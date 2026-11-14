@@ -27,3 +27,6 @@
 
 ## 0168 review
 [Source/readback review and local candidate inventory](../docs/0168/LOCAL_MVP_PARALLEL.md). No product source, canonical API, DB or dependency changes. Local candidate delta delivered separately.
+
+## 0169
+Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main; Python stdlib) and `tests/test_verify_source_zip.py` (10 helper fixture checks). No product API/DB/events/dependency changes. [Evidence and rollback](../docs/0169/PHASE01_PREFLIGHT.md).
