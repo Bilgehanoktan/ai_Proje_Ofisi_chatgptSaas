@@ -5,3 +5,6 @@ Source integration commit: f716591be84188d792f8a95ea3995a956208b51d · [readback
 
 # 0168 — parallel local MVP preparation
 9/9 source readback and 9/9 schema/fixture parity reverified. R11 product unchanged. 2/9 source tasks done; 7/9 runtime/integration tasks not complete. Local delta has three quarantine candidates, not uploaded here; all product tests/install/build/agent tasks NOT_RUN. [Parallel plan and blockers](../docs/0168/LOCAL_MVP_PARALLEL.md).
+
+# 0169 — phase 01 active
+Standalone ZIP preflight + test helper exact readback; 10/10 synthetic helper tests PASS, prior 0168 delta 7/7. Full R11 archive unavailable locally and 141/141 not verified; no product execution. Phase 02–10 wait. [0169 sequence and next](../docs/0169/PHASE01_PREFLIGHT.md).
