@@ -1,0 +1,2 @@
+# 0157 tam proje
+Güncel R4 source ZIP ve açık PRODUCT_DRAFT6_RECOVERY dizini. 0155 ve 0156 özgün ZIP'ler arşiv içinde; önceki full chain 0155 içinde. D3 ve R3 kaynak ZIP'leri ayrıca. Güncel master, v1.16 katalog, 24 alan v7, SOP v1.3, doğrulama, diff, devir, sonraki plan. 0156 orijinal ek ve katalog ayrı. Full delivery ≠ production-ready: karantina source candidate, hiçbir gerçek run/build/TEST veya migration yok; T01 ve bağımsız PRE/POST açık. Geri dönüş tam R3, 0156 ek ayrı korunur.

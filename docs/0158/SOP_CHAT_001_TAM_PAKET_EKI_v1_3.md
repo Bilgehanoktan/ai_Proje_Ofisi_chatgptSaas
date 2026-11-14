@@ -1,0 +1,2 @@
+# SOP-CHAT-001 v1.3 — zorunlu tam paket
+Kullanıcı: her tur tek tam proje ZIP; güncel açık frontend/backend ve source ZIP, master, tüm katalog/karar/test/devir/plan, 24 alan MD/JSON, SHA manifest. Önceki tam arşiv ve tüm ayrı ekler byte-exact içinde korunur. Paket boyutu tek başına kabul değil; önceki kaynak manifesti ve dosya farkı karşılaştırılır, kayıp dosya 0 veya açık, onaylı kaldırma gerekçesi. Kaynak yoksa tam diye etiketleme; kurtarma gerekliliğini bildir. Her tur ZIP doğrula. Bu teslimat standardı normatif güvenlik grant'i değildir.

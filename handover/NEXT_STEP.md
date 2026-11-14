@@ -1,0 +1,2 @@
+# 0162 — sonraki adım
+W3/W4 R01/R02: terminal mutation ve outbox intent/receipt binding, UNKNOWN reconciliation, T1 physical owner HOLD. W1: stateful Dashboard alt panelleri ve freshness presentation, canlı veri bağlama yok. W2: R06 owner ve 55 field gap; W6 IV key custody ve receipt algoritması seçimi açık; W7 settlement idempotency/unknown accounting. W8 test oracles. D4/D5 özgünleri eksik; ayrı dal. Gerçek TEST/DEV/CI/PROD/dış etki ayrı izin.

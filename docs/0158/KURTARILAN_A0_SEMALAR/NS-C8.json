@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aicos:doc-spec-0099:C8-IdentityCapabilityToken:0.1.0-a0",
+  "title": "A0 unratified candidate — C8-IdentityCapabilityToken",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "token_id",
+    "issuer_principal",
+    "subject_principal",
+    "audience",
+    "scope",
+    "issued_at_utc",
+    "not_before_utc",
+    "expires_at_utc",
+    "policy_epoch",
+    "grant_id",
+    "actions",
+    "nonce",
+    "token_sha256",
+    "key_id",
+    "signature_b64",
+    "token_state",
+    "authority_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "0.1.0-a0"
+      ]
+    },
+    "token_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "issuer_principal": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "subject_principal": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tenant_id",
+        "environment_id",
+        "effect_class"
+      ],
+      "properties": {
+        "tenant_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "environment_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "effect_class": {
+          "type": "string",
+          "enum": [
+            "A0",
+            "A1",
+            "A2",
+            "A3"
+          ]
+        },
+        "resource_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      }
+    },
+    "issued_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,6})?Z$"
+    },
+    "not_before_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,6})?Z$"
+    },
+    "expires_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,6})?Z$"
+    },
+    "policy_epoch": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "grant_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "nonce": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "token_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "key_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "signature_b64": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "token_state": {
+      "type": "string",
+      "enum": [
+        "CANDIDATE_NOT_ISSUED"
+      ]
+    },
+    "authority_status": {
+      "type": "string",
+      "enum": [
+        "A0_CANDIDATE_HOLD"
+      ]
+    }
+  }
+}

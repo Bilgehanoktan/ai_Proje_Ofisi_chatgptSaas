@@ -1,0 +1,4 @@
+# 0159-A değişiklik kaydı
+Neden: kaynak kaybı olmadan merkezi gezinme ve sahiplik sınırları. Nasıl: ayrı recovery/0159-structure dalında yalnız yeni dokümanlar. Parent 0e0b8da3007dc75a0ea7bcb9f653ba7ca0c326b4; R5 SHA-256 d679e8597c55db827dfa96c180ca02a44723cc036e34179a1279314b7caecb06. 0158 tam ZIP SHA-256 a57e69f780717ff10ebb21ccefda76c90b22e16cdc04ce0c4b0236df69fa4d08.
+Kapsam: 141 önceki Git blobu ve 72 kaynak kaydı korunmalı; API/DB/bağımlılık değişikliği yok. Gerçek TEST/CI/PROD/main merge yok. Katalog, karar ve devir indeksleri eklenir. Ürün AGENTS.md hükümleri korunur; dar repo istisnası normatif ratifikasyon değildir.
+Teşhis: parent tree ile blob hash karşılaştır; IMPORT_MANIFEST_0158.json ve product/SOURCE_MANIFEST.json kullan. Rollback: 0158 recovery dalına dön veya yetkili revert; force push yok. 36 test adayı NOT_RUN; olgunluk puanları aynı. Sonraki W5 D08/D09/D21.
