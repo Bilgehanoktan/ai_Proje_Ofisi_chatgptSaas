@@ -1,0 +1,2 @@
+# Doğrulama 0156
+Gerçek statik: D3 52/52 manifest hash ve CRC; v135 beklenen hash, v142 v135 exact suffix; ek 4 Python AST ayrıştırması; ek ZIP hash/CRC. 11 unittest metodu oluşturuldu, NOT_RUN. Hiçbir ürün modülü import/execute edilmedi. R3 diff, API parity, gerçek build/TEST, DB, security, lease race, restore, provider reconciliation NOT_RUN. Önceki kabul sayaçları değişmedi; yeniden doğrulanmış gerçek kabul değildir.
