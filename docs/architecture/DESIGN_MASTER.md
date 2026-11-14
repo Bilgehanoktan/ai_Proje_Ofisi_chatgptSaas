@@ -36,3 +36,6 @@
 
 ## 0171
 [Phase 01 exact readback candidate](../0171/PHASE01_READBACK_CANDIDATE.md). Quarantine only; product/authority unchanged.
+
+## 0172 — R12 integration
+[Exact local D0 readback integration](../0172/READBACK_INTEGRATION.md). Product source promotion only; no runtime authority or canonical architecture change.
