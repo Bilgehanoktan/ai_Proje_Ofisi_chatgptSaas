@@ -8,3 +8,6 @@ Source integration commit: f716591be84188d792f8a95ea3995a956208b51d · [readback
 
 # 0169 — phase 01 active
 Standalone ZIP preflight + test helper exact readback; 10/10 synthetic helper tests PASS, prior 0168 delta 7/7. Full R11 archive unavailable locally and 141/141 not verified; no product execution. Phase 02–10 wait. [0169 sequence and next](../docs/0169/PHASE01_PREFLIGHT.md).
+
+# 0170 — phase 01 active
+Pinned R11 manifest entry SHA-256/length readback 141/141; local archive unavailable. Dependency audit helper 14/14 standalone tests; 2 Python pin mismatches, staging Node packages absent, no locks. No product runtime/test. [0170 audit](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md) · [readback](../releases/SOURCE_READBACK_0170.json).
