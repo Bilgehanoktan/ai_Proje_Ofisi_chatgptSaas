@@ -41,3 +41,6 @@ Full pinned R11 archive ZIP preflight and extracted tree check; applicable isola
 
 ## 0170 next
 Local archive preflight and independent scope remain blockers; no need to repeat the verified remote R11 readback unless pin changes. After applicable DEV/TEST authority, review transitive locks and perform clean dependency install, backend/frontend checks, readback integration. [Audit](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md).
+
+## 0171 next
+No repeated source-only loop. Full local pinned R11 archive and applicable independent PRE/DEV/TEST + exact 0171 scope, review locks and install, actual backend/frontend/smoke/browser evidence. Then phase 01 acceptance and phase 02. [0171](../docs/0171/PHASE01_READBACK_CANDIDATE.md).
