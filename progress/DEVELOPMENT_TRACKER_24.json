@@ -1,8 +1,8 @@
 {
-  "id": "TRACK-0167",
-  "baseline": "TRACK-0166",
-  "tarih": "2026-11-14",
-  "status": "R11_SOURCE_INTEGRATED_NOT_RUN",
+  "id": "TRACK-0172",
+  "baseline": "TRACK-0167",
+  "tarih": "2026-11-15",
+  "status": "R12_SOURCE_INTEGRATED_NOT_RUN",
   "rubric": {
     "tasarim": {
       "0": "yok",
@@ -30,14 +30,14 @@
       "tasarim": 75,
       "kaynak": 50,
       "gercek_test": "NOT_RUN",
-      "kanit": "Dashboard.tsx; app/page.tsx; app/office/page.tsx; Offline_Demo.html",
-      "sonraki": "T02/DEV ve typecheck/build/browser ayrı; UI-06/08",
+      "kanit": "Dashboard.tsx; app/page.tsx; app/office/page.tsx; Offline_Demo.html; R12 exact readback route/panel and Dashboard mounted; build/browser NOT_RUN",
+      "sonraki": "Applicable DEV/TEST; pinned typecheck/build/browser and positive/negative readback",
       "onceki_tasarim": 75,
       "onceki_kaynak": 50,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Source-ready local setup; UI fixture-only"
+      "tur_durumu": "SOURCE_INTEGRATION_OR_EVIDENCE_DELTA",
+      "tur_kaniti": "R12 exact readback route/panel and Dashboard mounted; build/browser NOT_RUN"
     },
     {
       "id": 2,
@@ -81,14 +81,14 @@
       "tasarim": 75,
       "kaynak": 50,
       "gercek_test": "NOT_RUN",
-      "kanit": "app/main.py: 5 demo GET; 4 şema çifti; 16 A0 şema kopyası",
-      "sonraki": "Owner 0/16; 55 alan; ortak sözleşme ve gerçek API",
+      "kanit": "app/main.py: 5 demo GET; 4 şema çifti; 16 A0 şema kopyası; GET /api/local-mvp/readback mounted; D0 fixture equivalence only",
+      "sonraki": "Applicable DEV/TEST; pinned typecheck/build/browser and positive/negative readback",
       "onceki_tasarim": 75,
       "onceki_kaynak": 50,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "UNCHANGED",
-      "tur_kaniti": "Prior source preserved"
+      "tur_durumu": "SOURCE_INTEGRATION_OR_EVIDENCE_DELTA",
+      "tur_kaniti": "GET /api/local-mvp/readback mounted; D0 fixture equivalence only"
     },
     {
       "id": 5,
@@ -104,8 +104,8 @@
       "onceki_kaynak": 50,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Nine source promotions; no runtime"
+      "tur_durumu": "UNCHANGED",
+      "tur_kaniti": "Prior source preserved"
     },
     {
       "id": 6,
@@ -121,8 +121,8 @@
       "onceki_kaynak": 50,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Coordinator and readback integrated source-only"
+      "tur_durumu": "UNCHANGED",
+      "tur_kaniti": "Prior source preserved"
     },
     {
       "id": 7,
@@ -155,8 +155,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Identity and policy source integrated; no actual principal"
+      "tur_durumu": "UNCHANGED",
+      "tur_kaniti": "Prior source preserved"
     },
     {
       "id": 9,
@@ -206,8 +206,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "SQLite staging source; no DB"
+      "tur_durumu": "UNCHANGED",
+      "tur_kaniti": "Prior source preserved"
     },
     {
       "id": 12,
@@ -257,8 +257,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Trust/Policy source integrated; authentication HOLD"
+      "tur_durumu": "UNCHANGED",
+      "tur_kaniti": "Prior source preserved"
     },
     {
       "id": 15,
@@ -274,8 +274,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Readback source, IV trust root HOLD"
+      "tur_durumu": "UNCHANGED",
+      "tur_kaniti": "Prior source preserved"
     },
     {
       "id": 16,
@@ -353,14 +353,14 @@
       "tasarim": 75,
       "kaynak": 25,
       "gercek_test": "NOT_RUN",
-      "kanit": "CORE_REVIEW.md 22 NOT_RUN oracle; REVIEW_CHECKLIST.md; 0151 test defteri",
+      "kanit": "CORE_REVIEW.md 22 NOT_RUN oracle; REVIEW_CHECKLIST.md; 0151 test defteri; Root seven-case smoke helper integrated; actual smoke NOT_RUN",
       "sonraki": "Gerçek typecheck/build/browser ve 89 test adayı NOT_RUN",
       "onceki_tasarim": 75,
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "134 product candidates + 24 quarantine NOT_RUN; preflight helper 4/4 only"
+      "tur_durumu": "SOURCE_INTEGRATION_OR_EVIDENCE_DELTA",
+      "tur_kaniti": "Root seven-case smoke helper integrated; actual smoke NOT_RUN"
     },
     {
       "id": 21,
@@ -370,14 +370,14 @@
       "tasarim": 75,
       "kaynak": 25,
       "gercek_test": "NOT_RUN",
-      "kanit": "package.json, requirements.txt, AGENTS.md; OPS/T01",
+      "kanit": "package.json, requirements.txt, AGENTS.md; OPS/T01; R12 manifest pin and clean-source preflight; lock/install pending",
       "sonraki": "İzole DEV, REPO, CI; C01–24 0/24",
       "onceki_tasarim": 75,
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Windows preflight and setup instructions; dependency lock absent"
+      "tur_durumu": "SOURCE_INTEGRATION_OR_EVIDENCE_DELTA",
+      "tur_kaniti": "R12 manifest pin and clean-source preflight; lock/install pending"
     },
     {
       "id": 22,
@@ -421,14 +421,14 @@
       "tasarim": 75,
       "kaynak": 75,
       "gercek_test": "NOT_RUN",
-      "kanit": "0151 master; katalog v1 + v1.9 delta; SOP; manifest",
+      "kanit": "0151 master; katalog v1 + v1.9 delta; SOP; manifest; Manifest 143 and source readback 4/4; catalog/architecture/handover updated",
       "sonraki": "Her tur katalog/devir güncelle; 0164",
       "onceki_tasarim": 75,
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "SOURCE_OR_SETUP_DELTA",
-      "tur_kaniti": "Manifest 141, catalog/devir updated"
+      "tur_durumu": "SOURCE_INTEGRATION_OR_EVIDENCE_DELTA",
+      "tur_kaniti": "Manifest 143 and source readback 4/4; catalog/architecture/handover updated"
     }
   ],
   "note": "Ordinal scores unchanged without runtime evidence; source count is not completion."
