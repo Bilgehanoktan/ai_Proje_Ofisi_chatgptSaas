@@ -1,0 +1,76 @@
+{
+  "revision": "0172",
+  "baseline": "0171",
+  "source_commit": "2aeaf363c2588cb4c477cb43f1b4fa5dcdcab2fb",
+  "entries": [
+    {
+      "file": "product/ai-company-os-frontend/app/api/local-mvp/readback/route.ts",
+      "blob": "d0bff84e4adb1cac9bc21b5b0efcb5ecb8cdd5bd",
+      "sha256": "5bfe86d46a3043172629ba4ceba66f458d07a0451921c3d0601c5a2140c328dc",
+      "bytes": 2768,
+      "change": "ADDED",
+      "symbols": [
+        "canonical",
+        "read",
+        "GET"
+      ],
+      "tests": "NOT_RUN"
+    },
+    {
+      "file": "product/ai-company-os-frontend/components/dashboard/LocalReadbackPanel.tsx",
+      "blob": "768873f1bc4b884679b845ec43711c853283565f",
+      "sha256": "dfd137538fa62ca1639c9d4ebb43599f016f567e0b7b46227281834a8049d93c",
+      "bytes": 2585,
+      "change": "ADDED",
+      "symbols": [
+        "record",
+        "parseReadback",
+        "LocalReadbackPanel",
+        "inspect"
+      ],
+      "tests": "NOT_RUN"
+    },
+    {
+      "file": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "6337a48074443c79be67def15bccf8eca147f92b",
+      "sha256": "3e2ee8c1013e0e84d7c8eee2ac80260fbc3e11a28790c213cec316be36ee7914",
+      "bytes": 7228,
+      "change": "MODIFIED",
+      "symbols": [
+        "Dashboard",
+        "DashboardView"
+      ],
+      "tests": "NOT_RUN"
+    },
+    {
+      "file": "scripts/local_mvp_smoke.py",
+      "blob": "28c3d99d2022735230bad0003e6c6178715aff2b",
+      "sha256": "2107dfe9fc29cbb477a2a2b238244a1afd7ad08f71ce9f575cd673bfdcd6db8a",
+      "bytes": 3035,
+      "change": "ADDED",
+      "symbols": [
+        "NoRedirect",
+        "get",
+        "main"
+      ],
+      "tests": "NOT_RUN"
+    }
+  ],
+  "api": [
+    {
+      "method": "GET",
+      "path": "/api/local-mvp/readback",
+      "scope": "D0_LOOPBACK_READBACK_ONLY",
+      "success": "D0_READBACK_MATCH_ONLY",
+      "failure": "503 HOLD",
+      "dispatch_allowed": false,
+      "release_ready": false
+    }
+  ],
+  "database_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "prior_static_evidence": "0171 TS parse 3/3 and smoke AST PASS",
+  "product_tests": "NOT_RUN",
+  "rollback": "3e475a65e7150b5dbb535b5b5887dc8574a8de97"
+}
