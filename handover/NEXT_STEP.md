@@ -7,3 +7,5 @@ W3/W4 R01/R02: terminal mutation ve outbox intent/receipt binding, UNKNOWN recon
 
 
 0162-D: [next 0162-E](../docs/0162D/NEXT_STEP.md). No source transfer until applicable authority.
+
+0162-E: exact UI scope prepared; independent PRE/T01 required before integration. [PRE checklist](../docs/0162E/PRE_REVIEW.md).

@@ -9,3 +9,5 @@
 
 
 [0162-C local package reference](../0162C/LOCAL_PACKAGE_REFERENCE.json) · [0162-D static review](../0162D/ARCHITECTURE_ADDENDUM.md). R8 product remains; no normative change.
+
+[0162-E pinned integration scope](../0162E/SCOPE_0162E.json) — H01 request recorded; R8 unchanged, HOLD.
