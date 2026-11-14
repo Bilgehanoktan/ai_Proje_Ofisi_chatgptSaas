@@ -1,14 +1,26 @@
 {
-  "version": "0.1.0-draft.6-recovery-candidate-r11",
-  "doc_revision": "0167",
-  "status": "SOURCE_ONLY_R11_INTEGRATED_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-candidate-r12",
+  "doc_revision": "0172",
+  "status": "SOURCE_ONLY_R12_READBACK_INTEGRATED_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "619ce40c74f7a46987d05e50fa57572b41fba00c",
+  "parent_git_commit": "3e475a65e7150b5dbb535b5b5887dc8574a8de97",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
       "bytes": 70327,
       "sha256": "d9c8208f518de9b86ace850dbf9c7791042bce49b568a6b77784759c10fd50ad"
+    },
+    "CORE_REVIEW.md": {
+      "bytes": 3402,
+      "sha256": "34651745e6ff920039234bf4982909f76f8ec6cab39fcb65767fa71672b99938"
+    },
+    "README.md": {
+      "bytes": 1467,
+      "sha256": "379b81fde7895bfe50033374cadf3987d8a6672b470aacad9507c36b6afa3eb4"
+    },
+    "REVIEW_CHECKLIST.md": {
+      "bytes": 977,
+      "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
     },
     "ai-company-os-backend/.gitignore": {
       "bytes": 59,
@@ -17,6 +29,18 @@
     "ai-company-os-backend/AGENTS.md": {
       "bytes": 371,
       "sha256": "b020496478966219210ca8053bbedd0b6184bf577dfc82a98a651f14e673adaf"
+    },
+    "ai-company-os-backend/CONTRACT_PIN.md": {
+      "bytes": 1308,
+      "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
+    },
+    "ai-company-os-backend/README.md": {
+      "bytes": 274,
+      "sha256": "e9ddd77a1c52c241ab331e74662dc6b413e8d012d8b5c7f81b19e06c5d25300d"
+    },
+    "ai-company-os-backend/SECURITY.md": {
+      "bytes": 198,
+      "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
     },
     "ai-company-os-backend/app/__init__.py": {
       "bytes": 0,
@@ -66,13 +90,13 @@
       "bytes": 2149,
       "sha256": "27e9fe0dc2508230069e3ce51dd5c639a2d2d93ed8ca7e8d5dbeea8c419be1bf"
     },
-    "ai-company-os-backend/app/core/development_review/evidence_store.py": {
-      "bytes": 4496,
-      "sha256": "bc2b2eae7ad74e24f6d18a649f53c64fe5e5c3749e625f56af9204642d316576"
-    },
     "ai-company-os-backend/app/core/development_review/evidence.py": {
       "bytes": 4926,
       "sha256": "2cc7f396a920ac4add48039ed1db99dae507e8f5fa134c23e724b1a3bc07882e"
+    },
+    "ai-company-os-backend/app/core/development_review/evidence_store.py": {
+      "bytes": 4496,
+      "sha256": "bc2b2eae7ad74e24f6d18a649f53c64fe5e5c3749e625f56af9204642d316576"
     },
     "ai-company-os-backend/app/core/development_review/identity_registry.py": {
       "bytes": 1505,
@@ -142,10 +166,6 @@
       "bytes": 421,
       "sha256": "29e740da522087b1beeee27c1f974e12e7f29efb5e87b8cf4589ecea91e46ef4"
     },
-    "ai-company-os-backend/app/core/policy_gateway_review.py": {
-      "bytes": 395,
-      "sha256": "ddce1c99874da3f2e8324beae0dbf8bdb46ef85cdcc98d5faea52696ec77a267"
-    },
     "ai-company-os-backend/app/core/policy/__init__.py": {
       "bytes": 49,
       "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
@@ -169,6 +189,10 @@
     "ai-company-os-backend/app/core/policy/witness_review.py": {
       "bytes": 3799,
       "sha256": "3c658e59711007436f797d34c248d3ab1546e404d9715bf17bd72395bc6d4ff0"
+    },
+    "ai-company-os-backend/app/core/policy_gateway_review.py": {
+      "bytes": 395,
+      "sha256": "ddce1c99874da3f2e8324beae0dbf8bdb46ef85cdcc98d5faea52696ec77a267"
     },
     "ai-company-os-backend/app/core/runtime_plan_binding.py": {
       "bytes": 201,
@@ -310,10 +334,6 @@
       "bytes": 894,
       "sha256": "e8826ce6c67bfaa2f55ec930fc55fc91833e69f3fb4ae226dae41c5069af5d6c"
     },
-    "ai-company-os-backend/CONTRACT_PIN.md": {
-      "bytes": 1308,
-      "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
-    },
     "ai-company-os-backend/contracts/source/company.catalog.demo.schema.json": {
       "bytes": 2182,
       "sha256": "11b688e725933075ced435aba0d283c8a2b2df78896f7c5129a2cc673e9523a3"
@@ -350,17 +370,9 @@
       "bytes": 2700,
       "sha256": "313b8072ec1e4bdc1feb945540c31e0a762be4151f616bd6a25e4772a790baa5"
     },
-    "ai-company-os-backend/README.md": {
-      "bytes": 274,
-      "sha256": "e9ddd77a1c52c241ab331e74662dc6b413e8d012d8b5c7f81b19e06c5d25300d"
-    },
     "ai-company-os-backend/requirements.txt": {
       "bytes": 105,
       "sha256": "25295154f2f3db91ea65c2a9e1f7558925e723ef9847b805fdbe77a3fb44c4cd"
-    },
-    "ai-company-os-backend/SECURITY.md": {
-      "bytes": 198,
-      "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
     },
     "ai-company-os-backend/tests/test_development_review_0164.py": {
       "bytes": 8342,
@@ -410,6 +422,22 @@
       "bytes": 371,
       "sha256": "b020496478966219210ca8053bbedd0b6184bf577dfc82a98a651f14e673adaf"
     },
+    "ai-company-os-frontend/CONTRACT_PIN.md": {
+      "bytes": 1308,
+      "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
+    },
+    "ai-company-os-frontend/README.md": {
+      "bytes": 268,
+      "sha256": "8082f1dde1fd8ab995a5ce29887030cdfd390c144f1c7f0781925dc25e5a7aca"
+    },
+    "ai-company-os-frontend/SECURITY.md": {
+      "bytes": 198,
+      "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
+    },
+    "ai-company-os-frontend/app/api/local-mvp/readback/route.ts": {
+      "bytes": 2768,
+      "sha256": "5bfe86d46a3043172629ba4ceba66f458d07a0451921c3d0601c5a2140c328dc"
+    },
     "ai-company-os-frontend/app/globals.css": {
       "bytes": 11130,
       "sha256": "634fe9ebffbb431b8b15a183485ceadb844e7d760b0b6587e06edd90c3d102f1"
@@ -434,6 +462,10 @@
       "bytes": 1121,
       "sha256": "ac31e876df3494c8a32a254ccb5ea50fbaca27ab14a63a431542dab830dfe85b"
     },
+    "ai-company-os-frontend/components/dashboard/LocalReadbackPanel.tsx": {
+      "bytes": 2585,
+      "sha256": "dfd137538fa62ca1639c9d4ebb43599f016f567e0b7b46227281834a8049d93c"
+    },
     "ai-company-os-frontend/components/dashboard/MetricsStrip.tsx": {
       "bytes": 409,
       "sha256": "9c045ecac3467bc456e1f505a280bbb8a2a595da845f78eed86231db0bf5c824"
@@ -449,10 +481,6 @@
     "ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx": {
       "bytes": 704,
       "sha256": "dadc7de6906196aa1abc62343d81741552d234a526fc9b639f2e5b7c265c6341"
-    },
-    "ai-company-os-frontend/CONTRACT_PIN.md": {
-      "bytes": 1308,
-      "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
     },
     "ai-company-os-frontend/contracts/generated/company.catalog.demo.schema.json": {
       "bytes": 2182,
@@ -474,9 +502,17 @@
       "bytes": 1829,
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
     },
+    "ai-company-os-frontend/features/CorePreview.tsx": {
+      "bytes": 97,
+      "sha256": "105b71aa6c53a0e2f937801363d5cb1d67a06fd65e85c068e00cced4b8063dc3"
+    },
+    "ai-company-os-frontend/features/Dashboard.tsx": {
+      "bytes": 97,
+      "sha256": "65cdefc209e3942dd06f71a3d15157efe1034e1ce9e9582263fdf04d9aea1c9a"
+    },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 7125,
-      "sha256": "961d42494ddb3d7f0f634f0426e385ca419dd927528d1c8aba68d11386942b6d"
+      "bytes": 7228,
+      "sha256": "3e2ee8c1013e0e84d7c8eee2ac80260fbc3e11a28790c213cec316be36ee7914"
     },
     "ai-company-os-frontend/features/core-review/CorePreview.tsx": {
       "bytes": 3391,
@@ -485,14 +521,6 @@
     "ai-company-os-frontend/features/core-review/planProjection.ts": {
       "bytes": 2653,
       "sha256": "81f1fbe1bffbe571966c3256001c53ee6754717b0d3ec8998a55530cd3d06820"
-    },
-    "ai-company-os-frontend/features/CorePreview.tsx": {
-      "bytes": 97,
-      "sha256": "105b71aa6c53a0e2f937801363d5cb1d67a06fd65e85c068e00cced4b8063dc3"
-    },
-    "ai-company-os-frontend/features/Dashboard.tsx": {
-      "bytes": 97,
-      "sha256": "65cdefc209e3942dd06f71a3d15157efe1034e1ce9e9582263fdf04d9aea1c9a"
     },
     "ai-company-os-frontend/features/planProjection.ts": {
       "bytes": 76,
@@ -518,6 +546,10 @@
       "bytes": 2700,
       "sha256": "313b8072ec1e4bdc1feb945540c31e0a762be4151f616bd6a25e4772a790baa5"
     },
+    "ai-company-os-frontend/office/OfficeScene.tsx": {
+      "bytes": 92,
+      "sha256": "2091a45b2a9dcf6cf64480378f4a56054d2d9c047900f1b531504c5a96bbd19f"
+    },
     "ai-company-os-frontend/office/engine/geometry.ts": {
       "bytes": 5794,
       "sha256": "74d86fcf3162df7425c52f0685b3074d476a174a46f833289dc62168dcf20890"
@@ -525,10 +557,6 @@
     "ai-company-os-frontend/office/geometry.ts": {
       "bytes": 65,
       "sha256": "7bfa96191f151120fb269fc4343564d89cd88e830b910268ad80616d760dd79a"
-    },
-    "ai-company-os-frontend/office/OfficeScene.tsx": {
-      "bytes": 92,
-      "sha256": "2091a45b2a9dcf6cf64480378f4a56054d2d9c047900f1b531504c5a96bbd19f"
     },
     "ai-company-os-frontend/office/scenes/OfficeScene.tsx": {
       "bytes": 9361,
@@ -546,31 +574,11 @@
       "bytes": 11434,
       "sha256": "926b1f85ccde5ba2999628335a132b811338e67d0b88ea9316286df473723b1a"
     },
-    "ai-company-os-frontend/README.md": {
-      "bytes": 268,
-      "sha256": "8082f1dde1fd8ab995a5ce29887030cdfd390c144f1c7f0781925dc25e5a7aca"
-    },
-    "ai-company-os-frontend/SECURITY.md": {
-      "bytes": 198,
-      "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
-    },
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 583,
       "sha256": "269657f5fbb39127f713edff0a2f55a493e01190a8c505ceb3ba784e18f460e8"
-    },
-    "CORE_REVIEW.md": {
-      "bytes": 3402,
-      "sha256": "34651745e6ff920039234bf4982909f76f8ec6cab39fcb65767fa71672b99938"
-    },
-    "README.md": {
-      "bytes": 1467,
-      "sha256": "379b81fde7895bfe50033374cadf3987d8a6672b470aacad9507c36b6afa3eb4"
-    },
-    "REVIEW_CHECKLIST.md": {
-      "bytes": 977,
-      "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
     }
   },
-  "parent_source_manifest_blob": "477d6cbd0594162c547425c46d8ac8b6835d15f6",
+  "parent_source_manifest_blob": "337d4fa90bd93b2119da4cd7f6eba193e93d18fe",
   "source_git_commit_note": "Self reference excluded; use repository commit and verified tree."
 }
