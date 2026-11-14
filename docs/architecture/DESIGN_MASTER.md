@@ -42,3 +42,7 @@
 
 ## 0174 — standing development
 [CEO decision](../../decisions/CEO/CEO_0174_STANDING_DEVELOPMENT.md). Mandatory integration and evidence per round; independent gates unchanged. R11 remains until permitted promotion.
+
+
+## 0177 — W1 EDS candidate
+[Addendum](../0177/ARCHITECTURE_AND_CATALOG.md). No normative authority or product acceptance change; prior architecture preserved.

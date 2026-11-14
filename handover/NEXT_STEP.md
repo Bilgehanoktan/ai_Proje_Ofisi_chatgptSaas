@@ -50,3 +50,7 @@ Review exact candidate scope, legacy CSS contrast, independent PRE; then authori
 
 ## 0174
 Standing CODE/REPO/DEV/TEST user approval recorded. Independent PRE/T01/T06 remain open. Next: exact EDS integration review, isolated archive and local tests; do not mislabel independent acceptance.
+
+
+## 0177 — EDS integrated source candidate
+13 source deltas applied to a complete isolated frontend copy in quarantine/0177/frontend; 7 additions, 6 modifications, no product promotion. [Architecture and technical catalog](../docs/0177/ARCHITECTURE_AND_CATALOG.md). PRE/T01/T06 HOLD; build/browser/product tests NOT_RUN. 0172-R12 is a separate diverged branch. Next exact PRE, pinned archive and permitted local MVP checks.

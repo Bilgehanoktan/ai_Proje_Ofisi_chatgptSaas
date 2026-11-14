@@ -32,3 +32,6 @@
 
 ## 0174
 [Standing development decision](decisions/CEO/CEO_0174_STANDING_DEVELOPMENT.md).
+
+
+- [0177 integrated EDS candidate](docs/0177/ARCHITECTURE_AND_CATALOG.md) — isolated source, not product promotion.
