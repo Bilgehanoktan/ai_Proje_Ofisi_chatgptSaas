@@ -29,3 +29,6 @@ Resolve protected policy and registry trust boundary, durable staging ownership 
 3. Stage DDL ownership + global replay uniqueness + CAS/restore design; no canonical T1 migration.
 4. Separate permission for isolated DEV/TEST; actual unit/SQL/concurrency/browser tests only then.
 5. W2 55/20 owner gaps, W3/W4 terminal/reconciliation and R03, W7 settlement, W1 synthetic projection; D4/D5 recovery separately.
+
+## 0167 → 0168
+Prioritize working local D0 MVP: exact archive/preflight → applicable isolated DEV/TEST scope → pinned dependency install/lock → backend unittest and six GET smoke → frontend typecheck/build/browser → record actual failures and fix. Then read-only API projection integration; only after genuine custody/authority, agent execution. Parallel D01–D07 and 55/20 owner gaps remain open. No repeated design-only loop; actual execution evidence needed.

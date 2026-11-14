@@ -22,3 +22,5 @@
 [0165 technical delta MD](revisions/TECHNICAL_CATALOG_0165.md) · [JSON](revisions/TECHNICAL_CATALOG_0165.json).
 
 [0166 technical delta](revisions/TECHNICAL_CATALOG_0166.md) · [JSON](revisions/TECHNICAL_CATALOG_0166.json).
+
+[0167 source and setup delta](revisions/TECHNICAL_CATALOG_0167.md) · [JSON](revisions/TECHNICAL_CATALOG_0167.json).

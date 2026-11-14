@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-candidate-r10",
-  "doc_revision": "0165",
-  "status": "SOURCE_ONLY_R10_INTEGRATED_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-candidate-r11",
+  "doc_revision": "0167",
+  "status": "SOURCE_ONLY_R11_INTEGRATED_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "6a843f78625cbb3e293b0e534025687de0614528",
+  "parent_git_commit": "619ce40c74f7a46987d05e50fa57572b41fba00c",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -58,9 +58,25 @@
       "bytes": 66,
       "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
     },
+    "ai-company-os-backend/app/core/development_review/coordination_readback.py": {
+      "bytes": 2913,
+      "sha256": "d725134ca5deed8b3079f146d1ce2177fe85b4d2c33db1ab13a0a59889eb16fb"
+    },
+    "ai-company-os-backend/app/core/development_review/coordinator.py": {
+      "bytes": 2149,
+      "sha256": "27e9fe0dc2508230069e3ce51dd5c639a2d2d93ed8ca7e8d5dbeea8c419be1bf"
+    },
+    "ai-company-os-backend/app/core/development_review/evidence_store.py": {
+      "bytes": 4496,
+      "sha256": "bc2b2eae7ad74e24f6d18a649f53c64fe5e5c3749e625f56af9204642d316576"
+    },
     "ai-company-os-backend/app/core/development_review/evidence.py": {
       "bytes": 4926,
       "sha256": "2cc7f396a920ac4add48039ed1db99dae507e8f5fa134c23e724b1a3bc07882e"
+    },
+    "ai-company-os-backend/app/core/development_review/identity_registry.py": {
+      "bytes": 1505,
+      "sha256": "7b73b247949fe1cb50b192396fd3477a23ea7c1676a2646266914c4f56c025b1"
     },
     "ai-company-os-backend/app/core/development_review/model.py": {
       "bytes": 3221,
@@ -73,6 +89,18 @@
     "ai-company-os-backend/app/core/development_review/policy.py": {
       "bytes": 4627,
       "sha256": "10bd2f97ec88f2cfba8cff4681e59bc8c2deb0fd85c38ce4124ba0c82451ad45"
+    },
+    "ai-company-os-backend/app/core/development_review/staging_readback.py": {
+      "bytes": 5293,
+      "sha256": "955ca7a382c0620cc4e5b3f658588d43bfd689e043b51be9cbed86e12fe92364"
+    },
+    "ai-company-os-backend/app/core/development_review/trust_boundary.py": {
+      "bytes": 3408,
+      "sha256": "99f51fe6eff70e06f9d8e013d8c284f23b4bfdf3444bfa3c66e38088a525af95"
+    },
+    "ai-company-os-backend/app/core/development_review/trusted_policy.py": {
+      "bytes": 2395,
+      "sha256": "5d49a9771d556a5b89e61d6e840238e1f1fafc731d7598a08530b543e1c0a8fa"
     },
     "ai-company-os-backend/app/core/event_store/__init__.py": {
       "bytes": 287,
@@ -338,6 +366,14 @@
       "bytes": 8342,
       "sha256": "8f291f7bbcfb8b9b701c4088f17c4700bd3ae8e1b90aa38614e25d76da780e1c"
     },
+    "ai-company-os-backend/tests/test_development_review_0165.py": {
+      "bytes": 6911,
+      "sha256": "2133379dbe9b75d65096f97d9989f1ae212b0dab2fd71842fabf2f275e0b094a"
+    },
+    "ai-company-os-backend/tests/test_development_review_0166.py": {
+      "bytes": 7369,
+      "sha256": "98edcf5f661db2f6342ff047eb760565bb1a989e76061cbfed2e5a20d795d0d8"
+    },
     "ai-company-os-backend/tests/test_engines_0159b.py": {
       "bytes": 4082,
       "sha256": "c7c8c861f73a1b4e432891b2084790917573d05dd7b7d391d69c4dc4acb8c24a"
@@ -535,6 +571,6 @@
       "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
     }
   },
-  "parent_source_manifest_blob": "fc31d2b140197a80ee1da3157b364a24fcfe1cb7",
+  "parent_source_manifest_blob": "477d6cbd0594162c547425c46d8ac8b6835d15f6",
   "source_git_commit_note": "Self reference excluded; use repository commit and verified tree."
 }

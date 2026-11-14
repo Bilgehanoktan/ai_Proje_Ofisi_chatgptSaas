@@ -8,3 +8,5 @@
 14.11.2026 [0163 dar kaynak entegrasyonu](decisions/CEO/CEO_BOOTSTRAP_0163.md): kullanıcı açıkça dört sentetik frontend dosyasının R9 aday dalına entegrasyonunu istedi. Bu bir defalık kaynak istisnasıdır; sonraki ajanlara kalıcı source/repo grant vermez. T01/T06 gerçek bağımsız kabul ve T02/DEV/TEST/CI/PROD sınırları HOLD. Ürün AGENTS.md yürütme kuralları korunur.
 
 14.11.2026 [0165 bounded R10 source integration](decisions/CEO/CEO_DIRECTION_0165.md): six exact original R10 files and two dashboard source changes only; new backend candidate quarantine. One-turn source exception, not runtime/standing expansion. All execution and independent acceptance gates remain HOLD.
+
+14.11.2026 [0167 local MVP direction](decisions/CEO/CEO_DIRECTION_0167.md): nine pinned source promotions, manifest, preflight and documentation only; no actual package install/product runtime/test or independent grant. Read-only helper fixture verification is separate from product execution.

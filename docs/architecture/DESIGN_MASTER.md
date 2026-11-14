@@ -22,3 +22,5 @@
 [0165 R10 source integration and registry/policy/evidence candidates](../0165/ARCHITECTURE_ADDENDUM.md) — no runtime acceptance.
 
 [0166 R11 trust and staging readback](../0166/ARCHITECTURE_ADDENDUM_0166.md) — quarantine only, R10 unchanged.
+
+[0167 R11 source promotion and local MVP setup](../0167/ARCHITECTURE_ADDENDUM.md) — source-only, runtime HOLD.
