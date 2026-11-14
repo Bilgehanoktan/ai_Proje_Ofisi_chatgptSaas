@@ -17,3 +17,6 @@ User direction recorded in architecture. Scoped CSS candidate quarantined; R11 u
 
 # 0173
 Seven EDS quarantine candidates, 14 acceptance checks NOT_RUN. R11 unchanged. Phase 01 blockers retained. [Plan](../docs/0173/INTEGRATION_AND_TEST_PLAN.md).
+
+## 0174
+Standing CODE/REPO/DEV/TEST user approval recorded. Independent PRE/T01/T06 remain open. Next: exact EDS integration review, isolated archive and local tests; do not mislabel independent acceptance.

@@ -10,3 +10,6 @@
 14.11.2026 [0165 bounded R10 source integration](decisions/CEO/CEO_DIRECTION_0165.md): six exact original R10 files and two dashboard source changes only; new backend candidate quarantine. One-turn source exception, not runtime/standing expansion. All execution and independent acceptance gates remain HOLD.
 
 14.11.2026 [0167 local MVP direction](decisions/CEO/CEO_DIRECTION_0167.md): nine pinned source promotions, manifest, preflight and documentation only; no actual package install/product runtime/test or independent grant. Read-only helper fixture verification is separate from product execution.
+
+## CEO-0174 standing development
+[Decision](decisions/CEO/CEO_0174_STANDING_DEVELOPMENT.md): CODE/REPO/isolated DEV/local TEST approved. Every round integrates where independent gates permit; record blockers, test evidence and rollback. Prior user-level prohibitions superseded only within this scope. No independent acceptance, CI, PROD, main merge, paid calls or real data.

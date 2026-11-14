@@ -29,3 +29,6 @@
 
 ## 0173
 [Architecture](docs/0173/ARCHITECTURE_ADDENDUM.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0173.md) · [Plan](docs/0173/INTEGRATION_AND_TEST_PLAN.md) · [Progress](docs/0173/PROGRESS.json).
+
+## 0174
+[Standing development decision](decisions/CEO/CEO_0174_STANDING_DEVELOPMENT.md).

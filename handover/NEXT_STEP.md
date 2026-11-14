@@ -47,3 +47,6 @@ W1: exact Dashboard/Office chrome source scope and independent PRE; contrast rev
 
 ## 0173 next
 Review exact candidate scope, legacy CSS contrast, independent PRE; then authorized integration and DEV/TEST. In parallel obtain full R11 archive and locks. No phase advancement.
+
+## 0174
+Standing CODE/REPO/DEV/TEST user approval recorded. Independent PRE/T01/T06 remain open. Next: exact EDS integration review, isolated archive and local tests; do not mislabel independent acceptance.

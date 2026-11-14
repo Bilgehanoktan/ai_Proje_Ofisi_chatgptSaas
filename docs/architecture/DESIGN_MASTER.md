@@ -39,3 +39,6 @@
 
 ## 0173
 [Parallel EDS source candidates](../0173/ARCHITECTURE_ADDENDUM.md) · [integration and acceptance](../0173/INTEGRATION_AND_TEST_PLAN.md). R11 unchanged.
+
+## 0174 — standing development
+[CEO decision](../../decisions/CEO/CEO_0174_STANDING_DEVELOPMENT.md). Mandatory integration and evidence per round; independent gates unchanged. R11 remains until permitted promotion.
