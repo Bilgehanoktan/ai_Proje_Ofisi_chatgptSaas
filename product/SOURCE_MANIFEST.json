@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-candidate-r9",
-  "doc_revision": "0163",
-  "status": "SOURCE_ONLY_BOOTSTRAP_UNRATIFIED_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-candidate-r10",
+  "doc_revision": "0165",
+  "status": "SOURCE_ONLY_R10_INTEGRATED_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "8b97e203d1389fa4a4a28b86940a26e47ae1e63d",
+  "parent_git_commit": "6a843f78625cbb3e293b0e534025687de0614528",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -53,6 +53,26 @@
     "ai-company-os-backend/app/core/dag.py": {
       "bytes": 355,
       "sha256": "5884ae7fce504bbb6c573bbe61023843793d1d9a24de05a567ff5e8cd923ca92"
+    },
+    "ai-company-os-backend/app/core/development_review/__init__.py": {
+      "bytes": 66,
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    "ai-company-os-backend/app/core/development_review/evidence.py": {
+      "bytes": 4926,
+      "sha256": "2cc7f396a920ac4add48039ed1db99dae507e8f5fa134c23e724b1a3bc07882e"
+    },
+    "ai-company-os-backend/app/core/development_review/model.py": {
+      "bytes": 3221,
+      "sha256": "c18b358f8d1f77cdcece402721f8aba3bb7364490d1589c8a0ab954de2600481"
+    },
+    "ai-company-os-backend/app/core/development_review/planner.py": {
+      "bytes": 1687,
+      "sha256": "f31da08014d96b2659664d70230a4af225d766b8c36484b921f39216c8dea612"
+    },
+    "ai-company-os-backend/app/core/development_review/policy.py": {
+      "bytes": 4627,
+      "sha256": "10bd2f97ec88f2cfba8cff4681e59bc8c2deb0fd85c38ce4124ba0c82451ad45"
     },
     "ai-company-os-backend/app/core/event_store/__init__.py": {
       "bytes": 287,
@@ -314,6 +334,10 @@
       "bytes": 198,
       "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
     },
+    "ai-company-os-backend/tests/test_development_review_0164.py": {
+      "bytes": 8342,
+      "sha256": "8f291f7bbcfb8b9b701c4088f17c4700bd3ae8e1b90aa38614e25d76da780e1c"
+    },
     "ai-company-os-backend/tests/test_engines_0159b.py": {
       "bytes": 4082,
       "sha256": "c7c8c861f73a1b4e432891b2084790917573d05dd7b7d391d69c4dc4acb8c24a"
@@ -370,6 +394,10 @@
       "bytes": 1266,
       "sha256": "9d870a49384e0618cd4f5a80384489321f87760bef5cc73c95bcef68ca392956"
     },
+    "ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx": {
+      "bytes": 1121,
+      "sha256": "ac31e876df3494c8a32a254ccb5ea50fbaca27ab14a63a431542dab830dfe85b"
+    },
     "ai-company-os-frontend/components/dashboard/MetricsStrip.tsx": {
       "bytes": 409,
       "sha256": "9c045ecac3467bc456e1f505a280bbb8a2a595da845f78eed86231db0bf5c824"
@@ -411,8 +439,8 @@
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
     },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 6960,
-      "sha256": "db5b8fe4debe42d5812e1f0a0fb7b7798594135cbaa077467f32c0a93e68a2f5"
+      "bytes": 7125,
+      "sha256": "961d42494ddb3d7f0f634f0426e385ca419dd927528d1c8aba68d11386942b6d"
     },
     "ai-company-os-frontend/features/core-review/CorePreview.tsx": {
       "bytes": 3391,
@@ -507,6 +535,6 @@
       "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
     }
   },
-  "parent_source_manifest_blob": "bda53ce4daf85cfd6a7b823e2cf4b8deff59dbda",
+  "parent_source_manifest_blob": "fc31d2b140197a80ee1da3157b364a24fcfe1cb7",
   "source_git_commit_note": "Self reference excluded; use repository commit and verified tree."
 }

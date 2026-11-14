@@ -6,3 +6,5 @@
 14.11.2026 [C çalışma yönü](decisions/CEO/CEO_WORK_MODE_20261114_C.md): kaynak ve yetki hazırlığı paralel; gerçek T01 ve bağımsız kabul koşulları değişmez. C kararını tekrar sorma.
 
 14.11.2026 [0163 dar kaynak entegrasyonu](decisions/CEO/CEO_BOOTSTRAP_0163.md): kullanıcı açıkça dört sentetik frontend dosyasının R9 aday dalına entegrasyonunu istedi. Bu bir defalık kaynak istisnasıdır; sonraki ajanlara kalıcı source/repo grant vermez. T01/T06 gerçek bağımsız kabul ve T02/DEV/TEST/CI/PROD sınırları HOLD. Ürün AGENTS.md yürütme kuralları korunur.
+
+14.11.2026 [0165 bounded R10 source integration](decisions/CEO/CEO_DIRECTION_0165.md): six exact original R10 files and two dashboard source changes only; new backend candidate quarantine. One-turn source exception, not runtime/standing expansion. All execution and independent acceptance gates remain HOLD.

@@ -18,3 +18,5 @@
 [0163 ayrıntılı MD katalog](revisions/TECHNICAL_CATALOG_0163.md)
 
 [0164 source candidate catalog](revisions/TECHNICAL_CATALOG_0164.md) · [JSON](revisions/TECHNICAL_CATALOG_0164.json).
+
+[0165 technical delta MD](revisions/TECHNICAL_CATALOG_0165.md) · [JSON](revisions/TECHNICAL_CATALOG_0165.json).
