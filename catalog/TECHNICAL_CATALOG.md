@@ -33,3 +33,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0170
 `audit_local_dependencies.py`: read_safe, unique, parse_requirements, parse_package, installed_python, installed_node, rows, optional_lock, audit, main; Python stdlib only. `test_audit_local_dependencies.py`: 14 synthetic checks. No product API/DB/events/dependency version change. [Evidence and rollback](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md).
+
+## 0171
+Quarantine source: readback route `canonical/read/GET`, panel `record/parseReadback/LocalReadbackPanel/inspect`, Dashboard two insertions, smoke `NoRedirect/get/main`. Candidate GET only, no DB/event/dependency changes. [Scope, evidence and rollback](../docs/0171/PHASE01_READBACK_CANDIDATE.md).
