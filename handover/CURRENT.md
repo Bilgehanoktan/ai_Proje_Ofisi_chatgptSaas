@@ -11,3 +11,6 @@ Standalone ZIP preflight + test helper exact readback; 10/10 synthetic helper te
 
 # 0170 — phase 01 active
 Pinned R11 manifest entry SHA-256/length readback 141/141; local archive unavailable. Dependency audit helper 14/14 standalone tests; 2 Python pin mismatches, staging Node packages absent, no locks. No product runtime/test. [0170 audit](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md) · [readback](../releases/SOURCE_READBACK_0170.json).
+
+# 0171 — phase 01 readback candidate
+Exact quarantined route/panel/Dashboard/smoke and corrected mount patch; patch apply/cmp PASS exact copy, TS parse 3/3, smoke AST PASS. Product unchanged and execution NOT_RUN. [Evidence and remaining closure gates](../docs/0171/PHASE01_READBACK_CANDIDATE.md). Phase 01 ACTIVE_BLOCKED, phase 02 waits.
