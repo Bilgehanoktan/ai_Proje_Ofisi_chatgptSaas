@@ -36,3 +36,6 @@
 
 ## 0172 — EDS
 [Executive Design System architecture and implementation plan](../0172/ARCHITECTURE_ADDENDUM.md). W1 parallel, R11 unchanged.
+
+## 0173
+[Parallel EDS source candidates](../0173/ARCHITECTURE_ADDENDUM.md) · [integration and acceptance](../0173/INTEGRATION_AND_TEST_PLAN.md). R11 unchanged.

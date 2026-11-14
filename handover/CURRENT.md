@@ -14,3 +14,6 @@ Pinned R11 manifest entry SHA-256/length readback 141/141; local archive unavail
 
 # 0172 — EDS parallel candidate
 User direction recorded in architecture. Scoped CSS candidate quarantined; R11 unchanged; no product tests. [Architecture](../docs/0172/ARCHITECTURE_ADDENDUM.md).
+
+# 0173
+Seven EDS quarantine candidates, 14 acceptance checks NOT_RUN. R11 unchanged. Phase 01 blockers retained. [Plan](../docs/0173/INTEGRATION_AND_TEST_PLAN.md).

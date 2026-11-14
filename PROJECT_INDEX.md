@@ -26,3 +26,6 @@
 
 ## 0172 — EDS
 [Architecture](docs/0172/ARCHITECTURE_ADDENDUM.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0172.md) · [Progress](docs/0172/PROGRESS.json) · [Candidate](quarantine/0172/eds-shell.css).
+
+## 0173
+[Architecture](docs/0173/ARCHITECTURE_ADDENDUM.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0173.md) · [Plan](docs/0173/INTEGRATION_AND_TEST_PLAN.md) · [Progress](docs/0173/PROGRESS.json).

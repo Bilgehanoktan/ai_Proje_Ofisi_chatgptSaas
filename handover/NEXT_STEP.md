@@ -44,3 +44,6 @@ Local archive preflight and independent scope remain blockers; no need to repeat
 
 ## 0172 next
 W1: exact Dashboard/Office chrome source scope and independent PRE; contrast review, then authorized integration. Phase 01 archive/locks/DEV/TEST remain active in parallel. No phase advancement.
+
+## 0173 next
+Review exact candidate scope, legacy CSS contrast, independent PRE; then authorized integration and DEV/TEST. In parallel obtain full R11 archive and locks. No phase advancement.
