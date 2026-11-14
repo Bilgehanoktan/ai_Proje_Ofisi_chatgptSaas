@@ -1,0 +1,3 @@
+# Teknik katalog — indeks
+Yetkili kayıtlar: [v1 MD](../docs/0158/AI_Company_OS_TEKNIK_KATALOG_v1.md), [v1 JSON](../docs/0158/AI_Company_OS_TEKNIK_KATALOG_v1.json), [v1.14](../docs/0158/TEKNIK_KATALOG_DELTA_v1_14.md), [v1.15 ek](../docs/0158/TEKNIK_KATALOG_DELTA_v1_15_EK_ADAY.md), [v1.16](../docs/0158/TEKNIK_KATALOG_DELTA_v1_16.md), [v1.17](../docs/0158/TEKNIK_KATALOG_DELTA_v1_17.md).
+[Dosya envanteri](FILE_CATALOG.md) · [0159-A düzen değişikliği](../docs/0159A/CHANGE_RECORD.md). Sınıf, fonksiyon, API, DB, olay, hata ve bağımlılık indekslerinin ayrıştırılması sonraki iş; mevcut kataloglar değiştirilmez.
