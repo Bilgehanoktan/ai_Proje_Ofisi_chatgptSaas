@@ -4,3 +4,5 @@
 [0161 ek](../0161/ARCHITECTURE_ADDENDUM.md). Tam master önceki 0160 byte-exact prefix + 0161 ek olarak teslim edilir.
 
 [0162-A tasarım eki](../0162A/ARCHITECTURE_ADDENDUM.md) — öneri, R8 kaynakları değişmedi; normatif kabul değil.
+
+[0162-B C çalışma kararı](../../decisions/CEO/CEO_WORK_MODE_20261114_C.md) · [uygulama hazırlığı](../0162B/IMPLEMENTATION_CONTRACT.md). R8 kaynak değişmedi; normatif kabul yok.

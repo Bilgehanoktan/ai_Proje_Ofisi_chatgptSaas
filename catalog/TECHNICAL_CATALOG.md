@@ -4,3 +4,5 @@
 0161 ekleri: [değişiklik](../docs/0161/CHANGE_RECORD.md), [kanıt](../docs/0161/TEST_EVIDENCE.md), [owner pin](../contracts/OWNER_REVIEW_0161.json). R11 budget ve finance projection, R03 admission readback, R07 IV receipt ve R04 freshness adayları; no IO/authority.
 
 [0162-A inceleme deltası](revisions/TECHNICAL_REVIEW_0162A.json) — v1.21-A aday inceleme; v1.20 kaynak kataloğu ve 122 kaynak kaydı değişmedi.
+
+0162-B: [önerilen dosya kapsamı](../docs/0162B/SOURCE_SCOPE_PROPOSAL.json) · [uygulama sözleşmesi](../docs/0162B/IMPLEMENTATION_CONTRACT.md). Source catalogue v1.20 and review v1.21-A unchanged; proposed paths not actual modules.
