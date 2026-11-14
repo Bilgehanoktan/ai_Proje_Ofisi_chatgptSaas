@@ -1,5 +1,2 @@
 # Yol haritası
-1. 0159-A: repo indeksleri ve klasör sınırları.
-2. 0159-B aday: W5 D08/D21 model gateway, skill/capability; D09/R10 memory, provenance ve tombstone; dış çağrı yok.
-3. Sonraki geçişler: import ve sahiplik envanteri, taşıma ve davranış değişikliği ayrı commit, sözleşme pinleri, rollback. R03 fiziksel eşleme ve R06 sahiplik HOLD.
-Kaynak: docs/0158/SONRAKI_TUR_PLANI_0158.md.
+0159-A kök indeksleri tamam; 0159-B W5 adayları, statik kataloglar, pin ve dependency inventory tamam. 0160 W1/W4/W6/W7 inceleme ve ayrı move planı. R03/R06/T01/independent acceptance HOLD. [Geçiş planı](docs/architecture/MIGRATION_PLAN_0159B.md) · [Next](handover/NEXT_STEP.md).

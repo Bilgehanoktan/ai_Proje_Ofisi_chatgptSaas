@@ -1,2 +1,2 @@
-# Releases — indeks
-[0158 teslimat manifesti](../docs/0158/MANIFEST_0158.json), [kaynak manifesti](../product/SOURCE_MANIFEST.json). Tam tarihsel ZIP dosyaları Git dışında tam proje teslimatında saklanır; release veya PROD etkin değil.
+# Releases — current index
+[0159-B source manifest](SOURCE_MANIFEST_0159B.json): 84 candidate product files. [0158 manifest](../product/SOURCE_MANIFEST.json) unchanged. Full historical ZIP chain kept in offline delivery, not replaced by Git. No accepted release or PROD.

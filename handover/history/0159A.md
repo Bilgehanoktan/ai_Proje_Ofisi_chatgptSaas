@@ -1,0 +1,2 @@
+# Güncel devir — 0159-A
+Ürün 0158/R5; parent 0e0b8da3007dc75a0ea7bcb9f653ba7ca0c326b4; dal recovery/0159-structure. [Özgün devir](../docs/0158/AI_Company_OS_GUNCEL_DEVIR_KAYDI.md). [Değişiklik](../docs/0159A/CHANGE_RECORD.md). 72 kaynak korunur; 36 test adayı NOT_RUN. T01 HOLD, normatif CODE/REPO/DEV 0/3; dar repo istisnaları kayıtlı. R03 beşinci tablo UNKNOWN, owner 0/16, canonical 0/55. [Sonraki adım](NEXT_STEP.md).

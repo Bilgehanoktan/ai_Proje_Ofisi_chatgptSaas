@@ -1,2 +1,2 @@
-# 0159-B sonraki adım
-[0158 planı](../docs/0158/SONRAKI_TUR_PLANI_0158.md) doğrultusunda W5 model gateway, skill resolver ve memory provenance/tombstone kaynak adaylarını hedef backend app/engines altında planla. Mevcut core dosyalarını taşıma. W4 R03, W6 IV, W1 layout join ve R06 sahiplik açık. Gerçek adapter çağrısı, DB, CI ve TEST yok; yetki sınırlarını koru.
+# 0160 — sonraki adım
+W1 frontend component extraction plan with exact path/contract pins; preserve current routes and geometry semantics. W4 R03/R01 physical mapping and authoritative transaction/readback owner; W6 R07 independent verification/receipt; W7 R11 budget/telemetry candidate; W2 R06 ownership and W8 evidence. D0 only. First review 0159-B restrictions and source/catalog manifests, then separate move-only and behavior commits. No true provider, DB writes, CI, TEST, PROD or main merge without separate acceptance.

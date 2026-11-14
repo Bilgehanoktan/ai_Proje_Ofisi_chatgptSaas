@@ -1,3 +1,3 @@
-# Teknik katalog — indeks
-Yetkili kayıtlar: [v1 MD](../docs/0158/AI_Company_OS_TEKNIK_KATALOG_v1.md), [v1 JSON](../docs/0158/AI_Company_OS_TEKNIK_KATALOG_v1.json), [v1.14](../docs/0158/TEKNIK_KATALOG_DELTA_v1_14.md), [v1.15 ek](../docs/0158/TEKNIK_KATALOG_DELTA_v1_15_EK_ADAY.md), [v1.16](../docs/0158/TEKNIK_KATALOG_DELTA_v1_16.md), [v1.17](../docs/0158/TEKNIK_KATALOG_DELTA_v1_17.md).
-[Dosya envanteri](FILE_CATALOG.md) · [0159-A düzen değişikliği](../docs/0159A/CHANGE_RECORD.md). Sınıf, fonksiyon, API, DB, olay, hata ve bağımlılık indekslerinin ayrıştırılması sonraki iş; mevcut kataloglar değiştirilmez.
+# Teknik katalog — güncel giriş
+[0159-B v1.18](TECHNICAL_CATALOG.md) · [Dosya](FILE_CATALOG.json) · [Modül](MODULE_CATALOG.json) · [Sınıf](CLASS_CATALOG.json) · [Fonksiyon](FUNCTION_CATALOG.json) · [Bağımlılık](DEPENDENCY_CATALOG.json) · [Frontend](FRONTEND_CATALOG.json) · [API](API_CATALOG.json) · [DB](DATABASE_CATALOG.json) · [Olay](EVENT_CATALOG.json) · [Hata](ERROR_CATALOG.json) · [Güvenlik](SECURITY_CATALOG.json) · [Test](TEST_CATALOG.json) · [İzlenebilirlik](TRACEABILITY_MATRIX.json).
+Geçmiş [v1](../docs/0158/AI_Company_OS_TEKNIK_KATALOG_v1.md) ve [v1.17](../docs/0158/TEKNIK_KATALOG_DELTA_v1_17.md) korunur. Statik indeksler gerçek kabul değildir.

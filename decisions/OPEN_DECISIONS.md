@@ -1,0 +1,2 @@
+# Açık kararlar
+T01 normative CODE/REPO/DEV 0/3, independent approval HOLD; 0158 import and controlled candidate branch are narrow user permissions. R03 fifth physical readback UNKNOWN; DBA/Runtime/Security/Finance owner; R06 schema custodian 0/16, canonical fields 0/55; R07 independent root/receipt; R08 license/receipt, R10 retention/ACL and restore witness; W1 layout join HOLD; R11 budget. Prior CEO-19-01=C, CEO-19-02=B, GOV-00=B and ADR T1/R1/IV/F3 preserved. No new ratification.
