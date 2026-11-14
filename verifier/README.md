@@ -1,2 +1,2 @@
-# Independent Verifier — rezerv
-QA'dan bağımsız trust root, admin, recovery ve yürütme sınırı gerekir. Mevcut aday core/iv_review.py. Klasör tek başına bağımsızlık kanıtı değil.
+# Independent Verifier — 0160
+Ürün policy/iv_review.py yalnız inceleme adayı. Burada gerçek bağımsız güven kökü, admin, recovery ve yürütme ortamı ayrı kurulacak; bu tur yok. QA, IV ve release ayrıdır.

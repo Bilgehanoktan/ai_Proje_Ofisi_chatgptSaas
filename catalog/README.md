@@ -1,3 +1,2 @@
-# Teknik katalog — güncel giriş
-[0159-B v1.18](TECHNICAL_CATALOG.md) · [Dosya](FILE_CATALOG.json) · [Modül](MODULE_CATALOG.json) · [Sınıf](CLASS_CATALOG.json) · [Fonksiyon](FUNCTION_CATALOG.json) · [Bağımlılık](DEPENDENCY_CATALOG.json) · [Frontend](FRONTEND_CATALOG.json) · [API](API_CATALOG.json) · [DB](DATABASE_CATALOG.json) · [Olay](EVENT_CATALOG.json) · [Hata](ERROR_CATALOG.json) · [Güvenlik](SECURITY_CATALOG.json) · [Test](TEST_CATALOG.json) · [İzlenebilirlik](TRACEABILITY_MATRIX.json).
-Geçmiş [v1](../docs/0158/AI_Company_OS_TEKNIK_KATALOG_v1.md) ve [v1.17](../docs/0158/TEKNIK_KATALOG_DELTA_v1_17.md) korunur. Statik indeksler gerçek kabul değildir.
+# Teknik katalog — 0160
+[Technic v1.19](TECHNICAL_CATALOG.md) · [Relocation map](RELOCATION_MAP_0160.json) · [114 dosya](FILE_CATALOG.json). Kataloglar source manifest ve statik AST ile eşlenir; runtime kabul değildir.

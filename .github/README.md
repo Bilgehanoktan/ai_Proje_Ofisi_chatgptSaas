@@ -1,2 +1,2 @@
-# GitHub yönetimi — rezerv
-PR ve issue şablonları sonraki adım. Aktif workflow yok; CODEOWNERS ve branch protection gerçek sahiplik kararı gerektirir. Main merge yok.
+# GitHub yönetimi — 0160
+Issue/PR şablonları var; aktif workflow yok. Main branch değişmez, recovery adayları ayrı. CODEOWNERS/branch protection ve CI ayrı yetki ve gerçek owner gerektirir.

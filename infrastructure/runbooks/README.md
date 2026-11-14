@@ -1,2 +1,2 @@
-# Runbook reservation
-Source diagnosis and rollback: docs/maintenance/README.md. Real monitoring, backup/restore, deployment and secret configuration not implemented or authorized. No active infrastructure definitions.
+# infrastructure/runbooks — sorumluluk sınırı
+Bakım/teşhis/rollback dokümanları docs altında; gerçek operasyon yok.

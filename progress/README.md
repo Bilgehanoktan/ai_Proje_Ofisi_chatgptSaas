@@ -1,2 +1,2 @@
-# 24 alan ilerleme indeksi
-[0159-B MD](DEVELOPMENT_TRACKER_24.md) · [JSON](DEVELOPMENT_TRACKER_24.json). 0158 v8 [MD](../docs/0158/GELISTIRME_ILERSLEME_24_v8.md) korunur. Source maturity 9 and 13 0→25; real TEST NOT_RUN. [Next](../handover/NEXT_STEP.md).
+# 24 alan — 0160
+[Tracker MD](DEVELOPMENT_TRACKER_24.md) · [JSON](DEVELOPMENT_TRACKER_24.json) · [W1–W8](WORKSTREAMS/README.md) · [0159-B](history/0159B.md). Refactor kaynak olgunluğunu otomatik yükseltmez; puanlar aynı.

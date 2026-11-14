@@ -1,2 +1,2 @@
-# Maintenance / troubleshooting
-Start at [technical catalog](../../catalog/TECHNICAL_CATALOG.md); locate source path, hash, import, symbol, diagnostic, relevant test candidate and D/R decision. Compare exact parent and current source manifests; distinguish D0 reference mismatch from real production errors (no production). Do not reset witness/tombstone or re-enable expired grants. For rollback use previous candidate Git commit and full ZIP; no force push or DB restore.
+# Bakım
+Önce CURRENT ve source manifest, sonra FILE/MODULE/FUNCTION katalog ve RELOCATION_MAP. Yeni kodu canonical path üzerinde değiştir; facade ve pinleri birlikte koru. Eski hashleri tarihsel kayıt olarak tut.

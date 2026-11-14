@@ -1,7 +1,7 @@
 # Değişiklik geçmişi
+## 0160
+16 Python core modülü, API ve 5 frontend modülü yeni kanonik dizinlere; 2 Dashboard bileşeni ayrıldı. Uyumluluk facade, manifest 114 kayıt, katalog v1.19. Statik kanıt; gerçek TEST NOT_RUN.
 ## 0159-B
-12 yeni W5 Python dosyası (6 modül, 5 initializer, 1 test); 84 kaynak kaydı. Statik katalog ayrıştırma, contract pin ve frontend inventory, devir/ilerleme güncellendi. Gerçek TEST NOT_RUN.
-## 0159-A
-Eklemeli klasör standardı ve merkezi indeksler. Ürün kaynakları taşınmadı; davranış değişmedi. Gerçek test NOT_RUN.
-## 0158
-Bkz. docs/0158/README_0158.md, SOURCE_CHANGESET_0158.json ve TEST_EVIDENCE_0158.md.
+Model, skill, memory kaynak adayları; katalog v1.18. Bkz. docs/0159B/CHANGE_RECORD.md.
+## 0159-A / 0158
+Eklemeli repo düzeni ve R5 kaynakları; tarihsel kayıtlar docs/0159A ve docs/0158.
