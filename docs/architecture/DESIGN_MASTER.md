@@ -33,3 +33,6 @@
 
 ## 0170
 [Phase 01 dependency preflight and remote integrity evidence](../0170/PHASE01_DEPENDENCY_AUDIT.md). No architecture or product authority change.
+
+## 0171
+[Phase 01 exact readback candidate](../0171/PHASE01_READBACK_CANDIDATE.md). Quarantine only; product/authority unchanged.
