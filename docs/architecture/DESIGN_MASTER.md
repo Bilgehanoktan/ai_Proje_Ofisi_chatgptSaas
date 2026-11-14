@@ -30,3 +30,6 @@
 
 ## 0169
 [Sequential acceptance program](../0169/PHASE01_PREFLIGHT.md). R11 product baseline unchanged; authority and independent gates retained.
+
+## 0170
+[Phase 01 dependency preflight and remote integrity evidence](../0170/PHASE01_DEPENDENCY_AUDIT.md). No architecture or product authority change.
