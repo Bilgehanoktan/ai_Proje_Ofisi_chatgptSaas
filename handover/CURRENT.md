@@ -14,3 +14,6 @@ Pinned R11 manifest entry SHA-256/length readback 141/141; local archive unavail
 
 # 0171 — phase 01 readback candidate
 Exact quarantined route/panel/Dashboard/smoke and corrected mount patch; patch apply/cmp PASS exact copy, TS parse 3/3, smoke AST PASS. Product unchanged and execution NOT_RUN. [Evidence and remaining closure gates](../docs/0171/PHASE01_READBACK_CANDIDATE.md). Phase 01 ACTIVE_BLOCKED, phase 02 waits.
+
+# 0172 — R12 product source integration
+0171 exact route, panel, Dashboard mount and root smoke helper promoted. 4/4 Git blob readback; 143 manifest entries, 144 product files. Source commit 2aeaf363c2588cb4c477cb43f1b4fa5dcdcab2fb. [Integration and local setup](../docs/0172/READBACK_INTEGRATION.md) · [readback](../releases/GITHUB_READBACK_0172.json). Phase 01 ACTIVE_BLOCKED; install, actual DEV/TEST, build and runtime NOT_RUN; phase 02 waits.
