@@ -1,2 +1,2 @@
-# 0162-E — current handover
-H01 integration request recorded; exact UI-04/05 scope pinned. Product R8 unchanged, 123/123 blobs. P02-P05 HOLD; no independent reviewer, PRE, T01 grant or source change. 65+24 tests NOT_RUN. [Scope](../docs/0162E/SCOPE_0162E.json) · [PRE checklist](../docs/0162E/PRE_REVIEW.md) · [previous 0162-D](history/0162D_CURRENT.md).
+# 0162-F — iç ajan incelemesi yönü
+H01 iç ajan incelemesi talebi kaydedildi. [ADR](../docs/0162F/ADR_AGENT_REVIEW.md) öneri; mevcut T01/T06 normu yürürlükte. R8 değişmedi. 0162-E dört dosya entegrasyon scope korunur. Gerçek ajan yürütmesi/receipt yok. Dar sentetik UI bootstrap normatif değişiklik ve grant bekler. 65+24 test NOT_RUN.
