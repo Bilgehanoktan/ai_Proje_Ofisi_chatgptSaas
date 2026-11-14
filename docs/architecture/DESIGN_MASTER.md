@@ -27,3 +27,6 @@
 
 ## 0168 local MVP execution path
 [Parallel DAG, scope and evidence](../0168/LOCAL_MVP_PARALLEL.md). R11 normative source remains unchanged; no new runtime or acceptance authority.
+
+## 0169
+[Sequential acceptance program](../0169/PHASE01_PREFLIGHT.md). R11 product baseline unchanged; authority and independent gates retained.
