@@ -38,3 +38,6 @@ Parallel Python/Node lock/install and backend/frontend verification only after a
 
 ## 0169 next
 Full pinned R11 archive ZIP preflight and extracted tree check; applicable isolated DEV/TEST and independent PRE; lock/install Python + Node in parallel, backend and frontend tests, then API readback/snapshot. Phase 02 starts after Phase 01 acceptance. [Sequence](../docs/0169/PHASE01_PREFLIGHT.md).
+
+## 0170 next
+Local archive preflight and independent scope remain blockers; no need to repeat the verified remote R11 readback unless pin changes. After applicable DEV/TEST authority, review transitive locks and perform clean dependency install, backend/frontend checks, readback integration. [Audit](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md).
