@@ -1,5 +1,5 @@
 # Windows local MVP — source preparation only
-Download the pinned commit archive, extract to a new empty directory, do not mix old projects. Use Python 3.11/3.12 candidate, Node 22 LTS candidate and npm. Versions are proposed, not verified compatible. Before dependencies run `py -3 scripts/verify_product.py --root . --manifest-blob <PIN_FROM_RELEASE_READBACK>` or `powershell -NoProfile -File .\scripts\Prepare-Local.ps1 -RepoRoot . -ManifestBlob <PIN_FROM_RELEASE_READBACK>`. No product import. Expected 141 source entries, 142 product files. Do this before creating venv/node_modules/.next under product. Do not proceed on mismatch.
+Download the pinned commit archive, extract to a new empty directory, do not mix old projects. Use Python 3.11/3.12 candidate, Node 22 LTS candidate and npm. Versions are proposed, not verified compatible. Before dependencies run `py -3 scripts/verify_product.py --root . --manifest-blob 337d4fa90bd93b2119da4cd7f6eba193e93d18fe` or `powershell -NoProfile -File .\scripts\Prepare-Local.ps1 -RepoRoot . -ManifestBlob 337d4fa90bd93b2119da4cd7f6eba193e93d18fe`. No product import. Expected 141 source entries, 142 product files. Do this before creating venv/node_modules/.next under product. Do not proceed on mismatch.
 
 ## Next phase — only after applicable D0 sandbox execution authorization
 1. From repo root, create a separate Python virtualenv outside product: `py -3.12 -m venv .venv` then ` .\.venv\Scripts\python.exe -m pip install -r product\ai-company-os-backend\requirements.txt`. Pins fastapi 0.115.12, uvicorn 0.34.2; transitive lock absent. No external provider credentials.
@@ -10,3 +10,7 @@ Download the pinned commit archive, extract to a new empty directory, do not mix
 
 ## Current blockers
 Container has Python 3.13.5, Node 22.16.0, npm 10.9.2; existing FastAPI 0.128.2 / Uvicorn 0.48.0 differ from pins, Next/React/Phaser not installed; direct GitHub DNS failed. GitHub connector verified source only. No runtime execution, no installation, no smoke tests. User PC access not available. Old AGENTS T01/DEV/TEST gates remain; this guide is not a grant. Real isolated D0 execution scope needs applicable authority.
+
+## Pinned source archive
+https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/archive/f716591be84188d792f8a95ea3995a956208b51d.zip
+This is a complete repository snapshot at the source integration commit (not an exported historical ZIP chain). The local source-preparation package is a delta; do not treat it as the full repo.
