@@ -6,3 +6,7 @@
 [0162-A inceleme deltası](revisions/TECHNICAL_REVIEW_0162A.json) — v1.21-A aday inceleme; v1.20 kaynak kataloğu ve 122 kaynak kaydı değişmedi.
 
 0162-B: [önerilen dosya kapsamı](../docs/0162B/SOURCE_SCOPE_PROPOSAL.json) · [uygulama sözleşmesi](../docs/0162B/IMPLEMENTATION_CONTRACT.md). Source catalogue v1.20 and review v1.21-A unchanged; proposed paths not actual modules.
+
+
+## 0162-D static review
+[12 open findings](revisions/TECHNICAL_REVIEW_0162D.json) · [55 OfficeV0 crosswalk](../docs/0162D/OFFICE_FIELD_CROSSWALK_55.json) · [20 backend crosswalk](../docs/0162D/BACKEND_CROSSWALK_20.json). No product or API/DB/dependency changes.

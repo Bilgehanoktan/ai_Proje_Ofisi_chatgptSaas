@@ -1,0 +1,229 @@
+{
+  "status": "UPDATED_PARTIAL_CROSSWALK_NOT_RATIFIED",
+  "owner_accepted": 0,
+  "owner_total": 16,
+  "canonical_accepted": 0,
+  "canonical_total": 55,
+  "rows": [
+    {
+      "id": "0162-F1",
+      "pin": "NS-C2",
+      "canonical_field": "run_id/task_id/scope",
+      "existing": "Scope + RunObservation",
+      "issue": "attempt and full authority admission binding not canonical",
+      "status": "HOLD",
+      "review_0162c": "TerminalPin.scope/attempt",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F2",
+      "pin": "NS-C2",
+      "canonical_field": "admission_receipt_sha256",
+      "existing": "AdmissionPin.admission_id",
+      "issue": "ID is not digest or verified receipt",
+      "status": "HOLD",
+      "review_0162c": "AdmissionPin.admission_id only",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F3",
+      "pin": "NS-C2",
+      "canonical_field": "grant_decision_sha256",
+      "existing": "LogicalIntent.grant_ref",
+      "issue": "reference is not decision digest",
+      "status": "HOLD",
+      "review_0162c": "LogicalIntent.grant_ref only",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F4",
+      "pin": "NS-C2",
+      "canonical_field": "budget_reservation_id",
+      "existing": "ReservationRequest.budget_id",
+      "issue": "budget vs reservation identity conflated",
+      "status": "HOLD",
+      "review_0162c": "TerminalPin.reservation_id; not admission proof",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F5",
+      "pin": "NS-C2",
+      "canonical_field": "lease_expires_at_utc",
+      "existing": "LeaseObservation.expires_tick",
+      "issue": "synthetic tick not UTC authoritative clock",
+      "status": "HOLD",
+      "review_0162c": "LeaseObservation.expires_tick only",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F6",
+      "pin": "NS-C2",
+      "canonical_field": "task_state",
+      "existing": "RunObservation.state",
+      "issue": "task vs run semantics need owner",
+      "status": "HOLD",
+      "review_0162c": "RunObservation.state not TaskState",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F7",
+      "pin": "NS-C2",
+      "canonical_field": "requested_effect",
+      "existing": "LogicalIntent.effect_key",
+      "issue": "key is not effect scope payload",
+      "status": "HOLD",
+      "review_0162c": "LogicalIntent.effect_key only",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F8",
+      "pin": "NS-C3",
+      "canonical_field": "expected_version/new_version",
+      "existing": "LogicalIntent.expected_version",
+      "issue": "no verified postcommit new version",
+      "status": "HOLD",
+      "review_0162c": "MutationBinding.expected_version/new_version; HeadReadback",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F9",
+      "pin": "NS-C3",
+      "canonical_field": "before_sha256/after_sha256",
+      "existing": "RoleObservation.request_digest",
+      "issue": "request digest not state hashes",
+      "status": "HOLD",
+      "review_0162c": "MutationBinding.before_digest/after_digest; no bytes",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F10",
+      "pin": "NS-C3",
+      "canonical_field": "t1_transaction_id",
+      "existing": "RoleObservation.transaction_ref",
+      "issue": "caller string not actual atomic commit",
+      "status": "HOLD",
+      "review_0162c": "TerminalPin.transaction_ref caller ref",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F11",
+      "pin": "NS-C3",
+      "canonical_field": "outbox_event_id",
+      "existing": "OutboxObservation.event_id/outbox_id",
+      "issue": "no terminal mutation cross-binding",
+      "status": "HOLD",
+      "review_0162c": "TerminalPin.event_id/outbox_id; owner semantics open",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F12",
+      "pin": "KS-C7",
+      "canonical_field": "logical_effect_key/idempotency_key/outbox_intent_id",
+      "existing": "FenceObservation",
+      "issue": "outbox identity missing",
+      "status": "HOLD",
+      "review_0162c": "ReconciliationPin effect_key/idempotency_key/outbox_id",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F13",
+      "pin": "KS-C7",
+      "canonical_field": "provider_outcome/reconcile_cursor",
+      "existing": "OutboxObservation.phase/reconciliation_ref",
+      "issue": "classification not resolved evidence or cursor",
+      "status": "HOLD",
+      "review_0162c": "ReconciliationPin.outcome/cursor claim only",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F14",
+      "pin": "NS-C7",
+      "canonical_field": "economic_event_id/source_evidence_sha256",
+      "existing": "BudgetSnapshot.source_digest",
+      "issue": "no settlement economic event or receipt",
+      "status": "HOLD",
+      "review_0162c": "SettlementPin.economic_event_id/outcome_evidence_digest",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F15",
+      "pin": "NS-C7",
+      "canonical_field": "original_amount_decimal/currency",
+      "existing": "ReservationRequest.amount_minor/currency",
+      "issue": "rounding/currency owner and decimal mapping open",
+      "status": "HOLD",
+      "review_0162c": "SettlementPin.actual_minor/currency; no decimal owner",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F16",
+      "pin": "KS-C3",
+      "canonical_field": "signature_ref/issuer_principal_id",
+      "existing": "ReceiptPin.signer_id/key_id",
+      "issue": "no signature verification",
+      "status": "HOLD",
+      "review_0162c": "ReceiptPin unchanged; signature absent",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F17",
+      "pin": "KS-C3",
+      "canonical_field": "valid_until_utc/trust_domain",
+      "existing": "ReceiptPin.valid_until_tick/issuer_root",
+      "issue": "no trusted time/custody",
+      "status": "HOLD",
+      "review_0162c": "ReceiptPin tick/root not trusted custody",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F18",
+      "pin": "KS-C4",
+      "canonical_field": "committed_at_utc/source_issuer",
+      "existing": "CausalObservation",
+      "issue": "no committed time or issuer proof",
+      "status": "HOLD",
+      "review_0162c": "ReconciliationPin.observed_at_ref/issuer not committed UTC",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F19",
+      "pin": "KS-C1",
+      "canonical_field": "scope_revision/actor_principal_id",
+      "existing": "Scope.plan_revision/principal_id",
+      "issue": "scope revision distinct from plan revision",
+      "status": "HOLD",
+      "review_0162c": "Scope.plan_revision/principal_id not canonical scope revision",
+      "owner_receipt": null,
+      "canonical_binding": null
+    },
+    {
+      "id": "0162-F20",
+      "pin": "NS-C5",
+      "canonical_field": "verifier_receipt_sha256/release_status",
+      "existing": "ReceiptPin.receipt_id",
+      "issue": "receipt ID not digest, no release acceptance",
+      "status": "HOLD",
+      "review_0162c": "TerminalPin.receipt_digest shape; no release status",
+      "owner_receipt": null,
+      "canonical_binding": null
+    }
+  ]
+}

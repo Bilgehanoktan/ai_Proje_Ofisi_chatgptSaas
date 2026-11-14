@@ -6,3 +6,6 @@
 [0162-A tasarım eki](../0162A/ARCHITECTURE_ADDENDUM.md) — öneri, R8 kaynakları değişmedi; normatif kabul değil.
 
 [0162-B C çalışma kararı](../../decisions/CEO/CEO_WORK_MODE_20261114_C.md) · [uygulama hazırlığı](../0162B/IMPLEMENTATION_CONTRACT.md). R8 kaynak değişmedi; normatif kabul yok.
+
+
+[0162-C local package reference](../0162C/LOCAL_PACKAGE_REFERENCE.json) · [0162-D static review](../0162D/ARCHITECTURE_ADDENDUM.md). R8 product remains; no normative change.

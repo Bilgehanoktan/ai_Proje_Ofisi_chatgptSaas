@@ -4,3 +4,6 @@ W3/W4 R01/R02: terminal mutation ve outbox intent/receipt binding, UNKNOWN recon
 0162-A review: [tasarım](../docs/0162A/ARCHITECTURE_ADDENDUM.md) · [devir](../docs/0162A/HANDOVER.md). R8 current remains; next implementation blocked by unresolved T01 and explicit bounded scope. Main merge not authorized.
 
 0162-B: C kaydedildi; [devir](../docs/0162B/HANDOVER.md), [yetki hazırlığı](../security/evidence/AUTH_PREP_0162B.json). Dar kapsam ve PRE/POST/T01 açık. C tekrar sorulmaz.
+
+
+0162-D: [next 0162-E](../docs/0162D/NEXT_STEP.md). No source transfer until applicable authority.
