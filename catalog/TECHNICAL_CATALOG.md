@@ -30,3 +30,6 @@
 
 ## 0169
 Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main; Python stdlib) and `tests/test_verify_source_zip.py` (10 helper fixture checks). No product API/DB/events/dependency changes. [Evidence and rollback](../docs/0169/PHASE01_PREFLIGHT.md).
+
+## 0170
+`audit_local_dependencies.py`: read_safe, unique, parse_requirements, parse_package, installed_python, installed_node, rows, optional_lock, audit, main; Python stdlib only. `test_audit_local_dependencies.py`: 14 synthetic checks. No product API/DB/events/dependency version change. [Evidence and rollback](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md).
