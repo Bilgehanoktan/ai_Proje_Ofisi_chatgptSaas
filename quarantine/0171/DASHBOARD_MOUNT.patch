@@ -1,9 +1,15 @@
 diff --git a/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx b/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx
 --- a/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx
 +++ b/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx
-@@ -15,1 +15,2 @@
+@@ -14,4 +14,5 @@
+ import OperationPanel,{type Panel} from '../../components/dashboard/OperationPanel';
  import DevelopmentReviewPanel from '../../components/dashboard/DevelopmentReviewPanel';
 +import LocalReadbackPanel from '../../components/dashboard/LocalReadbackPanel';
-@@ -52,1 +53,2 @@
+ 
+ type Station=SnapshotFloor['stations'][number];
+@@ -51,4 +52,5 @@
+  <main id="main-content" tabIndex={-1}><header className="topline"><div><div className="eyebrow">AI COMPANY / KONTROL MERKEZİ</div><h1>{currentView==='Genel Bakış'?'CEO Command Center':currentView}</h1><div className="sub">Tek insan CEO · dört çekirdek rol · {version}</div></div><div className="chips">{officeOnly&&<Link className="action-link" href="/">← CEO paneli</Link>}<span className="pill">D0 DEMO · STATIC_ONLY</span></div></header>
   <div className="notice">Sentetik görünüm. Gerçek ajan, görev, gelir, onay veya bağımsız kanıt yok. SOURCE_BOOTSTRAP_ONLY · LIVE_UNAUTHORIZED · T01 HOLD.</div>
 + <LocalReadbackPanel/>
+  {overview?<><SnapshotStrip/>{!officeOnly&&<MetricsStrip/>}<div className="workspace"><OfficePanel floors={fixture.floors} floorId={floorId} onFloor={changeFloor} display={display} onDisplay={changeDisplay} officeOnly={officeOnly} stations={stationList()} demoFloor={demoFloor} layoutRevision={String(core.layout.revision)} snapshotRevision={String(fixture.layout_revision)} geometryReason={demoLayout.ok?'Kat bulunamadı':demoLayout.reason}/><OperationPanel panel={panel} onPanel={setPanel} stations={stationList()} detail={details}/></div></>:currentView==='AI Çalışanlar'?<section className="panel"><h2>Çekirdek rol şablonları</h2><div className="agentgrid">{ui.roles.map(r=><RoleButton key={r.id} role={r} pressed={role?.id===r.id} onSelect={()=>openRole(r)}/>)}</div>{details}</section>:<section className="panel"><h2>{currentView} · Durum kataloğu</h2><div className="sectiongrid">{(sections[currentView]??[]).map(x=><article className="item" key={x.title}><h3>{x.title}</h3><p>{x.description}</p><div className="status">{x.status}</div></article>)}</div></section>}
+  {!officeOnly&&(overview||['İş ve Denetim','Güvenlik','Olaylar'].includes(currentView))&&<CorePreview/>}
