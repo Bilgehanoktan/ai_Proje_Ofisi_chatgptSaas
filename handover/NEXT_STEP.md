@@ -44,3 +44,6 @@ Local archive preflight and independent scope remain blockers; no need to repeat
 
 ## 0171 next
 No repeated source-only loop. Full local pinned R11 archive and applicable independent PRE/DEV/TEST + exact 0171 scope, review locks and install, actual backend/frontend/smoke/browser evidence. Then phase 01 acceptance and phase 02. [0171](../docs/0171/PHASE01_READBACK_CANDIDATE.md).
+
+## 0172 next
+Use pinned R12 source archive and manifest ebef091334ec91b0739686fb1ef0d8dc5a14a4dc. No further source-only readback work needed. Review applicable independent PRE/DEV/TEST, obtain clean local environment and dependency locks, run backend tests, seven smoke cases, frontend typecheck/build/browser and positive/negative readback. Close phase 01 only on actual evidence; then phase 02 Agent Runtime. [R12 instructions](../docs/0172/READBACK_INTEGRATION.md).
