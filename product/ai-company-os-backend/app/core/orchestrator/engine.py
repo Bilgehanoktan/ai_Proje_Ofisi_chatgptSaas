@@ -1,8 +1,8 @@
 """Pure D0 plan compiler. No dispatch, task writes, workers or external I/O."""
 import hashlib
 import json
-from .dag import Task, GraphError, valid_id, topological_waves, validate_release_boundary
-from .security import EffectRequest, deny_effect
+from app.core.task_engine.dag import Task, GraphError, valid_id, topological_waves, validate_release_boundary
+from app.core.policy.denial import EffectRequest, deny_effect
 
 SCOPE = {"tenant_id": "synthetic-tenant", "environment_id": "A0_SAMPLE_ONLY"}
 
