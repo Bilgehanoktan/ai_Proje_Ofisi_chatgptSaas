@@ -36,3 +36,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0171
 Quarantine source: readback route `canonical/read/GET`, panel `record/parseReadback/LocalReadbackPanel/inspect`, Dashboard two insertions, smoke `NoRedirect/get/main`. Candidate GET only, no DB/event/dependency changes. [Scope, evidence and rollback](../docs/0171/PHASE01_READBACK_CANDIDATE.md).
+
+## 0172 — R12 integrated source
+[Machine-readable catalog delta](revisions/TECHNICAL_CATALOG_0172.json): Next GET /api/local-mvp/readback, manual LocalReadbackPanel mount in Dashboard, root smoke helper. No DB/events/dependency changes. [Maintenance/rollback and tests](../docs/0172/READBACK_INTEGRATION.md).
