@@ -41,3 +41,6 @@ Full pinned R11 archive ZIP preflight and extracted tree check; applicable isola
 
 ## 0170 next
 Local archive preflight and independent scope remain blockers; no need to repeat the verified remote R11 readback unless pin changes. After applicable DEV/TEST authority, review transitive locks and perform clean dependency install, backend/frontend checks, readback integration. [Audit](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md).
+
+## 0172 next
+W1: exact Dashboard/Office chrome source scope and independent PRE; contrast review, then authorized integration. Phase 01 archive/locks/DEV/TEST remain active in parallel. No phase advancement.

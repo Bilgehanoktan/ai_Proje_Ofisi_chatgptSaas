@@ -23,3 +23,6 @@
 
 ## 0167 — R11 local MVP source
 [Setup](docs/0167/LOCAL_MVP_SETUP.md) · [Architecture](docs/0167/ARCHITECTURE_ADDENDUM.md) · [Scope](security/policy/SCOPE_0167.json) · [Preflight](scripts/verify_product.py) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0167.md).
+
+## 0172 — EDS
+[Architecture](docs/0172/ARCHITECTURE_ADDENDUM.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0172.md) · [Progress](docs/0172/PROGRESS.json) · [Candidate](quarantine/0172/eds-shell.css).

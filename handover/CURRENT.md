@@ -11,3 +11,6 @@ Standalone ZIP preflight + test helper exact readback; 10/10 synthetic helper te
 
 # 0170 — phase 01 active
 Pinned R11 manifest entry SHA-256/length readback 141/141; local archive unavailable. Dependency audit helper 14/14 standalone tests; 2 Python pin mismatches, staging Node packages absent, no locks. No product runtime/test. [0170 audit](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md) · [readback](../releases/SOURCE_READBACK_0170.json).
+
+# 0172 — EDS parallel candidate
+User direction recorded in architecture. Scoped CSS candidate quarantined; R11 unchanged; no product tests. [Architecture](../docs/0172/ARCHITECTURE_ADDENDUM.md).

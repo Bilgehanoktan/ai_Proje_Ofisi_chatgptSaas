@@ -33,3 +33,6 @@
 
 ## 0170
 [Phase 01 dependency preflight and remote integrity evidence](../0170/PHASE01_DEPENDENCY_AUDIT.md). No architecture or product authority change.
+
+## 0172 — EDS
+[Executive Design System architecture and implementation plan](../0172/ARCHITECTURE_ADDENDUM.md). W1 parallel, R11 unchanged.
