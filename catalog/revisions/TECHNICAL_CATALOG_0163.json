@@ -1,0 +1,136 @@
+{
+  "revision": "0163",
+  "parent": "0162F/R8",
+  "status": "SOURCE_CANDIDATE_INTEGRATED_NOT_RUN",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "blob": "e648eff2dfdaeb4d420b629fed285e66578c3ff5",
+      "sha256": "9d870a49384e0618cd4f5a80384489321f87760bef5cc73c95bcef68ca392956",
+      "bytes": 1266,
+      "operation": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "blob": "5b2a9eb264de1c9670fb7e0af0919d6e320981df",
+      "sha256": "97eab6148e944ebdf877c39c5ba0ac5b804a1adcd742a0aa6c3fa0fdd0bf4d36",
+      "bytes": 2882,
+      "operation": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "blob": "23bfc5ddc0c93ac65d5e46fb3b5d5617ca05cdc8",
+      "sha256": "10707538997f9022444d62e431d242440592e835c889b55cdbe5762ad0a9eb02",
+      "bytes": 871,
+      "operation": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "150153956b08eacd4d730d0cadc575ca2be9b1aa",
+      "sha256": "db5b8fe4debe42d5812e1f0a0fb7b7798594135cbaa077467f32c0a93e68a2f5",
+      "bytes": 6960,
+      "operation": "REPLACE"
+    }
+  ],
+  "symbols": [
+    {
+      "file": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "exports": [
+        "Role (type)",
+        "RoleButton",
+        "AgentDetail (default)"
+      ],
+      "purpose": "controlled role selection and details",
+      "dependencies": [
+        "features/uiCatalog.json"
+      ]
+    },
+    {
+      "file": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "exports": [
+        "SnapshotFloor (type)",
+        "Display (type)",
+        "OfficePanel (default)"
+      ],
+      "purpose": "controlled floor/display and isolated static geometry",
+      "dependencies": [
+        "react (type)",
+        "next/link",
+        "office/scenes/OfficeScene",
+        "office/engine/geometry (type)",
+        "fixtures/office.snapshot.json (type)"
+      ]
+    },
+    {
+      "file": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "exports": [
+        "panelTabs",
+        "Panel (type)",
+        "OperationPanel (default)"
+      ],
+      "purpose": "controlled operation tabs",
+      "dependencies": [
+        "react (type)"
+      ]
+    },
+    {
+      "file": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "exports": [
+        "Dashboard (default)"
+      ],
+      "internal": [
+        "DashboardView",
+        "resetContext",
+        "changeFloor",
+        "changeDisplay",
+        "navigate",
+        "openStation",
+        "openRole",
+        "changeDetail",
+        "stationList"
+      ],
+      "purpose": "single presentation owner, controlled children",
+      "dependencies": [
+        "react",
+        "next/link",
+        "CorePreview",
+        "validateDemoLayout",
+        "core.preview.json",
+        "office.snapshot.json",
+        "company.catalog.json",
+        "uiCatalog.json",
+        "SnapshotStrip",
+        "MetricsStrip",
+        "OfficePanel",
+        "AgentDetail",
+        "OperationPanel"
+      ]
+    }
+  ],
+  "classes": [],
+  "api_delta": [],
+  "database_delta": [],
+  "event_delta": [],
+  "dependency_version_delta": [],
+  "security_delta": [
+    "SOURCE_BOOTSTRAP_ONLY presentation",
+    "JOIN_HOLD preserved",
+    "no normative grant"
+  ],
+  "tests": [
+    {
+      "id": "TSX-SYNTAX-0163",
+      "kind": "parser_only",
+      "tool": "TypeScript 5.8.3",
+      "files": 4,
+      "diagnostics": 0,
+      "status": "OBSERVED_SYNTAX_ONLY"
+    },
+    {
+      "id": "R8-R9-runtime",
+      "status": "NOT_RUN"
+    }
+  ],
+  "open_findings": "0162D D01–D12 remain open; D08 live join remains HOLD",
+  "rollback": "Restore prior Dashboard, remove three new panels, restore old manifest in ordinary revert; preserve docs/history."
+}

@@ -11,3 +11,7 @@ W3/W4 R01/R02: terminal mutation ve outbox intent/receipt binding, UNKNOWN recon
 0162-E: exact UI scope prepared; independent PRE/T01 required before integration. [PRE checklist](../docs/0162E/PRE_REVIEW.md).
 
 0162-F: [internal-agent review ADR](../docs/0162F/ADR_AGENT_REVIEW.md); resolve narrow bootstrap normative exception before source change.
+
+
+## 0163 → 0164
+R9 isolated source candidate integrated. Next define bounded review DAG, immutable digest and deterministic permission evaluator, separate agent principals and evidence; only new explicitly scoped source candidate work, no runtime or self-issued grants. In parallel resolve 0162D terminal/reconciliation/settlement, 55 OfficeV0 and 20 backend gaps; UI typecheck/build/browser require separate permission.

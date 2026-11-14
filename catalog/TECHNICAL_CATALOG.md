@@ -10,3 +10,7 @@
 
 ## 0162-D static review
 [12 open findings](revisions/TECHNICAL_REVIEW_0162D.json) · [55 OfficeV0 crosswalk](../docs/0162D/OFFICE_FIELD_CROSSWALK_55.json) · [20 backend crosswalk](../docs/0162D/BACKEND_CROSSWALK_20.json). No product or API/DB/dependency changes.
+
+
+## 0163 R9 source candidate
+[File/symbol/dependency/test delta](revisions/TECHNICAL_CATALOG_0163.json). Four TSX, no API/DB/event/dependency version change. [Maintenance](../docs/0163/MAINTENANCE_ROLLBACK.md).

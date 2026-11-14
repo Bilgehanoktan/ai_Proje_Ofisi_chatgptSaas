@@ -13,3 +13,6 @@
 [0162-E pinned integration scope](../0162E/SCOPE_0162E.json) — H01 request recorded; R8 unchanged, HOLD.
 
 [0162-F internal agent review ADR](../0162F/ADR_AGENT_REVIEW.md) — proposed, not ratified; no normative or source change.
+
+
+[0163 agent review bootstrap and R9 UI source integration](../0163/ADR_AGENT_BOOTSTRAP.md) — scoped source-only, normative acceptance HOLD.
