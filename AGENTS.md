@@ -10,3 +10,5 @@
 14.11.2026 [0165 bounded R10 source integration](decisions/CEO/CEO_DIRECTION_0165.md): six exact original R10 files and two dashboard source changes only; new backend candidate quarantine. One-turn source exception, not runtime/standing expansion. All execution and independent acceptance gates remain HOLD.
 
 14.11.2026 [0167 local MVP direction](decisions/CEO/CEO_DIRECTION_0167.md): nine pinned source promotions, manifest, preflight and documentation only; no actual package install/product runtime/test or independent grant. Read-only helper fixture verification is separate from product execution.
+
+[0172 bounded source integration](decisions/CEO/CEO_DIRECTION_0172.md): exact four 0171 files promoted to R12 development branch, including three product files and one root helper. User direction is bounded to this source promotion. No independent grant, actual DEV/TEST, CI, production, main merge or external effects. Retain integration-first definition of done: code → integrate → actual test → verify → catalog → deliver; do not label incomplete evidence as accepted.
