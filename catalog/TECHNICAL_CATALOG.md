@@ -24,3 +24,6 @@
 [0166 technical delta](revisions/TECHNICAL_CATALOG_0166.md) · [JSON](revisions/TECHNICAL_CATALOG_0166.json).
 
 [0167 source and setup delta](revisions/TECHNICAL_CATALOG_0167.md) · [JSON](revisions/TECHNICAL_CATALOG_0167.json).
+
+## 0168 review
+[Source/readback review and local candidate inventory](../docs/0168/LOCAL_MVP_PARALLEL.md). No product source, canonical API, DB or dependency changes. Local candidate delta delivered separately.
