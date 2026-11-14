@@ -32,3 +32,6 @@ Resolve protected policy and registry trust boundary, durable staging ownership 
 
 ## 0167 → 0168
 Prioritize working local D0 MVP: exact archive/preflight → applicable isolated DEV/TEST scope → pinned dependency install/lock → backend unittest and six GET smoke → frontend typecheck/build/browser → record actual failures and fix. Then read-only API projection integration; only after genuine custody/authority, agent execution. Parallel D01–D07 and 55/20 owner gaps remain open. No repeated design-only loop; actual execution evidence needed.
+
+## 0168 → next
+Parallel Python/Node lock/install and backend/frontend verification only after applicable isolated DEV/TEST authority. Local source candidate readback proxy, panel, smoke script remain outside product; inspect and approve exact scope separately. Agent Runtime needs real T1/PEP/lease/custody and model authority. [0168 plan](../docs/0168/LOCAL_MVP_PARALLEL.md). Do not treat checklist count as completion.
