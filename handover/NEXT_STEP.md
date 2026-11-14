@@ -15,3 +15,7 @@ W3/W4 R01/R02: terminal mutation ve outbox intent/receipt binding, UNKNOWN recon
 
 ## 0163 → 0164
 R9 isolated source candidate integrated. Next define bounded review DAG, immutable digest and deterministic permission evaluator, separate agent principals and evidence; only new explicitly scoped source candidate work, no runtime or self-issued grants. In parallel resolve 0162D terminal/reconciliation/settlement, 55 OfficeV0 and 20 backend gaps; UI typecheck/build/browser require separate permission.
+
+
+## 0164 → 0165
+Trusted policy and custody/readback boundary, explicit product integration scope, separate runtime permission. Parallel W1/W2/W3/W4/W6/W7/W8 per 0164 architecture addendum.

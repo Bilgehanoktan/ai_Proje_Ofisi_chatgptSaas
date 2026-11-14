@@ -16,3 +16,5 @@
 
 
 [0163 agent review bootstrap and R9 UI source integration](../0163/ADR_AGENT_BOOTSTRAP.md) — scoped source-only, normative acceptance HOLD.
+
+[0164 R10 review candidate](../0164/ARCHITECTURE_ADDENDUM.md) — quarantine only, R9 unchanged.

@@ -11,3 +11,6 @@
 ## 0163 / R9 — current isolated source candidate
 - [R9 source manifest](product/SOURCE_MANIFEST.json) · [Bootstrap ADR](docs/0163/ADR_AGENT_BOOTSTRAP.md) · [H01 decision](decisions/CEO/CEO_BOOTSTRAP_0163.md) · [Scope policy](security/policy/BOOTSTRAP_0163.json)
 - [Technical catalog delta](catalog/revisions/TECHNICAL_CATALOG_0163.md) · [GitHub readback](releases/GITHUB_READBACK_0163.json) · [Test evidence](tests/evidence/TEST_EVIDENCE_0163.json)
+
+## 0164 / R10 quarantine candidate
+[Architecture](docs/0164/ARCHITECTURE_ADDENDUM.md) · [Scope](security/policy/SCOPE_0164.json) · [Technical catalog](catalog/revisions/TECHNICAL_CATALOG_0164.md) · [Candidate source](quarantine/0164/) · [Test evidence](tests/evidence/TEST_EVIDENCE_0164.json).
