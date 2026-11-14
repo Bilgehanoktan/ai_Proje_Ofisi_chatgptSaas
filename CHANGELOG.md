@@ -1,3 +1,6 @@
+# 0161 — R8 kaynak adayı
+8 Python dosyası: admission/budget/readback, IV receipt, projection freshness, finance projection ve test. [Detay](docs/0161/CHANGE_RECORD.md).
+
 # Değişiklik geçmişi
 ## 0160
 16 Python core modülü, API ve 5 frontend modülü yeni kanonik dizinlere; 2 Dashboard bileşeni ayrıldı. Uyumluluk facade, manifest 114 kayıt, katalog v1.19. Statik kanıt; gerçek TEST NOT_RUN.

@@ -1,2 +1,2 @@
-# Teknik katalog — 0160
-[Technic v1.19](TECHNICAL_CATALOG.md) · [Relocation map](RELOCATION_MAP_0160.json) · [114 dosya](FILE_CATALOG.json). Kataloglar source manifest ve statik AST ile eşlenir; runtime kabul değildir.
+# Teknik katalog — 0161
+[Teknik katalog v1.20](TECHNICAL_CATALOG.md) · [0160 relocation](RELOCATION_MAP_0160.json) · [122 kaynak kaydı](FILE_CATALOG.json). Statik katalog, runtime kabulü değil.

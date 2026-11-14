@@ -1,2 +1,2 @@
 # Yol haritası
-0159-A kök düzeni, 0159-B katalog ve W5, 0160 mevcut kaynak modülerleşmesi tamamlandı (statik aday). Sonraki 0161: R03/R01 T1 fiziksel eşleme ve bütçe, R07 IV, R06 sahiplik, W1 layout/freshness, W8 oracle. UI alt rotaları, gerçek altyapı ve bağımsız güvenlik kabulü ayrı koşullara bağlı.
+0159-A kök düzeni, 0159-B katalog/W5, 0160 modülerleşme, 0161 R03/R11/R07/freshness inceleme adayları tamamlandı (statik). [0162 planı](handover/NEXT_STEP.md): terminal/outbox/settlement binding, stateful UI alt panelleri, R06 ve IV. Gerçek uygulama kabulü ve izinler HOLD.

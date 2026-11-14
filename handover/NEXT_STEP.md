@@ -1,2 +1,2 @@
-# 0161 — sonraki adım
-W4 R03/R01 fiziksel T1 mapping, head/admission/budget/readback sahipliği; W7 R11 budget/telemetry; W6 R07 IV receipt ve bağımsızlık; W2 R06 owner; W1 canonical layout/freshness ve UI alt panel ayrımı; W8 oracle. D4/D5 özgünleri hâlâ eksik. Runtime test/CI/DEV/PROD ve dış işlem ayrı yetki.
+# 0162 — sonraki adım
+W3/W4 R01/R02: terminal mutation ve outbox intent/receipt binding, UNKNOWN reconciliation, T1 physical owner HOLD. W1: stateful Dashboard alt panelleri ve freshness presentation, canlı veri bağlama yok. W2: R06 owner ve 55 field gap; W6 IV key custody ve receipt algoritması seçimi açık; W7 settlement idempotency/unknown accounting. W8 test oracles. D4/D5 özgünleri eksik; ayrı dal. Gerçek TEST/DEV/CI/PROD/dış etki ayrı izin.

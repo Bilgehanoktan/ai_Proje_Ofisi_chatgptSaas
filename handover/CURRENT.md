@@ -1,2 +1,2 @@
-# Güncel devir — 0160
-R7 kaynak adayı; branch recovery/0160-structure; source commit c94a3e6ad4645188d51f9012311ace173cade100. 114 kayıt; 62 aynı, 20 değişen, 2 kaldırılan eski yol, 32 yeni. 22 taşıma + 2 UI bileşeni. [Master](../docs/architecture/DESIGN_MASTER.md) · [Katalog v1.19](../catalog/TECHNICAL_CATALOG.md) · [24 alan](../progress/DEVELOPMENT_TRACKER_24.md) · [Kanıt](../docs/0160/TEST_EVIDENCE.md). 48 test NOT_RUN, T01 HOLD. [Sonraki](NEXT_STEP.md) · [Açık](OPEN_ITEMS.md).
+# Güncel devir — 0161
+R8 kaynak adayı; branch recovery/0161-evidence; parent 0160 8da225bc46fe1acb24850b67fcc292d5972d2d43. 122 kayıt, 114 önceki birebir, 8 yeni. [Master](../docs/architecture/DESIGN_MASTER.md) · [Katalog v1.20](../catalog/TECHNICAL_CATALOG.md) · [24 alan](../progress/DEVELOPMENT_TRACKER_24.md) · [Kanıt](../docs/0161/TEST_EVIDENCE.md). 65 test NOT_RUN; T01 HOLD, R03 UNKNOWN, R06 0/16 ve 0/55. [Sonraki](NEXT_STEP.md) · [Açık](OPEN_ITEMS.md).
