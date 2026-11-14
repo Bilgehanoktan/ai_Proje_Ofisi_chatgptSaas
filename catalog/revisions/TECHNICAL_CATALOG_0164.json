@@ -1,0 +1,392 @@
+{
+  "revision": "0164",
+  "status": "QUARANTINE_SOURCE_CANDIDATE",
+  "files": [
+    {
+      "path": "quarantine/0164/product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "target": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e",
+      "bytes": 66,
+      "lines": 1,
+      "operation": "ADD_CANDIDATE_ONLY"
+    },
+    {
+      "path": "quarantine/0164/product/ai-company-os-backend/app/core/development_review/model.py",
+      "target": "product/ai-company-os-backend/app/core/development_review/model.py",
+      "blob": "ebd68c6245c21c7fce16c0b6206dc9626050310a",
+      "sha256": "c18b358f8d1f77cdcece402721f8aba3bb7364490d1589c8a0ab954de2600481",
+      "bytes": 3221,
+      "lines": 84,
+      "operation": "ADD_CANDIDATE_ONLY"
+    },
+    {
+      "path": "quarantine/0164/product/ai-company-os-backend/app/core/development_review/planner.py",
+      "target": "product/ai-company-os-backend/app/core/development_review/planner.py",
+      "blob": "4c3bc95109c0bf209dc3298db044dcac56a40454",
+      "sha256": "f31da08014d96b2659664d70230a4af225d766b8c36484b921f39216c8dea612",
+      "bytes": 1687,
+      "lines": 44,
+      "operation": "ADD_CANDIDATE_ONLY"
+    },
+    {
+      "path": "quarantine/0164/product/ai-company-os-backend/app/core/development_review/policy.py",
+      "target": "product/ai-company-os-backend/app/core/development_review/policy.py",
+      "blob": "c103af3841e3389086393b78bc78ca1911d8b776",
+      "sha256": "10bd2f97ec88f2cfba8cff4681e59bc8c2deb0fd85c38ce4124ba0c82451ad45",
+      "bytes": 4627,
+      "lines": 92,
+      "operation": "ADD_CANDIDATE_ONLY"
+    },
+    {
+      "path": "quarantine/0164/product/ai-company-os-backend/app/core/development_review/evidence.py",
+      "target": "product/ai-company-os-backend/app/core/development_review/evidence.py",
+      "blob": "3bf24b68ac2e4960ca2b4e48cc17b78ddd54490f",
+      "sha256": "2cc7f396a920ac4add48039ed1db99dae507e8f5fa134c23e724b1a3bc07882e",
+      "bytes": 4926,
+      "lines": 95,
+      "operation": "ADD_CANDIDATE_ONLY"
+    },
+    {
+      "path": "quarantine/0164/product/ai-company-os-backend/tests/test_development_review_0164.py",
+      "target": "product/ai-company-os-backend/tests/test_development_review_0164.py",
+      "blob": "818785baa36d6fcc4911d7ff7795d245b8189ef8",
+      "sha256": "8f291f7bbcfb8b9b701c4088f17c4700bd3ae8e1c",
+      "bytes": 8342,
+      "lines": 165,
+      "operation": "ADD_CANDIDATE_ONLY"
+    }
+  ],
+  "symbols": [
+    {
+      "name": "__init__.py",
+      "classes": [],
+      "functions": [],
+      "dependencies": [],
+      "purpose": "package marker only"
+    },
+    {
+      "name": "model.py",
+      "classes": [
+        "FilePin",
+        "ReviewScope",
+        "PrincipalPin"
+      ],
+      "functions": [
+        "digest",
+        "valid_file",
+        "valid_scope",
+        "scope_digest",
+        "valid_principal",
+        "valid_roster"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "re",
+        "agent_runtime.lifecycle.token/uint",
+        "transaction.review.digest_ok"
+      ],
+      "purpose": "synthetic scope and SoD"
+    },
+    {
+      "name": "planner.py",
+      "classes": [
+        "ReviewTask",
+        "ReviewPlan"
+      ],
+      "functions": [
+        "compile_review",
+        "valid_plan"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "development_review.model"
+      ],
+      "purpose": "fixed review graph, deterministic plan digest"
+    },
+    {
+      "name": "policy.py",
+      "classes": [
+        "ReviewRequest",
+        "PolicyReview",
+        "FileReadback"
+      ],
+      "functions": [
+        "inspect_request",
+        "inspect_patch_bytes"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "hashlib",
+        "development_review.model/planner",
+        "agent_runtime.lifecycle.uint"
+      ],
+      "purpose": "deny/hold and byte comparison"
+    },
+    {
+      "name": "evidence.py",
+      "classes": [
+        "Observation",
+        "EvidenceReview"
+      ],
+      "functions": [
+        "observation_digest",
+        "subject_digest",
+        "valid_observation",
+        "inspect_evidence"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "hashlib",
+        "development_review.model/planner",
+        "agent_runtime.lifecycle.token/uint",
+        "transaction.review.digest_ok"
+      ],
+      "purpose": "read-only evidence chain"
+    },
+    {
+      "name": "test_development_review_0164.py",
+      "classes": [
+        "DevelopmentReviewCandidateTests"
+      ],
+      "functions": [
+        "h",
+        "setUp",
+        "policy",
+        "evidence",
+        "test_plan_deterministic",
+        "test_parallel_qa_security",
+        "test_plan_tampered",
+        "test_shared_principal",
+        "test_shared_custody",
+        "test_shared_execution",
+        "test_path_traversal",
+        "test_protected_path",
+        "test_duplicate_path",
+        "test_cross_company",
+        "test_bool_epoch",
+        "test_match_never_allow",
+        "test_reference_mismatch",
+        "test_revoked",
+        "test_unknown_revocation",
+        "test_stale_witness",
+        "test_self_approval",
+        "test_source_write_action",
+        "test_wrong_plan_digest",
+        "test_wrong_file_digest",
+        "test_patch_match_no_write",
+        "test_patch_add_collision",
+        "test_patch_parent_mismatch",
+        "test_patch_tampered_bytes",
+        "test_evidence_match_not_authoritative",
+        "test_missing_evidence",
+        "test_evidence_reorder",
+        "test_evidence_duplicate_id",
+        "test_evidence_causal_bypass",
+        "test_evidence_unknown",
+        "test_evidence_stale_epoch",
+        "test_evidence_mismatched_reference",
+        "test_evidence_output_bytes",
+        "test_evidence_unknown_revocation"
+      ],
+      "dependencies": [
+        "unittest",
+        "dataclasses",
+        "hashlib",
+        "development_review.*"
+      ],
+      "purpose": "34 candidate tests"
+    }
+  ],
+  "errors": [
+    "REVIEW_SCOPE_INVALID",
+    "REVIEW_PLAN_SCOPE_OR_SOD_INVALID",
+    "SCOPE_REFERENCE_MISMATCH",
+    "REVOCATION_UNKNOWN_OR_REVOKED",
+    "EPOCH_STALE_OR_INVALID",
+    "PLAN_OR_REQUEST_INVALID",
+    "REQUEST_DIGEST_MISMATCH",
+    "REQUEST_EPOCH_MISMATCH",
+    "TASK_ACTOR_MISMATCH",
+    "ACTION_FORBIDDEN",
+    "FILE_PIN_MISMATCH",
+    "D0_SCOPE_MATCH_NO_AUTHORITY",
+    "PARENT_MANIFEST_BYTES_MISMATCH",
+    "PATCH_SET_MISMATCH",
+    "PATCH_AFTER_BYTES_MISMATCH",
+    "PATCH_ADD_COLLISION",
+    "PATCH_BEFORE_BYTES_MISMATCH",
+    "D0_BYTES_MATCH_NO_CHECKOUT_AUTHORITY",
+    "EVIDENCE_SCOPE_OR_PLAN_HOLD",
+    "EVIDENCE_EPOCH_OR_REVOCATION_HOLD",
+    "EVIDENCE_SET_INCOMPLETE_OR_INVALID",
+    "EVIDENCE_OUTPUT_READBACK_INVALID",
+    "EVIDENCE_REFERENCE_MISMATCH",
+    "EVIDENCE_BINDING_OR_REPLAY_HOLD",
+    "EVIDENCE_CAUSAL_DIGEST_HOLD",
+    "EVIDENCE_OUTPUT_BYTES_HOLD",
+    "EVIDENCE_REJECT_OR_UNKNOWN_HOLD",
+    "D0_CHAIN_MATCH_SIGNATURE_CUSTODY_UNPROVEN"
+  ],
+  "api_delta": [],
+  "db_delta": [],
+  "event_delta": [],
+  "dependency_version_delta": [],
+  "security_delta": "HOLD/DENY only; no real effect",
+  "tests": [
+    {
+      "name": "test_plan_deterministic",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_parallel_qa_security",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_plan_tampered",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_shared_principal",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_shared_custody",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_shared_execution",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_path_traversal",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_protected_path",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_duplicate_path",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_cross_company",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_bool_epoch",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_match_never_allow",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_reference_mismatch",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_revoked",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_unknown_revocation",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_stale_witness",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_self_approval",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_source_write_action",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_wrong_plan_digest",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_wrong_file_digest",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_patch_match_no_write",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_patch_add_collision",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_patch_parent_mismatch",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_patch_tampered_bytes",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_match_not_authoritative",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_missing_evidence",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_reorder",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_duplicate_id",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_causal_bypass",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_unknown",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_stale_epoch",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_mismatched_reference",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_output_bytes",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_evidence_unknown_revocation",
+      "status": "NOT_RUN"
+    }
+  ],
+  "traceability": {
+    "W3": [
+      "model",
+      "planner"
+    ],
+    "W4": [
+      "policy"
+    ],
+    "W6": [
+      "evidence"
+    ],
+    "W8": [
+      "test",
+      "catalog"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+# Proje indeksi — 0161
+- [Devir](handover/CURRENT.md) · [Sonraki adım](handover/NEXT_STEP.md) · [Açık işler](handover/OPEN_ITEMS.md)
+- [Design Master](docs/architecture/DESIGN_MASTER.md) · [Klasör standardı](docs/architecture/REPOSITORY_LAYOUT.md) · [0160 yol eşlemesi](catalog/RELOCATION_MAP_0160.json)
+- [Frontend](product/ai-company-os-frontend/) · [Backend](product/ai-company-os-backend/)
+- [122 kaynak kaydı](releases/SOURCE_MANIFEST_0161.json) · [Katalog v1.20](catalog/TECHNICAL_CATALOG.md) · [Kararlar](decisions/OPEN_DECISIONS.md) · [24 alan](progress/DEVELOPMENT_TRACKER_24.md)
+- [0161 değişiklik](docs/0161/CHANGE_RECORD.md) · [Kanıt](docs/0161/TEST_EVIDENCE.md) · [Rollback](docs/rollback/README.md) · [R06 owner pin](contracts/OWNER_REVIEW_0161.json)
+- [0161-A tarihsel inceleme deltası (0160 bazlı)](docs/0161A_REVIEW/README.md) · [Sürekli GitHub aktarım kararı](decisions/CEO/CEO_REPO_TRANSFER_20261114.md)
+- [0162-A design review](docs/0162A/ARCHITECTURE_ADDENDUM.md) · [devir](docs/0162A/HANDOVER.md) · [field gap](docs/0162A/FIELD_GAP_0162.json) · [oracle](docs/0162A/ORACLE_MATRIX.json)
+- [0162-B C kararı](decisions/CEO/CEO_WORK_MODE_20261114_C.md) · [kapsam](docs/0162B/SOURCE_SCOPE_PROPOSAL.json) · [yetki hazırlığı](security/evidence/AUTH_PREP_0162B.json) · [devir](docs/0162B/HANDOVER.md)
+
+## 0163 / R9 — current isolated source candidate
+- [R9 source manifest](product/SOURCE_MANIFEST.json) · [Bootstrap ADR](docs/0163/ADR_AGENT_BOOTSTRAP.md) · [H01 decision](decisions/CEO/CEO_BOOTSTRAP_0163.md) · [Scope policy](security/policy/BOOTSTRAP_0163.json)
+- [Technical catalog delta](catalog/revisions/TECHNICAL_CATALOG_0163.md) · [GitHub readback](releases/GITHUB_READBACK_0163.json) · [Test evidence](tests/evidence/TEST_EVIDENCE_0163.json)
+
+## 0164 / R10 quarantine candidate
+[Architecture](docs/0164/ARCHITECTURE_ADDENDUM.md) · [Scope](security/policy/SCOPE_0164.json) · [Technical catalog](catalog/revisions/TECHNICAL_CATALOG_0164.md) · [Candidate source](quarantine/0164/) · [Test evidence](tests/evidence/TEST_EVIDENCE_0164.json).
+
+## 0165 / R10 source integration
+[Architecture](docs/0165/ARCHITECTURE_ADDENDUM.md) · [scope](security/policy/SCOPE_0165.json) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0165.md) · [test evidence](tests/evidence/TEST_EVIDENCE_0165.json).
+
+## 0166 / R11 quarantine
+[Architecture](docs/0166/ARCHITECTURE_ADDENDUM_0166.md) · [Acceptance](docs/0166/TRUST_AND_STAGING_ACCEPTANCE_0166.md) · [Parallel bindings](docs/0166/PARALLEL_BINDINGS_0166.md) · [Scope proposal](security/policy/INTEGRATION_SCOPE_PROPOSAL_0166.json) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0166.md).
+
+## 0167 — R11 local MVP source
+[Setup](docs/0167/LOCAL_MVP_SETUP.md) · [Architecture](docs/0167/ARCHITECTURE_ADDENDUM.md) · [Scope](security/policy/SCOPE_0167.json) · [Preflight](scripts/verify_product.py) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0167.md).
+
+## 0172 — R12 current source integration
+[Source manifest](product/SOURCE_MANIFEST.json) · [Integration/setup](docs/0172/READBACK_INTEGRATION.md) · [Catalog delta](catalog/revisions/TECHNICAL_CATALOG_0172.json) · [Readback](releases/GITHUB_READBACK_0172.json) · [Scope](security/policy/SCOPE_0172.json).

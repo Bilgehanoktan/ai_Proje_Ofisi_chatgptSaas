@@ -1,0 +1,2 @@
+# 0157 doğrulama
+Gerçek: 0155 106/106, 0156 30/30 CRC/SHA, R3 58/58, R4 67/67, tüm 58 R3 değişmedi, 0156 4/4 özgün hash, 3 aynı/1 adaptasyon, 9 ortak JSON, 16 A0 pin, 20/20 Python AST. 11 yeni unittest adayı (9 T1/fence/ledger, 2 binding). Önceki 5 R3 + 11 R156 = toplam 27 test metodu adayı, NOT_RUN. Ürün import/execute yok; SQL/migration, build, gerçek test, API, DB, concurrency, RLS, PEP, IV, restore, provider, gerçek T1 readback NOT_RUN. Statik PASS gerçek kabul değildir.

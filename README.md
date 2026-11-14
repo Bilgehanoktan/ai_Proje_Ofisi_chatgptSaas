@@ -1,2 +1,3 @@
-# ai_Proje_Ofisi_chatgptSaas
-ai_Proje_Ofisi_chatgptSaas-Multi-agent AI operating system, virtual office, task orchestration, enterprise automation and SaaS platform.
+# AI Company OS — 0172 / R12 local MVP source candidate
+
+144 product files, 143 manifest entries. R12 source integration: read-only D0 API proxy and Dashboard panel mounted, root smoke helper available. Actual install, build, product tests and independent acceptance NOT_RUN/HOLD. [Start here: R12 local MVP](docs/0172/READBACK_INTEGRATION.md) · [Project index](PROJECT_INDEX.md) · [Manifest](product/SOURCE_MANIFEST.json) · [Architecture](docs/architecture/DESIGN_MASTER.md) · [Technical catalog](catalog/TECHNICAL_CATALOG.md) · [Handover](handover/CURRENT.md). No actual agent runtime, CI, PROD or main merge. Historical R11 README preserved in parent commit 3e475a65e7150b5dbb535b5b5887dc8574a8de97.

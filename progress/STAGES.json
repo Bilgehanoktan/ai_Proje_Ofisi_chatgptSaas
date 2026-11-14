@@ -1,0 +1,88 @@
+{
+  "revision": "0172",
+  "stages": [
+    {
+      "id": "01",
+      "name": "Yerel MVP",
+      "status": "ACTIVE_BLOCKED",
+      "accepted": false,
+      "evidence": {
+        "source_manifest": "143 entries; 140 inherited + 3 changed verified by pin",
+        "product_integration": "DONE_SOURCE_R12",
+        "local_preflight": "NOT_RUN",
+        "dependency_locks": "ABSENT",
+        "DEV_TEST": "HOLD",
+        "runtime": "NOT_RUN",
+        "readback_candidate": "INTEGRATED_SOURCE_NOT_RUN",
+        "smoke": "NOT_RUN",
+        "frontend_build": "NOT_RUN"
+      }
+    },
+    {
+      "id": "02",
+      "name": "Agent Runtime",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "03",
+      "name": "AI Model Gateway",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "04",
+      "name": "Orchestrator Engine",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "05",
+      "name": "Canlı Sanal Ofis",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "06",
+      "name": "Kurumsal Hafıza",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "07",
+      "name": "Skill & Tool Engine",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "08",
+      "name": "İlk Ürünler",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "09",
+      "name": "Şirket Yönetimi",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    },
+    {
+      "id": "10",
+      "name": "SaaS & Production",
+      "status": "WAITING_PREDECESSOR",
+      "accepted": false
+    }
+  ],
+  "product_test_candidates": 134,
+  "product_tests_run": 0,
+  "quarantine_test_candidates": 24,
+  "helper_tests_passed": 24,
+  "helper_tests_total": 24,
+  "prior_static_evidence": {
+    "ts_parse": "3/3 at 0171",
+    "python_ast": "1/1 at 0171",
+    "exact_copy_patch": "PASS at 0171"
+  },
+  "current_round_source_readback": "4/4",
+  "notes": "Legacy actual agent execution belongs to phases 02–04; source integration not runtime acceptance."
+}

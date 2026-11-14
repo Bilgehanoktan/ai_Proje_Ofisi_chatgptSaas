@@ -1,0 +1,54 @@
+{
+  "revision": "0172",
+  "branch": "recovery/0172-r12-readback-integration",
+  "parent": "3e475a65e7150b5dbb535b5b5887dc8574a8de97",
+  "source_commit": "2aeaf363c2588cb4c477cb43f1b4fa5dcdcab2fb",
+  "manifest_blob": "ebef091334ec91b0739686fb1ef0d8dc5a14a4dc",
+  "prior_manifest_blob": "337d4fa90bd93b2119da4cd7f6eba193e93d18fe",
+  "prior_entries": 141,
+  "unchanged_entries": 140,
+  "new_entries": 2,
+  "modified_entries": 1,
+  "entries": 143,
+  "product_files": 144,
+  "root_tool_added": 1,
+  "removed": 0,
+  "promoted_blob_readback": "4/4",
+  "method": "Prior 0170 remote byte hash proof for 140 unchanged manifest entries plus 3 exact candidate blobs and their locally computed SHA256/size; commit compare confirms exactly 2 added and 1 changed product files plus manifest; 4th promoted file is root helper.",
+  "full_new_tree_independent_rehash": "NOT_RUN",
+  "local_full_archive": "NOT_AVAILABLE",
+  "prior_main_unchanged": "No main mutation performed",
+  "product_runtime": "NOT_RUN",
+  "product_test": "NOT_RUN",
+  "promoted": [
+    {
+      "target": "product/ai-company-os-frontend/app/api/local-mvp/readback/route.ts",
+      "blob": "d0bff84e4adb1cac9bc21b5b0efcb5ecb8cdd5bd",
+      "bytes": 2768,
+      "sha256": "5bfe86d46a3043172629ba4ceba66f458d07a0451921c3d0601c5a2140c328dc",
+      "origin": "quarantine/0171/product/ai-company-os-frontend/app/api/local-mvp/readback/route.ts"
+    },
+    {
+      "target": "product/ai-company-os-frontend/components/dashboard/LocalReadbackPanel.tsx",
+      "blob": "768873f1bc4b884679b845ec43711c853283565f",
+      "bytes": 2585,
+      "sha256": "dfd137538fa62ca1639c9d4ebb43599f016f567e0b7b46227281834a8049d93c",
+      "origin": "quarantine/0171/product/ai-company-os-frontend/components/dashboard/LocalReadbackPanel.tsx"
+    },
+    {
+      "target": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "6337a48074443c79be67def15bccf8eca147f92b",
+      "bytes": 7228,
+      "sha256": "3e2ee8c1013e0e84d7c8eee2ac80260fbc3e11a28790c213cec316be36ee7914",
+      "prior_blob": "6c378a90480048421ee59861f472f9c1f17a9a48",
+      "origin": "quarantine/0171/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx"
+    },
+    {
+      "target": "scripts/local_mvp_smoke.py",
+      "blob": "28c3d99d2022735230bad0003e6c6178715aff2b",
+      "bytes": 3035,
+      "sha256": "2107dfe9fc29cbb477a2a2b238244a1afd7ad08f71ce9f575cd673bfdcd6db8a",
+      "origin": "quarantine/0171/scripts/local_mvp_smoke.py"
+    }
+  ]
+}
