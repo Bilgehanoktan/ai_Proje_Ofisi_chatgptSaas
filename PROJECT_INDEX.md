@@ -7,3 +7,7 @@
 - [0161-A tarihsel inceleme deltası (0160 bazlı)](docs/0161A_REVIEW/README.md) · [Sürekli GitHub aktarım kararı](decisions/CEO/CEO_REPO_TRANSFER_20261114.md)
 - [0162-A design review](docs/0162A/ARCHITECTURE_ADDENDUM.md) · [devir](docs/0162A/HANDOVER.md) · [field gap](docs/0162A/FIELD_GAP_0162.json) · [oracle](docs/0162A/ORACLE_MATRIX.json)
 - [0162-B C kararı](decisions/CEO/CEO_WORK_MODE_20261114_C.md) · [kapsam](docs/0162B/SOURCE_SCOPE_PROPOSAL.json) · [yetki hazırlığı](security/evidence/AUTH_PREP_0162B.json) · [devir](docs/0162B/HANDOVER.md)
+
+## 0163 / R9 — current isolated source candidate
+- [R9 source manifest](product/SOURCE_MANIFEST.json) · [Bootstrap ADR](docs/0163/ADR_AGENT_BOOTSTRAP.md) · [H01 decision](decisions/CEO/CEO_BOOTSTRAP_0163.md) · [Scope policy](security/policy/BOOTSTRAP_0163.json)
+- [Technical catalog delta](catalog/revisions/TECHNICAL_CATALOG_0163.md) · [GitHub readback](releases/GITHUB_READBACK_0163.json) · [Test evidence](tests/evidence/TEST_EVIDENCE_0163.json)

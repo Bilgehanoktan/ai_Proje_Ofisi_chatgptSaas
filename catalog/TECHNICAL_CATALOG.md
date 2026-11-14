@@ -14,3 +14,5 @@
 
 ## 0163 R9 source candidate
 [File/symbol/dependency/test delta](revisions/TECHNICAL_CATALOG_0163.json). Four TSX, no API/DB/event/dependency version change. [Maintenance](../docs/0163/MAINTENANCE_ROLLBACK.md).
+
+[0163 ayrıntılı MD katalog](revisions/TECHNICAL_CATALOG_0163.md)
