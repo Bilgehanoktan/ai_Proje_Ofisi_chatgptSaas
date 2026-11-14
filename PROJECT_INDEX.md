@@ -23,3 +23,6 @@
 
 ## 0167 — R11 local MVP source
 [Setup](docs/0167/LOCAL_MVP_SETUP.md) · [Architecture](docs/0167/ARCHITECTURE_ADDENDUM.md) · [Scope](security/policy/SCOPE_0167.json) · [Preflight](scripts/verify_product.py) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0167.md).
+
+## 0172 — R12 current source integration
+[Source manifest](product/SOURCE_MANIFEST.json) · [Integration/setup](docs/0172/READBACK_INTEGRATION.md) · [Catalog delta](catalog/revisions/TECHNICAL_CATALOG_0172.json) · [Readback](releases/GITHUB_READBACK_0172.json) · [Scope](security/policy/SCOPE_0172.json).
