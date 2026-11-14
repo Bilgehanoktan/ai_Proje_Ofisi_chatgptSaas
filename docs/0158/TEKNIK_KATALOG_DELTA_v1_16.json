@@ -1,0 +1,147 @@
+{
+  "version": "v1.16 Delta",
+  "status": "UNRATIFIED_SOURCE_CANDIDATE_NOT_RUN",
+  "entries": [
+    {
+      "id": "CHG-0157-01",
+      "file": "app/core/runtime_preview.py; outbox_review.py; tests/test_runtime_preview_0156.py",
+      "symbols": "RunState, Scope, LeaseObservation, inspect_lease, inspect_transition, inspect_renewal, inspect_outbox, DisabledRuntimeCommitPort",
+      "why_how": "0156 exact transfer; no endpoint or worker",
+      "diagnosis": "Compare lease scope/ref/epoch, UNKNOWN and no retry; original 0156 tests NOT_RUN",
+      "rollback": "Restore complete R3 ZIP, preserve original 0156 addon separately; no real DB restore."
+    },
+    {
+      "id": "CHG-0157-02",
+      "file": "app/core/runtime_plan_binding.py",
+      "symbols": "inspect_plan_binding",
+      "why_how": "Recompile R3 canonical graph from projection and compare whole projection",
+      "diagnosis": "CANONICAL_PLAN_INVALID/MISMATCH; digest is not proof; check canonical compiler and fixture",
+      "rollback": "Restore complete R3 ZIP, preserve original 0156 addon separately; no real DB restore."
+    },
+    {
+      "id": "CHG-0157-03",
+      "file": "app/core/t1_review.py",
+      "symbols": "Operation, LogicalIntent, RoleObservation, T1Review, valid_intent, required_roles, inspect_write_set, DisabledT1Coordinator",
+      "why_how": "Operation-based logical role completeness, synthetic lease/ref, version and epoch, same transaction reference; no commit",
+      "diagnosis": "CAS_VERSION_MISMATCH, BUDGET_REFERENCE_MISSING, WRITE_SET_INCOMPLETE, duplicate/mismatch; actual physical mapping HOLD",
+      "rollback": "Restore complete R3 ZIP, preserve original 0156 addon separately; no real DB restore."
+    },
+    {
+      "id": "CHG-0157-04",
+      "file": "app/core/fence_review.py",
+      "symbols": "FencePhase, FenceObservation, FenceReview, valid_fence, inspect_fence",
+      "why_how": "Classify prior same key/different digest/unknown/epoch; never redispatch",
+      "diagnosis": "NO_BLIND_RETRY, IDEMPOTENCY_DIGEST_CONFLICT, ERR_WA_EPOCH_STALE",
+      "rollback": "Restore complete R3 ZIP, preserve original 0156 addon separately; no real DB restore."
+    },
+    {
+      "id": "CHG-0157-05",
+      "file": "app/core/causal_ledger_review.py",
+      "symbols": "CausalObservation, LedgerReview, event_digest, inspect_chain",
+      "why_how": "Synthetic per-run audit sequence and digest/causation checks; no writer",
+      "diagnosis": "EVENT_SCOPE_SEQUENCE_EPOCH_INVALID, EVENT_ID_OR_CHAIN_CONFLICT, CAUSATION_OR_CORRELATION_INVALID, EVENT_DIGEST_MISMATCH",
+      "rollback": "Restore complete R3 ZIP, preserve original 0156 addon separately; no real DB restore."
+    },
+    {
+      "id": "CHG-0157-06",
+      "file": "tests/test_t1_review_0157.py; tests/test_runtime_binding_0157.py",
+      "symbols": "T1ReviewTests, BindingTests",
+      "why_how": "11 unexecuted unittest methods: write-set negative cases, fence, chain and R3 parity",
+      "diagnosis": "NOT_RUN; no DB, runtime or API acceptance",
+      "rollback": "Restore complete R3 ZIP, preserve original 0156 addon separately; no real DB restore."
+    }
+  ],
+  "file_changes": [
+    {
+      "path": "ai-company-os-backend/app/core/causal_ledger_review.py",
+      "status": "ADDED_0157",
+      "after": {
+        "bytes": 3041,
+        "sha256": "9713d5a35135549173c300fe8f5e337267e20fb9e084306da09b20d5b77fced1"
+      },
+      "lines_after": 64
+    },
+    {
+      "path": "ai-company-os-backend/app/core/fence_review.py",
+      "status": "ADDED_0157",
+      "after": {
+        "bytes": 2334,
+        "sha256": "9fb122281334a7d27c2dd21bb53067f83efc76da3390a73b5c7f5326f1066865"
+      },
+      "lines_after": 59
+    },
+    {
+      "path": "ai-company-os-backend/app/core/outbox_review.py",
+      "status": "ADDED_FROM_0156",
+      "after": {
+        "bytes": 4392,
+        "sha256": "1fb9733b088a05d61b11ebe0bc7077ac76a29f174bcd751e7adb1b2f52c0bd1d"
+      },
+      "lines_after": 102
+    },
+    {
+      "path": "ai-company-os-backend/app/core/runtime_plan_binding.py",
+      "status": "ADDED_FROM_0156",
+      "after": {
+        "bytes": 3258,
+        "sha256": "d6247b953ec9d84c3c746dae77ff9b22e26e91e9ef76c89e31c661203747ca65"
+      },
+      "lines_after": 52
+    },
+    {
+      "path": "ai-company-os-backend/app/core/runtime_preview.py",
+      "status": "ADDED_FROM_0156",
+      "after": {
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      "lines_after": 181
+    },
+    {
+      "path": "ai-company-os-backend/app/core/t1_review.py",
+      "status": "ADDED_0157",
+      "after": {
+        "bytes": 5049,
+        "sha256": "0cfc24bfb5081d2e83a0d1b35c62272b7f8c96d217919411c3ea8b56e34e5aad"
+      },
+      "lines_after": 118
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_runtime_binding_0157.py",
+      "status": "ADDED_0157",
+      "after": {
+        "bytes": 1062,
+        "sha256": "fbaf2517a5379a9f6ebcda693bcf877c6d2aa680c8ef096fc3a9fa46d5a7455d"
+      },
+      "lines_after": 21
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_runtime_preview_0156.py",
+      "status": "ADDED_FROM_0156",
+      "after": {
+        "bytes": 4281,
+        "sha256": "fd31d787defdcccfae720c7dd21079eeb671594bf5ef36202fe6ebc5bd2dcf84"
+      },
+      "lines_after": 68
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_t1_review_0157.py",
+      "status": "ADDED_0157",
+      "after": {
+        "bytes": 4357,
+        "sha256": "7a5be38563c3148b1b421cd358c012b375cc4984bf7ff82b76e4444b43ace7c6"
+      },
+      "lines_after": 66
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "dependencies_added": [],
+  "limits": [
+    "No actual T1 physical mapping, writer, lock/CAS proof, PostgreSQL migration",
+    "Role references and clock samples caller-supplied synthetic only; no trusted authority",
+    "Per-run chain same epoch, no committed_at, no global ledger/restore lineage",
+    "Fence key lookup not authoritative; no provider readback/reconciliation",
+    "R3 source unchanged, 0156 binding integrated candidate only; full build and all tests NOT_RUN"
+  ]
+}
