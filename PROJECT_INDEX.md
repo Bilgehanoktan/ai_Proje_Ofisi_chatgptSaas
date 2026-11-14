@@ -17,3 +17,6 @@
 
 ## 0165 / R10 source integration
 [Architecture](docs/0165/ARCHITECTURE_ADDENDUM.md) · [scope](security/policy/SCOPE_0165.json) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0165.md) · [test evidence](tests/evidence/TEST_EVIDENCE_0165.json).
+
+## 0166 / R11 quarantine
+[Architecture](docs/0166/ARCHITECTURE_ADDENDUM_0166.md) · [Acceptance](docs/0166/TRUST_AND_STAGING_ACCEPTANCE_0166.md) · [Parallel bindings](docs/0166/PARALLEL_BINDINGS_0166.md) · [Scope proposal](security/policy/INTEGRATION_SCOPE_PROPOSAL_0166.json) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0166.md).

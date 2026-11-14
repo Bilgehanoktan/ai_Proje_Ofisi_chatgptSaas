@@ -1,4 +1,2 @@
-# 0165 / R10 current handover
-Six R10 source files and two dashboard changes integrated on isolated candidate branch. Five new backend files quarantined. Product 133 blobs, manifest 132. 141 tests NOT_RUN. No runtime or authority. [Architecture](../docs/0165/ARCHITECTURE_ADDENDUM.md) · [scope](../security/policy/SCOPE_0165.json) · [catalog](../catalog/revisions/TECHNICAL_CATALOG_0165.json). Next 0166 trusted external custody/readback/DB staging design and exact candidate integration scope.
-
-Source integration commit: 57bb2166ce4716863ba401241361891fbb39ef0b · [GitHub verified readback](../releases/GITHUB_READBACK_0165.json).
+# 0166 / R11
+R10 133 product files unchanged. Four new source candidates in quarantine, 17 additional tests NOT_RUN. See [architecture](../docs/0166/ARCHITECTURE_ADDENDUM_0166.md), [catalog](../catalog/revisions/TECHNICAL_CATALOG_0166.md), [integration scope proposal](../security/policy/INTEGRATION_SCOPE_PROPOSAL_0166.json) and NEXT_STEP.md. No real authority or execution.

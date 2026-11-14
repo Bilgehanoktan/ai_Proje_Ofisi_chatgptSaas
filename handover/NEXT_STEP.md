@@ -22,3 +22,10 @@ Trusted policy and custody/readback boundary, explicit product integration scope
 
 ## 0165 → 0166
 Resolve protected policy and registry trust boundary, durable staging ownership and replay/CAS, signatures/trusted time, 5-file precise product candidate scope, separate real test permission. Continue W1/W2/W3/W4/W6/W7/W8 independently. No automatic grants.
+
+## 0166 → 0167
+1. New explicit source-only scope for 0165 five-file slice A, then 0166 four-file slice B; preserve quarantine and verify parent/pins.
+2. Choose protected issuer/key custody and actual signature profile, trusted clock/revocation, external witness owner; keep normative T01/T06 HOLD.
+3. Stage DDL ownership + global replay uniqueness + CAS/restore design; no canonical T1 migration.
+4. Separate permission for isolated DEV/TEST; actual unit/SQL/concurrency/browser tests only then.
+5. W2 55/20 owner gaps, W3/W4 terminal/reconciliation and R03, W7 settlement, W1 synthetic projection; D4/D5 recovery separately.
