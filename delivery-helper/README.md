@@ -1,0 +1,2 @@
+# 0160 tam proje teslimat yardımcısı
+Bu ayrı teslimat dalı, 0160 kaynak dalını değiştirmez. GitHub'dan bu dalı Code > Download ZIP ile indir ve çıkar. Daha önceki özgün `AIOS_0159B_TAM_PROJE.zip` dosyasını `delivery-helper/` içine kopyala. Windows'ta `TAM_PROJE_OLUSTUR.bat` çalıştır. Python 3 gerekir. Çıktı aynı dizinde `AIOS_0160_TAM_PROJE.zip` olur. GitHub kaynak tree hash, önceki ZIP SHA-256, 114 kaynak kaydı ve 308 tam manifest kaydı doğrulanır. Ürün, build, test, Git ve network çalıştırılmaz; üzerine yazılmaz. Önceki ZIP olmadan tam tarihsel proje oluşturulmaz.
