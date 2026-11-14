@@ -35,3 +35,6 @@ Prioritize working local D0 MVP: exact archive/preflight → applicable isolated
 
 ## 0168 → next
 Parallel Python/Node lock/install and backend/frontend verification only after applicable isolated DEV/TEST authority. Local source candidate readback proxy, panel, smoke script remain outside product; inspect and approve exact scope separately. Agent Runtime needs real T1/PEP/lease/custody and model authority. [0168 plan](../docs/0168/LOCAL_MVP_PARALLEL.md). Do not treat checklist count as completion.
+
+## 0169 next
+Full pinned R11 archive ZIP preflight and extracted tree check; applicable isolated DEV/TEST and independent PRE; lock/install Python + Node in parallel, backend and frontend tests, then API readback/snapshot. Phase 02 starts after Phase 01 acceptance. [Sequence](../docs/0169/PHASE01_PREFLIGHT.md).
