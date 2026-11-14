@@ -5,3 +5,4 @@
 - [122 kaynak kaydı](releases/SOURCE_MANIFEST_0161.json) · [Katalog v1.20](catalog/TECHNICAL_CATALOG.md) · [Kararlar](decisions/OPEN_DECISIONS.md) · [24 alan](progress/DEVELOPMENT_TRACKER_24.md)
 - [0161 değişiklik](docs/0161/CHANGE_RECORD.md) · [Kanıt](docs/0161/TEST_EVIDENCE.md) · [Rollback](docs/rollback/README.md) · [R06 owner pin](contracts/OWNER_REVIEW_0161.json)
 - [0161-A tarihsel inceleme deltası (0160 bazlı)](docs/0161A_REVIEW/README.md) · [Sürekli GitHub aktarım kararı](decisions/CEO/CEO_REPO_TRANSFER_20261114.md)
+- [0162-A design review](docs/0162A/ARCHITECTURE_ADDENDUM.md) · [devir](docs/0162A/HANDOVER.md) · [field gap](docs/0162A/FIELD_GAP_0162.json) · [oracle](docs/0162A/ORACLE_MATRIX.json)
