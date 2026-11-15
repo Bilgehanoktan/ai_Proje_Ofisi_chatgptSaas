@@ -49,3 +49,17 @@ def plan_projection():
         return canonical_plan(sample["plan"])
     except GraphError as exc:
         raise HTTPException(status_code=409, detail={"mode": "D0_PLAN_HOLD", "reason": str(exc), "dispatch_allowed": False}) from exc
+
+
+from fastapi.responses import JSONResponse
+from app.api.mvp_diagnostics import inspect_mvp
+
+@app.get("/demo/v1/mvp/diagnostics")
+def mvp_diagnostics():
+    # Fixed local fixture only. Never accepts tenant, model or action input.
+    try:
+        sample = json.loads((FIXTURE.parent / "core.preview.json").read_text(encoding="utf-8"))
+        validate_layout(sample["layout"])
+        return JSONResponse(inspect_mvp(sample), headers={"Cache-Control": "no-store"})
+    except (GraphError, ValueError, KeyError, TypeError, StopIteration, OSError) as exc:
+        raise HTTPException(status_code=409, detail={"mode": "D0_READBACK_HOLD"}) from exc

@@ -9,3 +9,6 @@ D0 çevrimdışı kaynak adayı. Resmi CODE/REPO/DEV 0/3 etkin; NO_REAL_TEST / N
 - Offline HTML: önceki 13 görünüm + çekirdek inceleme paneli, örnek olay adımlama/gap. Phaser/Python çalıştırmaz.
 - Dosyalar kaynak olarak yazıldı; ürün kodu, build, uygulama, tarayıcı, test, schema validation, kurulum, GitHub, dış işlemler yapılmadı. Bağımlılık pinleri aday; lockfile yok. Hash kontrolleri sadece dosya bütünlüğü.
 - Yeni tasarım kararları (6×6 layout, örnek RESEARCH DAG, event adları, şemalar, ret kodları, API) teknik aday, normatif kabul değil. v139 kaynak-adayı istisnası açık; bağımsız kabul gerekli.
+
+## 0181 — current isolated development state
+Historical draft.3 notes above are preserved; CEO-0179=B authorizes isolated CODE/REPO/DEV/TEST. EDS and D0 diagnostic readback now integrated. Seven GET endpoints, guarded local proxy and panel, ephemeral SQLite sample replay. Backend selected product tests 24/24; TypeScript/Node 14/14, including real loopback GET. Exact pinned dependency environment, full frontend build/browser, independent acceptance, production and real operations remain unverified/HOLD. See ../docs/0181/ARCHITECTURE_AND_CATALOG.md.
