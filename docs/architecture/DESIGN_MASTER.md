@@ -84,3 +84,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188 — Paired synthetic task/budget readback
 [Addendum](../0188/ARCHITECTURE_AND_CATALOG.md). Optional fresh sample marker, double read, no causal/T1 or lease authority.
+
+## 0189 — Actual paired D0 integration and PostgreSQL probe
+[Addendum](../0189/ARCHITECTURE_AND_CATALOG.md). Existing product unchanged; real selected integration PASS, candidate PostgreSQL checks NOT_RUN. Canonical R03 mapping remains HOLD.

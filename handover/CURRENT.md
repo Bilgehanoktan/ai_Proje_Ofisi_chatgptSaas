@@ -66,3 +66,6 @@ Source f0af5e7bdb9310b7b9e8fc66e8cb8b5153b254cf; 212 manifest entries/213 produc
 
 ## 0188 — paired task-budget source integration
 Source 3a4c5d3ae85c1521af2cf4bb05fcafce81aeb3ac; 223 manifest entries/224 product files; 23 selected tests PASS (substituted prior readers, mocked proxy); actual paired writer/schema/CLI/full build NOT_RUN. 223 path/size, 17 delta content hash, 10 local exact paths. DNS and PG blockers retained. [Architecture](../docs/0188/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0188.json). No causal/T1/lease/geometry authority, actual grants/spend/CI/main/PROD HOLD.
+
+## 0189 — existing paired integration and PostgreSQL probe
+Source 54456e1598161c9fd5af5d0fefbaeae3945297d3; 224 product files unchanged, 48 selected controls PASS. Real writer/schema/CLI/HTTP confirmed; actual PG probe nine checks NOT_RUN (initdb absent), full build/browser NOT_RUN. Four new infrastructure files. [Architecture](../docs/0189/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0189.json). No canonical mapping or real grant.

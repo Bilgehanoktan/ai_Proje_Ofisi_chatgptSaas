@@ -69,3 +69,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188 — paired task-budget readback
 [Architecture](docs/0188/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0188.json) · [evidence](releases/GITHUB_READBACK_0188.json).
+
+## 0189 — integration and PG probe
+[Architecture](docs/0189/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0189.json) · [evidence](releases/GITHUB_READBACK_0189.json).

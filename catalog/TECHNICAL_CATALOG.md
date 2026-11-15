@@ -51,3 +51,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0188
 [Source/symbol/API/DB/event/test catalog](revisions/TECHNICAL_CATALOG_0188.json) · [Maintenance](../docs/0188/ARCHITECTURE_AND_CATALOG.md). 223 manifest entries; paired D0 sample readback, actual writer NOT_RUN.
+
+## 0189
+[Infrastructure and test catalog](revisions/TECHNICAL_CATALOG_0189.json) · [Maintenance](../docs/0189/ARCHITECTURE_AND_CATALOG.md). Four new test infrastructure files; no product file changes.
