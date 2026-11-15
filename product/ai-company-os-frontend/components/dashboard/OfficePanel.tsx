@@ -3,6 +3,7 @@ import type {ReactNode} from 'react';
 import Link from 'next/link';
 import {DisplayControls,FloorControls} from '../../design-system/OfficeControls';
 import OfficeScene from '../../office/scenes/OfficeScene';
+import OfficeIllustration from '../../office/components/OfficeIllustration';
 import type {Floor} from '../../office/engine/geometry';
 import type fixture from '../../fixtures/office.snapshot.json';
 export type SnapshotFloor=typeof fixture.floors[number];
@@ -13,8 +14,8 @@ export default function OfficePanel({floors,floorId,onFloor,display,onDisplay,of
  const layoutMatches=snapshotRevision===layoutRevision;
  return <section className="panel office-panel" aria-label="Sanal ofis"><div className="bar"><div><div className="eyebrow">OFFICE-01 / GÖRSEL PROJEKSİYON</div><h2>Sanal ofis</h2><div className="sub">{floor?.name??'Kat bulunamadı'} · STATIC_ONLY</div></div><DisplayControls display={display} onDisplay={onDisplay}>{!officeOnly&&<Link className="action-link" href="/office">Tam ekran ↗</Link>}</DisplayControls></div>
  <FloorControls floors={floors} floorId={floorId} onFloor={onFloor}/>
- {display==='scene'&&(floor&&officeAssets[floor.id]?<div className="scene"><img src={officeAssets[floor.id]} alt={`${floor.name} statik izometrik çizimi`}/><span className="corner">{floor.stations.length?`${floor.stations.length} rezerv istasyon`:'Genişleme rezervi'}</span></div>:<div className="empty" role="status">Bu kat için görsel kaynak yok. Liste kullanılabilir.</div>)}
+ {display==='scene'&&(demoFloor&&demoFloor.id===floorId?<OfficeIllustration key={`${layoutRevision}:${demoFloor.id}`} floor={demoFloor}/>:floor&&officeAssets[floor.id]?<div className="scene"><img src={officeAssets[floor.id]} alt={`${floor.name} tarihsel statik referans`}/><span className="corner">Tarihsel referans · Geometri HOLD</span></div>:<div className="empty" role="status">Bu kat için görsel kaynak yok. Liste kullanılabilir.</div>)}
  {display==='engine'&&(demoFloor?<OfficeScene key={`${layoutRevision}:${demoFloor.id}`} floor={demoFloor}/>:<div className="empty" role="status">Geometri HOLD · {geometryReason}</div>)}
- <div className="station-heading"><h3>İstasyonlar</h3><span className="sub">Klavye ile seçilebilir · gerçek instance yok</span></div>{stations}
+ <div className="station-heading"><h3>Snapshot istasyonları</h3><span className="sub">Klavye ile seçilebilir · gerçek instance yok</span></div>{stations}
  <div className="layout-hold" role="status"><strong>Snapshot ↔ geometri: JOIN_HOLD</strong><span>{layoutMatches?'Sürüm adı eşleşiyor; bağımsız yerleşim kabulü yok.':`Yerleşim revizyonları farklı: ${snapshotRevision} / ${layoutRevision}.`} Geometri yalnız bağımsız demo; canlı hareket ve konum birleştirmesi yok.</span></div></section>;
 }

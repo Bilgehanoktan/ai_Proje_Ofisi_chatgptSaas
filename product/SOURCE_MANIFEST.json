@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-r11-w1-workflow-studio-dev",
-  "doc_revision": "W1-0183A",
-  "status": "ISOLATED_W1_SOURCE_INTEGRATED_LAYOUT_TEST_PASS_FULL_BUILD_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-r11-w1-office-gallery-dev",
+  "doc_revision": "W1-0183B",
+  "status": "ISOLATED_W1_OFFICE_SOURCE_INTEGRATED_SELECTED_HELPER_AND_STANDALONE_BROWSER_PASS_NEXT_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "02e94c07fa8b56668b322184b95f1af2f3e76123",
+  "parent_git_commit": "e885fd51e3cc013ded11307fe6abd42f4b6ed7ee",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -515,8 +515,8 @@
       "sha256": "a1bced233fed3cce70e211df3b8c95826a047a84f8dada8584508dde7ba04630"
     },
     "ai-company-os-frontend/components/dashboard/OfficePanel.tsx": {
-      "bytes": 2631,
-      "sha256": "60b79585ac6822919b11004c89796eac809e0aa284ae202ade62ed0915a40a7c"
+      "bytes": 2781,
+      "sha256": "9112abcfe768c08f245cc0437818e1378a15a9ed2b3b2218f2c269c42eff4b27"
     },
     "ai-company-os-frontend/components/dashboard/OperationPanel.tsx": {
       "bytes": 871,
@@ -654,9 +654,21 @@
       "bytes": 92,
       "sha256": "2091a45b2a9dcf6cf64480378f4a56054d2d9c047900f1b531504c5a96bbd19f"
     },
+    "ai-company-os-frontend/office/components/OfficeIllustration.module.css": {
+      "bytes": 651,
+      "sha256": "23fb7439703ce68a6e5b99b71f2b65ff526573bd3e07855eee28e09517187ed1"
+    },
+    "ai-company-os-frontend/office/components/OfficeIllustration.tsx": {
+      "bytes": 1666,
+      "sha256": "88c1801ade14a488f189f96288479df6d40fc09dbc8db2861c09e340c42009c0"
+    },
     "ai-company-os-frontend/office/engine/geometry.ts": {
       "bytes": 5794,
       "sha256": "74d86fcf3162df7425c52f0685b3074d476a174a46f833289dc62168dcf20890"
+    },
+    "ai-company-os-frontend/office/engine/officeArtwork.ts": {
+      "bytes": 4458,
+      "sha256": "7e632717d64c12f1276f9f035d978b2cc8589666150e83d939856f79c3ea5c06"
     },
     "ai-company-os-frontend/office/geometry.ts": {
       "bytes": 65,
@@ -698,6 +710,10 @@
       "bytes": 2109,
       "sha256": "a39453ca67078550bf06b8d8a01ca9fca33bb419b1568b55f7a30554d55c042a"
     },
+    "ai-company-os-frontend/tests/office-artwork.test.cjs": {
+      "bytes": 2305,
+      "sha256": "2d0d9bc92bbc841feca84f383605e8f839d251ddcfd4a87cfa8112c1745e851f"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -711,6 +727,6 @@
       "sha256": "269657f5fbb39127f713edff0a2f55a493e01190a8c505ceb3ba784e18f460e8"
     }
   },
-  "parent_source_manifest_blob": "44c5de68a8bc41ca1195686dd90703c806dc96fa",
-  "source_git_commit_note": "Exact source commit recorded by branch readback; full Next build/browser and independent acceptance NOT_RUN/HOLD."
+  "parent_source_manifest_blob": "538e81fc186f9abc9b037a7d23f5646c9ed47618",
+  "source_git_commit_note": "Source commit recorded in releases/GITHUB_READBACK_W1_0183B.json; standalone preview browser != Next/React verification."
 }
