@@ -1,16 +1,14 @@
-# W1-0198 A–H — parallel application plan
+# W1-0198 A–H — P05 reconciled
 
-P04 source baseline: 7aea3fdf243f97c8b4c33290b72d2be5be22737f. A–H IDs preserved; Windows deferred. One isolated integration branch, logical path ownership; P01–P03 history retained.
+Two P04 parents preserved. 20/40 = 50% unchanged; zero acceptance gates. [Frozen milestones](../../progress/W1_0198_MILESTONES.json) remains P04 measurement baseline; no gate was closed by source reconciliation. Windows deferred.
 
-| Track | Scope | P04 result | Next |
-|---|---|---|---|
-| W1-0198-A | Birleşik UI ve backend regresyonu | 14 actual disposable SQLite boundary tests +14 session/join helper tests +2 terminal immutability tests +14 terminal regression tests PASS (30 new,14 rerun); P02/P03 persisted cases not run | Materialize exact backend dependency closure and candidate DDL, execute P02 eight/P03 nine; no new demo fixture before those run; then full pinned build/browser, Windows deferred |
-| W1-0198-B | Merkezi frontend veri bağlantı katmanı | Reader ownership token replaces key-only state, prevents A-B-A revival; deep-frozen terminal fixture and isolated parsed copy | React hook/browser regression, all seven endpoints parity, independent freshness proof |
-| W1-0198-C | CEO Dashboard veri entegrasyonu | Existing CEO lifecycle panels show explicit plan/DAG mismatch reason instead of implying shared state | Canonical scoped CEO projection only after persisted and trust proof |
-| W1-0198-D | Agent Runtime ve Office Engine bağlantısı | Both readers use a single read-only SQLite snapshot, approved tables, schema checks, authorizer, sidecar and unique head checks; terminal panel resets by floor | Actual 17 fixture tests and canonical active-run/clock/placement contract; no live join |
-| W1-0198-E | Görev ve Workflow Studio entegrasyonu | Compare checked-in plan identity vs historical sample scope, revision, task membership, company and run binding; every outcome HOLD | Use independently sourced plan/task/run lineage and causal evidence; no DAG state mutation |
-| W1-0198-F | Memory ve Model Gateway ekranları | Capability panel inherits scope mismatch and lease UNKNOWN; no new model invocation or memory read | Independent active lease/clock, reservation ledger, model input registry and ACL/tombstone/W-A provenance |
-| W1-0198-G | Finans ve güvenlik projeksiyonları | Finance/security use hardened read-only boundary; no extra cost/authority inference or shared mutable terminal expected data | Persisted settlement validation, independent security receipts and canonical ledger; no real money |
-| W1-0198-H | Görsel kalite ve kullanıcı deneyimi | Explicit join reason, no misleading live colors; both office panel instances reset by floor | Built light/dark/mobile visual/accessibility and interaction regression |
-
-Do not create another historical demo API to bypass outstanding fixture evidence. Independent acceptance and actual PostgreSQL remain HOLD/NOT_RUN.
+| Track | Progress | P05 result | Next |
+|---|---:|---|---|
+| A — Birleşik UI ve backend regresyonu | 40% | 11 new real SQLite merged guard tests; 46 selected regressions PASS; both parent test sources retained; full fixture/API 17 NOT_RUN | Materialize exact dependency closure and run 17 persisted cases; then pinned suite/build/browser |
+| B — Merkezi frontend veri bağlantı katmanı | 60% | Preserved owner-token hook, historical identity guard, strict prefix scope checks and 7-key registry | React lifecycle and 7-route parity; trusted current scope/clock |
+| C — CEO Dashboard veri entegrasyonu | 60% | CEO progress panel and historical identity diagnostics integrated; 20/40 baseline unchanged | Canonical operation data and browser acceptance |
+| D — Agent Runtime ve Office Engine bağlantısı | 40% | Single active lifecycle snapshot combines SQLite allowlist/authorizer/single head with deadline and pre/post sidecar checks | 17 actual fixture tests; trusted active lease/clock/placement |
+| E — Görev ve Workflow Studio entegrasyonu | 60% | Both identity and scope diagnostics; all joins HOLD | Canonical task/run/causal mapping |
+| F — Memory ve Model Gateway ekranları | 40% | Historical model/ACL prerequisite display preserved | Independent model reservation/registry and ACL/tombstone/witness |
+| G — Finans ve güvenlik projeksiyonları | 40% | Historical settlement and reservation use common guarded reader; no aggregation | 17 fixture tests, canonical ledger and independent evidence |
+| H — Görsel kalite ve kullanıcı deneyimi | 60% | Both EDS additions, progress panel and both floor resets retained | Full build and current light/dark/mobile visual/accessibility |

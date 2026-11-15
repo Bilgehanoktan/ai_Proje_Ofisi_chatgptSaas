@@ -1,19 +1,19 @@
 {
-  "revision": "W1-0198-P04",
-  "branch": "integration/w1-0198-p04",
-  "source_commit": "7aea3fdf243f97c8b4c33290b72d2be5be22737f",
-  "parent_commit": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
+  "revision": "W1-0198-P05",
+  "branch": "integration/w1-0198-p05-reconciled",
+  "source_commit": "0346991ed928a8fa682902dee9cc53aa2c0102e2",
+  "parent_commit": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
   "integration_parents": {
     "unified": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
     "lifecycle": "a7c4f417faf17959e3165193aa247815954bfa42"
   },
   "product": "ISOLATED_UNIFIED_SOURCE_CANDIDATE",
-  "product_files": 306,
-  "manifest_entries": 305,
-  "manifest_blob": "f9701fb7caa0fbe26e927823c70c7a9e257de310",
-  "source_readback": "305_PATH_SIZE_PASS_14_CHANGED_SHA256_PASS_291_UNCHANGED",
+  "product_files": 315,
+  "manifest_entries": 314,
+  "manifest_blob": "6bce9a2424c251cd001fa8bd4780a3c0395c5ce2",
+  "source_readback": "314_PATH_SIZE_PASS_8_EXACT_IMPORTS_5_NEW_OR_RECONCILED_SHA256_PASS",
   "full_product_sha256": "NOT_RUN",
-  "selected_controls_passed": 44,
+  "selected_controls_passed": 57,
   "full_product_tests": "NOT_RUN",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
@@ -33,28 +33,37 @@
     "lifecycle_0196_L": "26_NEW_79_REGRESSION_10_PG_SKIP_NOT_ADDITIVE",
     "W1_0198_P01": "12 pure helpers PASS",
     "W1_0198_P02": "24 new +12 rerun pure Node PASS",
-    "W1_0198_P03": "30 new +36 rerun pure tests PASS"
+    "W1_0198_P03": "30 new +36 rerun pure PASS",
+    "P04_A": "44 selected historical parent tests",
+    "P04_B": "98 selected historical parent tests"
   },
-  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P04.json",
-  "next": "W1-0198-P05 A–H: recover exact backend dependency closure and execute P02 8 + P03 9 persisted tests before new historical API; then scope/current clock/lease/model/ACL and canonical Office/DAG only after proof. Windows deferred.",
+  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P05.json",
+  "next": "P06: materialize exact backend dependency closure; execute 17 persisted P02/P03 tests; then canonical trusted scope/clock/model/ACL/Office and pinned full suite. No new historical API before evidence; Windows deferred.",
   "previous_pointers": [
-    "handover/history/CURRENT_W1_0198_P03_PRE_P04.json"
+    "handover/history/P05_PARENT_A_CURRENT.json",
+    "handover/history/P05_PARENT_B_CURRENT.json"
   ],
-  "selected_controls_scope": "14 SQLite boundary +30 Node; 30 new +14 rerun; 17 actual persisted tests NOT_RUN",
+  "selected_controls_scope": "11 new +46 rerun selected; 17 persisted cases NOT_RUN",
   "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json",
-  "maturity_summary": {
-    "method": "equal-weight descriptive mean of existing ordinal estimates, not completion/ETA; no combined score",
-    "areas": 24,
-    "design_points": 1725,
-    "source_points": 825,
-    "max_points": 2400,
-    "design_mean_pct": 71.875,
-    "source_mean_pct": 34.375,
-    "source_positive": 23,
-    "source_positive_pct": 95.83333333333334,
-    "partial_integrated": 18,
+  "variant": "RECONCILED",
+  "w1_milestones": {
+    "method": "equal-weight milestone count (source/helper/parent/integrated/acceptance; not whole-product completion)",
+    "canonical": "progress/W1_0198_MILESTONES.json",
+    "frontend_mirror": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "done": 20,
+    "total": 40,
+    "percent": 50,
     "accepted": 0,
-    "delta_design_pct": 0,
-    "delta_source_pct": 0
-  }
+    "baseline": "first explicit 40-gate measurement; preserve IDs/titles and denominator unless recorded scope change",
+    "note": "P04 frozen 20/40 gate vector retained byte-identically; no new gate closure in P05."
+  },
+  "parallel_collision": {
+    "decision": "RESOLVED_SOURCE_ONLY",
+    "parents": [
+      "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+      "34635cbd5f6df7bc2a01b5d07e4cc015cf1ec84b"
+    ],
+    "record": "handover/W1_0198_P05_RECONCILIATION.json"
+  },
+  "additional_parent_commit": "34635cbd5f6df7bc2a01b5d07e4cc015cf1ec84b"
 }

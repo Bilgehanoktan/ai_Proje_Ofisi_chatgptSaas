@@ -1,23 +1,22 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P04",
-  "parent": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
-  "source_commit": "7aea3fdf243f97c8b4c33290b72d2be5be22737f",
+  "round": "W1-0198-P05",
+  "parent": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+  "source_commit": "0346991ed928a8fa682902dee9cc53aa2c0102e2",
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
   "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
   "dependency_rules": [
     "B provides read abstraction; C–G use existing validated D0 contracts independently; real lifecycle, memory, model, finance and security contracts remain dependencies",
     "H may proceed independently; A full Windows deferred by user",
-    "No cross-store join unless exact shared proof; no live cache, dispatch, mutation, provider calls or geometry join",
-    "P04/P05 gate: prioritize execution of existing 17 exact persisted lifecycle tests before adding any more historical demo endpoints; separate D0 helper evidence and actual product acceptance."
+    "No cross-store join unless exact shared proof; no live cache, dispatch, mutation, provider calls or geometry join"
   ],
   "lanes": [
     {
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
-      "status": "PARTIAL_SQLITE_BOUNDARY_AND_NODE_PASS_PERSISTED_OPEN",
-      "done": "14 actual disposable SQLite boundary tests +14 session/join helper tests +2 terminal immutability tests +14 terminal regression tests PASS (30 new,14 rerun); P02/P03 persisted cases not run",
-      "next": "Materialize exact backend dependency closure and candidate DDL, execute P02 eight/P03 nine; no new demo fixture before those run; then full pinned build/browser, Windows deferred",
+      "status": "RECONCILED_GUARD_HELPERS_PASS_FIXTURES_OPEN",
+      "done": "11 new real SQLite merged guard tests; 46 selected regressions PASS; both parent test sources retained; full fixture/API 17 NOT_RUN",
+      "next": "Materialize exact dependency closure and run 17 persisted cases; then pinned suite/build/browser",
       "owner": [
         "tests/projection-read.test.cjs",
         "tests/integration/run_combined_helpers.cjs",
@@ -31,16 +30,18 @@
         "tests/test_lifecycle_prefix_p03.py",
         "tests/lifecycle-prefix.test.cjs",
         "tests/integration/browser_lifecycle_prefix_p03.py",
-        "tests/test_lifecycle_read_snapshot_p04.py",
-        "tests/projection-session-join.test.cjs"
-      ]
+        "tests/test_d0_snapshot_p04.py",
+        "tests/projection-scope.test.cjs",
+        "tests/progress-model.test.cjs"
+      ],
+      "progress_percent": 40
     },
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "D0_SESSION_IDENTITY_SOURCE_INTEGRATED_HELPER_PASS",
-      "done": "Reader ownership token replaces key-only state, prevents A-B-A revival; deep-frozen terminal fixture and isolated parsed copy",
-      "next": "React hook/browser regression, all seven endpoints parity, independent freshness proof",
+      "status": "RECONCILED_SESSION_AND_SCOPE_SOURCE_HELPER_PASS",
+      "done": "Preserved owner-token hook, historical identity guard, strict prefix scope checks and 7-key registry",
+      "next": "React lifecycle and 7-route parity; trusted current scope/clock",
       "owner": [
         "features/data/projectionRead.ts",
         "features/data/useProjectionRead.ts",
@@ -49,25 +50,31 @@
         "features/mvp/TaskBudgetPanel.tsx",
         "features/mvp/OutboxProjectionPanel.tsx",
         "features/data/projectionRegistry.ts",
-        "features/data/projectionSession.ts"
-      ]
+        "features/data/projectionScope.ts"
+      ],
+      "progress_percent": 60
     },
     {
       "id": "C",
       "name": "CEO Dashboard veri entegrasyonu",
-      "status": "D0_PLAN_MISMATCH_VISIBLE_SOURCE_INTEGRATED",
-      "done": "Existing CEO lifecycle panels show explicit plan/DAG mismatch reason instead of implying shared state",
-      "next": "Canonical scoped CEO projection only after persisted and trust proof",
+      "status": "RECONCILED_CEO_PROGRESS_SOURCE",
+      "done": "CEO progress panel and historical identity diagnostics integrated; 20/40 baseline unchanged",
+      "next": "Canonical operation data and browser acceptance",
       "owner": [
-        "features/ceo-dashboard/OperationalReadback.tsx"
-      ]
+        "features/ceo-dashboard/OperationalReadback.tsx",
+        "features/progress/PlanProgressPanel.tsx",
+        "features/progress/progressModel.ts",
+        "features/progress/w1PlanProgress.json",
+        "progress/W1_0198_MILESTONES.json"
+      ],
+      "progress_percent": 60
     },
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "D0_SNAPSHOT_HARDENED_BOUNDARY_TEST_PASS",
-      "done": "Both readers use a single read-only SQLite snapshot, approved tables, schema checks, authorizer, sidecar and unique head checks; terminal panel resets by floor",
-      "next": "Actual 17 fixture tests and canonical active-run/clock/placement contract; no live join",
+      "status": "RECONCILED_LIFECYCLE_READ_GUARD_TESTED",
+      "done": "Single active lifecycle snapshot combines SQLite allowlist/authorizer/single head with deadline and pre/post sidecar checks",
+      "next": "17 actual fixture tests; trusted active lease/clock/placement",
       "owner": [
         "features/mvp/OfficeWorkbenchPanel.tsx",
         "app/core/development_review/lifecycle_projection.py",
@@ -83,49 +90,68 @@
         "features/mvp/LifecyclePrefixReadback.tsx",
         "contracts/source/lifecycle.prefix.schema.json",
         "contracts/generated/lifecycle.prefix.schema.json",
-        "app/core/development_review/lifecycle_read_snapshot.py"
-      ]
+        "app/core/development_review/d0_snapshot.py"
+      ],
+      "progress_percent": 40
     },
     {
       "id": "E",
       "name": "Görev ve Workflow Studio entegrasyonu",
-      "status": "D0_SCOPE_JOIN_GUARD_HELPER_PASS",
-      "done": "Compare checked-in plan identity vs historical sample scope, revision, task membership, company and run binding; every outcome HOLD",
-      "next": "Use independently sourced plan/task/run lineage and causal evidence; no DAG state mutation",
+      "status": "RECONCILED_DAG_DIAGNOSTICS",
+      "done": "Both identity and scope diagnostics; all joins HOLD",
+      "next": "Canonical task/run/causal mapping",
       "owner": [
-        "components/dashboard/DevelopmentReviewPanel.tsx",
-        "features/mvp/historicalJoin.ts"
-      ]
+        "components/dashboard/DevelopmentReviewPanel.tsx"
+      ],
+      "progress_percent": 60
     },
     {
       "id": "F",
       "name": "Memory ve Model Gateway ekranları",
-      "status": "D0_HISTORICAL_BINDING_STAYS_HOLD",
-      "done": "Capability panel inherits scope mismatch and lease UNKNOWN; no new model invocation or memory read",
-      "next": "Independent active lease/clock, reservation ledger, model input registry and ACL/tombstone/W-A provenance",
+      "status": "HOLD_PREREQUISITES_RETAINED",
+      "done": "Historical model/ACL prerequisite display preserved",
+      "next": "Independent model reservation/registry and ACL/tombstone/witness",
       "owner": [
         "features/capabilities/CapabilityReadback.tsx"
-      ]
+      ],
+      "progress_percent": 40
     },
     {
       "id": "G",
       "name": "Finans ve güvenlik projeksiyonları",
-      "status": "D0_SNAPSHOT_AND_IMMUTABILITY_SOURCE_INTEGRATED",
-      "done": "Finance/security use hardened read-only boundary; no extra cost/authority inference or shared mutable terminal expected data",
-      "next": "Persisted settlement validation, independent security receipts and canonical ledger; no real money",
+      "status": "RECONCILED_READ_GUARD_SOURCE",
+      "done": "Historical settlement and reservation use common guarded reader; no aggregation",
+      "next": "17 fixture tests, canonical ledger and independent evidence",
       "owner": [
         "features/ceo-dashboard/Dashboard.tsx"
-      ]
+      ],
+      "progress_percent": 40
     },
     {
       "id": "H",
       "name": "Görsel kalite ve kullanıcı deneyimi",
-      "status": "CSS_SCOPE_NOTICE_SOURCE_VISUAL_NOT_RUN",
-      "done": "Explicit join reason, no misleading live colors; both office panel instances reset by floor",
-      "next": "Built light/dark/mobile visual/accessibility and interaction regression",
+      "status": "RECONCILED_UI_SOURCE_VISUAL_OPEN",
+      "done": "Both EDS additions, progress panel and both floor resets retained",
+      "next": "Full build and current light/dark/mobile visual/accessibility",
       "owner": [
         "design-system/eds.css"
-      ]
+      ],
+      "progress_percent": 60
     }
-  ]
+  ],
+  "variant": "RECONCILED",
+  "branch": "integration/w1-0198-p05-reconciled",
+  "parallel_collision": "RESOLVED_SOURCE_ONLY",
+  "measurement": {
+    "method": "equal-weight milestone count (source/helper/parent/integrated/acceptance; not whole-product completion)",
+    "canonical": "progress/W1_0198_MILESTONES.json",
+    "frontend_mirror": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "done": 20,
+    "total": 40,
+    "percent": 50,
+    "accepted": 0,
+    "baseline": "first explicit 40-gate measurement; preserve IDs/titles and denominator unless recorded scope change",
+    "note": "P04 frozen 20/40 gate vector retained byte-identically; no new gate closure in P05."
+  },
+  "additional_parent": "34635cbd5f6df7bc2a01b5d07e4cc015cf1ec84b"
 }

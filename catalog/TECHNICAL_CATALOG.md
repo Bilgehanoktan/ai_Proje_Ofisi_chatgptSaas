@@ -76,5 +76,8 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 ## W1-0198-P03
 [Delta](revisions/TECHNICAL_CATALOG_W1_0198_P03.json) · [Maintenance](../docs/W1-0198-P03/ARCHITECTURE_AND_CATALOG.md). Two fixed GET paths; no schema migration, event writer or dependency change.
 
-## W1-0198-P04
-[Delta](revisions/TECHNICAL_CATALOG_W1_0198_P04.json) · [Maintenance](../docs/W1-0198-P04/ARCHITECTURE_AND_CATALOG.md). No API/schema/event writer or dependency change; D0 read hardening.
+## W1-0198-P04-PROGRESS
+[Delta](revisions/TECHNICAL_CATALOG_W1_0198_P04.json) · [Maintenance](../docs/W1-0198-P04/ARCHITECTURE_AND_CATALOG.md). No new API, DB migration or dependency.
+
+## W1-0198-P05
+[Delta](revisions/TECHNICAL_CATALOG_W1_0198_P05.json) · [Maintenance](../docs/W1-0198-P05/ARCHITECTURE_AND_CATALOG.md).

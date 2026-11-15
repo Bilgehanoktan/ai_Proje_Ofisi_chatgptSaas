@@ -1,3 +1,3 @@
-# CURRENT — W1-0198-P04
+# CURRENT — W1-0198-P05
 
-P03 parent preserved. D0 snapshot/session/identity hardening; 30 new +14 regression tests PASS. 306 product files /305 manifest entries. P02/P03 actual 17 persisted tests, full build/browser/PG NOT_RUN; Windows deferred. Maturity from 24 scores: design 71.875%, source 34.375%, 0/24 product acceptance; not completion. [Plan](../docs/implementation_plan/W1_0198_PARALLEL_PLAN.md) · [Architecture](../docs/W1-0198-P04/ARCHITECTURE_AND_CATALOG.md) · [Next](NEXT_STEP.md).
+Two P04 branches reconciled at source level. 315 product files, 314 manifest entries, 57 selected tests PASS (11 new +46 rerun). W1 20/40 (50%) unchanged. 17 persisted tests NOT_RUN. [Plan](../docs/implementation_plan/W1_0198_PARALLEL_PLAN.md) · [Reconciliation](W1_0198_P05_RECONCILIATION.json) · [Next](NEXT_STEP.md).

@@ -118,5 +118,8 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 ## W1-0198-P03 — historical prefix and scope contract
 [Architecture](../W1-0198-P03/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Separate prefix/terminal profiles; no live freshness or authority.
 
-## W1-0198-P04 — D0 readback hardening and progress summary
-[Architecture](../W1-0198-P04/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Shared read snapshot, session identity and historical join HOLD. No new authority or endpoint.
+## W1-0198-P04-PROGRESS — shared D0 read guard and measurable UI milestones
+[Architecture](../W1-0198-P04/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Existing P04 preserved; no automatic merge or live authority.
+
+## W1-0198-P05 — P04 source reconciliation
+[Architecture](../W1-0198-P05/ARCHITECTURE_AND_CATALOG.md). Both P04 branches preserved; no runtime authority.
