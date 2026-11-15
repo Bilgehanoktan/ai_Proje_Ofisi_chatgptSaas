@@ -63,3 +63,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0201-R — retained history
 [Machine-readable delta](revisions/TECHNICAL_CATALOG_0201_R.json) · [Architecture, maintenance, rollback](../docs/0201R/ARCHITECTURE_AND_CATALOG.md). New reference module, two test files; 14 archive tests PASS, 5 integration tests NOT_RUN. No API/canonical DB/event schema change.
+
+## 0202-S — signed history
+[Machine-readable delta](revisions/TECHNICAL_CATALOG_0202_S.json) · [Architecture and rollback](../docs/0202S/ARCHITECTURE_AND_CATALOG.md). 25 new tests (6 underlying snapshot mock), 14 archive regression PASS. Optional cryptography pin; no base dependency or canonical schema change.
