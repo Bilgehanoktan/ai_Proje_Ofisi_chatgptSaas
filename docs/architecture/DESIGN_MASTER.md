@@ -90,3 +90,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188-W8 — combined architecture and build gate
 [Architecture](../0188-W8/ARCHITECTURE_AND_CATALOG.md) · [Local build](../0188-W8/LOCAL_BUILD_RUNBOOK.md). Premium W1 and paired 0188 sample source integrated; no canonical T1/lease/causal join or authority. Build and actual runtime remain unverified.
+
+## 0188-W8-S1 — dependency pin candidates
+[Scope and maintenance](../0188-W8-S1/ARCHITECTURE_AND_CATALOG.md). No API/DB or normative authority changes. New lock/audit/install/build open.

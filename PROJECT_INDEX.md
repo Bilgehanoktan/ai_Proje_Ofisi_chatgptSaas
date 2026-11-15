@@ -75,3 +75,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188-W8 — combined source and local execution tooling
 [Architecture](docs/0188-W8/ARCHITECTURE_AND_CATALOG.md) · [Build runbook](docs/0188-W8/LOCAL_BUILD_RUNBOOK.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8.json) · [Readback](releases/GITHUB_READBACK_0188_W8.json) · [Tests](tests/evidence/TEST_EVIDENCE_0188_W8.json). 17 exact 0188 paths, 250 product files, 249 manifest path/size matches; 13 Node +8 runner checks PASS. Full install/build/runtime NOT_RUN, independent HOLD.
+ 
+## 0188-W8-S1
+[Security candidate architecture](docs/0188-W8-S1/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8_S1.json) · [Readback](releases/GITHUB_READBACK_0188_W8_S1.json). Prior Windows lock rejected; new pins and 9 runner tests, full build open.

@@ -72,3 +72,6 @@ Source 3a4c5d3ae85c1521af2cf4bb05fcafce81aeb3ac; 223 manifest entries/224 produc
 
 ## 0188-W8 — joint product source and execution runner
 Branch integration/0188-w1-w8; two-parent source 4ffbfc0c03de7945860306b450c1a6457eb144c3; 17 exact 0188 paths, 250 product files, 249 path/size matches, 10 schema + 4 fixture pairs. 13 selected TS/Node mock checks and 8 offline runner preflight tests PASS. Full checkout, transitive locks, installation, paired writer, full backend, Next build/typecheck, React browser and visual regression remain NOT_RUN/NOT_GENERATED; npm timeout, DNS blocked. [Build runbook](../docs/0188-W8/LOCAL_BUILD_RUNBOOK.md) · [Catalog](../catalog/revisions/TECHNICAL_CATALOG_0188_W8.json). No main/CI/PROD/independent acceptance.
+
+## 0188-W8-S1
+Branch integration/0188-w8-s1; source 4144b7593bb901f866f016e6c342312244e9d2bb. Prior Windows audit 249/249 and 14 pairs; old npm 3 vulnerable packages/39 advisory objects. Two pin files changed, 2 runner files, manifest regenerated, 9 runner tests PASS. New locks, audits, install, full build and browser NOT_RUN. Independent HOLD. [Runbook](../docs/0188-W8-S1/ARCHITECTURE_AND_CATALOG.md).

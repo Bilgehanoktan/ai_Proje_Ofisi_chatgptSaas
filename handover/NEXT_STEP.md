@@ -97,3 +97,6 @@ P0 actual paired writer/CLI/schema/loopback on exact checkout, then regression i
 
 ## 0188-W8 → full execution gate / 0189
 P0 obtain clean pinned full checkout in network-enabled isolated DEV; run audit, prepare, review locks, install, test, smoke using tests/integration/w8_local.py and [runbook](../docs/0188-W8/LOCAL_BUILD_RUNBOOK.md). No more sample helper-only rounds as substitute for full build. Review 52 actual screenshots and pixel baseline separately. Retain 0189 actual paired writer/schema/CLI/loopback, R03/PG non-owner and T1/lease/W-A/freshness work; never auto-merge newer parallel changes without exact scope. Independent acceptance, real grants, paid calls, CI/main/PROD HOLD.
+
+## 0188-W8-S1 next
+Fetch new S1 branch, clean audit, prepare new stage, inspect and scan new npm/Python locks, only then approved install/test/smoke. Preserve 0190 parallel recovery, no main/CI/PROD. No old lock approval.
