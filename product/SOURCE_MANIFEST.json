@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-r11-d0-0197-unified",
-  "doc_revision": "0197-U",
-  "status": "ISOLATED_UNIFIED_SOURCE_CANDIDATE_FULL_REGRESSION_PENDING",
+  "version": "0.1.0-draft.6-r11-d0-0198-ul",
+  "doc_revision": "0198-UL",
+  "status": "ISOLATED_LIFECYCLE_SOURCE_INTEGRATION_REGRESSION_PENDING",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
+  "parent_git_commit": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -330,6 +330,10 @@
       "bytes": 13176,
       "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
     },
+    "ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py": {
+      "bytes": 18997,
+      "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1"
+    },
     "ai-company-os-backend/app/core/transaction/postgres_session.py": {
       "bytes": 2495,
       "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
@@ -562,6 +566,10 @@
       "bytes": 4082,
       "sha256": "c7c8c861f73a1b4e432891b2084790917573d05dd7b7d391d69c4dc4acb8c24a"
     },
+    "ai-company-os-backend/tests/test_lifecycle_mapping_0196.py": {
+      "bytes": 14286,
+      "sha256": "083fc5fa1e391eef4e7f6b7fb51ed453bc4f33b933a3f963e2428b03cbd18bdd"
+    },
     "ai-company-os-backend/tests/test_memory_access_0194.py": {
       "bytes": 7089,
       "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
@@ -597,6 +605,10 @@
     "ai-company-os-backend/tests/test_outbox_projection.py": {
       "bytes": 2931,
       "sha256": "ff9fc74517fe2b9c6452a301bdbabb7365977ca508ec75ef194cbdf1ab425a59"
+    },
+    "ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py": {
+      "bytes": 8750,
+      "sha256": "38fd8dbe7ed0f9f6ff4ab90bc3c59c67ace3593ce4ff9555b71e1601bbf20f84"
     },
     "ai-company-os-backend/tests/test_pg_transition_mapping_0194.py": {
       "bytes": 7176,
@@ -1083,8 +1095,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "652d12b5daf53859f723e6ffe06dfd03c3efd13f",
-  "source_git_commit_note": "Three pinned source parents; exact source commit in releases/GITHUB_READBACK_0197_U.json. Full regression pending.",
+  "parent_source_manifest_blob": "e3ad19477c8e1711d1b2bfa2694813b75a319bbc",
+  "source_git_commit_note": "Exact source commit in releases/GITHUB_READBACK_0198_UL.json; combined runtime not tested.",
   "integration_parents": {
     "ui": {
       "commit": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
@@ -1097,6 +1109,14 @@
     "memory": {
       "commit": "ef9cc8368309bd4d880b36137c7f25fc07a018db",
       "manifest": "3d8f59284c93d4736e302d5615fcb6e0ea794e69"
+    },
+    "unified": {
+      "commit": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
+      "manifest": "e3ad19477c8e1711d1b2bfa2694813b75a319bbc"
+    },
+    "lifecycle": {
+      "commit": "a7c4f417faf17959e3165193aa247815954bfa42",
+      "manifest": "0fc934e32a78b475b0c89a3e39b1eace33a88ecb"
     }
   }
 }

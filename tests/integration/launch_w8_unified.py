@@ -1,4 +1,4 @@
-"""Interactive D0 preview of the already built and smoke-tested 0197-U stage."""
+"""Interactive D0 preview of the already built and smoke-tested 0198-UL stage."""
 import argparse
 from pathlib import Path
 import socket
@@ -7,14 +7,15 @@ import sys
 import time
 import w8_unified as w
 
-APPROVAL = '20fb43a71e6a02f2dd0e4222542600cb0988dfab6a5aa61bf7318fbf6d98afdd'
 
 
-def launch(stage, frontend_port=17300, backend_port=17301):
-    w.installed(stage, APPROVAL)
-    if (stage / 'BUILD_TEST_OK').read_text(encoding='utf-8') != APPROVAL:
+def launch(stage, approval, frontend_port=17300, backend_port=17301):
+    if len(approval) != 64:
+        raise ValueError('explicit reviewed REVIEW.json SHA-256 required')
+    w.installed(stage, approval)
+    if (stage / 'BUILD_TEST_OK').read_text(encoding='utf-8') != approval:
         raise ValueError('verified build required')
-    if (stage / 'SMOKE_OK').read_text(encoding='utf-8') != APPROVAL:
+    if (stage / 'SMOKE_OK').read_text(encoding='utf-8') != approval:
         raise ValueError('verified smoke required')
     paths = [w.checked_path(stage, name) for name in (
         'sample-pair/demo.workbench.d0.sqlite',
@@ -75,11 +76,12 @@ def launch(stage, frontend_port=17300, backend_port=17301):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--stage', type=Path, required=True)
+    parser.add_argument('--approve', required=True)
     parser.add_argument('--frontend-port',type=int,default=17300)
     parser.add_argument('--backend-port',type=int,default=17301)
     args = parser.parse_args()
     try:
-        launch(args.stage.resolve(),args.frontend_port,args.backend_port)
+        launch(args.stage.resolve(),args.approve,args.frontend_port,args.backend_port)
     except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as exc:
         print('HOLD:', exc, file=sys.stderr)
         sys.exit(1)

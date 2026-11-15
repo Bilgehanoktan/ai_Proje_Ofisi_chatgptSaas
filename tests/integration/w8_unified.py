@@ -1,4 +1,4 @@
-"""0197-U isolated D0 build runner. No CI, main, provider calls or PROD."""
+"""0198-UL isolated D0 build runner. No CI, main, provider calls or PROD."""
 import argparse
 import email
 import hashlib
@@ -13,7 +13,7 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = 'e3ad19477c8e1711d1b2bfa2694813b75a319bbc'
+MANIFEST_BLOB = 'd42dcc1f5ac8da37e13d18e26687505463a5cd92'
 HARNESS = {
     'run_combined_helpers.cjs': '8228e8db13e27f641e8b24dd447f55cf2cfc4a31',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
@@ -42,6 +42,7 @@ DATABASE_FIXTURES = {
     'database/0193/candidate_run_head.sql': '180924e97ee1f31fa27332941a41e37fdf73017e',
     'database/0194/candidate_transition_roles.sql': '7b5d374bb7973b283e4fcfa0d796ed6128ef9d27',
     'database/0195/candidate_admission_budget.sql': 'd5dc6abc045da14ef42e88b4e85e50e9062a1b27',
+    'database/0196L/candidate_lease_settlement.sql': 'e4c9a84ff705c39486579c393b1f3aaef9e34da9',
 }
 
 def verify_aux(root):
@@ -56,7 +57,7 @@ def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0197-U archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0198-UL archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)
