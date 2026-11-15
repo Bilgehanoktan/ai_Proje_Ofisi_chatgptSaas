@@ -84,3 +84,9 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0187-W1-I — reconciled source integration
 [Architecture](../0187-W1-I/ARCHITECTURE_AND_CATALOG.md) · [Acceptance runbook](../0187-W1-I/ACCEPTANCE_RUNBOOK.md). Both 0187 and W1 histories retained; no new authority, runtime mapping or contract. Actual product acceptance remains open.
+
+## 0188 — Paired synthetic task/budget readback
+[Addendum](../0188/ARCHITECTURE_AND_CATALOG.md). Optional fresh sample marker, double read, no causal/T1 or lease authority.
+
+## 0188-W8 — combined architecture and build gate
+[Architecture](../0188-W8/ARCHITECTURE_AND_CATALOG.md) · [Local build](../0188-W8/LOCAL_BUILD_RUNBOOK.md). Premium W1 and paired 0188 sample source integrated; no canonical T1/lease/causal join or authority. Build and actual runtime remain unverified.

@@ -91,3 +91,9 @@ P0 full pinned network-enabled isolated checkout/locks/backend/Next/current brow
 
 ## 0187-W1-I next — 0188/W8
 Use unified branch as isolated integration candidate, recheck active recovery head before future joint changes. P0 full pinned checkout, dependency lock/provenance and full backend/Next/typecheck/actual React browser. P1 52 screen baseline and reviewed pixel regression, loopback API parity and all interaction tests. Continue 0188 R03/PG/lease/W-A/cross-store/freshness work separately. No acceptance until actual evidence; no main/CI/PROD/grants/spend.
+
+## 0188 → 0189
+P0 actual paired writer/CLI/schema/loopback on exact checkout, then regression including 0186/0187 and full pinned backend/Next build/current browser. P0 R03 physical mapping, PostgreSQL non-owner, trusted lease/heartbeat/W-A and canonical admission/budget/outbox. P1 canonical task identity, sequence freshness, Memory Engine ↔ Agent Runtime. No real provider, spend, customer data, independent acceptance, CI, main or PROD. Avoid repeated sample-only layers. No repeated standing approval.
+
+## 0188-W8 → full execution gate / 0189
+P0 obtain clean pinned full checkout in network-enabled isolated DEV; run audit, prepare, review locks, install, test, smoke using tests/integration/w8_local.py and [runbook](../docs/0188-W8/LOCAL_BUILD_RUNBOOK.md). No more sample helper-only rounds as substitute for full build. Review 52 actual screenshots and pixel baseline separately. Retain 0189 actual paired writer/schema/CLI/loopback, R03/PG non-owner and T1/lease/W-A/freshness work; never auto-merge newer parallel changes without exact scope. Independent acceptance, real grants, paid calls, CI/main/PROD HOLD.

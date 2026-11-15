@@ -66,3 +66,9 @@ Source f0af5e7bdb9310b7b9e8fc66e8cb8b5153b254cf; 212 manifest entries/213 produc
 
 ## 0187-W1-I — combined MVP source
 Isolated integration/0187-w1-abcdefgh; source 11eed33a9e9d0bf14a075d02fdd04d461197c683, two parents. 32 UI paths, 30 exact + 2 reconciled; 69 historical W1 records; 239 product files, 238 manifest path/size matches; 9 schema and 4 fixture pairs. 66 selected Node/mock checks and 2 syntax checks PASS; full checkout/locks/Next/backend/actual React/visual regression NOT_RUN. No independent acceptance, actual runtime, CI, main or PROD. [Architecture](../docs/0187-W1-I/ARCHITECTURE_AND_CATALOG.md) · [Acceptance](../docs/0187-W1-I/ACCEPTANCE_RUNBOOK.md) · [Readback](../releases/GITHUB_READBACK_0187_W1_I.json).
+
+## 0188 — paired task-budget source integration
+Source 3a4c5d3ae85c1521af2cf4bb05fcafce81aeb3ac; 223 manifest entries/224 product files; 23 selected tests PASS (substituted prior readers, mocked proxy); actual paired writer/schema/CLI/full build NOT_RUN. 223 path/size, 17 delta content hash, 10 local exact paths. DNS and PG blockers retained. [Architecture](../docs/0188/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0188.json). No causal/T1/lease/geometry authority, actual grants/spend/CI/main/PROD HOLD.
+
+## 0188-W8 — joint product source and execution runner
+Branch integration/0188-w1-w8; two-parent source 4ffbfc0c03de7945860306b450c1a6457eb144c3; 17 exact 0188 paths, 250 product files, 249 path/size matches, 10 schema + 4 fixture pairs. 13 selected TS/Node mock checks and 8 offline runner preflight tests PASS. Full checkout, transitive locks, installation, paired writer, full backend, Next build/typecheck, React browser and visual regression remain NOT_RUN/NOT_GENERATED; npm timeout, DNS blocked. [Build runbook](../docs/0188-W8/LOCAL_BUILD_RUNBOOK.md) · [Catalog](../catalog/revisions/TECHNICAL_CATALOG_0188_W8.json). No main/CI/PROD/independent acceptance.

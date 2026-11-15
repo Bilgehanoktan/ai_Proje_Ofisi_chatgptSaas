@@ -69,3 +69,9 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0187-W1-I — 0187 + W1 joint source
 32 UI paths (30 exact, two reconciled), 239 product files, 238 manifest path/size matches, 69 historical UI blobs retained. 9 shared schemas and 4 fixtures match. 66 selected Node/mock tests and 2 merged TSX syntax checks PASS; no full checkout/build/browser/backend or independent acceptance. [Scope](docs/0187-W1-I/SCOPE.json) · [Acceptance runbook](docs/0187-W1-I/ACCEPTANCE_RUNBOOK.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0187_W1_I.json) · [Readback](releases/GITHUB_READBACK_0187_W1_I.json).
+
+## 0188 — paired task-budget readback
+[Architecture](docs/0188/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0188.json) · [evidence](releases/GITHUB_READBACK_0188.json).
+
+## 0188-W8 — combined source and local execution tooling
+[Architecture](docs/0188-W8/ARCHITECTURE_AND_CATALOG.md) · [Build runbook](docs/0188-W8/LOCAL_BUILD_RUNBOOK.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8.json) · [Readback](releases/GITHUB_READBACK_0188_W8.json) · [Tests](tests/evidence/TEST_EVIDENCE_0188_W8.json). 17 exact 0188 paths, 250 product files, 249 manifest path/size matches; 13 Node +8 runner checks PASS. Full install/build/runtime NOT_RUN, independent HOLD.
