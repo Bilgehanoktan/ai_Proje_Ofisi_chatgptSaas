@@ -81,3 +81,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188-W8-S2
 [Architecture](docs/0188-W8-S2/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8_S2.json) · [Readback](releases/GITHUB_READBACK_0188_W8_S2.json)
+
+## 0188-W8-S3
+[Architecture](docs/0188-W8-S3/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8_S3.json) · [Readback](releases/GITHUB_READBACK_0188_W8_S3.json)
