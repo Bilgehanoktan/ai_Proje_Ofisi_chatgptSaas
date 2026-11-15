@@ -121,3 +121,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0199-C next
 [Detailed next step](NEXT_STEP_0199_C.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0199_C.json). Coordinate exact history/plan history carry with active integration; actual PG, terminal success/independent pin custody remain open.
+
+## 0200-S next
+[Detailed next step](NEXT_STEP_0200_S.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0200_S.json). Actual PostgreSQL, independent pin custody and terminal success remain open. W1/AI/MEM separate.

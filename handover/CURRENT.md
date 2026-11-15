@@ -96,3 +96,6 @@ Source 0dd841e8cb17116320b5db2bdebfd8e400b9fdd9; 243 product files, 242 manifest
 
 ## 0199-C — separate plan history workstream
 Source 7a46e9bf3f5dd8f61883ff3444efca0dbbb185e1; 245 product files, 244 manifest entries, 242 prior non-manifest blobs unchanged. 26 new + 127 regressions PASS; 10 opt-in PG skipped. Exact pinned project roster, per-run and DAG causal validation, optional exclusive sample pool replay. Actual PG/full suite/build/browser NOT_RUN; R03, true authority and IV HOLD. [Architecture](../docs/0199C/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0199_C.json) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0199_C.json). Unified not merged. [Next](NEXT_STEP_0199_C.md).
+
+## 0200-S — separate PostgreSQL snapshot workstream
+Source ca8da198bed3d862721e83d60ec4639bc1c9d584; 248 product files, 247 manifest entries, 244 prior non-manifest blobs unchanged. 11 protocol +153 regression PASS; 13 real PG skipped. Actual PG/full suite/build/browser NOT_RUN; R03, real authority and IV HOLD. [Architecture](../docs/0200S/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0200_S.json) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0200_S.json). Other branch not merged. [Next](NEXT_STEP_0200_S.md).

@@ -114,3 +114,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0199-C — exact project-wide D0 causal history and optional exclusive budget replay
 [Addendum](../0199C/ARCHITECTURE_AND_CATALOG.md). Internal historical input; no shared contract, normative mapping or real authority change.
+
+## 0200-S — guarded read-only consistent snapshot for D0 plan history
+[Addendum](../0200S/ARCHITECTURE_AND_CATALOG.md). Protocol tested, actual PG not run; no normative or shared contract change.

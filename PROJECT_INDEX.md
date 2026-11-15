@@ -99,3 +99,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0199-C — plan-wide causal history (separate workstream)
 [Architecture](docs/0199C/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0199_C.json) · [Evidence](releases/GITHUB_READBACK_0199_C.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0199_C.json). 153 selected tests PASS, PG/IV HOLD.
+
+## 0200-S — PostgreSQL consistent snapshot adapter (separate workstream)
+[Architecture](docs/0200S/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0200_S.json) · [Evidence](releases/GITHUB_READBACK_0200_S.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0200_S.json). 164 selected PASS; 13 actual PG skipped; IV/R03 HOLD.
