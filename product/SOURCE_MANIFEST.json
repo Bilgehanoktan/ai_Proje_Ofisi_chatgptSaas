@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0194",
-  "status": "ISOLATED_D0_TRANSITION_MAPPING_SQLITE_TESTED_PG_NOT_RUN",
+  "doc_revision": "0195",
+  "status": "ISOLATED_D0_ADMISSION_BUDGET_SQLITE_TESTED_PG_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f7a0258103b72b6052491b162c3a8fe73b99546e",
+  "parent_git_commit": "f230083545ad02c5e7abfeece8d39971827262b2",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -945,8 +945,16 @@
     "ai-company-os-backend/tests/test_transition_mapping_0194.py": {
       "bytes": 14108,
       "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": {
+      "bytes": 13176,
+      "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
+    },
+    "ai-company-os-backend/tests/test_admission_mapping_0195.py": {
+      "bytes": 10496,
+      "sha256": "d78954c237f7aa26838c4987665108c243e5646fa6e3b8e44ac77fb321df6dc4"
     }
   },
-  "parent_source_manifest_blob": "92717879a6776d9e0b62a21306dd59275d55e216",
+  "parent_source_manifest_blob": "bcffffb8504121e6b3d460fc47531c63f4238efc",
   "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }
