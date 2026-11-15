@@ -114,3 +114,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P02 — typed registry and historical lifecycle
 [Architecture](../W1-0198-P02/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). New fixed D0 readback; no canonical authority or geometry join.
+
+## W1-0198-P03 — historical prefix and scope contract
+[Architecture](../W1-0198-P03/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Separate prefix/terminal profiles; no live freshness or authority.

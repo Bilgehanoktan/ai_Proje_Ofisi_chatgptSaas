@@ -134,3 +134,6 @@ Keep A–H IDs; proceed parallel by path ownership. A pinned regression/React te
 
 ## W1-0198-P03 — current next
 Preserve A–H. A execute exact persisted fixture tests and React acceptance when available; Windows deferred. B scope/revision/freshness registry; C/D/E/G generalize validated active-run/lease/readback only after contract, no plan/geometry join without proof. F trusted model reservation and independent ACL/witness references; no content/provider calls. H visual review. Prior P02 fixture is separate fixed terminal scenario. No new grants, CI/main/PROD or independent acceptance. Fresh stage and new lock approval later.
+
+## W1-0198-P04 — current next
+Preserve A–H. A recover exact full source and execute P02 eight + P03 nine persisted cases, then full pinned tests and React/browser; Windows deferred. B/C/D/E/G generalize scope, independent current clock/lease/reservation and causal projection only after evidence; no join between historical files or geometry. F trusted model and memory references; no real content/provider/authority. H visual/accessibility. Fresh reviewed stage later. No new grant, CI/main/PROD or independent acceptance.

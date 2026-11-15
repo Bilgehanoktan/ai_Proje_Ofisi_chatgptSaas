@@ -1,19 +1,19 @@
 {
-  "revision": "W1-0198-P02",
-  "branch": "integration/w1-0198-p02",
-  "source_commit": "66e6d15f26ccfb23095f06884c2f347c65b2df46",
-  "parent_commit": "78c4286c6ae974f1f231c3ab3070eb0e864ddd4f",
+  "revision": "W1-0198-P03",
+  "branch": "integration/w1-0198-p03",
+  "source_commit": "f58cf95402b06daddfc3b7ec067533451772eb8f",
+  "parent_commit": "37edf7b3952435e1234ee30415615219f6eb4458",
   "integration_parents": {
     "unified": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
     "lifecycle": "a7c4f417faf17959e3165193aa247815954bfa42"
   },
   "product": "ISOLATED_UNIFIED_SOURCE_CANDIDATE",
-  "product_files": 289,
-  "manifest_entries": 288,
-  "manifest_blob": "b55ba435b9c428374acb08a8d70a21dc858eb53f",
-  "source_readback": "288_PATH_SIZE_PASS_23_CHANGED_SHA256_PASS_265_UNCHANGED",
+  "product_files": 301,
+  "manifest_entries": 300,
+  "manifest_blob": "54fc03f9f775e5d6b7d0aa880cd64b98d8d62145",
+  "source_readback": "300_PATH_SIZE_PASS_18_CHANGED_SHA256_PASS_282_UNCHANGED",
   "full_product_sha256": "NOT_RUN",
-  "selected_controls_passed": 36,
+  "selected_controls_passed": 66,
   "full_product_tests": "NOT_RUN",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
@@ -31,13 +31,14 @@
     "core_0195": "79_PASS_5_PG_SKIP",
     "memory_model_0196_MA": "41_PASS",
     "lifecycle_0196_L": "26_NEW_79_REGRESSION_10_PG_SKIP_NOT_ADDITIVE",
-    "W1_0198_P01": "12 pure helpers PASS"
+    "W1_0198_P01": "12 pure helpers PASS",
+    "W1_0198_P02": "24 new +12 rerun pure Node PASS"
   },
-  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P02.json",
-  "next": "W1-0198-P03 A–H: execute isolated backend fixture checks if pinned sources obtainable; generalized active run/lease and scope projection, trusted model/memory reference contracts, UX; Windows deferred.",
+  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P03.json",
+  "next": "W1-0198-P04 A–H: recover exact checkout and execute P02 8 + P03 9 persisted cases; independently scoped active run/lease/clock contract, model/memory reference, canonical task/office projection and UX; Windows deferred.",
   "previous_pointers": [
-    "handover/history/CURRENT_W1_0198_P01_PRE_P02.json"
+    "handover/history/CURRENT_W1_0198_P02_PRE_P03.json"
   ],
-  "selected_controls_scope": "24 new +12 transport regression pure Node/TS5.8.3; backend/React not run",
+  "selected_controls_scope": "6 Python pure +60 Node; 30 new +36 rerun; persisted/React NOT_RUN",
   "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json"
 }
