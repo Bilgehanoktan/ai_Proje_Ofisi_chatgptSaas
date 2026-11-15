@@ -84,3 +84,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0193
 [Architecture](docs/0193/ARCHITECTURE_AND_CATALOG.md) · [Product roadmap](docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0193.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0193.json). 25 selected synthetic tests PASS; PG and full product NOT_RUN.
+
+## 0194-M — Memory access reference
+[Architecture](docs/0194-M/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0194_M.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0194_M.json) · [Readback](releases/GITHUB_READBACK_0194_M.json)

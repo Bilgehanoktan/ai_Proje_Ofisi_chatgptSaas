@@ -99,3 +99,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0193 — Runtime transition
 [Addendum](../0193/ARCHITECTURE_AND_CATALOG.md) · [Product roadmap](../implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). No normative change.
+
+## 0194-M — Memory/Knowledge access reference
+[Addendum](../0194-M/ARCHITECTURE_AND_CATALOG.md). Separate branch; no normative change or retrieval authority.
