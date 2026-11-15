@@ -60,3 +60,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185 — provider/admission/contracts
 [Architecture](docs/0185/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0185.json) · [evidence](releases/GITHUB_READBACK_0185.json).
+
+## 0186 — durable sample admission/settlement
+[Architecture](docs/0186/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0186.json) · [evidence](releases/GITHUB_READBACK_0186.json).

@@ -42,3 +42,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0185
 [Source/class/function/API/DB/test catalog](revisions/TECHNICAL_CATALOG_0185.json) · [Maintenance](../docs/0185/ARCHITECTURE_AND_CATALOG.md). 191 product manifest entries. Typed provider DENY, admission bundle HOLD, shared Outbox schema/pins.
+
+## 0186
+[Source/class/function/API/DB/event/test catalog](revisions/TECHNICAL_CATALOG_0186.json) · [Maintenance](../docs/0186/ARCHITECTURE_AND_CATALOG.md). 201 manifest entries; isolated sample admission/budget/settlement, read-only projection.

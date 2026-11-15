@@ -57,3 +57,6 @@ Source 5d93a09b5e99dcbafc7066f3a140c63d1c09d156; 182 manifest entries/183 produc
 
 ## 0185 — typed provider review / cross-engine admission / shared contract
 Source bbae45051f38cf6a71ebcbb9ba0e46c94c5a188d; 191 manifest entries/192 product files. 47 new + 41 regression selected tests PASS; actual isolated HTTP and compiled proxy normal 200/overflow 503. 13 changed + 33 prior local files exact; full repo byte archive not downloaded. All runtime/independent/physical mapping authority HOLD. Full pinned backend/Next/browser/PG NOT_RUN, DNS blocked. [Architecture](../docs/0185/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0185.json). CURRENT.json refreshed from stale 0167 pointer; historical byte copy retained.
+
+## 0186 — durable sample admission/reservation/settlement and CEO projection
+Source e5db7974daa47652ca5773aeb5ece177a7b1a457; 201 manifest entries/202 product files; 23 new +88 regression =111 selected PASS; separate CLI reopen and actual isolated HTTP/proxy 200/503. 58 exact local paths; full repo archive not downloaded. Full pinned backend/ASGI/Next/browser/PG NOT_RUN, dependency DNS blocked. No real admission/tenant/provider/spend/independent authority. [Architecture](../docs/0186/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0186.json).

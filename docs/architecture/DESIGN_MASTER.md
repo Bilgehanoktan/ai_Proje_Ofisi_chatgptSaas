@@ -75,3 +75,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185 — typed provider review, admission bundle, shared Outbox contract
 [Addendum](../0185/ARCHITECTURE_AND_CATALOG.md). No normative mapping, trust or execution authority change.
+
+## 0186 — durable synthetic admission and settlement, CEO readback
+[Addendum](../0186/ARCHITECTURE_AND_CATALOG.md). No canonical physical mapping or authority change.
