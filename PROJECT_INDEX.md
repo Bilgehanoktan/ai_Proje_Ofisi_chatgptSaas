@@ -94,3 +94,6 @@ Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTU
 
 ## 0198-UL — Lifecycle integration / W1 baseline
 [Architecture](docs/0198-UL/ARCHITECTURE_AND_CATALOG.md) · [Lifecycle](docs/0196L/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0198_UL.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0198_UL.json) · [Readback](releases/GITHUB_READBACK_0198_UL.json).
+
+## W1-0198-P01
+[Architecture](docs/W1-0198-P01/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](docs/implementation_plan/W1_0198_PARALLEL_PLAN.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P01.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P01.json).

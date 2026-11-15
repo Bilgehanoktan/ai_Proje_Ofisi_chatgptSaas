@@ -108,3 +108,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0198-UL — Lifecycle source union
 [0196-L](../0196L/ARCHITECTURE_AND_CATALOG.md) · [0198-UL](../0198-UL/ARCHITECTURE_AND_CATALOG.md). UI preserved; no canonical or runtime authority change.
+
+## W1-0198-P01 — A–H parallel UI
+[Architecture](../W1-0198-P01/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Existing D0 reads centralized; canonical runtime/authority unchanged.

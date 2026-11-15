@@ -66,3 +66,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0198-UL
 [0196-L original catalog](revisions/TECHNICAL_CATALOG_0196_L.json) · [union delta](revisions/TECHNICAL_CATALOG_0198_UL.json). 272 manifest entries; no API/dependency change. W1 sources unchanged.
+
+## W1-0198-P01
+[Delta](revisions/TECHNICAL_CATALOG_W1_0198_P01.json) · [maintenance](../docs/W1-0198-P01/ARCHITECTURE_AND_CATALOG.md). 13 UI files, 5 new. No API/DB/event/dependency changes.

@@ -128,3 +128,6 @@ User transcript: 250 source SHA pins, 14 pairs, reviewed fingerprint matched, 25
 
 ## 0198-UL — current next
 W1 first: read-only D0 lifecycle/settlement projection with explicit scope, revision, causal readback and HOLD; no geometry join/live agents. Integrate CEO/Office using strict shared schema and parser; preserve W1 UI. Parallel model reservation binding, Skill/Tool and trusted Memory, real PG remains separate. Windows later: fresh stage with updated manifest, 9 auxiliary pins, new review fingerprint, full regression/build/smoke before launch. No reuse of old approval or stages. Independent acceptance/main/PROD/real provider HOLD.
+
+## W1-0198-P02 — current next
+Keep A–H IDs; proceed parallel by path ownership. A pinned regression/React test harness, Windows deferred; B fixed typed registry + React lifecycle tests; C/D/E/G need validated persisted lifecycle projection, no geometry/causal join before proof; F trusted model reservation + memory ACL API; H targeted browser/visual checks when environment available. No grant, provider, spend, main, CI, PROD or independent acceptance. Fresh Windows review later; old approval invalid.
