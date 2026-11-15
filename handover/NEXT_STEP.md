@@ -97,3 +97,6 @@ P0 actual disposable PostgreSQL probe on installed trusted binaries; resolve R03
 
 ## 0190 → 0191
 P0 execute 14 PG checks in an isolated environment with installed binaries. Resolve R03 owner mapping and canonical T1 in existing modules; full pinned backend/Next/browser. No additional sample engines. Preserve standing development scope and independent gates.
+
+## 0191 next
+Implement concrete PostgreSQL session after R03 mapping resolution; parallel Agent Runtime and Orchestrator code, Event Store. W8 Windows independent. No real grants.

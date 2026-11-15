@@ -72,3 +72,6 @@ Source 54456e1598161c9fd5af5d0fefbaeae3945297d3; 224 product files unchanged, 48
 
 ## 0190 — T1 contention and R03
 63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Architecture](../docs/0190/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0190.json).
+
+## 0191 — logical T1 coordinator
+Product source changed; concrete PG adapter and runtime wiring absent. Tests NOT_RUN. [Architecture](../docs/0191/ARCHITECTURE_AND_CATALOG.md).
