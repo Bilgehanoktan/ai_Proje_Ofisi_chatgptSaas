@@ -13,3 +13,7 @@
 
 ## CEO-0174 standing development
 [Decision](decisions/CEO/CEO_0174_STANDING_DEVELOPMENT.md): CODE/REPO/isolated DEV/local TEST approved. Every round integrates where independent gates permit; record blockers, test evidence and rollback. Prior user-level prohibitions superseded only within this scope. No independent acceptance, CI, PROD, main merge, paid calls or real data.
+
+
+## CEO-0179=B controlled continuous integration (2026-11-15)
+[Decision](decisions/CEO/CEO_0179_B_CONTROLLED_INTEGRATION.md) and [policy](security/policy/CONTROLLED_DEV_INTEGRATION_0180.json) supersede independent PRE/T01/T06 prerequisites **only** for pinned isolated development-branch product source transfer, local build and synthetic tests. Keep actual independent security acceptance, real grants, external effects, spend, customer data, CI, main merge and PROD on their existing gates. No runtime policy change. Integrate actual product source where applicable, verify manifest, test only in allowed scope, record actual evidence, update catalog/tracker/handover and retain rollback. Prior historical instructions are not deleted. Do not ask for the same owner approval again.
