@@ -3,7 +3,10 @@ from contextlib import contextmanager, closing
 from pathlib import Path
 import sqlite3
 
+SCOPE = ('D0_ATOMIC_SAMPLE', 'synthetic-tenant', 'synthetic-company')
 DDL = """
+CREATE TABLE meta(profile TEXT PRIMARY KEY CHECK(profile='D0_ATOMIC_SAMPLE'), tenant TEXT NOT NULL CHECK(tenant='synthetic-tenant'), company TEXT NOT NULL CHECK(company='synthetic-company'));
+INSERT INTO meta VALUES('D0_ATOMIC_SAMPLE','synthetic-tenant','synthetic-company');
 CREATE TABLE head(id INTEGER PRIMARY KEY CHECK(id=1), version INTEGER NOT NULL CHECK(version>=0), state TEXT NOT NULL CHECK(state IN ('PENDING','OBSERVED')));
 CREATE TABLE lease(id INTEGER PRIMARY KEY REFERENCES head(id), holder TEXT NOT NULL, fence INTEGER NOT NULL CHECK(fence>0), tick INTEGER NOT NULL, expires INTEGER NOT NULL CHECK(expires>tick));
 CREATE TABLE event(command_id TEXT PRIMARY KEY, version INTEGER UNIQUE NOT NULL, holder TEXT NOT NULL, fence INTEGER NOT NULL, tick INTEGER NOT NULL);
@@ -22,7 +25,9 @@ def holder_ok(s):
 
 
 class AtomicSample:
-    def __init__(self, path):
+    def __init__(self, path, tenant='synthetic-tenant', company='synthetic-company'):
+        if (tenant, company) != SCOPE[1:]:
+            raise ValueError('SAMPLE_SCOPE_DENY')
         self.path = Path(path)
         if not self.path.name.endswith('.atomic.d0.sqlite') or self.path.is_symlink():
             raise ValueError('SAMPLE_PATH_INVALID')
@@ -46,6 +51,8 @@ class AtomicSample:
             db.execute('PRAGMA foreign_keys=ON')
             with db:
                 db.execute('BEGIN IMMEDIATE')
+                if db.execute('SELECT profile,tenant,company FROM meta').fetchall() != [SCOPE]:
+                    raise ValueError('SAMPLE_DB_SCOPE_MISMATCH')
                 yield db
 
     def renew(self, holder, fence, tick, ttl):
@@ -96,4 +103,4 @@ class AtomicSample:
         with self._db() as db:
             head = db.execute('SELECT version,state FROM head WHERE id=1').fetchone()
             counts = {t: db.execute('SELECT count(*) FROM '+t).fetchone()[0] for t in ('event','audit','outbox')}
-        return {'mode':'D0_ATOMIC_SAMPLE','head':head,'counts':counts,'admission':'DENY','dispatch_allowed':False,'release_ready':False,'provider_called':False,'spend_allowed':False}
+        return {'mode':SCOPE[0],'tenant':SCOPE[1],'company':SCOPE[2],'head':head,'counts':counts,'admission':'DENY','dispatch_allowed':False,'release_ready':False,'provider_called':False,'spend_allowed':False}
