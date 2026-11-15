@@ -30,3 +30,5 @@ Remote readback: 13/13 candidate blobs match source commit 4ad5739c7373e88785f19
 
 ## 0178 — EDS source corrections and exact preflight
 47-file isolated frontend; 1 addition, 2 modifications versus 0177. 8 presentation helper + 12 preflight helper tests PASS (standalone, not product). 24-area scores unchanged; no product promotion. PRE/T01/T06 HOLD, actual local archive/build/browser/product tests NOT_RUN. [Details](../docs/0178/ARCHITECTURE_AND_CATALOG.md). Next obtain exact archive, independent scope and locks, then product smoke/build; no repeated user permission request.
+
+Remote readback 0178: 6/6 changed code/test blobs match; exact 47-entry candidate manifest and TRACK-0178 verified. [Report](../releases/GITHUB_READBACK_0178.json). Source commit 8f6dbf60645b16530a07fbbcdc254e099f2b6ec7.
