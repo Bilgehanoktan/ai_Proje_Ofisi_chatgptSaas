@@ -100,3 +100,6 @@ P0 obtain clean pinned full checkout in network-enabled isolated DEV; run audit,
 
 ## 0188-W8-S1 next
 Fetch new S1 branch, clean audit, prepare new stage, inspect and scan new npm/Python locks, only then approved install/test/smoke. Preserve 0190 parallel recovery, no main/CI/PROD. No old lock approval.
+
+## Windows S1 dependency review
+249/249 source and 14 shared pairs reported PASS; 61 npm and 25 Python lock records verified against review metadata. Both submitted audit reports show zero known findings. [Evidence](../tests/evidence/DEPENDENCY_REVIEW_0188_W8_S1_WINDOWS.json). Actual package bytes, install, full build, browser and independent acceptance remain open. Next: install using exact reviewed digest then test.

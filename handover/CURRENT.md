@@ -75,3 +75,6 @@ Branch integration/0188-w1-w8; two-parent source 4ffbfc0c03de7945860306b450c1a64
 
 ## 0188-W8-S1
 Branch integration/0188-w8-s1; source 4144b7593bb901f866f016e6c342312244e9d2bb. Prior Windows audit 249/249 and 14 pairs; old npm 3 vulnerable packages/39 advisory objects. Two pin files changed, 2 runner files, manifest regenerated, 9 runner tests PASS. New locks, audits, install, full build and browser NOT_RUN. Independent HOLD. [Runbook](../docs/0188-W8-S1/ARCHITECTURE_AND_CATALOG.md).
+
+## Windows S1 dependency review
+249/249 source and 14 shared pairs reported PASS; 61 npm and 25 Python lock records verified against review metadata. Both submitted audit reports show zero known findings. [Evidence](../tests/evidence/DEPENDENCY_REVIEW_0188_W8_S1_WINDOWS.json). Actual package bytes, install, full build, browser and independent acceptance remain open. Next: install using exact reviewed digest then test.

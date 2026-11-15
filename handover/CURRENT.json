@@ -18,7 +18,7 @@
   "independent_acceptance": "HOLD",
   "normative_status": "HOLD",
   "transfer_evidence": "releases/GITHUB_READBACK_0188_W8_S1.json",
-  "next": "Windows clean S1 checkout, audit, prepare new stage, npm and Python dependency security review, then reviewed install/test/smoke. No old lock approval.",
+  "next": "Run isolated install with reviewed fingerprint; then full test/build; no independent acceptance.",
   "previous_pointer": "handover/history/CURRENT_0188_W8_PRE_S1.json",
   "ui_parent_commit": "67aa93aed3023c51de6b865d80fc96bf202e20e8",
   "merged_tsx_syntax_passed": null,
@@ -26,7 +26,7 @@
   "fixture_pair_matches": 4,
   "previous_0187_selected_tests": 41,
   "previous_0187_rerun": false,
-  "dependency_lock": "OLD_LOCK_REJECTED_NEW_NOT_GENERATED",
+  "dependency_lock": "WINDOWS_S1_LOCK_METADATA_REVIEWED",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
   "backend_parent_commit": "73f86aff7eb25d74fe41f02c6e799e9317d1aab8",
@@ -34,5 +34,6 @@
   "previous_0187_w1_tests": 66,
   "previous_0188_recovery_tests": 23,
   "actual_paired_writer": "NOT_RUN",
-  "dependency_security_review": "HOLD_NEW_AUDITS_REQUIRED"
+  "dependency_security_review": "D0_INSTALL_CANDIDATE_REVIEWED_ZERO_REPORTED_KNOWN_VULNERABILITIES",
+  "dependency_review_evidence": "tests/evidence/DEPENDENCY_REVIEW_0188_W8_S1_WINDOWS.json"
 }
