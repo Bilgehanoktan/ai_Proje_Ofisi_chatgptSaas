@@ -88,3 +88,6 @@ P0 network-enabled pinned full checkout/locks, full backend, Next build and curr
 
 ## 0187 → 0188
 P0 full pinned network-enabled isolated checkout/locks/backend/Next/current browser; R03 physical mapping, PG non-owner, trusted clock/lease/W-A, canonical admission/budget/outbox. P1 bind workbench and admission identities across separate sample DBs; Office snapshot sequence/freshness and geometry crosswalk without live join. Actual grants, independent acceptance, real providers, spend, CI, main, PROD HOLD. No repeated standing owner approval.
+
+## 0188 → 0189
+P0 actual paired writer/CLI/schema/loopback on exact checkout, then regression including 0186/0187 and full pinned backend/Next build/current browser. P0 R03 physical mapping, PostgreSQL non-owner, trusted lease/heartbeat/W-A and canonical admission/budget/outbox. P1 canonical task identity, sequence freshness, Memory Engine ↔ Agent Runtime. No real provider, spend, customer data, independent acceptance, CI, main or PROD. Avoid repeated sample-only layers. No repeated standing approval.

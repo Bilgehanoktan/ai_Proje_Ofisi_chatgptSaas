@@ -63,3 +63,6 @@ Source e5db7974daa47652ca5773aeb5ece177a7b1a457; 201 manifest entries/202 produc
 
 ## 0187 — actual D0 Workbench history to Office projection
 Source f0af5e7bdb9310b7b9e8fc66e8cb8b5153b254cf; 212 manifest entries/213 product files; 41 new selected PASS, 111 prior NOT rerun. Actual writer and CLI reopen; isolated HTTP/proxy 200/503. 43 local exact paths, full archive not locally downloaded. Full ASGI/Next/browser/PG NOT_RUN; DNS blocked. IV, release, geometry join, actual agents, provider, spend and independent acceptance HOLD/DENY. [Architecture](../docs/0187/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0187.json).
+
+## 0188 — paired task-budget source integration
+Source 3a4c5d3ae85c1521af2cf4bb05fcafce81aeb3ac; 223 manifest entries/224 product files; 23 selected tests PASS (substituted prior readers, mocked proxy); actual paired writer/schema/CLI/full build NOT_RUN. 223 path/size, 17 delta content hash, 10 local exact paths. DNS and PG blockers retained. [Architecture](../docs/0188/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0188.json). No causal/T1/lease/geometry authority, actual grants/spend/CI/main/PROD HOLD.

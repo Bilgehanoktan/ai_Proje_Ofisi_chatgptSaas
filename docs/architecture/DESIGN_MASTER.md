@@ -81,3 +81,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0187 — Workbench history to Office role projection
 [Addendum](../0187/ARCHITECTURE_AND_CATALOG.md). No canonical T1, trusted clock, geometry join or authority change.
+
+## 0188 — Paired synthetic task/budget readback
+[Addendum](../0188/ARCHITECTURE_AND_CATALOG.md). Optional fresh sample marker, double read, no causal/T1 or lease authority.
