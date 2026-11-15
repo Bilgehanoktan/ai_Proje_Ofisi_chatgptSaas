@@ -63,3 +63,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0194–0197-U
 [0194](revisions/TECHNICAL_CATALOG_0194.json) · [0195](revisions/TECHNICAL_CATALOG_0195.json) · [0194-M](revisions/TECHNICAL_CATALOG_0194_M.json) · [0196-MA](revisions/TECHNICAL_CATALOG_0196_MA.json) · [0197-U](revisions/TECHNICAL_CATALOG_0197_U.json). Unified source reconciliation; no new API or dependency.
+
+## 0198-UL
+[0196-L original catalog](revisions/TECHNICAL_CATALOG_0196_L.json) · [union delta](revisions/TECHNICAL_CATALOG_0198_UL.json). 272 manifest entries; no API/dependency change. W1 sources unchanged.

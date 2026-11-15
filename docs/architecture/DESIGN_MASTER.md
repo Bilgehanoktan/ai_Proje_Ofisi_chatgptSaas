@@ -105,3 +105,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0197-U — Unified source and canonical current pointer
 [0189](../0189/ARCHITECTURE_AND_CATALOG.md) · [0190](../0190/ARCHITECTURE_AND_CATALOG.md) · [0191](../0191/ARCHITECTURE_AND_CATALOG.md) · [0192](../0192/ARCHITECTURE_AND_CATALOG.md) · [0193](../0193/ARCHITECTURE_AND_CATALOG.md) · [0194](../0194/ARCHITECTURE_AND_CATALOG.md) · [0195](../0195/ARCHITECTURE_AND_CATALOG.md) · [0194-M](../0194-M/ARCHITECTURE_AND_CATALOG.md) · [0196-MA](../0196-MA/ARCHITECTURE_AND_CATALOG.md) · [0197-U reconciliation](../0197-U/ARCHITECTURE_AND_CATALOG.md). [Product roadmap](../implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). P1, core and memory/model source united; no normative or real runtime change.
+
+## 0198-UL — Lifecycle source union
+[0196-L](../0196L/ARCHITECTURE_AND_CATALOG.md) · [0198-UL](../0198-UL/ARCHITECTURE_AND_CATALOG.md). UI preserved; no canonical or runtime authority change.

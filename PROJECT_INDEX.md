@@ -91,3 +91,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 ## 0197-U — Unified product source
 [Architecture](docs/0197-U/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0197_U.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0197_U.json) · [Readback](releases/GITHUB_READBACK_0197_U.json).
 Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTURE_AND_CATALOG.md), [0191](docs/0191/ARCHITECTURE_AND_CATALOG.md), [0192](docs/0192/ARCHITECTURE_AND_CATALOG.md), [0193](docs/0193/ARCHITECTURE_AND_CATALOG.md), [0194](docs/0194/ARCHITECTURE_AND_CATALOG.md), [0195](docs/0195/ARCHITECTURE_AND_CATALOG.md). Memory/Model: [0194-M](docs/0194-M/ARCHITECTURE_AND_CATALOG.md), [0196-MA](docs/0196-MA/ARCHITECTURE_AND_CATALOG.md). [8-phase roadmap](docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). Three-parent source reconciliation only; all runtime gates retained.
+
+## 0198-UL — Lifecycle integration / W1 baseline
+[Architecture](docs/0198-UL/ARCHITECTURE_AND_CATALOG.md) · [Lifecycle](docs/0196L/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0198_UL.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0198_UL.json) · [Readback](releases/GITHUB_READBACK_0198_UL.json).
