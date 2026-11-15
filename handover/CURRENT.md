@@ -108,3 +108,6 @@ Source `c69a8394e75dca1d16ad04585a3c1dc375109733`; parent `f6bf82ed85335d9189b61
 
 ## 0203-T — terminal anchor
 Source `2d900ac58ca49e061ba07c7cbd56a93f27513bde`; parent `d6c27d5f3ce9ff29cdf42108510a21c277006ebd`. 256 manifest entries / 257 product files. 54 selected PASS (12 SQL,3 mock,39 regression). Seven new and five prior full lifecycle/readback NOT_RUN; 13 PG NOT_RUN; 164 earlier PASS not rerun. [Architecture](../docs/0203T/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0203_T.json) · [Next](NEXT_STEP_0203_T.md). Independent acceptance, R03, actual authority and full product HOLD; no merge.
+
+## 0204-C — company coordination
+Source `f2510aaab5232dad8f29537638bf7ee3056b708a`; parent `76c110fdef1d35a86e09609920be67210caee741`. 258 manifest entries / 259 product files. 105 selected PASS (51 new,54 rerun). Original T1 decorator and 12 prior integration, 13 PG NOT_RUN; independent acceptance HOLD. [Architecture](../docs/0204C/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0204_C.json) · [Next](NEXT_STEP_0204_C.md).

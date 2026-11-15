@@ -126,3 +126,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0203-T — terminal anchor and strict historical readback
 [Addendum](../0203T/ARCHITECTURE_AND_CATALOG.md). Candidate same-T1 terminal anchor; 54 selected PASS; full lifecycle/PG/R03/IV remain open.
+
+## 0204-C — company coordination
+[Addendum](../0204C/ARCHITECTURE_AND_CATALOG.md). Explicit project membership, company sequence and shared allocation replay; 51 new +54 rerun PASS. Candidate T1 decorator, PG/R03/IV remain open.

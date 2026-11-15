@@ -133,3 +133,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0203-T next
 [Next](NEXT_STEP_0203_T.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0203_T.json). Run prior/new lifecycle integrations and PG first; 0204 ordering and project budget after identity/membership. No automatic merge or grant.
+
+## 0204-C next
+[Next](NEXT_STEP_0204_C.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0204_C.json). Run original integrations and PG; 0205 restore-external latest pin and witness, company/pool anti-rollback. No merge or grants.

@@ -69,3 +69,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0203-T — terminal anchor
 [Delta](revisions/TECHNICAL_CATALOG_0203_T.json) · [Maintenance](../docs/0203T/ARCHITECTURE_AND_CATALOG.md). Three modified product modules, three added product files, one root DDL. 54 selected tests PASS; 7+5 integration NOT_RUN.
+
+## 0204-C — company coordination
+[Delta](revisions/TECHNICAL_CATALOG_0204_C.json) · [Maintenance](../docs/0204C/ARCHITECTURE_AND_CATALOG.md). Two added product files, one root DDL; no old source changes.

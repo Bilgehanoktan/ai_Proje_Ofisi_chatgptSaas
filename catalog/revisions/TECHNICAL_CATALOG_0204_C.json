@@ -1,0 +1,175 @@
+{
+  "revision": "0204-C",
+  "parent": "76c110fdef1d35a86e09609920be67210caee741",
+  "source": "f2510aaab5232dad8f29537638bf7ee3056b708a",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "bytes": 16755,
+      "sha256": "2a903ae65205575d1c90cea07465aaa6cbe3ba881aa11529358f2d2b85a2fe99",
+      "blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "status": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+      "bytes": 15264,
+      "sha256": "49ddaea03aa86f98ec39e92005c3dbbc1c1846653508288a1dab3257f869e938",
+      "blob": "ce4f8fb249787c9e18a03a63225dbcddf7445650",
+      "status": "added"
+    },
+    {
+      "path": "database/0204C/company_event_order.sql",
+      "bytes": 1808,
+      "sha256": "548d22bfb26068b516508c6157787c7c9828fa767121ffcc8a489f011aec9c12",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "status": "added"
+    }
+  ],
+  "modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "classes": [
+        "Member",
+        "Allocation",
+        "Pool",
+        "CompanyEvent",
+        "CompanyReview",
+        "CompanyCoordinatedMapping"
+      ],
+      "functions": [
+        "_token",
+        "_sha",
+        "_uint",
+        "_revision",
+        "_tx",
+        "_member",
+        "_event",
+        "_roster",
+        "_pool",
+        "_replay",
+        "replay_company",
+        "_rows",
+        "_exact",
+        "append_company_order",
+        "inspect_company",
+        "prepare_company_step",
+        "finish_company_step",
+        "Member.row",
+        "CompanyEvent.order_row",
+        "CompanyCoordinatedMapping.__init__",
+        "CompanyCoordinatedMapping.lock_and_validate",
+        "CompanyCoordinatedMapping._guard",
+        "CompanyCoordinatedMapping.write_role",
+        "CompanyCoordinatedMapping.lock_transition",
+        "CompanyCoordinatedMapping.write_transition_role",
+        "CompanyCoordinatedMapping.read_transition",
+        "CompanyCoordinatedMapping.verify_write_set"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "json",
+        "re",
+        "transaction.review.Operation/valid_intent (lazy)",
+        "transaction.postgres_transition_mapping.transaction_ref (lazy)"
+      ],
+      "errors": [
+        "D0_COMPANY_ROSTER_HOLD",
+        "D0_COMPANY_MEMBER_DUPLICATE",
+        "D0_COMPANY_PLAN_COLLISION",
+        "D0_COMPANY_POOL_HOLD",
+        "D0_COMPANY_ALLOCATION_HOLD",
+        "D0_COMPANY_EVENT_LIMIT",
+        "D0_COMPANY_ORDER_HOLD",
+        "D0_COMPANY_TRANSITION_HOLD",
+        "D0_COMPANY_POOL_REVISION_HOLD",
+        "D0_COMPANY_RESERVATION_HOLD",
+        "D0_COMPANY_RENEWAL_HOLD",
+        "D0_COMPANY_SETTLEMENT_HOLD",
+        "D0_COMPANY_PROJECT_CAP_HOLD",
+        "D0_COMPANY_REPLAY_HOLD",
+        "D0_COMPANY_ROW_LIMIT",
+        "D0_COMPANY_ROW_HOLD",
+        "D0_COMPANY_MEMBER_HOLD",
+        "D0_COMPANY_CAUSAL_HOLD",
+        "D0_COMPANY_RUN_SEQUENCE_HOLD",
+        "D0_COMPANY_STREAM_CAS_HOLD",
+        "D0_COMPANY_SNAPSHOT_HOLD",
+        "D0_COMPANY_PREIMAGE_HOLD",
+        "D0_COMPANY_POSTIMAGE_HOLD",
+        "D0_COMPANY_INTENT_HOLD",
+        "D0_COMPANY_RECEIPT_HOLD"
+      ]
+    }
+  ],
+  "database": [
+    {
+      "table": "t1_candidate.company_run_membership",
+      "pk": [
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "run_id"
+      ],
+      "unique": [
+        "scope,project_id,plan_revision,task_id",
+        "scope,project_id,run_id"
+      ]
+    },
+    {
+      "table": "t1_candidate.company_stream_heads",
+      "pk": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "cas": "sequence"
+    },
+    {
+      "table": "t1_candidate.company_event_order",
+      "pk": [
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "sequence"
+      ],
+      "unique": [
+        "scope,run_id,version",
+        "scope,transaction_ref"
+      ],
+      "fk": [
+        "company_run_membership(scope,project_id,run_id)",
+        "events(scope,run_id,version)"
+      ]
+    }
+  ],
+  "api": [],
+  "events_new": [],
+  "dependencies_new": [],
+  "tests": {
+    "commands": [
+      "PYTHONPATH=. python -m unittest discover -s tests -p test_company_coordination_0204.py -v",
+      "PYTHONPATH=.:tests python -m unittest -v test_retained_history_0201 test_signed_history_0202 test_terminal_anchor_0203"
+    ],
+    "new_pass": 51,
+    "new_pure_replay": 26,
+    "new_actual_sqlite_fixture": 25,
+    "previous_selected_rerun": 54,
+    "previous_mocked_snapshot_tests": 9,
+    "total_selected_pass": 105,
+    "fail": 0,
+    "compile_changed_python": 2,
+    "new_log_sha256": "cbe630888e55cf9d8c76252d5d5de345bc206dbff451d13e2f80134e3f99bc79",
+    "regression_log_sha256": "c961bc34551fd59d85047e8b3e54e166a6f0b12b427b4423027f2dcc77fa7c53"
+  },
+  "not_run": {
+    "full_T1_decorator_integration": "NOT_RUN",
+    "prior_0201_integration": 5,
+    "prior_0203_lifecycle": 7,
+    "prior_pg": 13,
+    "prior_164_selected": "NOT_RERUN",
+    "full_product_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "decisions": "Provisional one D0 pool, fixed external allocation caps, contiguous company order and stream-first lock, revision reuse across projects rejected; not canonical ratification.",
+  "rollback": "Pin parent or revert 3 paths and manifest; preserve history."
+}

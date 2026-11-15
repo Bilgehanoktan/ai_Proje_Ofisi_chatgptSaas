@@ -111,3 +111,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0203-T — terminal anchor
 [Architecture](docs/0203T/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0203_T.json) · [Evidence](releases/GITHUB_READBACK_0203_T.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0203_T.json). 54 selected PASS; seven new and five prior lifecycle/readback and 13 PG NOT_RUN.
+
+## 0204-C — company coordination
+[Architecture](docs/0204C/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0204_C.json) · [Evidence](releases/GITHUB_READBACK_0204_C.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0204_C.json). 105 selected PASS; full T1, 12 integrations and 13 PG NOT_RUN.
