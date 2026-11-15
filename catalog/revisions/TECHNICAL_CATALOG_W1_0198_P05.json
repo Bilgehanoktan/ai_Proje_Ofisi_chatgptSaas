@@ -1,0 +1,64 @@
+{
+  "revision": "W1-0198-P05",
+  "parent": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+  "source_commit": "13c95e63a9177b2664c44ac0bd4598ff24c7b0f0",
+  "product_delta": [],
+  "helper_files": [],
+  "symbols": [
+    {
+      "path": "tests/integration/run_lifecycle_p05.py",
+      "exports": [
+        "blob",
+        "load_lock",
+        "safe_name",
+        "check_bytes",
+        "materialize",
+        "run_cases",
+        "execute",
+        "main"
+      ],
+      "internal": [
+        "_copy",
+        "CHILD"
+      ],
+      "git_blob": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+      "sha256": "7a4b8a241c4c119eb9b5b4cb9ab6f98301d0e8628504bddd5c2647a3f04ea5cc"
+    },
+    {
+      "path": "tests/integration/test_run_lifecycle_p05.py",
+      "classes": [
+        "RunnerTests"
+      ],
+      "git_blob": "b4236c43625d3448df109e9462b6bc1d29ac839d",
+      "sha256": "f84f8aa15963461ad77c3afc2e0ca604b324806d83fa770318fce95a95f37c84"
+    },
+    {
+      "path": "tests/integration/test_lifecycle_ddl_p05.py",
+      "classes": [
+        "Cursor",
+        "CandidateDDLTests"
+      ],
+      "git_blob": "e1807a5e2b21cee2545262e38591d5fa81a92cab",
+      "sha256": "6b25faf6c116df47a8abd6ef032344a891eeca38ba49a7517de42fec2f6fb042"
+    }
+  ],
+  "lock": {
+    "path": "tests/integration/lifecycle_p05_source_lock.json",
+    "git_blob": "44ba5836b086b576c45d50ace2e64152f41c9adc",
+    "entries": 44
+  },
+  "transport": {
+    "commit": "54e6feb5bf95e3fe436bb81011bb53cb089a59a0",
+    "branch": "recovery/w1-0198-p05-fixture-pack",
+    "merge_allowed": false
+  },
+  "api_changes": [],
+  "db_schema_changes": [],
+  "dependency_changes": [],
+  "tests": {
+    "new_runner": 16,
+    "new_sqlite_ddl": 7,
+    "persisted_pending": 17
+  },
+  "maintenance": "docs/W1-0198-P05/ARCHITECTURE_AND_CATALOG.md"
+}

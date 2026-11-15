@@ -1,0 +1,49 @@
+{
+  "revision": "W1-0198-P05",
+  "source_commit": "13c95e63a9177b2664c44ac0bd4598ff24c7b0f0",
+  "parent": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+  "transport_commit": "54e6feb5bf95e3fe436bb81011bb53cb089a59a0",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "fastapi": "0.128.2"
+  },
+  "executed": {
+    "runner": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "command": "python -B -m unittest -v test_run_lifecycle_p05",
+      "test_blob": "b4236c43625d3448df109e9462b6bc1d29ac839d"
+    },
+    "ddl": {
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "command": "PYTHONPATH=<exact P04 snapshot package> python -B -m unittest -v test_lifecycle_ddl_p05",
+      "test_blob": "e1807a5e2b21cee2545262e38591d5fa81a92cab",
+      "snapshot_blob": "285b1b56f47df44d7a53dafb1ceaa7071e3f9e45",
+      "sql_blobs": [
+        "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "e4c9a84ff705c39486579c393b1f3aaef9e34da9"
+      ]
+    },
+    "total": 23,
+    "new": 23,
+    "regression": 0
+  },
+  "not_run": {
+    "p02": 8,
+    "p03": 9,
+    "full_product_tests": true,
+    "react_build_browser": true,
+    "postgresql": true
+  },
+  "transport_verified": "44 exact blob/size, 4 additions and README; actual archive local download NOT_RUN",
+  "blocker": "GitHub local checkout DNS and archive retrieval unavailable; 6 exact source files materialized locally for DDL test only. Full 44-file local closure not materialized.",
+  "independent_acceptance": "HOLD",
+  "historical_counts_not_additive": true
+}

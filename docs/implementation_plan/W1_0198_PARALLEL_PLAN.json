@@ -1,23 +1,24 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P04",
-  "parent": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
-  "source_commit": "7aea3fdf243f97c8b4c33290b72d2be5be22737f",
+  "round": "W1-0198-P05",
+  "parent": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+  "source_commit": "13c95e63a9177b2664c44ac0bd4598ff24c7b0f0",
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
   "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
   "dependency_rules": [
     "B provides read abstraction; C–G use existing validated D0 contracts independently; real lifecycle, memory, model, finance and security contracts remain dependencies",
     "H may proceed independently; A full Windows deferred by user",
     "No cross-store join unless exact shared proof; no live cache, dispatch, mutation, provider calls or geometry join",
-    "P04/P05 gate: prioritize execution of existing 17 exact persisted lifecycle tests before adding any more historical demo endpoints; separate D0 helper evidence and actual product acceptance."
+    "P04/P05 gate: prioritize execution of existing 17 exact persisted lifecycle tests before adding any more historical demo endpoints; separate D0 helper evidence and actual product acceptance.",
+    "P05 transport branch is NEVER MERGE; original product remains full integration branch. Exact 17 selected cases remain gate; do not count runner/DDL tests as lifecycle acceptance."
   ],
   "lanes": [
     {
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
-      "status": "PARTIAL_SQLITE_BOUNDARY_AND_NODE_PASS_PERSISTED_OPEN",
-      "done": "14 actual disposable SQLite boundary tests +14 session/join helper tests +2 terminal immutability tests +14 terminal regression tests PASS (30 new,14 rerun); P02/P03 persisted cases not run",
-      "next": "Materialize exact backend dependency closure and candidate DDL, execute P02 eight/P03 nine; no new demo fixture before those run; then full pinned build/browser, Windows deferred",
+      "status": "TRANSPORT_PINNED_23_NEW_AUXILIARY_TESTS_PASS_17_PRODUCT_CASES_NOT_RUN",
+      "done": "44-source-file exact recovery transport; 16 runner +7 actual pinned DDL/P04 snapshot tests PASS. P02/P03 cases still NOT_RUN (container cannot retrieve complete pack).",
+      "next": "Obtain transport archive or exact checkout in isolated execution environment; run P02 eight and P03 nine via run_lifecycle_p05.py; record individual results, then full regression/build. No Windows or CI requirement for this selected runner.",
       "owner": [
         "tests/projection-read.test.cjs",
         "tests/integration/run_combined_helpers.cjs",
@@ -32,14 +33,18 @@
         "tests/lifecycle-prefix.test.cjs",
         "tests/integration/browser_lifecycle_prefix_p03.py",
         "tests/test_lifecycle_read_snapshot_p04.py",
-        "tests/projection-session-join.test.cjs"
+        "tests/projection-session-join.test.cjs",
+        "tests/integration/run_lifecycle_p05.py",
+        "tests/integration/test_run_lifecycle_p05.py",
+        "tests/integration/test_lifecycle_ddl_p05.py",
+        "tests/integration/lifecycle_p05_source_lock.json"
       ]
     },
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "D0_SESSION_IDENTITY_SOURCE_INTEGRATED_HELPER_PASS",
-      "done": "Reader ownership token replaces key-only state, prevents A-B-A revival; deep-frozen terminal fixture and isolated parsed copy",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "React hook/browser regression, all seven endpoints parity, independent freshness proof",
       "owner": [
         "features/data/projectionRead.ts",
@@ -55,8 +60,8 @@
     {
       "id": "C",
       "name": "CEO Dashboard veri entegrasyonu",
-      "status": "D0_PLAN_MISMATCH_VISIBLE_SOURCE_INTEGRATED",
-      "done": "Existing CEO lifecycle panels show explicit plan/DAG mismatch reason instead of implying shared state",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "Canonical scoped CEO projection only after persisted and trust proof",
       "owner": [
         "features/ceo-dashboard/OperationalReadback.tsx"
@@ -65,8 +70,8 @@
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "D0_SNAPSHOT_HARDENED_BOUNDARY_TEST_PASS",
-      "done": "Both readers use a single read-only SQLite snapshot, approved tables, schema checks, authorizer, sidecar and unique head checks; terminal panel resets by floor",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "Actual 17 fixture tests and canonical active-run/clock/placement contract; no live join",
       "owner": [
         "features/mvp/OfficeWorkbenchPanel.tsx",
@@ -89,8 +94,8 @@
     {
       "id": "E",
       "name": "Görev ve Workflow Studio entegrasyonu",
-      "status": "D0_SCOPE_JOIN_GUARD_HELPER_PASS",
-      "done": "Compare checked-in plan identity vs historical sample scope, revision, task membership, company and run binding; every outcome HOLD",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "Use independently sourced plan/task/run lineage and causal evidence; no DAG state mutation",
       "owner": [
         "components/dashboard/DevelopmentReviewPanel.tsx",
@@ -100,8 +105,8 @@
     {
       "id": "F",
       "name": "Memory ve Model Gateway ekranları",
-      "status": "D0_HISTORICAL_BINDING_STAYS_HOLD",
-      "done": "Capability panel inherits scope mismatch and lease UNKNOWN; no new model invocation or memory read",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "Independent active lease/clock, reservation ledger, model input registry and ACL/tombstone/W-A provenance",
       "owner": [
         "features/capabilities/CapabilityReadback.tsx"
@@ -110,8 +115,8 @@
     {
       "id": "G",
       "name": "Finans ve güvenlik projeksiyonları",
-      "status": "D0_SNAPSHOT_AND_IMMUTABILITY_SOURCE_INTEGRATED",
-      "done": "Finance/security use hardened read-only boundary; no extra cost/authority inference or shared mutable terminal expected data",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "Persisted settlement validation, independent security receipts and canonical ledger; no real money",
       "owner": [
         "features/ceo-dashboard/Dashboard.tsx"
@@ -120,8 +125,8 @@
     {
       "id": "H",
       "name": "Görsel kalite ve kullanıcı deneyimi",
-      "status": "CSS_SCOPE_NOTICE_SOURCE_VISUAL_NOT_RUN",
-      "done": "Explicit join reason, no misleading live colors; both office panel instances reset by floor",
+      "status": "P04_RETAINED_A_GATE_OPEN",
+      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
       "next": "Built light/dark/mobile visual/accessibility and interaction regression",
       "owner": [
         "design-system/eds.css"

@@ -120,3 +120,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P04 — D0 readback hardening and progress summary
 [Architecture](../W1-0198-P04/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Shared read snapshot, session identity and historical join HOLD. No new authority or endpoint.
+
+## W1-0198-P05 — fixture recovery
+[Architecture and test scope](../W1-0198-P05/ARCHITECTURE_AND_CATALOG.md). No product architecture changes; pinned recovery and integration coverage tracking.

@@ -106,3 +106,6 @@ Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTU
 
 ## W1-0198-P04
 [Architecture](docs/W1-0198-P04/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P04.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P04.json) · [24 area tracker and derived maturity](progress/DEVELOPMENT_TRACKER_24.md).
+
+## W1-0198-P05
+[Recovery and evidence](docs/W1-0198-P05/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P05.json) · [Tracker](progress/DEVELOPMENT_TRACKER_24.md).

@@ -140,3 +140,6 @@ Preserve A–H. A recover exact full source and execute P02 eight + P03 nine per
 
 ## W1-0198-P05 — current next
 Preserve A–H. A recover exact backend dependency closure + candidate DDL and execute existing P02 eight/P03 nine persisted tests before adding more historical endpoints. Report exact PASS/FAIL/NOT_RUN and fix discrepancies; then full pinned React/build/browser in fresh reviewed stage, Windows deferred. B–G current scope, independent clock/lease/ledger and model/ACL/W-A contracts only after actual evidence; no historical or geometry join. H visual/accessibility. Recompute equal-weight maturity from 24 canonical tracker rows each round; do not inflate scores. No new grant, CI/main/PROD or independent acceptance.
+
+## W1-0198-P06 — current next
+Execute exact existing 17 cases via recovered transport or checkout and runner, then fix evidence-based failures and rerun. Keep product source and branch intact; transport NEVER MERGE. Preserve A–H plan. Recalculate design/source/integration coverage and accepted areas from canonical tracker. Windows deferred, no CI/main/PROD/real external effects.
