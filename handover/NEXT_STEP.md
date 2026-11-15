@@ -91,3 +91,6 @@ W1-0183F read-only project management studio using existing plan/catalog. Then f
 
 ## 0185-W1-F next
 W1-0183G finance/SaaS read-only studio with explicit null/unavailable values and no fabricated actual economic state; then security/evidence. W8 pinned build/browser highest verification priority. Reconcile latest 0186 separately after rechecking paths; no automatic main/active branch merge.
+
+## 0185-W1-G next
+W1-0183H Security & Evidence Center; keep QA, IV, normative grants and actual evidence separate. W8 pinned full build/current product browser highest verification priority. Reconcile latest 0186 Dashboard via reviewed minimal patch, preserve both branches; no automatic main/active branch merge.

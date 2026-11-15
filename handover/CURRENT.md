@@ -66,3 +66,6 @@ Isolated integration/0185-w1-abcde; 6 exact W1 E source paths; 205 manifest entr
 
 ## 0185-W1-F — Project Management Studio
 Isolated integration/0185-w1-abcdef; five exact W1 F source paths, 209 manifest entries/210 product files. 10 helper, 2 syntax, 12 standalone browser checks PASS. 0185 backend and ABCDE preserved. 0186 branch 27588d74de0595a6a82855b3477abba4a1c42a2d compared, 23 cumulative paths / zero conflicts at that pin, not merged. Full product build/browser NOT_RUN; independent HOLD. [Architecture](../docs/0185-W1-F/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_F.json).
+
+## 0185-W1-G — Finance & SaaS Command Center
+Isolated integration/0185-w1-abcdefg; five exact source paths, 213 manifest entries/214 product files. 12 helper, 2 syntax, 11 standalone browser checks PASS. 0185 backend and ABCDEF preserved. 0186 pin 27588d74de0595a6a82855b3477abba4a1c42a2d: 28 cumulative paths / one Dashboard content conflict, not merged. Full product build/browser NOT_RUN; independent HOLD. [Architecture](../docs/0185-W1-G/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_G.json).

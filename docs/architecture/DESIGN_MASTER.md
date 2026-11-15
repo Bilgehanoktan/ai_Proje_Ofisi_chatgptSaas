@@ -84,3 +84,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-F — W1 read-only project management
 [Architecture and catalog](../0185-W1-F/ARCHITECTURE_AND_CATALOG.md). Canonical D0 plan and gates preserved; no scheduling, real progress or authority change.
+
+## 0185-W1-G — W1 read-only finance and SaaS
+[Architecture and catalog](../0185-W1-G/ARCHITECTURE_AND_CATALOG.md). Null financial values, historical targets and no spend; no normative or physical mapping change.
