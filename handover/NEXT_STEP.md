@@ -54,3 +54,6 @@ Standing CODE/REPO/DEV/TEST user approval recorded. Independent PRE/T01/T06 rema
 
 ## 0177 — EDS integrated source candidate
 13 source deltas applied to a complete isolated frontend copy in quarantine/0177/frontend; 7 additions, 6 modifications, no product promotion. [Architecture and technical catalog](../docs/0177/ARCHITECTURE_AND_CATALOG.md). PRE/T01/T06 HOLD; build/browser/product tests NOT_RUN. 0172-R12 is a separate diverged branch. Next exact PRE, pinned archive and permitted local MVP checks.
+
+## 0178 — EDS source corrections and exact preflight
+47-file isolated frontend; 1 addition, 2 modifications versus 0177. 8 presentation helper + 12 preflight helper tests PASS (standalone, not product). 24-area scores unchanged; no product promotion. PRE/T01/T06 HOLD, actual local archive/build/browser/product tests NOT_RUN. [Details](../docs/0178/ARCHITECTURE_AND_CATALOG.md). Next obtain exact archive, independent scope and locks, then product smoke/build; no repeated user permission request.

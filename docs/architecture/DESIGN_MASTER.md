@@ -46,3 +46,7 @@
 
 ## 0177 — W1 EDS candidate
 [Addendum](../0177/ARCHITECTURE_AND_CATALOG.md). No normative authority or product acceptance change; prior architecture preserved.
+
+
+## 0178 — W1 EDS fix and W8 preflight
+[Addendum](../0178/ARCHITECTURE_AND_CATALOG.md). No normative change.

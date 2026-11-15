@@ -35,3 +35,6 @@
 
 
 - [0177 integrated EDS candidate](docs/0177/ARCHITECTURE_AND_CATALOG.md) — isolated source, not product promotion.
+
+
+- [0178 EDS candidate and preflight](docs/0178/ARCHITECTURE_AND_CATALOG.md)
