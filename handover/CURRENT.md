@@ -93,3 +93,6 @@ Source 3fbea3977e0a9eb87f1a3a551acbd3558c7bdbe9; 241 product files, 240 manifest
 
 ## 0198-E — separate Event Store history workstream
 Source 0dd841e8cb17116320b5db2bdebfd8e400b9fdd9; 243 product files, 242 manifest entries, 240 prior non-manifest blobs unchanged. 22 new + 105 regressions PASS; 10 opt-in PG skipped. Exact D0 per-run pinned history and internal Office projection. Actual PG/full suite/build/browser NOT_RUN; R03, true authority and IV HOLD. [Architecture](../docs/0198E/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0198_E.json) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0198_E.json). Unified not merged. [Next](NEXT_STEP_0198_E.md).
+
+## 0199-C — separate plan history workstream
+Source 7a46e9bf3f5dd8f61883ff3444efca0dbbb185e1; 245 product files, 244 manifest entries, 242 prior non-manifest blobs unchanged. 26 new + 127 regressions PASS; 10 opt-in PG skipped. Exact pinned project roster, per-run and DAG causal validation, optional exclusive sample pool replay. Actual PG/full suite/build/browser NOT_RUN; R03, true authority and IV HOLD. [Architecture](../docs/0199C/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0199_C.json) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0199_C.json). Unified not merged. [Next](NEXT_STEP_0199_C.md).

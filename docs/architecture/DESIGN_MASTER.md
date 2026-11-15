@@ -111,3 +111,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0198-E — complete pinned D0 history readback
 [Addendum](../0198E/ARCHITECTURE_AND_CATALOG.md). Internal historical Office projection only; no shared schema, normative mapping or real authority change.
+
+## 0199-C — exact project-wide D0 causal history and optional exclusive budget replay
+[Addendum](../0199C/ARCHITECTURE_AND_CATALOG.md). Internal historical input; no shared contract, normative mapping or real authority change.

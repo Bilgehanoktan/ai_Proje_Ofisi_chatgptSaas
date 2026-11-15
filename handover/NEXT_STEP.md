@@ -118,3 +118,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0198-E next
 [Detailed next step](NEXT_STEP_0198_E.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0198_E.json). Coordinate lifecycle/history integration with active unified branch; real PG, R03 and trust remain open.
+
+## 0199-C next
+[Detailed next step](NEXT_STEP_0199_C.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0199_C.json). Coordinate exact history/plan history carry with active integration; actual PG, terminal success/independent pin custody remain open.

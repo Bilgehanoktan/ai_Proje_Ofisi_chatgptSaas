@@ -96,3 +96,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0198-E — pinned run history (separate workstream)
 [Architecture](docs/0198E/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0198_E.json) · [Evidence](releases/GITHUB_READBACK_0198_E.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0198_E.json). 127 selected tests PASS, PG/IV HOLD.
+
+## 0199-C — plan-wide causal history (separate workstream)
+[Architecture](docs/0199C/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0199_C.json) · [Evidence](releases/GITHUB_READBACK_0199_C.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0199_C.json). 153 selected tests PASS, PG/IV HOLD.
