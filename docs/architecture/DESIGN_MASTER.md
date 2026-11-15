@@ -102,3 +102,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0194 — D0 ordinary-transition mapping and scheduler
 [Addendum](../0194/ARCHITECTURE_AND_CATALOG.md). Candidate tables and synthetic lease/clock recheck; no canonical mapping or normative change.
+
+## 0195 — D0 admission / first lease / sample budget
+[Addendum](../0195/ARCHITECTURE_AND_CATALOG.md). Nine-role initial admission candidate; no normative mapping or real authority.

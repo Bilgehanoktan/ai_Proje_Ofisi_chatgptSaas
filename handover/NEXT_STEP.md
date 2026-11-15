@@ -109,3 +109,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0194 → 0195
 [Detailed next step](NEXT_STEP_0194.md). P0 actual disposable PG and R03 ownership, trusted clock/W-A; admission/lease/budget/terminal T1 mapping, canonical worker claim. P1 event/office and AI/memory contracts. No real grant/provider/CI/PROD/main merge.
+
+## 0195 → 0196
+[Detailed next step](NEXT_STEP_0195.md). Lease renewal, terminal settlement, persisted admission binding, actual PG; event/AI/memory/Office independent lines. No real authority or main merge.
