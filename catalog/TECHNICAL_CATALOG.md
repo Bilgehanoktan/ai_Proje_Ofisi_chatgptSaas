@@ -72,3 +72,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0204-C — company coordination
 [Delta](revisions/TECHNICAL_CATALOG_0204_C.json) · [Maintenance](../docs/0204C/ARCHITECTURE_AND_CATALOG.md). Two added product files, one root DDL; no old source changes.
+
+## 0205-R — company recovery
+[Delta](revisions/TECHNICAL_CATALOG_0205_R.json) · [Maintenance](../docs/0205R/ARCHITECTURE_AND_CATALOG.md). Two new product files, no prior source replacement or canonical migration.

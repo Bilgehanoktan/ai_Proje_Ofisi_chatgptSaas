@@ -136,3 +136,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0204-C next
 [Next](NEXT_STEP_0204_C.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0204_C.json). Run original integrations and PG; 0205 restore-external latest pin and witness, company/pool anti-rollback. No merge or grants.
+
+## 0205-R next
+[0206 integration](NEXT_STEP_0205_R.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0205_R.json). Close actual dependency/test gap; no automatic main merge, actual authority or PROD.

@@ -129,3 +129,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0204-C — company coordination
 [Addendum](../0204C/ARCHITECTURE_AND_CATALOG.md). Explicit project membership, company sequence and shared allocation replay; 51 new +54 rerun PASS. Candidate T1 decorator, PG/R03/IV remain open.
+
+## 0205-R — company recovery
+[Addendum](../0205R/ARCHITECTURE_AND_CATALOG.md). D0 checkpoint, local witness CAS and unknown transaction quarantine; 43 new +105 rerun PASS; independent custody, T1 integration and PG remain open.

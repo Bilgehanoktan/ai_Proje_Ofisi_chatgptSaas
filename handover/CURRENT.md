@@ -111,3 +111,6 @@ Source `2d900ac58ca49e061ba07c7cbd56a93f27513bde`; parent `d6c27d5f3ce9ff29cdf42
 
 ## 0204-C — company coordination
 Source `f2510aaab5232dad8f29537638bf7ee3056b708a`; parent `76c110fdef1d35a86e09609920be67210caee741`. 258 manifest entries / 259 product files. 105 selected PASS (51 new,54 rerun). Original T1 decorator and 12 prior integration, 13 PG NOT_RUN; independent acceptance HOLD. [Architecture](../docs/0204C/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0204_C.json) · [Next](NEXT_STEP_0204_C.md).
+
+## 0205-R — company recovery
+Source `bb2b88bf44ed23b523b269b50cad326c313b75fa`; parent `cb03319e1e8d46246973c9c6bfad23482043e529`. 260 manifest entries / 261 product files. 148 selected PASS (43 new,105 rerun); 12 prior integrations, full T1 decorator and 13 PG NOT_RUN; independent witness custody HOLD. [Architecture](../docs/0205R/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0205_R.json) · [Next](NEXT_STEP_0205_R.md).

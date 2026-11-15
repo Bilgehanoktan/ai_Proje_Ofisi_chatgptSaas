@@ -1,0 +1,61 @@
+{
+  "revision": "0205-R",
+  "parent": "cb03319e1e8d46246973c9c6bfad23482043e529",
+  "source": "bb2b88bf44ed23b523b269b50cad326c313b75fa",
+  "manifest_blob": "b30cdd833d85f118f8a9dcef8d07ab71c1be6f4d",
+  "product_manifest_count": 260,
+  "product_files_including_manifest": 261,
+  "changed_files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_recovery.py",
+      "bytes": 10457,
+      "sha256": "42c6ce3c16a354a00ac0d3a16067e10d51f57351730fab514e7530d964eab5dd",
+      "blob": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0",
+      "status": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_recovery_0205.py",
+      "bytes": 12267,
+      "sha256": "050b68f9438d022b9c0914ebbc0d4672ab9d0496d8308f847c50d07179e9a05a",
+      "blob": "8db01a9227d71b51e28485d823c304c5c48ab67b",
+      "status": "added"
+    }
+  ],
+  "source_blob_match": "2/2 exact local Git blob vs remote tree; 258 prior manifest entries unchanged; not full byte readback",
+  "test_workspace_product_python_manifest_match": 12,
+  "previous_zip": "0204-C CRC and all 7 manifest entries PASS",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "actual_pg": "UNAVAILABLE",
+    "checkout": "DNS_FAILURE"
+  },
+  "executed": {
+    "commands": [
+      "PYTHONPATH=.:tests python -m unittest -v test_company_recovery_0205",
+      "PYTHONPATH=.:tests python -m unittest -v test_retained_history_0201 test_signed_history_0202 test_terminal_anchor_0203 test_company_coordination_0204"
+    ],
+    "new_pass": 43,
+    "new_checkpoint_tests": 12,
+    "new_witness_sqlite": 13,
+    "new_recovery_sqlite": 18,
+    "previous_selected_rerun": 105,
+    "previous_mocked_underlying_snapshot": 9,
+    "total_selected_pass": 148,
+    "fail": 0,
+    "compile_changed_python": 2,
+    "new_log_sha256": "91f013dac12589563981a1d28599ce163d847cf3044595f4f5e08612b8e3597f",
+    "regression_log_sha256": "6a5dadd24d8849006fbbe995dfded4c064e02ab4f9548fb24ac3d85589564feb"
+  },
+  "not_run": {
+    "prior_0201_integration": 5,
+    "prior_0203_lifecycle": 7,
+    "full_T1_decorator": "NOT_RUN",
+    "prior_pg": 13,
+    "prior_164_selected": "NOT_RERUN",
+    "full_product_build_browser": "NOT_RUN",
+    "actual_independent_witness": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "authority": "NONE"
+}

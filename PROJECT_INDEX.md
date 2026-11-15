@@ -114,3 +114,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0204-C — company coordination
 [Architecture](docs/0204C/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0204_C.json) · [Evidence](releases/GITHUB_READBACK_0204_C.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0204_C.json). 105 selected PASS; full T1, 12 integrations and 13 PG NOT_RUN.
+
+## 0205-R — company recovery
+[Architecture](docs/0205R/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0205_R.json) · [Evidence](releases/GITHUB_READBACK_0205_R.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0205_R.json). 148 selected PASS; full integration and independent acceptance open.
