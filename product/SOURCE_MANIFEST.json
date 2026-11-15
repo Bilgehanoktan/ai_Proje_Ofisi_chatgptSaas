@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0198-E",
-  "status": "ISOLATED_D0_PINNED_HISTORY_SQLITE_TESTED",
+  "doc_revision": "0199-C",
+  "status": "ISOLATED_D0_PLAN_HISTORY_SQLITE_TESTED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "a7c4f417faf17959e3165193aa247815954bfa42",
+  "parent_git_commit": "2d2ee7c4b4eafbdec9b721c8ad1b8f0428f78a3f",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -973,8 +973,16 @@
     "ai-company-os-backend/tests/test_history_readback_0198.py": {
       "bytes": 6541,
       "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773"
+    },
+    "ai-company-os-backend/app/core/event_store/plan_history_review.py": {
+      "bytes": 9251,
+      "sha256": "d81e3c5fc8cee82f306787f1d1d5dca594350f9df278d7ee7d3d7219602996d3"
+    },
+    "ai-company-os-backend/tests/test_plan_history_review_0199.py": {
+      "bytes": 9848,
+      "sha256": "adb6e42cc994d90ff90ecfb74527f36cee22a43867abd830c579067744e92e79"
     }
   },
-  "parent_source_manifest_blob": "0fc934e32a78b475b0c89a3e39b1eace33a88ecb",
+  "parent_source_manifest_blob": "ee3f7f776d51ac058e80ee2ab0ff5a100d5b27ea",
   "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }

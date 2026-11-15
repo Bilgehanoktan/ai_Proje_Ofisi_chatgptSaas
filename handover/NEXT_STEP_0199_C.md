@@ -1,0 +1,4 @@
+# 0199-C → next
+- Repin active integration and workstream heads; preserve the other conversation. Carry exact history + plan history deltas only on an agreed integration branch. Regenerate manifest, shared architecture and tracker; combined suite NOT_RUN.
+- P0 actual PostgreSQL under disposable scope, consistent read-only REPEATABLE READ snapshot, race/rollback/tenant ownership and R03; trusted external witness and independent terminal success evidence. Do not add an allow path or trust bare SUCCEEDED state.
+- P1 independent plan pin custody, external provenance and explicit causal order for multi-run events, per-plan vs shared budget ledger; W1 API/UI ownership stays with other conversation. If another branch takes those tasks, choose an independent test/evidence slice. No main/CI/PROD/real grants/provider/spend.
