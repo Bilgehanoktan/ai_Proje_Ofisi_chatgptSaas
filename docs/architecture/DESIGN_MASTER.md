@@ -99,3 +99,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188-W8-S3
 [Build configuration pin and S2 Windows evidence](../0188-W8-S3/ARCHITECTURE_AND_CATALOG.md). No normative changes.
+
+## 0188-W8-P1
+[Loopback port configuration candidate](../0188-W8-P1/ARCHITECTURE_AND_CATALOG.md). No normative changes.

@@ -90,3 +90,6 @@ User terminal transcript confirms 249 source SHA-256 pins, 14 pairs, exact revie
 
 ## S3 actual loopback smoke
 User terminal transcript confirms both loopback servers, five API parity, 52 screenshots, paired panel and fail-closed response/floor reset, unchanged DB hashes. Smoke deliberately closes both processes; connection refused afterward is expected. [Evidence](../tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_SMOKE.json). New interactive launcher `tests/integration/launch_w8_s3.py` reuses the existing stage, exact review and build markers, synthetic sample files, restricted environment, loopback-only bind, parity gate, and Ctrl+C cleanup. No reinstall or product changes. Launcher is candidate, not yet executed. Pixel review and independent acceptance HOLD.
+
+## 0188-W8-P1
+Port configuration candidate: 17300/17301 default, explicit CLI override, distinct 1024..49151, fixed loopback host and paths. Source and tests changed, no dependency or schema change. S3 remains intact and user reports open. P1 tests/build/smoke NOT_RUN. [Architecture](../docs/0188-W8-P1/ARCHITECTURE_AND_CATALOG.md). Next: fresh P1 stage and exact reviewed lock inventory, then regression and real port smoke. Independent HOLD.
