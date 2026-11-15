@@ -1,0 +1,79 @@
+{
+  "revision": "0185-W1-F",
+  "files": [
+    {
+      "path": "ai-company-os-frontend/features/project-management/projectModel.ts",
+      "symbols": [
+        "ProjectRow",
+        "ProjectView",
+        "projectView",
+        "filterRows",
+        "projectContext",
+        "gateRoles",
+        "normalize"
+      ],
+      "purpose": "D0 canonical guard adapter, presentation ordinal wave rows, read-only HOLD counts, role filters and selection context; never schedules tasks.",
+      "dependencies": [
+        "features/core-review/planProjection.ts"
+      ],
+      "errors": [
+        "canonical guard reasons",
+        "PLAN_INPUT_INVALID"
+      ],
+      "diagnosis": "Inspect fixture pin/scope, task and wave bindings before any display; malformed input suppresses data."
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "symbols": [
+        "ProjectStudio",
+        "taskButton"
+      ],
+      "purpose": "Plan summary, wave board/table, Turkish search, role filter, retained context, separate QA/IV/human gate cards. No real dates/progress, mutation, execution or receipts.",
+      "dependencies": [
+        "React",
+        "projectModel",
+        "ProjectStudio.module.css",
+        "EDS theme"
+      ]
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+      "symbols": [
+        "studio",
+        "hero",
+        "hold",
+        "metrics",
+        "filters",
+        "scroll",
+        "board",
+        "wave",
+        "task",
+        "table",
+        "detail",
+        "gates"
+      ],
+      "purpose": "Responsive board/table scrolling and EDS color tokens, reduced-motion override."
+    },
+    {
+      "path": "ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+      "symbols": [
+        "DevelopmentReviewPanel",
+        "stages"
+      ],
+      "purpose": "Mount ProjectStudio in existing İş ve Denetim flow while preserving separate static development review, explicitly distinguishing it from Research plan."
+    },
+    {
+      "path": "ai-company-os-frontend/tests/project-model.test.cjs",
+      "symbols": [
+        "10 node:test cases"
+      ],
+      "purpose": "Counts, gate separation, Turkish filtering, context, fail-closed drift/malformed input, nonmutation."
+    }
+  ],
+  "apis_changed": 0,
+  "classes_added": 0,
+  "db_changed": 0,
+  "contracts_changed": 0,
+  "dependencies_changed": 0,
+  "rollback": "Revert the five exact source paths on current isolated branch and regenerate current manifest; preserve ABCDE and 0185/0186 histories. Do not copy old manifest."
+}
