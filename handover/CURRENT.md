@@ -60,3 +60,6 @@ Source bbae45051f38cf6a71ebcbb9ba0e46c94c5a188d; 191 manifest entries/192 produc
 
 ## 0185-W1-ABCD — combined integration
 Isolated integration/0185-w1-abcd; 16 exact W1 paths, 203 manifest entries / 204 product files; 34 selected local regression PASS. 0185 backend and Dashboard preserved. Full product build/browser NOT_RUN and independent HOLD. [Architecture](../docs/0185-W1-ABCD/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_ABCD.json).
+
+## 0185-W1-E — Department and Role Studio
+Isolated integration/0185-w1-abcde; 6 exact W1 E source paths; 205 manifest entries/206 product files. 8 new + 8 artwork regression, 2 syntax, 9 standalone browser checks PASS. 0185 backend and ABCD preserved. Full product build/browser NOT_RUN; independent HOLD. [Architecture](../docs/0185-W1-E/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_E.json).

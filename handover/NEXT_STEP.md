@@ -85,3 +85,6 @@ P0 network-enabled isolated pinned install/lock review and full backend, Next bu
 
 ## 0185-W1-ABCD next
 W1-0183E role/department visuals on combined base, followed by project/finance/security screens. 0186 backend priorities retained. Full pinned build/browser highest verification priority; no automatic main/active branch merge.
+
+## 0185-W1-E next
+W1-0183F read-only project management studio using existing plan/catalog. Then finance and security/evidence screens. 0186 backend priorities retained; full pinned build/current browser highest verification priority. No automatic main or active recovery branch merge.

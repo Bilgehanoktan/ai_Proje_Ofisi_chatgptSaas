@@ -78,3 +78,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-ABCD — isolated W1 combined source
 [Architecture and catalog](../0185-W1-ABCD/ARCHITECTURE_AND_CATALOG.md). No normative mapping or authority change.
+
+## 0185-W1-E — W1 department/role visuals
+[Architecture and catalog](../0185-W1-E/ARCHITECTURE_AND_CATALOG.md). Decorative role and room identities only; no topology or authority change.

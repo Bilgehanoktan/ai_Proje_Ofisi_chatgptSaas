@@ -63,3 +63,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-ABCD — W1 combined integration
 [Architecture](docs/0185-W1-ABCD/ARCHITECTURE_AND_CATALOG.md) · [scope](docs/0185-W1-ABCD/SCOPE.json) · [readback](releases/GITHUB_READBACK_0185_W1_ABCD.json). 16 W1 paths, 203 manifest entries, regression 34/34, full build NOT_RUN.
+
+## 0185-W1-E — Department and Role Studio
+[Architecture](docs/0185-W1-E/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0185_W1_E.json) · [readback](releases/GITHUB_READBACK_0185_W1_E.json). Six W1 E source paths, 205 manifest entries, full build NOT_RUN.
