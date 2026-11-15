@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-candidate-r11",
-  "doc_revision": "0174",
-  "status": "R11_RUNTIME_SOURCE_UNCHANGED_DEVELOPMENT_POLICY_UPDATED_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-r11-eds-dev",
+  "doc_revision": "0180",
+  "status": "EDS_PRODUCT_SOURCE_INTEGRATED_ISOLATED_DEV_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "bdd54b8c272bb2316cc79dc62a4fd41c4aef1664",
+  "parent_git_commit": "b7d65c9ebc5e1fa9fe7a921b7d33cc9cd685d071",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -15,8 +15,8 @@
       "sha256": "e1b8cceecce2b75a2b8a7c4c44698d3f2db55c109e4407d441803c03a9c22467"
     },
     "ai-company-os-backend/AGENTS.md": {
-      "bytes": 743,
-      "sha256": "03f1354a2ab2ff3172d0b319cbd3e588a043b5023b12b178f7f6e5a2294e343e"
+      "bytes": 1383,
+      "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-backend/app/__init__.py": {
       "bytes": 0,
@@ -407,16 +407,16 @@
       "sha256": "e1b8cceecce2b75a2b8a7c4c44698d3f2db55c109e4407d441803c03a9c22467"
     },
     "ai-company-os-frontend/AGENTS.md": {
-      "bytes": 743,
-      "sha256": "03f1354a2ab2ff3172d0b319cbd3e588a043b5023b12b178f7f6e5a2294e343e"
+      "bytes": 1383,
+      "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-frontend/app/globals.css": {
       "bytes": 11130,
       "sha256": "634fe9ebffbb431b8b15a183485ceadb844e7d760b0b6587e06edd90c3d102f1"
     },
     "ai-company-os-frontend/app/layout.tsx": {
-      "bytes": 186,
-      "sha256": "be9248824833d7092c35b82e01f297aa5410200148bdb2b097aed78b513cd3e0"
+      "bytes": 300,
+      "sha256": "8d0ce347b59032c25a5a1e2f58c984691bf791cfc2df7ae445944d43774dfe13"
     },
     "ai-company-os-frontend/app/office/page.tsx": {
       "bytes": 151,
@@ -435,12 +435,12 @@
       "sha256": "ac31e876df3494c8a32a254ccb5ea50fbaca27ab14a63a431542dab830dfe85b"
     },
     "ai-company-os-frontend/components/dashboard/MetricsStrip.tsx": {
-      "bytes": 409,
-      "sha256": "9c045ecac3467bc456e1f505a280bbb8a2a595da845f78eed86231db0bf5c824"
+      "bytes": 221,
+      "sha256": "a1bced233fed3cce70e211df3b8c95826a047a84f8dada8584508dde7ba04630"
     },
     "ai-company-os-frontend/components/dashboard/OfficePanel.tsx": {
-      "bytes": 2882,
-      "sha256": "97eab6148e944ebdf877c39c5ba0ac5b804a1adcd742a0aa6c3fa0fdd0bf4d36"
+      "bytes": 2631,
+      "sha256": "60b79585ac6822919b11004c89796eac809e0aa284ae202ade62ed0915a40a7c"
     },
     "ai-company-os-frontend/components/dashboard/OperationPanel.tsx": {
       "bytes": 871,
@@ -474,13 +474,45 @@
       "bytes": 1829,
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
     },
+    "ai-company-os-frontend/design-system/catalogPresentation.ts": {
+      "bytes": 1458,
+      "sha256": "1981a611c5e249b5561c5751f2e10f64e6a38d0f193577e5790aaad92efc3801"
+    },
+    "ai-company-os-frontend/design-system/eds.css": {
+      "bytes": 4102,
+      "sha256": "ecaa299b65623b35cc503e5640132f08ad454772abb4c1be620e381228fd1e38"
+    },
+    "ai-company-os-frontend/design-system/EvidencePanel.tsx": {
+      "bytes": 563,
+      "sha256": "cbc60c7355dd5cd04b2ca2fe2bf16c712b27d96fab0086e5c6433282b4ceb925"
+    },
+    "ai-company-os-frontend/design-system/MetricCards.tsx": {
+      "bytes": 746,
+      "sha256": "5cb1a80ef24de9a545a1f8b4301ad0fa54ab69664c5b09ed7138058462a867a6"
+    },
+    "ai-company-os-frontend/design-system/Navigation.tsx": {
+      "bytes": 695,
+      "sha256": "1dfd0693e26845195fabdde80835c30ffabf34a4d9a010c8e8128c754679926a"
+    },
+    "ai-company-os-frontend/design-system/OfficeControls.tsx": {
+      "bytes": 1002,
+      "sha256": "b5fda2626754657fab6e1fb29c252607106f21e4d2c304e08779d77f5ee7b2a7"
+    },
+    "ai-company-os-frontend/design-system/ThemeFrame.tsx": {
+      "bytes": 755,
+      "sha256": "c0ea5ca17def0b45c5cb15d8db9a67044d279238c5a4b117535a5b69cc3aab8a"
+    },
+    "ai-company-os-frontend/design-system/WorkflowProjection.tsx": {
+      "bytes": 648,
+      "sha256": "3c8b070c442437a91a99df688e481ccabc09594ea57aee67efaf18f5c73dd522"
+    },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 7125,
-      "sha256": "961d42494ddb3d7f0f634f0426e385ca419dd927528d1c8aba68d11386942b6d"
+      "bytes": 7172,
+      "sha256": "7102fabb7fcbf8a005d246264e8ae4e1a6ddf1da5d40b7b575700c16828043eb"
     },
     "ai-company-os-frontend/features/core-review/CorePreview.tsx": {
-      "bytes": 3391,
-      "sha256": "e87d87c64fe51b62475f2469993e476181bd732b18e15ecae4e6c8702ae786cb"
+      "bytes": 3378,
+      "sha256": "411df1d31c019deba0915fc79297e593547cbe57e0218396722a88216f9f5285"
     },
     "ai-company-os-frontend/features/core-review/planProjection.ts": {
       "bytes": 2653,
@@ -499,8 +531,8 @@
       "sha256": "f7aa4f158d7963d43bb55c5137790a0eec800c5a5f10dd687e2236b053354530"
     },
     "ai-company-os-frontend/features/uiCatalog.json": {
-      "bytes": 6910,
-      "sha256": "e0bb4354eb373e8f54dba4f9278e9bb9110bf3377c2e026cf596ed0636336e82"
+      "bytes": 7017,
+      "sha256": "b6ce6de4eb8f7ab2214a07ae1413367c76b42f559437462edfb6f26cf351a053"
     },
     "ai-company-os-frontend/fixtures/company.catalog.json": {
       "bytes": 5880,
@@ -571,6 +603,6 @@
       "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
     }
   },
-  "parent_source_manifest_blob": "477d6cbd0594162c547425c46d8ac8b6835d15f6",
-  "source_git_commit_note": "Self reference excluded; use repository commit and verified tree."
+  "parent_source_manifest_blob": "b5382b3073cf0fe0f9f60de986a10c7c8609f99e",
+  "source_git_commit_note": "Canonical isolated development product manifest; source commit recorded in releases/GITHUB_READBACK_0180.json, not embedded to avoid self-reference. Product build/acceptance NOT_RUN."
 }
