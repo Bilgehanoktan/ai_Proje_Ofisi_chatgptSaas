@@ -1,4 +1,4 @@
-"""Interactive D0 preview of the already built and smoke-tested 0198-UL stage."""
+"""Interactive D0 preview of the already built and smoke-tested W1-0198-P01 stage."""
 import argparse
 from pathlib import Path
 import socket

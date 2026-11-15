@@ -30,3 +30,11 @@
 @media(max-width:680px){.eds-frame .sidebar nav{display:flex;flex-wrap:wrap}.eds-frame .sidebar nav button,.eds-frame .sidebar nav .nav-link{min-height:44px}.eds-frame .topline{align-items:flex-start}.eds-frame .floor-switch button{min-width:0;width:100%}}
 @media(max-width:400px){.eds-frame .metrics,.eds-frame .sectiongrid,.eds-frame .agentgrid,.eds-frame .lanegrid,.eds-frame .station-list{grid-template-columns:1fr}.eds-frame main{padding:10px}.eds-frame .panel{padding:10px}.eds-frame .workspace{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.eds-frame *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.eds-frame .eds-card:hover{transform:none}}
+
+/* W1-0198-H / readback surfaces only; no animation or authority semantics. */
+.eds-frame .projection-summary{margin-block:12px}
+.eds-frame .projection-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,156px),1fr));gap:10px;margin-block:12px}
+.eds-frame .projection-summary-grid article{background:var(--surface-raised);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.eds-frame .projection-summary-grid article strong{display:block;overflow-wrap:anywhere;font-size:1.1rem;margin-top:6px}
+.eds-frame .projection-read-status{border-inline-start:3px solid var(--outline-strong);padding:8px 12px;background:var(--surface-raised);border-radius:6px;overflow-wrap:anywhere}
+.eds-frame .projection-read-status[data-phase=hold]{border-color:var(--hold-line);background:var(--hold-bg);color:var(--hold-text)}
