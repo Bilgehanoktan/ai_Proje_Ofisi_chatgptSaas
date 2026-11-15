@@ -109,3 +109,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0194-M
 Separate Memory/Knowledge workstream based on pinned 0193. 3 modules extended, one test file added, manifest regenerated. 17/17 exact-source selected unit tests PASS; 231 path/size checks. Caller-supplied reference matching remains HOLD; no actual retrieval, full suite, PG, build/browser or independent acceptance. [Architecture](../docs/0194-M/ARCHITECTURE_AND_CATALOG.md). Next: trusted graph/ACL/source readback and fenced retrieval boundary; R03/T1/scheduler and W8 separate.
+
+## 0196-MA
+Separate Memory/Model workstream, pinned 0194-M base. 4 added source/test files plus manifest. 15 real disposable SQLite tests, 9 model review and 17 memory regressions PASS (41 total). Exact model envelope remains DENY; memory readback returns diagnostics only. 235 manifest path/size matches. Full product/PG/build/browser and independent acceptance NOT_RUN/HOLD. Historical fixture bytes remain; no physical deletion or anti-restore witness. [Architecture](../docs/0196-MA/ARCHITECTURE_AND_CATALOG.md). Next: trusted canonical ledger/run/ACL/graph readback, ToolGateway and controlled branch reconciliation. No real grants.

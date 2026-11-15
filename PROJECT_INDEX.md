@@ -87,3 +87,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0194-M — Memory access reference
 [Architecture](docs/0194-M/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0194_M.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0194_M.json) · [Readback](releases/GITHUB_READBACK_0194_M.json)
+
+## 0196-MA — Memory/Model
+[Architecture](docs/0196-MA/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0196_MA.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0196_MA.json) · [Readback](releases/GITHUB_READBACK_0196_MA.json)
