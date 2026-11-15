@@ -75,3 +75,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185 — typed provider review, admission bundle, shared Outbox contract
 [Addendum](../0185/ARCHITECTURE_AND_CATALOG.md). No normative mapping, trust or execution authority change.
+
+## 0185-W1-ABCD — isolated W1 combined source
+[Architecture and catalog](../0185-W1-ABCD/ARCHITECTURE_AND_CATALOG.md). No normative mapping or authority change.

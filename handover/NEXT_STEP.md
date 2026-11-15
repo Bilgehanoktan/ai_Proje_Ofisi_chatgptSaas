@@ -82,3 +82,6 @@ P0 approved dependency network/locks, full backend and actual Next build/browser
 
 ## 0185 → 0186
 P0 network-enabled isolated pinned install/lock review and full backend, Next build/current browser. P0 R03 owner mapping + PostgreSQL non-owner tests + trusted clock/lease/witness and durable admission/budget/outbox. P1 tenant membership/ownership, settlement economic link, provider egress boundary design (no actual calls), CEO/Office projection. Actual grants, independent acceptance, CI, spend, main and PROD HOLD; standing owner permission already recorded.
+
+## 0185-W1-ABCD next
+W1-0183E role/department visuals on combined base, followed by project/finance/security screens. 0186 backend priorities retained. Full pinned build/browser highest verification priority; no automatic main/active branch merge.

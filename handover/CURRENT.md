@@ -57,3 +57,6 @@ Source 5d93a09b5e99dcbafc7066f3a140c63d1c09d156; 182 manifest entries/183 produc
 
 ## 0185 — typed provider review / cross-engine admission / shared contract
 Source bbae45051f38cf6a71ebcbb9ba0e46c94c5a188d; 191 manifest entries/192 product files. 47 new + 41 regression selected tests PASS; actual isolated HTTP and compiled proxy normal 200/overflow 503. 13 changed + 33 prior local files exact; full repo byte archive not downloaded. All runtime/independent/physical mapping authority HOLD. Full pinned backend/Next/browser/PG NOT_RUN, DNS blocked. [Architecture](../docs/0185/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0185.json). CURRENT.json refreshed from stale 0167 pointer; historical byte copy retained.
+
+## 0185-W1-ABCD — combined integration
+Isolated integration/0185-w1-abcd; 16 exact W1 paths, 203 manifest entries / 204 product files; 34 selected local regression PASS. 0185 backend and Dashboard preserved. Full product build/browser NOT_RUN and independent HOLD. [Architecture](../docs/0185-W1-ABCD/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_ABCD.json).
