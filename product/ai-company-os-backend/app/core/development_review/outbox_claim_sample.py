@@ -105,7 +105,7 @@ def read_projection(path):
         if row:
             phase,generation,tick,expires,digest=row
             recorded=phase=='READBACK_HOLD'
-            if phase not in {'CLAIMED','UNKNOWN_HOLD','READBACK_HOLD'} or not integer(generation) or generation==0 or not integer(tick) or not integer(expires) or not observed_tick<=tick<expires or (recorded and (not isinstance(digest,str) or not re.fullmatch('[0-9a-f]{64}',digest))) or (not recorded and digest is not None):
+            if phase not in {'CLAIMED','UNKNOWN_HOLD','READBACK_HOLD'} or not integer(generation) or not 1 <= generation <= 9007199254740991 or not integer(tick) or not integer(expires) or not observed_tick<=tick<expires or (recorded and (not isinstance(digest,str) or not re.fullmatch('[0-9a-f]{64}',digest))) or (not recorded and digest is not None):
                 raise ValueError('SAMPLE_PROJECTION_INVALID')
         # No command ID, raw digest, path, holder, or actual authority leaves the store.
         return {'schema_version':'outbox.review.projection.v1-D0','mode':PROFILE,'tenant':'synthetic-tenant','company':'synthetic-company','phase':phase,'generation':generation,'readback_recorded':recorded,'admission':'DENY','dispatch_allowed':False,'retry_allowed':False,'reconciled':False,'provider_called':False,'release_ready':False}

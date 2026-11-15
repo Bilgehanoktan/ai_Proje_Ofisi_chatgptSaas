@@ -2,6 +2,8 @@
 from dataclasses import dataclass
 from .registry import AdapterPin, exact_pin
 from .fallback import inspect_fallback
+from .provider_contract import ProviderKind, ProviderRequest, inspect_provider_request
+from hashlib import sha256
 
 
 @dataclass(frozen=True)
@@ -20,5 +22,9 @@ def sample_model(primary: AdapterPin, alternate: AdapterPin, registry: tuple[Ada
         return SampleOutput('SAMPLE_ADAPTER_ONLY')
     review = inspect_fallback(primary, alternate, registry, ('demo-tool',), ())
     if not review.structural_match or review.provider_call_allowed or review.decision != 'DENY':
+        return SampleOutput('SAMPLE_ADAPTER_HOLD')
+    request = ProviderRequest(primary.scope, ProviderKind.SAMPLE,
+                              sha256(b'D0 fixed sample input').hexdigest(), ('demo-tool',), (), 64)
+    if not inspect_provider_request(request, primary, alternate, registry).structural_match:
         return SampleOutput('SAMPLE_ADAPTER_HOLD')
     return SampleOutput('FIXED_SAMPLE_ONLY', 'Synthetic adapter review output; not a model response.')

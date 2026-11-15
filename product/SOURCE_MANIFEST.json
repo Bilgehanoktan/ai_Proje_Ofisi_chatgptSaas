@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-r11-outbox-readback-dev",
-  "doc_revision": "0184",
-  "status": "D0_PERSISTENT_OUTBOX_REVIEW_AND_READONLY_PROJECTION_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-r11-provider-admission-contracts-dev",
+  "doc_revision": "0185",
+  "status": "D0_TYPED_PROVIDER_ADMISSION_BUNDLE_OUTBOX_SCHEMA_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "02e94c07fa8b56668b322184b95f1af2f3e76123",
+  "parent_git_commit": "60c08053169b83c383019f5e34aace6cd7ba669b",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -31,8 +31,8 @@
       "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-backend/CONTRACT_PIN.md": {
-      "bytes": 1308,
-      "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
+      "bytes": 1803,
+      "sha256": "79ed6d315f24e3448f8b1bf39f3048c4eaad82adb53cea181a713884a5dfb990"
     },
     "ai-company-os-backend/README.md": {
       "bytes": 725,
@@ -119,8 +119,8 @@
       "sha256": "c18b358f8d1f77cdcece402721f8aba3bb7364490d1589c8a0ab954de2600481"
     },
     "ai-company-os-backend/app/core/development_review/outbox_claim_sample.py": {
-      "bytes": 7188,
-      "sha256": "71c4156d586109e1c082d464ffc4d55d3249d2612557042f2eb4ea7fa0933496"
+      "bytes": 7214,
+      "sha256": "ab4b60e8a9b4a302ef21239570daddf525cb93583cd4c582a7eda9377a79965c"
     },
     "ai-company-os-backend/app/core/development_review/outbox_demo.py": {
       "bytes": 943,
@@ -262,6 +262,10 @@
       "bytes": 49,
       "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
     },
+    "ai-company-os-backend/app/core/transaction/admission_bundle.py": {
+      "bytes": 3079,
+      "sha256": "91dcfea9b9f04aa39eab12702ca128677fa636ef839343d641de77b1a8e5c224"
+    },
     "ai-company-os-backend/app/core/transaction/fence_review.py": {
       "bytes": 2367,
       "sha256": "f20c4a7f095ef68eb5bb933568a45ea2b0c33e0af35222363521bc84ace9360e"
@@ -326,13 +330,17 @@
       "bytes": 242,
       "sha256": "7453cb37b258accc8d027fdfa85606d69b01907f1f067a2f61f7dc1073c4645d"
     },
+    "ai-company-os-backend/app/engines/model_gateway/provider_contract.py": {
+      "bytes": 2986,
+      "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    },
     "ai-company-os-backend/app/engines/model_gateway/registry.py": {
       "bytes": 1305,
       "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
     },
     "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": {
-      "bytes": 1108,
-      "sha256": "856cf9bc92b3476910f73f20ad6da695c8b4cdd3e98605bf252ba283bc085bd1"
+      "bytes": 1532,
+      "sha256": "3898776d470313243439e8a007f53daec0c6ab07f53460554f478c2cdba35112"
     },
     "ai-company-os-backend/app/engines/office_engine/__init__.py": {
       "bytes": 49,
@@ -394,6 +402,10 @@
       "bytes": 1829,
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
     },
+    "ai-company-os-backend/contracts/source/outbox.review.projection.schema.json": {
+      "bytes": 2141,
+      "sha256": "96aebab7e18757e36927d45e98c4dd5a1e51fd79b8b8438d83ee9822f692c868"
+    },
     "ai-company-os-backend/fixtures/company.catalog.json": {
       "bytes": 5880,
       "sha256": "f27745df5af32a68d1bf3aed6ec4c014d5047fa6ac70bb3e498ce86a2f0c5059"
@@ -417,6 +429,14 @@
     "ai-company-os-backend/requirements.txt": {
       "bytes": 105,
       "sha256": "25295154f2f3db91ea65c2a9e1f7558925e723ef9847b805fdbe77a3fb44c4cd"
+    },
+    "ai-company-os-backend/tests/outbox_projection_cases.json": {
+      "bytes": 11325,
+      "sha256": "5c835145ef738460c86ac801f0b68b70b7a5889d2fd833a3608700c2acbdb98c"
+    },
+    "ai-company-os-backend/tests/test_admission_bundle.py": {
+      "bytes": 3648,
+      "sha256": "7d2e7d74f8633dd93aa21fac85e0111accfc3dd2a89ac0f11a41feb4d12d676c"
     },
     "ai-company-os-backend/tests/test_atomic_sample.py": {
       "bytes": 3561,
@@ -446,6 +466,10 @@
       "bytes": 4475,
       "sha256": "7725520e7fb73cd7a4c371759e4b8c70eacfe57f203c72818b9fcc2a2701e612"
     },
+    "ai-company-os-backend/tests/test_outbox_contract.py": {
+      "bytes": 2177,
+      "sha256": "208516d2fbca63a78a825e20a69fb56bd2c72edd0cc1da9b54f8080ddc5465de"
+    },
     "ai-company-os-backend/tests/test_outbox_projection.py": {
       "bytes": 2931,
       "sha256": "ff9fc74517fe2b9c6452a301bdbabb7365977ca508ec75ef194cbdf1ab425a59"
@@ -453,6 +477,10 @@
     "ai-company-os-backend/tests/test_plan_projection.py": {
       "bytes": 2472,
       "sha256": "2f0e5ec8f52b49a4d8268a2977d34abec00c43d06d867020448f7a65f0c858fc"
+    },
+    "ai-company-os-backend/tests/test_provider_contract.py": {
+      "bytes": 3989,
+      "sha256": "4f64d94bdefbd0b6b73c9b9aa1ebe3bbb039590f4e39d2e0656a05ff0712e9fa"
     },
     "ai-company-os-backend/tests/test_review_0161.py": {
       "bytes": 6307,
@@ -491,8 +519,8 @@
       "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-frontend/CONTRACT_PIN.md": {
-      "bytes": 1308,
-      "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
+      "bytes": 1803,
+      "sha256": "79ed6d315f24e3448f8b1bf39f3048c4eaad82adb53cea181a713884a5dfb990"
     },
     "ai-company-os-frontend/README.md": {
       "bytes": 794,
@@ -573,6 +601,10 @@
     "ai-company-os-frontend/contracts/generated/office.snapshot.demo.schema.json": {
       "bytes": 1829,
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
+    },
+    "ai-company-os-frontend/contracts/generated/outbox.review.projection.schema.json": {
+      "bytes": 2141,
+      "sha256": "96aebab7e18757e36927d45e98c4dd5a1e51fd79b8b8438d83ee9822f692c868"
     },
     "ai-company-os-frontend/design-system/EvidencePanel.tsx": {
       "bytes": 563,
@@ -722,6 +754,10 @@
       "bytes": 2109,
       "sha256": "a39453ca67078550bf06b8d8a01ca9fca33bb419b1568b55f7a30554d55c042a"
     },
+    "ai-company-os-frontend/tests/outbox-contract.test.cjs": {
+      "bytes": 337,
+      "sha256": "ed03526ccfd940c2152368d140cb28da88aabe687f90f9fac4379ff54b90d343"
+    },
     "ai-company-os-frontend/tests/outbox-projection.test.cjs": {
       "bytes": 2271,
       "sha256": "5029408361a3212c2309ceaeacc87cc46cf63c4b352c61faf8ac3b64123ccd35"
@@ -735,6 +771,6 @@
       "sha256": "269657f5fbb39127f713edff0a2f55a493e01190a8c505ceb3ba784e18f460e8"
     }
   },
-  "parent_source_manifest_blob": "976a46212f817d9d7d2dba0734e7f90f3a25f3bf",
-  "source_git_commit_note": "Exact source commit recorded in releases/GITHUB_READBACK_0182.json; selected local synthetic tests and historical offline browser, not full Next build or independent acceptance."
+  "parent_source_manifest_blob": "97ade51ebc9c01cabbe8a3efa1e689cd98cb6156",
+  "source_git_commit_note": "Exact source commit recorded in releases/GITHUB_READBACK_0185.json; selected local synthetic tests, not full build or acceptance."
 }

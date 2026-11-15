@@ -12,3 +12,7 @@ Backend source owner candidate; frontend byte-identical consumer. Not normative 
 - `core.plan.projection.schema.json` SHA-256 `4e1b26ae8a122807351d7d6cbe6ba0e051de9171a93a0248070b22869c828421`
 - `core.plan.projection.json` SHA-256 `e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb`
 - Content digest `6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9`; independent offline reference fixture, not actual API capture.
+
+## 0185 D0 Outbox read-only projection contract
+- `outbox.review.projection.schema.json` SHA-256 `96aebab7e18757e36927d45e98c4dd5a1e51fd79b8b8438d83ee9822f692c868`; backend source and frontend generated copy are byte-identical.
+- Shared vectors: `product/ai-company-os-backend/tests/outbox_projection_cases.json` SHA-256 `5c835145ef738460c86ac801f0b68b70b7a5889d2fd833a3608700c2acbdb98c`. Draft 2020-12 and TypeScript parser agree on all 22 cases; no normative acceptance or runtime authority.
