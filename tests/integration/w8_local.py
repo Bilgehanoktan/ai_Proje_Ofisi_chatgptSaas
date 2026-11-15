@@ -13,7 +13,7 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = '383b6248cd34dd63baee313d4488613e1a6e67ce'
+MANIFEST_BLOB = '59396d0b378b274103b63449593392571dedb287'
 HARNESS = {
     'run_combined_helpers.cjs': '8228e8db13e27f641e8b24dd447f55cf2cfc4a31',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
@@ -41,7 +41,7 @@ def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0188-W8-S1 archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0188-W8-S2 archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)

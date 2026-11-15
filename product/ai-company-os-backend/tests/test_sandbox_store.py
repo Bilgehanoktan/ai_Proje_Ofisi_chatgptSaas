@@ -1,3 +1,4 @@
+from contextlib import closing
 import copy
 import json
 import sqlite3
@@ -11,7 +12,7 @@ from app.core.agent_runtime.lifecycle import Scope
 from app.engines.model_gateway.registry import AdapterPin
 from app.engines.model_gateway.sample_adapter import sample_model, SampleOutput
 
-PLAN = json.loads((Path(__file__).resolve().parents[1]/'fixtures/core.preview.json').read_text())['plan']
+PLAN = json.loads((Path(__file__).resolve().parents[1]/'fixtures/core.preview.json').read_text(encoding='utf-8'))['plan']
 
 
 class TestWorkbench(unittest.TestCase):
@@ -71,7 +72,7 @@ class TestWorkbench(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'TASK_TERMINAL'): self.w.lease('plan','demo-holder',20,5)
     def test_rollback(self):
         f=self.w.lease('plan','demo-holder',1,5)
-        with sqlite3.connect(self.path) as db:
+        with closing(sqlite3.connect(self.path)) as db, db:
             db.execute("CREATE TRIGGER fail_event BEFORE INSERT ON sample_event BEGIN SELECT RAISE(ABORT,'test'); END")
         with self.assertRaises(sqlite3.IntegrityError): self.w.observe('plan','demo-holder',f,1,'cmd')
         self.assertIn(('plan','PENDING',0),self.w.snapshot()['tasks']);self.assertEqual(self.w.snapshot()['events'],[])

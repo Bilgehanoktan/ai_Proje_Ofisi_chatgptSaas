@@ -78,8 +78,20 @@ class OfficeWorkbenchTests(TestCase):
         with closing(sqlite3.connect(self.path)) as db,db: db.execute('CREATE TABLE other(id)')
         self.assertEqual(self.get().status_code,503)
     def test_symlink(self):
-        target=self.path.with_name('target.d0.sqlite'); seed(target,1); self.path.symlink_to(target)
+        target=self.path.with_name('target.d0.sqlite'); seed(target,1)
+        try:
+            self.path.symlink_to(target)
+        except OSError as exc:
+            if os.name == 'nt' and getattr(exc, 'winerror', None) == 1314:
+                self.skipTest('Real symlink creation requires Windows privilege; guard separately tested')
+            raise
         self.assertEqual(self.get().status_code,503)
+    def test_symlink_guard_no_db_open(self):
+        seed(self.path,1)
+        with patch.object(Path,'is_symlink',return_value=True), patch('app.core.development_review.office_workbench.sqlite3.connect') as connect:
+            with self.assertRaisesRegex(ValueError,'OFFICE_WORKBENCH_PATH_HOLD'):
+                read_office_workbench(self.path)
+            connect.assert_not_called()
     def test_schema(self):
         from jsonschema import Draft202012Validator
         root=Path(__file__).resolve().parents[1]
