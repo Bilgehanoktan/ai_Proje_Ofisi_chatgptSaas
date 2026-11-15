@@ -87,3 +87,6 @@ S2 Windows install PASS; Node 180 PASS/1 skip, Python 264 PASS/1 skip, zero fail
 
 ## S3 Windows build evidence
 User terminal transcript confirms 249 source SHA-256 pins, 14 pairs, exact reviewed fingerprint, install/pip check, Node 180 PASS/1 skip, Python 264 PASS/1 skip, Next build 5/5 static pages, standalone tsc and post-build source/lock guard PASS. Total 444 PASS/2 SKIP/0 FAIL. [Evidence](../tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_BUILD.json). No new product code. Smoke and pixel review open; independent acceptance HOLD. Next: existing stage, explicit Chrome/Chromium path and reviewed digest; no reinstall. Real symlink evidence still open.
+
+## S3 actual loopback smoke
+User terminal transcript confirms both loopback servers, five API parity, 52 screenshots, paired panel and fail-closed response/floor reset, unchanged DB hashes. Smoke deliberately closes both processes; connection refused afterward is expected. [Evidence](../tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_SMOKE.json). New interactive launcher `tests/integration/launch_w8_s3.py` reuses the existing stage, exact review and build markers, synthetic sample files, restricted environment, loopback-only bind, parity gate, and Ctrl+C cleanup. No reinstall or product changes. Launcher is candidate, not yet executed. Pixel review and independent acceptance HOLD.

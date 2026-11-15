@@ -18,7 +18,7 @@
   "independent_acceptance": "HOLD",
   "normative_status": "HOLD",
   "transfer_evidence": "releases/GITHUB_READBACK_0188_W8_S3.json",
-  "next": "Existing S3 stage: run smoke with exact review digest and explicit local Chromium executable; then interactive loopback launch. Independent acceptance HOLD.",
+  "next": "Launch existing stage interactively using pinned launch_w8_s3.py; collect 52 screenshot files for pixel review; independent acceptance HOLD.",
   "previous_pointer": "handover/history/CURRENT_0188_W8_S2_PRE_S3.json",
   "ui_parent_commit": "67aa93aed3023c51de6b865d80fc96bf202e20e8",
   "merged_tsx_syntax_passed": null,
@@ -28,12 +28,12 @@
   "previous_0187_rerun": false,
   "dependency_lock": "S3_EXACT_REVIEW_PASS",
   "full_next_build": "WINDOWS_USER_TRANSCRIPT_PASS_POST_BUILD_INTEGRITY_PASS",
-  "actual_react_browser": "NOT_RUN",
+  "actual_react_browser": "WINDOWS_USER_TRANSCRIPT_52_CAPTURES_PASS_PIXEL_REVIEW_OPEN",
   "backend_parent_commit": "73f86aff7eb25d74fe41f02c6e799e9317d1aab8",
   "runner_preflight_tests_passed": 9,
   "previous_0187_w1_tests": 66,
   "previous_0188_recovery_tests": 23,
-  "actual_paired_writer": "UNITTEST_PASS_LIVE_HTTP_PENDING",
+  "actual_paired_writer": "PASS_LOCAL_SYNTHETIC_LIVE_HTTP",
   "dependency_security_review": "S1_AUDITS_REUSED_EXACT_REBOUND_LOCK_INVENTORY",
   "dependency_review_evidence": "tests/evidence/DEPENDENCY_REVIEW_0188_W8_S1_WINDOWS.json",
   "previous_s1_node_pass": 180,
@@ -48,5 +48,7 @@
   "previous_s2_python_fail": 0,
   "previous_s2_python_errors": 0,
   "previous_s2_next_build": "COMPILED_AND_TSC_PASS_POST_BUILD_SOURCE_HOLD",
-  "windows_build_evidence": "tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_BUILD.json"
+  "windows_build_evidence": "tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_BUILD.json",
+  "local_synthetic_runtime": "PASS_USER_TRANSCRIPT",
+  "windows_smoke_evidence": "tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_SMOKE.json"
 }

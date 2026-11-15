@@ -3,3 +3,6 @@ S2 Windows source audit and install PASS. Node 180 PASS/1 skip, Python 264 PASS/
 
 ## Windows build result
 S3 user transcript confirms complete build/test gate PASS. 444 passed, 2 skipped, 0 failed; unchanged source after build. Live smoke, pixel review and independent acceptance open. No runtime source changes.
+
+## S3 actual loopback smoke
+User terminal transcript confirms both loopback servers, five API parity, 52 screenshots, paired panel and fail-closed response/floor reset, unchanged DB hashes. Smoke deliberately closes both processes; connection refused afterward is expected. [Evidence](../tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_SMOKE.json). New interactive launcher `tests/integration/launch_w8_s3.py` reuses the existing stage, exact review and build markers, synthetic sample files, restricted environment, loopback-only bind, parity gate, and Ctrl+C cleanup. No reinstall or product changes. Launcher is candidate, not yet executed. Pixel review and independent acceptance HOLD.
