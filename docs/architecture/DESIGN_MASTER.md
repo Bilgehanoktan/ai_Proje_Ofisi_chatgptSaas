@@ -123,3 +123,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0202-S — signed retained checkpoint and terminal receipt
 [Addendum](../0202S/ARCHITECTURE_AND_CATALOG.md). Fixture Ed25519 and local archive tests PASS; external key custody, actual T1/PG/readback, W-A and independent acceptance HOLD. No normative authority or schema change.
+
+## 0203-T — terminal anchor and strict historical readback
+[Addendum](../0203T/ARCHITECTURE_AND_CATALOG.md). Candidate same-T1 terminal anchor; 54 selected PASS; full lifecycle/PG/R03/IV remain open.

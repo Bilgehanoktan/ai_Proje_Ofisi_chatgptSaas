@@ -105,3 +105,6 @@ Source `1ebf6c195b0534d3356b94e51b8d4d4cd3340906`; parent `b3813f2692da002d75b67
 
 ## 0202-S — signed retained history (separate workstream)
 Source `c69a8394e75dca1d16ad04585a3c1dc375109733`; parent `f6bf82ed85335d9189b6161dbb0d983b07d70b40`. 253 manifest entries / 254 product files; 25 new tests PASS (19 direct, 6 mocked underlying snapshot) and 14 archive regression PASS. Five prior integration and 13 actual PG NOT_RUN; 164 earlier PASS not rerun. Key custody, external pin/W-A, T1 and independent acceptance HOLD. [Architecture](../docs/0202S/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0202_S.json) · [Next](NEXT_STEP_0202_S.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0202_S.json). No merge or runtime authority.
+
+## 0203-T — terminal anchor
+Source `2d900ac58ca49e061ba07c7cbd56a93f27513bde`; parent `d6c27d5f3ce9ff29cdf42108510a21c277006ebd`. 256 manifest entries / 257 product files. 54 selected PASS (12 SQL,3 mock,39 regression). Seven new and five prior full lifecycle/readback NOT_RUN; 13 PG NOT_RUN; 164 earlier PASS not rerun. [Architecture](../docs/0203T/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0203_T.json) · [Next](NEXT_STEP_0203_T.md). Independent acceptance, R03, actual authority and full product HOLD; no merge.

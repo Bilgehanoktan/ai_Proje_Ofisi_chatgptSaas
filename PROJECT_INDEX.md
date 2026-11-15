@@ -108,3 +108,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0202-S — signed retained history (separate workstream)
 [Architecture](docs/0202S/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0202_S.json) · [Evidence](releases/GITHUB_READBACK_0202_S.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0202_S.json). 39 selected PASS (25 new, 14 rerun); five prior integration and 13 actual PG NOT_RUN; IV/R03 HOLD.
+
+## 0203-T — terminal anchor
+[Architecture](docs/0203T/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0203_T.json) · [Evidence](releases/GITHUB_READBACK_0203_T.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0203_T.json). 54 selected PASS; seven new and five prior lifecycle/readback and 13 PG NOT_RUN.

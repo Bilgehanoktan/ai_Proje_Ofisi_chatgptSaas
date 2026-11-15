@@ -66,3 +66,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0202-S — signed history
 [Machine-readable delta](revisions/TECHNICAL_CATALOG_0202_S.json) · [Architecture and rollback](../docs/0202S/ARCHITECTURE_AND_CATALOG.md). 25 new tests (6 underlying snapshot mock), 14 archive regression PASS. Optional cryptography pin; no base dependency or canonical schema change.
+
+## 0203-T — terminal anchor
+[Delta](revisions/TECHNICAL_CATALOG_0203_T.json) · [Maintenance](../docs/0203T/ARCHITECTURE_AND_CATALOG.md). Three modified product modules, three added product files, one root DDL. 54 selected tests PASS; 7+5 integration NOT_RUN.
