@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-r11-workbench-dev",
-  "doc_revision": "0182",
-  "status": "D0_PERSISTENT_WORKBENCH_INTEGRATED_SELECTED_LOCAL_TEST_PASS_FULL_NEXT_BUILD_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-r11-atomic-lifecycle-dev",
+  "doc_revision": "0183",
+  "status": "D0_ATOMIC_SAMPLE_AND_LIFECYCLE_VIEW_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "01b8790e343397ab8d69e9175ad0fb78303e3eab",
+  "parent_git_commit": "da434ab0fde4a7dc949967c970e48e940c59ac53",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -85,6 +85,10 @@
     "ai-company-os-backend/app/core/development_review/__init__.py": {
       "bytes": 66,
       "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    "ai-company-os-backend/app/core/development_review/atomic_sample.py": {
+      "bytes": 5463,
+      "sha256": "df0e2e53ae655a99a4735ebbf37f46d70a9f39f32c9d39a0c7f324f00bdade63"
     },
     "ai-company-os-backend/app/core/development_review/coordination_readback.py": {
       "bytes": 2913,
@@ -402,6 +406,10 @@
       "bytes": 105,
       "sha256": "25295154f2f3db91ea65c2a9e1f7558925e723ef9847b805fdbe77a3fb44c4cd"
     },
+    "ai-company-os-backend/tests/test_atomic_sample.py": {
+      "bytes": 3137,
+      "sha256": "36fb6b4259193879f444f9899d58f618928ee69f7a3d463725e9999ed1dffa6a"
+    },
     "ai-company-os-backend/tests/test_development_review_0164.py": {
       "bytes": 8342,
       "sha256": "8f291f7bbcfb8b9b701c4088f17c4700bd3ae8e1b90aa38614e25d76da780e1c"
@@ -583,8 +591,8 @@
       "sha256": "65cdefc209e3942dd06f71a3d15157efe1034e1ce9e9582263fdf04d9aea1c9a"
     },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 7286,
-      "sha256": "b79bbd86186ca3c6d42985769bb32f2a92cae17a81b4d8e3734c375d147aae85"
+      "bytes": 7409,
+      "sha256": "afe59ddf48f2fed9de11925a03433ef2a20aca2005ec10f62caca71d0659c617"
     },
     "ai-company-os-frontend/features/core-review/CorePreview.tsx": {
       "bytes": 3378,
@@ -598,9 +606,17 @@
       "bytes": 1609,
       "sha256": "06473c6c1853726292b14ff426725c18c849235a896534a010f196f1953dbf66"
     },
+    "ai-company-os-frontend/features/mvp/WorkbenchLifecyclePanel.tsx": {
+      "bytes": 1554,
+      "sha256": "b1e7190f49d41c83092265d70e705e743c1639acbfc4175c83fb815070e97845"
+    },
     "ai-company-os-frontend/features/mvp/mvpDiagnostics.ts": {
       "bytes": 2140,
       "sha256": "65a4beb72b4fae67c0fe757b0edaf47dbbab42a5d304cb4e43ead4e07936205c"
+    },
+    "ai-company-os-frontend/features/mvp/workbenchSnapshot.ts": {
+      "bytes": 2113,
+      "sha256": "9c2dcdc394975c708c185e4c8fe002bfbd8d8d45c34fa5f9e4791408b9d9427d"
     },
     "ai-company-os-frontend/features/planProjection.ts": {
       "bytes": 76,
@@ -673,6 +689,10 @@
     "ai-company-os-frontend/tests/mvpProxy.test.cjs": {
       "bytes": 2109,
       "sha256": "a39453ca67078550bf06b8d8a01ca9fca33bb419b1568b55f7a30554d55c042a"
+    },
+    "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
+      "bytes": 1573,
+      "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
     },
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 583,

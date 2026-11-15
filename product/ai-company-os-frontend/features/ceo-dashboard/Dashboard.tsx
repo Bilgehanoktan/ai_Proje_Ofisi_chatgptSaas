@@ -17,12 +17,13 @@ import AgentDetail,{RoleButton,type Role} from '../../components/dashboard/Agent
 import OperationPanel,{type Panel} from '../../components/dashboard/OperationPanel';
 import DevelopmentReviewPanel from '../../components/dashboard/DevelopmentReviewPanel';
 import MvpDiagnosticsPanel from '../mvp/MvpDiagnosticsPanel';
+import WorkbenchLifecyclePanel from '../mvp/WorkbenchLifecyclePanel';
 
 type Station=SnapshotFloor['stations'][number];
 type Selection={floorId:string;stationId:string}|{roleId:string}|null;
 const sections=catalog.sections as Record<string,{title:string;description:string;status:string}[]>;
 const demoLayout=validateDemoLayout(core.layout);
-const version='DOC-REV-0181 · D0 sentetik MVP okuması';
+const version='DOC-REV-0183 · D0 sentetik MVP okuması';
 const layoutKey=`${fixture.layout_revision}:${core.layout.revision}`;
 // Key resets all controlled presentation state when static layout or entry view changes.
 export default function Dashboard({initialView}:{initialView:'overview'|'office'}){
@@ -57,6 +58,7 @@ function DashboardView({initialView}:{initialView:'overview'|'office'}){
  {overview?<><SnapshotStrip/>{!officeOnly&&<MetricsStrip/>}<div className="workspace"><OfficePanel floors={fixture.floors} floorId={floorId} onFloor={changeFloor} display={display} onDisplay={changeDisplay} officeOnly={officeOnly} stations={stationList()} demoFloor={demoFloor} layoutRevision={String(core.layout.revision)} snapshotRevision={String(fixture.layout_revision)} geometryReason={demoLayout.ok?'Kat bulunamadı':demoLayout.reason}/><OperationPanel panel={panel} onPanel={setPanel} stations={stationList()} detail={details}/></div></>:currentView==='AI Çalışanlar'?<section className="panel"><h2>Çekirdek rol şablonları</h2><div className="agentgrid">{ui.roles.map(r=><RoleButton key={r.id} role={r} pressed={role?.id===r.id} onSelect={()=>openRole(r)}/>)}</div>{details}</section>:<section className="panel"><h2>{currentView} · Durum kataloğu</h2><div className="sectiongrid">{presentCatalogRows(currentView,sections,ui.sections).map(x=><article className="item" key={x.title}><h3>{x.title}</h3><p>{x.description}</p><div className="status">{x.status}</div></article>)}</div></section>}
  {!officeOnly&&(overview||['İş ve Denetim','Güvenlik','Olaylar'].includes(currentView))&&<CorePreview/>}
  {!officeOnly&&overview&&<MvpDiagnosticsPanel/>}
+ {!officeOnly&&overview&&<WorkbenchLifecyclePanel/>}
  {!officeOnly&&currentView==='İş ve Denetim'&&<DevelopmentReviewPanel/>}
  {!officeOnly&&<section className="panel bottom"><div className="bar"><h2>Geliştirme çalışma hatları</h2><span className="sub">Kaynak adayı · kabul edilmedi</span></div><div className="lanegrid">{catalog.lanes.map(x=><div className="lane" key={x.id}><strong>{x.id}</strong>{x.title}<small>{x.scope}</small></div>)}</div></section>}
  <footer>v135 hedef mimari · {version} · A0_SAMPLE_ONLY · NO_RELEASE · ACCEPTANCE HOLD</footer></main></div>;
