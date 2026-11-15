@@ -66,3 +66,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-E — Department and Role Studio
 [Architecture](docs/0185-W1-E/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0185_W1_E.json) · [readback](releases/GITHUB_READBACK_0185_W1_E.json). Six W1 E source paths, 205 manifest entries, full build NOT_RUN.
+
+## 0185-W1-F — Project Management Studio
+[Architecture](docs/0185-W1-F/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0185_W1_F.json) · [readback](releases/GITHUB_READBACK_0185_W1_F.json). Five W1 F source paths, 209 manifest entries, selected tests 10/10; full build NOT_RUN.

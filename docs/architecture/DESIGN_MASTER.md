@@ -81,3 +81,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-E — W1 department/role visuals
 [Architecture and catalog](../0185-W1-E/ARCHITECTURE_AND_CATALOG.md). Decorative role and room identities only; no topology or authority change.
+
+## 0185-W1-F — W1 read-only project management
+[Architecture and catalog](../0185-W1-F/ARCHITECTURE_AND_CATALOG.md). Canonical D0 plan and gates preserved; no scheduling, real progress or authority change.

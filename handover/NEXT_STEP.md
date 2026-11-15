@@ -88,3 +88,6 @@ W1-0183E role/department visuals on combined base, followed by project/finance/s
 
 ## 0185-W1-E next
 W1-0183F read-only project management studio using existing plan/catalog. Then finance and security/evidence screens. 0186 backend priorities retained; full pinned build/current browser highest verification priority. No automatic main or active recovery branch merge.
+
+## 0185-W1-F next
+W1-0183G finance/SaaS read-only studio with explicit null/unavailable values and no fabricated actual economic state; then security/evidence. W8 pinned build/browser highest verification priority. Reconcile latest 0186 separately after rechecking paths; no automatic main/active branch merge.
