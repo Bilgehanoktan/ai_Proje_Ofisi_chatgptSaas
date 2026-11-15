@@ -2,6 +2,7 @@
 from contextlib import closing, contextmanager
 from pathlib import Path
 import sqlite3
+from .task_budget_snapshot import write_pair_marker
 from app.core.agent_runtime.lifecycle import Scope, LeaseObservation, ClockSample
 from app.core.policy.witness_review import WitnessSample
 from app.core.transaction.review import LogicalIntent, Operation, RoleObservation, required_roles
@@ -87,11 +88,14 @@ def _open(path, readonly=False):
 class AdmissionSample:
     def __init__(self,path): self.path=_path(path)
 
-    def create(self):
+    def create(self, *, pair_id=None):
         with self.path.open('xb'): pass
         try:
             with closing(sqlite3.connect(self.path)) as db:
-                db.executescript('BEGIN;'+DDL+'COMMIT;')
+                db.executescript('BEGIN;'+DDL)
+                if pair_id is not None:
+                    write_pair_marker(db,pair_id)
+                db.commit()
         except BaseException:
             self.path.unlink(missing_ok=True)
             raise

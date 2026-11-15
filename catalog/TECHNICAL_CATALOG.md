@@ -48,3 +48,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0187
 [Source/symbol/API/DB/event/test catalog](revisions/TECHNICAL_CATALOG_0187.json) · [Maintenance](../docs/0187/ARCHITECTURE_AND_CATALOG.md). 212 product manifest entries; actual synthetic Workbench history and Office role readback.
+
+## 0188
+[Source/symbol/API/DB/event/test catalog](revisions/TECHNICAL_CATALOG_0188.json) · [Maintenance](../docs/0188/ARCHITECTURE_AND_CATALOG.md). 223 manifest entries; paired D0 sample readback, actual writer NOT_RUN.

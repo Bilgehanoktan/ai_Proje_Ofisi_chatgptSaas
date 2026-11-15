@@ -22,3 +22,6 @@ Backend source owner candidate; frontend byte-identical consumer. Not normative 
 
 ## 0187 D0 office workbench projection
 - `office.workbench.projection.schema.json` SHA-256 `6ea0033e956ed741a8135c609e13528f734aeb1c0c1375154ca43fe9b3620fb9`; backend and generated frontend schema byte-identical. Shared 20 vectors SHA-256 `9727cfe43bf7ac203c276b5bd4e5b1496500c39b8343576c4138df1ae1c7d81f`. Historical fixed CLI prefix only; no runtime or geometry authority.
+
+## 0188 paired task/budget snapshot
+- `task.budget.snapshot.schema.json` SHA-256 `0c8c2306d12f3870a4d46445a177fe98acb0650ecf4e819a7c80bc704c239dd2`; backend source and generated frontend copy identical. Nested 0186/0187 contracts, historical sample only; no causal, lease or T1 authority. Schema runtime acceptance NOT_RUN.
