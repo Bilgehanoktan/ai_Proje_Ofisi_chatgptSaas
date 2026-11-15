@@ -84,3 +84,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0193
 [Architecture](docs/0193/ARCHITECTURE_AND_CATALOG.md) · [Product roadmap](docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0193.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0193.json). 25 selected synthetic tests PASS; PG and full product NOT_RUN.
+
+## 0194 — D0 six-role transition mapping
+[Architecture](docs/0194/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0194.json) · [Evidence](releases/GITHUB_READBACK_0194.json). 35 new + 25 regression tests PASS; real PG NOT_RUN, R03/IV HOLD.

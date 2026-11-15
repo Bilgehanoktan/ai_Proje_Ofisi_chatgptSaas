@@ -106,3 +106,6 @@ Concrete authoritative role mapping and persisted transition preimage, scheduler
 
 ## 0193 → 0194
 A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plus authoritative admission/lease/budget/witness; connect repository and transaction without assuming approval. Actual disposable PG tests incl existing 14, concurrent CAS, rollback/unknown and non-owner isolation. Scheduler claim/worker lease, causal event replay and outbox reconciliation. C: disabled typed Model Gateway/Skill/Tool boundaries, no external calls. D: Memory/Knowledge retrieval provenance and ACL. E: read-only Office freshness/causal projection. F: tenant ownership/budget settlement. G: W8 independent; validate its own pinned evidence, no automatic merge. Full pinned backend/Next/current browser NOT_RUN here. No new grants, CI, main merge, PROD or external effects.
+
+## 0194 → 0195
+[Detailed next step](NEXT_STEP_0194.md). P0 actual disposable PG and R03 ownership, trusted clock/W-A; admission/lease/budget/terminal T1 mapping, canonical worker claim. P1 event/office and AI/memory contracts. No real grant/provider/CI/PROD/main merge.

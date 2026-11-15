@@ -81,3 +81,6 @@ Five product modules and candidate SQL; all new tests NOT_RUN; R03 HOLD. [Detail
 
 ## 0193 — runtime transition
 Source 6229e5611e7178b34945609b7478e9cb6f7aaeb5; 5 product paths changed (2 add, 3 modify), 230 manifest entries / 231 product files. D0 run-head DDL NOT_APPLIED. 25/25 selected synthetic tests PASS; actual PG/full suite/build NOT_RUN. R03 and independent acceptance HOLD. [Architecture](../docs/0193/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_0193.json) · [Roadmap](../docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). W8 separate. See NEXT_STEP.
+
+## 0194 — D0 six-role transition mapping and scheduler
+Source 1f390ec3d6d0b9bf891b1d7ee67960cd7317d62e; 5 new product paths, 235 manifest entries/236 files, 230 old non-manifest product blobs unchanged. 35 new (25 SQLite mapping + 10 scheduler) and 25 mock regression PASS; real PG 5 skipped/NOT_RUN. Actual PG/CI/full build/browser, canonical R03, real grant/IV HOLD. [Architecture](../docs/0194/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0194.json). Next [0195](NEXT_STEP_0194.md).
