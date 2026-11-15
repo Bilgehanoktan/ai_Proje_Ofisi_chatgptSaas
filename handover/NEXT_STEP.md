@@ -85,3 +85,6 @@ P0 network-enabled isolated pinned install/lock review and full backend, Next bu
 
 ## 0186 → 0187
 P0 network-enabled pinned full checkout/locks, full backend, Next build and current browser incl admission. P0 R03 owner mapping, PG non-owner tests, trusted clock/lease/W-A witness and canonical durable admission/budget/outbox. P1 task identity/event projection into Office, disabled provider boundary and tenant/settlement references. Keep real grants, independent acceptance, CI, main, PROD, spend HOLD. No repeated standing owner approval.
+
+## 0187 → 0188
+P0 full pinned network-enabled isolated checkout/locks/backend/Next/current browser; R03 physical mapping, PG non-owner, trusted clock/lease/W-A, canonical admission/budget/outbox. P1 bind workbench and admission identities across separate sample DBs; Office snapshot sequence/freshness and geometry crosswalk without live join. Actual grants, independent acceptance, real providers, spend, CI, main, PROD HOLD. No repeated standing owner approval.

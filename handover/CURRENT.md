@@ -60,3 +60,6 @@ Source bbae45051f38cf6a71ebcbb9ba0e46c94c5a188d; 191 manifest entries/192 produc
 
 ## 0186 — durable sample admission/reservation/settlement and CEO projection
 Source e5db7974daa47652ca5773aeb5ece177a7b1a457; 201 manifest entries/202 product files; 23 new +88 regression =111 selected PASS; separate CLI reopen and actual isolated HTTP/proxy 200/503. 58 exact local paths; full repo archive not downloaded. Full pinned backend/ASGI/Next/browser/PG NOT_RUN, dependency DNS blocked. No real admission/tenant/provider/spend/independent authority. [Architecture](../docs/0186/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0186.json).
+
+## 0187 — actual D0 Workbench history to Office projection
+Source f0af5e7bdb9310b7b9e8fc66e8cb8b5153b254cf; 212 manifest entries/213 product files; 41 new selected PASS, 111 prior NOT rerun. Actual writer and CLI reopen; isolated HTTP/proxy 200/503. 43 local exact paths, full archive not locally downloaded. Full ASGI/Next/browser/PG NOT_RUN; DNS blocked. IV, release, geometry join, actual agents, provider, spend and independent acceptance HOLD/DENY. [Architecture](../docs/0187/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0187.json).

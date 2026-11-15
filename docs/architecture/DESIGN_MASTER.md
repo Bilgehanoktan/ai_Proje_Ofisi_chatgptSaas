@@ -78,3 +78,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0186 — durable synthetic admission and settlement, CEO readback
 [Addendum](../0186/ARCHITECTURE_AND_CATALOG.md). No canonical physical mapping or authority change.
+
+## 0187 — Workbench history to Office role projection
+[Addendum](../0187/ARCHITECTURE_AND_CATALOG.md). No canonical T1, trusted clock, geometry join or authority change.
