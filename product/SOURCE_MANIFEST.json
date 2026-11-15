@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0204-C",
-  "status": "D0_COMPANY_COORDINATION_REPLAY_SQLITE_TESTED_T1_DECORATOR_NOT_RUN",
+  "doc_revision": "0205-R",
+  "status": "D0_COMPANY_RECOVERY_SQLITE_TESTED_INDEPENDENT_WITNESS_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "76c110fdef1d35a86e09609920be67210caee741",
+  "parent_git_commit": "cb03319e1e8d46246973c9c6bfad23482043e529",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1037,8 +1037,16 @@
     "ai-company-os-backend/tests/test_company_coordination_0204.py": {
       "bytes": 15264,
       "sha256": "49ddaea03aa86f98ec39e92005c3dbbc1c1846653508288a1dab3257f869e938"
+    },
+    "ai-company-os-backend/app/core/event_store/company_recovery.py": {
+      "bytes": 10457,
+      "sha256": "42c6ce3c16a354a00ac0d3a16067e10d51f57351730fab514e7530d964eab5dd"
+    },
+    "ai-company-os-backend/tests/test_company_recovery_0205.py": {
+      "bytes": 12267,
+      "sha256": "050b68f9438d022b9c0914ebbc0d4672ab9d0496d8308f847c50d07179e9a05a"
     }
   },
-  "parent_source_manifest_blob": "7b07aa66ad060401381808d6d3677d41679c6338",
-  "source_git_commit_note": "Same-commit source and manifest. 256 prior entries retained; 2 added; root candidate DDL tracked separately."
+  "parent_source_manifest_blob": "4034db18f859c269334e390c61538678a8a80e14",
+  "source_git_commit_note": "Same-commit source and manifest. All 258 prior entries retained, 2 added; separate local witness table is fixture code, not product DB migration."
 }
