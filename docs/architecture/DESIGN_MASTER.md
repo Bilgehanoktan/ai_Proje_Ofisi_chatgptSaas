@@ -87,3 +87,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-G — W1 read-only finance and SaaS
 [Architecture and catalog](../0185-W1-G/ARCHITECTURE_AND_CATALOG.md). Null financial values, historical targets and no spend; no normative or physical mapping change.
+
+## 0185-W1-H — W1 security/evidence projection
+[Architecture and catalog](../0185-W1-H/ARCHITECTURE_AND_CATALOG.md). Read-only D0 display; no normative authority, live security, receipt or release change.

@@ -69,3 +69,6 @@ Isolated integration/0185-w1-abcdef; five exact W1 F source paths, 209 manifest 
 
 ## 0185-W1-G — Finance & SaaS Command Center
 Isolated integration/0185-w1-abcdefg; five exact source paths, 213 manifest entries/214 product files. 12 helper, 2 syntax, 11 standalone browser checks PASS. 0185 backend and ABCDEF preserved. 0186 pin 27588d74de0595a6a82855b3477abba4a1c42a2d: 28 cumulative paths / one Dashboard content conflict, not merged. Full product build/browser NOT_RUN; independent HOLD. [Architecture](../docs/0185-W1-G/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_G.json).
+
+## 0185-W1-H — Security & Evidence Center
+Isolated integration/0185-w1-abcdefgh; 5 exact paths, 217 manifest entries/218 product files. 13 helper, 2 syntax, 12 standalone browser PASS. Backend preserved. Latest other recovery/0187-office-workbench @ 89d12284546077a6e69374c7ed794235c5e9703f, 32 cumulative paths/2 conflicts (Dashboard, OfficePanel), not merged. Full product build/browser NOT_RUN; independent HOLD. [Architecture](../docs/0185-W1-H/ARCHITECTURE_AND_CATALOG.md) · [readback](../releases/GITHUB_READBACK_0185_W1_H.json).

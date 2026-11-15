@@ -72,3 +72,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0185-W1-G — Finance & SaaS Command Center
 [Architecture](docs/0185-W1-G/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0185_W1_G.json) · [readback](releases/GITHUB_READBACK_0185_W1_G.json). Five source paths, 213 manifest entries, 12/12 helper tests; full build NOT_RUN.
+
+## 0185-W1-H — Security & Evidence Command Center
+[Architecture](docs/0185-W1-H/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0185_W1_H.json) · [readback](releases/GITHUB_READBACK_0185_W1_H.json). Five source paths, 217 manifest entries, 13/13 helper tests; full build NOT_RUN.
