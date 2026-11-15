@@ -16,6 +16,7 @@ import OfficePanel,{type Display,type SnapshotFloor} from '../../components/dash
 import AgentDetail,{RoleButton,type Role} from '../../components/dashboard/AgentDetail';
 import OperationPanel,{type Panel} from '../../components/dashboard/OperationPanel';
 import DevelopmentReviewPanel from '../../components/dashboard/DevelopmentReviewPanel';
+import FinanceStudio from '../finance/FinanceStudio';
 import MvpDiagnosticsPanel from '../mvp/MvpDiagnosticsPanel';
 import WorkbenchLifecyclePanel from '../mvp/WorkbenchLifecyclePanel';
 import OutboxProjectionPanel from '../mvp/OutboxProjectionPanel';
@@ -62,6 +63,7 @@ function DashboardView({initialView}:{initialView:'overview'|'office'}){
  {!officeOnly&&overview&&<WorkbenchLifecyclePanel/>}
  {!officeOnly&&overview&&<OutboxProjectionPanel/>}
  {!officeOnly&&currentView==='İş ve Denetim'&&<DevelopmentReviewPanel/>}
+ {!officeOnly&&currentView==='SaaS ve Finans'&&<FinanceStudio/>}
  {!officeOnly&&<section className="panel bottom"><div className="bar"><h2>Geliştirme çalışma hatları</h2><span className="sub">Kaynak adayı · kabul edilmedi</span></div><div className="lanegrid">{catalog.lanes.map(x=><div className="lane" key={x.id}><strong>{x.id}</strong>{x.title}<small>{x.scope}</small></div>)}</div></section>}
  <footer>v135 hedef mimari · {version} · A0_SAMPLE_ONLY · NO_RELEASE · ACCEPTANCE HOLD</footer></main></div>;
 }
