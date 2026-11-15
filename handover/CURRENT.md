@@ -69,3 +69,6 @@ Source 3a4c5d3ae85c1521af2cf4bb05fcafce81aeb3ac; 223 manifest entries/224 produc
 
 ## 0189 — existing paired integration and PostgreSQL probe
 Source 54456e1598161c9fd5af5d0fefbaeae3945297d3; 224 product files unchanged, 48 selected controls PASS. Real writer/schema/CLI/HTTP confirmed; actual PG probe nine checks NOT_RUN (initdb absent), full build/browser NOT_RUN. Four new infrastructure files. [Architecture](../docs/0189/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0189.json). No canonical mapping or real grant.
+
+## 0190 — T1 contention and R03
+63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Architecture](../docs/0190/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0190.json).

@@ -72,3 +72,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0189 — integration and PG probe
 [Architecture](docs/0189/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0189.json) · [evidence](releases/GITHUB_READBACK_0189.json).
+
+## 0190 — T1 contention and R03
+63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Architecture](docs/0190/ARCHITECTURE_AND_CATALOG.md) · [R03](docs/0190/R03_T1_DECISION_PACKET.md) · [Evidence](releases/GITHUB_READBACK_0190.json).

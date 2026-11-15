@@ -87,3 +87,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0189 — Actual paired D0 integration and PostgreSQL probe
 [Addendum](../0189/ARCHITECTURE_AND_CATALOG.md). Existing product unchanged; real selected integration PASS, candidate PostgreSQL checks NOT_RUN. Canonical R03 mapping remains HOLD.
+
+## 0190 — T1 contention and R03
+63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Architecture](../0190/ARCHITECTURE_AND_CATALOG.md) · [R03](../0190/R03_T1_DECISION_PACKET.md).

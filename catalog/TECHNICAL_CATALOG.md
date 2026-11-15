@@ -54,3 +54,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0189
 [Infrastructure and test catalog](revisions/TECHNICAL_CATALOG_0189.json) · [Maintenance](../docs/0189/ARCHITECTURE_AND_CATALOG.md). Four new test infrastructure files; no product file changes.
+
+## 0190 — T1 contention and R03
+63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Catalog](revisions/TECHNICAL_CATALOG_0190.json).

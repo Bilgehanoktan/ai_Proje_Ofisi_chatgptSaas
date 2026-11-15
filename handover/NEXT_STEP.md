@@ -94,3 +94,6 @@ P0 actual paired writer/CLI/schema/loopback on exact checkout, then regression i
 
 ## 0189 → 0190
 P0 actual disposable PostgreSQL probe on installed trusted binaries; resolve R03 owner mapping, multi-session canonical T1 and trusted lease/witness. P0 full pinned dependency install/build/browser/backend. P1 canonical task/admission/budget/event readback; Memory integration after runtime boundary. No new synthetic layers. No real provider, spend, customer data, independent acceptance, CI, main or PROD.
+
+## 0190 → 0191
+P0 execute 14 PG checks in an isolated environment with installed binaries. Resolve R03 owner mapping and canonical T1 in existing modules; full pinned backend/Next/browser. No additional sample engines. Preserve standing development scope and independent gates.
