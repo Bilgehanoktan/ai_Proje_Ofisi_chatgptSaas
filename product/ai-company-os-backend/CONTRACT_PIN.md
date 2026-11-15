@@ -19,3 +19,6 @@ Backend source owner candidate; frontend byte-identical consumer. Not normative 
 
 ## 0186 D0 admission sample projection
 - `admission.sample.projection.schema.json` SHA-256 `c28b116abdae37d324d76cf4bd255f0dcf86368604805a6093f377059b5a7193`; backend source and frontend generated copy byte-identical. Fixed synthetic phases only; no authority.
+
+## 0187 D0 office workbench projection
+- `office.workbench.projection.schema.json` SHA-256 `6ea0033e956ed741a8135c609e13528f734aeb1c0c1375154ca43fe9b3620fb9`; backend and generated frontend schema byte-identical. Shared 20 vectors SHA-256 `9727cfe43bf7ac203c276b5bd4e5b1496500c39b8343576c4138df1ae1c7d81f`. Historical fixed CLI prefix only; no runtime or geometry authority.

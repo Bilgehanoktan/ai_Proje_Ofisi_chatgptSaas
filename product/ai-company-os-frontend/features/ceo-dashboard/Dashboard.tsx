@@ -25,7 +25,7 @@ type Station=SnapshotFloor['stations'][number];
 type Selection={floorId:string;stationId:string}|{roleId:string}|null;
 const sections=catalog.sections as Record<string,{title:string;description:string;status:string}[]>;
 const demoLayout=validateDemoLayout(core.layout);
-const version='DOC-REV-0186 · D0 sentetik MVP okuması';
+const version='DOC-REV-0187 · D0 sentetik MVP okuması';
 const layoutKey=`${fixture.layout_revision}:${core.layout.revision}`;
 // Key resets all controlled presentation state when static layout or entry view changes.
 export default function Dashboard({initialView}:{initialView:'overview'|'office'}){

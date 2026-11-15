@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-r11-durable-admission-dev",
-  "doc_revision": "0186",
-  "status": "D0_DURABLE_ADMISSION_SETTLEMENT_PROJECTION_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-r11-office-workbench-dev",
+  "doc_revision": "0187",
+  "status": "D0_WORKBENCH_OFFICE_READBACK_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "ba74dd586c6ec4cfc768ae5ceb6b364d901782cb",
+  "parent_git_commit": "27588d74de0595a6a82855b3477abba4a1c42a2d",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -31,8 +31,8 @@
       "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-backend/CONTRACT_PIN.md": {
-      "bytes": 2065,
-      "sha256": "eebf749044dc3f5960f48f7a4e8212f85d97e922a15e8f1d804dcad610f8ee85"
+      "bytes": 2441,
+      "sha256": "41dc372bb1850a36bf212ebb9dc0d246dd00aa7fcfc0aba9b80eb8b50f043719"
     },
     "ai-company-os-backend/README.md": {
       "bytes": 725,
@@ -55,12 +55,16 @@
       "sha256": "69ebb03c9b5e6d7f2d3572324015c9a0bc71c46af0f679aeb7a16609a3bad48a"
     },
     "ai-company-os-backend/app/api/demo.py": {
-      "bytes": 2954,
-      "sha256": "4a10af5039aa0ae150f57cc25cd77e5de6875956a0e569b47072fe6e948921fa"
+      "bytes": 3104,
+      "sha256": "4fe79ed2b488cf7e86b830a791472644b76094e60cf86c4cec098f81c6dae11e"
     },
     "ai-company-os-backend/app/api/mvp_diagnostics.py": {
       "bytes": 5255,
       "sha256": "ea3028cd79ca3bf5f448c11e7b3df5ef0324a3fcc9e8a12c1cd799666b23a10c"
+    },
+    "ai-company-os-backend/app/api/office_workbench_projection.py": {
+      "bytes": 773,
+      "sha256": "bfdd6a2ff6768a8a979cca967a99ad28c038150a52362012e14c5b3e11f54a21"
     },
     "ai-company-os-backend/app/api/outbox_projection.py": {
       "bytes": 757,
@@ -129,6 +133,10 @@
     "ai-company-os-backend/app/core/development_review/model.py": {
       "bytes": 3221,
       "sha256": "c18b358f8d1f77cdcece402721f8aba3bb7364490d1589c8a0ab954de2600481"
+    },
+    "ai-company-os-backend/app/core/development_review/office_workbench.py": {
+      "bytes": 3951,
+      "sha256": "f1fa98133451e67dbdb918467487180e596a740bdae6e3456da2bb0af1121343"
     },
     "ai-company-os-backend/app/core/development_review/outbox_claim_sample.py": {
       "bytes": 7214,
@@ -418,6 +426,10 @@
       "bytes": 1829,
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
     },
+    "ai-company-os-backend/contracts/source/office.workbench.projection.schema.json": {
+      "bytes": 6627,
+      "sha256": "6ea0033e956ed741a8135c609e13528f734aeb1c0c1375154ca43fe9b3620fb9"
+    },
     "ai-company-os-backend/contracts/source/outbox.review.projection.schema.json": {
       "bytes": 2141,
       "sha256": "96aebab7e18757e36927d45e98c4dd5a1e51fd79b8b8438d83ee9822f692c868"
@@ -445,6 +457,10 @@
     "ai-company-os-backend/requirements.txt": {
       "bytes": 105,
       "sha256": "25295154f2f3db91ea65c2a9e1f7558925e723ef9847b805fdbe77a3fb44c4cd"
+    },
+    "ai-company-os-backend/tests/office_workbench_cases.json": {
+      "bytes": 25823,
+      "sha256": "9727cfe43bf7ac203c276b5bd4e5b1496500c39b8343576c4138df1ae1c7d81f"
     },
     "ai-company-os-backend/tests/outbox_projection_cases.json": {
       "bytes": 11325,
@@ -481,6 +497,14 @@
     "ai-company-os-backend/tests/test_mvp_diagnostics.py": {
       "bytes": 5253,
       "sha256": "e816e5cf4b91d9988b8db500462b8d01b22265595b8aa318e4d8640055148698"
+    },
+    "ai-company-os-backend/tests/test_office_workbench.py": {
+      "bytes": 6721,
+      "sha256": "78e57353d836ffcbaf13ed58c83b2fd356facb599e925324dd99805343801633"
+    },
+    "ai-company-os-backend/tests/test_office_workbench_cli.py": {
+      "bytes": 1313,
+      "sha256": "90ae02dbdf51810f578e84cd3ac1d1e429230216566f490848f8424104591b23"
     },
     "ai-company-os-backend/tests/test_outbox_claim_sample.py": {
       "bytes": 4475,
@@ -539,8 +563,8 @@
       "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-frontend/CONTRACT_PIN.md": {
-      "bytes": 2065,
-      "sha256": "eebf749044dc3f5960f48f7a4e8212f85d97e922a15e8f1d804dcad610f8ee85"
+      "bytes": 2441,
+      "sha256": "41dc372bb1850a36bf212ebb9dc0d246dd00aa7fcfc0aba9b80eb8b50f043719"
     },
     "ai-company-os-frontend/README.md": {
       "bytes": 794,
@@ -557,6 +581,10 @@
     "ai-company-os-frontend/app/api/demo/mvp/route.ts": {
       "bytes": 1099,
       "sha256": "3cac2aa5fe2a984a4b7135b170f0bdfb0f2630bb9759c135772bdd520e3c6b0e"
+    },
+    "ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
+      "bytes": 1122,
+      "sha256": "bb23971c489908d3eabc19f77b3e3dbdbd532b87c11746a9d8aceab663a8255d"
     },
     "ai-company-os-frontend/app/api/demo/outbox/route.ts": {
       "bytes": 1114,
@@ -591,8 +619,8 @@
       "sha256": "a1bced233fed3cce70e211df3b8c95826a047a84f8dada8584508dde7ba04630"
     },
     "ai-company-os-frontend/components/dashboard/OfficePanel.tsx": {
-      "bytes": 2631,
-      "sha256": "60b79585ac6822919b11004c89796eac809e0aa284ae202ade62ed0915a40a7c"
+      "bytes": 2755,
+      "sha256": "0b649c3637d667716401712cac0a816d9fda8d6aac9591b2658c0c6e2325d29e"
     },
     "ai-company-os-frontend/components/dashboard/OperationPanel.tsx": {
       "bytes": 871,
@@ -629,6 +657,10 @@
     "ai-company-os-frontend/contracts/generated/office.snapshot.demo.schema.json": {
       "bytes": 1829,
       "sha256": "f7191fa16fdfad020dcdf7cec0506f874b398c6afba6d25a734a0440c6e5ce9d"
+    },
+    "ai-company-os-frontend/contracts/generated/office.workbench.projection.schema.json": {
+      "bytes": 6627,
+      "sha256": "6ea0033e956ed741a8135c609e13528f734aeb1c0c1375154ca43fe9b3620fb9"
     },
     "ai-company-os-frontend/contracts/generated/outbox.review.projection.schema.json": {
       "bytes": 2141,
@@ -676,7 +708,7 @@
     },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
       "bytes": 7652,
-      "sha256": "24216737106461535e1d02e65105feb1b4fe85b1aca7b5d18680720cc949976e"
+      "sha256": "bba3d3294f27dc045f7e5910e1ee8ed1a3e92b1e708a1780b7075708b1c8ff92"
     },
     "ai-company-os-frontend/features/core-review/CorePreview.tsx": {
       "bytes": 3378,
@@ -694,6 +726,10 @@
       "bytes": 1609,
       "sha256": "06473c6c1853726292b14ff426725c18c849235a896534a010f196f1953dbf66"
     },
+    "ai-company-os-frontend/features/mvp/OfficeWorkbenchPanel.tsx": {
+      "bytes": 1546,
+      "sha256": "5c45cdf3feb03d03c660422917d10679ce713f30c01cc2fe982c5871b0420110"
+    },
     "ai-company-os-frontend/features/mvp/OutboxProjectionPanel.tsx": {
       "bytes": 1580,
       "sha256": "2a5c562085c45fdf2c720000b236e5f8f5a83920f84c59bb848adef0aaddc898"
@@ -709,6 +745,10 @@
     "ai-company-os-frontend/features/mvp/mvpDiagnostics.ts": {
       "bytes": 2140,
       "sha256": "65a4beb72b4fae67c0fe757b0edaf47dbbab42a5d304cb4e43ead4e07936205c"
+    },
+    "ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts": {
+      "bytes": 1798,
+      "sha256": "9b6bf49ce1178d8980f4f61038908f88f75f1995d002eef5505dafa6ad915bdb"
     },
     "ai-company-os-frontend/features/mvp/outboxProjection.ts": {
       "bytes": 1262,
@@ -794,6 +834,10 @@
       "bytes": 2109,
       "sha256": "a39453ca67078550bf06b8d8a01ca9fca33bb419b1568b55f7a30554d55c042a"
     },
+    "ai-company-os-frontend/tests/office-workbench.test.cjs": {
+      "bytes": 1216,
+      "sha256": "8ce4b182a32ae4bbc0580db540baf1873448a84246e6e56a6679984badd2f291"
+    },
     "ai-company-os-frontend/tests/outbox-contract.test.cjs": {
       "bytes": 337,
       "sha256": "ed03526ccfd940c2152368d140cb28da88aabe687f90f9fac4379ff54b90d343"
@@ -811,6 +855,6 @@
       "sha256": "269657f5fbb39127f713edff0a2f55a493e01190a8c505ceb3ba784e18f460e8"
     }
   },
-  "parent_source_manifest_blob": "271cfa20f9109a83d5a1875eb38593d3047750da",
-  "source_git_commit_note": "Exact source commit recorded in releases/GITHUB_READBACK_0186.json; local selected synthetic tests, not full build or acceptance."
+  "parent_source_manifest_blob": "e1e66f230a76ae8e001c50ebe6762432c5b51dc9",
+  "source_git_commit_note": "Exact source commit in releases/GITHUB_READBACK_0187.json; selected synthetic writer, reader and proxy tests only."
 }

@@ -3,6 +3,7 @@ import type {ReactNode} from 'react';
 import Link from 'next/link';
 import {DisplayControls,FloorControls} from '../../design-system/OfficeControls';
 import OfficeScene from '../../office/scenes/OfficeScene';
+import OfficeWorkbenchPanel from '../../features/mvp/OfficeWorkbenchPanel';
 import type {Floor} from '../../office/engine/geometry';
 import type fixture from '../../fixtures/office.snapshot.json';
 export type SnapshotFloor=typeof fixture.floors[number];
@@ -16,5 +17,6 @@ export default function OfficePanel({floors,floorId,onFloor,display,onDisplay,of
  {display==='scene'&&(floor&&officeAssets[floor.id]?<div className="scene"><img src={officeAssets[floor.id]} alt={`${floor.name} statik izometrik çizimi`}/><span className="corner">{floor.stations.length?`${floor.stations.length} rezerv istasyon`:'Genişleme rezervi'}</span></div>:<div className="empty" role="status">Bu kat için görsel kaynak yok. Liste kullanılabilir.</div>)}
  {display==='engine'&&(demoFloor?<OfficeScene key={`${layoutRevision}:${demoFloor.id}`} floor={demoFloor}/>:<div className="empty" role="status">Geometri HOLD · {geometryReason}</div>)}
  <div className="station-heading"><h3>İstasyonlar</h3><span className="sub">Klavye ile seçilebilir · gerçek instance yok</span></div>{stations}
+ {floorId==='floor-1'&&<OfficeWorkbenchPanel/>}
  <div className="layout-hold" role="status"><strong>Snapshot ↔ geometri: JOIN_HOLD</strong><span>{layoutMatches?'Sürüm adı eşleşiyor; bağımsız yerleşim kabulü yok.':`Yerleşim revizyonları farklı: ${snapshotRevision} / ${layoutRevision}.`} Geometri yalnız bağımsız demo; canlı hareket ve konum birleştirmesi yok.</span></div></section>;
 }

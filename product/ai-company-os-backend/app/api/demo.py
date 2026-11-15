@@ -71,3 +71,7 @@ app.include_router(outbox_projection_router)
 
 from app.api.admission_projection import router as admission_projection_router
 app.include_router(admission_projection_router)
+
+
+from app.api.office_workbench_projection import router as office_workbench_projection_router
+app.include_router(office_workbench_projection_router)
