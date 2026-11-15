@@ -117,3 +117,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0200-S — guarded read-only consistent snapshot for D0 plan history
 [Addendum](../0200S/ARCHITECTURE_AND_CATALOG.md). Protocol tested, actual PG not run; no normative or shared contract change.
+
+## 0201-R — retained history references and terminal reference match
+[Addendum](../0201R/ARCHITECTURE_AND_CATALOG.md). D0 local archive tested; wrapper/PG/independent custody HOLD/NOT_RUN. No canonical migration or normative change.
