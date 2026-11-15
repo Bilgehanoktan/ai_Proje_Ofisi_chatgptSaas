@@ -79,3 +79,6 @@ P0 resolve approved dependency network/locks, full pinned backend and current Ne
 
 ## 0184 → 0185
 P0 approved dependency network/locks, full backend and actual Next build/browser incl lifecycle/Outbox. Register formal shared readback schema and parity. P0 R03 physical owner mapping, PostgreSQL non-owner tests, canonical admission/budget/lease/clock/witness/outbox/UNKNOWN. P1 typed provider adapter using existing registry/fallback (disabled egress), tenant ownership/settlement. No actual grants, independent acceptance, CI, spend, main or PROD; standing owner permission already recorded.
+
+## 0185 → 0186
+P0 network-enabled isolated pinned install/lock review and full backend, Next build/current browser. P0 R03 owner mapping + PostgreSQL non-owner tests + trusted clock/lease/witness and durable admission/budget/outbox. P1 tenant membership/ownership, settlement economic link, provider egress boundary design (no actual calls), CEO/Office projection. Actual grants, independent acceptance, CI, spend, main and PROD HOLD; standing owner permission already recorded.

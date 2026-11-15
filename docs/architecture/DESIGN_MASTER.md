@@ -72,3 +72,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0184 — persistent D0 outbox review/read-only projection
 [Addendum](../0184/ARCHITECTURE_AND_CATALOG.md) · [R03 gaps](../0184/R03_MAPPING_GAPS.md). No normative or physical mapping change.
+
+## 0185 — typed provider review, admission bundle, shared Outbox contract
+[Addendum](../0185/ARCHITECTURE_AND_CATALOG.md). No normative mapping, trust or execution authority change.

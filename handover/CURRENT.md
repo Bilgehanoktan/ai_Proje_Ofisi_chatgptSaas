@@ -54,3 +54,6 @@ Source 72a5210530c794ea931a7429086cb94f9ac377d5, 173 manifest entries/174 produc
 
 ## 0184 — persistent outbox review and read-only projection
 Source 5d93a09b5e99dcbafc7066f3a140c63d1c09d156; 182 manifest entries/183 product files. 26 new +15 regression selected tests PASS; CLI reopen and direct/compiled proxy loopback PASS. New local review profile, UNKNOWN/READBACK_HOLD stays DENY. Actual provider/tenant/T1 authority unchanged. Full product app, full pinned backend, Next build/browser, PostgreSQL NOT_RUN; DNS blocked. [Architecture](../docs/0184/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0184.json).
+
+## 0185 — typed provider review / cross-engine admission / shared contract
+Source bbae45051f38cf6a71ebcbb9ba0e46c94c5a188d; 191 manifest entries/192 product files. 47 new + 41 regression selected tests PASS; actual isolated HTTP and compiled proxy normal 200/overflow 503. 13 changed + 33 prior local files exact; full repo byte archive not downloaded. All runtime/independent/physical mapping authority HOLD. Full pinned backend/Next/browser/PG NOT_RUN, DNS blocked. [Architecture](../docs/0185/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0185.json). CURRENT.json refreshed from stale 0167 pointer; historical byte copy retained.

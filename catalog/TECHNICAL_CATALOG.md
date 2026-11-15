@@ -39,3 +39,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0184
 [Source/API/DB/symbol/test catalog](revisions/TECHNICAL_CATALOG_0184.json) · [Maintenance](../docs/0184/ARCHITECTURE_AND_CATALOG.md). 182 product manifest entries. Synthetic local claim, UNKNOWN/READBACK_HOLD, fixed loopback GET; no external effect.
+
+## 0185
+[Source/class/function/API/DB/test catalog](revisions/TECHNICAL_CATALOG_0185.json) · [Maintenance](../docs/0185/ARCHITECTURE_AND_CATALOG.md). 191 product manifest entries. Typed provider DENY, admission bundle HOLD, shared Outbox schema/pins.
