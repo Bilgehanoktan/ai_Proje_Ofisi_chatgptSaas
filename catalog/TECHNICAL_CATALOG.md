@@ -60,3 +60,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0193
 [Source/symbol/DB/error/test delta](revisions/TECHNICAL_CATALOG_0193.json) · [Maintenance and rollback](../docs/0193/ARCHITECTURE_AND_CATALOG.md). 25 selected synthetic tests; no API/dependency change or actual migration.
+
+## 0201-R — retained history
+[Machine-readable delta](revisions/TECHNICAL_CATALOG_0201_R.json) · [Architecture, maintenance, rollback](../docs/0201R/ARCHITECTURE_AND_CATALOG.md). New reference module, two test files; 14 archive tests PASS, 5 integration tests NOT_RUN. No API/canonical DB/event schema change.
