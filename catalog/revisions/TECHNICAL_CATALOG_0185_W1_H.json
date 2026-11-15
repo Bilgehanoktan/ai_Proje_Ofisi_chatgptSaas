@@ -1,0 +1,85 @@
+{
+  "revision": "0185-W1-H",
+  "files": [
+    {
+      "path": "ai-company-os-frontend/features/security/securityModel.ts",
+      "symbols": [
+        "SecurityRow",
+        "SecurityView",
+        "readSecurityView",
+        "filterReasons",
+        "controls",
+        "trust",
+        "expectedReasons",
+        "expectedCatalog",
+        "record",
+        "hold",
+        "empty"
+      ],
+      "purpose": "D0 source/authority guard and read-only control, trust and reason projection. No live policy validation.",
+      "dependencies": [
+        "fixtures/company.catalog.json",
+        "fixtures/office.snapshot.json",
+        "fixtures/core.preview.json"
+      ],
+      "errors": [
+        "SECURITY_SCOPE_HOLD",
+        "SECURITY_AUTHORITY_HOLD",
+        "SECURITY_EVIDENCE_HOLD",
+        "SECURITY_REASON_HOLD",
+        "SECURITY_CATALOG_HOLD"
+      ],
+      "diagnosis": "Check fixture scope, pins, exact relevant rows, empty actual records, null verified outputs and denial reasons."
+    },
+    {
+      "path": "ai-company-os-frontend/features/security/SecurityStudio.tsx",
+      "symbols": [
+        "SecurityStudio",
+        "Tab",
+        "tabs",
+        "card"
+      ],
+      "purpose": "Control and trust cards, source detail and reason search; read-only tabs; QA, IV and release separate.",
+      "dependencies": [
+        "React",
+        "securityModel",
+        "SecurityStudio.module.css",
+        "EDS"
+      ]
+    },
+    {
+      "path": "ai-company-os-frontend/features/security/SecurityStudio.module.css",
+      "symbols": [
+        "studio",
+        "banner",
+        "grid",
+        "trust",
+        "card",
+        "detail",
+        "evidence",
+        "boundary"
+      ],
+      "purpose": "Responsive EDS layout and reduced motion."
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "symbols": [
+        "DashboardView"
+      ],
+      "purpose": "Mount SecurityStudio on Güvenlik and Raporlar; key resets context; existing FinanceStudio and all earlier views retained.",
+      "diagnosis": "Compare Dashboard anchors and preserve both parallel changes."
+    },
+    {
+      "path": "ai-company-os-frontend/tests/security-model.test.cjs",
+      "symbols": [
+        "13 node:test cases"
+      ],
+      "purpose": "Control counts, trust separation, reason search, scope and authority drift, no fabricated evidence, malformed input and copy independence."
+    }
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "contract_changes": 0,
+  "dependency_changes": 0,
+  "rollback": "Revert exact five source changes (including H-only Dashboard patch) on isolated branch, regenerate destination manifest, preserve G and other histories."
+}
