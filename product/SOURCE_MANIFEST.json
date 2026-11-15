@@ -1,10 +1,10 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0200-S",
-  "status": "ISOLATED_D0_PG_SNAPSHOT_PROTOCOL_TESTED_REAL_PG_NOT_RUN",
+  "doc_revision": "0201-R",
+  "status": "ISOLATED_D0_RETAINED_REFERENCE_ARCHIVE_TESTED_WRAPPER_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "37278c47bd04d645beed8f23341bbae427ee90d5",
-  "source_git_commit": null,
+  "parent_git_commit": "b3813f2692da002d75b678ec8e7b522ca4f1ce6a",
+  "source_git_commit": "1ebf6c195b0534d3356b94e51b8d4d4cd3340906",
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
       "bytes": 70327,
@@ -993,8 +993,20 @@
     "ai-company-os-backend/tests/test_pg_snapshot_0200.py": {
       "bytes": 2974,
       "sha256": "c586b85edd27ec86976659b917f8e5132e6e4efae385e5a86d143cb8deeda3c3"
+    },
+    "ai-company-os-backend/app/core/event_store/retained_history.py": {
+      "bytes": 8238,
+      "sha256": "4251703080dceac583517c91bd55f41aa142cd861705211d9675717c064419d3"
+    },
+    "ai-company-os-backend/tests/test_retained_history_0201.py": {
+      "bytes": 3815,
+      "sha256": "8344ef8216421d038f9ceec8e7063da3ba880e37c1ec04159993ce9fdf5c263a"
+    },
+    "ai-company-os-backend/tests/test_retained_snapshot_0201.py": {
+      "bytes": 3163,
+      "sha256": "f8aa59af6f79868078b41d570f6a7bae00952b85550dc948159bb531f0f3c8e9"
     }
   },
-  "parent_source_manifest_blob": "146a776cb3b8901774ed0d3803332e832502ebe5",
-  "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
+  "parent_source_manifest_blob": "df96f2ae38410a00402872d66d9843ad5b3ad991",
+  "source_git_commit_note": "Three added source/test files, before manifest update. Original 247 entries retained unchanged; no full tree byte readback."
 }
