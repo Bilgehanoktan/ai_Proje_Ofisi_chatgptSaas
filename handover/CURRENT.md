@@ -44,3 +44,7 @@ CEO-0179=B effective: isolated source transfer/local build/synthetic tests decou
 
 ## 0181 — D0 MVP diagnostics (2026-11-15)
 Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnostics`. 19 product source changes + manifest; 162 manifest entries, 163 files. Selected local synthetic tests 38/38 (24 Python, 14 Node including loopback GET 200). Full pinned dependency locks, full frontend build/browser and full backend suite NOT_RUN; independent acceptance HOLD. See docs/0181/ARCHITECTURE_AND_CATALOG.md and releases/GITHUB_READBACK_0181.json. Prior history preserved.
+
+
+## 0182 — persistent synthetic workbench
+Source 96013090589813167f00fac9c4d1fdf19c6d4c75; 6 new product paths, 168 manifest entries/169 files; 40 Python + 14 Node + 8 historical HTML Chromium checks PASS. New persistent local CLI sample observations survive reopen; IV/release pending. Current Next build/browser and full pinned suite NOT_RUN; npm DNS blocked. R03 canonical mapping, actual grants and independent acceptance HOLD. [Architecture/catalog](../docs/0182/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0182.json).

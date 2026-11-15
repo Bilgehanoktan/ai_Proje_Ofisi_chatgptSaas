@@ -69,3 +69,7 @@ CEO-0179=B effective: isolated source transfer/local build/synthetic tests decou
 
 ## 0181 -> 0182
 Priority W8/W1: resolve approved network dependency installation and pinned transitive locks in isolated environment, run full backend tests, Next typecheck/build/browser; then expand W3–W7 persistent/runtime implementation in permitted scope. Maintain DENY on real agents, providers, spend, independent acceptance and PROD; no main merge. Do not report full acceptance until demonstrated.
+
+
+## 0182 -> 0183
+W1/W8: clean pinned dependency install/locks, full backend and current Next build/browser (browser_next_0182.py). W3/W4: physical T1 mapping and durable transaction/outbox, trusted clock/heartbeat; separate workbench. W5: provider adapter contract and egress guard, W7 tenant ownership and settlement, W6 independent custody. Real grants/external effects/spend/main/PROD not authorized. No repeated owner development approval.
