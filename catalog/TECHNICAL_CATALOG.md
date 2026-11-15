@@ -57,3 +57,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0190 — T1 contention and R03
 63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Catalog](revisions/TECHNICAL_CATALOG_0190.json).
+
+## 0193
+[Source/symbol/DB/error/test delta](revisions/TECHNICAL_CATALOG_0193.json) · [Maintenance and rollback](../docs/0193/ARCHITECTURE_AND_CATALOG.md). 25 selected synthetic tests; no API/dependency change or actual migration.

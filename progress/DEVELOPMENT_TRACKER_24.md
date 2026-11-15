@@ -1,33 +1,30 @@
-# TRACK-0190 — 24 alan
+# TRACK-0193 — 24 alan
 
-Ordinal scores unchanged. 63 selected controls PASS; 14 actual PG checks NOT_RUN.
+Kanonik JSON: DEVELOPMENT_TRACKER_24.json. Puanlar ordinal, tamamlanma yüzdesi değil. 25 seçili sentetik test PASS; PG/full suite NOT_RUN. Önceki 0192 MD geçmişi history/TRACK_0192_PREVIOUS.md.
 
-| ID | Alan | Tasarım | Kaynak | Ürün entegrasyonu | Test | Sonraki |
-|---|---|---:|---:|---|---|---|
-| 1 | Frontend | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_COMPILED_PROXY | Full pinned Next build/browser |
-| 2 | UI/UX Design System | 50 | 50 | EDS_SLICE_INTEGRATED | NOT_RUN_CURRENT_EDS_BROWSER | Run current EDS browser tests |
-| 3 | Office Engine | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_ACTUAL_D0_OFFICE_PROJECTION | Actual browser; trusted freshness |
-| 4 | API & Contracts | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | Full application contract acceptance |
-| 5 | Backend | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_37_SELECTED_PYTHON | Full pinned backend |
-| 6 | Orchestrator | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_ACTUAL_D0_CLI | Canonical admission and execution |
-| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_ACTUAL_WORKBENCH | Canonical task/admission mapping |
-| 8 | Agent Runtime | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_ADMISSION_BUNDLE | Canonical lease and clock |
-| 9 | AI Model Gateway | 50 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_SAMPLE_ADAPTER | Provider boundary only, no egress |
-| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_REVIEW | Actual ToolGateway and receipts |
-| 11 | Database | 75 | 25 | PARTIAL_INTEGRATED | PG_BLOCKED_14_CHECKS_READY | Run PG and resolve R03 |
-| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_EVENT_READBACK | Canonical event/outbox readback |
-| 13 | Memory & Knowledge | 75 | 25 | SOURCE_PRESENT_UNVERIFIED | NOT_RUN | Memory retrieval and ACL tests |
-| 14 | Security & IAM | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_FIXED_OWNER | Real identity and independent custody |
-| 15 | Independent Verifier | 75 | 25 | PARTIAL_INTEGRATED | HOLD_INDEPENDENT_ACCEPTANCE | Actual independent custody/acceptance |
-| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_MEMBERSHIP | Actual multi-tenant RLS/membership |
-| 17 | Ürün ve iş modülleri | 75 | 25 | EARLY_SOURCE | NOT_RUN | WorkType implementations |
-| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_IMPLEMENTED | NOT_RUN | Separate authority and source work |
-| 19 | Finans & Billing | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_BUDGET | Canonical reserve and settlement |
-| 20 | Test & QA | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_63_SELECTED_CONTROLS | Actual PG and full suites |
-| 21 | DevOps & Infrastructure | 75 | 25 | PARTIAL_INTEGRATED | BLOCKED_DNS_AND_PG_BINARY | Network-enabled isolated DEV |
-| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_HISTORICAL_READBACK | Trusted freshness |
-| 23 | Backup & Disaster Recovery | 75 | 25 | SOURCE_PREPARATION | NOT_RUN | Restore and witness design |
-| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | CATALOG_UPDATED_SOURCE_PRESERVED | Preserve evidence |
-
-## TRACK-0192
-Ordinal scores unchanged; partial source in core lines, new tests NOT_RUN. Canonical JSON updated.
+| ID | Alan | Tasarım | Kaynak | Test | Bu tur |
+|---|---|---:|---:|---|---|
+| 1 | Frontend | 75 | 50 | PARTIAL_PASS_COMPILED_PROXY | 0192 preserved; not rerun |
+| 2 | UI/UX Design System | 50 | 50 | NOT_RUN_CURRENT_EDS_BROWSER | 0192 preserved; not rerun |
+| 3 | Office Engine | 75 | 50 | PARTIAL_PASS_ACTUAL_D0_OFFICE_PROJECTION | 0192 preserved; not rerun |
+| 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | 0192 preserved; not rerun |
+| 5 | Backend | 75 | 50 | PARTIAL_PASS_0193_25_SYNTHETIC | 25 selected synthetic tests PASS; no full suite/PG |
+| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_ACTUAL_D0_CLI | 0192 preserved; not rerun |
+| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_ACTUAL_WORKBENCH | 0192 preserved; not rerun |
+| 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0193_25_SYNTHETIC | 25 selected synthetic tests PASS; no full suite/PG |
+| 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_D0_SAMPLE_ADAPTER | 0192 preserved; not rerun |
+| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW | 0192 preserved; not rerun |
+| 11 | Database | 75 | 25 | PG_NOT_RUN_CANDIDATE_CAS_MOCK_PASS | Candidate SQL and scoped CAS mock tests; PG NOT_RUN |
+| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_D0_EVENT_READBACK | 0192 preserved; not rerun |
+| 13 | Memory & Knowledge | 75 | 25 | NOT_RUN | 0192 preserved; not rerun |
+| 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_D0_FIXED_OWNER | 0192 preserved; not rerun |
+| 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE | 0192 preserved; not rerun |
+| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_D0_MEMBERSHIP | 0192 preserved; not rerun |
+| 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN | 0192 preserved; not rerun |
+| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN | 0192 preserved; not rerun |
+| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_D0_BUDGET | 0192 preserved; not rerun |
+| 20 | Test & QA | 75 | 25 | PARTIAL_PASS_0193_25_SYNTHETIC | 25 selected synthetic tests PASS; no full suite/PG |
+| 21 | DevOps & Infrastructure | 75 | 25 | BLOCKED_DNS_AND_PG_BINARY | 0192 preserved; not rerun |
+| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | 0192 preserved; not rerun |
+| 23 | Backup & Disaster Recovery | 75 | 25 | NOT_RUN | 0192 preserved; not rerun |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | Architecture index, roadmap, catalog and handover updated |
