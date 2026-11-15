@@ -1,30 +1,32 @@
-# TRACK-0185 — 24 alan
+# TRACK-0185-W1-F
 
-Ordinal scores unchanged. 47 new + 41 regression = 88 selected PASS. Separate actual HTTP/proxy 200/503. Full product/Next/browser/PostgreSQL/pinned suites NOT_RUN.
+Olgunluk puanları, tamamlanma yüzdesi değildir. Kanonik kaynak: [DEVELOPMENT_TRACKER_24.json](DEVELOPMENT_TRACKER_24.json).
 
-| ID | Alan | Tasarım | Kaynak | Ürün entegrasyonu | Test | Sonraki |
-|---|---|---:|---:|---|---|---|
-| 1 | Frontend | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_CONTRACT | Pinned Next build/current browser incl panels |
-| 2 | UI/UX Design System | 50 | 50 | EDS_SLICE_INTEGRATED | NOT_RUN_CURRENT_EDS_BROWSER | Run current EDS browser tests |
-| 3 | Office Engine | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_OFFLINE_BROWSER | Current Phaser/browser controls |
-| 4 | API & Contracts | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_SHARED_SCHEMA | Full app contract tests |
-| 5 | Backend | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_SELECTED_0185 | Full pinned backend suite |
-| 6 | Orchestrator | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_WORKBENCH | Actual runtime only after applicable authority |
-| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_WORKBENCH | Full DAG and lifecycle |
-| 8 | Agent Runtime | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_BUNDLE | Canonical trusted clock/lease |
-| 9 | AI Model Gateway | 50 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_TYPED_PROVIDER | Executable provider boundary design and independent authority |
-| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_REVIEW | Actual ToolGateway and receipts |
-| 11 | Database | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_READBACK | R03 approved mapping and PostgreSQL non-owner tests |
-| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_CONTRACT | Canonical outbox claim/send/reconciliation |
-| 13 | Memory & Knowledge | 75 | 25 | SOURCE_PRESENT_UNVERIFIED | NOT_RUN | Memory retrieval and ACL tests |
-| 14 | Security & IAM | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_CROSS_ENGINE_HOLD | Independent custody, real IAM and grant acceptance |
-| 15 | Independent Verifier | 75 | 25 | PARTIAL_INTEGRATED | HOLD_INDEPENDENT_ACCEPTANCE | Actual independent custody/acceptance |
-| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_FIXED_SCOPE | Actual tenant ownership/RLS |
-| 17 | Ürün ve iş modülleri | 75 | 25 | EARLY_SOURCE | NOT_RUN | WorkType implementations |
-| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_IMPLEMENTED | NOT_RUN | Separate authority and source work |
-| 19 | Finans & Billing | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_BUDGET_BINDING | Settlement and durable economic ledger |
-| 20 | Test & QA | 75 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_SELECTED_0185 | Full pinned suites/current browser |
-| 21 | DevOps & Infrastructure | 75 | 25 | PARTIAL_INTEGRATED | BLOCKED_DEPENDENCY_DNS | Network-enabled isolated checkout/pinned dependencies |
-| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_D0_PROJECTION | Canonical projection/freshness |
-| 23 | Backup & Disaster Recovery | 75 | 25 | SOURCE_PREPARATION | NOT_RUN | Restore and witness design |
-| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | MANIFEST_READBACK_PASS | Maintain catalog/evidence |
+| ID | Alan | Tasarım | Kaynak | Kanıt |
+|---:|---|---:|---:|---|
+| 1 | Frontend | 75 | 50 | 22 shared TS vectors + 14 regressions; actual compiled proxy 200/503; React/Next NOT_RUN  /  W1 ABCD 16 source paths integrated; 34/34 selected local helper regressions; full Next NOT_RUN  /  W1 E: 6 exact sources; 8 new helper + 8 artwork regression, 2 syntax, 9 standalone preview browser checks; full Next NOT_RUN  /  W1 F: 5 source paths, 10 helper + 2 TSX syntax + 12 standalone browser checks; full Next NOT_RUN |
+| 2 | UI/UX Design System | 50 | 50 | Prior 14-file EDS integration unchanged; current EDS smoke source added  /  W1 ABCD 16 source paths integrated; 34/34 selected local helper regressions; full Next NOT_RUN  /  W1 E: 6 exact sources; 8 new helper + 8 artwork regression, 2 syntax, 9 standalone preview browser checks; full Next NOT_RUN  /  W1 F: 5 source paths, 10 helper + 2 TSX syntax + 12 standalone browser checks; full Next NOT_RUN |
+| 3 | Office Engine | 75 | 50 | Historical floor/office controls checked; current Phaser not run  /  W1 ABCD 16 source paths integrated; 34/34 selected local helper regressions; full Next NOT_RUN  /  W1 E: 6 exact sources; 8 new helper + 8 artwork regression, 2 syntax, 9 standalone preview browser checks; full Next NOT_RUN |
+| 4 | API & Contracts | 75 | 50 | Byte-identical pinned schema, 22 shared vectors, actual 200/503 API and proxy |
+| 5 | Backend | 75 | 50 | 52 selected Python; full app/suite NOT_RUN |
+| 6 | Orchestrator | 75 | 50 | Canonical DAG feeds CLI sample observations; no scheduler grant |
+| 7 | Task Engine & DAG | 75 | 50 | Dependency sequencing, five observed sample tasks, IV/release blocked  /  W1 F: 5 source paths, 10 helper + 2 TSX syntax + 12 standalone browser checks; full Next NOT_RUN |
+| 8 | Agent Runtime | 75 | 25 | Admission bundle incorporates existing lease reference/expiry and witness checks; no trusted clock |
+| 9 | AI Model Gateway | 50 | 25 | 11 tests; typed request/review integrated with fixed sample; real providers DENY |
+| 10 | Skill & Tool Engine | 75 | 25 | Prior skill/capability checks rerun; no effective tools |
+| 11 | Database | 75 | 25 | SQLite read-only projection rejects unsafe generation; no migration; PG NOT_RUN |
+| 12 | Event Store & Messaging | 75 | 50 | Shared Outbox schema and bounds; 27 Python regression tests |
+| 13 | Memory & Knowledge | 75 | 25 | Existing source retained |
+| 14 | Security & IAM | 75 | 25 | Provider deny flags and admission/witness shape checks; independent proof absent |
+| 15 | Independent Verifier | 75 | 25 | Witness reference shape review only; no independent verifier acceptance |
+| 16 | SaaS & Multi-Tenant | 75 | 25 | Fixed profile, tenant/company guards; no real multi-tenant proof |
+| 17 | Ürün ve iş modülleri | 75 | 25 | Prior source retained  /  W1 F: 5 source paths, 10 helper + 2 TSX syntax + 12 standalone browser checks; full Next NOT_RUN |
+| 18 | Dış sistem entegrasyonları | 75 | 0 | No external integration |
+| 19 | Finans & Billing | 75 | 25 | Existing budget reference, idempotency and UNKNOWN cost checks exercised via bundle; no spend |
+| 20 | Test & QA | 75 | 25 | 88 selected tests, 47 new/41 regression; HTTP/compiled proxy checks separately  /  W1 ABCD 16 source paths integrated; 34/34 selected local helper regressions; full Next NOT_RUN  /  W1 E: 6 exact sources; 8 new helper + 8 artwork regression, 2 syntax, 9 standalone preview browser checks; full Next NOT_RUN  /  W1 F: 5 source paths, 10 helper + 2 TSX syntax + 12 standalone browser checks; full Next NOT_RUN |
+| 21 | DevOps & Infrastructure | 75 | 25 | DNS resolution blocked npm/GitHub/PyPI; pin mismatch, PG absent, no locks |
+| 22 | Monitoring & Observability | 50 | 25 | Outbox projection 200/503 and safe integer guard; no live telemetry |
+| 23 | Backup & Disaster Recovery | 75 | 25 | Reopen is not backup or disaster recovery |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | 191/191 manifest paths/sizes; 13 changed and 33 unchanged local blobs exact  /  W1 ABCD 16 source paths integrated; 34/34 selected local helper regressions; full Next NOT_RUN  /  W1 E: 6 exact sources; 8 new helper + 8 artwork regression, 2 syntax, 9 standalone preview browser checks; full Next NOT_RUN  /  W1 F: 5 source paths, 10 helper + 2 TSX syntax + 12 standalone browser checks; full Next NOT_RUN |
+
+Ordinal maturity scores unchanged. Current round 10 selected helper tests, 2 TSX syntax and 12 standalone preview browser checks PASS; prior results historical. Full product Next/build/browser/backend NOT_RUN. Independent acceptance HOLD.
