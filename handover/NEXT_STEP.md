@@ -109,3 +109,6 @@ S1 Windows install PASS; Node 180 PASS/1 skip; Python 258/263 PASS, one failure 
 
 ## 0188-W8-S3
 S2 Windows install PASS; Node 180 PASS/1 skip, Python 264 PASS/1 skip, zero failures. Next compile/5 static pages and tsc PASS; post-build source guard HOLD because Next inserted incremental=true. S3 pins exact config with manifest/runner update. S3 regression/build/smoke NOT_RUN; independent HOLD. [Architecture and catalog](../docs/0188-W8-S3/ARCHITECTURE_AND_CATALOG.md). Next: clean S3 stage, exact lock review, install/test then smoke.
+
+## S3 Windows build evidence
+User terminal transcript confirms 249 source SHA-256 pins, 14 pairs, exact reviewed fingerprint, install/pip check, Node 180 PASS/1 skip, Python 264 PASS/1 skip, Next build 5/5 static pages, standalone tsc and post-build source/lock guard PASS. Total 444 PASS/2 SKIP/0 FAIL. [Evidence](../tests/evidence/TEST_EVIDENCE_0188_W8_S3_WINDOWS_BUILD.json). No new product code. Smoke and pixel review open; independent acceptance HOLD. Next: existing stage, explicit Chrome/Chromium path and reviewed digest; no reinstall. Real symlink evidence still open.

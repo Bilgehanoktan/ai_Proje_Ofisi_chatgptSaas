@@ -2,7 +2,7 @@
   "id": "TRACK-0188-W8-S3",
   "baseline": "TRACK-0188-W8-S2",
   "tarih": "2026-11-15",
-  "status": "D0_BUILD_CONFIG_PIN_CANDIDATE_POST_BUILD_VERIFICATION_OPEN",
+  "status": "D0_WINDOWS_BUILD_PASS_BROWSER_OPEN",
   "rubric": {
     "tasarim": {
       "0": "yok",
@@ -527,7 +527,7 @@
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "249/249 old source user audit and 14 pairs PASS; old npm audit 3 vulnerable packages (39 advisory objects), old lock rejected. New 2 product pins and 2 runner paths; 9/9 offline runner checks PASS. New lock/security review/full install/build/browser NOT_RUN; independent HOLD. Scores unchanged. Windows S1 source 249/249, 14 shared pairs; new locks 61 npm and 25 Python metadata checked, zero reported known vulnerabilities; isolated install pending. S1 Windows install PASS; Node 180 PASS/1 skip; Python 258/263 PASS (1 fail, 4 errors). S2 fixes five test files, adds two tests; no runtime changes. New regression/build NOT_RUN. S2 Windows 180 Node PASS/1 skip; 264 Python PASS/1 skip, zero failures. Next build and tsc PASS; post-build source HOLD (incremental insertion). S3 config pin only, full rerun/smoke pending.",
+  "note": "249/249 old source user audit and 14 pairs PASS; old npm audit 3 vulnerable packages (39 advisory objects), old lock rejected. New 2 product pins and 2 runner paths; 9/9 offline runner checks PASS. New lock/security review/full install/build/browser NOT_RUN; independent HOLD. Scores unchanged. Windows S1 source 249/249, 14 shared pairs; new locks 61 npm and 25 Python metadata checked, zero reported known vulnerabilities; isolated install pending. S1 Windows install PASS; Node 180 PASS/1 skip; Python 258/263 PASS (1 fail, 4 errors). S2 fixes five test files, adds two tests; no runtime changes. New regression/build NOT_RUN. S2 Windows 180 Node PASS/1 skip; 264 Python PASS/1 skip, zero failures. Next build and tsc PASS; post-build source HOLD (incremental insertion). S3 config pin only, full rerun/smoke pending. S3 actual Windows user transcript: 444 PASS/2 SKIP/0 FAIL; Next build, standalone tsc and post-build source/lock gate PASS. Actual browser and live HTTP parity pending. Independent HOLD.",
   "integration_tracking": {
     "scope": "0188-W8-S3",
     "source_commit": "5dea8a34e929575ad42358881241205b70ffa228",
@@ -542,7 +542,7 @@
     "runner_tests_passed": 9,
     "contract_pairs": 10,
     "fixture_pairs": 4,
-    "full_next_build": "NOT_RUN",
+    "full_next_build": "PASS",
     "current_next_browser": "NOT_RUN",
     "independent_acceptance": "HOLD",
     "prior_tracking": "progress/history/TRACK_0188_W8_S2_PRE_S3.json",
@@ -559,9 +559,15 @@
     "previous_windows_python_pass": 264,
     "previous_windows_python_fail": 0,
     "previous_windows_python_errors": 0,
-    "current_full_tests": "NOT_RUN",
+    "current_full_tests": "444_PASS_2_SKIP_0_FAIL_USER_TRANSCRIPT",
     "previous_windows_python_skip": 1,
     "previous_windows_next_compile": "PASS",
-    "previous_windows_post_build_integrity": "HOLD_TSCONFIG_CHANGED"
+    "previous_windows_post_build_integrity": "HOLD_TSCONFIG_CHANGED",
+    "current_windows_node_pass": 180,
+    "current_windows_node_skip": 1,
+    "current_windows_python_pass": 264,
+    "current_windows_python_skip": 1,
+    "current_windows_post_build_integrity": "PASS",
+    "actual_paired_writer": "UNITTEST_PASS"
   }
 }
