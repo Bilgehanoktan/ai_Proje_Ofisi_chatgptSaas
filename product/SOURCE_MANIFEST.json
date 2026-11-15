@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0195",
-  "status": "ISOLATED_D0_ADMISSION_BUDGET_SQLITE_TESTED_PG_NOT_RUN",
+  "doc_revision": "0196-L",
+  "status": "ISOLATED_D0_LIFECYCLE_SETTLEMENT_SQLITE_TESTED_PG_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f230083545ad02c5e7abfeece8d39971827262b2",
+  "parent_git_commit": "9ece621baaadd160b3f90d4c8071d6a74d697604",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -953,8 +953,20 @@
     "ai-company-os-backend/tests/test_admission_mapping_0195.py": {
       "bytes": 10496,
       "sha256": "d78954c237f7aa26838c4987665108c243e5646fa6e3b8e44ac77fb321df6dc4"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py": {
+      "bytes": 18997,
+      "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1"
+    },
+    "ai-company-os-backend/tests/test_lifecycle_mapping_0196.py": {
+      "bytes": 14286,
+      "sha256": "083fc5fa1e391eef4e7f6b7fb51ed453bc4f33b933a3f963e2428b03cbd18bdd"
+    },
+    "ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py": {
+      "bytes": 8750,
+      "sha256": "38fd8dbe7ed0f9f6ff4ab90bc3c59c67ace3593ce4ff9555b71e1601bbf20f84"
     }
   },
-  "parent_source_manifest_blob": "bcffffb8504121e6b3d460fc47531c63f4238efc",
+  "parent_source_manifest_blob": "7f632297eeba72665792d4cd75a68772fe9308c4",
   "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }
