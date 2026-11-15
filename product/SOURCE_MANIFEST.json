@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0192",
-  "status": "ISOLATED_CORE_PARTIAL_SOURCE_NOT_RUN",
+  "doc_revision": "0193",
+  "status": "ISOLATED_RUNTIME_TRANSITION_PARTIAL_SYNTHETIC_TESTED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "593858741eb0d5add2735afd42e123e02832e641",
+  "parent_git_commit": "4f2c6d131c38ca7207d0b89ca001580466fd06d4",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -279,8 +279,8 @@
       "sha256": "f20c4a7f095ef68eb5bb933568a45ea2b0c33e0af35222363521bc84ace9360e"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
-      "bytes": 3237,
-      "sha256": "9879e9fb00a89edfa262c4bee6f9ed8abadddc9e28ee6179a1e980d3eeea2a72"
+      "bytes": 4286,
+      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
     },
     "ai-company-os-backend/app/core/transaction/readback_review.py": {
       "bytes": 3960,
@@ -899,12 +899,12 @@
       "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
     },
     "ai-company-os-backend/app/core/transaction/postgres_session.py": {
-      "bytes": 1218,
-      "sha256": "c32b2537ba361a43400a0fc669ded4cefe3d5f2c53959d2c4c07218983844916"
+      "bytes": 2495,
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
     },
     "ai-company-os-backend/app/core/agent_runtime/transition_command.py": {
-      "bytes": 1608,
-      "sha256": "0b08901cac7eaf89e95420e23e16b0d27cd5f47432d8d2054a6a752f7654e08e"
+      "bytes": 1698,
+      "sha256": "35cb245bce423a4edebae97099fb578cf8ab9ce3a4a0bf7b495b9565cc247e24"
     },
     "ai-company-os-backend/app/core/orchestrator/readiness.py": {
       "bytes": 692,
@@ -917,8 +917,16 @@
     "ai-company-os-backend/app/engines/memory_engine/runtime_binding.py": {
       "bytes": 489,
       "sha256": "baf142421392522b87d5af0e8fc75606c03123d671cef9fb361f024815df9053"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/postgres_run.py": {
+      "bytes": 2994,
+      "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
+    },
+    "ai-company-os-backend/tests/test_transition_transaction_0193.py": {
+      "bytes": 9667,
+      "sha256": "411d57ebb21645ce8ff7c3c8ed94f90d85b6cf3d20c186043aeb43a42fe48ecb"
     }
   },
-  "parent_source_manifest_blob": "e1e66f230a76ae8e001c50ebe6762432c5b51dc9",
-  "source_git_commit_note": "Exact source commit in releases/GITHUB_READBACK_0187.json; selected synthetic writer, reader and proxy tests only."
+  "parent_source_manifest_blob": "4fff252f05491619422ada45918825fb784bc80d",
+  "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }
