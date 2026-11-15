@@ -60,3 +60,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0193
 [Source/symbol/DB/error/test delta](revisions/TECHNICAL_CATALOG_0193.json) · [Maintenance and rollback](../docs/0193/ARCHITECTURE_AND_CATALOG.md). 25 selected synthetic tests; no API/dependency change or actual migration.
+
+## 0194–0197-U
+[0194](revisions/TECHNICAL_CATALOG_0194.json) · [0195](revisions/TECHNICAL_CATALOG_0195.json) · [0194-M](revisions/TECHNICAL_CATALOG_0194_M.json) · [0196-MA](revisions/TECHNICAL_CATALOG_0196_MA.json) · [0197-U](revisions/TECHNICAL_CATALOG_0197_U.json). Unified source reconciliation; no new API or dependency.

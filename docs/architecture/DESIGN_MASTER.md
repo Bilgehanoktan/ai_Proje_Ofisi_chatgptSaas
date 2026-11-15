@@ -102,3 +102,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188-W8-P1
 [Loopback port configuration candidate](../0188-W8-P1/ARCHITECTURE_AND_CATALOG.md). No normative changes.
+
+## 0197-U — Unified source and canonical current pointer
+[0189](../0189/ARCHITECTURE_AND_CATALOG.md) · [0190](../0190/ARCHITECTURE_AND_CATALOG.md) · [0191](../0191/ARCHITECTURE_AND_CATALOG.md) · [0192](../0192/ARCHITECTURE_AND_CATALOG.md) · [0193](../0193/ARCHITECTURE_AND_CATALOG.md) · [0194](../0194/ARCHITECTURE_AND_CATALOG.md) · [0195](../0195/ARCHITECTURE_AND_CATALOG.md) · [0194-M](../0194-M/ARCHITECTURE_AND_CATALOG.md) · [0196-MA](../0196-MA/ARCHITECTURE_AND_CATALOG.md) · [0197-U reconciliation](../0197-U/ARCHITECTURE_AND_CATALOG.md). [Product roadmap](../implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). P1, core and memory/model source united; no normative or real runtime change.
