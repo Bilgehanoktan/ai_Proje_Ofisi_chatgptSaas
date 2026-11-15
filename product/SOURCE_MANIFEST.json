@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0196-L",
-  "status": "ISOLATED_D0_LIFECYCLE_SETTLEMENT_SQLITE_TESTED_PG_NOT_RUN",
+  "doc_revision": "0198-E",
+  "status": "ISOLATED_D0_PINNED_HISTORY_SQLITE_TESTED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "9ece621baaadd160b3f90d4c8071d6a74d697604",
+  "parent_git_commit": "a7c4f417faf17959e3165193aa247815954bfa42",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -965,8 +965,16 @@
     "ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py": {
       "bytes": 8750,
       "sha256": "38fd8dbe7ed0f9f6ff4ab90bc3c59c67ace3593ce4ff9555b71e1601bbf20f84"
+    },
+    "ai-company-os-backend/app/core/event_store/history_readback.py": {
+      "bytes": 9374,
+      "sha256": "c7528010ffb7c7ab14f8b67eccb9d062fff7d4c5825edaa3ed8d9b7d670f5060"
+    },
+    "ai-company-os-backend/tests/test_history_readback_0198.py": {
+      "bytes": 6541,
+      "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773"
     }
   },
-  "parent_source_manifest_blob": "7f632297eeba72665792d4cd75a68772fe9308c4",
+  "parent_source_manifest_blob": "0fc934e32a78b475b0c89a3e39b1eace33a88ecb",
   "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }
