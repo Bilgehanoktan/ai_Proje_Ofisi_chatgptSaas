@@ -1,8 +1,7 @@
 "use client";
 import {useProjectionRead} from '../data/useProjectionRead';
 import {readStatus} from '../data/projectionRead';
-import {parseTaskBudgetProjection} from '../mvp/taskBudgetProjection';
 export default function OperationalReadback(){
- const {state,data,read}=useProjectionRead('task-budget',parseTaskBudgetProjection);
+ const {state,data,read}=useProjectionRead('task-budget');
  return <section className="panel projection-summary" aria-label="CEO operasyon örneği"><div className="bar"><div><div className="eyebrow">CEO / OPERATION READBACK</div><h2>Operasyon örneği</h2><small>Tek eşleştirilmiş tarihsel D0 yanıtı · canlı KPI değil</small></div><button type="button" onClick={read}>Operasyon kaydını oku</button></div><p role="status" className="projection-read-status" data-phase={state.phase}>{readStatus(state,{idle:'Okunmadı · HOLD',loading:'Okunuyor…',historical:'Tarihsel örnek · DENY',hold:'Kayıt doğrulanamadı · HOLD'})}</p><div className="projection-summary-grid"><article><small>Örnek ofis olayları</small><strong>{data?data.office.sample_event_count+'/5':'—'}</strong></article><article><small>Research örnek olayı</small><strong>{data?data.research_event_seq===null?'Gözlenmedi':'#'+data.research_event_seq:'—'}</strong></article><article><small>Sentetik bütçe durumu</small><strong>{data?.budget.phase??'—'}</strong></article><article><small>Gerçek aktif run</small><strong>—</strong></article></div><p className="sub">Causality UNPROVEN · Lease / geometry HOLD · Gerçek maliyet ve dispatch DENY. Ayrı ekran okumaları otomatik birleştirilmez.</p></section>;
 }

@@ -38,3 +38,8 @@
 .eds-frame .projection-summary-grid article strong{display:block;overflow-wrap:anywhere;font-size:1.1rem;margin-top:6px}
 .eds-frame .projection-read-status{border-inline-start:3px solid var(--outline-strong);padding:8px 12px;background:var(--surface-raised);border-radius:6px;overflow-wrap:anywhere}
 .eds-frame .projection-read-status[data-phase=hold]{border-color:var(--hold-line);background:var(--hold-bg);color:var(--hold-text)}
+
+/* W1-0198-P02 historical timeline, no live motion. */
+.eds-frame .lifecycle-timeline{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,145px),1fr));gap:8px}
+.eds-frame .lifecycle-timeline li{border:1px solid var(--line);border-inline-start:3px solid var(--outline-strong);border-radius:8px;background:var(--surface-raised);padding:10px;min-width:0;overflow-wrap:anywhere}
+.eds-frame .lifecycle-timeline small{display:block;margin-top:5px}
