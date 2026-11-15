@@ -1,30 +1,32 @@
-# TRACK-0201-R — 24 alan
+# 24 Teknik Alan — TRACK-0202-S
 
-Kanonik JSON: DEVELOPMENT_TRACKER_24.json. Puanlar ordinal; tamamlanma yüzdesi değil. 14 yeni arşiv testi PASS; 5 wrapper testi ve 13 PG NOT_RUN; önceki 164 seçili kontrol tekrar koşulmadı. W1/AI/MEM ayrı.
+Ordinal olgunluk puanları; tamamlanma yüzdesi değildir. Önceki puanlar korundu. 39 seçili test PASS (25 yeni, 14 arşiv regresyonu); 6 yeni test mock snapshot kullanır. Gerçek PG, tam ürün ve bağımsız kabul açık.
 
-| ID | Alan | Tasarım | Kaynak | Test | Bu tur |
-|---|---|---:|---:|---|---|
-| 1 | Frontend | 75 | 50 | PARTIAL_PASS_COMPILED_PROXY | 0200-S evidence retained, not rerun |
-| 2 | UI/UX Design System | 50 | 50 | NOT_RUN_CURRENT_EDS_BROWSER | 0200-S evidence retained, not rerun |
-| 3 | Office Engine | 75 | 50 | PARTIAL_PASS_0199C_HISTORY | 0200-S evidence retained, not rerun |
-| 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | 0200-S evidence retained, not rerun |
-| 5 | Backend | 75 | 50 | PARTIAL_PASS_0201R_ARCHIVE | New reference module in product; 14 actual archive tests; wrapper integration NOT_RUN |
-| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0199C_CAUSAL | 0200-S evidence retained, not rerun |
-| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_0199C_CAUSAL | Plan + command pins are serialized; real DAG history integration NOT_RUN |
-| 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0199C_ROSTER | Run/admission/lease command types pinned; no actual runtime test |
-| 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_D0_SAMPLE_ADAPTER | 0200-S evidence retained, not rerun |
-| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW | 0200-S evidence retained, not rerun |
-| 11 | Database | 75 | 25 | PG_NOT_RUN_LOCAL_ARCHIVE_PASS | Separate local SQLite archive tested; PG remains NOT_RUN |
-| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0201R_ARCHIVE | Content-addressed reference archive; actual existing history wrapper NOT_RUN; global order design only |
-| 13 | Memory & Knowledge | 75 | 25 | NOT_RUN | 0200-S evidence retained, not rerun |
-| 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0201R_REFERENCE_TAMPER | Ordinary UPDATE/DELETE/REPLACE blocked, privileged corruption detected; no actual trust root |
-| 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE | Separate failure terminal reference contract; actual independent receipt and success authority HOLD |
-| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_0195_D0 | 0200-S evidence retained, not rerun |
-| 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN | 0200-S evidence retained, not rerun |
-| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN | 0200-S evidence retained, not rerun |
-| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0199C_BUDGET | Shared multi-project budget ownership design only; existing exclusive replay unchanged |
-| 20 | Test & QA | 75 | 25 | PARTIAL_PASS_0201R_SELECTED | 14 new actual archive PASS; 5 wrapper candidates NOT_RUN; 164 prior selected tests not rerun |
-| 21 | DevOps & Infrastructure | 75 | 25 | BLOCKED_PG_BINARY_DRIVER | Local git DNS failure, no postgres/psycopg/docker; exact checkout missing |
-| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | 0200-S evidence retained, not rerun |
-| 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_LOCAL_ARCHIVE_REOPEN | Actual read-only reopen and digest; no crash/backup/restore witness proof |
-| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | Architecture, catalog, test evidence, 24 tracker, source manifest, handover, parallel checkpoint |
+| ID | Alan | Hat | Tasarım | Kaynak | Test | Bu tur |
+|---:|---|---|---:|---:|---|---|
+| 1 | Frontend | W1 | 75 | 50 | PARTIAL_PASS_COMPILED_PROXY | UNCHANGED_0202S |
+| 2 | UI/UX Design System | W1 | 50 | 50 | NOT_RUN_CURRENT_EDS_BROWSER | UNCHANGED_0202S |
+| 3 | Office Engine | W1 | 75 | 50 | PARTIAL_PASS_0199C_HISTORY | UNCHANGED_0202S |
+| 4 | API & Contracts | W2 | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | UNCHANGED_0202S |
+| 5 | Backend | W2,W3,W4 | 75 | 50 | PARTIAL_PASS_0202S_SIGNATURE | UPDATED_0202S |
+| 6 | Orchestrator | W3 | 75 | 50 | PARTIAL_PASS_0199C_CAUSAL | UNCHANGED_0202S |
+| 7 | Task Engine & DAG | W3 | 75 | 50 | PARTIAL_PASS_0199C_CAUSAL | UNCHANGED_0202S |
+| 8 | Agent Runtime | W3 | 75 | 25 | PARTIAL_PASS_0199C_ROSTER | UNCHANGED_0202S |
+| 9 | AI Model Gateway | W5 | 50 | 25 | PARTIAL_PASS_D0_SAMPLE_ADAPTER | UNCHANGED_0202S |
+| 10 | Skill & Tool Engine | W5,W4 | 75 | 25 | PARTIAL_PASS_D0_REVIEW | UNCHANGED_0202S |
+| 11 | Database | W4 | 75 | 25 | PG_NOT_RUN_LOCAL_ARCHIVE_PASS | UNCHANGED_0202S |
+| 12 | Event Store & Messaging | W4 | 75 | 50 | PARTIAL_PASS_0202S_SIGNED_READBACK | UPDATED_0202S |
+| 13 | Memory & Knowledge | W5 | 75 | 25 | NOT_RUN | UNCHANGED_0202S |
+| 14 | Security & IAM | W4 | 75 | 25 | PARTIAL_PASS_0202S_SIGNATURE | UPDATED_0202S |
+| 15 | Independent Verifier | W6 | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE | UPDATED_0202S |
+| 16 | SaaS & Multi-Tenant | W7 | 75 | 25 | PARTIAL_PASS_0195_D0 | UNCHANGED_0202S |
+| 17 | Ürün ve iş modülleri | W6 | 75 | 25 | NOT_RUN | UNCHANGED_0202S |
+| 18 | Dış sistem entegrasyonları | W4,W5 | 75 | 0 | NOT_RUN | UNCHANGED_0202S |
+| 19 | Finans & Billing | W7 | 75 | 25 | PARTIAL_PASS_0199C_BUDGET | UNCHANGED_0202S |
+| 20 | Test & QA | W8 | 75 | 25 | PARTIAL_PASS_0202S_SELECTED | UPDATED_0202S |
+| 21 | DevOps & Infrastructure | W4,W8 | 75 | 25 | BLOCKED_PG_BINARY_DRIVER | UNCHANGED_0202S |
+| 22 | Monitoring & Observability | W4,W8 | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | UNCHANGED_0202S |
+| 23 | Backup & Disaster Recovery | W4 | 75 | 25 | PARTIAL_PASS_0202S_STALE_PIN | UPDATED_0202S |
+| 24 | Teknik katalog & dokümantasyon | W8 | 75 | 75 | CATALOG_UPDATED | UPDATED_0202S |
+
+Ayrıntılı kanıt ve önceki kayıtlar: [JSON](DEVELOPMENT_TRACKER_24.json), [0202-S geçmişi](history/TRACK_0202_S.json).
