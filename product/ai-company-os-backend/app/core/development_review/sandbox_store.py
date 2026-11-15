@@ -4,6 +4,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
+from .task_budget_snapshot import PLAN as PAIR_PLAN, write_pair_marker
 from app.core.orchestrator.engine import canonical_plan
 from app.core.agent_runtime.lifecycle import token, uint
 from app.engines.model_gateway.registry import AdapterPin
@@ -52,7 +53,9 @@ class Workbench:
                     raise ValueError('SAMPLE_TASK_PIN_MISMATCH')
                 yield db
 
-    def create(self):
+    def create(self, *, pair_id=None):
+        if pair_id is not None and (self.plan['digest'] != PAIR_PLAN or not self.path.name.endswith('.workbench.d0.sqlite')):
+            raise ValueError('D0_PAIR_PLAN_OR_PATH_HOLD')
         # Exclusive creation, never open or overwrite an unrelated existing database.
         with self.path.open('xb'):
             pass
@@ -63,6 +66,8 @@ class Workbench:
                     db.executescript(DDL)
                     db.execute('INSERT INTO meta VALUES (?,?,?,?)', (PROFILE,TENANT,COMPANY,self.plan['digest']))
                     db.executemany('INSERT INTO sample_task VALUES (?,?,?,?,?)', [(t['id'],t['role'],json.dumps(t['depends_on']),'PENDING',0) for t in self.plan['tasks']])
+                    if pair_id is not None:
+                        write_pair_marker(db,pair_id)
         except BaseException:
             self.path.unlink(missing_ok=True)
             raise

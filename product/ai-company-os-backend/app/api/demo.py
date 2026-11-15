@@ -75,3 +75,7 @@ app.include_router(admission_projection_router)
 
 from app.api.office_workbench_projection import router as office_workbench_projection_router
 app.include_router(office_workbench_projection_router)
+
+
+from app.api.task_budget_projection import router as task_budget_projection_router
+app.include_router(task_budget_projection_router)
