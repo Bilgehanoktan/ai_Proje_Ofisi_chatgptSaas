@@ -1,9 +1,10 @@
 import {parseOutboxProjection} from '../../../../features/mvp/outboxProjection';
 export const dynamic='force-dynamic';
-const endpoint='http://127.0.0.1:8000/demo/v1/outbox/review-projection';
+import {localBackendPort} from '../../../../features/mvp/localBackend';
 const headers={'Cache-Control':'no-store'};
 export async function GET(){
  try{
+  const endpoint=`http://127.0.0.1:${localBackendPort()}/demo/v1/outbox/review-projection`;
   const r=await fetch(endpoint,{method:'GET',cache:'no-store',redirect:'error',signal:AbortSignal.timeout(2500),headers:{Accept:'application/json'}});
   if(!r.ok||!r.headers.get('content-type')?.startsWith('application/json')||!r.body)throw Error('response');
   const reader=r.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true});let size=0,text='';
