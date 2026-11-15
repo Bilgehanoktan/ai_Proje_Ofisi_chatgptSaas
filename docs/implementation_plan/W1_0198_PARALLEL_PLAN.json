@@ -1,8 +1,8 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P05",
-  "parent": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
-  "source_commit": "13c95e63a9177b2664c44ac0bd4598ff24c7b0f0",
+  "round": "W1-0198-P06",
+  "parent": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
+  "source_commit": "08361b6c3c7bed4fde77623fdf5fafcb047cca06",
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
   "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
   "dependency_rules": [
@@ -10,15 +10,16 @@
     "H may proceed independently; A full Windows deferred by user",
     "No cross-store join unless exact shared proof; no live cache, dispatch, mutation, provider calls or geometry join",
     "P04/P05 gate: prioritize execution of existing 17 exact persisted lifecycle tests before adding any more historical demo endpoints; separate D0 helper evidence and actual product acceptance.",
-    "P05 transport branch is NEVER MERGE; original product remains full integration branch. Exact 17 selected cases remain gate; do not count runner/DDL tests as lifecycle acceptance."
+    "P05 transport branch is NEVER MERGE; original product remains full integration branch. Exact 17 selected cases remain gate; do not count runner/DDL tests as lifecycle acceptance.",
+    "P06 closes exact selected 17-case D0 fixture gate; 80 selected regressions PASS. This is not whole-product or live acceptance. P07 may advance independent read-only contracts after proof; no new historical endpoint solely for progress, no authority expansion."
   ],
   "lanes": [
     {
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
-      "status": "TRANSPORT_PINNED_23_NEW_AUXILIARY_TESTS_PASS_17_PRODUCT_CASES_NOT_RUN",
-      "done": "44-source-file exact recovery transport; 16 runner +7 actual pinned DDL/P04 snapshot tests PASS. P02/P03 cases still NOT_RUN (container cannot retrieve complete pack).",
-      "next": "Obtain transport archive or exact checkout in isolated execution environment; run P02 eight and P03 nine via run_lifecycle_p05.py; record individual results, then full regression/build. No Windows or CI requirement for this selected runner.",
+      "status": "SELECTED_17_PLUS_80_PASS_FULL_PRODUCT_NOT_RUN",
+      "done": "44 exact files materialized; 17 selected and 80 original tests PASS; all 97 distinct IDs, no failures/skips.",
+      "next": "Full pinned source/build/browser and seven endpoint parity in fresh reviewed environment; Windows remains deferred; recover exact additional dependency closure if needed.",
       "owner": [
         "tests/projection-read.test.cjs",
         "tests/integration/run_combined_helpers.cjs",
@@ -43,9 +44,9 @@
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "React hook/browser regression, all seven endpoints parity, independent freshness proof",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Seven endpoint frontend/backend parity and React hook lifecycle; independently trusted scope/revision/freshness contract.",
       "owner": [
         "features/data/projectionRead.ts",
         "features/data/useProjectionRead.ts",
@@ -60,9 +61,9 @@
     {
       "id": "C",
       "name": "CEO Dashboard veri entegrasyonu",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "Canonical scoped CEO projection only after persisted and trust proof",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Design canonical scoped CEO read projection against independently sourced active-run/ledger references; no live aggregation before proof.",
       "owner": [
         "features/ceo-dashboard/OperationalReadback.tsx"
       ]
@@ -70,9 +71,9 @@
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "Actual 17 fixture tests and canonical active-run/clock/placement contract; no live join",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Independent current clock/lease/epoch and placement contract; no geometry join or active agents before exact proof.",
       "owner": [
         "features/mvp/OfficeWorkbenchPanel.tsx",
         "app/core/development_review/lifecycle_projection.py",
@@ -94,9 +95,9 @@
     {
       "id": "E",
       "name": "Görev ve Workflow Studio entegrasyonu",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "Use independently sourced plan/task/run lineage and causal evidence; no DAG state mutation",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Independently sourced plan/task/run lineage and causal evidence; no DAG mutation.",
       "owner": [
         "components/dashboard/DevelopmentReviewPanel.tsx",
         "features/mvp/historicalJoin.ts"
@@ -105,9 +106,9 @@
     {
       "id": "F",
       "name": "Memory ve Model Gateway ekranları",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "Independent active lease/clock, reservation ledger, model input registry and ACL/tombstone/W-A provenance",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Independent active lease/clock, reservation ledger, model input registry, Memory ACL/tombstone/W-A provenance; no retrieval/provider call.",
       "owner": [
         "features/capabilities/CapabilityReadback.tsx"
       ]
@@ -115,9 +116,9 @@
     {
       "id": "G",
       "name": "Finans ve güvenlik projeksiyonları",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "Persisted settlement validation, independent security receipts and canonical ledger; no real money",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Canonical reservation/ledger and independent security receipts; no real spending.",
       "owner": [
         "features/ceo-dashboard/Dashboard.tsx"
       ]
@@ -125,9 +126,9 @@
     {
       "id": "H",
       "name": "Görsel kalite ve kullanıcı deneyimi",
-      "status": "P04_RETAINED_A_GATE_OPEN",
-      "done": "P04 product source retained byte-identically; P05 focuses on exact fixture recovery; no new authority, endpoint or live projection.",
-      "next": "Built light/dark/mobile visual/accessibility and interaction regression",
+      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
+      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "next": "Light/dark/mobile visual/accessibility and interaction regression once built environment is reviewed.",
       "owner": [
         "design-system/eds.css"
       ]

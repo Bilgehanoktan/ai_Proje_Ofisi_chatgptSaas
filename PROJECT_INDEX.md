@@ -109,3 +109,6 @@ Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTU
 
 ## W1-0198-P05
 [Recovery and evidence](docs/W1-0198-P05/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P05.json) · [Tracker](progress/DEVELOPMENT_TRACKER_24.md).
+
+## W1-0198-P06
+[Architecture](docs/W1-0198-P06/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P06.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P06.json) · [Readback](releases/GITHUB_READBACK_W1_0198_P06.json) · [Gate tracker](progress/W1_0198_GATE_TRACKER.json). 17 previously unrun +80 regression PASS; product unchanged.

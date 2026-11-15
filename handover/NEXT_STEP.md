@@ -143,3 +143,6 @@ Preserve A–H. A recover exact backend dependency closure + candidate DDL and e
 
 ## W1-0198-P06 — current next
 Execute exact existing 17 cases via recovered transport or checkout and runner, then fix evidence-based failures and rerun. Keep product source and branch intact; transport NEVER MERGE. Preserve A–H plan. Recalculate design/source/integration coverage and accepted areas from canonical tracker. Windows deferred, no CI/main/PROD/real external effects.
+
+## W1-0198-P07 — current next
+P06 selected gate 17/17 and 80/80 regression PASS. Preserve A–H; progress B–G with independent scoped clock/lease/reservation/ACL/W-A proof and exact causal join only. A seven-endpoint unified parity and full pinned regression/build/browser when reviewed environment is available, Windows deferred; H visual/accessibility. No historical-only expansion, main, CI, PROD, real provider, spending or independent acceptance. Keep fixed-denominator evidence gates separate from 24-area maturity.

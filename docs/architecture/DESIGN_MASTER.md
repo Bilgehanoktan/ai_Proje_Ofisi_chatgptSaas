@@ -123,3 +123,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P05 — fixture recovery
 [Architecture and test scope](../W1-0198-P05/ARCHITECTURE_AND_CATALOG.md). No product architecture changes; pinned recovery and integration coverage tracking.
+
+## W1-0198-P06 — selected persisted gate verified
+[Architecture and maintenance](../W1-0198-P06/ARCHITECTURE_AND_CATALOG.md). 44 exact files recovered; 17 selected +80 original regression PASS. Product architecture and authority unchanged; full product NOT_RUN.

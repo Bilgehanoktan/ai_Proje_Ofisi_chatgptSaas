@@ -81,3 +81,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## W1-0198-P05
 [Recovery helper catalog](revisions/TECHNICAL_CATALOG_W1_0198_P05.json). Product source unchanged.
+
+## W1-0198-P06
+[Catalog](revisions/TECHNICAL_CATALOG_W1_0198_P06.json) · [Maintenance](../docs/W1-0198-P06/ARCHITECTURE_AND_CATALOG.md). Existing symbols unchanged; exact 97 selected cases and evidence-gate tracking.
