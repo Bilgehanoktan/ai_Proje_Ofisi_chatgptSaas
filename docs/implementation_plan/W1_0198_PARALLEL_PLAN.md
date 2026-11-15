@@ -1,16 +1,18 @@
 # W1-0198 A–H — parallel application plan
 
-P03 source baseline: f58cf95402b06daddfc3b7ec067533451772eb8f. A–H IDs preserved; Windows deferred. One isolated integration branch, logical path ownership; P01/P02 history retained.
+P04-PROGRESS source baseline: 7d623ec052a1276f181faa7c52378331c42f877f. A–H IDs preserved; Windows deferred. Existing P04 branch independently preserved; [collision](../../handover/W1_0198_P04_PARALLEL_COLLISION.json).
 
-| Track | Scope | P03 result | Next |
-|---|---|---|---|
-| W1-0198-A | Birleşik UI ve backend regresyonu | 6 Python pure contract tests + 23 new cross-language parser tests + 1 new registry negative case + 36 prior Node regressions PASS; nine persisted fixture/API cases and browser scenario prepared; full checkout DNS blocked | Obtain exact full source and run P02 eight + P03 nine persisted cases, then pinned full suite/build/browser; Windows deferred |
-| W1-0198-B | Merkezi frontend veri bağlantı katmanı | Seventh typed endpoint, fixed four-prefix scope and revision, strict phase/lease/budget/freshness contract; existing transport retained | Prove persisted API parity, React lifecycle; independently sourced freshness and generic scope envelope remain open |
-| W1-0198-C | CEO Dashboard veri entegrasyonu | CEO panel displays separate historical ADMITTED/RUNNING/renewal/VERIFYING sample, not KPI | Actual React readback and canonical operational projection after proof |
-| W1-0198-D | Agent Runtime ve Office Engine bağlantısı | Fixed prefix reader checks scoped run head, lease, immutable admission, exact mutation/event/outbox/fence/audit and budget; office panel clears on floor change | Run persisted fixture tests; trusted clock, canonical active run/placement and geometry binding remain HOLD |
-| W1-0198-E | Görev ve Workflow Studio entegrasyonu | Workflow reads versioned timeline in separate fixed plan; no mapping to existing DAG | Prove shared plan identity, task/run lineage and causal projection |
-| W1-0198-F | Memory ve Model Gateway ekranları | Capability screen shows historical lease, reservation and model/ACL HOLD; no real binding or retrieval | Trusted active reference, reservation ledger, independent ACL/tombstone/W-A and provider authorization remain separate |
-| W1-0198-G | Finans ve güvenlik projeksiyonları | Finance/security expose exact historical reservation and fence/epoch-bound readback; separate from P02 terminal sample, no aggregation | Persisted sample validation, independent security evidence and actual ledger mapping |
-| W1-0198-H | Görsel kalite ve kullanıcı deneyimi | Responsive accessible description list; separate readbacks labelled; browser floor reset scenario prepared | Run visual and accessibility checks on built product, light/dark/mobile |
+First measurable baseline: **20/40 = 50%** equal-weight milestones, not entire product progress/ETA. Zero completed ACCEPTANCE gates. [Canonical milestones](../../progress/W1_0198_MILESTONES.json); frontend mirror byte-identical. Preserve IDs, titles and denominator unless a versioned decision changes scope. Existing 24-area ordinal estimates unchanged.
 
-Historical prefix and terminal are independent sample files, never joined as a current state. No new authority. Source, helper tests and persisted/UI acceptance tracked separately.
+| Track | Measured | P04 result | Next |
+|---|---:|---|---|
+| W1-0198-A · Birleşik UI ve backend regresyonu | 40% | 13 actual SQLite guard, 9 scope and 10 progress tests +66 prior pure regressions PASS | Reconcile P04 parallel source collision; execute exact P02/P03 17 fixture/API tests, pinned full suite/build/browser |
+| W1-0198-B · Merkezi frontend veri bağlantı katmanı | 60% | Seven-endpoint registry retained; inspectPlanBinding checks revision/task/scope without placement | Compare other P04 session/join guards; persisted API parity, trusted clock, React lifecycle |
+| W1-0198-C · CEO Dashboard veri entegrasyonu | 60% | CEO plan progress panel; 40-gate baseline, historical prefix comparison HOLD | Canonical operational KPI and React/browser |
+| W1-0198-D · Agent Runtime ve Office Engine bağlantısı | 40% | Both lifecycle readers use common tested read-only guard; no live placement | Compare alternate P04 snapshot guard; 17 actual persisted cases; trusted current lease/clock and task/station mapping |
+| W1-0198-E · Görev ve Workflow Studio entegrasyonu | 60% | Plan mismatch visible; exact structural match still HOLD | Canonical DAG/run/causal mapping and browser |
+| W1-0198-F · Memory ve Model Gateway ekranları | 40% | Historical lease/reservation prereqs retained; no real binding | Independent model reservation/registry and ACL/tombstone/witness |
+| W1-0198-G · Finans ve güvenlik projeksiyonları | 40% | Historical budget path shares read guard; journal/WAL refused; no aggregation | 17 fixture tests, trusted ledger and independent security evidence |
+| W1-0198-H · Görsel kalite ve kullanıcı deneyimi | 60% | Native progress/details and responsive EDS source | Reconcile UI, current full build, visual/accessibility/pixel review |
+
+17 P02/P03 persisted tests NOT_RUN. No automatic merge or double counting.

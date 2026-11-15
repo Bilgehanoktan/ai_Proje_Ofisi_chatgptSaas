@@ -1,8 +1,8 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P03",
-  "parent": "37edf7b3952435e1234ee30415615219f6eb4458",
-  "source_commit": "f58cf95402b06daddfc3b7ec067533451772eb8f",
+  "round": "W1-0198-P04",
+  "parent": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
+  "source_commit": "7d623ec052a1276f181faa7c52378331c42f877f",
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
   "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
   "dependency_rules": [
@@ -14,9 +14,9 @@
     {
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
-      "status": "PARTIAL_CONTRACT_TESTS_PASS_PERSISTED_TESTS_OPEN",
-      "done": "6 Python pure contract tests + 23 new cross-language parser tests + 1 new registry negative case + 36 prior Node regressions PASS; nine persisted fixture/API cases and browser scenario prepared; full checkout DNS blocked",
-      "next": "Obtain exact full source and run P02 eight + P03 nine persisted cases, then pinned full suite/build/browser; Windows deferred",
+      "status": "PARTIAL_SQLITE_GUARD_AND_HELPER_PASS_PERSISTED_FIXTURE_OPEN",
+      "done": "13 actual SQLite guard, 9 scope and 10 progress tests +66 prior pure regressions PASS",
+      "next": "Reconcile P04 parallel source collision; execute exact P02/P03 17 fixture/API tests, pinned full suite/build/browser",
       "owner": [
         "tests/projection-read.test.cjs",
         "tests/integration/run_combined_helpers.cjs",
@@ -29,15 +29,19 @@
         "tests/test_prefix_wire_p03.py",
         "tests/test_lifecycle_prefix_p03.py",
         "tests/lifecycle-prefix.test.cjs",
-        "tests/integration/browser_lifecycle_prefix_p03.py"
-      ]
+        "tests/integration/browser_lifecycle_prefix_p03.py",
+        "tests/test_d0_snapshot_p04.py",
+        "tests/projection-scope.test.cjs",
+        "tests/progress-model.test.cjs"
+      ],
+      "progress_percent": 40
     },
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "D0_SEVEN_ENDPOINT_REGISTRY_CONTRACT_PASS",
-      "done": "Seventh typed endpoint, fixed four-prefix scope and revision, strict phase/lease/budget/freshness contract; existing transport retained",
-      "next": "Prove persisted API parity, React lifecycle; independently sourced freshness and generic scope envelope remain open",
+      "status": "D0_SCOPE_DIAGNOSTICS_SOURCE_HELPER_PASS",
+      "done": "Seven-endpoint registry retained; inspectPlanBinding checks revision/task/scope without placement",
+      "next": "Compare other P04 session/join guards; persisted API parity, trusted clock, React lifecycle",
       "owner": [
         "features/data/projectionRead.ts",
         "features/data/useProjectionRead.ts",
@@ -45,25 +49,32 @@
         "features/mvp/AdmissionProjectionPanel.tsx",
         "features/mvp/TaskBudgetPanel.tsx",
         "features/mvp/OutboxProjectionPanel.tsx",
-        "features/data/projectionRegistry.ts"
-      ]
+        "features/data/projectionRegistry.ts",
+        "features/data/projectionScope.ts"
+      ],
+      "progress_percent": 60
     },
     {
       "id": "C",
       "name": "CEO Dashboard veri entegrasyonu",
-      "status": "D0_PREFIX_UI_SOURCE_INTEGRATED",
-      "done": "CEO panel displays separate historical ADMITTED/RUNNING/renewal/VERIFYING sample, not KPI",
-      "next": "Actual React readback and canonical operational projection after proof",
+      "status": "D0_PROGRESS_AND_SCOPE_VIEW_SOURCE",
+      "done": "CEO plan progress panel; 40-gate baseline, historical prefix comparison HOLD",
+      "next": "Canonical operational KPI and React/browser",
       "owner": [
-        "features/ceo-dashboard/OperationalReadback.tsx"
-      ]
+        "features/ceo-dashboard/OperationalReadback.tsx",
+        "features/progress/PlanProgressPanel.tsx",
+        "features/progress/progressModel.ts",
+        "features/progress/w1PlanProgress.json",
+        "progress/W1_0198_MILESTONES.json"
+      ],
+      "progress_percent": 60
     },
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "D0_PREFIX_PERSISTED_SOURCE_INTEGRATED_TEST_PENDING",
-      "done": "Fixed prefix reader checks scoped run head, lease, immutable admission, exact mutation/event/outbox/fence/audit and budget; office panel clears on floor change",
-      "next": "Run persisted fixture tests; trusted clock, canonical active run/placement and geometry binding remain HOLD",
+      "status": "D0_SHARED_SNAPSHOT_GUARD_PASS_INTEGRATION_OPEN",
+      "done": "Both lifecycle readers use common tested read-only guard; no live placement",
+      "next": "Compare alternate P04 snapshot guard; 17 actual persisted cases; trusted current lease/clock and task/station mapping",
       "owner": [
         "features/mvp/OfficeWorkbenchPanel.tsx",
         "app/core/development_review/lifecycle_projection.py",
@@ -78,48 +89,67 @@
         "app/api/demo/lifecycle-prefix/route.ts",
         "features/mvp/LifecyclePrefixReadback.tsx",
         "contracts/source/lifecycle.prefix.schema.json",
-        "contracts/generated/lifecycle.prefix.schema.json"
-      ]
+        "contracts/generated/lifecycle.prefix.schema.json",
+        "app/core/development_review/d0_snapshot.py"
+      ],
+      "progress_percent": 40
     },
     {
       "id": "E",
       "name": "Görev ve Workflow Studio entegrasyonu",
-      "status": "D0_PREFIX_UI_SOURCE_INTEGRATED",
-      "done": "Workflow reads versioned timeline in separate fixed plan; no mapping to existing DAG",
-      "next": "Prove shared plan identity, task/run lineage and causal projection",
+      "status": "D0_PLAN_JOIN_DIAGNOSTIC_HELPER_PASS",
+      "done": "Plan mismatch visible; exact structural match still HOLD",
+      "next": "Canonical DAG/run/causal mapping and browser",
       "owner": [
         "components/dashboard/DevelopmentReviewPanel.tsx"
-      ]
+      ],
+      "progress_percent": 60
     },
     {
       "id": "F",
       "name": "Memory ve Model Gateway ekranları",
-      "status": "D0_HISTORICAL_PREREQUISITE_VIEW_HOLD",
-      "done": "Capability screen shows historical lease, reservation and model/ACL HOLD; no real binding or retrieval",
-      "next": "Trusted active reference, reservation ledger, independent ACL/tombstone/W-A and provider authorization remain separate",
+      "status": "D0_PREREQUISITE_VIEW_HOLD",
+      "done": "Historical lease/reservation prereqs retained; no real binding",
+      "next": "Independent model reservation/registry and ACL/tombstone/witness",
       "owner": [
         "features/capabilities/CapabilityReadback.tsx"
-      ]
+      ],
+      "progress_percent": 40
     },
     {
       "id": "G",
       "name": "Finans ve güvenlik projeksiyonları",
-      "status": "D0_PREFIX_RESERVATION_VIEW_SOURCE_INTEGRATED",
-      "done": "Finance/security expose exact historical reservation and fence/epoch-bound readback; separate from P02 terminal sample, no aggregation",
-      "next": "Persisted sample validation, independent security evidence and actual ledger mapping",
+      "status": "D0_READONLY_GUARD_HELPER_PASS_LEDGER_OPEN",
+      "done": "Historical budget path shares read guard; journal/WAL refused; no aggregation",
+      "next": "17 fixture tests, trusted ledger and independent security evidence",
       "owner": [
         "features/ceo-dashboard/Dashboard.tsx"
-      ]
+      ],
+      "progress_percent": 40
     },
     {
       "id": "H",
       "name": "Görsel kalite ve kullanıcı deneyimi",
-      "status": "CSS_METADATA_SOURCE_VISUAL_NOT_RUN",
-      "done": "Responsive accessible description list; separate readbacks labelled; browser floor reset scenario prepared",
-      "next": "Run visual and accessibility checks on built product, light/dark/mobile",
+      "status": "PROGRESS_PANEL_SOURCE_VISUAL_NOT_RUN",
+      "done": "Native progress/details and responsive EDS source",
+      "next": "Reconcile UI, current full build, visual/accessibility/pixel review",
       "owner": [
         "design-system/eds.css"
-      ]
+      ],
+      "progress_percent": 60
     }
-  ]
+  ],
+  "variant": "PROGRESS",
+  "branch": "integration/w1-0198-p04-progress",
+  "parallel_collision": "handover/W1_0198_P04_PARALLEL_COLLISION.json",
+  "measurement": {
+    "method": "equal-weight milestone count (source/helper/parent/integrated/acceptance; not whole-product completion)",
+    "canonical": "progress/W1_0198_MILESTONES.json",
+    "frontend_mirror": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "done": 20,
+    "total": 40,
+    "percent": 50,
+    "accepted": 0,
+    "baseline": "first explicit 40-gate measurement; preserve IDs/titles and denominator unless recorded scope change"
+  }
 }

@@ -103,3 +103,6 @@ Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTU
 
 ## W1-0198-P03
 [Architecture](docs/W1-0198-P03/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P03.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P03.json).
+
+## W1-0198-P04-PROGRESS
+[Architecture](docs/W1-0198-P04/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P04.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P04.json) · [Milestones](progress/W1_0198_MILESTONES.json) · [Collision](handover/W1_0198_P04_PARALLEL_COLLISION.json).

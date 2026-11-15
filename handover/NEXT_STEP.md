@@ -137,3 +137,6 @@ Preserve A–H. A execute exact persisted fixture tests and React acceptance whe
 
 ## W1-0198-P04 — current next
 Preserve A–H. A recover exact full source and execute P02 eight + P03 nine persisted cases, then full pinned tests and React/browser; Windows deferred. B/C/D/E/G generalize scope, independent current clock/lease/reservation and causal projection only after evidence; no join between historical files or geometry. F trusted model and memory references; no real content/provider/authority. H visual/accessibility. Fresh reviewed stage later. No new grant, CI/main/PROD or independent acceptance.
+
+## W1-0198-P05 — current next
+Reconcile existing P04 and P04-PROGRESS against common P03; preserve source and evidence, no automatic merge or duplicate counts. A recover exact backend dependency closure and run 17 persisted cases, then full pinned regression/React/browser; Windows deferred. B–G trusted current scope/clock/lease/reservation/causal evidence before canonical binding, no geometry join on historical samples. F independent model/ACL/witness; H visual/accessibility. Preserve 40-gate IDs/titles and update mirror + manifest with evidence. No new grants, CI/main/PROD or independent acceptance.

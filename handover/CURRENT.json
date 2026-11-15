@@ -1,19 +1,19 @@
 {
-  "revision": "W1-0198-P03",
-  "branch": "integration/w1-0198-p03",
-  "source_commit": "f58cf95402b06daddfc3b7ec067533451772eb8f",
-  "parent_commit": "37edf7b3952435e1234ee30415615219f6eb4458",
+  "revision": "W1-0198-P04",
+  "branch": "integration/w1-0198-p04-progress",
+  "source_commit": "7d623ec052a1276f181faa7c52378331c42f877f",
+  "parent_commit": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
   "integration_parents": {
     "unified": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
     "lifecycle": "a7c4f417faf17959e3165193aa247815954bfa42"
   },
   "product": "ISOLATED_UNIFIED_SOURCE_CANDIDATE",
-  "product_files": 301,
-  "manifest_entries": 300,
-  "manifest_blob": "54fc03f9f775e5d6b7d0aa880cd64b98d8d62145",
-  "source_readback": "300_PATH_SIZE_PASS_18_CHANGED_SHA256_PASS_282_UNCHANGED",
+  "product_files": 309,
+  "manifest_entries": 308,
+  "manifest_blob": "e6c1fa0d9a28241668f94ccac0bcd78becdf01bb",
+  "source_readback": "308_PATH_SIZE_PASS_13_CHANGED_SHA256_PASS_295_UNCHANGED",
   "full_product_sha256": "NOT_RUN",
-  "selected_controls_passed": 66,
+  "selected_controls_passed": 98,
   "full_product_tests": "NOT_RUN",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
@@ -32,13 +32,31 @@
     "memory_model_0196_MA": "41_PASS",
     "lifecycle_0196_L": "26_NEW_79_REGRESSION_10_PG_SKIP_NOT_ADDITIVE",
     "W1_0198_P01": "12 pure helpers PASS",
-    "W1_0198_P02": "24 new +12 rerun pure Node PASS"
+    "W1_0198_P02": "24 new +12 rerun pure Node PASS",
+    "W1_0198_P03": "30 new +36 rerun pure PASS"
   },
-  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P03.json",
-  "next": "W1-0198-P04 A–H: recover exact checkout and execute P02 8 + P03 9 persisted cases; independently scoped active run/lease/clock contract, model/memory reference, canonical task/office projection and UX; Windows deferred.",
+  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P04.json",
+  "next": "W1-0198-P05: reconcile existing P04 and P04-PROGRESS using controlled integration, recover exact backend dependencies and execute 17 fixture tests; then trusted canonical scope/clock/model/ACL/Office; Windows deferred.",
   "previous_pointers": [
-    "handover/history/CURRENT_W1_0198_P02_PRE_P03.json"
+    "handover/history/CURRENT_W1_0198_P03_PRE_P04.json"
   ],
-  "selected_controls_scope": "6 Python pure +60 Node; 30 new +36 rerun; persisted/React NOT_RUN",
-  "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json"
+  "selected_controls_scope": "13 actual SQLite guard +19 new Node +66 pure regression; 17 persisted lifecycle/API and React NOT_RUN",
+  "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json",
+  "variant": "PROGRESS",
+  "w1_milestones": {
+    "method": "equal-weight milestone count (source/helper/parent/integrated/acceptance; not whole-product completion)",
+    "canonical": "progress/W1_0198_MILESTONES.json",
+    "frontend_mirror": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "done": 20,
+    "total": 40,
+    "percent": 50,
+    "accepted": 0,
+    "baseline": "first explicit 40-gate measurement; preserve IDs/titles and denominator unless recorded scope change"
+  },
+  "parallel_collision": {
+    "branch": "integration/w1-0198-p04",
+    "head": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+    "decision": "PRESERVE_BOTH_NO_AUTOMATIC_MERGE",
+    "record": "handover/W1_0198_P04_PARALLEL_COLLISION.json"
+  }
 }
