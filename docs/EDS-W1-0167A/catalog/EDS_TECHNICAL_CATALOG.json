@@ -1,0 +1,132 @@
+{
+  "revision": "EDS-W1-0167A",
+  "classification": "DESIGN_ONLY_NOT_PRODUCT_INTEGRATED",
+  "baseline": {
+    "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+    "branch": "recovery/0167-r11-local-mvp",
+    "source_commit": "f716591be84188d792f8a95ea3995a956208b51d"
+  },
+  "product_changes": 0,
+  "api_changes": 0,
+  "db_changes": 0,
+  "dependency_changes": 0,
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/app/globals.css",
+      "proposed_change": "Merkezi tokenlar, tema, grid, odak, motion",
+      "phase": "EDS-02",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/layout.tsx",
+      "proposed_change": "Tema sağlayıcı ve kök semantik kabuk; server/client sınırı korunur",
+      "phase": "EDS-03",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "proposed_change": "Mevcut state, 13 menü, rol ve kat seçimi korunarak yeni kabuk",
+      "phase": "EDS-03/04",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/MetricsStrip.tsx",
+      "proposed_change": "Null KPI → —; kaynak tazeliği ayrı",
+      "phase": "EDS-04",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx",
+      "proposed_change": "Tenant/world/seq/layout/as_of/epoch/source görünür",
+      "phase": "EDS-04",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "proposed_change": "Kat seçimi, liste, sahne, geometri fallback; JOIN_HOLD korunur",
+      "phase": "EDS-05",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "proposed_change": "Rol/instance ayrımı; mevcut yedi sekme korunur",
+      "phase": "EDS-05",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "proposed_change": "Kadro, olay, karar ve seçili bağlam görünümü",
+      "phase": "EDS-04",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/core-review/CorePreview.tsx",
+      "proposed_change": "Kanonik plan projeksiyonu; görsel katman dispatch etmez",
+      "phase": "EDS-07",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/OfficeScene.tsx",
+      "proposed_change": "Phaser sahnesi; görsel rota/marker ve reduced motion korunur",
+      "phase": "EDS-05",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/geometry.ts",
+      "proposed_change": "Kanonik olmayan geometri; davranış değişikliği yok",
+      "phase": "EDS-05",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/uiCatalog.json",
+      "proposed_change": "13 menü / 4 rol sabit; veri biçimi değişmez",
+      "phase": "EDS-03",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/fixtures/office.snapshot.json",
+      "proposed_change": "Null KPI, dört rezerv istasyon, boş ikinci kat ve otorite bayrakları",
+      "phase": "EDS-04/05",
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/package.json",
+      "proposed_change": "Next/React/Phaser pinleri korunur; yeni bağımlılıklar review sonrası",
+      "phase": "EDS-01",
+      "status": "PROPOSED_NOT_APPLIED"
+    }
+  ],
+  "prototype_symbols": [
+    {
+      "name": "page(k)",
+      "responsibility": "13 menü ve ofis/overview geçişi",
+      "effect": "local DOM only"
+    },
+    {
+      "name": "floor(n)",
+      "responsibility": "iki kavramsal kat, istasyon seçimini sıfırlar",
+      "effect": "local DOM only"
+    },
+    {
+      "name": "selectRole(i)",
+      "responsibility": "rol şablonunu gösterir; instance oluşturmaz",
+      "effect": "local DOM only"
+    },
+    {
+      "name": "resetRole()",
+      "responsibility": "seçili rol görsel bağlamını temizler",
+      "effect": "local DOM only"
+    },
+    {
+      "name": "theme click",
+      "responsibility": "tema tokenları arasında geçiş",
+      "effect": "local DOM only"
+    },
+    {
+      "name": "search input",
+      "responsibility": "yerel menü filtreleme",
+      "effect": "local DOM only"
+    }
+  ],
+  "rollback": "Önizleme ayrı dizin; ürün baseline değişmedi. Gelecekte ayrı commit ve scoped revert; fixtures ve kontratlar korunur."
+}

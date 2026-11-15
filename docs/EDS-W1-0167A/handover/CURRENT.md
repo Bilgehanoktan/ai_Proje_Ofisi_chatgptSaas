@@ -1,0 +1,2 @@
+# EDS-W1-0167A devir kaydı
+Ürün kaynağı: R11 / 0167, `f716591be84188d792f8a95ea3995a956208b51d`. Bu ayrı tasarım paketidir; R12 değildir. 0 ürün dosyası değişti, 0 bağımlılık eklendi, 0 API/DB değişikliği, 0 gerçek test. 13 menülü HTML tasarım önizlemesi, iki tema, dört rol, iki kavramsal kat, tokenlar ve teknik eşleme oluşturuldu. Kaynak olgunluğu puanları değişmedi. Kök ve frontend AGENTS.md gereği yeni ürün kaynak aktarımı/çalıştırma yapılmadı. Tasarım seçimi: teal/slate palet, 16px radius, 180ms motion, orijinal 8×8 kavramsal çizim; onaylı normatif karar değildir.
