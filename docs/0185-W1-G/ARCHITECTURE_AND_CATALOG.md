@@ -1,8 +1,0 @@
-# 0185-W1-G — Finance & SaaS Command Center
-Parent de1196868981989b646ce5ec1ac912ff3e49fcb9; isolated branch integration/0185-w1-abcdefg. Five source changes (four additions, one replacement); 213 manifest entries/214 product files. Existing SaaS ve Finans view mounts FinanceStudio; original catalog remains. D0 model validates exact relevant fixture rows and authority/scope; eight metric values remain null, even if a formatter receives a number. Actual budget, outstanding reservation, authorized balance, cost, revenue, collection, token use and quota unavailable. Historical goals only, no actual economic data or chart. Backend finance_projection.py and reservation_review.py inspected: diagnostic remaining is not authorized remaining. UI references fields, does not consume live endpoint or calculate actual values. No new API, DB, contract, provider, dependency, spend or runtime changes.
-
-## Evidence and maintenance
-12/12 helper tests, strict local compile, 2/2 TSX syntax, 11/11 standalone browser checks PASS. Actual React/Next product browser, build/typecheck and full backend NOT_RUN; Next/React/Phaser absent. Independent acceptance HOLD. UI tabs, labels, card layout and conservative unknown display are presentation decisions. Diagnose using pinned fixture guards and exact status/row matching; any future live financial contract must be separately reviewed. Revert five paths and regenerate destination manifest.
-
-## Parallel branch
-0186 pin 27588d74de0595a6a82855b3477abba4a1c42a2d; cumulative W1 28 paths, 1 content conflict(s). Dashboard requires reconciliation; anchor match true. No merge or write to other branch or main. Next W1-0183H Security & Evidence Center, then W8 full pinned build/browser and joint integration review.

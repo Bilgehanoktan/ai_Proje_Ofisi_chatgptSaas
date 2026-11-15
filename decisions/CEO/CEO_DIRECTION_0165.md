@@ -1,2 +1,0 @@
-# 0165 H01 scope
-User explicitly selected six named work packages, including six R10 source file integration and CEO Dashboard. Interpreted as new isolated source-only exception: six original R10 files plus two UI source changes, manifest and records; five new backend candidates quarantined. No general grant or inherited 0163 permission, no execution or independent acceptance. SQLite staging and static panel are engineering choices; not ratified runtime architecture.

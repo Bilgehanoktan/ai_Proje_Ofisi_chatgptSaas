@@ -1,3 +1,0 @@
-# 0162-B devir — C hazırlık
-Parent e0b42735f993b1bfe93a9f28f015d4f2cf988b1b; product R8 unchanged, 122 source records + manifest. 65 executable tests NOT_RUN; 30 documentary oracle and 20 partial crosswalk rows preserved. C recorded, bounded candidate scope proposed, independent review/authorization kit prepared. No source modifications, grant, signature, independent acceptance, DEV/TEST, main merge. R03 4/5/7 HOLD; R06 0/16 and 0/55; D4/D5 missing. Full 0161 historical ZIP unavailable; Git tree not full archive.
-Next: actual independent authority, scope and NO_CODE reconciliation, PRE/POST conditions, distinct T01; then permitted four-file UI slice and separate backend slices. C direction not asked again. Rollback: previous 0162-A commit, no force push.

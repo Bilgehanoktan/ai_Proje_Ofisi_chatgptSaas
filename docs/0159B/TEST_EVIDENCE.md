@@ -1,2 +1,0 @@
-# 0159-B verification boundary
-Static only: 37 Python files AST parsed, 8 TS/TSX files parsed using TypeScript compiler parser, 9 matching FE/BE JSON pairs. New 12 unittest methods; prior 36, total 48 NOT_RUN. Product imports, build, dependency installation, runtime tests, network/model/tool calls, DB and CI not executed. AST parsing is not a test pass. Reference equality not proof. Historical counters: C 0/24, F0 0/35, F0-F4 0/5, NEG 0/30, UX 0/24, JOB 0/23, R27 66 OPEN, FZ 0/18, H01 0/15, D5 fix 0/12/test 0/18; unchanged, not recertified.

@@ -1,2 +1,0 @@
-# 0187 selected actual tests
-17 Python +24 Node =41 new PASS. 16 fixture/readback tests and one actual existing writer integration test; 20 common vectors and four proxy tests. Actual CLI create/snapshot and loopback 200/503 against CLI-generated DB, stable GET DB hash. Previous 111 tests NOT rerun. Full product ASGI/Next/browser/PG/pinned suites NOT_RUN. Log hashes in releases/GITHUB_READBACK_0187.json; raw logs in local delta.

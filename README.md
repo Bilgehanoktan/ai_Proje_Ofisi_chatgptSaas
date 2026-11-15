@@ -1,3 +1,11 @@
-# AI Company OS — 0167 / R11 local MVP source candidate
+# W1-0198-P05 — immutable fixture recovery transport
 
-142 product files, 141 manifest entries; source integrated, runtime NOT_RUN. [Start here: local MVP preparation](docs/0167/LOCAL_MVP_SETUP.md). [Project index](PROJECT_INDEX.md) · [manifest](product/SOURCE_MANIFEST.json) · [architecture](docs/architecture/DESIGN_MASTER.md) · [technical catalog](catalog/TECHNICAL_CATALOG.md) · [handover](handover/CURRENT.md). Backend/Frontend in product/. No live API join, independent acceptance, actual agent runtime, CI, PROD or main merge. Previous source-only exceptions do not confer runtime grant. Historical root README retained in docs/0167/HISTORICAL_ROOT_README.md.
+TRANSPORT ONLY — NEVER MERGE. This tree is deliberately a minimal 44-file subset of P04, not a replacement product branch. Parent: 4ead00903f34e0226f0ca6475c89aaeacb9de364. All original source files are reused by Git blob identity. No product code changed. The three P05 helper scripts and pinned lock are separate additions.
+
+From the extracted archive root, with an existing Python >=3.10, SQLite >=3.37 and FastAPI installed:
+
+```
+python tests/integration/run_lifecycle_p05.py --source . --report lifecycle-p05-evidence.json
+````
+
+No dependency installation, CI, actual provider call, production or real PostgreSQL. Runs only P02 8 and P03 9 selected SQLite fixture/direct API handler cases; report PASS only if all 17 run and pass without skips. Package prepared on GitHub; actual 17 cases NOT_RUN in the current environment due local source transfer blocker. No guarantee of successful run before evidence. Full P04 and later product branches remain separate.

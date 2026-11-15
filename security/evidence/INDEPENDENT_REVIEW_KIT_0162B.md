@@ -1,5 +1,0 @@
-# 0162-B bağımsız inceleme hazırlığı (gerçek kabul değil)
-PRE: gerçek reviewer kimliği/rolü ve yetki dayanağı, COI/SoD, ayrı admin/recovery custody; NO_CODE uyuşmazlığı ve R8 pinleri; ilk dört UI dosyası önerisi, backend dilimleri ayrı; PRE/POST kesin sırası ve T01 koşulları yetkili makamca teyit edilir. Kapsam, süre, revoke ve gerçek receipt; taklit imza yok.
-POST (ileride): yetkili kapsam vs diff, exact source hash, API/schema/dependency değişimi, statik/gerçek test ayrımı, rollback ve bağımsız readback; HOLD/INCONCLUSIVE fail closed.
-DEV/TEST hazırlığı: izole çalışma kopyası, sentetik fixtures, ağ/egress kapalı, gerçek secret yok, least privilege, ayrı çalışma dizini, revoke, kanıt saklama. Gerçek test komutları yalnız ayrı izin sonrası; CI otomatik etkin değil. Gerçek owner/reviewer ve grant alanları boş.
-Yeni karar: dar kaynak adayı kapsamını yetkili normatif incelemeye sunma; gerçek bağımsız makam kim/rol. C yönü tekrar istenmez. Kullanıcı tek başına bağımsız kabul yerine geçmez.

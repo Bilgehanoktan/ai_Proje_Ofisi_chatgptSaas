@@ -1,2 +1,0 @@
-# 0174
-CEO standing approval recorded; two product AGENTS policy files changed, manifest updated with SHA-256 and byte count independently computed locally and Git blob SHA-1 matched. No runtime source promotion. Independent PRE/T01 remains open. Full archive and product tests not performed. Next exact EDS integration review and isolated local build after obtaining pinned tree. Rollback to 0173 retains historical policy; do not erase CEO decision.

@@ -1,2 +1,0 @@
-# Kontrollü geçiş — 0160
-Tamamlandı: kök düzen, katalog, devir, backend 16 core + API, frontend 5 modül + 2 bileşen, 9 sözleşme pin çifti, sistem test ve altyapı sorumluluk dizinleri. 22 yol haritası catalog/RELOCATION_MAP_0160.json. Bekleyen: runtime import/ASGI/Next build ve test, frontend alt rotalar ve stateful panel ayrımı, CSS token ayrımı, R06 şema owner, R03 fiziksel eşleme, bağımsız IV ve gerçek altyapı. Bunlar klasör taşıma ile otomatik kabul edilmez.

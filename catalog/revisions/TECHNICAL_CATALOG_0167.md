@@ -1,2 +1,0 @@
-# 0167 technical delta
-9 exact promoted files; symbol and dependency details remain in 0165 and 0166 catalogs. New helpers `scripts/verify_product.py` (`git_blob`, `verify`, `main`; stdlib) and `scripts/Prepare-Local.ps1` (read-only Python wrapper). No API, canonical DB, event or dependency version changes. 134 product test candidates, 24 quarantined, all NOT_RUN. Four standalone helper fixture checks passed; no product test.
