@@ -22,7 +22,7 @@ def _check_context(cursor):
     return tuple(row)
 
 
-def read_plan_snapshot(connect, plan, expected_revision, pins, *, exclusive_budget_anchors=None):
+def read_plan_snapshot(connect, plan, expected_revision, pins, *, exclusive_budget_anchors=None, require_terminal_anchors=False):
     """Return historical sample evidence only after clean rollback and close.
 
     Never commit, retry, switch to a weaker isolation level, reuse an open
@@ -33,6 +33,7 @@ def read_plan_snapshot(connect, plan, expected_revision, pins, *, exclusive_budg
     result = PlanHistoryReview('D0_PG_SNAPSHOT_HOLD')
     db = None
     try:
+        if type(require_terminal_anchors) is not bool: raise ValueError("D0_ANCHOR_MODE_HOLD")
         db = connect()
         # psycopg TransactionStatus.IDLE == 0; unknown status fails closed.
         status = db.info.transaction_status
@@ -45,6 +46,9 @@ def read_plan_snapshot(connect, plan, expected_revision, pins, *, exclusive_budg
             before = _check_context(cursor)
             reviewed = inspect_plan_history(cursor, plan, expected_revision, pins,
                                             exclusive_budget_anchors=exclusive_budget_anchors)
+            if require_terminal_anchors and reviewed.structural_match:
+                from app.core.event_store.terminal_anchor import verify_plan_anchors
+                verify_plan_anchors(cursor, expected_revision, pins)
             if _check_context(cursor) != before:
                 raise ValueError('D0_PG_SNAPSHOT_CONTEXT_CHANGED')
         result = reviewed

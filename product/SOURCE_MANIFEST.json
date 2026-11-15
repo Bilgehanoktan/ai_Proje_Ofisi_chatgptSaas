@@ -1,10 +1,10 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0202-S",
-  "status": "ISOLATED_D0_SIGNED_CHECKPOINT_TESTED_SNAPSHOT_MOCK_ONLY",
+  "doc_revision": "0203-T",
+  "status": "ISOLATED_D0_TERMINAL_ANCHOR_SQLITE_TESTED_FULL_LIFECYCLE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f6bf82ed85335d9189b6161dbb0d983b07d70b40",
-  "source_git_commit": "c69a8394e75dca1d16ad04585a3c1dc375109733",
+  "parent_git_commit": "d6c27d5f3ce9ff29cdf42108510a21c277006ebd",
+  "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
       "bytes": 70327,
@@ -983,8 +983,8 @@
       "sha256": "adb6e42cc994d90ff90ecfb74527f36cee22a43867abd830c579067744e92e79"
     },
     "ai-company-os-backend/app/core/event_store/postgres_snapshot.py": {
-      "bytes": 3042,
-      "sha256": "5e8dea18d478499875adf0000243705968c4930af1752261ff66a77cda21425a"
+      "bytes": 3394,
+      "sha256": "63cdda83e4b6430278a020bd2728b0a65e192bf01cc487f4e98917f207969b65"
     },
     "ai-company-os-backend/tests/test_postgres_snapshot_0200.py": {
       "bytes": 4899,
@@ -995,8 +995,8 @@
       "sha256": "c586b85edd27ec86976659b917f8e5132e6e4efae385e5a86d143cb8deeda3c3"
     },
     "ai-company-os-backend/app/core/event_store/retained_history.py": {
-      "bytes": 8238,
-      "sha256": "4251703080dceac583517c91bd55f41aa142cd861705211d9675717c064419d3"
+      "bytes": 8523,
+      "sha256": "86835d29aab941370a914518c892d91d4ba8b3742ff8772698e56b009b8b07a0"
     },
     "ai-company-os-backend/tests/test_retained_history_0201.py": {
       "bytes": 3815,
@@ -1007,8 +1007,8 @@
       "sha256": "f8aa59af6f79868078b41d570f6a7bae00952b85550dc948159bb531f0f3c8e9"
     },
     "ai-company-os-backend/app/core/event_store/signed_history.py": {
-      "bytes": 7648,
-      "sha256": "88dd8b3bf522e0b1260a01f24c013fbd56a303a67421205ead87065f469ce5c9"
+      "bytes": 8011,
+      "sha256": "8aed120d971f3fe3e33e93d3c8e521ed90a7b397314f1fb6f0c0a80dabb439f5"
     },
     "ai-company-os-backend/tests/test_signed_history_0202.py": {
       "bytes": 7211,
@@ -1017,8 +1017,20 @@
     "ai-company-os-backend/requirements-history-signatures.txt": {
       "bytes": 120,
       "sha256": "a2b52ebff7bc0ae138ca5cc06dc483826e5ec245fb506c76d01411a9beccd020"
+    },
+    "ai-company-os-backend/app/core/event_store/terminal_anchor.py": {
+      "bytes": 7640,
+      "sha256": "7b4767f61e78d256750ec82364a0a2fbc6d0c1dc21a874709764df4c174471ff"
+    },
+    "ai-company-os-backend/tests/test_terminal_anchor_0203.py": {
+      "bytes": 7611,
+      "sha256": "ffeef3d5bc67d4a75ce4c42fddfa533dac23ee36eb7a55efdfd28f5637dc6694"
+    },
+    "ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py": {
+      "bytes": 6939,
+      "sha256": "af69858bd268938c77ec1477f46c4b52d6b5c783ef80ead8ecf22179d08bd5a2"
     }
   },
-  "parent_source_manifest_blob": "2adbfc24895c4389c2570c71c5113276b8f52a63",
-  "source_git_commit_note": "Three new paths; 250 prior entries retained. Local exact delta bytes verified by blob IDs. No full tree byte readback."
+  "parent_source_manifest_blob": "9c69b0fb776f97efecba210abb20a7cb8b87b147",
+  "source_git_commit_note": "Source and manifest in same commit; see handover/CURRENT.json for commit pin. 250 unchanged prior product manifest entries, 3 replaced, 3 added. Root DDL separately recorded."
 }

@@ -73,6 +73,7 @@ class SignedReview:
     reason: str
     signature_match: bool = False
     history: object = None
+    atomic_anchor_match: bool = False
     decision: str = field(default='HOLD', init=False)
     independent_verified: bool = field(default=False, init=False)
     dispatch_allowed: bool = field(default=False, init=False)
@@ -144,8 +145,10 @@ def verify_checkpoint(c, pin, public_key, signature, terminal_signatures, now):
 
 
 def review_signed_snapshot(store, connect, plan, revision, pins, checkpoint, external_pin,
-                           public_key, signature, terminal_signatures, now, *, anchors=None):
+                           public_key, signature, terminal_signatures, now, *, anchors=None, require_terminal_anchors=False):
     """Require signed latest pin plus existing exact history; no success or replay permission."""
+    if type(require_terminal_anchors) is not bool:
+        return SignedReview("D0_ANCHOR_MODE_HOLD")
     check = verify_checkpoint(checkpoint,external_pin,public_key,signature,terminal_signatures,now)
     if not check.signature_match:
         return check
@@ -157,11 +160,12 @@ def review_signed_snapshot(store, connect, plan, revision, pins, checkpoint, ext
         if not all(_token(v) for v in principals) or not principals.issubset(external_pin.excluded_principals):
             return SignedReview('D0_SIGNED_PRINCIPAL_SET_HOLD')
         refs = tuple((c.run_id,c.command_sha) for c in checkpoint.terminal_claims)
+        mode = {"require_terminal_anchors": True} if require_terminal_anchors else {}
         result = review_retained_snapshot(store,connect,plan,revision,pins,checkpoint.history_sha,
-                                          anchors=anchors,terminal_refs=refs)
+                                          anchors=anchors,terminal_refs=refs,**mode)
         expected = tuple((c.run_id,c.command_sha,c.transaction_ref) for c in checkpoint.terminal_claims)
-        if not result.reference_match or result.failure_commands != expected or result.history is None:
+        if not result.reference_match or result.failure_commands != expected or result.history is None or (require_terminal_anchors and result.atomic_anchor_match is not True):
             return SignedReview('D0_SIGNED_READBACK_HOLD')
-        return SignedReview('D0_SIGNED_READBACK_MATCH_ONLY',True,result.history)
+        return SignedReview('D0_SIGNED_READBACK_MATCH_ONLY',True,result.history,require_terminal_anchors)
     except Exception:
         return SignedReview('D0_SIGNED_READBACK_HOLD')

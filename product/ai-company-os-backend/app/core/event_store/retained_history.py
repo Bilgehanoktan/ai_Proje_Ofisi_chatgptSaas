@@ -113,15 +113,17 @@ class RetainedReview:
     history: object = None
     failure_commands: tuple = ()
     reference_match: bool = False
+    atomic_anchor_match: bool = False
     decision: str = field(default='HOLD', init=False)
     independent_verified: bool = field(default=False, init=False)
     dispatch_allowed: bool = field(default=False, init=False)
     release_ready: bool = field(default=False, init=False)
 
 
-def review_retained_snapshot(store, connect, plan, revision, pins, expected, *, anchors=None, terminal_refs=()):
+def review_retained_snapshot(store, connect, plan, revision, pins, expected, *, anchors=None, terminal_refs=(), require_terminal_anchors=False):
     """Caller supplies separately retained expected digests. Never mint trust from the archive."""
     try:
+        if type(require_terminal_anchors) is not bool: raise ValueError("D0_ANCHOR_MODE_HOLD")
         from app.core.event_store.postgres_snapshot import read_plan_snapshot
         from app.core.event_store.history_readback import LifecyclePin
         from app.core.transaction.postgres_lifecycle_mapping import FAILURE
@@ -147,8 +149,9 @@ def review_retained_snapshot(store, connect, plan, revision, pins, expected, *, 
         expected_failures = tuple(sorted((r, k) for r, k, _ in failures))
         if type(terminal_refs) is not tuple or terminal_refs != expected_failures:
             raise ValueError('D0_TERMINAL_EXTERNAL_PIN_HOLD')
-        review = read_plan_snapshot(connect, plan, revision, pins, exclusive_budget_anchors=anchors)
+        mode = {"require_terminal_anchors": True} if require_terminal_anchors else {}
+        review = read_plan_snapshot(connect, plan, revision, pins, exclusive_budget_anchors=anchors, **mode)
         if not review.structural_match: return RetainedReview('D0_RETAINED_READBACK_HOLD')
-        return RetainedReview('D0_RETAINED_REFERENCE_MATCH_ONLY', review, tuple(sorted(failures)), True)
+        return RetainedReview('D0_RETAINED_REFERENCE_MATCH_ONLY', review, tuple(sorted(failures)), True, require_terminal_anchors)
     except Exception:
         return RetainedReview('D0_RETAINED_REFERENCE_HOLD')
