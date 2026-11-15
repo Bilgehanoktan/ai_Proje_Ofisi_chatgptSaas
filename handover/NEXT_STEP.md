@@ -115,3 +115,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0196-L → parallel integration review
 [Detailed next step](NEXT_STEP_0196_L.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0196_L.json). No automatic merge. Actual PG, true admission/lease/PEP/W-A/IV and full pinned suite remain open.
+
+## 0198-E next
+[Detailed next step](NEXT_STEP_0198_E.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0198_E.json). Coordinate lifecycle/history integration with active unified branch; real PG, R03 and trust remain open.

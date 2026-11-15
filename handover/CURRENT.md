@@ -90,3 +90,6 @@ Source 1456df0cc18f78d9b98c611c84af0fb911e0587b; 238 product files, 237 manifest
 
 ## 0196-L — separate lifecycle workstream
 Source 3fbea3977e0a9eb87f1a3a551acbd3558c7bdbe9; 241 product files, 240 manifest entries, 237 prior non-manifest blobs unchanged. 26 new + 79 regressions PASS; 10 opt-in PG skipped. D0 first claim→ordinary→renew→VERIFYING→FAILED tested, zero-cost sample release only. Actual PG/full suite/build/browser NOT_RUN; R03, true authority and IV HOLD. [Architecture](../docs/0196L/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0196_L.json). [Parallel checkpoint](PARALLEL_CHECKPOINT_0196_L.json); memory/model branch not merged. Next [integration review](NEXT_STEP_0196_L.md).
+
+## 0198-E — separate Event Store history workstream
+Source 0dd841e8cb17116320b5db2bdebfd8e400b9fdd9; 243 product files, 242 manifest entries, 240 prior non-manifest blobs unchanged. 22 new + 105 regressions PASS; 10 opt-in PG skipped. Exact D0 per-run pinned history and internal Office projection. Actual PG/full suite/build/browser NOT_RUN; R03, true authority and IV HOLD. [Architecture](../docs/0198E/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0198_E.json) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0198_E.json). Unified not merged. [Next](NEXT_STEP_0198_E.md).

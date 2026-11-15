@@ -108,3 +108,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0196-L — admission-bound ordinary transitions / lease renewal / D0 failure settlement
 [Addendum](../0196L/ARCHITECTURE_AND_CATALOG.md). No new normative mapping or real authority; separate memory/model workstream remains unmerged.
+
+## 0198-E — complete pinned D0 history readback
+[Addendum](../0198E/ARCHITECTURE_AND_CATALOG.md). Internal historical Office projection only; no shared schema, normative mapping or real authority change.
