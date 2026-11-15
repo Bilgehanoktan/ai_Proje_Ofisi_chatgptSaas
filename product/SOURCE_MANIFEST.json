@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0203-T",
-  "status": "ISOLATED_D0_TERMINAL_ANCHOR_SQLITE_TESTED_FULL_LIFECYCLE_NOT_RUN",
+  "doc_revision": "0204-C",
+  "status": "D0_COMPANY_COORDINATION_REPLAY_SQLITE_TESTED_T1_DECORATOR_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "d6c27d5f3ce9ff29cdf42108510a21c277006ebd",
+  "parent_git_commit": "76c110fdef1d35a86e09609920be67210caee741",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1029,8 +1029,16 @@
     "ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py": {
       "bytes": 6939,
       "sha256": "af69858bd268938c77ec1477f46c4b52d6b5c783ef80ead8ecf22179d08bd5a2"
+    },
+    "ai-company-os-backend/app/core/event_store/company_coordination.py": {
+      "bytes": 16755,
+      "sha256": "2a903ae65205575d1c90cea07465aaa6cbe3ba881aa11529358f2d2b85a2fe99"
+    },
+    "ai-company-os-backend/tests/test_company_coordination_0204.py": {
+      "bytes": 15264,
+      "sha256": "49ddaea03aa86f98ec39e92005c3dbbc1c1846653508288a1dab3257f869e938"
     }
   },
-  "parent_source_manifest_blob": "9c69b0fb776f97efecba210abb20a7cb8b87b147",
-  "source_git_commit_note": "Source and manifest in same commit; see handover/CURRENT.json for commit pin. 250 unchanged prior product manifest entries, 3 replaced, 3 added. Root DDL separately recorded."
+  "parent_source_manifest_blob": "7b07aa66ad060401381808d6d3677d41679c6338",
+  "source_git_commit_note": "Same-commit source and manifest. 256 prior entries retained; 2 added; root candidate DDL tracked separately."
 }
