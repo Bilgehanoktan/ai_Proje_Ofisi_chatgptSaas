@@ -1,16 +1,16 @@
 # W1-0198 A–H — parallel application plan
 
-P03 source baseline: f58cf95402b06daddfc3b7ec067533451772eb8f. A–H IDs preserved; Windows deferred. One isolated integration branch, logical path ownership; P01/P02 history retained.
+P04 source baseline: 7aea3fdf243f97c8b4c33290b72d2be5be22737f. A–H IDs preserved; Windows deferred. One isolated integration branch, logical path ownership; P01–P03 history retained.
 
-| Track | Scope | P03 result | Next |
+| Track | Scope | P04 result | Next |
 |---|---|---|---|
-| W1-0198-A | Birleşik UI ve backend regresyonu | 6 Python pure contract tests + 23 new cross-language parser tests + 1 new registry negative case + 36 prior Node regressions PASS; nine persisted fixture/API cases and browser scenario prepared; full checkout DNS blocked | Obtain exact full source and run P02 eight + P03 nine persisted cases, then pinned full suite/build/browser; Windows deferred |
-| W1-0198-B | Merkezi frontend veri bağlantı katmanı | Seventh typed endpoint, fixed four-prefix scope and revision, strict phase/lease/budget/freshness contract; existing transport retained | Prove persisted API parity, React lifecycle; independently sourced freshness and generic scope envelope remain open |
-| W1-0198-C | CEO Dashboard veri entegrasyonu | CEO panel displays separate historical ADMITTED/RUNNING/renewal/VERIFYING sample, not KPI | Actual React readback and canonical operational projection after proof |
-| W1-0198-D | Agent Runtime ve Office Engine bağlantısı | Fixed prefix reader checks scoped run head, lease, immutable admission, exact mutation/event/outbox/fence/audit and budget; office panel clears on floor change | Run persisted fixture tests; trusted clock, canonical active run/placement and geometry binding remain HOLD |
-| W1-0198-E | Görev ve Workflow Studio entegrasyonu | Workflow reads versioned timeline in separate fixed plan; no mapping to existing DAG | Prove shared plan identity, task/run lineage and causal projection |
-| W1-0198-F | Memory ve Model Gateway ekranları | Capability screen shows historical lease, reservation and model/ACL HOLD; no real binding or retrieval | Trusted active reference, reservation ledger, independent ACL/tombstone/W-A and provider authorization remain separate |
-| W1-0198-G | Finans ve güvenlik projeksiyonları | Finance/security expose exact historical reservation and fence/epoch-bound readback; separate from P02 terminal sample, no aggregation | Persisted sample validation, independent security evidence and actual ledger mapping |
-| W1-0198-H | Görsel kalite ve kullanıcı deneyimi | Responsive accessible description list; separate readbacks labelled; browser floor reset scenario prepared | Run visual and accessibility checks on built product, light/dark/mobile |
+| W1-0198-A | Birleşik UI ve backend regresyonu | 14 actual disposable SQLite boundary tests +14 session/join helper tests +2 terminal immutability tests +14 terminal regression tests PASS (30 new,14 rerun); P02/P03 persisted cases not run | Materialize exact backend dependency closure and candidate DDL, execute P02 eight/P03 nine; no new demo fixture before those run; then full pinned build/browser, Windows deferred |
+| W1-0198-B | Merkezi frontend veri bağlantı katmanı | Reader ownership token replaces key-only state, prevents A-B-A revival; deep-frozen terminal fixture and isolated parsed copy | React hook/browser regression, all seven endpoints parity, independent freshness proof |
+| W1-0198-C | CEO Dashboard veri entegrasyonu | Existing CEO lifecycle panels show explicit plan/DAG mismatch reason instead of implying shared state | Canonical scoped CEO projection only after persisted and trust proof |
+| W1-0198-D | Agent Runtime ve Office Engine bağlantısı | Both readers use a single read-only SQLite snapshot, approved tables, schema checks, authorizer, sidecar and unique head checks; terminal panel resets by floor | Actual 17 fixture tests and canonical active-run/clock/placement contract; no live join |
+| W1-0198-E | Görev ve Workflow Studio entegrasyonu | Compare checked-in plan identity vs historical sample scope, revision, task membership, company and run binding; every outcome HOLD | Use independently sourced plan/task/run lineage and causal evidence; no DAG state mutation |
+| W1-0198-F | Memory ve Model Gateway ekranları | Capability panel inherits scope mismatch and lease UNKNOWN; no new model invocation or memory read | Independent active lease/clock, reservation ledger, model input registry and ACL/tombstone/W-A provenance |
+| W1-0198-G | Finans ve güvenlik projeksiyonları | Finance/security use hardened read-only boundary; no extra cost/authority inference or shared mutable terminal expected data | Persisted settlement validation, independent security receipts and canonical ledger; no real money |
+| W1-0198-H | Görsel kalite ve kullanıcı deneyimi | Explicit join reason, no misleading live colors; both office panel instances reset by floor | Built light/dark/mobile visual/accessibility and interaction regression |
 
-Historical prefix and terminal are independent sample files, never joined as a current state. No new authority. Source, helper tests and persisted/UI acceptance tracked separately.
+Do not create another historical demo API to bypass outstanding fixture evidence. Independent acceptance and actual PostgreSQL remain HOLD/NOT_RUN.

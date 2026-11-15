@@ -1,19 +1,19 @@
 {
-  "revision": "W1-0198-P03",
-  "branch": "integration/w1-0198-p03",
-  "source_commit": "f58cf95402b06daddfc3b7ec067533451772eb8f",
-  "parent_commit": "37edf7b3952435e1234ee30415615219f6eb4458",
+  "revision": "W1-0198-P04",
+  "branch": "integration/w1-0198-p04",
+  "source_commit": "7aea3fdf243f97c8b4c33290b72d2be5be22737f",
+  "parent_commit": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
   "integration_parents": {
     "unified": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
     "lifecycle": "a7c4f417faf17959e3165193aa247815954bfa42"
   },
   "product": "ISOLATED_UNIFIED_SOURCE_CANDIDATE",
-  "product_files": 301,
-  "manifest_entries": 300,
-  "manifest_blob": "54fc03f9f775e5d6b7d0aa880cd64b98d8d62145",
-  "source_readback": "300_PATH_SIZE_PASS_18_CHANGED_SHA256_PASS_282_UNCHANGED",
+  "product_files": 306,
+  "manifest_entries": 305,
+  "manifest_blob": "f9701fb7caa0fbe26e927823c70c7a9e257de310",
+  "source_readback": "305_PATH_SIZE_PASS_14_CHANGED_SHA256_PASS_291_UNCHANGED",
   "full_product_sha256": "NOT_RUN",
-  "selected_controls_passed": 66,
+  "selected_controls_passed": 44,
   "full_product_tests": "NOT_RUN",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
@@ -32,13 +32,29 @@
     "memory_model_0196_MA": "41_PASS",
     "lifecycle_0196_L": "26_NEW_79_REGRESSION_10_PG_SKIP_NOT_ADDITIVE",
     "W1_0198_P01": "12 pure helpers PASS",
-    "W1_0198_P02": "24 new +12 rerun pure Node PASS"
+    "W1_0198_P02": "24 new +12 rerun pure Node PASS",
+    "W1_0198_P03": "30 new +36 rerun pure tests PASS"
   },
-  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P03.json",
-  "next": "W1-0198-P04 A–H: recover exact checkout and execute P02 8 + P03 9 persisted cases; independently scoped active run/lease/clock contract, model/memory reference, canonical task/office projection and UX; Windows deferred.",
+  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P04.json",
+  "next": "W1-0198-P05 A–H: recover exact backend dependency closure and execute P02 8 + P03 9 persisted tests before new historical API; then scope/current clock/lease/model/ACL and canonical Office/DAG only after proof. Windows deferred.",
   "previous_pointers": [
-    "handover/history/CURRENT_W1_0198_P02_PRE_P03.json"
+    "handover/history/CURRENT_W1_0198_P03_PRE_P04.json"
   ],
-  "selected_controls_scope": "6 Python pure +60 Node; 30 new +36 rerun; persisted/React NOT_RUN",
-  "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json"
+  "selected_controls_scope": "14 SQLite boundary +30 Node; 30 new +14 rerun; 17 actual persisted tests NOT_RUN",
+  "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json",
+  "maturity_summary": {
+    "method": "equal-weight descriptive mean of existing ordinal estimates, not completion/ETA; no combined score",
+    "areas": 24,
+    "design_points": 1725,
+    "source_points": 825,
+    "max_points": 2400,
+    "design_mean_pct": 71.875,
+    "source_mean_pct": 34.375,
+    "source_positive": 23,
+    "source_positive_pct": 95.83333333333334,
+    "partial_integrated": 18,
+    "accepted": 0,
+    "delta_design_pct": 0,
+    "delta_source_pct": 0
+  }
 }

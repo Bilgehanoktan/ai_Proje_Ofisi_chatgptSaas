@@ -137,3 +137,6 @@ Preserve A–H. A execute exact persisted fixture tests and React acceptance whe
 
 ## W1-0198-P04 — current next
 Preserve A–H. A recover exact full source and execute P02 eight + P03 nine persisted cases, then full pinned tests and React/browser; Windows deferred. B/C/D/E/G generalize scope, independent current clock/lease/reservation and causal projection only after evidence; no join between historical files or geometry. F trusted model and memory references; no real content/provider/authority. H visual/accessibility. Fresh reviewed stage later. No new grant, CI/main/PROD or independent acceptance.
+
+## W1-0198-P05 — current next
+Preserve A–H. A recover exact backend dependency closure + candidate DDL and execute existing P02 eight/P03 nine persisted tests before adding more historical endpoints. Report exact PASS/FAIL/NOT_RUN and fix discrepancies; then full pinned React/build/browser in fresh reviewed stage, Windows deferred. B–G current scope, independent clock/lease/ledger and model/ACL/W-A contracts only after actual evidence; no historical or geometry join. H visual/accessibility. Recompute equal-weight maturity from 24 canonical tracker rows each round; do not inflate scores. No new grant, CI/main/PROD or independent acceptance.
