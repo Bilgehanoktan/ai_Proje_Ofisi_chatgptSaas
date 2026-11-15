@@ -50,3 +50,7 @@
 
 ## 0178 — W1 EDS fix and W8 preflight
 [Addendum](../0178/ARCHITECTURE_AND_CATALOG.md). No normative change.
+
+
+## 0179 — EDS integration PRE
+[Exact scope and gate boundary](../0179/INTEGRATION_PRE.md). No product promotion or normative change.

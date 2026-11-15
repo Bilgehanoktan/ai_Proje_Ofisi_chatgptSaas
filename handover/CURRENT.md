@@ -32,3 +32,7 @@ Remote readback: 13/13 candidate blobs match source commit 4ad5739c7373e88785f19
 47-file isolated frontend; 1 addition, 2 modifications versus 0177. 8 presentation helper + 12 preflight helper tests PASS (standalone, not product). 24-area scores unchanged; no product promotion. PRE/T01/T06 HOLD, actual local archive/build/browser/product tests NOT_RUN. [Details](../docs/0178/ARCHITECTURE_AND_CATALOG.md). Next obtain exact archive, independent scope and locks, then product smoke/build; no repeated user permission request.
 
 Remote readback 0178: 6/6 changed code/test blobs match; exact 47-entry candidate manifest and TRACK-0178 verified. [Report](../releases/GITHUB_READBACK_0178.json). Source commit 8f6dbf60645b16530a07fbbcdc254e099f2b6ec7.
+
+
+## 0179 — exact EDS product integration scope
+User explicitly requested integration; CEO-0174 standing scope unchanged. Cumulative 14 paths (8 additions, 6 replacements, 0 deletions), 33 frontend files unchanged. 149-entry proposed manifest only, actual 141 unchanged. 14 candidate blobs read back, UTF-8 bytes and SHA-256 recorded. PRE/T01/T06 independent HOLD; no promotion, runtime, build, or product tests. [Exact scope](../security/policy/INTEGRATION_SCOPE_PROPOSAL_0179.json) · [Review](../docs/0179/INTEGRATION_PRE.md). Next: genuine independent receipt(s) for exact scope, applicable T01/T06; then bounded product write, manifest verification, POST and isolated build/tests.

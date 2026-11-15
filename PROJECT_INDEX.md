@@ -38,3 +38,6 @@
 
 
 - [0178 EDS candidate and preflight](docs/0178/ARCHITECTURE_AND_CATALOG.md)
+
+
+- [0179 exact EDS PRE scope](docs/0179/INTEGRATION_PRE.md) — no promotion.
