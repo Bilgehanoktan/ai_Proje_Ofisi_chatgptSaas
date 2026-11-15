@@ -78,3 +78,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
  
 ## 0188-W8-S1
 [Security candidate architecture](docs/0188-W8-S1/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8_S1.json) · [Readback](releases/GITHUB_READBACK_0188_W8_S1.json). Prior Windows lock rejected; new pins and 9 runner tests, full build open.
+
+## 0188-W8-S2
+[Architecture](docs/0188-W8-S2/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0188_W8_S2.json) · [Readback](releases/GITHUB_READBACK_0188_W8_S2.json)

@@ -1,8 +1,8 @@
 {
-  "id": "TRACK-0188-W8-S1",
-  "baseline": "TRACK-0188-W8",
+  "id": "TRACK-0188-W8-S2",
+  "baseline": "TRACK-0188-W8-S1",
   "tarih": "2026-11-15",
-  "status": "D0_DEPENDENCY_PATCH_CANDIDATE_LOCK_AUDIT_OPEN",
+  "status": "D0_WINDOWS_REGRESSION_FIX_CANDIDATE_TEST_BUILD_OPEN",
   "rubric": {
     "tasarim": {
       "0": "yok",
@@ -527,10 +527,10 @@
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "249/249 old source user audit and 14 pairs PASS; old npm audit 3 vulnerable packages (39 advisory objects), old lock rejected. New 2 product pins and 2 runner paths; 9/9 offline runner checks PASS. New lock/security review/full install/build/browser NOT_RUN; independent HOLD. Scores unchanged. Windows S1 source 249/249, 14 shared pairs; new locks 61 npm and 25 Python metadata checked, zero reported known vulnerabilities; isolated install pending.",
+  "note": "249/249 old source user audit and 14 pairs PASS; old npm audit 3 vulnerable packages (39 advisory objects), old lock rejected. New 2 product pins and 2 runner paths; 9/9 offline runner checks PASS. New lock/security review/full install/build/browser NOT_RUN; independent HOLD. Scores unchanged. Windows S1 source 249/249, 14 shared pairs; new locks 61 npm and 25 Python metadata checked, zero reported known vulnerabilities; isolated install pending. S1 Windows install PASS; Node 180 PASS/1 skip; Python 258/263 PASS (1 fail, 4 errors). S2 fixes five test files, adds two tests; no runtime changes. New regression/build NOT_RUN.",
   "integration_tracking": {
-    "scope": "0188-W8-S1 dependency security candidate",
-    "source_commit": "4144b7593bb901f866f016e6c342312244e9d2bb",
+    "scope": "0188-W8-S2",
+    "source_commit": "e3970146bf73f02ccdec5c663f240dbbee7fa46e",
     "source_delta": 2,
     "added": 0,
     "replaced": 2,
@@ -545,13 +545,20 @@
     "full_next_build": "NOT_RUN",
     "current_next_browser": "NOT_RUN",
     "independent_acceptance": "HOLD",
-    "prior_tracking": "progress/history/TRACK_0188_W8_PRE_S1.json",
+    "prior_tracking": "progress/history/TRACK_0188_W8_S1_PRE_S2.json",
     "recovery_tracking": "progress/history/TRACK_0188_RECOVERY_PRE_W8.json",
     "manifest_update": 1,
     "old_npm_vulnerable_packages": 3,
     "old_npm_advisory_objects": 39,
     "new_npm_audit": "USER_REPORTED_0_METADATA_CHECKED",
     "new_python_audit": "USER_REPORTED_0_25_VERSION_MATCH",
-    "dependency_review": "REVIEWED_FOR_D0_INSTALL_ONLY"
+    "dependency_review": "REVIEWED_FOR_D0_INSTALL_ONLY",
+    "previous_windows_install": "PASS",
+    "previous_windows_node_pass": 180,
+    "previous_windows_node_skip": 1,
+    "previous_windows_python_pass": 258,
+    "previous_windows_python_fail": 1,
+    "previous_windows_python_errors": 4,
+    "current_full_tests": "NOT_RUN"
   }
 }

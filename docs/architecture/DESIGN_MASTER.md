@@ -93,3 +93,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0188-W8-S1 — dependency pin candidates
 [Scope and maintenance](../0188-W8-S1/ARCHITECTURE_AND_CATALOG.md). No API/DB or normative authority changes. New lock/audit/install/build open.
+
+## 0188-W8-S2
+[Windows regression repair candidate](../0188-W8-S2/ARCHITECTURE_AND_CATALOG.md). No normative changes.
