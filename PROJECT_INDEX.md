@@ -105,3 +105,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0201-R — retained history references (separate workstream)
 [Architecture](docs/0201R/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0201_R.json) · [Evidence](releases/GITHUB_READBACK_0201_R.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0201_R.json). 14 new archive tests PASS; 5 integration and 13 PG NOT_RUN; prior 164 PASS not rerun. No independent acceptance.
+
+## 0202-S — signed retained history (separate workstream)
+[Architecture](docs/0202S/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0202_S.json) · [Evidence](releases/GITHUB_READBACK_0202_S.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0202_S.json). 39 selected PASS (25 new, 14 rerun); five prior integration and 13 actual PG NOT_RUN; IV/R03 HOLD.
