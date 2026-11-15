@@ -76,3 +76,6 @@ W1/W8: clean pinned dependency install/locks, full backend and current Next buil
 
 ## 0183 → 0184
 P0 resolve approved dependency network/locks, full pinned backend and current Next build/browser incl lifecycle viewer. P0 R03 mapping plus PostgreSQL test with non-owner role; T1 admission/budget/witness/outbox claim and UNKNOWN, trusted lease/heartbeat. P1 typed provider adapter boundary and tenant ownership/settlement. Keep actual grants, independent acceptance, CI, PROD, spend and main merge HOLD. Do not ask again for standing owner development approval.
+
+## 0184 → 0185
+P0 approved dependency network/locks, full backend and actual Next build/browser incl lifecycle/Outbox. Register formal shared readback schema and parity. P0 R03 physical owner mapping, PostgreSQL non-owner tests, canonical admission/budget/lease/clock/witness/outbox/UNKNOWN. P1 typed provider adapter using existing registry/fallback (disabled egress), tenant ownership/settlement. No actual grants, independent acceptance, CI, spend, main or PROD; standing owner permission already recorded.

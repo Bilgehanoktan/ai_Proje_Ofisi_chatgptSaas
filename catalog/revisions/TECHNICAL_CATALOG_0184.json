@@ -1,0 +1,210 @@
+{
+  "revision": "0184",
+  "parent_commit": "02e94c07fa8b56668b322184b95f1af2f3e76123",
+  "source_commit": "5d93a09b5e99dcbafc7066f3a140c63d1c09d156",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/api/demo.py",
+      "blob": "e1466056cfd281591b3b4f02d69e8462e807bad5",
+      "bytes": 2825,
+      "sha256": "19bc822f4eb9cea0c39aec8a9735b36d145cbd95c66d5a990eb012c5ea0ef29e",
+      "operation": "MODIFY",
+      "symbols": "register outbox_projection_router on existing app"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/outbox_projection.py",
+      "blob": "3dc3a9407ee626284c9388124843cb34ab132a6d",
+      "bytes": 757,
+      "sha256": "a873be8454f1e1a1c3820ff856e80801917b758a440e5f85d3b2ae900d823727",
+      "operation": "ADD",
+      "symbols": "router, outbox_projection()"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/atomic_sample.py",
+      "blob": "77998cd03cb8682dd54f854356ecba620f7d906b",
+      "bytes": 6234,
+      "sha256": "3a9ce8f6d9823a10de913dc05980feda8caf37562b02de18ef73ea9a62dfff8b",
+      "operation": "MODIFY",
+      "symbols": "AtomicSample.scope/ddl/suffix; existing methods use class profile"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/outbox_claim_sample.py",
+      "blob": "0637b03f99a204a20ba9a891abc774885bd0885d",
+      "bytes": 7188,
+      "sha256": "71c4156d586109e1c082d464ffc4d55d3249d2612557042f2eb4ea7fa0933496",
+      "operation": "ADD",
+      "symbols": "PROFILE, REVIEW_DDL, OutboxReviewSample._bound/claim_review/mark_unknown/record_readback/inspect_review, read_projection"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/outbox_demo.py",
+      "blob": "9a1cbac866123659de1df26d9bffa0f3472cd847",
+      "bytes": 943,
+      "sha256": "5409eeea08e23419b4b725a44d7a6b6234509f6bf8412f5a271e74fedd12df77",
+      "operation": "ADD",
+      "symbols": "main, create/snapshot CLI"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_outbox_claim_sample.py",
+      "blob": "e772322572c1bd40b7965ad2062fe824a653b422",
+      "bytes": 4475,
+      "sha256": "7725520e7fb73cd7a4c371759e4b8c70eacfe57f203c72818b9fcc2a2701e612",
+      "operation": "ADD",
+      "symbols": "OutboxReviewTests, 12 actual tests"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_outbox_projection.py",
+      "blob": "2790a7ee1f7d6567eb220c53876ae1715a687562",
+      "bytes": 2931,
+      "sha256": "ff9fc74517fe2b9c6452a301bdbabb7365977ca508ec75ef194cbdf1ab425a59",
+      "operation": "ADD",
+      "symbols": "ProjectionTests, 6 actual isolated router tests"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/outbox/route.ts",
+      "blob": "0d5d645124838f778fab39d28e26f2abfc655c70",
+      "bytes": 1114,
+      "sha256": "14e88cb4c28358abefa434252db9fc5178859e1580912fdb22e54766cd97af01",
+      "operation": "ADD",
+      "symbols": "GET, fixed loopback proxy"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "5ca45a298491a19f92569d397d7c04cde508a3a3",
+      "bytes": 7526,
+      "sha256": "363c4ad48bd876f2bf37793aaa7bd7702b479986f82a11e5c821e328879e1f88",
+      "operation": "MODIFY",
+      "symbols": "DashboardView mounts OutboxProjectionPanel"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/OutboxProjectionPanel.tsx",
+      "blob": "a116623ac07b9e88980e283f8f5701c4ab461989",
+      "bytes": 1580,
+      "sha256": "2a5c562085c45fdf2c720000b236e5f8f5a83920f84c59bb848adef0aaddc898",
+      "operation": "ADD",
+      "symbols": "OutboxProjectionPanel/read"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/outboxProjection.ts",
+      "blob": "4a10084ac38bb9f6de70c581c2936feca9094f5a",
+      "bytes": 1262,
+      "sha256": "b98664eed5f2b4fbfc671b419eeda440805d02419b9e80b33a930582b7357525",
+      "operation": "ADD",
+      "symbols": "OutboxProjection, parseOutboxProjection"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/outbox-projection.test.cjs",
+      "blob": "731f2646f99bab33425bdf2015e28d154aa6bf01",
+      "bytes": 2271,
+      "sha256": "5029408361a3212c2309ceaeacc87cc46cf63c4b352c61faf8ac3b64123ccd35",
+      "operation": "ADD",
+      "symbols": "8 actual Node tests"
+    }
+  ],
+  "api": [
+    {
+      "method": "GET",
+      "path": "/demo/v1/outbox/review-projection",
+      "implementation": "outbox_projection()",
+      "environment": "AICOS_D0_REVIEW_DB; explicitly configured local sample path",
+      "errors": "503 D0_OUTBOX_READBACK_HOLD",
+      "effects": "SQLite mode=ro/query_only; no writes",
+      "test": "isolated router TestClient + real loopback PASS; full ASGI app NOT_RUN"
+    },
+    {
+      "method": "GET",
+      "path": "/api/demo/outbox",
+      "implementation": "route.ts GET",
+      "backend": "fixed 127.0.0.1:8000",
+      "limits": "2500 ms, 4096 bytes, redirect error, exact parser",
+      "errors": "503 D0_OUTBOX_READBACK_HOLD",
+      "test": "compiled route Node tests + real loopback PASS; Next build NOT_RUN"
+    }
+  ],
+  "database": {
+    "profile": "D0_OUTBOX_REVIEW_0184",
+    "base_tables": [
+      "meta",
+      "head",
+      "lease",
+      "event",
+      "audit",
+      "outbox"
+    ],
+    "new_table": "local_review",
+    "columns": [
+      "command_id",
+      "phase",
+      "reviewer",
+      "generation",
+      "tick",
+      "expires",
+      "readback_sha"
+    ],
+    "constraints": "FK outbox(command_id), positive generation, sample ticks, READBACK_HOLD iff digest nonnull",
+    "schema_compatibility": "new exclusive sample file only; no migration; old 0183 files stay valid in AtomicSample",
+    "postgresql": "0183 candidate unchanged; NOT_RUN",
+    "R03": "4 tables/5 readback/7 logical unresolved; no canonical mapping approval"
+  },
+  "events": {
+    "local_phase": [
+      "LOCAL_HOLD",
+      "CLAIMED",
+      "UNKNOWN_HOLD",
+      "READBACK_HOLD"
+    ],
+    "canonical_event_changes": [],
+    "outbox_status": "DENY always",
+    "note": "review ownership != effect claim; no send, no reconciliation success or retry"
+  },
+  "contract": {
+    "version": "outbox.review.projection.v1-D0",
+    "scope": "fixed synthetic tenant/company",
+    "format": "exact 13 fields, no command ID, holder, path or digest",
+    "schema_registry": "formal shared schema not yet registered; parser and backend envelope tested"
+  },
+  "dependencies": {
+    "new_direct": [],
+    "existing": "stdlib sqlite3, FastAPI/HTTPX, existing React/TypeScript and Node",
+    "locks": "NOT_GENERATED"
+  },
+  "errors": [
+    "SAMPLE_OUTBOX_BINDING_HOLD",
+    "SAMPLE_REVIEW_INVALID",
+    "SAMPLE_REVIEW_CLOCK_REGRESSION",
+    "SAMPLE_NO_BLIND_RETRY",
+    "SAMPLE_REVIEW_BUSY_OR_STALE",
+    "SAMPLE_REVIEW_GENERATION_EXHAUSTED",
+    "SAMPLE_REVIEW_CLAIM_STALE",
+    "SAMPLE_READBACK_INVALID",
+    "SAMPLE_READBACK_CONFLICT_OR_HOLD",
+    "SAMPLE_PROJECTION_PATH_HOLD",
+    "SAMPLE_PROJECTION_NOT_READY",
+    "SAMPLE_PROJECTION_INVALID",
+    "D0_OUTBOX_READBACK_HOLD"
+  ],
+  "tests": {
+    "new_python": 18,
+    "new_node": 8,
+    "regression_python": 9,
+    "regression_node": 6,
+    "selected_total": 41,
+    "cli_reopen": "PASS",
+    "direct_loopback": "PASS",
+    "compiled_proxy_loopback": "PASS",
+    "full_backend": "NOT_RUN",
+    "full_next_build": "NOT_RUN",
+    "current_browser": "NOT_RUN",
+    "postgresql": "NOT_RUN"
+  },
+  "traceability": {
+    "W1": "CEO Outbox panel, not browser tested",
+    "W2": "new read-only route and strict envelope",
+    "W3": "reviewer generation and expiry, no trusted runtime clock",
+    "W4": "persistent UNKNOWN/READBACK_HOLD, no external claim",
+    "W5": "unchanged, typed provider contract deferred",
+    "W6": "independent acceptance HOLD",
+    "W7": "fixed sample scope only; actual tenant ownership/settlement open",
+    "W8": "41 selected tests plus separate CLI and loopback checks"
+  },
+  "maintenance": "docs/0184/ARCHITECTURE_AND_CATALOG.md"
+}

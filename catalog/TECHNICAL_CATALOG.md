@@ -36,3 +36,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0183
 [File/symbol/API/DB/dependency/test delta](revisions/TECHNICAL_CATALOG_0183.json) · [Maintenance](../docs/0183/ARCHITECTURE_AND_CATALOG.md). 173 manifest entries; separate SQLite lab, unexecuted SQL design, manual synthetic lifecycle view.
+
+## 0184
+[Source/API/DB/symbol/test catalog](revisions/TECHNICAL_CATALOG_0184.json) · [Maintenance](../docs/0184/ARCHITECTURE_AND_CATALOG.md). 182 product manifest entries. Synthetic local claim, UNKNOWN/READBACK_HOLD, fixed loopback GET; no external effect.

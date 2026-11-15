@@ -69,3 +69,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0183 — D0 atomicity lab and lifecycle viewer
 [Addendum](../0183/ARCHITECTURE_AND_CATALOG.md). Physical mapping, actual security and provider authority unchanged.
+
+## 0184 — persistent D0 outbox review/read-only projection
+[Addendum](../0184/ARCHITECTURE_AND_CATALOG.md) · [R03 gaps](../0184/R03_MAPPING_GAPS.md). No normative or physical mapping change.

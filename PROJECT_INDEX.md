@@ -54,3 +54,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0183 — atomicity lab and lifecycle viewer
 [Architecture](docs/0183/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0183.json) · [test evidence](releases/GITHUB_READBACK_0183.json).
+
+## 0184 — D0 outbox review/readback
+[Architecture](docs/0184/ARCHITECTURE_AND_CATALOG.md) · [R03 gaps](docs/0184/R03_MAPPING_GAPS.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0184.json) · [evidence](releases/GITHUB_READBACK_0184.json).
