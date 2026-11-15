@@ -49,3 +49,12 @@
 .eds-frame .prefix-facts div{min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised)}
 .eds-frame .prefix-facts dt{color:var(--muted);font-size:.85rem}
 .eds-frame .prefix-facts dd{margin:6px 0 0;font-weight:650;overflow-wrap:anywhere}
+
+/* P04 plan progress: native progress semantics, no acceptance colour claim. */
+.eds-frame .plan-progress progress{display:block;width:100%;height:10px;accent-color:var(--outline-strong)}
+.eds-frame .plan-progress-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px;margin-block:14px}
+.eds-frame .plan-progress-grid article{min-width:0;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised);padding:12px;overflow-wrap:anywhere}
+.eds-frame .plan-progress-grid details{margin-top:10px}
+.eds-frame .plan-progress-grid summary{cursor:pointer}
+.eds-frame .plan-progress-grid li{margin-block:8px}
+.eds-frame .plan-progress-grid small{display:block}

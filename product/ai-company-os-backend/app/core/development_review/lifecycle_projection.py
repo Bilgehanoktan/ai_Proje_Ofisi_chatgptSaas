@@ -1,8 +1,6 @@
 """W1-0198-P02 fixed 0196-L terminal readback; no writes, no live clock or grant."""
-from contextlib import closing
 from dataclasses import replace
-from pathlib import Path
-import sqlite3
+from app.core.development_review.d0_snapshot import ReadCursor, open_d0_snapshot
 from app.core.agent_runtime.lifecycle import Scope, RunObservation, RunState, LeaseObservation
 from app.core.agent_runtime.transition_command import transition_digest
 from app.core.transaction.review import LogicalIntent, Operation
@@ -34,29 +32,13 @@ def fixed_chain():
         return LogicalIntent(scope,Operation.STATE_MUTATION,b.version,transition_digest(b,target),'ordinary-'+str(b.version),'ordinary-idem-'+str(b.version),'grant-a','lease-a',None,2,3)
     return terminal,ti,((admission,'D0_RUN_ADMISSION','QUEUED','ADMITTED',lease),(ordinary(admitted,RunState.RUNNING),'D0_RUN_TRANSITION','ADMITTED','RUNNING',lease),(ri,'D0_LEASE_RENEWAL','RUNNING','RUNNING',renewed),(ordinary(running3,RunState.VERIFYING),'D0_RUN_TRANSITION','RUNNING','VERIFYING',renewed),(ti,'D0_RUN_FAILURE','VERIFYING','FAILED',renewed))
 
-class ReadCursor:
-    """Narrow SELECT-only SQLite dialect for the candidate mapping."""
-    def __init__(self,db): self.cursor=db.cursor()
-    def execute(self,sql,params=()):
-        if not sql.startswith('SELECT ') or ';' in sql or 'FOR UPDATE' in sql:
-            raise ValueError('D0_LIFECYCLE_SELECT_ONLY')
-        return self.cursor.execute(sql.replace('t1_candidate.','').replace('%s','?'),params)
-    def fetchone(self): return self.cursor.fetchone()
-
 def _exact(c,sql,params,expected):
     if _one(c,sql,params)!=expected: raise ValueError('D0_LIFECYCLE_PROJECTION_HOLD')
 
 def read_lifecycle_projection(path):
-    p=Path(path)
-    if not p.is_absolute() or p.name!='lifecycle.d0.sqlite' or not p.is_file() or p.resolve()!=p or p.stat().st_size>8*1024*1024:
-        raise ValueError('D0_LIFECYCLE_PATH_HOLD')
     terminal,ti,chain=fixed_chain()
     k=_key(ti)
-    with closing(sqlite3.connect(p.as_uri()+'?mode=ro',uri=True,timeout=2)) as db:
-        db.execute('PRAGMA query_only=ON')
-        db.execute('PRAGMA trusted_schema=OFF')
-        db.execute('BEGIN')
-        c=ReadCursor(db)
+    with open_d0_snapshot(path,'lifecycle.d0.sqlite') as c:
         if not reconcile_lifecycle(c,terminal,ti).exact_sample_match:
             raise ValueError('D0_LIFECYCLE_PROJECTION_HOLD')
         # Reconciliation checks admission, renewal history and terminal postimage.

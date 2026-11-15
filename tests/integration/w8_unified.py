@@ -1,4 +1,4 @@
-"""W1-0198-P03 isolated D0 build runner. No CI, main, provider calls or PROD."""
+"""W1-0198-P04 isolated D0 build runner. No CI, main, provider calls or PROD."""
 import argparse
 import email
 import hashlib
@@ -13,9 +13,9 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = '54fc03f9f775e5d6b7d0aa880cd64b98d8d62145'
+MANIFEST_BLOB = 'e6c1fa0d9a28241668f94ccac0bcd78becdf01bb'
 HARNESS = {
-    'run_combined_helpers.cjs': '2f1a2455d586ccaac63154d602caffa1c214e301',
+    'run_combined_helpers.cjs': '114c4c3cbafd8dd6a8f7b2ef48ecaf1f02771224',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
     'browser_0187_w1.py': 'b829ad9b2fa12f7910e014ec87e9ee2a59d17370',
     'browser_task_budget_0188.py': '4511877f03ffae35d4baef7267c6d7e8ea6bf583',
@@ -48,18 +48,21 @@ DATABASE_FIXTURES = {
 }
 
 def verify_aux(root):
-    pins = {**{'tests/integration/' + name: h for name, h in HARNESS.items()}, **DATABASE_FIXTURES}
+    pins = {**{'tests/integration/' + name: h for name, h in HARNESS.items()}, **DATABASE_FIXTURES, 'progress/W1_0198_MILESTONES.json': '1c35eae82c96dea1607b2f3b7c63702f458bee18'}
     for name, h in pins.items():
         p = checked_path(root, name)
         if not p.is_file() or blob(p) != h:
             raise ValueError('auxiliary source missing or changed: ' + name)
+    mirror = checked_path(root, 'product/ai-company-os-frontend/features/progress/w1PlanProgress.json')
+    if not mirror.is_file() or blob(mirror) != pins['progress/W1_0198_MILESTONES.json']:
+        raise ValueError('W1 milestone mirror mismatch')
     return pins
 
 def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact W1-0198-P03 archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact W1-0198-P04 archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)

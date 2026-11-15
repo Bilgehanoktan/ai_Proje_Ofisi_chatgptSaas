@@ -1,0 +1,334 @@
+{
+  "id": "W1-0198-A-H",
+  "revision": "W1-0198-P04",
+  "lanes": [
+    {
+      "id": "A",
+      "name": "Birleşik UI ve backend regresyonu",
+      "gates": [
+        {
+          "id": "A1",
+          "title": "Transport/registry/contract yardımcı testleri",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P01–P03 test evidence; P03 66/66"
+        },
+        {
+          "id": "A2",
+          "title": "Ortak SQLite read-only snapshot testleri",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P04 13/13 gerçek SQLite snapshot testi"
+        },
+        {
+          "id": "A3",
+          "title": "P02/P03 17 kalıcı fixture/API testi",
+          "kind": "INTEGRATED_TEST",
+          "status": "OPEN",
+          "evidence": "Tam dependency closure eksik; NOT_RUN"
+        },
+        {
+          "id": "A4",
+          "title": "Pinned birleşik suite ve Next.js build",
+          "kind": "INTEGRATED_TEST",
+          "status": "OPEN",
+          "evidence": "TS5.9.3 / Windows ertelendi"
+        },
+        {
+          "id": "A5",
+          "title": "Güncel tarayıcı ve bağımsız kabul",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "HOLD"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Merkezi frontend veri bağlantı katmanı",
+      "gates": [
+        {
+          "id": "B1",
+          "title": "Sabit GET, abort, deadline ve boyut kontrolü",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P01 transport 12/12"
+        },
+        {
+          "id": "B2",
+          "title": "Tip güvenli merkezi endpoint registry",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P03 yedi API; registry 11/11"
+        },
+        {
+          "id": "B3",
+          "title": "Tarihsel scope/revision wire kontrolü",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P03 prefix parser 23/23"
+        },
+        {
+          "id": "B4",
+          "title": "Kanonik kapsam ve güvenilir güncellik",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Trusted clock / provenance HOLD"
+        },
+        {
+          "id": "B5",
+          "title": "React lifecycle ve tüm API parity",
+          "kind": "INTEGRATED_TEST",
+          "status": "OPEN",
+          "evidence": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "CEO Dashboard veri entegrasyonu",
+      "gates": [
+        {
+          "id": "C1",
+          "title": "CEO temel panel ve KPI görünümü",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "0197 UI kaynakları; P01 OperationalReadback"
+        },
+        {
+          "id": "C2",
+          "title": "Tarihsel görev ve rezervasyon paneli",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P02/P03 LifecycleReadback ve prefix"
+        },
+        {
+          "id": "C3",
+          "title": "Plan revizyonu uyuşmazlık bariyeri",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P04 projectionScope; join HOLD"
+        },
+        {
+          "id": "C4",
+          "title": "Kanonik operasyon KPI ve görev verisi",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Gerçek run/şirket kanıtı eksik"
+        },
+        {
+          "id": "C5",
+          "title": "Güncel CEO uçtan uca kabulü",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Agent Runtime ve Office Engine bağlantısı",
+      "gates": [
+        {
+          "id": "D1",
+          "title": "Çok katlı ofis/scene/list/engine kaynakları",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "0197-U OfficePanel/OfficeScene; geçmiş S3"
+        },
+        {
+          "id": "D2",
+          "title": "Tarihsel lifecycle/lease UI kaynakları",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P02/P03 ayrı fixture readback kaynakları"
+        },
+        {
+          "id": "D3",
+          "title": "Kalıcı lifecycle/lease readback testleri",
+          "kind": "INTEGRATED_TEST",
+          "status": "OPEN",
+          "evidence": "17 fixture/API testi NOT_RUN"
+        },
+        {
+          "id": "D4",
+          "title": "Güvenilir lease ve kanonik görev-konum ilişkisi",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Clock / geometry JOIN_HOLD"
+        },
+        {
+          "id": "D5",
+          "title": "Gerçek olay projeksiyonu ve kabul",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "HOLD; gerçek ajan yok"
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Görev ve Workflow Studio entegrasyonu",
+      "gates": [
+        {
+          "id": "E1",
+          "title": "Statik doğrulanmış DAG görünümü",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "core.plan.projection ve ProjectStudio"
+        },
+        {
+          "id": "E2",
+          "title": "Tarihsel görev zaman çizelgesi",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P02/P03 Workflow paneli"
+        },
+        {
+          "id": "E3",
+          "title": "Yanlış plan/DAG join bariyeri",
+          "kind": "HELPER_TEST",
+          "status": "DONE",
+          "evidence": "P04 projectionScope; task/revision kontrolü"
+        },
+        {
+          "id": "E4",
+          "title": "Kanonik görev/run/causal state eşlemesi",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Kanonik kimlik ve yürütme eksik"
+        },
+        {
+          "id": "E5",
+          "title": "DAG uçtan uca kabulü",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "name": "Memory ve Model Gateway ekranları",
+      "gates": [
+        {
+          "id": "F1",
+          "title": "Model/Skill/Memory tanılama ekranı",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P01 CapabilityReadback"
+        },
+        {
+          "id": "F2",
+          "title": "Lease ve rezervasyon önkoşulları görünümü",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P03 model_binding/memory_acl HOLD"
+        },
+        {
+          "id": "F3",
+          "title": "Güvenilir model rezervasyon/registry binding",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Gerçek active reference ve ledger yok"
+        },
+        {
+          "id": "F4",
+          "title": "Bağımsız ACL/tombstone/lineage readback",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Memory trusted acquisition HOLD"
+        },
+        {
+          "id": "F5",
+          "title": "İzinli sağlayıcı/araç/hafıza kabulü",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "Yetki yok"
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Finans ve güvenlik projeksiyonları",
+      "gates": [
+        {
+          "id": "G1",
+          "title": "Finans ve güvenlik studio kaynakları",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "0197 FinanceStudio/SecurityStudio"
+        },
+        {
+          "id": "G2",
+          "title": "Tarihsel rezervasyon/settlement görünümü",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P01–P03 ayrı D0 kayıtları"
+        },
+        {
+          "id": "G3",
+          "title": "Kalıcı ledger/audit readback testleri",
+          "kind": "INTEGRATED_TEST",
+          "status": "OPEN",
+          "evidence": "P02/P03 NOT_RUN"
+        },
+        {
+          "id": "G4",
+          "title": "Kanonik ledger ve bağımsız güvenlik kanıtı",
+          "kind": "SOURCE",
+          "status": "OPEN",
+          "evidence": "Gerçek maliyet ve IV HOLD"
+        },
+        {
+          "id": "G5",
+          "title": "Finans ve güvenlik uçtan uca kabulü",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "HOLD"
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "name": "Görsel kalite ve kullanıcı deneyimi",
+      "gates": [
+        {
+          "id": "H1",
+          "title": "EDS/tema/responsive kaynakları",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "0197–P03 design-system"
+        },
+        {
+          "id": "H2",
+          "title": "Önceki S3 tarayıcı yakalamaları",
+          "kind": "PARENT_TEST",
+          "status": "DONE",
+          "evidence": "52 tarihsel capture; güncel kabul değil"
+        },
+        {
+          "id": "H3",
+          "title": "Erişilebilir plan ilerleme paneli kaynakları",
+          "kind": "SOURCE",
+          "status": "DONE",
+          "evidence": "P04 PlanProgressPanel"
+        },
+        {
+          "id": "H4",
+          "title": "Güncel light/dark/mobile görsel regresyon",
+          "kind": "INTEGRATED_TEST",
+          "status": "OPEN",
+          "evidence": "NOT_RUN"
+        },
+        {
+          "id": "H5",
+          "title": "Görsel/erişilebilirlik kabulü",
+          "kind": "ACCEPTANCE",
+          "status": "OPEN",
+          "evidence": "Pixel review ve kabul açık"
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,8 @@ const repo=resolve(__dirname,'../..'),root=join(repo,'product','ai-company-os-fr
 function run(args){const p=spawnSync(process.execPath,args,{cwd:root,stdio:'inherit'});if(p.error)throw p.error;if(p.status!==0)throw Error('exit '+p.status);}
 const js=p=>join(out,p+'.js'),fixture=p=>join(root,'fixtures',p+'.json'),shared=p=>join(backend,'tests',p+'.json');
 const tests=[
+ ['projection-scope.test.cjs',js('features/data/projectionScope'),shared('lifecycle_prefix_cases')],
+ ['progress-model.test.cjs',js('features/progress/progressModel'),join(root,'features/progress/w1PlanProgress.json')],
  ['lifecycle-prefix.test.cjs',js('features/mvp/lifecyclePrefix'),shared('lifecycle_prefix_cases')],
  ['projection-registry.test.cjs',js('features/data/projectionRegistry'),js('features/mvp/lifecycleProjection')],
  ['lifecycle-projection.test.cjs',js('features/mvp/lifecycleProjection')],
@@ -25,7 +27,7 @@ const tests=[
 try{
  const tsc=require.resolve('typescript/bin/tsc',{paths:[root]});
  const version=spawnSync(process.execPath,[tsc,'--version'],{encoding:'utf8'});if(version.status!==0||version.stdout.trim()!=='Version 5.9.3')throw Error('Pinned TypeScript 5.9.3 required');
- const entries=['features/mvp/lifecyclePrefix.ts','features/data/projectionRegistry.ts','features/mvp/lifecycleProjection.ts','features/data/projectionRead.ts','design-system/workflowLayout.ts','design-system/navigationModel.ts','design-system/roleVisuals.ts','office/engine/geometry.ts','office/engine/officeArtwork.ts','office/engine/galleryCamera.ts','features/project-management/projectModel.ts','features/finance/financeModel.ts','features/security/securityModel.ts','features/mvp/workbenchSnapshot.ts','app/api/demo/admission/route.ts','app/api/demo/outbox/route.ts','app/api/demo/office-workbench/route.ts'];
+ const entries=['features/data/projectionScope.ts','features/progress/progressModel.ts','features/mvp/lifecyclePrefix.ts','features/data/projectionRegistry.ts','features/mvp/lifecycleProjection.ts','features/data/projectionRead.ts','design-system/workflowLayout.ts','design-system/navigationModel.ts','design-system/roleVisuals.ts','office/engine/geometry.ts','office/engine/officeArtwork.ts','office/engine/galleryCamera.ts','features/project-management/projectModel.ts','features/finance/financeModel.ts','features/security/securityModel.ts','features/mvp/workbenchSnapshot.ts','app/api/demo/admission/route.ts','app/api/demo/outbox/route.ts','app/api/demo/office-workbench/route.ts'];
  run([tsc,'--strict','--target','ES2020','--lib','ESNext,DOM','--module','commonjs','--resolveJsonModule','--esModuleInterop','--rootDir',root,'--outDir',out,...entries]);
  for(const [name,...args] of tests)run([join(root,'tests',name),...args]);
  run([join(__dirname,'office-workbench-merge.test.cjs'),js('features/mvp/officeWorkbenchProjection'),js('app/api/demo/office-workbench/route')]);

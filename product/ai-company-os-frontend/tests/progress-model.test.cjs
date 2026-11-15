@@ -1,0 +1,12 @@
+const test=require('node:test'),assert=require('node:assert/strict');const {summarizePlan,parsePlanProgress}=require(process.argv[2]);const data=require(process.argv[3]);
+const clone=()=>JSON.parse(JSON.stringify(data));
+test('milestone numerator/denominator calculated from data',()=>{const p=summarizePlan(data);assert.equal(p.total,40);assert.equal(p.done,20);assert.equal(p.percent,50);assert.equal(p.accepted,0);assert.deepEqual(p.rows.map(r=>r.percent),[40,60,60,40,60,40,40,60]);});
+test('open gate does not count as complete',()=>{let x=clone();x.lanes[0].gates[0].status='OPEN';assert.equal(summarizePlan(x).done,19);});
+test('duplicate lane rejected',()=>{let x=clone();x.lanes[1].id='A';assert.equal(parsePlanProgress(x),null);});
+test('duplicate milestone rejected',()=>{let x=clone();x.lanes[0].gates[1].id='A1';assert.equal(parsePlanProgress(x),null);});
+test('missing milestone rejected',()=>{let x=clone();x.lanes[0].gates.pop();assert.equal(parsePlanProgress(x),null);});
+test('invalid status rejected',()=>{let x=clone();x.lanes[0].gates[0].status='PARTIAL';assert.equal(parsePlanProgress(x),null);});
+test('missing evidence rejected',()=>{let x=clone();x.lanes[0].gates[0].evidence='';assert.equal(parsePlanProgress(x),null);});
+test('invalid kind rejected',()=>{let x=clone();x.lanes[0].gates[0].kind='CLAIM';assert.equal(parsePlanProgress(x),null);});
+test('bad revision rejected',()=>{let x=clone();x.revision='LIVE';assert.equal(parsePlanProgress(x),null);});
+test('no alias between parses',()=>{let p=parsePlanProgress(data);p.lanes[0].gates[0].title='mutated';assert.notEqual(parsePlanProgress(data).lanes[0].gates[0].title,'mutated');});

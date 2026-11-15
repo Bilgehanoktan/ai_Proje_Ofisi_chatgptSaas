@@ -1,28 +1,19 @@
 """Read-only exact fixed-chain prefix profile; no general active runtime API."""
-from contextlib import closing
 from dataclasses import replace
-from pathlib import Path
-import sqlite3
+from app.core.development_review.d0_snapshot import open_d0_snapshot
 from app.core.agent_runtime.lifecycle import RunState
 from app.core.agent_runtime.postgres_run import PostgresRunRepository
 from app.core.transaction.postgres_admission_mapping import D0PostgresAdmissionMapping
 from app.core.transaction.postgres_lifecycle_mapping import verify_admission_binding
 from app.core.transaction.postgres_transition_mapping import transaction_ref, lease_digest, _key, _lease, _KEY
-from app.core.development_review.lifecycle_projection import fixed_chain, ReadCursor, _exact
+from app.core.development_review.lifecycle_projection import fixed_chain, _exact
 from app.core.development_review.lifecycle_prefix_wire import prefix_wire, PLAN_REVISION
 
 def read_lifecycle_prefix(path):
-    p=Path(path)
-    if not p.is_absolute() or p.name!='lifecycle-prefix.d0.sqlite' or not p.is_file() or p.resolve()!=p or p.stat().st_size>8*1024*1024:
-        raise ValueError('D0_PREFIX_PATH_HOLD')
     terminal,ti,chain=fixed_chain()
     binding=terminal.binding; admission=chain[0][0]; k=_key(admission)
     if admission.scope.plan_revision!=PLAN_REVISION: raise ValueError('D0_PREFIX_PLAN_HOLD')
-    with closing(sqlite3.connect(p.as_uri()+'?mode=ro',uri=True,timeout=2)) as db:
-        db.execute('PRAGMA query_only=ON')
-        db.execute('PRAGMA trusted_schema=OFF')
-        db.execute('BEGIN')
-        c=ReadCursor(db)
+    with open_d0_snapshot(path,'lifecycle-prefix.d0.sqlite') as c:
         head=PostgresRunRepository().read(c,admission.scope)
         wire=prefix_wire(head.version)
         if head!=replace(binding.claim.before,state=RunState(wire['state']),version=wire['head_version']):
