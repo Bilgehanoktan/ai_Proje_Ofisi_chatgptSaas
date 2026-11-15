@@ -1,5 +1,5 @@
 /** Exact fixed historical sample, never a canonical run or authority. */
-export const expectedLifecycle = {
+const sample = {
   "schema_version": "lifecycle.projection.v1-D0",
   "mode": "D0_LIFECYCLE_0196L_TERMINAL_FIXTURE",
   "tenant": "synthetic-tenant",
@@ -58,7 +58,15 @@ export const expectedLifecycle = {
   "authoritative": false,
   "real_run_count": null
 } as const;
-export type LifecycleProjection=typeof expectedLifecycle;
+export type LifecycleProjection=typeof sample;
+function freeze<T>(value:T):T{
+ if(value&&typeof value==='object'){
+  for(const child of Object.values(value))freeze(child);
+  Object.freeze(value);
+ }
+ return value;
+}
+export const expectedLifecycle=freeze(sample);
 function same(a:unknown,b:unknown):boolean{
  if(a===b)return true;
  if(Array.isArray(b))return Array.isArray(a)&&a.length===b.length&&b.every((v,i)=>same(a[i],v));
@@ -70,5 +78,5 @@ function same(a:unknown,b:unknown):boolean{
  return false;
 }
 export function parseLifecycleProjection(raw:unknown):LifecycleProjection|null{
- return same(raw,expectedLifecycle)?expectedLifecycle:null;
+ return same(raw,expectedLifecycle)?structuredClone(expectedLifecycle):null;
 }

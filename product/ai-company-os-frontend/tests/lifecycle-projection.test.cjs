@@ -11,3 +11,5 @@ for(const [name,change] of [
  ['lease active',x=>x.lease_active=true],['geometry join',x=>x.geometry_join='PASS']
 ])test(name,()=>{const x=clone();change(x);assert.equal(parseLifecycleProjection(x),null)});
 test('nonobject',()=>assert.equal(parseLifecycleProjection(null),null));
+test('exported expected envelope deep frozen',()=>{assert(Object.isFrozen(expectedLifecycle));assert(Object.isFrozen(expectedLifecycle.timeline));assert(Object.isFrozen(expectedLifecycle.timeline[0]))});
+test('parsed envelope isolated from canonical expected and other consumers',()=>{const a=parseLifecycleProjection(clone());a.timeline[0].state='FORGED';a.authoritative=true;assert.equal(expectedLifecycle.timeline[0].state,'ADMITTED');assert.equal(parseLifecycleProjection(clone()).authoritative,false);assert.equal(parseLifecycleProjection(a),null)});

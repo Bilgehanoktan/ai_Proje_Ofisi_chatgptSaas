@@ -1,8 +1,6 @@
 """W1-0198-P02 fixed 0196-L terminal readback; no writes, no live clock or grant."""
-from contextlib import closing
 from dataclasses import replace
-from pathlib import Path
-import sqlite3
+from app.core.development_review.lifecycle_read_snapshot import lifecycle_snapshot, require_single_head
 from app.core.agent_runtime.lifecycle import Scope, RunObservation, RunState, LeaseObservation
 from app.core.agent_runtime.transition_command import transition_digest
 from app.core.transaction.review import LogicalIntent, Operation
@@ -47,16 +45,11 @@ def _exact(c,sql,params,expected):
     if _one(c,sql,params)!=expected: raise ValueError('D0_LIFECYCLE_PROJECTION_HOLD')
 
 def read_lifecycle_projection(path):
-    p=Path(path)
-    if not p.is_absolute() or p.name!='lifecycle.d0.sqlite' or not p.is_file() or p.resolve()!=p or p.stat().st_size>8*1024*1024:
-        raise ValueError('D0_LIFECYCLE_PATH_HOLD')
     terminal,ti,chain=fixed_chain()
     k=_key(ti)
-    with closing(sqlite3.connect(p.as_uri()+'?mode=ro',uri=True,timeout=2)) as db:
-        db.execute('PRAGMA query_only=ON')
-        db.execute('PRAGMA trusted_schema=OFF')
-        db.execute('BEGIN')
+    with lifecycle_snapshot(path,'lifecycle.d0.sqlite') as db:
         c=ReadCursor(db)
+        require_single_head(c,k)
         if not reconcile_lifecycle(c,terminal,ti).exact_sample_match:
             raise ValueError('D0_LIFECYCLE_PROJECTION_HOLD')
         # Reconciliation checks admission, renewal history and terminal postimage.
@@ -70,7 +63,7 @@ def read_lifecycle_projection(path):
                 ('SELECT effect_key,idempotency_key,request_digest FROM t1_candidate.fences WHERE tenant_id=%s AND company_id=%s AND environment_id=%s AND (effect_key=%s OR idempotency_key=%s)',(*k[:3],i.effect_key,i.idempotency_key),(i.effect_key,i.idempotency_key,i.request_digest)),
                 ('SELECT transaction_ref,request_digest,effect_key,idempotency_key,grant_ref,lease_ref,policy_epoch,witness_epoch,lease_fence,lease_digest FROM t1_candidate.run_audit'+suffix,(*k,v),(tx,i.request_digest,i.effect_key,i.idempotency_key,i.grant_ref,i.lease_ref,i.policy_epoch,i.witness_epoch,lease.fence,lease_digest(lease)))
             ): _exact(c,sql,params,expected)
-        for table,count in (('run_mutations',5),('events',5),('outbox',5),('run_audit',5),('run_lease_renewals',1),('sample_settlements',1)):
+        for table,count in (('run_mutations',5),('events',5),('outbox',5),('run_audit',5),('run_lease_renewals',1),('sample_settlements',1),('run_admissions',1),('sample_reservations',1),('run_leases',0)):
             _exact(c,'SELECT count(*) FROM t1_candidate.'+table+' WHERE '+_KEY,k,(count,))
     # Fixed data is emitted only after the complete exact sample readback.
     return {"schema_version":"lifecycle.projection.v1-D0","mode":"D0_LIFECYCLE_0196L_TERMINAL_FIXTURE","tenant":"synthetic-tenant","company":"synthetic-company","environment":"A0_SAMPLE_ONLY","plan_revision":"sha256:c75ec1070786538f38bdccdcf6a75de62a9e02e9bcb7e4a4bb9df5f7e96638a0","task_id":"a","run_id":"demo-a","head_version":5,"attempt":0,"state":"FAILED","timeline":[{"version":1,"kind":"D0_RUN_ADMISSION","state":"ADMITTED"},{"version":2,"kind":"D0_RUN_TRANSITION","state":"RUNNING"},{"version":3,"kind":"D0_LEASE_RENEWAL","state":"RUNNING"},{"version":4,"kind":"D0_RUN_TRANSITION","state":"VERIFYING"},{"version":5,"kind":"D0_RUN_FAILURE","state":"FAILED"}],"lease_version":2,"heartbeat_revision":1,"lease_active":False,"sample_reserved_minor":20,"sample_released_minor":20,"sample_recognized_minor":0,"sample_budget_revision":3,"currency":"USD","freshness":"HISTORICAL_SAMPLE","causality":"EXACT_FIXED_SAMPLE_ONLY","geometry_join":"HOLD","independent_acceptance":"HOLD","decision":"HOLD","dispatch_allowed":False,"provider_called":False,"spend_allowed":False,"release_ready":False,"authoritative":False,"real_run_count":None}

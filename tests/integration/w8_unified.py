@@ -1,4 +1,4 @@
-"""W1-0198-P03 isolated D0 build runner. No CI, main, provider calls or PROD."""
+"""W1-0198-P04 isolated D0 build runner. No CI, main, provider calls or PROD."""
 import argparse
 import email
 import hashlib
@@ -13,9 +13,9 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = '54fc03f9f775e5d6b7d0aa880cd64b98d8d62145'
+MANIFEST_BLOB = 'f9701fb7caa0fbe26e927823c70c7a9e257de310'
 HARNESS = {
-    'run_combined_helpers.cjs': '2f1a2455d586ccaac63154d602caffa1c214e301',
+    'run_combined_helpers.cjs': 'ded198bdc584eaeed578df7fe9b09629502162e7',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
     'browser_0187_w1.py': 'b829ad9b2fa12f7910e014ec87e9ee2a59d17370',
     'browser_task_budget_0188.py': '4511877f03ffae35d4baef7267c6d7e8ea6bf583',
@@ -59,7 +59,7 @@ def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact W1-0198-P03 archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact W1-0198-P04 archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)

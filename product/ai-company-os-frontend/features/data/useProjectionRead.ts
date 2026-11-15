@@ -1,12 +1,16 @@
 "use client";
 import {useEffect,useMemo,useState} from 'react';
 import {registeredReader,type ProjectionValue} from './projectionRegistry';
-import {type ProjectionKey,type ReadState} from './projectionRead';
+import {type ProjectionKey} from './projectionRead';
+import {sessionReadState,type SessionEntry} from './projectionSession';
 export function useProjectionRead<K extends ProjectionKey>(key:K){
  type Data=ProjectionValue<K>;
- const [entry,setEntry]=useState<{key:K;state:ReadState<Data>}>({key,state:{phase:'idle',data:null}});
- const reader=useMemo(()=>registeredReader(key,state=>setEntry({key,state})),[key]);
- useEffect(()=>()=>reader.cancel(),[reader]);
- const state:ReadState<Data>=entry.key===key?entry.state:{phase:'idle',data:null};
- return {state,data:state.data,read:reader.read};
+ const [entry,setEntry]=useState<SessionEntry<Data>|null>(null);
+ const session=useMemo(()=>{
+  const owner={};
+  return {owner,reader:registeredReader(key,state=>setEntry({owner,state}))};
+ },[key]);
+ useEffect(()=>()=>session.reader.cancel(),[session]);
+ const state=sessionReadState(session.owner,entry);
+ return {state,data:state.data,read:session.reader.read};
 }

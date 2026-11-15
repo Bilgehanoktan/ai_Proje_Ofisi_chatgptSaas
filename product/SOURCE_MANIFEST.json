@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-r11-d0-w1-0198-p03",
-  "doc_revision": "W1-0198-P03",
-  "status": "ISOLATED_HISTORICAL_PREFIX_SOURCE_PARTIAL_HELPER_TESTS_PASS",
+  "version": "0.1.0-draft.6-r11-d0-w1-0198-p04",
+  "doc_revision": "W1-0198-P04",
+  "status": "ISOLATED_D0_READBACK_HARDENING_PARTIAL_HELPER_AND_SQLITE_TESTS_PASS",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "37edf7b3952435e1234ee30415615219f6eb4458",
+  "parent_git_commit": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -155,16 +155,20 @@
       "sha256": "7b73b247949fe1cb50b192396fd3477a23ea7c1676a2646266914c4f56c025b1"
     },
     "ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py": {
-      "bytes": 3865,
-      "sha256": "a6890037e5453c26ef142828f57411114c7bc079a69891df1046ca1c548039bf"
+      "bytes": 3597,
+      "sha256": "2b9a978bdbd7d4b1414f395817fa2ada2342bff996b0a1fb9d812abd53ff03df"
     },
     "ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py": {
       "bytes": 1868,
       "sha256": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462"
     },
     "ai-company-os-backend/app/core/development_review/lifecycle_projection.py": {
-      "bytes": 7086,
-      "sha256": "c605db17d4ffa91b669a9db15912a32fb00000831718e12075e287cbcfb5aeb0"
+      "bytes": 6879,
+      "sha256": "a015c574755409abfbe9cd58bd49ceabced9676b317e9597290b6ddfe1610f0c"
+    },
+    "ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py": {
+      "bytes": 3349,
+      "sha256": "4c80bf05d9eca1957de7d7bcad10ddaa518d2767cb517c3dba1f62d752838cda"
     },
     "ai-company-os-backend/app/core/development_review/model.py": {
       "bytes": 3221,
@@ -610,6 +614,10 @@
       "bytes": 3757,
       "sha256": "e48978990c84d22dd80a3b0be81b97a73032cbc9a1225903148d8f7df75a50e1"
     },
+    "ai-company-os-backend/tests/test_lifecycle_read_snapshot_p04.py": {
+      "bytes": 4328,
+      "sha256": "75e3cc294a76a74a686ec489dead6cb5edd1ac2a39e78ddeabcda0cf15be1137"
+    },
     "ai-company-os-backend/tests/test_memory_access_0194.py": {
       "bytes": 7089,
       "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
@@ -883,8 +891,8 @@
       "sha256": "1981a611c5e249b5561c5751f2e10f64e6a38d0f193577e5790aaad92efc3801"
     },
     "ai-company-os-frontend/design-system/eds.css": {
-      "bytes": 5940,
-      "sha256": "de8fe0180febc1d6e22d1ea9558773841ea480619c295e91419f4911bd8a5220"
+      "bytes": 6233,
+      "sha256": "aabdd7d9116a3f93f50dd64210103e97300381f3124b94469727329ce3b7d052"
     },
     "ai-company-os-frontend/design-system/navigationModel.ts": {
       "bytes": 2233,
@@ -911,8 +919,8 @@
       "sha256": "13d7e13fa43bf1e7341f2b8274482e0bbb68608209b6ae94c0390ba8dedd824d"
     },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 8952,
-      "sha256": "d4324098dc23bcf6063a651ff89fe54a60763fb4576d791e7461319723353b5d"
+      "bytes": 8978,
+      "sha256": "a0ca24eeb7004194d07938f787092dada245f27f0bb9dfae1f9cdbf1bc2cc94f"
     },
     "ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx": {
       "bytes": 1475,
@@ -934,9 +942,13 @@
       "bytes": 1436,
       "sha256": "51d63175815dfaa780146e5f550acada901cfe474ec20e6dc35406e0bf5e8b79"
     },
+    "ai-company-os-frontend/features/data/projectionSession.ts": {
+      "bytes": 356,
+      "sha256": "1c75541034878b2bce1951a401271e1060e193991863c583a754ff905176ee0a"
+    },
     "ai-company-os-frontend/features/data/useProjectionRead.ts": {
-      "bytes": 675,
-      "sha256": "2716483a6072959fb19e808c483b8e514f6ff2adaabc6a019db12939e4315175"
+      "bytes": 731,
+      "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
     },
     "ai-company-os-frontend/features/finance/FinanceStudio.module.css": {
       "bytes": 1336,
@@ -955,12 +967,12 @@
       "sha256": "0ac063f2ce28da720b2f2d6eb078beb7f5c3cbf45dbab29afce993e33bf942a0"
     },
     "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": {
-      "bytes": 2020,
-      "sha256": "44243bd94e8ae02b56a65b89064a3982169de4c22ea4eaf7cc361f7fb56af9cf"
+      "bytes": 2371,
+      "sha256": "365af8bf154ba035b3bb140bcc01ba3510ce6d71dc7d24834970a9d19e97b43d"
     },
     "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": {
-      "bytes": 2007,
-      "sha256": "aa0f9d5caadba9b71d6fa99e90ffa9c0ae487406e8e8f25bcbe41944ec29d290"
+      "bytes": 2358,
+      "sha256": "cf5722c31b1427f68502ffdd1d6a89790c32033c115b206f1fb43cb187ef6f69"
     },
     "ai-company-os-frontend/features/mvp/MvpDiagnosticsPanel.tsx": {
       "bytes": 1161,
@@ -986,13 +998,17 @@
       "bytes": 1574,
       "sha256": "e49e9c5382471b8abf7511b38e5392052476d2fdf0b5acec73b92ca4fdf32060"
     },
+    "ai-company-os-frontend/features/mvp/historicalJoin.ts": {
+      "bytes": 1431,
+      "sha256": "d431bb88ead7b3b2afad5661f4f3cab9df521315eb62e4678f47e40272ee0771"
+    },
     "ai-company-os-frontend/features/mvp/lifecyclePrefix.ts": {
       "bytes": 2187,
       "sha256": "e205c0e995ea5d9b49ead972a3baeef072fb05d348291dd06bf8d2c3598fa501"
     },
     "ai-company-os-frontend/features/mvp/lifecycleProjection.ts": {
-      "bytes": 2212,
-      "sha256": "6acfc648480d35f94facab896926e64b0ee8e1b69757b9afd0af42cab5bc0be8"
+      "bytes": 2416,
+      "sha256": "a31d6df2d4d6f6e9a49a25ac652b56450d4e9ffa0524c25ae3b7b55d689ae12d"
     },
     "ai-company-os-frontend/features/mvp/localBackend.ts": {
       "bytes": 475,
@@ -1139,8 +1155,8 @@
       "sha256": "1469b756e5d69ee4e9f73fcf1f0cb37b86af6dabde9b1a42f97d91e77a12a5e9"
     },
     "ai-company-os-frontend/tests/lifecycle-projection.test.cjs": {
-      "bytes": 1002,
-      "sha256": "d59bc26aa6b7f2751cf0407bc515a8a21d86847b59f29dded30d9238321dce38"
+      "bytes": 1558,
+      "sha256": "5727a17b82c0ca4ed1221e12f7667207e2de2e5b3c33aa406c6d1a7a53fd99a8"
     },
     "ai-company-os-frontend/tests/mvpDiagnostics.test.cjs": {
       "bytes": 1831,
@@ -1182,6 +1198,10 @@
       "bytes": 1685,
       "sha256": "d2acee60a2a3e6e840d235b9a34c43e959bd7222b48ca04aff6e9cc6ef8a0336"
     },
+    "ai-company-os-frontend/tests/projection-session-join.test.cjs": {
+      "bytes": 1909,
+      "sha256": "2945e4a2b50e552cbb52c286a5f81a07dd12e8306c13edf5051e2c3f8aa22102"
+    },
     "ai-company-os-frontend/tests/role-visuals.test.cjs": {
       "bytes": 2221,
       "sha256": "5119f888dca414f47a399f0e2b575c13734266b71cae109f5fa02aa89322e37f"
@@ -1207,8 +1227,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "b55ba435b9c428374acb08a8d70a21dc858eb53f",
-  "source_git_commit_note": "Source commit in releases/GITHUB_READBACK_W1_0198_P03.json; persisted integration and full build NOT_RUN.",
+  "parent_source_manifest_blob": "54fc03f9f775e5d6b7d0aa880cd64b98d8d62145",
+  "source_git_commit_note": "Source commit in releases/GITHUB_READBACK_W1_0198_P04.json; full persisted fixture and build NOT_RUN.",
   "integration_parents": {
     "ui": {
       "commit": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
