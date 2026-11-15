@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0199-C",
-  "status": "ISOLATED_D0_PLAN_HISTORY_SQLITE_TESTED",
+  "doc_revision": "0200-S",
+  "status": "ISOLATED_D0_PG_SNAPSHOT_PROTOCOL_TESTED_REAL_PG_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "2d2ee7c4b4eafbdec9b721c8ad1b8f0428f78a3f",
+  "parent_git_commit": "37278c47bd04d645beed8f23341bbae427ee90d5",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -981,8 +981,20 @@
     "ai-company-os-backend/tests/test_plan_history_review_0199.py": {
       "bytes": 9848,
       "sha256": "adb6e42cc994d90ff90ecfb74527f36cee22a43867abd830c579067744e92e79"
+    },
+    "ai-company-os-backend/app/core/event_store/postgres_snapshot.py": {
+      "bytes": 3042,
+      "sha256": "5e8dea18d478499875adf0000243705968c4930af1752261ff66a77cda21425a"
+    },
+    "ai-company-os-backend/tests/test_postgres_snapshot_0200.py": {
+      "bytes": 4899,
+      "sha256": "842a1feebcd9d68dddbcb3764c11be23b672dc4aabdd2b43ffc37a95003cfa5a"
+    },
+    "ai-company-os-backend/tests/test_pg_snapshot_0200.py": {
+      "bytes": 2974,
+      "sha256": "c586b85edd27ec86976659b917f8e5132e6e4efae385e5a86d143cb8deeda3c3"
     }
   },
-  "parent_source_manifest_blob": "ee3f7f776d51ac058e80ee2ab0ff5a100d5b27ea",
+  "parent_source_manifest_blob": "146a776cb3b8901774ed0d3803332e832502ebe5",
   "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }
