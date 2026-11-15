@@ -66,3 +66,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0187 — Office Workbench projection
 [Architecture](docs/0187/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0187.json) · [evidence](releases/GITHUB_READBACK_0187.json).
+
+## 0187-W1-I — 0187 + W1 joint source
+32 UI paths (30 exact, two reconciled), 239 product files, 238 manifest path/size matches, 69 historical UI blobs retained. 9 shared schemas and 4 fixtures match. 66 selected Node/mock tests and 2 merged TSX syntax checks PASS; no full checkout/build/browser/backend or independent acceptance. [Scope](docs/0187-W1-I/SCOPE.json) · [Acceptance runbook](docs/0187-W1-I/ACCEPTANCE_RUNBOOK.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0187_W1_I.json) · [Readback](releases/GITHUB_READBACK_0187_W1_I.json).

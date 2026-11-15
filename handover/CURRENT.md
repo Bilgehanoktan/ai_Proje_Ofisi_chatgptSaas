@@ -63,3 +63,6 @@ Source e5db7974daa47652ca5773aeb5ece177a7b1a457; 201 manifest entries/202 produc
 
 ## 0187 — actual D0 Workbench history to Office projection
 Source f0af5e7bdb9310b7b9e8fc66e8cb8b5153b254cf; 212 manifest entries/213 product files; 41 new selected PASS, 111 prior NOT rerun. Actual writer and CLI reopen; isolated HTTP/proxy 200/503. 43 local exact paths, full archive not locally downloaded. Full ASGI/Next/browser/PG NOT_RUN; DNS blocked. IV, release, geometry join, actual agents, provider, spend and independent acceptance HOLD/DENY. [Architecture](../docs/0187/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0187.json).
+
+## 0187-W1-I — combined MVP source
+Isolated integration/0187-w1-abcdefgh; source 11eed33a9e9d0bf14a075d02fdd04d461197c683, two parents. 32 UI paths, 30 exact + 2 reconciled; 69 historical W1 records; 239 product files, 238 manifest path/size matches; 9 schema and 4 fixture pairs. 66 selected Node/mock checks and 2 syntax checks PASS; full checkout/locks/Next/backend/actual React/visual regression NOT_RUN. No independent acceptance, actual runtime, CI, main or PROD. [Architecture](../docs/0187-W1-I/ARCHITECTURE_AND_CATALOG.md) · [Acceptance](../docs/0187-W1-I/ACCEPTANCE_RUNBOOK.md) · [Readback](../releases/GITHUB_READBACK_0187_W1_I.json).

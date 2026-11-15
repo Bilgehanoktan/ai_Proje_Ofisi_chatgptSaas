@@ -88,3 +88,6 @@ P0 network-enabled pinned full checkout/locks, full backend, Next build and curr
 
 ## 0187 → 0188
 P0 full pinned network-enabled isolated checkout/locks/backend/Next/current browser; R03 physical mapping, PG non-owner, trusted clock/lease/W-A, canonical admission/budget/outbox. P1 bind workbench and admission identities across separate sample DBs; Office snapshot sequence/freshness and geometry crosswalk without live join. Actual grants, independent acceptance, real providers, spend, CI, main, PROD HOLD. No repeated standing owner approval.
+
+## 0187-W1-I next — 0188/W8
+Use unified branch as isolated integration candidate, recheck active recovery head before future joint changes. P0 full pinned checkout, dependency lock/provenance and full backend/Next/typecheck/actual React browser. P1 52 screen baseline and reviewed pixel regression, loopback API parity and all interaction tests. Continue 0188 R03/PG/lease/W-A/cross-store/freshness work separately. No acceptance until actual evidence; no main/CI/PROD/grants/spend.
