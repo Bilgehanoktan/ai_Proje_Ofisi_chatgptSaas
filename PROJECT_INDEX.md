@@ -102,3 +102,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0200-S — PostgreSQL consistent snapshot adapter (separate workstream)
 [Architecture](docs/0200S/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0200_S.json) · [Evidence](releases/GITHUB_READBACK_0200_S.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0200_S.json). 164 selected PASS; 13 actual PG skipped; IV/R03 HOLD.
+
+## 0201-R — retained history references (separate workstream)
+[Architecture](docs/0201R/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0201_R.json) · [Evidence](releases/GITHUB_READBACK_0201_R.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0201_R.json). 14 new archive tests PASS; 5 integration and 13 PG NOT_RUN; prior 164 PASS not rerun. No independent acceptance.
