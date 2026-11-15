@@ -1,0 +1,66 @@
+{
+  "revision": "W1-0183D",
+  "files": [
+    {
+      "path": "ai-company-os-frontend/office/engine/galleryCamera.ts",
+      "symbols": [
+        "GalleryCamera",
+        "ART_WIDTH",
+        "ART_HEIGHT",
+        "HOME",
+        "MIN_ZOOM",
+        "MAX_ZOOM",
+        "constrainCamera",
+        "zoomCamera",
+        "panCamera",
+        "dragCamera",
+        "focusCamera",
+        "imagePlacement"
+      ],
+      "purpose": "Pure bounded camera in 900x510 artwork coordinates; 1–3 zoom, 2.5 focus; finite guards; pixel-to-art conversion; percent image placement.",
+      "dependencies": [],
+      "diagnosis": "Check camera bounds and viewport dimensions; do not pass snapshot coordinates."
+    },
+    {
+      "path": "ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+      "symbols": [
+        "OfficeIllustration",
+        "startDrag",
+        "moveDrag",
+        "endDrag",
+        "changeZoom"
+      ],
+      "purpose": "Local camera and station selection, mouse/pen drag capture and cleanup, button/keyboard pan, explicit focus; existing floor/revision remount resets.",
+      "dependencies": [
+        "React",
+        "galleryCamera",
+        "officeArtwork",
+        "CSS module"
+      ],
+      "diagnosis": "Check floor key, focus, pointer capture and CSS sizing; touch uses controls, no pinch."
+    },
+    {
+      "path": "ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+      "symbols": [
+        "camera",
+        "stage",
+        "hint",
+        "stations",
+        "context"
+      ],
+      "purpose": "Clipped responsive fixed-ratio viewport and controls; no motion effects."
+    },
+    {
+      "path": "ai-company-os-frontend/tests/gallery-camera.test.cjs",
+      "symbols": [
+        "10 node:test cases"
+      ],
+      "purpose": "Bounds, invalid numeric inputs, zoom/pan/drag/focus, full viewport coverage."
+    }
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "contract_changes": 0,
+  "dependency_changes": 0,
+  "rollback": "Revert exact four paths on isolated W1, regenerate manifest from destination. Preserve 0183A/B/C and other branch changes."
+}
