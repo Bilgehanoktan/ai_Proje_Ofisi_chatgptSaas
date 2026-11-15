@@ -33,7 +33,7 @@ def binaries(bindir: Path) -> dict[str, str]:
     return result
 
 
-def run(bindir: Path) -> None:
+def run(bindir: Path, multi_session: bool = False) -> None:
     exe = binaries(bindir)
     sql = compose(DDL.read_bytes(), PROBE.read_bytes())
     if os.name != 'posix' or os.geteuid() == 0:
@@ -61,6 +61,13 @@ def run(bindir: Path) -> None:
             if r.stdout.strip() != 'true':
                 raise RuntimeError('PG_ROLLBACK_READBACK_HOLD')
             print('PASS 09 outer rollback removes schema and probe role')
+            if multi_session:
+                import importlib.util
+                spec = importlib.util.spec_from_file_location('postgres_race_0190', ROOT/'tests/integration/postgres_race_0190.py')
+                race = importlib.util.module_from_spec(spec); spec.loader.exec_module(race)
+                def query(statement):
+                    return cmd('psql',*args,'-Atq','-c',statement,capture_output=True,text=True).stdout.strip()
+                race.run_races(exe['psql'],args,env,DDL.read_bytes(),query)
         finally:
             if started or (data/'postmaster.pid').exists():
                 # Do not delete a live cluster if stop fails. Surface failure.
@@ -76,8 +83,9 @@ def run(bindir: Path) -> None:
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--bindir',type=Path,required=True,help='directory containing trusted installed PostgreSQL executables')
+    p.add_argument('--multi-session',action='store_true',help='also run two-session candidate CAS commit/rollback probes in the disposable cluster')
     a = p.parse_args()
-    run(a.bindir)
+    run(a.bindir,a.multi_session)
 
 
 if __name__ == '__main__':
