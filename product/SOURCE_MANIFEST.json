@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-r11-d0-0194-memory",
-  "doc_revision": "0194-M",
-  "status": "D0_MEMORY_ACCESS_REFERENCE_PARTIAL_SOURCE",
+  "version": "0.1.0-draft.6-r11-d0-0196-memory-model",
+  "doc_revision": "0196-MA",
+  "status": "D0_MEMORY_SQLITE_MODEL_ENVELOPE_PARTIAL_SOURCE_TESTED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f7a0258103b72b6052491b162c3a8fe73b99546e",
+  "parent_git_commit": "0d9fb1727444938a16cf493ef5c5e58b48e73d89",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -929,8 +929,24 @@
     "ai-company-os-backend/tests/test_memory_access_0194.py": {
       "bytes": 7089,
       "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
+    },
+    "ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
+      "bytes": 8405,
+      "sha256": "f80f3d64350f9c38f718ad4d1671e6ad0b69e8986a2a3a9f268bedb37b99da4f"
+    },
+    "ai-company-os-backend/tests/test_memory_store_0196.py": {
+      "bytes": 8077,
+      "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/runtime_binding.py": {
+      "bytes": 3373,
+      "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
+    },
+    "ai-company-os-backend/tests/test_model_invocation_0196.py": {
+      "bytes": 4668,
+      "sha256": "fe1c62ba445f07185346009f2e4835bd5757815197288ef52cdf9b00f768bd0a"
     }
   },
-  "parent_source_manifest_blob": "92717879a6776d9e0b62a21306dd59275d55e216",
-  "source_git_commit_note": "0194-M source commit recorded in releases/GITHUB_READBACK_0194_M.json. Selected local tests only; real retrieval and independent acceptance HOLD."
+  "parent_source_manifest_blob": "2f949ef7ceb1cd9320d283ccd9da856cb5272668",
+  "source_git_commit_note": "Exact source commit in releases/GITHUB_READBACK_0196_MA.json; selected tests only; no production authority."
 }
