@@ -16,3 +16,6 @@ Backend source owner candidate; frontend byte-identical consumer. Not normative 
 ## 0185 D0 Outbox read-only projection contract
 - `outbox.review.projection.schema.json` SHA-256 `96aebab7e18757e36927d45e98c4dd5a1e51fd79b8b8438d83ee9822f692c868`; backend source and frontend generated copy are byte-identical.
 - Shared vectors: `product/ai-company-os-backend/tests/outbox_projection_cases.json` SHA-256 `5c835145ef738460c86ac801f0b68b70b7a5889d2fd833a3608700c2acbdb98c`. Draft 2020-12 and TypeScript parser agree on all 22 cases; no normative acceptance or runtime authority.
+
+## 0186 D0 admission sample projection
+- `admission.sample.projection.schema.json` SHA-256 `c28b116abdae37d324d76cf4bd255f0dcf86368604805a6093f377059b5a7193`; backend source and frontend generated copy byte-identical. Fixed synthetic phases only; no authority.

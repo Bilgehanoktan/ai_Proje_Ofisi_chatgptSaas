@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-r11-provider-admission-contracts-dev",
-  "doc_revision": "0185",
-  "status": "D0_TYPED_PROVIDER_ADMISSION_BUNDLE_OUTBOX_SCHEMA_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
+  "version": "0.1.0-draft.6-recovery-r11-durable-admission-dev",
+  "doc_revision": "0186",
+  "status": "D0_DURABLE_ADMISSION_SETTLEMENT_PROJECTION_INTEGRATED_SELECTED_TEST_PASS_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "60c08053169b83c383019f5e34aace6cd7ba669b",
+  "parent_git_commit": "ba74dd586c6ec4cfc768ae5ceb6b364d901782cb",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -31,8 +31,8 @@
       "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-backend/CONTRACT_PIN.md": {
-      "bytes": 1803,
-      "sha256": "79ed6d315f24e3448f8b1bf39f3048c4eaad82adb53cea181a713884a5dfb990"
+      "bytes": 2065,
+      "sha256": "eebf749044dc3f5960f48f7a4e8212f85d97e922a15e8f1d804dcad610f8ee85"
     },
     "ai-company-os-backend/README.md": {
       "bytes": 725,
@@ -50,9 +50,13 @@
       "bytes": 53,
       "sha256": "204dd3047d08ca62e823cf02fa9c35a2b17d829ce048bbb342e55bd20b20e23e"
     },
+    "ai-company-os-backend/app/api/admission_projection.py": {
+      "bytes": 715,
+      "sha256": "69ebb03c9b5e6d7f2d3572324015c9a0bc71c46af0f679aeb7a16609a3bad48a"
+    },
     "ai-company-os-backend/app/api/demo.py": {
-      "bytes": 2825,
-      "sha256": "19bc822f4eb9cea0c39aec8a9735b36d145cbd95c66d5a990eb012c5ea0ef29e"
+      "bytes": 2954,
+      "sha256": "4a10af5039aa0ae150f57cc25cd77e5de6875956a0e569b47072fe6e948921fa"
     },
     "ai-company-os-backend/app/api/mvp_diagnostics.py": {
       "bytes": 5255,
@@ -89,6 +93,14 @@
     "ai-company-os-backend/app/core/development_review/__init__.py": {
       "bytes": 66,
       "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    "ai-company-os-backend/app/core/development_review/admission_demo.py": {
+      "bytes": 709,
+      "sha256": "ddf0e4295efbc02cdda05a73c207229aba2b3260adc28fd0cbae95f67c8ed08e"
+    },
+    "ai-company-os-backend/app/core/development_review/admission_sample.py": {
+      "bytes": 8231,
+      "sha256": "2aeb2c765d9e7d06be7d1e1bcd3e2694fcaf8499470b205708da7ac72ee68270"
     },
     "ai-company-os-backend/app/core/development_review/atomic_sample.py": {
       "bytes": 6234,
@@ -378,6 +390,10 @@
       "bytes": 894,
       "sha256": "e8826ce6c67bfaa2f55ec930fc55fc91833e69f3fb4ae226dae41c5069af5d6c"
     },
+    "ai-company-os-backend/contracts/source/admission.sample.projection.schema.json": {
+      "bytes": 3079,
+      "sha256": "c28b116abdae37d324d76cf4bd255f0dcf86368604805a6093f377059b5a7193"
+    },
     "ai-company-os-backend/contracts/source/company.catalog.demo.schema.json": {
       "bytes": 2182,
       "sha256": "11b688e725933075ced435aba0d283c8a2b2df78896f7c5129a2cc673e9523a3"
@@ -437,6 +453,10 @@
     "ai-company-os-backend/tests/test_admission_bundle.py": {
       "bytes": 3648,
       "sha256": "7d2e7d74f8633dd93aa21fac85e0111accfc3dd2a89ac0f11a41feb4d12d676c"
+    },
+    "ai-company-os-backend/tests/test_admission_sample.py": {
+      "bytes": 6069,
+      "sha256": "11cad0a4f7786cee91250b531b0ebb1e1f6f94d2e5854648e51d6715143ec2d7"
     },
     "ai-company-os-backend/tests/test_atomic_sample.py": {
       "bytes": 3561,
@@ -519,8 +539,8 @@
       "sha256": "161b9c2b2fc731ee9b136050dc64f5a7601634bea963de068d679db23555aaf3"
     },
     "ai-company-os-frontend/CONTRACT_PIN.md": {
-      "bytes": 1803,
-      "sha256": "79ed6d315f24e3448f8b1bf39f3048c4eaad82adb53cea181a713884a5dfb990"
+      "bytes": 2065,
+      "sha256": "eebf749044dc3f5960f48f7a4e8212f85d97e922a15e8f1d804dcad610f8ee85"
     },
     "ai-company-os-frontend/README.md": {
       "bytes": 794,
@@ -529,6 +549,10 @@
     "ai-company-os-frontend/SECURITY.md": {
       "bytes": 198,
       "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
+    },
+    "ai-company-os-frontend/app/api/demo/admission/route.ts": {
+      "bytes": 1126,
+      "sha256": "f494eab65357a36572dd17c0e4e07499af39121b185229b40cfcd76a5a8d71b4"
     },
     "ai-company-os-frontend/app/api/demo/mvp/route.ts": {
       "bytes": 1099,
@@ -577,6 +601,10 @@
     "ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx": {
       "bytes": 704,
       "sha256": "dadc7de6906196aa1abc62343d81741552d234a526fc9b639f2e5b7c265c6341"
+    },
+    "ai-company-os-frontend/contracts/generated/admission.sample.projection.schema.json": {
+      "bytes": 3079,
+      "sha256": "c28b116abdae37d324d76cf4bd255f0dcf86368604805a6093f377059b5a7193"
     },
     "ai-company-os-frontend/contracts/generated/company.catalog.demo.schema.json": {
       "bytes": 2182,
@@ -647,8 +675,8 @@
       "sha256": "65cdefc209e3942dd06f71a3d15157efe1034e1ce9e9582263fdf04d9aea1c9a"
     },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 7526,
-      "sha256": "363c4ad48bd876f2bf37793aaa7bd7702b479986f82a11e5c821e328879e1f88"
+      "bytes": 7652,
+      "sha256": "24216737106461535e1d02e65105feb1b4fe85b1aca7b5d18680720cc949976e"
     },
     "ai-company-os-frontend/features/core-review/CorePreview.tsx": {
       "bytes": 3378,
@@ -657,6 +685,10 @@
     "ai-company-os-frontend/features/core-review/planProjection.ts": {
       "bytes": 2653,
       "sha256": "81f1fbe1bffbe571966c3256001c53ee6754717b0d3ec8998a55530cd3d06820"
+    },
+    "ai-company-os-frontend/features/mvp/AdmissionProjectionPanel.tsx": {
+      "bytes": 1599,
+      "sha256": "deedb72ab168cf6336e67a0d29d7159712597a113549d5d3705b9693e492e273"
     },
     "ai-company-os-frontend/features/mvp/MvpDiagnosticsPanel.tsx": {
       "bytes": 1609,
@@ -669,6 +701,10 @@
     "ai-company-os-frontend/features/mvp/WorkbenchLifecyclePanel.tsx": {
       "bytes": 1554,
       "sha256": "b1e7190f49d41c83092265d70e705e743c1639acbfc4175c83fb815070e97845"
+    },
+    "ai-company-os-frontend/features/mvp/admissionProjection.ts": {
+      "bytes": 1574,
+      "sha256": "e49e9c5382471b8abf7511b38e5392052476d2fdf0b5acec73b92ca4fdf32060"
     },
     "ai-company-os-frontend/features/mvp/mvpDiagnostics.ts": {
       "bytes": 2140,
@@ -738,6 +774,10 @@
       "bytes": 955,
       "sha256": "ff51492a3f95d5e1dc713267b0cd9c82f760dca6ee229501a098ad3cf2a50f2f"
     },
+    "ai-company-os-frontend/tests/admission-projection.test.cjs": {
+      "bytes": 2471,
+      "sha256": "42ac64db37cbfd9cd3ac8aecb527b606cc29f6f8fe68dd4f245b72a3970ceef1"
+    },
     "ai-company-os-frontend/tests/browser_next_0182.py": {
       "bytes": 2705,
       "sha256": "966f9ade811faa22a42d10386a02798836ec9dbad6f36c8c6c26e43a77d2b3f5"
@@ -771,6 +811,6 @@
       "sha256": "269657f5fbb39127f713edff0a2f55a493e01190a8c505ceb3ba784e18f460e8"
     }
   },
-  "parent_source_manifest_blob": "97ade51ebc9c01cabbe8a3efa1e689cd98cb6156",
-  "source_git_commit_note": "Exact source commit recorded in releases/GITHUB_READBACK_0185.json; selected local synthetic tests, not full build or acceptance."
+  "parent_source_manifest_blob": "271cfa20f9109a83d5a1875eb38593d3047750da",
+  "source_git_commit_note": "Exact source commit recorded in releases/GITHUB_READBACK_0186.json; local selected synthetic tests, not full build or acceptance."
 }

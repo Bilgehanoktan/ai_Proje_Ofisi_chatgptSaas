@@ -67,3 +67,7 @@ def mvp_diagnostics():
 
 from app.api.outbox_projection import router as outbox_projection_router
 app.include_router(outbox_projection_router)
+
+
+from app.api.admission_projection import router as admission_projection_router
+app.include_router(admission_projection_router)
