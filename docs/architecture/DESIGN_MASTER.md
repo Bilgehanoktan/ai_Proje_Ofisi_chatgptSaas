@@ -132,3 +132,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0205-R — company recovery
 [Addendum](../0205R/ARCHITECTURE_AND_CATALOG.md). D0 checkpoint, local witness CAS and unknown transaction quarantine; 43 new +105 rerun PASS; independent custody, T1 integration and PG remain open.
+
+
+## 0206 — controlled D0 unified product source
+[Architecture](../0206/ARCHITECTURE_AND_CATALOG.md) · [Reconciled P05](../W1-0198-P05/ARCHITECTURE_AND_CATALOG.md) · [AI/Memory](../0196-MA/ARCHITECTURE_AND_CATALOG.md) · [P06 historical evidence](../W1-0198-P06/ARCHITECTURE_AND_CATALOG.md). 335 product files; 24 selected actual SQLite regressions PASS; combined runtime/independent acceptance open.

@@ -75,3 +75,7 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0205-R — company recovery
 [Delta](revisions/TECHNICAL_CATALOG_0205_R.json) · [Maintenance](../docs/0205R/ARCHITECTURE_AND_CATALOG.md). Two new product files, no prior source replacement or canonical migration.
+
+
+## 0206
+[Exact source delta, symbols, API/DB/event/dependencies and test boundaries](revisions/TECHNICAL_CATALOG_0206.json) · [Architecture/maintenance/rollback](../docs/0206/ARCHITECTURE_AND_CATALOG.md).

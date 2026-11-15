@@ -587,12 +587,206 @@
     "full_T1": "NOT_RUN",
     "actual_pg_13": "NOT_RUN",
     "build_browser": "NOT_RUN",
-    "independent": "HOLD"
+    "independent": "HOLD",
+    "snapshot_regressions": {
+      "passed": 24,
+      "new": 0,
+      "rerun": 24,
+      "scope": "exact 7-file dependency closure with real SQLite",
+      "evidence": "tests/evidence/TEST_EVIDENCE_0206_SNAPSHOT.json"
+    }
   },
   "notes": [
     "No CI, main merge, live actions or new grants.",
     "P06 evidence is from a different snapshot guard; never transfer PASS to combined tree.",
     "P05 W8 harness pins are historical; must be repinned/reviewed before use. W8 current branch not merged.",
     "Source manifests inherited; full SHA-256 byte verification pending local checkout."
+  ],
+  "source_commit": "f1b50dc2be8a455e3f3aee92b14d2d79433338a4",
+  "api_changes": [
+    {
+      "method": "GET",
+      "backend": "/demo/v1/lifecycle/sample-projection",
+      "frontend": "/api/demo/lifecycle",
+      "schema": "lifecycle.projection.schema.json",
+      "guard": "fixed env AICOS_D0_LIFECYCLE_DB; 503/no-store on failure",
+      "authority": "D0 historical only"
+    },
+    {
+      "method": "GET",
+      "backend": "/demo/v1/lifecycle/prefix-projection",
+      "frontend": "/api/demo/lifecycle-prefix",
+      "schema": "lifecycle.prefix.schema.json",
+      "guard": "fixed env AICOS_D0_LIFECYCLE_PREFIX_DB; 503/no-store on failure",
+      "authority": "D0 historical only"
+    }
+  ],
+  "symbols": [
+    {
+      "path": "app/core/development_review/lifecycle_read_snapshot.py",
+      "symbols": [
+        "lifecycle_snapshot",
+        "require_single_head",
+        "_authorizer",
+        "_check_path"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "pathlib",
+        "contextlib",
+        "time"
+      ],
+      "diagnosis": "PATH/SCHEMA/JOURNAL/HEAD_COUNT/DEADLINE HOLD; preserve source; no repair"
+    },
+    {
+      "path": "app/core/development_review/d0_snapshot.py",
+      "symbols": [
+        "ReadCursor",
+        "open_d0_snapshot"
+      ],
+      "status": "compatibility helper, not canonical lifecycle boundary"
+    },
+    {
+      "path": "app/core/development_review/lifecycle_projection.py",
+      "symbols": [
+        "fixed_chain",
+        "ReadCursor",
+        "read_lifecycle_projection"
+      ],
+      "dependencies": [
+        "lifecycle_read_snapshot",
+        "agent_runtime.lifecycle",
+        "postgres_admission_mapping",
+        "postgres_lifecycle_mapping",
+        "postgres_transition_mapping"
+      ]
+    },
+    {
+      "path": "app/core/development_review/lifecycle_prefix_projection.py",
+      "symbols": [
+        "read_lifecycle_prefix"
+      ],
+      "dependencies": [
+        "lifecycle_read_snapshot",
+        "lifecycle_projection",
+        "lifecycle_prefix_wire",
+        "postgres_run",
+        "postgres_admission_mapping",
+        "postgres_lifecycle_mapping"
+      ]
+    },
+    {
+      "path": "app/engines/memory_engine/snapshot_store.py",
+      "symbols": [
+        "Snapshot",
+        "SnapshotPin",
+        "create_store",
+        "publish_snapshot",
+        "inspect_stored_memory"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "retrieval",
+        "memory_engine.runtime_binding",
+        "knowledge_engine.provenance",
+        "agent_runtime.lifecycle"
+      ]
+    },
+    {
+      "path": "app/engines/model_gateway/runtime_binding.py",
+      "symbols": [
+        "InvocationEnvelope",
+        "invocation_digest",
+        "inspect_invocation"
+      ],
+      "dependencies": [
+        "agent_runtime.lifecycle",
+        "provider_contract",
+        "registry"
+      ]
+    },
+    {
+      "path": "features/data/projectionSession.ts",
+      "status": "owner-token readback session"
+    },
+    {
+      "path": "features/data/projectionScope.ts",
+      "status": "historical scope guard"
+    },
+    {
+      "path": "features/progress/PlanProgressPanel.tsx",
+      "status": "historical 40-gate milestone display, not global completion"
+    }
+  ],
+  "db_schema": {
+    "canonical_migrations_added": 0,
+    "retained_candidate_sql": [
+      "database/0203T/terminal_command_anchors.sql",
+      "database/0204C/company_event_order.sql"
+    ],
+    "memory_fixture": "snapshots(generation PK,digest,graph,metadata,raw), local BEGIN IMMEDIATE CAS only",
+    "lifecycle_tables": [
+      "run_heads",
+      "run_leases",
+      "run_admissions",
+      "sample_budgets",
+      "sample_reservations",
+      "run_mutations",
+      "events",
+      "outbox",
+      "fences",
+      "run_audit",
+      "run_lease_renewals",
+      "sample_settlements"
+    ],
+    "events_changed": 0
+  },
+  "dependency_changes": {
+    "backend": {
+      "fastapi": [
+        "0.115.12",
+        "0.163.0"
+      ],
+      "starlette": [
+        null,
+        "1.10.0"
+      ],
+      "uvicorn": [
+        "0.34.2",
+        "0.34.2"
+      ]
+    },
+    "frontend": {
+      "next": [
+        "15.5.9",
+        "15.5.29"
+      ],
+      "react": [
+        "19.1.4",
+        "19.1.10"
+      ],
+      "react-dom": [
+        "19.1.4",
+        "19.1.10"
+      ],
+      "overrides_added": {
+        "postcss": "8.5.32",
+        "sharp": "0.35.5"
+      },
+      "typescript": "5.9.3",
+      "phaser": "3.90.0"
+    },
+    "status": "Imported P05 historical candidate pins, not installed or freshly audited; review transitive locks and compatibility with history signature requirements before build."
+  },
+  "catalog_refs": [
+    "catalog/revisions/TECHNICAL_CATALOG_0194_M.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0196_MA.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P01.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P02.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P03.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P04.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P05.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P06.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0205_R.json"
   ]
 }

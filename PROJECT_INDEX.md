@@ -117,3 +117,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0205-R — company recovery
 [Architecture](docs/0205R/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0205_R.json) · [Evidence](releases/GITHUB_READBACK_0205_R.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0205_R.json). 148 selected PASS; full integration and independent acceptance open.
+
+
+## 0206 — D0 unified product
+[Architecture](docs/0206/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0206.json) · [Evidence](releases/GITHUB_READBACK_0206.json) · [Next](handover/NEXT_STEP_0206.md).

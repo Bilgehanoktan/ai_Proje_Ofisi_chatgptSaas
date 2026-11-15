@@ -114,3 +114,7 @@ Source `f2510aaab5232dad8f29537638bf7ee3056b708a`; parent `76c110fdef1d35a86e096
 
 ## 0205-R — company recovery
 Source `bb2b88bf44ed23b523b269b50cad326c313b75fa`; parent `cb03319e1e8d46246973c9c6bfad23482043e529`. 260 manifest entries / 261 product files. 148 selected PASS (43 new,105 rerun); 12 prior integrations, full T1 decorator and 13 PG NOT_RUN; independent witness custody HOLD. [Architecture](../docs/0205R/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0205_R.json) · [Next](NEXT_STEP_0205_R.md).
+
+
+## 0206 — controlled D0 source union
+Source f1b50dc2be8a455e3f3aee92b14d2d79433338a4; 335 product files, 334 manifest entries. 22/22 core carry, 8/8 AI delta, 12/12 shared contract parity. 24 selected exact SQLite regressions PASS; 12 core +17 combined lifecycle, full T1/PG/build/browser NOT_RUN; independent HOLD. [Architecture](../docs/0206/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0206.json) · [Next](NEXT_STEP_0206.md).

@@ -139,3 +139,7 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0205-R next
 [0206 integration](NEXT_STEP_0205_R.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0205_R.json). Close actual dependency/test gap; no automatic main merge, actual authority or PROD.
+
+
+## 0206 next
+[0207 evidence program](NEXT_STEP_0206.md).
