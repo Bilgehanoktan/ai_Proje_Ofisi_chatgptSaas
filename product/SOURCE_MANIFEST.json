@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0193",
-  "status": "ISOLATED_RUNTIME_TRANSITION_PARTIAL_SYNTHETIC_TESTED",
+  "version": "0.1.0-draft.6-r11-d0-0194-memory",
+  "doc_revision": "0194-M",
+  "status": "D0_MEMORY_ACCESS_REFERENCE_PARTIAL_SOURCE",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "4f2c6d131c38ca7207d0b89ca001580466fd06d4",
+  "parent_git_commit": "f7a0258103b72b6052491b162c3a8fe73b99546e",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -315,16 +315,16 @@
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
     "ai-company-os-backend/app/engines/knowledge_engine/provenance.py": {
-      "bytes": 1358,
-      "sha256": "65a4906da55c9c918729c0e58d4ab10acd1979bf1e8e556037132f9b1942a49d"
+      "bytes": 1391,
+      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
     },
     "ai-company-os-backend/app/engines/memory_engine/__init__.py": {
       "bytes": 52,
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
     "ai-company-os-backend/app/engines/memory_engine/retrieval.py": {
-      "bytes": 2645,
-      "sha256": "07b7266d778a65c2972bf01c71925c0dfcfc1529e49dd5f738b384925fb63ca5"
+      "bytes": 2715,
+      "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
     },
     "ai-company-os-backend/app/engines/model_gateway/__init__.py": {
       "bytes": 52,
@@ -915,8 +915,8 @@
       "sha256": "4730949fe2af90c58b70a92d2462881e20deccde535882e8785e9eaaf76bae71"
     },
     "ai-company-os-backend/app/engines/memory_engine/runtime_binding.py": {
-      "bytes": 489,
-      "sha256": "baf142421392522b87d5af0e8fc75606c03123d671cef9fb361f024815df9053"
+      "bytes": 5319,
+      "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
     },
     "ai-company-os-backend/app/core/agent_runtime/postgres_run.py": {
       "bytes": 2994,
@@ -925,8 +925,12 @@
     "ai-company-os-backend/tests/test_transition_transaction_0193.py": {
       "bytes": 9667,
       "sha256": "411d57ebb21645ce8ff7c3c8ed94f90d85b6cf3d20c186043aeb43a42fe48ecb"
+    },
+    "ai-company-os-backend/tests/test_memory_access_0194.py": {
+      "bytes": 7089,
+      "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
     }
   },
-  "parent_source_manifest_blob": "4fff252f05491619422ada45918825fb784bc80d",
-  "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
+  "parent_source_manifest_blob": "92717879a6776d9e0b62a21306dd59275d55e216",
+  "source_git_commit_note": "0194-M source commit recorded in releases/GITHUB_READBACK_0194_M.json. Selected local tests only; real retrieval and independent acceptance HOLD."
 }
