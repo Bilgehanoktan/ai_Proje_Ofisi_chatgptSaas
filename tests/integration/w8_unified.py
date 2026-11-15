@@ -1,4 +1,4 @@
-"""W1-0198-P02 isolated D0 build runner. No CI, main, provider calls or PROD."""
+"""W1-0198-P03 isolated D0 build runner. No CI, main, provider calls or PROD."""
 import argparse
 import email
 import hashlib
@@ -13,13 +13,14 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = 'b55ba435b9c428374acb08a8d70a21dc858eb53f'
+MANIFEST_BLOB = '54fc03f9f775e5d6b7d0aa880cd64b98d8d62145'
 HARNESS = {
-    'run_combined_helpers.cjs': '2d7b92d2223e1b325d433ca6bb04dff370561cc3',
+    'run_combined_helpers.cjs': '2f1a2455d586ccaac63154d602caffa1c214e301',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
     'browser_0187_w1.py': 'b829ad9b2fa12f7910e014ec87e9ee2a59d17370',
     'browser_task_budget_0188.py': '4511877f03ffae35d4baef7267c6d7e8ea6bf583',
     'browser_lifecycle_p02.py': 'd7e8760b3f366d410459b33dc16f44b1144fe231',
+    'browser_lifecycle_prefix_p03.py': 'c41ea2455ce1bd6792fa829be0377344fd30e9da',
 }
 
 def sha(path):
@@ -58,7 +59,7 @@ def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact W1-0198-P02 archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact W1-0198-P03 archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)
@@ -223,29 +224,32 @@ def smoke(stage, approval, chromium, frontend_port=17300, backend_port=17301):
     front_origin=f'http://127.0.0.1:{frontend_port}'
     back_origin=f'http://127.0.0.1:{backend_port}'
     b,f=backend(stage),frontend(stage); e=env_local(); pair=stage/'sample-pair';outbox=stage/'demo.review.atomic.d0.sqlite'
-    lifecycle=stage/'lifecycle.d0.sqlite'
-    if pair.exists() or outbox.exists() or lifecycle.exists():raise ValueError('use fresh stage for smoke; preserve old sample for inspection')
+    lifecycle=stage/'lifecycle.d0.sqlite'; prefix=stage/'lifecycle-prefix.d0.sqlite'
+    if pair.exists() or outbox.exists() or lifecycle.exists() or prefix.exists():raise ValueError('use fresh stage for smoke; preserve old sample for inspection')
     run([python(stage),'-m','app.core.development_review.paired_demo','--directory',pair,'--outcome','unknown'],b,e)
     run([python(stage),'-m','app.core.development_review.outbox_demo','create','--db',outbox],b,e)
     run([python(stage),'-c',"import sys; sys.path.insert(0,'tests'); from test_lifecycle_projection_p02 import export_fixture; export_fixture(sys.argv[1])",lifecycle],b,e)
+    run([python(stage),'-c',"import sys; sys.path.insert(0,'tests'); from test_lifecycle_prefix_p03 import export_prefix_fixture; export_prefix_fixture(sys.argv[1])",prefix],b,e)
     w,a=pair/'demo.workbench.d0.sqlite',pair/'demo.admission.d0.sqlite'
-    before=[sha(p) for p in (w,a,outbox,lifecycle)]
-    e.update(AICOS_D0_BACKEND_PORT=str(backend_port), AICOS_D0_WORKBENCH_DB=str(w),AICOS_D0_ADMISSION_DB=str(a),AICOS_D0_REVIEW_DB=str(outbox),AICOS_D0_LIFECYCLE_DB=str(lifecycle))
+    before=[sha(p) for p in (w,a,outbox,lifecycle,prefix)]
+    e.update(AICOS_D0_BACKEND_PORT=str(backend_port), AICOS_D0_WORKBENCH_DB=str(w),AICOS_D0_ADMISSION_DB=str(a),AICOS_D0_REVIEW_DB=str(outbox),AICOS_D0_LIFECYCLE_DB=str(lifecycle),AICOS_D0_LIFECYCLE_PREFIX_DB=str(prefix))
     procs=[]
     try:
         procs.append(subprocess.Popen([str(python(stage)),'-m','uvicorn','app.main:app','--host','127.0.0.1','--port',str(backend_port)],cwd=b,env=e))
         ready(back_origin+'/demo/v1/status',procs[-1])
         procs.append(subprocess.Popen([node(),str(f/'node_modules/next/dist/bin/next'),'start','-H','127.0.0.1','-p',str(frontend_port)],cwd=f,env=e))
         ready(front_origin+'/',procs[-1])
-        routes={'mvp':'mvp/diagnostics','admission':'admission/sample-projection','outbox':'outbox/review-projection','office-workbench':'office/workbench-projection','task-budget':'task-budget/sample-projection','lifecycle':'lifecycle/sample-projection'}
+        routes={'mvp':'mvp/diagnostics','admission':'admission/sample-projection','outbox':'outbox/review-projection','office-workbench':'office/workbench-projection','task-budget':'task-budget/sample-projection','lifecycle':'lifecycle/sample-projection','lifecycle-prefix':'lifecycle/prefix-projection'}
         for front,back in routes.items():
             x=get_json(back_origin+'/demo/v1/'+back);y=get_json(front_origin+'/api/demo/'+front)
             if x!=y:raise ValueError('loopback parity mismatch: '+front)
+            if front=='lifecycle-prefix' and (x['head_version']!=3 or x['lease_freshness']!='UNKNOWN' or x['dispatch_allowed'] is not False):raise ValueError('prefix invariant mismatch')
             if front=='task-budget' and (x['budget']['phase']!='UNKNOWN_HOLD' or x['budget']['sample_reserved_minor']!=100 or x['spend_allowed'] is not False):raise ValueError('paired invariant mismatch')
+        run([python(stage),stage/'tests/integration/browser_lifecycle_prefix_p03.py','--chromium',chromium,'--frontend-port',frontend_port],stage,e)
         run([python(stage),stage/'tests/integration/browser_lifecycle_p02.py','--chromium',chromium,'--frontend-port',frontend_port],stage,e)
         run([python(stage),stage/'tests/integration/browser_0187_w1.py','--chromium',chromium,'--output',stage/'screenshots','--frontend-port',frontend_port],stage,e)
         run([python(stage),stage/'tests/integration/browser_task_budget_0188.py','--chromium',chromium,'--frontend-port',frontend_port],stage,e)
-        if before!=[sha(p) for p in (w,a,outbox,lifecycle)]:raise ValueError('readback changed sample DB')
+        if before!=[sha(p) for p in (w,a,outbox,lifecycle,prefix)]:raise ValueError('readback changed sample DB')
         print('PASS loopback parity and 52 baseline captures; pixel review and independent acceptance remain open')
     finally:
         for p in reversed(procs):

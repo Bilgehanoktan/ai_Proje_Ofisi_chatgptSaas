@@ -43,3 +43,9 @@
 .eds-frame .lifecycle-timeline{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,145px),1fr));gap:8px}
 .eds-frame .lifecycle-timeline li{border:1px solid var(--line);border-inline-start:3px solid var(--outline-strong);border-radius:8px;background:var(--surface-raised);padding:10px;min-width:0;overflow-wrap:anywhere}
 .eds-frame .lifecycle-timeline small{display:block;margin-top:5px}
+
+/* P03 historical prefix metadata; accessible text, no live-motion styling. */
+.eds-frame .prefix-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,165px),1fr));gap:10px;margin-block:12px}
+.eds-frame .prefix-facts div{min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised)}
+.eds-frame .prefix-facts dt{color:var(--muted);font-size:.85rem}
+.eds-frame .prefix-facts dd{margin:6px 0 0;font-weight:650;overflow-wrap:anywhere}

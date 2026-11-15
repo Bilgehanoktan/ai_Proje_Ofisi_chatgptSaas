@@ -83,3 +83,7 @@ app.include_router(task_budget_projection_router)
 
 from app.api.lifecycle_projection import router as lifecycle_projection_router
 app.include_router(lifecycle_projection_router)
+
+
+from app.api.lifecycle_prefix_projection import router as lifecycle_prefix_projection_router
+app.include_router(lifecycle_prefix_projection_router)

@@ -1,4 +1,4 @@
-"""Interactive D0 preview of the already built and smoke-tested W1-0198-P02 stage."""
+"""Interactive D0 preview of the already built and smoke-tested W1-0198-P03 stage."""
 import argparse
 from pathlib import Path
 import socket
@@ -22,6 +22,7 @@ def launch(stage, approval, frontend_port=17300, backend_port=17301):
         'sample-pair/demo.admission.d0.sqlite',
         'demo.review.atomic.d0.sqlite',
         'lifecycle.d0.sqlite',
+        'lifecycle-prefix.d0.sqlite',
     )]
     before = [w.sha(p) for p in paths]
     w.check_ports(frontend_port, backend_port)
@@ -30,7 +31,7 @@ def launch(stage, approval, frontend_port=17300, backend_port=17301):
     env = w.env_local()
     env.update(AICOS_D0_BACKEND_PORT=str(backend_port), AICOS_D0_WORKBENCH_DB=str(paths[0]),
                AICOS_D0_ADMISSION_DB=str(paths[1]),
-               AICOS_D0_REVIEW_DB=str(paths[2]), AICOS_D0_LIFECYCLE_DB=str(paths[3]))
+               AICOS_D0_REVIEW_DB=str(paths[2]), AICOS_D0_LIFECYCLE_DB=str(paths[3]), AICOS_D0_LIFECYCLE_PREFIX_DB=str(paths[4]))
     f, b = w.frontend(stage), w.backend(stage)
     procs = []
     try:
@@ -42,12 +43,14 @@ def launch(stage, approval, frontend_port=17300, backend_port=17301):
         w.ready(front_origin+'/', procs[-1])
         routes = {'mvp': 'mvp/diagnostics', 'admission': 'admission/sample-projection',
                   'outbox': 'outbox/review-projection', 'office-workbench': 'office/workbench-projection',
-                  'task-budget': 'task-budget/sample-projection', 'lifecycle': 'lifecycle/sample-projection'}
+                  'task-budget': 'task-budget/sample-projection', 'lifecycle': 'lifecycle/sample-projection', 'lifecycle-prefix': 'lifecycle/prefix-projection'}
         for front, back in routes.items():
             x = w.get_json(back_origin+'/demo/v1/' + back)
             y = w.get_json(front_origin+'/api/demo/' + front)
             if x != y:
                 raise ValueError('loopback parity mismatch: ' + front)
+            if front == 'lifecycle-prefix' and (x['head_version'] != 3 or x['lease_freshness'] != 'UNKNOWN' or x['dispatch_allowed'] is not False):
+                raise ValueError('prefix invariant mismatch')
             if front == 'task-budget' and (x['budget']['phase'] != 'UNKNOWN_HOLD'
                 or x['budget']['sample_reserved_minor'] != 100
                 or x['spend_allowed'] is not False):
