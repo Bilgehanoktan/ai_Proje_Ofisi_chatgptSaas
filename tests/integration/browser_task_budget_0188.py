@@ -2,8 +2,9 @@
 import argparse
 from playwright.sync_api import sync_playwright, expect
 
-p=argparse.ArgumentParser();p.add_argument('--chromium',required=True);args=p.parse_args()
-origin='http://127.0.0.1:3000'
+p=argparse.ArgumentParser();p.add_argument('--chromium',required=True);p.add_argument('--frontend-port',type=int,default=3000);args=p.parse_args()
+if not 1024 <= args.frontend_port <= 49151: raise ValueError('invalid frontend port')
+origin=f'http://127.0.0.1:{args.frontend_port}'
 with sync_playwright() as pw:
     browser=pw.chromium.launch(executable_path=args.chromium)
     page=browser.new_page(viewport={'width':1440,'height':900})

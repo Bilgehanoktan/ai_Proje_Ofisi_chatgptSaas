@@ -13,12 +13,12 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = '95cb400e00b246fb8275d93fbc6c74517179ab3c'
+MANIFEST_BLOB = '652d12b5daf53859f723e6ffe06dfd03c3efd13f'
 HARNESS = {
     'run_combined_helpers.cjs': '8228e8db13e27f641e8b24dd447f55cf2cfc4a31',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
-    'browser_0187_w1.py': 'af750f0a7ca7cd57f133abaf6f47b6e9bac2b0f7',
-    'browser_task_budget_0188.py': 'da3fb0eb65d7058187a2ce1146c57cd124a6ee0c',
+    'browser_0187_w1.py': 'b829ad9b2fa12f7910e014ec87e9ee2a59d17370',
+    'browser_task_budget_0188.py': '4511877f03ffae35d4baef7267c6d7e8ea6bf583',
 }
 
 def sha(path):
@@ -41,7 +41,7 @@ def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0188-W8-S3 archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0188-W8-P1 archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)
@@ -178,33 +178,50 @@ def ready(url, proc):
         time.sleep(1)
     raise ValueError('local server not ready: '+url)
 
-def smoke(stage, approval, chromium):
+def validate_ports(frontend_port, backend_port):
+    if any(type(p) is not int or not 1024 <= p <= 49151 for p in (frontend_port, backend_port)) or frontend_port == backend_port:
+        raise ValueError('ports must be distinct integers in 1024..49151')
+
+
+def check_ports(frontend_port, backend_port):
+    validate_ports(frontend_port, backend_port)
+    for port in (frontend_port, backend_port):
+        with socket.socket() as sock:
+            if os.name == 'nt':
+                sock.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+            try:
+                sock.bind(('127.0.0.1', port))
+            except OSError as exc:
+                raise ValueError('local port unavailable: ' + str(port)) from exc
+
+
+def smoke(stage, approval, chromium, frontend_port=17300, backend_port=17301):
     installed(stage,approval)
     if (stage/'BUILD_TEST_OK').read_text(encoding='utf-8')!=approval: raise ValueError('full build/test not passed')
     if not chromium or not chromium.is_file():raise ValueError('explicit reviewed Chrome/Chromium executable required')
-    for port in (8000,3000):
-        with socket.socket() as s:
-            if s.connect_ex(('127.0.0.1',port))==0:raise ValueError('local port already in use: '+str(port))
+    check_ports(frontend_port, backend_port)
+    front_origin=f'http://127.0.0.1:{frontend_port}'
+    back_origin=f'http://127.0.0.1:{backend_port}'
     b,f=backend(stage),frontend(stage); e=env_local(); pair=stage/'sample-pair';outbox=stage/'demo.review.atomic.d0.sqlite'
     if pair.exists() or outbox.exists():raise ValueError('use fresh stage for smoke; preserve old sample for inspection')
     run([python(stage),'-m','app.core.development_review.paired_demo','--directory',pair,'--outcome','unknown'],b,e)
     run([python(stage),'-m','app.core.development_review.outbox_demo','create','--db',outbox],b,e)
     w,a=pair/'demo.workbench.d0.sqlite',pair/'demo.admission.d0.sqlite'
     before=[sha(p) for p in (w,a,outbox)]
-    e.update(AICOS_D0_WORKBENCH_DB=str(w),AICOS_D0_ADMISSION_DB=str(a),AICOS_D0_REVIEW_DB=str(outbox))
+    e.update(AICOS_D0_BACKEND_PORT=str(backend_port), AICOS_D0_WORKBENCH_DB=str(w),AICOS_D0_ADMISSION_DB=str(a),AICOS_D0_REVIEW_DB=str(outbox))
     procs=[]
     try:
-        procs.append(subprocess.Popen([str(python(stage)),'-m','uvicorn','app.main:app','--host','127.0.0.1','--port','8000'],cwd=b,env=e))
-        ready('http://127.0.0.1:8000/demo/v1/status',procs[-1])
-        procs.append(subprocess.Popen([node(),str(f/'node_modules/next/dist/bin/next'),'start','-H','127.0.0.1','-p','3000'],cwd=f,env=e))
-        ready('http://127.0.0.1:3000/',procs[-1])
+        procs.append(subprocess.Popen([str(python(stage)),'-m','uvicorn','app.main:app','--host','127.0.0.1','--port',str(backend_port)],cwd=b,env=e))
+        ready(back_origin+'/demo/v1/status',procs[-1])
+        procs.append(subprocess.Popen([node(),str(f/'node_modules/next/dist/bin/next'),'start','-H','127.0.0.1','-p',str(frontend_port)],cwd=f,env=e))
+        ready(front_origin+'/',procs[-1])
         routes={'mvp':'mvp/diagnostics','admission':'admission/sample-projection','outbox':'outbox/review-projection','office-workbench':'office/workbench-projection','task-budget':'task-budget/sample-projection'}
         for front,back in routes.items():
-            x=get_json('http://127.0.0.1:8000/demo/v1/'+back);y=get_json('http://127.0.0.1:3000/api/demo/'+front)
+            x=get_json(back_origin+'/demo/v1/'+back);y=get_json(front_origin+'/api/demo/'+front)
             if x!=y:raise ValueError('loopback parity mismatch: '+front)
             if front=='task-budget' and (x['budget']['phase']!='UNKNOWN_HOLD' or x['budget']['sample_reserved_minor']!=100 or x['spend_allowed'] is not False):raise ValueError('paired invariant mismatch')
-        run([python(stage),stage/'tests/integration/browser_0187_w1.py','--chromium',chromium,'--output',stage/'screenshots'],stage,e)
-        run([python(stage),stage/'tests/integration/browser_task_budget_0188.py','--chromium',chromium],stage,e)
+        run([python(stage),stage/'tests/integration/browser_0187_w1.py','--chromium',chromium,'--output',stage/'screenshots','--frontend-port',frontend_port],stage,e)
+        run([python(stage),stage/'tests/integration/browser_task_budget_0188.py','--chromium',chromium,'--frontend-port',frontend_port],stage,e)
         if before!=[sha(p) for p in (w,a,outbox)]:raise ValueError('readback changed sample DB')
         print('PASS loopback parity and 52 baseline captures; pixel review and independent acceptance remain open')
     finally:
@@ -220,6 +237,8 @@ def main():
     parser.add_argument('--stage',type=Path)
     parser.add_argument('--approve',default='')
     parser.add_argument('--chromium',type=Path)
+    parser.add_argument('--frontend-port',type=int,default=17300)
+    parser.add_argument('--backend-port',type=int,default=17301)
     args=parser.parse_args();repo=args.repo.resolve();stage=args.stage.resolve() if args.stage else None
     if args.command=='audit':
         files,pairs=verify(repo,clean=True);print(f'PASS {len(files)} source SHA-256 pins; {pairs} shared file pairs');return
@@ -228,7 +247,7 @@ def main():
     if len(args.approve)!=64:parser.error('--approve requires reviewed REVIEW.json SHA-256')
     if args.command=='install':install(stage,args.approve)
     elif args.command=='test':test(stage,args.approve)
-    else:smoke(stage,args.approve,args.chromium.resolve() if args.chromium else None)
+    else:smoke(stage,args.approve,args.chromium.resolve() if args.chromium else None,args.frontend_port,args.backend_port)
 
 if __name__=='__main__':
     try:main()

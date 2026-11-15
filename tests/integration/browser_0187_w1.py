@@ -7,11 +7,13 @@ from playwright.sync_api import sync_playwright, expect
 parser=argparse.ArgumentParser()
 parser.add_argument('--chromium')
 parser.add_argument('--output', required=True)
+parser.add_argument('--frontend-port',type=int,default=3000)
 args=parser.parse_args()
 root=Path(__file__).resolve().parents[2]
 nav_items=json.loads((root/'product/ai-company-os-frontend/features/uiCatalog.json').read_text(encoding='utf-8'))['nav']
 output=Path(args.output); output.mkdir(parents=True, exist_ok=True)
-origin='http://127.0.0.1:3000'
+if not 1024 <= args.frontend_port <= 49151: raise ValueError('invalid frontend port')
+origin=f'http://127.0.0.1:{args.frontend_port}'
 with sync_playwright() as p:
     browser=p.chromium.launch(executable_path=args.chromium)
     for width,height in [(1440,900),(390,844)]:

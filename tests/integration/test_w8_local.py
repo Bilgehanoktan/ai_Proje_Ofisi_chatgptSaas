@@ -47,4 +47,17 @@ class Preflight(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'approval mismatch'):w.install(self.root,'0'*64)
             run.assert_not_called()
 
+    def test_port_validation(self):
+        for pair in [(80,17301),(17300,17300),(17300,49152),(True,17301),('17300',17301)]:
+            with self.assertRaises(ValueError):w.validate_ports(*pair)
+        w.validate_ports(17300,17301)
+    def test_occupied_port_holds(self):
+        import socket
+        with socket.socket() as sock:
+            sock.bind(('127.0.0.1',0));sock.listen()
+            port=sock.getsockname()[1]
+            if not 1024 <= port <= 49151:self.skipTest('ephemeral port outside allowed range')
+            with self.assertRaisesRegex(ValueError,'unavailable'):
+                w.check_ports(port,17301 if port!=17301 else 17300)
+
 if __name__=='__main__':unittest.main()
