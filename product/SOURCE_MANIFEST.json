@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0193",
-  "status": "ISOLATED_RUNTIME_TRANSITION_PARTIAL_SYNTHETIC_TESTED",
+  "doc_revision": "0194",
+  "status": "ISOLATED_D0_TRANSITION_MAPPING_SQLITE_TESTED_PG_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "4f2c6d131c38ca7207d0b89ca001580466fd06d4",
+  "parent_git_commit": "f7a0258103b72b6052491b162c3a8fe73b99546e",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -925,8 +925,28 @@
     "ai-company-os-backend/tests/test_transition_transaction_0193.py": {
       "bytes": 9667,
       "sha256": "411d57ebb21645ce8ff7c3c8ed94f90d85b6cf3d20c186043aeb43a42fe48ecb"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": {
+      "bytes": 2285,
+      "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py": {
+      "bytes": 8493,
+      "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
+    },
+    "ai-company-os-backend/app/core/transaction/transition_reconciliation.py": {
+      "bytes": 1105,
+      "sha256": "ae7f27db7c8ccd62ea09be950a94178ed436b9cac1afe05daa61298f5236638e"
+    },
+    "ai-company-os-backend/tests/test_pg_transition_mapping_0194.py": {
+      "bytes": 7176,
+      "sha256": "195135113a847a398743bbfafd29829afb41aae892dc1227a72d68750456eea2"
+    },
+    "ai-company-os-backend/tests/test_transition_mapping_0194.py": {
+      "bytes": 14108,
+      "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3"
     }
   },
-  "parent_source_manifest_blob": "4fff252f05491619422ada45918825fb784bc80d",
+  "parent_source_manifest_blob": "92717879a6776d9e0b62a21306dd59275d55e216",
   "source_git_commit_note": "Self-referential pin omitted; use source commit and release readback."
 }
