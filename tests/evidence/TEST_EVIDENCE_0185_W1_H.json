@@ -1,0 +1,57 @@
+{
+  "revision": "0185-W1-H",
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 local (pin 5.9.3)",
+    "browser": "installed Chromium via Playwright"
+  },
+  "fixture_pins": {
+    "catalog": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e",
+    "snapshot": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+    "core": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7"
+  },
+  "commands": [
+    "tsc --strict --target ES2020 --module commonjs --resolveJsonModule --esModuleInterop --outDir out features/security/securityModel.ts",
+    "node tests/security-model.test.cjs <compiled-model> <catalog> <snapshot> <core>",
+    "TypeScript transpileModule SecurityStudio and Dashboard",
+    "Playwright page.set_content independent HTML with compiled model data and filter"
+  ],
+  "helper": {
+    "pass": 13,
+    "fail": 0
+  },
+  "tsx_syntax": {
+    "pass": 2,
+    "fail": 0
+  },
+  "standalone_browser": {
+    "pass": 12,
+    "fail": 0,
+    "checks": [
+      "four control cards",
+      "F0 not accepted",
+      "authority distinction",
+      "six trust surfaces",
+      "IV separate source",
+      "five reasons",
+      "filter",
+      "no match",
+      "reset filter",
+      "light theme",
+      "390px no overflow",
+      "no page errors"
+    ],
+    "method": "Independent DOM adapter, not React/Next."
+  },
+  "dependencies": {
+    "next": "NOT_INSTALLED",
+    "react": "NOT_INSTALLED",
+    "phaser": "NOT_INSTALLED"
+  },
+  "full_next_build": "NOT_RUN",
+  "full_product_typecheck": "NOT_RUN",
+  "actual_react_browser": "NOT_RUN",
+  "full_backend": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "previous_rounds": "Historical only"
+}
