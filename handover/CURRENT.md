@@ -87,3 +87,6 @@ Source 1f390ec3d6d0b9bf891b1d7ee67960cd7317d62e; 5 new product paths, 235 manife
 
 ## 0195 — D0 first claim and budget reservation
 Source 1456df0cc18f78d9b98c611c84af0fb911e0587b; 238 product files, 237 manifest entries, 235 prior non-manifest blobs unchanged. 19 new + 60 regression PASS, 5 PG skipped; real PG/full suite/build/browser NOT_RUN. R03, true worker authorization and IV HOLD. [Architecture](../docs/0195/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0195.json). Next [0196](NEXT_STEP_0195.md).
+
+## 0196-L — separate lifecycle workstream
+Source 3fbea3977e0a9eb87f1a3a551acbd3558c7bdbe9; 241 product files, 240 manifest entries, 237 prior non-manifest blobs unchanged. 26 new + 79 regressions PASS; 10 opt-in PG skipped. D0 first claim→ordinary→renew→VERIFYING→FAILED tested, zero-cost sample release only. Actual PG/full suite/build/browser NOT_RUN; R03, true authority and IV HOLD. [Architecture](../docs/0196L/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0196_L.json). [Parallel checkpoint](PARALLEL_CHECKPOINT_0196_L.json); memory/model branch not merged. Next [integration review](NEXT_STEP_0196_L.md).

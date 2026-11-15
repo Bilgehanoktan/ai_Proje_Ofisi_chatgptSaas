@@ -105,3 +105,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0195 — D0 admission / first lease / sample budget
 [Addendum](../0195/ARCHITECTURE_AND_CATALOG.md). Nine-role initial admission candidate; no normative mapping or real authority.
+
+## 0196-L — admission-bound ordinary transitions / lease renewal / D0 failure settlement
+[Addendum](../0196L/ARCHITECTURE_AND_CATALOG.md). No new normative mapping or real authority; separate memory/model workstream remains unmerged.

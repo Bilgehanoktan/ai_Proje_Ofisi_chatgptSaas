@@ -90,3 +90,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0195 — D0 first claim and admission budget
 [Architecture](docs/0195/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0195.json) · [Evidence](releases/GITHUB_READBACK_0195.json). 19 new + 60 regression PASS; real PG/R03/IV HOLD.
+
+## 0196-L — D0 lease renewal and terminal settlement (separate workstream)
+[Architecture](docs/0196L/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0196_L.json) · [Evidence](releases/GITHUB_READBACK_0196_L.json) · [Parallel checkpoint](handover/PARALLEL_CHECKPOINT_0196_L.json). 105 selected tests PASS; real PG/IV HOLD; 0196-MA not merged.

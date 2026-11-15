@@ -112,3 +112,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0195 → 0196
 [Detailed next step](NEXT_STEP_0195.md). Lease renewal, terminal settlement, persisted admission binding, actual PG; event/AI/memory/Office independent lines. No real authority or main merge.
+
+## 0196-L → parallel integration review
+[Detailed next step](NEXT_STEP_0196_L.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0196_L.json). No automatic merge. Actual PG, true admission/lease/PEP/W-A/IV and full pinned suite remain open.
