@@ -81,3 +81,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0192
 [Core integration](docs/0192/ARCHITECTURE_AND_CATALOG.md).
+
+## 0193
+[Architecture](docs/0193/ARCHITECTURE_AND_CATALOG.md) · [Product roadmap](docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0193.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0193.json). 25 selected synthetic tests PASS; PG and full product NOT_RUN.

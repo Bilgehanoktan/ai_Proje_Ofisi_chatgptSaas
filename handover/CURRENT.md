@@ -78,3 +78,6 @@ Product source changed; concrete PG adapter and runtime wiring absent. Tests NOT
 
 ## 0192
 Five product modules and candidate SQL; all new tests NOT_RUN; R03 HOLD. [Details](../docs/0192/ARCHITECTURE_AND_CATALOG.md).
+
+## 0193 — runtime transition
+Source 6229e5611e7178b34945609b7478e9cb6f7aaeb5; 5 product paths changed (2 add, 3 modify), 230 manifest entries / 231 product files. D0 run-head DDL NOT_APPLIED. 25/25 selected synthetic tests PASS; actual PG/full suite/build NOT_RUN. R03 and independent acceptance HOLD. [Architecture](../docs/0193/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_0193.json) · [Roadmap](../docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). W8 separate. See NEXT_STEP.

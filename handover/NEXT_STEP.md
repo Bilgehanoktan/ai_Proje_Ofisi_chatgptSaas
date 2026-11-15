@@ -103,3 +103,6 @@ Implement concrete PostgreSQL session after R03 mapping resolution; parallel Age
 
 ## 0192 next
 Concrete authoritative role mapping and persisted transition preimage, scheduler claim, event/outbox/fence reconciliation, memory retrieval authority. W8 independent.
+
+## 0193 → 0194
+A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plus authoritative admission/lease/budget/witness; connect repository and transaction without assuming approval. Actual disposable PG tests incl existing 14, concurrent CAS, rollback/unknown and non-owner isolation. Scheduler claim/worker lease, causal event replay and outbox reconciliation. C: disabled typed Model Gateway/Skill/Tool boundaries, no external calls. D: Memory/Knowledge retrieval provenance and ACL. E: read-only Office freshness/causal projection. F: tenant ownership/budget settlement. G: W8 independent; validate its own pinned evidence, no automatic merge. Full pinned backend/Next/current browser NOT_RUN here. No new grants, CI, main merge, PROD or external effects.

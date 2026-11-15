@@ -90,3 +90,12 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0190 — T1 contention and R03
 63 selected controls PASS, 14 PG checks NOT_RUN, canonical mapping HOLD. Product files unchanged. [Architecture](../0190/ARCHITECTURE_AND_CATALOG.md) · [R03](../0190/R03_T1_DECISION_PACKET.md).
+
+## 0191 — Logical T1
+[Addendum](../0191/ARCHITECTURE_AND_CATALOG.md). Mapping HOLD.
+
+## 0192 — Partial core integration
+[Addendum](../0192/ARCHITECTURE_AND_CATALOG.md). No live runtime or physical mapping.
+
+## 0193 — Runtime transition
+[Addendum](../0193/ARCHITECTURE_AND_CATALOG.md) · [Product roadmap](../implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). No normative change.

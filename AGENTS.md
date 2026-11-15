@@ -17,3 +17,6 @@
 
 ## CEO-0179=B controlled continuous integration (2026-11-15)
 [Decision](decisions/CEO/CEO_0179_B_CONTROLLED_INTEGRATION.md) and [policy](security/policy/CONTROLLED_DEV_INTEGRATION_0180.json) supersede independent PRE/T01/T06 prerequisites **only** for pinned isolated development-branch product source transfer, local build and synthetic tests. Keep actual independent security acceptance, real grants, external effects, spend, customer data, CI, main merge and PROD on their existing gates. No runtime policy change. Integrate actual product source where applicable, verify manifest, test only in allowed scope, record actual evidence, update catalog/tracker/handover and retain rollback. Prior historical instructions are not deleted. Do not ask for the same owner approval again.
+
+## Product roadmap (15.11.2026)
+Read docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md with current architecture and 24-area tracker. A–G independent workstreams; W8 Windows not prerequisite for other independent work. Continue CURRENT and NEXT_STEP; no new permissions.
