@@ -120,3 +120,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0201-R — retained history references and terminal reference match
 [Addendum](../0201R/ARCHITECTURE_AND_CATALOG.md). D0 local archive tested; wrapper/PG/independent custody HOLD/NOT_RUN. No canonical migration or normative change.
+
+## 0202-S — signed retained checkpoint and terminal receipt
+[Addendum](../0202S/ARCHITECTURE_AND_CATALOG.md). Fixture Ed25519 and local archive tests PASS; external key custody, actual T1/PG/readback, W-A and independent acceptance HOLD. No normative authority or schema change.
