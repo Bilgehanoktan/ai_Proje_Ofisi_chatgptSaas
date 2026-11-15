@@ -35,6 +35,12 @@ class Preflight(unittest.TestCase):
     def test_path_traversal(self):
         self.files['../outside']={'bytes':0,'sha256':'x'};self.refresh()
         with self.assertRaisesRegex(ValueError,'unsafe path'):w.verify(self.root,self.pin)
+    def test_override_pin_drift_stops_review(self):
+        f=w.frontend(self.root);f.mkdir(parents=True,exist_ok=True)
+        (f/'package.json').write_text(json.dumps({'overrides':{'postcss':'8.5.32'}}))
+        for packages in [{'':{}},{'':{},'node_modules/postcss':{'version':'8.4.31'}},{'':{},'node_modules/postcss':{'version':'8.5.32'},'node_modules/next/node_modules/postcss':{'version':'8.4.31'}}]:
+            (f/'package-lock.json').write_text(json.dumps({'packages':packages}))
+            with self.assertRaisesRegex(ValueError,'override pin drift'):w.lock_inventory(self.root)
     def test_review_tamper_stops_before_install(self):
         lock=self.root/'locks';lock.mkdir();(lock/'REVIEW.json').write_text('{}')
         with patch.object(w,'verify'),patch.object(w,'run') as run:

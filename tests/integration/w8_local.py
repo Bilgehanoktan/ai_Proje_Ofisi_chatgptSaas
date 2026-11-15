@@ -13,7 +13,7 @@ import time
 import urllib.request
 import zipfile
 
-MANIFEST_BLOB = 'b72b89cf8c0e1785cde949957d91cf1db8ee7c14'
+MANIFEST_BLOB = '383b6248cd34dd63baee313d4488613e1a6e67ce'
 HARNESS = {
     'run_combined_helpers.cjs': '8228e8db13e27f641e8b24dd447f55cf2cfc4a31',
     'office-workbench-merge.test.cjs': 'c19cb85bd9f418c69ba47eb177b5151db20d43b7',
@@ -41,7 +41,7 @@ def verify(repo, pin=MANIFEST_BLOB, clean=False):
     product = repo / 'product'
     m = product / 'SOURCE_MANIFEST.json'
     if not m.is_file() or blob(m) != pin:
-        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0188-W8 archive')
+        raise ValueError('missing or wrong SOURCE_MANIFEST.json; use exact 0188-W8-S1 archive')
     files = json.loads(m.read_text(encoding='utf-8'))['files']
     for name, info in files.items():
         p = checked_path(product, name)
@@ -90,6 +90,10 @@ def lock_inventory(stage):
     packages=data.get('packages',{})
     for key in ['dependencies','devDependencies']:
         if packages.get('',{}).get(key)!=pkg.get(key): raise ValueError('npm direct pins drift')
+    for name, version in pkg.get('overrides', {}).items():
+        matches = [info for path, info in packages.items() if path.endswith('node_modules/' + name)]
+        if not matches or any(info.get('version') != version for info in matches):
+            raise ValueError('npm override pin drift: ' + name)
     from urllib.parse import urlparse
     for name, info in packages.items():
         if name and (not info.get('integrity','').startswith(('sha512-','sha256-')) or urlparse(info.get('resolved','')).scheme!='https' or urlparse(info.get('resolved','')).hostname!='registry.npmjs.org'):
