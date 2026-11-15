@@ -75,3 +75,6 @@ Source 54456e1598161c9fd5af5d0fefbaeae3945297d3; 224 product files unchanged, 48
 
 ## 0191 — logical T1 coordinator
 Product source changed; concrete PG adapter and runtime wiring absent. Tests NOT_RUN. [Architecture](../docs/0191/ARCHITECTURE_AND_CATALOG.md).
+
+## 0192
+Five product modules and candidate SQL; all new tests NOT_RUN; R03 HOLD. [Details](../docs/0192/ARCHITECTURE_AND_CATALOG.md).

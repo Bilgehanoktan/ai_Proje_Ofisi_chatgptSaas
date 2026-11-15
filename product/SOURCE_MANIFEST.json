@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0191",
-  "status": "ISOLATED_LOGICAL_T1_SOURCE_TEST_NOT_RUN",
+  "doc_revision": "0192",
+  "status": "ISOLATED_CORE_PARTIAL_SOURCE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "bd15a09c0b8efe76ff31ad6ab135ad19dbfa0fcf",
+  "parent_git_commit": "593858741eb0d5add2735afd42e123e02832e641",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -897,6 +897,26 @@
     "REVIEW_CHECKLIST.md": {
       "bytes": 977,
       "sha256": "c424716283bdaa8320f86d573a908efdcd0108a773daf70792b4820da01df705"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_session.py": {
+      "bytes": 1218,
+      "sha256": "c32b2537ba361a43400a0fc669ded4cefe3d5f2c53959d2c4c07218983844916"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/transition_command.py": {
+      "bytes": 1608,
+      "sha256": "0b08901cac7eaf89e95420e23e16b0d27cd5f47432d8d2054a6a752f7654e08e"
+    },
+    "ai-company-os-backend/app/core/orchestrator/readiness.py": {
+      "bytes": 692,
+      "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+    },
+    "ai-company-os-backend/app/core/event_store/postgres_write.py": {
+      "bytes": 1548,
+      "sha256": "4730949fe2af90c58b70a92d2462881e20deccde535882e8785e9eaaf76bae71"
+    },
+    "ai-company-os-backend/app/engines/memory_engine/runtime_binding.py": {
+      "bytes": 489,
+      "sha256": "baf142421392522b87d5af0e8fc75606c03123d671cef9fb361f024815df9053"
     }
   },
   "parent_source_manifest_blob": "e1e66f230a76ae8e001c50ebe6762432c5b51dc9",

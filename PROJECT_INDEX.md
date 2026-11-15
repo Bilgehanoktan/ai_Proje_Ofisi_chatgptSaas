@@ -78,3 +78,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0191 — logical T1 product core
 [Architecture](docs/0191/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0191.json).
+
+## 0192
+[Core integration](docs/0192/ARCHITECTURE_AND_CATALOG.md).

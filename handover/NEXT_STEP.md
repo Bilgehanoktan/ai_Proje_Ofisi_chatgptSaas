@@ -100,3 +100,6 @@ P0 execute 14 PG checks in an isolated environment with installed binaries. Reso
 
 ## 0191 next
 Implement concrete PostgreSQL session after R03 mapping resolution; parallel Agent Runtime and Orchestrator code, Event Store. W8 Windows independent. No real grants.
+
+## 0192 next
+Concrete authoritative role mapping and persisted transition preimage, scheduler claim, event/outbox/fence reconciliation, memory retrieval authority. W8 independent.

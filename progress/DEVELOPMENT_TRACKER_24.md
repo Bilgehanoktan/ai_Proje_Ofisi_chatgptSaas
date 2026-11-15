@@ -28,3 +28,6 @@ Ordinal scores unchanged. 63 selected controls PASS; 14 actual PG checks NOT_RUN
 | 22 | Monitoring & Observability | 50 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_HISTORICAL_READBACK | Trusted freshness |
 | 23 | Backup & Disaster Recovery | 75 | 25 | SOURCE_PREPARATION | NOT_RUN | Restore and witness design |
 | 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | CATALOG_UPDATED_SOURCE_PRESERVED | Preserve evidence |
+
+## TRACK-0192
+Ordinal scores unchanged; partial source in core lines, new tests NOT_RUN. Canonical JSON updated.
