@@ -33,3 +33,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0170
 `audit_local_dependencies.py`: read_safe, unique, parse_requirements, parse_package, installed_python, installed_node, rows, optional_lock, audit, main; Python stdlib only. `test_audit_local_dependencies.py`: 14 synthetic checks. No product API/DB/events/dependency version change. [Evidence and rollback](../docs/0170/PHASE01_DEPENDENCY_AUDIT.md).
+
+## 0183
+[File/symbol/API/DB/dependency/test delta](revisions/TECHNICAL_CATALOG_0183.json) · [Maintenance](../docs/0183/ARCHITECTURE_AND_CATALOG.md). 173 manifest entries; separate SQLite lab, unexecuted SQL design, manual synthetic lifecycle view.

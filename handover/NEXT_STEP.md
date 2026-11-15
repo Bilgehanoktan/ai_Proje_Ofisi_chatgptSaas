@@ -73,3 +73,6 @@ Priority W8/W1: resolve approved network dependency installation and pinned tran
 
 ## 0182 -> 0183
 W1/W8: clean pinned dependency install/locks, full backend and current Next build/browser (browser_next_0182.py). W3/W4: physical T1 mapping and durable transaction/outbox, trusted clock/heartbeat; separate workbench. W5: provider adapter contract and egress guard, W7 tenant ownership and settlement, W6 independent custody. Real grants/external effects/spend/main/PROD not authorized. No repeated owner development approval.
+
+## 0183 → 0184
+P0 resolve approved dependency network/locks, full pinned backend and current Next build/browser incl lifecycle viewer. P0 R03 mapping plus PostgreSQL test with non-owner role; T1 admission/budget/witness/outbox claim and UNKNOWN, trusted lease/heartbeat. P1 typed provider adapter boundary and tenant ownership/settlement. Keep actual grants, independent acceptance, CI, PROD, spend and main merge HOLD. Do not ask again for standing owner development approval.

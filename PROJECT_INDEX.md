@@ -51,3 +51,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 
 - [0182 workbench and browser tests](docs/0182/ARCHITECTURE_AND_CATALOG.md)
+
+## 0183 — atomicity lab and lifecycle viewer
+[Architecture](docs/0183/ARCHITECTURE_AND_CATALOG.md) · [catalog](catalog/revisions/TECHNICAL_CATALOG_0183.json) · [test evidence](releases/GITHUB_READBACK_0183.json).

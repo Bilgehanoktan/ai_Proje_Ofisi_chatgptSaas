@@ -48,3 +48,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0182 — persistent synthetic workbench
 Source 96013090589813167f00fac9c4d1fdf19c6d4c75; 6 new product paths, 168 manifest entries/169 files; 40 Python + 14 Node + 8 historical HTML Chromium checks PASS. New persistent local CLI sample observations survive reopen; IV/release pending. Current Next build/browser and full pinned suite NOT_RUN; npm DNS blocked. R03 canonical mapping, actual grants and independent acceptance HOLD. [Architecture/catalog](../docs/0182/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0182.json).
+
+## 0183 — atomicity lab and lifecycle viewer
+Source 72a5210530c794ea931a7429086cb94f9ac377d5, 173 manifest entries/174 product files; 5 additions, 1 replacement. 9 Python + 6 Node actual new selected tests; 62 prior 0182 checks historical only. SQL candidate NOT_RUN, no PostgreSQL, full Next/build/browser/full backend NOT_RUN; DNS blocked, locks not generated. No new provider contract or actual SaaS management. [Architecture/catalog](../docs/0183/ARCHITECTURE_AND_CATALOG.md) · [Readback](../releases/GITHUB_READBACK_0183.json). Independent and runtime grant HOLD.

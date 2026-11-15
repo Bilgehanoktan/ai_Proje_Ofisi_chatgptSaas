@@ -66,3 +66,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0182 — persistent synthetic workbench
 [Addendum](../0182/ARCHITECTURE_AND_CATALOG.md). Canonical mapping and authority unchanged.
+
+## 0183 — D0 atomicity lab and lifecycle viewer
+[Addendum](../0183/ARCHITECTURE_AND_CATALOG.md). Physical mapping, actual security and provider authority unchanged.
