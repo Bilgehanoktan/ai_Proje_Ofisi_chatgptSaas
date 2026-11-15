@@ -36,3 +36,7 @@ Remote readback 0178: 6/6 changed code/test blobs match; exact 47-entry candidat
 
 ## 0179 — exact EDS product integration scope
 User explicitly requested integration; CEO-0174 standing scope unchanged. Cumulative 14 paths (8 additions, 6 replacements, 0 deletions), 33 frontend files unchanged. 149-entry proposed manifest only, actual 141 unchanged. 14 candidate blobs read back, UTF-8 bytes and SHA-256 recorded. PRE/T01/T06 independent HOLD; no promotion, runtime, build, or product tests. [Exact scope](../security/policy/INTEGRATION_SCOPE_PROPOSAL_0179.json) · [Review](../docs/0179/INTEGRATION_PRE.md). Next: genuine independent receipt(s) for exact scope, applicable T01/T06; then bounded product write, manifest verification, POST and isolated build/tests.
+
+
+## 0180 — EDS actual product integration
+CEO-0179=B effective: isolated source transfer/local build/synthetic tests decoupled from PRE/T01/T06; actual independent acceptance and real grants remain HOLD. 14/14 EDS files integrated in product/, 8 add/6 replace; 2 product AGENTS docs and manifest updated. 149 manifest entries / 150 product files / 47 frontend files. Source commit d15537a19b029e036b6dadd37f1840d2707d4aa9; remote exact delta readback verified. 20/20 standalone local helpers rerun, full product build/test NOT_RUN. [Architecture/catalog](../docs/0180/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0180.json). Next exact local archive and dependency locks, then isolated product tests/build. No main merge, PROD, actual security grant or R12 merge.

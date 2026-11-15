@@ -54,3 +54,7 @@
 
 ## 0179 — EDS integration PRE
 [Exact scope and gate boundary](../0179/INTEGRATION_PRE.md). No product promotion or normative change.
+
+
+## 0180 — CEO-0179=B controlled integration and EDS product source
+[Addendum](../0180/ARCHITECTURE_AND_CATALOG.md). Source integration in isolated development only; runtime gates unchanged.

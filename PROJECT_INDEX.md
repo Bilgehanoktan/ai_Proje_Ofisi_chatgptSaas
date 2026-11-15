@@ -41,3 +41,6 @@
 
 
 - [0179 exact EDS PRE scope](docs/0179/INTEGRATION_PRE.md) — no promotion.
+
+
+- [0180 EDS actual isolated product integration](docs/0180/ARCHITECTURE_AND_CATALOG.md)
