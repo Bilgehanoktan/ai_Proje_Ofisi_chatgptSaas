@@ -63,3 +63,7 @@ def mvp_diagnostics():
         return JSONResponse(inspect_mvp(sample), headers={"Cache-Control": "no-store"})
     except (GraphError, ValueError, KeyError, TypeError, StopIteration, OSError) as exc:
         raise HTTPException(status_code=409, detail={"mode": "D0_READBACK_HOLD"}) from exc
+
+
+from app.api.outbox_projection import router as outbox_projection_router
+app.include_router(outbox_projection_router)

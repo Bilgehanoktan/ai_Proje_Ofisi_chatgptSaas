@@ -25,11 +25,15 @@ def holder_ok(s):
 
 
 class AtomicSample:
+    scope = SCOPE
+    ddl = DDL
+    suffix = '.atomic.d0.sqlite'
+
     def __init__(self, path, tenant='synthetic-tenant', company='synthetic-company'):
-        if (tenant, company) != SCOPE[1:]:
+        if (tenant, company) != self.scope[1:]:
             raise ValueError('SAMPLE_SCOPE_DENY')
         self.path = Path(path)
-        if not self.path.name.endswith('.atomic.d0.sqlite') or self.path.is_symlink():
+        if not self.path.name.endswith(self.suffix) or self.path.is_symlink():
             raise ValueError('SAMPLE_PATH_INVALID')
 
     def create(self):
@@ -37,7 +41,7 @@ class AtomicSample:
             pass
         try:
             with closing(sqlite3.connect(self.path)) as db:
-                db.executescript(DDL)
+                db.executescript(self.ddl)
                 db.commit()
         except BaseException:
             self.path.unlink(missing_ok=True)
@@ -51,7 +55,7 @@ class AtomicSample:
             db.execute('PRAGMA foreign_keys=ON')
             with db:
                 db.execute('BEGIN IMMEDIATE')
-                if db.execute('SELECT profile,tenant,company FROM meta').fetchall() != [SCOPE]:
+                if db.execute('SELECT profile,tenant,company FROM meta').fetchall() != [self.scope]:
                     raise ValueError('SAMPLE_DB_SCOPE_MISMATCH')
                 yield db
 
@@ -103,4 +107,4 @@ class AtomicSample:
         with self._db() as db:
             head = db.execute('SELECT version,state FROM head WHERE id=1').fetchone()
             counts = {t: db.execute('SELECT count(*) FROM '+t).fetchone()[0] for t in ('event','audit','outbox')}
-        return {'mode':SCOPE[0],'tenant':SCOPE[1],'company':SCOPE[2],'head':head,'counts':counts,'admission':'DENY','dispatch_allowed':False,'release_ready':False,'provider_called':False,'spend_allowed':False}
+        return {'mode':self.scope[0],'tenant':self.scope[1],'company':self.scope[2],'head':head,'counts':counts,'admission':'DENY','dispatch_allowed':False,'release_ready':False,'provider_called':False,'spend_allowed':False}
