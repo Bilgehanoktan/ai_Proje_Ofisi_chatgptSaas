@@ -81,3 +81,6 @@ Five product modules and candidate SQL; all new tests NOT_RUN; R03 HOLD. [Detail
 
 ## 0193 — runtime transition
 Source 6229e5611e7178b34945609b7478e9cb6f7aaeb5; 5 product paths changed (2 add, 3 modify), 230 manifest entries / 231 product files. D0 run-head DDL NOT_APPLIED. 25/25 selected synthetic tests PASS; actual PG/full suite/build NOT_RUN. R03 and independent acceptance HOLD. [Architecture](../docs/0193/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_0193.json) · [Roadmap](../docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md). W8 separate. See NEXT_STEP.
+
+## 0194-M
+Separate Memory/Knowledge workstream based on pinned 0193. 3 modules extended, one test file added, manifest regenerated. 17/17 exact-source selected unit tests PASS; 231 path/size checks. Caller-supplied reference matching remains HOLD; no actual retrieval, full suite, PG, build/browser or independent acceptance. [Architecture](../docs/0194-M/ARCHITECTURE_AND_CATALOG.md). Next: trusted graph/ACL/source readback and fenced retrieval boundary; R03/T1/scheduler and W8 separate.
