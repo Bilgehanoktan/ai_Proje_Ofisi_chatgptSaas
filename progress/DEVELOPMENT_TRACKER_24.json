@@ -2,7 +2,7 @@
   "id": "TRACK-0188-W8-P1",
   "baseline": "TRACK-0188-W8-S3",
   "tarih": "2026-11-15",
-  "status": "D0_CONFIGURABLE_LOOPBACK_PORT_CANDIDATE",
+  "status": "D0_P1_BUILD_PASS_LIVE_SMOKE_PENDING",
   "rubric": {
     "tasarim": {
       "0": "yok",
@@ -527,7 +527,7 @@
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "249/249 old source user audit and 14 pairs PASS; old npm audit 3 vulnerable packages (39 advisory objects), old lock rejected. New 2 product pins and 2 runner paths; 9/9 offline runner checks PASS. New lock/security review/full install/build/browser NOT_RUN; independent HOLD. Scores unchanged. Windows S1 source 249/249, 14 shared pairs; new locks 61 npm and 25 Python metadata checked, zero reported known vulnerabilities; isolated install pending. S1 Windows install PASS; Node 180 PASS/1 skip; Python 258/263 PASS (1 fail, 4 errors). S2 fixes five test files, adds two tests; no runtime changes. New regression/build NOT_RUN. S2 Windows 180 Node PASS/1 skip; 264 Python PASS/1 skip, zero failures. Next build and tsc PASS; post-build source HOLD (incremental insertion). S3 config pin only, full rerun/smoke pending. S3 actual Windows user transcript: 444 PASS/2 SKIP/0 FAIL; Next build, standalone tsc and post-build source/lock gate PASS. Actual browser and live HTTP parity pending. Independent HOLD. S3 Windows smoke PASS: actual local synthetic backend/frontend, five parity routes, 52 browser captures, task-budget malformed HOLD and floor reset, unchanged DB hashes. Interactive launcher candidate NOT_RUN; visual review and independent acceptance open. P1 configurable ports candidate; S3 interactive opens per user. 5 proxy and 2 preflight tests added, P1 regression/build/browser NOT_RUN.",
+  "note": "249/249 old source user audit and 14 pairs PASS; old npm audit 3 vulnerable packages (39 advisory objects), old lock rejected. New 2 product pins and 2 runner paths; 9/9 offline runner checks PASS. New lock/security review/full install/build/browser NOT_RUN; independent HOLD. Scores unchanged. Windows S1 source 249/249, 14 shared pairs; new locks 61 npm and 25 Python metadata checked, zero reported known vulnerabilities; isolated install pending. S1 Windows install PASS; Node 180 PASS/1 skip; Python 258/263 PASS (1 fail, 4 errors). S2 fixes five test files, adds two tests; no runtime changes. New regression/build NOT_RUN. S2 Windows 180 Node PASS/1 skip; 264 Python PASS/1 skip, zero failures. Next build and tsc PASS; post-build source HOLD (incremental insertion). S3 config pin only, full rerun/smoke pending. S3 actual Windows user transcript: 444 PASS/2 SKIP/0 FAIL; Next build, standalone tsc and post-build source/lock gate PASS. Actual browser and live HTTP parity pending. Independent HOLD. S3 Windows smoke PASS: actual local synthetic backend/frontend, five parity routes, 52 browser captures, task-budget malformed HOLD and floor reset, unchanged DB hashes. Interactive launcher candidate NOT_RUN; visual review and independent acceptance open. P1 configurable ports candidate; S3 interactive opens per user. 5 proxy and 2 preflight tests added, P1 regression/build/browser NOT_RUN. P1 Windows 449 PASS/2 SKIP/0 FAIL, five port mock tests PASS, Next build and tsc PASS. Interactive launch HOLD missing sample DB because smoke prerequisite not executed. Preflight and live port smoke NOT_RUN.",
   "integration_tracking": {
     "scope": "0188-W8-P1",
     "source_commit": "716eee3cee87c0f69c96ac36f1df5c1c9d2cf32c",
@@ -542,7 +542,7 @@
     "runner_tests_passed": 9,
     "contract_pairs": 10,
     "fixture_pairs": 4,
-    "full_next_build": "NOT_RUN",
+    "full_next_build": "PASS",
     "current_next_browser": "NOT_RUN",
     "independent_acceptance": "HOLD",
     "prior_tracking": "progress/history/TRACK_0188_W8_S3_PRE_P1.json",
@@ -559,7 +559,7 @@
     "previous_windows_python_pass": 264,
     "previous_windows_python_fail": 0,
     "previous_windows_python_errors": 0,
-    "current_full_tests": "NOT_RUN",
+    "current_full_tests": "449_PASS_2_SKIP_0_FAIL_USER_TRANSCRIPT",
     "previous_windows_python_skip": 1,
     "previous_windows_next_compile": "PASS",
     "previous_windows_post_build_integrity": "HOLD_TSCONFIG_CHANGED",
@@ -571,8 +571,10 @@
     "actual_paired_writer": "PASS_LOCAL_SYNTHETIC",
     "live_http_parity": "5/5_PASS",
     "pixel_review": "NOT_RUN",
-    "interactive_launcher": "P1_CANDIDATE_NOT_RUN",
+    "interactive_launcher": "HOLD_MISSING_SAMPLE_DB",
     "frontend_default_port": 17300,
-    "backend_default_port": 17301
+    "backend_default_port": 17301,
+    "new_port_proxy_tests": "5/5_PASS",
+    "new_runner_preflight": "NOT_RUN"
   }
 }
