@@ -127,3 +127,6 @@ A/B P0: explicit R03 role mapping for head/mutation/fence/event/outbox/audit plu
 
 ## 0201-R next
 [Detailed next step](NEXT_STEP_0201_R.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0201_R.json). Exact checkout and five integration tests, actual PostgreSQL/R03 and independent pin/receipt custody; cross-project order, shared budget and restore. No automatic merge or authority.
+
+## 0202-S next
+[Detailed next step](NEXT_STEP_0202_S.md) · [Parallel checkpoint](PARALLEL_CHECKPOINT_0202_S.json). Actual signed readback, external pin/key custody, T1 atomicity, PG/R03 and restore/global order/budget remain open. No merge or authority.
