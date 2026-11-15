@@ -1,9 +1,9 @@
 {
-  "version": "0.1.0-draft.6-r11-d0-0188-w8-p1",
-  "doc_revision": "0188-W8-P1",
-  "status": "D0_CONFIGURABLE_LOOPBACK_PORT_CANDIDATE",
+  "version": "0.1.0-draft.6-r11-d0-0197-unified",
+  "doc_revision": "0197-U",
+  "status": "ISOLATED_UNIFIED_SOURCE_CANDIDATE_FULL_REGRESSION_PENDING",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "4a79082d8b03fb9e3b06dad714ca1a83df704b99",
+  "parent_git_commit": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -89,6 +89,18 @@
     "ai-company-os-backend/app/core/agent_runtime/plan_binding.py": {
       "bytes": 3309,
       "sha256": "66955a30cb80868fd59b1977b772c67d8d4202114a905c3ecaf17ea51a111b0d"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/postgres_run.py": {
+      "bytes": 2994,
+      "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": {
+      "bytes": 2285,
+      "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/transition_command.py": {
+      "bytes": 1698,
+      "sha256": "35cb245bce423a4edebae97099fb578cf8ab9ce3a4a0bf7b495b9565cc247e24"
     },
     "ai-company-os-backend/app/core/causal_ledger_review.py": {
       "bytes": 321,
@@ -202,6 +214,10 @@
       "bytes": 4408,
       "sha256": "3ee900c996cc1bdc30668c7011d5e7963cf890e5caf7f09000782f0b523e282b"
     },
+    "ai-company-os-backend/app/core/event_store/postgres_write.py": {
+      "bytes": 1548,
+      "sha256": "4730949fe2af90c58b70a92d2462881e20deccde535882e8785e9eaaf76bae71"
+    },
     "ai-company-os-backend/app/core/event_store/sqlite_preview.py": {
       "bytes": 2100,
       "sha256": "554ce6a19143da4d1691a607619bcc18ae12cdfd31d048cd3968b03b1947919f"
@@ -225,6 +241,10 @@
     "ai-company-os-backend/app/core/orchestrator/engine.py": {
       "bytes": 3082,
       "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+    },
+    "ai-company-os-backend/app/core/orchestrator/readiness.py": {
+      "bytes": 692,
+      "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
     },
     "ai-company-os-backend/app/core/outbox_review.py": {
       "bytes": 421,
@@ -303,8 +323,20 @@
       "sha256": "f20c4a7f095ef68eb5bb933568a45ea2b0c33e0af35222363521bc84ace9360e"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
-      "bytes": 750,
-      "sha256": "62a16ff55205339066f8849f6652113948151823b0f784e1020b203268388614"
+      "bytes": 4286,
+      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": {
+      "bytes": 13176,
+      "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_session.py": {
+      "bytes": 2495,
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+    },
+    "ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py": {
+      "bytes": 8493,
+      "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
     },
     "ai-company-os-backend/app/core/transaction/readback_review.py": {
       "bytes": 3960,
@@ -313,6 +345,10 @@
     "ai-company-os-backend/app/core/transaction/review.py": {
       "bytes": 5065,
       "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+    },
+    "ai-company-os-backend/app/core/transaction/transition_reconciliation.py": {
+      "bytes": 1105,
+      "sha256": "ae7f27db7c8ccd62ea09be950a94178ed436b9cac1afe05daa61298f5236638e"
     },
     "ai-company-os-backend/app/core/witness_review.py": {
       "bytes": 411,
@@ -339,16 +375,24 @@
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
     "ai-company-os-backend/app/engines/knowledge_engine/provenance.py": {
-      "bytes": 1358,
-      "sha256": "65a4906da55c9c918729c0e58d4ab10acd1979bf1e8e556037132f9b1942a49d"
+      "bytes": 1391,
+      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
     },
     "ai-company-os-backend/app/engines/memory_engine/__init__.py": {
       "bytes": 52,
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
     "ai-company-os-backend/app/engines/memory_engine/retrieval.py": {
-      "bytes": 2645,
-      "sha256": "07b7266d778a65c2972bf01c71925c0dfcfc1529e49dd5f738b384925fb63ca5"
+      "bytes": 2715,
+      "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+    },
+    "ai-company-os-backend/app/engines/memory_engine/runtime_binding.py": {
+      "bytes": 5319,
+      "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
+    },
+    "ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
+      "bytes": 8405,
+      "sha256": "f80f3d64350f9c38f718ad4d1671e6ad0b69e8986a2a3a9f268bedb37b99da4f"
     },
     "ai-company-os-backend/app/engines/model_gateway/__init__.py": {
       "bytes": 52,
@@ -369,6 +413,10 @@
     "ai-company-os-backend/app/engines/model_gateway/registry.py": {
       "bytes": 1305,
       "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/runtime_binding.py": {
+      "bytes": 3373,
+      "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
     },
     "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": {
       "bytes": 1532,
@@ -486,6 +534,10 @@
       "bytes": 3648,
       "sha256": "7d2e7d74f8633dd93aa21fac85e0111accfc3dd2a89ac0f11a41feb4d12d676c"
     },
+    "ai-company-os-backend/tests/test_admission_mapping_0195.py": {
+      "bytes": 10496,
+      "sha256": "d78954c237f7aa26838c4987665108c243e5646fa6e3b8e44ac77fb321df6dc4"
+    },
     "ai-company-os-backend/tests/test_admission_sample.py": {
       "bytes": 6069,
       "sha256": "11cad0a4f7786cee91250b531b0ebb1e1f6f94d2e5854648e51d6715143ec2d7"
@@ -510,6 +562,18 @@
       "bytes": 4082,
       "sha256": "c7c8c861f73a1b4e432891b2084790917573d05dd7b7d391d69c4dc4acb8c24a"
     },
+    "ai-company-os-backend/tests/test_memory_access_0194.py": {
+      "bytes": 7089,
+      "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
+    },
+    "ai-company-os-backend/tests/test_memory_store_0196.py": {
+      "bytes": 8077,
+      "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98"
+    },
+    "ai-company-os-backend/tests/test_model_invocation_0196.py": {
+      "bytes": 4668,
+      "sha256": "fe1c62ba445f07185346009f2e4835bd5757815197288ef52cdf9b00f768bd0a"
+    },
     "ai-company-os-backend/tests/test_mvp_diagnostics.py": {
       "bytes": 5253,
       "sha256": "e816e5cf4b91d9988b8db500462b8d01b22265595b8aa318e4d8640055148698"
@@ -533,6 +597,10 @@
     "ai-company-os-backend/tests/test_outbox_projection.py": {
       "bytes": 2931,
       "sha256": "ff9fc74517fe2b9c6452a301bdbabb7365977ca508ec75ef194cbdf1ab425a59"
+    },
+    "ai-company-os-backend/tests/test_pg_transition_mapping_0194.py": {
+      "bytes": 7176,
+      "sha256": "195135113a847a398743bbfafd29829afb41aae892dc1227a72d68750456eea2"
     },
     "ai-company-os-backend/tests/test_plan_projection.py": {
       "bytes": 2472,
@@ -577,6 +645,14 @@
     "ai-company-os-backend/tests/test_task_budget_snapshot.py": {
       "bytes": 4484,
       "sha256": "13ba5287977be4ff25d3bd29b408d339919d7376704c8c3e401b7eed0b72b927"
+    },
+    "ai-company-os-backend/tests/test_transition_mapping_0194.py": {
+      "bytes": 14108,
+      "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3"
+    },
+    "ai-company-os-backend/tests/test_transition_transaction_0193.py": {
+      "bytes": 9667,
+      "sha256": "411d57ebb21645ce8ff7c3c8ed94f90d85b6cf3d20c186043aeb43a42fe48ecb"
     },
     "ai-company-os-frontend/.gitignore": {
       "bytes": 59,
@@ -810,6 +886,10 @@
       "bytes": 1574,
       "sha256": "e49e9c5382471b8abf7511b38e5392052476d2fdf0b5acec73b92ca4fdf32060"
     },
+    "ai-company-os-frontend/features/mvp/localBackend.ts": {
+      "bytes": 475,
+      "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71"
+    },
     "ai-company-os-frontend/features/mvp/mvpDiagnostics.ts": {
       "bytes": 2140,
       "sha256": "65a4beb72b4fae67c0fe757b0edaf47dbbab42a5d304cb4e43ead4e07936205c"
@@ -1001,12 +1081,22 @@
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 608,
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
-    },
-    "ai-company-os-frontend/features/mvp/localBackend.ts": {
-      "bytes": 475,
-      "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71"
     }
   },
-  "parent_source_manifest_blob": "95cb400e00b246fb8275d93fbc6c74517179ab3c",
-  "source_git_commit_note": "P1 source commit in readback; real regression pending."
+  "parent_source_manifest_blob": "652d12b5daf53859f723e6ffe06dfd03c3efd13f",
+  "source_git_commit_note": "Three pinned source parents; exact source commit in releases/GITHUB_READBACK_0197_U.json. Full regression pending.",
+  "integration_parents": {
+    "ui": {
+      "commit": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
+      "manifest": "652d12b5daf53859f723e6ffe06dfd03c3efd13f"
+    },
+    "core": {
+      "commit": "9ece621baaadd160b3f90d4c8071d6a74d697604",
+      "manifest": "7f632297eeba72665792d4cd75a68772fe9308c4"
+    },
+    "memory": {
+      "commit": "ef9cc8368309bd4d880b36137c7f25fc07a018db",
+      "manifest": "3d8f59284c93d4736e302d5615fcb6e0ea794e69"
+    }
+  }
 }

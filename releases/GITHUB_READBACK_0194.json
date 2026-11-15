@@ -1,0 +1,106 @@
+{
+  "revision": "0194",
+  "parent": "f7a0258103b72b6052491b162c3a8fe73b99546e",
+  "source_commit": "1f390ec3d6d0b9bf891b1d7ee67960cd7317d62e",
+  "branch": "recovery/0194-transition-mapping",
+  "product_files": 236,
+  "manifest_entries": 235,
+  "manifest_blob": "bcffffb8504121e6b3d460fc47531c63f4238efc",
+  "prior_product_blobs_preserved": 230,
+  "previous_product_path_size_parity": true,
+  "product_path_size_parity": true,
+  "local_source_and_evidence_blob_matches": 13,
+  "added_product_paths": 5,
+  "added_database_paths": 1,
+  "source_changes": [
+    {
+      "path": "catalog/revisions/TECHNICAL_CATALOG_0194.json",
+      "sha": "b8afb746967427d42fc06ad9c5a7f80b70f16b25",
+      "size": 19716
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "sha": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "size": 2437
+    },
+    {
+      "path": "docs/0194/ARCHITECTURE_AND_CATALOG.md",
+      "sha": "c50045b10c36e14820c569ed474de992df1dc1fb",
+      "size": 6117
+    },
+    {
+      "path": "docs/0194/BASE_PINS.json",
+      "sha": "8deea6827126ff5c8028f912a404fb832aa0602a",
+      "size": 3498
+    },
+    {
+      "path": "docs/0194/PG_TEST_STATUS.txt",
+      "sha": "236775ae033785e8a51de4296830436dd7a3eada",
+      "size": 858
+    },
+    {
+      "path": "docs/0194/REGRESSION_0193.txt",
+      "sha": "e4298664b25aab49a753e40358b00a39b8689eb0",
+      "size": 2674
+    },
+    {
+      "path": "docs/0194/TEST_LOG.txt",
+      "sha": "ca95ac3bc602625e4689d74e434aaf16a80ee3e4",
+      "size": 3726
+    },
+    {
+      "path": "handover/NEXT_STEP_0194.md",
+      "sha": "053f749db9320849ef67810ba1269a363ffad680",
+      "size": 790
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "sha": "bcffffb8504121e6b3d460fc47531c63f4238efc",
+      "size": 41755
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "sha": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "size": 2285
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "sha": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "size": 8493
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+      "sha": "b011ae715b424a185963af552f524586115a23ec",
+      "size": 1105
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_transition_mapping_0194.py",
+      "sha": "75f3fb01653b226830546e3600ef75b8dbcfd636",
+      "size": 7176
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+      "sha": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "size": 14108
+    }
+  ],
+  "selected_tests": {
+    "sqlite_mapping": 25,
+    "scheduler": 10,
+    "regression_mock": 25,
+    "passed": 60,
+    "pg_skipped": 5,
+    "pg_status": "NOT_RUN"
+  },
+  "base_dependencies_exact_git_blob_matches": 14,
+  "prior_delta_manifest_entries_verified": 12,
+  "actual_pg": "NOT_RUN",
+  "full_suite": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "real_grants": "HOLD",
+  "main_before": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "source_full_archive_downloaded": false,
+  "notes": "Tree metadata comparison and 13 exact local-to-Git blob matches; no full byte archive. SQLite shim is not PG. No external provider, real data, production or CI."
+}

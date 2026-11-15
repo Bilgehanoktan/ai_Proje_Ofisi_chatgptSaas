@@ -27,7 +27,7 @@ def valid_source(source: object) -> bool:
 
 
 def inspect_span(span: ClaimSpan, source: SourceVersion, raw: bytes) -> str:
-    if not isinstance(span, ClaimSpan) or not valid_source(source) or span.source != source:
+    if not isinstance(span, ClaimSpan) or not valid_source(source) or not valid_source(span.source) or span.source != source:
         return 'SOURCE_PIN_HOLD'
     if type(raw) is not bytes or len(raw) > 1024 * 1024 or sha256(raw).hexdigest() != source.raw_digest:
         return 'SOURCE_DIGEST_HOLD'
