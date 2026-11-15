@@ -111,3 +111,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P01 — A–H parallel UI
 [Architecture](../W1-0198-P01/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). Existing D0 reads centralized; canonical runtime/authority unchanged.
+
+## W1-0198-P02 — typed registry and historical lifecycle
+[Architecture](../W1-0198-P02/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](../implementation_plan/W1_0198_PARALLEL_PLAN.md). New fixed D0 readback; no canonical authority or geometry join.

@@ -97,3 +97,6 @@ Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTU
 
 ## W1-0198-P01
 [Architecture](docs/W1-0198-P01/ARCHITECTURE_AND_CATALOG.md) · [A–H plan](docs/implementation_plan/W1_0198_PARALLEL_PLAN.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P01.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P01.json).
+
+## W1-0198-P02
+[Architecture](docs/W1-0198-P02/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P02.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P02.json).

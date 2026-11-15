@@ -1,19 +1,19 @@
 {
-  "revision": "W1-0198-P01",
-  "branch": "integration/w1-0198-p01",
-  "source_commit": "2a87695793509a52714434aa6fa6898449693df0",
-  "parent_commit": "9eee77b0f8467f4926973218a2de48aabe9dd95c",
+  "revision": "W1-0198-P02",
+  "branch": "integration/w1-0198-p02",
+  "source_commit": "66e6d15f26ccfb23095f06884c2f347c65b2df46",
+  "parent_commit": "78c4286c6ae974f1f231c3ab3070eb0e864ddd4f",
   "integration_parents": {
     "unified": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
     "lifecycle": "a7c4f417faf17959e3165193aa247815954bfa42"
   },
   "product": "ISOLATED_UNIFIED_SOURCE_CANDIDATE",
-  "product_files": 278,
-  "manifest_entries": 277,
-  "manifest_blob": "eff9fb34b5f4fcf200e7daf83f097d04278df3c6",
-  "source_readback": "277_PATH_SIZE_PASS_13_CHANGED_SHA256_PASS_264_UNCHANGED",
+  "product_files": 289,
+  "manifest_entries": 288,
+  "manifest_blob": "b55ba435b9c428374acb08a8d70a21dc858eb53f",
+  "source_readback": "288_PATH_SIZE_PASS_23_CHANGED_SHA256_PASS_265_UNCHANGED",
   "full_product_sha256": "NOT_RUN",
-  "selected_controls_passed": 12,
+  "selected_controls_passed": 36,
   "full_product_tests": "NOT_RUN",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
@@ -30,13 +30,14 @@
     "windows_S3": "444_PASS_52_CAPTURES_5_API_PARITY",
     "core_0195": "79_PASS_5_PG_SKIP",
     "memory_model_0196_MA": "41_PASS",
-    "lifecycle_0196_L": "26_NEW_79_REGRESSION_10_PG_SKIP_NOT_ADDITIVE"
+    "lifecycle_0196_L": "26_NEW_79_REGRESSION_10_PG_SKIP_NOT_ADDITIVE",
+    "W1_0198_P01": "12 pure helpers PASS"
   },
-  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P01.json",
-  "next": "W1-0198-P02 parallel A–H: B fixed registry/react tests; D persisted lifecycle projection, C/E/G consume only proved scope, F trusted model/memory contract, H visual review; Windows deferred.",
+  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P02.json",
+  "next": "W1-0198-P03 A–H: execute isolated backend fixture checks if pinned sources obtainable; generalized active run/lease and scope projection, trusted model/memory reference contracts, UX; Windows deferred.",
   "previous_pointers": [
-    "handover/history/CURRENT_0198_UL_PRE_W1_P01.json"
+    "handover/history/CURRENT_W1_0198_P01_PRE_P02.json"
   ],
-  "selected_controls_scope": "pure browser transport; Node 22.16.0 / TS 5.8.3",
+  "selected_controls_scope": "24 new +12 transport regression pure Node/TS5.8.3; backend/React not run",
   "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json"
 }

@@ -131,3 +131,6 @@ W1 first: read-only D0 lifecycle/settlement projection with explicit scope, revi
 
 ## W1-0198-P02 — current next
 Keep A–H IDs; proceed parallel by path ownership. A pinned regression/React test harness, Windows deferred; B fixed typed registry + React lifecycle tests; C/D/E/G need validated persisted lifecycle projection, no geometry/causal join before proof; F trusted model reservation + memory ACL API; H targeted browser/visual checks when environment available. No grant, provider, spend, main, CI, PROD or independent acceptance. Fresh Windows review later; old approval invalid.
+
+## W1-0198-P03 — current next
+Preserve A–H. A execute exact persisted fixture tests and React acceptance when available; Windows deferred. B scope/revision/freshness registry; C/D/E/G generalize validated active-run/lease/readback only after contract, no plan/geometry join without proof. F trusted model reservation and independent ACL/witness references; no content/provider calls. H visual review. Prior P02 fixture is separate fixed terminal scenario. No new grants, CI/main/PROD or independent acceptance. Fresh stage and new lock approval later.

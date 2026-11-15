@@ -1,10 +1,10 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P01",
-  "parent": "9eee77b0f8467f4926973218a2de48aabe9dd95c",
-  "source_commit": "2a87695793509a52714434aa6fa6898449693df0",
+  "round": "W1-0198-P02",
+  "parent": "78c4286c6ae974f1f231c3ab3070eb0e864ddd4f",
+  "source_commit": "66e6d15f26ccfb23095f06884c2f347c65b2df46",
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
-  "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; G uses Dashboard placement in this round",
+  "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
   "dependency_rules": [
     "B provides read abstraction; C–G use existing validated D0 contracts independently; real lifecycle, memory, model, finance and security contracts remain dependencies",
     "H may proceed independently; A full Windows deferred by user",
@@ -15,36 +15,41 @@
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
       "status": "PARTIAL_HELPER_PASS_WINDOWS_DEFERRED",
-      "done": "12 yeni transport testi, mevcut harness entegrasyonu ve yeni manifest/runner pinleri",
-      "next": "Pinned TS 5.9.3, tam backend/Next build/browser regresyonu; Windows sonraya",
+      "done": "24 new pure TypeScript/Node tests + 12 P01 transport regressions PASS; eight backend tests and actual browser scenario prepared; runner pins/fixture/six-route parity updated",
+      "next": "Execute eight backend tests, pinned TS 5.9.3, hook/browser, full suite/build in fresh reviewed stage. No Windows now",
       "owner": [
         "tests/projection-read.test.cjs",
         "tests/integration/run_combined_helpers.cjs",
         "tests/integration/w8_unified.py",
-        "tests/integration/launch_w8_unified.py"
+        "tests/integration/launch_w8_unified.py",
+        "tests/lifecycle-projection.test.cjs",
+        "tests/projection-registry.test.cjs",
+        "tests/integration/browser_lifecycle_p02.py",
+        "tests/test_lifecycle_projection_p02.py"
       ]
     },
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "D0_SOURCE_INTEGRATED_PARTIAL_TEST",
-      "done": "Fixed GET allowlist, bounded UTF-8/JSON, strict existing parser, deadline, abort, stale response suppression, five migrated consumers",
-      "next": "React lifecycle tests, fixed registry parser binding, canonical scope/revision and explicit live adapter only after contract; no shared cache now",
+      "status": "D0_REGISTRY_INTEGRATED_HELPER_PASS",
+      "done": "Fixed six endpoint/parser registry, key-only typed hook, seven existing consumer call sites migrated; no cross-scope cache",
+      "next": "React lifecycle acceptance; generic proven scope/revision envelope, freshness protocol and live adapter only after authority",
       "owner": [
         "features/data/projectionRead.ts",
         "features/data/useProjectionRead.ts",
         "features/mvp/MvpDiagnosticsPanel.tsx",
         "features/mvp/AdmissionProjectionPanel.tsx",
         "features/mvp/TaskBudgetPanel.tsx",
-        "features/mvp/OutboxProjectionPanel.tsx"
+        "features/mvp/OutboxProjectionPanel.tsx",
+        "features/data/projectionRegistry.ts"
       ]
     },
     {
       "id": "C",
       "name": "CEO Dashboard veri entegrasyonu",
-      "status": "D0_SOURCE_INTEGRATED",
-      "done": "OperationalReadback: one paired historical snapshot; no derived live KPI",
-      "next": "Canonical CEO projection and shared scope evidence",
+      "status": "D0_LIFECYCLE_UI_SOURCE_INTEGRATED",
+      "done": "CEO readback displays separate exact fixed 0196-L sample timeline",
+      "next": "Run actual readback; canonical CEO data, no KPI inference",
       "owner": [
         "features/ceo-dashboard/OperationalReadback.tsx"
       ]
@@ -52,19 +57,25 @@
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "D0_HISTORICAL_SOURCE_INTEGRATED_LIFECYCLE_API_HOLD",
-      "done": "Station observation panel uses reader; completion of example observations explicitly not agent status",
-      "next": "0196-L persisted lifecycle read-only API, scope/revision/causality, then Office; geometry JOIN_HOLD",
+      "status": "D0_LIFECYCLE_API_SOURCE_INTEGRATED_TEST_PENDING",
+      "done": "Read-only fixed terminal fixture API; office full-screen historical panel; no live geometry or station association",
+      "next": "Execute persisted fixture tests; generalized active-run/lease and placement mapping with trusted clock; JOIN_HOLD until proved",
       "owner": [
-        "features/mvp/OfficeWorkbenchPanel.tsx"
+        "features/mvp/OfficeWorkbenchPanel.tsx",
+        "app/core/development_review/lifecycle_projection.py",
+        "app/api/lifecycle_projection.py",
+        "app/api/demo/lifecycle/route.ts",
+        "features/mvp/LifecycleReadback.tsx",
+        "contracts/source/lifecycle.projection.schema.json",
+        "contracts/generated/lifecycle.projection.schema.json"
       ]
     },
     {
       "id": "E",
       "name": "Görev ve Workflow Studio entegrasyonu",
-      "status": "D0_SOURCE_INTEGRATED",
-      "done": "Research paired historical record placed beside existing Project Studio, no DAG state join",
-      "next": "Task/run projection contract and per-task validated state",
+      "status": "D0_LIFECYCLE_UI_SOURCE_INTEGRATED",
+      "done": "Workflow screen displays separate fixed plan/run timeline; not DAG state mapping",
+      "next": "Prove scope identity and per-task canonical readback; no false join",
       "owner": [
         "components/dashboard/DevelopmentReviewPanel.tsx"
       ]
@@ -72,9 +83,9 @@
     {
       "id": "F",
       "name": "Memory ve Model Gateway ekranları",
-      "status": "D0_DIAGNOSTICS_SOURCE_INTEGRATED_MEMORY_API_HOLD",
-      "done": "CapabilityReadback shows existing model/gateway/tool diagnostics and explicit unavailable memory API",
-      "next": "Persisted model reservation/lease readback and trusted ACL memory read API; no provider invocation",
+      "status": "D0_REGISTRY_MIGRATION_CONTRACT_GAP_HOLD",
+      "done": "Capability panel uses registry; explicitly excludes closed terminal sample from model/retrieval; dependency contract recorded",
+      "next": "Trusted active run/admission/lease/reservation and independent ACL/witness readback; actual model/memory APIs remain HOLD",
       "owner": [
         "features/capabilities/CapabilityReadback.tsx"
       ]
@@ -82,9 +93,9 @@
     {
       "id": "G",
       "name": "Finans ve güvenlik projeksiyonları",
-      "status": "D0_SOURCE_INTEGRATED",
-      "done": "Existing admission sample and outbox readback exposed in Finance and Security/Reports, authoritative finance remains null",
-      "next": "Canonical ledger/settlement, security evidence projection",
+      "status": "D0_SETTLEMENT_READBACK_UI_SOURCE_INTEGRATED",
+      "done": "Finance and Security/Reports use same fixed historical terminal projection in separate readers; zero recognized sample cost, no financial ledger",
+      "next": "Execute fixture tests; canonical settlement ledger and independent evidence; no authorized balance",
       "owner": [
         "features/ceo-dashboard/Dashboard.tsx"
       ]
@@ -92,9 +103,9 @@
     {
       "id": "H",
       "name": "Görsel kalite ve kullanıcı deneyimi",
-      "status": "CSS_SOURCE_INTEGRATED_VISUAL_NOT_RUN",
-      "done": "Scoped responsive grid, text overflow and status theme styles",
-      "next": "Browser visual review light/dark, compact/mobile, interaction regression",
+      "status": "CSS_TIMELINE_SOURCE_INTEGRATED_VISUAL_NOT_RUN",
+      "done": "Responsive EDS timeline, no motion; browser assertions prepared",
+      "next": "Actual light/dark/mobile browser visual and accessibility review",
       "owner": [
         "design-system/eds.css"
       ]
