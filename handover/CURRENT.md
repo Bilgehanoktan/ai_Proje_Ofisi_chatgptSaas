@@ -40,3 +40,7 @@ User explicitly requested integration; CEO-0174 standing scope unchanged. Cumula
 
 ## 0180 — EDS actual product integration
 CEO-0179=B effective: isolated source transfer/local build/synthetic tests decoupled from PRE/T01/T06; actual independent acceptance and real grants remain HOLD. 14/14 EDS files integrated in product/, 8 add/6 replace; 2 product AGENTS docs and manifest updated. 149 manifest entries / 150 product files / 47 frontend files. Source commit d15537a19b029e036b6dadd37f1840d2707d4aa9; remote exact delta readback verified. 20/20 standalone local helpers rerun, full product build/test NOT_RUN. [Architecture/catalog](../docs/0180/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0180.json). Next exact local archive and dependency locks, then isolated product tests/build. No main merge, PROD, actual security grant or R12 merge.
+
+
+## 0181 — D0 MVP diagnostics (2026-11-15)
+Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnostics`. 19 product source changes + manifest; 162 manifest entries, 163 files. Selected local synthetic tests 38/38 (24 Python, 14 Node including loopback GET 200). Full pinned dependency locks, full frontend build/browser and full backend suite NOT_RUN; independent acceptance HOLD. See docs/0181/ARCHITECTURE_AND_CATALOG.md and releases/GITHUB_READBACK_0181.json. Prior history preserved.

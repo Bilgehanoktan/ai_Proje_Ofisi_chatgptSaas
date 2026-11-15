@@ -65,3 +65,7 @@ User explicitly requested integration; CEO-0174 standing scope unchanged. Cumula
 
 ## 0180 — EDS actual product integration
 CEO-0179=B effective: isolated source transfer/local build/synthetic tests decoupled from PRE/T01/T06; actual independent acceptance and real grants remain HOLD. 14/14 EDS files integrated in product/, 8 add/6 replace; 2 product AGENTS docs and manifest updated. 149 manifest entries / 150 product files / 47 frontend files. Source commit d15537a19b029e036b6dadd37f1840d2707d4aa9; remote exact delta readback verified. 20/20 standalone local helpers rerun, full product build/test NOT_RUN. [Architecture/catalog](../docs/0180/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0180.json). Next exact local archive and dependency locks, then isolated product tests/build. No main merge, PROD, actual security grant or R12 merge.
+
+
+## 0181 -> 0182
+Priority W8/W1: resolve approved network dependency installation and pinned transitive locks in isolated environment, run full backend tests, Next typecheck/build/browser; then expand W3–W7 persistent/runtime implementation in permitted scope. Maintain DENY on real agents, providers, spend, independent acceptance and PROD; no main merge. Do not report full acceptance until demonstrated.
