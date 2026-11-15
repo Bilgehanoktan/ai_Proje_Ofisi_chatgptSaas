@@ -1,0 +1,62 @@
+{
+  "revision": "0185-W1-F",
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 local (pin 5.9.3)",
+    "browser": "Chromium via Playwright"
+  },
+  "fixture_pins": {
+    "guard": "2981fd4fbff4c7f3215a8b59b1a5ff58e7eb1830",
+    "core": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+    "projection": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac"
+  },
+  "commands": [
+    "tsc --strict --target ES2020 --module commonjs --resolveJsonModule --esModuleInterop --outDir out features/project-management/projectModel.ts",
+    "node tests/project-model.test.cjs <compiled-model> <fixture>",
+    "TypeScript transpileModule two TSX files",
+    "Playwright page.set_content independent HTML with exact compiled model, guard and fixtures"
+  ],
+  "initial_test": {
+    "pass": 9,
+    "fail": 1,
+    "reason": "Test asserted PLAN_INPUT_INVALID for {} but canonical guard correctly returned PLAN_SCOPE_OR_PIN_MISMATCH; corrected test to check both early guard and null-scope catch."
+  },
+  "final_helper": {
+    "pass": 10,
+    "fail": 0
+  },
+  "tsx_syntax": {
+    "pass": 2,
+    "fail": 0
+  },
+  "standalone_browser": {
+    "pass": 12,
+    "fail": 0,
+    "checks": [
+      "six waves seven tasks",
+      "three distinct gates",
+      "task context",
+      "Turkish query",
+      "selection context preserved",
+      "role filter",
+      "table filter",
+      "empty state",
+      "reset filters",
+      "light theme preview",
+      "390px page overflow",
+      "no page errors"
+    ],
+    "method": "Standalone DOM adapter, not React/Next; rerun after CSS layout adjustment and static module loader replacing dynamic evaluation."
+  },
+  "dependencies": {
+    "next": "NOT_INSTALLED",
+    "react": "NOT_INSTALLED",
+    "phaser": "NOT_INSTALLED"
+  },
+  "full_next_build": "NOT_RUN",
+  "full_product_typecheck": "NOT_RUN",
+  "actual_react_browser": "NOT_RUN",
+  "full_backend": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "previous_rounds": "Historical only, not counted in new tests."
+}

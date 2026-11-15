@@ -9,6 +9,7 @@ from app.core.development_review.policy import FileReadback
 from app.core.development_review.evidence_store import initialize_staging, stage_batch, inspect_staged
 from hashlib import sha256
 import sqlite3
+from contextlib import closing
 from app.core.development_review.model import FilePin, ReviewScope, PrincipalPin, ROLES, scope_digest
 from app.core.development_review.planner import compile_review
 
@@ -93,30 +94,30 @@ class RegistryPolicyTests(unittest.TestCase):
         return inspect_staged(db,self.scope,self.scope,self.plan,self.rows,self.rows,self.outputs,4,7,False)
 
     def test_staging_complete_readback(self):
-        with sqlite3.connect(':memory:') as db:
+        with closing(sqlite3.connect(':memory:')) as db, db:
             initialize_staging(db)
             self.assertEqual(self.stage(db),'D0_BATCH_STAGED_NOT_AUTHORITY')
             self.assertEqual(self.readback(db),'D0_STAGING_READBACK_MATCH_ONLY')
 
     def test_staging_duplicate(self):
-        with sqlite3.connect(':memory:') as db:
+        with closing(sqlite3.connect(':memory:')) as db, db:
             initialize_staging(db); self.stage(db)
             self.assertEqual(self.stage(db),'STAGING_DUPLICATE_HOLD')
 
     def test_staging_reject_incomplete(self):
-        with sqlite3.connect(':memory:') as db:
+        with closing(sqlite3.connect(':memory:')) as db, db:
             initialize_staging(db)
             self.assertEqual(self.stage(db,self.rows[:-1]),'STAGING_HOLD')
             self.assertEqual(self.readback(db),'STAGING_INCOMPLETE_HOLD')
 
     def test_staging_update_denied(self):
-        with sqlite3.connect(':memory:') as db:
+        with closing(sqlite3.connect(':memory:')) as db, db:
             initialize_staging(db); self.stage(db)
             with self.assertRaises(sqlite3.IntegrityError):
                 db.execute('UPDATE development_evidence_d0 SET body=?',('tampered',))
 
     def test_staging_delete_denied(self):
-        with sqlite3.connect(':memory:') as db:
+        with closing(sqlite3.connect(':memory:')) as db, db:
             initialize_staging(db); self.stage(db)
             with self.assertRaises(sqlite3.IntegrityError):
                 db.execute('DELETE FROM development_evidence_d0')

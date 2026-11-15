@@ -30,3 +30,34 @@
 @media(max-width:680px){.eds-frame .sidebar nav{display:flex;flex-wrap:wrap}.eds-frame .sidebar nav button,.eds-frame .sidebar nav .nav-link{min-height:44px}.eds-frame .topline{align-items:flex-start}.eds-frame .floor-switch button{min-width:0;width:100%}}
 @media(max-width:400px){.eds-frame .metrics,.eds-frame .sectiongrid,.eds-frame .agentgrid,.eds-frame .lanegrid,.eds-frame .station-list{grid-template-columns:1fr}.eds-frame main{padding:10px}.eds-frame .panel{padding:10px}.eds-frame .workspace{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.eds-frame *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.eds-frame .eds-card:hover{transform:none}}
+
+/* W1-0198-H / readback surfaces only; no animation or authority semantics. */
+.eds-frame .projection-summary{margin-block:12px}
+.eds-frame .projection-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,156px),1fr));gap:10px;margin-block:12px}
+.eds-frame .projection-summary-grid article{background:var(--surface-raised);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.eds-frame .projection-summary-grid article strong{display:block;overflow-wrap:anywhere;font-size:1.1rem;margin-top:6px}
+.eds-frame .projection-read-status{border-inline-start:3px solid var(--outline-strong);padding:8px 12px;background:var(--surface-raised);border-radius:6px;overflow-wrap:anywhere}
+.eds-frame .projection-read-status[data-phase=hold]{border-color:var(--hold-line);background:var(--hold-bg);color:var(--hold-text)}
+
+/* W1-0198-P02 historical timeline, no live motion. */
+.eds-frame .lifecycle-timeline{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,145px),1fr));gap:8px}
+.eds-frame .lifecycle-timeline li{border:1px solid var(--line);border-inline-start:3px solid var(--outline-strong);border-radius:8px;background:var(--surface-raised);padding:10px;min-width:0;overflow-wrap:anywhere}
+.eds-frame .lifecycle-timeline small{display:block;margin-top:5px}
+
+/* P03 historical prefix metadata; accessible text, no live-motion styling. */
+.eds-frame .prefix-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,165px),1fr));gap:10px;margin-block:12px}
+.eds-frame .prefix-facts div{min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised)}
+.eds-frame .prefix-facts dt{color:var(--muted);font-size:.85rem}
+.eds-frame .prefix-facts dd{margin:6px 0 0;font-weight:650;overflow-wrap:anywhere}
+
+/* P04 explicit historical scope mismatch, no live-state colors. */
+.eds-frame .join-readback{border:1px solid var(--line);border-inline-start:3px solid var(--outline-strong);padding:10px;border-radius:8px;overflow-wrap:anywhere}
+.eds-frame .join-readback small{display:block;margin-top:5px}
+/* P04 plan progress: native progress semantics, no acceptance colour claim. */
+.eds-frame .plan-progress progress{display:block;width:100%;height:10px;accent-color:var(--outline-strong)}
+.eds-frame .plan-progress-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px;margin-block:14px}
+.eds-frame .plan-progress-grid article{min-width:0;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised);padding:12px;overflow-wrap:anywhere}
+.eds-frame .plan-progress-grid details{margin-top:10px}
+.eds-frame .plan-progress-grid summary{cursor:pointer}
+.eds-frame .plan-progress-grid li{margin-block:8px}
+.eds-frame .plan-progress-grid small{display:block}

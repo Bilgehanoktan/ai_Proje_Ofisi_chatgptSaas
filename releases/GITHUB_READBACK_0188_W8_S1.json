@@ -1,0 +1,85 @@
+{
+  "revision": "0188-W8-S1",
+  "base": "4a34fe9786a30bd408055600d08e336d271a7ddc",
+  "branch": "integration/0188-w8-s1",
+  "source_commit": "4144b7593bb901f866f016e6c342312244e9d2bb",
+  "source_tree": "cf0ee670e1c43012e2c0236048afaf229c03c983",
+  "manifest_blob": "383b6248cd34dd63baee313d4488613e1a6e67ce",
+  "manifest_entries": 249,
+  "manifest_path_size_matches": 249,
+  "product_files": 250,
+  "unchanged_product_blobs": 247,
+  "changed": [
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "previous": "b72b89cf8c0e1785cde949957d91cf1db8ee7c14",
+      "current": "383b6248cd34dd63baee313d4488613e1a6e67ce"
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements.txt",
+      "previous": "91379a6ca858f91904aa267e528f983d73247b65",
+      "current": "297b0a1ff6a125166f9f7eca94390062644bee7c"
+    },
+    {
+      "path": "product/ai-company-os-frontend/package.json",
+      "previous": "cb25bd33c71273d4b1fc3e76a5c152015add714d",
+      "current": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3"
+    },
+    {
+      "path": "tests/integration/test_w8_local.py",
+      "previous": "04edfa20af331f19b66039889f7e080a5de16cbc",
+      "current": "cc1ccc4eb2d2ae1069146983503ab0f995acff17"
+    },
+    {
+      "path": "tests/integration/w8_local.py",
+      "previous": "5f54a06af0dd74773a1ce8fc613d75558dbb5105",
+      "current": "57bcedb4e59c2d6f5cdc7c178180230cdeaafc40"
+    }
+  ],
+  "evidence": {
+    "user_windows_source_audit": "249 SHA-256 pins and 14 shared pairs PASS on old 0188-W8",
+    "user_npm_audit": {
+      "sha256": "e7227d0368963835431149ee1357cd4c57d77626fd016e0f54db63aaa71ef800",
+      "packages": 3,
+      "critical": 1,
+      "high": 2,
+      "advisories": {
+        "next": 32,
+        "postcss": 4,
+        "sharp": 3
+      },
+      "total_advisories": 39,
+      "next_suggested": "15.5.29"
+    },
+    "local_runner_tests": {
+      "pass": 9,
+      "fail": 0,
+      "scope": "offline preflight; no product install"
+    },
+    "new_lock": "NOT_GENERATED",
+    "new_audit": "NOT_RUN",
+    "full_install": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "pins": {
+    "next": "15.5.29",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "postcss_override": "8.5.32",
+    "sharp_override": "0.35.5",
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "uvicorn": "0.34.2"
+  },
+  "sources": [
+    "https://github.com/vercel/next.js/releases/tag/v15.5.29",
+    "https://github.com/react/react/security/advisories/GHSA-xqc2-xf4c-x3h3",
+    "https://github.com/postcss/postcss/releases/tag/8.5.32",
+    "https://github.com/advisories/GHSA-fxqj-rqcc-2cmp",
+    "https://github.com/advisories/GHSA-wq5f-xc86-pv6w",
+    "https://github.com/fastapi/fastapi/blob/0.163.0/pyproject.toml",
+    "https://github.com/Kludex/starlette/releases/tag/1.10.0"
+  ],
+  "parallel_recovery": "recovery/0190-t1-race at bd15a09c0b8efe76ff31ad6ab135ad19dbfa0fcf not merged"
+}

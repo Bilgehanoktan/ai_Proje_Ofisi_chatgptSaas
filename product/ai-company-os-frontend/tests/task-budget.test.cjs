@@ -8,3 +8,17 @@ test('valid joined projection',()=>assert.equal(parse(sample).research_event_seq
 for(const [name,change] of Object.entries({pair:{pair_id:'b'},seq:{workbench_event_seq:4},research:{research_event_seq:null},version:{admission_version:2},admission:{sample_admission_ref:null},causal:{causality:'PROVEN'},authority:{authoritative:true},extra:{extra:true},budget:{budget:{...budget,sample_reserved_minor:0}},office:{office:{...office,provider_called:true}}}))test('reject '+name,()=>assert.equal(parse({...sample,...change}),null));
 test('unknown retains reservation',()=>assert.equal(parse({...sample,admission_version:2,budget:{...budget,version:2,phase:'UNKNOWN_HOLD'}}).budget.sample_reserved_minor,100));
 test('proxy 200 and invalid 503',async()=>{const prior=global.fetch;try{global.fetch=async(url,opts)=>{assert.equal(url,'http://127.0.0.1:8000/demo/v1/task-budget/sample-projection');assert.equal(opts.redirect,'error');return Response.json(sample);};assert.equal((await GET()).status,200);global.fetch=async()=>Response.json({...sample,spend_allowed:true});assert.equal((await GET()).status,503);global.fetch=async()=>Response.json({text:'x'.repeat(9000)});assert.equal((await GET()).status,503);}finally{global.fetch=prior;}});
+
+test('configured loopback port and invalid config fail closed',async()=>{
+ const saved=process.env.AICOS_D0_BACKEND_PORT,old=global.fetch;
+ try {
+  let urls=[];global.fetch=async(url)=>{urls.push(url);throw Error('synthetic offline');};
+  process.env.AICOS_D0_BACKEND_PORT='17301';
+  assert.equal((await GET()).status,503);
+  assert.deepEqual(urls,['http://127.0.0.1:17301/demo/v1/task-budget/sample-projection']);
+  for(const value of ['', '0','80','65536','49152','017301','17301/path','17301@evil.test','http://evil.test',' 17301','17301.0']){
+   process.env.AICOS_D0_BACKEND_PORT=value;urls=[];
+   assert.equal((await GET()).status,503);assert.deepEqual(urls,[]);
+  }
+ }finally{global.fetch=old;if(saved===undefined)delete process.env.AICOS_D0_BACKEND_PORT;else process.env.AICOS_D0_BACKEND_PORT=saved;}
+});

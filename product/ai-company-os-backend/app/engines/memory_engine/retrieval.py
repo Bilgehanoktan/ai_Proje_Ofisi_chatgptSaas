@@ -36,13 +36,17 @@ def valid_keys(keys: object) -> bool:
             and all(token(k) for k in keys) and len(set(keys)) == len(keys))
 
 
+def valid_view(view: object, scope: Scope) -> bool:
+    return (isinstance(view, TombstoneView) and view.scope == scope
+            and view.complete is True and uint(view.epoch) and uint(view.sequence)
+            and valid_keys(view.keys))
+
+
 def inspect_retrieval(scope: Scope, nodes: tuple[Node, ...], target: str,
                       view: TombstoneView, current: TombstoneView) -> RetrievalReview:
     if not valid_scope(scope) or not token(target):
         return RetrievalReview('MEMORY_SCOPE_HOLD')
-    if (not isinstance(view, TombstoneView) or not isinstance(current, TombstoneView)
-            or view != current or view.scope != scope or view.complete is not True
-            or not uint(view.epoch) or not uint(view.sequence) or not valid_keys(view.keys)):
+    if not valid_view(view, scope) or not valid_view(current, scope) or view != current:
         return RetrievalReview('TOMBSTONE_VIEW_UNKNOWN_HOLD')
     if not isinstance(nodes, tuple) or not nodes or len(nodes) > 512:
         return RetrievalReview('LINEAGE_GRAPH_HOLD')

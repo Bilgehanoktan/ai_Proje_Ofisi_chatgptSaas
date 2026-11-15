@@ -1,3 +1,4 @@
+from contextlib import closing
 import sqlite3
 import tempfile
 import unittest
@@ -42,7 +43,7 @@ class AtomicTests(unittest.TestCase):
 
     def test_rollback(self):
         self.store.renew('demo-a',None,1,5)
-        with sqlite3.connect(self.path) as db:
+        with closing(sqlite3.connect(self.path)) as db, db:
             db.execute("CREATE TRIGGER fail BEFORE INSERT ON outbox BEGIN SELECT RAISE(ABORT,'test'); END")
         with self.assertRaises(sqlite3.IntegrityError): self.store.observe('demo-x','demo-a',1,2,0)
         self.assertEqual(self.store.snapshot()['head'],(0,'PENDING'))
@@ -63,7 +64,7 @@ class AtomicTests(unittest.TestCase):
         with self.assertRaises(ValueError): AtomicSample(self.path,tenant='other')
         with self.assertRaises(ValueError): AtomicSample(self.path,company='other')
         self.assertEqual(self.store.snapshot()['tenant'],'synthetic-tenant')
-        with sqlite3.connect(self.path) as db: db.execute('DELETE FROM meta')
+        with closing(sqlite3.connect(self.path)) as db, db: db.execute('DELETE FROM meta')
         with self.assertRaises(ValueError): self.store.snapshot()
 
     def test_cas_and_terminal(self):

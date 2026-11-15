@@ -10,3 +10,17 @@ test('network failure held',async()=>withFetch(async()=>{throw Error('network')}
 test('non-JSON held',async()=>withFetch(async()=>new Response('bad'),async()=>assert.equal((await GET()).status,503)));
 test('oversize held',async()=>withFetch(async()=>Response.json({data:'x'.repeat(17000)}),async()=>assert.equal((await GET()).status,503)));
 test('real local backend readback',{skip:process.env.MVP_LOOPBACK_TEST!=='1'},async()=>{const r=await GET();assert.equal(r.status,200);const data=await r.json();assert.equal(data.sections.event_store,'SQLITE_MEMORY_READBACK_ONLY');assert.equal(data.sample_event_rows,3);assert.equal(data.dispatch_allowed,false);assert.equal(data.diagnostic_remaining_minor,6900);});
+
+test('configured loopback port and invalid config fail closed',async()=>{
+ const saved=process.env.AICOS_D0_BACKEND_PORT,old=global.fetch;
+ try {
+  let urls=[];global.fetch=async(url)=>{urls.push(url);throw Error('synthetic offline');};
+  process.env.AICOS_D0_BACKEND_PORT='17301';
+  assert.equal((await GET()).status,503);
+  assert.deepEqual(urls,['http://127.0.0.1:17301/demo/v1/mvp/diagnostics']);
+  for(const value of ['', '0','80','65536','49152','017301','17301/path','17301@evil.test','http://evil.test',' 17301','17301.0']){
+   process.env.AICOS_D0_BACKEND_PORT=value;urls=[];
+   assert.equal((await GET()).status,503);assert.deepEqual(urls,[]);
+  }
+ }finally{global.fetch=old;if(saved===undefined)delete process.env.AICOS_D0_BACKEND_PORT;else process.env.AICOS_D0_BACKEND_PORT=saved;}
+});

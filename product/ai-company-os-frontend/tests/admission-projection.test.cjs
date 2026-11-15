@@ -14,3 +14,17 @@ test('fixed loopback proxy',async()=>mocked(async(url,opts)=>{assert.equal(url,'
 test('invalid contract HOLD',async()=>mocked(async()=>Response.json({...base,spend_allowed:true}),async r=>assert.equal(r.status,503)));
 test('oversized body HOLD',async()=>mocked(async()=>Response.json({x:'a'.repeat(5000)}),async r=>assert.equal(r.status,503)));
 test('network failure HOLD',async()=>mocked(async()=>{throw Error('down');},async r=>assert.equal(r.status,503)));
+
+test('configured loopback port and invalid config fail closed',async()=>{
+ const saved=process.env.AICOS_D0_BACKEND_PORT,old=global.fetch;
+ try {
+  let urls=[];global.fetch=async(url)=>{urls.push(url);throw Error('synthetic offline');};
+  process.env.AICOS_D0_BACKEND_PORT='17301';
+  assert.equal((await GET()).status,503);
+  assert.deepEqual(urls,['http://127.0.0.1:17301/demo/v1/admission/sample-projection']);
+  for(const value of ['', '0','80','65536','49152','017301','17301/path','17301@evil.test','http://evil.test',' 17301','17301.0']){
+   process.env.AICOS_D0_BACKEND_PORT=value;urls=[];
+   assert.equal((await GET()).status,503);assert.deepEqual(urls,[]);
+  }
+ }finally{global.fetch=old;if(saved===undefined)delete process.env.AICOS_D0_BACKEND_PORT;else process.env.AICOS_D0_BACKEND_PORT=saved;}
+});
