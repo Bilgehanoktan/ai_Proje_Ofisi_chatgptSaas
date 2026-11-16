@@ -8,6 +8,7 @@ const items=[
  {id:'avatar',label:'Rezerv rol sprite',category:'sprite',art:'<circle cx="36" cy="19" r="12" fill="#aab9cd"/><path d="M18 56V43a18 18 0 0 1 36 0v13Z" fill="#7084a5"/><path d="M24 56v8m24-8v8" stroke="#9eb0c6" stroke-width="5"/>'}
 ] as const;
 export const decorCatalog=items.map(({id,label,category})=>({id,label,category}));
+export function decorFragment(id:string):string|null{return items.find(x=>x.id===id)?.art??null;}
 export function decorUri(id:string):string|null{
  const asset=items.find(x=>x.id===id);return asset?'data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">'+asset.art+'</svg>'):null;
 }
