@@ -198,3 +198,7 @@ Canonical Research root evidence candidate; exact plan and company snapshot, arc
 
 ## 0225 — actual integration validation
 Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLite T1 and pinned admission/history, persisted historical DB and mounted routes, real loopback compiled TS proxy/Studio. No runtime source changes; original suites and full result path still open. 7/16 gates unchanged. See docs/0225/ARCHITECTURE_AND_CATALOG.md and handover/NEXT_STEP_0225.md.
+
+
+## 0226 — recovered original regression
+173 recovered original tests +134 prior selected reruns =307 unique selected tests (254 Python, 53 Node). Original SQL6 and DB4 PASS; original core29 current source PASS nonlocked, historical locked acceptance NOT_RUN. No product changes. 7/16 gates unchanged. See docs/0226/ARCHITECTURE_AND_CATALOG.md and docs/0226/LOCAL_ACCEPTANCE_RUNBOOK.md.
