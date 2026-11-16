@@ -79,3 +79,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0206
 [Exact source delta, symbols, API/DB/event/dependencies and test boundaries](revisions/TECHNICAL_CATALOG_0206.json) · [Architecture/maintenance/rollback](../docs/0206/ARCHITECTURE_AND_CATALOG.md).
+
+## 0207 — cross-boundary evidence
+[Source/test delta](revisions/TECHNICAL_CATALOG_0207.json) · [Architecture and maintenance](../docs/0207/ARCHITECTURE_AND_CATALOG.md). 72 selected PASS, 29 core/lifecycle NOT_RUN, D-01 open.

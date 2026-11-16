@@ -136,3 +136,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0206 — controlled D0 unified product source
 [Architecture](../0206/ARCHITECTURE_AND_CATALOG.md) · [Reconciled P05](../W1-0198-P05/ARCHITECTURE_AND_CATALOG.md) · [AI/Memory](../0196-MA/ARCHITECTURE_AND_CATALOG.md) · [P06 historical evidence](../W1-0198-P06/ARCHITECTURE_AND_CATALOG.md). 335 product files; 24 selected actual SQLite regressions PASS; combined runtime/independent acceptance open.
+
+## 0207 — D0 cross-boundary evidence
+[Addendum](../0207/ARCHITECTURE_AND_CATALOG.md). Selected 72 tests PASS; 55-file static lock, 29 cases NOT_RUN. Joint memory/model revocation binding remains P0 open. No production authority or normative change.
