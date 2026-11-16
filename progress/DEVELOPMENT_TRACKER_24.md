@@ -31,3 +31,6 @@ Ordinal scores unchanged. Nine local component behaviors PASS and one authority-
 
 ## 0212 evidence update
 All ordinal design/source scores retained (not percent completion). 55/55 source recovery, core29 diagnostic PASS, 7 direct authority/T1 and 6 Company/Terminal new tests PASS; 52/52 combined including one expected residual reproduction. Explicit integration gates 5/16 = 31.25%, scope only, not global completion. [Gates](INTEGRATION_GATES_0212.json). PG/RLS/locked build and independent acceptance remain open.
+
+## 0213 — tracked integration gates
+24-domain ordinal estimates unchanged; independent source/security acceptances still HOLD. 55/55 core source pins and 56/56 diagnostic tests passed (4 new real SQLite two-project cases); six full wrapper tests prepared but NOT_RUN. 16-scope completion gates: 6/16 = **37.5%**, not global product completion. Full PG/RLS/locked deps/build/browser NOT_RUN. [Evidence](../releases/GITHUB_READBACK_0213.json) · [Gates](INTEGRATION_GATES_0213.json).
