@@ -189,3 +189,7 @@ Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLi
 
 ## 0226 — recovered original regression
 173 recovered original tests +134 prior selected reruns =307 unique selected tests (254 Python, 53 Node). Original SQL6 and DB4 PASS; original core29 current source PASS nonlocked, historical locked acceptance NOT_RUN. No product changes. 7/16 gates unchanged. See docs/0226/ARCHITECTURE_AND_CATALOG.md and docs/0226/LOCAL_ACCEPTANCE_RUNBOOK.md.
+
+
+## 0227 — MVP environment preflight (BLOCKED)
+No new product code or product tests. 392/392 remote manifest path/size; historical 55/55 remote Git blob/size; local checkout/resolver blocked. 307 prior selected passes not rerun; 7/16 unchanged; independent HOLD. [Architecture](../docs/0227/ARCHITECTURE_AND_CATALOG.md) · [Workstation packet](../docs/0227/CONNECTED_WORKSTATION_0227.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_0227.json).

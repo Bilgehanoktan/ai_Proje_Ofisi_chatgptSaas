@@ -1,0 +1,7 @@
+# DOC-REV-0227 — MVP environment preflight (BLOCKED)
+
+Pinned 0226 parent c715e1edfd1af021b4c0be0681c6958455b6a26f. No runtime/product changes, no new prototype or tests. Existing CEO-0174/0179=B boundary remains unchanged. Repo branch readback, exact manifest path/size 392/392, no missing/extra; 393 product files; 1571 repo blob paths. Historical lock at 614aa63efbd0a95d0fa5fe47390df043d773370f: 55/55 Git blob and size matches remotely, current source 52/55 (three expected changed paths), no local source execution. See [environment evidence](../../tests/evidence/TEST_EVIDENCE_0227.json).
+
+Local network probes: git DNS failure exit 128, pip dry-run exit 1 and npm registry metadata exit 1; separate DNS queries all exit 2. Published exact versions were found on public package indexes, so the local resolver error does not prove the pins are unavailable. No transitive lock, installation, PostgreSQL, full checkout or build produced. The existing 307 selected passes are historical 0226 only, not rerun. A3, D1-D3, E1-E4 open, B3 HOLD. 7/16 unchanged. Do not substitute new package pins, change historical lock or infer independent acceptance.
+
+Operational next: [connected workstation runbook](CONNECTED_WORKSTATION_0227.md). Execute source/lock preparation and original residual suites in an actual connected authorized isolated environment, then PG and build/browser. No new user-level authorization requested. No CI or main changes. This revision does not represent a working MVP.

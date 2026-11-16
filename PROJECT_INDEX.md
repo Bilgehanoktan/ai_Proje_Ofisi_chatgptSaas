@@ -190,3 +190,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0221
 [Architecture](docs/0221/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0221.json) · [Evidence](releases/GITHUB_READBACK_0221.json) · [Next](handover/NEXT_STEP_0221.md).
+
+
+## 0227
+[Architecture](docs/0227/ARCHITECTURE_AND_CATALOG.md) · [Workstation execution](docs/0227/CONNECTED_WORKSTATION_0227.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0227.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0227.json) · [Gates](progress/INTEGRATION_GATES_0227.json) · [Next](handover/NEXT_STEP_0227.md).
