@@ -1,0 +1,173 @@
+{
+  "revision": "W1-0198-P08",
+  "parent": "3a744286bb1dd3702f4065f4d23eddf92465a480",
+  "scope": "Exact existing Office router + actual compiled Next route GET/parser in Node HTTP test wrapper; seeded D0 SQLite (not actual Workbench writer); not app.main/Next/React/PG or trusted live state",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "v22.16.0",
+    "typescript": "Version 5.8.3",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0"
+  },
+  "pins": {
+    "product/ai-company-os-backend/app/core/development_review/office_workbench.py": {
+      "git_blob": "9a0f053482c0783f453b9afc3972aab97c3881ea",
+      "bytes": 3951,
+      "sha256": "f1fa98133451e67dbdb918467487180e596a740bdae6e3456da2bb0af1121343"
+    },
+    "product/ai-company-os-backend/app/api/office_workbench_projection.py": {
+      "git_blob": "735f1aa950285b55278cc369ae08620c972f3f66",
+      "bytes": 773,
+      "sha256": "bfdd6a2ff6768a8a979cca967a99ad28c038150a52362012e14c5b3e11f54a21"
+    },
+    "product/ai-company-os-backend/fixtures/core.plan.projection.json": {
+      "git_blob": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+      "bytes": 2462,
+      "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+    },
+    "product/ai-company-os-backend/fixtures/office.snapshot.json": {
+      "git_blob": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+      "bytes": 2700,
+      "sha256": "313b8072ec1e4bdc1feb945540c31e0a762be4151f616bd6a25e4772a790baa5"
+    },
+    "product/ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts": {
+      "git_blob": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+      "bytes": 1798,
+      "sha256": "9b6bf49ce1178d8980f4f61038908f88f75f1995d002eef5505dafa6ad915bdb"
+    },
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": {
+      "git_blob": "9231711d7efb18dd18b68e3322f62337a6477484",
+      "bytes": 475,
+      "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71"
+    },
+    "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
+      "git_blob": "749a289984049e0cec27ed93d656023ba4da1fff",
+      "bytes": 1213,
+      "sha256": "afa5e6397a4cebc234417c61dabe6448c5d386fa556fb919e2a7eed0cf298460"
+    }
+  },
+  "cases": [
+    {
+      "id": "prefix_0",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_1",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_2",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_3",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_4",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_5",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_scope",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_event",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_lease",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_task",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "missing",
+      "status": "PASS",
+      "status_code": 503,
+      "db_created": false
+    },
+    {
+      "id": "post_rejected",
+      "status": "PASS",
+      "status_code": 405,
+      "db_sha256_unchanged": true,
+      "frontend_method_guard": "test wrapper only"
+    },
+    {
+      "id": "backend_unavailable",
+      "status": "PASS",
+      "status_code": 503
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "skipped": 0,
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "full_http_parity_7": "NOT_RUN",
+  "independent_acceptance": "HOLD"
+}

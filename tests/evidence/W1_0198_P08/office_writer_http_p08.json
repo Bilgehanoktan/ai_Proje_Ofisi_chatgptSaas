@@ -1,0 +1,330 @@
+{
+  "revision": "W1-0198-P08",
+  "parent": "3a744286bb1dd3702f4065f4d23eddf92465a480",
+  "scope": "Exact existing Office router + actual compiled Next route GET/parser in Node HTTP test wrapper; actual D0 Workbench writer and sequential persisted state; not app.main/Next/React/PG or trusted live state",
+  "writer_mode": true,
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "v22.16.0",
+    "typescript": "Version 5.8.3",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0"
+  },
+  "pins": {
+    "product/ai-company-os-backend/app/core/development_review/office_workbench.py": {
+      "git_blob": "9a0f053482c0783f453b9afc3972aab97c3881ea",
+      "bytes": 3951,
+      "sha256": "f1fa98133451e67dbdb918467487180e596a740bdae6e3456da2bb0af1121343"
+    },
+    "product/ai-company-os-backend/app/api/office_workbench_projection.py": {
+      "git_blob": "735f1aa950285b55278cc369ae08620c972f3f66",
+      "bytes": 773,
+      "sha256": "bfdd6a2ff6768a8a979cca967a99ad28c038150a52362012e14c5b3e11f54a21"
+    },
+    "product/ai-company-os-backend/fixtures/core.plan.projection.json": {
+      "git_blob": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+      "bytes": 2462,
+      "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+    },
+    "product/ai-company-os-backend/fixtures/office.snapshot.json": {
+      "git_blob": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+      "bytes": 2700,
+      "sha256": "313b8072ec1e4bdc1feb945540c31e0a762be4151f616bd6a25e4772a790baa5"
+    },
+    "product/ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts": {
+      "git_blob": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+      "bytes": 1798,
+      "sha256": "9b6bf49ce1178d8980f4f61038908f88f75f1995d002eef5505dafa6ad915bdb"
+    },
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": {
+      "git_blob": "9231711d7efb18dd18b68e3322f62337a6477484",
+      "bytes": 475,
+      "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71"
+    },
+    "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
+      "git_blob": "749a289984049e0cec27ed93d656023ba4da1fff",
+      "bytes": 1213,
+      "sha256": "afa5e6397a4cebc234417c61dabe6448c5d386fa556fb919e2a7eed0cf298460"
+    },
+    "product/ai-company-os-backend/app/__init__.py": {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "product/ai-company-os-backend/app/core/__init__.py": {
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "bytes": 59,
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    "product/ai-company-os-backend/app/api/__init__.py": {
+      "git_blob": "2d899e27663a6e414765904ffd9c4624a825adde",
+      "bytes": 53,
+      "sha256": "204dd3047d08ca62e823cf02fa9c35a2b17d829ce048bbb342e55bd20b20e23e"
+    },
+    "product/ai-company-os-backend/app/core/development_review/__init__.py": {
+      "git_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "bytes": 66,
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    "product/ai-company-os-backend/app/core/orchestrator/__init__.py": {
+      "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+      "bytes": 259,
+      "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/__init__.py": {
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    "product/ai-company-os-backend/app/core/task_engine/__init__.py": {
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    "product/ai-company-os-backend/app/core/policy/__init__.py": {
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    "product/ai-company-os-backend/app/core/transaction/__init__.py": {
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    "product/ai-company-os-backend/app/engines/__init__.py": {
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "bytes": 52,
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/__init__.py": {
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "bytes": 52,
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": {
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "bytes": 7251,
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    "product/ai-company-os-backend/app/core/orchestrator/engine.py": {
+      "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "bytes": 3082,
+      "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+    },
+    "product/ai-company-os-backend/app/core/task_engine/dag.py": {
+      "git_blob": "04487bda631e9133f3904451a39fc8722e985997",
+      "bytes": 3367,
+      "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1"
+    },
+    "product/ai-company-os-backend/app/core/policy/denial.py": {
+      "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+      "bytes": 1335,
+      "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+    },
+    "product/ai-company-os-backend/app/core/transaction/review.py": {
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "bytes": 5065,
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+    },
+    "product/ai-company-os-backend/app/core/runtime_preview.py": {
+      "git_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+      "bytes": 725,
+      "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+    },
+    "product/ai-company-os-backend/app/core/t1_review.py": {
+      "git_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+      "bytes": 517,
+      "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+    },
+    "product/ai-company-os-backend/app/core/development_review/sandbox_store.py": {
+      "git_blob": "3b2c7339a869571bb8fe4bd381c50d3f2a1a2368",
+      "bytes": 8216,
+      "sha256": "4ca3997a68b7a2655c6e07f4e1dde4fdfe77367a2fb83bfacb86c3c3a04debbe"
+    },
+    "product/ai-company-os-backend/app/core/development_review/task_budget_snapshot.py": {
+      "git_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+      "bytes": 4591,
+      "sha256": "dc9c82ccfd1eb394405ef22cae2cf279c76b7f9c16c7e35854bf633619c005f4"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/registry.py": {
+      "git_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      "bytes": 1305,
+      "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/fallback.py": {
+      "git_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+      "bytes": 1391,
+      "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py": {
+      "git_blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+      "bytes": 2986,
+      "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": {
+      "git_blob": "783e9842c4712dac37b650354286f3f7c06290f0",
+      "bytes": 1532,
+      "sha256": "3898776d470313243439e8a007f53daec0c6ab07f53460554f478c2cdba35112"
+    },
+    "product/ai-company-os-backend/fixtures/core.preview.json": {
+      "git_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+      "bytes": 8418,
+      "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+    }
+  },
+  "cases": [
+    {
+      "id": "prefix_0",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_1",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_2",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_3",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_4",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "prefix_5",
+      "status": "PASS",
+      "status_code": 200,
+      "observed": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "writer_reopen_idempotency",
+      "status": "PASS",
+      "events": 5,
+      "provider_called": false,
+      "duplicate_ignored": true
+    },
+    {
+      "id": "writer_dependency_hold",
+      "status": "PASS",
+      "reason": "SAMPLE_DEPENDENCY_HOLD",
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "writer_iv_hold",
+      "status": "PASS",
+      "reason": "SAMPLE_ROLE_HOLD",
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "writer_expired_lease",
+      "status": "PASS",
+      "reason": "SAMPLE_LEASE_STALE",
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "writer_wrong_holder",
+      "status": "PASS",
+      "reason": "SAMPLE_LEASE_STALE",
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_scope",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_event",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_lease",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "tamper_task",
+      "status": "PASS",
+      "status_code": 503,
+      "db_sha256_unchanged": true
+    },
+    {
+      "id": "missing",
+      "status": "PASS",
+      "status_code": 503,
+      "db_created": false
+    },
+    {
+      "id": "post_rejected",
+      "status": "PASS",
+      "status_code": 405,
+      "db_sha256_unchanged": true,
+      "frontend_method_guard": "test wrapper only"
+    },
+    {
+      "id": "backend_unavailable",
+      "status": "PASS",
+      "status_code": 503
+    }
+  ],
+  "passed": 18,
+  "failed": 0,
+  "skipped": 0,
+  "status": "PASS_DIAGNOSTIC_ONLY",
+  "full_http_parity_7": "NOT_RUN",
+  "independent_acceptance": "HOLD"
+}

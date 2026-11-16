@@ -25,3 +25,14 @@ Path ownership remains in [JSON plan](W1_0198_PARALLEL_PLAN.json).
 
 ## P07 delta
 A 12 new D0 persisted scope +20 rerun PASS; B seven static route matches, not HTTP parity; D synthetic lease reference proof only, trust HOLD. C/E/F/G/H unchanged. P08 first fresh pinned full checkout and actual integration evidence.
+
+
+## P08 result
+- A: PARTIAL_DIAGNOSTIC_26_PASS — Full pinned checkout/install and regression remain blocked by DNS; available versions differ.
+- B: OFFICE_ROUTE_DIAGNOSTIC_1_OF_7 — Full seven-endpoint product HTTP parity remains 0/7 NOT_RUN.
+- C: CANONICAL_CEO_BINDING_HOLD — No canonical run binding or live CEO change.
+- D: D0_OFFICE_READER_HARDENED — Actual persisted D0 role counts 6/6; trusted time/placement still HOLD.
+- E: D0_WORKBENCH_WRITER_PROVED — Five DAG tasks, dependency/lease/IV/idempotency verified; canonical lineage remains HOLD.
+- F: D0_FIXED_MODEL_SAMPLE_ONLY — No live provider, reservation or Memory ACL proof.
+- G: D0_SQLITE_GUARD_PASS — No canonical ledger/security acceptance; optional pair table compatibility only.
+- H: NOT_RUN — Full build/browser/accessibility pending.

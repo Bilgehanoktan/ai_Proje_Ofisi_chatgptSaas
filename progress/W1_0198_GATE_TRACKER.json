@@ -1,6 +1,6 @@
 {
-  "revision": "W1-0198-P07",
-  "baseline": "W1-0198-P06",
+  "revision": "W1-0198-P08",
+  "baseline": "W1-0198-P07",
   "method": "Fixed-denominator evidence gates, not weights or product completion. Distinct test IDs count once; do not add historical runs. New tests require separate scope and denominator version.",
   "gates": [
     {
@@ -103,9 +103,45 @@
       "pct": 100,
       "status": "PASS_STATIC_ONLY",
       "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P07.json"
+    },
+    {
+      "id": "A-P08-SOURCE-32",
+      "scope": "exact diagnostic source closure",
+      "total": 32,
+      "verified": 32,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P08.json"
+    },
+    {
+      "id": "A-P08-WRITER-HTTP-26",
+      "scope": "D0 writer and selected Office HTTP final run",
+      "total": 26,
+      "verified": 26,
+      "pct": 100,
+      "status": "PASS_DIAGNOSTIC_ONLY",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P08.json"
+    },
+    {
+      "id": "B-P08-OFFICE-DIAGNOSTIC-1-OF-7",
+      "scope": "one Office route via actual router and compiled GET in wrapper; not unified parity",
+      "total": 7,
+      "verified": 1,
+      "pct": 14.285714285714286,
+      "status": "PARTIAL_DIAGNOSTIC_ONLY",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P08.json"
+    },
+    {
+      "id": "D-P08-GUARD-3",
+      "scope": "prior malformed profiles rejected after fix",
+      "total": 3,
+      "verified": 3,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P08.json"
     }
   ],
-  "unique_test_ids_this_round": 32,
+  "unique_test_ids_this_round": 26,
   "global_weighted_completion": "NOT_DEFINED; no baseline for all required tasks",
   "prior_p06_unique_test_ids": 97,
   "historical_counts_not_additive": true

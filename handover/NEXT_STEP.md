@@ -149,3 +149,8 @@ P06 selected gate 17/17 and 80/80 regression PASS. Preserve A–H; progress B–
 
 ## W1-0198-P08 — current next
 P07 D0 scope 12 and rerun 20 PASS; seven static matches only. Obtain fresh reviewed full checkout, matching dependency locks, seven actual HTTP/FE parity and full build/regression; parallel independent scope, clock/lease/placement, reservation/ACL/W-A contracts. No new historical screen, no authority expansion; Windows deferred.
+
+
+## P09
+P09: full pinned checkout/dependency install; unified seven HTTP parity; independent scope/time/lease/reservation/ACL/W-A/placement, browser after build.
+No authority expansion. Preserve P08 regression.

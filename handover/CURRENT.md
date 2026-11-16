@@ -1,3 +1,7 @@
-# CURRENT — W1-0198-P07
+# CURRENT — W1-0198-P08
 
-Parent eef7da68d5c00b38af11d8c1f92509e82e44fc2d. 12 new persisted scope tests and 20 prior reruns PASS; seven static route matches, HTTP parity NOT_RUN. P06 17+80 retained, not additive. Product unchanged; full checkout/dependency/build/browser/PG blocked or NOT_RUN; independent acceptance HOLD. [Architecture](../docs/W1-0198-P07/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_W1_0198_P07.json) · [Gate tracker](../progress/W1_0198_GATE_TRACKER.json) · [Next](NEXT_STEP.md).
+Parent: 3a744286bb1dd3702f4065f4d23eddf92465a480
+
+Actual D0 writer, original Office FastAPI router/Uvicorn and compiled Next GET/parser via Node HTTP wrapper; not full app.main, Next, React, PostgreSQL, live authority or independent acceptance.
+
+26/26 final selected diagnostic; 32 source pins. 3 reader defects corrected. All prior evidence retained, no additive counts. Full product build/parity/PG/browser NOT_RUN, independent HOLD. Manifest: 23fd67af920bed8869cb182122ce987ef0f8bceb. See docs/W1-0198-P08/ARCHITECTURE_AND_CATALOG.md, tests/evidence/TEST_EVIDENCE_W1_0198_P08.json, catalog/revisions/TECHNICAL_CATALOG_W1_0198_P08.json. P09: P09: full pinned checkout/dependency install; unified seven HTTP parity; independent scope/time/lease/reservation/ACL/W-A/placement, browser after build.

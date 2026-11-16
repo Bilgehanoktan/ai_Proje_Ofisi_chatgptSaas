@@ -28,3 +28,7 @@
 | 22 | Monitoring & Observability | 50 | 25 | PARTIAL_INTEGRATED | PARTIAL_PASS_HISTORICAL_READBACK |
 | 23 | Backup & Disaster Recovery | 75 | 25 | SOURCE_PREPARATION | NOT_RUN |
 | 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | CATALOG_UPDATED |
+
+
+## P08 delta
+26/26 selected diagnostic; Office 1/7 wrapper route only; full parity 0/7 NOT_RUN; score changes 0.

@@ -1,0 +1,64 @@
+{
+  "revision": "W1-0198-P08",
+  "parent": "3a744286bb1dd3702f4065f4d23eddf92465a480",
+  "scope": "Actual D0 writer, original Office FastAPI router/Uvicorn and compiled Next GET/parser via Node HTTP wrapper; not full app.main, Next, React, PostgreSQL, live authority or independent acceptance.",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "v22.16.0",
+    "typescript": "Version 5.8.3",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0"
+  },
+  "dependency_status": "DNS_BLOCKED_PIN_MISMATCH",
+  "source_pins": 32,
+  "changed_source": {
+    "git_blob": "d370681092a192088d67aca908eb6b0d76e5eaef",
+    "bytes": 6127,
+    "sha256": "48fbb4cc23c5335bfc6e67cc7b26fe2948983e68b371175ea01d5aad6ede10fe"
+  },
+  "runner": {
+    "path": "tests/integration/run_office_http_p08.py",
+    "git_blob": "4a5d0e5cd38d113761e6409a9690e6d02a470751",
+    "sha256": "a413002c7f5b6916231873edd2cdd6aee18ee924c76a67db6b1df0c18e523a31"
+  },
+  "reports": [
+    {
+      "path": "tests/evidence/W1_0198_P08/office_hardened_http_p08.json",
+      "git_blob": "0b386d390f80008633e51e5ffacfa8618a0fdabf",
+      "sha256": "bba1e88771c11124b298865a2b19aa2d000928bf57883f0582199ae22e01e28b"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P08/office_writer_http_p08.json",
+      "git_blob": "dbe529259779fab450b2ea1cf6d1a724dfe5b74d",
+      "sha256": "2818319599f7cdf79f010a5b9dff054fbc86cc2b1b37c8373eafbb096fe40844"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P08/office_guard_before.json",
+      "git_blob": "11ac36ca2b501e7919dc277a348c8bc472c02352",
+      "sha256": "b4b29be3ce31acecb5778ae2761bdc83bda9a059f7fd151e23b644808d1fc1f6"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P08/office_http_p08.json",
+      "git_blob": "412e9cae630a910fef5ff08c27c916635c596a5e",
+      "sha256": "0dd9d57dd13d040a3e80d851c51f14629cd10e27c0e03dc6507c21829055138b"
+    }
+  ],
+  "dependency_log": {
+    "path": "tests/evidence/W1_0198_P08/dependency_environment_p08.log",
+    "git_blob": "82b0dd9e911cda2a14a92fef563d51938f1da9d9"
+  },
+  "counts": {
+    "seed_initial": 13,
+    "writer_before_fix": 18,
+    "before_guard_unexpected_accept": 3,
+    "final_pass": 26,
+    "final_fail": 0,
+    "final_skip": 0,
+    "overlap_not_additive": true
+  },
+  "full_http_parity_7": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "independent_acceptance": "HOLD"
+}

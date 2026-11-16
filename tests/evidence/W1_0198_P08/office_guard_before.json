@@ -1,0 +1,27 @@
+{
+  "scope": "original P07 exact source reader, actual D0 writer, no HTTP",
+  "reader_git_blob": "9a0f053482c0783f453b9afc3972aab97c3881ea",
+  "cases": [
+    {
+      "case": "event_view",
+      "expected": "HOLD",
+      "observed": "ACCEPTED",
+      "sample_event_count": 1,
+      "db_unchanged": true
+    },
+    {
+      "case": "unrelated_trigger",
+      "expected": "HOLD",
+      "observed": "ACCEPTED",
+      "sample_event_count": 1,
+      "db_unchanged": true
+    },
+    {
+      "case": "sidecar",
+      "expected": "HOLD",
+      "observed": "ACCEPTED",
+      "sample_event_count": 1,
+      "db_unchanged": true
+    }
+  ]
+}

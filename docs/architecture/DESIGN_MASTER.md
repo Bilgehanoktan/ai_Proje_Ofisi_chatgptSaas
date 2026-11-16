@@ -129,3 +129,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P07 — persisted scope tests
 [Architecture and maintenance](../W1-0198-P07/ARCHITECTURE_AND_CATALOG.md). 12 new D0 scope +20 rerun PASS; seven static route matches; no runtime/authority/schema changes.
+
+
+## W1-0198-P08
+Actual D0 writer, original Office FastAPI router/Uvicorn and compiled Next GET/parser via Node HTTP wrapper; not full app.main, Next, React, PostgreSQL, live authority or independent acceptance. Final 26/26 PASS; prior 13 and 18 overlap. No scores changed; full parity 0/7 NOT_RUN, independent HOLD. [Architecture and catalog](../docs/W1-0198-P08/ARCHITECTURE_AND_CATALOG.md) (repository path: docs/W1-0198-P08/ARCHITECTURE_AND_CATALOG.md); evidence: tests/evidence/TEST_EVIDENCE_W1_0198_P08.json.
