@@ -1,9 +1,11 @@
 "use client";
 import {createContext,useContext,useEffect,useRef,useState,type ReactNode} from 'react';
 import {parseSharedReplay,readSharedText,type SharedSnapshot} from './sharedSnapshot';
+import {useProjectionRead} from './useProjectionRead';
 type State={phase:'idle'|'loading'|'hold';data:null}|{phase:'historical';data:SharedSnapshot};
-const Shared=createContext<{state:State;read:()=>void}|null>(null);
+const Shared=createContext<{state:State;read:()=>void;planRead:ReturnType<typeof useProjectionRead<'plan'>>}|null>(null);
 export function SharedSnapshotProvider({children}:{children:ReactNode}){
+ const planRead=useProjectionRead('plan');
  const [state,setState]=useState<State>({phase:'idle',data:null});
  const generation=useRef(0),active=useRef<AbortController|null>(null),expiry=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  function cancel(){generation.current++;active.current?.abort();active.current=null;clearTimeout(expiry.current);}
@@ -21,6 +23,6 @@ export function SharedSnapshotProvider({children}:{children:ReactNode}){
   }catch{if(id===generation.current)hold();}
   finally{clearTimeout(timeout);if(id===generation.current)active.current=null;}
  }
- return <Shared.Provider value={{state,read}}>{children}</Shared.Provider>;
+ return <Shared.Provider value={{state,read,planRead}}>{children}</Shared.Provider>;
 }
 export function useSharedSnapshot(){const context=useContext(Shared);if(!context)throw Error('D0_SHARED_PROVIDER_REQUIRED');return context;}

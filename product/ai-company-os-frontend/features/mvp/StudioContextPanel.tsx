@@ -1,0 +1,19 @@
+"use client";
+import {useSharedSnapshot} from '../data/SharedSnapshotProvider';
+import {readPlanProjection} from '../core-review/planProjection';
+import {reviewStudioEvidence,rolePlanTasks,type StudioSelection} from './studioContext';
+export default function StudioContextPanel({selection}:{selection:StudioSelection}){
+ const {state,read,planRead}=useSharedSnapshot();
+ const view=readPlanProjection(planRead.data??undefined);
+ const plan=view.ok?view.plan:null;
+ const result=reviewStudioEvidence(plan,selection,state.data),obs=result.observation;
+ const tasks=plan?(selection.kind==='role'?rolePlanTasks(plan.tasks,selection.id):plan.tasks.filter(t=>t.id===selection.id)):[];
+ return <section className="panel projection-summary" aria-label="Studio kimlik ve kanıt bağlamı">
+ <div className="bar"><div><div className="eyebrow">0223 / STUDIO CONTEXT · READ ONLY</div><h3>Plan ve kanıt bağlantısı</h3></div><div className="chips"><button type="button" onClick={planRead.read}>Backend planını oku</button><button type="button" onClick={read}>Ortak geçmişi oku</button></div></div>
+ <p role="status">{planRead.state.phase==='historical'?'Backend derleyici yanıtı sabit planla eşleşti':planRead.state.phase==='loading'?'Backend planı okunuyor':planRead.state.phase==='hold'?'Backend planı HOLD · yalnız çevrimdışı referans':'Backend okunmadı · çevrimdışı referans'} · gerçek yürütme yok</p>
+ <div className="empty"><strong>Seçim: {selection.id||'—'} · {selection.kind==='role'?'Rol şablonu':'DAG düğümü'}</strong><p>{tasks.length?tasks.map(t=>t.label+' ('+t.id+')').join(' · '):'Eşleşen plan görevi yok'}</p><small>Plan: {plan?.revision??'—'} · Instance / run ataması: doğrulanmadı · Model ve Skill profili: atanmamış · HOLD</small></div>
+ <h3>Bağımsız tarihsel Runtime gözlemi · seçime bağlı değil</h3>
+ <p role="status">{state.phase==='loading'?'Ortak geçmiş okunuyor':state.phase==='historical'?'Tarihsel oturum mevcut':state.phase==='hold'?'Ortak geçmiş geçersiz veya süresi doldu':'Ortak geçmiş okunmadı'} · JOIN HOLD · {result.reason}</p>
+ {obs&&<><dl className="prefix-facts"><div><dt>Kapsam</dt><dd>{obs.scope.join(' / ')}</dd></div><div><dt>Plan</dt><dd style={{overflowWrap:'anywhere'}}>{obs.planRevision}</dd></div><div><dt>Tarihsel görev / run</dt><dd>{obs.taskId} / {obs.runId}</dd></div><div><dt>Ajan / principal referansı</dt><dd>{obs.agentRef} / {obs.principalRef}</dd></div><div><dt>Tarihsel durum / sıra</dt><dd>{obs.state} / {obs.sequence}</dd></div><div><dt>Policy / W-A epoch</dt><dd>{obs.policyEpoch} / {obs.witnessEpoch}</dd></div><div><dt>Model / Memory / Lease</dt><dd>{obs.modelBinding} / {obs.memoryAcl} / {obs.leaseFreshness}</dd></div></dl><ol aria-label="Tarihsel görev olayları">{obs.timeline.map(e=><li key={e.version}>{e.version} · {e.kind} · {e.state}</li>)}</ol><small style={{overflowWrap:'anywhere'}}>Snapshot digest: {obs.digest}</small></>}
+ <p className="sub">Bu geçmiş seçili role veya DAG düğümüne atanmaz. Proje/world, bağımsız kanıt, güncel lease ve placement doğrulanmadı. Dispatch / release DENY.</p></section>;
+}

@@ -33,3 +33,20 @@ export function readPlanProjection(p: typeof projection = projection): {ok:true;
   if (levels.size!==byId.size) return hold('WAVE_COVERAGE_INVALID');
   return {ok:true,plan:p,groups};
 }
+
+/** Exact fixed-plan wire parser for the existing backend compiler endpoint. */
+export function parsePlanProjection(raw:unknown):typeof projection|null{
+  function same(a:unknown,b:unknown):boolean{
+    if(a===b)return true;
+    if(Array.isArray(b))return Array.isArray(a)&&a.length===b.length&&b.every((x,i)=>same(a[i],x));
+    if(b!==null&&typeof b==='object'){
+      if(a===null||typeof a!=='object'||Array.isArray(a))return false;
+      const x=a as Record<string,unknown>,y=b as Record<string,unknown>;
+      return Object.keys(x).length===Object.keys(y).length&&Object.keys(y).every(k=>Object.hasOwn(x,k)&&same(x[k],y[k]));
+    }
+    return false;
+  }
+  if(!same(raw,projection))return null;
+  const plan=raw as typeof projection;
+  return readPlanProjection(plan).ok?plan:null;
+}
