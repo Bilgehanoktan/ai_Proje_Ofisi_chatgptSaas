@@ -25,7 +25,12 @@ export function officeArtwork(raw:Floor,selectedId:string|null=null):Artwork{
   pieces.push(box(x,y,r.w,.08,31,'#9aabbc','#586e84'));
   pieces.push(box(x,y,.08,Math.min(r.h,.9),31,'#9aabbc','#586e84'));
   // Window bands on the back wall, not physical openings.
-  for(let i=0;i<r.w;i++)pieces.push(box(x+i+.18,y+.09,.62,.04,13,'#9ad1e4','#4b809e',12));
+  for(let i=0;i<r.w;i++){
+   pieces.push(box(x+i+.18,y+.09,.62,.04,13,'#9ad1e4','#4b809e',12));
+   // Decorative window sill and mullion; never adds walkable/collision cells.
+   pieces.push(box(x+i+.13,y+.10,.72,.08,2,'#d2e0eb','#607b94',9));
+   pieces.push(box(x+i+.46,y+.13,.04,.04,13,'#dce7f1','#7893a7',12));
+  }
  }
  const stations= [...floor.stations].sort((a,b)=>a.x+a.y-b.x-b.y).map(s=>{
   const p=pt(s.x,s.y),visual=roleVisual(s.role);const color=visual?.accent??'#a9b5c5';const active=s.id===selectedId;
