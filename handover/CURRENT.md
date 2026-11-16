@@ -139,3 +139,9 @@ Source `bef094e96d6b7f57552e022b92f0a5524b2c6a9e`; 349 product files / 348 entri
 
 ## 0213 — two-project budget and reproducible diagnostic
 Source commit `9c3649d592b2382fa6aef4020fcc71000c18b075`; 351 product files / 350 manifest entries. 55/55 exact local pins and 56/56 selected diagnostic tests (52 selected inherited, 4 new multi-project). Six full 0209–0211 wrapper scenarios written but NOT_RUN, exact full checkout absent. PostgreSQL/RLS, locked29, full build/browser NOT_RUN. 16-gate integration tracker 6/16 (37.5%) is only this scope, not product acceptance. [Architecture](../docs/0213/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0213.json) · [Next](NEXT_STEP_0213.md). No main/CI/PROD or independent grant.
+
+## 0214 — recovered source checkpoint
+Source `a4a6aba3e986927b4e2b0157028e6623c669864e`; 355 product files. Recorded prior 66 Python and 14 Node diagnostic cases, full original wrapper 10/10 including one reproduced restore residual. Raw logs not available in current session; historical, not rerun. [Readback](../releases/GITHUB_READBACK_0214.json).
+
+## 0215 — external claim observation / PG runner / CEO-Office provenance
+Source `76815dfd2401d7a81f1f9f0a112da06d8002fb2f`; 359 product files / 358 manifest entries. 46 new diagnostics (15 signed local claim review, 14 runner unit, 17 static UI reference); no full regression, PG, RLS, independent authority, Next build or browser. 7/16 = 43.75% current integration scope, not whole product. [Architecture](../docs/0215/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0215.json) · [Next](NEXT_STEP_0215.md).
