@@ -1,5 +1,5 @@
 // D0 presentation-only layout. Never join these coordinates to OfficeV0.
-import {pairEscape,type EscapeStep} from './premiumRouting';
+import {createTrafficSearch,type TrafficStep} from './premiumTraffic';
 export const roles = ['orchestrator','research','engineer','qa'] as const;
 export type Role = typeof roles[number];
 export type Mode = 'idle'|'work'|'meeting'|'rest';
@@ -25,36 +25,32 @@ export function pathBetween(a:Cell,b:Cell,occupied:ReadonlySet<string>=new Set()
 }
 export function initialActors():Actor[]{return roles.map(role=>({role,cell:work[role],mode:'idle',target:'idle',path:[],progress:0,direction:1}));}
 const destination=(r:Role,m:Mode)=>m==='meeting'?meeting[r]:m==='rest'?rest[r]:work[r];
-type Recovery={pair:readonly [Actor,Actor];steps:EscapeStep[]};
-type Scheduler={cursor:number;recovery:Recovery|null;blocked:boolean;retryAt:number;tick:number};
+type Recovery={group:readonly Actor[];steps:TrafficStep[]};
+type Scheduler={cursor:number;recovery:Recovery|null;search:{group:readonly Actor[];planner:ReturnType<typeof createTrafficSearch>}|null;blocked:boolean;retryAt:number;tick:number;lastFailure:string|null};
 const schedulers=new WeakMap<Actor[],Scheduler>();
-function scheduler(a:Actor[]):Scheduler{let s=schedulers.get(a);if(!s){s={cursor:0,recovery:null,blocked:false,retryAt:0,tick:0};schedulers.set(a,s);}return s;}
-export function routeStatus(a:Actor[]){const s=scheduler(a);return s.recovery?'COOPERATIVE_ESCAPE':s.blocked?'WAIT_BLOCKED':a.some(v=>v.progress>0)?'MOVING':'READY';}
+function scheduler(a:Actor[]):Scheduler{let s=schedulers.get(a);if(!s){s={cursor:0,recovery:null,search:null,blocked:false,retryAt:0,tick:0,lastFailure:null};schedulers.set(a,s);}return s;}
+export function routeStatus(a:Actor[]){const s=scheduler(a);return s.recovery?'COOPERATIVE_ESCAPE':s.search?'TRAFFIC_PLANNING':s.blocked?(s.lastFailure==='LIMIT'?'WAIT_SEARCH_LIMIT':'WAIT_BLOCKED'):a.some(v=>v.progress>0)?'MOVING':'READY';}
 export function command(actors:Actor[],role:Role,mode:Mode):boolean{
  const a=actors.find(v=>v.role===role);if(!a||!['idle','work','meeting','rest'].includes(mode))return false;
  if(a.progress>0)return false;
- const s=scheduler(actors);s.recovery=null;s.retryAt=0;s.blocked=false;
+ const s=scheduler(actors);s.recovery=null;s.search=null;s.retryAt=0;s.blocked=false;s.lastFailure=null;
  a.target=mode;a.mode='idle';a.path=[];return true;
 }
 function begin(a:Actor,to:Cell){a.path=[to];a.mode='idle';a.direction=iso(...to).x>=iso(...a.cell).x?1:-1;}
 function move(a:Actor,dt:number){if(!a.path[0])return;a.progress+=dt*2.4;if(a.progress>=1){a.cell=a.path[0];a.path=[];a.progress=0;if(equal(a.cell,destination(a.role,a.target)))a.mode=a.target;}}
-function findRecovery(actors:Actor[],order:Actor[]):Recovery|null{
- for(let i=0;i<order.length;i++)for(let j=i+1;j<order.length;j++){
-  const a=order[i],b=order[j],ga=destination(a.role,a.target),gb=destination(b.role,b.target);
-  if(equal(a.cell,ga)&&equal(b.cell,gb))continue;
-  const fixed=new Set(actors.filter(v=>v!==a&&v!==b).map(v=>key(v.cell)));
-  const steps=pairEscape([a.cell,b.cell],[ga,gb],walkable,fixed);
-  if(steps?.length)return {pair:[a,b],steps};
- }return null;
-}
 export function advance(actors:Actor[],seconds:number):void{
  const dt=Math.max(0,Math.min(.1,Number.isFinite(seconds)?seconds:0));if(dt===0||!actors.length)return;
  const s=scheduler(actors);s.tick++;s.blocked=false;
  if(s.recovery){
   const moving=actors.find(a=>a.progress>0);if(moving){move(moving,dt);return;}
-  const step=s.recovery.steps.shift();if(step){const a=s.recovery.pair[step.actor],to=step.to;
+  const step=s.recovery.steps.shift();if(step){const a=s.recovery.group[step.actor],to=step.to;
    if(walkable(to)&&Math.abs(to[0]-a.cell[0])+Math.abs(to[1]-a.cell[1])===1&&!actors.some(v=>v!==a&&equal(v.cell,to))){begin(a,to);move(a,dt);return;}
   }s.recovery=null;
+ }
+ if(s.search){
+  const r=s.search.planner.advance();if(r.status==='SEARCHING')return;
+  if(r.status==='SOLVED'&&r.steps.length){s.recovery={group:s.search.group,steps:r.steps.slice()};s.search=null;return;}
+  s.lastFailure=r.status;s.search=null;s.blocked=true;s.retryAt=s.tick+30;return;
  }
  const order=actors.map((_,i)=>actors[(i+s.cursor)%actors.length]);s.cursor=(s.cursor+1)%actors.length;
  const occupied=new Set(actors.map(a=>key(a.cell)));for(const a of actors)if(a.progress>0&&a.path[0])occupied.add(key(a.path[0]));
@@ -63,7 +59,7 @@ export function advance(actors:Actor[],seconds:number):void{
   if(a.progress===0){if(equal(a.cell,dest)){a.mode=a.target;a.path=[];continue;}const reserved=new Set(occupied);reserved.delete(key(a.cell));const p=pathBetween(a.cell,dest,reserved);a.path=p?.slice(1,2)??[];if(!a.path.length)continue;occupied.add(key(a.path[0]));begin(a,a.path[0]);}
   if(a.path[0]){moved=true;move(a,dt);}
  }
- if(!moved&&actors.some(a=>!equal(a.cell,destination(a.role,a.target)))){s.blocked=true;if(s.tick>=s.retryAt){s.recovery=findRecovery(actors,order);s.retryAt=s.tick+30;if(s.recovery)s.blocked=false;}}
+ if(!moved&&actors.some(a=>!equal(a.cell,destination(a.role,a.target)))){s.blocked=true;if(s.tick>=s.retryAt){s.search={group:order,planner:createTrafficSearch(order.map(a=>a.cell),order.map(a=>destination(a.role,a.target)),walkable)};s.lastFailure=null;s.blocked=false;}}
 }
 export function position(a:Actor){const from=iso(...a.cell),to=a.path[0]?iso(...a.path[0]):from;return {x:from.x+(to.x-from.x)*a.progress,y:from.y+(to.y-from.y)*a.progress};}
 // Explicit no-join boundary: even a structurally valid readback cannot drive this scene.

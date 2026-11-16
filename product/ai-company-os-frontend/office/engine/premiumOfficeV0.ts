@@ -18,3 +18,12 @@ export function inspectOfficeV0(x:unknown){
  if(!roleIds.every((r,i)=>record((first.stations as unknown[])[i])&&exact((first.stations as Record<string,unknown>[])[i],{id:'station-'+r,role_template_id:r,x:i%2,y:Math.floor(i/2),agent_instance_id:null})))return hold;
  return {...hold,source:'EXACT_HISTORICAL_SAMPLE',snapshotSeq:0,layoutRevision:fixed.layout_revision} as const;
 }
+
+/** Diagnostic comparison only: station identity/coordinate spaces are not joined. */
+export function inspectGeometryGap(x:unknown,visual:readonly {role:string;cell:readonly [number,number]}[]){
+ const source=inspectOfficeV0(x);
+ const reasons=['CANONICAL_OWNER_UNPROVEN','LAYOUT_REVISION_HOLD','POLICY_WITNESS_EPOCH_UNPROVEN','INSTANCE_LEASE_TASK_PROOF_MISSING','TRUSTED_FRESHNESS_UNPROVEN'] as const;
+ const base={status:'JOIN_HOLD',placement:false,taskBinding:false,authoritative:false,reasons,spaces:{snapshot:'draft-hybrid-floor-1',backend:'layout-d3-demo (6×6)',visual:'premium-decorative (12×10)'}} as const;
+ if(source.source!=='EXACT_HISTORICAL_SAMPLE'||visual.length!==4||!roleIds.every((r,i)=>visual[i]?.role===r&&Array.isArray(visual[i].cell)&&visual[i].cell.length===2&&visual[i].cell.every(Number.isSafeInteger)&&visual[i].cell[0]>=0&&visual[i].cell[0]<12&&visual[i].cell[1]>=0&&visual[i].cell[1]<10)||new Set(visual.map(v=>v.cell.join(','))).size!==4)return {...base,rows:[]};
+ return {...base,rows:roleIds.map((role,i)=>({role,snapshotStation:'station-'+role,snapshotCell:[i%2,Math.floor(i/2)] as const,visualCell:[...visual[i].cell] as readonly number[],agentInstance:null,binding:'NONE' as const}))};
+}
