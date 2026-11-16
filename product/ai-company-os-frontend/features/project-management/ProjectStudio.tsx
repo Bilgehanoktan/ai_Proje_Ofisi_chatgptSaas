@@ -3,7 +3,7 @@ import {useId,useState} from 'react';
 import {projectView,filterRows,projectContext,type ProjectRow} from './projectModel';
 import {sortProjectRows} from '../evidence/evidenceModel';
 import styles from './ProjectStudio.module.css';
-import DependencyNeighborhood from './DependencyNeighborhood';
+import DependencyNeighborhood from './DependencyNeighborhoodPanel';
 import PlanGraph from '../graph/PlanGraph';
 export default function ProjectStudio(){
  const [query,setQuery]=useState(''),[role,setRole]=useState(''),[mode,setMode]=useState<'board'|'table'>('board'),[selected,setSelected]=useState('plan'),[sort,setSort]=useState<'wave'|'label'|'role'>('wave'),[descending,setDescending]=useState(false),[waveFilter,setWaveFilter]=useState('');

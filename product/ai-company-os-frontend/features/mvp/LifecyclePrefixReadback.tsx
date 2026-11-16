@@ -1,7 +1,7 @@
 "use client";
 import {useProjectionRead} from '../data/useProjectionRead';
 import {readStatus} from '../data/projectionRead';
-import HistoricalEvidence from '../evidence/HistoricalEvidence';
+import HistoricalEvidence from '../evidence/HistoricalEvidencePanel';
 import {inspectPlanBinding} from '../data/projectionScope';
 import {inspectHistoricalJoin} from './historicalJoin';
 import plan from '../../fixtures/core.plan.projection.json';

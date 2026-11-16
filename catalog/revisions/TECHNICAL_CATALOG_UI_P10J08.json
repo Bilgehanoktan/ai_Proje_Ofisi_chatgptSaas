@@ -1,0 +1,54 @@
+{
+  "revision": "UI-P10J-08",
+  "delta": [
+    {
+      "from": "ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+      "to": "ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+      "blob": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+      "bytes": 3658,
+      "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    },
+    {
+      "from": "ai-company-os-frontend/features/project-management/DependencyNeighborhood.tsx",
+      "to": "ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+      "blob": "f3f64f6a4566d6c2fd5f7cd18729c4eae51d4121",
+      "bytes": 1991,
+      "sha256": "d91a2106b168bddb3ff9163832f705826a3abe5a006091ee57661100fe661c6e"
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+      "old_blob": "0f7bff6fe9ade87a0754559b4e41fb1f692081ea",
+      "bytes": 1316,
+      "sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "old_blob": "0cde375f20bc54d941cdf203ee2ddca5d2de65ab",
+      "bytes": 2874,
+      "sha256": "ef683e81aede7dd2a24c5999ac24a8d538380a71632146e86926165f12075ddb"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "old_blob": "8fe0c91ee233b26d6bb10f40271bc9521dd6b235",
+      "bytes": 3037,
+      "sha256": "0943905f6b67240a2795c42c56b619eb515133919ab0ed1c575f903394c29c60"
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "old_blob": "3f16dc336c42ab2b3f92875047edb0744e2efd92",
+      "bytes": 6610,
+      "sha256": "81aae794649a063d4263a05ee914178ad333c18491d7436474238f1da6b65448"
+    }
+  ],
+  "adapter": "tests/integration/w8_p10j08.py",
+  "symbols": [
+    "portable_modules",
+    "windows_temp",
+    "load_candidate"
+  ],
+  "api_changes": [],
+  "db_changes": [],
+  "dependency_changes": [],
+  "verification": "source candidate; exact Windows replay pending",
+  "rollback": "prior pinned checkout and prior evidence stage"
+}

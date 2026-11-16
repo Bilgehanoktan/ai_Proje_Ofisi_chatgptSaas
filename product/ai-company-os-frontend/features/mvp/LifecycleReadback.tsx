@@ -1,7 +1,7 @@
 "use client";
 import {useProjectionRead} from '../data/useProjectionRead';
 import {readStatus} from '../data/projectionRead';
-import HistoricalEvidence from '../evidence/HistoricalEvidence';
+import HistoricalEvidence from '../evidence/HistoricalEvidencePanel';
 import {inspectHistoricalJoin} from './historicalJoin';
 import plan from '../../fixtures/core.plan.projection.json';
 export default function LifecycleReadback({context}:{context:'ceo'|'office'|'workflow'|'finance'|'security'}){

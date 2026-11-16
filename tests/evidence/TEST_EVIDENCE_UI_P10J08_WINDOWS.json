@@ -1,0 +1,81 @@
+{
+  "revision": "UI-P10J-08",
+  "source_tested": "182adb096cb7ae46103fe86e465df36217561a71",
+  "old_review": "510ab77355529f6c03f6701b0611d3bc1c3cc66a514b7f9179ffc54c452dd718",
+  "user_pasted_log_sha256": "c83b186b080ede95910cb6c96ae5c394747699604281a52bf5f5de389c89dfa5",
+  "evidence_origin": "user-provided Windows console transcript; not independently replayed",
+  "audit": {
+    "source": 390,
+    "pairs": 16,
+    "auxiliary": 20
+  },
+  "backend": {
+    "total": 839,
+    "pass": 821,
+    "fail": 0,
+    "skip": 18,
+    "pg_skip": 13,
+    "platform_skip": 5
+  },
+  "node": {
+    "pass": 369,
+    "skip": 1,
+    "fail": 0
+  },
+  "archive_audit_tests": 9,
+  "targeted": {
+    "memory": {
+      "pass": 14,
+      "skip": 1
+    },
+    "authority": {
+      "pass": 10
+    }
+  },
+  "build": "FAIL: case-insensitive extensionless resolution, two module stem collisions",
+  "api": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "new_candidate_manifest": "2a555e7e511fe80078b233324f3442d79cd590c6",
+  "delta": [
+    {
+      "from": "ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+      "to": "ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+      "blob": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+      "bytes": 3658,
+      "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    },
+    {
+      "from": "ai-company-os-frontend/features/project-management/DependencyNeighborhood.tsx",
+      "to": "ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+      "blob": "f3f64f6a4566d6c2fd5f7cd18729c4eae51d4121",
+      "bytes": 1991,
+      "sha256": "d91a2106b168bddb3ff9163832f705826a3abe5a006091ee57661100fe661c6e"
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+      "old_blob": "0f7bff6fe9ade87a0754559b4e41fb1f692081ea",
+      "bytes": 1316,
+      "sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "old_blob": "0cde375f20bc54d941cdf203ee2ddca5d2de65ab",
+      "bytes": 2874,
+      "sha256": "ef683e81aede7dd2a24c5999ac24a8d538380a71632146e86926165f12075ddb"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "old_blob": "8fe0c91ee233b26d6bb10f40271bc9521dd6b235",
+      "bytes": 3037,
+      "sha256": "0943905f6b67240a2795c42c56b619eb515133919ab0ed1c575f903394c29c60"
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "old_blob": "3f16dc336c42ab2b3f92875047edb0744e2efd92",
+      "bytes": 6610,
+      "sha256": "81aae794649a063d4263a05ee914178ad333c18491d7436474238f1da6b65448"
+    }
+  ],
+  "source_candidate_acceptance": "NOT_RUN",
+  "independent": "0/7"
+}
