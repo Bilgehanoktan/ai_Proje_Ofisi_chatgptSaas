@@ -1,3 +1,8 @@
+# UI-P10J-10 — next
+
+Audit exact candidate, then fresh reviewed W8 build/test/smoke; verify mobile disclosure and heading, 52 captures. Reconcile shared CEO/Work paths at current heads before changing Dashboard. No core merge. See ../docs/UI-P10J/P10J10_ARCHITECTURE.md.
+
+---
 # UI-P10J-09 — exact delivery and real-screen review
 
 Source archive reconstructed full Git tree e4e16879901fe045be686fceaa1db525d02c8996 from 1,544 blobs, exact tested source 752b225deac4557a548faec7191a090fbfba19f7. Original pinned archive auditor and W8 audit executed locally: 390/390, 16 pairs, 20 auxiliary blobs PASS. Raw REVIEW/lock hashes and all three acceptance markers match. Raw core29 report: 29 PASS, 55 exact historical 0207 files, no promotion to 0223. All 52 PNGs decoded, distinct SHA-256, four viewports/themes; contact-sheet review and selected full screen inspection. User Windows full run not independently replayed. PowerShell transcript omitted native command stdout; original console paste remains separate. No raw wheel or DB bytes; no pixel comparison baseline.

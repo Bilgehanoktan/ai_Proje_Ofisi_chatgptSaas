@@ -254,3 +254,7 @@ Exact source 752b225deac4557a548faec7191a090fbfba19f7; see docs/UI-P10J/P10J08_W
 
 ## UI-P10J-09 — verified delivery and real UI review
 See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J09.json, catalog/revisions/TECHNICAL_CATALOG_UI_P10J09.json and progress/UI_P10J09.json. No product changes; next mobile shell and controlled core reconciliation.
+
+
+## UI-P10J-10 — mobile navigation candidate
+[Architecture, maintenance and rollback](../UI-P10J/P10J10_ARCHITECTURE.md). Two presentation files, new W8 harness pin; full build/browser/W8 NOT_RUN. Core 0223 remains separate; 29 differing shared paths observed.

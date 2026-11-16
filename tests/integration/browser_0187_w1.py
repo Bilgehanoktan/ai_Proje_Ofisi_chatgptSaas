@@ -28,11 +28,32 @@ with sync_playwright() as p:
         for theme in ['dark','light']:
             for index,(name,_) in enumerate(nav_items):
                 page.goto(origin+'/',wait_until='networkidle')
+                menu=page.get_by_role('button',name='Menü',exact=True)
+                if width<=680:
+                    expect(menu).to_have_attribute('aria-expanded','false')
+                    assert page.locator('h1').bounding_box()['y']<=240, ('mobile heading',theme)
+                    expect(page.get_by_role('navigation',name='Ana navigasyon')).to_have_count(0)
+                    if index==0:
+                        page.keyboard.press('Control+k')
+                        search=page.get_by_role('searchbox',name='Menü ara')
+                        expect(search).to_be_focused()
+                        search.fill('finans')
+                        expect(page.get_by_role('navigation',name='Ana navigasyon').get_by_role('button',name='SaaS ve Finans',exact=True)).to_be_visible()
+                        search.press('Escape')
+                        expect(search).to_have_value('')
+                        search.press('Escape')
+                        expect(menu).to_be_focused()
+                        expect(menu).to_have_attribute('aria-expanded','false')
+                    menu.click()
                 nav=page.get_by_role('navigation',name='Ana navigasyon')
                 expect(nav.locator('button,a')).to_have_count(13)
                 if name=='Sanal Ofis':
                     nav.get_by_role('link',name=name,exact=True).click(); expect(page).to_have_url(origin+'/office')
                 elif name!='Genel Bakış': nav.get_by_role('button',name=name,exact=True).click()
+                if width<=680 and name!='Sanal Ofis':
+                    if name=='Genel Bakış': menu.press('Escape')
+                    expect(menu).to_have_attribute('aria-expanded','false')
+                    if name!='Genel Bakış': expect(page.locator('#main-content')).to_be_focused()
                 expect(page.locator('h1')).to_have_text('CEO Command Center' if name=='Genel Bakış' else name)
                 if theme=='light':page.get_by_role('button',name='Açık tema').click()
                 expect(page.locator('.eds-frame')).to_have_attribute('data-eds-theme',theme)
