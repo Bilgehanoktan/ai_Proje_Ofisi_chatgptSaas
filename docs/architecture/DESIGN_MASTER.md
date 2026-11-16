@@ -274,3 +274,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-14 — core/UI source reconciliation
 [Architecture](../UI-P10J/P10J14_ARCHITECTURE.md) · [24-area matrix](../../progress/INTEGRATION_MATRIX_UI_P10J14.md). D0 candidate; no new normative acceptance.
+
+
+## UI-P10J-15 validation
+[Architecture](../UI-P10J/P10J15_ARCHITECTURE.md) · [Runbook](../UI-P10J/P10J15_RUNBOOK.md) · [24 areas](../../progress/INTEGRATION_MATRIX_UI_P10J15.md). 0225 and 0226 historical evidence preserved; no new normative acceptance.
