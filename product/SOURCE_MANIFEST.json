@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0215",
-  "status": "D0_SIGNED_CLAIM_READBACK_AND_UI_PROVENANCE_PG_RUNNER_DIAGNOSTIC_PASS_FULL_ACCEPTANCE_HOLD",
+  "doc_revision": "0216",
+  "status": "D0_EFFECT_FENCE_REFERENCE_SYNTHETIC_ONLY_INDEPENDENT_ACCEPTANCE_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "a4a6aba3e986927b4e2b0157028e6623c669864e",
+  "parent_git_commit": "f3b8f0f1ba972c48d13249ed88885cb35900b17f",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1437,6 +1437,14 @@
     "ai-company-os-frontend/tests/historical-presentation-0215.test.cjs": {
       "bytes": 2916,
       "sha256": "bb2d72e425c86587cc0207d8a5f233fa9147eccf8812f3139dc79ef6c360a8e2"
+    },
+    "ai-company-os-backend/app/core/transaction/effect_fence_reference.py": {
+      "bytes": 5572,
+      "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f"
+    },
+    "ai-company-os-backend/tests/test_effect_fence_reference_0216.py": {
+      "bytes": 5007,
+      "sha256": "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f"
     }
   },
   "parent_source_manifest_blob": "98da5a4d9cf592368199287382f1e22f8b00cdc0",
