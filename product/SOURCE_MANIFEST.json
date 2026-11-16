@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0211",
-  "status": "D0_INTENT_AUTHORITY_COMPONENT_TESTED_ORIGINAL_T1_INTEGRATION_NOT_RUN",
+  "doc_revision": "0212",
+  "status": "D0_CORE29_DIRECT_AUTHORITY_COMPANY_SQLITE_DIAGNOSTIC_PASS_PINNED_PG_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+  "parent_git_commit": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1389,8 +1389,16 @@
     "ai-company-os-backend/tests/test_intent_authority_0211.py": {
       "bytes": 4895,
       "sha256": "ddef3499e45c05ca9fcaff1dfa7396ee0cdde4aa5a8f00aea12703464d56fb8c"
+    },
+    "ai-company-os-backend/tests/test_intent_authority_t1_0212.py": {
+      "bytes": 5481,
+      "sha256": "1cae8b04454f40b5e03fafe3106ef0472ca0267ac617c33462eb13a57fcbf626"
+    },
+    "ai-company-os-backend/tests/test_company_terminal_0212.py": {
+      "bytes": 10641,
+      "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55"
     }
   },
-  "parent_source_manifest_blob": "d8fbc81d6a0a8e409e92b906de9d86db2b65dd12",
-  "source_git_commit_note": "Two exact new product files. D0 authority: 9 component behavior checks and 1 reproduced authority-store restore residual. Original 0210 T1 integration, locked core29, PG/RLS and full build NOT_RUN. No independent custody or grant."
+  "parent_source_manifest_blob": "9c85c1a9ccdfbceabb0e341ce7565c87318aa815",
+  "source_git_commit_note": "Two new exact integration test sources; 55 locked source files recovered; 52 diagnostic tests run (29 original +10 prior authority incl. one residual reproduction +13 new). Original 0211 wrapper, independent custody, pinned dependencies, PG/RLS and full build open."
 }
