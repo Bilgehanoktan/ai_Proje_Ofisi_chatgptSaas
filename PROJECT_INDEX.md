@@ -188,3 +188,12 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 - [Progress](progress/UI_P10H.json)
 - [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10H.json)
 - [Next](handover/NEXT_STEP_UI.md)
+
+
+## UI-P10I
+- [Current](handover/CURRENT_UI.md)
+- [Combined](handover/CURRENT_COMBINED_UI_P10I.json)
+- [Architecture](docs/UI-P10I/ARCHITECTURE_AND_CATALOG.md)
+- [Progress](progress/UI_P10I.json)
+- [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10I.json)
+- [Next](handover/NEXT_STEP_UI.md)

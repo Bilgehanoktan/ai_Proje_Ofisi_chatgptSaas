@@ -115,3 +115,7 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10H
 [Catalog](revisions/TECHNICAL_CATALOG_UI_P10H.json); [architecture](../docs/UI-P10H/ARCHITECTURE_AND_CATALOG.md). D0 only.
+
+
+## UI-P10I
+[Catalog](revisions/TECHNICAL_CATALOG_UI_P10I.json); [architecture](../docs/UI-P10I/ARCHITECTURE_AND_CATALOG.md). D0 only.
