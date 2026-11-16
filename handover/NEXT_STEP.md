@@ -1,2 +1,2 @@
-# NEXT — 0227 D1 / D2
-E1 accepted after raw ZIP review; 9/16 gates (56.25%). Preserve core-0227-e1. Inspect local Windows PostgreSQL binaries and driver availability; do not use shared services. Review platform-specific PostgreSQL version and separate psycopg lock before installation. D1 disposable non-superuser local connection, D2 exact original PG13 using scripts/run_pg_acceptance_0215.py and current manifest; D3 requires separate two-tenant FORCE RLS policies and observed contention. E2/E3/E4 and B3 remain open. No UI branch merge. Evidence: tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json
+# NEXT — 0227 D1
+Download isolated PostgreSQL 17.12 Windows x64 binary ZIP and Psycopg 3.3.9 wheels under separate stage; verify provenance, hashes and transitive graph constrained by E1; do not execute before review. D1 requires actual disposable loopback non-superuser connection. D2 original PG13; D3 separate. E1 preserved, 9/16. tests/evidence/D1_WINDOWS_INVENTORY_0227.json

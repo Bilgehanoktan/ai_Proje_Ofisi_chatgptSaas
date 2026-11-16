@@ -246,8 +246,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_E1_RAW_REVIEWED_ORIGINAL24_PASS",
-      "tur_kaniti": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
+      "tur_durumu": "0227_D1_INVENTORY_MISSING_CANDIDATE_ONLY",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -456,8 +456,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_E1_RAW_REVIEWED_ORIGINAL24_PASS",
-      "tur_kaniti": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
+      "tur_durumu": "0227_D1_INVENTORY_MISSING_CANDIDATE_ONLY",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -519,15 +519,15 @@
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_E1_RAW_REVIEWED_ORIGINAL24_PASS",
-      "tur_kaniti": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
+      "tur_durumu": "0227_D1_INVENTORY_MISSING_CANDIDATE_ONLY",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "0227 E1 raw evidence reviewed, 24/24 originals pass, 9/16 gates. Prior 307 preserved separately. No product design/source score promotion.",
+  "note": "E1 accepted 9/16. D1 user Windows inventory finds no PG/driver at checked locations; candidate only, no install or PG test.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -574,7 +574,8 @@
       "canonical_mapping": "HOLD",
       "normative_authority": "HOLD",
       "locked_core29": "PASS_TRANSFERRED_A0F_HISTORICAL_LOCKED_29",
-      "original_0219_company_fence6": "PASS_SQLITE_6_RAW_REVIEWED"
+      "original_0219_company_fence6": "PASS_SQLITE_6_RAW_REVIEWED",
+      "postgresql_environment": "MISSING_AT_CHECKED_LOCATIONS_CANDIDATES_NOT_INSTALLED"
     },
     "recovered_original_tests": 0,
     "original_scheduled_admission_sql6": "PASS_6",
@@ -601,6 +602,10 @@
       "status": "PASS",
       "evidence": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
       "original24_pass": 24
+    },
+    "d1_inventory": {
+      "status": "MISSING_CANDIDATE_DOWNLOAD_PENDING",
+      "evidence": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json"
     }
   },
   "integration_gate": {

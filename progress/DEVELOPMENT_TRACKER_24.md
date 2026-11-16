@@ -30,3 +30,7 @@ E1 PASS; 9/16 integration gates (56.25%). Design/source ordinal scores unchanged
 | 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 
 Historical MD preserved in Git history. Current evidence: tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json
+
+
+## 0227-D1 — Windows inventory checkpoint
+No PostgreSQL commands, default Program Files directory, service or Psycopg packages found in user checks. Proposed PG17.12 and Psycopg3.3.9 Windows cp314, separate loopback-only D0 stage. Candidate download and hash/provenance review pending; no install, DB, test or gate promotion. E1 remains accepted and unchanged, 9/16. Evidence: tests/evidence/D1_WINDOWS_INVENTORY_0227.json.

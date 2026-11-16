@@ -72,5 +72,10 @@
     "source_changes": 0,
     "maintenance": "Keep reviewed stage unchanged; new PG runtime separately reviewed. Optional npm entries documented; recheck E3.",
     "rollback": "Revert this evidence-only commit if raw review is invalidated; preserve prior source and archive; no deletion."
+  },
+  "d1_inventory": {
+    "path": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
+    "scope": "Windows read-only inventory and candidate selection; no product source/DDL/API changes",
+    "rollback": "No installation to revert; retain E1 unchanged."
   }
 }

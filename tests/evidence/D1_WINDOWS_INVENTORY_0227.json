@@ -1,0 +1,53 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_WINDOWS_INVENTORY_MISSING_CANDIDATE_SELECTION",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "e1": "PASS_PRESERVED",
+  "user_transcript": {
+    "get_command_postgres_psql_initdb_pg_ctl": "NO_RESULTS",
+    "program_files_postgresql": "NO_RESULTS",
+    "postgres_service": "NO_RESULTS",
+    "pip_show_psycopg_psycopg_binary": "WARNING_PACKAGE_NOT_FOUND"
+  },
+  "scope": "Observed search locations only; not proof of absence everywhere",
+  "candidate": {
+    "postgresql": "17.12",
+    "platform": "Windows x64",
+    "python": "3.14.3",
+    "psycopg": "3.3.9",
+    "port": 55432,
+    "server_url": "https://get.enterprisedb.com/postgresql/postgresql-17.12-1-windows-x64-binaries.zip",
+    "server_sha256_secondary": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+    "secondary_status": "Chocolatey public package pending automated review; not vendor checksum",
+    "pypi_psycopg_wheel_sha256": "d2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6",
+    "sources": [
+      "https://www.postgresql.org/support/versioning/",
+      "https://www.postgresql.org/download/windows/",
+      "https://productsdl.enterprisedb.com/download-postgresql-binaries",
+      "https://pypi.org/project/psycopg/3.3.9/",
+      "https://pypi.org/project/psycopg-binary/3.3.9/",
+      "https://community.chocolatey.org/packages/psql17/17.12.1"
+    ],
+    "approval": "CANDIDATE_ONLY_DOWNLOAD_REVIEW_BEFORE_EXECUTION"
+  },
+  "execution": {
+    "download": "NOT_RUN",
+    "installed": "NOT_RUN",
+    "connection": "NOT_RUN",
+    "pg13": "NOT_RUN",
+    "rls": "NOT_RUN"
+  },
+  "constraints": [
+    "New isolated stage only, no administrator or service registration, no PATH/security changes, no E1 mutation, loopback only, distinct disposable databases, no production or actual credentials in evidence.",
+    "PG13 denotes 13 tests, not server major. Official runbook has no server-major pin; 17.12 is a proposed D0 target.",
+    "PyPI release has no published provenance attestations; require exact registry file hashes and dependency metadata before execution.",
+    "Server archive publisher verification not yet established; secondary checksum not independent vendor proof."
+  ],
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  },
+  "next": "Download candidates only, review server archive and wheel hashes/metadata; then explicit local isolated install and D1 connection. D2 existing PG13 and D3 separate."
+}
