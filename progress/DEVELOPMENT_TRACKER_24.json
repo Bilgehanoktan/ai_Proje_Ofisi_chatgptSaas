@@ -246,8 +246,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_INVENTORY_MISSING_CANDIDATE_ONLY",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
+      "tur_durumu": "0227_D1_DOWNLOADS_READY_RUNNER_NOT_RUN",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_WHEELS_READY_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -456,8 +456,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_INVENTORY_MISSING_CANDIDATE_ONLY",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
+      "tur_durumu": "0227_D1_DOWNLOADS_READY_RUNNER_NOT_RUN",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_WHEELS_READY_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -519,15 +519,15 @@
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_INVENTORY_MISSING_CANDIDATE_ONLY",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
+      "tur_durumu": "0227_D1_DOWNLOADS_READY_RUNNER_NOT_RUN",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_WHEELS_READY_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "E1 accepted 9/16. D1 user Windows inventory finds no PG/driver at checked locations; candidate only, no install or PG test.",
+  "note": "E1 9/16 retained. PG and three wheels downloaded; two hashes verified via public PyPI, binary local API gate pending; D1 runner mechanics only, actual PG NOT_RUN.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -575,7 +575,7 @@
       "normative_authority": "HOLD",
       "locked_core29": "PASS_TRANSFERRED_A0F_HISTORICAL_LOCKED_29",
       "original_0219_company_fence6": "PASS_SQLITE_6_RAW_REVIEWED",
-      "postgresql_environment": "SERVER_ARCHIVE_VENDOR_CHECKSUM_MATCH_USER_TRANSCRIPT_DRIVER_PENDING"
+      "postgresql_environment": "SERVER_AND_WHEELS_DOWNLOADED_D1_RUNNER_READY_NOT_RUN"
     },
     "recovered_original_tests": 0,
     "original_scheduled_admission_sql6": "PASS_6",
@@ -610,6 +610,10 @@
     "d1_download": {
       "status": "SERVER_CHECKSUM_MATCH_DRIVER_PENDING",
       "evidence": "tests/evidence/D1_WINDOWS_DOWNLOAD_0227.json"
+    },
+    "d1_wheels": {
+      "status": "DOWNLOADED_RUNNER_READY_NOT_RUN",
+      "evidence": "tests/evidence/D1_WINDOWS_WHEELS_READY_0227.json"
     }
   },
   "integration_gate": {

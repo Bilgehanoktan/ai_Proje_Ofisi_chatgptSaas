@@ -1,2 +1,2 @@
-# NEXT — 0227 D1
-PostgreSQL 17.12 archive and EDB checksum match per user transcript. Psycopg download not performed because constraints.txt missing after pasted command parse error. Create ASCII constraints from E1 lock, verify existence, rerun download only; review wheel hashes/metadata. No install or connection yet. 9/16 unchanged. Evidence: tests/evidence/D1_WINDOWS_DOWNLOAD_0227.json
+# NEXT — 0227 D1 actual connection
+Run scripts/run_d1_0227.py (SHA256 706f3d465067652006cc8ab45a13ca96c8a6acf90e372b8b4223c3094be0332a) outside clean checkout with --source C:\AIOS\core-0227-clean --e1 C:\AIOS\core-0227-e1 --pgroot C:\AIOS\core-0227-pg. Exact local registry hash checks and explicit EVET before installation; new local-only cluster, passwords entered interactively, no secrets in evidence. Return D1_REVIEW.json, pg.lock and evidence directory only. D1 gate remains open until raw review; D2/PG13 separate. 9/16. tests/evidence/D1_WINDOWS_WHEELS_READY_0227.json

@@ -1,0 +1,61 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_WINDOWS_CANDIDATES_DOWNLOADED_RUNNER_READY",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "e1": "PASS_PRESERVED",
+  "prior": "tests/evidence/D1_WINDOWS_DOWNLOAD_0227.json",
+  "user_transcript": {
+    "constraints_created": true,
+    "pip_download": "SUCCESS",
+    "files": [
+      {
+        "name": "psycopg-3.3.9-py3-none-any.whl",
+        "sha256": "d2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6",
+        "registry_hash": "MATCH_PYPI_PUBLIC_PAGE"
+      },
+      {
+        "name": "psycopg_binary-3.3.9-cp314-cp314-win_amd64.whl",
+        "sha256": "109c5df5b0e5117e01a42d3b56a2f4ccd5431bd54d25efdfc89df095ac9f9605",
+        "registry_hash": "PENDING_LOCAL_PYPI_JSON_EXACT_MATCH_BEFORE_EXECUTION"
+      },
+      {
+        "name": "tzdata-2026.6-py2.py3-none-any.whl",
+        "sha256": "0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec",
+        "registry_hash": "MATCH_PYPI_PUBLIC_PAGE"
+      }
+    ]
+  },
+  "registry_sources": [
+    "https://pypi.org/project/psycopg/3.3.9/",
+    "https://pypi.org/project/psycopg-binary/3.3.9/",
+    "https://pypi.org/project/tzdata/2026.6/"
+  ],
+  "runner": {
+    "path": "scripts/run_d1_0227.py",
+    "git_blob": "f40f5fc348915c7c7cf5bbc0cb9c6aa6644d40c6",
+    "sha256": "706f3d465067652006cc8ab45a13ca96c8a6acf90e372b8b4223c3094be0332a",
+    "scope": "Verify source+E1 locks/wheels, exact vendor server SHA, all three PyPI JSON hashes and metadata; review locally; new 31-pin environment; normal-user loopback-only SCRAM PostgreSQL cluster; two non-superuser non-BYPASSRLS disposable DBs; write/read/rollback; stop; evidence",
+    "mechanics_checks": [
+      "Python compile PASS",
+      "Synthetic safe archive extraction PASS",
+      "Five unsafe archive path denials PASS",
+      "Name normalization PASS",
+      "Raw E1 review and Python lock SHA match",
+      "Non-Windows runtime guard HOLD as expected"
+    ],
+    "windows_execution": "NOT_RUN"
+  },
+  "limitations": [
+    "Binary wheel registry hash not independently retrieved in assistant session; local runner requires exact registry digest before any install.",
+    "Raw server and new wheels not uploaded; user transcript only. No independent publisher attestation for psycopg release.",
+    "No Windows runtime test of new runner, no PG connection, PG13 or RLS. Local mechanics only.",
+    "No credentials or server-private.log in evidence; no E1 changes or service registration."
+  ],
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  },
+  "next": "Run pinned D1 script on workstation, inspect review, explicit EVET; return D1 evidence ZIP (no server private log or passwords). D2 separate."
+}
