@@ -211,3 +211,6 @@ P10J-05 [final remote readback](releases/GITHUB_READBACK_UI_P10J05.json).
 
 ## UI-P10J-08
 [Architecture](docs/UI-P10J/P10J08_WINDOWS_PORTABILITY.md) · [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10J08_WINDOWS.json) · [Progress](progress/UI_P10J08.json).
+
+## UI-P10J-08 — local Windows W8 PASS
+Exact source 752b225deac4557a548faec7191a090fbfba19f7; see docs/UI-P10J/P10J08_W8_WINDOWS_ACCEPTANCE.md and tests/evidence/TEST_EVIDENCE_UI_P10J08_W8_PASS.json. Independent and 0222 union acceptance remain HOLD.

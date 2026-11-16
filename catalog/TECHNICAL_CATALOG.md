@@ -131,3 +131,6 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10J-08
 [Windows portability delta](revisions/TECHNICAL_CATALOG_UI_P10J08.json).
+
+## UI-P10J-08 — local Windows W8 PASS
+Exact source 752b225deac4557a548faec7191a090fbfba19f7; see docs/UI-P10J/P10J08_W8_WINDOWS_ACCEPTANCE.md and tests/evidence/TEST_EVIDENCE_UI_P10J08_W8_PASS.json. Independent and 0222 union acceptance remain HOLD.

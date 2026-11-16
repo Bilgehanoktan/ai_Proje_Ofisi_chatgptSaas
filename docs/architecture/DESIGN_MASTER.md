@@ -248,3 +248,6 @@ P10J-03 integrated 10 modifications and two additions to UI presentation (387 pr
 
 # UI-P10J-08 — Windows portability
 [Diagnosis and fix](../UI-P10J/P10J08_WINDOWS_PORTABILITY.md). Two component renames, four imports, canonical test TEMP; no security guard or contract change. Source candidate only.
+
+## UI-P10J-08 — local Windows W8 PASS
+Exact source 752b225deac4557a548faec7191a090fbfba19f7; see docs/UI-P10J/P10J08_W8_WINDOWS_ACCEPTANCE.md and tests/evidence/TEST_EVIDENCE_UI_P10J08_W8_PASS.json. Independent and 0222 union acceptance remain HOLD.
