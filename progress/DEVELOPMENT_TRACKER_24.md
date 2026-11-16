@@ -34,3 +34,6 @@ All ordinal design/source scores retained (not percent completion). 55/55 source
 
 ## 0213 — tracked integration gates
 24-domain ordinal estimates unchanged; independent source/security acceptances still HOLD. 55/55 core source pins and 56/56 diagnostic tests passed (4 new real SQLite two-project cases); six full wrapper tests prepared but NOT_RUN. 16-scope completion gates: 6/16 = **37.5%**, not global product completion. Full PG/RLS/locked deps/build/browser NOT_RUN. [Evidence](../releases/GITHUB_READBACK_0213.json) · [Gates](INTEGRATION_GATES_0213.json).
+
+## 0215 evidence
+24-area ordinal scores unchanged. 0214 prior recorded original wrapper evidence carried (not rerun). 0215 46 new selected checks (15 signed local claim, 14 PG runner unit, 17 static UI reference) PASS. **7/16 = 43.75%** scoped integration gates, not global completion. Independent custody/effect, PG13/RLS, locked deps and full build/browser remain HOLD. [Gate tracker](INTEGRATION_GATES_0215.json) · [Evidence](../releases/GITHUB_READBACK_0215.json).
