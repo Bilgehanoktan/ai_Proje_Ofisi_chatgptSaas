@@ -1,0 +1,32 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),ts=require('typescript');
+const root=path.join(__dirname,'../features/workflow');
+const modules={};
+const jsx=(type,props)=>({type,props});
+function load(name){if(modules[name])return modules[name];const file=path.join(root,name);const result=ts.transpileModule(fs.readFileSync(file,'utf8'),{fileName:file,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true},reportDiagnostics:true});assert.equal(result.diagnostics.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0);const mod={exports:{}};vm.runInNewContext(result.outputText,{exports:mod.exports,module:mod,require:id=>{if(id==='react/jsx-runtime')return {jsx,jsxs:jsx};if(id.endsWith('.css'))return {};return load(id.slice(2)+'.ts')}});return modules[name]=mod.exports}
+const {inspectDraft,previewDraftEdge}=load('draftInspector.ts'),{editDraft,emptyDraftHistory}=load('draftHistory.ts'),{default:Inspector}=load('DraftInspector.tsx');
+const tasks=[['plan','Plan','orchestrator',[]],['draft','Draft','engineer',['plan']],['research','Research','research',['plan']],['merge','Merge','engineer',['draft','research']],['qa','QA','qa',['merge']],['iv','IV','independent-verifier',['qa']],['release','Release','human-authority',['iv']]].map(([id,label,role,depends_on])=>({id,label,role,depends_on}));
+const edge={from:'draft',to:'research'},reverse={from:'research',to:'draft'};
+const add=(d=emptyDraftHistory(),e=edge)=>editDraft(tasks,d,{kind:'add',edge:e});
+const norm=x=>JSON.parse(JSON.stringify(x));
+function flatten(x,out=[]){if(Array.isArray(x)){for(const y of x)flatten(y,out)}else if(x&&typeof x==='object'){out.push(x);flatten(x.props?.children,out)}return out}
+const nodes=(x,t)=>flatten(x).filter(n=>n.type===t);
+function words(x){if(Array.isArray(x))return x.map(words).join(' ');if(x&&typeof x==='object')return words(x.props?.children);return typeof x==='string'||typeof x==='number'?String(x):''}
+let actions=[];const render=(draft=emptyDraftHistory(),selected='research',from='draft',to='research')=>Inspector({tasks,draft,selected,from,to,onSelect:id=>actions.push(['select',id]),onSource:id=>actions.push(['source',id]),onTarget:id=>actions.push(['target',id]),onRemove:e=>actions.push(['remove',norm(e)])});
+const button=(x,name)=>nodes(x,'button').find(n=>words(n)===name);
+test('preview idle without both endpoints',()=>assert.equal(previewDraftEdge(tasks,[],'','research').phase,'idle'));
+test('valid preview shows wave impact, no mutation',()=>{const old=[];assert.deepEqual(norm(previewDraftEdge(tasks,old,'draft','research')),{phase:'valid',before:6,after:7});assert.equal(old.length,0)});
+test('preview rejects reference and existing draft duplicates',()=>{assert.equal(previewDraftEdge(tasks,[],'plan','research').reason,'DUPLICATE_EDGE');assert.equal(previewDraftEdge(tasks,[edge],'draft','research').reason,'DUPLICATE_EDGE')});
+test('cycle and invalid endpoint rejected by original guard',()=>{assert.equal(previewDraftEdge(tasks,[edge],reverse.from,reverse.to).reason,'CYCLE');assert.equal(previewDraftEdge(tasks,[],'draft','draft').reason,'EDGE_ENDPOINT');assert.equal(previewDraftEdge(tasks,[],'missing','qa').reason,'EDGE_ENDPOINT')});
+test('invalid existing graph fails closed',()=>{assert.equal(inspectDraft(tasks,[edge,reverse],'research'),null);assert.equal(previewDraftEdge(tasks,[edge,reverse],'qa','release').reason,'CYCLE')});
+test('reference and draft direction and wave exact',()=>{const x=inspectDraft(tasks,[edge],'research');assert.equal(x.wave,3);assert.deepEqual(norm(x.links.map(l=>[l.peer,l.direction,l.kind])),[['plan','incoming','reference'],['merge','outgoing','reference'],['draft','incoming','draft']])});
+test('unknown selection has no inferred task',()=>assert.equal(inspectDraft(tasks,[],'missing'),null));
+test('add undo redo recalculate inspection and preview',()=>{const d=add(),u=editDraft(tasks,d,{kind:'undo'}),r=editDraft(tasks,u,{kind:'redo'});assert.deepEqual([d,u,r].map(x=>inspectDraft(tasks,x.edges,'research').wave),[3,2,3]);assert.equal(u.future.length,1);assert.equal(r.future.length,0)});
+test('reject leaves history unchanged, new edit after undo clears redo',()=>{const d=add(),bad=editDraft(tasks,d,{kind:'add',edge:reverse});assert.equal(bad.edges,d.edges);assert.equal(bad.past,d.past);const u=editDraft(tasks,d,{kind:'undo'}),n=add(u,reverse);assert.equal(n.future.length,0);assert.equal(n.edges[0].from,'research')});
+test('reference removal does not mutate history',()=>{const d=add(),r=editDraft(tasks,d,{kind:'remove',edge:{from:'plan',to:'research'}});assert.equal(r.edges,d.edges);assert.equal(r.past,d.past)});
+test('draft removal is reversible',()=>{const d=add(),r=editDraft(tasks,d,{kind:'remove',edge});assert.equal(r.edges.length,0);assert.equal(editDraft(tasks,r,{kind:'undo'}).edges.length,1)});
+test('history reset and bounded undo entries',()=>{let d=emptyDraftHistory();for(let i=0;i<25;i++){d=add(d);d=editDraft(tasks,d,{kind:'remove',edge})}assert.equal(d.past.length,20);const r=editDraft(tasks,d,{kind:'reset'});assert.deepEqual([r.edges.length,r.past.length,r.future.length],[0,0,0])});
+test('JSX shows distinct reference/draft and only draft remove',()=>{const x=render(add());assert.match(words(x),/Referans · kilitli/);assert.match(words(x),/Yerel taslak/);assert.equal(nodes(x,'button').filter(n=>n.props['aria-label']?.startsWith('Taslak bağlantıyı kaldır')).length,1);assert.match(words(x),/DUPLICATE_EDGE/)});
+test('inspector callbacks select endpoints, navigate and remove only local edge',()=>{actions=[];const x=render(add());button(x,'Ön koşul olarak seç').props.onClick();button(x,'Bağımlı olarak seç').props.onClick();button(x,'Plan').props.onClick();button(x,'Taslağı kaldır').props.onClick();assert.deepEqual(actions,[['source','research'],['target','research'],['select','plan'],['remove',edge]])});
+test('JSX preview and history counters are read-only',()=>{const x=render();assert.match(words(x),/Henüz eklenmedi/);assert.deepEqual(nodes(x,'dd').map(words),['0 /20','0 /20','0']);assert.match(words(x),/dispatch ve release değiştirilmez/)});
+test('empty selected task shows HOLD with no removal controls',()=>{const x=render(emptyDraftHistory(),'missing');assert.match(words(x),/Görev seçilmedi/);assert.equal(nodes(x,'button').length,0)});

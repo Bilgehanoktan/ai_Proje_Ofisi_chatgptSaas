@@ -1,0 +1,114 @@
+{
+  "revision": "UI-P10J-20",
+  "manifest": "9672f2e26f0635448f56cc02d338641bbe3ed5a5",
+  "local": {
+    "actual": 16,
+    "pass": 16,
+    "fail": 0,
+    "skip": 0,
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "mode": "actual draftGraph and draftHistory exact parent blobs; actual draftInspector and DraftInspector transpiled with isolated mocked JSX/CSS, reference topology reproduced manually; strict TypeScript model noEmit PASS; no real React, parent mount, canonical parser or DOM",
+    "log_sha256": "6d123948c4f30d4121faa848a30ef77127dd9ff1716b234e32af712454197890",
+    "parent_pins": [
+      "1ed12b2c77cd4f50264bfd2ddaec14c85c129954",
+      "d7cf426e00e5d55f83c382d176cf699e96ccae16"
+    ]
+  },
+  "adapter": {
+    "actual_test_groups": 5,
+    "pass": 5,
+    "subscenarios": "success, wrong manifest, missing/duplicate hook, native failure, parent failure, bad marker, test success/failure",
+    "mode": "doubled inherited runner with real new wrapper, not full chain or browser",
+    "log_sha256": "a5a89981ea71acbe6a6bafa2d1cb94f018cdcfae6bdda9ca0e861498ab46db6a",
+    "blob": "51ffc6c176c5bcbbec3308708bcd224d7a1f8f95",
+    "test_blob": "3bc115abb9586727fb79bf59674fdcd7420a0251"
+  },
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/workflow/draftInspector.ts",
+      "bytes": 1451,
+      "sha256": "48894f00237520e63f631c3bda9d34722cc00c5b2616082d8f6d5a287f18e5bc",
+      "blob": "e61abe72c4865f7e1b0b78cab9f277b04de6804c",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+      "bytes": 3217,
+      "sha256": "349a4acb8b7144b1e168f54254d3b0fa1e27c0341e53157bc6906950c456c937",
+      "blob": "b57e27761e60351e62224b569ad107cd54fd8daf",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/DraftInspector.module.css",
+      "bytes": 1191,
+      "sha256": "df0bab119e35952873362f0356e217f6a1f833c257f7d1dc1bdecc34b8347fb2",
+      "blob": "57da99b0835eaf8e68577d12ae6a66d25cbe1fb3",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+      "bytes": 6466,
+      "sha256": "7907d61a3c1e091dd4d48e422c91bf6af7398dd48d4d03ce36d3630ee3eafb23",
+      "blob": "833d216cca83015894beddbdb5214c30ee140843",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "bytes": 5665,
+      "sha256": "80d5238308a0864d23aec3672121fd29045c04c0e6c86fd64df967796567de5a",
+      "blob": "d7bde30e7f91db72cd9c2c57531836bb3f355bac",
+      "source": "manual",
+      "change": "replace"
+    },
+    {
+      "path": "ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx",
+      "bytes": 10771,
+      "sha256": "366235c0a866820dcaad51f098eecc680063233bcad42dcb3c8600c58fcd7f69",
+      "blob": "cafe5a427a77944779be2250693a7d9665818d31",
+      "source": "exact_A4R2",
+      "change": "replace"
+    }
+  ],
+  "a4r2": {
+    "commit": "d8671883a77ee7f97b1fc3528e3ffdc1831b3856",
+    "parent": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+    "manifest": "397f87b7d9a9227ee435b1501347c6460fc73c5e",
+    "expected_old_scene": "8fe0766a096ea6b5969d8993f5bd29a80b220387",
+    "exact_scene": "cafe5a427a77944779be2250693a7d9665818d31",
+    "matching_dependency_manifest_pins": 11,
+    "native_script": "tests/integration/native_ux_a4r2.py",
+    "native_blob": "d82d09d0ea39e213ae4db78e8181d2c9c90d06f7",
+    "owner_evidence": "76 selected model regression +12 adapter/helper checks on owner branch, not rerun here",
+    "renderer": "SOURCE_BOUND_NOT_NATIVE_ACCEPTED",
+    "portal": "HOLD",
+    "canonical_join": "HOLD"
+  },
+  "browser": {
+    "old_blob": "baac24da1edba991a240a0c41258f0f9a35d95fa",
+    "blob": "99df17ec2a0be012ad2f3c463510c64fbd69c062",
+    "old_captures": 90,
+    "new_ui_captures": 4,
+    "ui_planned": 94,
+    "native_planned": 5,
+    "total_planned": 99,
+    "status": "NOT_RUN",
+    "scope": "4 viewport/theme inspector runs; exact native A4R2 separate 5 PNGs"
+  },
+  "gates": {
+    "ui": "21/40 prior; no promotion",
+    "core": "9/16 separate core 0227 E1 accepted; D1 inventory missing",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "office_v0": "0/55 JOIN_HOLD",
+    "hd": "0/36",
+    "full_build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  }
+}

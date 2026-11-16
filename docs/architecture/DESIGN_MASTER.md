@@ -290,3 +290,6 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-19 — Project roadmap / A4 source reconciliation
 [Architecture and catalog](../UI-P10J/P10J19_PROJECT_ROADMAP.md). Logical waves only; hybrid adapter source-bound, not native-accepted. No normative change.
+
+## UI-P10J-20 — Workflow inspector / A4R2 source reconciliation
+[Architecture and catalog](../UI-P10J/P10J20_WORKFLOW_INSPECTOR.md). Derived local draft only; exact diagnostic scene and pinned native harness, acceptance NOT_RUN. No normative change.

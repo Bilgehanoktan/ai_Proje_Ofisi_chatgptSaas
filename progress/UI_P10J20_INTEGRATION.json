@@ -1,0 +1,50 @@
+{
+  "revision": "UI-P10J-20",
+  "counts": {
+    "prior_product": 483,
+    "product": 487,
+    "manifest": 486,
+    "added": 4,
+    "replaced": 2,
+    "retained": 480,
+    "deleted": 0
+  },
+  "gates": {
+    "ui": "21/40 prior; no promotion",
+    "core": "9/16 separate core 0227 E1 accepted; D1 inventory missing",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "office_v0": "0/55 JOIN_HOLD",
+    "hd": "0/36",
+    "full_build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  },
+  "browser": {
+    "old_blob": "baac24da1edba991a240a0c41258f0f9a35d95fa",
+    "blob": "99df17ec2a0be012ad2f3c463510c64fbd69c062",
+    "old_captures": 90,
+    "new_ui_captures": 4,
+    "ui_planned": 94,
+    "native_planned": 5,
+    "total_planned": 99,
+    "status": "NOT_RUN",
+    "scope": "4 viewport/theme inspector runs; exact native A4R2 separate 5 PNGs"
+  },
+  "a4r2": {
+    "commit": "d8671883a77ee7f97b1fc3528e3ffdc1831b3856",
+    "parent": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+    "manifest": "397f87b7d9a9227ee435b1501347c6460fc73c5e",
+    "expected_old_scene": "8fe0766a096ea6b5969d8993f5bd29a80b220387",
+    "exact_scene": "cafe5a427a77944779be2250693a7d9665818d31",
+    "matching_dependency_manifest_pins": 11,
+    "native_script": "tests/integration/native_ux_a4r2.py",
+    "native_blob": "d82d09d0ea39e213ae4db78e8181d2c9c90d06f7",
+    "owner_evidence": "76 selected model regression +12 adapter/helper checks on owner branch, not rerun here",
+    "renderer": "SOURCE_BOUND_NOT_NATIVE_ACCEPTED",
+    "portal": "HOLD",
+    "canonical_join": "HOLD"
+  },
+  "next": "P10J21 Skill & Memory Studio, exact connected workstation W8 review/install/test/smoke first when available; re-pin A4R2/A5 and core."
+}
