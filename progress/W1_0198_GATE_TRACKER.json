@@ -1,6 +1,6 @@
 {
-  "revision": "W1-0198-P06",
-  "baseline": "W1-0198-P05",
+  "revision": "W1-0198-P07",
+  "baseline": "W1-0198-P06",
   "method": "Fixed-denominator evidence gates, not weights or product completion. Distinct test IDs count once; do not add historical runs. New tests require separate scope and denominator version.",
   "gates": [
     {
@@ -76,8 +76,37 @@
       "id": "INDEPENDENT",
       "scope": "Independent product/security acceptance",
       "status": "HOLD"
+    },
+    {
+      "id": "A-P07-SCOPE-12",
+      "scope": "new D0 persisted scope tests",
+      "total": 12,
+      "verified": 12,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P07.json"
+    },
+    {
+      "id": "A-P07-RERUN-20",
+      "scope": "prior snapshot and prefix tests rerun",
+      "total": 20,
+      "verified": 20,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P07.json"
+    },
+    {
+      "id": "B-P07-STATIC-ROUTES-7",
+      "scope": "static proxy path/router/parser names only; not HTTP parity",
+      "total": 7,
+      "verified": 7,
+      "pct": 100,
+      "status": "PASS_STATIC_ONLY",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P07.json"
     }
   ],
-  "unique_test_ids_this_round": 97,
-  "global_weighted_completion": "NOT_DEFINED; no baseline for all required tasks"
+  "unique_test_ids_this_round": 32,
+  "global_weighted_completion": "NOT_DEFINED; no baseline for all required tasks",
+  "prior_p06_unique_test_ids": 97,
+  "historical_counts_not_additive": true
 }

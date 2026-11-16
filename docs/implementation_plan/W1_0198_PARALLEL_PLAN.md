@@ -22,3 +22,6 @@ PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH. Selected A g
 - P06 closes exact selected 17-case D0 fixture gate; 80 selected regressions PASS. This is not whole-product or live acceptance. P07 may advance independent read-only contracts after proof; no new historical endpoint solely for progress, no authority expansion.
 
 Path ownership remains in [JSON plan](W1_0198_PARALLEL_PLAN.json).
+
+## P07 delta
+A 12 new D0 persisted scope +20 rerun PASS; B seven static route matches, not HTTP parity; D synthetic lease reference proof only, trust HOLD. C/E/F/G/H unchanged. P08 first fresh pinned full checkout and actual integration evidence.

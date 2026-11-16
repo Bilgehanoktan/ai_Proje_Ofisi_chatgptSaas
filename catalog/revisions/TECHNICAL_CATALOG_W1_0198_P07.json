@@ -1,0 +1,74 @@
+{
+  "revision": "W1-0198-P07",
+  "parent": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
+  "changes": [
+    {
+      "path": "tests/integration/test_run_scope_p07.py",
+      "kind": "new integration test",
+      "git_blob": "54aa513b0a8bdc533c352388d54392780e969442",
+      "sha256": "02a776af666f3eaf29dd01e48f0ca7d21519f70616fbd92ba729b7e04bffff3d",
+      "classes": [
+        "SQLiteReadWriteCursor",
+        "PersistedScopeTests"
+      ],
+      "functions": [
+        "PersistedScopeTests.test_cas_persists_and_reopens",
+        "PersistedScopeTests.test_cas_rejects_stale_version_and_attempt",
+        "PersistedScopeTests.test_exact_scope_reopens_persisted_head",
+        "PersistedScopeTests.test_expiry_and_stale_heartbeat",
+        "PersistedScopeTests.test_fresh_sample_is_not_authority",
+        "PersistedScopeTests.test_lease_bound_to_persisted_scope",
+        "PersistedScopeTests.test_missing_clock_or_reference",
+        "PersistedScopeTests.test_plan_task_run_agent_principal_mismatch",
+        "PersistedScopeTests.test_policy_and_witness_epoch_deny",
+        "PersistedScopeTests.test_renewal_fence_and_reference_mismatch",
+        "PersistedScopeTests.test_tenant_company_environment_mismatch",
+        "PersistedScopeTests.test_unknown_result_and_stale_head_hold"
+      ],
+      "dependencies": [
+        "Python standard library",
+        "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+        "database/0193/candidate_run_head.sql"
+      ],
+      "reason": "prove persisted full scope and fail-closed lifecycle reference against original code",
+      "test": "12/12 PASS"
+    }
+  ],
+  "runtime_changes": [],
+  "new_api": [],
+  "new_db_tables": [],
+  "new_events": [],
+  "new_dependency": [],
+  "observed_interfaces": [
+    "PostgresRunRepository.read",
+    "PostgresRunRepository.advance",
+    "inspect_transition",
+    "inspect_lease",
+    "Scope",
+    "RunObservation",
+    "ClockSample",
+    "LeaseObservation",
+    "run_heads"
+  ],
+  "errors": [
+    "RUN_SCOPE_INVALID",
+    "RUN_HEAD_NOT_FOUND",
+    "RUN_HEAD_CAS_MISMATCH",
+    "CLOCK_SAMPLE_INVALID",
+    "LEASE_REFERENCE_INVALID_OR_MISSING",
+    "LEASE_EXPIRED",
+    "HEARTBEAT_STALE",
+    "HEARTBEAT_IN_FUTURE",
+    "ERR_POLICY_EPOCH_STALE",
+    "ERR_WA_EPOCH_STALE",
+    "RUN_LEASE_BINDING_MISSING",
+    "LEASE_SCOPE_MISMATCH",
+    "LEASE_REFERENCE_MISMATCH",
+    "ERR_PROVIDER_RESULT_UNKNOWN",
+    "CAS_VERSION_MISMATCH_OR_EXHAUSTED"
+  ],
+  "maintenance": "docs/W1-0198-P07/ARCHITECTURE_AND_CATALOG.md",
+  "rollback": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
+  "evidence": "tests/evidence/TEST_EVIDENCE_W1_0198_P07.json"
+}

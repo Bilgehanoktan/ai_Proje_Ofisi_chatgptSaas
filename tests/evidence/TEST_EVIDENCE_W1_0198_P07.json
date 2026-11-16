@@ -1,0 +1,212 @@
+{
+  "revision": "W1-0198-P07",
+  "tested_parent": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
+  "prior_p06": {
+    "pending_17": "PASS",
+    "regression_80": "PASS",
+    "rerun_in_p07": false
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "installed": {
+      "fastapi": "0.128.2",
+      "starlette": "0.50.0",
+      "uvicorn": "0.48.0",
+      "httpx": "0.28.1",
+      "jsonschema": "4.26.0"
+    },
+    "required": {
+      "fastapi": "0.163.0",
+      "starlette": "1.10.0",
+      "uvicorn": "0.34.2"
+    },
+    "dependency_status": "PIN_MISMATCH; direct GitHub DNS and package index access failed; no substitutions, no install"
+  },
+  "pins": [
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "bytes": 878,
+      "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "sha256": "c8317eceef963dfeafb2452dd53e25074dc7926868fc96dfef5be14176396be6"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "bytes": 7251,
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "bytes": 2994,
+      "git_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+      "bytes": 3349,
+      "git_blob": "285b1b56f47df44d7a53dafb1ceaa7071e3f9e45",
+      "sha256": "4c80bf05d9eca1957de7d7bcad10ddaa518d2767cb517c3dba1f62d752838cda"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+      "bytes": 1868,
+      "git_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+      "sha256": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_read_snapshot_p04.py",
+      "bytes": 4328,
+      "git_blob": "ef0b536700ae1f8ef29229abba3713aa56c5377c",
+      "sha256": "75e3cc294a76a74a686ec489dead6cb5edd1ac2a39e78ddeabcda0cf15be1137"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_prefix_wire_p03.py",
+      "bytes": 1765,
+      "git_blob": "829c935b91d266a6eec01958e9b5afa35d519d05",
+      "sha256": "a2af0b6fec199fb81728206d89ba2ead1cf48c95c81b75439d7ddd0464d033a7"
+    },
+    {
+      "path": "tests/integration/test_run_scope_p07.py",
+      "bytes": 7546,
+      "git_blob": "54aa513b0a8bdc533c352388d54392780e969442",
+      "sha256": "02a776af666f3eaf29dd01e48f0ca7d21519f70616fbd92ba729b7e04bffff3d"
+    }
+  ],
+  "executed": {
+    "snapshot_14": {
+      "status": "PASS",
+      "ids": [
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_absent_head",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_duplicate_head",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_missing_table",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_no_attach",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_no_pragma",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_no_unapproved_function",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_no_unrelated_read",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_no_write",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_read_only_snapshot_preserves_bytes",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_sidecar_hold",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_snapshot_blocks_writer_commit",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_unrelated_trigger",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_view_instead_of_table",
+        "test_lifecycle_read_snapshot_p04.SnapshotTests.test_wrong_name"
+      ]
+    },
+    "prefix_6": {
+      "status": "PASS",
+      "ids": [
+        "test_prefix_wire_p03.PrefixWireTests.test_all_prefixes",
+        "test_prefix_wire_p03.PrefixWireTests.test_bad_version",
+        "test_prefix_wire_p03.PrefixWireTests.test_fresh_copy",
+        "test_prefix_wire_p03.PrefixWireTests.test_no_live_authority",
+        "test_prefix_wire_p03.PrefixWireTests.test_renewal",
+        "test_prefix_wire_p03.PrefixWireTests.test_reservation_not_cost"
+      ]
+    },
+    "persisted_scope_12": {
+      "status": "PASS",
+      "ids": [
+        "PersistedScopeTests.test_cas_persists_and_reopens",
+        "PersistedScopeTests.test_cas_rejects_stale_version_and_attempt",
+        "PersistedScopeTests.test_exact_scope_reopens_persisted_head",
+        "PersistedScopeTests.test_expiry_and_stale_heartbeat",
+        "PersistedScopeTests.test_fresh_sample_is_not_authority",
+        "PersistedScopeTests.test_lease_bound_to_persisted_scope",
+        "PersistedScopeTests.test_missing_clock_or_reference",
+        "PersistedScopeTests.test_plan_task_run_agent_principal_mismatch",
+        "PersistedScopeTests.test_policy_and_witness_epoch_deny",
+        "PersistedScopeTests.test_renewal_fence_and_reference_mismatch",
+        "PersistedScopeTests.test_tenant_company_environment_mismatch",
+        "PersistedScopeTests.test_unknown_result_and_stale_head_hold"
+      ]
+    },
+    "new_test_ids": 12,
+    "rerun_test_ids": 20,
+    "pass": 32,
+    "failed": 0,
+    "skipped": 0,
+    "raw_log_sha256": {
+      "selected_snapshot_wire": "94c81965725fb28b8acbe7d8d72af81a40712ceed9809057ae20495773bc0973",
+      "run_scope_p07": "ac6eaa413d15f0203395efb719baf08c1033ba74f161c5cbbf76d7d0418d367e"
+    }
+  },
+  "static_routes": {
+    "matched": 7,
+    "total": 7,
+    "registry_blob": "a9293468f0e5249e641f80fc5b91c2d2f9f67d39",
+    "rows": [
+      {
+        "key": "mvp",
+        "path": "/demo/v1/mvp/diagnostics",
+        "parser": "parseMvpDiagnostics",
+        "front_blob": "199877a68ada2f98bc94c5b3ab5bbab7386d5afb",
+        "back_blob": "4d80172bc467953039ff57296055f68d740a3ff2",
+        "static_match": true
+      },
+      {
+        "key": "admission",
+        "path": "/demo/v1/admission/sample-projection",
+        "parser": "parseAdmissionProjection",
+        "front_blob": "c0a867a669993738d8b06a08fa7089f836a911b3",
+        "back_blob": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b",
+        "static_match": true
+      },
+      {
+        "key": "outbox",
+        "path": "/demo/v1/outbox/review-projection",
+        "parser": "parseOutboxProjection",
+        "front_blob": "7dc1c9eb20feaf70358ba6137f35a3cbbec8a4ce",
+        "back_blob": "3dc3a9407ee626284c9388124843cb34ab132a6d",
+        "static_match": true
+      },
+      {
+        "key": "office-workbench",
+        "path": "/demo/v1/office/workbench-projection",
+        "parser": "parseOfficeWorkbench",
+        "front_blob": "749a289984049e0cec27ed93d656023ba4da1fff",
+        "back_blob": "735f1aa950285b55278cc369ae08620c972f3f66",
+        "static_match": true
+      },
+      {
+        "key": "task-budget",
+        "path": "/demo/v1/task-budget/sample-projection",
+        "parser": "parseTaskBudgetProjection",
+        "front_blob": "91256098c2a61001e7305bf3658c8178219591ed",
+        "back_blob": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b",
+        "static_match": true
+      },
+      {
+        "key": "lifecycle",
+        "path": "/demo/v1/lifecycle/sample-projection",
+        "parser": "parseLifecycleProjection",
+        "front_blob": "1a0cbd9a7f01093659e5e968a28be1cbcfe7f214",
+        "back_blob": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+        "static_match": true
+      },
+      {
+        "key": "lifecycle-prefix",
+        "path": "/demo/v1/lifecycle/prefix-projection",
+        "parser": "parseLifecyclePrefix",
+        "front_blob": "ad9206746f9bbd27dd3c44f30e801c06dace8bd7",
+        "back_blob": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+        "static_match": true
+      }
+    ],
+    "http_parity": "NOT_RUN"
+  },
+  "scope": "D0 disposable SQLite run_heads DDL and exact existing read/advance/inspection; translated schema and bind markers; clock and lease are synthetic supplied samples; no actual PG lock, T1 atomicity, authority or external action",
+  "not_run": [
+    "full checkout and pinned backend install",
+    "full product backend suite",
+    "seven endpoint HTTP/frontend parity",
+    "React/Next build",
+    "browser",
+    "PostgreSQL",
+    "trusted clock/lease",
+    "canonical Office placement",
+    "model reservation and memory ACL"
+  ],
+  "independent_acceptance": "HOLD",
+  "historical_counts_not_additive": true
+}

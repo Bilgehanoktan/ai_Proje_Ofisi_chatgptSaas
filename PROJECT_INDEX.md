@@ -112,3 +112,6 @@ Core: [0189](docs/0189/ARCHITECTURE_AND_CATALOG.md), [0190](docs/0190/ARCHITECTU
 
 ## W1-0198-P06
 [Architecture](docs/W1-0198-P06/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P06.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P06.json) · [Readback](releases/GITHUB_READBACK_W1_0198_P06.json) · [Gate tracker](progress/W1_0198_GATE_TRACKER.json). 17 previously unrun +80 regression PASS; product unchanged.
+
+## W1-0198-P07
+[Architecture](docs/W1-0198-P07/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_W1_0198_P07.json) · [Evidence](tests/evidence/TEST_EVIDENCE_W1_0198_P07.json). 12 new scope tests, 20 reruns, 7 static route matches; full build NOT_RUN.

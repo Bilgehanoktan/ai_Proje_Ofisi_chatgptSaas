@@ -1,6 +1,6 @@
-# 24-area tracker — W1-0198-P06
+# 24-area tracker — W1-0198-P07
 
-**Design 71.875% · source 34.375% · integration started 79.1667% (19/24) · partial integration 75% · full product acceptance 0/24.** Ordinal coverage only; no score changes. Selected gates: 44/44 locally verified, 17/17 newly executed pending tests, 80/80 selected regression. [Gate tracker](W1_0198_GATE_TRACKER.json).
+**Design 71.875% · source 34.375% · integration started 79.1667% (19/24) · partial integration 75% · full product acceptance 0/24.** Ordinal coverage only; no score changes. P06 retained: 44/44 local source, 17/17 pending, 80/80 regression. P07: 12 new persisted scope +20 prior reruns PASS; 7 static route matches; not additive. [Gate tracker](W1_0198_GATE_TRACKER.json).
 
 | ID | Area | Design | Source | Integration | Evidence |
 |---|---|---:|---:|---|---|

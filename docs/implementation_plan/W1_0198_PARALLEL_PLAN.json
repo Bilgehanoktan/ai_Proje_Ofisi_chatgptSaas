@@ -1,8 +1,8 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P06",
-  "parent": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
-  "source_commit": "08361b6c3c7bed4fde77623fdf5fafcb047cca06",
+  "round": "W1-0198-P07",
+  "parent": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
+  "source_commit": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
   "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
   "dependency_rules": [
@@ -11,14 +11,15 @@
     "No cross-store join unless exact shared proof; no live cache, dispatch, mutation, provider calls or geometry join",
     "P04/P05 gate: prioritize execution of existing 17 exact persisted lifecycle tests before adding any more historical demo endpoints; separate D0 helper evidence and actual product acceptance.",
     "P05 transport branch is NEVER MERGE; original product remains full integration branch. Exact 17 selected cases remain gate; do not count runner/DDL tests as lifecycle acceptance.",
-    "P06 closes exact selected 17-case D0 fixture gate; 80 selected regressions PASS. This is not whole-product or live acceptance. P07 may advance independent read-only contracts after proof; no new historical endpoint solely for progress, no authority expansion."
+    "P06 closes exact selected 17-case D0 fixture gate; 80 selected regressions PASS. This is not whole-product or live acceptance. P07 may advance independent read-only contracts after proof; no new historical endpoint solely for progress, no authority expansion.",
+    "P07 12 persisted scope and 20 prior reruns PASS; seven static routes match, real HTTP parity remains NOT_RUN. No runtime or authority change."
   ],
   "lanes": [
     {
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
-      "status": "SELECTED_17_PLUS_80_PASS_FULL_PRODUCT_NOT_RUN",
-      "done": "44 exact files materialized; 17 selected and 80 original tests PASS; all 97 distinct IDs, no failures/skips.",
+      "status": "P07_SCOPE_12_RERUN_20_PASS_FULL_PRODUCT_NOT_RUN",
+      "done": "P06 17+80 retained; P07 12 new persisted scope +20 reruns; dependency mismatch remains.",
       "next": "Full pinned source/build/browser and seven endpoint parity in fresh reviewed environment; Windows remains deferred; recover exact additional dependency closure if needed.",
       "owner": [
         "tests/projection-read.test.cjs",
@@ -38,14 +39,15 @@
         "tests/integration/run_lifecycle_p05.py",
         "tests/integration/test_run_lifecycle_p05.py",
         "tests/integration/test_lifecycle_ddl_p05.py",
-        "tests/integration/lifecycle_p05_source_lock.json"
+        "tests/integration/lifecycle_p05_source_lock.json",
+        "tests/integration/test_run_scope_p07.py"
       ]
     },
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
-      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "status": "P07_STATIC_ROUTE_MATCH_7_HTTP_NOT_RUN",
+      "done": "Seven static proxy path/router/parser name matches; no HTTP parity.",
       "next": "Seven endpoint frontend/backend parity and React hook lifecycle; independently trusted scope/revision/freshness contract.",
       "owner": [
         "features/data/projectionRead.ts",
@@ -71,8 +73,8 @@
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "P04_RETAINED_SELECTED_A_GATE_CLOSED_CONTRACTS_OPEN",
-      "done": "Source unchanged; selected A prerequisite passed, individual live/React/authority acceptance remains open.",
+      "status": "P07_D0_SCOPE_PROVED_TRUST_HOLD",
+      "done": "Exact persisted run-head and synthetic lease checks pass; independent scope clock and placement still HOLD.",
       "next": "Independent current clock/lease/epoch and placement contract; no geometry join or active agents before exact proof.",
       "owner": [
         "features/mvp/OfficeWorkbenchPanel.tsx",

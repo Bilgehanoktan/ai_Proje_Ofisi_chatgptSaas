@@ -1,8 +1,8 @@
 {
-  "revision": "W1-0198-P06",
-  "branch": "integration/w1-0198-p06",
+  "revision": "W1-0198-P07",
+  "branch": "integration/w1-0198-p07",
   "source_commit": "08361b6c3c7bed4fde77623fdf5fafcb047cca06",
-  "parent_commit": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
+  "parent_commit": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
   "integration_parents": {
     "unified": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
     "lifecycle": "a7c4f417faf17959e3165193aa247815954bfa42"
@@ -11,9 +11,9 @@
   "product_files": 306,
   "manifest_entries": 305,
   "manifest_blob": "f9701fb7caa0fbe26e927823c70c7a9e257de310",
-  "source_readback": "306_PRODUCT_BLOBS_UNCHANGED; 44_LOCAL_PINS_MATCH; 3_EXACT_REPORT_BLOBS_MATCH",
+  "source_readback": "7_LOCAL_ORIGINAL_BLOBS_MATCH; NEW_TEST_BLOB_MATCH; no product mutation requested",
   "full_product_sha256": "NOT_RUN",
-  "selected_controls_passed": 97,
+  "selected_controls_passed": 32,
   "full_product_tests": "NOT_RUN",
   "full_next_build": "NOT_RUN",
   "actual_react_browser": "NOT_RUN",
@@ -23,7 +23,7 @@
   "normative_status": "HOLD",
   "actual_agents": 0,
   "actual_provider_calls": 0,
-  "dependency_lock": "NEW_REVIEW_REQUIRED_WINDOWS_DEFERRED",
+  "dependency_lock": "PIN_MISMATCH_NETWORK_BLOCKED_NEW_REVIEW_REQUIRED",
   "expected_review_sha256": null,
   "prior_evidence": {
     "windows_P1": "449_PASS_2_SKIP_BUILD_PASS_LIVE_PENDING",
@@ -35,15 +35,17 @@
     "W1_0198_P02": "24 new +12 rerun pure Node PASS",
     "W1_0198_P03": "30 new +36 rerun pure tests PASS",
     "W1_0198_P04": "30 new +14 rerun selected tests PASS",
-    "W1_0198_P05": "23 auxiliary and DDL tests PASS; 17 selected cases then NOT_RUN"
+    "W1_0198_P05": "23 auxiliary and DDL tests PASS; 17 selected cases then NOT_RUN",
+    "W1_0198_P06": "17 prior pending +80 selected regression PASS, not rerun in P07"
   },
-  "transfer_evidence": "releases/GITHUB_READBACK_W1_0198_P06.json",
-  "next": "P07: advance A–H in parallel, seven endpoint parity and independent scope/clock/lease/reservation/ACL/W-A read contracts; full product regression/build/browser remain open; Windows deferred. No authority change.",
+  "transfer_evidence": "tests/evidence/TEST_EVIDENCE_W1_0198_P07.json",
+  "next": "P08 fresh reviewed full checkout, pinned deps and actual 7 HTTP/FE parity; parallel independent task scope/clock/lease/reservation/ACL/W-A/placement; no historical expansion.",
   "previous_pointers": [
     "handover/history/CURRENT_W1_0198_P04_PRE_P05.json",
-    "handover/history/CURRENT_W1_0198_P05_PRE_P06.json"
+    "handover/history/CURRENT_W1_0198_P05_PRE_P06.json",
+    "handover/history/CURRENT_W1_0198_P06_PRE_P07.json"
   ],
-  "selected_controls_scope": "17 previously NOT_RUN persisted SQLite/direct API handler cases +80 selected 0194/0195/0196-L regression cases; not additive to prior rounds",
+  "selected_controls_scope": "12 new persisted-scope tests and 20 reruns; 7 static route matches not counted as tests",
   "parallel_plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json",
   "maturity_summary": {
     "method": "Equal-weight descriptive averages of existing ordinal scores; no completion/ETA. Integration coverage counts only PARTIAL_INTEGRATED and EDS_SLICE_INTEGRATED; not accepted integration.",
@@ -74,5 +76,6 @@
     "total_files": 49,
     "merge_allowed": false
   },
-  "gate_tracker": "progress/W1_0198_GATE_TRACKER.json"
+  "gate_tracker": "progress/W1_0198_GATE_TRACKER.json",
+  "tested_product_commit": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d"
 }

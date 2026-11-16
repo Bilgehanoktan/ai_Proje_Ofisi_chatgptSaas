@@ -126,3 +126,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P06 — selected persisted gate verified
 [Architecture and maintenance](../W1-0198-P06/ARCHITECTURE_AND_CATALOG.md). 44 exact files recovered; 17 selected +80 original regression PASS. Product architecture and authority unchanged; full product NOT_RUN.
+
+## W1-0198-P07 — persisted scope tests
+[Architecture and maintenance](../W1-0198-P07/ARCHITECTURE_AND_CATALOG.md). 12 new D0 scope +20 rerun PASS; seven static route matches; no runtime/authority/schema changes.
