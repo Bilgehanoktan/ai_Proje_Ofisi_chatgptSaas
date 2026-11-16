@@ -1,0 +1,97 @@
+{
+  "revision": "UX-PREMIUM-07-A0E",
+  "scope": "User-executed exact A0C Windows local D0; transcript-supported functional acceptance, raw artifacts and visual review pending",
+  "source": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "transcript_sha256": "efe65294f80f014d999c4cbb17d76d361eac770c1e42dde5ff9fe84b0f37413e",
+  "transcript_lines": 1947,
+  "review_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+  "source_audit": {
+    "pins": 398,
+    "pairs": 16,
+    "auxiliary": 19
+  },
+  "environment": {
+    "platform": "Windows",
+    "node": "v24.14.0",
+    "npm": "11.9.0",
+    "python": "3.14.3",
+    "next": "15.5.29"
+  },
+  "local_approval": "EVET",
+  "install": {
+    "python_wheels": 28,
+    "npm_packages_installed": 30,
+    "pip_check": "PASS"
+  },
+  "backend": {
+    "total": 827,
+    "passed": 810,
+    "skipped": 17,
+    "failed": 0,
+    "pg_skipped": 13,
+    "other_skipped": 4
+  },
+  "node": {
+    "passed": 365,
+    "skipped": 1,
+    "failed": 0,
+    "premium_subset": {
+      "model": 16,
+      "traffic": 12,
+      "boundary": 3
+    }
+  },
+  "build": "PASS_WITH_WARNINGS",
+  "typecheck": "PASS",
+  "api": {
+    "endpoints": 7,
+    "direct_and_proxy": "PASS"
+  },
+  "browser": {
+    "legacy_captures": 52,
+    "native_groups": 8,
+    "native_checks": [
+      "native_canvas_and_d0_boundary",
+      "atlas_texture_marker",
+      "zoom_and_minimap",
+      "decorative_work_walk_meeting",
+      "passive_floor_no_occupants",
+      "reset_and_reduced_motion",
+      "reload_atlas_reduced_motion",
+      "no_page_errors_or_nonlocal_requests"
+    ],
+    "raw_native_json_png": "PENDING",
+    "pixel_review": "NOT_RUN",
+    "manual_visual": "NOT_RUN"
+  },
+  "markers": {
+    "INSTALL_OK": "PASS",
+    "BUILD_TEST_OK": "PASS",
+    "SMOKE_OK": "PASS",
+    "NATIVE_SMOKE_OK": "PASS",
+    "scope": "User transcript reports exact fingerprint comparison; raw marker bytes not supplied"
+  },
+  "warnings": [
+    "Starlette httpx TestClient deprecation",
+    "autoprefixer end value mixed support in EvidenceStudio and ParallelStudio",
+    "webpack warning serialization/cache"
+  ],
+  "limits": [
+    "Not independently replayed",
+    "Core29 command completed but report not supplied; no additive count",
+    "No live agents or authorized provider/spend",
+    "PG and RLS remain open",
+    "No GPU/occlusion/manual visual acceptance",
+    "Not latest core/UI union"
+  ],
+  "office": "JOIN_HOLD",
+  "independent": "HOLD",
+  "observed_heads": {
+    "core": "32b4453d848827400774a73f18fc4674e424e976",
+    "ui_union": "1d0d4eb89e0aff92720c0d545247b7bd3713012e",
+    "ui_static": "3384a301d7f1727153f64df950a82fc20bb234a5",
+    "premium": "a79df6622e2eb9de63795ff6c0309984d1be6910"
+  },
+  "next": "Collect native-floor1.png, NATIVE_EVIDENCE.json, 52 captures, reviewed lock files, markers and core29-p10f.json; inspect exact artifacts then A1 hybrid layout candidate. No runtime join or shared UI edits."
+}
