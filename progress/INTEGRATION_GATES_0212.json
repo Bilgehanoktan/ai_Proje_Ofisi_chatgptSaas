@@ -1,0 +1,112 @@
+{
+  "definition": "Equal-weight binary evidence gates for this 0212 work scope only; not overall project maturity/ETA or normative acceptance",
+  "gates": [
+    {
+      "id": "A",
+      "name": "Core recovery",
+      "done": 2,
+      "total": 3,
+      "criteria": [
+        [
+          "55 exact files",
+          true
+        ],
+        [
+          "29 diagnostic tests",
+          true
+        ],
+        [
+          "29 locked dependency tests",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Intent Authority + T1",
+      "done": 1,
+      "total": 3,
+      "criteria": [
+        [
+          "Direct claim/fence + ordinary T1",
+          true
+        ],
+        [
+          "Exact 0211 witness/journal wrapper",
+          false
+        ],
+        [
+          "Independent custody/effect authority",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Company + Terminal",
+      "done": 2,
+      "total": 3,
+      "criteria": [
+        [
+          "Single-project lifecycle composition",
+          true
+        ],
+        [
+          "Rollback/UNKNOWN/cap/tamper",
+          true
+        ],
+        [
+          "Multi-project concurrent composition",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "D",
+      "name": "PG/RLS",
+      "done": 0,
+      "total": 3,
+      "criteria": [
+        [
+          "Local PG+driver",
+          false
+        ],
+        [
+          "13 actual PG tests",
+          false
+        ],
+        [
+          "Non-owner RLS/lock contention",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Working product",
+      "done": 0,
+      "total": 4,
+      "criteria": [
+        [
+          "Exact full checkout+reviewed locks",
+          false
+        ],
+        [
+          "Full backend build/test",
+          false
+        ],
+        [
+          "Full frontend build",
+          false
+        ],
+        [
+          "Browser CEO/Office historical data",
+          false
+        ]
+      ]
+    }
+  ],
+  "done": 5,
+  "total": 16,
+  "percent": 31.25
+}
