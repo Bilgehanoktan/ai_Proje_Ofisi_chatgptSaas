@@ -25,3 +25,6 @@ Backend source owner candidate; frontend byte-identical consumer. Not normative 
 
 ## 0188 paired task/budget snapshot
 - `task.budget.snapshot.schema.json` SHA-256 `0c8c2306d12f3870a4d46445a177fe98acb0650ecf4e819a7c80bc704c239dd2`; backend source and generated frontend copy identical. Nested 0186/0187 contracts, historical sample only; no causal, lease or T1 authority. Schema runtime acceptance NOT_RUN.
+
+## 0222 shared historical CEO/Office replay
+- `ceo.office.shared.snapshot.schema.json` SHA-256 `e85bc656ca8dca50937501752dac4edb3a1833c8727d00f3ddcfdf07a4212ac7`; backend source and generated frontend copy are identical. References the pinned `lifecycle.prefix.schema.json` (SHA-256 `5278dfedc3ce2824a5caa5f9c5b2880b9dd52df3dcaa7e422cdab7842ebfc9e4`). Frame payload schema only; digest, sequence, completeness and cross-frame scope require the exact replay parser. Not live OfficeV0 or authority.
