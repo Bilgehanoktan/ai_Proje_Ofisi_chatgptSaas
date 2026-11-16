@@ -1,0 +1,207 @@
+{
+  "revision": "0213",
+  "date": "2026-11-16",
+  "branch": "integration/0213-cross-domain-gates",
+  "base_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
+  "source_commit": "9c3649d592b2382fa6aef4020fcc71000c18b075",
+  "product_manifest_blob": "74c6f9199f72669cfab80e54ddadcde76836aa9e",
+  "product_manifest_entries": 350,
+  "product_files_including_manifest": 351,
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+      "bytes": 6418,
+      "sha256": "50cc62f60b36bd53ae44b775526844ef1b81ceee852055b15d67b3c35c0d2525",
+      "git_blob": "a190919f0719716fccebd6d6f15177633864d56a",
+      "executed": true,
+      "new_test_cases": 4
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+      "bytes": 5086,
+      "sha256": "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df",
+      "git_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+      "executed": false,
+      "prepared_tests": 6
+    },
+    {
+      "path": "scripts/diagnostic_preflight_0213.py",
+      "bytes": 3683,
+      "sha256": "0c27a4420ed02bd103e1fd9da00038b5d4626b466ded497ccd956c0c63716499",
+      "git_blob": "a0484a23e2e5d9414165634035a8ddc5acc70402",
+      "executed": true
+    }
+  ],
+  "local_evidence": {
+    "bundle": "AI_Company_OS_0212_KAYNAK_VE_KANIT.zip",
+    "core55": {
+      "verified": 55,
+      "expected": 55,
+      "original_source_changed": false
+    },
+    "test_run": {
+      "command": "PYTHONPATH=.:tests python -B -m unittest test_retained_snapshot_0201 test_terminal_anchor_lifecycle_0203 test_lifecycle_prefix_p03 test_lifecycle_projection_p02 test_intent_authority_0211 test_intent_authority_t1_0212 test_company_terminal_0212 test_company_multiproject_0213 -v",
+      "ran": 56,
+      "passed": 56,
+      "failed": 0,
+      "expected_residual_reproduced": 1,
+      "new_multi_project": 4,
+      "log_sha256": "696e9d72b8a67112c4da20a0f38c25174a4ac3889932724785aa8287ec526600"
+    },
+    "preflight": {
+      "source_verified": 55,
+      "locked_dependency_match": false,
+      "test_status": "DIAGNOSTIC_PASS",
+      "acceptance": "HOLD",
+      "reported_tests": 56
+    },
+    "environment": {
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "fastapi_installed": "0.128.2",
+      "fastapi_required": "0.163.0",
+      "starlette_installed": "0.50.0",
+      "starlette_required": "1.10.0",
+      "uvicorn_installed": "0.48.0",
+      "uvicorn_required": "0.34.2",
+      "cryptography": "46.0.4",
+      "postgres_binary": "NOT_FOUND",
+      "psycopg": "NOT_INSTALLED",
+      "node": "22.16.0",
+      "full_checkout": "NOT_AVAILABLE_LOCAL"
+    }
+  },
+  "not_run": [
+    "6 exact 0209/0210/0211 witness/journal/authority T1 wrapper tests (prepared and syntax checked only)",
+    "29 pinned dependency acceptance",
+    "13 PostgreSQL regression tests",
+    "RLS nonowner and cross-tenant",
+    "Full backend + frontend dependency-pinned build",
+    "CEO and Office browser runtime integration"
+  ],
+  "risk": [
+    "D-01 memory/model/effect boundary remains.",
+    "D-02 independent custody/real clock/restore root absent.",
+    "D-03 external latest witness check-to-commit race remains.",
+    "D-04 local authority DB restored alongside journal and T1 permits replay; original 0211 test reproduces.",
+    "One project B plan and shared budget are synthetically constructed; no PG transaction lock or real tenant isolation measured.",
+    "Full chain wrapper prepared but not executed, no normative F0 security grant."
+  ],
+  "preserved": [
+    "348/348 prior product entries unchanged",
+    "prior implementation and decision history",
+    "main/CI/PROD untouched"
+  ],
+  "progress": {
+    "definition": "16 equal binary evidence gates for current integration scope, NOT overall system completion or normative security acceptance",
+    "gates": [
+      {
+        "id": "A",
+        "name": "Core recovery",
+        "done": 2,
+        "total": 3,
+        "criteria": [
+          [
+            "55 exact files",
+            true
+          ],
+          [
+            "29 diagnostic tests",
+            true
+          ],
+          [
+            "29 locked dependency tests",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "B",
+        "name": "Intent Authority + T1",
+        "done": 1,
+        "total": 3,
+        "criteria": [
+          [
+            "Direct claim/fence + ordinary T1",
+            true
+          ],
+          [
+            "Exact 0211 witness/journal wrapper",
+            false
+          ],
+          [
+            "Independent custody/effect authority",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "C",
+        "name": "Company + Terminal",
+        "done": 3,
+        "total": 3,
+        "criteria": [
+          [
+            "Single-project lifecycle composition",
+            true
+          ],
+          [
+            "Rollback/UNKNOWN/cap/tamper",
+            true
+          ],
+          [
+            "Multi-project concurrent composition",
+            true
+          ]
+        ]
+      },
+      {
+        "id": "D",
+        "name": "PG/RLS",
+        "done": 0,
+        "total": 3,
+        "criteria": [
+          [
+            "Local PG+driver",
+            false
+          ],
+          [
+            "13 actual PG tests",
+            false
+          ],
+          [
+            "Non-owner RLS/lock contention",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "E",
+        "name": "Working product",
+        "done": 0,
+        "total": 4,
+        "criteria": [
+          [
+            "Exact full checkout+reviewed locks",
+            false
+          ],
+          [
+            "Full backend build/test",
+            false
+          ],
+          [
+            "Full frontend build",
+            false
+          ],
+          [
+            "Browser CEO/Office historical data",
+            false
+          ]
+        ]
+      }
+    ],
+    "done": 6,
+    "total": 16,
+    "percent": 37.5
+  }
+}
