@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0213",
-  "status": "D0_MULTIPROJECT_4_PASS_FULL_WRAPPER_PREPARED_NOT_RUN_PG_RLS_BUILD_HOLD",
+  "doc_revision": "0214",
+  "status": "D0_ORIGINAL_FULLCHAIN_AND_HISTORICAL_UI_SLICE_PASS_INDEPENDENT_PG_FULL_BUILD_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
+  "parent_git_commit": "3cec45d2040fc35293ddcb82840ee543ba1f4019",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1055,16 +1055,16 @@
       "sha256": "e205c0e995ea5d9b49ead972a3baeef072fb05d348291dd06bf8d2c3598fa501"
     },
     "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": {
-      "bytes": 2516,
-      "sha256": "652541ce003d45c89ab7bac94429bb240621ddecc6f3814a9aaa7dd0e41c6e41"
+      "bytes": 2467,
+      "sha256": "e429fb9f000fc340ab8ecab6722b8137fb3114f290a1ec49a4968da8b4ee5441"
     },
     "ai-company-os-frontend/features/mvp/lifecycleProjection.ts": {
       "bytes": 2416,
       "sha256": "a31d6df2d4d6f6e9a49a25ac652b56450d4e9ffa0524c25ae3b7b55d689ae12d"
     },
     "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": {
-      "bytes": 2358,
-      "sha256": "cf5722c31b1427f68502ffdd1d6a89790c32033c115b206f1fb43cb187ef6f69"
+      "bytes": 2309,
+      "sha256": "c1858c0751e594aba4fbc07728e99d39fab867c0f45bf52e099690fc97350cca"
     },
     "ai-company-os-frontend/features/mvp/localBackend.ts": {
       "bytes": 475,
@@ -1405,8 +1405,24 @@
     "ai-company-os-backend/tests/test_authority_wrapper_0213.py": {
       "bytes": 5086,
       "sha256": "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df"
+    },
+    "ai-company-os-backend/tests/test_authority_fullchain_0214.py": {
+      "bytes": 9712,
+      "sha256": "ba9c77f0c7b529b532a91c25aee88f6b3aa1136181a79206180d5c5e6d0312b9"
+    },
+    "ai-company-os-frontend/features/mvp/historicalEvidence.ts": {
+      "bytes": 1741,
+      "sha256": "032abe3f5879d6157b502c3153eb4f6a58d8684b853b1cc4e394e4282ed3667f"
+    },
+    "ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx": {
+      "bytes": 1041,
+      "sha256": "30a6a9db9b5811ce63675a9ac004777b12d214735df29f9fa029c4ac53e8ca82"
+    },
+    "ai-company-os-frontend/tests/historical-evidence-0214.test.cjs": {
+      "bytes": 2123,
+      "sha256": "1aa90b23630cf86f91df9ac591d5f10370d5c996c2115df0a323960598256de3"
     }
   },
-  "parent_source_manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c",
-  "source_git_commit_note": "Two new test sources: 4 real SQLite cross-project fixture tests PASS; 6 original witness/journal/authority chain tests prepared NOT_RUN pending full exact repository. Original 348 manifest records unchanged; 55 core hashes/56 diagnostic tests reconfirmed. PG/RLS, pinned dependency, frontend/backend build and browser NOT_RUN."
+  "parent_source_manifest_blob": "74c6f9199f72669cfab80e54ddadcde76836aa9e",
+  "source_git_commit_note": "18 original backend dependency and 2 frontend parser files recovered locally exactly; original full wrapper run through new fixture 10/10 (1 restore residual); 66 Python +14 Node diagnostic tests; 4 new and 2 modified product files; no live authority, locked deps, PG or full browser acceptance."
 }
