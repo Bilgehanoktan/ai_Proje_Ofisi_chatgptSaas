@@ -169,3 +169,8 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 - [Current](handover/CURRENT.md) · [Technical catalog](catalog/revisions/TECHNICAL_CATALOG_0213.json) · [Architecture](docs/0213/ARCHITECTURE_AND_CATALOG.md)
 - [Test evidence](releases/GITHUB_READBACK_0213.json) · [RLS/UI acceptance matrix](docs/0213/PG_RLS_UI_ACCEPTANCE_MATRIX.md) · [Gate progress](progress/INTEGRATION_GATES_0213.json)
 - [Offline preflight](scripts/diagnostic_preflight_0213.py) · [Next](handover/NEXT_STEP_0213.md)
+
+## 0214 / 0215
+- [0214 historical readback](releases/GITHUB_READBACK_0214.json) · [Current](handover/CURRENT.md)
+- [Architecture](docs/0215/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0215.json) · [Evidence](releases/GITHUB_READBACK_0215.json)
+- [PG runbook](docs/0215/PG_RUNBOOK.md) · [Runner](scripts/run_pg_acceptance_0215.py) · [Gates](progress/INTEGRATION_GATES_0215.json) · [Next](handover/NEXT_STEP_0215.md)
