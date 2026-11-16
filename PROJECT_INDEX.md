@@ -161,3 +161,12 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10E — 0211 + UI D0 source union candidate
 [Candidate pointer](handover/CURRENT_COMBINED_UI_P10E.json) · [Architecture](docs/UI-P10E/ARCHITECTURE_AND_CATALOG.md) · [Progress](progress/UI_P10E.json) · [Next](handover/NEXT_STEP_UI.md). Separate from canonical core branches.
+
+
+## UI-P10F
+- [Current UI](handover/CURRENT_UI.md)
+- [Combined candidate](handover/CURRENT_COMBINED_UI_P10F.json)
+- [Architecture](docs/UI-P10F/ARCHITECTURE_AND_CATALOG.md)
+- [Progress](progress/UI_P10F.json)
+- [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10F.json)
+- [Next](handover/NEXT_STEP_UI.md)

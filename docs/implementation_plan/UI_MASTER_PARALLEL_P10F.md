@@ -1,0 +1,27 @@
+# UI-P10F — 0211 + UI D0 source candidate
+
+Source: 5b57199c397fa6ae183ec16c9efaa480dfc78175; parent 14738822c38eb179825e00a01e48e2a3a0c16c3d. Manifest 44844b647640694a00abc62f200af034d38ac6ff. 372 pins, 373 product files, 158 frontend; 359 unchanged, 5 additions, 8 modifications, zero deletion. Selected local verification 113 exact source files, 11/13 changed product files local; two exact-source remote-only patches (Dashboard and ProjectStudio). No main merge or new authority.
+
+## Changes and maintenance
+- evidenceContext: exact lifecycle/prefix parsing, endpoint/plan/run/head revision key; selected event must remain in filtered visible record. HistoricalEvidence and EDS focus/details, AgentDirectory role template. No live identity or authority inferred.
+- draftHistory: last 20 local undo snapshots, original DAG validation on every action/undo. WorkflowDraft uses functional state update; canonical plan unchanged. ProjectStudio clears filters to reveal selected task. Dashboard label updated.
+- wallDecor: two SVG assets; officeArtwork adds four fixed wall accents, existing 16 desk accents and reserve floor preserved. No geometry/placement or runtime agent movement changes.
+- test_authority_sqlite_p10f: original ordinary T1 mapping and coordinator under 0211 claim fence, disposable SQLite only. 7 protection cases, 1 expected residual replay when both stores restored. Original 0211 tests: 9 protections + 1 residual. D-03 cooperating root serialized, independent trust open; D-04 replay reproduced, not fixed; D-01/02 open. No actual witness/journal wrapper or PG/RLS execution.
+- preflight_ui_p10f: read-only inventory, symlink/traversal guards, core lock and installed dependency reporting. Six probes pass. Full checkout absent; core29 37/55 exact, missing 18, original core29 NOT_RUN.
+- w8_p10f: new adapter loads exact original W8 runner without modifying it, binds P10F manifest, adds existing pinned auxiliary SQL/core runner and signature wheelhouse requirements, runs selected 43 model and original locked core29 before original full test/build/smoke. Original W8 stages locks for review; absence of package-lock in clean source is not itself a defect. Adapter syntax checked; final prepare/install/test/smoke not run. No dependency upgrades or lock substitution.
+
+## Verification and limits
+7/7 original backend + compiled GET rerun, 25/25 terminal/prefix rerun, 43/43 model (16 new,27 rerun), 18/18 standalone SVG Chromium, 4 TSX syntax, 6 preflight probes. No React/Next product acceptance: build exit 127, next not found. Real Next parity 0/7 and original browser 0/52 not run. Exact 0212/0213 HEAD e33ffb633bc5a445aec1fb4946625884d503c348; 0212 only two new test files, no production code modification; 0213 same commit. No merge; prior 52 outcomes historical. Independent acceptance HOLD, 21/40 original UI gates, 0/7 acceptance.
+
+## Diagnosis / rollback
+Use exact manifest and preflight; never replace absent original files with mocks. If root restore replay occurs, isolate both disposable DBs; retain logs and do not grant authority. For UI context mismatch inspect endpoint/plan/run/version and filters; for undo inspect original DAG; for art inspect SVG only. Revert candidate to parent 14738822c38eb179825e00a01e48e2a3a0c16c3d (separate branch), no DB migration. W8 adapter failure: retain original runner and review stage, regenerate a new isolated stage only after exact source recovery. No CI, PROD, real provider, effects, spend, real data or grants.
+
+# UI-P10G — unblock exact product verification
+
+Priority zero: obtain exact full P10F archive or user-local checkout with network access; attach archive to conversation if remote bytes cannot be materialized. Source slice and historical packages are not full checkout.
+1. Audit exact product manifest and original 55-file core lock; recover 18 absent originals, then core29 and exact 0211 witness/journal wrapper. Keep D-01/02/03/04 open until evidence establishes closure; reproduce negatives separately.
+2. Use tests/integration/w8_p10f.py on exact clean checkout: audit, prepare isolated stage, review generated lock fingerprint, install, test, smoke with reviewed Chromium. Preserve original W8 review/approval rules. No lock pin substitution. Adapter remains a candidate until run.
+3. Actual Next build, 7 Next E2E and 52 original browser checks; visual review separately. Preserve regression logs and screenshots.
+4. Compare 0212/0213 scope; merge only as explicit isolated source-union task, no main merge. Current 0211+UI candidate unchanged in core.
+5. Parallel UI C–H: evidence context, office decoration, local workflow undo, accessible agent/project filters and model/memory/finance/security details. Stop if new authority is implied.
+6. Update manifest, catalog, architecture, handover and progress; deliver exact archive and local verified evidence. No artificial gate closure.

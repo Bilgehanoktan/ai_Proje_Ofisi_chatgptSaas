@@ -103,3 +103,7 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## UI-P10E — 0211 + UI D0 source union candidate
 [Source/symbol/test delta](revisions/TECHNICAL_CATALOG_UI_P10E.json) · [Maintenance and rollback](../docs/UI-P10E/ARCHITECTURE_AND_CATALOG.md).
+
+
+## UI-P10F
+See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architecture](../docs/UI-P10F/ARCHITECTURE_AND_CATALOG.md). Exact source 5b57199c397fa6ae183ec16c9efaa480dfc78175; no API/schema/dependency upgrades. D0 only.

@@ -1,7 +1,9 @@
-# UI-P10F — combined candidate verification
-1. Materialize exact full candidate checkout and original lockfiles; verify 367 source manifest entries against bytes; no dependency substitution. If unavailable, record BLOCKED.
-2. In isolated authorized D0 environment rerun original 0211 authority component and original core29 + full wrapper, residual D-03/D-04, and combined tests. Never imply PG/RLS or independent acceptance from SQLite.
-3. Run the seven real Next GET endpoints against app.main and 52 original product browser checks; record each case and screenshot; no generic acceptance substitution.
-4. Compare 0212/0213 source, decisions and evidence against 0211 union, prepare explicit follow-up candidate only after scope decision; preserve independent branches.
-5. Continue A–H: CEO card focus/details, office visual catalog, Agent/Project selection/filters, Model/Memory evidence, Finance/Security history and EDS accessibility/notifications. No live metrics, providers, actual agents, external mutations or expenditure.
-6. Update source/symbol/API/DB/dependency/test catalog, defect/rollback and progress/handover. Original 21/40 and acceptance 0/7 retained until documented gates close.
+# UI-P10G — unblock exact product verification
+
+Priority zero: obtain exact full P10F archive or user-local checkout with network access; attach archive to conversation if remote bytes cannot be materialized. Source slice and historical packages are not full checkout.
+1. Audit exact product manifest and original 55-file core lock; recover 18 absent originals, then core29 and exact 0211 witness/journal wrapper. Keep D-01/02/03/04 open until evidence establishes closure; reproduce negatives separately.
+2. Use tests/integration/w8_p10f.py on exact clean checkout: audit, prepare isolated stage, review generated lock fingerprint, install, test, smoke with reviewed Chromium. Preserve original W8 review/approval rules. No lock pin substitution. Adapter remains a candidate until run.
+3. Actual Next build, 7 Next E2E and 52 original browser checks; visual review separately. Preserve regression logs and screenshots.
+4. Compare 0212/0213 scope; merge only as explicit isolated source-union task, no main merge. Current 0211+UI candidate unchanged in core.
+5. Parallel UI C–H: evidence context, office decoration, local workflow undo, accessible agent/project filters and model/memory/finance/security details. Stop if new authority is implied.
+6. Update manifest, catalog, architecture, handover and progress; deliver exact archive and local verified evidence. No artificial gate closure.
