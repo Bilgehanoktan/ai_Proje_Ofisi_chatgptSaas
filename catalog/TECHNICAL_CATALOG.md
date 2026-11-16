@@ -125,3 +125,6 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10J-05
 [Source/symbol delta](revisions/TECHNICAL_CATALOG_UI_P10J05.json) · [Architecture and rollback](../docs/UI-P10J/P10J05_ARCHITECTURE.md). D0 graph and historical presentation; no API/DB change.
+
+## UI-P10J-07
+[Verified symbols and overlap](revisions/TECHNICAL_CATALOG_UI_P10J07.json). No API/DB/source change.

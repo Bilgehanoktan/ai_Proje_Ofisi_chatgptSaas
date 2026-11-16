@@ -242,3 +242,6 @@ P10J-03 integrated 10 modifications and two additions to UI presentation (387 pr
 
 # UI-P10J-05 — bounded presentation increment
 [Architecture and evidence boundaries](../UI-P10J/P10J05_ARCHITECTURE.md). Full guarded reference/draft DAG presentation, role-template task context, historical event explorer, decorative office assets only. No backend contract, authority, DB or live status changes. Full W8/build/browser/independent acceptance remain HOLD.
+
+# UI-P10J-06/07 — 0220 alignment and W8
+[Verification and integration constraints](../UI-P10J/P10J06_ARCHITECTURE.md). Product unchanged; full checkout and W8 HOLD.

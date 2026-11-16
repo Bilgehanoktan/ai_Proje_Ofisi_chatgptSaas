@@ -1,3 +1,7 @@
+# P10J-07 — environment HOLD, next actual W8
+
+Use docs/UI-P10J/P10J07_W8_RUNBOOK.md on network-capable isolated DEV. Exact UI checkout 390 pins, prepare/review locks before install/test/smoke. Recheck 0220/0221 and UI heads. No new duplicate features or automatic merge. Combined candidate only after source compatibility and explicit scope; 21/40, core 7/16, independent 0/7 unchanged.
+
 # UI-P10J-06 — exact checkout and product verification
 
 Check parallel heads, materialize exact 390-pin checkout; verify W8 P10J-05 adapter chain, prepare/review locks before full build/test/smoke. Validate DAG selection and edit interactions, lifecycle filtering/reset, role contexts and office previews in actual React browser. No live runtime/authority/core merge, main, CI or PROD. Continue presentation work separately from acceptance. Previous pointer below.
