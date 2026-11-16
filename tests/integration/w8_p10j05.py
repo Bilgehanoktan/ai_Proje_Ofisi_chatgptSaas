@@ -6,7 +6,7 @@ import subprocess
 import sys
 
 PARENT_BLOB = '328464e636baff4488830e054db6f52690505056'
-CANDIDATE_MANIFEST = 'e7534a4d65aaa960e7d07788197181b4721e7075'
+CANDIDATE_MANIFEST = '106bc3353d545cf4145093c766b8b9d18caecc5d'
 
 def load_candidate():
     p = Path(__file__).resolve().with_name('w8_p10j.py')

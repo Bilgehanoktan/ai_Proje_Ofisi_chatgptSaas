@@ -7,7 +7,7 @@
     "core_0213": "3cec45d2040fc35293ddcb82840ee543ba1f4019",
     "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
   },
-  "manifest_blob": "e7534a4d65aaa960e7d07788197181b4721e7075",
+  "manifest_blob": "106bc3353d545cf4145093c766b8b9d18caecc5d",
   "product_files": 391,
   "manifest_entries": 390,
   "modified": 8,
@@ -32,7 +32,20 @@
     "w8": "NOT_RUN",
     "full_build": "NOT_RUN",
     "real_api": "NOT_RUN",
-    "browser": "NOT_RUN"
+    "browser": "NOT_RUN",
+    "dependency_probe": {
+      "npm": "FAIL ENOTCACHED exit 1",
+      "pip": "FAIL no matching FastAPI distribution exit 1",
+      "package_sha256": "e00528a32e54e21b7547ad08762a44dede75366af0f0781140f42b35f102c0f0",
+      "requirements_sha256": "e1e7b627b7f83b54687170391406cbf996a85dfb02fed06591b301c01a78799a",
+      "installed": {
+        "fastapi": "0.128.2",
+        "starlette": "0.50.0",
+        "uvicorn": "0.48.0",
+        "cryptography": "46.0.4"
+      },
+      "reviewed_locks": false
+    }
   },
   "gates": {
     "ui": "21/40",
@@ -80,14 +93,14 @@
     {
       "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
       "old_blob": "efac23d30917475d82ecaa9b7a7793d2587bbc3d",
-      "bytes": 2582,
-      "sha256": "8b46aaf7e648f2d4d1eb854eececd9b363699dabd0b77fbcee7b2da4cbbb16ba"
+      "bytes": 2869,
+      "sha256": "18b51a498f96659a53b0c1231e2551da531a24738b9a08a076bec4eeb0f2f23b"
     },
     {
       "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
       "old_blob": "69737471493a4233d94dc74da94a492d7fb844bf",
-      "bytes": 2745,
-      "sha256": "69ac8b46b928ee497cc6eef4eb4e9090b472fc6fa29dd6c4a73d7cd7e24caa94"
+      "bytes": 3032,
+      "sha256": "944db519eee5cf6147d65344a80b379488e1f71936fcc3a053d7292605e74d3c"
     },
     {
       "path": "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
@@ -114,5 +127,28 @@
       "sha256": "f4fb14cc5a92f8891665013524ea67d6857b6ddf564bf33fb9bfc5f793d62e18"
     }
   ],
-  "security": "D0 only; no authority, no cross-record joins, no core merge"
+  "security": "D0 only; no authority, no cross-record joins, no core merge",
+  "initial_source_commit": "8297bc479efa3da5ddc292a0ed1b6be41f15dec3",
+  "baseline_browser_contract_review": {
+    "status": "STATIC_REVIEW_CORRECTED_NOT_EXECUTED",
+    "files": [
+      "tests/integration/browser_lifecycle_p02.py",
+      "tests/integration/browser_lifecycle_prefix_p03.py"
+    ],
+    "change": "Preserve original version/state list and collapsed explorer; browser selectors still require actual test."
+  },
+  "patch": [
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "old_blob": "912631575a040370cf90f02e8bc70005f9def841",
+      "bytes": 2869,
+      "sha256": "18b51a498f96659a53b0c1231e2551da531a24738b9a08a076bec4eeb0f2f23b"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "old_blob": "95c95a71fa465ebec51f355382cf520596d0bd29",
+      "bytes": 3032,
+      "sha256": "944db519eee5cf6147d65344a80b379488e1f71936fcc3a053d7292605e74d3c"
+    }
+  ]
 }

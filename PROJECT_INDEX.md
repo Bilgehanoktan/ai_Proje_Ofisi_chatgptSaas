@@ -200,3 +200,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10J-04 — parallel reconciliation
 [Current UI](handover/CURRENT_UI.md) · [Next](handover/NEXT_STEP_UI.md) · [P10J-03](docs/UI-P10J/P10J03_ARCHITECTURE.md) · [P10J-04](docs/UI-P10J/P10J04_ARCHITECTURE.md) · [Protocol](docs/development/PARALLEL_WORK_PROTOCOL.md) · [Progress](progress/UI_P10J04.json) · [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10J04.json). Core 0213 remains separate.
+
+## UI-P10J-05
+[Architecture](docs/UI-P10J/P10J05_ARCHITECTURE.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_UI_P10J05.json) · [Progress](progress/UI_P10J05.json) · [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10J05.json). Core remains separate.

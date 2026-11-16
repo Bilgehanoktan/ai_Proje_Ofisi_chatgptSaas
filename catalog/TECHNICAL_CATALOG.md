@@ -122,3 +122,6 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10J-03 / 04
 [Product source delta](revisions/TECHNICAL_CATALOG_UI_P10J.json) · [Parallel and W8 delta](revisions/TECHNICAL_CATALOG_UI_P10J04.json) · [Architecture and maintenance](../docs/UI-P10J/P10J04_ARCHITECTURE.md). Standalone tests only; product manifest unchanged in P10J-04.
+
+## UI-P10J-05
+[Source/symbol delta](revisions/TECHNICAL_CATALOG_UI_P10J05.json) · [Architecture and rollback](../docs/UI-P10J/P10J05_ARCHITECTURE.md). D0 graph and historical presentation; no API/DB change.

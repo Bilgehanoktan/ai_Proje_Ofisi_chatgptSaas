@@ -239,3 +239,6 @@ Diagnosis: use archive auditor before extract; W8 audit/prepare/review/install/t
 
 # UI-P10J — bounded parallel UI source and coordination
 P10J-03 integrated 10 modifications and two additions to UI presentation (387 product files, 386 pins). P10J-04 reconciles the exact P10I delivery without changing product bytes; no 0213 merge. See [P10J-03](../UI-P10J/P10J03_ARCHITECTURE.md), [P10J-04](../UI-P10J/P10J04_ARCHITECTURE.md) and [parallel protocol](../development/PARALLEL_WORK_PROTOCOL.md). All live authority, independent acceptance and W8 full acceptance remain HOLD. Prior exact P10I design text is preserved in commit 1b5481c2ed677e9ea04c913dd231696b6f14b741.
+
+# UI-P10J-05 — bounded presentation increment
+[Architecture and evidence boundaries](../UI-P10J/P10J05_ARCHITECTURE.md). Full guarded reference/draft DAG presentation, role-template task context, historical event explorer, decorative office assets only. No backend contract, authority, DB or live status changes. Full W8/build/browser/independent acceptance remain HOLD.
