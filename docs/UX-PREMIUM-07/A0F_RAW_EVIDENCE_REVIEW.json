@@ -1,0 +1,88 @@
+{
+  "revision": "UX-PREMIUM-07-A0F",
+  "source": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "archive": "AIOS_PREMIUM_A0C_EVIDENCE_20261117_000117.zip",
+  "archive_sha256": "1d9267628a6b253840cf4144fa99026729ba64f7f779b1cd6d02493f4672c68c",
+  "archive_bytes": 10962649,
+  "entries": 62,
+  "crc": "PASS",
+  "inventory_sha256": "72d5b7276423e52cf53cdf5ab15be8892d191509ab10cc1ec292cd6e2d6b9fd0",
+  "markers": "4/4 exact raw bytes equal REVIEW fingerprint",
+  "review_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+  "npm_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+  "python_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+  "npm_registry_integrity_records": "61/61",
+  "wheel_hash_records": "28/28 match lock (raw wheels absent)",
+  "core29": {
+    "pass": 29,
+    "files": 55,
+    "source": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+    "report_sha256": "840f57bdebda7d600c8e79bad966bbf203ea5160ef38f29a69ad1ef1801642a1",
+    "scope": "historical 0207 only, overlap backend suite"
+  },
+  "native": {
+    "groups": 8,
+    "browser": "157.0.8103.39",
+    "json_sha256": "c7c080691e33183f6ee2a661f3bc9629c50dd87c48f8ad99fcc053a4726e3e00",
+    "png_sha256": "9117c4e63224f234c5351f6c5bcd7be0e1e40989c24ec0cb4ec917f735253de1",
+    "size": [
+      1440,
+      1762
+    ]
+  },
+  "png": {
+    "decoded": 53,
+    "unique_hashes": 53,
+    "legacy": 52,
+    "native": 1,
+    "ceo_height_desktop": 6978,
+    "ceo_height_mobile": 12868
+  },
+  "visual_review": {
+    "status": "BASELINE_REVIEW_COMPLETE_DEFECTS_RECORDED",
+    "scope": "All 53 decoded, four overview sheets viewed, native full screenshot inspected; no pixel diff or motion/GPU audit",
+    "findings": [
+      {
+        "id": "VIS-01",
+        "owner": "A1",
+        "finding": "Legacy 12x10 scene combines Engineering/Research and QA/Lounge, CEO/Strategy label; separate pods and central orchestrator/briefing required."
+      },
+      {
+        "id": "VIS-02",
+        "owner": "A4",
+        "finding": "Zoomed/panned native screenshot crops right/top, minimap overlays scene; assess fit and focus, not proof default camera broken."
+      },
+      {
+        "id": "VIS-03",
+        "owner": "A4",
+        "finding": "Uniform desks, simple sprites, glass; richer asset profiles and corporate pixel-art pending."
+      },
+      {
+        "id": "VIS-04",
+        "owner": "A4/A7",
+        "finding": "Controls and role context below canvas; responsive and keyboard/occlusion/GPU measurements pending."
+      },
+      {
+        "id": "VIS-05",
+        "owner": "General UI (other branch)",
+        "finding": "Older general UI long pages and mobile navigation; do not modify shared routes here."
+      }
+    ]
+  },
+  "limits": [
+    "User-run evidence, no independent replay",
+    "No raw wheel or sample DB bytes",
+    "Only one native desktop capture (zoomed after minimap interaction); no new hybrid scene",
+    "No HD criterion individually accepted"
+  ],
+  "A0": "BASELINE_REVIEWED_LOCAL_D0_PASS",
+  "A1": "ELIGIBLE_CANDIDATE_IMPLEMENTATION",
+  "office": "JOIN_HOLD",
+  "independent": "HOLD",
+  "observed_heads": {
+    "core": "c715e1edfd1af021b4c0be0681c6958455b6a26f",
+    "ui": "1d0d4eb89e0aff92720c0d545247b7bd3713012e",
+    "source": "a79df6622e2eb9de63795ff6c0309984d1be6910"
+  },
+  "no_merge": true
+}
