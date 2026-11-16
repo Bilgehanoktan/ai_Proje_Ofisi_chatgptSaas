@@ -20,7 +20,8 @@
     "manifest_path_size_matches": 384,
     "selected_sha256_batch": 12,
     "previous_batch": 12,
-    "unique_selected": 23
+    "unique_selected": 41,
+    "additional_batch": 18
   },
   "local_test": {
     "draft_overview": "3/3 PASS",
@@ -29,7 +30,8 @@
     "full_build": "NOT_RUN",
     "real_api": "NOT_RUN",
     "browser": "NOT_RUN",
-    "w8": "NOT_RUN"
+    "w8": "NOT_RUN",
+    "checkout_auditor": "8/8 PASS on exact prior helper blob 58a16a9e7de34b8e25e079fca49cd98087b9d37c; rerun this turn, baseline count 384"
   },
   "w8_gap": "P10I adapter absent in pinned parent tree and 404; new P10J adapter candidate extends P10H, adds P10I/P10J model checks and archive aux pins.",
   "delta": [
@@ -105,5 +107,21 @@
       "bytes": 744,
       "sha256": "50780fc5fef42ef26d573033f1577a4763f152f962b1671fa53cc016a1cfddee"
     }
-  ]
+  ],
+  "remote_delta": {
+    "sha256_matches": 12,
+    "path_size_matches": 386,
+    "preserved_blobs": 374,
+    "deleted": 0
+  },
+  "w8": {
+    "adapter_blob": "cc88a0b9db495c922a92cac01ce9a84f25f670d0",
+    "aux_git_tree_matches": 20,
+    "milestone_mirror_match": true,
+    "archive_test_invocation": "unittest discovery corrected",
+    "full_run": "NOT_RUN"
+  },
+  "evidence": "tests/evidence/TEST_EVIDENCE_UI_P10J.json",
+  "source_commit": "346cf03de51c1b24ab1a5e9f9a973de6a12b61d0",
+  "adapter_fix_commit": "9df9c2fa74bc31b6c01d2a2b5581432c0d1a98fb"
 }

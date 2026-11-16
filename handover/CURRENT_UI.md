@@ -1,3 +1,7 @@
+# P10J-03 final readback
+
+Source integration 346cf03de51c1b24ab1a5e9f9a973de6a12b61d0; W8 unittest invocation fix 9df9c2fa74bc31b6c01d2a2b5581432c0d1a98fb. 12/12 changed/new product SHA pins verified; 386/386 paths/sizes, 374 preserved Git blobs. 18 additional exact prior source pins (41 distinct old pins across batches). 20/20 W8 auxiliary Git tree pins and milestone mirror match; full W8 NOT_RUN. Standalone draft summary 3/3 and previous checkout auditor 8/8 rerun in this round. See ../tests/evidence/TEST_EVIDENCE_UI_P10J.json. 21/40 and 0/7 unchanged.
+
 # UI-P10J-03 — parallel source integration
 Parent 96aa2c1247c49430f2e01c4f8eae9e70a5ffa4c1. Manifest 35724e95238201da97a9f98b390d879704f68771; 386 pins, 387 product files, 10 modifications + 2 additions, no deletion. 385 parent product blobs match P10I; 384 parent paths/sizes match; 12 selected SHA/length matches this batch, 23 unique across two batches (not full byte audit). W8 P10I adapter absent in parent tree and fetch 404; new P10J candidate preserves P10H chain, adds P10I/P10J models and two original archive auxiliary pins. Full W8 NOT_RUN. Local standalone draftOverview 3/3 on TS 5.8.3 / Node 22.16.0, not locked product run. All UI React, artwork and API/build/browser tests NOT_RUN. 21/40, independent 0/7. No live authority, no main/CI/PROD. Details: ../progress/UI_P10J.json and ../catalog/revisions/TECHNICAL_CATALOG_UI_P10J.json.
 
