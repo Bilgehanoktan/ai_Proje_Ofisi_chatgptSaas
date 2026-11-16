@@ -1,0 +1,68 @@
+{
+  "revision": "UX-PREMIUM-05",
+  "files": {
+    "product/ai-company-os-frontend/office/engine/premiumPresentation.ts": {
+      "symbols": [
+        "frames",
+        "clips",
+        "atlasSize",
+        "avatarFrame",
+        "glassAlpha",
+        "monitorGlow"
+      ],
+      "dependencies": [
+        "premiumModel"
+      ],
+      "tests": "premium-presentation"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumLift.ts": {
+      "symbols": [
+        "initialLift",
+        "enqueueLift",
+        "cancelLift",
+        "tickLift"
+      ],
+      "dependencies": [
+        "premiumModel"
+      ],
+      "scope": "isolated candidate; no active actor transfer"
+    },
+    "product/ai-company-os-frontend/office/scenes/premiumAtlasPaint.ts": {
+      "symbols": [
+        "paintAvatar",
+        "paintAtlas"
+      ],
+      "dependencies": [
+        "premiumPresentation",
+        "CanvasRenderingContext2D"
+      ],
+      "tests": "test_atlas_browser"
+    },
+    "product/ai-company-os-frontend/office/scenes/PremiumNativeScene.tsx": {
+      "symbols": [
+        "PremiumNativeScene"
+      ],
+      "dependencies": [
+        "premiumPresentation",
+        "premiumAtlasPaint",
+        "existing Phaser 3.90.0"
+      ],
+      "state": "source integrated, renderer NOT_RUN"
+    },
+    "product/ai-company-os-frontend/tests/premium-presentation.test.cjs": {
+      "symbols": [
+        "12 selected unit checks"
+      ],
+      "dependencies": [
+        "compiled helpers",
+        "Node assert"
+      ]
+    }
+  },
+  "api_delta": [],
+  "db_delta": [],
+  "event_delta": [],
+  "dependency_pin_delta": [],
+  "rollback": "revert five product paths and manifest to parent",
+  "diagnostics": "HANDOVER.md"
+}

@@ -1,0 +1,95 @@
+v22.16.0
+Version 5.8.3
+PASS four unique reserved visual roles
+PASS furniture excluded from walkable grid
+PASS invalid cell and blocked destination rejected
+PASS route adjacency and occupied cell exclusion
+PASS occupied goal denied
+PASS work pose at own station
+PASS mid-edge replan rejected
+PASS interpolated finite positions
+PASS all four meeting then rest then work; no cell/edge conflicts
+PASS opposing goals resolve without swapping or teleporting
+PASS non-finite and negative delta bounded
+PASS invalid role and mode rejected
+PASS OfficeV0 data is never converted into visual authority
+PASS interrupted cooperative plan cannot leave stale route
+PASS three-role cycle resolves in real office model
+PASS four-role cycle resolves without cell conflict
+16/16 PASS
+PASS opposite adjacent destinations resolved via side cell
+PASS single-width corridor cannot swap
+PASS fixed third actor is never crossed
+PASS same goal rejected
+PASS invalid start rejected
+PASS bounded state search
+PASS deterministic escape
+PASS depth orders front foot after back foot
+PASS depth tie stable actor above furniture
+PASS zoom viewport center retained
+10/10 PASS
+PASS three actor cyclic deadlock
+PASS four actor cyclic deadlock
+PASS fully occupied cycle cannot swap
+PASS fixed obstacle never traversed
+PASS search is incremental with bounded expansions
+PASS hard search state limit
+PASS deterministic across slice sizes
+PASS duplicate starts/goals fail closed
+PASS invalid budget rejected
+PASS invalid limits and unsupported actor count
+PASS already at goal is empty plan
+PASS inputs copied to avoid mutation
+12/12 PASS
+PASS exact historical fixture remains non-authoritative
+PASS wrong tenant
+PASS wrong layout
+PASS stale policy epoch
+PASS higher sequence
+PASS forged agents
+PASS forged metric
+PASS forged authority
+PASS station coordinate mismatch
+PASS agent binding
+PASS unknown field
+PASS wrong role
+PASS null or malformed payload
+13/13 PASS
+PASS four historical station differences with no binding
+PASS never grants authority even for exact sample
+PASS forged sequence and epoch remove diagnostic rows
+PASS missing or reordered visual roles rejected
+PASS invalid visual cells fail closed
+PASS duplicate visual cells rejected
+PASS diagnostic copied coordinates cannot mutate model
+7/7 PASS
+PASS 176 unique frames, bounded atlas
+PASS all role direction mode combinations have a frame
+PASS walking frame cycles and static preferences
+PASS glass selected behind vs front vs outside
+PASS glass vertical, reversed and nonfinite
+PASS glow bounded and reduced-motion static
+PASS lift one arrival, no duplicate event
+PASS FIFO with repositioning
+PASS blocked landing holds exclusive reservation
+PASS invalid or duplicate request rejected
+PASS queued cancellation only; immutable input copy
+PASS invalid clock cannot advance; large delta clamped
+12/12 PASS
+Chromium 144.0.7559.96
+PASS 3 actor cycle
+PASS 4 actor cycle
+PASS historical geometry held
+PASS forged epoch rejected
+4/4 PASS (pure browser model only)
+Chromium 144.0.7559.96
+PASS 176 nonempty pixel frames
+PASS transparent frame edges / no bleed
+PASS walking motion pixel difference
+PASS direction pixel difference
+PASS role pixel difference
+PASS repeat paint deterministic
+PASS lift blocked landing held in browser
+7/7 PASS (Canvas + pure lift; not Phaser)
+Scene transpile diagnostics: 0
+Final scene transpile diagnostics: 0
