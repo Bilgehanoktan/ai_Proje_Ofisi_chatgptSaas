@@ -154,3 +154,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0212 — original core and composed D0 T1 verification
 [Addendum](../0212/ARCHITECTURE_AND_CATALOG.md). 55/55 core files, 29/29 unpinned diagnostic tests, direct authority/T1 7/7, Company/Terminal 6/6. No existing product code or normative change; full wrapper, independent authority, PG/RLS/build remain open.
+
+## 0213 — two-project D0 budget race and 0211 wrapper test preparation
+[Addendum](../0213/ARCHITECTURE_AND_CATALOG.md). 55/55 pinned core and 56/56 diagnostic tests; four new multi-project SQLite cases. Six original wrapper integration tests only prepared, NOT_RUN. PostgreSQL/RLS/Next/browser and independent authority still HOLD. No normative decision or product runtime change.
