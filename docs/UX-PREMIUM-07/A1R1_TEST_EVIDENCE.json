@@ -1,0 +1,131 @@
+{
+  "revision": "UX-PREMIUM-07-A1R1",
+  "parent": "6140e16edb2ddd943912908f3714ccd3a211b1d3",
+  "baseline": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "manifest_blob": "ead7eb00754306089729e43ba66f553bcc695709",
+  "product_files": 401,
+  "manifest_entries": 400,
+  "source_files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumHybridLayout.ts",
+      "bytes": 10955,
+      "sha256": "b0c13f8544a1fc4403b98a4cead5a55c986a6986158848f6aaa1dacab93e9328",
+      "blob": "b22331afc90dc7059cc8e3c098ba83477c993d90",
+      "symbols": [
+        "Cell",
+        "Rect",
+        "Role",
+        "Scale",
+        "ZoneKind",
+        "Zone",
+        "Footprint",
+        "Station",
+        "Layout",
+        "createHybridLayout",
+        "hybridWalkable",
+        "hybridPath",
+        "validateHybridLayout",
+        "compareHybridLayouts"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-hybrid-layout.test.cjs",
+      "bytes": 5797,
+      "sha256": "8d4ad80cb166b361d63ccc6be0a5251a7973d199138e171a10d884fe3b56c6c2",
+      "blob": "74854788ae143335ffc70ffc0bd445c6615b45d2",
+      "symbols": [
+        "15 node:test cases"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "scale": "compact",
+      "width": 40,
+      "height": 26,
+      "status": "REJECTED_GEOMETRY",
+      "reason": "FOOTPRINT_BOUNDS:q-west-top"
+    },
+    {
+      "scale": "reference",
+      "width": 48,
+      "height": 30,
+      "status": "STATIC_PATH_PASS",
+      "walkable": 1081,
+      "clear2x2": 853,
+      "entryPaths": {
+        "research": 38,
+        "orchestrator": 20,
+        "engineer": 37,
+        "qa": 22
+      },
+      "briefingPaths": {
+        "research": 32,
+        "orchestrator": 14,
+        "engineer": 31,
+        "qa": 16
+      }
+    },
+    {
+      "scale": "expanded",
+      "width": 56,
+      "height": 34,
+      "status": "STATIC_PATH_PASS",
+      "walkable": 1474,
+      "clear2x2": 1210,
+      "entryPaths": {
+        "research": 45,
+        "orchestrator": 23,
+        "engineer": 43,
+        "qa": 25
+      },
+      "briefingPaths": {
+        "research": 38,
+        "orchestrator": 16,
+        "engineer": 36,
+        "qa": 18
+      }
+    }
+  ],
+  "checks": {
+    "strict_ts": "PASS",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "passed": 15,
+    "total": 15,
+    "failed": 0,
+    "log_sha256": "0e4e2488a741d6a75747acbfa0882edf65be415ee30647b8fb21222d8621ab1c",
+    "scope": "Actual static model source compiled and executed on Linux, not Next/Phaser or runtime. Initial node --test invocation mistakenly treated second argument as another test file; corrected direct node command. No failed code test in final run."
+  },
+  "geometry": {
+    "zones": 11,
+    "footprints": 20,
+    "active_templates": 4,
+    "passive_stations": 2,
+    "portal_enabled": false,
+    "agent_instances": 0,
+    "canonical_join": "HOLD"
+  },
+  "decisions": {
+    "approved": "DEC-28A/B/C-D topology and four P0 role templates",
+    "proposed": "48x30 with original inclusive zones, 32 tile, 20 physical footprints, 2 passive desks; compact and expanded comparison; no geometry approval or capacity claim"
+  },
+  "not_run": [
+    "full A1 checkout audit",
+    "W8 rebind and fresh lock review",
+    "React/Next build",
+    "native hybrid renderer",
+    "swept footprint or multi-agent motion",
+    "HD-GEO asset and visual acceptance",
+    "PG/RLS",
+    "independent acceptance"
+  ],
+  "unchanged": [
+    "12x10 native model",
+    "6x6 backend fixture",
+    "shared UI",
+    "canonical API/DB/events",
+    "dependencies"
+  ],
+  "next": "A2 unique D0 visual IDs and immutable station/room/floor bindings on new model; preserve original role-keyed renderer until integration; rebind W8 before full product acceptance; A3/A4 after A2; separate geometry and art approval"
+}

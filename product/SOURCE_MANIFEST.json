@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UX-PREMIUM-07-A0C",
-  "status": "D0_WINDOWS_PORTABILITY_BACKPORT_FULL_BUILD_NOT_RUN",
+  "doc_revision": "UX-PREMIUM-07-A1R1",
+  "status": "D0_HYBRID_GEOMETRY_MODEL_CANDIDATE_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "ad6e3505f319d11b42c868f2322c04c683b9a715",
+  "parent_git_commit": "6140e16edb2ddd943912908f3714ccd3a211b1d3",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1366,6 +1366,10 @@
       "bytes": 5072,
       "sha256": "e38460ca4b884cd7259b1d9dc06f5e8198965dac2792f0824eb505fc5e11523d"
     },
+    "ai-company-os-frontend/office/engine/premiumHybridLayout.ts": {
+      "bytes": 10955,
+      "sha256": "b0c13f8544a1fc4403b98a4cead5a55c986a6986158848f6aaa1dacab93e9328"
+    },
     "ai-company-os-frontend/office/engine/premiumLift.ts": {
       "bytes": 1820,
       "sha256": "b7ab097875576862c21dd60a3fe9ff14f9142de790af8dbb902750d8ded9bc67"
@@ -1498,6 +1502,10 @@
       "bytes": 1812,
       "sha256": "2cb318c5881a449e7a225a02a2b32b21e03d9c95bdea66583ff0d149d2579c2a"
     },
+    "ai-company-os-frontend/tests/premium-hybrid-layout.test.cjs": {
+      "bytes": 5797,
+      "sha256": "8d4ad80cb166b361d63ccc6be0a5251a7973d199138e171a10d884fe3b56c6c2"
+    },
     "ai-company-os-frontend/tests/premium-model.test.cjs": {
       "bytes": 4574,
       "sha256": "3e0cb6291ec6c19974e05f8a487d5b594fbc1d6c3d33ed99a37a06966b034602"
@@ -1599,8 +1607,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "c61c2006d3c01877ef002664e585c7c5289c1676",
-  "source_git_commit_note": "Exact tested UI portability blobs only; no merge. Candidate source recorded by external Git readback.",
+  "parent_source_manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "source_git_commit_note": "A0C baseline unchanged except manifest; two new static candidate files; not yet imported by renderer or accepted by W8.",
   "additional_parent_git_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
   "additional_parent_source_manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c"
 }
