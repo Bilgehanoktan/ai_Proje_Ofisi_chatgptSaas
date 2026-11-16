@@ -119,3 +119,6 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10I
 [Catalog](revisions/TECHNICAL_CATALOG_UI_P10I.json); [architecture](../docs/UI-P10I/ARCHITECTURE_AND_CATALOG.md). D0 only.
+
+## UI-P10J-03 / 04
+[Product source delta](revisions/TECHNICAL_CATALOG_UI_P10J.json) · [Parallel and W8 delta](revisions/TECHNICAL_CATALOG_UI_P10J04.json) · [Architecture and maintenance](../docs/UI-P10J/P10J04_ARCHITECTURE.md). Standalone tests only; product manifest unchanged in P10J-04.

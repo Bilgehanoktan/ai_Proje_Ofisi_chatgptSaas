@@ -7,7 +7,7 @@
     },
     {
       "path": "tests/integration/test_parallel_preflight.py",
-      "blob": "e34fc6e77850187f1ab83e275c699837b7ea3c5b"
+      "blob": "057a3be755d51e11f963af9e625e9ef09f15c2fb"
     },
     {
       "path": "tests/integration/w8_p10j.py",
@@ -29,5 +29,20 @@
   "db_changes": [],
   "event_changes": [],
   "product_changes": [],
-  "maintenance": "Use complete verified common-ancestor inventories. Manual review for shared/deleted/divergent; no write. Adapter pins original P10I and inherits W8 review gates. Revert this bounded commit on isolated branch; preserve original historical files and claims."
+  "maintenance": "Use complete verified common-ancestor inventories. Manual review for shared/deleted/divergent; no write. Adapter pins original P10I and inherits W8 review gates. Revert this bounded commit on isolated branch; preserve original historical files and claims.",
+  "repo_layout_test": {
+    "preflight": "12/12",
+    "adapter": "4/4",
+    "commands": [
+      "python -m unittest discover -s tests/integration -p test_parallel_preflight.py -v",
+      "python -m unittest discover -s tests/integration -p test_w8_p10j_adapter.py -v"
+    ],
+    "kind": "standalone synthetic / substituted parent",
+    "initial_reconciliation_commit": "1b5481c2ed677e9ea04c913dd231696b6f14b741",
+    "initial_readback": {
+      "p10i_delivery_paths": 15,
+      "exact_tested_code": 4,
+      "product_blobs_preserved": 387
+    }
+  }
 }

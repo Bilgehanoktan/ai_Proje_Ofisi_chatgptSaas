@@ -235,3 +235,7 @@ Original core_0207 lock and runner/helper recovered exactly. Original runner --c
 - D03/D04: see D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md; design candidate only, options not ratified. No operational change.
 
 Diagnosis: use archive auditor before extract; W8 audit/prepare/review/install/test/smoke only on exact clean checkout, not selected evidence; preserve reviewed lock provenance. For UI inspect plan pin and reset generation, never infer live status. For root restore retain evidence and quarantine. Rollback to parent on separate branch only, no DB migration or main merge.
+
+
+# UI-P10J — bounded parallel UI source and coordination
+P10J-03 integrated 10 modifications and two additions to UI presentation (387 product files, 386 pins). P10J-04 reconciles the exact P10I delivery without changing product bytes; no 0213 merge. See [P10J-03](../UI-P10J/P10J03_ARCHITECTURE.md), [P10J-04](../UI-P10J/P10J04_ARCHITECTURE.md) and [parallel protocol](../development/PARALLEL_WORK_PROTOCOL.md). All live authority, independent acceptance and W8 full acceptance remain HOLD. Prior exact P10I design text is preserved in commit 1b5481c2ed677e9ea04c913dd231696b6f14b741.

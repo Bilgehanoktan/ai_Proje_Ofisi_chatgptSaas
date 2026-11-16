@@ -83,7 +83,7 @@
     },
     {
       "path": "tests/integration/test_parallel_preflight.py",
-      "blob": "e34fc6e77850187f1ab83e275c699837b7ea3c5b"
+      "blob": "057a3be755d51e11f963af9e625e9ef09f15c2fb"
     },
     {
       "path": "tests/integration/w8_p10j.py",
@@ -116,5 +116,20 @@
     "W8 actual chain load/full audit, reviewed locks, build, real 7 API and 52 browser checks NOT_RUN.",
     "No separate independent authority approval; core 0213 remains unmerged."
   ],
-  "next": "P10J-05: actual checkout and W8 preflight; independent presentation source work after renewed branch check."
+  "next": "P10J-05: actual checkout and W8 preflight; independent presentation source work after renewed branch check.",
+  "repo_layout_test": {
+    "preflight": "12/12",
+    "adapter": "4/4",
+    "commands": [
+      "python -m unittest discover -s tests/integration -p test_parallel_preflight.py -v",
+      "python -m unittest discover -s tests/integration -p test_w8_p10j_adapter.py -v"
+    ],
+    "kind": "standalone synthetic / substituted parent",
+    "initial_reconciliation_commit": "1b5481c2ed677e9ea04c913dd231696b6f14b741",
+    "initial_readback": {
+      "p10i_delivery_paths": 15,
+      "exact_tested_code": 4,
+      "product_blobs_preserved": 387
+    }
+  }
 }

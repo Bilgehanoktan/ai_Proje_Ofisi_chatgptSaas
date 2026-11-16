@@ -1,5 +1,5 @@
 import unittest
-from parallel_preflight import compare
+from scripts.parallel_preflight import compare
 
 A, B, C = 'a'*40, 'b'*40, 'c'*40
 class ParallelPreflightTests(unittest.TestCase):
