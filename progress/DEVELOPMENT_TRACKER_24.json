@@ -1,8 +1,8 @@
 {
-  "id": "TRACK-0224",
-  "baseline": "0223",
+  "id": "TRACK-0225",
+  "baseline": "0224",
   "tarih": "2026-11-16",
-  "status": "RESEARCH_ROOT_EVIDENCE_CANDIDATE",
+  "status": "PARTIAL_PASS_ACTUAL_SQLITE_HTTP_INTEGRATION",
   "rubric": {
     "tasarim": {
       "0": "yok",
@@ -527,17 +527,17 @@
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "26 new +17 prior selected actual passes; full Research SQL8 NOT_RUN; no score or binary gate promotion.",
+  "note": "32 new +102 prior unique selected PASS; no ordinal score or gate promotion.",
   "integration_tracking": {
-    "scope": "0224 canonical Research root prefix, company snapshot, result evidence candidate",
-    "source_commit": "ba9e8705a46a6d48ef59a76788197e45b2248f5c",
-    "product_manifest_actual": 388,
-    "product_files_including_manifest": 389,
+    "scope": "0225 four actual integration suites",
+    "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
+    "product_manifest_actual": 392,
+    "product_files_including_manifest": 393,
     "product_added": 4,
-    "product_replaced": 2,
-    "selected_new_diagnostics": 26,
-    "selected_prior_rerun": 17,
-    "actual_prefix_db4": "NOT_RUN",
+    "product_replaced": 1,
+    "selected_new_diagnostics": 32,
+    "selected_prior_rerun": 102,
+    "actual_prefix_db4": "ORIGINAL_NOT_RUN_NEW_ACTUAL_PREFIX_HTTP_5_PASS",
     "locked_core29": "NOT_RUN",
     "postgresql_13": "NOT_RUN",
     "rls": "NOT_RUN",
@@ -549,10 +549,31 @@
       "done": 7,
       "total": 16,
       "percent": 43.75,
-      "ref": "progress/INTEGRATION_GATES_0224.json"
+      "ref": "progress/INTEGRATION_GATES_0225.json"
     },
     "research_sql8": "NOT_RUN",
-    "result_sql10": "NOT_RERUN"
+    "result_sql10": "NOT_RERUN",
+    "total_selected": 134,
+    "actual_pinned_research": "8_PASS",
+    "actual_t1_company": "12_PASS",
+    "actual_http_proxy_studio": "7_PASS",
+    "residual": {
+      "exact_full_checkout": "BLOCKED_DNS",
+      "locked_dependencies": "NOT_RUN",
+      "original_0220_SQL6": "NOT_RUN",
+      "original_0221_SQL10": "NOT_RUN",
+      "original_0224_SQL8": "NOT_RUN",
+      "original_0223_DB4": "NOT_RUN",
+      "full_0224_research_result_slice": "NOT_RUN",
+      "postgresql_13": "NOT_RUN",
+      "rls": "NOT_RUN",
+      "full_backend_build": "NOT_RUN",
+      "full_frontend_build": "NOT_RUN",
+      "browser": "NOT_RUN",
+      "independent_acceptance": "HOLD",
+      "canonical_mapping": "HOLD",
+      "normative_authority": "HOLD"
+    }
   },
   "integration_gate": {
     "done": 7,

@@ -32,3 +32,7 @@ Ordinal scores unchanged. 36 new + 27 prior selected checks; 7/16 gates. No full
 
 ## 0224
 43 selected passes; full root SQL8 NOT_RUN. Scores unchanged; 7/16 integration gates. Current machine-readable tracker: DEVELOPMENT_TRACKER_24.json.
+
+
+## 0225 — actual integration validation
+Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLite T1 and pinned admission/history, persisted historical DB and mounted routes, real loopback compiled TS proxy/Studio. No runtime source changes; original suites and full result path still open. 7/16 gates unchanged. See docs/0225/ARCHITECTURE_AND_CATALOG.md and handover/NEXT_STEP_0225.md.

@@ -27,3 +27,7 @@ Studio source landed: 36 new +27 prior selected checks. 7/16. Runtime/project/ro
 
 ## 0224 status
 Research root source candidate integrated; 26 new +17 prior selected PASS; full root T1 SQL8 NOT_RUN. 0225 remains integrated build/regression/MVP evaluation; first close SQL8/10/6/DB4 and 0219, then PG/locked build/browser. No acceptance promotion.
+
+
+## 0225 — actual integration validation
+Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLite T1 and pinned admission/history, persisted historical DB and mounted routes, real loopback compiled TS proxy/Studio. No runtime source changes; original suites and full result path still open. 7/16 gates unchanged. See docs/0225/ARCHITECTURE_AND_CATALOG.md and handover/NEXT_STEP_0225.md.

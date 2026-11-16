@@ -194,3 +194,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0224
 Canonical Research root evidence candidate; exact plan and company snapshot, archive/local receipt readback candidate. No verified SUCCESS, QA/IV/H01 or real authority. See docs/0224/ARCHITECTURE_AND_CATALOG.md. 43 selected PASS; full SQL8 NOT_RUN; 7/16.
+
+
+## 0225 — actual integration validation
+Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLite T1 and pinned admission/history, persisted historical DB and mounted routes, real loopback compiled TS proxy/Studio. No runtime source changes; original suites and full result path still open. 7/16 gates unchanged. See docs/0225/ARCHITECTURE_AND_CATALOG.md and handover/NEXT_STEP_0225.md.
