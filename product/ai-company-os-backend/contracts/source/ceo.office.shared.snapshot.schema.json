@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "0222 fixed historical SSE frame payload (not an authority contract)",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "source",
+        "project_id",
+        "world_id",
+        "snapshot_seq",
+        "prefix",
+        "digest"
+      ],
+      "properties": {
+        "profile": {
+          "const": "ceo-office.prefix.v1-D0"
+        },
+        "source": {
+          "const": "D0_0196L_HISTORICAL_PREFIX"
+        },
+        "project_id": {
+          "type": "null"
+        },
+        "world_id": {
+          "type": "null"
+        },
+        "snapshot_seq": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "prefix": {
+          "$ref": "lifecycle.prefix.schema.json"
+        },
+        "digest": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "digest",
+        "sequence",
+        "entry"
+      ],
+      "properties": {
+        "digest": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "entry": {
+          "oneOf": [
+            {
+              "const": {
+                "version": 1,
+                "kind": "D0_RUN_ADMISSION",
+                "state": "ADMITTED"
+              }
+            },
+            {
+              "const": {
+                "version": 2,
+                "kind": "D0_RUN_TRANSITION",
+                "state": "RUNNING"
+              }
+            },
+            {
+              "const": {
+                "version": 3,
+                "kind": "D0_LEASE_RENEWAL",
+                "state": "RUNNING"
+              }
+            },
+            {
+              "const": {
+                "version": 4,
+                "kind": "D0_RUN_TRANSITION",
+                "state": "VERIFYING"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "digest",
+        "sequence"
+      ],
+      "properties": {
+        "digest": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        }
+      }
+    }
+  ]
+}

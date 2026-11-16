@@ -1,3 +1,18 @@
+# UI-P10J-13 — bounded shared historical Studio integration
+
+UI parent 3384a301d7f1727153f64df950a82fc20bb234a5; core source c94753b4f2bc8a3e739ffa997ca9547772deeaf2; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. CEO-0174/0179=B isolated source scope only. Single-parent candidate, not a branch merge. Full Git trees untruncated: 397 UI product blobs / 385 core; 317 identical, 48 UI-only, 36 core-only, 32 different incl manifest. Selected 30 exact core blobs, two manual UI edits. Manifest pins 413; no files deleted. Parent manifests verified path and length against both trees; manual parent bytes SHA-256 verified. Core pin metadata reused; not full byte rehash.
+
+## Composition
+- Root app/layout wraps children in existing SharedSnapshotProvider; CEO summary adds SharedSnapshotPanel; existing OfficePanel adds office variant. Shared session is app-local, finite historical replay, not live SSE. 4s read timeout, 30s expiry and clear on hidden; no project/world association. Static fixture SnapshotStrip explicitly labels geometry. Existing UI sections, navigation, room camera/filter, independent lifecycle readbacks and draft workflow retained.
+- Exact core AgentDetail and CorePreview include StudioContextPanel; ProjectStudio adds same context to selected reference task. Fixed plan GET validated against pinned fixture; no role-to-instance assignment. Local workflow draft remains separate from canonical plan. No live avatar motion.
+- Read-only API /demo/v1/lifecycle/shared-snapshot and frontend /api/demo/shared-snapshot plus /api/demo/plan. Core replay serializer and paired schema copied. No DB changes, grants, provider calls, external effects, dependencies, main or CI. Authority and all remaining core execution changes not imported. UI variants of lifecycle readers preserved; later semantic reconciliation still required.
+- No full checkout in current environment (GitHub DNS unavailable); no new product test, full build, browser or PG/RLS acceptance. Original core diagnostic runner and tests transferred as candidates. Previous W8 PASS applies only to P10J-08. Need exact new manifest and union-specific W8 review/adapter before any build.
+
+## Maintenance / rollback
+Check app layout/provider, shared route 503 and parser framing/digest/sequence; confirm both panels display same digest within app session and clear on hidden/expiry. Validate plan proxy 503 for altered plan; task/role selection must never assign historical agent. Check all 13 destinations and P12 role/room interactions, no fake status; run exact locked regression and browser. Roll back by starting a fresh branch at UI parent 3384a301d7f1727153f64df950a82fc20bb234a5; preserve original heads, no live DB restore. Next: exact core source closure review for intent authority, T1 and two lifecycle readers, then full union with reviewed W8/PG and Research vertical slice. No new gate promoted.
+
+---
+
 # UI-P10J-12 — Agent Studio and static Office room context
 
 Parent UI 9cd9ebee9f0760eeec24a86bf02487f02096eea8; observed core c94753b4f2bc8a3e739ffa997ca9547772deeaf2 (TRACK-0223). Roadmap phase 4, parallel E/W1; phase 2 remains product-critical; phase 3 only role/plan presentation here. No new execution or security authority.

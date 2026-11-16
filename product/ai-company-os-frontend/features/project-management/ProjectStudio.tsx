@@ -5,6 +5,7 @@ import {sortProjectRows} from '../evidence/evidenceModel';
 import styles from './ProjectStudio.module.css';
 import DependencyNeighborhood from './DependencyNeighborhoodPanel';
 import PlanGraph from '../graph/PlanGraph';
+import StudioContextPanel from '../mvp/StudioContextPanel';
 export default function ProjectStudio(){
  const [query,setQuery]=useState(''),[role,setRole]=useState(''),[mode,setMode]=useState<'board'|'table'>('board'),[selected,setSelected]=useState('plan'),[sort,setSort]=useState<'wave'|'label'|'role'>('wave'),[descending,setDescending]=useState(false),[waveFilter,setWaveFilter]=useState('');
  const searchId=useId(),roleId=useId(),view=projectView();
@@ -23,6 +24,7 @@ export default function ProjectStudio(){
   <div className={styles.detail} aria-live="polite"><h3>Seçili görev · {ctx.row?.task.label??'—'}</h3><small>{ctx.row?.task.role??'—'} · {ctx.row?.task.state??'—'} · Run yok</small><div><strong>Ön koşullar</strong><span>{ctx.prerequisites.length?ctx.prerequisites.map(r=><button type="button" key={r.task.id} onClick={()=>setSelected(r.task.id)}>{r.task.label}</button>):'—'}</span></div><div><strong>Sonraki bağımlılar</strong><span>{ctx.followers.length?ctx.followers.map(r=><button type="button" key={r.task.id} onClick={()=>setSelected(r.task.id)}>{r.task.label}</button>):'—'}</span></div>{ctx.row&&!rows.some(r=>r.task.id===selected)&&<small>Seçim mevcut filtre dışında; bağlam korunuyor. <button type="button" onClick={()=>{setQuery('');setRole('');setWaveFilter('');}}>Seçili görevi göster</button></small>}</div>
   <h3>Tam plan bağlantı grafiği · filtrelerden bağımsız</h3><PlanGraph tasks={view.plan.tasks} waves={view.plan.waves} links={view.plan.edges.map(e=>({...e,kind:'reference' as const}))} selected={selected} onSelect={setSelected} label="Referans plan DAG"/>
   <DependencyNeighborhood view={view} selected={selected} onSelect={setSelected}/>
+  <StudioContextPanel selection={{kind:'task',id:selected}}/>
   <h3>Kalite ve yayın kapıları · tüm plan</h3><div className={styles.gates}>{view.gates.map(taskButton)}</div><p className="sub">QA ≠ Independent Verifier ≠ insan yayın yetkisi. Bu kartlar görev şablonudur; bağımsız makbuz veya kabul göstermez.</p>
  </section>;
 }

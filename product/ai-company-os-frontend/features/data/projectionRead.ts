@@ -1,5 +1,5 @@
 /** Browser-only D0 read transport. No authority, persistence, retry or live adapter. */
-export const endpointCaps = Object.freeze({mvp:16384,admission:4096,outbox:4096,'office-workbench':4096,'task-budget':8192,lifecycle:8192,'lifecycle-prefix':8192} as const);
+export const endpointCaps = Object.freeze({mvp:16384,admission:4096,outbox:4096,'office-workbench':4096,'task-budget':8192,lifecycle:8192,'lifecycle-prefix':8192,plan:16384} as const);
 export type ProjectionKey=keyof typeof endpointCaps;
 export type ReadState<T>={phase:'idle'|'loading';data:null}|{phase:'historical';data:T}|{phase:'hold';data:null;reason:'TIMEOUT'|'READBACK_HOLD'};
 export type Parser<T>=(raw:unknown)=>T|null;

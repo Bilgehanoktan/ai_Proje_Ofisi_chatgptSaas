@@ -11,6 +11,7 @@ import fixture from '../../fixtures/office.snapshot.json';
 import catalog from '../../fixtures/company.catalog.json';
 import ui from '../uiCatalog.json';
 import SnapshotStrip from '../../components/dashboard/SnapshotStrip';
+import SharedSnapshotPanel from '../data/SharedSnapshotPanel';
 import MetricsStrip from '../../components/dashboard/MetricsStrip';
 import OfficePanel,{type Display,type SnapshotFloor} from '../../components/dashboard/OfficePanel';
 import AgentDetail,{RoleButton,type Role} from '../../components/dashboard/AgentDetail';
@@ -39,7 +40,7 @@ type Station=SnapshotFloor['stations'][number];
 type Selection={floorId:string;stationId:string}|{roleId:string}|null;
 const sections=catalog.sections as Record<string,{title:string;description:string;status:string}[]>;
 const demoLayout=validateDemoLayout(core.layout);
-const version='UI-P10J-11 · D0 yönetim ve iş stüdyoları';
+const version='UI-P10J-13 · D0 ortak tarihsel bağlam';
 const layoutKey=`${fixture.layout_revision}:${core.layout.revision}`;
 // Key resets all controlled presentation state when static layout or entry view changes.
 export default function Dashboard({initialView}:{initialView:'overview'|'office'}){
@@ -79,7 +80,7 @@ function DashboardView({initialView}:{initialView:'overview'|'office'}){
  {ceo&&<SectionSwitcher label="CEO bölümleri" options={ceoSections} current={ceoSection} onChange={changeCeoSection}/>}
  {work&&<SectionSwitcher label="İş ve Denetim bölümleri" options={workSections} current={workSection} onChange={changeWorkSection}/>}
  {(ceo||officeOnly)&&<SnapshotStrip/>}
- {ceo&&ceoSection==='summary'&&<><MetricsStrip/><OperationalReadback/><section className="panel" aria-label="Yönetim bağlamı"><div className="bar"><h2>Şirket yönetim bağlamı</h2><span className="pill">D0 · HOLD</span></div><p className="sub">Dört çekirdek rol şablonu; etkin çalışan veya canlı departman performansı kanıtı değildir.</p><div className="sectiongrid">{ui.roles.map(r=><article className="item" key={r.id}><h3>{r.department}</h3><p>{r.name} · {r.description}</p><small>Rol şablonu · gerçek run bilinmiyor</small></article>)}</div><div className="chips"><button type="button" onClick={()=>navigate('Hedefler')}>Hedef kataloğu</button><button type="button" onClick={()=>navigate('Karar Kutusu')}>Karar kutusu</button></div></section></>}
+ {ceo&&ceoSection==='summary'&&<><MetricsStrip/><OperationalReadback/><SharedSnapshotPanel/><section className="panel" aria-label="Yönetim bağlamı"><div className="bar"><h2>Şirket yönetim bağlamı</h2><span className="pill">D0 · HOLD</span></div><p className="sub">Dört çekirdek rol şablonu; etkin çalışan veya canlı departman performansı kanıtı değildir.</p><div className="sectiongrid">{ui.roles.map(r=><article className="item" key={r.id}><h3>{r.department}</h3><p>{r.name} · {r.description}</p><small>Rol şablonu · gerçek run bilinmiyor</small></article>)}</div><div className="chips"><button type="button" onClick={()=>navigate('Hedefler')}>Hedef kataloğu</button><button type="button" onClick={()=>navigate('Karar Kutusu')}>Karar kutusu</button></div></section></>}
  {(officeOnly||(ceo&&ceoSection==='operations'))&&<div className="workspace"><OfficePanel floors={fixture.floors} floorId={floorId} onFloor={changeFloor} display={display} onDisplay={changeDisplay} officeOnly={officeOnly} stations={stationList()} demoFloor={demoFloor} layoutRevision={String(core.layout.revision)} snapshotRevision={String(fixture.layout_revision)} geometryReason={demoLayout.ok?'Kat bulunamadı':demoLayout.reason}/><OperationPanel panel={panel} onPanel={setPanel} stations={stationList()} detail={details}/></div>}
  {ceo&&ceoSection==='operations'&&<WorkbenchLifecyclePanel/>}
  {officeOnly&&<><LifecycleReadback key={"terminal-"+floorId} context="office"/><LifecyclePrefixReadback key={floorId} context="office"/></>}

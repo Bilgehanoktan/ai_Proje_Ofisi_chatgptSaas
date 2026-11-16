@@ -266,3 +266,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-12 — Agent Studio and Office context
 [Architecture and rollback](../UI-P10J/P10J12_ARCHITECTURE.md). Static role plan dependencies and room-focused gallery. No live identity or location. Per-area integration status: [matrix](../../progress/INTEGRATION_MATRIX_UI_P10J12.md). Core separate; actual W8 pending.
+
+
+## UI-P10J-13 bounded historical integration
+[Architecture and maintenance](../UI-P10J/P10J13_ARCHITECTURE.md) · [24-area matrix](../../progress/INTEGRATION_MATRIX_UI_P10J13.md). Partial isolated source only; no normative or product acceptance.
