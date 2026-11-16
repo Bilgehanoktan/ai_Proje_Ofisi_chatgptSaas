@@ -1,0 +1,56 @@
+{
+  "revision": "0224",
+  "source_commit": "ba9e8705a46a6d48ef59a76788197e45b2248f5c",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "mode": "isolated local exact source subset"
+  },
+  "suites": [
+    {
+      "name": "test_research_roster_0224",
+      "pass": 18,
+      "kind": "new canonical roster/scheduler and prefix"
+    },
+    {
+      "name": "test_research_company_snapshot_0224",
+      "pass": 8,
+      "kind": "new real SQLite with seven existing DDL files; direct fixture seed, not T1 writer"
+    },
+    {
+      "name": "test_plan_projection",
+      "pass": 5,
+      "kind": "prior rerun"
+    },
+    {
+      "name": "test_pinned_schedule_0220",
+      "pass": 12,
+      "kind": "prior rerun"
+    },
+    {
+      "name": "test_canonical_research_0224",
+      "prepared": 8,
+      "status": "NOT_RUN",
+      "blocker": "import closure missing test_admission_mapping_0195"
+    }
+  ],
+  "new_pass": 26,
+  "prior_pass": 17,
+  "selected_pass": 43,
+  "full_result_sql10": "NOT_RERUN_AFTER_TEST_HELPER_REFACTOR",
+  "sql6_0220": "NOT_RUN",
+  "original_0219": "NOT_RUN",
+  "actual_prefix_db4": "NOT_RUN",
+  "pg13": "NOT_RUN",
+  "rls": "NOT_RUN",
+  "locked29": "NOT_RUN",
+  "full_build_browser": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "full_checkout": "BLOCKED_DNS",
+  "actual_provider_calls": 0,
+  "actual_agents": 0,
+  "gate": {
+    "done": 7,
+    "total": 16
+  }
+}

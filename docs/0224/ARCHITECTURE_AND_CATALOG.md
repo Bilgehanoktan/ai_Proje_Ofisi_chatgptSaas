@@ -1,0 +1,14 @@
+# 0224 — Canonical Research root evidence candidate
+
+Parent delivery: c94753b4f2bc8a3e739ffa997ca9547772deeaf2. Source: ba9e8705a46a6d48ef59a76788197e45b2248f5c. Branch: integration/0224-research-vertical-slice.
+
+## What / why / how
+Use the exact existing UI canonical Research plan (7 tasks, 7 edges, 6 waves; sha256:6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9). Do not join the unrelated 0222 historical prefix. Five synthetic agent tasks; IV and human release are separate gates. One explicit demo-research-project and five exact pinned members. The only admitted root candidate is plan (Orchestrator), with QUEUED v0 → ADMITTED v1 → RUNNING v2 → VERIFYING v3, attempt 0. Descendants remain queued. No supported independent SUCCESS path, no actual research task or provider execution.
+
+research_slice.py reuses canonical_plan, inspect_pinned_schedule and inspect_company. The full read-only slice candidate requires one cursor for plan/company history, exact membership, budget and event-prefix reconciliation, matching transaction/request digests, and optional recomputed archive binding plus exact local HISTORICAL journal receipt. Missing result remains prefix-only; mismatched or UNKNOWN/PENDING evidence fails closed. A local receipt is not independent custody, cross-store atomicity, or successful terminal proof. QA dependency, IV receipt and H01 release remain HOLD; all authority flags false. No UI/API change because persisted chain is not proven. Existing 0223 separate observations stay separate. No new DB tables, packages or migration.
+
+## Test evidence
+26 new +17 prior reruns =43 actual selected passes. Eight company checks ran real isolated SQLite using seven existing translated DDL files and direct fixture inserts, not original T1 writer. Eighteen roster tests use exact canonical compiler/scheduler. Eight full canonical Research integration cases prepared but NOT_RUN: local import closure lacks test_admission_mapping_0195. 0221 test helper refactor not yet covered by prior SQL10. 0220 SQL6, 0219 compositions, 0222 DB4, PG13/RLS, locked29, full checkout/build/browser remain open. No new binary integration gate: 7/16.
+
+## Maintenance / extension / rollback
+Check plan revision and member identities before touching archive; inspect plan/company history and journal status, never infer success from a receipt. Preserve root-only profile until approved verified success transition. Single project entire sample pool allocation is a diagnostic simplification, not production budget policy. For wrong identity, version, digest, reservation or missing evidence fail closed; no retries for unknown/pending outcome. To revert, use separate branch at parent or revert changes with manifest; no migration. Full repo and dependencies must be pinned before integrating UI. Independent acceptance, canonical mapping, normative authority remain HOLD; no main/CI/PROD or real effects.

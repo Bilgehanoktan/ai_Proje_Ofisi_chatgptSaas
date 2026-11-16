@@ -177,3 +177,7 @@ Source `7dbb696f8f3d5b639d2a00765566babd4108cf93`; 379 product files / 378 manif
 
 ## 0223 — Agent/Workflow Studio fixed compiler plan and historical context
 Source `c963630b5d174f4c078b84b42ea88318086ea18e`; 385 product files / 384 manifest entries. 36 new +27 prior rerun selected controls, 63 total. Exact plan compiler and shared context; historical mismatched revision stays HOLD. Actual DB4, full registry/React/Next/browser, combined SQL/PG/RLS and independent acceptance open. 7/16. [Architecture](../docs/0223/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0223.json) · [Next](NEXT_STEP_0223.md).
+
+
+## 0224 — Research root evidence candidate
+Source ba9e8705a46a6d48ef59a76788197e45b2248f5c; 389 product files / 388 manifest entries; 26 new +17 prior selected PASS. Full root SQL8 prepared NOT_RUN, no actual persisted Research result or UI join. Gate 7/16; QA/IV/H01 HOLD. [Architecture/catalog](../docs/0224/ARCHITECTURE_AND_CATALOG.md). Next 0225 integrated build/regression/MVP evaluation.

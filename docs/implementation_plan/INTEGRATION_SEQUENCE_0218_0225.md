@@ -23,3 +23,7 @@ Historical shared source landed; 39 selected behavior checks, 18 payload checks,
 
 ## 0223 progress (2026-11-16)
 Studio source landed: 36 new +27 prior selected checks. 7/16. Runtime/project/role association not proven, actual DB4/browser/SQL/PG/build remain open. Next 0224 Research vertical slice in parallel with W8.
+
+
+## 0224 status
+Research root source candidate integrated; 26 new +17 prior selected PASS; full root T1 SQL8 NOT_RUN. 0225 remains integrated build/regression/MVP evaluation; first close SQL8/10/6/DB4 and 0219, then PG/locked build/browser. No acceptance promotion.

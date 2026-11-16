@@ -14,3 +14,7 @@ Shared CEO/Office historical snapshot, finite SSE replay, bounded loopback proxy
 
 ## 0223
 Agent and Workflow Studio fixed compiler read, shared separate historical context, role/task lineage HOLD, 63 selected checks, actual DB/browser/PG/build open. [Details](docs/0223/ARCHITECTURE_AND_CATALOG.md).
+
+
+## 0224
+Canonical Research root roster/company and result readback candidate; four new product files, two replacements including manifest. 43 selected passes, eight full integration cases NOT_RUN. No new authority or schema.

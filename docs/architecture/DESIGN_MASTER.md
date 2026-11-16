@@ -190,3 +190,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0223 — Agent / Workflow Studio
 [Addendum](../0223/ARCHITECTURE_AND_CATALOG.md). Existing compiler/DAG and shared historical provider reused; fixed Research plan API, exact role context and unbound evidence timeline. Plan revision mismatch remains HOLD. 63 selected checks, actual DB/browser/PG/build open; no normative changes.
+
+
+## 0224
+Canonical Research root evidence candidate; exact plan and company snapshot, archive/local receipt readback candidate. No verified SUCCESS, QA/IV/H01 or real authority. See docs/0224/ARCHITECTURE_AND_CATALOG.md. 43 selected PASS; full SQL8 NOT_RUN; 7/16.
