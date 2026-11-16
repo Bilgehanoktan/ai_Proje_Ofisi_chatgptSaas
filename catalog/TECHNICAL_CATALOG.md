@@ -115,3 +115,7 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UX-PREMIUM-06
 [22-path consolidated file/symbol/API/DB/dependency/test catalog](revisions/TECHNICAL_CATALOG_UX_PREMIUM_06.json) · [maintenance and acceptance](../docs/UX-PREMIUM-06/CONSOLIDATION.md). 397 manifest entries; 81 Node +11 Chromium, not native Phaser. No product changes.
+
+
+## UX-PREMIUM-07 planning
+[Proposed refactor and acceptance mapping](../docs/UX-PREMIUM-07/OFFICE_REALIGNMENT_PLAN.md). No new actual symbols, API, schema or dependencies; UX-06 catalog remains technical source inventory.

@@ -1,0 +1,115 @@
+{
+  "revision": "UX-PREMIUM-07-PLAN",
+  "parent": "7032dac5f619dc02a7bc76a0161719a2fe768bf0",
+  "scope": "PLAN_ONLY",
+  "approved_existing": [
+    "DEC-28A",
+    "DEC-28B",
+    "DEC-28C-D",
+    "DEC-24A"
+  ],
+  "candidate": [
+    "48x30 grid / 32 tile",
+    "2–4 reserve stations",
+    "8–12 capacity test",
+    "new geometry and art approval",
+    "traffic algorithm and device thresholds"
+  ],
+  "work_packages": [
+    {
+      "id": "A0",
+      "name": "Baseline build/native acceptance",
+      "depends_on": [],
+      "status": "BLOCKED",
+      "note": "No implementation in this round"
+    },
+    {
+      "id": "A1",
+      "name": "Hybrid topology",
+      "depends_on": [
+        "A0"
+      ],
+      "status": "PLANNED",
+      "note": "No implementation in this round"
+    },
+    {
+      "id": "A2",
+      "name": "Identity/layout refactor",
+      "depends_on": [
+        "A1"
+      ],
+      "status": "PLANNED",
+      "note": "No implementation in this round"
+    },
+    {
+      "id": "A3",
+      "name": "Scalable traffic",
+      "depends_on": [
+        "A2"
+      ],
+      "status": "PLANNED",
+      "note": "No implementation in this round"
+    },
+    {
+      "id": "A4",
+      "name": "Renderer and assets",
+      "depends_on": [
+        "A1",
+        "A2"
+      ],
+      "status": "PLANNED",
+      "note": "No implementation in this round"
+    },
+    {
+      "id": "A5",
+      "name": "Dynamic floors and portals",
+      "depends_on": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "status": "PLANNED",
+      "note": "No implementation in this round"
+    },
+    {
+      "id": "A6",
+      "name": "OfficeV0 contract review / conditional join",
+      "depends_on": [],
+      "status": "REVIEW_ONLY_JOIN_HOLD",
+      "note": "Review parallel, implementation subject to owner/independent evidence and A0"
+    },
+    {
+      "id": "A7",
+      "name": "Full acceptance",
+      "depends_on": [
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "status": "PLANNED",
+      "note": "No implementation in this round"
+    }
+  ],
+  "affected_tracker_areas": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    14,
+    15,
+    20,
+    21,
+    24
+  ],
+  "source_manifest_unchanged": 397,
+  "new_tests": 0,
+  "full_build": "BLOCKED",
+  "native_browser": "NOT_RUN",
+  "independent": "HOLD",
+  "office_v0": "JOIN_HOLD",
+  "next": "A0 exact checkout and actual native acceptance",
+  "hd_acceptance": "36 original criteria not accepted"
+}

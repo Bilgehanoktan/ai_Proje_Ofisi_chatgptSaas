@@ -5,3 +5,7 @@ Priority zero: upload full archive of P10G or use exact user-local checkout with
 
 ## UX-PREMIUM-06 sequencing
 [Consolidation](../docs/UX-PREMIUM-06/CONSOLIDATION.md). P0 exact checkout, reviewed lock, full build/typecheck and real Phaser browser acceptance. Do not resume new art/floor/lift features until this checkpoint is reviewed. OfficeV0 remains JOIN_HOLD; no core merge.
+
+
+## Office realignment plan
+[UX-PREMIUM-07 A0–A7](../docs/UX-PREMIUM-07/OFFICE_REALIGNMENT_PLAN.md). A0 exact checkout and real native acceptance first; no feature implementation yet. A6 contract review only may run parallel; JOIN_HOLD maintained.
