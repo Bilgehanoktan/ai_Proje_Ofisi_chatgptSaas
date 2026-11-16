@@ -1,0 +1,244 @@
+{
+  "revision": "0215",
+  "parent": "a4a6aba3e986927b4e2b0157028e6623c669864e",
+  "source_commit": "76815dfd2401d7a81f1f9f0a112da06d8002fb2f",
+  "branch": "integration/0215-parallel-acceptance",
+  "manifest_blob": "9dc7c7db0ff496d546a9cbf0a76a1aa63aeaf2bc",
+  "manifest_entries": 358,
+  "product_files_including_manifest": 359,
+  "prior_product_entries_preserved": 353,
+  "delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+      "bytes": 5574,
+      "sha256": "9fc7e5de6af70271a11da25db6a68151385aaff82ba956f99d48a735793ba667",
+      "blob": "f7616fca91825a63302e3fb2a41da8a0411eeed2",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_external_claim_review_0215.py",
+      "bytes": 4817,
+      "sha256": "70c7bafc78d32ab4afc9869109ef088ff47d0961aa16b1850ca6e2bc5fb14198",
+      "blob": "b31672e1f4b48364190c37ad2a33a311ae8e23e5",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/historicalPresentation.ts",
+      "bytes": 1253,
+      "sha256": "5713cdfe90a2d513d3e9bfbf71f1fa066f1d25b76508e38611ae99ba4bdb433c",
+      "blob": "a760a0ebf7f49ac79ff8948e496aecaa7770b9ee",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+      "bytes": 1527,
+      "sha256": "b83e8f27a842a3159d7e5fdf59ac444f9fb2fa5b4944f2a67cc1bf2ac9a15f11",
+      "blob": "8b26cbcc34e336037cc7c2f43bb4bbd682df9ea2",
+      "action": "modify"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/historical-presentation-0215.test.cjs",
+      "bytes": 2916,
+      "sha256": "bb2d72e425c86587cc0207d8a5f233fa9147eccf8812f3139dc79ef6c360a8e2",
+      "blob": "14c1db2508cfbdd9fd86dda099849aeda1068eb8",
+      "action": "add"
+    },
+    {
+      "path": "scripts/run_pg_acceptance_0215.py",
+      "bytes": 7785,
+      "sha256": "9268ae83ec13744ba51c15176fe1ee99fb605c09b84e7e929dc49c3d9f348827",
+      "blob": "7cde2a62eee46ce4e682451f82a1c6b3245cf94a",
+      "action": "add"
+    },
+    {
+      "path": "tests/test_pg_runner_0215.py",
+      "bytes": 3826,
+      "sha256": "ff3f5b1c479fd5ffc8785691d4fb1653c8c4dd02969c997999283e6fc06ba02a",
+      "blob": "562876e8c5015553e63041635032cc838ba8c44d",
+      "action": "add"
+    }
+  ],
+  "tests": {
+    "current": {
+      "external_claim": {
+        "ran": 15,
+        "passed": 15,
+        "classification": "ACTUAL_DISPOSABLE_SQLITE_AND_ED25519_FIXTURE",
+        "log": "tests/evidence/0215/EXTERNAL_CLAIM_TESTS.log",
+        "sha256": "defca7648305b9ef732af4021b381f316407e7ee289b6c26d0959165e09522ba"
+      },
+      "pg_runner": {
+        "ran": 14,
+        "passed": 14,
+        "classification": "UNIT_AND_FAIL_CLOSED_PREFLIGHT_NOT_PG",
+        "log": "tests/evidence/0215/PG_RUNNER_TESTS.log",
+        "sha256": "f0acec59fce99fbca72d2ca8bfe9ac988c9a27a831a8323ee1231b280eae0183"
+      },
+      "ui": {
+        "ran": 17,
+        "passed": 17,
+        "classification": "STATIC_REFERENCE_TS_NODE_NOT_BROWSER_BACKEND",
+        "log": "tests/evidence/0215/UI_REFERENCE_TESTS.log",
+        "sha256": "c4889a3ebd2a681238e5e6243472e8dcf10bfc8b434a0c8e5398d78e7988a68f"
+      },
+      "total": 46
+    },
+    "historical_0214": {
+      "source": "a4a6aba3e986927b4e2b0157028e6623c669864e",
+      "manifest": "98da5a4d9cf592368199287382f1e22f8b00cdc0",
+      "python": 66,
+      "node": 14,
+      "fullchain": 10,
+      "fullchain_residual": 1,
+      "raw_logs": "NOT_AVAILABLE_IN_CURRENT_SESSION",
+      "rerun": false
+    },
+    "original_0213_six": "NOT_RUN",
+    "locked29": "NOT_RUN",
+    "actual_pg13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_backend_frontend": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "ts": "5.8.3",
+    "locked_ts": "5.9.3",
+    "cryptography": "46.0.4",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0",
+    "psycopg": "NOT_INSTALLED",
+    "postgres": "NOT_FOUND",
+    "git": "DNS_FAILURE",
+    "full_checkout": "NOT_MATERIALIZED"
+  },
+  "progress": {
+    "definition": "16 equal binary evidence gates for current integration scope, NOT overall system completion or normative security acceptance",
+    "gates": [
+      {
+        "id": "A",
+        "name": "Core recovery",
+        "done": 2,
+        "total": 3,
+        "criteria": [
+          [
+            "55 exact files",
+            true
+          ],
+          [
+            "29 diagnostic tests",
+            true
+          ],
+          [
+            "29 locked dependency tests",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "B",
+        "name": "Intent Authority + T1",
+        "done": 2,
+        "total": 3,
+        "criteria": [
+          [
+            "Direct claim/fence + ordinary T1",
+            true
+          ],
+          [
+            "Exact 0211 witness/journal wrapper",
+            true
+          ],
+          [
+            "Independent custody/effect authority",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "C",
+        "name": "Company + Terminal",
+        "done": 3,
+        "total": 3,
+        "criteria": [
+          [
+            "Single-project lifecycle composition",
+            true
+          ],
+          [
+            "Rollback/UNKNOWN/cap/tamper",
+            true
+          ],
+          [
+            "Multi-project concurrent composition",
+            true
+          ]
+        ]
+      },
+      {
+        "id": "D",
+        "name": "PG/RLS",
+        "done": 0,
+        "total": 3,
+        "criteria": [
+          [
+            "Local PG+driver",
+            false
+          ],
+          [
+            "13 actual PG tests",
+            false
+          ],
+          [
+            "Non-owner RLS/lock contention",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "E",
+        "name": "Working product",
+        "done": 0,
+        "total": 4,
+        "criteria": [
+          [
+            "Exact full checkout+reviewed locks",
+            false
+          ],
+          [
+            "Full backend build/test",
+            false
+          ],
+          [
+            "Full frontend build",
+            false
+          ],
+          [
+            "Browser CEO/Office historical data",
+            false
+          ]
+        ]
+      }
+    ],
+    "done": 7,
+    "total": 16,
+    "percent": 43.75,
+    "prior_0214_evidence": "0214 exact original wrapper with new D0 fixture recorded 10/10, one restore residual; inherited prior result from pinned manifest and prior conversation, not rerun 0215. Original six 0213 fixture tests NOT_RUN.",
+    "current_0215": "46 new diagnostic checks; no new binary acceptance gate passed; independent custody, PG/RLS, pinned build and browser remain HOLD."
+  },
+  "open_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ],
+  "limitations": [
+    "Local fixture signer is not independent; signed absence never grants. External challenge freshness and key/head custody cannot be established in this environment; mandatory distributed effect fence not wired.",
+    "PG runner did not contact a database; original tests still NOT_RUN. Unit classification can detect skips but original suite is not RLS acceptance. Actual preflight HOLD due incomplete local source.",
+    "UI strict TypeScript helper tests only, no TSX/Next build or browser test; fixtures derived from fixed reference parsers, not fresh backend responses.",
+    "0214 source exists on GitHub but previous handover remained 0213; historical test counts retained without re-execution. No main/CI/PROD/real agents/provider/spend."
+  ]
+}
