@@ -1,5 +1,6 @@
 "use client";
 import {useProjectionRead} from '../data/useProjectionRead';
+import HistoricalEvidenceStrip from './HistoricalEvidenceStrip';
 import {readStatus} from '../data/projectionRead';
 import {inspectPlanBinding} from '../data/projectionScope';
 import {inspectHistoricalJoin} from './historicalJoin';
@@ -9,7 +10,7 @@ export default function LifecyclePrefixReadback({context}:{context:'ceo'|'office
  const join=data?inspectHistoricalJoin(plan,data):null;
  const binding=data?inspectPlanBinding(data,plan):null;
  return <section className="panel projection-summary" aria-label={context+' / historical prefix'}><div className="bar"><div><div className="eyebrow">D0 / HISTORICAL PREFIX</div><h2>Görev ve lease gözlemi</h2><small>0196-L ayrı tarihsel DB · terminal örneğiyle aynı an değil</small></div><button type="button" onClick={read}>Görev örneğini oku</button></div><p role="status" className="projection-read-status" data-phase={state.phase}>{readStatus(state,{idle:'Okunmadı · HOLD',loading:'Okunuyor…',historical:'Tarihsel prefix eşleşti · HOLD',hold:'Kayıt yok veya uyuşmuyor · HOLD'})}</p>
- {data&&<><p className="sub">{data.run_id} · görev {data.task_id} · {data.state} · v{data.head_version} · attempt {data.attempt}</p><ol className="lifecycle-timeline">{data.timeline.map(e=><li key={e.version}><strong>v{e.version} · {e.state}</strong><small>{e.kind}</small></li>)}</ol><dl className="prefix-facts"><div><dt>Lease kaydı</dt><dd>v{data.lease_version} · fence {data.fence}</dd></div><div><dt>Heartbeat / expiry (örnek tick)</dt><dd>{data.heartbeat_tick} / {data.expires_tick}</dd></div><div><dt>Lease güncelliği</dt><dd>{data.lease_freshness}</dd></div><div><dt>Örnek açık rezervasyon</dt><dd>{data.sample_outstanding_minor} minor {data.currency}</dd></div><div><dt>Model / Memory ACL</dt><dd>{data.model_binding} / {data.memory_acl}</dd></div><div><dt>Plan / Office eşleşmesi</dt><dd>{data.geometry_join}</dd></div></dl></>}
+ {data&&<><p className="sub">{data.run_id} · görev {data.task_id} · {data.state} · v{data.head_version} · attempt {data.attempt}</p><HistoricalEvidenceStrip sample={data}/><dl className="prefix-facts"><div><dt>Lease kaydı</dt><dd>v{data.lease_version} · fence {data.fence}</dd></div><div><dt>Heartbeat / expiry (örnek tick)</dt><dd>{data.heartbeat_tick} / {data.expires_tick}</dd></div><div><dt>Lease güncelliği</dt><dd>{data.lease_freshness}</dd></div><div><dt>Örnek açık rezervasyon</dt><dd>{data.sample_outstanding_minor} minor {data.currency}</dd></div><div><dt>Model / Memory ACL</dt><dd>{data.model_binding} / {data.memory_acl}</dd></div><div><dt>Plan / Office eşleşmesi</dt><dd>{data.geometry_join}</dd></div></dl></>}
  {join&&<p className="join-readback"><strong>Plan / DAG bağlantısı: HOLD</strong><small>{join.reason} · {binding?.reason??'HOLD'} · yalnız kimlik karşılaştırması; canlı eşleme yok.</small></p>}
  <p className="sub">Tarihsel lease kaydı, güncel yetki veya aktif ajan anlamına gelmez. Terminal paneli ayrı örnek dosyadır; durumlar birleştirilmez. Gerçek bütçe, model, retrieval, hareket ve dispatch kapalı.</p></section>;
 }
