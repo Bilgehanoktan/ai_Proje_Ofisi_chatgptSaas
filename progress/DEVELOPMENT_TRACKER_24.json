@@ -1,6 +1,6 @@
 {
-  "id": "TRACK-0210",
-  "baseline": "TRACK-0209",
+  "id": "TRACK-UX-PREMIUM-06",
+  "baseline": "TRACK-0210",
   "tarih": "2026-11-16",
   "status": "D0_LOCAL_FENCED_T1_INTENT_QUARANTINE_SELECTED_PASS",
   "rubric": {
@@ -41,7 +41,12 @@
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
-      "integration_status": "PARTIAL_INTEGRATED"
+      "integration_status": "PARTIAL_INTEGRATED",
+      "ux_premium_06": {
+        "summary": "Native and sandbox routes source-linked",
+        "status": "SOURCE_INTEGRATED_NATIVE_NOT_RUN",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     },
     {
       "id": 2,
@@ -62,7 +67,12 @@
       "latest_candidate_product_integration": "EDS_SLICE_INTEGRATED",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
-      "integration_status": "EDS_SLICE_INTEGRATED"
+      "integration_status": "EDS_SLICE_INTEGRATED",
+      "ux_premium_06": {
+        "summary": "176 Canvas frames, art, glass and reduced motion",
+        "status": "CANVAS_PASS_NATIVE_VISUAL_NOT_RUN",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     },
     {
       "id": 3,
@@ -83,7 +93,12 @@
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
-      "integration_status": "PARTIAL_INTEGRATED"
+      "integration_status": "PARTIAL_INTEGRATED",
+      "ux_premium_06": {
+        "summary": "4-agent model, mini camera, lift isolated, floor 2 passive",
+        "status": "MODEL_PASS_JOIN_HOLD",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     },
     {
       "id": 4,
@@ -104,7 +119,12 @@
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
-      "integration_status": "PARTIAL_INTEGRATED"
+      "integration_status": "PARTIAL_INTEGRATED",
+      "ux_premium_06": {
+        "summary": "Existing historical readback, no new contract/API",
+        "status": "NO_API_CHANGE_CANONICAL_HOLD",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     },
     {
       "id": 5,
@@ -440,7 +460,12 @@
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
-      "integration_status": "PARTIAL_INTEGRATED"
+      "integration_status": "PARTIAL_INTEGRATED",
+      "ux_premium_06": {
+        "summary": "81 Node +11 Chromium selected rerun",
+        "status": "92_SELECTED_PASS_FULL_NOT_RUN",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     },
     {
       "id": 21,
@@ -461,7 +486,12 @@
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
-      "integration_status": "PARTIAL_INTEGRATED"
+      "integration_status": "PARTIAL_INTEGRATED",
+      "ux_premium_06": {
+        "summary": "Git and npm DNS blocked; reviewed lock absent",
+        "status": "BLOCKED",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     },
     {
       "id": 22,
@@ -524,10 +554,15 @@
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
-      "integration_status": "CATALOG_UPDATED"
+      "integration_status": "CATALOG_UPDATED",
+      "ux_premium_06": {
+        "summary": "22 path catalog, main index, tracker, handover",
+        "status": "CONSOLIDATION_RECORDED",
+        "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      }
     }
   ],
-  "note": "Ordinal scores unchanged. 154 selected PASS, 138 regression +16 new. D-03 local writer pass, external drift and D-04 restore gaps remain. Full core29/CompanyTerminal/PG/build and independent acceptance open. Historical tests not additive.",
+  "note": "Ordinal scores unchanged. 154 selected PASS, 138 regression +16 new. D-03 local writer pass, external drift and D-04 restore gaps remain. Full core29/CompanyTerminal/PG/build and independent acceptance open. Historical tests not additive. | UX overlay: separate branch evidence, no score or core acceptance change; do not aggregate historical results.",
   "integration_tracking": {
     "scope": "0210 local fenced T1 and durable intent",
     "source_commit": "cd1dd5e61e259d4f16b94ae7e386e32730c8fd13",
@@ -546,5 +581,24 @@
     "independent_acceptance": "HOLD",
     "canonical_mapping": "HOLD",
     "normative_authority": "HOLD"
+  },
+  "parallel_ui_tracking": {
+    "source_commit": "897c9b95c4264e3ae4f569139d36f32001d3dccf",
+    "product_manifest_entries": 397,
+    "product_manifest_blob": "c1769eec8a476cf853b4ebb524616b96041db7eb",
+    "selected_node": 81,
+    "selected_chromium": 11,
+    "selected_total": 92,
+    "product_build": "BLOCKED",
+    "native_browser": "NOT_RUN",
+    "office_v0": "JOIN_HOLD",
+    "independent_acceptance": "HOLD",
+    "core_parallel": {
+      "commit": "a4a6aba3e986927b4e2b0157028e6623c669864e",
+      "tracker_id": "TRACK-0213",
+      "tracker_blob": "546dc737518360e1ec2392757be035d1b12f09cc",
+      "not_merged": true
+    },
+    "p10g": "f2457545cf52805e5ed5ea86cd869c326fd162ca"
   }
 }

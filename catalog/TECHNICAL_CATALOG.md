@@ -111,3 +111,7 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10G
 [Catalog](revisions/TECHNICAL_CATALOG_UI_P10G.json); [architecture](../docs/UI-P10G/ARCHITECTURE_AND_CATALOG.md). D0 only.
+
+
+## UX-PREMIUM-06
+[22-path consolidated file/symbol/API/DB/dependency/test catalog](revisions/TECHNICAL_CATALOG_UX_PREMIUM_06.json) · [maintenance and acceptance](../docs/UX-PREMIUM-06/CONSOLIDATION.md). 397 manifest entries; 81 Node +11 Chromium, not native Phaser. No product changes.

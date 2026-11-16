@@ -1,0 +1,433 @@
+{
+  "revision": "UX-PREMIUM-06",
+  "source": "897c9b95c4264e3ae4f569139d36f32001d3dccf",
+  "baseline": "f2457545cf52805e5ed5ea86cd869c326fd162ca",
+  "scope": "22 changed product paths; consolidated source catalog, not a full symbol extraction",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/app/office/premium/native/page.tsx",
+      "git_blob": "dad0a2656e81ee8a2076c390fcbd76bdf5594c78",
+      "bytes": 398,
+      "manifest_sha256": "a733017b66d72f6c1e136519a4b32e0f37e0ba6e009ef872d7229a6c8f21c120",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "Page",
+        "metadata"
+      ],
+      "purpose": "Next App Router native lab entry; links to sandbox",
+      "dependencies": [
+        "PremiumNativeScene"
+      ],
+      "evidence": "source only"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/office/premium/page.tsx",
+      "git_blob": "dba6bfe8e9f73e7d2b7489e5fd0060e7ec127c82",
+      "bytes": 1250,
+      "manifest_sha256": "1d2002aaf077e4b4f8f8061ec30fec677ae3c15c4a9e94b17e747d461edd408e",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "PremiumOfficePage",
+        "metadata"
+      ],
+      "purpose": "Sandbox srcDoc route and native link; allow-scripts only",
+      "dependencies": [
+        "premiumOfficeHtml"
+      ],
+      "evidence": "diagnostic host only"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "git_blob": "a55f1004df509ce4759c228b67beef0f6729bd72",
+      "bytes": 2989,
+      "manifest_sha256": "1f0d4b4f8a63de649b684350b5894f95b21e270bf204505b011f990eb43a0d7e",
+      "previous_git_blob": "539833649fa3de74dfe8e7a79f7bfe4fbec74dbb",
+      "change": "modified",
+      "symbols": [
+        "OfficePanel",
+        "SnapshotFloor",
+        "Display"
+      ],
+      "purpose": "Premium link; retain historical list and workbench",
+      "dependencies": [
+        "OfficeScene",
+        "OfficeIllustration",
+        "OfficeWorkbenchPanel"
+      ],
+      "evidence": "source only"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/assets/premiumOfficeHtml.ts",
+      "git_blob": "41bc3a89d9aaed8aa65f4a953f8e158e6f9edfe4",
+      "bytes": 41143,
+      "manifest_sha256": "bf7fd53c9e4d175387c5245cd9a1a86702ce836a53fae59f1c97672edc154468",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "premiumOfficeHtml"
+      ],
+      "purpose": "Original 02.4 decorative HTML plus touch fix; opaque sandbox",
+      "dependencies": [],
+      "evidence": "historical 02.5A/B diagnostic; not rerun"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/cameraInput.ts",
+      "git_blob": "97d3cbca00d7e027a1b29d61c9fa7255e945a183",
+      "bytes": 1222,
+      "manifest_sha256": "1e8abb6015e25ff6bcb0039c0d059c9542a4c910bc08f729a79719871e997b0c",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "InputView",
+        "inputBounds",
+        "inputPan",
+        "inputZoom",
+        "inputDragged"
+      ],
+      "purpose": "Finite camera bounds, pan, wheel anchor and drag threshold",
+      "dependencies": [],
+      "evidence": "11/11 rerun"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumLift.ts",
+      "git_blob": "e3215655b0551eef97f0c66b17a871397f3d6e9a",
+      "bytes": 1820,
+      "manifest_sha256": "b7ab097875576862c21dd60a3fe9ff14f9142de790af8dbb902750d8ded9bc67",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "initialLift",
+        "enqueueLift",
+        "cancelLift",
+        "tickLift"
+      ],
+      "purpose": "FIFO lift state machine, no scene join",
+      "dependencies": [
+        "premiumModel types"
+      ],
+      "evidence": "isolated model pass"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumModel.ts",
+      "git_blob": "fe2e250192f340db725d848d630869d3cd47c507",
+      "bytes": 6309,
+      "manifest_sha256": "07405280965f63f236c1084d0c2fee9730d26fd96f1e13e795d1503270f58d43",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "roles",
+        "rooms",
+        "furniture",
+        "walkable",
+        "pathBetween",
+        "initialActors",
+        "command",
+        "advance",
+        "position",
+        "routeStatus",
+        "projectionBoundary",
+        "iso"
+      ],
+      "purpose": "12x10 D0 model; bounded recovery and safe cell reservations",
+      "dependencies": [
+        "premiumRouting",
+        "premiumTraffic"
+      ],
+      "evidence": "16/16 rerun"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumOfficeV0.ts",
+      "git_blob": "bb1165fff5cc26eb35e8e7a405596221eb0427a1",
+      "bytes": 4614,
+      "manifest_sha256": "41105b6e3196ea043936b7f4da91b341a1a46b5e1bb9053bfab710a7116e6e9a",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "inspectOfficeV0",
+        "inspectGeometryGap"
+      ],
+      "purpose": "Strict historical inspection, coordinate diagnostics; never binds runtime",
+      "dependencies": [],
+      "evidence": "20/20 rerun"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumPresentation.ts",
+      "git_blob": "9dc05ad7d51b1031fd30ec07dd9cc5082055cde3",
+      "bytes": 1865,
+      "manifest_sha256": "d06c396ce4628b258f41185aa3565c7275b8bd79d2c88313a43b5002937c4715",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "frames",
+        "clips",
+        "atlasSize",
+        "avatarFrame",
+        "glassAlpha",
+        "monitorGlow"
+      ],
+      "purpose": "Atlas frame selection, reduced motion, opacity and glow",
+      "dependencies": [
+        "premiumModel"
+      ],
+      "evidence": "pure/model and Canvas pass"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumRouting.ts",
+      "git_blob": "da139ea32dea7358acfddb2782c6cfb2e9e7a4cd",
+      "bytes": 2098,
+      "manifest_sha256": "ed635338d270c917968b972fddb9cdd66a7ca31e1877bb78f9dfdea450b1c53c",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "pairEscape",
+        "depthAt",
+        "cameraViewport"
+      ],
+      "purpose": "Pair recovery and presentation depth/camera geometry",
+      "dependencies": [],
+      "evidence": "10/10 rerun"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumTraffic.ts",
+      "git_blob": "a25473d42be2a4bb895b2e8891a3467523dbdcc6",
+      "bytes": 3464,
+      "manifest_sha256": "d176441e27060e3d6791b2fdf1d68a293c12f89dfb08a10476870b28e11b1c87",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "createTrafficSearch",
+        "TrafficStep",
+        "TrafficResult"
+      ],
+      "purpose": "Bounded incremental joint search",
+      "dependencies": [
+        "premiumRouting type"
+      ],
+      "evidence": "12/12 rerun"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/OfficeScene.tsx",
+      "git_blob": "1dbddc3be56941c317d1b9dba067c4eac2cd70e8",
+      "bytes": 11211,
+      "manifest_sha256": "d8f671ebca70530c9b560471628dd8a3b1016cc8615226dbbf6e95ad82271478",
+      "previous_git_blob": "edc39bfc6814e1cff97233fc525dc04366f48866",
+      "change": "modified",
+      "symbols": [
+        "OfficeScene"
+      ],
+      "purpose": "Original 6x6 Phaser demo input wiring; static fallback",
+      "dependencies": [
+        "geometry",
+        "cameraInput",
+        "React",
+        "Phaser"
+      ],
+      "evidence": "native NOT_RUN"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/PremiumNativeScene.tsx",
+      "git_blob": "f8b8e3b7e3e599053a43dcfccffb52c32e14e0ec",
+      "bytes": 14510,
+      "manifest_sha256": "45a567a35dfca099be4ca0535e541d5c0389bb12a8cea8d6de2a1b019ba5f43c",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "PremiumNativeScene"
+      ],
+      "purpose": "12x10 native scene, atlas fallback, mini camera, detail panels, passive floor",
+      "dependencies": [
+        "premiumModel",
+        "premiumArt",
+        "premiumRouting",
+        "premiumPresentation",
+        "premiumAtlasPaint",
+        "premiumOfficeV0",
+        "useProjectionRead",
+        "React",
+        "Phaser"
+      ],
+      "evidence": "native NOT_RUN"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/premiumArt.ts",
+      "git_blob": "86b9a53d760a7a9c6852d674619b6b974dd4ebb0",
+      "bytes": 4363,
+      "manifest_sha256": "dbfc24e7eb82bbcaa8adcc31c375bc57778ec5511d0d927378217df9e3a84aa8",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "drawFurnitureCell",
+        "drawAvatar",
+        "box"
+      ],
+      "purpose": "Procedural art and segmented depth",
+      "dependencies": [
+        "premiumModel",
+        "premiumRouting"
+      ],
+      "evidence": "source only"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/premiumAtlasPaint.ts",
+      "git_blob": "a524c66b22bc8f5836c6c809dedd192d1114ac4a",
+      "bytes": 2805,
+      "manifest_sha256": "bed0398ad15ad53a0dec2afcfc37edc371c0f1042456420f2e0d3896a196fa39",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "paintAvatar",
+        "paintAtlas"
+      ],
+      "purpose": "Canvas sprite painting; 176 frames",
+      "dependencies": [
+        "premiumPresentation"
+      ],
+      "evidence": "actual Chromium Canvas pass"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-camera.test.cjs",
+      "git_blob": "796feb476b8a1953f78518de528389def07bcdc5",
+      "bytes": 1708,
+      "manifest_sha256": "99daf9c27ed325485a67ff85275a0a51101d0cd798d5f7af4317e63207ce7fbb",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "11 checks"
+      ],
+      "purpose": "Camera helper suite",
+      "dependencies": [
+        "cameraInput"
+      ],
+      "evidence": "11/11"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-geometry.test.cjs",
+      "git_blob": "df0183b5dc8ffd12b9cf65a00abca863278b31e4",
+      "bytes": 1812,
+      "manifest_sha256": "2cb318c5881a449e7a225a02a2b32b21e03d9c95bdea66583ff0d149d2579c2a",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "7 checks"
+      ],
+      "purpose": "Non-binding geometry gap",
+      "dependencies": [
+        "premiumOfficeV0",
+        "premiumModel"
+      ],
+      "evidence": "7/7"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-model.test.cjs",
+      "git_blob": "0f668ab89b9dc28898573ad0923ed76fd9c48f57",
+      "bytes": 4574,
+      "manifest_sha256": "3e0cb6291ec6c19974e05f8a487d5b594fbc1d6c3d33ed99a37a06966b034602",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "16 checks"
+      ],
+      "purpose": "Movement and conflict invariants",
+      "dependencies": [
+        "premiumModel"
+      ],
+      "evidence": "16/16"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-office-v0.test.cjs",
+      "git_blob": "059ab5d536b48c3215e875e892b4ff11b2335cd0",
+      "bytes": 1415,
+      "manifest_sha256": "bde7eb529d84f27c0daa1352357cf80193278e42d44be4c5a027d3643a2bdbc2",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "13 checks"
+      ],
+      "purpose": "Historical sample rejection and HOLD",
+      "dependencies": [
+        "premiumOfficeV0"
+      ],
+      "evidence": "13/13"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-presentation.test.cjs",
+      "git_blob": "8e4bc661c4fff1eabe06de164efc5122ec030cf2",
+      "bytes": 4017,
+      "manifest_sha256": "6d7490a0e8aefd66a0433566bb63df048ae6cb79707b713ab7181de38b38f35f",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "12 checks"
+      ],
+      "purpose": "Atlas, glass, glow, lift",
+      "dependencies": [
+        "premiumPresentation",
+        "premiumLift",
+        "premiumModel"
+      ],
+      "evidence": "12/12"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-routing.test.cjs",
+      "git_blob": "e16824a95040b05ff4c68b4f81fae3c00d5ce3d8",
+      "bytes": 1930,
+      "manifest_sha256": "212c91dcab331df587b43d8192aa8855772c48fcbe80a210da6252f072f0eab6",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "10 checks"
+      ],
+      "purpose": "Pair routes, depth and camera",
+      "dependencies": [
+        "premiumRouting"
+      ],
+      "evidence": "10/10"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-traffic.test.cjs",
+      "git_blob": "6f4b8b302bf3a84a2ec9264b3c7b667933d72ab8",
+      "bytes": 2565,
+      "manifest_sha256": "9e07dac651294e222c7543b304f4debdfde5987978fd3f8fec97514e2f312e1a",
+      "previous_git_blob": null,
+      "change": "added",
+      "symbols": [
+        "12 checks"
+      ],
+      "purpose": "Joint traffic, budget and safety",
+      "dependencies": [
+        "premiumTraffic"
+      ],
+      "evidence": "12/12"
+    }
+  ],
+  "api": {
+    "added": [],
+    "reused": [
+      "GET /api/demo/office-workbench",
+      "GET /demo/v1/office/workbench-projection"
+    ],
+    "authority": "historical sample only; JOIN_HOLD"
+  },
+  "database": [],
+  "events": [],
+  "classes": "No new exported runtime class; scene is React function with Phaser scene object; types in source",
+  "dependency_pins": {
+    "added": [],
+    "next": "15.5.29",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "phaser": "3.90.0",
+    "typescript": "5.9.3"
+  },
+  "test_evidence": {
+    "node": 81,
+    "chromium": 11,
+    "full_build": "BLOCKED",
+    "native_phaser": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "maintenance": "docs/UX-PREMIUM-06/CONSOLIDATION.md",
+  "rollback": "897c9b95c4264e3ae4f569139d36f32001d3dccf"
+}

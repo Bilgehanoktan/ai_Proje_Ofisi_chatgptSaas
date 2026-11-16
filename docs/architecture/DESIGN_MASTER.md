@@ -197,3 +197,7 @@ Recovered all 18 missing core29 lock files; 55/55 exact Git blob pins, 29/29 ori
 
 ## Diagnose / rollback
 Inspect source hashes before test. For root replacement/restore preserve evidence, isolate fixture and keep HOLD; external independent custody and effect fencing are separate decisions. For UI filter verify view intersection and exact parsed record, clear filter. For W8 obtain full clean checkout, verify pins then reviewed lock stage. Never synthesize missing dependency. Revert to parent 0b9e476264128ce523e3acab97712fe78fd5582e on candidate branch; no DB migration. Maintain separate core branch.
+
+
+## UX-PREMIUM-02–06 — controlled presentation consolidation
+[Consolidation and scope](../UX-PREMIUM-06/CONSOLIDATION.md) · [02.5A](../UX-PREMIUM-02.5/HANDOVER.md) · [02.5B](../UX-PREMIUM-02.5B/HANDOVER.md) · [03](../UX-PREMIUM-03/HANDOVER.md) · [04](../UX-PREMIUM-04/HANDOVER.md) · [05](../UX-PREMIUM-05/HANDOVER.md). Product source pinned to UX-05; 92 selected checks, native/full build blocked, OfficeV0 JOIN_HOLD, independent HOLD. Core 0214 separate; no merge, no normative changes or score increase. Phase 4 line E, line G acceptance; second floor remains passive.
