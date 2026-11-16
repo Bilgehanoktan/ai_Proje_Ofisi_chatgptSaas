@@ -1,0 +1,33 @@
+{
+  "revision": "UI-P10J-04",
+  "code": [
+    {
+      "path": "scripts/parallel_preflight.py",
+      "blob": "e8f492a2a6fe27a1b971c0900d4e21bd4c9b8760"
+    },
+    {
+      "path": "tests/integration/test_parallel_preflight.py",
+      "blob": "e34fc6e77850187f1ab83e275c699837b7ea3c5b"
+    },
+    {
+      "path": "tests/integration/w8_p10j.py",
+      "blob": "328464e636baff4488830e054db6f52690505056"
+    },
+    {
+      "path": "tests/integration/test_w8_p10j_adapter.py",
+      "blob": "9f0bbae569564392547664da36cb5dcb02cd9738"
+    }
+  ],
+  "symbols": [
+    "parallel_preflight.shared(path)",
+    "parallel_preflight.validate(inventory)",
+    "parallel_preflight.compare(base,local,incoming)",
+    "w8_p10j.load_candidate()"
+  ],
+  "dependencies": "Python stdlib only",
+  "api_changes": [],
+  "db_changes": [],
+  "event_changes": [],
+  "product_changes": [],
+  "maintenance": "Use complete verified common-ancestor inventories. Manual review for shared/deleted/divergent; no write. Adapter pins original P10I and inherits W8 review gates. Revert this bounded commit on isolated branch; preserve original historical files and claims."
+}

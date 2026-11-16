@@ -1,0 +1,120 @@
+{
+  "revision": "UI-P10J-04",
+  "parent": "3077fa9c4f285bea8425f53f036570db6f859c9c",
+  "upstream_p10i_delivery": "61c61894cd29f3dd5a5c148516ffccd369bf47e1",
+  "common_source": "2febb84e539eddcfe4821783910c430ac20697c8",
+  "core_0213_reference": "3cec45d2040fc35293ddcb82840ee543ba1f4019",
+  "carried": [
+    {
+      "path": "PROJECT_INDEX.md",
+      "sha": "8efdcc0f1e5ee480ce37bffeeaf6883cdbe2a59a"
+    },
+    {
+      "path": "catalog/TECHNICAL_CATALOG.md",
+      "sha": "698c76c9e8eb8a76fa6256e4da01e5cbfa06367b"
+    },
+    {
+      "path": "docs/architecture/DESIGN_MASTER.md",
+      "sha": "1619e09faaca3609c4acbabb284f45027367c726"
+    },
+    {
+      "path": "catalog/revisions/TECHNICAL_CATALOG_UI_P10I.json",
+      "sha": "fe316f3a42ba9e6c81223a488a2baf286bdc9334"
+    },
+    {
+      "path": "docs/UI-P10I/ARCHITECTURE_AND_CATALOG.md",
+      "sha": "5f2d594bed9591ec5ee7140f7c96d034baafc790"
+    },
+    {
+      "path": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+      "sha": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+    },
+    {
+      "path": "docs/implementation_plan/UI_MASTER_PARALLEL_P10I.md",
+      "sha": "806341ab157804ad65462949c4d8bab9bc917add"
+    },
+    {
+      "path": "handover/CURRENT_COMBINED_UI_P10I.json",
+      "sha": "46d71969cc8a270ff90c26c04b7741fdb0d1e691"
+    },
+    {
+      "path": "handover/history/CURRENT_UI_P10H.md",
+      "sha": "6af4a6d8713580fc85f99b2840e35de7ca0a7579"
+    },
+    {
+      "path": "progress/UI_P10I.json",
+      "sha": "1a26bdef71d402392b9a5f7e3338a7d692790933"
+    },
+    {
+      "path": "releases/GITHUB_READBACK_UI_P10I.json",
+      "sha": "972922c3940b4ce0d81c68fa812efa3c2411ed94"
+    },
+    {
+      "path": "tests/evidence/TEST_EVIDENCE_UI_P10I.json",
+      "sha": "7744c1c3651bbfb1fa3d4dd2d1165a66fe2a74fe"
+    },
+    {
+      "path": "tests/integration/w8_p10i.py",
+      "sha": "ec8d8f9479cff0a502a5e60c23e2fc414ed27601"
+    }
+  ],
+  "history": [
+    {
+      "path": "handover/history/CURRENT_UI_P10I.md",
+      "source": "handover/CURRENT_UI.md",
+      "sha": "806341ab157804ad65462949c4d8bab9bc917add"
+    },
+    {
+      "path": "handover/history/NEXT_STEP_UI_P10I.md",
+      "source": "handover/NEXT_STEP_UI.md",
+      "sha": "59f33b877ea3593a46dfcb86f39c8125919ead1a"
+    }
+  ],
+  "product": {
+    "manifest_blob": "35724e95238201da97a9f98b390d879704f68771",
+    "manifest_entries": 386,
+    "files": 387,
+    "changed": 0
+  },
+  "tested_code": [
+    {
+      "path": "scripts/parallel_preflight.py",
+      "blob": "e8f492a2a6fe27a1b971c0900d4e21bd4c9b8760"
+    },
+    {
+      "path": "tests/integration/test_parallel_preflight.py",
+      "blob": "e34fc6e77850187f1ab83e275c699837b7ea3c5b"
+    },
+    {
+      "path": "tests/integration/w8_p10j.py",
+      "blob": "328464e636baff4488830e054db6f52690505056"
+    },
+    {
+      "path": "tests/integration/test_w8_p10j_adapter.py",
+      "blob": "9f0bbae569564392547664da36cb5dcb02cd9738"
+    }
+  ],
+  "tests": {
+    "parallel_preflight": {
+      "passed": 12,
+      "total": 12,
+      "kind": "local synthetic unit"
+    },
+    "w8_adapter": {
+      "passed": 4,
+      "total": 4,
+      "kind": "local mocked parent protocol; not original full W8"
+    }
+  },
+  "gates": {
+    "ui": "21/40",
+    "independent": "0/7",
+    "core_0213": "6/16 historical distinct"
+  },
+  "blockers": [
+    "Full checkout unavailable; GitHub DNS failure in local runtime.",
+    "W8 actual chain load/full audit, reviewed locks, build, real 7 API and 52 browser checks NOT_RUN.",
+    "No separate independent authority approval; core 0213 remains unmerged."
+  ],
+  "next": "P10J-05: actual checkout and W8 preflight; independent presentation source work after renewed branch check."
+}

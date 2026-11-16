@@ -20,3 +20,6 @@
 
 ## Product roadmap (15.11.2026)
 Read docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md with current architecture and 24-area tracker. A–G independent workstreams; W8 Windows not prerequisite for other independent work. Continue CURRENT and NEXT_STEP; no new permissions.
+
+## Parallel work / conflict prevention (P10J-04)
+Follow [PARALLEL_WORK_PROTOCOL](docs/development/PARALLEL_WORK_PROTOCOL.md) before every round, including across chats. Resolve current remote heads and shared paths; non-force expected-parent updates only. Keep core/UI/security branches separate; reconcile shared records with preserved history. No additional permission; historical prohibitions and CEO-0174/0179 boundaries remain.
