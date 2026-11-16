@@ -1,0 +1,461 @@
+{
+  "revision": "0209",
+  "baseline": "f832f00bffa4162b1f31a9bd192a5aedd44986fb",
+  "source_commit": "9164fe68b545144953ea138c5d9cde3f12a18e12",
+  "scope": "D0 signed memory witness, original T1 coordinator/session and ordinary SQL mapping on disposable SQLite; no external effects",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "cryptography": "46.0.4",
+  "passed": 138,
+  "failed": 0,
+  "skipped": 0,
+  "new": 40,
+  "regression": 98,
+  "groups": {
+    "memory_witness": 23,
+    "t1_fixture_mapping": 10,
+    "t1_original_mapping_sqlite": 7
+  },
+  "files": [
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "bytes": 1346,
+      "git_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "sha256": "02c15b573b2056c841854a6ca3b2a08b9ee2c2076a8388ff4d0118c974115003"
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "bytes": 878,
+      "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "sha256": "c8317eceef963dfeafb2452dd53e25074dc7926868fc96dfef5be14176396be6"
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "bytes": 2437,
+      "git_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "sha256": "64c7ae1b4c89eef2d0011ce3bf035b4c782dcfbc7a1fe0ce70d6ce007f0bf917"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "bytes": 59,
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "bytes": 49,
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "bytes": 3694,
+      "git_blob": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+      "sha256": "786928f7b0a12af8995e20886dbabfd9139e0ff8ffef7a049c994adf987ca6b6"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "bytes": 7251,
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "bytes": 10752,
+      "git_blob": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+      "sha256": "91b4268c410265be18b6248a3c1f652788200f08f81786914a796b6d8b39b1db"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "bytes": 2994,
+      "git_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+      "bytes": 1698,
+      "git_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+      "sha256": "35cb245bce423a4edebae97099fb578cf8ab9ce3a4a0bf7b495b9565cc247e24"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "bytes": 66,
+      "git_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/d0_snapshot.py",
+      "bytes": 2592,
+      "git_blob": "c067e844f1c3200c625f4811d13f12c59a602e95",
+      "sha256": "ef17e343571236d1c3c7b261551627ab727c6f632c1cc3a867c22d24b05e09a7"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+      "bytes": 3802,
+      "git_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+      "sha256": "4be862d34e292dfc94a01fdb3d3e7254363126afe653d9637ddf75f743e07a03"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+      "bytes": 287,
+      "git_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+      "sha256": "30d5585648be281c058fee53678a44851b57576e28a48d721dc3465100e7a7db"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "bytes": 3093,
+      "git_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "sha256": "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "bytes": 1548,
+      "git_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "sha256": "4730949fe2af90c58b70a92d2462881e20deccde535882e8785e9eaaf76bae71"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+      "bytes": 725,
+      "git_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+      "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/t1_review.py",
+      "bytes": 517,
+      "git_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+      "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "bytes": 49,
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "bytes": 4286,
+      "git_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "bytes": 2495,
+      "git_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "bytes": 8493,
+      "git_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "bytes": 5065,
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+      "bytes": 5404,
+      "git_blob": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2",
+      "sha256": "279f377da4be9a4425a1bc77ba160217e811c7e0c31e1cbccccbeb6cf9ea716b"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/__init__.py",
+      "bytes": 52,
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/knowledge_engine/__init__.py",
+      "bytes": 52,
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+      "bytes": 1391,
+      "git_blob": "7d710685366a55c117e49043a64f1eeabf5079cf",
+      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/__init__.py",
+      "bytes": 52,
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+      "bytes": 2715,
+      "git_blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+      "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py",
+      "bytes": 5319,
+      "git_blob": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+      "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "bytes": 9580,
+      "git_blob": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+      "sha256": "ac03b3ab7ce63b851853f61d8b68f76c17bcf1e7a61518e6c42acfd378ebe169"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+      "bytes": 52,
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+      "bytes": 1391,
+      "git_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+      "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py",
+      "bytes": 2986,
+      "git_blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+      "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+      "bytes": 1305,
+      "git_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+      "bytes": 3373,
+      "git_blob": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+      "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_d0_snapshot_p04.py",
+      "bytes": 4349,
+      "git_blob": "42d761960c0a5fe3efb573612fab36ac9f797619",
+      "sha256": "c09c67844f61608f8f957526bed49e4e6a5fb81b714ede302b80606cca83e817"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_joint_context_0208.py",
+      "bytes": 9128,
+      "git_blob": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd",
+      "sha256": "9fd2c905a6821d0bcf33e09ea707dae1ab190225b016d66ff7cf2ef60f63d822"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_snapshot_merge_p05.py",
+      "bytes": 4258,
+      "git_blob": "619d14e103207f840e82c96774ae773e38914b3e",
+      "sha256": "c36fd20098749daea35cbfd66915cff992054cf315976b130d827545777be750"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_access_0194.py",
+      "bytes": 7089,
+      "git_blob": "a792abc90b7a09fb703982f6efd1cd4f648b073c",
+      "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "bytes": 8077,
+      "git_blob": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+      "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_witness_0209.py",
+      "bytes": 10155,
+      "git_blob": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb",
+      "sha256": "3485e328bc7900d24b91681bd6f49adea48938e3d44ccdc4632ec2ae77df02ad"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_model_invocation_0196.py",
+      "bytes": 4668,
+      "git_blob": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e",
+      "sha256": "fe1c62ba445f07185346009f2e4835bd5757815197288ef52cdf9b00f768bd0a"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_runtime_memory_model_0207.py",
+      "bytes": 4628,
+      "git_blob": "01f3110955e4c9e02ed7244a305216163d34df99",
+      "sha256": "6787ddf20de8a9f0097ad3d58d3c9cf30b4b4268324028ec4a5070bd40ac26b1"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_witnessed_sql_0209.py",
+      "bytes": 7231,
+      "git_blob": "0b9a538b5bf80574f771486e56b70d8d0ec8b278",
+      "sha256": "0b4265731a587e20255d434c11aa4e956faaba6df83f6155425b5ef6dc7f9439"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_witnessed_t1_0209.py",
+      "bytes": 8253,
+      "git_blob": "4d476aa49fcfeb754ffe8eefdda0fba7531258c0",
+      "sha256": "cf157958b9686f897cca79b8b238842a7cd56d040b5eb2ea4f0affc4f4368f64"
+    }
+  ],
+  "cases": [
+    "test_d0_snapshot_p04.SnapshotTests.test_actual_read_preserves_hash",
+    "test_d0_snapshot_p04.SnapshotTests.test_cursor_closed",
+    "test_d0_snapshot_p04.SnapshotTests.test_deadline_holds",
+    "test_d0_snapshot_p04.SnapshotTests.test_empty_file",
+    "test_d0_snapshot_p04.SnapshotTests.test_exception_cleanup_preserves_hash",
+    "test_d0_snapshot_p04.SnapshotTests.test_missing_does_not_create",
+    "test_d0_snapshot_p04.SnapshotTests.test_oversize",
+    "test_d0_snapshot_p04.SnapshotTests.test_reject_write_attach_and_multiple_statements",
+    "test_d0_snapshot_p04.SnapshotTests.test_relative_path",
+    "test_d0_snapshot_p04.SnapshotTests.test_sidecar_appears_during_read",
+    "test_d0_snapshot_p04.SnapshotTests.test_sidecars",
+    "test_d0_snapshot_p04.SnapshotTests.test_symlink",
+    "test_d0_snapshot_p04.SnapshotTests.test_wrong_name",
+    "test_joint_context_0208.JointContextTests.test_acl_deny_after_new_pin",
+    "test_joint_context_0208.JointContextTests.test_changed_model_without_joint_digest",
+    "test_joint_context_0208.JointContextTests.test_changed_pin_without_joint_digest",
+    "test_joint_context_0208.JointContextTests.test_cross_principal",
+    "test_joint_context_0208.JointContextTests.test_effect_cannot_be_pinned",
+    "test_joint_context_0208.JointContextTests.test_exact_span_matches_without_authority",
+    "test_joint_context_0208.JointContextTests.test_expired_lease",
+    "test_joint_context_0208.JointContextTests.test_failed_revocation_transaction_preserves_pin",
+    "test_joint_context_0208.JointContextTests.test_fence_drift",
+    "test_joint_context_0208.JointContextTests.test_full_source_not_authorized_span",
+    "test_joint_context_0208.JointContextTests.test_graph_pin_tampering_cannot_be_repinned",
+    "test_joint_context_0208.JointContextTests.test_invalid_input_and_pin_shape",
+    "test_joint_context_0208.JointContextTests.test_missing_store_and_tampered_raw",
+    "test_joint_context_0208.JointContextTests.test_model_input_hash_must_match_even_with_exact_span",
+    "test_joint_context_0208.JointContextTests.test_new_revoked_pin",
+    "test_joint_context_0208.JointContextTests.test_old_pin_after_revocation",
+    "test_joint_context_0208.JointContextTests.test_policy_drift",
+    "test_joint_context_0208.JointContextTests.test_read_only_preserves_store",
+    "test_joint_context_0208.JointContextTests.test_real_provider_cannot_be_pinned",
+    "test_joint_context_0208.JointContextTests.test_registry_order_is_bound",
+    "test_joint_context_0208.JointContextTests.test_repin_arbitrary_input_does_not_bypass_span",
+    "test_joint_context_0208.JointContextTests.test_restore_external_witness_still_required",
+    "test_joint_context_0208.JointContextTests.test_revocation_between_reads",
+    "test_joint_context_0208.JointContextTests.test_run_drift",
+    "test_joint_context_0208.JointContextTests.test_terminal",
+    "test_joint_context_0208.JointContextTests.test_witness_drift",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_authorizer",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_deadline",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_duplicate_head",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_empty_file",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_exact_read_and_hash",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_exception_cleanup",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_missing_table",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_sidecars_before_and_after",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_trigger",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_view",
+    "test_lifecycle_snapshot_merge_p05.MergeTests.test_writer_blocked",
+    "test_memory_access_0194.MemoryAccessTests.test_acl_epochs_and_tombstone_sequence",
+    "test_memory_access_0194.MemoryAccessTests.test_acl_exact_ancestor_coverage",
+    "test_memory_access_0194.MemoryAccessTests.test_acl_pin_mismatch",
+    "test_memory_access_0194.MemoryAccessTests.test_acl_reference_revision_and_type",
+    "test_memory_access_0194.MemoryAccessTests.test_ancestor_deny",
+    "test_memory_access_0194.MemoryAccessTests.test_cross_principal_run",
+    "test_memory_access_0194.MemoryAccessTests.test_current_tombstone_boolean_alias",
+    "test_memory_access_0194.MemoryAccessTests.test_duplicate_acl_entry",
+    "test_memory_access_0194.MemoryAccessTests.test_expired_and_wrong_scope_lease",
+    "test_memory_access_0194.MemoryAccessTests.test_graph_cycle_orphan",
+    "test_memory_access_0194.MemoryAccessTests.test_match_never_grants",
+    "test_memory_access_0194.MemoryAccessTests.test_raw_and_span_tamper",
+    "test_memory_access_0194.MemoryAccessTests.test_run_version_and_attempt_drift",
+    "test_memory_access_0194.MemoryAccessTests.test_source_revision_mismatch",
+    "test_memory_access_0194.MemoryAccessTests.test_terminal_or_non_running",
+    "test_memory_access_0194.MemoryAccessTests.test_tombstone_propagation",
+    "test_memory_access_0194.MemoryAccessTests.test_unrelated_source_and_wrong_principal",
+    "test_memory_store_0196.SnapshotStoreTests.test_bad_path_and_pin",
+    "test_memory_store_0196.SnapshotStoreTests.test_canonical_graph_and_metadata_order",
+    "test_memory_store_0196.SnapshotStoreTests.test_create_refuses_existing",
+    "test_memory_store_0196.SnapshotStoreTests.test_deny_persisted",
+    "test_memory_store_0196.SnapshotStoreTests.test_forged_graph_pin",
+    "test_memory_store_0196.SnapshotStoreTests.test_graph_edge_changes_digest",
+    "test_memory_store_0196.SnapshotStoreTests.test_insert_failure_preserves_head",
+    "test_memory_store_0196.SnapshotStoreTests.test_metadata_and_raw_tamper",
+    "test_memory_store_0196.SnapshotStoreTests.test_missing_file_no_creation",
+    "test_memory_store_0196.SnapshotStoreTests.test_parallel_cas_single_winner",
+    "test_memory_store_0196.SnapshotStoreTests.test_reopen_and_read_only",
+    "test_memory_store_0196.SnapshotStoreTests.test_revocation_and_stale_pin",
+    "test_memory_store_0196.SnapshotStoreTests.test_stale_cas_cannot_append",
+    "test_memory_store_0196.SnapshotStoreTests.test_tombstone_cannot_resurrect",
+    "test_memory_store_0196.SnapshotStoreTests.test_wrong_run_and_expired_lease",
+    "test_memory_witness_0209.MemoryWitnessTests.test_alias",
+    "test_memory_witness_0209.MemoryWitnessTests.test_append_during_joint_review",
+    "test_memory_witness_0209.MemoryWitnessTests.test_append_only",
+    "test_memory_witness_0209.MemoryWitnessTests.test_cas",
+    "test_memory_witness_0209.MemoryWitnessTests.test_chain_forgery",
+    "test_memory_witness_0209.MemoryWitnessTests.test_concurrent_append_single_winner",
+    "test_memory_witness_0209.MemoryWitnessTests.test_exact_read_only",
+    "test_memory_witness_0209.MemoryWitnessTests.test_expired",
+    "test_memory_witness_0209.MemoryWitnessTests.test_future",
+    "test_memory_witness_0209.MemoryWitnessTests.test_illegal_direct_generation_advance",
+    "test_memory_witness_0209.MemoryWitnessTests.test_key_pin_mismatch",
+    "test_memory_witness_0209.MemoryWitnessTests.test_missing_file",
+    "test_memory_witness_0209.MemoryWitnessTests.test_pending_blocks_even_old_matching_snapshot",
+    "test_memory_witness_0209.MemoryWitnessTests.test_pending_cannot_clear_on_absence",
+    "test_memory_witness_0209.MemoryWitnessTests.test_policy_epoch",
+    "test_memory_witness_0209.MemoryWitnessTests.test_restore_both_with_current_external_pin",
+    "test_memory_witness_0209.MemoryWitnessTests.test_restore_memory_with_current_external_head",
+    "test_memory_witness_0209.MemoryWitnessTests.test_signature_tamper",
+    "test_memory_witness_0209.MemoryWitnessTests.test_stage_before_memory_write_then_finalize",
+    "test_memory_witness_0209.MemoryWitnessTests.test_untrusted_reader_subclass_rejected",
+    "test_memory_witness_0209.MemoryWitnessTests.test_witness_epoch",
+    "test_memory_witness_0209.MemoryWitnessTests.test_wrong_external_pin",
+    "test_memory_witness_0209.MemoryWitnessTests.test_wrong_scope",
+    "test_model_invocation_0196.ModelInvocationTests.test_adapter_and_registry_pin",
+    "test_model_invocation_0196.ModelInvocationTests.test_effects_and_invalid_ceiling",
+    "test_model_invocation_0196.ModelInvocationTests.test_input_hash_and_size",
+    "test_model_invocation_0196.ModelInvocationTests.test_lease_expiry_and_fence",
+    "test_model_invocation_0196.ModelInvocationTests.test_matching_request_still_denied",
+    "test_model_invocation_0196.ModelInvocationTests.test_output_budget_pin",
+    "test_model_invocation_0196.ModelInvocationTests.test_real_providers_never_call",
+    "test_model_invocation_0196.ModelInvocationTests.test_reservation_and_idempotency_pins",
+    "test_model_invocation_0196.ModelInvocationTests.test_run_drift",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_input_digest_and_provider_gate_independent_of_memory",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_lease_expiry_denied_by_both",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_revocation_exposes_independent_gate_gap",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_run_version_drift_denied_by_both",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_same_run_lease_and_fixture_input_never_grant",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_terminal_run_denied_by_both",
+    "test_runtime_memory_model_0207.RuntimeMemoryModelTests.test_witness_epoch_drift_denied_by_both",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_concurrent_original_writers_single_winner",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_final_check_to_commit_gap_remains",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_memory_revocation_rolls_back_all_original_roles",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_original_six_role_sql_commit",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_persisted_lease_drift_denies",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_unknown_original_commit_readback_no_retry",
+    "test_witnessed_sql_0209.WitnessedSqlTests.test_witness_epoch_change_rolls_back_all_original_roles",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_bad_intent_ref",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_clock_expiry_at_postcheck",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_external_latest_reference_changes",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_generic_commit_disallowed",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_original_coordinator_and_session_commit",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_revocation_during_roles_rolls_back",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_role_error_rolls_back",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_unknown_commit_preserves_rows_no_retry",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_witness_update_during_roles_rolls_back",
+    "test_witnessed_t1_0209.WitnessedT1Tests.test_wrong_binding_rolls_back"
+  ],
+  "log_sha256": "9869635c1ccb5a86d641db4f43fcd083cb82ae45581a3d48157a8ae061b7bfb5",
+  "command": "env -i PATH=... LANG=C.UTF-8 python -B -m unittest discover -s tests -p 'test_*.py' -v",
+  "core_55": {
+    "remote_pin_match": 55,
+    "local_exact_files": 19,
+    "local_missing_files": 36,
+    "target_tests": 29,
+    "status": "NOT_RUN"
+  },
+  "limitations": [
+    "D-01 mandatory effect boundary HOLD",
+    "D-02 D0 witness catches rollback when external current pin/key remain trusted; all-three rollback still matches",
+    "D-03 final witness check to T1 COMMIT race reproduced; no cross-store atomic effect proof",
+    "Separate SQLite files and fixture signing key are not independent custody",
+    "Original T1 ordinary SQL executed with SQLite shim; Company Coordination plus Terminal Anchor full composition NOT_RUN",
+    "12+17 core tests, PostgreSQL 13, full build/browser NOT_RUN",
+    "No real grants, provider calls, release, CI, main merge, PROD or spending"
+  ]
+}

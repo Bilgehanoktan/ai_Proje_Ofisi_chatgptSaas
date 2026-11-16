@@ -85,3 +85,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0208 — Joint Runtime Context
 [Source/symbol/test delta](revisions/TECHNICAL_CATALOG_0208.json) · [Architecture and rollback](../docs/0208/ARCHITECTURE_AND_CATALOG.md). 98 selected PASS; D-01 D0 joint inspection, D-02 restore gap open.
+
+## 0209 — witnessed Runtime / original ordinary T1
+[Source/symbol/test delta](revisions/TECHNICAL_CATALOG_0209.json) · [Architecture and rollback](../docs/0209/ARCHITECTURE_AND_CATALOG.md). 138 selected PASS; D-03 open.

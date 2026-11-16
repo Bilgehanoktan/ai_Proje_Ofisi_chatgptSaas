@@ -142,3 +142,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0208 — D0 joint Runtime context
 [Addendum](../0208/ARCHITECTURE_AND_CATALOG.md). New joint digest and two memory span observations; 98 selected PASS. D-02 restore-external latest witness and mandatory effect boundary HOLD. No normative permission change.
+
+## 0209 — signed memory witness and ordinary T1
+[Addendum](../0209/ARCHITECTURE_AND_CATALOG.md). D0 external pin and original ordinary mapping SQLite pass; D-03 final check to commit race reproduced. Independent authority unchanged.

@@ -1,0 +1,86 @@
+{
+  "revision": "0209",
+  "baseline": "f832f00bffa4162b1f31a9bd192a5aedd44986fb",
+  "source_commit": "9164fe68b545144953ea138c5d9cde3f12a18e12",
+  "parallel": [
+    {
+      "line": "A",
+      "priority": "P0",
+      "status": "PARTIAL_SOURCE_RECOVERY_NOT_RUN",
+      "scope": "55 lock paths unchanged; 19 exact files local (+11), 36 absent; 12 original core tests NOT_RUN"
+    },
+    {
+      "line": "B",
+      "priority": "P0",
+      "status": "PARTIAL_SOURCE_RECOVERY_NOT_RUN",
+      "scope": "17 lifecycle/API integration tests NOT_RUN; direct pins mismatch"
+    },
+    {
+      "line": "C",
+      "priority": "P0",
+      "status": "ORIGINAL_ORDINARY_T1_SQLITE_PASS_FULL_COMPANY_TERMINAL_NOT_RUN",
+      "scope": "7 actual original ordinary six-role SQL mapping tests; CompanyCoordinatedMapping and TerminalAnchorMapping composition remains open"
+    },
+    {
+      "line": "D",
+      "priority": "P0",
+      "status": "D0_SIGNED_WITNESS_AND_T1_PASS",
+      "scope": "23 witness, 10 coordinator/session stand-in, 7 actual ordinary mapping SQLite; D-02 custody and D-03 race HOLD"
+    },
+    {
+      "line": "E",
+      "priority": "P1",
+      "status": "UNCHANGED_NOT_RUN",
+      "scope": "Existing historical CEO/Office readbacks only; no new wiring"
+    },
+    {
+      "line": "F",
+      "priority": "P0",
+      "status": "SQLITE_CONCURRENCY_ROLLBACK_PASS_PG_NOT_RUN",
+      "scope": "Witness CAS and ordinary T1 one-winner; 13 PG, non-owner RLS, cross-project, external trust root not run"
+    },
+    {
+      "line": "G",
+      "priority": "P0",
+      "status": "BLOCKED_CHECKOUT_DEPENDENCIES",
+      "scope": "Full checkout DNS, prior frontend deps absent; no install/build/browser this round"
+    }
+  ],
+  "tests": {
+    "passed": 138,
+    "new": 40,
+    "regression": 98,
+    "failed": 0,
+    "skipped": 0,
+    "original_ordinary_sqlite": 7,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "D0_JOINT_AND_WITNESSED_ORDINARY_T1_PASS_EFFECT_GATE_HOLD",
+      "result": "Joint context pin and explicit witness checks bracket ordinary RUNNING->VERIFYING original T1 mapping. Not a mandatory runtime/provider gate; actual budget/reservation proof and default dispatch wiring absent."
+    },
+    {
+      "id": "0208-D-02",
+      "priority": "P0",
+      "status": "D0_EXTERNAL_PIN_ANTI_RESTORE_PASS_INDEPENDENT_CUSTODY_HOLD",
+      "result": "Signed head, separate store, externally expected latest digest and key pin reject old memory or both restored stores when the latest external pin remains current. All-three rollback can still structurally match. Fixture key/store not independent custody; recovery key rotation, trusted time, authoritative publication and restore-external trust root HOLD."
+    },
+    {
+      "id": "0209-D-03",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "result": "test_final_check_to_commit_gap_remains advances signed witness after the last check and before original T1 commit. D0 state persists; no grant/effect. Separate witness and T1 stores cannot prove atomicity by repeated reads. Need authoritative fence/effect-boundary protocol with durable pending/unknown reconciliation, not blind retry or new grant."
+    }
+  ],
+  "next": "handover/NEXT_STEP_0209.md"
+}
