@@ -12,5 +12,6 @@ export function useProjectionRead<K extends ProjectionKey>(key:K){
  },[key]);
  useEffect(()=>()=>session.reader.cancel(),[session]);
  const state=sessionReadState(session.owner,entry);
- return {state,data:state.data,read:session.reader.read};
+ function reset(){session.reader.cancel();setEntry(null);}
+ return {state,data:state.data,read:session.reader.read,reset};
 }
