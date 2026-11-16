@@ -284,7 +284,8 @@ def sample_result_bytes(intent, context, registry, witness, witness_binding, com
     if ((g.scope,g.grant_id,g.admission_id,g.lease_id,g.budget_id,g.policy_epoch,g.witness_epoch,g.fence)
             !=(intent.scope,l.grant_id,claim.admission_id,l.lease_id,claim.budget.budget_id,
                l.policy_epoch,l.witness_epoch,l.fence)
-            or capabilities.witness.record_digest!=witness.record_sha):
+            or capabilities.witness.record_digest!=witness.record_sha
+            or capabilities.witness.root_id!=witness.key_sha):
         raise ValueError('D0_RESULT_EFFECT_OR_WITNESS_HOLD')
     output=sample_task_output(e,registry,capabilities,clock,raw)
     if (output.reason!='FIXED_SAMPLE_ONLY' or type(output.output) is not str
@@ -311,6 +312,8 @@ def resolve_result_binding(intent, context, registry, witness, witness_binding, 
     if (type(result) is not SampleResultPin or not digest_ok(result.evidence_sha)
             or company is None or type(result_reader) not in (ReferenceReader,ReferenceStore)):
         raise ValueError('D0_RESULT_PIN_HOLD')
+    if company_transition_binding(intent,witness_binding,company)!=company_pin:
+        raise ValueError('D0_RESULT_COMPANY_PIN_HOLD')
     body=sample_result_bytes(intent,context,registry,witness,witness_binding,company,
                              result.capabilities,clock,raw)
     if sha256(body).hexdigest()!=result.evidence_sha or result_reader.read(result.evidence_sha)!=body:
@@ -319,7 +322,12 @@ def resolve_result_binding(intent, context, registry, witness, witness_binding, 
 
 
 def check_result_store_separation(result_reader, paths):
-    if result_reader is not None and any(os.path.samefile(result_reader.path,p) for p in paths):
+    from app.core.event_store.retained_history import ReferenceReader, ReferenceStore
+    if result_reader is None:
+        return
+    if type(result_reader) not in (ReferenceReader,ReferenceStore):
+        raise ValueError('D0_RESULT_PIN_HOLD')
+    if any(os.path.samefile(result_reader.path,p) for p in paths):
         raise ValueError('D0_RESULT_STORE_SEPARATION_HOLD')
 
 
@@ -346,6 +354,11 @@ def execute_fenced_transition(intent, context, registry, witness, expected_bindi
             def observe(c):
                 lease, now, current = _lease(c,intent,lock=True), clock(), latest()
                 if result is not None:
+                    signed=reader.read_latest(witness,public_key)
+                    diagnostic=result.capabilities.witness
+                    if (diagnostic.scope,diagnostic.epoch,diagnostic.sequence,diagnostic.observed_tick)!= (
+                            signed.scope,signed.witness_epoch,signed.sequence,signed.issued_tick):
+                        raise ValueError('D0_RESULT_WITNESS_METADATA_HOLD')
                     if resolve_result_binding(intent,context,registry,witness,expected_binding,company,
                             company_pin,result,result_reader,now,raw)!=fence_binding:
                         raise ValueError('D0_RESULT_FENCE_DRIFT_HOLD')
