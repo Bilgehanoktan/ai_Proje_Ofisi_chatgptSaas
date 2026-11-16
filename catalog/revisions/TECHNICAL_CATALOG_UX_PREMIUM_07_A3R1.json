@@ -1,0 +1,84 @@
+{
+  "revision": "UX-PREMIUM-07-A3R1",
+  "parent": "ba67700ab7c405131f5a207e438f69b0f7c94002",
+  "architecture": "docs/UX-PREMIUM-07/A3R1_TRAFFIC.md",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumIdentityTraffic.ts",
+      "operation": "ADD",
+      "blob": "3aa9bc61c3835da550ccb7d7b2ece4e8d74d7f79",
+      "symbols": [
+        "Registry",
+        "Goal",
+        "Movement",
+        "TrafficStatus",
+        "TrafficToken",
+        "createIdentityTraffic",
+        "snapshot",
+        "setGoals",
+        "setObstacles",
+        "advance"
+      ],
+      "private_functions": [
+        "path",
+        "check",
+        "invalidate",
+        "apply",
+        "priority",
+        "groups"
+      ],
+      "dependencies": [
+        "premiumActorIdentity.ts (type)",
+        "premiumHybridLayout.ts",
+        "premiumTraffic.ts"
+      ],
+      "reason": "Safe ID-based D0 movement across four-plus actors",
+      "errors": [
+        "D0_REGISTRY_REQUIRED",
+        "INVALID_INITIAL_OCCUPANCY",
+        "STALE_TRAFFIC_TOKEN",
+        "INVALID_GOAL",
+        "DUPLICATE_GOAL",
+        "INVALID_OBSTACLE",
+        "TRAFFIC_INVARIANT"
+      ],
+      "hold_reasons": [
+        "CONFLICT_GROUP_LIMIT",
+        "BOUNDED_RECOVERY_EXHAUSTED",
+        "NO_SAFE_ROUTE",
+        "REPEATED_POSITION_LIMIT",
+        "GENERATION_TICK_LIMIT"
+      ],
+      "maintenance": "See architecture/diagnosis; stop on invariant exception."
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-identity-traffic.test.cjs",
+      "operation": "ADD",
+      "blob": "8ee65ef409afac43e91c25d2c9970584515d351e",
+      "symbols": [
+        "20 node:test cases"
+      ],
+      "dependencies": [
+        "node:test",
+        "node:assert/strict",
+        "compiled A1/A2/A3"
+      ],
+      "result": "20/20 PASS"
+    }
+  ],
+  "api": [],
+  "database": [],
+  "external_dependencies": [],
+  "regression_pins": {
+    "premiumActorIdentity.ts": "1189295b372f2b9360cbecbf5357f2ad356f1824",
+    "premiumHybridLayout.ts": "b22331afc90dc7059cc8e3c098ba83477c993d90",
+    "premiumModel.ts": "fe2e250192f340db725d848d630869d3cd47c507",
+    "premiumTraffic.ts": "e236e61cfb6fdee7fd5f3356aa7e6ea0c9b2914e",
+    "premiumRouting.ts": "da139ea32dea7358acfddb2782c6cfb2e9e7a4cd",
+    "premium-actor-identity.test.cjs": "9f3dd96520eb848dd65e912619647500d9335c76",
+    "premium-hybrid-layout.test.cjs": "74854788ae143335ffc70ffc0bd445c6615b45d2",
+    "premium-model.test.cjs": "0f668ab89b9dc28898573ad0923ed76fd9c48f57"
+  },
+  "legacy_renderer": "unchanged",
+  "acceptance": "D0_ONLY"
+}
