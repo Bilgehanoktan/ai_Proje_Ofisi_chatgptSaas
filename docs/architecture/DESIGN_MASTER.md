@@ -206,3 +206,6 @@ Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLi
 
 ## 0227 — environment preflight (BLOCKED)
 [Architecture](../0227/ARCHITECTURE_AND_CATALOG.md) · [Connected workstation](../0227/CONNECTED_WORKSTATION_0227.md). 392/392 remote paths/sizes, 55/55 historical blob/sizes; local checkout/resolver blocked. No runtime changes, test rerun or normative decision. 7/16 unchanged; B3 HOLD.
+
+## 0227-A3 — historical evidence only
+8/16; A3 transferred from exact historical A0F raw review. Product environment and independent acceptance open. [Evidence](../../tests/evidence/A3_EVIDENCE_TRANSFER_0227.json).

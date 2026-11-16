@@ -4,7 +4,7 @@
     {
       "id": "A",
       "name": "Core recovery",
-      "done": 2,
+      "done": 3,
       "total": 3,
       "criteria": [
         [
@@ -17,7 +17,7 @@
         ],
         [
           "29 locked dependency tests",
-          false
+          true
         ]
       ]
     },
@@ -106,9 +106,9 @@
       ]
     }
   ],
-  "done": 7,
+  "done": 8,
   "total": 16,
-  "percent": 43.75,
+  "percent": 50,
   "prior_0214_evidence": "0214 exact original wrapper with new D0 fixture recorded 10/10, one restore residual; inherited prior result from pinned manifest and prior conversation, not rerun 0215. Original six 0213 fixture tests NOT_RUN.",
   "current_0215": "46 new diagnostic checks; no new binary acceptance gate passed; independent custody, PG/RLS, pinned build and browser remain HOLD.",
   "previous": "progress/INTEGRATION_GATES_0226.json",
@@ -146,5 +146,22 @@
     "prior_selected_pass_not_rerun": 307,
     "local_environment": "BLOCKED_DNS_LOCKS_PG",
     "evidence": "tests/evidence/TEST_EVIDENCE_0227.json"
+  },
+  "current_0227_A3": {
+    "gate": "A3",
+    "status": "PASS_TRANSFERRED_HISTORICAL_LOCKED_29",
+    "evidence": "tests/evidence/A3_EVIDENCE_TRANSFER_0227.json",
+    "new_binary_gates": 1,
+    "local_rerun": 0,
+    "remaining": [
+      "E1",
+      "D1",
+      "D2",
+      "D3",
+      "E2",
+      "E3",
+      "E4",
+      "B3"
+    ]
   }
 }

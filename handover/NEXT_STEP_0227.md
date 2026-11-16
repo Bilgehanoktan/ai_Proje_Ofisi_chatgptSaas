@@ -1,2 +1,2 @@
-# NEXT — complete 0227 environment acceptance
-7/16 unchanged; no new product tests. Execute docs/0227/CONNECTED_WORKSTATION_0227.md in connected isolated workstation. E1/A3 then D1-D3 and E2-E4; original 0219/0221/0224 suites 24 expected tests pending. No CI/main/PROD/independent acceptance. Do not advance a gate without actual evidence.
+# NEXT — 0227 remains OPEN
+8/16: A3 historical locked 29/29 transferred from pinned A0F review, no additive test count or rerun. E1 next, then D1-D3 and E2-E4. Original 0219/0221/0224 (6+10+8) NOT_RUN; same exact test blobs on P10J15. Use existing reviewed Windows W8 infrastructure and new disposable exact checkout; do not merge branches or reuse source-bound approval as current full E1. B3 remains HOLD. See tests/evidence/A3_EVIDENCE_TRANSFER_0227.json and docs/0227/CONNECTED_WORKSTATION_0227.md.

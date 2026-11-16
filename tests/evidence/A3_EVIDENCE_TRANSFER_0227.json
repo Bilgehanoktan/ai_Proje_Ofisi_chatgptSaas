@@ -1,0 +1,77 @@
+{
+  "revision": "0227",
+  "checkpoint": "0227-A3-transfer",
+  "base_commit": "66c1616ff4a2ab98de1268de8871fc7dc55d30f2",
+  "method": "Reuse exact historical D0 evidence already raw-reviewed on A0F; no execution in this session",
+  "gate": "A3",
+  "decision": "PASS_TRANSFERRED_HISTORICAL_LOCKED_29",
+  "review_commit": "6140e16edb2ddd943912908f3714ccd3a211b1d3",
+  "review_path": "docs/UX-PREMIUM-07/A0F_RAW_EVIDENCE_REVIEW.json",
+  "review_git_blob": "f8c4871c56753a9580a48385f690d638d33145fc",
+  "transcript_review_path": "docs/UX-PREMIUM-07/A0E_WINDOWS_ACCEPTANCE_EVIDENCE.json",
+  "transcript_review_git_blob": "604487f1f061d3c97490dafad2b3aaa30d242531",
+  "a0c_source_commit": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "historical_source_commit": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "core_lock_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+  "runner_blob": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+  "helper_blob": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+  "a0c_wrapper": "tests/integration/w8_p10f.py",
+  "a0c_wrapper_blob": "155a2179eb71bd554aa34dff36147be4658473e0",
+  "checks": {
+    "a0c_historical_lock_git_blob_and_size_matches": 55,
+    "expected": 55,
+    "current_0227_core_lock_runner_helper_identical": true,
+    "runner_uses_unpinned_flag": false,
+    "reviewed_python_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+    "review_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+    "raw_report_sha256": "840f57bdebda7d600c8e79bad966bbf203ea5160ef38f29a69ad1ef1801642a1",
+    "reviewed_archive_sha256": "1d9267628a6b253840cf4144fa99026729ba64f7f779b1cd6d02493f4672c68c",
+    "reported_historical_pass": 29,
+    "reported_historical_total": 29,
+    "markers_match": "4/4",
+    "wheel_hash_inventory": "28/28",
+    "pip_check": "PASS",
+    "local_approval": "EVET",
+    "platform": "Windows",
+    "python": "3.14.3"
+  },
+  "limitations": [
+    "Raw ZIP listed in Library but raw-byte materialization denied in current session; reliance on pinned A0F prior raw review, not a fresh read of raw artifacts.",
+    "Raw wheel binaries absent from reviewed ZIP; no new independent replay.",
+    "Historical 0207 scope only; overlap with existing selected test count. Do not add 29 to 307.",
+    "A0C contains none of original 0219/0221/0224 target suites; A0 builds/browser cannot close 0227 E1/E2/E3/E4.",
+    "Current Linux environment DNS/PG/driver blocked; no test run this session."
+  ],
+  "parallel": {
+    "p10j15_commit": "49d48fb4a1a08ac54a074dd3f3b63d7f15aa78ad",
+    "backend_database_and_core_lock_scope": {
+      "compared": 255,
+      "identical": 254,
+      "changed": [
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py"
+      ],
+      "missing": 0
+    },
+    "target_test_blobs": {
+      "test_company_fence_binding_0219": "12bebeac8b3d2b2d1bd4a04a540836489d90a1eb",
+      "test_result_reference_0221": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+      "test_canonical_research_0224": "e121ee6275def01070397a942a8434ff37b611a6"
+    },
+    "a0c_and_p10j15_and_0227_direct_specs_identical": [
+      "requirements.txt",
+      "requirements-test.txt",
+      "requirements-history-signatures.txt",
+      "package.json"
+    ],
+    "target_test_execution": "NOT_RUN",
+    "no_merge": true
+  },
+  "gates": {
+    "done": 8,
+    "total": 16,
+    "percent": 50,
+    "newly_closed": 1
+  },
+  "independent": "HOLD",
+  "product_changes": 0
+}

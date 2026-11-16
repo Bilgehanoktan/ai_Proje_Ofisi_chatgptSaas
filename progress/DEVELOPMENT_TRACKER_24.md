@@ -44,3 +44,7 @@ Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLi
 
 ## 0227 — MVP environment preflight (BLOCKED)
 No new product code or product tests. 392/392 remote manifest path/size; historical 55/55 remote Git blob/size; local checkout/resolver blocked. 307 prior selected passes not rerun; 7/16 unchanged; independent HOLD. [Architecture](../docs/0227/ARCHITECTURE_AND_CATALOG.md) · [Workstation packet](../docs/0227/CONNECTED_WORKSTATION_0227.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_0227.json).
+
+
+## 0227-A3 — scoped historical evidence transfer
+A3 only: 29/29 historical locked tests from pinned A0F review `6140e16edb2ddd943912908f3714ccd3a211b1d3`, actual A0C source `a79df6622e2eb9de63795ff6c0309984d1be6910`; 55/55 source lock, same exact lock/runner/helper, reviewed Python lock and report hashes, four raw markers checked in prior review. Current product is unchanged. No new local execution, no independent replay; raw Library ZIP materialization unavailable in this session. 8/16; 307 historical selected tests unchanged, no additive count. E1, D1-D3, E2-E4, B3 open. P10J15 exact three original test blobs match, but no execution or merge. Evidence: tests/evidence/A3_EVIDENCE_TRANSFER_0227.json.

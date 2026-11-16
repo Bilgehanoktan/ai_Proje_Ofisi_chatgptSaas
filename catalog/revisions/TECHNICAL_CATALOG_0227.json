@@ -22,5 +22,11 @@
     }
   ],
   "source_evidence": "tests/evidence/TEST_EVIDENCE_0227.json",
-  "maintenance": "docs/0227/CONNECTED_WORKSTATION_0227.md"
+  "maintenance": "docs/0227/CONNECTED_WORKSTATION_0227.md",
+  "evidence_transfer": {
+    "path": "tests/evidence/A3_EVIDENCE_TRANSFER_0227.json",
+    "gate": "A3",
+    "scope": "historical exact 0207 locked core only",
+    "rollback": "Revert this acceptance-record commit only if evidence review invalidated; no runtime changes. Preserve original A0F record."
+  }
 }
