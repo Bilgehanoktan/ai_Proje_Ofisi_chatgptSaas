@@ -1,0 +1,95 @@
+{
+  "revision": "UX-PREMIUM-07-A0D",
+  "parent": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+  "source_to_run": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "source_manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "source_runner_blob": "52ac6add8b0bc338527e9e12c7848c9056d8f836",
+  "observed_heads": {
+    "ui": "9cd9ebee9f0760eeec24a86bf02487f02096eea8",
+    "core": "b201833f948f91293414e91000bc53377de9b6d1",
+    "premium": "a79df6622e2eb9de63795ff6c0309984d1be6910"
+  },
+  "comparison": {
+    "tested_ui": "752b225deac4557a548faec7191a090fbfba19f7",
+    "exact_dependency_definitions": [
+      [
+        "product/ai-company-os-frontend/package.json",
+        "55a6d296ee20daad2cd36f4552f9feb3f4440ba3"
+      ],
+      [
+        "product/ai-company-os-backend/requirements.txt",
+        "297b0a1ff6a125166f9f7eca94390062644bee7c"
+      ],
+      [
+        "product/ai-company-os-backend/requirements-test.txt",
+        "9dd748002ae8a2c18fe293fec6c8cacaa82ef187"
+      ],
+      [
+        "product/ai-company-os-backend/requirements-history-signatures.txt",
+        "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+      ]
+    ],
+    "pass": 4,
+    "total": 4,
+    "review_reuse": false
+  },
+  "new_checks": {
+    "pass": 7,
+    "total": 7,
+    "scope": "Actual local Git init/fetch/checkout against temporary synthetic repos and synthetic W8 subprocess; not real product tests",
+    "python": "3.13.5",
+    "git": "2.47.3",
+    "os": "Linux",
+    "scenarios": [
+      "exact older commit despite newer head and review-only",
+      "audit only",
+      "existing workspace preserved",
+      "wrong manifest blob rejected",
+      "missing commit rejected",
+      "audit failure stops prepare",
+      "missing REVIEW.json holds"
+    ]
+  },
+  "actual_checkout_attempt": {
+    "exit": 1,
+    "git_exit": 128,
+    "reason": "Could not resolve host: github.com",
+    "stage_created": false
+  },
+  "npm_ping": "EAI_AGAIN registry.npmjs.org",
+  "library_archives": "Metadata located, raw materialization not authorized; no source recovery claimed",
+  "new_sources": [
+    {
+      "path": "docs/UX-PREMIUM-07/prepare_a0c.py",
+      "blob": "8dd4783ed03cb0b1046a3aed3b6940f85aa58758",
+      "sha256": "2af0547d4a18d3b99eb187c24e135189567befecaa47cec3eb6b348c86cb1f8a",
+      "bytes": 3902,
+      "symbols": [
+        "run",
+        "git_blob",
+        "checkout_exact",
+        "prepare",
+        "main"
+      ]
+    },
+    {
+      "path": "docs/UX-PREMIUM-07/test_prepare_a0c.py",
+      "blob": "5948b79e6bd320c82cb6cf910eba038b60002301",
+      "sha256": "ac6336666b1ecfeb129eb52b3de9a77508481e9802bb4c2e5262e82e7f83bff6",
+      "bytes": 4471,
+      "symbols": [
+        "Bootstrap"
+      ]
+    }
+  ],
+  "full_checkout": "BLOCKED",
+  "actual_source_audit": "NOT_RUN",
+  "reviewed_lock": "NOT_CREATED",
+  "install": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "canonical": "JOIN_HOLD",
+  "independent": "HOLD",
+  "product_changes": 0,
+  "no_merge": true
+}
