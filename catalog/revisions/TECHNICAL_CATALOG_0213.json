@@ -1,0 +1,106 @@
+{
+  "revision": "0213",
+  "parent": "0212",
+  "source_baseline": "e33ffb633bc5a445aec1fb4946625884d503c348",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+      "bytes": 6418,
+      "sha256": "50cc62f60b36bd53ae44b775526844ef1b81ceee852055b15d67b3c35c0d2525",
+      "git_blob": "a190919f0719716fccebd6d6f15177633864d56a",
+      "executed": true,
+      "new_test_cases": 4
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+      "bytes": 5086,
+      "sha256": "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df",
+      "git_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+      "executed": false,
+      "prepared_tests": 6
+    },
+    {
+      "path": "scripts/diagnostic_preflight_0213.py",
+      "bytes": 3683,
+      "sha256": "0c27a4420ed02bd103e1fd9da00038b5d4626b466ded497ccd956c0c63716499",
+      "git_blob": "a0484a23e2e5d9414165634035a8ddc5acc70402",
+      "executed": true
+    }
+  ],
+  "symbols": [
+    {
+      "module": "tests.test_company_multiproject_0213",
+      "class": "TwoProjectTests",
+      "methods": [
+        "setUp",
+        "_claim_b",
+        "pool_budget",
+        "_event",
+        "_commit",
+        "test_two_projects_actual_shared_budget",
+        "test_project_b_cap_rejected_before_write",
+        "test_two_projects_stale_concurrent_budget_single_winner",
+        "test_different_project_wrong_plan_hold"
+      ],
+      "dependencies": [
+        "CompanyCoordinatedMapping",
+        "D0PostgresAdmissionMapping",
+        "CompanyTerminalTests.setUp",
+        "SQLiteConnectionShim",
+        "canonical_plan"
+      ],
+      "test_status": "4/4 PASS_SQLITE"
+    },
+    {
+      "module": "tests.test_authority_wrapper_0213",
+      "class": "AuthorityWrappedSqlTests",
+      "methods": [
+        "setUp",
+        "invoke",
+        "_claims",
+        "test_original_t1_and_all_three_guards",
+        "test_restore_t1_and_journal_without_authority_blocks_replay",
+        "test_unknown_commit_stays_quarantined",
+        "test_revocation_before_attempt_denies_without_claim",
+        "test_root_publisher_waits_through_original_commit",
+        "test_full_authority_store_restore_is_still_unsafe_residual"
+      ],
+      "dependencies": [
+        "D0IntentAuthority",
+        "D0IntentJournal",
+        "execute_authority_fenced_transition",
+        "test_fenced_transition_0210",
+        "test_witnessed_sql_0209"
+      ],
+      "test_status": "NOT_RUN_FULL_REPO_REQUIRED_SYNTAX_ONLY"
+    },
+    {
+      "module": "scripts.diagnostic_preflight_0213",
+      "functions": [
+        "verify",
+        "main"
+      ],
+      "dependencies": [
+        "hashlib",
+        "importlib.metadata",
+        "subprocess",
+        "unittest"
+      ],
+      "test_status": "EXECUTED_55/55_AND_56/56_DIAGNOSTIC"
+    }
+  ],
+  "api_changes": [],
+  "db_schema_changes": [],
+  "event_contract_changes": [],
+  "dependency_changes": [],
+  "test_evidence": "releases/GITHUB_READBACK_0213.json",
+  "preflight": "scripts/diagnostic_preflight_0213.py",
+  "maintenance": "Inspect PostgreSQL availability, 55 raw blob pins, difference between diagnostic and locked suite, company event order, shared budget CAS; quarantine UNKNOWN; never clear authority claims.",
+  "rollback": "Revert test additions/scripts and 0213 docs on branch without restoring/deleting consumed authority roots or claims; do not affect main/CI/PROD.",
+  "open_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ]
+}
