@@ -1,3 +1,7 @@
+
+## Selected local regression — evidence supplement
+Exact source 7049122143611f35a2152f721f7d99d514a7af9d; 6/6 re-materialized files matched candidate SHA-256. Original Python shared replay 6/6 and Node parser/transport 22/22 PASS, strict TypeScript compile PASS, Python 3.13.5 / Node 22.16.0 / TS 5.8.3. Four fixed Python-generated replays, no DB/HTTP, React, Studio, full W8 or PG execution. Product tree path/size 413/413, exact core blob 30/30, manual source hash readback 2/2. No new acceptance. Full checkout remains unavailable. See revisioned evidence and matrix. Historical initial NOT_RUN entry superseded only for these selected checks.
+
 # UI-P10J-13 — bounded shared historical Studio integration
 
 UI parent 3384a301d7f1727153f64df950a82fc20bb234a5; core source c94753b4f2bc8a3e739ffa997ca9547772deeaf2; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. CEO-0174/0179=B isolated source scope only. Single-parent candidate, not a branch merge. Full Git trees untruncated: 397 UI product blobs / 385 core; 317 identical, 48 UI-only, 36 core-only, 32 different incl manifest. Selected 30 exact core blobs, two manual UI edits. Manifest pins 413; no files deleted. Parent manifests verified path and length against both trees; manual parent bytes SHA-256 verified. Core pin metadata reused; not full byte rehash.

@@ -16,7 +16,7 @@
         "acceptance": "NOT_RUN",
         "next": "Research canonical project/plan/run lineage; actual DB and pinned build/browser"
       },
-      "ui_round": "Shared provider, CEO/Office panel, role/task/project context composed",
+      "ui_round": "Shared provider, CEO/Office panel, role/task/project context composed; shared replay component regression 28/28 (not row-wide acceptance)",
       "unified_acceptance": "NOT_RUN_OR_HOLD",
       "core_merged_into_ui": false
     },
@@ -44,7 +44,7 @@
         "acceptance": "NOT_RUN",
         "next": "Exact DB route, pinned build/browser, authenticated project/world and live scope proof"
       },
-      "ui_round": "Office shared historical panel, static geometry and JOIN_HOLD retained",
+      "ui_round": "Office shared historical panel, static geometry and JOIN_HOLD retained; shared replay component regression 28/28 (not row-wide acceptance)",
       "unified_acceptance": "NOT_RUN_OR_HOLD",
       "core_merged_into_ui": false
     },
@@ -58,7 +58,7 @@
         "acceptance": "NOT_RUN",
         "next": "Research canonical project/plan/run lineage; actual DB and pinned build/browser"
       },
-      "ui_round": "Shared replay schema pair, GET proxy and exact fixed-plan parser transferred",
+      "ui_round": "Shared replay schema pair, GET proxy and exact fixed-plan parser transferred; shared replay component regression 28/28 (not row-wide acceptance)",
       "unified_acceptance": "NOT_RUN_OR_HOLD",
       "core_merged_into_ui": false
     },
@@ -72,7 +72,7 @@
         "acceptance": "NOT_RUN",
         "next": "Exact DB route, pinned build/browser, authenticated project/world and live scope proof"
       },
-      "ui_round": "Read-only shared replay API route and serializer transferred",
+      "ui_round": "Read-only shared replay API route and serializer transferred; shared replay component regression 28/28 (not row-wide acceptance)",
       "unified_acceptance": "NOT_RUN_OR_HOLD",
       "core_merged_into_ui": false
     },
@@ -170,7 +170,7 @@
         "acceptance": "NOT_RUN",
         "next": "Full Company/Terminal composition"
       },
-      "ui_round": "UNCHANGED_FROM_P10J12; CORE_REMAINS_SEPARATE",
+      "ui_round": "UNCHANGED_FROM_P10J12; CORE_REMAINS_SEPARATE; shared replay component regression 28/28 (not row-wide acceptance)",
       "unified_acceptance": "NOT_RUN_OR_HOLD",
       "core_merged_into_ui": false
     },
@@ -282,7 +282,7 @@
         "acceptance": "NOT_RUN",
         "next": "Research canonical project/plan/run lineage; actual DB and pinned build/browser"
       },
-      "ui_round": "Original core diagnostic tests/runner transferred; no new execution",
+      "ui_round": "28/28 exact selected shared replay tests; strict TS compile; Studio/React/W8/DB NOT_RUN",
       "unified_acceptance": "NOT_RUN_OR_HOLD",
       "core_merged_into_ui": false
     },
@@ -348,7 +348,7 @@
       "id": "P13-01",
       "name": "Shared Snapshot Provider + CEO/Office",
       "source": "SOURCE_COMPOSED",
-      "test": "NOT_RUN",
+      "test": "PARTIAL_PASS_28_SHARED_REPLAY; REACT_HTTP_DB_NOT_RUN",
       "union": "PARTIAL_READ_ONLY_CANDIDATE",
       "acceptance": "HOLD_OR_NOT_RUN"
     },
@@ -364,7 +364,7 @@
       "id": "P13-03",
       "name": "Read-only API + contract pair",
       "source": "EXACT_CORE_BLOBS",
-      "test": "NOT_RUN",
+      "test": "PARTIAL_PASS_28_SHARED_REPLAY; REACT_HTTP_DB_NOT_RUN",
       "union": "PARTIAL_READ_ONLY_CANDIDATE",
       "acceptance": "HOLD_OR_NOT_RUN"
     },
@@ -388,7 +388,7 @@
       "id": "P13-06",
       "name": "W8 and core selected runner",
       "source": "CORE_DIAGNOSTIC_RUNNER_TRANSFERRED",
-      "test": "NOT_RUN",
+      "test": "SELECTED_28_PASS; FULL_W8_NOT_RUN",
       "union": "FULL_W8_PENDING",
       "acceptance": "HOLD_OR_NOT_RUN"
     },
@@ -396,9 +396,11 @@
       "id": "P13-07",
       "name": "Revisioned records",
       "source": "UPDATED",
-      "test": "STATIC_MANIFEST_METADATA_CHECK",
+      "test": "SOURCE_TREE_PATH_SIZE_413_PASS; EXACT_CORE_BLOB_30; MANUAL_HASH_2",
       "union": "NOT_APPLICABLE",
       "acceptance": "HOLD_OR_NOT_RUN"
     }
-  ]
+  ],
+  "source_commit": "7049122143611f35a2152f721f7d99d514a7af9d",
+  "test_evidence": "tests/evidence/TEST_EVIDENCE_UI_P10J13.json"
 }
