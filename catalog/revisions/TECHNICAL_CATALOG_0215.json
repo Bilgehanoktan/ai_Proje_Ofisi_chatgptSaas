@@ -1,0 +1,141 @@
+{
+  "revision": "0215",
+  "parent": "0214",
+  "source_commit": "76815dfd2401d7a81f1f9f0a112da06d8002fb2f",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+      "bytes": 5574,
+      "sha256": "9fc7e5de6af70271a11da25db6a68151385aaff82ba956f99d48a735793ba667",
+      "blob": "f7616fca91825a63302e3fb2a41da8a0411eeed2",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_external_claim_review_0215.py",
+      "bytes": 4817,
+      "sha256": "70c7bafc78d32ab4afc9869109ef088ff47d0961aa16b1850ca6e2bc5fb14198",
+      "blob": "b31672e1f4b48364190c37ad2a33a311ae8e23e5",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/historicalPresentation.ts",
+      "bytes": 1253,
+      "sha256": "5713cdfe90a2d513d3e9bfbf71f1fa066f1d25b76508e38611ae99ba4bdb433c",
+      "blob": "a760a0ebf7f49ac79ff8948e496aecaa7770b9ee",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+      "bytes": 1527,
+      "sha256": "b83e8f27a842a3159d7e5fdf59ac444f9fb2fa5b4944f2a67cc1bf2ac9a15f11",
+      "blob": "8b26cbcc34e336037cc7c2f43bb4bbd682df9ea2",
+      "action": "modify"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/historical-presentation-0215.test.cjs",
+      "bytes": 2916,
+      "sha256": "bb2d72e425c86587cc0207d8a5f233fa9147eccf8812f3139dc79ef6c360a8e2",
+      "blob": "14c1db2508cfbdd9fd86dda099849aeda1068eb8",
+      "action": "add"
+    },
+    {
+      "path": "scripts/run_pg_acceptance_0215.py",
+      "bytes": 7785,
+      "sha256": "9268ae83ec13744ba51c15176fe1ee99fb605c09b84e7e929dc49c3d9f348827",
+      "blob": "7cde2a62eee46ce4e682451f82a1c6b3245cf94a",
+      "action": "add"
+    },
+    {
+      "path": "tests/test_pg_runner_0215.py",
+      "bytes": 3826,
+      "sha256": "ff3f5b1c479fd5ffc8785691d4fb1653c8c4dd02969c997999283e6fc06ba02a",
+      "blob": "562876e8c5015553e63041635032cc838ba8c44d",
+      "action": "add"
+    }
+  ],
+  "classes": [
+    {
+      "module": "app.core.transaction.external_claim_review",
+      "names": [
+        "ClaimObservation",
+        "ExternalClaimObservation",
+        "ClaimReview"
+      ],
+      "functions": [
+        "observation_bytes",
+        "_local",
+        "review_external_claim"
+      ],
+      "dependencies": [
+        "D0IntentAuthority._head",
+        "RootPin",
+        "sqlite3 read-only snapshot",
+        "Ed25519PublicKey",
+        "SHA256"
+      ],
+      "test": "15/15 D0",
+      "api": "None; opt-in read-only diagnostic, not wired to dispatch"
+    },
+    {
+      "module": "scripts.run_pg_acceptance_0215",
+      "functions": [
+        "blob",
+        "check_ddl",
+        "validate_info",
+        "child_env",
+        "classify",
+        "run",
+        "main"
+      ],
+      "dependencies": [
+        "scripts.verify_product",
+        "psycopg (runtime not installed)",
+        "5 pinned SQL files",
+        "3 original PG suites"
+      ],
+      "test": "14/14 unit/preflight, actual PG NOT_RUN"
+    },
+    {
+      "module": "features/mvp/historicalPresentation",
+      "functions": [
+        "historicalPresentation"
+      ],
+      "dependencies": [
+        "historicalEvidence",
+        "parseLifecycleProjection",
+        "parseLifecyclePrefix"
+      ],
+      "test": "17/17 static reference"
+    },
+    {
+      "module": "features/mvp/HistoricalEvidenceStrip",
+      "functions": [
+        "HistoricalEvidenceStrip"
+      ],
+      "dependencies": [
+        "historicalPresentation",
+        "LifecycleReadback",
+        "LifecyclePrefixReadback",
+        "React"
+      ],
+      "test": "view model tested, TSX/browser NOT_RUN"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "errors": [
+    "EXTERNAL_PIN_OR_FRESHNESS_HOLD",
+    "EXTERNAL_SIGNATURE_OR_SHAPE_HOLD",
+    "LOCAL_DIVERGENCE_HOLD",
+    "LOCAL_READ_HOLD",
+    "EXTERNAL_CONSUMED_HOLD",
+    "UNCLAIMED_OBSERVATION_HOLD",
+    "SOURCE_OR_DDL_HOLD",
+    "DISPOSABLE_DSN_HOLD",
+    "SUITE_NOT_PASS"
+  ],
+  "test_evidence": "releases/GITHUB_READBACK_0215.json",
+  "rollback": "Revert 0215 source commit on separate branch; preserve every root/consumed claim/receipt and independent evidence. Never restore authority or rerun UNKNOWN; no DB schema change."
+}
