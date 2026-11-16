@@ -39,6 +39,10 @@ class ResultReferenceTests(TestCase):
         f.before=replace(f.before,state=RunState.ADMITTED,version=1)
         f.budget=replace(f.budget,revision=1,outstanding_minor=20)
         f.ordinary(RunState.RUNNING)
+        self.prepare_result_context(f)
+
+    def prepare_result_context(self,f):
+        """Reuse the exact 0221 result pins on an already-admitted RUNNING fixture."""
         self.f=f;self.clock=f.clock
         r,l=f.before,f.lease;s=r.scope
         self.intent=LogicalIntent(s,Operation.STATE_MUTATION,r.version,transition_digest(r,RunState.VERIFYING),
