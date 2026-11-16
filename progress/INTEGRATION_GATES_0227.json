@@ -84,12 +84,12 @@
     {
       "id": "E",
       "name": "Working product",
-      "done": 0,
+      "done": 1,
       "total": 4,
       "criteria": [
         [
           "Exact full checkout+reviewed locks",
-          false
+          true
         ],
         [
           "Full backend build/test",
@@ -106,9 +106,9 @@
       ]
     }
   ],
-  "done": 8,
+  "done": 9,
   "total": 16,
-  "percent": 50,
+  "percent": 56.25,
   "prior_0214_evidence": "0214 exact original wrapper with new D0 fixture recorded 10/10, one restore residual; inherited prior result from pinned manifest and prior conversation, not rerun 0215. Original six 0213 fixture tests NOT_RUN.",
   "current_0215": "46 new diagnostic checks; no new binary acceptance gate passed; independent custody, PG/RLS, pinned build and browser remain HOLD.",
   "previous": "progress/INTEGRATION_GATES_0226.json",
@@ -180,5 +180,12 @@
     "evidence": "tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json",
     "gate_promotion": false,
     "original24_pass": 24
+  },
+  "current_0227_E1_raw_review": {
+    "status": "PASS_RAW_REVIEWED",
+    "evidence": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
+    "gate_promotion": true,
+    "original24_pass": 24,
+    "new_binary_gates": 1
   }
 }

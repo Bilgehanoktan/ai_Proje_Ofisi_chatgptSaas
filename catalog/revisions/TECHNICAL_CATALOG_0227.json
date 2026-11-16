@@ -65,5 +65,12 @@
     "path": "tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json",
     "scope": "User-run actual Windows install and original24 transcript, raw review pending",
     "rollback": "Preserve exact stage and raw evidence; no rerun into occupied stage."
+  },
+  "e1_raw_review": {
+    "path": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
+    "scope": "E1 Windows raw review; 24 original SQLite tests",
+    "source_changes": 0,
+    "maintenance": "Keep reviewed stage unchanged; new PG runtime separately reviewed. Optional npm entries documented; recheck E3.",
+    "rollback": "Revert this evidence-only commit if raw review is invalidated; preserve prior source and archive; no deletion."
   }
 }

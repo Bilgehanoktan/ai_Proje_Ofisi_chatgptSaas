@@ -1,2 +1,2 @@
-# NEXT — 0227 E1 raw evidence review
-Windows install 6/6 and original24 24/24 PASS reported by user; raw E1/ORIGINAL24 reports and nine logs/locks still pending. No new binary gate until raw review. 8/16. Next D1 local disposable PostgreSQL/driver and D2 PG13, D3 RLS remains separate. Evidence: tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json
+# NEXT — 0227 D1 / D2
+E1 accepted after raw ZIP review; 9/16 gates (56.25%). Preserve core-0227-e1. Inspect local Windows PostgreSQL binaries and driver availability; do not use shared services. Review platform-specific PostgreSQL version and separate psycopg lock before installation. D1 disposable non-superuser local connection, D2 exact original PG13 using scripts/run_pg_acceptance_0215.py and current manifest; D3 requires separate two-tenant FORCE RLS policies and observed contention. E2/E3/E4 and B3 remain open. No UI branch merge. Evidence: tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json

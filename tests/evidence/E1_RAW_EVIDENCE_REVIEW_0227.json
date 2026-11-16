@@ -1,0 +1,134 @@
+{
+  "revision": "0227",
+  "checkpoint": "E1_PASS_RAW_REVIEWED",
+  "acceptance_scope": "D0 local Windows E1 only; not independent security, full build, browser, PostgreSQL or production",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner_blob": "788bc12ff00c1f3c8a1bd5474b42d692814fd433",
+  "archive": {
+    "name": "AIOS_0227_E1_EVIDENCE.zip",
+    "bytes": 17808,
+    "sha256": "7a164b4d194e2741c91e75c8f1d5de3124d3f99a0840ed990a92455870bfa1e8",
+    "entries": 14,
+    "crc": "PASS",
+    "normalized_unique_safe_paths": 14,
+    "source": "user-uploaded raw ZIP, inspected in current session; archive retained by user"
+  },
+  "source_checks": {
+    "product_files": 393,
+    "manifest_entries": 392,
+    "database_git_pins": 16,
+    "source_manifest_and_test_blobs": "MATCH_REMOTE",
+    "local_source_check": "PASS_REPORTED_BY_EXACT_RUNNER",
+    "raw_source_archive": "NOT_INCLUDED"
+  },
+  "review": {
+    "sha256": "13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b",
+    "origin_review_reconstructed_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+    "python_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+    "npm_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "platform": "win32",
+    "python": "3.14.3",
+    "node": "v24.14.0",
+    "npm": "11.9.0 (runner precondition)",
+    "approval": "EVET for exact new fingerprint",
+    "python_wheel_hash_records": 28,
+    "python_lock_installed_match": 28,
+    "pip_bootstrap": "25.3",
+    "pip_check": "No broken requirements found.",
+    "npm_registry_integrity_records": 61,
+    "npm_installed_unique_name_versions": 30,
+    "npm_nonoptional_missing": 0,
+    "npm_extraneous_locked_optional": [
+      {
+        "name": "@emnapi/runtime",
+        "version": "1.11.3"
+      },
+      {
+        "name": "@img/sharp-wasm32",
+        "version": "0.35.5"
+      }
+    ],
+    "direct_python_pins_match": 6,
+    "direct_npm_pins_match": 8,
+    "npm_overrides_match": 2
+  },
+  "reports": {
+    "E1_LOCAL_RESULT.json": "55e079919c1f5c696e6decd04b5417cf81ccf65f8e1f322c00749acab72aef39",
+    "ORIGINAL24_RESULT.json": "8b819c22b8708af7e907b177e64f01cdc5831497694fbd0a6dde3b60e29d566f"
+  },
+  "logHashes": {
+    "01_venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "02_pip_install.log": "7d3cb137a951eac5683d978d95e20a50380ed385d305870d15283a50689af1e3",
+    "03_pip_check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "04_npm_ci.log": "b64b746f7e1a6f5c997b3c05d7ba8f262a5fc109d341bb024bf8edd7bcca7cd9",
+    "05_pip_list.log": "cd772743f2b73adf516874ec938b8eb5687445ec2aacdcd12b77a109458a6f8f",
+    "06_npm_tree.log": "975c14a2cf4825c9024ed8a8b88fd8626269254ca99507a28b06749854b51a54",
+    "test_company_fence_binding_0219.log": "26f7337679c7393ac77ff3bfe301260d3ce44ab01d8ae7d501ee334006a3ec7a",
+    "test_result_reference_0221.log": "be64675675257fe3d946f4c6ec8399419f39dd75c46cc14ea97cd2bc2bdcf669",
+    "test_canonical_research_0224.log": "261bb4a881a44649b3962d73139b0aa83a58d6f00e0124d1bbc42daaad74f8a0"
+  },
+  "logs_matching_reports": 9,
+  "original_suites": [
+    {
+      "name": "test_company_fence_binding_0219",
+      "blob": "12bebeac8b3d2b2d1bd4a04a540836489d90a1eb",
+      "collected": 6,
+      "ran": 6,
+      "pass": 6,
+      "seconds": 0.52
+    },
+    {
+      "name": "test_result_reference_0221",
+      "blob": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+      "collected": 10,
+      "ran": 10,
+      "pass": 10,
+      "seconds": 4.182
+    },
+    {
+      "name": "test_canonical_research_0224",
+      "blob": "e121ee6275def01070397a942a8434ff37b611a6",
+      "collected": 8,
+      "ran": 8,
+      "pass": 8,
+      "seconds": 2.915
+    }
+  ],
+  "original24": {
+    "pass": 24,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "source_test_names_match": 24,
+    "log_markers_match_reports": 3,
+    "scope": "actual user-run SQLite D0 only",
+    "review_replay": "raw evidence inspected, not tests rerun"
+  },
+  "limitations": [
+    "No raw wheel binaries; 28 wheel inventory hashes match reviewed hash-locked install, not independent raw wheel verification.",
+    "Empty venv log matches hash; user transcript exit 0 and subsequent successful pip/test evidence.",
+    "Two extraneous npm entries are exact optional locked packages, not unpinned; retain warning for E3.",
+    "No full checkout byte archive in ZIP; rely on exact runner source verification and post-run recheck plus remote pins.",
+    "No independent execution, PG/RLS/build/browser/real providers or live grants; B3 HOLD."
+  ],
+  "gates": {
+    "previous": 8,
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "closed": "E1",
+    "remaining": [
+      "D1",
+      "D2",
+      "D3",
+      "E2",
+      "E3",
+      "E4",
+      "B3"
+    ]
+  },
+  "prior_selected_307": "historical 0226, not rerun; original24 separately recorded, no combined unique count claimed"
+}

@@ -217,3 +217,7 @@ scripts/run_e1_0227.py reuses original W8 lock inventory, exact A0C hash/wheels 
 
 ## 0227-E1 Windows execution transcript
 User explicitly approved new fingerprint and ran the isolated Windows stage. Six install/inventory commands and original 0219/0221/0224 suites exited zero; runner reported 24/24 PASS after source/lock rechecks. Actual SQLite D0 execution reported, not independent replay. Raw reports/logs/locks pending; E1 gate remains open, 8/16. No additive test aggregate, no product/source changes. Evidence: tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json.
+
+
+## 0227-E1 final raw review — PASS
+User-uploaded raw ZIP 14/14 CRC, 9/9 report log hashes, 28 Python wheel/installed versions and 61 npm lock entries, 30 installed versions, 24 original test names match source and all pass. Two extraneous npm packages are exact optional lock entries; E3 recheck. No raw wheel binaries or independent replay. E1 closed, 9/16 (56.25%); product and DB source unchanged; prior 307 count separate. D1/D2 next; D3/E2/E3/E4/B3 open. Evidence: tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json.

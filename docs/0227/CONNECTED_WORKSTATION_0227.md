@@ -110,3 +110,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Execution HOLD; preserve logs' }
 
 ```
 Return the evidence directory, REVIEW_0227.json, python.lock and package-lock.json; retain the old stage and new stage. No secrets, live DB, old venv copying or dependency version substitution. If old wheels absent, revert to separately reviewed resolution workflow. E1 cannot be promoted until real new review and install evidence inspected; original24 only D0 SQLite, no E2 full build.
+
+
+## 0227-E1 final raw review — PASS
+User-uploaded raw ZIP 14/14 CRC, 9/9 report log hashes, 28 Python wheel/installed versions and 61 npm lock entries, 30 installed versions, 24 original test names match source and all pass. Two extraneous npm packages are exact optional lock entries; E3 recheck. No raw wheel binaries or independent replay. E1 closed, 9/16 (56.25%); product and DB source unchanged; prior 307 count separate. D1/D2 next; D3/E2/E3/E4/B3 open. Evidence: tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json.

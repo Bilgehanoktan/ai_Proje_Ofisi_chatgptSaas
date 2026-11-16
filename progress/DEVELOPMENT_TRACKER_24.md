@@ -1,58 +1,32 @@
-# 24 Teknik Alan — TRACK-0223
+# 24 Teknik Alan — TRACK-0227
 
-Ordinal scores unchanged. 36 new + 27 prior selected checks; 7/16 gates. No full acceptance.
+E1 PASS; 9/16 integration gates (56.25%). Design/source ordinal scores unchanged. Prior selected 307 not rerun; 24 original SQLite tests separately raw-reviewed. Full acceptance remains open.
 
-| ID | Alan | Tasarım | Kaynak | Önceki test durumu | Bu tur |
+| ID | Alan | Tasarım | Kaynak | Gerçek test durumu | Bu tur |
 |---:|---|---:|---:|---|---|
-| 1 | Frontend | 75 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT | SOURCE_OR_EVIDENCE_0223 |
-| 2 | UI/UX Design System | 50 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT | SOURCE_OR_EVIDENCE_0223 |
-| 3 | Office Engine | 75 | 50 | PARTIAL_PASS_0217_HISTORICAL_LABEL | UNCHANGED_0223 |
-| 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | SOURCE_OR_EVIDENCE_0223 |
-| 5 | Backend | 75 | 50 | PARTIAL_PASS_0217_SIGNED_FIXTURE | SOURCE_OR_EVIDENCE_0223 |
-| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0204C_REPLAY | SOURCE_OR_EVIDENCE_0223 |
-| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_0205R_CHECKPOINT | SOURCE_OR_EVIDENCE_0223 |
-| 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE | SOURCE_OR_EVIDENCE_0223 |
-| 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_0210_DENIAL | UNCHANGED_0223 |
-| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW | UNCHANGED_0223 |
-| 11 | Database | 75 | 25 | PARTIAL_PASS_0217_LOCAL_SQLITE_DDL_PINS | UNCHANGED_0223 |
-| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM | SOURCE_OR_EVIDENCE_0223 |
-| 13 | Memory & Knowledge | 75 | 25 | PARTIAL_PASS_0210_LOCAL_FENCE | UNCHANGED_0223 |
-| 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL | SOURCE_OR_EVIDENCE_0223 |
-| 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE | UNCHANGED_0223 |
-| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_0204C_REPLAY | UNCHANGED_0223 |
-| 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN | UNCHANGED_0223 |
-| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN | UNCHANGED_0223 |
-| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL | UNCHANGED_0223 |
-| 20 | Test & QA | 75 | 25 | PARTIAL_PASS_0217_SELECTED_37 | SOURCE_OR_EVIDENCE_0223 |
-| 21 | DevOps & Infrastructure | 75 | 25 | BLOCKED_CHECKOUT_DEPENDENCIES_PG | UNCHANGED_0223 |
-| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | SOURCE_OR_EVIDENCE_0223 |
-| 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0217_RESTORE_RESIDUAL | UNCHANGED_0223 |
-| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | SOURCE_OR_EVIDENCE_0223 |
+| 1 | Frontend | 75 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 2 | UI/UX Design System | 50 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 3 | Office Engine | 75 | 50 | PARTIAL_PASS_0217_HISTORICAL_LABEL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 5 | Backend | 75 | 50 | PARTIAL_PASS_0217_SIGNED_FIXTURE | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0204C_REPLAY | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_ORIGINAL_0224_SQL8_RAW_REVIEWED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_0210_DENIAL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 11 | Database | 75 | 25 | PARTIAL_PASS_0217_LOCAL_SQLITE_DDL_PINS | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 13 | Memory & Knowledge | 75 | 25 | PARTIAL_PASS_ORIGINAL_0221_SQL10_RAW_REVIEWED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_0204C_REPLAY | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 20 | Test & QA | 75 | 25 | E1_PASS_ORIGINAL24_RAW_REVIEWED_FULL_REGRESSION_OPEN | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 21 | DevOps & Infrastructure | 75 | 25 | E1_PASS_WINDOWS_REVIEWED_LOCKS_PG_BUILD_OPEN | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0217_RESTORE_RESIDUAL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 
-
-## 0224
-43 selected passes; full root SQL8 NOT_RUN. Scores unchanged; 7/16 integration gates. Current machine-readable tracker: DEVELOPMENT_TRACKER_24.json.
-
-
-## 0225 — actual integration validation
-Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLite T1 and pinned admission/history, persisted historical DB and mounted routes, real loopback compiled TS proxy/Studio. No runtime source changes; original suites and full result path still open. 7/16 gates unchanged. See docs/0225/ARCHITECTURE_AND_CATALOG.md and handover/NEXT_STEP_0225.md.
-
-
-## 0226 — recovered original regression
-173 recovered original tests +134 prior selected reruns =307 unique selected tests (254 Python, 53 Node). Original SQL6 and DB4 PASS; original core29 current source PASS nonlocked, historical locked acceptance NOT_RUN. No product changes. 7/16 gates unchanged. See docs/0226/ARCHITECTURE_AND_CATALOG.md and docs/0226/LOCAL_ACCEPTANCE_RUNBOOK.md.
-
-
-## 0227 — MVP environment preflight (BLOCKED)
-No new product code or product tests. 392/392 remote manifest path/size; historical 55/55 remote Git blob/size; local checkout/resolver blocked. 307 prior selected passes not rerun; 7/16 unchanged; independent HOLD. [Architecture](../docs/0227/ARCHITECTURE_AND_CATALOG.md) · [Workstation packet](../docs/0227/CONNECTED_WORKSTATION_0227.md) · [Evidence](../tests/evidence/TEST_EVIDENCE_0227.json).
-
-
-## 0227-A3 — scoped historical evidence transfer
-A3 only: 29/29 historical locked tests from pinned A0F review `6140e16edb2ddd943912908f3714ccd3a211b1d3`, actual A0C source `a79df6622e2eb9de63795ff6c0309984d1be6910`; 55/55 source lock, same exact lock/runner/helper, reviewed Python lock and report hashes, four raw markers checked in prior review. Current product is unchanged. No new local execution, no independent replay; raw Library ZIP materialization unavailable in this session. 8/16; 307 historical selected tests unchanged, no additive count. E1, D1-D3, E2-E4, B3 open. P10J15 exact three original test blobs match, but no execution or merge. Evidence: tests/evidence/A3_EVIDENCE_TRANSFER_0227.json.
-
-
-## 0227-E1 — reviewed-lock reuse execution packet
-scripts/run_e1_0227.py reuses original W8 lock inventory, exact A0C hash/wheels and a fresh source-bound review. It copies only pinned product and DB source into a new stage, installs Python offline with hash verification and npm ci with scripts disabled, runs original 6/10/8 suites with exact collection and exit counts. 10/10 synthetic runner mechanics PASS; Windows prepare/execute NOT_RUN and zero product tests. 8/16 unchanged. No runtime/product changes, no CI, no merge. If A0 raw wheel/lock bytes unavailable or mismatch, stop; retain failed stage, use separately reviewed recovery. Evidence: tests/evidence/E1_RUNNER_MECHANICS_0227.json.
-
-
-## 0227-E1 Windows execution transcript
-User explicitly approved new fingerprint and ran the isolated Windows stage. Six install/inventory commands and original 0219/0221/0224 suites exited zero; runner reported 24/24 PASS after source/lock rechecks. Actual SQLite D0 execution reported, not independent replay. Raw reports/logs/locks pending; E1 gate remains open, 8/16. No additive test aggregate, no product/source changes. Evidence: tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json.
+Historical MD preserved in Git history. Current evidence: tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json
