@@ -121,9 +121,11 @@ class D0IntentAuthority:
 
 
 def execute_authority_fenced_transition(*, authority, intent, context, registry, witness,
-        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock):
+        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
+        company=None, expected_company_binding=None, result=None, result_reader=None):
     """Opt-in wrapper around 0210; no caller-supplied latest callback or live grant."""
-    from app.core.transaction.fenced_transition import execute_fenced_transition, intent_pin
+    from app.core.transaction.fenced_transition import (execute_fenced_transition, intent_pin,
+        resolve_fence_binding, resolve_result_binding, check_result_store_separation)
     from app.core.transaction.witnessed_mapping import binding_digest
     from app.core.agent_runtime.memory_witness import LatestWitnessPin
     if type(authority) is not D0IntentAuthority or type(witness) is not LatestWitnessPin:
@@ -132,8 +134,14 @@ def execute_authority_fenced_transition(*, authority, intent, context, registry,
         raise ValueError('D0_AUTHORITY_BINDING_HOLD')
     if any(os.path.samefile(authority.path, p) for p in (memory_path, reader.path, journal.path)):
         raise ValueError('D0_AUTHORITY_SEPARATION_HOLD')
-    pin = intent_pin(intent, expected_binding)
+    company_pin = resolve_fence_binding(intent, expected_binding, company, expected_company_binding)
+    check_result_store_separation(result_reader,(authority.path,memory_path,reader.path,journal.path))
+    fence_binding = resolve_result_binding(intent,context,registry,witness,expected_binding,company,
+                                          company_pin,result,result_reader,clock() if result is not None else None,raw)
+    pin = intent_pin(intent, fence_binding)
     root = RootPin(witness.record_sha, witness.key_sha, witness.recovery_epoch)
     with authority.claim_and_fence(root, pin.scope_sha, pin.binding, pin.transaction_ref, pin.request_digest):
         return execute_fenced_transition(intent, context, registry, witness, expected_binding,
-            memory_path, reader, public_key, raw, journal, connect, clock, lambda: witness)
+            memory_path, reader, public_key, raw, journal, connect, clock, lambda: witness,
+            company=company, expected_company_binding=expected_company_binding,
+            result=result, result_reader=result_reader)
