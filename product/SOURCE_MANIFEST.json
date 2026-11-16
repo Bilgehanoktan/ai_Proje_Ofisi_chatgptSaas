@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0212",
-  "status": "D0_CORE29_DIRECT_AUTHORITY_COMPANY_SQLITE_DIAGNOSTIC_PASS_PINNED_PG_FULL_BUILD_NOT_RUN",
+  "doc_revision": "0213",
+  "status": "D0_MULTIPROJECT_4_PASS_FULL_WRAPPER_PREPARED_NOT_RUN_PG_RLS_BUILD_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
+  "parent_git_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1397,8 +1397,16 @@
     "ai-company-os-backend/tests/test_company_terminal_0212.py": {
       "bytes": 10641,
       "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55"
+    },
+    "ai-company-os-backend/tests/test_company_multiproject_0213.py": {
+      "bytes": 6418,
+      "sha256": "50cc62f60b36bd53ae44b775526844ef1b81ceee852055b15d67b3c35c0d2525"
+    },
+    "ai-company-os-backend/tests/test_authority_wrapper_0213.py": {
+      "bytes": 5086,
+      "sha256": "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df"
     }
   },
-  "parent_source_manifest_blob": "9c85c1a9ccdfbceabb0e341ce7565c87318aa815",
-  "source_git_commit_note": "Two new exact integration test sources; 55 locked source files recovered; 52 diagnostic tests run (29 original +10 prior authority incl. one residual reproduction +13 new). Original 0211 wrapper, independent custody, pinned dependencies, PG/RLS and full build open."
+  "parent_source_manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c",
+  "source_git_commit_note": "Two new test sources: 4 real SQLite cross-project fixture tests PASS; 6 original witness/journal/authority chain tests prepared NOT_RUN pending full exact repository. Original 348 manifest records unchanged; 55 core hashes/56 diagnostic tests reconfirmed. PG/RLS, pinned dependency, frontend/backend build and browser NOT_RUN."
 }
