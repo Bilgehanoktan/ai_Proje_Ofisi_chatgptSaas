@@ -1,0 +1,212 @@
+{
+  "revision": "0212",
+  "parent_commit": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
+  "source_commit": "bef094e96d6b7f57552e022b92f0a5524b2c6a9e",
+  "manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c",
+  "manifest_entries": 348,
+  "product_files": 349,
+  "source_added": 2,
+  "existing_product_code_modified": 0,
+  "newfiles": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+      "bytes": 5481,
+      "sha256": "1cae8b04454f40b5e03fafe3106ef0472ca0267ac617c33462eb13a57fcbf626",
+      "git_blob": "9296347d9253d74902ed1c6a89e273d8e516f2b5"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+      "bytes": 10641,
+      "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55",
+      "git_blob": "c35a2e497ce013409c1943f293799d83c7164e83"
+    }
+  ],
+  "core_lock_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+  "core_recovery": {
+    "previous": 32,
+    "local_exact": 55,
+    "total": 55,
+    "method": "6 historical source transfer files plus pinned UTF-8 Git readbacks; exact blob and length checked; full per-file local report delivered",
+    "report_sha256": "d57708bbfd2f5f11068e6262fad79d8837afb65c22b50cc4caca5965bcc61793"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "cryptography": "46.0.4",
+    "uvicorn": "0.48.0",
+    "locked_fastapi": "0.163.0",
+    "locked_starlette": "1.10.0",
+    "locked_uvicorn": "0.34.2",
+    "transitive_lock_review": "OPEN",
+    "pg": "NOT_INSTALLED",
+    "psycopg": "NOT_INSTALLED",
+    "node": "22.16.0",
+    "npm": "10.9.2",
+    "full_checkout": "NOT_MATERIALIZED"
+  },
+  "tests": {
+    "combined": {
+      "ran": 52,
+      "pass": 52,
+      "behavior_pass": 51,
+      "residual_reproduced": 1,
+      "sha256": "ef2890dc88c5c90b029f399993b9779663129d232c3dbe09de61de3f47212465",
+      "command": "PYTHONPATH=.:tests python -B -m unittest test_retained_snapshot_0201 test_terminal_anchor_lifecycle_0203 test_lifecycle_prefix_p03 test_lifecycle_projection_p02 test_intent_authority_0211 test_intent_authority_t1_0212 test_company_terminal_0212 -v"
+    },
+    "core_29": {
+      "pass": 29,
+      "classification": "DIAGNOSTIC_UNPINNED",
+      "groups": [
+        5,
+        7,
+        9,
+        8
+      ],
+      "sha256": "0d2e556724e783ff72a372e10db7112bc112087b25386f67f49b8d4b14d03898"
+    },
+    "authority_prior": {
+      "ran": 10,
+      "behavior_pass": 9,
+      "residual_reproduced": 1
+    },
+    "authority_direct": {
+      "pass": 7
+    },
+    "company": {
+      "pass": 6
+    },
+    "prior_154": "NOT_RERUN",
+    "exact_wrapper": "NOT_RUN",
+    "locked_29": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN"
+  },
+  "progress": {
+    "definition": "Equal-weight binary evidence gates for this 0212 work scope only; not overall project maturity/ETA or normative acceptance",
+    "gates": [
+      {
+        "id": "A",
+        "name": "Core recovery",
+        "done": 2,
+        "total": 3,
+        "criteria": [
+          [
+            "55 exact files",
+            true
+          ],
+          [
+            "29 diagnostic tests",
+            true
+          ],
+          [
+            "29 locked dependency tests",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "B",
+        "name": "Intent Authority + T1",
+        "done": 1,
+        "total": 3,
+        "criteria": [
+          [
+            "Direct claim/fence + ordinary T1",
+            true
+          ],
+          [
+            "Exact 0211 witness/journal wrapper",
+            false
+          ],
+          [
+            "Independent custody/effect authority",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "C",
+        "name": "Company + Terminal",
+        "done": 2,
+        "total": 3,
+        "criteria": [
+          [
+            "Single-project lifecycle composition",
+            true
+          ],
+          [
+            "Rollback/UNKNOWN/cap/tamper",
+            true
+          ],
+          [
+            "Multi-project concurrent composition",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "D",
+        "name": "PG/RLS",
+        "done": 0,
+        "total": 3,
+        "criteria": [
+          [
+            "Local PG+driver",
+            false
+          ],
+          [
+            "13 actual PG tests",
+            false
+          ],
+          [
+            "Non-owner RLS/lock contention",
+            false
+          ]
+        ]
+      },
+      {
+        "id": "E",
+        "name": "Working product",
+        "done": 0,
+        "total": 4,
+        "criteria": [
+          [
+            "Exact full checkout+reviewed locks",
+            false
+          ],
+          [
+            "Full backend build/test",
+            false
+          ],
+          [
+            "Full frontend build",
+            false
+          ],
+          [
+            "Browser CEO/Office historical data",
+            false
+          ]
+        ]
+      }
+    ],
+    "done": 5,
+    "total": 16,
+    "percent": 31.25
+  },
+  "limitations": [
+    "Authority store restore residual remains; D-03/D-04 not closed; exact wrapper not executed.",
+    "SQLite shim not PG locking/RLS; signed sample not independent custody.",
+    "Single-project terminal failure path, not real agent execution or general success.",
+    "Initial Company test harness OrdinaryPin argument omission corrected; final 6/6 and combined 52/52.",
+    "No full exact checkout/lock/build/browser; no CI, main, PROD, provider or actual agent calls."
+  ],
+  "open_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ]
+}
