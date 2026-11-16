@@ -28,3 +28,6 @@ Ordinal scores unchanged. Nine local component behaviors PASS and one authority-
 | 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | Prior status retained; no new acceptance |
 | 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0211_AUTHORITY_RESTORE_RESIDUAL | Separate-store claim persists; authority restore replay reproduced |
 | 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0211 architecture, catalog, evidence, tracker, handover updated |
+
+## 0212 evidence update
+All ordinal design/source scores retained (not percent completion). 55/55 source recovery, core29 diagnostic PASS, 7 direct authority/T1 and 6 Company/Terminal new tests PASS; 52/52 combined including one expected residual reproduction. Explicit integration gates 5/16 = 31.25%, scope only, not global completion. [Gates](INTEGRATION_GATES_0212.json). PG/RLS/locked build and independent acceptance remain open.
