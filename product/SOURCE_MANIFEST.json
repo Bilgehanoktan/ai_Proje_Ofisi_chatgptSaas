@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0216",
-  "status": "D0_EFFECT_FENCE_REFERENCE_SYNTHETIC_ONLY_INDEPENDENT_ACCEPTANCE_HOLD",
+  "doc_revision": "0217",
+  "status": "D0_SIGNED_CONSUME_STUDIO_CONTEXT_SELECTED_TESTS_INDEPENDENT_ACCEPTANCE_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f3b8f0f1ba972c48d13249ed88885cb35900b17f",
+  "parent_git_commit": "12e90ef2f8b7eb091299240488c60a1034a461c3",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -975,8 +975,8 @@
       "sha256": "9e338eccef6fc361ce65fd3ab94e14e987bec696a73fa96e9f2fa6ec686699f6"
     },
     "ai-company-os-frontend/design-system/WorkflowProjection.tsx": {
-      "bytes": 3365,
-      "sha256": "4f74ca0ee99be3e3f0f9c7af2c77f2f8c23217b2fc7f087fca45fc68a1034e84"
+      "bytes": 3635,
+      "sha256": "67cd185d250e39985609d0fa74cacb5edaf7bf69cf4bb0498e78ccab9f39779f"
     },
     "ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx": {
       "bytes": 1461,
@@ -1415,8 +1415,8 @@
       "sha256": "032abe3f5879d6157b502c3153eb4f6a58d8684b853b1cc4e394e4282ed3667f"
     },
     "ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx": {
-      "bytes": 1527,
-      "sha256": "b83e8f27a842a3159d7e5fdf59ac444f9fb2fa5b4944f2a67cc1bf2ac9a15f11"
+      "bytes": 1682,
+      "sha256": "eb78987fe3a7f95e4021992c3ac92dced6b131a1bc27ace759f65eea4964dca9"
     },
     "ai-company-os-frontend/tests/historical-evidence-0214.test.cjs": {
       "bytes": 2123,
@@ -1445,8 +1445,24 @@
     "ai-company-os-backend/tests/test_effect_fence_reference_0216.py": {
       "bytes": 5007,
       "sha256": "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f"
+    },
+    "ai-company-os-backend/app/core/transaction/signed_consume_reference.py": {
+      "bytes": 4409,
+      "sha256": "7c3086ba3030a072fe2bba6a9a4925232228b746a83fffeb9a9bed416f16f86b"
+    },
+    "ai-company-os-backend/tests/test_signed_consume_reference_0217.py": {
+      "bytes": 4879,
+      "sha256": "d16ebb5860e9f2c92b25d39aa4b19b72acccc061a4b0c880d464abe69fa54b9f"
+    },
+    "ai-company-os-frontend/features/mvp/studioContext.ts": {
+      "bytes": 927,
+      "sha256": "ca73ee8dbeb7c761ec3546fc37b72523730d5dc4a5b53c60a788f8d00b43529e"
+    },
+    "ai-company-os-frontend/tests/studio-context-0217.test.cjs": {
+      "bytes": 1234,
+      "sha256": "c03332dd1fb69f1140555bee26e59c34241aaf23605452d5ea260b393d6b66f2"
     }
   },
-  "parent_source_manifest_blob": "9dc7c7db0ff496d546a9cbf0a76a1aa63aeaf2bc",
-  "source_git_commit_note": "0216 adds two isolated D0 reference/test files. 13 local unittest cases ran: 12 expected behaviors and one expected authority-store restore residual reproduced. No original wrapper, independent custody, mandatory gateway wiring, PG/RLS, full checkout/locked build/browser or real effect acceptance."
+  "parent_source_manifest_blob": "c343f0e981bdd00c8ff0a3b1c0afe2bc1cb4bd77",
+  "source_git_commit_note": "14 new signed SQLite cases, 13 0216 reruns (one expected restore residual), 6 strict TS helper cases, 4 isolated Chromium harness checks. TSX/full Next/browser product, PG/RLS, independent custody and mandatory gateway wiring NOT_RUN/HOLD."
 }
