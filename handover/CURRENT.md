@@ -157,3 +157,7 @@ Source `093d9674e3a753ae26f799217ffdc3ae5ed74b75`; 365 product files / 364 manif
 
 ## 0218 — architecture realignment
 Product source unchanged (365 files; 364 manifest paths/sizes matched remotely, 55/55 locked core and 6/6 delta blob+size pins). Environment blocked by DNS, PG/driver and dependency mismatch. Zero product tests, 7/16 gates unchanged, independent HOLD. [Architecture](../docs/0218/ARCHITECTURE_AND_CATALOG.md) · [Sequence](../docs/implementation_plan/INTEGRATION_SEQUENCE_0218_0225.md) · [Evidence](../releases/SOURCE_PREFLIGHT_0218.json) · [Next 0219](NEXT_STEP_0218.md).
+
+
+## 0219 — D0 company/admission/witness T1 composition
+Source `2507c9316da0e41ac5c3d320477cc72ca832f521`; 366 product files / 365 manifest entries. Existing fence and authority modules composed with admission-bound/company mapping; 12 exact new excerpt diagnostic checks only (fixture dependencies); six new product tests NOT_RUN; full combined wrapper/PG13/RLS/build NOT_RUN. 7/16 gates, independent and R03 HOLD. [Architecture](../docs/0219/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0219.json) · [Next](NEXT_STEP_0219.md).

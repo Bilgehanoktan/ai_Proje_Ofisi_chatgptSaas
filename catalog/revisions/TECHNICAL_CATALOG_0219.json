@@ -1,0 +1,132 @@
+{
+  "revision": "0219",
+  "source_commit": "2507c9316da0e41ac5c3d320477cc72ca832f521",
+  "parent": "ac983472422cc78fd925dc714738a790600cd2b1",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "action": "modify",
+      "before_blob": "350fd89572d047d9ac89f3a6c80b494772e563ba",
+      "blob": "4724324f454c52eebac66b1e5c7819a299e95ae3",
+      "bytes": 14214,
+      "sha256": "1f1198211fe49b940f96f3a8b70373d55b10360c2a2589ed2bbf5c3965ccb7fd"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "action": "modify",
+      "before_blob": "e015a0fb7f2eff07117dc5f9acb309e5bbcb6f52",
+      "blob": "8482b1d6033511137a23d75caa5f6d5e5aebe886",
+      "bytes": 7359,
+      "sha256": "737a44b22912b46e6c7c55c28c91a93dd67f4cb8a688b3555d817d9e5d48a623"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+      "action": "add",
+      "blob": "12bebeac8b3d2b2d1bd4a04a540836489d90a1eb",
+      "bytes": 3582,
+      "sha256": "c2f8563d93d33a82e231216339831a5f9a774021648be8c91ede6626173db606"
+    }
+  ],
+  "symbols": [
+    {
+      "module": "app.core.transaction.fenced_transition",
+      "class": "CompanyTransitionContext",
+      "functions": [
+        "company_transition_binding",
+        "resolve_fence_binding",
+        "execute_fenced_transition"
+      ],
+      "dependencies": [
+        "existing AdmissionBinding/D0AdmissionBoundTransitionMapping",
+        "Member/Pool/CompanyEvent/CompanyCoordinatedMapping/_roster/_replay",
+        "WitnessedTransitionMapping",
+        "LogicalT1Coordinator",
+        "postgres_transaction"
+      ],
+      "callers": [
+        "execute_authority_fenced_transition",
+        "existing explicit D0 fixture callers"
+      ],
+      "notes": "optional versioned company profile; no real effect, new physical schema or independent grant"
+    },
+    {
+      "module": "app.core.transaction.intent_authority",
+      "functions": [
+        "execute_authority_fenced_transition"
+      ],
+      "dependencies": [
+        "resolve_fence_binding",
+        "intent_pin",
+        "existing claim_and_fence"
+      ],
+      "notes": "same effective binding passed to journal; previous local scope claim remains one per scope"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "errors": [
+    "D0_COMPANY_FENCE_BINDING_HOLD",
+    "D0_COMPANY_FENCE_PIN_HOLD",
+    "existing company replay/roster/cap HOLD"
+  ],
+  "test": {
+    "excerpt": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python run_binding_checks.py",
+      "python": "3.13.5",
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.003,
+      "checks": [
+        "budget_cap",
+        "budget_source_drift",
+        "duplicate_roster",
+        "exact_and_legacy",
+        "missing_admission_history",
+        "partial_profile",
+        "request_mismatch",
+        "wrong_admission",
+        "wrong_epoch",
+        "wrong_principal",
+        "wrong_project",
+        "wrong_transaction"
+      ],
+      "exact_new_excerpt": {
+        "bytes": 2752,
+        "sha256": "a0ac116d19c2a5a035afacac633020c69884a2fce9b756465b50b1e47b716ea6"
+      },
+      "existing_company_prefix": {
+        "bytes": 7268,
+        "remote_local_fnv1a": "f85b77bb",
+        "local_sha256": "331b47067d883e09c44f236672db134fa95ae0a99d5109cacb57cbb0928b7e98"
+      },
+      "limitations": "remaining imports/intent validator are fixture stand-ins; no full product import, SQL, actual witness or authority execution. FNV not cryptographic."
+    },
+    "new_product_tests": {
+      "count": 6,
+      "status": "NOT_RUN"
+    },
+    "original_0213_fixture6": "NOT_RUN",
+    "locked_core29": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN"
+  },
+  "traceability": [
+    "v135 BE-03",
+    "v135 BE-04",
+    "v130 C01/C02/C03/A03",
+    "MVP-05/MVP-11"
+  ],
+  "maintenance": "compare exact Member, Scope, admission and company sequence, independent readback; never retry UNKNOWN",
+  "rollback": "revert both modified modules, new test, manifest together; preserve persistent evidence; no restore/retry",
+  "open": [
+    "PG13/RLS",
+    "locked full checkout/core29",
+    "full combined wrapper tests",
+    "R03",
+    "D-01–D-04",
+    "B3"
+  ]
+}

@@ -178,3 +178,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0216 / 0217 / 0218
 [0216](docs/0216/ARCHITECTURE_AND_CATALOG.md) · [0217](docs/0217/ARCHITECTURE_AND_CATALOG.md) · [0218](docs/0218/ARCHITECTURE_AND_CATALOG.md) · [Traceability](docs/0218/TRACEABILITY.json) · [Roadmap](docs/implementation_plan/INTEGRATION_SEQUENCE_0218_0225.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0218.json) · [Preflight](releases/SOURCE_PREFLIGHT_0218.json) · [Next](handover/NEXT_STEP_0218.md).
+
+
+## 0219
+[Architecture](docs/0219/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0219.json) · [Evidence](releases/GITHUB_READBACK_0219.json) · [Next](handover/NEXT_STEP_0219.md).

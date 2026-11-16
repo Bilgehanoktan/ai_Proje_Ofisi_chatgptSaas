@@ -170,3 +170,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0218 — architecture realignment and user-approved integration sequence
 [Addendum](../0218/ARCHITECTURE_AND_CATALOG.md) · [0218–0225 sequence](../implementation_plan/INTEGRATION_SEQUENCE_0218_0225.md). Product unchanged; remote source preflight, no new gate or normative decision. Original scope and grant boundaries preserved.
+
+
+## 0219 — D0 company/admission/witness composition
+[Addendum](../0219/ARCHITECTURE_AND_CATALOG.md). Reuse existing T1 mappings under explicit company profile; 12 excerpt diagnostics only, no actual combined wrapper/PG acceptance or normative change. Old profiles preserved.
