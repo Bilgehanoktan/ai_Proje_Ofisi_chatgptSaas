@@ -173,3 +173,7 @@ Source `763bd55796945dcd08bb53cda1b68f4c80c48845`; 370 product files / 369 manif
 
 ## 0222 — CEO/Office common historical snapshot
 Source `7dbb696f8f3d5b639d2a00765566babd4108cf93`; 379 product files / 378 manifest entries. 39 selected behaviors (6 Python +22 Node +5 ASGI mock DB +6 real loopback proxy with synthetic upstream), 18 schema payloads and 2 TSX syntax checks separately. Single shared historical provider, finite SSE, no live or placement. 7/16. Actual DB route/browser, full SQL/PG/RLS/build and independent acceptance open. [Architecture](../docs/0222/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0222.json) · [Next](NEXT_STEP_0222.md).
+
+
+## 0223 — Agent/Workflow Studio fixed compiler plan and historical context
+Source `c963630b5d174f4c078b84b42ea88318086ea18e`; 385 product files / 384 manifest entries. 36 new +27 prior rerun selected controls, 63 total. Exact plan compiler and shared context; historical mismatched revision stays HOLD. Actual DB4, full registry/React/Next/browser, combined SQL/PG/RLS and independent acceptance open. 7/16. [Architecture](../docs/0223/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0223.json) · [Next](NEXT_STEP_0223.md).

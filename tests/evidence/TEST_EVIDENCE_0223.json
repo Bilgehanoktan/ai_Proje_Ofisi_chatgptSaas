@@ -1,0 +1,69 @@
+{
+  "revision": "0223",
+  "source_commit": "c963630b5d174f4c078b84b42ea88318086ea18e",
+  "environment": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "typescript_required": "5.9.3 pinned; NOT_RUN",
+    "node_env_declaration": "minimal diagnostic declaration; not full typecheck",
+    "checkout": "partial exact local source",
+    "git_network": "Could not resolve host github.com",
+    "postgresql_server_driver": "psql/initdb/psycopg absent",
+    "react_next": "not installed in local checkout"
+  },
+  "new_checks": [
+    {
+      "suite": "exact Python canonical_plan direct diagnostics",
+      "pass": 5,
+      "scope": "one exact reference + four rejected inputs, current compiler/DAG/denial sources"
+    },
+    {
+      "suite": "compiled exact studio-context-0223.test.cjs",
+      "pass": 23
+    },
+    {
+      "suite": "compiled exact plan-proxy-0223.test.cjs",
+      "pass": 8,
+      "scope": "actual local HTTP to diagnostic upstream serving Python compiler output, not full backend ASGI or Next server"
+    }
+  ],
+  "prior_reruns": [
+    {
+      "suite": "exact test_plan_projection.py",
+      "pass": 5
+    },
+    {
+      "suite": "exact shared-snapshot-0222.test.cjs",
+      "pass": 22
+    }
+  ],
+  "selected_new": 36,
+  "selected_prior_rerun": 27,
+  "total_selected": 63,
+  "runner": {
+    "status": "PASS",
+    "node_tests": 53,
+    "python_original_tests": 5,
+    "compiler_fixture_parity": "PASS",
+    "note": "runner reruns already counted cases; not added to total"
+  },
+  "source_readback": {
+    "changed_including_manifest": 17,
+    "sha256_and_bytes_pass": 17,
+    "manifest_paths_sizes_pass": 384,
+    "product_files": 385,
+    "unchanged_product": 368
+  },
+  "not_run": [
+    "4 actual fixed-prefix SQLite ASGI tests added in 0223",
+    "full projection registry test with all eight parsers",
+    "full React/Next typecheck/build/browser and provider state",
+    "0219–0221 combined SQL",
+    "PG13/RLS",
+    "locked29",
+    "full regression"
+  ],
+  "gate": "7/16",
+  "independent_acceptance": "HOLD"
+}

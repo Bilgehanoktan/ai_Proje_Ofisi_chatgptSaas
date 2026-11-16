@@ -11,3 +11,6 @@ Eklemeli repo düzeni ve R5 kaynakları; tarihsel kayıtlar docs/0159A ve docs/0
 
 ## 0222
 Shared CEO/Office historical snapshot, finite SSE replay, bounded loopback proxy, common provider and source/mirror schema. 39 selected behaviors. Actual DB/browser/PG/build not run. [Details](docs/0222/ARCHITECTURE_AND_CATALOG.md).
+
+## 0223
+Agent and Workflow Studio fixed compiler read, shared separate historical context, role/task lineage HOLD, 63 selected checks, actual DB/browser/PG/build open. [Details](docs/0223/ARCHITECTURE_AND_CATALOG.md).
