@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10F-0211-CANDIDATE",
-  "status": "D0_SELECTED_T1_AUTHORITY_AND_APP_MAIN_COMPILED_GET_PASS_RESIDUAL_REPRODUCED_NEXT_BLOCKED",
+  "doc_revision": "UI-P10G-0212-TEST-UNION",
+  "status": "D0_CORE29_55_EXACT_29_DIAGNOSTIC_PASS_0212_TEST_UNION_NEXT_BLOCKED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "14738822c38eb179825e00a01e48e2a3a0c16c3d",
+  "parent_git_commit": "0b9e476264128ce523e3acab97712fe78fd5582e",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -646,6 +646,10 @@
       "bytes": 3618,
       "sha256": "e3c4c2956dd1dc1380315dbd3a93571efb005f7dba411a8e90f66c6309a87ad1"
     },
+    "ai-company-os-backend/tests/test_authority_boundary_p10g.py": {
+      "bytes": 3308,
+      "sha256": "d6fe86f14a36869b4c534e9c550692e3b04bee14a61e7d80c08c92e4693520d6"
+    },
     "ai-company-os-backend/tests/test_authority_sqlite_p10f.py": {
       "bytes": 8019,
       "sha256": "f8eac07fadabe1b0c0a8992e7cc242c659a84386e0404563ee9ed601563dd46c"
@@ -657,6 +661,10 @@
     "ai-company-os-backend/tests/test_company_recovery_0205.py": {
       "bytes": 12267,
       "sha256": "050b68f9438d022b9c0914ebbc0d4672ab9d0496d8308f847c50d07179e9a05a"
+    },
+    "ai-company-os-backend/tests/test_company_terminal_0212.py": {
+      "bytes": 10641,
+      "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55"
     },
     "ai-company-os-backend/tests/test_d0_snapshot_p04.py": {
       "bytes": 4349,
@@ -689,6 +697,10 @@
     "ai-company-os-backend/tests/test_intent_authority_0211.py": {
       "bytes": 4895,
       "sha256": "ddef3499e45c05ca9fcaff1dfa7396ee0cdde4aa5a8f00aea12703464d56fb8c"
+    },
+    "ai-company-os-backend/tests/test_intent_authority_t1_0212.py": {
+      "bytes": 5481,
+      "sha256": "1cae8b04454f40b5e03fafe3106ef0472ca0267ac617c33462eb13a57fcbf626"
     },
     "ai-company-os-backend/tests/test_joint_context_0208.py": {
       "bytes": 9128,
@@ -1267,8 +1279,8 @@
       "sha256": "22e2139cf1cf377d742a64f2960333df55642cd6108600be9fe8dec44d225298"
     },
     "ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx": {
-      "bytes": 3123,
-      "sha256": "e10428c73dc33bfe6252c6345ce0104e0389180092fde6c9454d854d2b62f933"
+      "bytes": 2717,
+      "sha256": "ab4dd8d67392c8512ab88fd8fb31816ea90a6bf232994d3b603de225480a37de"
     },
     "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx": {
       "bytes": 3536,
@@ -1281,6 +1293,10 @@
     "ai-company-os-frontend/features/workflow/draftHistory.ts": {
       "bytes": 1532,
       "sha256": "3bba9722556ea5467291bd8f7c5f3d0554743893f577592229e77c0fae7926cb"
+    },
+    "ai-company-os-frontend/features/workflow/readbackCatalog.ts": {
+      "bytes": 2023,
+      "sha256": "f694a94e1ae0de5eb6bae8415dee6550b0acd89ee021a9acaf0739c534af4f75"
     },
     "ai-company-os-frontend/features/workflow/readbackPresentation.ts": {
       "bytes": 1641,
@@ -1478,6 +1494,10 @@
       "bytes": 4390,
       "sha256": "e9517b595236994df3b88a61dcba30c1eb5c0aede32868616867ae3f761006e9"
     },
+    "ai-company-os-frontend/tests/ui-p10g-model.test.cjs": {
+      "bytes": 1804,
+      "sha256": "09923cc6c4d5f3074151b2b76efec0e2e993edbdfd6e928932259a6a11006607"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -1495,8 +1515,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "0ba4d8d7a0dde2b96482cdc360406bb7a845cf0c",
-  "source_git_commit_note": "Isolated 0211+UI candidate, no main merge; 0212/0213 not included.",
-  "additional_parent_git_commit": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
-  "additional_parent_source_manifest_blob": "9c85c1a9ccdfbceabb0e341ce7565c87318aa815"
+  "parent_source_manifest_blob": "44844b647640694a00abc62f200af034d38ac6ff",
+  "source_git_commit_note": "Exact 0212 two test sources only; 0213 same HEAD. No main merge or new authority.",
+  "additional_parent_git_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
+  "additional_parent_source_manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c"
 }
