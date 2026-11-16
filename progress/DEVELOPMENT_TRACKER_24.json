@@ -435,8 +435,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_A3_HISTORICAL_EVIDENCE_TRANSFER",
-      "tur_kaniti": "tests/evidence/A3_EVIDENCE_TRANSFER_0227.json",
+      "tur_durumu": "0227_E1_RUNNER_MECHANICS_PASS_NO_PRODUCT_ACCEPTANCE",
+      "tur_kaniti": "tests/evidence/E1_RUNNER_MECHANICS_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -456,8 +456,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_CURRENT_ENVIRONMENT_OPEN_A0F_LOCKS_AVAILABLE",
-      "tur_kaniti": "A0C installed on Windows; current exact product install/PG remains open.",
+      "tur_durumu": "0227_E1_RUNNER_MECHANICS_PASS_NO_PRODUCT_ACCEPTANCE",
+      "tur_kaniti": "tests/evidence/E1_RUNNER_MECHANICS_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -519,15 +519,15 @@
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_CATALOG_UPDATED",
-      "tur_kaniti": "tests/evidence/A3_EVIDENCE_TRANSFER_0227.json",
+      "tur_durumu": "0227_E1_RUNNER_MECHANICS_PASS_NO_PRODUCT_ACCEPTANCE",
+      "tur_kaniti": "tests/evidence/E1_RUNNER_MECHANICS_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "0227-A3: pinned A0F raw-reviewed historical Core29 evidence transferred; 8/16. 307 selected 0226 tests remain historical, no additive count or rerun. Current product E1/E2/E3/E4, PG/RLS and independent HOLD. No score changes.",
+  "note": "0227 E1 execution runner prepared using reviewed A0C locks; 10 synthetic runner controls PASS, 0 product tests. Gates remain 8/16; no score promotion.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -558,8 +558,8 @@
     "actual_t1_company": "12_PASS",
     "actual_http_proxy_studio": "7_PASS",
     "residual": {
-      "exact_full_checkout": "REMOTE_TREE_392_PATH_SIZE_MATCH_LOCAL_BLOCKED_DNS",
-      "locked_dependencies": "A0F_REVIEWED_LOCKS_EXIST_FOR_IDENTICAL_DIRECT_SPECS_CURRENT_E1_PENDING",
+      "exact_full_checkout": "REMOTE_PINS_VERIFIED_LOCAL_CHECKOUT_PENDING",
+      "locked_dependencies": "REUSE_RUNNER_READY_WINDOWS_NOT_RUN",
       "original_0220_SQL6": "PASS_SQLITE_6",
       "original_0221_SQL10": "NOT_RUN",
       "original_0224_SQL8": "NOT_RUN",
@@ -580,7 +580,13 @@
     "core29_current": "PASS_29_NONLOCKED",
     "total_selected_scope": "HISTORICAL_0226_NOT_RERUN",
     "prior_0226_recovered_original_tests": 173,
-    "prior_0226_tooling_commit": "8bce11edf99371950d003469f23e7d0c27e8b8d5"
+    "prior_0226_tooling_commit": "8bce11edf99371950d003469f23e7d0c27e8b8d5",
+    "e1_runner": {
+      "status": "READY_WINDOWS_NOT_RUN",
+      "evidence": "tests/evidence/E1_RUNNER_MECHANICS_0227.json",
+      "mechanics_pass": 10,
+      "product_pass": 0
+    }
   },
   "integration_gate": {
     "done": 8,

@@ -19,6 +19,33 @@
       "db_changes": [],
       "test": "Commands supplied, not executed on connected workstation",
       "rollback": "Discard isolated runtime after ownership check; retain clean checkout; revert documentation commit"
+    },
+    {
+      "path": "scripts/run_e1_0227.py",
+      "purpose": "Exact Windows E1 stage reuse and original24 execution",
+      "functions": [
+        "source_check",
+        "tree_pins",
+        "check_origin",
+        "prepare",
+        "lock_review",
+        "execute",
+        "parse_result",
+        "check_stage_clean",
+        "check_python_inventory"
+      ],
+      "dependencies": [
+        "Git",
+        "Python 3.14.3",
+        "Node v24.14.0",
+        "npm 11.9.0",
+        "retained A0C wheelhouse and locks",
+        "original W8 inventory"
+      ],
+      "api_changes": [],
+      "db_changes": [],
+      "test": "10 synthetic mechanics pass; real Windows run pending",
+      "rollback": "Discard only identified new stage after preserving evidence; original source/A0 untouched; revert this tooling commit."
     }
   ],
   "source_evidence": "tests/evidence/TEST_EVIDENCE_0227.json",

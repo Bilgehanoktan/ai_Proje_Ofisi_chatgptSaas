@@ -1,0 +1,57 @@
+{
+  "revision": "0227",
+  "checkpoint": "E1_REUSE_RUNNER_READY_WINDOWS_NOT_RUN",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner": {
+    "path": "scripts/run_e1_0227.py",
+    "git_blob": "788bc12ff00c1f3c8a1bd5474b42d692814fd433",
+    "sha256": "b7ad889333410d8c28cf1057ae71aa227c0cc832ff923247e581a273ff2bb6d2"
+  },
+  "mechanics_test": {
+    "path": "scripts/verify_e1_runner_0227.py",
+    "git_blob": "a309645e453f3cdd2adc4d109c04c4b9268cf84a",
+    "sha256": "b1605c3b6feb33ee5975033453628165f1d9375cef4ae74e0d37e250e75e9b90",
+    "passed": 10,
+    "expected": 10,
+    "platform": "Linux",
+    "python": "3.13.5",
+    "scope": "Synthetic runner mechanics only",
+    "log": "tests/evidence/E1_RUNNER_MECHANICS_0227.log",
+    "log_sha256": "07e141f87878e4d1dcd57dcd9c9cd56b7f4db66ae427f42fba22394ed09b70c9",
+    "linux_expected_hold_exit": 1
+  },
+  "origin": {
+    "review_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+    "wheel_count": 28,
+    "npm_packages": 61,
+    "raw_wheels_current_session": "UNAVAILABLE"
+  },
+  "windows": {
+    "prepare": "NOT_RUN",
+    "execute": "NOT_RUN",
+    "required_environment": "Windows Python 3.14.3 Node v24.14.0 npm 11.9.0; retained A0C stage"
+  },
+  "product": {
+    "source_changes": 0,
+    "tests_run": 0,
+    "original_24": "NOT_RUN",
+    "selected_prior_307": "UNCHANGED_NOT_RERUN",
+    "E1": "OPEN",
+    "D1_D2_D3": "OPEN",
+    "E2_E3_E4": "OPEN",
+    "B3": "HOLD"
+  },
+  "gates": {
+    "done": 8,
+    "total": 16,
+    "percent": 50,
+    "newly_closed": 0
+  },
+  "limitations": [
+    "No connected Windows terminal in current session; direct Git DNS blocked.",
+    "Runner mechanics exercised with synthetic test cases, not product tests, full installation or Windows execution.",
+    "Retained A0C stage path/actual wheel availability must be checked on workstation; missing bytes cause HOLD.",
+    "No new acceptance; no branch merge or product edits."
+  ]
+}

@@ -77,3 +77,36 @@ Stop on a source mismatch or dependency error. Retain clean source and evidence;
 
 ## 0227-A3 checkpoint — avoid duplicated work
 Historical A3 accepted from A0F raw-reviewed exact historical Core29 evidence; see ../../tests/evidence/A3_EVIDENCE_TRANSFER_0227.json. Do not rerun merely to increase counts. All four direct spec blobs match A0C and P10J15, but source-bound A0C approval/markers cannot be reused as E1 for current product. For a targeted 24-case D0 diagnostic, use the existing reviewed Windows A0C interpreter on a new pinned core checkout after checking the original A0C stage with its original wrapper and review fingerprint, exact 392 source bytes, direct pins and pip check. Do not alter A0C source/venv, install additional packages in it, use real DBs or carry over its marker files. Use fresh TEMP and no PG/provider credentials. Capture exact source, lock and test logs; 24 tests are not full E2. The P10J15 workstream already contains exact target test blobs; coordinate a single run where applicable, but keep source-specific evidence and no branch merge. For full current E1/build acceptance use a separate reviewed runtime stage and source-bound REVIEW. Existing stage command and path can be reused only if present and revalidated on the workstation.
+
+
+## 0227-E1 — retained Windows A0C lock recovery (preferred when original stage exists)
+
+Use the versioned scripts/run_e1_0227.py from the new 0227 checkpoint, outside the clean checkout. The clean source is the detached commit 52219c7a222bae41735c9a9b9f7f7082462982b4, product manifest unchanged. Verify actual A0C stage path (example below; replace if different). Requires Windows Python 3.14.3, Node v24.14.0 and npm 11.9.0. Do not create stage in the source or A0C stage; do not overwrite prior directories.
+
+```powershell
+$root = 'C:\AIOS\core-0227-clean'
+$old = 'C:\AIOS\premium-a0d\stage'
+$stage = 'C:\AIOS\core-0227-e1'
+$runner = 'C:\AIOS\run_e1_0227.py' # saved from the versioned runner
+if (Test-Path $root) { throw 'Use a new clean checkout directory' }
+git -c core.autocrlf=false clone --no-checkout https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas.git $root
+if ($LASTEXITCODE -ne 0) { throw 'Clone failed' }
+git -C $root config core.autocrlf false
+if ($LASTEXITCODE -ne 0) { throw 'Git config failed' }
+git -C $root checkout --detach 52219c7a222bae41735c9a9b9f7f7082462982b4
+if ($LASTEXITCODE -ne 0) { throw 'Checkout failed' }
+py -3.14 -B $runner prepare --source $root --a0-stage $old --stage $stage
+if ($LASTEXITCODE -ne 0) { throw 'Prepare HOLD' }
+Get-Content "$stage\locks\REVIEW_0227.json"
+Get-FileHash "$stage\locks\REVIEW_0227.json" -Algorithm SHA256
+
+```
+Inspect actual review and send its contents/hash for verification. Only after explicit local approval, pass the NEW fingerprint (not A0 review hash) to execute.
+
+```powershell
+$approve = '<new reviewed SHA256>'
+py -3.14 -B $runner execute --source $root --a0-stage $old --stage $stage --approve $approve
+if ($LASTEXITCODE -ne 0) { throw 'Execution HOLD; preserve logs' }
+
+```
+Return the evidence directory, REVIEW_0227.json, python.lock and package-lock.json; retain the old stage and new stage. No secrets, live DB, old venv copying or dependency version substitution. If old wheels absent, revert to separately reviewed resolution workflow. E1 cannot be promoted until real new review and install evidence inspected; original24 only D0 SQLite, no E2 full build.

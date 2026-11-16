@@ -209,3 +209,7 @@ Four scoped integration suites PASS (32 new +102 prior, 134 unique). Actual SQLi
 
 ## 0227-A3 — historical evidence only
 8/16; A3 transferred from exact historical A0F raw review. Product environment and independent acceptance open. [Evidence](../../tests/evidence/A3_EVIDENCE_TRANSFER_0227.json).
+
+
+## 0227-E1 — reviewed-lock reuse execution packet
+scripts/run_e1_0227.py reuses original W8 lock inventory, exact A0C hash/wheels and a fresh source-bound review. It copies only pinned product and DB source into a new stage, installs Python offline with hash verification and npm ci with scripts disabled, runs original 6/10/8 suites with exact collection and exit counts. 10/10 synthetic runner mechanics PASS; Windows prepare/execute NOT_RUN and zero product tests. 8/16 unchanged. No runtime/product changes, no CI, no merge. If A0 raw wheel/lock bytes unavailable or mismatch, stop; retain failed stage, use separately reviewed recovery. Evidence: tests/evidence/E1_RUNNER_MECHANICS_0227.json.
