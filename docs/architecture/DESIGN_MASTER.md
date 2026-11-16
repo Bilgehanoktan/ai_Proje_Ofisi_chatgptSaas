@@ -151,3 +151,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0211 — D0 separate intent authority
 [Addendum](../0211/ARCHITECTURE_AND_CATALOG.md). Two product additions; 9 component checks PASS and 1 authority-restore residual reproduced. Original T1, independent root, core29, Company/Terminal, PG/RLS and build NOT_RUN/HOLD. No normative change.
+
+## 0212 — original core and composed D0 T1 verification
+[Addendum](../0212/ARCHITECTURE_AND_CATALOG.md). 55/55 core files, 29/29 unpinned diagnostic tests, direct authority/T1 7/7, Company/Terminal 6/6. No existing product code or normative change; full wrapper, independent authority, PG/RLS/build remain open.
