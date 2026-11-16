@@ -1,0 +1,118 @@
+{
+  "revision": "UI-P10J-05",
+  "parent": "fe88ad7ca3e774f313e64804415192c034414ca8",
+  "heads_at_start": {
+    "ui": "fe88ad7ca3e774f313e64804415192c034414ca8",
+    "p10i": "61c61894cd29f3dd5a5c148516ffccd369bf47e1",
+    "core_0213": "3cec45d2040fc35293ddcb82840ee543ba1f4019",
+    "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+  },
+  "manifest_blob": "e7534a4d65aaa960e7d07788197181b4721e7075",
+  "product_files": 391,
+  "manifest_entries": 390,
+  "modified": 8,
+  "added": 4,
+  "deleted": 0,
+  "local_recovered_parent": 34,
+  "local_recovery": "0155 PRODUCT_DRAFT6_RECOVERY exact SHA256 matches 34 of 59; not full checkout",
+  "tests": {
+    "graph_model": {
+      "passed": 11,
+      "total": 11,
+      "typescript": "5.8.3",
+      "node": "22.16.0",
+      "fixture_sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb",
+      "tested_blobs": [
+        "560ec8dcbba9ae3800d4f06058ed2c0841187661",
+        "1080631ab3585b720ad27eebc166155555075acb"
+      ]
+    },
+    "react": "NOT_RUN",
+    "office_visual": "NOT_RUN",
+    "w8": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "real_api": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "gates": {
+    "ui": "21/40",
+    "independent": "0/7"
+  },
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/graph/graphPresentation.ts",
+      "old_blob": null,
+      "bytes": 1976,
+      "sha256": "b01cf1a8ee85a02bc20499f93bddb6478d9a2503d88d569b20385bad6e2126ab",
+      "tested_blob": "560ec8dcbba9ae3800d4f06058ed2c0841187661"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j05-model.test.cjs",
+      "old_blob": null,
+      "bytes": 3261,
+      "sha256": "e534d04b0b90535fcb35e3dd8d5641dc908e56852a2a5188bf145c2d6848ba38",
+      "tested_blob": "1080631ab3585b720ad27eebc166155555075acb"
+    },
+    {
+      "path": "ai-company-os-frontend/features/graph/PlanGraph.tsx",
+      "old_blob": null,
+      "bytes": 2417,
+      "sha256": "b635df09e03d7bfa69fb6f7151e8993b463dd07f3d711effe54b8496256ed5a9"
+    },
+    {
+      "path": "ai-company-os-frontend/features/graph/PlanGraph.module.css",
+      "old_blob": null,
+      "bytes": 1543,
+      "sha256": "ece407c8c61c3cf94a1ea23e17b89d5d3ff4572fb80f1b460e66733eefab9761"
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "old_blob": "384f8b07c1abcbe37ec1c6c05fcd9a78e3e22fd1",
+      "bytes": 6605,
+      "sha256": "43f229a5d1cf5efd68761ce2521e2a47f3b6cb7c6369f1121bc3aca1c12eb942"
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "old_blob": "6decaaeb0de24e1b6161ed774825dddf634471b4",
+      "bytes": 5138,
+      "sha256": "66b8e495116e6e60b2c831021aa13a995d46acfc2d94022190233722edc00c42"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "old_blob": "efac23d30917475d82ecaa9b7a7793d2587bbc3d",
+      "bytes": 2582,
+      "sha256": "8b46aaf7e648f2d4d1eb854eececd9b363699dabd0b77fbcee7b2da4cbbb16ba"
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "old_blob": "69737471493a4233d94dc74da94a492d7fb844bf",
+      "bytes": 2745,
+      "sha256": "69ac8b46b928ee497cc6eef4eb4e9090b472fc6fa29dd6c4a73d7cd7e24caa94"
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "old_blob": "3d54ab9f9185b486f58c22d7688b209d0105ddca",
+      "bytes": 2958,
+      "sha256": "d1b9bf95ab141447236ea7af09b5176f5ca826df31b3b12d006091fde25987d8"
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+      "old_blob": "900f27138bd188b0c4f91e1c5c9843ef2edfdd97",
+      "bytes": 3330,
+      "sha256": "5a4b716c62470f7c569067960a6b4bbdf58380a470a68b95b474d5d3bc1ab026"
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/officeArtwork.ts",
+      "old_blob": "cd3dc1682935e59eae9cbe1069f61febdd984982",
+      "bytes": 5648,
+      "sha256": "56a3302a580f68824a8c0dc3f14de24656953005bb27225810406d3c0ba9e6cf"
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "old_blob": "5aaeb1139151189a82524ddc9b747fa03f2fb2ee",
+      "bytes": 9469,
+      "sha256": "f4fb14cc5a92f8891665013524ea67d6857b6ddf564bf33fb9bfc5f793d62e18"
+    }
+  ],
+  "security": "D0 only; no authority, no cross-record joins, no core merge"
+}

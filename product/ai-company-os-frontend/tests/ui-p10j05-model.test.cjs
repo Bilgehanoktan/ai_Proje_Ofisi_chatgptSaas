@@ -1,0 +1,16 @@
+const test=require('node:test'),assert=require('node:assert/strict'),path=require('node:path');
+const {graphPresentation,rolePlanTasks,NODE_WIDTH,NODE_HEIGHT}=require(path.join(process.env.P10D_MODEL,'features/graph/graphPresentation.js'));
+const tasks=[{id:'a',label:'Plan',role:'orchestrator'},{id:'b',label:'Draft',role:'engineer'},{id:'c',label:'Research',role:'research'},{id:'d',label:'Merge',role:'engineer'}];
+const waves=[['a'],['b','c'],['d']];
+const edges=[{from:'a',to:'b',kind:'reference'},{from:'a',to:'c',kind:'reference'},{from:'b',to:'d',kind:'reference'},{from:'c',to:'d',kind:'reference'}];
+test('covers every task and every exact edge',()=>{const g=graphPresentation(tasks,waves,edges);assert.equal(g.nodes.length,4);assert.deepEqual(g.edges.map(({d,...e})=>e),edges);assert.equal(new Set(g.nodes.map(n=>n.id)).size,4)});
+test('all nodes are inside graph bounds',()=>{const g=graphPresentation(tasks,waves,edges);for(const n of g.nodes){assert.ok(n.x>=0&&n.y>=0&&n.x+NODE_WIDTH<=g.width&&n.y+NODE_HEIGHT<=g.height)}});
+test('same wave nodes do not overlap',()=>{const g=graphPresentation(tasks,waves,edges);const b=g.nodes.find(n=>n.id==='b'),c=g.nodes.find(n=>n.id==='c');assert.ok(c.y-b.y>=NODE_HEIGHT)});
+test('skipped wave draft edge stays distinct and has top route',()=>{const g=graphPresentation(tasks,waves,[...edges,{from:'a',to:'d',kind:'draft'}]);assert.equal(g.edges.at(-1).kind,'draft');assert.match(g.edges.at(-1).d,/V40 H/)});
+test('unknown or missing node rejected',()=>{assert.equal(graphPresentation(tasks,[['a'],['b','x'],['d']],edges),null);assert.equal(graphPresentation(tasks,[['a'],['b'],['d']],edges),null)});
+test('duplicate wave task or duplicate edge rejected',()=>{assert.equal(graphPresentation(tasks,[['a'],['b','c'],['d','a']],edges),null);assert.equal(graphPresentation(tasks,waves,[...edges,edges[0]]),null)});
+test('backward, same wave and unknown endpoint rejected',()=>{for(const [from,to] of [['d','a'],['b','c'],['a','z']])assert.equal(graphPresentation(tasks,waves,[{from,to,kind:'draft'}]),null)});
+test('empty waves and unknown kind rejected',()=>{assert.equal(graphPresentation(tasks,[[],...waves],edges),null);assert.equal(graphPresentation(tasks,waves,[{from:'a',to:'b',kind:'live'}]),null)});
+test('presentation deterministic, never mutates data',()=>{const before=JSON.stringify({tasks,waves,edges});assert.deepEqual(graphPresentation(tasks,waves,edges),graphPresentation(tasks,waves,edges));assert.equal(JSON.stringify({tasks,waves,edges}),before)});
+test('role context is exact static template match',()=>{assert.deepEqual(rolePlanTasks(tasks,'engineer'),[{id:'b',label:'Draft'},{id:'d',label:'Merge'}]);assert.deepEqual(rolePlanTasks(tasks,'Engineer'),[]);assert.deepEqual(rolePlanTasks(tasks,'__proto__'),[])});
+test('exact original plan fixture yields seven nodes, seven links and six waves',()=>{const plan=require('../fixtures/core.plan.projection.json'),g=graphPresentation(plan.tasks,plan.waves,plan.edges.map(e=>({...e,kind:'reference'})));assert.equal(g.nodes.length,7);assert.equal(g.edges.length,7);assert.equal(Math.max(...g.nodes.map(n=>n.wave)),6);assert.deepEqual(rolePlanTasks(plan.tasks,'engineer').map(t=>t.id),['draft','merge']);assert.equal(plan.dispatch_allowed,false)});

@@ -49,6 +49,10 @@ export function officeArtwork(raw:Floor,selectedId:string|null=null):Artwork{
   pieces.push(reservedDeskDecor(p[0],p[1],s.agent_instance_id));
   pieces.push(reservedDeskAccessories(p[0],p[1],s.agent_instance_id));
   pieces.push(box(s.x-.10,s.y+.22,.25,.22,9,'#6c819a','#43576e'));
+  // Chair backrest and arm rests are part of the same decorative station, not new occupied cells.
+  pieces.push(box(s.x-.10,s.y+.39,.25,.05,12,'#8da1b8','#4b637f',9));
+  pieces.push(box(s.x-.13,s.y+.25,.04,.16,3,'#9cacc1','#516780',9));
+  pieces.push(box(s.x+.15,s.y+.25,.04,.16,3,'#9cacc1','#516780',9));
   pieces.push(`<circle cx="${p[0]+29}" cy="${p[1]-22}" r="13" fill="#142338" stroke="${color}" stroke-width="2"/>`,label(p[0]+29,p[1]-18,visual?.initials??'?',10,color));
   return {id:s.id,role:s.role,room:s.room,x:p[0],y:p[1]};
  });

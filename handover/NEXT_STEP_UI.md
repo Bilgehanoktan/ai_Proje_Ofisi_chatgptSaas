@@ -1,3 +1,7 @@
+# UI-P10J-06 — exact checkout and product verification
+
+Check parallel heads, materialize exact 390-pin checkout; verify W8 P10J-05 adapter chain, prepare/review locks before full build/test/smoke. Validate DAG selection and edit interactions, lifecycle filtering/reset, role contexts and office previews in actual React browser. No live runtime/authority/core merge, main, CI or PROD. Continue presentation work separately from acceptance. Previous pointer below.
+
 # UI-P10J-05 — full checkout / W8 and parallel UI work
 
 Re-read P10I/P10J/core HEADs, use parallel protocol and checkpoint. Run full 386-pin audit on exact checkout; load W8 P10J→P10I→P10H chain, prepare/review locks before install/test/smoke. Keep separate core 0213, D03/D04 HOLD. In parallel advance historical Runtime timeline, Project/Workflow graph and Office presentation only, with exact source and test evidence. No main, CI, PROD or real grants. Historical P10I handover snapshots preserved.
