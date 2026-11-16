@@ -1,0 +1,54 @@
+{
+  "revision": "UX-PREMIUM-07-A0C",
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+      "symbols": [
+        "HistoricalEvidence"
+      ],
+      "purpose": "exact rename only; existing P10J08 blob",
+      "blob": "19e18f9d1a5baaa59528adc06d81b1ab62706f74"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+      "symbols": [
+        "EvidenceDetails"
+      ],
+      "purpose": "exact existing UI import fix",
+      "blob": "af6bd8b3023e2916166199089d425fdcf906d889"
+    },
+    {
+      "path": "tests/integration/w8_ux_a0c.py",
+      "blob": "52ac6add8b0bc338527e9e12c7848c9056d8f836",
+      "sha256": "3a45325359798cc24814655678d294cbaf395ffb084517c08a5bc76ae16759a5",
+      "bytes": 4026,
+      "symbols": [
+        "portable_modules",
+        "windows_temp",
+        "extend_candidate",
+        "load_candidate"
+      ],
+      "purpose": "Windows portability and acceptance guard"
+    },
+    {
+      "path": "tests/integration/test_w8_ux_a0c.py",
+      "blob": "6c69f57335e2f5b1232bc3f6d150bb9c1eb4a54d",
+      "sha256": "929ddb79fdbbdad62b8d4dca56542678e9e767d6118d23c38a06fa5f98a9d9f7",
+      "bytes": 4738,
+      "symbols": [
+        "ExactChain",
+        "PortableModules",
+        "GuardDoubles"
+      ],
+      "purpose": "adapter tests"
+    }
+  ],
+  "removed_path": "product/ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+  "api": [],
+  "db": [],
+  "events": [],
+  "dependency_changes": [],
+  "evidence": "docs/UX-PREMIUM-07/A0C_TEST_EVIDENCE.json",
+  "maintenance": "docs/UX-PREMIUM-07/A0C_PARALLEL_PORTABILITY.md",
+  "rollback": "ad6e3505f319d11b42c868f2322c04c683b9a715"
+}

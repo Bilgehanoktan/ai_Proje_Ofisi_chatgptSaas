@@ -1,0 +1,32 @@
+{
+  "revision": "UX-PREMIUM-07-A0C",
+  "branch": "integration/ux-premium-07-a0c-windows",
+  "parent": "ad6e3505f319d11b42c868f2322c04c683b9a715",
+  "manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "product_files": 399,
+  "score_changes": false,
+  "track_24_overlay": {
+    "ui": "PORTABILITY_SOURCE_CANDIDATE",
+    "test": "24_ADAPTER_PASS_FULL_NOT_RUN",
+    "catalog": "BRANCH_OVERLAY_UPDATED"
+  },
+  "A0": "PARTIAL",
+  "A0B": "HARNESS_READY_FULL_NOT_RUN",
+  "A0C": "SOURCE_PORTABILITY_READY_WINDOWS_NOT_RUN",
+  "A1_A5": "DEFERRED",
+  "A6": "REVIEW_ONLY_JOIN_HOLD",
+  "A7": "PLANNED",
+  "independent": "HOLD",
+  "next": "Exact A0C full checkout, fresh reviewed W8 Windows stage, actual native smoke then A1",
+  "reference": "docs/UX-PREMIUM-07/A0C_PARALLEL_PORTABILITY.md",
+  "observed_heads": {
+    "ui": "9610417c422c2cf162f023a1a8dc5e6bedaf69ec",
+    "core": "b201833f948f91293414e91000bc53377de9b6d1",
+    "premium": "ad6e3505f319d11b42c868f2322c04c683b9a715"
+  },
+  "ownership": "Premium only; general UI/core remain on their own branches",
+  "architecture": "docs/UX-PREMIUM-07/A0C_PARALLEL_PORTABILITY.md",
+  "catalog": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A0C.json",
+  "evidence": "docs/UX-PREMIUM-07/A0C_TEST_EVIDENCE.json",
+  "stage_isolation": "fresh separate source/stage/ports, no P10J reuse"
+}

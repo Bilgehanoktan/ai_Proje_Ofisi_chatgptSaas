@@ -1,0 +1,74 @@
+{
+  "revision": "UX-PREMIUM-07-A0C",
+  "parent": "ad6e3505f319d11b42c868f2322c04c683b9a715",
+  "branch": "integration/ux-premium-07-a0c-windows",
+  "observed_heads": {
+    "ui": "9610417c422c2cf162f023a1a8dc5e6bedaf69ec",
+    "core": "b201833f948f91293414e91000bc53377de9b6d1",
+    "premium": "ad6e3505f319d11b42c868f2322c04c683b9a715"
+  },
+  "tree_comparison": {
+    "ui": {
+      "same": 355,
+      "differing_shared": 22,
+      "premium_only": 22,
+      "ui_only": 14
+    },
+    "core": {
+      "same": 323,
+      "differing_shared": 26,
+      "premium_only": 50,
+      "core_only": 40
+    }
+  },
+  "manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "manifest_entries": 398,
+  "product_files": 399,
+  "remote_path_size_pass": 398,
+  "typescript_js_stems": 103,
+  "stem_collision_before": 1,
+  "stem_collision_after": 0,
+  "backport": {
+    "origin": "P10J-08 Windows portability; identical blobs at UI-P10J-10 head",
+    "tested_ui_source": "752b225deac4557a548faec7191a090fbfba19f7",
+    "renamed_from": "product/ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+    "renamed_to": "product/ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+    "panel_blob": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+    "import_path": "product/ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+    "old_import_blob": "0f7bff6fe9ade87a0754559b4e41fb1f692081ea",
+    "new_import_blob": "af6bd8b3023e2916166199089d425fdcf906d889",
+    "new_import_sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8",
+    "new_import_equals_exact_one_line_replacement": true,
+    "portability_helpers_source": "UI-P10J-08 w8_p10j08.py"
+  },
+  "tests": {
+    "a0c": 12,
+    "a0b_regression": 12,
+    "total": 24,
+    "fail": 0,
+    "scope": "Python 3.13.5 Linux; exact parent chain, synthetic filesystem, marker control doubles; Windows TEMP branch not run; full source audit not run"
+  },
+  "source_delta": [
+    {
+      "path": "tests/integration/w8_ux_a0c.py",
+      "blob": "52ac6add8b0bc338527e9e12c7848c9056d8f836",
+      "sha256": "3a45325359798cc24814655678d294cbaf395ffb084517c08a5bc76ae16759a5",
+      "bytes": 4026
+    },
+    {
+      "path": "tests/integration/test_w8_ux_a0c.py",
+      "blob": "6c69f57335e2f5b1232bc3f6d150bb9c1eb4a54d",
+      "sha256": "929ddb79fdbbdad62b8d4dca56542678e9e767d6118d23c38a06fa5f98a9d9f7",
+      "bytes": 4738
+    }
+  ],
+  "full_sha256": "NOT_RUN",
+  "full_import_audit": "NOT_RUN",
+  "windows": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "office_v0": "JOIN_HOLD",
+  "independent": "HOLD",
+  "no_merge": true,
+  "scope": "Premium isolated branch only; no shared functional design edits; source-level exact portability backport exception; new branch-specific records instead of overlapping shared index edits"
+}
