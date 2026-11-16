@@ -23,7 +23,11 @@ from app.core.transaction.postgres_transition_mapping import (
 from app.core.transaction.port import LogicalT1Coordinator, CommitReceipt
 from app.core.transaction.postgres_session import postgres_transaction
 from app.core.transaction.witnessed_mapping import WitnessedTransitionMapping, binding_digest
-from app.core.transaction.review import valid_intent, digest_ok
+from app.core.transaction.review import valid_intent, digest_ok, Operation
+from app.core.transaction.postgres_lifecycle_mapping import AdmissionBinding, D0AdmissionBoundTransitionMapping
+from app.core.event_store.company_coordination import (
+    Member, Pool, CompanyEvent, CompanyCoordinatedMapping, SCOPE, _roster, _replay,
+)
 
 
 def _canonical(value):
@@ -195,9 +199,59 @@ def local_revocation_fence(memory_path, reader, journal):
                     db.execute('ROLLBACK')
 
 
+@dataclass(frozen=True)
+class CompanyTransitionContext:
+    """D0 candidate inputs for the existing company/admission mapping."""
+    admission: AdmissionBinding
+    members: tuple[Member, ...]
+    pool: Pool
+    history: tuple[CompanyEvent, ...]
+    event: CompanyEvent
+
+
+def company_transition_binding(intent, witness_binding, company):
+    """Separate v1 binding profile; preserve historical witness/transaction hashes."""
+    if (not valid_intent(intent) or not digest_ok(witness_binding)
+            or type(company) is not CompanyTransitionContext
+            or type(company.admission) is not AdmissionBinding
+            or not valid_intent(company.admission.intent)
+            or company.admission.intent.operation is not Operation.ADMISSION
+            or company.admission.intent.scope != intent.scope
+            or type(company.pool) is not Pool or type(company.event) is not CompanyEvent
+            or type(company.history) is not tuple):
+        raise ValueError('D0_COMPANY_FENCE_BINDING_HOLD')
+    e = company.event
+    s = intent.scope
+    member = _roster(company.members).get(s.run_id)
+    if (member is None or (s.tenant_id,s.company_id,s.environment_id) != SCOPE
+            or (member.plan_revision,member.task_id,member.agent_instance_id,member.principal_id)
+                != (s.plan_revision,s.task_id,s.agent_instance_id,s.principal_id)
+            or (e.project_id,e.run_id,e.kind,e.version,e.transaction_ref,e.request_digest)
+                != (member.project_id,s.run_id,'D0_RUN_TRANSITION',intent.expected_version+1,
+                    transaction_ref(intent),intent.request_digest)
+            or intent.operation is not Operation.STATE_MUTATION or intent.lease_or_budget_changes
+            or intent.budget_ref is not None
+            or (intent.policy_epoch,intent.witness_epoch) != (company.pool.policy_epoch,company.pool.witness_epoch)
+            or company.admission.intent.budget_ref != company.pool.budget_id):
+        raise ValueError('D0_COMPANY_FENCE_BINDING_HOLD')
+    _replay(company.members,company.pool,company.history+(e,))
+    # This is a caller-pinned D0 observation, not an independently authenticated grant.
+    return _digest(['aicos-d0-company-witness-fence-v1',witness_binding,asdict(company)])
+
+
+def resolve_fence_binding(intent, witness_binding, company, expected_company_binding):
+    """No silent fallback for a partially supplied company profile."""
+    if company is None and expected_company_binding is None:
+        return witness_binding
+    if (not digest_ok(expected_company_binding)
+            or company_transition_binding(intent,witness_binding,company) != expected_company_binding):
+        raise ValueError('D0_COMPANY_FENCE_PIN_HOLD')
+    return expected_company_binding
+
+
 def execute_fenced_transition(intent, context, registry, witness, expected_binding,
                               memory_path, reader, public_key, raw, journal, connect,
-                              clock, latest):
+                              clock, latest, *, company=None, expected_company_binding=None):
     """Explicit local D0 RUNNING->VERIFYING; no generic mutation or real effect.
 
     connect, clock and latest are trusted fixture dependencies, not independent proof.
@@ -205,12 +259,18 @@ def execute_fenced_transition(intent, context, registry, witness, expected_bindi
     """
     if type(journal) is not D0IntentJournal or binding_digest(intent, context, registry, witness) != expected_binding:
         raise ValueError('D0_FENCE_BINDING_HOLD')
-    pin = journal.stage(intent, expected_binding)
+    fence_binding = resolve_fence_binding(intent, expected_binding, company, expected_company_binding)
+    pin = journal.stage(intent, fence_binding)
     try:
         with local_revocation_fence(memory_path, reader, journal):
-            mapping = D0PostgresTransitionMapping(context.invocation.lease, clock)
+            mapping = (D0PostgresTransitionMapping(context.invocation.lease, clock) if company is None
+                       else D0AdmissionBoundTransitionMapping(company.admission, context.invocation.lease, clock))
             guard = WitnessedTransitionMapping(mapping, context, registry, witness, expected_binding,
                 memory_path, reader, public_key, raw, lambda c: (_lease(c, intent, lock=True), clock(), latest()))
+            if company is not None:
+                # Company lock first; the same cursor then checks admission, lease, witness,
+                # ordinary T1 roles and exact company postimage before COMMIT.
+                guard = CompanyCoordinatedMapping(guard, company.members, company.pool, company.history, company.event)
             coordinator = LogicalT1Coordinator(lambda: postgres_transaction(connect, guard))
             receipt = coordinator.commit_transition(intent, context.invocation.run, RunState.VERIFYING)
         journal._record(intent, pin, receipt)

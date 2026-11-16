@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0217",
-  "status": "D0_SIGNED_CONSUME_STUDIO_CONTEXT_SELECTED_TESTS_INDEPENDENT_ACCEPTANCE_HOLD",
+  "doc_revision": "0219",
+  "status": "D0_COMPANY_ADMISSION_WITNESS_COMPOSITION_CANDIDATE",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "12e90ef2f8b7eb091299240488c60a1034a461c3",
+  "parent_git_commit": "ac983472422cc78fd925dc714738a790600cd2b1",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1375,16 +1375,16 @@
       "sha256": "0b4265731a587e20255d434c11aa4e956faaba6df83f6155425b5ef6dc7f9439"
     },
     "ai-company-os-backend/app/core/transaction/fenced_transition.py": {
-      "bytes": 10586,
-      "sha256": "6aed1371dae1d4e40b5f735aa360a06883dff868e3c748535dc8763373034175"
+      "bytes": 14214,
+      "sha256": "1f1198211fe49b940f96f3a8b70373d55b10360c2a2589ed2bbf5c3965ccb7fd"
     },
     "ai-company-os-backend/tests/test_fenced_transition_0210.py": {
       "bytes": 9144,
       "sha256": "5ba5f253bf3df39e2cf0daa7781c9d4ac91550cec9bc20a3355cfaf5153b95ac"
     },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
-      "bytes": 7103,
-      "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239"
+      "bytes": 7359,
+      "sha256": "737a44b22912b46e6c7c55c28c91a93dd67f4cb8a688b3555d817d9e5d48a623"
     },
     "ai-company-os-backend/tests/test_intent_authority_0211.py": {
       "bytes": 4895,
@@ -1461,8 +1461,12 @@
     "ai-company-os-frontend/tests/studio-context-0217.test.cjs": {
       "bytes": 1234,
       "sha256": "c03332dd1fb69f1140555bee26e59c34241aaf23605452d5ea260b393d6b66f2"
+    },
+    "ai-company-os-backend/tests/test_company_fence_binding_0219.py": {
+      "bytes": 3582,
+      "sha256": "c2f8563d93d33a82e231216339831a5f9a774021648be8c91ede6626173db606"
     }
   },
-  "parent_source_manifest_blob": "c343f0e981bdd00c8ff0a3b1c0afe2bc1cb4bd77",
-  "source_git_commit_note": "14 new signed SQLite cases, 13 0216 reruns (one expected restore residual), 6 strict TS helper cases, 4 isolated Chromium harness checks. TSX/full Next/browser product, PG/RLS, independent custody and mandatory gateway wiring NOT_RUN/HOLD."
+  "parent_source_manifest_blob": "c6c50d70884374ac27ccb2fc850b4430ef5bd10c",
+  "source_git_commit_note": "Source commit identified by release readback; avoids self-reference."
 }
