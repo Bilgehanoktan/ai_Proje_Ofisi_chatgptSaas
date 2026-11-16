@@ -1,0 +1,108 @@
+{
+  "revision": "0211",
+  "source_commit": "b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "dependency_observations": {
+      "fastapi": "0.128.2",
+      "starlette": "0.50.0",
+      "cryptography": "46.0.4",
+      "uvicorn": "0.48.0"
+    }
+  },
+  "command": "python -B -m unittest discover -s tests -p test_intent_authority_0211.py -v",
+  "log_sha256": "59436d083d4c0a4b0943be313dc3f2d26d2e35f4dde17452dd86f387931ff850",
+  "tests": {
+    "runner_pass": 10,
+    "behavior_pass": 9,
+    "residual_reproduced": 1,
+    "failed": 0,
+    "skipped": 0,
+    "previous_0210_selected_pass": 154,
+    "previous_0210_rerun": false,
+    "original_0210_wrapper": "NOT_RUN",
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "cases": [
+    {
+      "name": "test_append_only",
+      "result": "PASS"
+    },
+    {
+      "name": "test_cas_monotonic_and_key",
+      "result": "PASS"
+    },
+    {
+      "name": "test_exception_consumes_claim",
+      "result": "PASS"
+    },
+    {
+      "name": "test_joint_product_restore_no_second_attempt",
+      "result": "PASS"
+    },
+    {
+      "name": "test_missing_and_existing",
+      "result": "PASS"
+    },
+    {
+      "name": "test_publisher_waits_through_fence",
+      "result": "PASS"
+    },
+    {
+      "name": "test_revocation_first",
+      "result": "PASS"
+    },
+    {
+      "name": "test_scope_survives_root_advance",
+      "result": "PASS"
+    },
+    {
+      "name": "test_two_claims_one_winner",
+      "result": "PASS"
+    },
+    {
+      "name": "test_root_restore_limitation",
+      "result": "RESIDUAL_REPRODUCED"
+    }
+  ],
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "bytes": 7103,
+      "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239",
+      "git_blob": "e015a0fb7f2eff07117dc5f9acb309e5bbcb6f52",
+      "symbols": [
+        "RootPin.validate",
+        "D0IntentAuthority.create",
+        "D0IntentAuthority._head",
+        "D0IntentAuthority.publish",
+        "D0IntentAuthority.claim_and_fence",
+        "execute_authority_fenced_transition"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_intent_authority_0211.py",
+      "bytes": 4895,
+      "sha256": "ddef3499e45c05ca9fcaff1dfa7396ee0cdde4aa5a8f00aea12703464d56fb8c",
+      "git_blob": "0179b7f3b10d2dac1db07ffef68dae3d230244fd"
+    }
+  ],
+  "limitations": [
+    "Separate SQLite file is a fixture, not independently custodied root or immutable external log.",
+    "Publishers cooperating through the same authority serialize; unrelated root changes, direct SQLite/filesystem mutation, separate processes bypassing this API, and real provider effect remain unproven.",
+    "Restoring the authority itself allows a second claim; reproduced intentionally.",
+    "Wrapper exists but original T1 composition has not executed; legacy 0210 entry remains opt-in/unmodified.",
+    "Root publisher accepts fixture pins; no production signature validation, rotation, authoritative clock or provider fence.",
+    "T1 connector identity is a fixture dependency; no proof authority/T1 DB cannot alias or be replaced.",
+    "No live grants, spend, provider calls, CI, main merge or PROD."
+  ]
+}

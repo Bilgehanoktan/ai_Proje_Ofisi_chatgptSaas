@@ -2,6 +2,7 @@
 import {iso,validateDemoLayout,type Floor} from './geometry';
 import {roleVisual,roomVisual} from '../../design-system/roleVisuals';
 import {reservedDeskDecor} from './stationDecor';
+import {reservedDeskAccessories} from './deskAccessories';
 export type Artwork = {ok:true;svg:string;stations:{id:string;role:string;room:string;x:number;y:number}[]}|{ok:false;reason:string};
 const esc=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]!));
 const pt=(x:number,y:number,z=0)=>{const p=iso(x,y);return [p.x,p.y+26-z];};
@@ -38,6 +39,7 @@ export function officeArtwork(raw:Floor,selectedId:string|null=null):Artwork{
   if(active)pieces.push(`<ellipse cx="${p[0]}" cy="${p[1]}" rx="45" ry="22" fill="none" stroke="#fbe1a0" stroke-width="4"/>`);
   pieces.push(box(s.x-.32,s.y-.32,.65,.45,14,'#d4b18c','#8b6c56'));
   pieces.push(reservedDeskDecor(p[0],p[1],s.agent_instance_id));
+  pieces.push(reservedDeskAccessories(p[0],p[1],s.agent_instance_id));
   pieces.push(box(s.x-.10,s.y+.22,.25,.22,9,'#6c819a','#43576e'));
   pieces.push(`<circle cx="${p[0]+29}" cy="${p[1]-22}" r="13" fill="#142338" stroke="${color}" stroke-width="2"/>`,label(p[0]+29,p[1]-18,visual?.initials??'?',10,color));
   return {id:s.id,role:s.role,room:s.room,x:p[0],y:p[1]};

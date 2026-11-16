@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10D-0210",
-  "status": "D0_UI_SOURCE_INTEGRATED_SELECTED_TESTS_PASS_FULL_BUILD_NOT_RUN",
+  "doc_revision": "UI-P10E-0211-CANDIDATE",
+  "status": "D0_SOURCE_UNION_SELECTED_APP_MAIN_COMPILED_GET_PASS_NEXT_NOT_RUN_INDEPENDENT_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "b7f58d86f943cc1ad58ad2c60198f8cb2b500fb0",
+  "parent_git_commit": "4b44c802f31c826b449b76e99da875eee92ff0b9",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -394,6 +394,10 @@
       "bytes": 10586,
       "sha256": "6aed1371dae1d4e40b5f735aa360a06883dff868e3c748535dc8763373034175"
     },
+    "ai-company-os-backend/app/core/transaction/intent_authority.py": {
+      "bytes": 7103,
+      "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239"
+    },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
       "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
@@ -677,6 +681,10 @@
     "ai-company-os-backend/tests/test_history_readback_0198.py": {
       "bytes": 6541,
       "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773"
+    },
+    "ai-company-os-backend/tests/test_intent_authority_0211.py": {
+      "bytes": 4895,
+      "sha256": "ddef3499e45c05ca9fcaff1dfa7396ee0cdde4aa5a8f00aea12703464d56fb8c"
     },
     "ai-company-os-backend/tests/test_joint_context_0208.py": {
       "bytes": 9128,
@@ -1087,8 +1095,8 @@
       "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
     },
     "ai-company-os-frontend/features/evidence/AgentDirectory.tsx": {
-      "bytes": 1631,
-      "sha256": "e7e8b15c68de52e55b551647ede7555e0ea7a63095a859b07e7a3cf5c40dbeac"
+      "bytes": 1868,
+      "sha256": "300f24a756691e35dc9d9c5cec1e3851841f610b7cd4c1e49e4c149bbfe07255"
     },
     "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx": {
       "bytes": 1311,
@@ -1099,12 +1107,16 @@
       "sha256": "0588dfa3141ed8d651c9e91d5ce1ba2c32967c8918e47a0b8ff4c7d249ece8a7"
     },
     "ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx": {
-      "bytes": 1963,
-      "sha256": "da978ddabef6b660fc1dac9612ad790440595f265b27ed55aa08e0b763c9f501"
+      "bytes": 2816,
+      "sha256": "a1dd8b3b42660755aa3f15f95aa8518288a11b1eeb7c4033453f03a6832158c1"
     },
     "ai-company-os-frontend/features/evidence/evidenceModel.ts": {
       "bytes": 2041,
       "sha256": "4db3cc2d00e1709f26b794a671ba468f8aa074c4a233278db4942d60927e6e8a"
+    },
+    "ai-company-os-frontend/features/evidence/evidenceReview.ts": {
+      "bytes": 787,
+      "sha256": "513a98d530227529bbf70ec19ada5889a811ac1b60f34de85ce1fe9975142aea"
     },
     "ai-company-os-frontend/features/evidence/historicalEvidence.ts": {
       "bytes": 3174,
@@ -1215,8 +1227,8 @@
       "sha256": "836f879fbd95e5d3a47e523fd693f6eb4dd650cd052fcb7f6001cbf8b6305faf"
     },
     "ai-company-os-frontend/features/project-management/ProjectStudio.tsx": {
-      "bytes": 5711,
-      "sha256": "9e74f98ca334843db12ed67a0dd51a813b894cb45cb5f873b2e86ff6ca05fe94"
+      "bytes": 6036,
+      "sha256": "b5fd30798f79c8a7b37a0ba7e91681ba542657eafb8d53fca3f7fd23582ea97c"
     },
     "ai-company-os-frontend/features/project-management/projectModel.ts": {
       "bytes": 1643,
@@ -1239,8 +1251,8 @@
       "sha256": "b6ce6de4eb8f7ab2214a07ae1413367c76b42f559437462edfb6f26cf351a053"
     },
     "ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx": {
-      "bytes": 1679,
-      "sha256": "1d000069814a932ed0e48ee44dd241ac3d36e370bd4e0e6a06c1759841a046af"
+      "bytes": 2088,
+      "sha256": "b3cb57f9c71032752214f74f1f97fd7ea55dcfbb517006753f379e3984d641b4"
     },
     "ai-company-os-frontend/features/workflow/ParallelStudio.module.css": {
       "bytes": 2740,
@@ -1294,6 +1306,10 @@
       "bytes": 2072,
       "sha256": "64aaf398eb9c8df07f11c21cd64de21c77daecf975e02a252ca82fb81253493d"
     },
+    "ai-company-os-frontend/office/engine/deskAccessories.ts": {
+      "bytes": 1106,
+      "sha256": "53003693c2ab339971075979c3baa36d5caf383e3a8efb70016a4f6ba6ae2e2f"
+    },
     "ai-company-os-frontend/office/engine/galleryCamera.ts": {
       "bytes": 1684,
       "sha256": "7b43b9515b96975eb994f3ebab01b70af76df723c9a5d400a9adf7dc6991ad4a"
@@ -1303,8 +1319,8 @@
       "sha256": "74d86fcf3162df7425c52f0685b3074d476a174a46f833289dc62168dcf20890"
     },
     "ai-company-os-frontend/office/engine/officeArtwork.ts": {
-      "bytes": 4674,
-      "sha256": "9659c0bd97bc66e6f34e479db246bbd32c4d42f1e6d6ad20c57e1d600fdcf96a"
+      "bytes": 4804,
+      "sha256": "fb7887a02c54b3ff5cfdd88b6ed847e48c6f9e72e92379537a03d2588586b0c2"
     },
     "ai-company-os-frontend/office/engine/stationDecor.ts": {
       "bytes": 779,
@@ -1438,6 +1454,10 @@
       "bytes": 4558,
       "sha256": "6ba4523d127e7235d833aaf754c8b02b077e25ff3a1e7def308fa020ce44e07b"
     },
+    "ai-company-os-frontend/tests/ui-p10e-model.test.cjs": {
+      "bytes": 2797,
+      "sha256": "fa82214433f658d2e15ee837504a7027b4efe12ef6c90860f351f6838413e01e"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -1455,8 +1475,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "68d623aba80fb461e625bb4c2fd1c8ceb7de6f7d",
-  "source_git_commit_note": "Pinned isolated commit; no self-reference.",
-  "additional_parent_git_commit": "23505d8f95500aef72466824ddb3956a14a594a8",
-  "additional_parent_source_manifest_blob": "6bce9a2424c251cd001fa8bd4780a3c0395c5ce2"
+  "parent_source_manifest_blob": "06ee9648592c97d50f86891d7ded6d8c37de363e",
+  "source_git_commit_note": "Separate source union candidate; no self-reference. No main merge.",
+  "additional_parent_git_commit": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
+  "additional_parent_source_manifest_blob": "9c85c1a9ccdfbceabb0e341ce7565c87318aa815"
 }
