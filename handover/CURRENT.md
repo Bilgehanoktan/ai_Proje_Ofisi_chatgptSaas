@@ -133,3 +133,6 @@ Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manif
 
 ## 0211 — separate intent authority component
 Source `b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d`; 347 product files / 346 manifest entries. Two new exact blobs verified. 10 actual local unit tests (9 behavior PASS, 1 authority restore residual reproduced); 154 historical tests not rerun. 23/23 previously missing local core blob pins verified remotely, no new local materialization. D-03/D-04 partial component mitigation; original wrapper, Company/Terminal, core29, PG/RLS and full build NOT_RUN, independent authority HOLD. [Architecture](../docs/0211/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0211.json) · [Next](NEXT_STEP_0211.md).
+
+## 0212 — core recovery and D0 integration evidence
+Source `bef094e96d6b7f57552e022b92f0a5524b2c6a9e`; 349 product files / 348 entries. 55/55 exact core recovered; 29 original diagnostic tests, 7 direct authority/T1, 6 company/terminal, 10 prior authority tests = 52/52 (51 behavior + 1 expected residual). Locked29, exact witness/journal wrapper, multi-project, PG/RLS, full build/browser open. No normative change. [Architecture](../docs/0212/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0212.json) · [Gates](../progress/INTEGRATION_GATES_0212.json) · [Next](NEXT_STEP_0212.md).
