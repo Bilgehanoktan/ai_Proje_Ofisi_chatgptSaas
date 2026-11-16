@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0209",
-  "status": "D0_WITNESSED_CONTEXT_T1_FIXTURE_SELECTED_TESTS_PASS",
+  "doc_revision": "0210",
+  "status": "D0_LOCAL_FENCED_T1_INTENT_QUARANTINE_SELECTED_PASS",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f832f00bffa4162b1f31a9bd192a5aedd44986fb",
+  "parent_git_commit": "b9cd16ca6dbb6d8344c34b9446564af7d2a29040",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1373,10 +1373,18 @@
     "ai-company-os-backend/tests/test_witnessed_sql_0209.py": {
       "bytes": 7231,
       "sha256": "0b4265731a587e20255d434c11aa4e956faaba6df83f6155425b5ef6dc7f9439"
+    },
+    "ai-company-os-backend/app/core/transaction/fenced_transition.py": {
+      "bytes": 10586,
+      "sha256": "6aed1371dae1d4e40b5f735aa360a06883dff868e3c748535dc8763373034175"
+    },
+    "ai-company-os-backend/tests/test_fenced_transition_0210.py": {
+      "bytes": 9144,
+      "sha256": "5ba5f253bf3df39e2cf0daa7781c9d4ac91550cec9bc20a3355cfaf5153b95ac"
     }
   },
-  "parent_source_manifest_blob": "268f575b534bda97d8ed57a1f7f3f4de8bdf62cd",
-  "source_git_commit_note": "Five product additions; 138 selected local cases pass (98 regression, 23 signed memory witness, 10 original T1 coordinator/session with SQLite stand-in mapping, 7 original candidate SQL mapping on SQLite). No default runtime wiring or independent authority. Last-check-to-commit gap reproduced.",
+  "parent_source_manifest_blob": "02b7b2cdea8ba2d21c14cc2bda2a4107502ae237",
+  "source_git_commit_note": "Two product additions; 154 selected local tests (138 regression, 16 local fence/intent journal). Local cooperating writer serialization only. External trust-root drift and joint journal/T1 rollback remain reproduced. No default authority.",
   "additional_parent_git_commit": "23505d8f95500aef72466824ddb3956a14a594a8",
   "additional_parent_source_manifest_blob": "6bce9a2424c251cd001fa8bd4780a3c0395c5ce2"
 }
