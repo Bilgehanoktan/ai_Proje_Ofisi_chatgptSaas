@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10E-0211-CANDIDATE",
-  "status": "D0_SOURCE_UNION_SELECTED_APP_MAIN_COMPILED_GET_PASS_NEXT_NOT_RUN_INDEPENDENT_HOLD",
+  "doc_revision": "UI-P10F-0211-CANDIDATE",
+  "status": "D0_SELECTED_T1_AUTHORITY_AND_APP_MAIN_COMPILED_GET_PASS_RESIDUAL_REPRODUCED_NEXT_BLOCKED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "4b44c802f31c826b449b76e99da875eee92ff0b9",
+  "parent_git_commit": "14738822c38eb179825e00a01e48e2a3a0c16c3d",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -646,6 +646,10 @@
       "bytes": 3618,
       "sha256": "e3c4c2956dd1dc1380315dbd3a93571efb005f7dba411a8e90f66c6309a87ad1"
     },
+    "ai-company-os-backend/tests/test_authority_sqlite_p10f.py": {
+      "bytes": 8019,
+      "sha256": "f8eac07fadabe1b0c0a8992e7cc242c659a84386e0404563ee9ed601563dd46c"
+    },
     "ai-company-os-backend/tests/test_company_coordination_0204.py": {
       "bytes": 15264,
       "sha256": "49ddaea03aa86f98ec39e92005c3dbbc1c1846653508288a1dab3257f869e938"
@@ -1059,8 +1063,8 @@
       "sha256": "13d7e13fa43bf1e7341f2b8274482e0bbb68608209b6ae94c0390ba8dedd824d"
     },
     "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": {
-      "bytes": 9472,
-      "sha256": "290c2ca6f425ca6ecb855c684f3673f7c4743f38778a217074f50a454838e114"
+      "bytes": 9477,
+      "sha256": "b4dc3b283772ae833a54cba699b37911b719780a6b26f417e266ac380365cc0d"
     },
     "ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx": {
       "bytes": 1475,
@@ -1095,20 +1099,24 @@
       "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
     },
     "ai-company-os-frontend/features/evidence/AgentDirectory.tsx": {
-      "bytes": 1868,
-      "sha256": "300f24a756691e35dc9d9c5cec1e3851841f610b7cd4c1e49e4c149bbfe07255"
+      "bytes": 2160,
+      "sha256": "0c56dfa146a73aed708a5e9f4695f71b0618da3a6640a8fd6d55f86dd93b591a"
     },
     "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx": {
       "bytes": 1311,
       "sha256": "ce62bb27b4eac34b06b765460c109b0566e8789f068cc3748411fc37fd5792eb"
     },
     "ai-company-os-frontend/features/evidence/EvidenceStudio.module.css": {
-      "bytes": 2152,
-      "sha256": "0588dfa3141ed8d651c9e91d5ce1ba2c32967c8918e47a0b8ff4c7d249ece8a7"
+      "bytes": 2518,
+      "sha256": "91b73f42e98a772dc6244832cf5d8a79c55d2b42750e0485e4c27f3aa4ddb132"
     },
     "ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx": {
-      "bytes": 2816,
-      "sha256": "a1dd8b3b42660755aa3f15f95aa8518288a11b1eeb7c4033453f03a6832158c1"
+      "bytes": 3658,
+      "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    },
+    "ai-company-os-frontend/features/evidence/evidenceContext.ts": {
+      "bytes": 1599,
+      "sha256": "03e4de859ab39186aa19ec05e0791064591918e9631e3814865d2edf9e8937f7"
     },
     "ai-company-os-frontend/features/evidence/evidenceModel.ts": {
       "bytes": 2041,
@@ -1227,8 +1235,8 @@
       "sha256": "836f879fbd95e5d3a47e523fd693f6eb4dd650cd052fcb7f6001cbf8b6305faf"
     },
     "ai-company-os-frontend/features/project-management/ProjectStudio.tsx": {
-      "bytes": 6036,
-      "sha256": "b5fd30798f79c8a7b37a0ba7e91681ba542657eafb8d53fca3f7fd23582ea97c"
+      "bytes": 6151,
+      "sha256": "08c235c4240a9500a51136345b179880f95b2ce7e886c6388ec414bf91b2577e"
     },
     "ai-company-os-frontend/features/project-management/projectModel.ts": {
       "bytes": 1643,
@@ -1251,8 +1259,8 @@
       "sha256": "b6ce6de4eb8f7ab2214a07ae1413367c76b42f559437462edfb6f26cf351a053"
     },
     "ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx": {
-      "bytes": 2088,
-      "sha256": "b3cb57f9c71032752214f74f1f97fd7ea55dcfbb517006753f379e3984d641b4"
+      "bytes": 2467,
+      "sha256": "352ae15da25b705f7f156c74b0dd9c8bef5dae4e9f01d2c24c389072ee4fb78e"
     },
     "ai-company-os-frontend/features/workflow/ParallelStudio.module.css": {
       "bytes": 2740,
@@ -1263,12 +1271,16 @@
       "sha256": "e10428c73dc33bfe6252c6345ce0104e0389180092fde6c9454d854d2b62f933"
     },
     "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx": {
-      "bytes": 3533,
-      "sha256": "e86f274f66ef95b40a76e08a8b3347836a099680e8e75ed8ccc68a7d2a25fe45"
+      "bytes": 3536,
+      "sha256": "b5ef19beb955152c71f381dc19673ac5da44fde2ad058cf319054773715f8b1f"
     },
     "ai-company-os-frontend/features/workflow/draftGraph.ts": {
       "bytes": 1365,
       "sha256": "7a37730b3bcd2d5326061a41c8a8dedd3888540e64cc4ff3d216c03c694b5d0f"
+    },
+    "ai-company-os-frontend/features/workflow/draftHistory.ts": {
+      "bytes": 1532,
+      "sha256": "3bba9722556ea5467291bd8f7c5f3d0554743893f577592229e77c0fae7926cb"
     },
     "ai-company-os-frontend/features/workflow/readbackPresentation.ts": {
       "bytes": 1641,
@@ -1319,12 +1331,16 @@
       "sha256": "74d86fcf3162df7425c52f0685b3074d476a174a46f833289dc62168dcf20890"
     },
     "ai-company-os-frontend/office/engine/officeArtwork.ts": {
-      "bytes": 4804,
-      "sha256": "fb7887a02c54b3ff5cfdd88b6ed847e48c6f9e72e92379537a03d2588586b0c2"
+      "bytes": 5072,
+      "sha256": "e38460ca4b884cd7259b1d9dc06f5e8198965dac2792f0824eb505fc5e11523d"
     },
     "ai-company-os-frontend/office/engine/stationDecor.ts": {
       "bytes": 779,
       "sha256": "91ccb1fff12ccbaf706fa14fef06edf9b88322ddee21b9109057c5944f110b5f"
+    },
+    "ai-company-os-frontend/office/engine/wallDecor.ts": {
+      "bytes": 1230,
+      "sha256": "d6b3cc6a8e4ebe5b14336b54c726bc76495e974ad25d7b3372e553cf20945207"
     },
     "ai-company-os-frontend/office/geometry.ts": {
       "bytes": 65,
@@ -1458,6 +1474,10 @@
       "bytes": 2797,
       "sha256": "fa82214433f658d2e15ee837504a7027b4efe12ef6c90860f351f6838413e01e"
     },
+    "ai-company-os-frontend/tests/ui-p10f-model.test.cjs": {
+      "bytes": 4390,
+      "sha256": "e9517b595236994df3b88a61dcba30c1eb5c0aede32868616867ae3f761006e9"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -1475,8 +1495,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "06ee9648592c97d50f86891d7ded6d8c37de363e",
-  "source_git_commit_note": "Separate source union candidate; no self-reference. No main merge.",
+  "parent_source_manifest_blob": "0ba4d8d7a0dde2b96482cdc360406bb7a845cf0c",
+  "source_git_commit_note": "Isolated 0211+UI candidate, no main merge; 0212/0213 not included.",
   "additional_parent_git_commit": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
   "additional_parent_source_manifest_blob": "9c85c1a9ccdfbceabb0e341ce7565c87318aa815"
 }
