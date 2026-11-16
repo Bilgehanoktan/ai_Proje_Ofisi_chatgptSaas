@@ -157,3 +157,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0213 — two-project D0 budget race and 0211 wrapper test preparation
 [Addendum](../0213/ARCHITECTURE_AND_CATALOG.md). 55/55 pinned core and 56/56 diagnostic tests; four new multi-project SQLite cases. Six original wrapper integration tests only prepared, NOT_RUN. PostgreSQL/RLS/Next/browser and independent authority still HOLD. No normative decision or product runtime change.
+
+## 0214 / 0215 — original wrapper, external claim observation, PG runner and historical UI
+0214 source checkpoint is preserved at `a4a6aba3e986927b4e2b0157028e6623c669864e`; prior recorded 10 original wrapper tests, 1 restore residual. [0215 addendum](../0215/ARCHITECTURE_AND_CATALOG.md): 15 read-only signed local claim checks, 14 PG runner unit checks and 17 UI reference checks. Actual PG/RLS/build/browser and independent custody remain HOLD; no normative changes or effect authorization.
