@@ -27,6 +27,8 @@ import OperationalReadback from './OperationalReadback';
 import LifecyclePrefixReadback from '../mvp/LifecyclePrefixReadback';
 import LifecycleReadback from '../mvp/LifecycleReadback';
 import CapabilityReadback from '../capabilities/CapabilityReadback';
+import WorkflowDraft from '../workflow/WorkflowDraft';
+import ProjectionReadbackCenter from '../workflow/ProjectionReadbackCenter';
 
 type Station=SnapshotFloor['stations'][number];
 type Selection={floorId:string;stationId:string}|{roleId:string}|null;
@@ -70,10 +72,11 @@ function DashboardView({initialView}:{initialView:'overview'|'office'}){
  {!officeOnly&&overview&&<WorkbenchLifecyclePanel/>}
  {!officeOnly&&overview&&<OutboxProjectionPanel/>}
  {!officeOnly&&overview&&<AdmissionProjectionPanel/>}
- {!officeOnly&&currentView==='İş ve Denetim'&&<><DevelopmentReviewPanel/><LifecycleReadback context="workflow"/><LifecyclePrefixReadback context="workflow"/></>}
+ {!officeOnly&&currentView==='İş ve Denetim'&&<><DevelopmentReviewPanel/><WorkflowDraft/><LifecycleReadback context="workflow"/><LifecyclePrefixReadback context="workflow"/></>}
  {!officeOnly&&currentView==='SaaS ve Finans'&&<><FinanceStudio/><AdmissionProjectionPanel/><LifecycleReadback context="finance"/><LifecyclePrefixReadback context="finance"/></>}
  {!officeOnly&&['Güvenlik','Raporlar'].includes(currentView)&&<><SecurityStudio key={currentView} initialTab={currentView==='Raporlar'?'evidence':'controls'}/><OutboxProjectionPanel key={currentView}/><LifecycleReadback key={currentView} context="security"/><LifecyclePrefixReadback key={"prefix-"+currentView} context="security"/></>}
  {!officeOnly&&currentView==='Beceriler'&&<><CapabilityReadback/><LifecyclePrefixReadback context="capability"/></>}
+ <ProjectionReadbackCenter key={currentView+':'+(currentView==='Sanal Ofis'?floorId:'')} view={currentView}/>
  {!officeOnly&&overview&&<PlanProgressPanel/>}
  {!officeOnly&&<section className="panel bottom"><div className="bar"><h2>Geliştirme çalışma hatları</h2><span className="sub">Kaynak adayı · kabul edilmedi</span></div><div className="lanegrid">{catalog.lanes.map(x=><div className="lane" key={x.id}><strong>{x.id}</strong>{x.title}<small>{x.scope}</small></div>)}</div></section>}
  <footer>v135 hedef mimari · {version} · A0_SAMPLE_ONLY · NO_RELEASE · ACCEPTANCE HOLD</footer></main></div>;
