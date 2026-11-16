@@ -55,5 +55,10 @@
     "gate": "A3",
     "scope": "historical exact 0207 locked core only",
     "rollback": "Revert this acceptance-record commit only if evidence review invalidated; no runtime changes. Preserve original A0F record."
+  },
+  "e1_review": {
+    "path": "tests/evidence/E1_WINDOWS_REVIEW_0227.json",
+    "scope": "User Windows prepare and reconstructed new/origin hashes; no install or product test",
+    "rollback": "Preserve stage and prior evidence; do not rerun prepare into existing stage."
   }
 }

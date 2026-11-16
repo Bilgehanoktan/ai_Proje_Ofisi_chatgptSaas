@@ -1,2 +1,2 @@
-# NEXT — 0227 E1 remains OPEN
-8/16 unchanged. Use `scripts/run_e1_0227.py` with exact detached source 52219c7a222bae41735c9a9b9f7f7082462982b4 and the retained A0C stage. Prepare, inspect new source-bound REVIEW_0227, explicitly approve its hash, execute; return raw logs/locks/review. Do not reuse old approval. 10 runner mechanics tests passed on Linux; no product tests or Windows install. PG, build/browser, B3 remain open. See docs/0227/CONNECTED_WORKSTATION_0227.md and tests/evidence/E1_RUNNER_MECHANICS_0227.json.
+# NEXT — 0227 E1
+Windows prepare and REVIEW reconstruction match. Explicitly approve new REVIEW SHA256 `13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b` locally and execute existing runner. Return E1_LOCAL_RESULT.json, ORIGINAL24_RESULT.json and raw logs/locks. 8/16 unchanged. tests/evidence/E1_WINDOWS_REVIEW_0227.json

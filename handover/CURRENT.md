@@ -201,3 +201,7 @@ A3 only: 29/29 historical locked tests from pinned A0F review `6140e16edb2ddd943
 
 ## 0227-E1 — reviewed-lock reuse execution packet
 scripts/run_e1_0227.py reuses original W8 lock inventory, exact A0C hash/wheels and a fresh source-bound review. It copies only pinned product and DB source into a new stage, installs Python offline with hash verification and npm ci with scripts disabled, runs original 6/10/8 suites with exact collection and exit counts. 10/10 synthetic runner mechanics PASS; Windows prepare/execute NOT_RUN and zero product tests. 8/16 unchanged. No runtime/product changes, no CI, no merge. If A0 raw wheel/lock bytes unavailable or mismatch, stop; retain failed stage, use separately reviewed recovery. Evidence: tests/evidence/E1_RUNNER_MECHANICS_0227.json.
+
+
+## 0227-E1 Windows prepare review
+User Windows prepare reports success. 16 DB pins match remote; reconstructed sorted CRLF new and A0 origin review hashes both match. No new source or product execution; install and 24 tests pending explicit local approval. 8/16 remains. Evidence: tests/evidence/E1_WINDOWS_REVIEW_0227.json.

@@ -1,0 +1,41 @@
+{
+  "revision": "0227",
+  "checkpoint": "E1_WINDOWS_PREPARE_REVIEW_MATCH",
+  "scope": "User-executed Windows prepare transcript and reconstructed REVIEW bytes, not independent execution",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner_blob": "788bc12ff00c1f3c8a1bd5474b42d692814fd433",
+  "source": {
+    "checkout": "USER_TRANSCRIPT_PASS",
+    "product_manifest_entries": 392,
+    "product_files": 393,
+    "database_git_pins_matching_remote": 16
+  },
+  "review": {
+    "reported_sha256": "13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b",
+    "reconstructed_crlf_sorted_json_sha256": "13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b",
+    "origin_reported_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+    "origin_reconstructed_crlf_sorted_inventory_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+    "origin_inventory_manifest": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+    "python_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+    "npm_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "wheel_inventory_entries": 28,
+    "npm_inventory_entries": 61,
+    "platform": "win32",
+    "python": "3.14.3",
+    "node": "v24.14.0",
+    "review_status": "MATCH"
+  },
+  "limits": [
+    "Raw REVIEW and wheel bytes not uploaded in this conversation; hash reconstructed from pasted JSON, prior origin inventory fingerprint matches.",
+    "Prepare only; install and original24 NOT_RUN. User local approval for exact new fingerprint required; not granted by this record.",
+    "No PG, build/browser or independent acceptance."
+  ],
+  "gates": {
+    "done": 8,
+    "total": 16,
+    "percent": 50,
+    "newly_closed": 0
+  },
+  "next": "Explicit local approval of new review fingerprint, execute existing runner and return logs/results."
+}

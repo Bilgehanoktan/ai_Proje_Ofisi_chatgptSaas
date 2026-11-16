@@ -527,7 +527,7 @@
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "0227 E1 execution runner prepared using reviewed A0C locks; 10 synthetic runner controls PASS, 0 product tests. Gates remain 8/16; no score promotion.",
+  "note": "0227 E1 Windows prepare and new/origin REVIEW reconstructed hashes match; install/original24 pending. 8/16 unchanged.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -558,8 +558,8 @@
     "actual_t1_company": "12_PASS",
     "actual_http_proxy_studio": "7_PASS",
     "residual": {
-      "exact_full_checkout": "REMOTE_PINS_VERIFIED_LOCAL_CHECKOUT_PENDING",
-      "locked_dependencies": "REUSE_RUNNER_READY_WINDOWS_NOT_RUN",
+      "exact_full_checkout": "USER_WINDOWS_PREPARE_PASS_392_MANIFEST_16_DB_PINS",
+      "locked_dependencies": "PREPARE_REVIEW_HASH_MATCH_INSTALL_PENDING",
       "original_0220_SQL6": "PASS_SQLITE_6",
       "original_0221_SQL10": "NOT_RUN",
       "original_0224_SQL8": "NOT_RUN",
@@ -586,6 +586,10 @@
       "evidence": "tests/evidence/E1_RUNNER_MECHANICS_0227.json",
       "mechanics_pass": 10,
       "product_pass": 0
+    },
+    "e1_review": {
+      "status": "MATCH_INSTALL_PENDING",
+      "evidence": "tests/evidence/E1_WINDOWS_REVIEW_0227.json"
     }
   },
   "integration_gate": {
