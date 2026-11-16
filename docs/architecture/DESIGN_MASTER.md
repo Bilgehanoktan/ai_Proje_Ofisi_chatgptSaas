@@ -287,3 +287,6 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-18 — Agent role profile / A3 source reconciliation
 [Architecture and catalog](../UI-P10J/P10J18_AGENT_PROFILE.md). Validated static plan presentation; A3 unbound to renderer; no normative change.
+
+## UI-P10J-19 — Project roadmap / A4 source reconciliation
+[Architecture and catalog](../UI-P10J/P10J19_PROJECT_ROADMAP.md). Logical waves only; hybrid adapter source-bound, not native-accepted. No normative change.

@@ -1,3 +1,9 @@
+# UI-P10J-19 — Project roadmap and A4 source integration
+
+Parent 4a011d2f4d11e6bf7526ba596ca00b16643ea5bf; manifest 6caabe5948967e1532a117e99780e7fb90b1b968; 483 product files, 11/11 local isolated JSX checks. A4 four exact blobs, new hybrid link, actual native acceptance NOT_RUN. W8/build/browser/PG NOT_RUN, 90 planned captures. Core 9/16 separately accepted E1; no new UI gate. [Revision handover](../docs/UI-P10J/P10J19_PROJECT_ROADMAP.md) · [Runbook](../docs/UI-P10J/P10J19_RUNBOOK.md). Next P10J20 Workflow Studio and reviewed W8.
+
+---
+
 # UI-P10J-18 — Agent profile and exact A3 source
 
 Parent cc6a62b33feecb0f4a827ca1a5b4857be1a4f243; manifest a234ce2017432b88d1cabad37872d3f8444850ee; 476 product files, 14/14 local isolated JSX checks. A3 two exact source additions, renderer NOT_BOUND. W8/build/browser/PG NOT_RUN; 84 planned captures; no new authority or gate. [Revision handover](../docs/UI-P10J/P10J18_AGENT_PROFILE.md). Next P10J19 Project Studio, re-pin A4/core, reviewed W8.

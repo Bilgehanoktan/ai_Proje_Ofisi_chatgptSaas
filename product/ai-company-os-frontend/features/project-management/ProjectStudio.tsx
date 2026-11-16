@@ -6,6 +6,7 @@ import styles from './ProjectStudio.module.css';
 import DependencyNeighborhood from './DependencyNeighborhoodPanel';
 import PlanGraph from '../graph/PlanGraph';
 import StudioContextPanel from '../mvp/StudioContextPanel';
+import ProjectRoadmap from './ProjectRoadmap';
 export default function ProjectStudio(){
  const [query,setQuery]=useState(''),[role,setRole]=useState(''),[mode,setMode]=useState<'board'|'table'>('board'),[selected,setSelected]=useState('plan'),[sort,setSort]=useState<'wave'|'label'|'role'>('wave'),[descending,setDescending]=useState(false),[waveFilter,setWaveFilter]=useState('');
  const searchId=useId(),roleId=useId(),view=projectView();
@@ -17,6 +18,7 @@ export default function ProjectStudio(){
   <div className={styles.hero}><div><small>WorkType / Plan kimliği</small><h3>{view.plan.worktype} · {view.plan.plan_id}</h3><small>Revizyon {view.plan.digest.slice(0,12)}… · A0_SAMPLE_ONLY</small></div><div className={styles.hold}>RELEASE HOLD</div></div>
   <div className={styles.metrics}>{[['Plan görevleri',view.rows.length],['Bağımlılıklar',view.plan.edges.length],['Plan dalgaları',view.groups.length],['HOLD görevleri',view.holdCount]].map(([name,count])=><div key={name}><small>{name}</small><strong>{count}</strong></div>)}</div>
   <p className="sub">Dalga sırası zaman takvimi değildir. Dar ekranda panoyu yatay kaydırın. Gerçek ilerleme, süre, tarih, run ve teslimat verisi yok; hesaplanmaz.</p>
+  <ProjectRoadmap view={view} selected={selected} onSelect={setSelected}/>
   <div className={styles.filters}><label htmlFor={searchId}>Görev ara<input id={searchId} type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder="Kaynak, QA, HOLD…"/></label><label htmlFor={roleId}>Rol<select id={roleId} value={role} onChange={e=>setRole(e.target.value)}><option value="">Tüm roller</option>{view.roles.map(r=><option key={r} value={r}>{r}</option>)}</select></label><label>Dalga<select value={waveFilter} onChange={e=>setWaveFilter(e.target.value)}><option value="">Tüm dalgalar</option>{view.groups.map((_,i)=><option key={i} value={String(i+1)}>{i+1}</option>)}</select></label><button type="button" onClick={()=>{setQuery('');setRole('');setWaveFilter('');}}>Filtreyi temizle</button><div className="chips"><button type="button" aria-pressed={mode==='board'} onClick={()=>setMode('board')}>Dalga panosu</button><button type="button" aria-pressed={mode==='table'} onClick={()=>setMode('table')}>Görev listesi</button></div></div>
   {mode==='table'&&<div className={styles.filters}><label>Sıralama<select value={sort} onChange={e=>{const v=e.target.value;if(v==='wave'||v==='label'||v==='role')setSort(v);}}><option value="wave">Dalga</option><option value="label">Görev</option><option value="role">Rol</option></select></label><button type="button" aria-pressed={descending} onClick={()=>setDescending(v=>!v)}>{descending?'Azalan':'Artan'}</button></div>}
   <small role="status">{rows.length}/{view.rows.length} görev gösteriliyor</small>
