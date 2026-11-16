@@ -1,0 +1,232 @@
+{
+  "revision": "0220",
+  "parent": "4d748a829f02fddf8a21a4c82aaa017bc1a3406a",
+  "source_commit": "a039ad0b4a096780d8365d3392f5ed5859a433b4",
+  "source_tree": "50ecc0c61e32df0f31d8bc3fa38cc4142620945d",
+  "branch": "integration/0220-plan-dag-admission",
+  "manifest_blob": "e68708fe464cd774d9991a6f6fce864a499a3db7",
+  "manifest_entries": 367,
+  "product_files": 368,
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "action": "modify",
+      "before_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "bytes": 3649,
+      "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "action": "modify",
+      "before_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "blob": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+      "bytes": 17868,
+      "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "action": "add",
+      "blob": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+      "bytes": 4042,
+      "sha256": "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+      "action": "add",
+      "blob": "3e01853c9fb3d184c3bd74fe2c5bbbb5904a36af",
+      "bytes": 3127,
+      "sha256": "24f6db16cee419de307499727dcea219f33be113a36591c9273c09f187376c28"
+    }
+  ],
+  "remote_tree": {
+    "truncated": false,
+    "manifest_path_size_matches": 367,
+    "extra_product_files": 0,
+    "unchanged_product_blobs": 363,
+    "full_local_rehash": false
+  },
+  "local_exact_subset": {
+    "count": 13,
+    "pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+        "bytes": 59
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d",
+        "bytes": 7251
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "git_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d",
+        "bytes": 3649
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6",
+        "bytes": 259
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3",
+        "bytes": 3082
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482",
+        "bytes": 692
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "git_blob": "04487bda631e9133f3904451a39fc8722e985997",
+        "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1",
+        "bytes": 3367
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4",
+        "bytes": 1335
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "git_blob": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "sha256": "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc",
+        "bytes": 4042
+      }
+    ],
+    "method": "connector reconstruction; Python hashlib independently recomputed Git blob SHA1 for all 13 source files and SHA256; no stubs for new pure scheduler tests",
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. python -m unittest discover -s tests -p test_pinned_schedule_0220.py -v",
+    "pass": 12,
+    "fail": 0,
+    "seconds": 0.008,
+    "tests": [
+      "bare_success_legacy_vs_pinned",
+      "failed_root_blocks_children",
+      "forged_descendant",
+      "missing_roster",
+      "regressed_version",
+      "root_ready_only_no_grant",
+      "running_root_blocks_children",
+      "wrong_agent",
+      "wrong_attempt",
+      "wrong_initial_state",
+      "wrong_principal",
+      "wrong_revision"
+    ],
+    "test_output": "evidence/0220/SCHEDULER_TESTS.txt"
+  },
+  "prior_0219_excerpt": {
+    "sha256_manifest_verified": true,
+    "pass": 12,
+    "fail": 0,
+    "seconds": 0.004,
+    "limitations": "existing source-excerpt with fixture stand-ins, not full combined transaction",
+    "test_output": "evidence/0220/PRIOR_0219_EXCERPT_REGRESSION.txt"
+  },
+  "new_sql_tests": {
+    "count": 6,
+    "status": "NOT_RUN"
+  },
+  "full_0219_wrapper": "NOT_RUN",
+  "original_0213_fixture6": "NOT_RUN",
+  "locked_core29": "NOT_RUN",
+  "postgresql_13": "NOT_RUN",
+  "rls": "NOT_RUN",
+  "full_build_browser": "NOT_RUN",
+  "historical_core_lock": {
+    "status": "candidate_delta_not_a_reviewed_dependency_lock",
+    "historical_lock": "tests/integration/core_0207_source_lock.json",
+    "historical_count": 55,
+    "unchanged_exact": 53,
+    "changed": [
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "old_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+        "new_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "bytes": 3649,
+        "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+        "old_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+        "new_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+        "bytes": 17868,
+        "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e"
+      }
+    ],
+    "new_tests": [
+      "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py"
+    ],
+    "historical_lock_preserved": true,
+    "locked_core29": "NOT_RUN; run exact historic source separately, then review candidate delta and run current regression with approved locks; do not relabel old lock as current"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3 != 5.9.3",
+    "fastapi": "0.128.2 != 0.163.0",
+    "starlette": "0.50.0 != 1.10.0",
+    "uvicorn": "0.48.0 != 0.34.2",
+    "cryptography": "46.0.4",
+    "httpx": "0.28.1",
+    "jsonschema": "4.26.0",
+    "postgres": "postgres/initdb/psql absent",
+    "docker": "absent",
+    "psycopg": "absent",
+    "github_dns": "Temporary failure in name resolution",
+    "transitive_locks": "not reviewed/generated"
+  },
+  "gate": {
+    "done": 7,
+    "total": 16,
+    "percent": 43.75,
+    "new_closed": 0
+  },
+  "independent_acceptance": "HOLD",
+  "r03": "HOLD",
+  "actual_agents": 0,
+  "provider_calls": 0,
+  "real_spend": 0,
+  "local_partial_zip": {
+    "filename": "AI_Company_OS_0220_KISMI_DOGRULAMA.zip",
+    "bytes": 13854,
+    "sha256": "50142f0a965ec2f343f7fe3687d0201433f4f02327d742c4f7b37bffb3bd28ee",
+    "members": 18
+  },
+  "full_zip": "GitHub pinned commit archive reference; not locally downloaded or rehashed"
+}

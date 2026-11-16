@@ -1,0 +1,28 @@
+{
+  "status": "candidate_delta_not_a_reviewed_dependency_lock",
+  "historical_lock": "tests/integration/core_0207_source_lock.json",
+  "historical_count": 55,
+  "unchanged_exact": 53,
+  "changed": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "old_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "new_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "bytes": 3649,
+      "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "old_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "new_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+      "bytes": 17868,
+      "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e"
+    }
+  ],
+  "new_tests": [
+    "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+    "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py"
+  ],
+  "historical_lock_preserved": true,
+  "locked_core29": "NOT_RUN; run exact historic source separately, then review candidate delta and run current regression with approved locks; do not relabel old lock as current"
+}

@@ -174,3 +174,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0219 — D0 company/admission/witness composition
 [Addendum](../0219/ARCHITECTURE_AND_CATALOG.md). Reuse existing T1 mappings under explicit company profile; 12 excerpt diagnostics only, no actual combined wrapper/PG acceptance or normative change. Old profiles preserved.
+
+
+## 0220 — pinned scheduler and explicit company admission
+[Addendum](../0220/ARCHITECTURE_AND_CATALOG.md). Existing plan/DAG and T1 coordinator reused; exact initial roster and historical evidence before root admission, no bare success. 12 exact pure tests and 12 prior excerpt diagnostics; SQL and independent acceptance open. No normative changes.

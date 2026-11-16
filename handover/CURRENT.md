@@ -161,3 +161,7 @@ Product source unchanged (365 files; 364 manifest paths/sizes matched remotely, 
 
 ## 0219 — D0 company/admission/witness T1 composition
 Source `2507c9316da0e41ac5c3d320477cc72ca832f521`; 366 product files / 365 manifest entries. Existing fence and authority modules composed with admission-bound/company mapping; 12 exact new excerpt diagnostic checks only (fixture dependencies); six new product tests NOT_RUN; full combined wrapper/PG13/RLS/build NOT_RUN. 7/16 gates, independent and R03 HOLD. [Architecture](../docs/0219/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0219.json) · [Next](NEXT_STEP_0219.md).
+
+
+## 0220 — pinned plan and company admission
+Source `a039ad0b4a096780d8365d3392f5ed5859a433b4`; 368 product files / 367 manifest records. 12 exact pure Scheduler tests and 12 prior excerpt diagnostics PASS; six SQL tests and combined wrapper/PG/RLS/build NOT_RUN. 53/55 historical core lock currently matches, 2 explicit changes; original lock preserved. 7/16 gates; independent and R03 HOLD. [Architecture](../docs/0220/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0220.json) · [Next](NEXT_STEP_0220.md).
