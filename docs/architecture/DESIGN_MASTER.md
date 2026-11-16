@@ -148,3 +148,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0210 — local revocation fence and durable intent quarantine
 [Addendum](../0210/ARCHITECTURE_AND_CATALOG.md). Cooperating SQLite writer serialization through T1 commit and durable quarantine pass. D-03 external race and D-04 restore gap open. Independent authority unchanged.
+
+## 0211 — D0 separate intent authority
+[Addendum](../0211/ARCHITECTURE_AND_CATALOG.md). Two product additions; 9 component checks PASS and 1 authority-restore residual reproduced. Original T1, independent root, core29, Company/Terminal, PG/RLS and build NOT_RUN/HOLD. No normative change.
