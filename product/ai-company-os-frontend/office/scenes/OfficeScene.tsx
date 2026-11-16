@@ -1,6 +1,7 @@
 "use client";
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {cameraView,iso,markerPosition,pointKey,route,type Floor,type Point} from '../engine/geometry';
+import {inputPan,inputZoom,inputDragged} from '../engine/cameraInput';
 
 type View = {zoom:number;x:number;y:number};
 type Visual = {view:View;path:Point[]|null;playing:boolean;selected:string|null;playId:number};
@@ -40,6 +41,10 @@ export default function OfficeScene({floor}:{floor:Floor}){
    let marker:import('phaser').GameObjects.Arc|undefined;
    let lastPath:Point[]|null|undefined,lastSelected:string|null|undefined,lastView:View|undefined;
    let elapsed=0,lastPlayId=-1;
+   // Local visual gesture state only; no placement or runtime state is emitted.
+   const stationZones=new Map<import('phaser').GameObjects.GameObject,string>();
+   const stationAt=(over:import('phaser').GameObjects.GameObject[])=>over.map(o=>stationZones.get(o)).find(id=>id!==undefined)??null;
+   let drag:{id:number;sx:number;sy:number;lx:number;ly:number;moved:boolean;station:string|null}|null=null;
    const scene={
     create(this:import('phaser').Scene){
      if(cancelled)return;
@@ -55,8 +60,24 @@ export default function OfficeScene({floor}:{floor:Floor}){
       this.add.rectangle(cx,cy-19,29,16,0x142435).setStrokeStyle(1,0x7aa9bb);
       this.add.rectangle(cx,cy+16,16,13,0x60778e).setStrokeStyle(1,0x93a9ba);
       this.add.text(cx,cy-38,s.role.toUpperCase(),{fontSize:'11px',color:'#e1e9f0',backgroundColor:'#101b29'}).setOrigin(.5);
-      this.add.zone(cx,cy,76,55).setInteractive({useHandCursor:true}).on('pointerdown',()=>{if(!cancelled)setSelected(s.id);});
+      const zone=this.add.zone(cx,cy,76,55).setInteractive({useHandCursor:true});stationZones.set(zone,s.id);
      }
+     // Phaser emits game-coordinate pointer positions; existing cameraView remains the clamp authority.
+     this.input.on('pointerdown',(p:import('phaser').Input.Pointer,over:import('phaser').GameObjects.GameObject[])=>{
+      if(!cancelled&&p.button===0&&!drag)drag={id:p.id,sx:p.x,sy:p.y,lx:p.x,ly:p.y,moved:false,station:stationAt(over)};
+     });
+     this.input.on('pointermove',(p:import('phaser').Input.Pointer)=>{
+      if(cancelled||!drag||p.id!==drag.id||!p.isDown)return;
+      if(!drag.moved&&!inputDragged(drag.sx,drag.sy,p.x,p.y))return;
+      const dx=p.x-drag.lx,dy=p.y-drag.ly;drag.lx=p.x;drag.ly=p.y;drag.moved=true;setView(v=>inputPan(v,dx,dy));
+     });
+     this.input.on('pointerup',(p:import('phaser').Input.Pointer,over:import('phaser').GameObjects.GameObject[])=>{
+      if(cancelled||!drag||p.id!==drag.id)return;
+      if(!drag.moved&&!inputDragged(drag.sx,drag.sy,p.x,p.y)&&drag.station&&drag.station===stationAt(over))setSelected(drag.station);
+      drag=null;
+     });
+     this.input.on('pointerupoutside',()=>{drag=null;});this.input.on('gameout',()=>{drag=null;});
+     this.input.on('wheel',(p:import('phaser').Input.Pointer,_over:unknown, _dx:number,dy:number)=>{if(!cancelled&&!drag)setView(v=>inputZoom(v,p.x,p.y,dy));});
      if(!floor.stations.length)this.add.text(450,440,'GENİŞLEME REZERVİ',{fontSize:'17px',color:'#d1dde8'}).setOrigin(.5);
      pathGraphics=this.add.graphics().setDepth(5);highlight=this.add.graphics().setDepth(6);
      marker=this.add.circle(0,0,7,0xf4d48a).setStrokeStyle(2,0x101b29).setDepth(7).setVisible(false);
@@ -86,7 +107,7 @@ export default function OfficeScene({floor}:{floor:Floor}){
  return <div className="office-engine-preview">
   <div className="bar"><strong>Geometri stüdyosu · {floor.name}</strong><span className="pill">DEMO / {status==='ready'?'SAHNE HAZIR':status==='loading'?'YÜKLENİYOR':'FALLBACK'}</span></div>
   <div className="chips camera-controls" aria-label="Görsel kamera"><button disabled={status!=='ready'} onClick={()=>zoomBy(-.15)}>−</button><button disabled={status!=='ready'} onClick={()=>setView(home)}>Kamera {Math.round(view.zoom*100)}% · Sıfırla</button><button disabled={status!=='ready'} onClick={()=>zoomBy(.15)}>+</button>{([[-50,0,'Sol'],[50,0,'Sağ'],[0,-35,'Yukarı'],[0,35,'Aşağı']] as const).map(([x,y,label])=><button key={label} disabled={status!=='ready'||view.zoom<=1} onClick={()=>move(x,y)}>{label}</button>)}</div>
-  <div className="engine-frame"><div ref={host} className="sceneEngine" aria-hidden="true"/>{status!=='ready'&&<div className="engine-fallback"><img src={assets[floor.id]} alt={`${floor.name} statik ofis referansı`}/><span role="status">{status==='loading'?'Görsel motor yükleniyor…':'Görsel motor kullanılamıyor. Statik referans ve liste kullanılabilir.'}</span></div>}</div>
+  <p className="sub">Fare sürükleme ve tekerlek · D0 görsel kamera; istasyon seçimi tıklama bırakıldığında yapılır.</p><div className="engine-frame"><div ref={host} className="sceneEngine" aria-hidden="true"/>{status!=='ready'&&<div className="engine-fallback"><img src={assets[floor.id]} alt={`${floor.name} statik ofis referansı`}/><span role="status">{status==='loading'?'Görsel motor yükleniyor…':'Görsel motor kullanılamıyor. Statik referans ve liste kullanılabilir.'}</span></div>}</div>
   <div className="engine-stations" aria-label="Yalnız geometri istasyonları">{floor.stations.map(s=><button key={s.id} aria-pressed={selected===s.id} onClick={()=>setSelected(s.id)}>{s.role} · ({s.x},{s.y}) · REZERV</button>)}</div>
   {floor.stations.length>0?<div className="route-controls"><h3>Sentetik koridor rotası</h3><div className="chips"><label>Başlangıç <select value={start} onChange={e=>{setStart(e.target.value);resetRoute();}}>{points.map(p=><option key={pointKey(p)} value={pointKey(p)}>{pointKey(p)}</option>)}</select></label><label>Bitiş <select value={end} onChange={e=>{setEnd(e.target.value);resetRoute();}}>{points.map(p=><option key={pointKey(p)} value={pointKey(p)}>{pointKey(p)}</option>)}</select></label><button disabled={!path} aria-pressed={showPath} onClick={()=>{setShowPath(v=>!v);setPlaying(false);}}>Rotayı {showPath?'gizle':'göster'}</button><button disabled={!showPath||!path||path.length<2||reduced||status!=='ready'||playing} onClick={()=>{setPlayId(v=>v+1);setPlaying(true);}}>İşaretçiyi oynat</button><button disabled={!playing} onClick={()=>setPlaying(false)}>Durdur</button></div><p className="sub" role="status">{!path?'Rota yok · HOLD':`${path.length-1} adım · görsel BFS`}{reduced?' · Hareket azaltma etkin':''}. İşaretçi ajan değildir.</p></div>:<p className="sub">Genişleme rezervi: hareket ve istasyon yok.</p>}
   <p className="sub">Bağımsız demo geometrisi; snapshot ile koordinat birleştirme, gerçek placement, agent instance, kapı/kat geçiş grafı veya olay akışı yok.</p>

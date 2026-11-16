@@ -1,0 +1,7 @@
+const assert=require('node:assert/strict');const {inspectOfficeV0}=require(process.argv[2]);const sample=require(process.argv[3]);let n=0;
+const test=(name,fn)=>{fn();console.log('PASS',name);n++};
+const safe=r=>{assert.equal(r.status,'JOIN_HOLD');assert.equal(r.authoritative,false);assert.equal(r.placement,false);assert.equal(r.taskBinding,false);assert.equal(r.activeRuns,null);};
+test('exact historical fixture remains non-authoritative',()=>{const r=inspectOfficeV0(sample);safe(r);assert.equal(r.source,'EXACT_HISTORICAL_SAMPLE');});
+for(const [name,change] of [['wrong tenant',s=>s.tenant_id='other'],['wrong layout',s=>s.layout_revision='premium'],['stale policy epoch',s=>s.policy_epoch=1],['higher sequence',s=>s.snapshot_seq=1],['forged agents',s=>s.agents=[{instance_id:'a'}]],['forged metric',s=>s.metrics[0].value=1],['forged authority',s=>s.authority.dev_effective=true],['station coordinate mismatch',s=>s.floors[0].stations[0].x=5],['agent binding',s=>s.floors[0].stations[0].agent_instance_id='a'],['unknown field',s=>s.extra=true],['wrong role',s=>s.role_templates[0].id='admin']])test(name,()=>{const s=structuredClone(sample);change(s);const r=inspectOfficeV0(s);safe(r);assert.equal(r.source,'UNVERIFIED');});
+test('null or malformed payload',()=>{for(const x of [null,{},[],false,1]){const r=inspectOfficeV0(x);safe(r);assert.equal(r.source,'UNVERIFIED');}});
+console.log(`${n}/${n} PASS`);
