@@ -1,0 +1,108 @@
+{
+  "revision": "0217",
+  "parent": "12e90ef2f8b7eb091299240488c60a1034a461c3",
+  "source_commit": "093d9674e3a753ae26f799217ffdc3ae5ed74b75",
+  "branch": "integration/0217-signed-consume-studio",
+  "manifest_blob": "c6c50d70884374ac27ccb2fc850b4430ef5bd10c",
+  "manifest_entries": 364,
+  "product_files_including_manifest": 365,
+  "prior_product_entries_preserved": 358,
+  "delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+      "bytes": 4409,
+      "sha256": "7c3086ba3030a072fe2bba6a9a4925232228b746a83fffeb9a9bed416f16f86b",
+      "blob": "477bcde63418dd43f886df7b32c5acd006d64a79",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_consume_reference_0217.py",
+      "bytes": 4879,
+      "sha256": "d16ebb5860e9f2c92b25d39aa4b19b72acccc061a4b0c880d464abe69fa54b9f",
+      "blob": "08f7a7d07376779bc90baa9062e17a9695436b45",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/studioContext.ts",
+      "bytes": 927,
+      "sha256": "ca73ee8dbeb7c761ec3546fc37b72523730d5dc4a5b53c60a788f8d00b43529e",
+      "blob": "0abcddb32b8c106756e51b11128752453352df62",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+      "bytes": 1234,
+      "sha256": "c03332dd1fb69f1140555bee26e59c34241aaf23605452d5ea260b393d6b66f2",
+      "blob": "d0acdf19a4f102561e47de0b85cd8646a18b0d90",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+      "bytes": 3635,
+      "sha256": "67cd185d250e39985609d0fa74cacb5edaf7bf69cf4bb0498e78ccab9f39779f",
+      "blob": "ab1b642263ab142e1da07d8551c97a835612b5ee",
+      "action": "modify"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+      "bytes": 1682,
+      "sha256": "eb78987fe3a7f95e4021992c3ac92dced6b131a1bc27ace759f65eea4964dca9",
+      "blob": "8e687088be274910977395186debba39d676ab9d",
+      "action": "modify"
+    }
+  ],
+  "readback": "6/6 exact Git blobs matched local source; old 358 entries equal, two replacements, four additions; full checkout not verified",
+  "tests": {
+    "python": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p 'test_*reference_02*.py' -v",
+      "version": "3.13.5",
+      "cryptography": "46.0.4",
+      "new": 14,
+      "prior_0216_rerun": 13,
+      "pass": 27,
+      "expected_residual": 1,
+      "seconds": 0.287,
+      "warning": "ResourceWarning unclosed SQLite connections in prior 0216 test fixture; tests passed; not remediated this round"
+    },
+    "node": {
+      "version": "22.16.0",
+      "typescript": "5.8.3",
+      "pass": 6,
+      "full_pinned_typecheck": "NOT_RUN"
+    },
+    "browser": {
+      "version": "144.0.7559.96",
+      "pass": 4,
+      "scope": "isolated harness executing compiled studioContext helper, not React/Next"
+    },
+    "tsx_syntax_only": 2,
+    "ddl_remote_pins": 5,
+    "total_selected_pass": 37,
+    "new_selected": 24,
+    "prior_0215_rerun": false
+  },
+  "environment": {
+    "git_checkout": "BLOCKED_DNS",
+    "postgres": "NOT_FOUND",
+    "initdb": "NOT_FOUND",
+    "psql": "NOT_FOUND",
+    "psycopg": "NOT_INSTALLED",
+    "full_build": "NOT_RUN"
+  },
+  "gate": {
+    "done": 7,
+    "total": 16,
+    "percent": 43.75
+  },
+  "open_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ],
+  "limitations": [
+    "No authenticated service/independent key custody, external head/clock, nonce issuance, atomic signed result, distributed revoke or mandatory live gateway integration. Reference store restore remains replayable. Missing observation is UNKNOWN by interpretation; only consumed row stored.",
+    "Two-project test isolates local consume scopes, not company stream, shared budget or PG coordination. Five DDL pins unchanged; candidate single-tenant checks are not RLS.",
+    "No real backend/API linkage or actual Agent Studio screen; workflow role panel and CEO/Office historical labels only. Browser harness not actual product. No full checkout/build/PG/RLS, actual effects, spend, main or CI."
+  ]
+}

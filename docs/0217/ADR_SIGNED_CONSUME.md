@@ -1,0 +1,4 @@
+# ADR-0217 — signed consume observation and UI role boundary
+Engineering decision only, not independent or normative ratification.
+Use existing disposable SQLite consume before Ed25519 signing rather than a new parallel canonical authority. A missing signature after commit means an uncertain observation; do not retry. Reject treating signature as authorization. Future real service must authenticate issuer/caller, issue and persist unique challenge, use external monotonic head/time and protected key, durable receipt/unknown recovery, revocation/effect serialization or explicit provider-side fence, and independent bypass tests. No real effect path wired.
+UI plan-role context remains distinct from agent instance/principal, live run, independent verifier and geometry. Historical snapshots cannot authorize placement. Actual Agent Studio and backend integration remain open.

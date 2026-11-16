@@ -1,0 +1,117 @@
+{
+  "definition": "16 equal binary evidence gates for current integration scope, NOT overall system completion or normative security acceptance",
+  "gates": [
+    {
+      "id": "A",
+      "name": "Core recovery",
+      "done": 2,
+      "total": 3,
+      "criteria": [
+        [
+          "55 exact files",
+          true
+        ],
+        [
+          "29 diagnostic tests",
+          true
+        ],
+        [
+          "29 locked dependency tests",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Intent Authority + T1",
+      "done": 2,
+      "total": 3,
+      "criteria": [
+        [
+          "Direct claim/fence + ordinary T1",
+          true
+        ],
+        [
+          "Exact 0211 witness/journal wrapper",
+          true
+        ],
+        [
+          "Independent custody/effect authority",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Company + Terminal",
+      "done": 3,
+      "total": 3,
+      "criteria": [
+        [
+          "Single-project lifecycle composition",
+          true
+        ],
+        [
+          "Rollback/UNKNOWN/cap/tamper",
+          true
+        ],
+        [
+          "Multi-project concurrent composition",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "D",
+      "name": "PG/RLS",
+      "done": 0,
+      "total": 3,
+      "criteria": [
+        [
+          "Local PG+driver",
+          false
+        ],
+        [
+          "13 actual PG tests",
+          false
+        ],
+        [
+          "Non-owner RLS/lock contention",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Working product",
+      "done": 0,
+      "total": 4,
+      "criteria": [
+        [
+          "Exact full checkout+reviewed locks",
+          false
+        ],
+        [
+          "Full backend build/test",
+          false
+        ],
+        [
+          "Full frontend build",
+          false
+        ],
+        [
+          "Browser CEO/Office historical data",
+          false
+        ]
+      ]
+    }
+  ],
+  "done": 7,
+  "total": 16,
+  "percent": 43.75,
+  "prior_0214_evidence": "0214 exact original wrapper with new D0 fixture recorded 10/10, one restore residual; inherited prior result from pinned manifest and prior conversation, not rerun 0215. Original six 0213 fixture tests NOT_RUN.",
+  "current_0215": "46 new diagnostic checks; no new binary acceptance gate passed; independent custody, PG/RLS, pinned build and browser remain HOLD.",
+  "previous": "progress/INTEGRATION_GATES_0216.json",
+  "current_0216": "13 local reference tests: 12 expected controls, 1 restore residual reproduced. No new binary gate.",
+  "current_0217": "24 new checks (14 Python, 6 Node, 4 isolated Chromium), 13 0216 reruns incl. expected restore residual, 2 TSX syntax-only, 5 remote DDL pins. No new full binary acceptance."
+}

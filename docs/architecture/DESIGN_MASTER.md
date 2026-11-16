@@ -163,3 +163,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0216 — isolated synthetic effect fence reference
 [Addendum](../0216/ARCHITECTURE_AND_CATALOG.md). 13 local tests, 1 expected restore residual; no canonical or normative change, independent and mandatory gateway acceptance HOLD.
+
+## 0217 — signed consume observation and read-only studio context
+[Addendum](../0217/ARCHITECTURE_AND_CATALOG.md). 37 selected checks including expected restore residual; no independent or normative change, actual PG/RLS/Next/browser open.

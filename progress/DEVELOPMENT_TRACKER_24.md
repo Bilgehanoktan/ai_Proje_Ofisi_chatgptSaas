@@ -70,3 +70,36 @@ Scores unchanged; 13 selected D0 tests (12 controls, 1 restore residual). 7/16 s
 | 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED |
 
 [Canonical tracker](DEVELOPMENT_TRACKER_24.json) · [Gates](INTEGRATION_GATES_0216.json).
+
+
+## 0217 — canonical TRACK-0217 JSON-derived snapshot
+Ordinal scores unchanged. 37 selected checks incl. one expected residual; 2 TSX syntax and 5 DDL pins separately. 7/16 scoped gates.
+
+| ID | Alan | Tasarım | Kaynak | Test |
+|---:|---|---:|---:|---|
+| 1 | Frontend | 75 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT |
+| 2 | UI/UX Design System | 50 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT |
+| 3 | Office Engine | 75 | 50 | PARTIAL_PASS_0217_HISTORICAL_LABEL |
+| 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP |
+| 5 | Backend | 75 | 50 | PARTIAL_PASS_0217_SIGNED_FIXTURE |
+| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0204C_REPLAY |
+| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_0205R_CHECKPOINT |
+| 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE |
+| 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_0210_DENIAL |
+| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW |
+| 11 | Database | 75 | 25 | PARTIAL_PASS_0217_LOCAL_SQLITE_DDL_PINS |
+| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM |
+| 13 | Memory & Knowledge | 75 | 25 | PARTIAL_PASS_0210_LOCAL_FENCE |
+| 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL |
+| 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE |
+| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_0204C_REPLAY |
+| 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN |
+| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN |
+| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL |
+| 20 | Test & QA | 75 | 25 | PARTIAL_PASS_0217_SELECTED_37 |
+| 21 | DevOps & Infrastructure | 75 | 25 | BLOCKED_CHECKOUT_DEPENDENCIES_PG |
+| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK |
+| 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0217_RESTORE_RESIDUAL |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED |
+
+[Canonical tracker](DEVELOPMENT_TRACKER_24.json) · [Gates](INTEGRATION_GATES_0217.json).

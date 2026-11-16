@@ -1,0 +1,17 @@
+# DOC-REV-0217 — signed D0 consume observation and studio role context
+
+Parent `12e90ef2f8b7eb091299240488c60a1034a461c3`; source `093d9674e3a753ae26f799217ffdc3ae5ed74b75`. 4 additions, 2 replacements, 0 deletions. 364 manifest entries / 365 product files including manifest; 358 prior entries unchanged. Exact delta blob readback 6/6. CEO-0174/0179=B isolated development only, independent and normative HOLD.
+
+## A/B — independent authority and mandatory boundary
+`signed_consume_reference.py` uses 0216 disposable store and Ed25519. Exact scope (tenant/company/environment/project/task/run/effect), head, nonce, binding, tx, request hash and 1–60 tick window are canonicalized. Fixture consumes before signing. Missing observation after consume denies retry; only consumed row persists, not a durable signed receipt or UNKNOWN state. Verification pins expected request/head/key/time and authenticates observation only; all decisions HOLD, no dispatch. Fixture signer is not independent; arbitrary fixture caller scope is not authentication, nonce not independently issued, caller pins/clock untrusted outside fixture. Restore vulnerability persists. No T1, ToolGateway or ModelGateway wiring; current disabled gateway unchanged. D-01–D-04 OPEN. See ADR.
+
+## C/D/E — PG and company coordination
+Original 0215 runner's five DDL Git blob pins match 5/5 on current branch. It accepts separately supplied manifest pin; do not run against shared/production DB. No PG server/initdb/psql/psycopg, git DNS failure; actual 13 tests, RLS and PG company contention NOT_RUN. Existing 0192–0196L pinned DDL has scoped keys but no ENABLE/FORCE RLS policy; 0193 run_heads fixes synthetic tenant. Separate RLS fixture design needed; no canonical migration. Two projects consume concurrently and persist on reopen in 0217 SQLite test; this is not shared company budget, stream or scheduler acceptance. Existing company coordination untouched.
+
+## G/H — CEO, Office, Workflow/Agent
+`studioContext.ts` produces selected plan role, unknown assigned agent/run and HOLD only; no inferred placement. WorkflowProjection uses current selected task and displays Plan role / Agent Studio context. Shared HistoricalEvidenceStrip used by CEO/Office now explicitly labels unknown current agent/run. No actual agent assignment screen, real backend data or scope join. Strict helper compile/test 6/6; 4/4 real isolated Chromium harness checks; two TSX files syntax-transpiled only, full pinned typecheck/Next/product browser NOT_RUN.
+
+## Evidence and maintenance
+14 new signed Python + 6 Node + 4 Chromium, 13 previous 0216 tests rerun (12 controls, 1 expected reference-store restore residual); total 37. 2 TSX syntax and 5 remote DDL checks tracked separately. Prior test ResourceWarning for unclosed SQLite connections recorded, not new runtime leak proof. 0215 regressions not rerun. 7/16 scoped gates unchanged. No canonical API/DB/event/dependency changes. Diagnose mismatch by checking independent request/key/head/time; no reset/retry for consumed or unknown. Revert code only, preserve consumed evidence. UI rollback reverts both callers plus helper; no geometry or live grants. No main/CI/PROD/real effects/spend.
+
+[ADR](ADR_SIGNED_CONSUME.md) · [PG/RLS plan](PG_RLS_ACCEPTANCE.md) · [Catalog](../../catalog/revisions/TECHNICAL_CATALOG_0217.json) · [Evidence](../../releases/GITHUB_READBACK_0217.json) · [Next](../../handover/NEXT_STEP_0217.md).

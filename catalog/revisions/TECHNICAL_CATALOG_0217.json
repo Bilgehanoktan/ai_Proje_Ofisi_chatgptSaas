@@ -1,0 +1,114 @@
+{
+  "revision": "0217",
+  "parent": "0216",
+  "source_commit": "093d9674e3a753ae26f799217ffdc3ae5ed74b75",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+      "bytes": 4409,
+      "sha256": "7c3086ba3030a072fe2bba6a9a4925232228b746a83fffeb9a9bed416f16f86b",
+      "blob": "477bcde63418dd43f886df7b32c5acd006d64a79",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_consume_reference_0217.py",
+      "bytes": 4879,
+      "sha256": "d16ebb5860e9f2c92b25d39aa4b19b72acccc061a4b0c880d464abe69fa54b9f",
+      "blob": "08f7a7d07376779bc90baa9062e17a9695436b45",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/studioContext.ts",
+      "bytes": 927,
+      "sha256": "ca73ee8dbeb7c761ec3546fc37b72523730d5dc4a5b53c60a788f8d00b43529e",
+      "blob": "0abcddb32b8c106756e51b11128752453352df62",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+      "bytes": 1234,
+      "sha256": "c03332dd1fb69f1140555bee26e59c34241aaf23605452d5ea260b393d6b66f2",
+      "blob": "d0acdf19a4f102561e47de0b85cd8646a18b0d90",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+      "bytes": 3635,
+      "sha256": "67cd185d250e39985609d0fa74cacb5edaf7bf69cf4bb0498e78ccab9f39779f",
+      "blob": "ab1b642263ab142e1da07d8551c97a835612b5ee",
+      "action": "modify"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+      "bytes": 1682,
+      "sha256": "eb78987fe3a7f95e4021992c3ac92dced6b131a1bc27ace759f65eea4964dca9",
+      "blob": "8e687088be274910977395186debba39d676ab9d",
+      "action": "modify"
+    }
+  ],
+  "symbols": [
+    {
+      "module": "app.core.transaction.signed_consume_reference",
+      "classes": [
+        "Scope",
+        "ConsumeRequest",
+        "SignedObservation",
+        "Review"
+      ],
+      "functions": [
+        "canonical",
+        "token",
+        "issue_fixture",
+        "review_observation"
+      ],
+      "methods": [
+        "Scope.fingerprint",
+        "ConsumeRequest.intent",
+        "ConsumeRequest.body"
+      ],
+      "dependencies": [
+        "existing D0EffectFenceReference, Head, Intent, digest, positive",
+        "stdlib dataclasses, hashlib, json, re",
+        "optional existing cryptography==46.0.4 (requirements-history-signatures.txt; full dependency review pending)"
+      ],
+      "callers": "0217 unittest only; no HTTP, actual T1 or tool/model gateway callers",
+      "test": "14/14 local signed fixture tests"
+    },
+    {
+      "module": "features/mvp/studioContext",
+      "types": [
+        "PlanRoleTask"
+      ],
+      "functions": [
+        "studioContext",
+        "historicalAgentContext"
+      ],
+      "callers": [
+        "design-system/WorkflowProjection.tsx",
+        "features/mvp/HistoricalEvidenceStrip.tsx (CEO and Office)"
+      ],
+      "dependencies": [
+        "TypeScript only; existing components retain React/layout and historical parser dependencies"
+      ],
+      "test": "6 Node tests, 4 Chromium harness checks, two TSX syntax-only transpiles; no full Next or product browser"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "fixture_database": "Uses existing 0216 heads/consumed fixture. No new table. Consume precedes signature; no durable signed receipt/UNKNOWN row, only existing consumed row; missing receipt remains uncertain and retry denied.",
+  "errors": [
+    "SCOPE_HOLD",
+    "REQUEST_SHAPE_HOLD",
+    "REQUEST_WINDOW_HOLD",
+    "ISSUER_HOLD",
+    "ISSUER_WINDOW_HOLD",
+    "SHAPE_HOLD",
+    "PIN_OR_FRESHNESS_HOLD",
+    "SIGNATURE_OR_SHAPE_HOLD",
+    "SIGNED_CONSUMED_OBSERVATION_HOLD"
+  ],
+  "test_evidence": "releases/GITHUB_READBACK_0217.json",
+  "rollback": "Revert only 0217 source changes on isolated branch; preserve prior roots/consumed rows and evidence; no database restoration to permit replay. UI helper removal requires reverting both imports and call sites together."
+}
