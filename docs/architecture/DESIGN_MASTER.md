@@ -209,3 +209,7 @@ Inspect source hashes before test. For root replacement/restore preserve evidenc
 
 ## UX-PREMIUM-07-A0 — existing traffic result isolation
 [Architecture, evidence and rollback](../UX-PREMIUM-07/A0_TRAFFIC_FIX.md). 15 selected Node PASS; 3 baseline failures reproduced. A0 remains BLOCKED for full build/native. No A1–A5 feature implementation or normative change; JOIN_HOLD and independent HOLD.
+
+
+## UX-PREMIUM-07-A0B — reviewed W8 and native smoke extension
+[Scope, evidence, replay](../UX-PREMIUM-07/A0B_BUILD_ACCEPTANCE.md). 31 selected product Node +12 adapter checks, full checkout/build/native BLOCKED/NOT_RUN. No product, API, DB, pin or normative changes. A1–A5 deferred, JOIN_HOLD and independent HOLD.

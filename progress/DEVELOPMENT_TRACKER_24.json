@@ -1,6 +1,6 @@
 {
-  "id": "TRACK-UX-PREMIUM-07-A0",
-  "baseline": "TRACK-UX-PREMIUM-06",
+  "id": "TRACK-UX-PREMIUM-07-A0B",
+  "baseline": "TRACK-UX-PREMIUM-07-A0",
   "tarih": "2026-11-16",
   "status": "D0_LOCAL_FENCED_T1_INTENT_QUARANTINE_SELECTED_PASS",
   "rubric": {
@@ -50,6 +50,10 @@
       "ux_premium_07_a0": {
         "status": "SELECTED_TRAFFIC_PASS",
         "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
+      },
+      "ux_premium_07_a0b": {
+        "status": "SELECTED_CHECKS_ONLY",
+        "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
       }
     },
     {
@@ -106,6 +110,10 @@
       "ux_premium_07_a0": {
         "status": "SELECTED_TRAFFIC_PASS",
         "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
+      },
+      "ux_premium_07_a0b": {
+        "status": "SELECTED_CHECKS_ONLY",
+        "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
       }
     },
     {
@@ -132,6 +140,10 @@
         "summary": "Existing historical readback, no new contract/API",
         "status": "NO_API_CHANGE_CANONICAL_HOLD",
         "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      },
+      "ux_premium_07_a0b": {
+        "status": "PAIR_BLOB_PARITY",
+        "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
       }
     },
     {
@@ -477,6 +489,10 @@
       "ux_premium_07_a0": {
         "status": "SELECTED_TRAFFIC_PASS",
         "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
+      },
+      "ux_premium_07_a0b": {
+        "status": "SELECTED_CHECKS_ONLY",
+        "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
       }
     },
     {
@@ -507,6 +523,10 @@
       "ux_premium_07_a0": {
         "status": "BLOCKED",
         "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
+      },
+      "ux_premium_07_a0b": {
+        "status": "BLOCKED_DEPENDENCIES",
+        "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
       }
     },
     {
@@ -579,10 +599,14 @@
       "ux_premium_07_a0": {
         "status": "CATALOG_UPDATED",
         "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
+      },
+      "ux_premium_07_a0b": {
+        "status": "CATALOG_UPDATED",
+        "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
       }
     }
   ],
-  "note": "Ordinal scores unchanged. 154 selected PASS, 138 regression +16 new. D-03 local writer pass, external drift and D-04 restore gaps remain. Full core29/CompanyTerminal/PG/build and independent acceptance open. Historical tests not additive. | UX overlay: separate branch evidence, no score or core acceptance change; do not aggregate historical results. | A0 correction: 15 selected PASS, 3 expected baseline failures reproduced, no scores changed; historical tests not additive.",
+  "note": "Ordinal scores unchanged. 154 selected PASS, 138 regression +16 new. D-03 local writer pass, external drift and D-04 restore gaps remain. Full core29/CompanyTerminal/PG/build and independent acceptance open. Historical tests not additive. | UX overlay: separate branch evidence, no score or core acceptance change; do not aggregate historical results. | A0 correction: 15 selected PASS, 3 expected baseline failures reproduced, no scores changed; historical tests not additive. | A0B: 31 exact selected product Node +12 adapter checks (5 doubles); full build/native blocked, no score changes; historical checks not additive.",
   "integration_tracking": {
     "scope": "0210 local fenced T1 and durable intent",
     "source_commit": "cd1dd5e61e259d4f16b94ae7e386e32730c8fd13",
@@ -632,5 +656,16 @@
     "office_v0": "JOIN_HOLD",
     "independent_acceptance": "HOLD",
     "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
+  },
+  "parallel_ui_tracking_a0b": {
+    "parent": "e7cdb4b4137c76f15b893409e58112bdd9de0ed9",
+    "manifest_entries": 398,
+    "selected_node": 31,
+    "adapter_checks": 12,
+    "full_build": "BLOCKED",
+    "native_browser": "NOT_RUN",
+    "office_v0": "JOIN_HOLD",
+    "independent": "HOLD",
+    "evidence": "docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json"
   }
 }

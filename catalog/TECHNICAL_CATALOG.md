@@ -123,3 +123,7 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UX-PREMIUM-07-A0
 [Source and test catalog](revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A0.json) · [Maintenance](../docs/UX-PREMIUM-07/A0_TRAFFIC_FIX.md). One existing helper corrected, one regression file added; no API/DB/event/dependency change.
+
+
+## UX-PREMIUM-07-A0B
+[Three harness paths and symbols](revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A0B.json) · [Replay and maintenance](../docs/UX-PREMIUM-07/A0B_BUILD_ACCEPTANCE.md). Product source unchanged; old W8 review retained.

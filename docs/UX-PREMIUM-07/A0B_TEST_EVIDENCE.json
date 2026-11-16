@@ -1,0 +1,81 @@
+{
+  "revision": "UX-PREMIUM-07-A0B",
+  "parent": "e7cdb4b4137c76f15b893409e58112bdd9de0ed9",
+  "product_manifest_blob": "c61c2006d3c01877ef002664e585c7c5289c1676",
+  "local_a0_delivery_sha256": "12/12 PASS",
+  "remote_product_path_size": "398/398",
+  "remote_core29_source_pins": "55/55 path/size/Git blob",
+  "remote_contract_fixture_pairs": "16/16 Git blob parity",
+  "local_exact_product_tests_sources": 6,
+  "local_exact_runner_parents": 3,
+  "original_runner_chain_loaded": true,
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 global, not pinned 5.9.3",
+    "git_dns": "Could not resolve host github.com",
+    "npm_registry": "EAI_AGAIN",
+    "npm_offline": "ENOTCACHED exit 1",
+    "build_probe": "next: not found exit 127; package-only preflight, not product build",
+    "chromium": "installed, native app not executed"
+  },
+  "tests": {
+    "model": 16,
+    "traffic": 12,
+    "boundary": 3,
+    "product_selected_pass": 31,
+    "adapter_actual_chain_helper": 7,
+    "adapter_smoke_doubles": 5,
+    "adapter_pass": 12
+  },
+  "original_full_audit": "HOLD: full source absent; actual original verify invoked",
+  "reviewed_lock": "NOT_CREATED",
+  "full_install": "NOT_RUN",
+  "full_build": "BLOCKED",
+  "native_groups": "0/8 NOT_RUN",
+  "original_browser_52": "NOT_RUN",
+  "manual_visual": "NOT_RUN",
+  "office_v0": "JOIN_HOLD",
+  "independent_acceptance": "HOLD",
+  "product_changes": 0,
+  "full_local_sha256": "NOT_RUN",
+  "source_delta": [
+    {
+      "path": "tests/integration/w8_ux_a0b.py",
+      "blob": "9267828684fbf905d3132d114f3566f191780793",
+      "sha256": "3a14ba2f2f52647cb81031052a13eeacb8f3918c7b87b89000febfd7b3e5cb7a",
+      "bytes": 4608,
+      "symbols": [
+        "blob",
+        "checked_pin",
+        "load_candidate",
+        "extend_candidate",
+        "verify_aux_candidate",
+        "test_candidate",
+        "smoke_candidate"
+      ],
+      "purpose": "Exact reviewed W8 rebind and native smoke extension"
+    },
+    {
+      "path": "tests/integration/native_ux_a0b.py",
+      "blob": "becb59ee24df2a76c4aa31428abf3365b35172ed",
+      "sha256": "0decd62e52288367063b34973a8a175622b31ce7d3e23bbb20ce1fc749700d2b",
+      "bytes": 5978,
+      "symbols": [
+        "local_origin",
+        "main"
+      ],
+      "purpose": "Eight planned native smoke groups, explicit loopback/browser and actual screenshot"
+    },
+    {
+      "path": "tests/integration/test_w8_ux_a0b.py",
+      "blob": "3fe61eee25961229e91eefb7c64919d20117a9fc",
+      "sha256": "47248fa88574114e512951f588b036d8593fd1dfb5ee5917766ee68648eec95f",
+      "bytes": 5071,
+      "symbols": [
+        "ExactChain",
+        "SmokeControlFlow"
+      ],
+      "purpose": "7 real pin/gate/helper checks + 5 synthetic control flow checks"
+    }
+  ]
+}

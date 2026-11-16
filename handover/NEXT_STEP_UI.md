@@ -13,3 +13,7 @@ Priority zero: upload full archive of P10G or use exact user-local checkout with
 
 ## UX-PREMIUM-07-A0 defect correction
 [Existing traffic boundary fix](../docs/UX-PREMIUM-07/A0_TRAFFIC_FIX.md): 15 selected Node PASS; full A0 still blocked. Recover exact full checkout (398 manifest entries), review/rebind W8 lock and run actual Next/Phaser baseline before new A1–A5 features. No OfficeV0 join or core merge.
+
+
+## UX-PREMIUM-07-A0B
+[Reviewed W8 rebind and native smoke](../docs/UX-PREMIUM-07/A0B_BUILD_ACCEPTANCE.md). P0 actual clean checkout, review lock, install/test/smoke using w8_ux_a0b.py; 31 selected Node and 12 adapter checks not full build. A1–A5 deferred until A0 review; A6 contract-only, JOIN_HOLD. No core merge.

@@ -33,3 +33,6 @@ Selected 81 Node + 11 Chromium (not native Phaser). Full build BLOCKED; OfficeV0
 
 ## TRACK-UX-PREMIUM-07-A0 overlay
 Scores and 24 original rows unchanged. Areas 1/3/20: 15 selected traffic checks (12 regression, 3 new) PASS; area 21 full checkout/build BLOCKED; area 24 source/test catalog updated. 398 manifest entries; full native browser NOT_RUN; independent/OfficeV0 HOLD. See [evidence](../docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json). Historical 92 checks not rerun or additive.
+
+## TRACK-UX-PREMIUM-07-A0B overlay
+No ordinal score change. 31 selected product Node +12 adapter checks (7 actual chain/helper, 5 smoke doubles). 398 source entries unchanged, 16 shared file pair blob parity; checkout and build BLOCKED, native NOT_RUN, independent HOLD/OfficeV0 JOIN_HOLD. [Evidence](../docs/UX-PREMIUM-07/A0B_TEST_EVIDENCE.json).
