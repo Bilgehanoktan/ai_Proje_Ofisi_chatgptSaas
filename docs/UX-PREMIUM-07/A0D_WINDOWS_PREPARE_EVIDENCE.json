@@ -1,0 +1,37 @@
+{
+  "revision": "UX-PREMIUM-07-A0D-WINDOWS-PREPARE",
+  "source": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "evidence_origin": "User supplied Windows console transcript; no independent rerun or lock file bytes supplied",
+  "transcript_sha256": "1976028c5bdafe92fbed06213986653d5b67fb2cf04f4d72fcc2215fe9490446",
+  "audit": {
+    "source": 398,
+    "shared_pairs": 16,
+    "auxiliary": 19,
+    "status": "PASS_USER_TRANSCRIPT"
+  },
+  "prepare": {
+    "npm_lock": "PREPARED",
+    "python_wheels": 28,
+    "download": "PASS_USER_TRANSCRIPT",
+    "review_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+    "review": "PENDING_ACTUAL_INVENTORY"
+  },
+  "historical_comparison": {
+    "source": "752b225deac4557a548faec7191a090fbfba19f7",
+    "npm_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "python_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+    "status": "NOT_COMPARED_CURRENT_LOCK_BYTES"
+  },
+  "install": "NOT_RUN",
+  "build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "A0": "PARTIAL_PREPARE_PASS_REVIEW_PENDING",
+  "A1_A5": "DEFERRED",
+  "A6": "55_REVIEWED_0_CANONICAL_JOIN_HOLD",
+  "A7": "NOT_RUN",
+  "core_gates": "7/16 historical 0224",
+  "independent": "HOLD",
+  "next": "Recompute actual REVIEW and lock inventory using exact A0C runner; compare npm and Python lock hashes and current wheel hashes; explicit review before install; preserve separate stage.",
+  "product_changes": 0
+}
