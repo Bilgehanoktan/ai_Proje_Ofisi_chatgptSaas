@@ -1,0 +1,26 @@
+# UX-PREMIUM-02.5A — controlled product source integration
+Date 2026-11-16. Status: PRODUCT_SOURCE_CANDIDATE / FULL_BUILD_NOT_RUN / INDEPENDENT_HOLD.
+
+## Immutable parents and scope
+UI-P10G `f2457545cf52805e5ed5ea86cd869c326fd162ca`; core 0214 `a4a6aba3e986927b4e2b0157028e6623c669864e` is divergent (59 ahead / 13 behind relative to P10G) and NOT merged. Premium 02.4 `9d17468116f7b8a1fb1ae4f7402515b6ef1f018d`, exact HTML blob `c47b8c7789e772906c69286639f5b2632d7f691b`, SHA-256 `05c1af2f387131bbebd149de5c9bbe53b687a404c1e24d19aec32e0da5d13e6d`. Isolated `integration/ux-premium-02-5`. No change to other branches, existing backend, schemas, snapshot, runtime, geometry, dependency pins, databases or product release/authority. Four roles are templates; no real instance. H01 sole human CEO. JOIN_HOLD preserved.
+
+## Design addendum and technical catalog
+| Path relative to frontend | Symbols / behavior / reason |
+|---|---|
+| `app/office/premium/page.tsx` | `PremiumOfficePage`, separate Next App Router route, exact asset through `srcDoc`, sandbox only allow-scripts, no same-origin, no bridge/postMessage, no live props, no network permission. Back link to `/office`. |
+| `office/assets/premiumOfficeHtml.ts` | `premiumOfficeHtml`, original 02.4 HTML encoded as static TS string; avoid a directly accessible same-origin public script asset. SHA-256 of decoded text matches original. |
+| `components/dashboard/OfficePanel.tsx` | Add one link to premium route, retain original scene/list/engine, Workbench, snapshot station and layout warning. |
+| `office/engine/cameraInput.ts` | `InputView`, `inputBounds`, `inputPan`, `inputZoom`, `inputDragged`: original 900×510 bounds, .75–1.45 zoom, pointer anchor unless clamped, scaled drag, 5 logical pixel threshold, finite inputs. |
+| `office/scenes/OfficeScene.tsx` | Existing native Phaser input wiring for wheel and single-pointer drag; station selection on same-station pointer release if not dragged. Existing renderer, fallback, marker path, reduced-motion and destroy behavior retained. Event wiring source only, NOT_RUN with actual Phaser. |
+| `tests/premium-camera.test.cjs` | 11 executed helper checks after strict local TypeScript 5.8.3 compile (pinned 5.9.3 NOT_RUN). |
+| `product/SOURCE_MANIFEST.json` | Update only changed/new product pins; retain all other parent entries; not full archive readback. |
+| `docs/UX-PREMIUM-02.5/` | Scoped handover, progress, diagnostics and patch record; no changes to shared CURRENT/master or 24-area tracker. |
+
+## Evidence / failures / residuals
+24 selected host checks PASS in Chromium 144 `set_content` using actual TSX transpiled to a diagnostic HTML renderer (not React/Next) and original srcDoc. Sandboxed child cannot read parent DOM/storage; connect-src rejects data fetch; no HTTP requests observed. Desktop role selection, floor and visual commands; mobile responsive width and mouse click fallback passed. Mobile emulated **touch tap did not activate embedded floor control**, reproduced after waiting; remains open. Earlier loopback HTTP navigation explicitly blocked by environment (`ERR_BLOCKED_BY_ADMINISTRATOR`); no actual route HTTP or native Next runtime claimed. Initial diagnostic renderer had duplicate `exports` binding and node CLI test invocation mistakenly treated compiled helper as a test file; fixed both before final counts. No real native Phaser tests, pinned dependencies, full app, PG, live authority, product E2E or independent acceptance. Previous 54 prototype checks historical only, not added. No tests of real agent behavior.
+
+## Reproduction / maintenance / rollback
+In local delta root: `NODE_PATH=$(npm root -g) node render_host.cjs`, `python test_host.py`; in frontend `tsc --strict --target ES2020 --module commonjs --outDir <tmp> office/engine/cameraInput.ts`, `node tests/premium-camera.test.cjs <absolute tmp>/cameraInput.js`. Diagnostics need Playwright and Chromium. Node/TypeScript local versions differ from pins; use actual pinned environment for product checks. `patch_parent.py <exact P10G root>` only for reproduction, checks prior Git blob anchors. Remote branch contains actual edited sources and updated product manifest. If iframe blank, inspect exact decoded asset hash, sandbox, srcDoc hydration and CSP; if touch fails inspect nested frame input/scroll/click delivery without granting same-origin. If native drag wrong inspect Phaser pointer.x/y game coordinates, station zone `currentlyOver` event ordering and cameraView. Rollback by selecting P10G parent or dropping candidate delta; no DB migration. Avoid merging this branch before reconciling core 0214 and newer UI source. No new dependencies.
+
+## Next
+02.5B: acquire exact pinned product checkout, install dependencies (review locks), run Next build/typecheck, real route and full browser/Phaser smoke; fix embedded mobile tap and native input release/cancel tests. Then port decorative geometry/avatar/motion/minimap into native renderer using presentation-only model, compare 55 OfficeV0 fields and independent placement/freshness/lease/task-run lineage. No automatic joins or live grants. Core merge reviewed separately. 3D, depth sorting, collision and multi-agent route reservation remain open.
