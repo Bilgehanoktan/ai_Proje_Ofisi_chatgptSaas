@@ -23,3 +23,7 @@ Read docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md with current architect
 
 ## Parallel work / conflict prevention (P10J-04)
 Follow [PARALLEL_WORK_PROTOCOL](docs/development/PARALLEL_WORK_PROTOCOL.md) before every round, including across chats. Resolve current remote heads and shared paths; non-force expected-parent updates only. Keep core/UI/security branches separate; reconcile shared records with preserved history. No additional permission; historical prohibitions and CEO-0174/0179 boundaries remain.
+
+
+## UI integration reporting (P10J-12)
+User direction: every development round reports item-level source, branch integration, test, unified integration and acceptance, and a revisioned 24-area matrix derived from current pinned core records plus UI delta. Do not overwrite parallel core tracker or infer acceptance from branch-local source. See progress/INTEGRATION_MATRIX_UI_P10J12.json. Existing authority unchanged.

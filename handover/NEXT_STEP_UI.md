@@ -1,3 +1,8 @@
+# UI-P10J-12 — next
+
+Exact W8 audit, fresh reviewed locks/build/test/smoke and 68 captures with added role and room checks. Prepare a separate 0223 union only after explicit three-way semantic reconciliation; preserve historical scope and independent gates. Core phase 2 SQL/PG/RLS work remains product critical. Every future UI round updates the 24-area matrix and per-item integration, test and acceptance status. See ../docs/UI-P10J/P10J12_ARCHITECTURE.md.
+
+---
 # UI-P10J-11 — next
 
 W8 exact candidate audit, reviewed fresh locks, build/test/smoke; verify 68 captures and CEO summary height. Continue P10J-12 Agent Studio and static office improvements in UI-owned paths; separately prepare 0223 shared snapshot/reader/authority union only after three-way review. No actual grant or branch merge. See ../docs/UI-P10J/P10J11_ARCHITECTURE.md.

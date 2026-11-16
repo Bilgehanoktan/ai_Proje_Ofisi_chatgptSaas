@@ -262,3 +262,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-11 — CEO and Work information architecture
 [Source layout, boundaries and reconciliation review](../UI-P10J/P10J11_ARCHITECTURE.md). CEO summary/operations/evidence; Project/Workflow/Audit; no domain or authority change. Full W8 pending. Core remains separate.
+
+
+## UI-P10J-12 — Agent Studio and Office context
+[Architecture and rollback](../UI-P10J/P10J12_ARCHITECTURE.md). Static role plan dependencies and room-focused gallery. No live identity or location. Per-area integration status: [matrix](../../progress/INTEGRATION_MATRIX_UI_P10J12.md). Core separate; actual W8 pending.

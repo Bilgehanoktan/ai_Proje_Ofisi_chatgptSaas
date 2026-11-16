@@ -75,6 +75,17 @@ with sync_playwright() as p:
                     expect(office.get_by_role('region',name='Görsel ofis kamerası')).to_be_visible()
                     expect(office.get_by_role('region',name='İstasyon görev gözlemleri')).to_be_visible()
                     expect(office).to_contain_text('JOIN_HOLD')
+                    rooms=office.get_by_role('region',name='Demo departmanları')
+                    stations=office.get_by_role('group',name='Geometri istasyon seçimi')
+                    total=stations.get_by_role('button').count()
+                    assert total>0
+                    first=rooms.locator('button[aria-pressed]').first
+                    first.click()
+                    expect(first).to_have_attribute('aria-pressed','true')
+                    assert stations.get_by_role('button').count()<total
+                    rooms.get_by_role('button',name='Tüm odalar',exact=True).click()
+                    expect(first).to_have_attribute('aria-pressed','false')
+                    expect(stations.get_by_role('button')).to_have_count(total)
                     if name=='Genel Bakış':
                         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'), ('CEO operations',width,theme)
                         page.screenshot(path=str(output/f'{width}-{theme}-{index:02}-operations.png'),full_page=True,animations='disabled')
@@ -122,6 +133,19 @@ with sync_playwright() as p:
                     expect(editor).to_contain_text('Ek taslak bağlantılar · 0')
                     projects.click()
                     expect(page.get_by_role('region',name='Proje yönetim merkezi')).to_be_visible()
+                if name=='AI Çalışanlar':
+                    studio=page.get_by_role('region',name='Agent Studio',exact=True)
+                    expect(studio).to_contain_text('Gerçek aktif çalışan')
+                    studio.get_by_role('button',name='Research',exact=False).click()
+                    context=studio.get_by_role('region',name='Seçili rol şablonu')
+                    expect(context).to_contain_text('Ön koşullar')
+                    expect(context).to_contain_text('Ardıl görevler')
+                    expect(context).to_contain_text('Kaynak incelemesi')
+                    studio.get_by_role('searchbox',name='Rol ara').fill('no-such-role')
+                    expect(studio).to_contain_text('Seçili rol filtre dışında')
+                    studio.get_by_role('button',name='Seçili rolü göster').click()
+                    expect(studio).to_contain_text('4/4 rol şablonu')
+                    expect(page.get_by_role('region',name='Rol ayrıntısı')).to_be_visible()
                 if name=='SaaS ve Finans':expect(page.get_by_role('region',name='Finans ve SaaS merkezi')).to_be_visible()
                 if name in ('Güvenlik','Raporlar'):expect(page.get_by_role('region',name='Güvenlik ve kanıt merkezi')).to_be_visible()
                 assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),(name,width,theme)
