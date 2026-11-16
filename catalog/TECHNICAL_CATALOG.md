@@ -91,3 +91,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0210 — local fenced T1 and intent journal
 [Source/symbol/test delta](revisions/TECHNICAL_CATALOG_0210.json) · [Architecture and rollback](../docs/0210/ARCHITECTURE_AND_CATALOG.md). 154 selected PASS; D-03 external and D-04 open.
+
+## UI-P10B
+[UI catalog delta](revisions/TECHNICAL_CATALOG_UI_P10B.json) · [Maintenance](../docs/UI-P10B/ARCHITECTURE_AND_CATALOG.md).

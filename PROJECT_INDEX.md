@@ -149,3 +149,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 - [Architecture](docs/0210/ARCHITECTURE_AND_CATALOG.md)
 - [Evidence](releases/GITHUB_READBACK_0210.json)
 - [Next](handover/NEXT_STEP_0210.md)
+
+## UI-P10B — isolated parallel UI workstream
+[Architecture](docs/UI-P10B/ARCHITECTURE_AND_CATALOG.md) · [Progress](progress/UI_P10B.json) · [UI next](handover/NEXT_STEP_UI.md). Core 0211 remains separate.

@@ -130,3 +130,6 @@ Source `9164fe68b545144953ea138c5d9cde3f12a18e12`; 343 product files / 342 manif
 
 ## 0210 — local fenced T1 / durable intent
 Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manifest entries. 154 selected PASS (138 regression +16 new). D-03 local writer fence PASS; external latest drift and D-04 joint journal/T1 restore reproduced. 32/55 core files local, 29 cases NOT_RUN. Full Company/Terminal/PG/build/browser NOT_RUN. [Architecture](../docs/0210/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0210.json) · [Next](NEXT_STEP_0210.md).
+
+## UI-P10B — isolated UI track
+[Current UI](CURRENT_UI.md) · [Next UI](NEXT_STEP_UI.md). 21/40 original gates, 0/7 acceptance, no full build/browser. Core CURRENT.json and 0211 next unchanged.

@@ -1,0 +1,2 @@
+# UI-P10C
+exact full checkout/locks and four original router/compiled GET diagnostic chains, 7/7 integrated parity, full build and 52 current browser checks. In parallel improve scene artwork/animation only as decorative reserve, agent directory and project table, finance/security evidence detail and EDS charts/table/notification primitives. No verified KPI or placement without authoritative lineage. Core 0211 continues independently.

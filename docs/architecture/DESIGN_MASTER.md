@@ -148,3 +148,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0210 — local revocation fence and durable intent quarantine
 [Addendum](../0210/ARCHITECTURE_AND_CATALOG.md). Cooperating SQLite writer serialization through T1 commit and durable quarantine pass. D-03 external race and D-04 restore gap open. Independent authority unchanged.
+
+## UI-P10B — non-normative D0 UI source integration
+[Architecture and boundaries](../UI-P10B/ARCHITECTURE_AND_CATALOG.md). No authority or core decision change.
