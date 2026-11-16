@@ -1,0 +1,120 @@
+{
+  "revision": "0212",
+  "parent": "0211",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+      "bytes": 5481,
+      "sha256": "1cae8b04454f40b5e03fafe3106ef0472ca0267ac617c33462eb13a57fcbf626",
+      "git_blob": "9296347d9253d74902ed1c6a89e273d8e516f2b5"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+      "bytes": 10641,
+      "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55",
+      "git_blob": "c35a2e497ce013409c1943f293799d83c7164e83"
+    }
+  ],
+  "modules": [
+    {
+      "test": "IntentAuthorityT1Tests",
+      "symbols": [
+        "run_t1",
+        "claims",
+        "test_actual_commit_and_readback",
+        "test_product_database_restore_no_replay",
+        "test_unknown_commit_quarantined",
+        "test_rollback_does_not_enable_retry",
+        "test_root_publisher_waits_through_actual_commit",
+        "test_revocation_first_no_t1",
+        "test_two_claimants_only_one_commit"
+      ],
+      "dependencies": [
+        "D0IntentAuthority",
+        "RootPin",
+        "D0PostgresTransitionMapping",
+        "LogicalT1Coordinator",
+        "postgres_transaction",
+        "SQLiteConnectionShim"
+      ],
+      "test_pass": 7
+    },
+    {
+      "test": "CompanyTerminalTests",
+      "symbols": [
+        "event",
+        "execute",
+        "admission",
+        "ordinary",
+        "renewal",
+        "terminal",
+        "chain",
+        "company",
+        "dump",
+        "pins",
+        "signed"
+      ],
+      "dependencies": [
+        "CompanyCoordinatedMapping",
+        "TerminalAnchorMapping",
+        "D0PostgresAdmissionMapping",
+        "D0AdmissionBoundTransitionMapping",
+        "D0PostgresLifecycleMapping",
+        "ReferenceStore",
+        "Ed25519PrivateKey",
+        "review_signed_snapshot",
+        "SQLiteConnectionShim"
+      ],
+      "test_pass": 6
+    }
+  ],
+  "api": [],
+  "database": "No schema changes; original DDL 0192–0204C used via SQLite fixture",
+  "events_new": [],
+  "dependencies_new": [],
+  "tests": {
+    "combined": {
+      "ran": 52,
+      "pass": 52,
+      "behavior_pass": 51,
+      "residual_reproduced": 1,
+      "sha256": "ef2890dc88c5c90b029f399993b9779663129d232c3dbe09de61de3f47212465",
+      "command": "PYTHONPATH=.:tests python -B -m unittest test_retained_snapshot_0201 test_terminal_anchor_lifecycle_0203 test_lifecycle_prefix_p03 test_lifecycle_projection_p02 test_intent_authority_0211 test_intent_authority_t1_0212 test_company_terminal_0212 -v"
+    },
+    "core_29": {
+      "pass": 29,
+      "classification": "DIAGNOSTIC_UNPINNED",
+      "groups": [
+        5,
+        7,
+        9,
+        8
+      ],
+      "sha256": "0d2e556724e783ff72a372e10db7112bc112087b25386f67f49b8d4b14d03898"
+    },
+    "authority_prior": {
+      "ran": 10,
+      "behavior_pass": 9,
+      "residual_reproduced": 1
+    },
+    "authority_direct": {
+      "pass": 7
+    },
+    "company": {
+      "pass": 6
+    },
+    "prior_154": "NOT_RERUN",
+    "exact_wrapper": "NOT_RUN",
+    "locked_29": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN"
+  },
+  "open_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ],
+  "maintenance": "Read-only reconcile on UNKNOWN, preserve claim store; rollback code/tests only; no live replay."
+}
