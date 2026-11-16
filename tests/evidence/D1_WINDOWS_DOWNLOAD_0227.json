@@ -1,0 +1,33 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_POSTGRES_ARCHIVE_VENDOR_CHECKSUM_MATCH_DRIVER_DOWNLOAD_PENDING",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "prior_evidence": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
+  "server": {
+    "version": "17.12",
+    "platform": "Windows x64",
+    "archive": "postgresql-17.12-1-windows-x64-binaries.zip",
+    "local_sha256_reported": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+    "vendor_checksum_url": "https://get.enterprisedb.com/postgresql/postgresql-17.12-1-windows-x64-binaries.zip.sha256",
+    "vendor_checksum_reported": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+    "status": "MATCH_USER_TRANSCRIPT",
+    "raw_archive_inspected": false,
+    "independent_signature_verified": false
+  },
+  "driver": {
+    "version": "3.3.9",
+    "status": "NOT_DOWNLOADED",
+    "reason": "PowerShell concatenated commands; constraints.txt not created; pip download failed before resolution",
+    "fix": "Create ASCII constraints from E1 python.lock, confirm file exists, rerun download only. Do not upgrade pip or mutate E1."
+  },
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  },
+  "limits": [
+    "User Windows transcript only; no raw server ZIP inspection in assistant runtime.",
+    "No extraction, install, DB start, D1 connection or PG13 tests."
+  ]
+}

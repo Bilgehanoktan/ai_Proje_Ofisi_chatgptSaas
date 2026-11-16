@@ -1,2 +1,2 @@
 # NEXT — 0227 D1
-Download isolated PostgreSQL 17.12 Windows x64 binary ZIP and Psycopg 3.3.9 wheels under separate stage; verify provenance, hashes and transitive graph constrained by E1; do not execute before review. D1 requires actual disposable loopback non-superuser connection. D2 original PG13; D3 separate. E1 preserved, 9/16. tests/evidence/D1_WINDOWS_INVENTORY_0227.json
+PostgreSQL 17.12 archive and EDB checksum match per user transcript. Psycopg download not performed because constraints.txt missing after pasted command parse error. Create ASCII constraints from E1 lock, verify existence, rerun download only; review wheel hashes/metadata. No install or connection yet. 9/16 unchanged. Evidence: tests/evidence/D1_WINDOWS_DOWNLOAD_0227.json
