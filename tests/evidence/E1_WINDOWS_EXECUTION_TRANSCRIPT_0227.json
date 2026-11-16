@@ -1,0 +1,93 @@
+{
+  "revision": "0227",
+  "checkpoint": "E1_WINDOWS_EXECUTION_TRANSCRIPT_PASS_RAW_REVIEW_PENDING",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner_blob": "788bc12ff00c1f3c8a1bd5474b42d692814fd433",
+  "review_sha256": "13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b",
+  "prior_review_evidence": "tests/evidence/E1_WINDOWS_REVIEW_0227.json",
+  "local_approval": {
+    "value": "EVET",
+    "scope": "isolated 0227 install and original24 only"
+  },
+  "platform": "Windows PowerShell 5.1",
+  "source_and_locks": "PREPARE_MATCH; runner requires post-install and post-test recheck before final PASS",
+  "install": {
+    "status": "PASS_USER_TRANSCRIPT",
+    "commands": 6,
+    "exit_codes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_suites": [
+    {
+      "name": "test_company_fence_binding_0219",
+      "expected": 6,
+      "passed": 6,
+      "exit": 0
+    },
+    {
+      "name": "test_result_reference_0221",
+      "expected": 10,
+      "passed": 10,
+      "exit": 0
+    },
+    {
+      "name": "test_canonical_research_0224",
+      "expected": 8,
+      "passed": 8,
+      "exit": 0
+    }
+  ],
+  "original24": {
+    "status": "PASS_USER_TRANSCRIPT",
+    "total": 24,
+    "passed": 24,
+    "failures": 0,
+    "skipped": 0,
+    "errors": 0,
+    "scope": "SQLite D0; counts inferred from exact runner success contract, raw reports pending"
+  },
+  "transcript_excerpt": [
+    "01_venv.log exit 0",
+    "02_pip_install.log exit 0",
+    "03_pip_check.log exit 0",
+    "04_npm_ci.log exit 0",
+    "05_pip_list.log exit 0",
+    "06_npm_tree.log exit 0",
+    "test_company_fence_binding_0219.log exit 0",
+    "test_result_reference_0221.log exit 0",
+    "test_canonical_research_0224.log exit 0",
+    "24/24 PASS; send evidence and REVIEW_0227.json for review."
+  ],
+  "raw_pending": [
+    "E1_LOCAL_RESULT.json",
+    "ORIGINAL24_RESULT.json",
+    "all nine logs",
+    "REVIEW_0227.json",
+    "python.lock",
+    "package-lock.json"
+  ],
+  "prior_selected_307": "UNCHANGED_NOT_RERUN; no additive aggregate before raw suite reconciliation",
+  "gates": {
+    "done": 8,
+    "total": 16,
+    "percent": 50,
+    "newly_closed": 0,
+    "E1": "EXECUTED_PASS_RAW_REVIEW_PENDING",
+    "E2_E3_E4": "NOT_RUN",
+    "D1_D2_D3": "NOT_RUN",
+    "B3": "HOLD"
+  },
+  "limitations": [
+    "User-run transcript, not independent replay; raw bytes not yet received.",
+    "No full backend suite, frontend build, PostgreSQL or browser acceptance.",
+    "No new source edits, no branch merge, no live agents/provider calls."
+  ],
+  "next": "Collect raw evidence and compare hashes/counts; close E1 only after review; then D1/D2 and scoped RLS."
+}

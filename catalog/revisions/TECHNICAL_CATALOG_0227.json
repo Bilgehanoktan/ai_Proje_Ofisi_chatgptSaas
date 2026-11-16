@@ -60,5 +60,10 @@
     "path": "tests/evidence/E1_WINDOWS_REVIEW_0227.json",
     "scope": "User Windows prepare and reconstructed new/origin hashes; no install or product test",
     "rollback": "Preserve stage and prior evidence; do not rerun prepare into existing stage."
+  },
+  "e1_execution": {
+    "path": "tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json",
+    "scope": "User-run actual Windows install and original24 transcript, raw review pending",
+    "rollback": "Preserve exact stage and raw evidence; no rerun into occupied stage."
   }
 }

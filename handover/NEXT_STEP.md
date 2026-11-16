@@ -1,2 +1,2 @@
-# NEXT — 0227 E1
-Windows prepare and REVIEW reconstruction match. Explicitly approve new REVIEW SHA256 `13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b` locally and execute existing runner. Return E1_LOCAL_RESULT.json, ORIGINAL24_RESULT.json and raw logs/locks. 8/16 unchanged. tests/evidence/E1_WINDOWS_REVIEW_0227.json
+# NEXT — 0227 E1 raw evidence review
+Windows install 6/6 and original24 24/24 PASS reported by user; raw E1/ORIGINAL24 reports and nine logs/locks still pending. No new binary gate until raw review. 8/16. Next D1 local disposable PostgreSQL/driver and D2 PG13, D3 RLS remains separate. Evidence: tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json

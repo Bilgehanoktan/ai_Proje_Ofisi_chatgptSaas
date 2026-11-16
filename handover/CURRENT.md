@@ -205,3 +205,7 @@ scripts/run_e1_0227.py reuses original W8 lock inventory, exact A0C hash/wheels 
 
 ## 0227-E1 Windows prepare review
 User Windows prepare reports success. 16 DB pins match remote; reconstructed sorted CRLF new and A0 origin review hashes both match. No new source or product execution; install and 24 tests pending explicit local approval. 8/16 remains. Evidence: tests/evidence/E1_WINDOWS_REVIEW_0227.json.
+
+
+## 0227-E1 Windows execution transcript
+User explicitly approved new fingerprint and ran the isolated Windows stage. Six install/inventory commands and original 0219/0221/0224 suites exited zero; runner reported 24/24 PASS after source/lock rechecks. Actual SQLite D0 execution reported, not independent replay. Raw reports/logs/locks pending; E1 gate remains open, 8/16. No additive test aggregate, no product/source changes. Evidence: tests/evidence/E1_WINDOWS_EXECUTION_TRANSCRIPT_0227.json.
