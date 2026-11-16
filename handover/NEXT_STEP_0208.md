@@ -1,0 +1,7 @@
+# 0208 → 0209 — remaining core execution / independent latest witness
+
+1. Exact full archive/checkout of 0208, verify manifest 268f575b534bda97d8ed57a1f7f3f4de8bdf62cd. 55-file core lock already content-hashed, but 47 local files missing; obtain exact bytes and reviewed direct/transitive dependencies. Run 0207 runner preflight then 12+17 tests; record results per case, distinguish diagnostic-unpinned from acceptance. No CI.
+2. D: D-01 D0 joint gate passes. Resolve D-02 restore-external latest pin/witness and bind trusted effect admission, time/fence/revocation freshness, budget/reservation and T1. No real provider dispatch. Add multi-source prompt design only after provenance grammar review.
+3. C: run actual original T1 + CompanyCoordinatedMapping around TerminalAnchorMapping terminal commit, plus admission/ordinary/renewal lifecycle, rollback/UNKNOWN and independent signed recovery. No retry/release on ambiguity.
+4. F: isolated PostgreSQL 13 tests, non-owner RLS, cross-project contention and restore external witness. Do not use production credentials. G: exact pinned Next/backend dependency lock, local build and browser tests. Chromium is present; product deps/checkout absent.
+5. E: use validated historical readbacks for Office and CEO, no live geometry or active KPI until exact run/scope mapping. All independent acceptance, grants, external effects, spend, customer data, main, CI and PROD remain HOLD.

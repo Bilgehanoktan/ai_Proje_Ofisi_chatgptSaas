@@ -82,3 +82,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## 0207 — cross-boundary evidence
 [Source/test delta](revisions/TECHNICAL_CATALOG_0207.json) · [Architecture and maintenance](../docs/0207/ARCHITECTURE_AND_CATALOG.md). 72 selected PASS, 29 core/lifecycle NOT_RUN, D-01 open.
+
+## 0208 — Joint Runtime Context
+[Source/symbol/test delta](revisions/TECHNICAL_CATALOG_0208.json) · [Architecture and rollback](../docs/0208/ARCHITECTURE_AND_CATALOG.md). 98 selected PASS; D-01 D0 joint inspection, D-02 restore gap open.

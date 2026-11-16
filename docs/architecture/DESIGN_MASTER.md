@@ -139,3 +139,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0207 — D0 cross-boundary evidence
 [Addendum](../0207/ARCHITECTURE_AND_CATALOG.md). Selected 72 tests PASS; 55-file static lock, 29 cases NOT_RUN. Joint memory/model revocation binding remains P0 open. No production authority or normative change.
+
+## 0208 — D0 joint Runtime context
+[Addendum](../0208/ARCHITECTURE_AND_CATALOG.md). New joint digest and two memory span observations; 98 selected PASS. D-02 restore-external latest witness and mandatory effect boundary HOLD. No normative permission change.

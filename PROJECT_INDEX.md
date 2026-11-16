@@ -128,3 +128,10 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 - [Architecture](docs/0207/ARCHITECTURE_AND_CATALOG.md)
 - [Evidence](releases/GITHUB_READBACK_0207.json)
 - [Next](handover/NEXT_STEP_0207.md)
+
+## 0208
+- [Current](handover/CURRENT.md)
+- [Technical catalog](catalog/revisions/TECHNICAL_CATALOG_0208.json)
+- [Architecture](docs/0208/ARCHITECTURE_AND_CATALOG.md)
+- [Evidence](releases/GITHUB_READBACK_0208.json)
+- [Next](handover/NEXT_STEP_0208.md)

@@ -121,3 +121,6 @@ Source f1b50dc2be8a455e3f3aee92b14d2d79433338a4; 335 product files, 334 manifest
 
 ## 0207 — cross-boundary evidence
 Source `d06e65dba202d79740b05980eea739596ad134c3`; 336 product files / 335 manifest entries. 72 selected PASS (65 regression + 7 new). Static 55-file lock for 29 tests; runner NOT_RUN. P0 D-01 joint memory/model gate remains open; T1/PG/build/browser and independent acceptance HOLD/NOT_RUN. [Architecture](../docs/0207/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0207.json) · [Next](NEXT_STEP_0207.md).
+
+## 0208 — D0 joint context
+Source `596529ed3d3de59b29065239b42033774e31af6e`; 338 product files / 337 manifest entries. 98 selected PASS (72 regression +26 new). D-01 D0 joint review implemented, mandatory effect boundary HOLD; D-02 old restore + old pin gap reproduced. 55 core lock bytes verified remotely, 29 tests NOT_RUN. Full T1/PG/build/browser NOT_RUN. [Architecture](../docs/0208/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0208.json) · [Next](NEXT_STEP_0208.md).
