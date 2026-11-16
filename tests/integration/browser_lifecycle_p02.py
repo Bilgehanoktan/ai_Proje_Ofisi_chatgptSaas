@@ -18,6 +18,7 @@ with sync_playwright() as pw:
         else: external.append(url);route.abort()
     page.route('**/*',guard)
     page.goto(origin+'/',wait_until='networkidle')
+    page.get_by_role('group',name='CEO bölümleri seçimi').get_by_role('button',name='Teknik kanıtlar',exact=False).click()
     panel=page.get_by_role('region',name='CEO / LIFECYCLE')
     expect(panel).to_be_visible()
     read=panel.get_by_role('button',name='Lifecycle kaydını oku')

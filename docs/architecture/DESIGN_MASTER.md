@@ -258,3 +258,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-10 — mobile navigation candidate
 [Architecture, maintenance and rollback](../UI-P10J/P10J10_ARCHITECTURE.md). Two presentation files, new W8 harness pin; full build/browser/W8 NOT_RUN. Core 0223 remains separate; 29 differing shared paths observed.
+
+
+## UI-P10J-11 — CEO and Work information architecture
+[Source layout, boundaries and reconciliation review](../UI-P10J/P10J11_ARCHITECTURE.md). CEO summary/operations/evidence; Project/Workflow/Audit; no domain or authority change. Full W8 pending. Core remains separate.

@@ -16,6 +16,7 @@ with sync_playwright() as pw:
         else:external.append(url);route.abort()
     page.route('**/*',guard)
     page.goto(origin+'/',wait_until='networkidle')
+    page.get_by_role('group',name='CEO bölümleri seçimi').get_by_role('button',name='Operasyonlar',exact=False).click()
     panel=page.get_by_role('region',name='Ortak görev ve bütçe örneği')
     expect(panel).to_be_visible()
     read=panel.get_by_role('button',name='Ortak kayıt oku')

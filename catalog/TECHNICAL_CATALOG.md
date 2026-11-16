@@ -141,3 +141,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-10
 [Delta](revisions/TECHNICAL_CATALOG_UI_P10J10.json) · [Maintenance](../docs/UI-P10J/P10J10_ARCHITECTURE.md). Mobile disclosure candidate; no API/DB/dependency changes.
+
+
+## UI-P10J-11
+[Delta](revisions/TECHNICAL_CATALOG_UI_P10J11.json) · [Maintenance](../docs/UI-P10J/P10J11_ARCHITECTURE.md). 6 product source/test paths, no API/DB/dependencies changed.

@@ -1,3 +1,8 @@
+# UI-P10J-11 — next
+
+W8 exact candidate audit, reviewed fresh locks, build/test/smoke; verify 68 captures and CEO summary height. Continue P10J-12 Agent Studio and static office improvements in UI-owned paths; separately prepare 0223 shared snapshot/reader/authority union only after three-way review. No actual grant or branch merge. See ../docs/UI-P10J/P10J11_ARCHITECTURE.md.
+
+---
 # UI-P10J-10 — next
 
 Audit exact candidate, then fresh reviewed W8 build/test/smoke; verify mobile disclosure and heading, 52 captures. Reconcile shared CEO/Work paths at current heads before changing Dashboard. No core merge. See ../docs/UI-P10J/P10J10_ARCHITECTURE.md.
