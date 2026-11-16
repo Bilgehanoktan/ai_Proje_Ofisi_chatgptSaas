@@ -33,7 +33,7 @@ def load_candidate():
         w.run([w.node(),f/'node_modules/typescript/bin/tsc','--strict','--target','ES2022','--module','commonjs','--lib','ES2022,DOM','--resolveJsonModule','--esModuleInterop','--rootDir','.','--outDir',out,'features/project-management/dependencyNeighborhood.ts','features/data/projectionRead.ts','features/workflow/draftOverview.ts'],f,env)
         env.update(P10D_MODEL=str(out))
         w.run([w.node(),'--test','tests/ui-p10i-model.test.cjs','tests/ui-p10j-model.test.cjs'],f,env)
-        w.run([w.python(stage),stage/'tests/integration/test_audit_source_archive.py'],stage,w.env_local())
+        w.run([w.python(stage),'-m','unittest','discover','-s',stage/'tests/integration','-p','test_audit_source_archive.py','-v'],stage,w.env_local())
         return test(stage,approval)
     w.test=test_candidate
     return w
