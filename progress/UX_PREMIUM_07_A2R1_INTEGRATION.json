@@ -26,7 +26,7 @@
       "id": "A2",
       "name": "Identity/layout",
       "integration": "D0_IDENTITY_MODEL_TESTED_RENDERER_NOT_JOINED",
-      "proof": "15/15 selected local TS/Node tests; exact A1 model blob; original role-keyed renderer unchanged; extra station test-only",
+      "proof": "15/15 new tests + 15/15 exact A1 and 16/16 exact legacy model regressions; renderer not joined",
       "owner": "Premium",
       "next": "A3 ID-based traffic on A2 registry; A4 renderer and legacy command integration; old model regression and W8 rebind before acceptance"
     },
@@ -498,7 +498,7 @@
   },
   "track_24_overlay": {
     "office_engine": "A2 identity model 15/15 local tests; renderer not joined",
-    "test_qa": "15 selected A2 tests; no score change",
+    "test_qa": "46/46 selected actual model checks (15 new + 31 historical-source rerun); no score change",
     "catalog": "A2R1 revision overlay"
   },
   "a2": {
@@ -509,9 +509,11 @@
     "core_actors": 4,
     "passive_stations": 2,
     "synthetic_same_role_test": 2,
-    "legacy_renderer": "UNCHANGED_NOT_RERUN",
+    "legacy_renderer": "UNCHANGED; LEGACY_MODEL_16/16_PASS",
     "full_build": "NOT_RUN",
-    "native": "NOT_RUN"
+    "native": "NOT_RUN",
+    "a1_regression": "15/15 PASS",
+    "selected_total": 46
   },
   "observed_heads_scope": "Inherited A1R1 observations; not fresh core/UI status."
 }
