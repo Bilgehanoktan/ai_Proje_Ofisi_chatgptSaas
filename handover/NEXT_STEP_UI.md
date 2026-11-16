@@ -11,7 +11,7 @@ Source archive reconstructed full Git tree e4e16879901fe045be686fceaa1db525d02c8
 - Version label still P10J-05 on P10J08, correct presentation version via source provenance in future candidate. CSS autoprefixer and Starlette warnings open.
 - Visual acceptance: current 52 screenshots are baseline candidates, not reviewed pixel comparison. Check 390/1440 both themes, accessible menu, keyboard, graph actions, reserve floor, no horizontal overflow, no new network requests, no fake live data, unchanged sample DB hashes. Full W8 rerun for any code candidate.
 
-Parallel 0223 source e499d8f063af872e2e83407935693b0ffed655c6 at observation; 320 same, 49 UI-only, 51 core-only, 5 divergent paths. No final 0223 handover found in this snapshot. Do not auto merge. UI 21/40 historic gate count retained pending explicit criterion mapping; W8 local 8/8. Independent 0/7. Core 7/16 last confirmed 0222; not regraded. No new product code, no main/CI/PROD changes. Rollback uses tested source 752b225deac4557a548faec7191a090fbfba19f7 and original evidence, no live DB restore.
+Parallel 0223 source c963630b5d174f4c078b84b42ea88318086ea18e at observation; 320 same, 49 UI-only, 53 core-only, 5 divergent paths. No final 0223 handover found in this snapshot. Do not auto merge. UI 21/40 historic gate count retained pending explicit criterion mapping; W8 local 8/8. Independent 0/7. Core 7/16 last confirmed 0222; not regraded. No new product code, no main/CI/PROD changes. Rollback uses tested source 752b225deac4557a548faec7191a090fbfba19f7 and original evidence, no live DB restore.
 
 ---
 # UI-P10J-08 — local Windows W8 PASS
