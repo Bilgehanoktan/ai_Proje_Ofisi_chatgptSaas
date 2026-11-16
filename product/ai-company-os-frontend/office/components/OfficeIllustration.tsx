@@ -18,6 +18,7 @@ export default function OfficeIllustration({floor}:{floor:Floor}){
  function changeZoom(step:number){setCamera(c=>zoomCamera(c,c.zoom+step));}
  return <div className={styles.studio}>
   <div className="bar"><strong>İzometrik ofis galerisi</strong><span className="pill">D0 · REZERV</span></div>
+  <div className={styles.floorFacts} aria-label="Geometri katalog özeti"><span>{floor.rooms.length} demo oda</span><span>{art.stations.length} rezerv istasyon</span><span>Gerçek ajan yok</span></div>
   <div className={styles.camera} role="group" aria-label="Galeri kamera kontrolü">
    <button type="button" disabled={camera.zoom<=MIN_ZOOM} onClick={()=>changeZoom(-.25)} aria-label="Uzaklaştır">−</button>
    <button type="button" onClick={()=>setCamera({...HOME})} aria-label="Kamerayı sıfırla">{Math.round(camera.zoom*100)}% · Sıfırla</button>
@@ -31,7 +32,7 @@ export default function OfficeIllustration({floor}:{floor:Floor}){
   </div>
   <p className={styles.hint}>Yakınlaştır, ok düğmeleriyle kaydır veya sahneyi fareyle sürükle. Mobilde düğmeleri kullan.</p>
   {floor.rooms.length>0&&<section className={styles.directory} aria-label="Demo departmanları"><h3>Departmanlar</h3><div className={styles.roomGrid}>{floor.rooms.map(r=>{const v=roomVisual(r.id),count=art.stations.filter(s=>s.room===r.id).length;return <button type="button" className={styles.roomCard} key={r.id} aria-label={r.label+' odasına odaklan'} onClick={()=>{const p=iso(r.x+(r.w-1)/2,r.y+(r.h-1)/2);setSelected(null);setCamera(focusCamera(p.x,p.y+26));}}><span className={styles.roomMark} style={{background:v?.accent??'#a9b5c5'}} aria-hidden="true"/><span><strong>{r.label}</strong><small>{v?.motif??'Demo oda'} · {count} rezerv</small></span><span aria-hidden="true">↗</span></button>;})}</div></section>}
-  <div className={styles.stations} role="group" aria-label="Geometri istasyon seçimi">{art.stations.map(s=><button type="button" key={s.id} aria-pressed={selected===s.id} onClick={()=>setSelected(s.id)}><img src={rolePortraitUri(s.role)} width={32} height={32} alt=""/><span>{s.role} · REZERV</span></button>)}</div>
+  <div className={styles.stations} role="group" aria-label="Geometri istasyon seçimi">{art.stations.map(s=><button type="button" key={s.id} aria-pressed={selected===s.id} onClick={()=>{setSelected(s.id);setCamera(focusCamera(s.x,s.y));}}><img src={rolePortraitUri(s.role)} width={32} height={32} alt=""/><span>{s.role} · REZERV</span></button>)}</div>
   <div className={styles.context} aria-live="polite">{station?<><strong>{station.role} · geometri şablonu</strong><span>Oda: {floor.rooms.find(r=>r.id===station.room)?.label??'—'} · Instance yok</span><button type="button" onClick={()=>setCamera(focusCamera(station.x,station.y))}>İstasyona odaklan</button><button type="button" onClick={()=>setSelected(null)}>Seçimi temizle</button></>:<span>{art.stations.length?'Vurgu için istasyon seçin.':'Genişleme rezervi · istasyon yok.'}</span>}</div>
   <p className="sub">Kamera ve mobilyalar yalnız görsel. Snapshot ile JOIN_HOLD; gerçek yerleşim, ajan veya hareket yok.</p>
  </div>;

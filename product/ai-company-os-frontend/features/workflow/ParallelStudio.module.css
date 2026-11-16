@@ -3,3 +3,5 @@
 
 /* P10C optional decorative sprite preview; no runtime or placement semantics. */
 @keyframes reservePreview{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@media(prefers-reduced-motion:no-preference){.asset[data-preview-motion=true] img{animation:reservePreview 1.4s ease-in-out infinite}}@media(prefers-reduced-motion:reduce){.asset img{animation:none!important}}
+
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),1fr));gap:8px}.overview span{display:grid;gap:4px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface-raised);font-size:12px}.overview strong{font-size:20px;font-variant-numeric:tabular-nums}

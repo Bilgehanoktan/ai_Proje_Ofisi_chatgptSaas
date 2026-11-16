@@ -43,7 +43,9 @@ export function officeArtwork(raw:Floor,selectedId:string|null=null):Artwork{
  const stations= [...floor.stations].sort((a,b)=>a.x+a.y-b.x-b.y).map(s=>{
   const p=pt(s.x,s.y),visual=roleVisual(s.role);const color=visual?.accent??'#a9b5c5';const active=s.id===selectedId;
   if(active)pieces.push(`<ellipse cx="${p[0]}" cy="${p[1]}" rx="45" ry="22" fill="none" stroke="#fbe1a0" stroke-width="4"/>`);
+  // Decorative desk mat on the desktop only; no floor occupancy or agent binding.
   pieces.push(box(s.x-.32,s.y-.32,.65,.45,14,'#d4b18c','#8b6c56'));
+  pieces.push(tile(s.x-.25,s.y-.25,.32,.24,14.2,'#55788b'));
   pieces.push(reservedDeskDecor(p[0],p[1],s.agent_instance_id));
   pieces.push(reservedDeskAccessories(p[0],p[1],s.agent_instance_id));
   pieces.push(box(s.x-.10,s.y+.22,.25,.22,9,'#6c819a','#43576e'));

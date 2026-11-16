@@ -1,3 +1,7 @@
+# UI-P10J-04 — exact source and W8 acceptance
+
+Verify 386 SHA pins in clean full local checkout; audit/prepare/review/install/test/smoke with w8_p10j.py, inspect missing P10I historical auxiliary records. Validate React controls, graph and office visuals, maintain D03/D04 HOLD. No live authority, main, CI or PROD. Preserve evidence. Historical pointer below.
+
 # UI-P10J-03 — exact checkout and W8
 
 Recover remaining product pins in bounded batches; materialize complete checkout; run original archive auditor and W8 audit/prepare/review/install/test/smoke. New checkout audit is supplemental only. No CI, main merge, PROD or real grant. D03/D04 independent HOLD. Continue UI tracks without claiming full build. Historical pointer below.

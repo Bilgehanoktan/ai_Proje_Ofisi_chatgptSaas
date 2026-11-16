@@ -1,3 +1,6 @@
+# UI-P10J-03 — parallel source integration
+Parent 96aa2c1247c49430f2e01c4f8eae9e70a5ffa4c1. Manifest 35724e95238201da97a9f98b390d879704f68771; 386 pins, 387 product files, 10 modifications + 2 additions, no deletion. 385 parent product blobs match P10I; 384 parent paths/sizes match; 12 selected SHA/length matches this batch, 23 unique across two batches (not full byte audit). W8 P10I adapter absent in parent tree and fetch 404; new P10J candidate preserves P10H chain, adds P10I/P10J models and two original archive auxiliary pins. Full W8 NOT_RUN. Local standalone draftOverview 3/3 on TS 5.8.3 / Node 22.16.0, not locked product run. All UI React, artwork and API/build/browser tests NOT_RUN. 21/40, independent 0/7. No live authority, no main/CI/PROD. Details: ../progress/UI_P10J.json and ../catalog/revisions/TECHNICAL_CATALOG_UI_P10J.json.
+
 # UI-P10J-02 — source recovery checkpoint
 
 Product baseline P10I 2febb84e539eddcfe4821783910c430ac20697c8; manifest blob a26c4d53e66d800226beae27626f03c68f5bb064; 384 pins, 385 product files. 12 remote SHA/length matches from checkpoint 01. New standalone checkout audit candidate: 8/8 local fixture checks, not full checkout. Product unchanged; 21/40, independent 0/7. See ../docs/UI-P10J/REMOTE_SOURCE_CHECKPOINT.md and audit_manifest.py. Historical pointer retained below.
