@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0219",
-  "status": "D0_COMPANY_ADMISSION_WITNESS_COMPOSITION_CANDIDATE",
+  "doc_revision": "0220",
+  "status": "D0_PINNED_PLAN_COMPANY_ADMISSION_CANDIDATE",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "ac983472422cc78fd925dc714738a790600cd2b1",
+  "parent_git_commit": "4d748a829f02fddf8a21a4c82aaa017bc1a3406a",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -79,8 +79,8 @@
       "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
     },
     "ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": {
-      "bytes": 2285,
-      "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57"
+      "bytes": 3649,
+      "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
     },
     "ai-company-os-backend/app/core/agent_runtime/transition_command.py": {
       "bytes": 1698,
@@ -363,8 +363,8 @@
       "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
     },
     "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": {
-      "bytes": 13176,
-      "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
+      "bytes": 17868,
+      "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e"
     },
     "ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py": {
       "bytes": 18997,
@@ -1465,8 +1465,16 @@
     "ai-company-os-backend/tests/test_company_fence_binding_0219.py": {
       "bytes": 3582,
       "sha256": "c2f8563d93d33a82e231216339831a5f9a774021648be8c91ede6626173db606"
+    },
+    "ai-company-os-backend/tests/test_pinned_schedule_0220.py": {
+      "bytes": 4042,
+      "sha256": "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+    },
+    "ai-company-os-backend/tests/test_scheduled_admission_0220.py": {
+      "bytes": 3127,
+      "sha256": "24f6db16cee419de307499727dcea219f33be113a36591c9273c09f187376c28"
     }
   },
-  "parent_source_manifest_blob": "c6c50d70884374ac27ccb2fc850b4430ef5bd10c",
+  "parent_source_manifest_blob": "5feff4596b402a1e9bfb089ca6247c6d637e8265",
   "source_git_commit_note": "Source commit identified by release readback; avoids self-reference."
 }

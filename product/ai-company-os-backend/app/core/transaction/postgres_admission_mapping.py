@@ -7,7 +7,7 @@ from hashlib import sha256
 import json
 from app.core.agent_runtime.lifecycle import (Scope, RunObservation, RunState, LeaseObservation,
     valid_scope, valid_lease, inspect_lease, uint, token)
-from app.core.agent_runtime.scheduler_review import inspect_schedule
+from app.core.agent_runtime.scheduler_review import inspect_schedule, inspect_pinned_schedule
 from app.core.orchestrator.engine import canonical_plan
 from app.core.transaction.review import Operation, valid_intent, required_roles, digest_ok
 from app.core.transaction.port import CommitReceipt
@@ -55,8 +55,9 @@ def valid_budget(b):
 
 class D0PostgresAdmissionMapping:
     """Explicit, single-use mapping for LogicalT1Coordinator.commit(ADMISSION)."""
-    def __init__(self, plan, spec, clock):
+    def __init__(self, plan, spec, clock, *, history_pins=None):
         self.plan=deepcopy(plan); self.spec=spec; self.clock=clock; self.intent=None
+        self.history_pins=history_pins
         self.written=set(); self.verified=False; self.last_tick=None
 
     def _check_clock(self):
@@ -94,7 +95,20 @@ class D0PostgresAdmissionMapping:
         while (row:=c.fetchone()) is not None:
             if len(observations)>=100: raise ValueError('D0_CLAIM_ROSTER_LIMIT')
             observations.append(RunObservation(Scope(*_key(i)[:3],*row[:5]),RunState(row[5]),row[6],row[7]))
-        if s.before not in observations or i.scope.task_id not in inspect_schedule(self.plan,tuple(observations)).ready:
+        if self.history_pins is None:
+            schedule=inspect_schedule(self.plan,tuple(observations))
+        else:
+            # Lazy import avoids the existing history -> admission module cycle.
+            from app.core.event_store.plan_history_review import RunHistoryPin, inspect_plan_history
+            if type(self.history_pins) is not tuple or not all(type(p) is RunHistoryPin for p in self.history_pins):
+                raise ValueError('D0_SCHEDULE_HISTORY_PIN_HOLD')
+            schedule=inspect_pinned_schedule(self.plan,tuple(observations),tuple(p.initial for p in self.history_pins))
+            history=inspect_plan_history(c,self.plan,i.scope.plan_revision,self.history_pins)
+            if (not history.structural_match or history.plan_revision!=i.scope.plan_revision
+                    or not any(t.task_id==i.scope.task_id and t.dependency_status=='READY_OBSERVATION_ONLY'
+                               for t in history.tasks)):
+                raise ValueError('D0_SCHEDULE_HISTORY_HOLD')
+        if s.before not in observations or i.scope.task_id not in schedule.ready:
             raise ValueError('D0_CLAIM_NOT_READY')
         if _one(c,'SELECT lease_id FROM t1_candidate.run_leases WHERE '+_KEY,_key(i)) is not None:
             raise ValueError('D0_CLAIM_LEASE_EXISTS')
@@ -182,3 +196,57 @@ def reconcile_admission(cursor, plan, spec, intent):
     except Exception:
         return AdmissionReconciliation('D0_CLAIM_READBACK_INCOMPLETE_OR_UNAVAILABLE')
     return AdmissionReconciliation('D0_CLAIM_EXACT_SAMPLE_AUTHORITY_UNPROVEN',True)
+
+
+def commit_scheduled_admission(*, connect, plan, spec, intent, clock, members, pool, history, history_pins):
+    """Explicit D0 company/plan admission using the existing T1 coordinator.
+
+    Roster and retained pins are caller-pinned fixture inputs, not real identity
+    or role authority. The company preimage and plan history are checked inside
+    one transaction, before any admission write. No assignment or worker dispatch.
+    """
+    from app.core.event_store.company_coordination import (
+        SCOPE, Pool, CompanyEvent, CompanyCoordinatedMapping, _roster,
+    )
+    from app.core.event_store.plan_history_review import RunHistoryPin
+    from app.core.transaction.port import LogicalT1Coordinator
+    from app.core.transaction.postgres_session import postgres_transaction
+
+    if (type(spec) is not ClaimSpec or not valid_intent(intent) or intent.operation is not Operation.ADMISSION
+            or not isinstance(spec.before,RunObservation) or spec.before.scope!=intent.scope
+            or type(pool) is not Pool or type(history) is not tuple or type(history_pins) is not tuple
+            or not all(type(p) is RunHistoryPin and isinstance(p.initial,RunObservation)
+                       and valid_scope(p.initial.scope) for p in history_pins)
+            or not valid_budget(spec.budget) or spec.budget.budget_id!=pool.budget_id):
+        raise ValueError('D0_SCHEDULE_ADMISSION_BINDING_HOLD')
+    roster=_roster(members)
+    s=intent.scope
+    member=roster.get(s.run_id)
+    projection=canonical_plan(plan)
+    if member is None or (s.tenant_id,s.company_id,s.environment_id)!=SCOPE or projection['revision']!=s.plan_revision:
+        raise ValueError('D0_SCHEDULE_MEMBER_HOLD')
+    plan_members={m.run_id:m for m in members if m.plan_revision==s.plan_revision}
+    pins={p.initial.scope.run_id:p for p in history_pins}
+    if len(pins)!=len(history_pins) or set(pins)!=set(plan_members) or s.run_id not in pins:
+        raise ValueError('D0_SCHEDULE_MEMBER_HOLD')
+    for run_id,p in pins.items():
+        r=p.initial; m=plan_members[run_id]; q=r.scope
+        if ((q.tenant_id,q.company_id,q.environment_id)!=SCOPE
+                or (q.plan_revision,q.task_id,q.run_id,q.agent_instance_id,q.principal_id,r.version)
+                   !=(m.plan_revision,m.task_id,m.run_id,m.agent_instance_id,m.principal_id,m.initial_version)
+                or m.project_id!=member.project_id):
+            raise ValueError('D0_SCHEDULE_MEMBER_HOLD')
+    if pins[s.run_id].initial!=spec.before or pins[s.run_id].admission is not None or pins[s.run_id].commands:
+        raise ValueError('D0_SCHEDULE_INITIAL_HOLD')
+    # Current D0 has no verified success path; only root tasks can be admitted.
+    # Derive the event from the existing membership and intent; never invent a
+    # predecessor transaction or reinterpret a bare SUCCEEDED head as a receipt.
+    task=next((t for t in projection['tasks'] if t['id']==s.task_id),None)
+    if task is None or task['depends_on'] or task['role'] not in ('orchestrator','research','engineer','qa'):
+        raise ValueError('D0_SCHEDULE_PREDECESSOR_PROOF_HOLD')
+    event=CompanyEvent(len(history)+1,member.project_id,s.run_id,intent.expected_version+1,
+                       transaction_ref(intent),intent.request_digest,'D0_RUN_ADMISSION',(),
+                       spec.budget.revision,spec.amount_minor)
+    mapping=CompanyCoordinatedMapping(D0PostgresAdmissionMapping(plan,spec,clock,history_pins=history_pins),
+                                      members,pool,history,event)
+    return LogicalT1Coordinator(lambda:postgres_transaction(connect,mapping)).commit(intent)
