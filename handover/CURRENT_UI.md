@@ -1,3 +1,9 @@
+# UI-P10J-17 — CEO operational presentation
+
+Parent 4b11e9d24d1a7a63bb4a2810c129e0bd58fa6465; manifest d314b5cef9b40db2c48a4034248debd4fd7bfba1; 471 product files. 9/9 isolated JSX checks PASS; full W8/browser/PG NOT_RUN, 80 planned captures. No new authority or gate. [Revision handover](../docs/UI-P10J/P10J17_CEO_OPERATIONS.md). Next P10J18 Agent Studio, reviewed W8 and current parallel re-pin.
+
+---
+
 # UI-P10J-16 — controlled premium composition (D0)
 
 Source a2bc3097717333e1dbd8ab4876213021728e61b0; parent a8789a91283d9c1c0f47452b639dc3d320db792f; office ba67700ab7c405131f5a207e438f69b0f7c94002; core 52219c7a222bae41735c9a9b9f7f7082462982b4; manifest 8b88d3e6ad080ab61bd91b95c9b98d28faea9b1a. 469 product files; 26 exact premium transfers, one reconciled OfficePanel and one test. 8 actual isolated JSX checks PASS; full W8/build/browser and PG/RLS NOT_RUN. Browser plan 76 captures. No live geometry/agent binding. Core A3 transferred historical acceptance 8/16 separate from UI 21/40. [Revision handover](../docs/UI-P10J/P10J16_RECONCILIATION.md) · [W8 runbook](../docs/UI-P10J/P10J16_RUNBOOK.md). Next: reviewed W8 and real premium routes browser checks; re-pin A3 before next composition. No main merge or grant.

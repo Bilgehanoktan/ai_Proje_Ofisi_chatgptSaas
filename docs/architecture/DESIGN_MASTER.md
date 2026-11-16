@@ -281,3 +281,6 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-16 — D0 premium/UI source reconciliation
 [Architecture / catalog](../UI-P10J/P10J16_RECONCILIATION.md). No normative or runtime authority change; A1/A2 models remain unbound; independent acceptance HOLD.
+
+## UI-P10J-17 — CEO operational presentation
+[Architecture / catalog](../UI-P10J/P10J17_CEO_OPERATIONS.md). Historical sample only; no normative change.
