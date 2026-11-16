@@ -1,3 +1,19 @@
+# UI-P10J-14 — core/UI source reconciliation (D0)
+Parent UI 14348b3d6259a41725142585da886aefb63f11e8; latest core b201833f948f91293414e91000bc53377de9b6d1; source f7d66eb39c6151bfd994919ac7df51a4e72fe694; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. CEO-0174/0179=B only; no new normative authority.
+
+## What/why/how
+- 28 exact core product blobs selected (all differing backend product paths + five historical evidence frontend paths); 233/233 core backend product blobs exact in candidate. UI-only tests retained. 439 product files, 438 manifest records, 25 new paths, 36 changed/new including manifest. Source composition, not a Git merge or proven runtime integration. No DB migrations or package changes. Core database/contracts tree differences absent in observed heads; old UI browser harness retained.
+- Both lifecycle readers retain local reset, filters, selectable timeline, provenance and independent scope; include exact core HistoricalEvidenceStrip with explicit unobserved slots and identity. Terminal and prefix remain separate; no live join. P13 provider and Project Studio unchanged.
+- Authority wrapper replaced with exact 0224 core owner source, adds company/result optional bindings and separation checks; same original root/claim semantics, no second implementation. New core fenced_transition, scheduler, scheduled admission, sample model, Research and test closure all transferred. Actual SQL composition and production independent custody remain HOLD. No grant, provider, live dispatch or release.
+- Skill Studio adds static source/quarantine/F0/publish gate presentation using existing diagnostic read/reset. No actual skill catalog, install, enabled count, or grant. Organization Studio groups exact four role templates, H01 and coordination role; separate IV/PEP/W-A. Not real staffing or reporting assignments.
+- Local strict TS 5.8.3 + Node 22.16.0, 6/6 exact new governance model tests PASS; source SHA pins match local. 43 prior 0224 selected and 28 P13 replay tests are historical only. No new React, full W8, canonical SQL8, PG13/RLS, independent acceptance. Git DNS unavailable; no postgres/psql/docker in local PATH.
+- W8 adapter pins P12 parent and new manifest; retains review/lock gates, adds model test and existing run-studio-0223 before inherited suite. New adapter not executed; browser harness still historical 68 captures and needs explicit shared replay / studio / lifecycle interaction coverage before acceptance. No CI.
+
+## Maintenance / rollback
+Use exact manifest aecff74cb7c9084d80a90cf7f317545c5e086e4e; inspect UI historical scope and reset, test sample slots and missing/invalid rows. Diagnose core by exact project/plan/run, company pin, result archive and intent journal; unknown stays quarantine, no retry. PG run only on disposable database, non-owner RLS and two-session contention; never use SQLite as PG proof. New UI grouping/model is presentation choice. Roll back to 14348b3d6259a41725142585da886aefb63f11e8 on separate branch; no live DB restore, no main merge. Next: exact checkout, W8 audit/prepare/review/install/test/smoke; run canonical SQL8 and PG13 plus RLS; targeted browser tests for both readbacks, shared snapshot and new studios; only then extend Research UI persisted evidence.
+
+---
+
 
 ## Selected local regression — evidence supplement
 Exact source 7049122143611f35a2152f721f7d99d514a7af9d; 6/6 re-materialized files matched candidate SHA-256. Original Python shared replay 6/6 and Node parser/transport 22/22 PASS, strict TypeScript compile PASS, Python 3.13.5 / Node 22.16.0 / TS 5.8.3. Four fixed Python-generated replays, no DB/HTTP, React, Studio, full W8 or PG execution. Product tree path/size 413/413, exact core blob 30/30, manual source hash readback 2/2. No new acceptance. Full checkout remains unavailable. See revisioned evidence and matrix. Historical initial NOT_RUN entry superseded only for these selected checks.

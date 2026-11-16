@@ -1,0 +1,38 @@
+{
+  "revision": "UI-P10J-14",
+  "source_commit": "f7d66eb39c6151bfd994919ac7df51a4e72fe694",
+  "local_tests": {
+    "model_pass": 6,
+    "model_total": 6,
+    "strict_ts": "PASS",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "source_hash": "d1a4552ecf78b3b06022e42e29d00250a6868316522a0f11b31b77a8eb545e9c",
+    "test_hash": "e13ab2e36665e1a78afe575746747cbfe7084a23b94cdb1cb3dc83e93ada2157"
+  },
+  "source": {
+    "manifest": "aecff74cb7c9084d80a90cf7f317545c5e086e4e",
+    "pins": 438,
+    "core_backend_exact": 233,
+    "selected_core_blobs": 28,
+    "paired_schema_fixture_pin_count": 17
+  },
+  "previous_evidence": {
+    "core_0224_selected": 43,
+    "p13_selected": 28
+  },
+  "not_run": [
+    "React/Next build",
+    "full W8",
+    "browser",
+    "canonical Research SQL8",
+    "PG13",
+    "RLS",
+    "independent acceptance"
+  ],
+  "environment_blockers": [
+    "GitHub DNS checkout unavailable",
+    "postgres/psql/docker not found in PATH"
+  ],
+  "scope": "Only six newly executed model tests. No integrated runtime acceptance."
+}
