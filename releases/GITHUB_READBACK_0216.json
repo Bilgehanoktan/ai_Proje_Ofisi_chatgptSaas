@@ -1,0 +1,59 @@
+{
+  "revision": "0216",
+  "parent": "f3b8f0f1ba972c48d13249ed88885cb35900b17f",
+  "source_commit": "1e01ad5dea65213a86a2401b83fd698436318099",
+  "branch": "integration/0216-effect-fence-reference",
+  "manifest_blob": "c343f0e981bdd00c8ff0a3b1c0afe2bc1cb4bd77",
+  "manifest_entries": 360,
+  "product_files_including_manifest": 361,
+  "prior_product_entries_preserved": 358,
+  "delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/effect_fence_reference.py",
+      "bytes": 5572,
+      "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f",
+      "blob": "3730a404de13673a1cbcd36353ff75d1b3642004",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+      "bytes": 5007,
+      "sha256": "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f",
+      "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+      "action": "add"
+    }
+  ],
+  "readback": "2/2 exact Git blob IDs matched locally tested source bytes; prior 358 manifest records equal; compare lists 2 additions and manifest only; no full local source byte verification",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p test_effect_fence_reference_0216.py -v",
+    "python": "3.13.5",
+    "executed": 13,
+    "unittest_pass": 13,
+    "expected_controls": 12,
+    "expected_residual": 1,
+    "elapsed_seconds": 0.09,
+    "log": "evidence/0216/LOCAL_TESTS.txt",
+    "prior_tests_rerun": false
+  },
+  "environment": {
+    "git_checkout": "BLOCKED_DNS",
+    "postgres": "NOT_FOUND",
+    "psycopg": "NOT_INSTALLED",
+    "full_build": "NOT_RUN"
+  },
+  "gate": {
+    "done": 7,
+    "total": 16,
+    "percent": 43.75
+  },
+  "open_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ],
+  "limitations": [
+    "Separate fixture store is not independent custody; restoring it enables replay. No canonical authority composition, trusted external head/clock, authentication, or gateway wiring.",
+    "No original wrapper or PG/RLS/core29/build/browser tests rerun. No actual effect, provider, customer data, spend, CI, main or PROD."
+  ]
+}

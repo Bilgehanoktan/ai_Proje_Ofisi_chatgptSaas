@@ -145,3 +145,7 @@ Source `a4a6aba3e986927b4e2b0157028e6623c669864e`; 355 product files. Recorded p
 
 ## 0215 — external claim observation / PG runner / CEO-Office provenance
 Source `76815dfd2401d7a81f1f9f0a112da06d8002fb2f`; 359 product files / 358 manifest entries. 46 new diagnostics (15 signed local claim review, 14 runner unit, 17 static UI reference); no full regression, PG, RLS, independent authority, Next build or browser. 7/16 = 43.75% current integration scope, not whole product. [Architecture](../docs/0215/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0215.json) · [Next](NEXT_STEP_0215.md).
+
+
+## 0216 — isolated D0 synthetic effect-fence reference
+Source `1e01ad5dea65213a86a2401b83fd698436318099`; 361 product files / 360 manifest entries; 13 local reference tests (12 controls, 1 expected restore residual). No new full gate; 7/16 (43.75%). Independent custody, actual mandatory T1/gateway wiring, PG/RLS, full build/browser HOLD/NOT_RUN. [Architecture](../docs/0216/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0216.json) · [Next](NEXT_STEP_0216.md).

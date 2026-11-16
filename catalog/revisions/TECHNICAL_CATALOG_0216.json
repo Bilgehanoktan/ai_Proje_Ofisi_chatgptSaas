@@ -1,0 +1,80 @@
+{
+  "revision": "0216",
+  "parent": "0215",
+  "source_commit": "1e01ad5dea65213a86a2401b83fd698436318099",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/effect_fence_reference.py",
+      "bytes": 5572,
+      "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f",
+      "blob": "3730a404de13673a1cbcd36353ff75d1b3642004",
+      "action": "add"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+      "bytes": 5007,
+      "sha256": "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f",
+      "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+      "action": "add"
+    }
+  ],
+  "symbols": [
+    {
+      "module": "app.core.transaction.effect_fence_reference",
+      "classes": [
+        "Head",
+        "Intent",
+        "SyntheticReceipt",
+        "D0EffectFenceReference"
+      ],
+      "functions": [
+        "digest",
+        "positive",
+        "external_effect_decision"
+      ],
+      "methods": [
+        "Head.validate",
+        "Intent.validate",
+        "D0EffectFenceReference.__init__",
+        "D0EffectFenceReference._write",
+        "D0EffectFenceReference.create",
+        "D0EffectFenceReference._head",
+        "D0EffectFenceReference.advance",
+        "D0EffectFenceReference.consume_synthetic"
+      ],
+      "dependencies": [
+        "Python stdlib contextlib, dataclasses, pathlib, os, sqlite3"
+      ],
+      "callers": "Only new unittest suite. No runtime gateway or T1 composition.",
+      "test": "13 executed; 12 expected controls + one expected authority-store rollback residual"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "fixture_database": [
+    {
+      "file_suffix": ".effect-reference.sqlite",
+      "tables": [
+        "heads(seq PK, root UNIQUE, epoch)",
+        "consumed(scope PK, binding UNIQUE, tx UNIQUE, request, seq, root, epoch)"
+      ],
+      "invariants": "BEGIN IMMEDIATE; append-only triggers; CAS seq+1 and nondecreasing epoch; no canonical migration"
+    }
+  ],
+  "event_changes": [],
+  "dependency_changes": [],
+  "errors": [
+    "HEAD_SHAPE_HOLD",
+    "INTENT_SHAPE_HOLD",
+    "REFERENCE_PATH_HOLD",
+    "GENESIS_HOLD",
+    "HEAD_MISSING_HOLD",
+    "HEAD_CAS_HOLD",
+    "INPUT_SHAPE_HOLD",
+    "STALE_HEAD_HOLD",
+    "ALREADY_CONSUMED_HOLD",
+    "EXTERNAL_EFFECT_HOLD"
+  ],
+  "test_evidence": "releases/GITHUB_READBACK_0216.json",
+  "rollback": "Revert only 0216 additions and manifest metadata on isolated branch; preserve logs and consumed records. Never restore/delete authority to authorize replay. No runtime or canonical DB migrations."
+}

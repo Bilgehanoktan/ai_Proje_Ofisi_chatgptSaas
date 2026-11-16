@@ -37,3 +37,36 @@ All ordinal design/source scores retained (not percent completion). 55/55 source
 
 ## 0215 evidence
 24-area ordinal scores unchanged. 0214 prior recorded original wrapper evidence carried (not rerun). 0215 46 new selected checks (15 signed local claim, 14 PG runner unit, 17 static UI reference) PASS. **7/16 = 43.75%** scoped integration gates, not global completion. Independent custody/effect, PG13/RLS, locked deps and full build/browser remain HOLD. [Gate tracker](INTEGRATION_GATES_0215.json) · [Evidence](../releases/GITHUB_READBACK_0215.json).
+
+
+## 0216 — canonical TRACK-0216 JSON-derived snapshot
+Scores unchanged; 13 selected D0 tests (12 controls, 1 restore residual). 7/16 scoped gates, not overall maturity.
+
+| ID | Alan | Tasarım | Kaynak | Test |
+|---:|---|---:|---:|---|
+| 1 | Frontend | 75 | 50 | PARTIAL_PASS_COMPILED_PROXY |
+| 2 | UI/UX Design System | 50 | 50 | NOT_RUN_CURRENT_EDS_BROWSER |
+| 3 | Office Engine | 75 | 50 | PARTIAL_PASS_HISTORICAL_READBACK |
+| 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP |
+| 5 | Backend | 75 | 50 | PARTIAL_PASS_0211_COMPONENT |
+| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0204C_REPLAY |
+| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_0205R_CHECKPOINT |
+| 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0216_REFERENCE |
+| 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_0210_DENIAL |
+| 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW |
+| 11 | Database | 75 | 25 | PARTIAL_PASS_0216_REFERENCE_SQLITE |
+| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM |
+| 13 | Memory & Knowledge | 75 | 25 | PARTIAL_PASS_0210_LOCAL_FENCE |
+| 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0216_RESTORE_RESIDUAL |
+| 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE |
+| 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_0204C_REPLAY |
+| 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN |
+| 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN |
+| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL |
+| 20 | Test & QA | 75 | 25 | PARTIAL_PASS_0216_REFERENCE_13 |
+| 21 | DevOps & Infrastructure | 75 | 25 | BLOCKED_CHECKOUT_DEPENDENCIES_PG |
+| 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK |
+| 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0216_RESTORE_RESIDUAL |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED |
+
+[Canonical tracker](DEVELOPMENT_TRACKER_24.json) · [Gates](INTEGRATION_GATES_0216.json).
