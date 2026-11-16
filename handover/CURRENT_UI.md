@@ -1,3 +1,9 @@
+# UI-P10J-18 — Agent profile and exact A3 source
+
+Parent cc6a62b33feecb0f4a827ca1a5b4857be1a4f243; manifest a234ce2017432b88d1cabad37872d3f8444850ee; 476 product files, 14/14 local isolated JSX checks. A3 two exact source additions, renderer NOT_BOUND. W8/build/browser/PG NOT_RUN; 84 planned captures; no new authority or gate. [Revision handover](../docs/UI-P10J/P10J18_AGENT_PROFILE.md). Next P10J19 Project Studio, re-pin A4/core, reviewed W8.
+
+---
+
 # UI-P10J-17 — CEO operational presentation
 
 Parent 4b11e9d24d1a7a63bb4a2810c129e0bd58fa6465; manifest d314b5cef9b40db2c48a4034248debd4fd7bfba1; 471 product files. 9/9 isolated JSX checks PASS; full W8/browser/PG NOT_RUN, 80 planned captures. No new authority or gate. [Revision handover](../docs/UI-P10J/P10J17_CEO_OPERATIONS.md). Next P10J18 Agent Studio, reviewed W8 and current parallel re-pin.

@@ -7,6 +7,7 @@ import {readPlanProjection} from '../core-review/planProjection';
 import {roleTaskContext} from './studioContext';
 import {organizationTemplate} from './studioGovernance';
 import styles from './EvidenceStudio.module.css';
+import AgentRoleProfile from './AgentRoleProfile';
 export default function AgentDirectory({roles,selected,onSelect}:{roles:readonly Role[];selected:string|undefined;onSelect:(role:Role)=>void}){
  const [query,setQuery]=useState(''),[department,setDepartment]=useState(''),[sort,setSort]=useState(false);
  const filtered=roleDirectory(roles,query,department);
@@ -25,7 +26,7 @@ export default function AgentDirectory({roles,selected,onSelect}:{roles:readonly
   {hidden&&<p className={styles.notice} role="status">Seçili rol filtre dışında; bağlam korunuyor. <button type="button" onClick={()=>{setQuery('');setDepartment('');}}>Seçili rolü göster</button></p>}
   <div className="agentgrid">{rows.map(r=><RoleButton key={r.id} role={r} pressed={selected===r.id} onSelect={()=>onSelect(r)}/>)}</div>{rows.length===0&&<p className="empty">Eşleşen rol bulunamadı.</p>}
   {selectedRole&&<section className={styles.eventDetail} aria-label="Seçili rol şablonu"><div className="bar"><div><strong>{selectedRole.name}</strong><small>{selectedRole.department} · {selectedRole.id}</small></div><button type="button" onClick={()=>{setQuery('');setDepartment(selectedRole.department);}}>Departmanı göster</button></div><small>Rol şablonu · gerçek instance yok</small><small>Departmandaki şablon sayısı: {roles.filter(r=>r.department===selectedRole.department).length}</small>
-   <h3>Referans plandaki rol görevleri</h3>{plan.ok?<>{templateTasks.length?<div className={styles.agentTasks}>{templateTasks.map(t=><article key={t.id}><strong>{t.label} · HOLD</strong><dl><div><dt>Ön koşullar</dt><dd>{t.predecessors.map(p=>p.label).join(' · ')||'Yok'}</dd></div><div><dt>Ardıl görevler</dt><dd>{t.followers.map(p=>p.label).join(' · ')||'Yok'}</dd></div></dl></article>)}</div>:<small>Bu rol için referans görev yok.</small>}<small>Statik plan ilişkisi · gerçek görev ataması veya yönetim hiyerarşisi değildir.</small></>:<small>Plan doğrulanamadı · HOLD</small>}
+   <AgentRoleProfile role={selectedRole} tasks={plan.ok?templateTasks:null} waves={plan.ok?plan.plan.waves:[]}/>
   </section>}
  </section>;
 }

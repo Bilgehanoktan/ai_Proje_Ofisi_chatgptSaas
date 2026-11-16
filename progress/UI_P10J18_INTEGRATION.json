@@ -1,0 +1,42 @@
+{
+  "revision": "UI-P10J-18",
+  "counts": {
+    "prior_product": 471,
+    "product": 476,
+    "manifest": 475,
+    "added": 5,
+    "replaced": 1,
+    "retained": 469,
+    "deleted": 0
+  },
+  "gates": {
+    "ui": "21/40 prior; no gate promotion",
+    "core": "8/16 separate 0227; E1 review matched, installation pending",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "full_build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  },
+  "browser": {
+    "old_blob": "2dc45a405400c856983e47c8efd20b39231a0390",
+    "blob": "9d4a741e9c8b4e643e494b0c19f0d789d6967a17",
+    "old_captures": 80,
+    "new_captures": 4,
+    "planned": 84,
+    "status": "NOT_RUN"
+  },
+  "a3": {
+    "commit": "82b1f5877f90149e5aaa3e8a0029d2a0f91c9e64",
+    "parent": "ba67700ab7c405131f5a207e438f69b0f7c94002",
+    "manifest": "f734982795060ec1f202b41e7371a984434a4d2b",
+    "exact_transfers": 2,
+    "matching_dependency_manifest_pins": 5,
+    "owner_evidence": "20 new + 46 rerun = 66 selected PASS on A3 branch; not rerun here",
+    "renderer": "NOT_BOUND",
+    "portal": "HOLD",
+    "canonical_join": "HOLD"
+  },
+  "next": "P10J19 Project Studio portfolio/task dependency view; re-pin A4 and core; run reviewed W8 when environment available."
+}

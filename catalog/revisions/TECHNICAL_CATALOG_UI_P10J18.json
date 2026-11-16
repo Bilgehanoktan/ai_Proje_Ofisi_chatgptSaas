@@ -1,0 +1,152 @@
+{
+  "revision": "UI-P10J-18",
+  "status": "D0_AGENT_PROFILE_A3_EXACT_SOURCE_NOT_ACCEPTED",
+  "parent": "cc6a62b33feecb0f4a827ca1a5b4857be1a4f243",
+  "core_observed": "b79f88b259c94e7a0901ff6a5817b3d6c91b5a17",
+  "manifest": "a234ce2017432b88d1cabad37872d3f8444850ee",
+  "counts": {
+    "prior_product": 471,
+    "product": 476,
+    "manifest": 475,
+    "added": 5,
+    "replaced": 1,
+    "retained": 469,
+    "deleted": 0
+  },
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/evidence/AgentRoleProfile.tsx",
+      "bytes": 2652,
+      "sha256": "dcec6ef54955f7efce0eaad908eb77995408f3bfc33eec0637c05f10d97400f8",
+      "blob": "f47317db9acd182a3feb9e054f5ab55530db5a0e",
+      "change": "add",
+      "source": "local"
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "bytes": 4462,
+      "sha256": "f1586cc9a8a65df1f315e650e37f3b92dd4c35f9ac2202808dd8ef00a82bb249",
+      "blob": "bb3ad084dd62a094363a44e86805f9693400bb30",
+      "change": "replace",
+      "source": "local"
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css",
+      "bytes": 1450,
+      "sha256": "07bb87dcca47523d324fa073c19d30375490d4f74217de5f341441233173a2ac",
+      "blob": "0351a2c5c06678175462598d2cd10356cec149d3",
+      "change": "add",
+      "source": "local"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+      "bytes": 6431,
+      "sha256": "6d140aaa1196d77d4ffa0c719aa0e806e6a1df7b66312b4876a5990f4cce3905",
+      "blob": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+      "change": "add",
+      "source": "local"
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumIdentityTraffic.ts",
+      "bytes": 9636,
+      "sha256": "e00973cb0cf9b657d979cde61b0e8176c6d5d192f88fa8a5ed9ade03d6463942",
+      "blob": "3aa9bc61c3835da550ccb7d7b2ece4e8d74d7f79",
+      "change": "add",
+      "source": "exact_A3"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-identity-traffic.test.cjs",
+      "bytes": 9595,
+      "sha256": "2a7eef188379836ec84d7965098d67cef12250d9b2aaa78a6266de2a25cbf640",
+      "blob": "8ee65ef409afac43e91c25d2c9970584515d351e",
+      "change": "add",
+      "source": "exact_A3"
+    }
+  ],
+  "local": {
+    "actual": 14,
+    "pass": 14,
+    "fail": 0,
+    "skip": 0,
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "mode": "actual AgentRoleProfile and AgentDirectory TSX transpile and isolated JSX execution; mocked collaborators, no actual React DOM or parser execution",
+    "local_files": 4,
+    "log_sha256": "e41241f8eeba4272fa70fa0f46f733031397b17b5ca23805e3f285a4972f8bca"
+  },
+  "a3": {
+    "commit": "82b1f5877f90149e5aaa3e8a0029d2a0f91c9e64",
+    "parent": "ba67700ab7c405131f5a207e438f69b0f7c94002",
+    "manifest": "f734982795060ec1f202b41e7371a984434a4d2b",
+    "exact_transfers": 2,
+    "matching_dependency_manifest_pins": 5,
+    "owner_evidence": "20 new + 46 rerun = 66 selected PASS on A3 branch; not rerun here",
+    "renderer": "NOT_BOUND",
+    "portal": "HOLD",
+    "canonical_join": "HOLD"
+  },
+  "browser": {
+    "old_blob": "2dc45a405400c856983e47c8efd20b39231a0390",
+    "blob": "9d4a741e9c8b4e643e494b0c19f0d789d6967a17",
+    "old_captures": 80,
+    "new_captures": 4,
+    "planned": 84,
+    "status": "NOT_RUN"
+  },
+  "gates": {
+    "ui": "21/40 prior; no gate promotion",
+    "core": "8/16 separate 0227; E1 review matched, installation pending",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "full_build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  },
+  "symbols": [
+    {
+      "file": "ai-company-os-frontend/features/evidence/AgentRoleProfile.tsx",
+      "symbol": "orderRoleTasks",
+      "type": "pure presentation function",
+      "input": "already validated role task context + plan waves",
+      "output": "sorted role task rows, wave number or null",
+      "authority": "none"
+    },
+    {
+      "file": "ai-company-os-frontend/features/evidence/AgentRoleProfile.tsx",
+      "symbol": "AgentRoleProfile",
+      "type": "React presentation",
+      "input": "RoleProfile, ProfileTask[] | null, waves",
+      "output": "static profile, counts and dependency list; unknown on invalid plan",
+      "dependencies": [
+        "ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css"
+      ]
+    },
+    {
+      "file": "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "symbol": "AgentDirectory",
+      "type": "existing component",
+      "change": "replaces prior task list with AgentRoleProfile; preserves filtering and selection",
+      "dependencies": [
+        "readPlanProjection",
+        "roleTaskContext",
+        "AgentRoleProfile"
+      ]
+    },
+    {
+      "file": "ai-company-os-frontend/office/engine/premiumIdentityTraffic.ts",
+      "symbol": "createIdentityTraffic",
+      "type": "exact A3 transfer",
+      "reference": "docs/UX-PREMIUM-07/A3R1_TRAFFIC.md at pinned A3 commit",
+      "change": "no modifications, no renderer binding"
+    }
+  ],
+  "changes": {
+    "API": 0,
+    "DB": 0,
+    "backend": 0,
+    "dependencies": 0,
+    "authority": 0
+  },
+  "next": "P10J19 Project Studio portfolio/task dependency view; re-pin A4 and core; run reviewed W8 when environment available."
+}
