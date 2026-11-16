@@ -1,0 +1,56 @@
+{
+  "revision": "UX-PREMIUM-07-A2R1",
+  "parent": "7dac004e95e07ceb337fea00fc38f860d98e9b95",
+  "architecture": "docs/UX-PREMIUM-07/A2R1_IDENTITY.md",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumActorIdentity.ts",
+      "operation": "ADD",
+      "blob": "1189295b372f2b9360cbecbf5357f2ad356f1824",
+      "symbols": [
+        "VisualActorSeed",
+        "SyntheticStation",
+        "VisualStation",
+        "VisualActor",
+        "createVisualIdentityRegistry",
+        "actor",
+        "station",
+        "legacyRole"
+      ],
+      "dependencies": [
+        "premiumHybridLayout.ts"
+      ],
+      "reason": "Decouple role from unique visual identity and immutable layout binding",
+      "errors": [
+        "DUPLICATE_STATION_OR_ANCHOR",
+        "SYNTHETIC_STATION_LIMIT",
+        "INVALID_SYNTHETIC_STATION",
+        "INVALID_STATION_GEOMETRY",
+        "INVALID_ACTOR_SEED",
+        "DUPLICATE_ACTOR",
+        "STATION_ROLE_OR_REFERENCE",
+        "STATION_OCCUPIED"
+      ],
+      "maintenance": "Inspect seed, station, zone and A1 reachability; use visual ID when role ambiguous; see architecture rollback."
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-actor-identity.test.cjs",
+      "operation": "ADD",
+      "blob": "9f3dd96520eb848dd65e912619647500d9335c76",
+      "symbols": [
+        "15 node:test cases"
+      ],
+      "dependencies": [
+        "node:test",
+        "node:assert/strict",
+        "compiled premiumActorIdentity"
+      ],
+      "result": "15/15 PASS"
+    }
+  ],
+  "api": [],
+  "database": [],
+  "external_dependencies": [],
+  "legacy_renderer": "unchanged",
+  "acceptance": "D0_ONLY"
+}
