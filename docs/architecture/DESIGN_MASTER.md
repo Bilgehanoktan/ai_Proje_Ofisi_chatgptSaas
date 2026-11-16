@@ -178,3 +178,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0220 — pinned scheduler and explicit company admission
 [Addendum](../0220/ARCHITECTURE_AND_CATALOG.md). Existing plan/DAG and T1 coordinator reused; exact initial roster and historical evidence before root admission, no bare success. 12 exact pure tests and 12 prior excerpt diagnostics; SQL and independent acceptance open. No normative changes.
+
+
+## 0221 — fixed sample result context
+[Addendum](../0221/ARCHITECTURE_AND_CATALOG.md). Existing model/skill/tool/memory inspectors and retained archive bound to opt-in company/witness intent fence. 18 new local checks, full SQL NOT_RUN; no real effects or normative change.

@@ -165,3 +165,7 @@ Source `2507c9316da0e41ac5c3d320477cc72ca832f521`; 366 product files / 365 manif
 
 ## 0220 — pinned plan and company admission
 Source `a039ad0b4a096780d8365d3392f5ed5859a433b4`; 368 product files / 367 manifest records. 12 exact pure Scheduler tests and 12 prior excerpt diagnostics PASS; six SQL tests and combined wrapper/PG/RLS/build NOT_RUN. 53/55 historical core lock currently matches, 2 explicit changes; original lock preserved. 7/16 gates; independent and R03 HOLD. [Architecture](../docs/0220/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0220.json) · [Next](NEXT_STEP_0220.md).
+
+
+## 0221 — fixed sample result context
+Source `763bd55796945dcd08bb53cda1b68f4c80c48845`; 370 product files / 369 manifest records. 12 exact product module + 6 local memory diagnostics PASS; 12 prior scheduler and 12 historical excerpt rerun. Full result SQL10, prior SQL/PG/RLS/build NOT_RUN. 7/16 gates; independent/R03 HOLD. [Architecture](../docs/0221/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0221.json) · [Next](NEXT_STEP_0221.md).

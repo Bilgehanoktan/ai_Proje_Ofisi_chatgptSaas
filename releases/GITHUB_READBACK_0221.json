@@ -1,0 +1,426 @@
+{
+  "revision": "0221",
+  "parent": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+  "source_commit": "763bd55796945dcd08bb53cda1b68f4c80c48845",
+  "source_tree": "25b74b7a0249a33f1e9ee76cd1a804cb41e33b4b",
+  "branch": "integration/0221-sample-result-context",
+  "manifest_blob": "1d9ecaa4a97824e334be2881a8486953582e37f2",
+  "manifest_entries": 369,
+  "product_files": 370,
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "action": "modify",
+      "before_blob": "4724324f454c52eebac66b1e5c7819a299e95ae3",
+      "blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+      "bytes": 20298,
+      "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "action": "modify",
+      "before_blob": "8482b1d6033511137a23d75caa5f6d5e5aebe886",
+      "blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "bytes": 7835,
+      "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+      "action": "modify",
+      "before_blob": "783e9842c4712dac37b650354286f3f7c06290f0",
+      "blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+      "bytes": 4783,
+      "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+      "action": "add",
+      "before_blob": null,
+      "blob": "bb3f67caeb2102d944e5950cf04eb3705d963587",
+      "bytes": 10586,
+      "sha256": "b8490b108ced03a8319f74892f54a23db80acbf6f13949f2228101f5b880c7a5"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_sample_task_0221.py",
+      "action": "add",
+      "before_blob": null,
+      "blob": "010eec304471c547af45514a2d8208e8752da20f",
+      "bytes": 4282,
+      "sha256": "7f582ba285398c2bcfd1be04a301e6fe016641a225abcf9e50e9063ade8a075f"
+    }
+  ],
+  "remote_tree": {
+    "manifest_path_size_matches": 369,
+    "extra_product_files": 0,
+    "unchanged_product_blobs": 364,
+    "full_local_rehash": false
+  },
+  "local_exact_subset": {
+    "count": 42,
+    "pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "git_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "bytes": 3649,
+        "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "bytes": 259,
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "bytes": 3082,
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "bytes": 692,
+        "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "git_blob": "04487bda631e9133f3904451a39fc8722e985997",
+        "bytes": 3367,
+        "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "bytes": 1335,
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "git_blob": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "bytes": 4042,
+        "sha256": "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/__init__.py",
+        "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+        "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/__init__.py",
+        "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "bytes": 5065,
+        "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+        "git_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+        "bytes": 725,
+        "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/t1_review.py",
+        "git_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+        "bytes": 517,
+        "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/skill_review.py",
+        "git_blob": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+        "bytes": 315,
+        "sha256": "e591da76572a6a57b73ee167e5f072629506969b431582c8098ae1c066697eef"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+        "git_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+        "bytes": 1305,
+        "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+        "git_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+        "bytes": 1391,
+        "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py",
+        "git_blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+        "bytes": 2986,
+        "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+        "git_blob": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+        "bytes": 3373,
+        "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+        "git_blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+        "bytes": 3799,
+        "sha256": "3c658e59711007436f797d34c248d3ab1546e404d9715bf17bd72395bc6d4ff0"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+        "git_blob": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e",
+        "bytes": 4733,
+        "sha256": "c4b4e35699e6a829cba53fe21d87907eb77245e8f7bb134f1d94fc08df8f2e75"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/manifest_review.py",
+        "git_blob": "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+        "bytes": 1904,
+        "sha256": "cf283466d3c2966f11d1c21acbacc0ace6fd53e3dc8be157e1850d4fe2dd151e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+        "git_blob": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+        "bytes": 2101,
+        "sha256": "f538ae06791e2e6e6d1fae4173b800f3ec1a7bf8ea51357e00bf7d00c7c470fb"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+        "git_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "bytes": 4783,
+        "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_sample_task_0221.py",
+        "git_blob": "010eec304471c547af45514a2d8208e8752da20f",
+        "bytes": 4282,
+        "sha256": "7f582ba285398c2bcfd1be04a301e6fe016641a225abcf9e50e9063ade8a075f"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/__init__.py",
+        "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/knowledge_engine/__init__.py",
+        "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+        "git_blob": "7d710685366a55c117e49043a64f1eeabf5079cf",
+        "bytes": 1391,
+        "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+        "git_blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+        "bytes": 2715,
+        "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py",
+        "git_blob": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+        "bytes": 5319,
+        "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+        "git_blob": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+        "bytes": 9580,
+        "sha256": "ac03b3ab7ce63b851853f61d8b68f76c17bcf1e7a61518e6c42acfd378ebe169"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+        "git_blob": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+        "bytes": 3694,
+        "sha256": "786928f7b0a12af8995e20886dbabfd9139e0ff8ffef7a049c994adf987ca6b6"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+        "git_blob": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+        "bytes": 10752,
+        "sha256": "91b4268c410265be18b6248a3c1f652788200f08f81786914a796b6d8b39b1db"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "git_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "bytes": 287,
+        "sha256": "30d5585648be281c058fee53678a44851b57576e28a48d721dc3465100e7a7db"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "git_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "bytes": 3093,
+        "sha256": "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+        "git_blob": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+        "bytes": 8523,
+        "sha256": "86835d29aab941370a914518c892d91d4ba8b3742ff8772698e56b009b8b07a0"
+      }
+    ],
+    "method": "connector reconstruction, local Python independently checked SHA1 Git blob, SHA256, byte length; matched remote tree; exact closure of executed modules only"
+  },
+  "tests": {
+    "sample": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=source:source/tests python -m unittest discover -s source/tests -p test_sample_task_0221.py -v",
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.01,
+      "names": [
+        "effectful_request",
+        "enabled_skill",
+        "expired_lease",
+        "fixed_output",
+        "live_provider",
+        "policy_capability_missing",
+        "raw_digest_mismatch",
+        "revoked_grant",
+        "skill_source_drift",
+        "wrong_effect_digest",
+        "wrong_scope",
+        "wrong_witness"
+      ]
+    },
+    "memory": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=source:source/tests python -m unittest run_memory_diagnostics.MemoryDiagnostics -v",
+      "pass": 6,
+      "fail": 0,
+      "seconds": 0.135,
+      "names": [
+        "arbitrary_repin_cannot_expand_span",
+        "existing_archive_exact_read_and_corruption",
+        "expired_signed_witness_blocks",
+        "revoked_snapshot_blocks",
+        "signed_memory_span_and_fixed_sample",
+        "wrong_public_key_blocks"
+      ],
+      "scope": "actual temporary SQLite memory/witness/archive and Ed25519 test key, separate calls to sample_task_output and witnessed memory. Does NOT execute sample_result_bytes, resolve_result_binding, company T1 or signed metadata join."
+    },
+    "prior_0220": {
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.006,
+      "scope": "exact scheduler module rerun"
+    },
+    "prior_0219": {
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.002,
+      "scope": "historical excerpt with stand-ins; not current complete module regression"
+    },
+    "unique_new": 18,
+    "unique_prior": 24,
+    "full_result_sql": {
+      "count": 10,
+      "status": "NOT_RUN"
+    },
+    "prior_0219_full": "NOT_RUN",
+    "prior_0220_sql6": "NOT_RUN",
+    "locked_core29": "NOT_RUN",
+    "original_0213_fixture6": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "cryptography": "46.0.4",
+    "github_dns": "Could not resolve host: github.com",
+    "postgres": "postgres/initdb/psql absent",
+    "docker": "absent",
+    "psycopg": "absent",
+    "fastapi": "0.128.2 != 0.163.0",
+    "starlette": "0.50.0 != 1.10.0",
+    "uvicorn": "0.48.0 != 0.34.2",
+    "transitive_locks": "not reviewed/generated"
+  },
+  "historical_core_lock": {
+    "count": 55,
+    "unchanged": 53,
+    "drift": [
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "old_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+        "new_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+        "old_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+        "new_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac"
+      }
+    ],
+    "original_preserved": true
+  },
+  "gate": {
+    "done": 7,
+    "total": 16,
+    "percent": 43.75,
+    "new_closed": 0
+  },
+  "independent_acceptance": "HOLD",
+  "r03": "HOLD",
+  "actual_agents": 0,
+  "provider_calls": 0,
+  "tool_calls": 0,
+  "real_spend": 0,
+  "local_partial_zip": {
+    "filename": "AI_Company_OS_0221_KISMI_DOGRULAMA.zip",
+    "bytes": 59268,
+    "sha256": "6d6c2d9fcc150380512edc6c0c91c0a4c9b6797a1e22d6787b849c754b42e782",
+    "members": 54
+  },
+  "full_zip": "GitHub pinned archive reference only; no local full download"
+}

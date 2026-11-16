@@ -1,0 +1,175 @@
+{
+  "revision": "0221",
+  "source_commit": "763bd55796945dcd08bb53cda1b68f4c80c48845",
+  "parent": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "action": "modify",
+      "before_blob": "4724324f454c52eebac66b1e5c7819a299e95ae3",
+      "blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+      "bytes": 20298,
+      "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "action": "modify",
+      "before_blob": "8482b1d6033511137a23d75caa5f6d5e5aebe886",
+      "blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "bytes": 7835,
+      "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+      "action": "modify",
+      "before_blob": "783e9842c4712dac37b650354286f3f7c06290f0",
+      "blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+      "bytes": 4783,
+      "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+      "action": "add",
+      "before_blob": null,
+      "blob": "bb3f67caeb2102d944e5950cf04eb3705d963587",
+      "bytes": 10586,
+      "sha256": "b8490b108ced03a8319f74892f54a23db80acbf6f13949f2228101f5b880c7a5"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_sample_task_0221.py",
+      "action": "add",
+      "before_blob": null,
+      "blob": "010eec304471c547af45514a2d8208e8752da20f",
+      "bytes": 4282,
+      "sha256": "7f582ba285398c2bcfd1be04a301e6fe016641a225abcf9e50e9063ade8a075f"
+    }
+  ],
+  "symbols": [
+    {
+      "module": "app.engines.model_gateway.sample_adapter",
+      "class": "SampleCapabilityContext",
+      "functions": [
+        "sample_task_output"
+      ],
+      "dependencies": [
+        "InvocationEnvelope",
+        "inspect_invocation",
+        "inspect_capabilities",
+        "inspect_gateway",
+        "sample_model"
+      ],
+      "notes": "fixed local sample, DENY all effects"
+    },
+    {
+      "module": "app.core.transaction.fenced_transition",
+      "class": "SampleResultPin",
+      "functions": [
+        "sample_result_bytes",
+        "resolve_result_binding",
+        "check_result_store_separation",
+        "execute_fenced_transition"
+      ],
+      "dependencies": [
+        "company_transition_binding",
+        "binding_digest",
+        "ReferenceReader/Store",
+        "claim_digest",
+        "joint_context_digest",
+        "WitnessedTransitionMapping",
+        "D0AdmissionBoundTransitionMapping",
+        "CompanyCoordinatedMapping"
+      ],
+      "notes": "separate result pin, historical sample only; archive external to T1"
+    },
+    {
+      "module": "app.core.transaction.intent_authority",
+      "functions": [
+        "execute_authority_fenced_transition"
+      ],
+      "notes": "resolve same result pin before claim; old route preserved"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "test": {
+    "sample": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=source:source/tests python -m unittest discover -s source/tests -p test_sample_task_0221.py -v",
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.01,
+      "names": [
+        "effectful_request",
+        "enabled_skill",
+        "expired_lease",
+        "fixed_output",
+        "live_provider",
+        "policy_capability_missing",
+        "raw_digest_mismatch",
+        "revoked_grant",
+        "skill_source_drift",
+        "wrong_effect_digest",
+        "wrong_scope",
+        "wrong_witness"
+      ]
+    },
+    "memory": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=source:source/tests python -m unittest run_memory_diagnostics.MemoryDiagnostics -v",
+      "pass": 6,
+      "fail": 0,
+      "seconds": 0.135,
+      "names": [
+        "arbitrary_repin_cannot_expand_span",
+        "existing_archive_exact_read_and_corruption",
+        "expired_signed_witness_blocks",
+        "revoked_snapshot_blocks",
+        "signed_memory_span_and_fixed_sample",
+        "wrong_public_key_blocks"
+      ],
+      "scope": "actual temporary SQLite memory/witness/archive and Ed25519 test key, separate calls to sample_task_output and witnessed memory. Does NOT execute sample_result_bytes, resolve_result_binding, company T1 or signed metadata join."
+    },
+    "prior_0220": {
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.006,
+      "scope": "exact scheduler module rerun"
+    },
+    "prior_0219": {
+      "pass": 12,
+      "fail": 0,
+      "seconds": 0.002,
+      "scope": "historical excerpt with stand-ins; not current complete module regression"
+    },
+    "unique_new": 18,
+    "unique_prior": 24,
+    "full_result_sql": {
+      "count": 10,
+      "status": "NOT_RUN"
+    },
+    "prior_0219_full": "NOT_RUN",
+    "prior_0220_sql6": "NOT_RUN",
+    "locked_core29": "NOT_RUN",
+    "original_0213_fixture6": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN"
+  },
+  "maintenance": "exact admission and result hash/witness/pool readback, no automatic retry UNKNOWN",
+  "rollback": "revert source changes and manifest together; preserve archive and claims",
+  "open": [
+    "10 new SQL cases",
+    "0219/0220 full SQL",
+    "PG13/RLS",
+    "full locks/build",
+    "independent custody",
+    "success settlement",
+    "actual provider/tools",
+    "R03"
+  ],
+  "traceability": [
+    "v135 BE-03/BE-04",
+    "v130 C01/C03/D02/D04/A03",
+    "MVP-05–08/MVP-11"
+  ]
+}
