@@ -1,0 +1,40 @@
+{
+  "revision": "UX-PREMIUM-07-A0D-WINDOWS-REVIEW",
+  "source": "a79df6622e2eb9de63795ff6c0309984d1be6910",
+  "previous_prepare_evidence": "docs/UX-PREMIUM-07/A0D_WINDOWS_PREPARE_EVIDENCE.json",
+  "transcript_sha256": "dccf4023fbc72e44c4ff7fb33cb13ef03129cbdc3e3b725ffb21a3bee5da8112",
+  "origin": "User-provided Windows transcript; local reconstruction of pasted REVIEW and Python lock with CRLF, not raw wheel or npm lock bytes",
+  "source_pins": 398,
+  "pairs": 16,
+  "auxiliary_pins": 19,
+  "manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
+  "review_sha256": "a861d3d6bf4cd6e3727f2cbb2474ee221a435c5b3d660b11a9ce10d8acb72545",
+  "npm_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+  "python_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+  "comparison": {
+    "baseline": "752b225deac4557a548faec7191a090fbfba19f7",
+    "npm_hash_match": true,
+    "python_hash_match": true,
+    "new_review_hash_match": true,
+    "reconstructed_review_hash_match": true,
+    "reconstructed_python_lock_hash_match": true,
+    "python_lock_wheel_hash_set_match": "28/28",
+    "npm_packages": 61,
+    "raw_npm_lock_and_wheels": "NOT_SUPPLIED; actual W8 reviewed() recomputes on user machine"
+  },
+  "environment": {
+    "node": "v24.14.0",
+    "npm": "11.9.0",
+    "python": "3.14.3",
+    "platform": "win32"
+  },
+  "review_status": "MATCH_HISTORICAL_REVIEWED_DEPENDENCY_LOCKS_EXPLICIT_LOCAL_APPROVAL_PENDING",
+  "install": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "office": "JOIN_HOLD",
+  "independent": "HOLD",
+  "core": "7/16 historical",
+  "next": "User explicitly confirms scoped D0 local install then runs existing A0C install/test/smoke with new fingerprint, stop on nonzero; no main or union",
+  "product_changes": 0
+}
