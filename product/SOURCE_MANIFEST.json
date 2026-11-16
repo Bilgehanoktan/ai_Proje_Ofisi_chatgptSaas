@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0210",
-  "status": "D0_LOCAL_FENCED_T1_INTENT_QUARANTINE_SELECTED_PASS",
+  "doc_revision": "0211",
+  "status": "D0_INTENT_AUTHORITY_COMPONENT_TESTED_ORIGINAL_T1_INTEGRATION_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "b9cd16ca6dbb6d8344c34b9446564af7d2a29040",
+  "parent_git_commit": "b395d1944877128ab1bb7fa6477fc3188841fe57",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1381,10 +1381,16 @@
     "ai-company-os-backend/tests/test_fenced_transition_0210.py": {
       "bytes": 9144,
       "sha256": "5ba5f253bf3df39e2cf0daa7781c9d4ac91550cec9bc20a3355cfaf5153b95ac"
+    },
+    "ai-company-os-backend/app/core/transaction/intent_authority.py": {
+      "bytes": 7103,
+      "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239"
+    },
+    "ai-company-os-backend/tests/test_intent_authority_0211.py": {
+      "bytes": 4895,
+      "sha256": "ddef3499e45c05ca9fcaff1dfa7396ee0cdde4aa5a8f00aea12703464d56fb8c"
     }
   },
-  "parent_source_manifest_blob": "02b7b2cdea8ba2d21c14cc2bda2a4107502ae237",
-  "source_git_commit_note": "Two product additions; 154 selected local tests (138 regression, 16 local fence/intent journal). Local cooperating writer serialization only. External trust-root drift and joint journal/T1 rollback remain reproduced. No default authority.",
-  "additional_parent_git_commit": "23505d8f95500aef72466824ddb3956a14a594a8",
-  "additional_parent_source_manifest_blob": "6bce9a2424c251cd001fa8bd4780a3c0395c5ce2"
+  "parent_source_manifest_blob": "d8fbc81d6a0a8e409e92b906de9d86db2b65dd12",
+  "source_git_commit_note": "Two exact new product files. D0 authority: 9 component behavior checks and 1 reproduced authority-store restore residual. Original 0210 T1 integration, locked core29, PG/RLS and full build NOT_RUN. No independent custody or grant."
 }
