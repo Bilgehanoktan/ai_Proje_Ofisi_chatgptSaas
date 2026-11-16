@@ -189,3 +189,26 @@ def inspect_stored_memory(path, expected, run, lease, lease_reference, clock):
             return result
     except (OSError, sqlite3.Error, ValueError, TypeError, KeyError, AttributeError, OverflowError, RecursionError):
         return MemoryAccessReview('MEMORY_SNAPSHOT_READ_HOLD')
+
+
+def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, raw):
+    """One consistent read-only snapshot; compare exact bytes without returning them."""
+    if not _pin_ok(pin) or not _valid_run(run) or type(raw) is not bytes or len(raw) > LIMIT:
+        return 'MEMORY_SNAPSHOT_PIN_HOLD'
+    try:
+        with closing(_connect(path, 'ro')) as db:
+            db.execute('BEGIN')
+            if _head(db) != pin:
+                return 'MEMORY_SNAPSHOT_CAS_HOLD'
+            s = _load(db, pin)
+            review = inspect_run_memory_access(s.run, run, s.nodes, s.target,
+                s.tombstone, s.tombstone, s.acl, s.acl, lease, lease_reference, clock,
+                s.source, s.span, s.raw)
+            if not review.structural_match or review.reason != 'D0_MEMORY_ACCESS_MATCH_ONLY':
+                return review.reason
+            if raw != s.raw[s.span.start:s.span.end]:
+                return 'JOINT_INPUT_SPAN_HOLD'
+            return 'D0_MEMORY_INPUT_MATCH_ONLY'
+    except (OSError, sqlite3.Error, ValueError, TypeError, KeyError, AttributeError,
+            OverflowError, RecursionError):
+        return 'MEMORY_SNAPSHOT_READ_HOLD'

@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0207",
-  "status": "D0_UNIFIED_SELECTED_CROSS_BOUNDARY_TESTS_PASS",
+  "doc_revision": "0208",
+  "status": "D0_JOINT_CONTEXT_SELECTED_TESTS_PASS",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "parent_git_commit": "9bbc4bed75c56a36bcacc8c430a79bf3612aa85b",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -431,8 +431,8 @@
       "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
     },
     "ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
-      "bytes": 8405,
-      "sha256": "f80f3d64350f9c38f718ad4d1671e6ad0b69e8986a2a3a9f268bedb37b99da4f"
+      "bytes": 9580,
+      "sha256": "ac03b3ab7ce63b851853f61d8b68f76c17bcf1e7a61518e6c42acfd378ebe169"
     },
     "ai-company-os-backend/app/engines/model_gateway/__init__.py": {
       "bytes": 52,
@@ -1345,10 +1345,18 @@
     "ai-company-os-backend/tests/test_runtime_memory_model_0207.py": {
       "bytes": 4628,
       "sha256": "6787ddf20de8a9f0097ad3d58d3c9cf30b4b4268324028ec4a5070bd40ac26b1"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/joint_context.py": {
+      "bytes": 3694,
+      "sha256": "786928f7b0a12af8995e20886dbabfd9139e0ff8ffef7a049c994adf987ca6b6"
+    },
+    "ai-company-os-backend/tests/test_joint_context_0208.py": {
+      "bytes": 9128,
+      "sha256": "9fd2c905a6821d0bcf33e09ea707dae1ab190225b016d66ff7cf2ef60f63d822"
     }
   },
-  "parent_source_manifest_blob": "756bb6bd4717d363a9af4edd9d20ae558afdf71e",
-  "source_git_commit_note": "All 334 prior product files retained; one cross-boundary test added. 72 selected cases pass, not full product. No live authority.",
+  "parent_source_manifest_blob": "573166141f186245b94b818b9c0b1cdaf85d37e9",
+  "source_git_commit_note": "Two additions, one append-only source update. 98 selected local cases pass (72 regression, 26 new). D0 only; old independent readers retained.",
   "additional_parent_git_commit": "23505d8f95500aef72466824ddb3956a14a594a8",
   "additional_parent_source_manifest_blob": "6bce9a2424c251cd001fa8bd4780a3c0395c5ce2"
 }
