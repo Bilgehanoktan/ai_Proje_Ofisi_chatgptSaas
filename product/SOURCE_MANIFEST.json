@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0214",
-  "status": "D0_ORIGINAL_FULLCHAIN_AND_HISTORICAL_UI_SLICE_PASS_INDEPENDENT_PG_FULL_BUILD_HOLD",
+  "doc_revision": "0215",
+  "status": "D0_SIGNED_CLAIM_READBACK_AND_UI_PROVENANCE_PG_RUNNER_DIAGNOSTIC_PASS_FULL_ACCEPTANCE_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "3cec45d2040fc35293ddcb82840ee543ba1f4019",
+  "parent_git_commit": "a4a6aba3e986927b4e2b0157028e6623c669864e",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1415,14 +1415,30 @@
       "sha256": "032abe3f5879d6157b502c3153eb4f6a58d8684b853b1cc4e394e4282ed3667f"
     },
     "ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx": {
-      "bytes": 1041,
-      "sha256": "30a6a9db9b5811ce63675a9ac004777b12d214735df29f9fa029c4ac53e8ca82"
+      "bytes": 1527,
+      "sha256": "b83e8f27a842a3159d7e5fdf59ac444f9fb2fa5b4944f2a67cc1bf2ac9a15f11"
     },
     "ai-company-os-frontend/tests/historical-evidence-0214.test.cjs": {
       "bytes": 2123,
       "sha256": "1aa90b23630cf86f91df9ac591d5f10370d5c996c2115df0a323960598256de3"
+    },
+    "ai-company-os-backend/app/core/transaction/external_claim_review.py": {
+      "bytes": 5574,
+      "sha256": "9fc7e5de6af70271a11da25db6a68151385aaff82ba956f99d48a735793ba667"
+    },
+    "ai-company-os-backend/tests/test_external_claim_review_0215.py": {
+      "bytes": 4817,
+      "sha256": "70c7bafc78d32ab4afc9869109ef088ff47d0961aa16b1850ca6e2bc5fb14198"
+    },
+    "ai-company-os-frontend/features/mvp/historicalPresentation.ts": {
+      "bytes": 1253,
+      "sha256": "5713cdfe90a2d513d3e9bfbf71f1fa066f1d25b76508e38611ae99ba4bdb433c"
+    },
+    "ai-company-os-frontend/tests/historical-presentation-0215.test.cjs": {
+      "bytes": 2916,
+      "sha256": "bb2d72e425c86587cc0207d8a5f233fa9147eccf8812f3139dc79ef6c360a8e2"
     }
   },
-  "parent_source_manifest_blob": "74c6f9199f72669cfab80e54ddadcde76836aa9e",
-  "source_git_commit_note": "18 original backend dependency and 2 frontend parser files recovered locally exactly; original full wrapper run through new fixture 10/10 (1 restore residual); 66 Python +14 Node diagnostic tests; 4 new and 2 modified product files; no live authority, locked deps, PG or full browser acceptance."
+  "parent_source_manifest_blob": "98da5a4d9cf592368199287382f1e22f8b00cdc0",
+  "source_git_commit_note": "0214 recorded historical 66 Python/14 Node diagnostic checks, not rerun this session; 0215 adds four and modifies one product file plus two runner/test files outside product. 15 real local Authority/readback cases, 14 PG runner controls, 17 UI reference cases PASS. No independent custody/effect, actual PG, RLS, full checkout/locked build/browser acceptance."
 }
