@@ -1,0 +1,74 @@
+{
+  "revision": "UX-PREMIUM-07-A4R2",
+  "parent": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx",
+      "operation": "REPLACE",
+      "before": "8fe0766a096ea6b5969d8993f5bd29a80b220387",
+      "blob": "cafe5a427a77944779be2250693a7d9665818d31",
+      "bytes": 10771,
+      "sha256": "366235c0a866820dcaad51f098eecc680063233bcad42dcb3c8600c58fcd7f69",
+      "symbols": [
+        "PremiumHybridScene",
+        "diagnostics",
+        "data-camera-view",
+        "data-frame-deltas",
+        "data-traffic-tick",
+        "data-position"
+      ],
+      "purpose": "native readback and partition axis correction",
+      "validation": "TSX_SYNTAX_ONLY"
+    },
+    {
+      "path": "tests/integration/native_ux_a4r2.py",
+      "operation": "ADD",
+      "blob": "d82d09d0ea39e213ae4db78e8181d2c9c90d06f7",
+      "symbols": [
+        "local_origin",
+        "frame_metrics",
+        "main"
+      ],
+      "validation": "HELPERS_PASS_NATIVE_NOT_RUN"
+    },
+    {
+      "path": "tests/integration/w8_ux_a4r2.py",
+      "operation": "ADD",
+      "blob": "a5957b898048bc45774583dc9ab541497eebb12a",
+      "symbols": [
+        "checked_pin",
+        "clear",
+        "extend_candidate",
+        "load_candidate",
+        "verify_aux_candidate",
+        "test_candidate",
+        "smoke_candidate",
+        "hook"
+      ],
+      "validation": "GUARD_DOUBLES_PASS_CHAIN_NOT_RUN"
+    },
+    {
+      "path": "tests/integration/test_w8_ux_a4r2.py",
+      "operation": "ADD",
+      "blob": "14fbd2e67451ebaa7dfa8047e2796fd5c4b06052",
+      "symbols": [
+        "Helpers",
+        "GuardDoubles"
+      ],
+      "validation": "12/12 PASS"
+    }
+  ],
+  "api": [],
+  "database": [],
+  "external_dependencies": [],
+  "dependency_pins": {
+    "tests/integration/w8_ux_a0c.py": "52ac6add8b0bc338527e9e12c7848c9056d8f836",
+    "tests/integration/w8_ux_a0b.py": "9267828684fbf905d3132d114f3566f191780793",
+    "tests/integration/w8_p10g.py": "f2fa61c515f9b4eb5b964dccde88f58b8daff73b",
+    "tests/integration/w8_p10f.py": "155a2179eb71bd554aa34dff36147be4658473e0",
+    "tests/integration/w8_unified.py": "162a2387e5cdea6828a0cbbf0dab247bc4678551",
+    "tests/integration/native_ux_a0b.py": "becb59ee24df2a76c4aa31428abf3365b35172ed",
+    "tests/integration/browser_task_budget_0188.py": "4511877f03ffae35d4baef7267c6d7e8ea6bf583"
+  },
+  "maintenance": "A4R2_NATIVE.md runbook; exact stage and locks required; rollback parent; no migration."
+}

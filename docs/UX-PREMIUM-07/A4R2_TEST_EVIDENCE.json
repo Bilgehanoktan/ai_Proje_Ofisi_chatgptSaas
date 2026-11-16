@@ -1,0 +1,65 @@
+{
+  "revision": "UX-PREMIUM-07-A4R2",
+  "input_zip": "CRC PASS; 21/21 SHA256-size",
+  "model": {
+    "typescript": "5.8.3",
+    "node": "22.16.0",
+    "strict_compile": "PASS",
+    "a4": 10,
+    "a3": 20,
+    "a2": 15,
+    "a1": 15,
+    "legacy": 16,
+    "total": 76
+  },
+  "tsx": {
+    "count": 2,
+    "noCheck": "PASS",
+    "full_typecheck": "NOT_RUN"
+  },
+  "harness": {
+    "python": "3.13.5",
+    "helpers": 5,
+    "doubles": 7,
+    "pass": 12,
+    "total": 12,
+    "full_original_chain_local": "NOT_RUN",
+    "parent_pins_remote": {
+      "tests/integration/w8_ux_a0c.py": "52ac6add8b0bc338527e9e12c7848c9056d8f836",
+      "tests/integration/w8_ux_a0b.py": "9267828684fbf905d3132d114f3566f191780793",
+      "tests/integration/w8_p10g.py": "f2fa61c515f9b4eb5b964dccde88f58b8daff73b",
+      "tests/integration/w8_p10f.py": "155a2179eb71bd554aa34dff36147be4658473e0",
+      "tests/integration/w8_unified.py": "162a2387e5cdea6828a0cbbf0dab247bc4678551",
+      "tests/integration/native_ux_a0b.py": "becb59ee24df2a76c4aa31428abf3365b35172ed",
+      "tests/integration/browser_task_budget_0188.py": "4511877f03ffae35d4baef7267c6d7e8ea6bf583"
+    }
+  },
+  "logs_sha256": {
+    "actor-identity.log": "260c464e2705ec8cda4b4a1747b31a94f8242e21067594fc0445394d9e408b45",
+    "harness.log": "23e4bdd15cbb5bc2aebd42926972be36a0f9fdd2b8a7c9619fa9a481bd31ac2e",
+    "hybrid-layout.log": "e9606e58c470a95d8d85649def43542d55146723ad0bda75cf2f81cd7ff80cff",
+    "hybrid-render.log": "b3e4c7df86bdb1210d0018c447bb89fd9ee5cad713bfe2cfb710b7e0606f60c2",
+    "identity-traffic.log": "70e8338d2f2af3593d53fb0330d4eb3f718f70da8634dc92807cfa6772127920",
+    "model.log": "b5b4b0ee35a68fc2bf89696db085ed2882f58417c73665463c9e0df3bf2f272c"
+  },
+  "source_blobs": {
+    "product/ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx": "cafe5a427a77944779be2250693a7d9665818d31",
+    "product/SOURCE_MANIFEST.json": "397f87b7d9a9227ee435b1501347c6460fc73c5e",
+    "tests/integration/native_ux_a4r2.py": "d82d09d0ea39e213ae4db78e8181d2c9c90d06f7",
+    "tests/integration/w8_ux_a4r2.py": "a5957b898048bc45774583dc9ab541497eebb12a",
+    "tests/integration/test_w8_ux_a4r2.py": "14fbd2e67451ebaa7dfa8047e2796fd5c4b06052"
+  },
+  "blockers": [
+    "git ls-remote Could not resolve host github.com",
+    "npm view phaser@3.90.0 EAI_AGAIN registry.npmjs.org"
+  ],
+  "chromium": "144.0.7559.96 available; product not launched",
+  "full_build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "planned_groups": 6,
+  "planned_png": 5,
+  "actual_png": 0,
+  "gpu": "NOT_RUN",
+  "manual_art": "NOT_RUN",
+  "independent": "HOLD"
+}

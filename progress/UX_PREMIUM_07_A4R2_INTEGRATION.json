@@ -1,0 +1,847 @@
+{
+  "revision": "UX-PREMIUM-07-A4R2",
+  "observed_heads": {
+    "premium_A4R1": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+    "core_0227": "23b74c75d169a8533a9b2b6f51fe7c8026f91dc0",
+    "ui_P10J19": "b5cfa4fe8d839037bbb760f6361a474b42f8578a",
+    "ui_P10J18": "4a011d2f4d11e6bf7526ba596ca00b16643ea5bf",
+    "scope": "P10J19 has exact A4R1 scene blob 8fe0766a096ea6b5969d8993f5bd29a80b220387; A4R2 harness paths absent in observed trees. Shared path intentional downstream delta; no other branch writes. Reconcile by expected old blob, not merge or manifest replacement."
+  },
+  "packages": [
+    {
+      "id": "A0",
+      "name": "Freeze/reproduce",
+      "integration": "BASELINE_REVIEWED_LOCAL_D0_PASS",
+      "proof": "Raw lock/marker/native report and 53 PNG verification; baseline visual findings recorded; not HD or release acceptance",
+      "owner": "Isolated Premium",
+      "next": "A1 hybrid geometry model"
+    },
+    {
+      "id": "A1",
+      "name": "Hybrid topology",
+      "integration": "STATIC_MODEL_SOURCE_TESTED_RENDERER_NOT_JOINED",
+      "proof": "15/15 static TS/Node checks; 48x30 and 56x34 pass, 40x26 rejected. No new runtime or render integration.",
+      "owner": "Premium",
+      "next": "A2 model implemented; renderer pending"
+    },
+    {
+      "id": "A2",
+      "name": "Identity/layout",
+      "integration": "D0_IDENTITY_MODEL_TESTED_RENDERER_NOT_JOINED",
+      "proof": "15/15 new tests + 15/15 exact A1 and 16/16 exact legacy model regressions; renderer not joined",
+      "owner": "Premium",
+      "next": "A3 ID-based traffic on A2 registry; A4 renderer and legacy command integration; old model regression and W8 rebind before acceptance"
+    },
+    {
+      "id": "A3",
+      "name": "Traffic scaling",
+      "integration": "D0_IDENTITY_TRAFFIC_MODEL_TESTED_RENDERER_NOT_JOINED",
+      "proof": "20/20 new plus 46/46 exact regressions; 4/6/8/12 round trips; 2–4 joint cycles resolve; six-way cycle safe HOLD; per-tick cell/edge only",
+      "owner": "Premium",
+      "next": "A4: new D0 native renderer adapter consumes A1/A2/A3, preserves original route and atlas fallback; interpolate only accepted adjacent tick movements with render barrier; W8 manifest/locks rebind before exact build/native/browser. A5 portals and A6 canonical join remain separate."
+    },
+    {
+      "id": "A4",
+      "name": "Render/assets",
+      "integration": "W8_REBOUND_HARNESS_TESTED_NATIVE_BLOCKED",
+      "proof": "76/76 model regression reruns +12/12 runner helpers/doubles; 2 TSX syntax only; no native run",
+      "owner": "Premium",
+      "next": "A4R2 actual W8 Windows execution: fresh exact checkout, audit, prepare and review locks, install, test, smoke, inspect raw markers, five PNGs, logs and frame samples, manual art review. Then bounded art refinements and A5 dynamic floors/portal only after native baseline review. P10J19+ cross-track delta by expected scene blob and target-specific W8/manifest rebind, no auto-merge."
+    },
+    {
+      "id": "A5",
+      "name": "Floors/portals",
+      "integration": "PARTIAL_LEGACY_ONLY",
+      "proof": "Passive floor and isolated lift helper; no dynamic publication",
+      "owner": "Premium",
+      "next": "A4R2 actual W8 native and visual review first"
+    },
+    {
+      "id": "A6",
+      "name": "OfficeV0/core alignment",
+      "integration": "REVIEWED_55_JOIN_HOLD",
+      "proof": "55/55 static review, 0 owner/canonical; 0222 replay no world/geometry; 0224 separate",
+      "owner": "Joint review only",
+      "next": "actual DB4; exact shared snapshot/browser; owner/IV proof"
+    },
+    {
+      "id": "A7",
+      "name": "Acceptance",
+      "integration": "NOT_RUN",
+      "proof": "0/36 HD criteria formally accepted; no full native/combined acceptance",
+      "owner": "Joint review",
+      "next": "A0–A6 and independent gates"
+    }
+  ],
+  "core_gates": [
+    {
+      "id": "A",
+      "name": "Core recovery",
+      "done": 2,
+      "total": 3,
+      "criteria": [
+        [
+          "55 exact files",
+          true
+        ],
+        [
+          "29 diagnostic tests",
+          true
+        ],
+        [
+          "29 locked dependency tests",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Intent Authority + T1",
+      "done": 2,
+      "total": 3,
+      "criteria": [
+        [
+          "Direct claim/fence + ordinary T1",
+          true
+        ],
+        [
+          "Exact 0211 witness/journal wrapper",
+          true
+        ],
+        [
+          "Independent custody/effect authority",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Company + Terminal",
+      "done": 3,
+      "total": 3,
+      "criteria": [
+        [
+          "Single-project lifecycle composition",
+          true
+        ],
+        [
+          "Rollback/UNKNOWN/cap/tamper",
+          true
+        ],
+        [
+          "Multi-project concurrent composition",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "D",
+      "name": "PG/RLS",
+      "done": 0,
+      "total": 3,
+      "criteria": [
+        [
+          "Local PG+driver",
+          false
+        ],
+        [
+          "13 actual PG tests",
+          false
+        ],
+        [
+          "Non-owner RLS/lock contention",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Working product",
+      "done": 0,
+      "total": 4,
+      "criteria": [
+        [
+          "Exact full checkout+reviewed locks",
+          false
+        ],
+        [
+          "Full backend build/test",
+          false
+        ],
+        [
+          "Full frontend build",
+          false
+        ],
+        [
+          "Browser CEO/Office historical data",
+          false
+        ]
+      ]
+    }
+  ],
+  "core_total": {
+    "done": 7,
+    "total": 16
+  },
+  "ui_historical_criteria": {
+    "done": 21,
+    "total": 40,
+    "latest_candidate": "P10J14",
+    "full_latest": "NOT_RUN",
+    "historical_W8": "P10J08_PASS_ONLY"
+  },
+  "office_owner": {
+    "done": 0,
+    "total": 55,
+    "reviewed": 55
+  },
+  "independent": {
+    "done": 0,
+    "total": 7
+  },
+  "hd": {
+    "accepted": 0,
+    "total": 36
+  },
+  "tracker24": {
+    "source": "TRACK-0226",
+    "blob": "8e74838d1a6fc231d839079b20a174f21a635da3",
+    "scores_are": "ordinal editorial estimates, not completion percentages or ETA; no weighted total; track per area changes with evidence and preserve history",
+    "rows": [
+      {
+        "id": 1,
+        "alan": "Frontend",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0217_STUDIO_CONTEXT",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Research canonical project/plan/run lineage; actual DB and pinned build/browser"
+      },
+      {
+        "id": 2,
+        "alan": "UI/UX Design System",
+        "tasarim": 50,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0217_STUDIO_CONTEXT",
+        "integration_status": "EDS_SLICE_INTEGRATED",
+        "sonraki": "Real UI and EDS browser"
+      },
+      {
+        "id": 3,
+        "alan": "Office Engine",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0217_HISTORICAL_LABEL",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Exact DB route, pinned build/browser, authenticated project/world and live scope proof"
+      },
+      {
+        "id": 4,
+        "alan": "API & Contracts",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_ACTUAL_SCHEMA_HTTP",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Research canonical project/plan/run lineage; actual DB and pinned build/browser"
+      },
+      {
+        "id": 5,
+        "alan": "Backend",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0217_SIGNED_FIXTURE",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 6,
+        "alan": "Orchestrator",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0204C_REPLAY",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 7,
+        "alan": "Task Engine & DAG",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0205R_CHECKPOINT",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 8,
+        "alan": "Agent Runtime",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0217_SIGNED_FIXTURE",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 9,
+        "alan": "AI Model Gateway",
+        "tasarim": 50,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0210_DENIAL",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Mandatory effect/budget proof"
+      },
+      {
+        "id": 10,
+        "alan": "Skill & Tool Engine",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_D0_REVIEW",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Actual ToolGateway and receipts"
+      },
+      {
+        "id": 11,
+        "alan": "Database",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0217_LOCAL_SQLITE_DDL_PINS",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 12,
+        "alan": "Event Store & Messaging",
+        "tasarim": 75,
+        "kaynak": 50,
+        "gercek_test": "PARTIAL_PASS_0211_COMPONENT_CLAIM",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Full Company/Terminal composition"
+      },
+      {
+        "id": 13,
+        "alan": "Memory & Knowledge",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0210_LOCAL_FENCE",
+        "integration_status": "SOURCE_PRESENT_UNVERIFIED",
+        "sonraki": "Independent trust root/restore-external intent head"
+      },
+      {
+        "id": 14,
+        "alan": "Security & IAM",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "External trust custody, authenticated consume and effect boundary"
+      },
+      {
+        "id": 15,
+        "alan": "Independent Verifier",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "HOLD_INDEPENDENT_ACCEPTANCE",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 16,
+        "alan": "SaaS & Multi-Tenant",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0204C_REPLAY",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "RLS and tenant owner proof"
+      },
+      {
+        "id": 17,
+        "alan": "Ürün ve iş modülleri",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "NOT_RUN",
+        "integration_status": "EARLY_SOURCE",
+        "sonraki": "WorkType implementations"
+      },
+      {
+        "id": 18,
+        "alan": "Dış sistem entegrasyonları",
+        "tasarim": 75,
+        "kaynak": 0,
+        "gercek_test": "NOT_RUN",
+        "integration_status": "NOT_IMPLEMENTED",
+        "sonraki": "Separate authority and source work"
+      },
+      {
+        "id": 19,
+        "alan": "Finans & Billing",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0205R_POOL",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Project identity/allocations/T1, shared pool tests"
+      },
+      {
+        "id": 20,
+        "alan": "Test & QA",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0217_SELECTED_37",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable"
+      },
+      {
+        "id": 21,
+        "alan": "DevOps & Infrastructure",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "BLOCKED_CHECKOUT_DEPENDENCIES_PG",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Obtain authenticated exact checkout and reviewed locks"
+      },
+      {
+        "id": 22,
+        "alan": "Monitoring & Observability",
+        "tasarim": 50,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_HISTORICAL_READBACK",
+        "integration_status": "PARTIAL_INTEGRATED",
+        "sonraki": "Exact DB route, pinned build/browser, authenticated project/world and live scope proof"
+      },
+      {
+        "id": 23,
+        "alan": "Backup & Disaster Recovery",
+        "tasarim": 75,
+        "kaynak": 25,
+        "gercek_test": "PARTIAL_PASS_0217_RESTORE_RESIDUAL",
+        "integration_status": "SOURCE_PREPARATION",
+        "sonraki": "Separate independent storage and destructive test"
+      },
+      {
+        "id": 24,
+        "alan": "Teknik katalog & dokümantasyon",
+        "tasarim": 75,
+        "kaynak": 75,
+        "gercek_test": "CATALOG_UPDATED",
+        "integration_status": "CATALOG_UPDATED",
+        "sonraki": "Keep exact readback"
+      }
+    ]
+  },
+  "product_changes": 1,
+  "full_build": "BLOCKED_DNS_NOT_RUN",
+  "native": "NOT_RUN",
+  "next": "A4R2 actual W8 Windows execution: fresh exact checkout, audit, prepare and review locks, install, test, smoke, inspect raw markers, five PNGs, logs and frame samples, manual art review. Then bounded art refinements and A5 dynamic floors/portal only after native baseline review. P10J19+ cross-track delta by expected scene blob and target-specific W8/manifest rebind, no auto-merge.",
+  "parent": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+  "bootstrap": {
+    "tests": 7,
+    "scope": "local Git fixtures",
+    "actual_fetch": "DNS_BLOCKED",
+    "dependencies_same": "4/4 direct definition blobs",
+    "source": "docs/UX-PREMIUM-07/prepare_a0c.py"
+  },
+  "premium_a0_checklist": {
+    "done": 8,
+    "total": 8,
+    "scope": "Eight local execution checklist stages, all user transcript PASS; not HD/IV or manual visual acceptance"
+  },
+  "a1": {
+    "model": "product/ai-company-os-frontend/office/engine/premiumHybridLayout.ts",
+    "checks": 15,
+    "variants": [
+      {
+        "scale": "compact",
+        "width": 40,
+        "height": 26,
+        "status": "REJECTED_GEOMETRY",
+        "reason": "FOOTPRINT_BOUNDS:q-west-top"
+      },
+      {
+        "scale": "reference",
+        "width": 48,
+        "height": 30,
+        "status": "STATIC_PATH_PASS",
+        "walkable": 1081,
+        "clear2x2": 853,
+        "entryPaths": {
+          "research": 38,
+          "orchestrator": 20,
+          "engineer": 37,
+          "qa": 22
+        },
+        "briefingPaths": {
+          "research": 32,
+          "orchestrator": 14,
+          "engineer": 31,
+          "qa": 16
+        }
+      },
+      {
+        "scale": "expanded",
+        "width": 56,
+        "height": 34,
+        "status": "STATIC_PATH_PASS",
+        "walkable": 1474,
+        "clear2x2": 1210,
+        "entryPaths": {
+          "research": 45,
+          "orchestrator": 23,
+          "engineer": 43,
+          "qa": 25
+        },
+        "briefingPaths": {
+          "research": 38,
+          "orchestrator": 16,
+          "engineer": 36,
+          "qa": 18
+        }
+      }
+    ],
+    "renderer": "NOT_JOINED",
+    "manifest_blob": "ead7eb00754306089729e43ba66f553bcc695709"
+  },
+  "track_24_overlay": {
+    "source": "TRACK-0227 read-only observation; prior scores carried, no score promotion",
+    "source_blob": "a661d0efd5845722f2882251acf0e189b665b75a",
+    "rows": [
+      {
+        "id": 1,
+        "alan": "Frontend",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "New scene diagnostics; full build blocked"
+      },
+      {
+        "id": 2,
+        "alan": "UI/UX Design System",
+        "tasarim": 50,
+        "kaynak": 50,
+        "integration_status": "EDS_SLICE_INTEGRATED",
+        "a4r2_note": "Axis-aligned glass source change; native art review open"
+      },
+      {
+        "id": 3,
+        "alan": "Office Engine",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "A1–A4 bridge retained; native smoke prepared"
+      },
+      {
+        "id": 4,
+        "alan": "API & Contracts",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 5,
+        "alan": "Backend",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 6,
+        "alan": "Orchestrator",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 7,
+        "alan": "Task Engine & DAG",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 8,
+        "alan": "Agent Runtime",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 9,
+        "alan": "AI Model Gateway",
+        "tasarim": 50,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 10,
+        "alan": "Skill & Tool Engine",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 11,
+        "alan": "Database",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 12,
+        "alan": "Event Store & Messaging",
+        "tasarim": 75,
+        "kaynak": 50,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 13,
+        "alan": "Memory & Knowledge",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 14,
+        "alan": "Security & IAM",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 15,
+        "alan": "Independent Verifier",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 16,
+        "alan": "SaaS & Multi-Tenant",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 17,
+        "alan": "Ürün ve iş modülleri",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "EARLY_SOURCE",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 18,
+        "alan": "Dış sistem entegrasyonları",
+        "tasarim": 75,
+        "kaynak": 0,
+        "integration_status": "NOT_IMPLEMENTED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 19,
+        "alan": "Finans & Billing",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 20,
+        "alan": "Test & QA",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "76 actual model reruns + 12 runner checks (5 helpers/7 doubles)"
+      },
+      {
+        "id": 21,
+        "alan": "DevOps & Infrastructure",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "A4R2 W8 rebind; core E1 separate PASS, PG missing"
+      },
+      {
+        "id": 22,
+        "alan": "Monitoring & Observability",
+        "tasarim": 50,
+        "kaynak": 25,
+        "integration_status": "PARTIAL_INTEGRATED",
+        "a4r2_note": "Camera and update-delta readback instrumentation; real measurements open"
+      },
+      {
+        "id": 23,
+        "alan": "Backup & Disaster Recovery",
+        "tasarim": 75,
+        "kaynak": 25,
+        "integration_status": "SOURCE_PREPARATION",
+        "a4r2_note": "Separate core/UI record; unchanged by A4R2"
+      },
+      {
+        "id": 24,
+        "alan": "Teknik katalog & dokümantasyon",
+        "tasarim": 75,
+        "kaynak": 75,
+        "integration_status": "CATALOG_UPDATED",
+        "a4r2_note": "A4R2 pins, tests, architecture, handover updated"
+      }
+    ],
+    "no_score_change": true
+  },
+  "a2": {
+    "source": "product/ai-company-os-frontend/office/engine/premiumActorIdentity.ts",
+    "test": "product/ai-company-os-frontend/tests/premium-actor-identity.test.cjs",
+    "checks": 15,
+    "base_model_blob": "b22331afc90dc7059cc8e3c098ba83477c993d90",
+    "core_actors": 4,
+    "passive_stations": 2,
+    "synthetic_same_role_test": 2,
+    "legacy_renderer": "UNCHANGED; LEGACY_MODEL_16/16_PASS",
+    "full_build": "NOT_RUN",
+    "native": "NOT_RUN",
+    "a1_regression": "15/15 PASS",
+    "selected_total": 46
+  },
+  "observed_heads_scope": "P10J19 has exact A4R1 scene blob 8fe0766a096ea6b5969d8993f5bd29a80b220387; A4R2 harness paths absent in observed trees. Shared path intentional downstream delta; no other branch writes. Reconcile by expected old blob, not merge or manifest replacement.",
+  "a3": {
+    "source": "product/ai-company-os-frontend/office/engine/premiumIdentityTraffic.ts",
+    "test": "product/ai-company-os-frontend/tests/premium-identity-traffic.test.cjs",
+    "checks": 20,
+    "regressions": 46,
+    "total": 66,
+    "scale": [
+      {
+        "actors": 4,
+        "ticks": 62,
+        "moves": 180,
+        "bfs_expanded": 54886,
+        "mean_ms": 1.665,
+        "p95_ms": 4.472,
+        "max_ms": 4.976,
+        "cpu_mean_ms": 1.709
+      },
+      {
+        "actors": 6,
+        "ticks": 69,
+        "moves": 296,
+        "bfs_expanded": 96866,
+        "mean_ms": 2.693,
+        "p95_ms": 7.672,
+        "max_ms": 12.465,
+        "cpu_mean_ms": 2.889
+      },
+      {
+        "actors": 8,
+        "ticks": 69,
+        "moves": 358,
+        "bfs_expanded": 106008,
+        "mean_ms": 3.075,
+        "p95_ms": 8.402,
+        "max_ms": 10.69,
+        "cpu_mean_ms": 3.184
+      },
+      {
+        "actors": 12,
+        "ticks": 72,
+        "moves": 554,
+        "bfs_expanded": 169185,
+        "mean_ms": 4.382,
+        "p95_ms": 12.28,
+        "max_ms": 13.584,
+        "cpu_mean_ms": 4.497
+      }
+    ],
+    "benchmark_scope": "Node advance only, 1 warmup+3 rounds per size, no browser FPS",
+    "limits": {
+      "joint_group": 4,
+      "joint_states": 20000,
+      "joint_expansions_per_slice": 96,
+      "generation_ticks": 2048,
+      "repeated_position_visits": 8
+    },
+    "renderer": "NOT_JOINED",
+    "full_build": "NOT_RUN",
+    "native": "NOT_RUN"
+  },
+  "a4": {
+    "new_tests": 10,
+    "regression": 66,
+    "selected_total": 76,
+    "tsx_syntax_only": 2,
+    "route": "/office/premium/hybrid",
+    "legacy_route": "/office/premium/native",
+    "edge_ms": 240,
+    "renderer": "SOURCE_INTEGRATED",
+    "native": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "dependencies": "EAI_AGAIN registry.npmjs.org",
+    "asset": "existing procedural atlas reused, original new geometry drawing; no external art",
+    "limitations": [
+      "no actual art/occlusion/footprint acceptance",
+      "single-floor four default actors; only same-role model tested",
+      "no real native GPU/frame metrics",
+      "no CEO embed or OfficeV0 join",
+      "no W8 rebind yet"
+    ]
+  },
+  "parallel_observation": {
+    "core_gate": {
+      "done": 9,
+      "total": 16,
+      "percent": 56.25
+    },
+    "core_tracker_blob": "a661d0efd5845722f2882251acf0e189b665b75a",
+    "ui": {
+      "ui": "21/40 prior; no new UI gate",
+      "core": "9/16 separate core 0227; E1 accepted in core scope only",
+      "mvp": "0/11",
+      "independent": "0/7 HOLD",
+      "full_build": "NOT_RUN",
+      "W8": "NOT_RUN",
+      "browser": "NOT_RUN",
+      "PG_RLS": "NOT_RUN"
+    },
+    "ui_tracker_blob": "b88454159c0c21e1caeb07599c44ade62184fa77",
+    "ui_browser_plan": {
+      "old_blob": "9d4a741e9c8b4e643e494b0c19f0d789d6967a17",
+      "blob": "baac24da1edba991a240a0c41258f0f9a35d95fa",
+      "old_captures": 84,
+      "new_captures": 6,
+      "planned": 90,
+      "status": "NOT_RUN",
+      "scope": "4 Project roadmap viewport/theme, 2 hybrid native viewport checks; no full motion or native performance acceptance"
+    },
+    "core_note": "E1 accepted 9/16. D1 user Windows inventory finds no PG/driver at checked locations; candidate only, no install or PG test.",
+    "notes": "Core 9/16 E1 scoped; UI 21/40, 90 planned captures, 483 files. Separate records; A4R2 no gate promotion."
+  },
+  "a4r2": {
+    "product_replaced": 1,
+    "auxiliary_added": 3,
+    "model_regressions": 76,
+    "harness": {
+      "actual_helpers": 5,
+      "doubles": 7,
+      "total": 12
+    },
+    "tsx_syntax_only": 2,
+    "runner": "tests/integration/w8_ux_a4r2.py",
+    "planned_native_groups": 6,
+    "planned_captures": 5,
+    "actual_native_groups": 0,
+    "actual_captures": 0,
+    "frame_samples": "NOT_RUN",
+    "gpu": "NOT_RUN",
+    "art": "PARTITION_AXIS_SOURCE_CHANGE_ONLY",
+    "full_build": "BLOCKED_DNS",
+    "native": "NOT_RUN"
+  }
+}

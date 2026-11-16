@@ -1,0 +1,28 @@
+{
+  "revision": "UX-PREMIUM-07-A4R2",
+  "branch": "integration/ux-premium-07-a4r2-native-acceptance",
+  "parent": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+  "product_files": 409,
+  "manifest_entries": 408,
+  "product_replaced": 1,
+  "auxiliary_added": 3,
+  "model_regressions": "76/76",
+  "harness": "12/12 (5 helper, 7 double)",
+  "build": "NOT_RUN_BLOCKED_DNS",
+  "native": "NOT_RUN",
+  "office": "JOIN_HOLD",
+  "independent": "HOLD",
+  "architecture": "docs/UX-PREMIUM-07/A4R2_NATIVE.md",
+  "catalog": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A4R2.json",
+  "progress": "progress/UX_PREMIUM_07_A4R2_INTEGRATION.json",
+  "evidence": "docs/UX-PREMIUM-07/A4R2_TEST_EVIDENCE.json",
+  "next": "A4R2 actual W8 Windows execution: fresh exact checkout, audit, prepare and review locks, install, test, smoke, inspect raw markers, five PNGs, logs and frame samples, manual art review. Then bounded art refinements and A5 dynamic floors/portal only after native baseline review. P10J19+ cross-track delta by expected scene blob and target-specific W8/manifest rebind, no auto-merge.",
+  "rollback": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+  "observed_heads": {
+    "premium_A4R1": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+    "core_0227": "23b74c75d169a8533a9b2b6f51fe7c8026f91dc0",
+    "ui_P10J19": "b5cfa4fe8d839037bbb760f6361a474b42f8578a",
+    "ui_P10J18": "4a011d2f4d11e6bf7526ba596ca00b16643ea5bf",
+    "scope": "P10J19 has exact A4R1 scene blob 8fe0766a096ea6b5969d8993f5bd29a80b220387; A4R2 harness paths absent in observed trees. Shared path intentional downstream delta; no other branch writes. Reconcile by expected old blob, not merge or manifest replacement."
+  }
+}
