@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10J-14",
-  "status": "D0_CORE_UI_INTEGRATED_SOURCE_CANDIDATE_NOT_ACCEPTED",
+  "doc_revision": "UI-P10J-15",
+  "status": "D0_0225_VALIDATION_CANDIDATE_NOT_ACCEPTED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "14348b3d6259a41725142585da886aefb63f11e8",
+  "parent_git_commit": "1d0d4eb89e0aff92720c0d545247b7bd3713012e",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1757,10 +1757,26 @@
     "ai-company-os-frontend/tests/ui-p10j14-governance.test.cjs": {
       "bytes": 1816,
       "sha256": "e13ab2e36665e1a78afe575746747cbfe7084a23b94cdb1cb3dc83e93ada2157"
+    },
+    "ai-company-os-backend/tests/test_lifecycle_db_http_0225.py": {
+      "bytes": 6047,
+      "sha256": "f4731601b65b8a5cc47ee1bfc63e2012ac334b27df876d2295ba6e60524d7a52"
+    },
+    "ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": {
+      "bytes": 5649,
+      "sha256": "2b9c7adc4ae9d4201bf8ec7ca2b9788ccf7f68a2efd9422b8a7b561d552171e9"
+    },
+    "ai-company-os-backend/tests/test_pinned_research_t1_0225.py": {
+      "bytes": 5303,
+      "sha256": "7a6371c41539317863bb4dfa674514d53b76f08baf7a41a7c6d2c6fcfef61ac5"
+    },
+    "ai-company-os-backend/tests/test_research_t1_integration_0225.py": {
+      "bytes": 11626,
+      "sha256": "d4a8aedded72b54217095310518a49567161a9a82057a2d0b99d93c034cb9c2f"
     }
   },
-  "parent_source_manifest_blob": "6c74acb56800be1861bc6f7702416c949c5e5ed4",
-  "source_git_commit_note": "Single-parent isolated candidate; core backend exact source files + preserved UI-only tests, manually reconciled UI; no normative acceptance.",
-  "additional_parent_git_commit": "b201833f948f91293414e91000bc53377de9b6d1",
-  "additional_parent_source_manifest_blob": "30bdf13b02561549119f18b0149be136a7079704"
+  "parent_source_manifest_blob": "aecff74cb7c9084d80a90cf7f317545c5e086e4e",
+  "source_git_commit_note": "0225 four test files only; proxy test portability delta, all runtime sources preserved. No live authority.",
+  "additional_parent_git_commit": "32b4453d848827400774a73f18fc4674e424e976",
+  "additional_parent_source_manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302"
 }
