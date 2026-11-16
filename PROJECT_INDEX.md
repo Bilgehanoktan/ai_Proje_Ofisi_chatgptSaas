@@ -174,3 +174,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 - [0214 historical readback](releases/GITHUB_READBACK_0214.json) · [Current](handover/CURRENT.md)
 - [Architecture](docs/0215/ARCHITECTURE_AND_CATALOG.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0215.json) · [Evidence](releases/GITHUB_READBACK_0215.json)
 - [PG runbook](docs/0215/PG_RUNBOOK.md) · [Runner](scripts/run_pg_acceptance_0215.py) · [Gates](progress/INTEGRATION_GATES_0215.json) · [Next](handover/NEXT_STEP_0215.md)
+
+
+## 0216 / 0217 / 0218
+[0216](docs/0216/ARCHITECTURE_AND_CATALOG.md) · [0217](docs/0217/ARCHITECTURE_AND_CATALOG.md) · [0218](docs/0218/ARCHITECTURE_AND_CATALOG.md) · [Traceability](docs/0218/TRACEABILITY.json) · [Roadmap](docs/implementation_plan/INTEGRATION_SEQUENCE_0218_0225.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0218.json) · [Preflight](releases/SOURCE_PREFLIGHT_0218.json) · [Next](handover/NEXT_STEP_0218.md).

@@ -1,0 +1,150 @@
+{
+  "revision": "0218",
+  "parent": "8615b6bc86c183d9a294de7d93041c14c75d8112",
+  "product_source_commit": "093d9674e3a753ae26f799217ffdc3ae5ed74b75",
+  "product_changes": [],
+  "new_symbols": [],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "existing_symbol_review": [
+    [
+      "app.core.agent_runtime.lifecycle.Scope",
+      "eight-field synthetic run scope"
+    ],
+    [
+      "app.core.transaction.review.LogicalIntent",
+      "scope plus operation/effect/idempotency/grant/lease/budget/epochs"
+    ],
+    [
+      "app.core.event_store.company_coordination.Member",
+      "project/revision/task/run/agent/principal relationship candidate"
+    ],
+    [
+      "app.core.transaction.port.LogicalT1Coordinator",
+      "existing transaction coordinator"
+    ],
+    [
+      "app.core.transaction.witnessed_mapping.binding_digest",
+      "existing joint memory/model/witness binding"
+    ],
+    [
+      "app.core.transaction.signed_consume_reference.Scope",
+      "seven-field D0 observation fixture only"
+    ]
+  ],
+  "scope_crosswalk": [
+    [
+      "tenant/company/environment",
+      "lifecycle.Scope tenant_id/company_id/environment_id",
+      "exact same; never request-only"
+    ],
+    [
+      "plan_revision/task/run/agent_instance/principal",
+      "lifecycle.Scope, LogicalIntent.scope",
+      "all five remain bound; no role-as-instance substitution"
+    ],
+    [
+      "project",
+      "company_coordination.Member.project_id + matching committed roster",
+      "resolve by tenant/company/env + revision/task/run/agent/principal; unique match, no caller-invented project"
+    ],
+    [
+      "effect",
+      "LogicalIntent.effect_key",
+      "exact effect key; do not collapse to scope-only idempotency"
+    ],
+    [
+      "request / tx / binding",
+      "LogicalIntent.request_digest, committed receipt, witnessed_mapping.binding_digest",
+      "bind exact request, transaction, canonical preimage/postimage, witness and memory/model pin; no caller-supplied independent proof"
+    ],
+    [
+      "epochs / authority",
+      "current trusted policy and W-A head",
+      "validate freshness, lease and revocation at correct boundary; restore-external root absent => HOLD"
+    ]
+  ],
+  "workstreams": [
+    [
+      "W1",
+      "Office/UI",
+      "product/ai-company-os-frontend/features/data/projectionScope.ts; features/data/projectionSession.ts; design-system/WorkflowProjection.tsx; features/mvp/HistoricalEvidenceStrip.tsx",
+      "0222/0223",
+      "same scoped committed sequence, stale/gap resync, actual React browser"
+    ],
+    [
+      "W2",
+      "Contracts/API",
+      "product/ai-company-os-backend/app/api/demo.py; app/core/agent_runtime/lifecycle.py; app/core/transaction/review.py; product/ai-company-os-frontend/features/data/projectionScope.ts",
+      "0218/0222",
+      "one authority contract, scoped read boundary"
+    ],
+    [
+      "W3",
+      "Orchestrator/DAG/Runtime",
+      "product/ai-company-os-backend/app/core/orchestrator/engine.py; app/core/task_engine/dag.py; app/core/agent_runtime/plan_binding.py; app/core/agent_runtime/transition_command.py",
+      "0219/0220",
+      "canonical plan, member binding, existing transaction path"
+    ],
+    [
+      "W4",
+      "T1/Event Store/Security",
+      "product/ai-company-os-backend/app/core/transaction/port.py; postgres_session.py; postgres_transition_mapping.py; postgres_admission_mapping.py; witnessed_mapping.py; fenced_transition.py; intent_authority.py; app/core/event_store/company_coordination.py",
+      "0219",
+      "atomic writes, CAS, lease, budget, no effects"
+    ],
+    [
+      "W5",
+      "Skill/Model/Memory",
+      "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py; app/engines/memory_engine/runtime_binding.py; app/core/agent_runtime/joint_context.py; app/core/skill_review.py",
+      "0221",
+      "local fixture, permission and source binding; disabled real gateways"
+    ],
+    [
+      "W6",
+      "Research/IV",
+      "product/ai-company-os-backend/app/core/policy/iv_review.py; app/core/event_store/terminal_anchor.py; app/core/event_store/plan_history_review.py",
+      "0224",
+      "QA distinct from IV; no release without proof"
+    ],
+    [
+      "W7",
+      "SaaS/Finance",
+      "product/ai-company-os-backend/app/core/event_store/company_coordination.py; app/engines/budget_engine/reservation_review.py",
+      "0219/0220",
+      "scope and shared cap, no spend"
+    ],
+    [
+      "W8",
+      "Environment/QA",
+      "scripts/verify_product.py; scripts/run_pg_acceptance_0215.py; tests/integration/core_0207_source_lock.json",
+      "0218/0225",
+      "locked exact checkout; real disposable PG, backend/Next/browser evidence"
+    ]
+  ],
+  "diagnosis": "missing scope HOLD; contradiction DENY; unknown no retry; exact hash/checkout mismatch stop; no authority from UI or fixture signer",
+  "rollback": "revert documentation commit only, preserve 0217 product tree/manifest and all historical evidence",
+  "tests_this_round": [],
+  "static_preflight": {
+    "truncated": false,
+    "all_repo_blobs": 1459,
+    "product_files": 365,
+    "manifest_records": 364,
+    "path_size_match": 364,
+    "extra_product_files": 0,
+    "core_lock_git_blob_size_match": "55/55",
+    "delta_0217_git_blob_size_match": "6/6",
+    "full_content_sha256_recalculation": false
+  },
+  "open": [
+    "R03 mapping",
+    "D-01–D-04",
+    "independent custody",
+    "PG/RLS",
+    "locked build",
+    "actual browser"
+  ],
+  "traceability": "docs/0218/TRACEABILITY.json"
+}

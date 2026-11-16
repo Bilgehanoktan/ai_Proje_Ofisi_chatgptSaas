@@ -153,3 +153,7 @@ Source `1e01ad5dea65213a86a2401b83fd698436318099`; 361 product files / 360 manif
 
 ## 0217 — signed consume observation and read-only studio context
 Source `093d9674e3a753ae26f799217ffdc3ae5ed74b75`; 365 product files / 364 manifest entries; 24 new checks + 13 0216 reruns (one expected restore residual); 2 TSX syntax-only, 5 DDL pins separate. No new binary gate: 7/16. Independent custody, mandatory wiring, PG/RLS, real backend/Next/browser open. [Architecture](../docs/0217/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0217.json) · [Next](NEXT_STEP_0217.md).
+
+
+## 0218 — architecture realignment
+Product source unchanged (365 files; 364 manifest paths/sizes matched remotely, 55/55 locked core and 6/6 delta blob+size pins). Environment blocked by DNS, PG/driver and dependency mismatch. Zero product tests, 7/16 gates unchanged, independent HOLD. [Architecture](../docs/0218/ARCHITECTURE_AND_CATALOG.md) · [Sequence](../docs/implementation_plan/INTEGRATION_SEQUENCE_0218_0225.md) · [Evidence](../releases/SOURCE_PREFLIGHT_0218.json) · [Next 0219](NEXT_STEP_0218.md).

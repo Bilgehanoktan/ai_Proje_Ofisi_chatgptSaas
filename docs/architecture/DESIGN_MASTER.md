@@ -166,3 +166,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0217 — signed consume observation and read-only studio context
 [Addendum](../0217/ARCHITECTURE_AND_CATALOG.md). 37 selected checks including expected restore residual; no independent or normative change, actual PG/RLS/Next/browser open.
+
+
+## 0218 — architecture realignment and user-approved integration sequence
+[Addendum](../0218/ARCHITECTURE_AND_CATALOG.md) · [0218–0225 sequence](../implementation_plan/INTEGRATION_SEQUENCE_0218_0225.md). Product unchanged; remote source preflight, no new gate or normative decision. Original scope and grant boundaries preserved.

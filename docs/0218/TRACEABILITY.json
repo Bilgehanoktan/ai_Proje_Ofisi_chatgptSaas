@@ -1,0 +1,534 @@
+{
+  "revision": "0218",
+  "source_v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+  "source_v135_backlog": "lines 183-213",
+  "source_v130_cards": "v135 historical v130 section lines 3992-4466; v131 classification lines 3664-3708",
+  "status": "planning crosswalk only, not acceptance or source authority change",
+  "v130_cards": [
+    {
+      "id": "A01",
+      "title": "Yetki zarfı ve tek karar",
+      "target": "0218/0219",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "A02",
+      "title": "Doğal kişi ve AI kimlik ayrımı",
+      "target": "0220",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "A03",
+      "title": "Restore dışı tanık ve epoch doğrulaması",
+      "target": "0219",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "A04",
+      "title": "Independent Verifier güven kökü ve release ayırımı",
+      "target": "0224/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "B01",
+      "title": "Kaynak emanet ve fark inceleme protokolü",
+      "target": "0218/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "B02",
+      "title": "Kanonik delil/imza veri modeli",
+      "target": "0218/0219",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "B03",
+      "title": "Sözleşme sürümü ve kayıpsız veri dönüşümü",
+      "target": "0218/0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "B04",
+      "title": "R27 tipli gramer ve zaman semantiği",
+      "target": "0219/0220",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "C01",
+      "title": "Tek transaction state mutation",
+      "target": "0219",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "C02",
+      "title": "Dispatcher claim ve worker lease",
+      "target": "0219/0220",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "C03",
+      "title": "Belirsiz sağlayıcı sonucu için mutabakat",
+      "target": "0219/0221",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "C04",
+      "title": "Dead-letter ve telafi yerine karantina",
+      "target": "0219/0220",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "D01",
+      "title": "Ingress policy ve tenant ayrıştırması",
+      "target": "0219/0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "D02",
+      "title": "Egress last-moment PEP",
+      "target": "0219/0221",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "D03",
+      "title": "Sentetik zero-write egzersiz şartnamesi",
+      "target": "0224/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "D04",
+      "title": "Tool sonucu ve audit outbox ayrımı",
+      "target": "0219/0221",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "E01",
+      "title": "Claim ve kaynak span modeli",
+      "target": "0221/0224",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "E02",
+      "title": "Claim normalizasyonu ve provenance DAG",
+      "target": "0221/0224",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "E03",
+      "title": "Research kaynak silme, tombstone ve kaynak soy ağacı",
+      "target": "0221/0224",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "E04",
+      "title": "Research IV ve release ayrımı",
+      "target": "0224",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "F01",
+      "title": "OOXML kaynak ve paket sınırı",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "F02",
+      "title": "Excel W1 formül alt kümesi",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "F03",
+      "title": "Excel W1 sayı, locale ve tarih gösterimi",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "F04",
+      "title": "Staged workbook diff ve CAS readback",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "G01",
+      "title": "Obligation hukuki kapsam ve dayanak",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "G02",
+      "title": "Obligation saat ve süre hesaplama",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "G03",
+      "title": "Bildirim taslağı, para/teklif yok",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "G04",
+      "title": "Obligation IV ve release engeli",
+      "target": "POST-0225 / retain",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "H01",
+      "title": "Repository hazırlık kontrol haritası",
+      "target": "0218",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "H02",
+      "title": "Zaman/scope sınırlı CODE grant taslağı",
+      "target": "0218",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "H03",
+      "title": "İzole DEV başlangıcı kabul matrisleri",
+      "target": "0218/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "H04",
+      "title": "DEV→F3→PROD yetki sınırları",
+      "target": "0218/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "I01",
+      "title": "Event ve kanıt zincirli gözlemlenebilirlik",
+      "target": "0219/0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "I02",
+      "title": "Yedekten dönüş ve witness fencing senaryosu",
+      "target": "0219/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "I03",
+      "title": "Release imza zinciri ve rollback",
+      "target": "0224/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "I04",
+      "title": "Olay müdahalesi ve otomatik yetki daraltma",
+      "target": "0219/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "J01",
+      "title": "P0 üç ürün ve kapsam sınırı",
+      "target": "0218/0224",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "J02",
+      "title": "15 H01 karar yönü ve normatif alanların ayrımı",
+      "target": "0218",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "J03",
+      "title": "18 FZ ve freeze kararını erteleme",
+      "target": "0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "J04",
+      "title": "Kapanış raporu ve gelecek el değiştirme paketi",
+      "target": "0218–0225",
+      "accepted_by_0218": false
+    }
+  ],
+  "v135_cards": [
+    {
+      "id": "UI-01",
+      "title": "Bütünleşik ekran haritası",
+      "target": "0222/0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-02",
+      "title": "D0 veri sözleşmesi taslağı",
+      "target": "0218/0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-03",
+      "title": "SSE olay sıralama ve yeniden senkronizasyon",
+      "target": "0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-04",
+      "title": "CEO-01 büyük ofis viewport ve özet",
+      "target": "0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-05",
+      "title": "Tam ekran OFFICE-01",
+      "target": "0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-06",
+      "title": "Hibrit ofis layout + asset manifest",
+      "target": "0222/0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-07",
+      "title": "Office avatar FSM",
+      "target": "0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-08",
+      "title": "Ofis sağ dört sekme",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-09",
+      "title": "Agent Detail bağları",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-10",
+      "title": "CEO-02 Hedefler",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-11",
+      "title": "CEO-03 karar kutusu",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-12",
+      "title": "CEO-04 iş & denetim izi",
+      "target": "0222/0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-13",
+      "title": "CEO-05 güvenlik/kapı görünümü",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-14",
+      "title": "CEO-06 rapor & CEO-07 tercihler",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "UI-15",
+      "title": "CEO-08 olay & güvenli durdurma",
+      "target": "0223",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "BE-01",
+      "title": "Scoped snapshot read adapter",
+      "target": "0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "BE-02",
+      "title": "Scoped SSE projection read adapter",
+      "target": "0222",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "BE-03",
+      "title": "PG T1 + outbox + canonical run authority",
+      "target": "0219",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "BE-04",
+      "title": "Orchestrator + Policy/PEP + W-A bağlama",
+      "target": "0219/0220/0221",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "QA-01",
+      "title": "UI statik oracle sözleşme seti",
+      "target": "0222/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "QA-02",
+      "title": "Sentetik ekran test taslağı",
+      "target": "0222/0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "QA-03",
+      "title": "Gerçek negative/audit proof",
+      "target": "0225",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "OPS-01",
+      "title": "BOOTSTRAP pre/post kontrol uzlaştırması",
+      "target": "0218",
+      "accepted_by_0218": false
+    },
+    {
+      "id": "OPS-02",
+      "title": "CODE/REPO/DEV grant karar paketi",
+      "target": "0218",
+      "accepted_by_0218": false
+    }
+  ],
+  "mvp_targets": [
+    {
+      "id": "MVP-01",
+      "title": "Şirket oluşturma",
+      "target": "0220/0224",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-02",
+      "title": "Departman ve ajan tanımı",
+      "target": "0220/0223",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-03",
+      "title": "Kullanıcı görev talebi",
+      "target": "0220/0223",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-04",
+      "title": "Otomatik görev planı",
+      "target": "0220",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-05",
+      "title": "DAG bağımlılık sırasına uygun yürütme",
+      "target": "0219/0220",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-06",
+      "title": "Ajanların izinli AI modeli kullanımı",
+      "target": "0221",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-07",
+      "title": "İzinli araç kullanımı",
+      "target": "0221",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-08",
+      "title": "Kalıcı hafıza/sonuç",
+      "target": "0219/0221",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-09",
+      "title": "Ofisin gerçek durum projection'ı",
+      "target": "0222",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-10",
+      "title": "QA ve bağımsız IV",
+      "target": "0224/0225",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    },
+    {
+      "id": "MVP-11",
+      "title": "İnsan onayları ve bütçe sınırları",
+      "target": "0219/0223/0225",
+      "acceptance": "NOT_ASSESSED_IN_0218"
+    }
+  ],
+  "workstreams": [
+    [
+      "W1",
+      "Office/UI",
+      "product/ai-company-os-frontend/features/data/projectionScope.ts; features/data/projectionSession.ts; design-system/WorkflowProjection.tsx; features/mvp/HistoricalEvidenceStrip.tsx",
+      "0222/0223",
+      "same scoped committed sequence, stale/gap resync, actual React browser"
+    ],
+    [
+      "W2",
+      "Contracts/API",
+      "product/ai-company-os-backend/app/api/demo.py; app/core/agent_runtime/lifecycle.py; app/core/transaction/review.py; product/ai-company-os-frontend/features/data/projectionScope.ts",
+      "0218/0222",
+      "one authority contract, scoped read boundary"
+    ],
+    [
+      "W3",
+      "Orchestrator/DAG/Runtime",
+      "product/ai-company-os-backend/app/core/orchestrator/engine.py; app/core/task_engine/dag.py; app/core/agent_runtime/plan_binding.py; app/core/agent_runtime/transition_command.py",
+      "0219/0220",
+      "canonical plan, member binding, existing transaction path"
+    ],
+    [
+      "W4",
+      "T1/Event Store/Security",
+      "product/ai-company-os-backend/app/core/transaction/port.py; postgres_session.py; postgres_transition_mapping.py; postgres_admission_mapping.py; witnessed_mapping.py; fenced_transition.py; intent_authority.py; app/core/event_store/company_coordination.py",
+      "0219",
+      "atomic writes, CAS, lease, budget, no effects"
+    ],
+    [
+      "W5",
+      "Skill/Model/Memory",
+      "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py; app/engines/memory_engine/runtime_binding.py; app/core/agent_runtime/joint_context.py; app/core/skill_review.py",
+      "0221",
+      "local fixture, permission and source binding; disabled real gateways"
+    ],
+    [
+      "W6",
+      "Research/IV",
+      "product/ai-company-os-backend/app/core/policy/iv_review.py; app/core/event_store/terminal_anchor.py; app/core/event_store/plan_history_review.py",
+      "0224",
+      "QA distinct from IV; no release without proof"
+    ],
+    [
+      "W7",
+      "SaaS/Finance",
+      "product/ai-company-os-backend/app/core/event_store/company_coordination.py; app/engines/budget_engine/reservation_review.py",
+      "0219/0220",
+      "scope and shared cap, no spend"
+    ],
+    [
+      "W8",
+      "Environment/QA",
+      "scripts/verify_product.py; scripts/run_pg_acceptance_0215.py; tests/integration/core_0207_source_lock.json",
+      "0218/0225",
+      "locked exact checkout; real disposable PG, backend/Next/browser evidence"
+    ]
+  ],
+  "security_findings": [
+    "0207-D-01",
+    "0208-D-02",
+    "0209-D-03",
+    "0210-D-04"
+  ],
+  "separate_measures": [
+    "16 integration gates",
+    "24 area maturity",
+    "40 v130 cards",
+    "24 v135 cards",
+    "11 MVP targets"
+  ]
+}

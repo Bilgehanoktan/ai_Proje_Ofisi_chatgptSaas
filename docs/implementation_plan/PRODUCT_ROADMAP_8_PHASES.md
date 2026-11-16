@@ -42,3 +42,7 @@ Kritik uçtan uca zincir: şirket → ajan → proje → plan/dağıtım → yü
 Her tur güncel pinned source, Design Master, kararlar ve tracker okunur. Kodla, entegre et, izinli test/build çalıştır, hataları düzelt, kaynak/manifest/readback doğrula; dosya/sembol/API/DB/event/bağımlılık/test kataloğunu, mimari ve devir kayıtlarını güncelle. Çalıştırılamayanları NOT_RUN veya BLOCKED bırak; skorları kanıtsız yükseltme. CEO-0174 ve CEO-0179=B kapsamında izole geliştirme dalı, yerel build/sentetik test; gerçek ajan/araç/sağlayıcı, harcama, gerçek veri, dış etkiler, bağımsız kabul, CI/main/PROD ayrı kapılar.
 
 Başlangıç referansı: 0192 commit 4f2c6d131c38ca7207d0b89ca001580466fd06d4; ilerleyen turlarda CURRENT ve NEXT_STEP kanonik işaretlerdir.
+
+
+## 0218 approved integration direction
+[0218–0225 sequence](INTEGRATION_SEQUENCE_0218_0225.md) and [source-card crosswalk](../0218/TRACEABILITY.json). This prioritizes existing phase delivery; no phase replacement, new grant or independent acceptance.
