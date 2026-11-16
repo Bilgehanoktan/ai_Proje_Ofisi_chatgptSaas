@@ -128,3 +128,6 @@ See [revision catalog](revisions/TECHNICAL_CATALOG_UI_P10F.json) and [architectu
 
 ## UI-P10J-07
 [Verified symbols and overlap](revisions/TECHNICAL_CATALOG_UI_P10J07.json). No API/DB/source change.
+
+## UI-P10J-08
+[Windows portability delta](revisions/TECHNICAL_CATALOG_UI_P10J08.json).

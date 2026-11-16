@@ -208,3 +208,6 @@ P10J-05 [final remote readback](releases/GITHUB_READBACK_UI_P10J05.json).
 
 ## UI-P10J-06/07
 [Architecture](docs/UI-P10J/P10J06_ARCHITECTURE.md) · [W8](docs/UI-P10J/P10J07_W8_RUNBOOK.md) · [Progress](progress/UI_P10J07.json) · [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10J07.json).
+
+## UI-P10J-08
+[Architecture](docs/UI-P10J/P10J08_WINDOWS_PORTABILITY.md) · [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10J08_WINDOWS.json) · [Progress](progress/UI_P10J08.json).

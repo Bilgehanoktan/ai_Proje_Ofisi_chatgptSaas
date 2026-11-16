@@ -245,3 +245,6 @@ P10J-03 integrated 10 modifications and two additions to UI presentation (387 pr
 
 # UI-P10J-06/07 — 0220 alignment and W8
 [Verification and integration constraints](../UI-P10J/P10J06_ARCHITECTURE.md). Product unchanged; full checkout and W8 HOLD.
+
+# UI-P10J-08 — Windows portability
+[Diagnosis and fix](../UI-P10J/P10J08_WINDOWS_PORTABILITY.md). Two component renames, four imports, canonical test TEMP; no security guard or contract change. Source candidate only.

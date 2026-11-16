@@ -1,3 +1,6 @@
+# UI-P10J-08 — Windows portability candidate verification
+Exact source eb77018c9e0b4b0f403cb07d899d5329896e9427, manifest 2a555e7e511fe80078b233324f3442d79cd590c6. Fresh checkout and stage. Use tests/integration/w8_p10j08.py audit, prepare, compare lock inventory and review new fingerprint before install/test/smoke. Old stage preserved. Original full test 821 pass/18 skip, 369 Node pass/1 skip, Next.js FAIL. Candidate has not passed build. No independent acceptance or branch merge. Recheck current core heads before union.
+
 # P10J-07 — environment HOLD, next actual W8
 
 Use docs/UI-P10J/P10J07_W8_RUNBOOK.md on network-capable isolated DEV. Exact UI checkout 390 pins, prepare/review locks before install/test/smoke. Recheck 0220/0221 and UI heads. No new duplicate features or automatic merge. Combined candidate only after source compatibility and explicit scope; 21/40, core 7/16, independent 0/7 unchanged.
