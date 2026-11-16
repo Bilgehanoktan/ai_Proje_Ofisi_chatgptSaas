@@ -1,0 +1,55 @@
+{
+  "revision": "UI-P10G",
+  "source": "9ebe8aa2cad28e6f3357c2ad81f05f963aa691dc",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+      "bytes": 5481,
+      "sha256": "1cae8b04454f40b5e03fafe3106ef0472ca0267ac617c33462eb13a57fcbf626"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+      "bytes": 10641,
+      "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_boundary_p10g.py",
+      "bytes": 3308,
+      "sha256": "d6fe86f14a36869b4c534e9c550692e3b04bee14a61e7d80c08c92e4693520d6"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/readbackCatalog.ts",
+      "bytes": 2023,
+      "sha256": "f694a94e1ae0de5eb6bae8415dee6550b0acd89ee021a9acaf0739c534af4f75"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10g-model.test.cjs",
+      "bytes": 1804,
+      "sha256": "09923cc6c4d5f3074151b2b76efec0e2e993edbdfd6e928932259a6a11006607"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+      "bytes": 2717,
+      "sha256": "ab4dd8d67392c8512ab88fd8fb31816ea90a6bf232994d3b603de225480a37de"
+    }
+  ],
+  "aux": [
+    {
+      "path": "tests/integration/w8_p10g.py",
+      "blob": "f2fa61c515f9b4eb5b964dccde88f58b8daff73b"
+    }
+  ],
+  "symbols": [
+    "readbackLabels",
+    "readbackGroups",
+    "filterReadbackCards",
+    "ProjectionReadbackCenter",
+    "AuthorityBoundaryP10G",
+    "load_candidate"
+  ],
+  "api_changes": [],
+  "db_migrations": [],
+  "dependency_changes": [],
+  "maintenance": "# UI-P10G — 0212 test union / D0 source candidate\n\nSource 9ebe8aa2cad28e6f3357c2ad81f05f963aa691dc; parent 0b9e476264128ce523e3acab97712fe78fd5582e; manifest 150cda5f380d889240ca05b51a50ce8baf6e01c0. 377 source pins, 378 product files, 160 frontend. Five new files, one modified, 371 preserved, zero deletion. 0212/0213 same head e33ffb633bc5a445aec1fb4946625884d503c348; two exact original 0212 tests imported, no production core mutation or main merge. 0212 historical authority/decision remains separate.\n\n## Actual validation\nRecovered all 18 missing core29 lock files; 55/55 exact Git blob pins, 29/29 original tests in existing environment. Original 180 unique test outcomes: 179 expected behavior, 1 intentional restore residual; combined 52 is a subset, not additive. Original 0212 tests 7+6 passed. New boundary test 2 protections and 1 POSIX residual. Seven original backend + compiled GET checks passed, 7 POST denied, five disposable DB files unchanged. 54 model tests (11 new +43 rerun), one TSX syntax check. No full Next/React test. Original wrapper still NOT_RUN; original core29 locked runner not run.\n\n## Changes and maintenance\n- readbackCatalog: view-local static endpoint inventory; Turkish search, group intersection only. Unknown view/group fails closed. ProjectionReadbackCenter adds group buttons, reset and catalog count (not live KPI); independent readers retained. No mutation or cross-record inference. Existing Office, Workflow, Agent, Project and evidence features preserved. UI grouping is implementation choice.\n- test_authority_boundary_p10g: disposable original ordinary T1 negative D-03 test on POSIX; replacing authority path while fenced demonstrates local lock is not independent custody. Missing authority and already-revoked root correctly block. D-04 restore replay remains. D-01/02 open. Do not deploy or treat negative outcome as security pass. No authority policy changes.\n- Exact 0212 tests test_intent_authority_t1_0212.py and test_company_terminal_0212.py: original mapping/receipt, commit, rollback, company ordering and terminal readback.\n- W8 P10G adapter pins P10F adapter, selects new manifest and adds model regression before parent test; exact original W8 required, no review gate bypass. Syntax check only; local load fails due missing w8_unified.py. npm offline lock probe failed ENOTCACHED, next build exit127. Original full source still unavailable locally (DNS). Parent local evidence ZIP 177 hashes verified; not full checkout. 0/7 Next E2E, 0/52 product browser, independent HOLD.\n- No new API, DB migration, provider call, dependency upgrade, production data, CI, main merge, spending, real grant or live agent state.\n\n## Diagnose / rollback\nInspect source hashes before test. For root replacement/restore preserve evidence, isolate fixture and keep HOLD; external independent custody and effect fencing are separate decisions. For UI filter verify view intersection and exact parsed record, clear filter. For W8 obtain full clean checkout, verify pins then reviewed lock stage. Never synthesize missing dependency. Revert to parent 0b9e476264128ce523e3acab97712fe78fd5582e on candidate branch; no DB migration. Maintain separate core branch.\n",
+  "rollback": "0b9e476264128ce523e3acab97712fe78fd5582e"
+}

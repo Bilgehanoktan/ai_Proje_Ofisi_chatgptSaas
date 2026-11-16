@@ -1,9 +1,3 @@
-# UI-P10G — unblock exact product verification
+# UI-P10H — exact checkout and wrapper acceptance
 
-Priority zero: obtain exact full P10F archive or user-local checkout with network access; attach archive to conversation if remote bytes cannot be materialized. Source slice and historical packages are not full checkout.
-1. Audit exact product manifest and original 55-file core lock; recover 18 absent originals, then core29 and exact 0211 witness/journal wrapper. Keep D-01/02/03/04 open until evidence establishes closure; reproduce negatives separately.
-2. Use tests/integration/w8_p10f.py on exact clean checkout: audit, prepare isolated stage, review generated lock fingerprint, install, test, smoke with reviewed Chromium. Preserve original W8 review/approval rules. No lock pin substitution. Adapter remains a candidate until run.
-3. Actual Next build, 7 Next E2E and 52 original browser checks; visual review separately. Preserve regression logs and screenshots.
-4. Compare 0212/0213 scope; merge only as explicit isolated source-union task, no main merge. Current 0211+UI candidate unchanged in core.
-5. Parallel UI C–H: evidence context, office decoration, local workflow undo, accessible agent/project filters and model/memory/finance/security details. Stop if new authority is implied.
-6. Update manifest, catalog, architecture, handover and progress; deliver exact archive and local verified evidence. No artificial gate closure.
+Priority zero: upload full archive of P10G or use exact user-local checkout with network. Full local source unavailable despite core29 recovery. Verify 377 manifest pins and auxiliary files. Run original W8 via w8_p10g.py only with reviewed lock stage; do not substitute pins. Run exact witness/journal/T1 wrapper and independent D03/D04 negative/positive tests; external custody/effect proof remains HOLD. Complete Next build, real Next 7/7 and 52 product browser cases, then evaluate original gates. Continue A-H in parallel without live grants; review 0213 multi-project development separately. Update catalog, evidence, progress and handover. No main merge or production acceptance.
