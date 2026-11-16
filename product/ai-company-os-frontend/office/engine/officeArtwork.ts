@@ -4,6 +4,7 @@ import {roleVisual,roomVisual} from '../../design-system/roleVisuals';
 import {reservedDeskDecor} from './stationDecor';
 import {reservedDeskAccessories} from './deskAccessories';
 import {wallDecorAt} from './wallDecor';
+import {roomAccentAt} from './roomAccents';
 export type Artwork = {ok:true;svg:string;stations:{id:string;role:string;room:string;x:number;y:number}[]}|{ok:false;reason:string};
 const esc=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]!));
 const pt=(x:number,y:number,z=0)=>{const p=iso(x,y);return [p.x,p.y+26-z];};
@@ -37,6 +38,7 @@ export function officeArtwork(raw:Floor,selectedId:string|null=null):Artwork{
   // Fixed wall-only accents on the last back-wall segment; no occupancy change.
   const wall=pt(x+r.w-.75,y+.12,28);
   pieces.push(wallDecorAt(r.id==='management'||r.id==='quality'?'whiteboard':'wall-shelf',wall[0],wall[1]));
+  const sign=pt(x+.18,y+.12,33);pieces.push(roomAccentAt(r.id,sign[0],sign[1]));
  }
  const stations= [...floor.stations].sort((a,b)=>a.x+a.y-b.x-b.y).map(s=>{
   const p=pt(s.x,s.y),visual=roleVisual(s.role);const color=visual?.accent??'#a9b5c5';const active=s.id===selectedId;

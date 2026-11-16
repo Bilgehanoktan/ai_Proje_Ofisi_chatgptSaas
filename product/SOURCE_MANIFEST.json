@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10G-0212-TEST-UNION",
-  "status": "D0_CORE29_55_EXACT_29_DIAGNOSTIC_PASS_0212_TEST_UNION_NEXT_BLOCKED",
+  "doc_revision": "UI-P10H-0212-TEST-UNION",
+  "status": "D0_ORIGINAL_WRAPPER_AND_0211_COMPOSITION_PASS_RESIDUAL_OPEN_NEXT_BLOCKED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "0b9e476264128ce523e3acab97712fe78fd5582e",
+  "parent_git_commit": "f2457545cf52805e5ed5ea86cd869c326fd162ca",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -654,6 +654,10 @@
       "bytes": 8019,
       "sha256": "f8eac07fadabe1b0c0a8992e7cc242c659a84386e0404563ee9ed601563dd46c"
     },
+    "ai-company-os-backend/tests/test_authority_wrapper_p10h.py": {
+      "bytes": 7897,
+      "sha256": "8d09543e811f8ab8c79cffa712f2bfc0995dfafaf017d0d67ccc421276ff2d01"
+    },
     "ai-company-os-backend/tests/test_company_coordination_0204.py": {
       "bytes": 15264,
       "sha256": "49ddaea03aa86f98ec39e92005c3dbbc1c1846653508288a1dab3257f869e938"
@@ -1111,8 +1115,8 @@
       "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
     },
     "ai-company-os-frontend/features/evidence/AgentDirectory.tsx": {
-      "bytes": 2160,
-      "sha256": "0c56dfa146a73aed708a5e9f4695f71b0618da3a6640a8fd6d55f86dd93b591a"
+      "bytes": 2271,
+      "sha256": "fc5861e97484f60ea98042b04f09d5b46e40ffa40cb3cf7df5fa4a43315f8f60"
     },
     "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx": {
       "bytes": 1311,
@@ -1271,28 +1275,32 @@
       "sha256": "b6ce6de4eb8f7ab2214a07ae1413367c76b42f559437462edfb6f26cf351a053"
     },
     "ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx": {
-      "bytes": 2467,
-      "sha256": "352ae15da25b705f7f156c74b0dd9c8bef5dae4e9f01d2c24c389072ee4fb78e"
+      "bytes": 2853,
+      "sha256": "c95fea31257ddfb4165c9fd7213b2dc5b13e8304d15baa65b2e928fb890adbec"
     },
     "ai-company-os-frontend/features/workflow/ParallelStudio.module.css": {
       "bytes": 2740,
       "sha256": "22e2139cf1cf377d742a64f2960333df55642cd6108600be9fe8dec44d225298"
     },
     "ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx": {
-      "bytes": 2717,
-      "sha256": "ab4dd8d67392c8512ab88fd8fb31816ea90a6bf232994d3b603de225480a37de"
+      "bytes": 2971,
+      "sha256": "1c7b432a0105cdf31c4765de914990fbfa58ac7d96205c002a4c4dba53b47ac6"
     },
     "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx": {
-      "bytes": 3536,
-      "sha256": "b5ef19beb955152c71f381dc19673ac5da44fde2ad058cf319054773715f8b1f"
+      "bytes": 3666,
+      "sha256": "e889a6a33e2f78aa10a7758c496cdd41fff93f0a74e7ca80c63ada24a37eccad"
     },
     "ai-company-os-frontend/features/workflow/draftGraph.ts": {
       "bytes": 1365,
       "sha256": "7a37730b3bcd2d5326061a41c8a8dedd3888540e64cc4ff3d216c03c694b5d0f"
     },
     "ai-company-os-frontend/features/workflow/draftHistory.ts": {
-      "bytes": 1532,
-      "sha256": "3bba9722556ea5467291bd8f7c5f3d0554743893f577592229e77c0fae7926cb"
+      "bytes": 2097,
+      "sha256": "f6755891d7cad4c5fa11aa667fcc4ff21ca45a12723b71a50391df8c219d7d50"
+    },
+    "ai-company-os-frontend/features/workflow/readbackBoundary.ts": {
+      "bytes": 1293,
+      "sha256": "1d45a99fb4c26e7398992f7a0092d28836051636752855a0435d68bcc03e3541"
     },
     "ai-company-os-frontend/features/workflow/readbackCatalog.ts": {
       "bytes": 2023,
@@ -1347,8 +1355,12 @@
       "sha256": "74d86fcf3162df7425c52f0685b3074d476a174a46f833289dc62168dcf20890"
     },
     "ai-company-os-frontend/office/engine/officeArtwork.ts": {
-      "bytes": 5072,
-      "sha256": "e38460ca4b884cd7259b1d9dc06f5e8198965dac2792f0824eb505fc5e11523d"
+      "bytes": 5197,
+      "sha256": "19be699e883e506bef32d59b01426d02e520643dfd58a7450b468f4960daf18b"
+    },
+    "ai-company-os-frontend/office/engine/roomAccents.ts": {
+      "bytes": 1464,
+      "sha256": "67c81a8654514ceb7aade3a92f6b8272fbf89fed924768b194e7c1aa7121a294"
     },
     "ai-company-os-frontend/office/engine/stationDecor.ts": {
       "bytes": 779,
@@ -1498,6 +1510,10 @@
       "bytes": 1804,
       "sha256": "09923cc6c4d5f3074151b2b76efec0e2e993edbdfd6e928932259a6a11006607"
     },
+    "ai-company-os-frontend/tests/ui-p10h-model.test.cjs": {
+      "bytes": 3297,
+      "sha256": "f3b8cfdf0d91e98c67482183c24dbacdf4ab9dda2cc2a8d3cfd2bc9df105e6cc"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -1515,8 +1531,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "44844b647640694a00abc62f200af034d38ac6ff",
-  "source_git_commit_note": "Exact 0212 two test sources only; 0213 same HEAD. No main merge or new authority.",
+  "parent_source_manifest_blob": "150cda5f380d889240ca05b51a50ce8baf6e01c0",
+  "source_git_commit_note": "P10H local D0 diagnostic; 0212 test union preserved; no production authority or main merge.",
   "additional_parent_git_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
   "additional_parent_source_manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c"
 }
