@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "0208",
-  "status": "D0_JOINT_CONTEXT_SELECTED_TESTS_PASS",
+  "doc_revision": "0209",
+  "status": "D0_WITNESSED_CONTEXT_T1_FIXTURE_SELECTED_TESTS_PASS",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "9bbc4bed75c56a36bcacc8c430a79bf3612aa85b",
+  "parent_git_commit": "f832f00bffa4162b1f31a9bd192a5aedd44986fb",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1353,10 +1353,26 @@
     "ai-company-os-backend/tests/test_joint_context_0208.py": {
       "bytes": 9128,
       "sha256": "9fd2c905a6821d0bcf33e09ea707dae1ab190225b016d66ff7cf2ef60f63d822"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
+      "bytes": 10752,
+      "sha256": "91b4268c410265be18b6248a3c1f652788200f08f81786914a796b6d8b39b1db"
+    },
+    "ai-company-os-backend/app/core/transaction/witnessed_mapping.py": {
+      "bytes": 5404,
+      "sha256": "279f377da4be9a4425a1bc77ba160217e811c7e0c31e1cbccccbeb6cf9ea716b"
+    },
+    "ai-company-os-backend/tests/test_memory_witness_0209.py": {
+      "bytes": 10155,
+      "sha256": "3485e328bc7900d24b91681bd6f49adea48938e3d44ccdc4632ec2ae77df02ad"
+    },
+    "ai-company-os-backend/tests/test_witnessed_t1_0209.py": {
+      "bytes": 8253,
+      "sha256": "cf157958b9686f897cca79b8b238842a7cd56d040b5eb2ea4f0affc4f4368f64"
     }
   },
-  "parent_source_manifest_blob": "573166141f186245b94b818b9c0b1cdaf85d37e9",
-  "source_git_commit_note": "Two additions, one append-only source update. 98 selected local cases pass (72 regression, 26 new). D0 only; old independent readers retained.",
+  "parent_source_manifest_blob": "268f575b534bda97d8ed57a1f7f3f4de8bdf62cd",
+  "source_git_commit_note": "Four product additions; 131 selected local cases pass (98 regression, 23 signed memory witness, 10 original T1 coordinator/session with SQLite stand-in mapping). No default runtime wiring or independent authority.",
   "additional_parent_git_commit": "23505d8f95500aef72466824ddb3956a14a594a8",
   "additional_parent_source_manifest_blob": "6bce9a2424c251cd001fa8bd4780a3c0395c5ce2"
 }
