@@ -1,0 +1,120 @@
+{
+  "revision": "W1-0198-P09",
+  "parent": "cf8d86c2a840a50c50bf58cbb823d7b7d45d1e76",
+  "scope": "Original D0 Workbench and AdmissionSample writers, three original FastAPI routers/Uvicorn, compiled TypeScript Next GET functions/parsers via Node HTTP wrapper, not full app.main/Next/React/PostgreSQL/live authority.",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "v22.16.0",
+    "typescript": "5.8.3",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0"
+  },
+  "dependency_status": "DNS_BLOCKED_PIN_MISMATCH",
+  "parent_source_pins": 45,
+  "final_source_pins": 46,
+  "changed_source": [
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/paired_read_guard.py",
+      "kind": "ADDED",
+      "old_blob": null,
+      "git_blob": "63659a7648bafe633cb3f80300f776bf3c842cf9",
+      "bytes": 2897,
+      "sha256": "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347",
+      "functions": [
+        "guarded_read"
+      ],
+      "constants": [
+        "MAX_BYTES",
+        "MAX_STEPS",
+        "ADMISSION_TABLES",
+        "PAIR_TABLES"
+      ],
+      "why": "Bound D0 paired and admission read trust surface; reject malformed schema and sidecars."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/admission_sample.py",
+      "kind": "MODIFIED",
+      "old_blob": "a697188c51173e23d645fac95abf99c282f939b3",
+      "git_blob": "a530d415f5fb1f7e7eff79c1aa1bda3c36057859",
+      "bytes": 8672,
+      "sha256": "bcb8e58049e96277153b98a37b054d3c59e0d2e473af52d4763c369eb56ddfe3",
+      "functions": [
+        "_open",
+        "_state",
+        "read_admission",
+        "AdmissionSample.apply"
+      ],
+      "why": "Use bounded read profile; enforce singleton integer budget row on read and existing write validation. Existing transitions unchanged."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+      "kind": "MODIFIED",
+      "old_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+      "git_blob": "086584de235756f24aebea16657fa51793fc06e2",
+      "bytes": 4515,
+      "sha256": "06dcc74490cd9fa31d66ada69a017370174b23dd3c30d7e395fd3c3b6653a798",
+      "functions": [
+        "read_pair_marker",
+        "read_task_budget_snapshot"
+      ],
+      "why": "Use bounded pair-marker reader; keep double-collect and HOLD semantics."
+    }
+  ],
+  "runner": {
+    "path": "tests/integration/run_pair_http_p09.py",
+    "git_blob": "bf1055c49260dc9ccc31f047097eba2d8988bfa7",
+    "sha256": "6d4a2789e375f56eb4d3a50caae31551e483f68913e547ab2d9d88de9e4bfe30",
+    "dependency": {
+      "path": "tests/integration/run_office_http_p08.py",
+      "git_blob": "4a5d0e5cd38d113761e6409a9690e6d02a470751"
+    }
+  },
+  "reports": [
+    {
+      "path": "tests/evidence/W1_0198_P09/parent_lock.json",
+      "git_blob": "2ef42bba84eb287b5130029227e257ce27d649b3",
+      "sha256": "7de36259d5e4002c375c5a9731c9722945bc49d6cb397cba28dbb371990fa22a"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P09/final_lock.json",
+      "git_blob": "91b5018e3edebd8c08f41c4bc03cd5ea799701a8",
+      "sha256": "1eb4a47bf4a72228deaec889199b5f4ec5b8f69b431f9bb1e9a97473676ac880"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P09/before.json",
+      "git_blob": "a3922dc1fcbac394f465af84cec858ee36a1fa96",
+      "sha256": "20e2471c84488c48cf29c4df0b2eb0cabef61882dd8d6f41ac7bccef445fe0e9"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P09/final.json",
+      "git_blob": "98e871694053afc7dfeeb47edc4c69b5ce7fecfc",
+      "sha256": "015c8d3f661bbe6e6573e2891b1c9d8129275f1677d0dfb592a0887875e8abfd"
+    },
+    {
+      "path": "tests/evidence/W1_0198_P09/final.log",
+      "git_blob": "56bbeb8cff44d7d10604e1db19360e6c4527989b",
+      "sha256": "cc85cf790bac8ed13250b592117860fe121c425d139da1c1c8b8f28d04b1ed87"
+    }
+  ],
+  "counts": {
+    "before_unexpected_accept": 4,
+    "final_pass": 39,
+    "final_fail": 0,
+    "final_skip": 0,
+    "overlap_not_additive": true
+  },
+  "diagnostic_endpoint_coverage": {
+    "verified": 3,
+    "total": 7,
+    "keys": [
+      "office-workbench",
+      "admission",
+      "task-budget"
+    ]
+  },
+  "full_http_parity_7": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "independent_acceptance": "HOLD"
+}

@@ -133,3 +133,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## W1-0198-P08
 Actual D0 writer, original Office FastAPI router/Uvicorn and compiled Next GET/parser via Node HTTP wrapper; not full app.main, Next, React, PostgreSQL, live authority or independent acceptance. Final 26/26 PASS; prior 13 and 18 overlap. No scores changed; full parity 0/7 NOT_RUN, independent HOLD. [Architecture and catalog](../docs/W1-0198-P08/ARCHITECTURE_AND_CATALOG.md) (repository path: docs/W1-0198-P08/ARCHITECTURE_AND_CATALOG.md); evidence: tests/evidence/TEST_EVIDENCE_W1_0198_P08.json.
+
+
+## W1-0198-P09 — paired D0 readback
+[Architecture and maintenance](../W1-0198-P09/ARCHITECTURE_AND_CATALOG.md). Original D0 Workbench and AdmissionSample writers, three original FastAPI routers/Uvicorn, compiled TypeScript Next GET functions/parsers via Node HTTP wrapper, not full app.main/Next/React/PostgreSQL/live authority. 39/39 PASS, 4 prior defects corrected, 3/7 wrapper diagnostic; full product parity NOT_RUN, no authority or scores changed.

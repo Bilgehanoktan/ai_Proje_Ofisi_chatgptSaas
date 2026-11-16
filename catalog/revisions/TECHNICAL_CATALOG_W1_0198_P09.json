@@ -1,0 +1,79 @@
+{
+  "revision": "W1-0198-P09",
+  "parent": "cf8d86c2a840a50c50bf58cbb823d7b7d45d1e76",
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/paired_read_guard.py",
+      "kind": "ADDED",
+      "old_blob": null,
+      "git_blob": "63659a7648bafe633cb3f80300f776bf3c842cf9",
+      "bytes": 2897,
+      "sha256": "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347",
+      "functions": [
+        "guarded_read"
+      ],
+      "constants": [
+        "MAX_BYTES",
+        "MAX_STEPS",
+        "ADMISSION_TABLES",
+        "PAIR_TABLES"
+      ],
+      "why": "Bound D0 paired and admission read trust surface; reject malformed schema and sidecars.",
+      "classes": [],
+      "api": "Existing GET routes; no contract change",
+      "database": "D0 read guard and existing singleton validation; no migration",
+      "dependencies": "No package change; SQLite table_list >=3.37",
+      "maintenance": "Inspect path/profile, sidecar, journal, schema and record/identity integrity; preserve evidence; no automatic repair",
+      "rollback": "cf8d86c2a840a50c50bf58cbb823d7b7d45d1e76"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/admission_sample.py",
+      "kind": "MODIFIED",
+      "old_blob": "a697188c51173e23d645fac95abf99c282f939b3",
+      "git_blob": "a530d415f5fb1f7e7eff79c1aa1bda3c36057859",
+      "bytes": 8672,
+      "sha256": "bcb8e58049e96277153b98a37b054d3c59e0d2e473af52d4763c369eb56ddfe3",
+      "functions": [
+        "_open",
+        "_state",
+        "read_admission",
+        "AdmissionSample.apply"
+      ],
+      "why": "Use bounded read profile; enforce singleton integer budget row on read and existing write validation. Existing transitions unchanged.",
+      "classes": [],
+      "api": "Existing GET routes; no contract change",
+      "database": "D0 read guard and existing singleton validation; no migration",
+      "dependencies": "No package change; SQLite table_list >=3.37",
+      "maintenance": "Inspect path/profile, sidecar, journal, schema and record/identity integrity; preserve evidence; no automatic repair",
+      "rollback": "cf8d86c2a840a50c50bf58cbb823d7b7d45d1e76"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+      "kind": "MODIFIED",
+      "old_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+      "git_blob": "086584de235756f24aebea16657fa51793fc06e2",
+      "bytes": 4515,
+      "sha256": "06dcc74490cd9fa31d66ada69a017370174b23dd3c30d7e395fd3c3b6653a798",
+      "functions": [
+        "read_pair_marker",
+        "read_task_budget_snapshot"
+      ],
+      "why": "Use bounded pair-marker reader; keep double-collect and HOLD semantics.",
+      "classes": [],
+      "api": "Existing GET routes; no contract change",
+      "database": "D0 read guard and existing singleton validation; no migration",
+      "dependencies": "No package change; SQLite table_list >=3.37",
+      "maintenance": "Inspect path/profile, sidecar, journal, schema and record/identity integrity; preserve evidence; no automatic repair",
+      "rollback": "cf8d86c2a840a50c50bf58cbb823d7b7d45d1e76"
+    },
+    {
+      "path": "tests/integration/run_pair_http_p09.py",
+      "kind": "ADDED",
+      "scope": "Three-router actual D0 pair writer diagnostic",
+      "git_blob": "bf1055c49260dc9ccc31f047097eba2d8988bfa7",
+      "sha256": "6d4a2789e375f56eb4d3a50caae31551e483f68913e547ab2d9d88de9e4bfe30"
+    }
+  ],
+  "evidence": "tests/evidence/TEST_EVIDENCE_W1_0198_P09.json",
+  "authority": "unchanged"
+}

@@ -1,6 +1,6 @@
 {
-  "revision": "W1-0198-P08",
-  "baseline": "W1-0198-P07",
+  "revision": "W1-0198-P09",
+  "baseline": "W1-0198-P08",
   "method": "Fixed-denominator evidence gates, not weights or product completion. Distinct test IDs count once; do not add historical runs. New tests require separate scope and denominator version.",
   "gates": [
     {
@@ -139,9 +139,45 @@
       "pct": 100,
       "status": "PASS",
       "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P08.json"
+    },
+    {
+      "id": "A-P09-SOURCE-46",
+      "scope": "Exact final diagnostic source closure",
+      "total": 46,
+      "verified": 46,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P09.json"
+    },
+    {
+      "id": "A-P09-PAIR-HTTP-39",
+      "scope": "Actual paired D0 writer and HTTP controls",
+      "total": 39,
+      "verified": 39,
+      "pct": 100,
+      "status": "PASS_DIAGNOSTIC_ONLY",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P09.json"
+    },
+    {
+      "id": "B-P09-PAIR-DIAGNOSTIC-3-OF-7",
+      "scope": "Three router and compiled GET diagnostics, not unified parity",
+      "total": 7,
+      "verified": 3,
+      "pct": 42.857142857142854,
+      "status": "PARTIAL_DIAGNOSTIC_ONLY",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P09.json"
+    },
+    {
+      "id": "G-P09-GUARD-4",
+      "scope": "Four original malformed profiles rejected after fix",
+      "total": 4,
+      "verified": 4,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P09.json"
     }
   ],
-  "unique_test_ids_this_round": 26,
+  "unique_test_ids_this_round": 39,
   "global_weighted_completion": "NOT_DEFINED; no baseline for all required tasks",
   "prior_p06_unique_test_ids": 97,
   "historical_counts_not_additive": true

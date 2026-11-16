@@ -1,7 +1,7 @@
 {
   "id": "W1-0198-A-H",
-  "round": "W1-0198-P08",
-  "parent": "3a744286bb1dd3702f4065f4d23eddf92465a480",
+  "round": "W1-0198-P09",
+  "parent": "cf8d86c2a840a50c50bf58cbb823d7b7d45d1e76",
   "source_commit": null,
   "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
   "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
@@ -12,15 +12,16 @@
     "P04/P05 gate: prioritize execution of existing 17 exact persisted lifecycle tests before adding any more historical demo endpoints; separate D0 helper evidence and actual product acceptance.",
     "P05 transport branch is NEVER MERGE; original product remains full integration branch. Exact 17 selected cases remain gate; do not count runner/DDL tests as lifecycle acceptance.",
     "P06 closes exact selected 17-case D0 fixture gate; 80 selected regressions PASS. This is not whole-product or live acceptance. P07 may advance independent read-only contracts after proof; no new historical endpoint solely for progress, no authority expansion.",
-    "P07 12 persisted scope and 20 prior reruns PASS; seven static routes match, real HTTP parity remains NOT_RUN. No runtime or authority change."
+    "P07 12 persisted scope and 20 prior reruns PASS; seven static routes match, real HTTP parity remains NOT_RUN. No runtime or authority change.",
+    "P09 matched D0 pair and 3/7 HTTP wrapper routes only; do not infer atomicity, canonical scope, authority or live budget. Full parity remains 0/7 NOT_RUN."
   ],
   "lanes": [
     {
       "id": "A",
       "name": "Birleşik UI ve backend regresyonu",
-      "status": "PARTIAL_DIAGNOSTIC_26_PASS",
-      "done": "Full pinned checkout/install and regression remain blocked by DNS; available versions differ.",
-      "next": "Full pinned source/build/browser and seven endpoint parity in fresh reviewed environment; Windows remains deferred; recover exact additional dependency closure if needed.",
+      "status": "PARTIAL_DIAGNOSTIC_39_PASS",
+      "done": "46 exact source pins; 39/39 D0 paired writer and HTTP controls. Full checkout/install/build still blocked.",
+      "next": "Recover exact dependency closure for MVP/outbox/lifecycle/lifecycle-prefix; full pinned checkout and regression remain P0.",
       "owner": [
         "tests/projection-read.test.cjs",
         "tests/integration/run_combined_helpers.cjs",
@@ -40,15 +41,16 @@
         "tests/integration/test_run_lifecycle_p05.py",
         "tests/integration/test_lifecycle_ddl_p05.py",
         "tests/integration/lifecycle_p05_source_lock.json",
-        "tests/integration/test_run_scope_p07.py"
+        "tests/integration/test_run_scope_p07.py",
+        "tests/integration/run_pair_http_p09.py"
       ]
     },
     {
       "id": "B",
       "name": "Merkezi frontend veri bağlantı katmanı",
-      "status": "OFFICE_ROUTE_DIAGNOSTIC_1_OF_7",
-      "done": "Full seven-endpoint product HTTP parity remains 0/7 NOT_RUN.",
-      "next": "Seven endpoint frontend/backend parity and React hook lifecycle; independently trusted scope/revision/freshness contract.",
+      "status": "D0_HTTP_DIAGNOSTIC_3_OF_7",
+      "done": "Three original router and compiled GET diagnostic chains, not unified parity.",
+      "next": "Remaining four diagnostic routes and then unified seven-endpoint product/React parity.",
       "owner": [
         "features/data/projectionRead.ts",
         "features/data/useProjectionRead.ts",
@@ -64,8 +66,8 @@
       "id": "C",
       "name": "CEO Dashboard veri entegrasyonu",
       "status": "CANONICAL_CEO_BINDING_HOLD",
-      "done": "No canonical run binding or live CEO change.",
-      "next": "Design canonical scoped CEO read projection against independently sourced active-run/ledger references; no live aggregation before proof.",
+      "done": "No canonical run/ledger join or live CEO change.",
+      "next": "Independent canonical run, ledger and current scope proof before CEO read projection.",
       "owner": [
         "features/ceo-dashboard/OperationalReadback.tsx"
       ]
@@ -73,9 +75,9 @@
     {
       "id": "D",
       "name": "Agent Runtime ve Office Engine bağlantısı",
-      "status": "D0_OFFICE_READER_HARDENED",
-      "done": "Actual persisted D0 role counts 6/6; trusted time/placement still HOLD.",
-      "next": "Independent current clock/lease/epoch and placement contract; no geometry join or active agents before exact proof.",
+      "status": "D0_OFFICE_PAIR_READ_PASS",
+      "done": "Office read with original persisted task writer and matched pair; no geometry or trusted clock proof.",
+      "next": "Independent clock/lease/epoch, causal task/run and station-placement binding.",
       "owner": [
         "features/mvp/OfficeWorkbenchPanel.tsx",
         "app/core/development_review/lifecycle_projection.py",
@@ -97,9 +99,9 @@
     {
       "id": "E",
       "name": "Görev ve Workflow Studio entegrasyonu",
-      "status": "D0_WORKBENCH_WRITER_PROVED",
-      "done": "Five DAG tasks, dependency/lease/IV/idempotency verified; canonical lineage remains HOLD.",
-      "next": "Independently sourced plan/task/run lineage and causal evidence; no DAG mutation.",
+      "status": "D0_PAIRED_TASK_READ_PASS",
+      "done": "WorkBench event prefix and research-event sequence match on D0 pair; causality UNPROVEN.",
+      "next": "Independent plan/task/run lineage and causal references; no DAG mutation.",
       "owner": [
         "components/dashboard/DevelopmentReviewPanel.tsx",
         "features/mvp/historicalJoin.ts"
@@ -108,9 +110,9 @@
     {
       "id": "F",
       "name": "Memory ve Model Gateway ekranları",
-      "status": "D0_FIXED_MODEL_SAMPLE_ONLY",
-      "done": "No live provider, reservation or Memory ACL proof.",
-      "next": "Independent active lease/clock, reservation ledger, model input registry, Memory ACL/tombstone/W-A provenance; no retrieval/provider call.",
+      "status": "D0_MODEL_SAMPLE_ONLY_RESERVATION_UNBOUND",
+      "done": "D0 reservation sample now observed through paired read; no model-input reservation binding or Memory ACL proof.",
+      "next": "Independent active lease/clock, reservation/ledger, model-input registry and ACL/tombstone/W-A provenance.",
       "owner": [
         "features/capabilities/CapabilityReadback.tsx"
       ]
@@ -118,19 +120,22 @@
     {
       "id": "G",
       "name": "Finans ve güvenlik projeksiyonları",
-      "status": "D0_SQLITE_GUARD_PASS",
-      "done": "No canonical ledger/security acceptance; optional pair table compatibility only.",
-      "next": "Canonical reservation/ledger and independent security receipts; no real spending.",
+      "status": "D0_ADMISSION_BUDGET_GUARD_PASS",
+      "done": "Four formerly accepted malformed profiles now rejected; UNKNOWN reservation preserved; no canonical financial ledger or independent security.",
+      "next": "Canonical reservation/ledger and independent receipts; no actual money or security grant.",
       "owner": [
-        "features/ceo-dashboard/Dashboard.tsx"
+        "features/ceo-dashboard/Dashboard.tsx",
+        "product/ai-company-os-backend/app/core/development_review/paired_read_guard.py",
+        "product/ai-company-os-backend/app/core/development_review/admission_sample.py",
+        "product/ai-company-os-backend/app/core/development_review/task_budget_snapshot.py"
       ]
     },
     {
       "id": "H",
       "name": "Görsel kalite ve kullanıcı deneyimi",
       "status": "NOT_RUN",
-      "done": "Full build/browser/accessibility pending.",
-      "next": "Light/dark/mobile visual/accessibility and interaction regression once built environment is reviewed.",
+      "done": "Current full build/browser and visual test not run.",
+      "next": "Light/dark/mobile visual/accessibility and interaction regression once pinned build available.",
       "owner": [
         "design-system/eds.css"
       ]

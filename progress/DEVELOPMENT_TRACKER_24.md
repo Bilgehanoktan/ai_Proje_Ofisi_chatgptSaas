@@ -32,3 +32,7 @@
 
 ## P08 delta
 26/26 selected diagnostic; Office 1/7 wrapper route only; full parity 0/7 NOT_RUN; score changes 0.
+
+
+## P09 delta
+39/39 selected D0 paired writer/HTTP diagnostic; 3/7 wrapper endpoints, full product parity 0/7 NOT_RUN; score changes 0. See tests/evidence/TEST_EVIDENCE_W1_0198_P09.json.

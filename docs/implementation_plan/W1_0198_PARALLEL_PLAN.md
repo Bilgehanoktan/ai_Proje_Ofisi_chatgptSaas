@@ -36,3 +36,14 @@ A 12 new D0 persisted scope +20 rerun PASS; B seven static route matches, not HT
 - F: D0_FIXED_MODEL_SAMPLE_ONLY — No live provider, reservation or Memory ACL proof.
 - G: D0_SQLITE_GUARD_PASS — No canonical ledger/security acceptance; optional pair table compatibility only.
 - H: NOT_RUN — Full build/browser/accessibility pending.
+
+
+## P09 result
+- A: PARTIAL_DIAGNOSTIC_39_PASS — 46 exact source pins; 39/39 D0 paired writer and HTTP controls. Full checkout/install/build still blocked. — Recover exact dependency closure for MVP/outbox/lifecycle/lifecycle-prefix; full pinned checkout and regression remain P0.
+- B: D0_HTTP_DIAGNOSTIC_3_OF_7 — Three original router and compiled GET diagnostic chains, not unified parity. — Remaining four diagnostic routes and then unified seven-endpoint product/React parity.
+- C: CANONICAL_CEO_BINDING_HOLD — No canonical run/ledger join or live CEO change. — Independent canonical run, ledger and current scope proof before CEO read projection.
+- D: D0_OFFICE_PAIR_READ_PASS — Office read with original persisted task writer and matched pair; no geometry or trusted clock proof. — Independent clock/lease/epoch, causal task/run and station-placement binding.
+- E: D0_PAIRED_TASK_READ_PASS — WorkBench event prefix and research-event sequence match on D0 pair; causality UNPROVEN. — Independent plan/task/run lineage and causal references; no DAG mutation.
+- F: D0_MODEL_SAMPLE_ONLY_RESERVATION_UNBOUND — D0 reservation sample now observed through paired read; no model-input reservation binding or Memory ACL proof. — Independent active lease/clock, reservation/ledger, model-input registry and ACL/tombstone/W-A provenance.
+- G: D0_ADMISSION_BUDGET_GUARD_PASS — Four formerly accepted malformed profiles now rejected; UNKNOWN reservation preserved; no canonical financial ledger or independent security. — Canonical reservation/ledger and independent receipts; no actual money or security grant.
+- H: NOT_RUN — Current full build/browser and visual test not run. — Light/dark/mobile visual/accessibility and interaction regression once pinned build available.

@@ -154,3 +154,8 @@ P07 D0 scope 12 and rerun 20 PASS; seven static matches only. Obtain fresh revie
 ## P09
 P09: full pinned checkout/dependency install; unified seven HTTP parity; independent scope/time/lease/reservation/ACL/W-A/placement, browser after build.
 No authority expansion. Preserve P08 regression.
+
+
+## P10
+P10: remaining MVP/outbox/lifecycle/lifecycle-prefix HTTP diagnostics; full pinned checkout/install and seven-product parity; independent task/run/time/lease/placement, reservation/ACL/W-A; browser after build.
+Preserve P09 evidence and P08 regression, no authority expansion, no new historical screen.
