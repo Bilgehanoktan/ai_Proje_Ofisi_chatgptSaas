@@ -1,6 +1,6 @@
 {
-  "id": "TRACK-UX-PREMIUM-06",
-  "baseline": "TRACK-0210",
+  "id": "TRACK-UX-PREMIUM-07-A0",
+  "baseline": "TRACK-UX-PREMIUM-06",
   "tarih": "2026-11-16",
   "status": "D0_LOCAL_FENCED_T1_INTENT_QUARANTINE_SELECTED_PASS",
   "rubric": {
@@ -46,6 +46,10 @@
         "summary": "Native and sandbox routes source-linked",
         "status": "SOURCE_INTEGRATED_NATIVE_NOT_RUN",
         "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      },
+      "ux_premium_07_a0": {
+        "status": "SELECTED_TRAFFIC_PASS",
+        "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
       }
     },
     {
@@ -98,6 +102,10 @@
         "summary": "4-agent model, mini camera, lift isolated, floor 2 passive",
         "status": "MODEL_PASS_JOIN_HOLD",
         "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      },
+      "ux_premium_07_a0": {
+        "status": "SELECTED_TRAFFIC_PASS",
+        "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
       }
     },
     {
@@ -465,6 +473,10 @@
         "summary": "81 Node +11 Chromium selected rerun",
         "status": "92_SELECTED_PASS_FULL_NOT_RUN",
         "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      },
+      "ux_premium_07_a0": {
+        "status": "SELECTED_TRAFFIC_PASS",
+        "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
       }
     },
     {
@@ -491,6 +503,10 @@
         "summary": "Git and npm DNS blocked; reviewed lock absent",
         "status": "BLOCKED",
         "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      },
+      "ux_premium_07_a0": {
+        "status": "BLOCKED",
+        "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
       }
     },
     {
@@ -559,10 +575,14 @@
         "summary": "22 path catalog, main index, tracker, handover",
         "status": "CONSOLIDATION_RECORDED",
         "evidence": "docs/UX-PREMIUM-06/CONSOLIDATION.md"
+      },
+      "ux_premium_07_a0": {
+        "status": "CATALOG_UPDATED",
+        "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
       }
     }
   ],
-  "note": "Ordinal scores unchanged. 154 selected PASS, 138 regression +16 new. D-03 local writer pass, external drift and D-04 restore gaps remain. Full core29/CompanyTerminal/PG/build and independent acceptance open. Historical tests not additive. | UX overlay: separate branch evidence, no score or core acceptance change; do not aggregate historical results.",
+  "note": "Ordinal scores unchanged. 154 selected PASS, 138 regression +16 new. D-03 local writer pass, external drift and D-04 restore gaps remain. Full core29/CompanyTerminal/PG/build and independent acceptance open. Historical tests not additive. | UX overlay: separate branch evidence, no score or core acceptance change; do not aggregate historical results. | A0 correction: 15 selected PASS, 3 expected baseline failures reproduced, no scores changed; historical tests not additive.",
   "integration_tracking": {
     "scope": "0210 local fenced T1 and durable intent",
     "source_commit": "cd1dd5e61e259d4f16b94ae7e386e32730c8fd13",
@@ -600,5 +620,17 @@
       "not_merged": true
     },
     "p10g": "f2457545cf52805e5ed5ea86cd869c326fd162ca"
+  },
+  "parallel_ui_tracking_a0": {
+    "parent": "e850eb64075ee5f681f2ebeab0698a3970ffd63c",
+    "manifest_entries": 398,
+    "selected_node": 15,
+    "new_tests": 3,
+    "regression_tests": 12,
+    "full_build": "BLOCKED",
+    "native_browser": "NOT_RUN",
+    "office_v0": "JOIN_HOLD",
+    "independent_acceptance": "HOLD",
+    "evidence": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json"
   }
 }

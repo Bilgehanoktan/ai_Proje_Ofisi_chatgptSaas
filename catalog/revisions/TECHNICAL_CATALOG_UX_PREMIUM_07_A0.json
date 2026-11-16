@@ -1,0 +1,46 @@
+{
+  "revision": "UX-PREMIUM-07-A0",
+  "scope": "D0 existing defect correction; no new feature",
+  "parent": "e850eb64075ee5f681f2ebeab0698a3970ffd63c",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumTraffic.ts",
+      "action": "replace",
+      "sha256": "955047ac505021e0ffa8698288780543d93eb81d94db6c2a147fa10f8a1f1081",
+      "bytes": 3722,
+      "symbols": [
+        "createTrafficSearch",
+        "snapshot (private closure)",
+        "finish",
+        "advance"
+      ],
+      "why": "Return detached snapshots including nested coordinate tuples; preserve search-owned state.",
+      "dependencies": [
+        "premiumRouting GridCell type"
+      ],
+      "rollback": "Restore exact parent blob a25473d42be2a4bb895b2e8891a3467523dbdcc6."
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-traffic-boundary.test.cjs",
+      "action": "add",
+      "sha256": "995729adb62b2cf59a165bb51d40d94091c6ebd46ff95e9e19212125ee414217",
+      "bytes": 1664,
+      "symbols": [
+        "solve",
+        "3 mutation boundary cases"
+      ],
+      "dependencies": [
+        "node:assert/strict",
+        "compiled premiumTraffic"
+      ],
+      "rollback": "Remove added test and corresponding manifest entry."
+    }
+  ],
+  "api": [],
+  "database": [],
+  "events": [],
+  "external_dependencies": [],
+  "security_authority": "unchanged; not independent security proof",
+  "tests": "docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json",
+  "maintenance": "docs/UX-PREMIUM-07/A0_TRAFFIC_FIX.md"
+}

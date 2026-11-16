@@ -9,3 +9,7 @@ Priority zero: upload full archive of P10G or use exact user-local checkout with
 
 ## Office realignment plan
 [UX-PREMIUM-07 A0–A7](../docs/UX-PREMIUM-07/OFFICE_REALIGNMENT_PLAN.md). A0 exact checkout and real native acceptance first; no feature implementation yet. A6 contract review only may run parallel; JOIN_HOLD maintained.
+
+
+## UX-PREMIUM-07-A0 defect correction
+[Existing traffic boundary fix](../docs/UX-PREMIUM-07/A0_TRAFFIC_FIX.md): 15 selected Node PASS; full A0 still blocked. Recover exact full checkout (398 manifest entries), review/rebind W8 lock and run actual Next/Phaser baseline before new A1–A5 features. No OfficeV0 join or core merge.

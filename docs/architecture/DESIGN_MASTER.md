@@ -205,3 +205,7 @@ Inspect source hashes before test. For root replacement/restore preserve evidenc
 
 ## UX-PREMIUM-07 — office realignment plan only
 [Correction plan](../UX-PREMIUM-07/OFFICE_REALIGNMENT_PLAN.md): restore DEC-28A/B/C-D hybrid topology, remove fixed role-instance coupling, scalable traffic and floor model. Existing approvals preserved; measured geometry and capacity candidate only. A0 baseline acceptance blocked; no code or normative changes.
+
+
+## UX-PREMIUM-07-A0 — existing traffic result isolation
+[Architecture, evidence and rollback](../UX-PREMIUM-07/A0_TRAFFIC_FIX.md). 15 selected Node PASS; 3 baseline failures reproduced. A0 remains BLOCKED for full build/native. No A1–A5 feature implementation or normative change; JOIN_HOLD and independent HOLD.

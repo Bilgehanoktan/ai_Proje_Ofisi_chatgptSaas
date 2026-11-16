@@ -1,0 +1,54 @@
+{
+  "revision": "UX-PREMIUM-07-A0",
+  "parent": "e850eb64075ee5f681f2ebeab0698a3970ffd63c",
+  "source_base": "7032dac5f619dc02a7bc76a0161719a2fe768bf0",
+  "remote_verified_sha256_04_delta": "7/7",
+  "local_exact_baseline_files": 3,
+  "local_exact_baseline": [
+    {
+      "path": "premiumTraffic.ts",
+      "sha256": "d176441e27060e3d6791b2fdf1d68a293c12f89dfb08a10476870b28e11b1c87"
+    },
+    {
+      "path": "premiumRouting.ts",
+      "sha256": "ed635338d270c917968b972fddb9cdd66a7ca31e1877bb78f9dfdea450b1c53c"
+    },
+    {
+      "path": "premium-traffic.test.cjs",
+      "sha256": "9e07dac651294e222c7543b304f4debdfde5987978fd3f8fec97514e2f312e1a"
+    }
+  ],
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 (global; not pinned 5.9.3)",
+    "strict_compile": "PASS_SELECTED",
+    "git_dns": "exit 128 could not resolve github.com",
+    "npm_dns": "exit 1 EAI_AGAIN registry.npmjs.org",
+    "npm_cache_entries": 0
+  },
+  "tests": [
+    {
+      "id": "original traffic",
+      "pass": 12,
+      "fail": 0
+    },
+    {
+      "id": "boundary reproduction before fix",
+      "pass": 0,
+      "fail": 3,
+      "expected": "failure",
+      "exit": 1
+    },
+    {
+      "id": "boundary after fix",
+      "pass": 3,
+      "fail": 0
+    }
+  ],
+  "selected_pass": 15,
+  "full_checkout": "BLOCKED",
+  "full_build": "BLOCKED",
+  "native_browser": "NOT_RUN",
+  "office_v0": "JOIN_HOLD",
+  "independent_acceptance": "HOLD"
+}

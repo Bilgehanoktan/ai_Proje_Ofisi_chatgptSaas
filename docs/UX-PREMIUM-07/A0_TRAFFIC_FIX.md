@@ -1,0 +1,15 @@
+# UX-PREMIUM-07-A0 — existing traffic result isolation
+2026-11-16 | D0 isolated fix | A0 PARTIAL, full build BLOCKED.
+
+Parent: e850eb64075ee5f681f2ebeab0698a3970ffd63c (07 plan), product baseline 7032dac5f619dc02a7bc76a0161719a2fe768bf0 (06), 04→06 four commits ahead/zero behind; 07 plan one documentation commit ahead. Prior branches remain intact. Seven current 04 delta files matched 06 SHA-256 and byte lengths remotely. Three exact local source/test files matched parent manifest before compilation.
+
+## Defect and change
+createTrafficSearch leaked its private TrafficResult object to callers. Mutating status/expanded/steps, including nested coordinates, could terminate search or corrupt later readbacks. Reproduced all three boundary cases before fix. New private snapshot() returns detached status, count, array, records and tuples for SEARCHING/SOLVED/NO_ROUTE/LIMIT. Existing public shape, bounded weighted A*, 2–4 actor count, 20k state cap and 96 default budget unchanged; walkable/fixed inputs still require stable topology during a search. No claims about native renderer collision or universal liveness. No layout, asset, floor, API, database, event, package or authority change. This is a defect correction in A0, not early A3 feature work.
+
+## Executed evidence
+Node 22.16.0 / global TS 5.8.3: strict compile of exact baseline and corrected traffic + original routing. Three original files exact SHA-256. New test before fix 0/3 (expected failures); corrected 3/3 plus original 12/12 = 15 selected actual PASS. Historical UX06 92 not rerun and not additive. Full pinned TS 5.9.3, Next build, React/Phaser/native browser, full product and HD acceptance NOT_RUN. Local git transport still DNS exit128; npm registry EAI_AGAIN exit1, cache zero. Local full checkout absent, no dependency substitutions. OfficeV0 JOIN_HOLD, owner 0/55, independent HOLD. No CI, real agent, provider, spending, production or cross-branch merge.
+
+## Replay / maintenance / rollback
+From frontend of exact checkout: compile strict helpers using tsc --strict --target ES2022 --module commonjs --outDir <tmp> office/engine/premiumTraffic.ts office/engine/premiumRouting.ts. Run node tests/premium-traffic.test.cjs <tmp>/premiumTraffic.js and node tests/premium-traffic-boundary.test.cjs <tmp>/premiumTraffic.js. For corrupt results inspect createTrafficSearch snapshot, ensure all terminal and intermediate paths detach tuples and records; do not infer runtime proof. Restore the parent source and remove new test plus corresponding manifest delta if necessary. No DB migration. Preserve original 07 plan, 04/05/06 and parallel core branches. Next A0: exact full checkout + verified 398 hashes, reviewed W8 lock staging and genuine typecheck/build/native E2E before A1. No new art/layout/identity/floor feature until A0 reviewed. A6 review-only remains parallel.
+
+Engineering decision: defensive deep copy rather than freezing public return object, preserving existing consumer compatibility; no new normative decision. See docs/UX-PREMIUM-07/A0_TEST_EVIDENCE.json and catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A0.json.

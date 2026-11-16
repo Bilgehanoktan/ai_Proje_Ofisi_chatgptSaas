@@ -19,9 +19,11 @@ export function createTrafficSearch(start:readonly GridCell[],goal:readonly Grid
  const less=(a:number,b:number)=>{const x=nodes[a],y=nodes[b];return x.g+2*x.h<y.g+2*y.h||(x.g+2*x.h===y.g+2*y.h&&(x.h<y.h||(x.h===y.h&&a<b)));};
  function push(n:number){let i=heap.length;heap.push(n);while(i>0){const p=(i-1)>>1;if(!less(heap[i],heap[p]))break;[heap[i],heap[p]]=[heap[p],heap[i]];i=p;}}
  function pop(){const first=heap[0],last=heap.pop()!;if(heap.length){heap[0]=last;let i=0;for(;;){let j=i*2+1;if(j>=heap.length)break;if(j+1<heap.length&&less(heap[j+1],heap[j]))j++;if(!less(heap[j],heap[i]))break;[heap[j],heap[i]]=[heap[i],heap[j]];i=j;}}return first;}
- function finish(status:TrafficResult['status'],steps:TrafficStep[]=[]){result={status,steps,expanded:result.expanded};return result;}
+ // A caller may mutate its readback; never expose planner-owned records or cell tuples.
+ function snapshot():TrafficResult{return {status:result.status,expanded:result.expanded,steps:result.steps.map(({actor,to})=>({actor,to:[to[0],to[1]]}))};}
+ function finish(status:TrafficResult['status'],steps:TrafficStep[]=[]){result={status,steps,expanded:result.expanded};return snapshot();}
  function advance(budget=96):TrafficResult{
-  if(result.status!=='SEARCHING')return result;
+  if(result.status!=='SEARCHING')return snapshot();
   if(!Number.isSafeInteger(budget)||budget<1||budget>256)throw Error('TRAFFIC_BUDGET_INVALID');
   for(let i=0;i<budget&&heap.length;i++){
    const idx=pop(),n=nodes[idx];if(seen.get(stateKey(n.cells))!==idx)continue;
@@ -34,7 +36,7 @@ export function createTrafficSearch(start:readonly GridCell[],goal:readonly Grid
     const j=nodes.length;nodes.push({cells:next,parent:idx,step:{actor,to},g:n.g+1,h:heuristic(next)});seen.set(id,j);push(j);
    }
   }
-  return heap.length?result:finish('NO_ROUTE');
+  return heap.length?snapshot():finish('NO_ROUTE');
  }
  return {advance};
 }
