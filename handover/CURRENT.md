@@ -136,3 +136,6 @@ Source `b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d`; 347 product files / 346 manif
 
 ## 0212 — core recovery and D0 integration evidence
 Source `bef094e96d6b7f57552e022b92f0a5524b2c6a9e`; 349 product files / 348 entries. 55/55 exact core recovered; 29 original diagnostic tests, 7 direct authority/T1, 6 company/terminal, 10 prior authority tests = 52/52 (51 behavior + 1 expected residual). Locked29, exact witness/journal wrapper, multi-project, PG/RLS, full build/browser open. No normative change. [Architecture](../docs/0212/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0212.json) · [Gates](../progress/INTEGRATION_GATES_0212.json) · [Next](NEXT_STEP_0212.md).
+
+## 0213 — two-project budget and reproducible diagnostic
+Source commit `9c3649d592b2382fa6aef4020fcc71000c18b075`; 351 product files / 350 manifest entries. 55/55 exact local pins and 56/56 selected diagnostic tests (52 selected inherited, 4 new multi-project). Six full 0209–0211 wrapper scenarios written but NOT_RUN, exact full checkout absent. PostgreSQL/RLS, locked29, full build/browser NOT_RUN. 16-gate integration tracker 6/16 (37.5%) is only this scope, not product acceptance. [Architecture](../docs/0213/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0213.json) · [Next](NEXT_STEP_0213.md). No main/CI/PROD or independent grant.
