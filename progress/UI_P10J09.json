@@ -1,0 +1,47 @@
+{
+  "revision": "UI-P10J-09",
+  "source": "752b225deac4557a548faec7191a090fbfba19f7",
+  "prior": "progress/UI_P10J08.json",
+  "original_gates": {
+    "passed": 21,
+    "total": 40,
+    "percent": 52.5,
+    "delta": 0
+  },
+  "independent_acceptance": {
+    "passed": 0,
+    "total": 7
+  },
+  "w8": "8/8 local Windows PASS",
+  "source_delivery": "FULL_MATCH",
+  "visual_review": "initial 52-capture review complete; pixel comparison and targeted interaction acceptance HOLD",
+  "historical_core29": "29/29 on tested UI, not 0223",
+  "parallel": {
+    "heads": {
+      "integration/ui-0212-p10j": "6712776e2a7ab11e7f514ff985d2c5041de27939",
+      "integration/0220-plan-dag-admission": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+      "integration/0221-sample-result-context": "6423e91d32a8ce660105b8ea76e44489dc36018d",
+      "integration/0222-shared-ceo-office": "70d6c305c34a36361214343526d5c134cb6c9c9f",
+      "integration/0223-agent-workflow-studio": "e499d8f063af872e2e83407935693b0ffed655c6",
+      "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+    },
+    "core0223_tree": "e5fcc4b522d9c376c3b48118df016ddd9bf9e5d8",
+    "counts": {
+      "same": 320,
+      "ui_only": 49,
+      "core_only": 51,
+      "diverged": 5
+    },
+    "divergent": [
+      "product/SOURCE_MANIFEST.json",
+      "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "merge": false,
+    "core0223_status": "observed source candidate, final handover not found at snapshot"
+  },
+  "next": "P10J10 mobile navigation candidate; core shared Dashboard reconciliation separately",
+  "evidence": "tests/evidence/TEST_EVIDENCE_UI_P10J09.json"
+}

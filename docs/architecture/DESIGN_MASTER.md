@@ -251,3 +251,6 @@ P10J-03 integrated 10 modifications and two additions to UI presentation (387 pr
 
 ## UI-P10J-08 — local Windows W8 PASS
 Exact source 752b225deac4557a548faec7191a090fbfba19f7; see docs/UI-P10J/P10J08_W8_WINDOWS_ACCEPTANCE.md and tests/evidence/TEST_EVIDENCE_UI_P10J08_W8_PASS.json. Independent and 0222 union acceptance remain HOLD.
+
+## UI-P10J-09 — verified delivery and real UI review
+See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J09.json, catalog/revisions/TECHNICAL_CATALOG_UI_P10J09.json and progress/UI_P10J09.json. No product changes; next mobile shell and controlled core reconciliation.
