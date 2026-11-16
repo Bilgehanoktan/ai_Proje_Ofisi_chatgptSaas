@@ -1,3 +1,7 @@
+# P10J-05 final readback
+
+Product source 50c2a5a0c0cbb852f0139a2e2a135a7df6b8c66f; 391 files / 390 pins, 12/12 changed SHA-256, 390/390 paths/sizes and 378 preserved old Git blobs. 34 local exact archive recoveries. 20/20 W8 auxiliary and 7/7 adapter chain Git tree pins; W8 NOT_RUN. Graph model 11/11, exact PlanGraph TSX syntax zero errors, standalone Chromium native details sanity PASS (not React/product). npm ENOTCACHED and Python wheels unavailable; reviewed locks absent. 21/40, independent 0/7 unchanged. [Readback](../releases/GITHUB_READBACK_UI_P10J05.json).
+
 # P10J-05 baseline compatibility correction
 
 Initial source commit 8297bc479efa3da5ddc292a0ed1b6be41f15dec3; new manifest 106bc3353d545cf4145093c766b8b9d18caecc5d; same 390 pins / 391 product files. Two lifecycle panels retain original vN · STATE timeline and add collapsed event explorer. Static review of original P02/P03 browser contracts exposed selector/text risk; fixed prior to acceptance, actual browser still NOT_RUN. Local dependency probes on exact package/requirements: npm offline ENOTCACHED, pip no-index missing FastAPI. No reviewed locks. Graph model 11/11 previously executed; no React/product acceptance. Source delta and evidence updated.

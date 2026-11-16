@@ -203,3 +203,5 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10J-05
 [Architecture](docs/UI-P10J/P10J05_ARCHITECTURE.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_UI_P10J05.json) · [Progress](progress/UI_P10J05.json) · [Evidence](tests/evidence/TEST_EVIDENCE_UI_P10J05.json). Core remains separate.
+
+P10J-05 [final remote readback](releases/GITHUB_READBACK_UI_P10J05.json).
