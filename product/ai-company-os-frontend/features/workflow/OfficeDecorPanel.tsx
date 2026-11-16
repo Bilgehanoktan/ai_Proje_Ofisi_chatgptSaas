@@ -1,0 +1,8 @@
+"use client";
+import {useState} from 'react';
+import {decorCatalog,decorUri} from '../../office/engine/decorCatalog';
+import styles from './ParallelStudio.module.css';
+export default function OfficeDecorPanel(){
+ const [filter,setFilter]=useState<'all'|'furniture'|'sprite'>('all');
+ return <section className={`panel ${styles.studio}`} aria-label="Ofis dekor varlık kataloğu"><div className="bar"><div><div className="eyebrow">OFFICE / ASSET LIBRARY</div><h2>Ofis mobilya ve sprite kataloğu</h2><small>Özgün vektör varlıklar · yalnız önizleme</small></div><span className="pill">D0 · REZERV</span></div><div className="chips" role="group" aria-label="Varlık filtresi">{([['all','Tümü'],['furniture','Mobilyalar'],['sprite','Avatar']] as const).map(([id,label])=><button key={id} type="button" aria-pressed={filter===id} onClick={()=>setFilter(id)}>{label}</button>)}</div><div className={styles.assetGrid}>{decorCatalog.filter(a=>filter==='all'||a.category===filter).map(a=><article key={a.id} className={styles.asset}><img src={decorUri(a.id)??undefined} alt="" width={64} height={64}/><strong>{a.label}</strong><small>Yerleşim uygulanmadı</small></article>)}</div><p className="sub">Varlıklar gerçek konum, ajan kimliği, hareket veya görev durumu oluşturmaz.</p></section>;
+}
