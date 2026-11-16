@@ -15,3 +15,7 @@ Source: user accepted the preceding proposed sequence. This is product execution
 Reuse existing modules before new files; link each task to source card, owner, dependency, acceptance and evidence. Parallel W1–W8 where dependencies permit. No automatic branch merges, new provider effect path, false acceptance or arbitrary score increase. Each round records what/why/where/how, maintenance/rollback, exact source/test status, catalog and handover. Research first is a proposed first D0 slice, not deletion of Excel W1/Obligation scope. Independent QA/IV boundaries stay separate. 
 ## Current status
 0218 static reconciliation performed; checkout/locks/PG and actual product tests/build remain blocked; 7/16 gates unchanged. 0219 can begin authorized existing-source work, but must carry blockers and cannot claim 0218 runtime acceptance.
+
+
+## 0222 progress (2026-11-16)
+Historical shared source landed; 39 selected behavior checks, 18 payload checks, 2 syntax-only TSX. 7/16 gates unchanged. Actual DB and browser, authenticated canonical live snapshot/SSE and placement open; 0223 can progress source-only in parallel with W8.

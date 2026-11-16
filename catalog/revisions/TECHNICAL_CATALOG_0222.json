@@ -1,0 +1,203 @@
+{
+  "revision": "0222",
+  "scope": "D0 fixed historical source candidate, not canonical live OfficeV0",
+  "base_commit": "6423e91d32a8ce660105b8ea76e44489dc36018d",
+  "source_commit": "7dbb696f8f3d5b639d2a00765566babd4108cf93",
+  "files": [
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "change": "modified",
+      "git_blob": "3ad39d582a2509c877cd39748167bfa3e77fe5b7",
+      "bytes": 67644,
+      "sha256": "9c6bd212b99b31975a9c3ed67082cc490489a83cc8af39efb0a294eaf86041c4",
+      "area": "Integrity",
+      "symbols_and_purpose": "378 product path/byte/SHA-256 records excluding manifest itself."
+    },
+    {
+      "path": "product/ai-company-os-backend/CONTRACT_PIN.md",
+      "change": "modified",
+      "git_blob": "212db95a20268bb6261a5832446a1d9718b2195b",
+      "bytes": 3264,
+      "sha256": "606e3f3e50ea600ab6f2aa3fbaebb4502bca4a8aa2017febb40eb1ef1a95f511",
+      "area": "Contract",
+      "symbols_and_purpose": "Pin schema SHA-256 and reused prefix schema; no KS/NS ratification."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "change": "modified",
+      "git_blob": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822",
+      "bytes": 1659,
+      "sha256": "169f6a24d47bf1bd328a974d9dcfc36f1c8d9341400203bd81e1a9814ba807b8",
+      "area": "Backend",
+      "symbols_and_purpose": "shared_snapshot(request): existing fixed path reader called once; no resume, no-store, 503 HOLD on invalid evidence."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py",
+      "change": "added",
+      "git_blob": "54b3ff7bf96ecd032fa72851183fe671e69a6418",
+      "bytes": 1369,
+      "sha256": "714ce68e7fea401e30c42381a3b883ece9ac2a92f3af9dc47478cb5fc002cce2",
+      "area": "Backend",
+      "symbols_and_purpose": "canonical(value), build_shared_replay(wire): exact historical prefix validation, SHA-256, finite SSE frames; no database write."
+    },
+    {
+      "path": "product/ai-company-os-backend/contracts/source/ceo.office.shared.snapshot.schema.json",
+      "change": "added",
+      "git_blob": "35341938ec016b1b125a01e72eea1cc8a60e5b8a",
+      "bytes": 2709,
+      "sha256": "e85bc656ca8dca50937501752dac4edb3a1833c8727d00f3ddcfdf07a4212ac7",
+      "area": "Contract",
+      "symbols_and_purpose": "Draft 2020-12 frame payload schema; reuses lifecycle.prefix.schema.json, exact source/generated mirror. Cross-frame rules enforced in code."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_shared_snapshot_0222.py",
+      "change": "added",
+      "git_blob": "6cf54bde13d8b9ca5a03ea1f48fbf32c8d7aaa44",
+      "bytes": 2221,
+      "sha256": "b41e3a3f721e41dbcfcec4ce3c84508ef0097c7f9bc1929d1334c4aaca783a50",
+      "area": "QA",
+      "symbols_and_purpose": "Six unittest behavior cases, fixed profile, deterministic digest, invalid scope/version/timeline."
+    },
+    {
+      "path": "product/ai-company-os-frontend/CONTRACT_PIN.md",
+      "change": "modified",
+      "git_blob": "212db95a20268bb6261a5832446a1d9718b2195b",
+      "bytes": 3264,
+      "sha256": "606e3f3e50ea600ab6f2aa3fbaebb4502bca4a8aa2017febb40eb1ef1a95f511",
+      "area": "Contract",
+      "symbols_and_purpose": "Pin schema SHA-256 and reused prefix schema; no KS/NS ratification."
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+      "change": "added",
+      "git_blob": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+      "bytes": 918,
+      "sha256": "e71ea3b15e8e576704f98a22879e9b169fc0c2689834468ff5562eea7b706be8",
+      "area": "Frontend",
+      "symbols_and_purpose": "GET: fixed loopback FastAPI proxy, 2.5s deadline, no-store, 503 HOLD, rejects Last-Event-ID, validates complete replay."
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/layout.tsx",
+      "change": "modified",
+      "git_blob": "29f15f7920c11b64db7526e0b53721e9ce60022a",
+      "bytes": 429,
+      "sha256": "936722ee95f24d2477efd5cc4246ccdd131c199b58fe5c994ccff161b9e52758",
+      "area": "Frontend",
+      "symbols_and_purpose": "Layout: root provider persists over client navigation between CEO and full office."
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "change": "modified",
+      "git_blob": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+      "bytes": 3011,
+      "sha256": "c3fe73638078ea1d4819b9acd50ad0a233cd81e11290e61da9644153651b3f56",
+      "area": "Frontend",
+      "symbols_and_purpose": "OfficePanel: common session consumer; original static geometry and placement HOLD retained."
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx",
+      "change": "modified",
+      "git_blob": "6118c9d5a57f7991094e72ef9903fa65a5e6c724",
+      "bytes": 735,
+      "sha256": "77e83cf349824ec02059a10c6f801579aaa6baf83c6ea23572a55e8c1ffdc9e5",
+      "area": "Frontend",
+      "symbols_and_purpose": "SnapshotStrip: fixture explicitly labelled static geometry, not shared runtime snapshot."
+    },
+    {
+      "path": "product/ai-company-os-frontend/contracts/generated/ceo.office.shared.snapshot.schema.json",
+      "change": "added",
+      "git_blob": "35341938ec016b1b125a01e72eea1cc8a60e5b8a",
+      "bytes": 2709,
+      "sha256": "e85bc656ca8dca50937501752dac4edb3a1833c8727d00f3ddcfdf07a4212ac7",
+      "area": "Contract",
+      "symbols_and_purpose": "Draft 2020-12 frame payload schema; reuses lifecycle.prefix.schema.json, exact source/generated mirror. Cross-frame rules enforced in code."
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "change": "modified",
+      "git_blob": "8677ce4269e93c9b7edb2ca9150777f40beb7bac",
+      "bytes": 9076,
+      "sha256": "a24c6ba6ff8e7fb736cb1e7299cf2e6be8351cb84753c23cb4f00120779baa67",
+      "area": "Frontend",
+      "symbols_and_purpose": "DashboardView: CEO common panel replaces independent historical prefix reader; office-only view consumes OfficePanel's shared panel; other studio readers retained."
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "change": "added",
+      "git_blob": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+      "bytes": 1716,
+      "sha256": "d81d6a1572961c81d8e3193cb977160652f403b2d3493714644f5b8f3e0c8557",
+      "area": "Frontend",
+      "symbols_and_purpose": "SharedSnapshotPanel: common historical task, sequence, scope, budget sample and evidence digest; real active agent unavailable."
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+      "change": "added",
+      "git_blob": "b809f3ca5a18ff7c92060db1d349118dee4f9084",
+      "bytes": 2044,
+      "sha256": "cf4466d8d15d9913ae5f89d6050a6b7ac7fbadce6cc9c9a4ab784d68aa68a6ef",
+      "area": "Frontend",
+      "symbols_and_purpose": "SharedSnapshotProvider, useSharedSnapshot: shared root React context; abort/generation fence, 4s timeout, 30s display expiry, hidden invalidation."
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/sharedSnapshot.ts",
+      "change": "added",
+      "git_blob": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+      "bytes": 3270,
+      "sha256": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e",
+      "area": "Frontend",
+      "symbols_and_purpose": "parseSharedReplay, readSharedText, SharedSnapshot: strict canonical ASCII/UTF-8 frame parsing, digest, exact scope/epochs/order/end marker; 16 KiB."
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+      "change": "added",
+      "git_blob": "16b8070f809c590d0d4b2796adc6db186cd23f29",
+      "bytes": 2462,
+      "sha256": "ceba1eb2c2403b9a9b0ba08e9b61ef23eabca856a82715f5de5cc82064561d32",
+      "area": "QA",
+      "symbols_and_purpose": "22 Node test cases; Python replay vectors, sequence/digest/scope/framing and bounded stream reads."
+    }
+  ],
+  "apis": [
+    {
+      "method": "GET",
+      "path": "/demo/v1/lifecycle/shared-snapshot",
+      "source": "existing lifecycle_prefix_projection router",
+      "result": "finite text/event-stream or 503 D0_SHARED_SNAPSHOT_HOLD"
+    },
+    {
+      "method": "GET",
+      "path": "/api/demo/shared-snapshot",
+      "result": "validated bounded replay or 503 HOLD"
+    }
+  ],
+  "db": {
+    "new_tables": [],
+    "migrations": [],
+    "existing_reader": "read_lifecycle_prefix; fixed read-only AICOS_D0_LIFECYCLE_PREFIX_DB; existing lifecycle_snapshot authorizer and exact profile",
+    "actual_db_test": "NOT_RUN_0222"
+  },
+  "dependencies": {
+    "added": [],
+    "existing": [
+      "Python hashlib/json/FastAPI",
+      "React context",
+      "Next route",
+      "Web Crypto SHA-256",
+      "TextDecoder",
+      "fetch/AbortController"
+    ]
+  },
+  "maintenance": {
+    "diagnostics": "Check fixed DB configuration and existing prefix API; compare scope/version/digest; 503 is HOLD not zero. No Last-Event-ID; manual full resync. Verify secure context Web Crypto and root provider mount. Check generated schema mirrors.",
+    "rollback": "Revert product changes of 1cd6fc00aab15c9275fba5fb5059e7323377cf51 and 7dbb696f8f3d5b639d2a00765566babd4108cf93 on a new branch; restore manifest from pinned base, never reset main or mutate DB.",
+    "extension": "Add authenticated project/world and canonical plan/run/agent placement lineage only from existing read models; authenticated retained cursor, replay and revocation under separate authority. Do not reuse run-local sequence as world-global sequence."
+  },
+  "authority": {
+    "live": false,
+    "placement": false,
+    "external_effect": false,
+    "independent_acceptance": "HOLD",
+    "normative_change": false
+  }
+}

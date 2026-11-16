@@ -169,3 +169,7 @@ Source `a039ad0b4a096780d8365d3392f5ed5859a433b4`; 368 product files / 367 manif
 
 ## 0221 — fixed sample result context
 Source `763bd55796945dcd08bb53cda1b68f4c80c48845`; 370 product files / 369 manifest records. 12 exact product module + 6 local memory diagnostics PASS; 12 prior scheduler and 12 historical excerpt rerun. Full result SQL10, prior SQL/PG/RLS/build NOT_RUN. 7/16 gates; independent/R03 HOLD. [Architecture](../docs/0221/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0221.json) · [Next](NEXT_STEP_0221.md).
+
+
+## 0222 — CEO/Office common historical snapshot
+Source `7dbb696f8f3d5b639d2a00765566babd4108cf93`; 379 product files / 378 manifest entries. 39 selected behaviors (6 Python +22 Node +5 ASGI mock DB +6 real loopback proxy with synthetic upstream), 18 schema payloads and 2 TSX syntax checks separately. Single shared historical provider, finite SSE, no live or placement. 7/16. Actual DB route/browser, full SQL/PG/RLS/build and independent acceptance open. [Architecture](../docs/0222/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0222.json) · [Next](NEXT_STEP_0222.md).

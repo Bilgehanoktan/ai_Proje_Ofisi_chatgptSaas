@@ -182,3 +182,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0221 — fixed sample result context
 [Addendum](../0221/ARCHITECTURE_AND_CATALOG.md). Existing model/skill/tool/memory inspectors and retained archive bound to opt-in company/witness intent fence. 18 new local checks, full SQL NOT_RUN; no real effects or normative change.
+
+
+## 0222 — common CEO / Office historical snapshot
+[Addendum](../0222/ARCHITECTURE_AND_CATALOG.md). Existing fixed historical prefix read reused once; bounded finite SSE with digest, shared frontend context; project/world/placement/live remain HOLD. 39 selected controls, full actual DB/browser/PG/build not run. No normative changes.

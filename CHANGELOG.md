@@ -8,3 +8,6 @@
 Model, skill, memory kaynak adayları; katalog v1.18. Bkz. docs/0159B/CHANGE_RECORD.md.
 ## 0159-A / 0158
 Eklemeli repo düzeni ve R5 kaynakları; tarihsel kayıtlar docs/0159A ve docs/0158.
+
+## 0222
+Shared CEO/Office historical snapshot, finite SSE replay, bounded loopback proxy, common provider and source/mirror schema. 39 selected behaviors. Actual DB/browser/PG/build not run. [Details](docs/0222/ARCHITECTURE_AND_CATALOG.md).

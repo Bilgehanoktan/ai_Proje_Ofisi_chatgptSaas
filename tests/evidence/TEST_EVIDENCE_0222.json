@@ -1,0 +1,62 @@
+{
+  "revision": "0222",
+  "source_commit": "7dbb696f8f3d5b639d2a00765566babd4108cf93",
+  "implementation_commit": "1cd6fc00aab15c9275fba5fb5059e7323377cf51",
+  "environment": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "fastapi": "0.128.2",
+    "httpx": "0.28.1",
+    "dependency_lock": "NOT_VERIFIED"
+  },
+  "behavior": [
+    {
+      "suite": "Python exact new replay module unittest",
+      "pass": 6,
+      "scope": "fixed prefix_wire inputs, not DB"
+    },
+    {
+      "suite": "Node compiled exact parser/transport",
+      "pass": 22,
+      "scope": "four Python-generated replay fixtures; negative cases; actual Response reader"
+    },
+    {
+      "suite": "isolated FastAPI ASGI TestClient",
+      "pass": 5,
+      "scope": "exact route, DB read substituted by Mock"
+    },
+    {
+      "suite": "compiled Next GET proxy, real loopback HTTP",
+      "pass": 6,
+      "scope": "synthetic upstream HTTP server, not full Next or backend DB"
+    }
+  ],
+  "selected_behavior_pass": 39,
+  "additional": {
+    "schema_payloads_pass": 18,
+    "tsx_syntax_pass": 2,
+    "strict_ts": "parser and isolated proxy compiled; proxy used minimal process env declaration",
+    "schema_mirror": "byte identical"
+  },
+  "source_readback": {
+    "changed_including_manifest": 17,
+    "sha256_and_bytes_pass": 17,
+    "manifest_paths_sizes_pass": 378,
+    "product_files": 379,
+    "old_source_files_unchanged": 362
+  },
+  "not_run": [
+    "actual fixed-prefix SQLite read through new route",
+    "React provider browser lifecycle",
+    "full Next build/typecheck",
+    "combined 0219/0220/0221 SQL",
+    "PostgreSQL13",
+    "RLS",
+    "locked core29",
+    "full regression"
+  ],
+  "previous_0221_tests": "historical only; not rerun",
+  "gate": "7/16",
+  "independent_acceptance": "HOLD"
+}
