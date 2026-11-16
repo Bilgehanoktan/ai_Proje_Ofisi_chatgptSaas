@@ -1,0 +1,104 @@
+{
+  "revision": "UX-PREMIUM-03",
+  "base": "e5f8e4dd356ed839b1722da1edddef8ca0d4b994",
+  "modules": [
+    {
+      "file": "office/engine/premiumRouting.ts",
+      "symbols": [
+        "pairEscape",
+        "depthAt",
+        "cameraViewport"
+      ],
+      "purpose": "bounded pair rescue and visual geometry math",
+      "errors": [
+        "null: no route or search cap"
+      ]
+    },
+    {
+      "file": "office/engine/premiumModel.ts",
+      "symbols": [
+        "scheduler",
+        "routeStatus",
+        "begin",
+        "move",
+        "findRecovery",
+        "advance",
+        "command",
+        "projectionBoundary"
+      ],
+      "purpose": "presentation-only scheduler, reservation and no-join guard",
+      "errors": [
+        "WAIT_BLOCKED",
+        "JOIN_HOLD"
+      ]
+    },
+    {
+      "file": "office/scenes/premiumArt.ts",
+      "symbols": [
+        "box",
+        "drawFurnitureCell",
+        "drawAvatar"
+      ],
+      "purpose": "original procedural art and footprint sorting"
+    },
+    {
+      "file": "office/scenes/PremiumNativeScene.tsx",
+      "symbols": [
+        "PremiumNativeScene"
+      ],
+      "purpose": "native secondary camera, draw layers, source inspector",
+      "errors": [
+        "unavailable",
+        "READBACK_HOLD"
+      ]
+    },
+    {
+      "file": "office/engine/premiumOfficeV0.ts",
+      "symbols": [
+        "inspectOfficeV0"
+      ],
+      "purpose": "strict historical snapshot inspection",
+      "errors": [
+        "UNVERIFIED",
+        "JOIN_HOLD"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "file": "tests/premium-model.test.cjs",
+      "pass": 14
+    },
+    {
+      "file": "tests/premium-routing.test.cjs",
+      "pass": 10
+    },
+    {
+      "file": "tests/premium-office-v0.test.cjs",
+      "pass": 13
+    },
+    {
+      "file": "docs/UX-PREMIUM-03/test_native_e2e.py",
+      "status": "NOT_RUN"
+    }
+  ],
+  "dependencies": {
+    "added": [],
+    "unchanged": [
+      "next@15.5.29",
+      "react@19.1.10",
+      "phaser@3.90.0",
+      "typescript@5.9.3"
+    ]
+  },
+  "api": {
+    "added": [],
+    "reused": [
+      "GET /api/demo/office-workbench"
+    ]
+  },
+  "database_changes": [],
+  "events_changes": [],
+  "security_acceptance": "HOLD",
+  "rollback": "e5f8e4dd356ed839b1722da1edddef8ca0d4b994"
+}
