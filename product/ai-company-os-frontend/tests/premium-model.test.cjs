@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');const M=require(process.argv[2]);let count=0;
+function test(name,fn){fn();console.log('PASS',name);count++;}
+const key=c=>c.join(',');const tick=(a,n=1)=>{for(let i=0;i<n;i++)M.advance(a,.1)};
+function invariant(a){const occupied=[];for(const x of a){assert(M.walkable(x.cell));occupied.push(key(x.cell));if(x.progress>0){assert(M.walkable(x.path[0]));occupied.push(key(x.path[0]));}assert(x.progress>=0&&x.progress<1);}assert.equal(new Set(occupied).size,occupied.length);}
+test('four unique reserved visual roles',()=>{const a=M.initialActors();assert.equal(a.length,4);invariant(a);assert(a.every(x=>x.mode==='idle'));});
+test('furniture excluded from walkable grid',()=>{for(const f of M.furniture)for(let x=f.x;x<f.x+f.w;x++)for(let y=f.y;y<f.y+f.h;y++)assert(!M.walkable([x,y]));});
+test('invalid cell and blocked destination rejected',()=>{assert.equal(M.pathBetween([-1,0],[2,2]),null);assert.equal(M.pathBetween([2,2],[2,1]),null);assert(!M.walkable([.5,2]));});
+test('route adjacency and occupied cell exclusion',()=>{const p=M.pathBetween([2,2],[8,2],new Set(['5,2']));assert(p);p.forEach((c,i)=>{assert(M.walkable(c));assert.notEqual(key(c),'5,2');if(i)assert.equal(Math.abs(c[0]-p[i-1][0])+Math.abs(c[1]-p[i-1][1]),1);});});
+test('occupied goal denied',()=>assert.equal(M.pathBetween([2,2],[8,2],new Set(['8,2'])),null));
+test('work pose at own station',()=>{const a=M.initialActors();assert(M.command(a,'engineer','work'));tick(a);assert.equal(a[2].mode,'work');});
+test('mid-edge replan rejected',()=>{const a=M.initialActors();M.command(a,'engineer','meeting');tick(a);assert(a[2].progress>0);assert(!M.command(a,'engineer','rest'));});
+test('interpolated finite positions',()=>{const a=M.initialActors();M.command(a,'qa','meeting');tick(a);const p=M.position(a[3]);assert(Number.isFinite(p.x)&&Number.isFinite(p.y));});
+test('all four meeting then rest then work; no cell/edge conflicts',()=>{const a=M.initialActors();for(const mode of ['meeting','rest','work']){for(const r of M.roles)assert(M.command(a,r,mode));for(let i=0;i<500;i++){tick(a);invariant(a);}assert(a.every(x=>x.mode===mode&&x.progress===0),JSON.stringify(a));}});
+test('opposing edge cannot swap into occupied cells',()=>{const a=M.initialActors();a[0].cell=[9,2];a[1].cell=[8,2];M.command(a,'orchestrator','meeting');M.command(a,'research','meeting');for(let i=0;i<40;i++){tick(a);invariant(a);}assert.deepEqual(a[0].cell,[9,2]);assert.deepEqual(a[1].cell,[8,2]);});
+test('non-finite and negative delta bounded',()=>{const a=M.initialActors();M.command(a,'research','rest');tick(a);const before=JSON.stringify(a);M.advance(a,NaN);M.advance(a,-1);assert.equal(JSON.stringify(a),before);M.advance(a,100);invariant(a);});
+test('invalid role and mode rejected',()=>{const a=M.initialActors();assert(!M.command(a,'x','work'));assert(!M.command(a,'qa','live'));});
+test('OfficeV0 data is never converted into visual authority',()=>{for(const raw of [null,{}, {agents:[{instance_id:'real',state:'RUNNING'}],authoritative:true}])assert.deepEqual(M.projectionBoundary(raw),{status:'JOIN_HOLD',authoritative:false,placement:false,taskBinding:false,actors:[]});});
+console.log(`${count}/${count} PASS`);
