@@ -1,0 +1,45 @@
+{
+  "revision": "UX-PREMIUM-07-A4R1",
+  "scope": "local selected model tests; scene and route syntax-only",
+  "node": "22.16.0",
+  "typescript": "5.8.3",
+  "strict_model_compile": "PASS",
+  "tsx_syntax_only": {
+    "count": 2,
+    "exit": 0,
+    "command": "tsc --noCheck --target ES2022 --module esnext --jsx preserve --outDir /tmp/a4syntax office/scenes/PremiumHybridScene.tsx app/office/premium/hybrid/page.tsx"
+  },
+  "new_tests": {
+    "pass": 10,
+    "total": 10
+  },
+  "regression": {
+    "a3": 20,
+    "a2": 15,
+    "a1": 15,
+    "legacy": 16,
+    "total": 66
+  },
+  "selected_total": 76,
+  "input_zip_crc": "PASS",
+  "input_zip_sha256_size": "18/18",
+  "local_source_blobs": {
+    "office/engine/premiumHybridRender.ts": "62f5420def96be88bf423d8d010a791bb2299ed9",
+    "tests/premium-hybrid-render.test.cjs": "583924781c30bfebf974054148cc32359ceb11f2",
+    "office/scenes/PremiumHybridScene.tsx": "8fe0766a096ea6b5969d8993f5bd29a80b220387",
+    "app/office/premium/hybrid/page.tsx": "df3b3ac2ad76def6036f44cd549c26e3fe72dbca"
+  },
+  "logs_sha256": {
+    "A1_REGRESSION.txt": "526cb1dd2e4231ca2cefd36fd2ddcd73b9664e9814c10f32432891d3d3932f7e",
+    "A2_REGRESSION.txt": "d2ae4e0e038d83ad20ecdac8c8527800a7650d629dce465b175545ef41b4abbe",
+    "A3_REGRESSION.txt": "f4eecf9887c9e58f7adc9b3d9051988ef2225c430c7cd219f3b8a7d0b4d4546d",
+    "A4_MODEL_TEST.txt": "14ebaebe180bd0d4146494e96efbe39596aecfbfb6b2790cab3c4ab9da44fb85",
+    "LEGACY_REGRESSION.txt": "b5b4b0ee35a68fc2bf89696db085ed2882f58417c73665463c9e0df3bf2f272c"
+  },
+  "blocker": "npm view phaser@3.90.0 EAI_AGAIN registry.npmjs.org",
+  "full_typecheck": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "gpu": "NOT_RUN",
+  "independent": "HOLD"
+}

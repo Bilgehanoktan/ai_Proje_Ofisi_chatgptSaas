@@ -1,0 +1,98 @@
+{
+  "revision": "UX-PREMIUM-07-A4R1",
+  "parent": "82b1f5877f90149e5aaa3e8a0029d2a0f91c9e64",
+  "architecture": "docs/UX-PREMIUM-07/A4R1_RENDER.md",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumHybridRender.ts",
+      "operation": "ADD",
+      "blob": "62f5420def96be88bf423d8d010a791bb2299ed9",
+      "bytes": 2375,
+      "sha256": "e706128f470737794a72e1ef1b2daa5803cdf0f1b6f400bf93703a7cd03c812e",
+      "symbols": [
+        "EDGE_MS",
+        "isoHybrid",
+        "hybridBounds",
+        "fitHybrid",
+        "createHybridRender",
+        "frame",
+        "advance",
+        "goal",
+        "home"
+      ],
+      "dependencies": [
+        "premiumActorIdentity",
+        "premiumIdentityTraffic",
+        "premiumHybridLayout"
+      ],
+      "validation": "MODEL_PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-hybrid-render.test.cjs",
+      "operation": "ADD",
+      "blob": "583924781c30bfebf974054148cc32359ceb11f2",
+      "bytes": 4027,
+      "sha256": "e5204c7b3f5320a269f13308be8beae6e607223dada1df935f8a7c09713e8530",
+      "symbols": [
+        "10 node:test cases"
+      ],
+      "dependencies": [
+        "node:test",
+        "node:assert/strict",
+        "compiled A4/A2"
+      ],
+      "validation": "MODEL_PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx",
+      "operation": "ADD",
+      "blob": "8fe0766a096ea6b5969d8993f5bd29a80b220387",
+      "bytes": 9739,
+      "sha256": "6be20a9d0a2ab34bb5fe1db21e3311ae54f7e91647a51c40bb0ab778f59501e1",
+      "symbols": [
+        "PremiumHybridScene",
+        "CameraAction",
+        "scene.create",
+        "scene update",
+        "command",
+        "select"
+      ],
+      "dependencies": [
+        "react",
+        "phaser",
+        "premiumHybridRender",
+        "premiumPresentation",
+        "premiumAtlasPaint"
+      ],
+      "validation": "SYNTAX_ONLY_NATIVE_NOT_RUN"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/office/premium/hybrid/page.tsx",
+      "operation": "ADD",
+      "blob": "df3b3ac2ad76def6036f44cd549c26e3fe72dbca",
+      "bytes": 407,
+      "sha256": "81f5e3dcbe1ee62f5fc8a482ec533cba10e34104f98f1efd98f5a28aa6cb815f",
+      "symbols": [
+        "Page",
+        "metadata"
+      ],
+      "dependencies": [
+        "PremiumHybridScene"
+      ],
+      "validation": "SYNTAX_ONLY_NATIVE_NOT_RUN"
+    }
+  ],
+  "api": [],
+  "database": [],
+  "external_dependencies": [],
+  "asset_provenance": {
+    "new": "original procedural code in PremiumHybridScene",
+    "reused": [
+      "premiumAtlasPaint.ts",
+      "premiumPresentation.ts"
+    ],
+    "external_assets": 0,
+    "license_review": "existing provenance retained; independent asset review open"
+  },
+  "maintenance": "See architecture/rollback and W8 native verification."
+}
