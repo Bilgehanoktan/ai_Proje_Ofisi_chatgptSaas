@@ -127,3 +127,6 @@ Source `596529ed3d3de59b29065239b42033774e31af6e`; 338 product files / 337 manif
 
 ## 0209 — D0 witnessed context / ordinary T1
 Source `9164fe68b545144953ea138c5d9cde3f12a18e12`; 343 product files / 342 manifest entries. 138 selected PASS (98 regressions +40 new), including 7 original ordinary SQL mapping SQLite tests. D-02 fixture anti-restore PASS with trusted latest pin, independent custody HOLD. D-03 final-check-to-COMMIT race reproduced. 19/55 core files local, 29 cases NOT_RUN; full Company/Terminal/PG/build/browser NOT_RUN. [Architecture](../docs/0209/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0209.json) · [Next](NEXT_STEP_0209.md).
+
+## 0210 — local fenced T1 / durable intent
+Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manifest entries. 154 selected PASS (138 regression +16 new). D-03 local writer fence PASS; external latest drift and D-04 joint journal/T1 restore reproduced. 32/55 core files local, 29 cases NOT_RUN. Full Company/Terminal/PG/build/browser NOT_RUN. [Architecture](../docs/0210/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0210.json) · [Next](NEXT_STEP_0210.md).

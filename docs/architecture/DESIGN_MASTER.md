@@ -145,3 +145,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0209 — signed memory witness and ordinary T1
 [Addendum](../0209/ARCHITECTURE_AND_CATALOG.md). D0 external pin and original ordinary mapping SQLite pass; D-03 final check to commit race reproduced. Independent authority unchanged.
+
+## 0210 — local revocation fence and durable intent quarantine
+[Addendum](../0210/ARCHITECTURE_AND_CATALOG.md). Cooperating SQLite writer serialization through T1 commit and durable quarantine pass. D-03 external race and D-04 restore gap open. Independent authority unchanged.

@@ -1,0 +1,91 @@
+{
+  "revision": "0210",
+  "baseline": "b9cd16ca6dbb6d8344c34b9446564af7d2a29040",
+  "source_commit": "cd1dd5e61e259d4f16b94ae7e386e32730c8fd13",
+  "parallel": [
+    {
+      "line": "A",
+      "priority": "P0",
+      "status": "SOURCE_RECOVERY_32_OF_55_NOT_RUN",
+      "scope": "13 more exact files recovered; 23 absent. Core 12 NOT_RUN."
+    },
+    {
+      "line": "B",
+      "priority": "P0",
+      "status": "SOURCE_RECOVERY_32_OF_55_NOT_RUN",
+      "scope": "17 API/lifecycle tests NOT_RUN; exact dependency lock still unavailable."
+    },
+    {
+      "line": "C",
+      "priority": "P0",
+      "status": "LOCAL_FENCED_ORIGINAL_ORDINARY_T1_PASS_FULL_COMPANY_TERMINAL_NOT_RUN",
+      "scope": "Original ordinary mapping used in 16 new tests; CompanyCoordinatedMapping+TerminalAnchorMapping reviewed, no new full composition execution."
+    },
+    {
+      "line": "D",
+      "priority": "P0",
+      "status": "D0_FENCE_AND_DURABLE_QUARANTINE_PASS_EXTERNAL_TRUST_HOLD",
+      "scope": "16 tests, including both writer serialization and two residual gap reproductions. D-03 external, D-04 restore open."
+    },
+    {
+      "line": "E",
+      "priority": "P1",
+      "status": "UNCHANGED_NOT_RUN",
+      "scope": "No new CEO/Office wiring. Historical receipt cannot represent active KPI."
+    },
+    {
+      "line": "F",
+      "priority": "P0",
+      "status": "SQLITE_CONCURRENCY_PASS_PG_NOT_RUN",
+      "scope": "Two local revocation writers and concurrent same-intent one winner. PG13/RLS/independent recovery NOT_RUN."
+    },
+    {
+      "line": "G",
+      "priority": "P0",
+      "status": "BLOCKED_CHECKOUT_DEPENDENCIES",
+      "scope": "Full checkout blocked; no new dependency installation, full build or browser execution."
+    }
+  ],
+  "tests": {
+    "passed": 154,
+    "new": 16,
+    "regression": 138,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "D0_LOCAL_ORDINARY_T1_PASS_MANDATORY_EFFECT_GATE_HOLD",
+      "result": "Existing joint context, witnessed ordinary T1 and opt-in local fence. No actual reservation ledger or default provider wiring."
+    },
+    {
+      "id": "0208-D-02",
+      "priority": "P0",
+      "status": "D0_EXTERNAL_PIN_ANTI_RESTORE_PASS_INDEPENDENT_CUSTODY_HOLD",
+      "result": "Signed Memory Witness with current external pin; all-three rollback remains possible. Independent key/latest pin/clock custody and rotation HOLD."
+    },
+    {
+      "id": "0209-D-03",
+      "priority": "P0",
+      "status": "LOCAL_COOPERATING_WRITER_RACE_PASS_EXTERNAL_ROOT_RACE_OPEN",
+      "result": "Original T1 commit bracketed by witness then memory BEGIN IMMEDIATE writer reservations. Test verifies both writers wait through COMMIT. Independent latest callback may change after final check and D0 commit still persists. No distributed atomicity or provider effect proof."
+    },
+    {
+      "id": "0210-D-04",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "result": "Restore both intent journal and original T1 DB to pre-attempt images while Memory Witness unchanged; second local attempt succeeds. Independent restore-external intent head and non-replayable claim needed. Local append-only is not WORM. No real effect or grant."
+    }
+  ],
+  "next": "handover/NEXT_STEP_0210.md"
+}
