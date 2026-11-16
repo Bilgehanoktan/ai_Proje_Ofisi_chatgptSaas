@@ -249,9 +249,84 @@ def resolve_fence_binding(intent, witness_binding, company, expected_company_bin
     return expected_company_binding
 
 
+
+
+@dataclass(frozen=True)
+class SampleResultPin:
+    """Reference to a pre-staged local diagnostic result, not a success receipt."""
+    capabilities: object
+    evidence_sha: str
+
+
+def sample_result_bytes(intent, context, registry, witness, witness_binding, company,
+                        capabilities, clock, raw):
+    """Canonical hash-only result body; caller may stage in existing ReferenceStore.
+
+    This is a provisional observation. Actual memory/witness and persisted
+    admission/company rows must be checked by the existing T1 mapping.
+    """
+    from app.engines.model_gateway.sample_adapter import SampleCapabilityContext, sample_task_output
+    from app.core.transaction.postgres_admission_mapping import ClaimSpec, claim_digest, valid_budget
+    from app.core.agent_runtime.joint_context import joint_context_digest
+    if type(capabilities) is not SampleCapabilityContext or type(company) is not CompanyTransitionContext:
+        raise ValueError('D0_RESULT_CONTEXT_HOLD')
+    if binding_digest(intent,context,registry,witness)!=witness_binding:
+        raise ValueError('D0_RESULT_WITNESS_HOLD')
+    company_pin=company_transition_binding(intent,witness_binding,company)
+    a=company.admission.intent; claim=company.admission.claim; e=context.invocation
+    if (type(claim) is not ClaimSpec or not valid_budget(claim.budget)
+            or claim.before.scope!=intent.scope or claim.before.attempt!=e.run.attempt
+            or a.request_digest!=claim_digest(claim) or claim.before.version!=a.expected_version
+            or e.reservation_ref!=transaction_ref(a)
+            or not 0<e.sample_cost_ceiling_minor<=claim.amount_minor):
+        raise ValueError('D0_RESULT_RESERVATION_HOLD')
+    g=capabilities.effect; l=e.lease
+    if ((g.scope,g.grant_id,g.admission_id,g.lease_id,g.budget_id,g.policy_epoch,g.witness_epoch,g.fence)
+            !=(intent.scope,l.grant_id,claim.admission_id,l.lease_id,claim.budget.budget_id,
+               l.policy_epoch,l.witness_epoch,l.fence)
+            or capabilities.witness.record_digest!=witness.record_sha):
+        raise ValueError('D0_RESULT_EFFECT_OR_WITNESS_HOLD')
+    output=sample_task_output(e,registry,capabilities,clock,raw)
+    if (output.reason!='FIXED_SAMPLE_ONLY' or type(output.output) is not str
+            or output.provider_called or output.spend_allowed or output.dispatch_allowed):
+        raise ValueError(output.reason)
+    return _canonical(dict(profile='aicos-d0-sample-result-v1',scope=asdict(intent.scope),
+        project_id=company.event.project_id,run_version=e.run.version,attempt=e.run.attempt,
+        transaction_ref=transaction_ref(intent),request_digest=intent.request_digest,
+        effect_key=intent.effect_key,admission_transaction_ref=transaction_ref(a),
+        company_binding=company_pin,witness_binding=witness_binding,
+        joint_binding=joint_context_digest(context,registry),memory_pin=asdict(context.memory_pin),
+        input_sha256=e.request.input_digest,capability_sha256=_digest(asdict(capabilities)),
+        output_sha256=sha256(output.output.encode('utf-8')).hexdigest(),
+        result_kind='FIXED_SAMPLE_ONLY',decision='HOLD',provider_called=False,
+        tool_called=False,spend_allowed=False,release_ready=False))
+
+
+def resolve_result_binding(intent, context, registry, witness, witness_binding, company,
+                           company_pin, result, result_reader, clock, raw):
+    """Use existing content-addressed archive; never infer success from its bytes."""
+    from app.core.event_store.retained_history import ReferenceReader, ReferenceStore
+    if result is None and result_reader is None:
+        return company_pin
+    if (type(result) is not SampleResultPin or not digest_ok(result.evidence_sha)
+            or company is None or type(result_reader) not in (ReferenceReader,ReferenceStore)):
+        raise ValueError('D0_RESULT_PIN_HOLD')
+    body=sample_result_bytes(intent,context,registry,witness,witness_binding,company,
+                             result.capabilities,clock,raw)
+    if sha256(body).hexdigest()!=result.evidence_sha or result_reader.read(result.evidence_sha)!=body:
+        raise ValueError('D0_RESULT_READBACK_HOLD')
+    return _digest(['aicos-d0-company-result-fence-v1',company_pin,result.evidence_sha])
+
+
+def check_result_store_separation(result_reader, paths):
+    if result_reader is not None and any(os.path.samefile(result_reader.path,p) for p in paths):
+        raise ValueError('D0_RESULT_STORE_SEPARATION_HOLD')
+
+
 def execute_fenced_transition(intent, context, registry, witness, expected_binding,
                               memory_path, reader, public_key, raw, journal, connect,
-                              clock, latest, *, company=None, expected_company_binding=None):
+                              clock, latest, *, company=None, expected_company_binding=None,
+                              result=None, result_reader=None):
     """Explicit local D0 RUNNING->VERIFYING; no generic mutation or real effect.
 
     connect, clock and latest are trusted fixture dependencies, not independent proof.
@@ -259,14 +334,24 @@ def execute_fenced_transition(intent, context, registry, witness, expected_bindi
     """
     if type(journal) is not D0IntentJournal or binding_digest(intent, context, registry, witness) != expected_binding:
         raise ValueError('D0_FENCE_BINDING_HOLD')
-    fence_binding = resolve_fence_binding(intent, expected_binding, company, expected_company_binding)
+    company_pin = resolve_fence_binding(intent, expected_binding, company, expected_company_binding)
+    check_result_store_separation(result_reader,(memory_path,reader.path,journal.path))
+    fence_binding = resolve_result_binding(intent,context,registry,witness,expected_binding,company,
+                                          company_pin,result,result_reader,clock() if result is not None else None,raw)
     pin = journal.stage(intent, fence_binding)
     try:
         with local_revocation_fence(memory_path, reader, journal):
             mapping = (D0PostgresTransitionMapping(context.invocation.lease, clock) if company is None
                        else D0AdmissionBoundTransitionMapping(company.admission, context.invocation.lease, clock))
+            def observe(c):
+                lease, now, current = _lease(c,intent,lock=True), clock(), latest()
+                if result is not None:
+                    if resolve_result_binding(intent,context,registry,witness,expected_binding,company,
+                            company_pin,result,result_reader,now,raw)!=fence_binding:
+                        raise ValueError('D0_RESULT_FENCE_DRIFT_HOLD')
+                return lease, now, current
             guard = WitnessedTransitionMapping(mapping, context, registry, witness, expected_binding,
-                memory_path, reader, public_key, raw, lambda c: (_lease(c, intent, lock=True), clock(), latest()))
+                memory_path, reader, public_key, raw, observe)
             if company is not None:
                 # Company lock first; the same cursor then checks admission, lease, witness,
                 # ordinary T1 roles and exact company postimage before COMMIT.
