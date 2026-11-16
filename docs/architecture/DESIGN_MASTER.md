@@ -151,3 +151,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10B — non-normative D0 UI source integration
 [Architecture and boundaries](../UI-P10B/ARCHITECTURE_AND_CATALOG.md). No authority or core decision change.
+
+## UI-P10C — non-normative D0 UI source integration
+[Architecture and boundaries](../UI-P10C/ARCHITECTURE_AND_CATALOG.md). No core decision or authority change.

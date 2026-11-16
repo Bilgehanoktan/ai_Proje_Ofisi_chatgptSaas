@@ -94,3 +94,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## UI-P10B
 [UI catalog delta](revisions/TECHNICAL_CATALOG_UI_P10B.json) · [Maintenance](../docs/UI-P10B/ARCHITECTURE_AND_CATALOG.md).
+
+## UI-P10C
+[Catalog delta](revisions/TECHNICAL_CATALOG_UI_P10C.json) · [Maintenance](../docs/UI-P10C/ARCHITECTURE_AND_CATALOG.md).

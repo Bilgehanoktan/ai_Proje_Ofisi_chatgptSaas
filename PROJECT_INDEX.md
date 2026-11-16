@@ -152,3 +152,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10B — isolated parallel UI workstream
 [Architecture](docs/UI-P10B/ARCHITECTURE_AND_CATALOG.md) · [Progress](progress/UI_P10B.json) · [UI next](handover/NEXT_STEP_UI.md). Core 0211 remains separate.
+
+## UI-P10C — isolated UI workstream
+[Architecture](docs/UI-P10C/ARCHITECTURE_AND_CATALOG.md) · [Progress](progress/UI_P10C.json) · [UI next](handover/NEXT_STEP_UI.md). Core 0211 separate; next 0212.
