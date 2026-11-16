@@ -157,3 +157,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10D
 [Architecture and limits](../UI-P10D/ARCHITECTURE_AND_CATALOG.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.
+
+## UI-P10E — 0211 + UI D0 source union candidate
+[Architecture and limits](../UI-P10E/ARCHITECTURE_AND_CATALOG.md). Exact 0211 source additions + UI, 7/7 same-app compiled GET, full Next NOT_RUN. No authority change.

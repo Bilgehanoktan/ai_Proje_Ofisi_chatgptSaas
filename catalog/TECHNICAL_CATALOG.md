@@ -100,3 +100,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## UI-P10D
 [Architecture and limits](../docs/UI-P10D/ARCHITECTURE_AND_CATALOG.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.
+
+## UI-P10E — 0211 + UI D0 source union candidate
+[Source/symbol/test delta](revisions/TECHNICAL_CATALOG_UI_P10E.json) · [Maintenance and rollback](../docs/UI-P10E/ARCHITECTURE_AND_CATALOG.md).
