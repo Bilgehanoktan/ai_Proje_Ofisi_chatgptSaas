@@ -1,2 +1,3 @@
-# UI-P10D
-recover original MVP and two lifecycle writer/router dependency closures; execute real HTTP chains and current seven integrated API parity only when full checkout and pinned dependencies available. Continue independently: canonical verified read-only identity/freshness and CEO evidence, scene asset placement with no runtime authority, proper React interaction/visual tests, accessible table/notification improvements. Core 0212 D-03/D-04, core29 and PG/RLS independently. Do not add new mock endpoints as substitute for tests. Preserve current 0210 root pointer and separate UI handover; 0211 is a different branch.
+# UI-P10E
+
+UI-P10E: recover exact terminal/prefix T1 mapping closure; run original writer/reader/HTTP; recover pinned full checkout and dependencies; reconcile core/UI manifests and devir on a reviewed candidate before integration tests; 7/7 actual product parity and Next build/52 checks; deepen evidence accessibility, interaction and office decoration without geometry or authority changes. Core 0212 independently.

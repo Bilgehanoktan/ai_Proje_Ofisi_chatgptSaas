@@ -154,3 +154,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10C — non-normative D0 UI source integration
 [Architecture and boundaries](../UI-P10C/ARCHITECTURE_AND_CATALOG.md). No core decision or authority change.
+
+## UI-P10D
+[Architecture and limits](../UI-P10D/ARCHITECTURE_AND_CATALOG.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.

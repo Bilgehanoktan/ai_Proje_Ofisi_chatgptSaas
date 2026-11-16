@@ -97,3 +97,6 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## UI-P10C
 [Catalog delta](revisions/TECHNICAL_CATALOG_UI_P10C.json) · [Maintenance](../docs/UI-P10C/ARCHITECTURE_AND_CATALOG.md).
+
+## UI-P10D
+[Architecture and limits](../docs/UI-P10D/ARCHITECTURE_AND_CATALOG.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.

@@ -1,0 +1,37 @@
+{
+  "revision": "UI-P10D",
+  "source_commit": "8a40ab40e07313d94e588edeaf814f735b241eba",
+  "parent": "b7f58d86f943cc1ad58ad2c60198f8cb2b500fb0",
+  "manifest_entries": 362,
+  "product_files": 363,
+  "frontend_files": 151,
+  "unchanged_parent_manifest_entries": 349,
+  "manifest_path_size_match": 362,
+  "new_model": 16,
+  "prior_model_regression": 33,
+  "mvp_original_isolated_http": 10,
+  "mvp_scope": "exact inspect_mvp and original handler AST, compiled original GET, isolated FastAPI; not app.main",
+  "snapshot_boundary": 10,
+  "prefix_wire": 5,
+  "prefix_wire_parser": 4,
+  "standalone_svg_browser": 10,
+  "tsx_syntax": 4,
+  "full_build": "BLOCKED_NEXT_NOT_FOUND",
+  "product_browser": "NOT_RUN",
+  "product_api": "0/7 NOT_RUN",
+  "historical_original_isolated_chains": "5/7 across rounds; earlier chains not rerun",
+  "terminal_prefix_full_chain": "BLOCKED exact T1 mapping dependencies",
+  "independent": "HOLD",
+  "environment": "Node22.16 TS5.8.3 FastAPI0.128.2 Uvicorn0.48.0; not pinned full product",
+  "core_review": {
+    "ancestor": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+    "core_source": "b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d",
+    "core_added": [
+      "app/core/transaction/intent_authority.py",
+      "tests/test_intent_authority_0211.py"
+    ],
+    "ui_changed_since_ancestor": 22,
+    "product_manifest_entry_overlap": 0,
+    "merge": "NOT_PERFORMED; manifest and handover reconciliation required"
+  }
+}

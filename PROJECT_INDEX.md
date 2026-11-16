@@ -155,3 +155,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## UI-P10C — isolated UI workstream
 [Architecture](docs/UI-P10C/ARCHITECTURE_AND_CATALOG.md) · [Progress](progress/UI_P10C.json) · [UI next](handover/NEXT_STEP_UI.md). Core 0211 separate; next 0212.
+
+## UI-P10D
+[Architecture and limits](docs/UI-P10D/ARCHITECTURE_AND_CATALOG.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.
