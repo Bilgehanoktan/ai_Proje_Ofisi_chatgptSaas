@@ -1,3 +1,7 @@
+# UI-P10J-02 — source recovery checkpoint
+
+Product baseline P10I 2febb84e539eddcfe4821783910c430ac20697c8; manifest blob a26c4d53e66d800226beae27626f03c68f5bb064; 384 pins, 385 product files. 12 remote SHA/length matches from checkpoint 01. New standalone checkout audit candidate: 8/8 local fixture checks, not full checkout. Product unchanged; 21/40, independent 0/7. See ../docs/UI-P10J/REMOTE_SOURCE_CHECKPOINT.md and audit_manifest.py. Historical pointer retained below.
+
 # UI-P10H — D0 original wrapper and UI candidate
 
 Source a5b2bd5139d374e3828fbe0e374407c2433bd58d; parent f2457545cf52805e5ed5ea86cd869c326fd162ca; manifest e818c96e2c81580cfdc27302e8690d68ba743ffd. 381 pins, 382 product files, 163 frontend, 4 additions and 6 modifications, 371 preserved. No production backend change. Parent 198/198 selected package hashes, 377/377 remote paths/sizes, 156/377 local exact bytes. All 19 recovered files exact. Full checkout and remote full byte audit still incomplete; no main merge, no new grant.
