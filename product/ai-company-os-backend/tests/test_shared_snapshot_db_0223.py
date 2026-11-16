@@ -4,6 +4,7 @@ import os
 import sqlite3
 import tempfile
 import unittest
+from contextlib import closing
 from pathlib import Path
 from unittest.mock import patch
 from fastapi import FastAPI
@@ -42,7 +43,7 @@ class SharedSnapshotDBTests(unittest.TestCase):
 
     def test_tampered_db_holds(self):
         export_prefix_fixture(self.path, 3)
-        with sqlite3.connect(self.path) as db:
+        with closing(sqlite3.connect(self.path)) as db, db:
             db.execute("UPDATE run_heads SET principal_id='forged' WHERE task_id='a'")
         self.assertEqual(self.read().status_code, 503)
 
