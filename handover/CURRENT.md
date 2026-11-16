@@ -130,3 +130,6 @@ Source `9164fe68b545144953ea138c5d9cde3f12a18e12`; 343 product files / 342 manif
 
 ## 0210 — local fenced T1 / durable intent
 Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manifest entries. 154 selected PASS (138 regression +16 new). D-03 local writer fence PASS; external latest drift and D-04 joint journal/T1 restore reproduced. 32/55 core files local, 29 cases NOT_RUN. Full Company/Terminal/PG/build/browser NOT_RUN. [Architecture](../docs/0210/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0210.json) · [Next](NEXT_STEP_0210.md).
+
+## 0211 — separate intent authority component
+Source `b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d`; 347 product files / 346 manifest entries. Two new exact blobs verified. 10 actual local unit tests (9 behavior PASS, 1 authority restore residual reproduced); 154 historical tests not rerun. 23/23 previously missing local core blob pins verified remotely, no new local materialization. D-03/D-04 partial component mitigation; original wrapper, Company/Terminal, core29, PG/RLS and full build NOT_RUN, independent authority HOLD. [Architecture](../docs/0211/ARCHITECTURE_AND_CATALOG.md) · [Evidence](../releases/GITHUB_READBACK_0211.json) · [Next](NEXT_STEP_0211.md).
