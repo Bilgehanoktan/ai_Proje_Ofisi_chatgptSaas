@@ -25,3 +25,7 @@ Priority zero: upload full archive of P10G or use exact user-local checkout with
 
 ## UX-PREMIUM-07-A5R2
 [Current](UX_PREMIUM_07_A5R2_CURRENT.json). Next A5R3 read-only multi-floor render bridge over single D0 world, selected floor and transition; existing native scene and A4R2 Windows acceptance NOT_RUN. A6 separate, no auto merge.
+
+
+## UX-PREMIUM-07-A5R3
+[Current](UX_PREMIUM_07_A5R3_CURRENT.json). Next A5R4 isolated selected-floor scene shell and floor controls, scoped department layout/art; A4R2 Windows/native NOT_RUN, A6 separate. No merge.

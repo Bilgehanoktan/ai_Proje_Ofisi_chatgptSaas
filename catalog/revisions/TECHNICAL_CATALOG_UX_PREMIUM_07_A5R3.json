@@ -1,0 +1,73 @@
+{
+  "revision": "UX-PREMIUM-07-A5R3",
+  "parent": "2927259330934ed3a6ba51eb5f9105240aca832f",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumFloorRender.ts",
+      "bytes": 5499,
+      "sha256": "d409f536a60142297484eb89e3de3e28a32df70201518ab81fcfda477175c4e5",
+      "blob": "305ce5e5757c26a7a619e39115e49264ddfe9b7d",
+      "exports": [
+        "FLOOR_EDGE_MS",
+        "floorPoint",
+        "floorCamera",
+        "createFloorRenderBridge"
+      ],
+      "types": [
+        "WorldSnapshot",
+        "WorldReader",
+        "FloorFrame"
+      ],
+      "methods": [
+        "capture",
+        "frame",
+        "selectFloor",
+        "setViewport",
+        "setReducedMotion",
+        "advanceVisual"
+      ],
+      "dependencies": [
+        "premiumFloorTraffic (type)",
+        "premiumHybridLayout (type)"
+      ],
+      "change": "ADD",
+      "api": [],
+      "database": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumFloorSvg.ts",
+      "bytes": 3416,
+      "sha256": "e2f8f5059b0b3201eccf651db1dadb074f2c74645982d55cdaa908c5d6ccb277",
+      "blob": "5007c2a02b4ca33490bcf9681d2a0a7ef58a9b4f",
+      "exports": [
+        "renderFloorSvg"
+      ],
+      "dependencies": [
+        "premiumFloorRender",
+        "premiumHybridLayout (type)"
+      ],
+      "change": "ADD",
+      "api": [],
+      "database": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-floor-render.test.cjs",
+      "bytes": 7470,
+      "sha256": "eeee35ab782cd6cd90ba27cab143277d5780f9f6653568fdcab20c9d9571b2ad",
+      "blob": "85d1a58643d8be75041ec1ad66e6b16cb13dd792",
+      "test_count": 12,
+      "dependencies": [
+        "node:test",
+        "node:assert/strict",
+        "node:path",
+        "compiled A5R2/A5R3 modules"
+      ],
+      "change": "ADD",
+      "api": [],
+      "database": []
+    }
+  ],
+  "authority": "none",
+  "diagnosis": "docs/UX-PREMIUM-07/A5R3_FLOOR_RENDER.md",
+  "rollback": "2927259330934ed3a6ba51eb5f9105240aca832f"
+}

@@ -221,3 +221,7 @@ Inspect source hashes before test. For root replacement/restore preserve evidenc
 
 ## UX-PREMIUM-07-A5R2 — D0 floor geometry and traffic integration
 [A5R2 architecture](../UX-PREMIUM-07/A5R2_FLOOR_TRAFFIC.md). Exact A1/A2 and A3 pure planner connected to A5R1 sole synthetic position writer; 17 new + 15 A5R1 regression PASS. Two additive sources; no actual floor activation or renderer/native/OfficeV0 acceptance.
+
+
+## UX-PREMIUM-07-A5R3 — read-only D0 multi-floor presentation
+[A5R3 architecture](../UX-PREMIUM-07/A5R3_FLOOR_RENDER.md). 12 new + 32 A5R2/R1 regression PASS; four actual SVG diagnostic renders, no native/Windows/full product acceptance. Existing world writer and scene preserved; no actual floor activation or OfficeV0 join.

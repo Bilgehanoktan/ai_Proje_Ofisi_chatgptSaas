@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UX-PREMIUM-07-A5R2",
-  "status": "D0_GEOMETRY_IDENTITY_PORTAL_TRAFFIC_MODEL_TESTED_NATIVE_NOT_RUN",
+  "doc_revision": "UX-PREMIUM-07-A5R3",
+  "status": "D0_READONLY_FLOOR_RENDER_SVG_TESTED_NATIVE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "7f8ef6d90c587e018033b667b4fffb071bfcf464",
+  "parent_git_commit": "2927259330934ed3a6ba51eb5f9105240aca832f",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1378,6 +1378,14 @@
       "bytes": 8557,
       "sha256": "b65acc33a6dbc233a221a7c90c6ba21441aa99d52c4efeb90f40c330ed2f5eb3"
     },
+    "ai-company-os-frontend/office/engine/premiumFloorRender.ts": {
+      "bytes": 5499,
+      "sha256": "d409f536a60142297484eb89e3de3e28a32df70201518ab81fcfda477175c4e5"
+    },
+    "ai-company-os-frontend/office/engine/premiumFloorSvg.ts": {
+      "bytes": 3416,
+      "sha256": "e2f8f5059b0b3201eccf651db1dadb074f2c74645982d55cdaa908c5d6ccb277"
+    },
     "ai-company-os-frontend/office/engine/premiumFloorTraffic.ts": {
       "bytes": 10465,
       "sha256": "e086719d04984b2e7debee33be4b3133fc470935272216dcc625119c44e90703"
@@ -1534,6 +1542,10 @@
       "bytes": 6808,
       "sha256": "7fb5b7f01f576af06365936111e1725642977ad47c0097e7ed928516a622b8a7"
     },
+    "ai-company-os-frontend/tests/premium-floor-render.test.cjs": {
+      "bytes": 7470,
+      "sha256": "eeee35ab782cd6cd90ba27cab143277d5780f9f6653568fdcab20c9d9571b2ad"
+    },
     "ai-company-os-frontend/tests/premium-floor-traffic.test.cjs": {
       "bytes": 10077,
       "sha256": "5dd909527ca5764d43019ea5208eae71e31ad966316969b147d5edd8983367cf"
@@ -1655,6 +1667,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "0cabfe3124bc7ebe6c5cfff7b19f0bf1a0b0245a",
-  "source_git_commit_note": "Two additive A5R2 adapter/test paths; all A1–A5R1 pins preserved; no native or OfficeV0 join."
+  "parent_source_manifest_blob": "b5552546a4e9f5fc31dd60331da1d692b2891197",
+  "source_git_commit_note": "Three additive A5R3 model/SVG/test files, all prior product pins retained; no native renderer import, A4R2 NOT_RUN."
 }
