@@ -169,5 +169,30 @@
   "count": 41,
   "pg": "NOT_RUN",
   "python_probe": "NOT_RUN",
-  "gate_promotion": false
+  "gate_promotion": false,
+  "followup": {
+    "type": "actual_source_edit_shape_check",
+    "checks": [
+      {
+        "id": "foreign_only_seed",
+        "pass": true
+      },
+      {
+        "id": "positive_rollback",
+        "pass": true
+      },
+      {
+        "id": "cross_update_delete",
+        "pass": true
+      },
+      {
+        "id": "expected_count",
+        "pass": true
+      },
+      {
+        "id": "seed_role_closed",
+        "pass": true
+      }
+    ]
+  }
 }

@@ -33,6 +33,8 @@ def connect_checked(label, role):
                 raise RuntimeError("D4_SESSION_HOLD")
         if c.execute("SELECT count(*) FROM pg_auth_members WHERE member=(SELECT oid FROM pg_roles WHERE rolname=session_user)").fetchone()[0]:
             raise RuntimeError("D4_ROLE_MEMBERSHIP_HOLD")
+        if c.execute("SELECT count(*) FROM pg_roles WHERE rolname LIKE 'aicos_d4_seed_%' AND rolcanlogin").fetchone()[0]:
+            raise RuntimeError("D4_SEED_LOGIN_STILL_ENABLED")
         c.execute("SET statement_timeout='4s'")
         c.execute("SET lock_timeout='2s'")
         return c
@@ -72,7 +74,7 @@ def main():
             for t in TABLES:
                 name=sql.Identifier(SCHEMA,t)
                 rows=c.execute(sql.SQL("SELECT tenant_id,company_id,environment_id FROM {}").format(name)).fetchall()
-                expected=2 if k=="a" and t in ("run_heads","company_run_membership") else 1
+                expected=2 if k in ("a","b") and t in ("run_heads","company_run_membership") else 1
                 require(len(rows)==expected and all(tuple(scope)==row for row in rows),f"{k}.{t}.visible",checks)
                 meta=c.execute("""SELECT relrowsecurity,relforcerowsecurity FROM pg_class x
                     JOIN pg_namespace n ON n.oid=x.relnamespace WHERE n.nspname=%s AND x.relname=%s""",(SCHEMA,t)).fetchone()
@@ -100,6 +102,34 @@ def main():
             checks.append(f"{k}.anchor_deferred_fk")
             expect_error(c,sql.SQL("SET ROLE {}").format(sql.Identifier(CONFIG["runtime_roles"][next(x for x in SCOPES if x!=k)])),(),"42501")
             checks.append(f"{k}.role_switch_denied")
+            c.execute("BEGIN")
+            try:
+                require(c.execute("UPDATE t1_candidate.company_stream_heads SET sequence=sequence+1 WHERE (tenant_id,company_id,environment_id)=(%s,%s,%s) RETURNING sequence",other).fetchall()==[],f"{k}.cross_update_hidden",checks)
+                require(c.execute("DELETE FROM t1_candidate.run_leases WHERE (tenant_id,company_id,environment_id)=(%s,%s,%s) RETURNING run_id",other).fetchall()==[],f"{k}.cross_delete_hidden",checks)
+            finally:
+                c.execute("ROLLBACK")
+            if k=="a":
+                expect_error(c,"INSERT INTO t1_candidate.company_event_order VALUES (%s,%s,%s,99,'foreign-project','foreign-run',1,'foreign-tx',%s,'[]')",(*scope,"c"*64),"23503",True)
+                checks.append("a.fk_foreign_membership_only")
+                c.execute("BEGIN")
+                try:
+                    # Rollback-only positive SQL policy probe, deliberately NOT the T1 engine.
+                    p=tuple(scope)
+                    d="c"*64
+                    c.execute("INSERT INTO t1_candidate.events VALUES (%s,%s,%s,'run-2',1,'tx-2','D0_FIXTURE_ONLY',%s)",(*p,d))
+                    c.execute("INSERT INTO t1_candidate.run_mutations VALUES (%s,%s,%s,'run-2',1,'tx-2',%s,'QUEUED','FAILED',0)",(*p,d))
+                    c.execute("INSERT INTO t1_candidate.run_admissions VALUES (%s,%s,%s,'run-2','admission-2','tx-2',%s,'lease-2','grant-2','budget-1')",(*p,d))
+                    c.execute("INSERT INTO t1_candidate.sample_reservations VALUES (%s,%s,%s,'run-2','budget-1',1,1,'TRY',%s,'tx-2')",(*p,d))
+                    c.execute("INSERT INTO t1_candidate.sample_settlements VALUES (%s,%s,%s,'run-2',1,'tx-2',%s,'admission-2','budget-1',1,0,2,'lease-digest-2','D0_LOCAL_FAILURE_NO_EFFECT')",(*p,d))
+                    c.execute("INSERT INTO t1_candidate.terminal_command_anchors VALUES (%s,%s,%s,'plan-2','run-2',1,'tx-2',%s,%s)",(*p,d,"d"*64))
+                    c.execute("INSERT INTO t1_candidate.company_event_order VALUES (%s,%s,%s,2,'project-2','run-2',1,'tx-2',%s,'[]')",(*p,d))
+                    require(c.execute("UPDATE t1_candidate.company_stream_heads SET sequence=sequence+1 WHERE sequence=1 RETURNING sequence").fetchone()==(2,),"a.positive_sequence_cas",checks)
+                    c.execute("SET CONSTRAINTS ALL IMMEDIATE")
+                    require(c.execute("SELECT count(*) FROM t1_candidate.terminal_command_anchors WHERE run_id='run-2'").fetchone()==(1,),"a.positive_anchor",checks)
+                    require(c.execute("SELECT count(*) FROM t1_candidate.company_event_order WHERE project_id='project-2'").fetchone()==(1,),"a.positive_order",checks)
+                finally:
+                    c.execute("ROLLBACK")
+                require(c.execute("SELECT count(*) FROM t1_candidate.terminal_command_anchors WHERE run_id='run-2'").fetchone()==(0,) and c.execute("SELECT count(*) FROM t1_candidate.company_event_order WHERE project_id='project-2'").fetchone()==(0,) and c.execute("SELECT sequence FROM t1_candidate.company_stream_heads").fetchone()==(1,),"a.positive_rollback",checks)
     with connect_checked("unmapped",CONFIG["unmapped"]) as c:
         for t in TABLES:
             require(c.execute(sql.SQL("SELECT count(*) FROM {}").format(sql.Identifier(SCHEMA,t))).fetchone()==(0,),f"unmapped.{t}",checks)
@@ -115,8 +145,8 @@ def main():
         finally:
             first.execute("ROLLBACK")
         require(second.execute("SELECT sequence FROM t1_candidate.company_stream_heads").fetchone()==(1,),"stream_rollback_unchanged",checks)
-    if len(set(checks)) != len(checks):
-        raise RuntimeError("D4_DUPLICATE_CHECK")
+    if len(set(checks)) != len(checks) or len(checks) != 450:
+        raise RuntimeError("D4_CHECK_SET_HOLD")
     print(json.dumps({"status":"FIXTURE_PROBE_ONLY","checks":checks,"count":len(checks),"canonical":False}))
 
 if __name__ == "__main__":

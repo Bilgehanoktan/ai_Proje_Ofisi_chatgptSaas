@@ -17,4 +17,6 @@ INSERT INTO t1_candidate.terminal_command_anchors VALUES ('synthetic-tenant-b','
 INSERT INTO t1_candidate.company_run_membership VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','project-1','plan-1','task-1','run-1','agent-1','principal-1',0);
 INSERT INTO t1_candidate.company_stream_heads VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY',1);
 INSERT INTO t1_candidate.company_event_order VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY',1,'project-1','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','[]');
+INSERT INTO t1_candidate.run_heads VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','foreign-plan','foreign-task','foreign-run','foreign-agent','foreign-principal','QUEUED',0,0);
+INSERT INTO t1_candidate.company_run_membership VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','foreign-project','foreign-plan','foreign-task','foreign-run','foreign-agent','foreign-principal',0);
 COMMIT;
