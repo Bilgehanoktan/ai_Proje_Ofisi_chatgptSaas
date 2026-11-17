@@ -1,0 +1,14 @@
+{
+  "revision": "ORG-06R2",
+  "parent": "17be56406408d572ebc66cf6fe7c1b6d83f18d76",
+  "scope": "isolated local SQLite verification; no product promotion",
+  "files": {
+    "run_checkout.py": {"symbols": ["git", "blob", "materialize", "run"], "purpose": "exact commit archive, full blob preflight, original plus additional test launch", "dependencies": ["Python standard library", "local Git", "cryptography==46.0.4 (existing fixture pin)"]},
+    "test_operation_notice.py": {"symbols": ["OperationNoticeTests.test_operation_notice_tamper"], "purpose": "actual R3 op_notice corruption test candidate", "dependencies": ["original ORG-06 CheckoutTests", "R3 TaskPin", "SQLite"]},
+    "test_preflight.py": {"symbols": ["PreflightTests"], "purpose": "disposable Git fixture tests, no product tests"}
+  },
+  "api_changes": [], "database_schema_changes": [], "event_contract_changes": [], "product_changes": [], "new_package_dependencies": [],
+  "test_evidence": {"preflight_fixture": "4/4 PASS", "compile": "PASS", "original_integration": "11 NOT_RUN", "additional_integration": "1 NOT_RUN", "checkout": "BLOCKED"},
+  "acceptance": "HOLD",
+  "next": "exact local checkout test execution, then ORG-07"
+}
