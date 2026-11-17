@@ -57,6 +57,8 @@ def inspect_effect_budget(envelope, registry, invocation_pin, current_run, curre
                 or claim.budget.budget_id != admission.budget_ref
                 or not token(claim.admission_id) or not uint(claim.amount_minor)
                 or claim.amount_minor == 0
+                or envelope.run.attempt != claim.before.attempt
+                or (current_lease.lease_id, current_lease.grant_id, current_lease.policy_epoch, current_lease.witness_epoch, current_lease.fence) != (claim.lease.lease_id, claim.lease.grant_id, claim.lease.policy_epoch, claim.lease.witness_epoch, claim.lease.fence)
                 or envelope.run.version <= admission.expected_version + 1):
             return EffectBudgetReview("ADMISSION_SCOPE_HOLD")
         if type(reservation) is not ReservationObservation:
@@ -64,7 +66,8 @@ def inspect_effect_budget(envelope, registry, invocation_pin, current_run, curre
         expected = ReservationObservation(admission.scope, claim.budget.budget_id,
             claim.budget.revision + 1, claim.amount_minor, claim.budget.currency,
             admission.request_digest, transaction_ref(admission))
-        if reservation != expected:
+        if (not uint(reservation.budget_revision) or not uint(reservation.amount_minor)
+                or reservation != expected):
             return EffectBudgetReview("RESERVATION_ROW_MISMATCH_HOLD")
         # Existing row has no reservation_id. Do not invent an alias for reservation_ref.
         if type(budget) is not BudgetSnapshot or not valid_snapshot(budget):
@@ -82,9 +85,9 @@ def inspect_effect_budget(envelope, registry, invocation_pin, current_run, curre
             return EffectBudgetReview("BUDGET_CAPACITY_HOLD")
         if type(effect) is not EffectScope or not valid_effect(effect):
             return EffectBudgetReview("MODEL_EFFECT_MISSING_HOLD")
-        if (effect.scope, effect.action, effect.effect_digest, effect.admission_id,
+        if (effect.scope, effect.action, effect.tool_id, effect.effect_digest, effect.admission_id,
                 effect.budget_id, effect.lease_id, effect.grant_id, effect.policy_epoch,
-                effect.witness_epoch, effect.fence) != (admission.scope, "MODEL_SAMPLE_REVIEW",
+                effect.witness_epoch, effect.fence) != (admission.scope, "MODEL_SAMPLE_REVIEW", envelope.primary.adapter_id,
                 invocation_pin, claim.admission_id, reservation.budget_id,
                 current_lease.lease_id, current_lease.grant_id, current_lease.policy_epoch,
                 current_lease.witness_epoch, current_lease.fence):
