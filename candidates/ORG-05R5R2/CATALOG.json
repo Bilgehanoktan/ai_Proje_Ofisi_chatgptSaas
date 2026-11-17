@@ -1,0 +1,19 @@
+{
+  "revision": "ORG-05R5R2",
+  "parent": "a49c20d8e0e9d1e69400a710385a5434b43f577c",
+  "files": {
+    "review_pg_evidence.py": {
+      "symbols": ["ReviewHold", "require", "sha", "pinned_file", "verify_sources", "unique_object", "no_constant", "valid_hex", "check_detail", "inspect_report", "main"],
+      "purpose": "Offline source-pin and report consistency review; no runtime authority"
+    },
+    "test_review_pg_evidence.py": {"symbols": ["fixture", "raw", "ReviewTests"], "purpose": "Synthetic report regression tests"},
+    "HANDOVER.md": {"purpose": "Architecture delta, maintenance, rollback and next step"},
+    "test_review.log": {"purpose": "Actual local test output"}
+  },
+  "dependencies": ["Python standard library"],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "tests": {"local_report": {"passed": 20, "type": "synthetic JSON"}, "postgres": {"executed": 0, "planned": 26, "status": "NOT_RUN"}, "full_checkout_preflight": "NOT_RUN"},
+  "gates": {"product": "HOLD", "independent_security": "HOLD", "canonical_identity": "HOLD", "runtime_office": "HOLD", "real_api": "HOLD"}
+}
