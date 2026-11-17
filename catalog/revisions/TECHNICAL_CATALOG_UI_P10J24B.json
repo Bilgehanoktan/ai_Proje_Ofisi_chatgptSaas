@@ -1,0 +1,55 @@
+{
+  "revision": "UI-P10J-24B",
+  "parent": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+  "manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+  "product_files": 492,
+  "manifest_entries": 491,
+  "product_change": 0,
+  "files": [
+    {
+      "path": "tests/integration/p10j24b_contract_diagnostics.py",
+      "blob": "d903ad980e071fd8ed72204e25396777d08c40bc",
+      "symbols": [
+        "CASES",
+        "read_pinned",
+        "load_pairs",
+        "suite_for",
+        "main"
+      ],
+      "purpose": "reproducible exact static D0 schema and negative authority-claim tests",
+      "dependency": "existing jsonschema==4.26.0 direct test pin"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "dependency_changes": [],
+  "authority_changes": [],
+  "tests": {
+    "original_plan_projection": {
+      "passed": 5,
+      "failed": 0,
+      "log_sha256": "3fd81f5f8c598b32893f987fcde8b8c9fcc8b7f74ea13a9df65d6ff8f20af447"
+    },
+    "contract_diagnostics": {
+      "passed": 12,
+      "failed": 0,
+      "positive": 4,
+      "negative": 8,
+      "source_paths": 16,
+      "shared_pairs": 8,
+      "blob": "d903ad980e071fd8ed72204e25396777d08c40bc",
+      "sha256": "8fc12a30896d8fd18966cfd03f55c83db37346227f3815b371ed5097b9eb0da2",
+      "log_sha256": "227090becf93a90b36497fe0ac1b98b3dd9e2e8e7283c22727a7e738cf63c0ac",
+      "jsonschema": "4.26.0",
+      "scope": "original static D0 schemas and fixtures; not API or runtime security acceptance"
+    },
+    "total": 17,
+    "python": "3.13.5"
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}
