@@ -1,0 +1,23 @@
+{
+  "revision": "ORG-05R5R2-EXEC-LOCALE",
+  "parent": "51c8ed415cb4e6120d502c5d23b1979413979982",
+  "files": {
+    "launch_disposable.py": {
+      "purpose": "Existing isolated launcher plus explicit initdb locale and UTF8",
+      "changed_function": "main",
+      "sha256": "c0237fab9a08372d2a17bca3451ab4f4d16179904bb6863b11c42abd8eaf649a"
+    },
+    "HANDOVER.md": {
+      "purpose": "Observed failure, maintenance, isolation and next step"
+    }
+  },
+  "api_changes": [],
+  "database_schema_changes": [],
+  "dependency_changes": [],
+  "tests": {
+    "parent_protocol_rerun": "14/14 PASS",
+    "static_initdb_arguments": "PASS",
+    "postgres": "0/26 NOT_RUN"
+  },
+  "gates": "HOLD"
+}
