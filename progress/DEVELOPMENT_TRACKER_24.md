@@ -42,3 +42,7 @@ Server ZIP checksum matches EDB (user transcript); Psycopg/psycopg-binary/tzdata
 
 ## 0227 D1 initdb HOLD
 User transcript confirms all 3 PyPI checks and reaches postgres 17.12/initdb after 31-pin installation sequence. Password mismatch aborts initdb; rerun intentionally refused by fresh-stage guard. Preserve failed stage; copy only ZIP and wheels to new sibling stage and repeat isolated D1. No connection or PG13/RLS test; 9/16 unchanged. tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json
+
+
+## 0227-D1 retry1 connection HOLD
+User reports initdb and PostgreSQL start/stop successful, child OperationalError masked by runner; exact failing statement unknown. No D1 acceptance. Preserve retry1 and diagnose with interactive read-only psql connection and role/database existence checks, then stop own cluster. No password or private log transfer; no reinstallation or grants. 9/16. Evidence: tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json

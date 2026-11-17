@@ -1,2 +1,2 @@
-# NEXT — 0227 D1 retry
-Password mismatch during initdb, no DB connection. Preserve existing `C:\AIOS\core-0227-pg`; create `C:\AIOS\core-0227-pg-retry1`, copy only `postgresql-17.12.zip` and `wheels`, rerun pinned D1 runner with new pgroot. Explicit approval and password confirmation. Do not share credentials, delete failed stage, or mutate E1. Raw evidence review before D1 gate. 9/16. tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json
+# NEXT — 0227 D1 connection diagnostic
+Existing `C:\AIOS\core-0227-pg-retry1` cluster initialized and started/stopped; connection child HOLD. Start only that cluster on loopback 55432, read-only psql admin connection and role/database inventory, stop in finally. Preserve existing stage; do not rerun initializer or drop objects. Diagnose before recovery. 9/16. tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json

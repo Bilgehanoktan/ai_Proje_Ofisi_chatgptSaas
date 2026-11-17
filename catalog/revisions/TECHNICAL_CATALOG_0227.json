@@ -110,5 +110,10 @@
     "evidence": "tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json",
     "reason": "Password mismatch before cluster start; preserve failed stage; retry fresh input-only copy.",
     "product_changes": 0
+  },
+  "d1_retry1_recovery": {
+    "evidence": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json",
+    "scope": "Read-only diagnostic of existing isolated cluster; preserve partial state and original failure evidence",
+    "product_changes": 0
   }
 }

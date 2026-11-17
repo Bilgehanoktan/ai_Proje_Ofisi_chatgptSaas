@@ -246,8 +246,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_INITDB_HOLD",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json",
+      "tur_durumu": "0227_D1_RETRY1_CONNECTION_HOLD",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -456,8 +456,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_INITDB_HOLD",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json",
+      "tur_durumu": "0227_D1_RETRY1_CONNECTION_HOLD",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -519,15 +519,15 @@
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_INITDB_HOLD",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json",
+      "tur_durumu": "0227_D1_RETRY1_CONNECTION_HOLD",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "D1 local registry checks and installation reached initdb; password mismatch, fresh stage guard protects failed stage. 9/16 unchanged.",
+  "note": "D1 retry1 initdb/start/stop succeeded per user transcript; OperationalError connection child HOLD. 9/16 unchanged.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -575,7 +575,7 @@
       "normative_authority": "HOLD",
       "locked_core29": "PASS_TRANSFERRED_A0F_HISTORICAL_LOCKED_29",
       "original_0219_company_fence6": "PASS_SQLITE_6_RAW_REVIEWED",
-      "postgresql_environment": "LOCAL_INSTALL_REACHED_INITDB_PASSWORD_MISMATCH_HOLD"
+      "postgresql_environment": "INITDB_START_STOP_PASS_USER_TRANSCRIPT_CONNECTION_HOLD"
     },
     "recovered_original_tests": 0,
     "original_scheduled_admission_sql6": "PASS_6",
@@ -618,6 +618,10 @@
     "d1_initdb": {
       "status": "HOLD_RETRY_FRESH_STAGE",
       "evidence": "tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json"
+    },
+    "d1_retry1": {
+      "status": "CONNECTION_HOLD",
+      "evidence": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json"
     }
   },
   "integration_gate": {

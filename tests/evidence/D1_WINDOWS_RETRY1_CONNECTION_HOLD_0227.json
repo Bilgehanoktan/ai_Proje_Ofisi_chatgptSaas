@@ -1,0 +1,35 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_RETRY1_INITDB_START_PASS_CONNECTION_HOLD",
+  "scope": "User Windows transcript, not independent replay or raw review",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "runner_blob": "f40f5fc348915c7c7cf5bbc0cb9c6aa6644d40c6",
+  "stage": "C:\\AIOS\\core-0227-pg-retry1",
+  "combined_lock_sha256": "576dc61d00895bf3ba624b881b49785c1617b1e476bd4b7dec3ea05217c9b4ac",
+  "observed": {
+    "source_manifest_entries": 392,
+    "product_files": 393,
+    "registry_review": "PASS_REPORTED",
+    "installation": "REACHED_POSTGRES_17_12_PER_RUNNER",
+    "approval": "EVET isolated D1",
+    "initdb": "PASS",
+    "server_start": "PASS",
+    "connection_child": "HOLD OperationalError",
+    "server_stop": "PASS",
+    "parent": "HOLD CalledProcessError",
+    "d1_final": "NOT_REPORTED",
+    "pg13": "NOT_RUN",
+    "rls": "NOT_RUN"
+  },
+  "cause": "Unknown; runner suppresses operational exception detail, cannot infer exact failing statement or auth failure.",
+  "recovery": "Do not rerun fresh-stage installer; preserve stage. Read-only psql diagnostic on existing own cluster at 127.0.0.1:55432 with interactive admin password, inspect role/db existence and connection result, stop in finally; no grant/schema/config change. Do not share credentials or raw private server log.",
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  },
+  "limitations": [
+    "No raw D1 evidence review, no independent run, no product source change. Role and database creation may be partial; inspect before retrying child."
+  ]
+}
