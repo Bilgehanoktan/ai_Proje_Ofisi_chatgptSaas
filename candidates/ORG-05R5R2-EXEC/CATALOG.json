@@ -1,0 +1,46 @@
+{
+  "revision": "ORG-05R5R2-EXEC",
+  "parent": "80bc6f4e4d46e9341660e7e7a85ba5a917168c54",
+  "files": {
+    "launch_disposable.py": {
+      "symbols": [
+        "Hold",
+        "require",
+        "parse_version",
+        "validate_paths",
+        "verify_identity",
+        "check_port",
+        "env_without_pg",
+        "main"
+      ],
+      "purpose": "explicit fresh isolated PG launch and existing runner/reviewer composition"
+    },
+    "test_launch_disposable.py": {
+      "symbols": [
+        "PreflightTests"
+      ],
+      "purpose": "14 local preflight tests"
+    },
+    "HANDOVER.md": "architecture delta, collision record, maintenance, next",
+    "RUN.md": "Windows execution",
+    "test_launch.log": "local raw unit output",
+    "test_r5_protocol_rerun.log": "local raw regression output",
+    "TEST_EVIDENCE.json": "status and source evidence"
+  },
+  "dependencies": [
+    "Python standard library",
+    "reviewed PG17 binaries (external, absent)",
+    "psycopg and psycopg-binary 3.3.9 (external, absent)",
+    "exact R3/R4/R5/R5R2 sources"
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "event_changes": [],
+  "product_changes": 0,
+  "gates": {
+    "PG": "NOT_RUN",
+    "IAM": "HOLD",
+    "HTTP": "HOLD",
+    "Runtime_Office": "HOLD"
+  }
+}

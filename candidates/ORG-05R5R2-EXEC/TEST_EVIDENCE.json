@@ -1,0 +1,49 @@
+{
+  "revision": "ORG-05R5R2-EXEC",
+  "python": "3.13.5",
+  "r5_zip": {
+    "crc": "PASS",
+    "entries": 13,
+    "local_exact": 13,
+    "manifest_pass": 12,
+    "remote_blob_exact": 13
+  },
+  "remote_sha256": {
+    "r3": 7,
+    "r4_sql": 1,
+    "r5_manifest": 1,
+    "pass": 9
+  },
+  "branch_tree_check": {
+    "trees": 9,
+    "truncated": 0,
+    "other_r5_path_count": 0
+  },
+  "actual_local": {
+    "r5_protocol": {
+      "pass": 29,
+      "type": "fake DB"
+    },
+    "launcher_preflight": {
+      "pass": 14,
+      "type": "unit/mock"
+    },
+    "syntax_parse": 2
+  },
+  "historical": {
+    "r5r2_report_validator": 20,
+    "r3_behavior": 141
+  },
+  "actual_postgresql": {
+    "executed": 0,
+    "planned": 26,
+    "status": "NOT_RUN",
+    "blockers": [
+      "server/client binaries absent",
+      "psycopg absent",
+      "package host DNS unavailable"
+    ]
+  },
+  "product_acceptance": "HOLD",
+  "new_gates": 0
+}
