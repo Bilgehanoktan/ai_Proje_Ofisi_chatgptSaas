@@ -134,3 +134,7 @@ User psql diagnostic starts server, reaches loopback 55432, FATAL password authe
 
 ## 0227-D1 retry2 connection PASS — raw review pending
 User transcript: PG17.12, Psycopg3.3.9 binary, libpq180004, SCRAM loopback 55432, two separate DBs with non-superuser/non-BYPASSRLS test role; both write/read/rollback PASS; source before/after match, server stopped. Existing input-directory/copy errors preceded successful runner preflight; retain anomaly and do not rerun install. Raw evidence pending; 9/16 unchanged; PG13 and RLS NOT_RUN. tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json
+
+
+## 0227-D1 final raw review — PASS
+Raw ZIP 8/8 CRC, 5/5 log/report hashes, 31/31 installed pins, original 28 E1 lock lines exact from reopened E1 archive, two PostgreSQL DB probes PASS; SCRAM loopback and stopped state evidenced. D1 accepted, 10/16 (62.5%). No independent replay, raw binaries absent, PG13/RLS/build open. Source unchanged. Next: docs/0227/D2_PG13_RUNBOOK.md. Evidence: tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json.

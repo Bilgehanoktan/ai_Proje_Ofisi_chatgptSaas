@@ -1,2 +1,2 @@
-# NEXT — 0227 D1 raw acceptance
-Retry2 connection and rollback PASS per user transcript. Collect only `D1_REVIEW.json`, `pg.lock`, and `evidence/` from `C:\AIOS\core-0227-pg-retry2`. Exclude passwords, data, tmp, private server logs. Verify raw hashes and reports before D1 promotion. Preserve stopped cluster for D2 original PG13; no reinstall. 9/16. tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json
+# NEXT — 0227 D2
+D1 accepted, 10/16. Use existing stopped `C:\AIOS\core-0227-pg-retry2` cluster with `aicos_d0_runner`, reviewed 31-package venv and exact `scripts/run_pg_acceptance_0215.py` blob `7cde2a62eee46ce4e682451f82a1c6b3245cf94a` from source `52219c7...`. Explicit local D2 approval; run 5+5+3 original tests, report outside checkout, stop cluster; no DSN in evidence. D3 separate. See docs/0227/D2_PG13_RUNBOOK.md.

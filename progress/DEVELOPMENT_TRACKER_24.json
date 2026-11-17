@@ -2,7 +2,7 @@
   "id": "TRACK-0227",
   "baseline": "0226",
   "tarih": "2026-11-17",
-  "status": "E1_ACCEPTED_PG_BUILD_OPEN",
+  "status": "E1_D1_ACCEPTED_PG13_BUILD_OPEN",
   "rubric": {
     "tasarim": {
       "0": "yok",
@@ -239,15 +239,15 @@
       "domain": "D07,D12,D15,D17",
       "tasarim": 75,
       "kaynak": 25,
-      "gercek_test": "PARTIAL_PASS_0217_LOCAL_SQLITE_DDL_PINS",
-      "kanit": "Five remote DDL pins match; PG/RLS NOT_RUN",
-      "sonraki": "0225 exact checkout, actual root T1/SQL, PG and full build as applicable",
+      "gercek_test": "D1_PASS_PG13_RLS_OPEN",
+      "kanit": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
+      "sonraki": "D2 exact PG13; D3 separate RLS; full build remains open",
       "onceki_tasarim": 75,
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_CONNECTION_PASS_RAW_REVIEW_PENDING",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
+      "tur_durumu": "0227_D1_RAW_REVIEWED_PASS",
+      "tur_kaniti": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -449,15 +449,15 @@
       "domain": "D14,D16,D18",
       "tasarim": 75,
       "kaynak": 25,
-      "gercek_test": "E1_PASS_WINDOWS_REVIEWED_LOCKS_PG_BUILD_OPEN",
-      "kanit": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
-      "sonraki": "D1/D2 disposable PG; E2/E3/E4 full product acceptance",
+      "gercek_test": "D1_PASS_PG13_RLS_OPEN",
+      "kanit": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
+      "sonraki": "D2 exact PG13; D3 separate RLS; full build remains open",
       "onceki_tasarim": 75,
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_CONNECTION_PASS_RAW_REVIEW_PENDING",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
+      "tur_durumu": "0227_D1_RAW_REVIEWED_PASS",
+      "tur_kaniti": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -519,15 +519,15 @@
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_CONNECTION_PASS_RAW_REVIEW_PENDING",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
+      "tur_durumu": "0227_D1_RAW_REVIEWED_PASS",
+      "tur_kaniti": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "D1 retry2 actual Windows PostgreSQL 17.12 / Psycopg 3.3.9 two DB connections and rollback PASS per transcript, stopped; raw review pending. 9/16 unchanged.",
+  "note": "D1 accepted after raw ZIP review; 10/16. D2/D3 and full build/browser remain open; no product source/design score promotion.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -546,9 +546,9 @@
     "canonical_mapping": "HOLD",
     "normative_authority": "HOLD",
     "gates": {
-      "done": 9,
+      "done": 10,
       "total": 16,
-      "percent": 56.25,
+      "percent": 62.5,
       "ref": "progress/INTEGRATION_GATES_0227.json"
     },
     "research_sql8": "PASS_8_RAW_REVIEWED",
@@ -575,7 +575,7 @@
       "normative_authority": "HOLD",
       "locked_core29": "PASS_TRANSFERRED_A0F_HISTORICAL_LOCKED_29",
       "original_0219_company_fence6": "PASS_SQLITE_6_RAW_REVIEWED",
-      "postgresql_environment": "D1_CONNECTION_PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING"
+      "postgresql_environment": "D1_PASS_RAW_REVIEWED"
     },
     "recovered_original_tests": 0,
     "original_scheduled_admission_sql6": "PASS_6",
@@ -630,12 +630,16 @@
     "d1_connection": {
       "status": "PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING",
       "evidence": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json"
+    },
+    "d1_raw_review": {
+      "status": "PASS",
+      "evidence": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json"
     }
   },
   "integration_gate": {
-    "done": 9,
+    "done": 10,
     "total": 16,
-    "percent": 56.25
+    "percent": 62.5
   },
   "traceability": "docs/0218/TRACEABILITY.json"
 }

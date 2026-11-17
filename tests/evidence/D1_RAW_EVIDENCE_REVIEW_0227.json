@@ -1,0 +1,104 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_PASS_RAW_REVIEWED",
+  "scope": "D0 Windows local PostgreSQL and driver acceptance only",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner_blob": "d20bbb6740901e2abf02d445b20cfa34f4b93d50",
+  "prior": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
+  "archive": {
+    "name": "AIOS_0227_D1_EVIDENCE.zip",
+    "bytes": 6322,
+    "sha256": "f81d6d16e317ead560ddad55a722bce9379fa45cfeb4ceb6142ff1ba0c9b7b0a",
+    "entries": 8,
+    "crc": "PASS",
+    "normalized_unique_paths": 8
+  },
+  "review": {
+    "sha256": "ce09749cc9507961cec8120c712cc599556fc83d6ecf1f0da2eae4546a4dd407",
+    "combined_lock_sha256": "576dc61d00895bf3ba624b881b49785c1617b1e476bd4b7dec3ea05217c9b4ac",
+    "server_archive_sha256": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+    "e1_archive_reopened": true,
+    "e1_original_lock_sha256": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+    "e1_review_sha256": "13a39b47704ac59953b30a4723266c7d9be47b8c084998b77b61a19175b08e2b",
+    "e1_prefix_lines_exact_match": 28,
+    "new_wheel_pins_match_review": 3,
+    "installed_pin_matches": 31,
+    "pip_bootstrap": "25.3",
+    "pip_check": "No broken requirements found."
+  },
+  "reports": {
+    "connection_sha256": "b1c493075c4e3f484a550e927defd57def0719aef1a21c776b35f1577a638023",
+    "final_sha256": "5e50f13bf80cf221c981fe535bcd3bcbfeb02e3adc0dc65363e6996064545177",
+    "log_hash_matches": 5,
+    "log_hashes": {
+      "01_venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "02_pip_install.log": "f50acaa0c0476c40e20ac3b361d206b91f478a5fd966b33413cd3fc7191639d6",
+      "03_pip_check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "04_pip_list.json": "0aec778594b6e99f3d85d11b74b149d9d68acc75cafcf8fb31b1f38fc4157b71",
+      "D1_CONNECTION.json": "b1c493075c4e3f484a550e927defd57def0719aef1a21c776b35f1577a638023"
+    }
+  },
+  "connection": {
+    "server_version_num": 170012,
+    "psycopg": "3.3.9",
+    "pq_impl": "binary",
+    "libpq_version": 180004,
+    "listen_addresses": "127.0.0.1",
+    "server_address": "127.0.0.1/32",
+    "port": 55432,
+    "auth_methods": [
+      "scram-sha-256"
+    ],
+    "databases": [
+      {
+        "database": "aicos_d0_0194_0227",
+        "role": "aicos_d0_runner",
+        "superuser": false,
+        "bypassrls": false,
+        "createdb": false,
+        "createrole": false,
+        "replication": false,
+        "can_create_schema": true,
+        "t1_candidate_absent": true,
+        "write_read_rollback": "PASS"
+      },
+      {
+        "database": "aicos_d0_0196l_0227",
+        "role": "aicos_d0_runner",
+        "superuser": false,
+        "bypassrls": false,
+        "createdb": false,
+        "createrole": false,
+        "replication": false,
+        "can_create_schema": true,
+        "t1_candidate_absent": true,
+        "write_read_rollback": "PASS"
+      }
+    ],
+    "server_stopped": true,
+    "e1_preserved": true
+  },
+  "limitations": [
+    "Raw server ZIP and wheels not included; hashes/install evidence reviewed, binaries not independently rehashed in assistant runtime.",
+    "Venv log empty, consistent with final hash and subsequent successful install.",
+    "No independent replay; source and server stop established through exact runner evidence and transcript.",
+    "D1 database role owns disposable DBs; NOBYPASSRLS alone is not tenant isolation. D2 PG13, D3 RLS, E2/E3/E4, B3 remain open."
+  ],
+  "gates": {
+    "previous": 9,
+    "done": 10,
+    "total": 16,
+    "percent": 62.5,
+    "closed": "D1",
+    "remaining": [
+      "D2",
+      "D3",
+      "E2",
+      "E3",
+      "E4",
+      "B3"
+    ]
+  },
+  "next": "docs/0227/D2_PG13_RUNBOOK.md"
+}
