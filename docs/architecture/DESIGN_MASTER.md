@@ -293,3 +293,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-20 — Workflow inspector / A4R2 source reconciliation
 [Architecture and catalog](../UI-P10J/P10J20_WORKFLOW_INSPECTOR.md). Derived local draft only; exact diagnostic scene and pinned native harness, acceptance NOT_RUN. No normative change.
+
+
+## UI-P10J-21 — Skill & Memory Studio
+[Source inventory and boundaries](../UI-P10J/P10J21_SKILL_MEMORY.md) · [Reviewed W8 runbook](../UI-P10J/P10J21_RUNBOOK.md). Six pinned source candidates, local review-role/area filtering and inspection; no actual skill registry, memory access, permission or core changes. Isolated model 10/10; full acceptance NOT_RUN.
