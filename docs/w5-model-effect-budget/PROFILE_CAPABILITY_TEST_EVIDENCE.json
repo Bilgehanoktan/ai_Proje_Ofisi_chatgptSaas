@@ -1,0 +1,120 @@
+{
+  "checkpoint": "W5_PROFILE_CAPABILITY_01",
+  "tested_commit": "9d17e861e33bf638cde1a05bd33ed2be55d775eb",
+  "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
+  "environment": "Linux Python 3.13.5; stdlib only; no external calls or DB",
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. python -m unittest discover -s tests/w5 -p test_model_profile_review.py -v",
+  "source_transfer": "GitHub connector UTF-8 files recovered into isolated source subset; independently recomputed Git blob SHA-1 and SHA-256; all 16 exact. Direct git ls-remote still failed DNS. Not a full checkout.",
+  "pins": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+      "bytes": 59
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+      "bytes": 49
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d",
+      "bytes": 7251
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+      "git_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+      "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121",
+      "bytes": 725
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/t1_review.py",
+      "git_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+      "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2",
+      "bytes": 517
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+      "bytes": 49
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908",
+      "bytes": 5065
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/__init__.py",
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635",
+      "bytes": 52
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635",
+      "bytes": 52
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "git_blob": "b90b0853ba466b89fd82bc38512517637afe1e02",
+      "sha256": "a336a1348f70b6ec7602af6b5dac2d5e4fe59ea7cc65c9ab139eb5c8af10be17",
+      "bytes": 3576
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+      "git_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+      "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5",
+      "bytes": 1391
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "git_blob": "ec16d064a0ac12fe46c72230399e41c2c56e2a83",
+      "sha256": "29c108efc0c63035492caaa41672a8be973fae7d317bab2142191ec5a0184e15",
+      "bytes": 2589
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py",
+      "git_blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+      "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9",
+      "bytes": 2986
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+      "git_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15",
+      "bytes": 1305
+    },
+    {
+      "path": "tests/w5/test_model_profile_review.py",
+      "git_blob": "b48e46c9128832fb20f49e9dd9aa33086aee2e08",
+      "sha256": "129a9633ab55a2c93b17b1aa8ec5c713cbc7844d5258baaff3fc48ac46f0a920",
+      "bytes": 5583
+    }
+  ],
+  "raw_output": "test_allowlist (test_model_profile_review.ModelProfileTests.test_allowlist) ... ok\ntest_capability_filter (test_model_profile_review.ModelProfileTests.test_capability_filter) ... ok\ntest_duplicates (test_model_profile_review.ModelProfileTests.test_duplicates) ... ok\ntest_invalid_profile (test_model_profile_review.ModelProfileTests.test_invalid_profile) ... ok\ntest_invalid_query (test_model_profile_review.ModelProfileTests.test_invalid_query) ... ok\ntest_matching_candidates_never_authorize (test_model_profile_review.ModelProfileTests.test_matching_candidates_never_authorize) ... ok\ntest_order_independence_and_boundary (test_model_profile_review.ModelProfileTests.test_order_independence_and_boundary) ... ok\ntest_pin_and_scope (test_model_profile_review.ModelProfileTests.test_pin_and_scope) ... ok\ntest_profile_metadata_mutation (test_model_profile_review.ModelProfileTests.test_profile_metadata_mutation) ... ok\ntest_rejection_matrix (test_model_profile_review.ModelProfileTests.test_rejection_matrix) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.009s\n\nOK\n",
+  "tests": {
+    "passed": 10,
+    "failed": 0,
+    "prior_effect_budget": "NOT_RUN"
+  },
+  "gates": {
+    "provider_call": "HOLD",
+    "spend": "HOLD",
+    "independent_acceptance": "HOLD",
+    "production": "HOLD",
+    "global_integration": "UNCHANGED"
+  },
+  "scope": "No CI, no full product build, no regression claim beyond this test file."
+}
