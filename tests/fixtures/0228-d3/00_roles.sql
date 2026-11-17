@@ -1,0 +1,10 @@
+-- D3 disposable-only role preparation. Execute on a NEW cluster, never retry2.
+-- Intentionally NOLOGIN until the reviewed bootstrap assigns transient credentials.
+CREATE ROLE aicos_d3_owner NOLOGIN NOSUPERUSER NOBYPASSRLS NOCREATEDB NOCREATEROLE NOREPLICATION NOINHERIT;
+CREATE ROLE aicos_d3_tenant_a NOLOGIN NOSUPERUSER NOBYPASSRLS NOCREATEDB NOCREATEROLE NOREPLICATION NOINHERIT;
+CREATE ROLE aicos_d3_tenant_b NOLOGIN NOSUPERUSER NOBYPASSRLS NOCREATEDB NOCREATEROLE NOREPLICATION NOINHERIT;
+CREATE ROLE aicos_d3_unmapped NOLOGIN NOSUPERUSER NOBYPASSRLS NOCREATEDB NOCREATEROLE NOREPLICATION NOINHERIT;
+-- Separate database creation (outside transaction). Database owner cannot login.
+CREATE DATABASE aicos_d3_0228 OWNER aicos_d3_owner;
+REVOKE CONNECT,TEMPORARY ON DATABASE aicos_d3_0228 FROM PUBLIC;
+GRANT CONNECT ON DATABASE aicos_d3_0228 TO aicos_d3_tenant_a, aicos_d3_tenant_b, aicos_d3_unmapped;

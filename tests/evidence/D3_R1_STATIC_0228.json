@@ -1,0 +1,60 @@
+{
+  "revision": "0228-D3-R1",
+  "source_manifest": "tests/fixtures/0228-d3/SOURCE_MANIFEST.json",
+  "status": "SOURCE_CANDIDATE_STATIC_PASS",
+  "checks": {
+    "source_generation": {
+      "passed": 12,
+      "checks": [
+        "five original Git blob pins",
+        "exact twelve base tables",
+        "exact synthetic scope guards occur once",
+        "replacement guard present once",
+        "base namespace absent",
+        "all foreign keys scope-aware",
+        "12 ENABLE and 12 FORCE",
+        "48 explicit command policies",
+        "update grants confined to 3 mapped state tables",
+        "delete grant only lease",
+        "no GUC identity or definer function",
+        "one row per table per tenant plus B-only FK probe"
+      ]
+    },
+    "python_compile": "PASS",
+    "local_python_guards": {
+      "passed": 11,
+      "checks": [
+        "valid DSN",
+        "remote host denied",
+        "accepted D1/D2 port denied",
+        "accepted D1/D2 database denied",
+        "wrong role denied",
+        "options denied",
+        "empty password denied",
+        "SSL profile mismatch denied",
+        "connect timeout mismatch denied",
+        "12-table/3-mutable-table inventory",
+        "unknown table denied"
+      ]
+    }
+  },
+  "actual_postgresql": "NOT_RUN",
+  "windows": "NOT_RUN",
+  "actual_product_tests_added": 0,
+  "gate_promotion": 0,
+  "accepted_D1_D2": "PRESERVED",
+  "limitations": [
+    "Static SQL generation checks are not a SQL parser or live database execution.",
+    "Runtime probe was compiled and pure guard-tested only; psycopg and postgres absent locally.",
+    "Owner FORCE-RLS DML probe is prepared separately; owner retains DDL control by design.",
+    "Seed rows are synthetic policy coverage, not coherent lifecycle execution.",
+    "Two fixed fixture principals are not production identity mapping or dynamic tenant provisioning.",
+    "D3 canonical authority and independent acceptance remain HOLD."
+  ],
+  "observed_parallel_heads": {
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "integration/p10j24-product-acceptance": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+    "integration/p10j24b-source-recovery": "6941a73e5b1b63b1ada7b912d375efb07a7599b1"
+  }
+}

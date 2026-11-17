@@ -1,0 +1,104 @@
+{
+  "revision": "0228-D3-R1",
+  "base_commit": "bebee3198ede68cd201cba363752a9006be35581",
+  "files": [
+    {
+      "path": "tests/fixtures/0228-d3/00_roles.sql",
+      "git_blob": "b8a5f9a53a29c89b71fa3e96556e8f430d6b2fd5",
+      "bytes": 904,
+      "purpose": "isolated role/database DDL"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/01_schema.sql",
+      "git_blob": "22a68921e6bf9047c231f789d3a03ca08d4341d0",
+      "bytes": 9098,
+      "purpose": "12-table derived fixture schema"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/02_rls_policies.sql",
+      "git_blob": "4da0121b1ab251a4183540defb280d9e968fed67",
+      "bytes": 28932,
+      "purpose": "48 policy DDL and least-privilege fixture grants"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/03_seed_a.sql",
+      "git_blob": "a7a5dda09b5460519fb20dd3f9744e7366292fc1",
+      "bytes": 2260,
+      "purpose": "tenant A seed"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/04_seed_b.sql",
+      "git_blob": "dbe348ccaa7d47205a42dddb6722da962dd8c66a",
+      "bytes": 2431,
+      "purpose": "tenant B seed including FK probe"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/05_owner_probe.sql",
+      "git_blob": "06813fd76f68369835c50ec55c3d0b301f69bb77",
+      "bytes": 313,
+      "purpose": "owner DML FORCE RLS probe"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/scope.json",
+      "git_blob": "1d5d15f309d77d6f5f30db3e5370ef12bf2406d2",
+      "bytes": 2034,
+      "purpose": "fixed scope/table inventory"
+    },
+    {
+      "path": "tests/fixtures/0228-d3/d3_probe.py",
+      "git_blob": "6ce374bc2801d9223658d05959cb1c25178b5ba9",
+      "bytes": 15070,
+      "purpose": "actual PG probe runner; main, validate_dsn, table, run_probe"
+    }
+  ],
+  "dependencies": [
+    "PostgreSQL 17.12",
+    "Psycopg 3.3.9 binary",
+    "Python 3.14.3",
+    "five original pinned DDLs"
+  ],
+  "db": "12 separate fixture tables; 4 non-superuser roles; 48 policies; port 55433",
+  "api_changes": [],
+  "product_changes": 0,
+  "original_db_changes": 0,
+  "test": {
+    "source_generation": {
+      "passed": 12,
+      "checks": [
+        "five original Git blob pins",
+        "exact twelve base tables",
+        "exact synthetic scope guards occur once",
+        "replacement guard present once",
+        "base namespace absent",
+        "all foreign keys scope-aware",
+        "12 ENABLE and 12 FORCE",
+        "48 explicit command policies",
+        "update grants confined to 3 mapped state tables",
+        "delete grant only lease",
+        "no GUC identity or definer function",
+        "one row per table per tenant plus B-only FK probe"
+      ]
+    },
+    "python_compile": "PASS",
+    "local_python_guards": {
+      "passed": 11,
+      "checks": [
+        "valid DSN",
+        "remote host denied",
+        "accepted D1/D2 port denied",
+        "accepted D1/D2 database denied",
+        "wrong role denied",
+        "options denied",
+        "empty password denied",
+        "SSL profile mismatch denied",
+        "connect timeout mismatch denied",
+        "12-table/3-mutable-table inventory",
+        "unknown table denied"
+      ]
+    }
+  },
+  "actual_pg": "NOT_RUN",
+  "maintenance": "Preserve logs; stop only new cluster; no retry on dirty fixture.",
+  "rollback": "Abandon isolated branch/fixture, retain 0227.",
+  "next": "D3-R2 bootstrap and real execution"
+}

@@ -1,0 +1,2 @@
+# NEXT — 0228 D3-R2
+D3-R1 isolated fixture source and probes prepared; 12 source generation checks + Python compile + 11 guard checks PASS. Actual PostgreSQL NOT_RUN. Prepare source-bound Windows bootstrap for new data directory/port 55433, ephemeral admin and runtime credentials, exact fixture pins, seed via actual logins, owner probe and runtime suite. No modification of D1/D2, UI/Office, E2/E3/E4 or original DDLs. D3 remains open; 11/16. Read docs/0228/D3_R1_ARCHITECTURE.md.
