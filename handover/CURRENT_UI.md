@@ -1,3 +1,8 @@
+# UI-P10J-22 — Finance & Security Studio
+Parent df4c95688424c7c43d38941d219cf05932dd9040; manifest 3d7bb6a05f523b2691c8a7cfe048f030e2d94c91. 491 source pins / 492 product files; 3 additions, 2 replacements, 486 retained pins, zero deletion. Five changed/new product blobs matched local bytes; eight referenced backend blobs checked. Source inspector is static presentation only: 3 finance, 5 security; independent domain search, visible-only selection, source/requirement/boundary details. Existing finance/security model guards and tabs retained. No backend, API, DB, dependency, runtime, Office or authority change. 12/12 isolated model tests, strict model compile and 3/3 TSX transpile; W8 wrapper AST PASS, entire W8/build/browser/native NOT_RUN. Prior gates unchanged: core 9/16 historical, UI 21/40, MVP 0/11, independent 0/7. No cross-branch merge. Next P10J23 visual polish within UI scope; inspect latest parallel refs and avoid Office/core-owned files before edits. [Revision](../docs/UI-P10J/P10J22_FINANCE_SECURITY.md) · [Runbook](../docs/UI-P10J/P10J22_RUNBOOK.md).
+
+---
+
 # UI-P10J-21 — Skill & Memory Studio
 
 Parent ae3f5e45c8dc77359f5ae7701efc833585d3c4a9; manifest ce8b61352b9b56825a8ecd01238025fc07b7d2d2; 489 product files. Two additions, one replacement, 485 previous source pins retained. 10/10 actual isolated model tests and TSX transpile; W8 wrapper AST only, full build/browser/PG NOT_RUN. 99 inherited planned captures unchanged; extra manual Studio scenarios NOT_RUN. No backend/office/core transfer or authority change. Core 9/16 and UI 21/40 historical; independent 0/7. [Revision](../docs/UI-P10J/P10J21_SKILL_MEMORY.md) · [Runbook](../docs/UI-P10J/P10J21_RUNBOOK.md). Next P10J22 Finance & Security Studio after latest parallel head check.
