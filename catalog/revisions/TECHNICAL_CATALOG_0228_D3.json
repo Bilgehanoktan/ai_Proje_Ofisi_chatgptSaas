@@ -159,7 +159,7 @@
   "actual_pg": "PASS_230_RAW_REVIEWED_SCOPED_FIXTURE",
   "maintenance": "On failure preserve D3 stage and sanitized reports, stop only D3 cluster; never retry in place or delete automatically. Do not share server-private.log, data or tmp.",
   "rollback": "Abandon isolated branch/fixture, retain 0227.",
-  "next": "D3 scoped fixture gate accepted. Transfer only evidence metadata to core with CAS; coordinate E2/E3/E4 with unified U3 owner; B3 and canonical RLS/company-stream binding remain open.",
+  "next": "Coordinate E2/E3/E4 with Unified U3 acceptance owner, no duplicate execution; compare exact source/lock/evidence compatibility. B3 independent authority and canonical product RLS/company-stream PG remain open.",
   "readback": {
     "status": "PASS",
     "fixture_blob_matches": 8,
@@ -349,5 +349,21 @@
     "actual_pg": "NOT_RUN"
   },
   "r3_evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json",
-  "r4_evidence": "tests/evidence/D3_R4_RAW_EVIDENCE_REVIEW_0228.json"
+  "r4_evidence": "tests/evidence/D3_R4_RAW_EVIDENCE_REVIEW_0228.json",
+  "core_transfer": {
+    "status": "PASS",
+    "core_transfer_commit": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+    "core_previous": "bebee3198ede68cd201cba363752a9006be35581",
+    "source_review_commit": "426a2e69dd193a9ec8f61181cc809c28fc50733c",
+    "gate": {
+      "done": 12,
+      "total": 16,
+      "percent": 75
+    },
+    "raw_report_pins": 3,
+    "product_files_unchanged": 393,
+    "original_db_files_unchanged": 16,
+    "source_merge": false,
+    "core_metadata_only": true
+  }
 }
