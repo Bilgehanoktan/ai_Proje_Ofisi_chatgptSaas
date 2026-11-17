@@ -1,0 +1,35 @@
+{
+  "revision": "ORG-07C-R4",
+  "architecture_delta": "Evidence input compatibility only; fail closed",
+  "files": [
+    {
+      "path": "EVIDENCE.json",
+      "purpose": "Pinned inputs and actual V8 review result"
+    },
+    {
+      "path": "HANDOVER.md",
+      "purpose": "Architecture decision, reproduction, owner boundaries, maintenance and rollback"
+    },
+    {
+      "path": "CATALOG.json",
+      "purpose": "Candidate technical catalog delta"
+    }
+  ],
+  "existing_symbols": [
+    {
+      "path": "candidates/ORG-07C-R3/review_evidence.mjs",
+      "symbols": [
+        "reviewEvidence",
+        "runFixtureTests"
+      ],
+      "change": "none"
+    }
+  ],
+  "new_symbols": [],
+  "api": [],
+  "database": [],
+  "dependencies": [],
+  "test_ids_added": 0,
+  "existing_fixture_checks_rerun": 24,
+  "product_changes": 0
+}

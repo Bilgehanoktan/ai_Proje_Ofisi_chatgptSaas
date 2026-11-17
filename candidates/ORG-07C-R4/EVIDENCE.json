@@ -1,0 +1,227 @@
+{
+  "revision": "ORG-07C-R4",
+  "parent": "c8d7659301489501a1b09f808f269c6353f93db0",
+  "owner_commit": "0839ecc5cedc338e791022d287d0a251cf93506f",
+  "branch_count_observed": 203,
+  "observed_heads": {
+    "planning/org-07c-r3-runtime-evidence-review": "c8d7659301489501a1b09f808f269c6353f93db0",
+    "planning/org-09r1-windows-evidence": "0839ecc5cedc338e791022d287d0a251cf93506f",
+    "planning/org-10-common-scope-fixture": "5c7eb6b148e6e96247682653ff70dccc4a7ba823",
+    "planning/0230-d5c-r2-org-evidence": "946bc24cd943d6c3550f7f6c1eadcc42ee1bbd06",
+    "planning/0229-d4-r6-canonical-readiness": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "integration/unified-u3a-product-acceptance": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "planning/org-08-office-runtime-readback": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352"
+  },
+  "input_blobs": {
+    "review_evidence": "cc6729687b035ae97fd48f8eca3a97f138f04073",
+    "report_reconstructed": "6322d5ad184677d0ee94ce3088e26b1c57db5975",
+    "runtime_original": "3d9fe7c4700fdb6c4176d35f54638ead32905294",
+    "runtime_notice": "7477d8f40bb35da956ba1c6830f1dec86d10e2c9"
+  },
+  "execution": {
+    "engine": "connector V8 isolated JS; fetched R3 source, export statement replaced with return for harness only; no file/Node CLI execution",
+    "review_result": {
+      "status": "HOLD",
+      "reason": "SOURCE_OR_SCOPE_MISMATCH",
+      "custody": "UNATTESTED",
+      "activation": "HOLD",
+      "canonical_IAM": "HOLD",
+      "independent": "HOLD",
+      "product_registration": "NOT_APPLIED"
+    },
+    "fixture_regression": [
+      {
+        "name": "exact",
+        "pass": true,
+        "actual": "REVIEW_MATCH_ONLY"
+      },
+      {
+        "name": "CRLF",
+        "pass": true,
+        "actual": "REVIEW_MATCH_ONLY"
+      },
+      {
+        "name": "blocked",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "commit",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "scope",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "count",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "dependency",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "extra pin",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "environment",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "exit",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "boolean exit",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "not run",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "missing log",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "missing extra",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "duplicate",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong name",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "skip",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "fail",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong total",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "extra output",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong class",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong extra",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "oversize",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "null",
+        "pass": true,
+        "actual": "HOLD"
+      }
+    ],
+    "new_original_tests": 0,
+    "report_transformed": false
+  },
+  "format": {
+    "expected": [
+      "commit",
+      "scope",
+      "verified_blobs",
+      "cryptography",
+      "additional_sha256",
+      "original",
+      "additional",
+      "original_returncode",
+      "additional_returncode"
+    ],
+    "observed_keys": [
+      "archive_commit",
+      "archive_sha256",
+      "archive_tree",
+      "child_text_encoding_policy",
+      "dependencies",
+      "historical_commit",
+      "historical_tree",
+      "independent_security",
+      "office_placement",
+      "passed_here",
+      "pg_evidence",
+      "post_run_source_integrity",
+      "product_acceptance",
+      "profile",
+      "python",
+      "real_iam",
+      "sqlite",
+      "status",
+      "studio_owner_evidence",
+      "suites",
+      "verified_current_blobs",
+      "verified_historical_blobs"
+    ],
+    "historical_commit": "17be56406408d572ebc66cf6fe7c1b6d83f18d76",
+    "verified_historical_blobs": 1739,
+    "cryptography": "46.0.4",
+    "missing_original_report_hash": true
+  },
+  "owner_reported": {
+    "runtime": 12,
+    "office": 8,
+    "studio_original": 6,
+    "studio_extra": 6,
+    "original_matrix": "26/26",
+    "custody": "UNATTESTED",
+    "execution_plan": "5/7",
+    "pg_prior_fixture": "26/26 separate UNATTESTED",
+    "org10_pg": "0/31 NOT_RUN"
+  },
+  "gates": {
+    "activation": "HOLD",
+    "canonical_IAM": "HOLD",
+    "product_registration": "NOT_APPLIED",
+    "independent": "HOLD",
+    "common_scope_pg": "HOLD",
+    "locked_build_browser": "NOT_RUN"
+  },
+  "official": {
+    "core": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "hd": "0/36",
+    "office": "0/55",
+    "independent": "0/7",
+    "manifest_draft": 508,
+    "changed": false
+  }
+}
