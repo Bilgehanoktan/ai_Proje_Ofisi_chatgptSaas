@@ -1,0 +1,48 @@
+{
+  "revision": "0230-D5-INTENT",
+  "base": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+  "classification": "ISOLATED_SOURCE_CANDIDATE",
+  "files": [
+    {
+      "file": "intent_identity.py",
+      "functions": [
+        "full_intent_digest",
+        "derive_request",
+        "review_bound_intent"
+      ]
+    },
+    {
+      "file": "test_intent_identity.py",
+      "classes": [
+        "IntentIdentityTests"
+      ],
+      "tests": 19
+    },
+    {
+      "file": "run_exact.py",
+      "functions": [
+        "main"
+      ],
+      "status": "EXACT_CHECKOUT_NOT_RUN"
+    }
+  ],
+  "dependencies": [
+    "Core lifecycle.Scope",
+    "Core transaction.review.LogicalIntent/valid_intent",
+    "Core event_store.company_coordination.Member/SCOPE/_member",
+    "D4-R4 identity_binding.Request/Review/review_binding",
+    "Python stdlib"
+  ],
+  "new_classes": 0,
+  "new_api": [],
+  "new_tables": [],
+  "new_events": [],
+  "new_external_dependencies": [],
+  "product_files_changed": 0,
+  "local_extract_tests": "19/19 PASS",
+  "exact_checkout_tests": "NOT_RUN",
+  "core_gates": "12/16 unchanged",
+  "d4_gates": "unchanged",
+  "execution_authority": false,
+  "rollback": "Abandon candidate branch; no DB change"
+}
