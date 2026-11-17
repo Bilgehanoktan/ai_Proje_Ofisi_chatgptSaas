@@ -1,0 +1,202 @@
+{
+  "method": "actual JS text/structure checks in this turn; not SQL parsing or PostgreSQL execution",
+  "checks": [
+    {
+      "id": "SHA256 schema.sql",
+      "status": "PASS"
+    },
+    {
+      "id": "SHA256 operations.sql",
+      "status": "PASS"
+    },
+    {
+      "id": "12 unique tables",
+      "status": "PASS"
+    },
+    {
+      "id": "no SQLite syntax",
+      "status": "PASS"
+    },
+    {
+      "id": "single transaction",
+      "status": "PASS"
+    },
+    {
+      "id": "disposable guard",
+      "status": "PASS"
+    },
+    {
+      "id": "only one UPDATE grant",
+      "status": "PASS"
+    },
+    {
+      "id": "no DELETE/TRUNCATE grants",
+      "status": "PASS"
+    },
+    {
+      "id": "no function or role creation",
+      "status": "PASS"
+    },
+    {
+      "id": "only qualified references",
+      "status": "PASS"
+    },
+    {
+      "id": "org_revision: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_revision: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_revision: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_head: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_head: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_head: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_unit: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_unit: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_unit: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_position: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_position: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_position: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_definition_ref: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_definition_ref: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_definition_ref: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_instance_ref: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_instance_ref: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_instance_ref: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_binding: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_binding: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_binding: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "org_notice: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "org_notice: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "org_notice: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "op_team: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "op_team: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "op_team: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "op_member: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "op_member: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "op_member: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "op_entry: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "op_entry: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "op_entry: no reader write grant",
+      "status": "PASS"
+    },
+    {
+      "id": "op_notice: ENABLE and FORCE",
+      "status": "PASS"
+    },
+    {
+      "id": "op_notice: scoped SELECT/INSERT",
+      "status": "PASS"
+    },
+    {
+      "id": "op_notice: no reader write grant",
+      "status": "PASS"
+    }
+  ],
+  "passed": 46,
+  "failed": 0,
+  "prior_R3_tests": {
+    "recorded": 141,
+    "rerun": 0
+  },
+  "postgres": "NOT_RUN",
+  "http": "NOT_RUN",
+  "product": "HOLD",
+  "source_sha256": [
+    "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed",
+    "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77"
+  ]
+}

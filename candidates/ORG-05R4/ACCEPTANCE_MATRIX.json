@@ -1,0 +1,105 @@
+{
+  "status": "NOT_RUN",
+  "checks": [
+    {
+      "id": "R4-01",
+      "name": "disposable database and owner role guard",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-02",
+      "name": "all 12 table RLS/force inventory",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-03",
+      "name": "same-scope SELECT and writer INSERT",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-04",
+      "name": "reader INSERT/UPDATE/DELETE denied",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-05",
+      "name": "unmapped and owner hidden/denied",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-06",
+      "name": "cross-tenant/company/environment SELECT/INSERT/UPDATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-07",
+      "name": "composite FK cross-scope rejection",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-08",
+      "name": "direct login and SET ROLE/SET SESSION AUTHORIZATION attempts",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-09",
+      "name": "immutable table UPDATE/DELETE/TRUNCATE denied",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-10",
+      "name": "head rev-only update and stale CAS",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-11",
+      "name": "scope head lock then project history serialization",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-12",
+      "name": "genesis contention and rollback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-13",
+      "name": "atomic proposal+notice on failure",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-14",
+      "name": "archived revision read and stale proposal rejection",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-15",
+      "name": "restore external head mismatch",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-16",
+      "name": "trusted task/project/role/agent reference mismatch",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-17",
+      "name": "office world/revision/epoch/freshness mismatch",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-18",
+      "name": "authentication/revocation and connection pool isolation",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-19",
+      "name": "real HTTP cache/no data leak",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-20",
+      "name": "canonical T1 event publication and independent acceptance",
+      "status": "NOT_RUN"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "revision": "ORG-05R4",
+  "base": "94eefafee221f42a070088d82805d0a1fe685186",
+  "pins": {
+    "org": "94eefafee221f42a070088d82805d0a1fe685186",
+    "core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+    "d3": "f6cde1c6dece8423c1f809cee9896101f76b2150",
+    "ui": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "a5": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "tables": [
+    {
+      "name": "org_revision",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_head",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_unit",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_position",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_definition_ref",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_instance_ref",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_binding",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "org_notice",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "op_team",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "op_member",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "op_entry",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    },
+    {
+      "name": "op_notice",
+      "scope": [
+        "t",
+        "c",
+        "e"
+      ],
+      "storage": "PG_SCHEMA_R4.sql",
+      "write": "fixture-only",
+      "acceptance": "NOT_RUN"
+    }
+  ],
+  "files": {
+    "PG_SCHEMA_R4.sql": "isolated schema, 25 RLS policies, privilege boundary",
+    "ARCHITECTURE_DELTA.md": "owner crosswalk and gaps",
+    "READ_API_BOUNDARY.md": "read-only API preconditions, no route",
+    "ACCEPTANCE_MATRIX.json": "future acceptance cases",
+    "TEST_EVIDENCE.json": "actual static checks only",
+    "HANDOVER.md": "maintenance and next",
+    "SHA256SUMS": "new-file manifest"
+  },
+  "dependencies": [
+    "PostgreSQL 17 candidate (not installed/executed)",
+    "R3 exact two SQL sources",
+    "Core D3 evidence metadata"
+  ],
+  "api": "no route",
+  "events": "no canonical publish",
+  "product_changes": 0
+}
