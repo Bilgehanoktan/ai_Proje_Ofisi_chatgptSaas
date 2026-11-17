@@ -9,8 +9,8 @@
   },
   "command": "tsc --strict --target ES2020 --module commonjs --outDir /tmp/a5test office/engine/premiumDynamicFloors.ts && A5_MODEL=/tmp/a5test/premiumDynamicFloors.js node --test tests/premium-dynamic-floors.test.cjs",
   "actual": {
-    "tests": 12,
-    "pass": 12,
+    "tests": 15,
+    "pass": 15,
     "fail": 0,
     "strict_compile": "PASS",
     "scope": "isolated fixture"
@@ -27,11 +27,14 @@
     "invalid floor/portal/actor",
     "collision and jump",
     "immutable model",
-    "reciprocal transfer hold/cancel"
+    "reciprocal transfer hold/cancel",
+    "passive cabin disabled",
+    "FIFO completed head",
+    "two portal queues"
   ],
   "blobs": {
-    "ai-company-os-frontend/office/engine/premiumDynamicFloors.ts": "80c72de3d0b4943a7973378acaecf61ecc3e3ee3",
-    "ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs": "dc15928a1f43ec6a9113620bd3ef9fa15c2cb3c8"
+    "ai-company-os-frontend/office/engine/premiumDynamicFloors.ts": "d53d8c78b6d980ddc531d2e0a3ea89f6d8e992c2",
+    "ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs": "209789688fa45c3fc44bfc0293a8d77513cbefc9"
   },
   "full_build": "NOT_RUN",
   "native": "NOT_RUN",

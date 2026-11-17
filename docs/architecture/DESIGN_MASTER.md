@@ -216,4 +216,4 @@ Inspect source hashes before test. For root replacement/restore preserve evidenc
 
 
 ## UX-PREMIUM-07-A5R1 — isolated dynamic floor model
-[A5R1 architecture and limitations](../UX-PREMIUM-07/A5R1_DYNAMIC_FLOORS.md). 12/12 isolated synthetic tests, two additive source files. A4R2 Windows/native and full build NOT_RUN; OfficeV0 JOIN_HOLD. No actual floor activation, no core merge or normative change.
+[A5R1 architecture and limitations](../UX-PREMIUM-07/A5R1_DYNAMIC_FLOORS.md). 15/15 isolated synthetic tests, two additive source files; passive cabin initialization corrected. A4R2 Windows/native and full build NOT_RUN; OfficeV0 JOIN_HOLD. No actual floor activation, no core merge or normative change.
