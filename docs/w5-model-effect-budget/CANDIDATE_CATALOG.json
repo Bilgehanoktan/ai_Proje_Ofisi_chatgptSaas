@@ -1,6 +1,6 @@
 {
   "baseline": "167e5239882dc7b49bd96647412fe6761da0be5e",
-  "status": "PARTIAL_ISOLATED_TEST_PASS_NO_PRODUCT_PROMOTION",
+  "status": "ISOLATED_29_TESTS_PASS_NO_PRODUCT_PROMOTION",
   "pins": [
     {
       "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
@@ -26,6 +26,21 @@
       "path": "tests/w5/test_model_profile_review.py",
       "git_blob": "b48e46c9128832fb20f49e9dd9aa33086aee2e08",
       "lines": 94
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+      "git_blob": "b244e311574fd2fb31b7e30a7f4026095cbca8f2",
+      "lines": 54
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "git_blob": "fa0f058486cc9dfe263fa9562f1bd4387b91760b",
+      "lines": 125
+    },
+    {
+      "path": "tests/w5/test_router_cost_review.py",
+      "git_blob": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2",
+      "lines": 110
     }
   ],
   "architecture": "D08/D14/D21; D30-05A; existing T1 admission is not model effect authority",
@@ -35,14 +50,27 @@
       "EffectBudgetReview",
       "ModelProfile",
       "CapabilityQuery",
-      "CapabilityReview"
+      "CapabilityReview",
+      "CostProfile",
+      "CostEstimate",
+      "RouteMetric",
+      "RoutePolicy",
+      "RouteCandidate",
+      "RoutingReview"
     ],
     "functions": [
       "inspect_effect_budget",
       "valid_profile",
       "profile_digest",
       "catalog_digest",
-      "inspect_capabilities"
+      "inspect_capabilities",
+      "valid_currency",
+      "cost_digest",
+      "estimate_cost",
+      "_digest",
+      "metrics_digest",
+      "policy_digest",
+      "inspect_route"
     ],
     "dependencies": [
       "runtime_binding",
@@ -57,7 +85,9 @@
       "profile_registry",
       "dataclasses",
       "hashlib",
-      "json"
+      "json",
+      "capability_resolver",
+      "cost_estimator"
     ],
     "api": [],
     "db_changes": [],
@@ -67,9 +97,15 @@
     "effect_budget": {
       "authored_methods": 9,
       "authored_cases": 32,
-      "executed": 0,
-      "status": "NOT_RUN",
-      "reason": "Container git ls-remote failed DNS; no exact checkout"
+      "executed": 9,
+      "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
+      "previous": {
+        "executed": 0,
+        "status": "NOT_RUN",
+        "reason": "Container git ls-remote failed DNS; no exact checkout"
+      },
+      "passed": 9,
+      "evidence": "docs/w5-model-effect-budget/ROUTER_COST_EFFECT_TEST_EVIDENCE.json"
     },
     "profile_capability": {
       "authored_methods": 10,
@@ -78,6 +114,21 @@
       "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
       "verified_source_files": 16,
       "evidence": "docs/w5-model-effect-budget/PROFILE_CAPABILITY_TEST_EVIDENCE.json"
+    },
+    "router_cost": {
+      "authored_methods": 10,
+      "executed": 10,
+      "passed": 10,
+      "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
+      "evidence": "docs/w5-model-effect-budget/ROUTER_COST_EFFECT_TEST_EVIDENCE.json"
+    },
+    "combined": {
+      "executed": 29,
+      "passed": 29,
+      "verified_source_files": 42,
+      "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
+      "tested_commit": "76d3997f70bbe80117304557b6576dfa07ba32bb",
+      "evidence": "docs/w5-model-effect-budget/ROUTER_COST_EFFECT_TEST_EVIDENCE.json"
     }
   },
   "scores": {
@@ -88,20 +139,46 @@
     "No per-invocation reservation identity in current schema",
     "No independent custody or current readback",
     "Global product manifest unchanged; candidates not promoted",
-    "Direct full checkout blocked by DNS; effect/budget suite still NOT_RUN",
+    "Direct full checkout remains DNS-blocked; exact 42-file dependency subset recovered and 29 unit tests passed; full integration not run",
     "Revocation/concurrency/restore acceptance remains open",
-    "Real data taxonomy, provider profiles, prices, latency limits, ranking and scoring not approved; no defaults selected"
+    "Real data taxonomy, provider profiles, prices, latency limits, ranking and scoring not approved; no defaults selected",
+    "No authenticated live policy/metrics, quota/risk/revocation proof, routing decision record or token accounting implementation; no actual provider, token charge or reservation"
   ],
-  "next": "In parallel: recover exact effect/budget dependencies and execute its nine tests; prepare policy-aware router and cost estimator design using explicit pinned policies only, preserving HOLD and no final selection until budget/effect proof. Recheck paths against current parallel branches before editing. No shared source modifications.",
+  "next": "In parallel on W5, design immutable RoutingDecisionRecord and distinct estimated/reserved/actual/reconciled Token Accounting candidate; bind explicit query, policy, catalog, metrics and outcomes. Do not infer actual cost or introduce production defaults. Recheck parallel branches and rerun 29 tests plus new tests. Real per-invocation receipt, independent authority, actual DB/provider acceptance remain HOLD.",
   "rollback": "Revert candidate commits on isolated branch only.",
   "changes": [
     "Expanded diagnostic fixture tests",
     "Bind attempt, current lease lineage, adapter identity and strict reservation integer types",
     "Add immutable disabled ModelProfile and canonical profile/catalog digest",
     "Filter candidates by explicit digest allowlist, data/region, complexity, capability, token boundaries; no authority or ranking",
-    "Run ten actual isolated tests with 16 exact source file pins"
+    "Run ten actual isolated tests with 16 exact source file pins",
+    "Add explicit pinned cost estimator with integer minor-unit component-wise ceiling and overflow rejection",
+    "Add policy-aware diagnostic router with capability, scope/epoch, allowlist, cost/latency and metrics pin checks; only SAMPLE eligible, no winner",
+    "Recover exact dependency subset from immutable commit and pass all 29 unit tests; preserve former NOT_RUN evidence"
   ],
   "conflict_review": {
+    "scope": "Six current parallel Model Gateway directories directly inspected before edit; router.py and cost_estimator.py absent. No exhaustive merge proof.",
+    "branches": [
+      "integration/0228-d3-rls-fixture",
+      "integration/unified-u3a-product-acceptance",
+      "planning/org-04-candidate-scale",
+      "integration/p10j24b-source-recovery",
+      "integration/ux-premium-07-a5r3-floor-render",
+      "planning/ux-premium-07-a6-review"
+    ],
+    "deferred": "sample_adapter.py differs on Office branches; unchanged. Existing registry, fallback, provider and runtime files unchanged.",
+    "new_source_paths_only": true
+  },
+  "design_choices": [
+    "D0 run-scoped metadata, not a tenant-wide production catalog",
+    "One profile per exact adapter id/revision and one per provider/model/revision within a D0 catalog; provisional engineering constraint",
+    "Catalog digest order independent; returned digest sorting is not ranking",
+    "Explicit supplied allowlist is diagnostic only, not independently authenticated policy",
+    "Component-wise upward rounding of explicit token rates in minor units is provisional D0 arithmetic, not approved billing formula",
+    "Cost and upper latency are explicit pinned synthetic inputs, not measured or approved production limits",
+    "SAMPLE-only screening and digest ordering; no ranking, selection, fallback or execution"
+  ],
+  "previous_conflict_review": {
     "scope": "Seven parallel branch heads directly inspected via model_gateway directory listings; tests/w5 absent on each; compare endpoint capped at 300 on two. No exhaustive merge guarantee.",
     "branches": [
       "integration/0227-local-environment-preflight",
@@ -114,11 +191,5 @@
     ],
     "deferred": "sample_adapter.py differs across branches; no edit. Common registry/provider/fallback/runtime pins match.",
     "new_paths_only": true
-  },
-  "design_choices": [
-    "D0 run-scoped metadata, not a tenant-wide production catalog",
-    "One profile per exact adapter id/revision and one per provider/model/revision within a D0 catalog; provisional engineering constraint",
-    "Catalog digest order independent; returned digest sorting is not ranking",
-    "Explicit supplied allowlist is diagnostic only, not independently authenticated policy"
-  ]
+  }
 }
