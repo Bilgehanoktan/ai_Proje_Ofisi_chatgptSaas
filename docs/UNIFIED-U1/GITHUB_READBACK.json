@@ -1,0 +1,79 @@
+{
+  "revision": "UNIFIED-U1",
+  "source_commit": "0d28446db93a55bfb172d678956864b3a714e66c",
+  "source_tree": "abee746c2cdd97ae2b97a6b43c4134e2f9c32860",
+  "base": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+  "branch": "integration/unified-u1-core-ui-office",
+  "product_files": 503,
+  "manifest_entries": 502,
+  "remote_path_size_match": 502,
+  "old_ui_manifest_records_unchanged": 490,
+  "old_ui_product_blobs_unchanged": 490,
+  "product_case_aliases": [],
+  "missing": [],
+  "unlisted": [],
+  "removed": [],
+  "added": [
+    "catalog/revisions/TECHNICAL_CATALOG_UNIFIED_U1.json",
+    "docs/UNIFIED-U1/INTEGRATION_PLAN.md",
+    "docs/UNIFIED-U1/TEST_EVIDENCE.json",
+    "docs/UNIFIED-U1/THREE_WAY_SCOPE.json",
+    "handover/UNIFIED_U1_CURRENT.json",
+    "product/ai-company-os-frontend/app/office/premium/unified/page.tsx",
+    "product/ai-company-os-frontend/office/components/UnifiedOfficePreview.tsx",
+    "product/ai-company-os-frontend/office/engine/premiumDynamicFloors.ts",
+    "product/ai-company-os-frontend/office/engine/premiumFloorRender.ts",
+    "product/ai-company-os-frontend/office/engine/premiumFloorSvg.ts",
+    "product/ai-company-os-frontend/office/engine/premiumFloorTraffic.ts",
+    "product/ai-company-os-frontend/office/engine/unifiedOfficePreview.ts",
+    "product/ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs",
+    "product/ai-company-os-frontend/tests/premium-floor-render.test.cjs",
+    "product/ai-company-os-frontend/tests/premium-floor-traffic.test.cjs",
+    "product/ai-company-os-frontend/tests/unified-office-preview.test.cjs",
+    "progress/UNIFIED_U1_MATRIX_24.json"
+  ],
+  "changed": [
+    "PROJECT_INDEX.md",
+    "docs/architecture/DESIGN_MASTER.md",
+    "handover/NEXT_STEP_UI.md",
+    "product/SOURCE_MANIFEST.json",
+    "product/ai-company-os-frontend/app/office/premium/page.tsx"
+  ],
+  "exact_source_blobs": {
+    "office/engine/premiumDynamicFloors.ts": "d53d8c78b6d980ddc531d2e0a3ea89f6d8e992c2",
+    "office/engine/premiumFloorRender.ts": "305ce5e5757c26a7a619e39115e49264ddfe9b7d",
+    "office/engine/premiumFloorSvg.ts": "5007c2a02b4ca33490bcf9681d2a0a7ef58a9b4f",
+    "office/engine/premiumFloorTraffic.ts": "937773a16328451045d447ab267723ef68adfd55",
+    "tests/premium-dynamic-floors.test.cjs": "209789688fa45c3fc44bfc0293a8d77513cbefc9",
+    "tests/premium-floor-render.test.cjs": "85d1a58643d8be75041ec1ad66e6b16cb13dd792",
+    "tests/premium-floor-traffic.test.cjs": "53145d8869c053ea8156c96fc8082b3cd7baf5d8",
+    "office/engine/unifiedOfficePreview.ts": "e31d2d535a0d4a4a566a090d0d3236937a51b1d5",
+    "office/components/UnifiedOfficePreview.tsx": "059a55f5a5c939bc54a7ead4e45f0b339c71d70b",
+    "app/office/premium/unified/page.tsx": "fb6cf1fe045f216df1ad4a24cb72eb6d42f3219f",
+    "app/office/premium/page.tsx": "2a21f807a63e8808da56cd9c980882244c3df05b",
+    "tests/unified-office-preview.test.cjs": "a9ed8f9200ad136464e9ff491ce2b2d5b334c241"
+  },
+  "core_identical_product_blobs": 372,
+  "core_backend_differences": [
+    "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py"
+  ],
+  "observed_heads_before": {
+    "integration/0227-local-environment-preflight": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "integration/p10j23-premium-management-eds": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+  },
+  "observed_heads_after": {
+    "integration/0227-local-environment-preflight": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "integration/p10j23-premium-management-eds": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+  },
+  "other_heads_unchanged": true,
+  "manifest_blob": "335895df70e5702d2d7ab26c8a737de9a5bd98e1",
+  "full_local_checkout": "BLOCKED_DNS",
+  "full_byte_audit": "NOT_RUN",
+  "scope": "single-parent dev branch, exact source transfer; no git merge, no main, no CI",
+  "full_build": "NOT_RUN",
+  "join": "JOIN_HOLD"
+}
