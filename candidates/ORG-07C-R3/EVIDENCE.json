@@ -1,0 +1,267 @@
+{
+  "revision": "ORG-07C-R3",
+  "base": "3ad85986e3e55e2b89306f15fef93b8c116a886e",
+  "branch_count": 200,
+  "relevant_heads": [
+    {
+      "name": "integration/p10j24b-source-recovery",
+      "sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1"
+    },
+    {
+      "name": "integration/unified-u3a-product-acceptance",
+      "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+    },
+    {
+      "name": "integration/w5-ext-06-skill-studio",
+      "sha": "ba20cd64eba0f09390818c294ae8894fab9a3acf"
+    },
+    {
+      "name": "planning/org-05-integration-readiness",
+      "sha": "c2e15eaa31c17fe6a4c91aaa3aa7e446b59bc235"
+    },
+    {
+      "name": "planning/org-05r2-persistence-contract",
+      "sha": "85fe0f912c33b9b1b984f85ae1ba96b6fd3711a0"
+    },
+    {
+      "name": "planning/org-05r3-durable-operations",
+      "sha": "94eefafee221f42a070088d82805d0a1fe685186"
+    },
+    {
+      "name": "planning/org-05r4-controlled-integration",
+      "sha": "49499807a9a0c37d34375a17d1f5fbacc31ac4b3"
+    },
+    {
+      "name": "planning/org-05r4-pg-preflight",
+      "sha": "fd083f15bd8523aed5130ade021ed5d9b079d27a"
+    },
+    {
+      "name": "planning/org-05r5-pg-operations",
+      "sha": "a49c20d8e0e9d1e69400a710385a5434b43f577c"
+    },
+    {
+      "name": "planning/org-05r5r2-evidence-review",
+      "sha": "80bc6f4e4d46e9341660e7e7a85ba5a917168c54"
+    },
+    {
+      "name": "planning/org-05r5r2-exec-auth-fix",
+      "sha": "90ffa42da6cb1b2b66b01c22210cd63b09f0f700"
+    },
+    {
+      "name": "planning/org-05r5r2-exec-locale-fix",
+      "sha": "cd8b522e6b0e996cd4747acc9124a8f46446a1fa"
+    },
+    {
+      "name": "planning/org-05r5r2-execution-preflight",
+      "sha": "51c8ed415cb4e6120d502c5d23b1979413979982"
+    },
+    {
+      "name": "planning/org-05r5r2-pg-evidence",
+      "sha": "ba6c72a2508e3eab579c33f48e52008d1d601897"
+    },
+    {
+      "name": "planning/org-05r5r3-isolated-pg-launch",
+      "sha": "1d0d587d8e42a2f0324712e614b7a85d6245cffa"
+    },
+    {
+      "name": "planning/org-06-canonical-runtime-bridge",
+      "sha": "17be56406408d572ebc66cf6fe7c1b6d83f18d76"
+    },
+    {
+      "name": "planning/org-06r2-sqlite-preflight",
+      "sha": "fd91b58e030e4dd74274a58878c48d0616456b34"
+    },
+    {
+      "name": "planning/org-07a-studio-read-transport",
+      "sha": "a2f4461d558af0f69e51cf1570ccea64b7d9ac20"
+    },
+    {
+      "name": "planning/org-07b-original-sqlite-api",
+      "sha": "601cba1ef3108a381adb6bf8dd8a67e763eb744d"
+    },
+    {
+      "name": "planning/org-07c-r2-manifest-preflight",
+      "sha": "3ad85986e3e55e2b89306f15fef93b8c116a886e"
+    },
+    {
+      "name": "planning/org-07c-studio-product-review",
+      "sha": "73693e2b8864e3eb735bba40f2935191c0d83bef"
+    },
+    {
+      "name": "planning/org-08-office-runtime-readback",
+      "sha": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352"
+    },
+    {
+      "name": "planning/ux-premium-07-a6-review",
+      "sha": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+    },
+    {
+      "name": "planning/0229-d4-r6-canonical-readiness",
+      "sha": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a"
+    },
+    {
+      "name": "planning/0230-d5-intent-identity",
+      "sha": "49fbe17a0c74cb8cd0dc5a575e8bf381c9562ac1"
+    },
+    {
+      "name": "planning/0230-d5b-authority-fence",
+      "sha": "585b2eab9558de57512343ed5c43f349e38bc3cf"
+    },
+    {
+      "name": "planning/0230-d5c-protected-reader",
+      "sha": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21"
+    },
+    {
+      "name": "planning/0230-d5c-r1-t1-recovery",
+      "sha": "ed278389047e10b75c8e31d6fa52f7cd03c16cef"
+    },
+    {
+      "name": "workstream/w5-j-regression-acceptance",
+      "sha": "147502d831ab146b8825585fc7ac390f951beb84"
+    }
+  ],
+  "tests": {
+    "engine": "isolated V8 pure functions; CLI not run",
+    "results": [
+      {
+        "name": "exact",
+        "pass": true,
+        "actual": "REVIEW_MATCH_ONLY"
+      },
+      {
+        "name": "CRLF",
+        "pass": true,
+        "actual": "REVIEW_MATCH_ONLY"
+      },
+      {
+        "name": "blocked",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "commit",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "scope",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "count",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "dependency",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "extra pin",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "environment",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "exit",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "boolean exit",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "not run",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "missing log",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "missing extra",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "duplicate",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong name",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "skip",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "fail",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong total",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "extra output",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong class",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "wrong extra",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "oversize",
+        "pass": true,
+        "actual": "HOLD"
+      },
+      {
+        "name": "null",
+        "pass": true,
+        "actual": "HOLD"
+      }
+    ],
+    "pass": 24
+  },
+  "actual_owner_report": {
+    "ref": "fd91b58e030e4dd74274a58878c48d0616456b34",
+    "blob": "e1bb64db0f1724fad08ce2ca472a9adb08da4cec",
+    "review": {
+      "status": "HOLD",
+      "reason": "OWNER_RUN_NOT_PASS",
+      "custody": "UNATTESTED",
+      "activation": "HOLD",
+      "canonical_IAM": "HOLD",
+      "independent": "HOLD",
+      "product_registration": "NOT_APPLIED"
+    }
+  },
+  "product_changes": 0,
+  "original_runtime": "11+1 NOT_RUN",
+  "full_checkout": "NOT_RUN",
+  "iam": "HOLD",
+  "activation": "HOLD"
+}
