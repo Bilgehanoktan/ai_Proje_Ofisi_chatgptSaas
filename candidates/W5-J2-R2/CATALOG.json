@@ -1,0 +1,504 @@
+{
+  "revision": "W5-J2-R2",
+  "parent": "d8cf5505444cb9e2a2dca2a3e054b92e0d33d349",
+  "kind": "isolated test fixture, no product changes",
+  "files": {
+    "allocation_fixture.py": {
+      "symbols": [
+        {
+          "symbol": "Hold",
+          "line": 37,
+          "end": 38,
+          "kind": "ClassDef"
+        },
+        {
+          "symbol": "LostAck",
+          "line": 40,
+          "end": 41,
+          "kind": "ClassDef"
+        },
+        {
+          "symbol": "require",
+          "line": 44,
+          "end": 45,
+          "kind": "FunctionDef"
+        },
+        {
+          "symbol": "encode",
+          "line": 48,
+          "end": 49,
+          "kind": "FunctionDef"
+        },
+        {
+          "symbol": "AllocationFixture",
+          "line": 52,
+          "end": 237,
+          "kind": "ClassDef"
+        },
+        {
+          "symbol": "AllocationFixture.__init__",
+          "line": 54,
+          "end": 55,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture.connect",
+          "line": 57,
+          "end": 60,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture.seed",
+          "line": 62,
+          "end": 83,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._budget",
+          "line": 86,
+          "end": 88,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._pool",
+          "line": 91,
+          "end": 93,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._member",
+          "line": 96,
+          "end": 98,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._invariant",
+          "line": 100,
+          "end": 140,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._transaction",
+          "line": 143,
+          "end": 166,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._fault",
+          "line": 169,
+          "end": 170,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture._receipt",
+          "line": 173,
+          "end": 175,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture.allocate",
+          "line": 177,
+          "end": 191,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture.advance",
+          "line": 194,
+          "end": 217,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture.close_unused",
+          "line": 219,
+          "end": 225,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationFixture.readback",
+          "line": 227,
+          "end": 237,
+          "kind": "method"
+        }
+      ],
+      "sha256": "3ba94906c626034c9b0a01758e6cc2bccdab71206decf6a222e51898fbf70e53"
+    },
+    "test_allocation_fixture.py": {
+      "symbols": [
+        {
+          "symbol": "pin",
+          "line": 12,
+          "end": 12,
+          "kind": "FunctionDef"
+        },
+        {
+          "symbol": "binding",
+          "line": 15,
+          "end": 23,
+          "kind": "FunctionDef"
+        },
+        {
+          "symbol": "AllocationTests",
+          "line": 26,
+          "end": 165,
+          "kind": "ClassDef"
+        },
+        {
+          "symbol": "AllocationTests.setUp",
+          "line": 27,
+          "end": 30,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.read",
+          "line": 31,
+          "end": 31,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.alloc",
+          "line": 32,
+          "end": 35,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.step",
+          "line": 36,
+          "end": 38,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.consume",
+          "line": 39,
+          "end": 39,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.usage",
+          "line": 40,
+          "end": 40,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.settle",
+          "line": 41,
+          "end": 41,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.unchanged",
+          "line": 42,
+          "end": 45,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_allocation_no_double_debit",
+          "line": 46,
+          "end": 47,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_multiple_invocations_same_run",
+          "line": 48,
+          "end": 49,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_other_run_independent_pool",
+          "line": 50,
+          "end": 51,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_no_borrow_from_other_run",
+          "line": 52,
+          "end": 52,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_overallocation_after_partial",
+          "line": 53,
+          "end": 53,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_stale_cas",
+          "line": 54,
+          "end": 54,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_admission_alias",
+          "line": 55,
+          "end": 55,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_scope_identity_mismatch",
+          "line": 56,
+          "end": 58,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_duplicate_reservation",
+          "line": 59,
+          "end": 59,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_duplicate_key",
+          "line": 60,
+          "end": 60,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_duplicate_invocation",
+          "line": 61,
+          "end": 61,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_duplicate_membership",
+          "line": 62,
+          "end": 62,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_duplicate_receipt_cross_member",
+          "line": 63,
+          "end": 63,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_tx_alias",
+          "line": 64,
+          "end": 64,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_cross_role_pin_alias",
+          "line": 65,
+          "end": 65,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_wrong_consume_pin",
+          "line": 66,
+          "end": 66,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_cannot_usage_without_consume",
+          "line": 67,
+          "end": 67,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_cannot_consume_twice",
+          "line": 68,
+          "end": 68,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_unknown_before_ack",
+          "line": 69,
+          "end": 70,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_unknown_after_consume",
+          "line": 71,
+          "end": 71,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_unknown_cannot_zero_fill",
+          "line": 72,
+          "end": 72,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_multiple_unknowns",
+          "line": 73,
+          "end": 73,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_usage_ceiling",
+          "line": 74,
+          "end": 74,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_token_ceiling",
+          "line": 75,
+          "end": 75,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_bool_not_cost",
+          "line": 76,
+          "end": 76,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_reconcile_once",
+          "line": 77,
+          "end": 78,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_known_zero_distinct_from_unknown",
+          "line": 79,
+          "end": 79,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_reconcile_wrong_usage_pin",
+          "line": 80,
+          "end": 80,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_terminal_release_blocked_for_member",
+          "line": 81,
+          "end": 81,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_terminal_no_effect_release_reconciled_blocked",
+          "line": 82,
+          "end": 82,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_unused_release_once",
+          "line": 83,
+          "end": 84,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_release_while_unknown",
+          "line": 85,
+          "end": 85,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_allocate_fault_all_stages",
+          "line": 86,
+          "end": 88,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_reconcile_fault_all_stages",
+          "line": 89,
+          "end": 92,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_lost_ack_after_commit",
+          "line": 93,
+          "end": 95,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_lost_ack_reconcile",
+          "line": 96,
+          "end": 99,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_before_commit_no_record",
+          "line": 100,
+          "end": 100,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_writer_lock_and_stale_retry",
+          "line": 101,
+          "end": 108,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_no_dirty_read",
+          "line": 109,
+          "end": 113,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_receipt_drift_detected",
+          "line": 114,
+          "end": 118,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_r1_crosswalk_reuse",
+          "line": 119,
+          "end": 120,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_journal_missing_role_detected",
+          "line": 122,
+          "end": 126,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_journal_role_target_drift",
+          "line": 127,
+          "end": 131,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_admission_tx_other_run_alias",
+          "line": 132,
+          "end": 132,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_true_two_writer_allocation_contention",
+          "line": 133,
+          "end": 153,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_mixed_budget_currency_seed_rejected",
+          "line": 154,
+          "end": 157,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_index_body_drift",
+          "line": 159,
+          "end": 163,
+          "kind": "method"
+        },
+        {
+          "symbol": "AllocationTests.test_released_capacity_not_reallocated_in_same_run",
+          "line": 164,
+          "end": 165,
+          "kind": "method"
+        }
+      ],
+      "sha256": "d2a9d2b6059a929ff2588834187dbdf9abd57b71aec199259765060c77dceeb1"
+    }
+  },
+  "table_catalog": {
+    "b": "single fixture budget CAS and balance",
+    "pool": "pre-reserved run pool and immutable synthetic owner fields",
+    "member": "R1 full row JSON with indexed unique identity, state and ceilings",
+    "receipt": "per-member role + globally unique fixture pin and tx",
+    "journal": "three fixture roles per command; no canonical event/outbox/audit"
+  },
+  "dependencies": [
+    "Python stdlib json/sqlite3/contextlib/pathlib/unittest/threading/hashlib",
+    "exact R1 membership_review.py and test_membership_review.py"
+  ],
+  "api_changes": [],
+  "canonical_db_changes": [],
+  "external_dependencies": [],
+  "architecture": "OWNER_MAPPING.md",
+  "maintenance": "HANDOVER.md",
+  "acceptance": "ACCEPTANCE_GATES.json",
+  "tests": "TEST_EVIDENCE.json",
+  "pg_plan": "PG_ACCEPTANCE_PLAN.json"
+}
