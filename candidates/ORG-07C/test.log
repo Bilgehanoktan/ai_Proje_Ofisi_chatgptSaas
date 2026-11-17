@@ -1,0 +1,244 @@
+TAP version 13
+# Subtest: actual loopback R3 SQLite -> proxy -> central reader
+ok 1 - actual loopback R3 SQLite -> proxy -> central reader
+  ---
+  duration_ms: 88.27448
+  type: 'test'
+  ...
+# Subtest: actual HTTP expired session
+ok 2 - actual HTTP expired session
+  ---
+  duration_ms: 12.004716
+  type: 'test'
+  ...
+# Subtest: actual HTTP other tenant
+ok 3 - actual HTTP other tenant
+  ---
+  duration_ms: 4.630913
+  type: 'test'
+  ...
+# Subtest: actual HTTP unknown credential
+ok 4 - actual HTTP unknown credential
+  ---
+  duration_ms: 14.163768
+  type: 'test'
+  ...
+# Subtest: no server context does not call backend
+ok 5 - no server context does not call backend
+  ---
+  duration_ms: 1.000808
+  type: 'test'
+  ...
+# Subtest: caller authorization rejected before provider
+ok 6 - caller authorization rejected before provider
+  ---
+  duration_ms: 1.113487
+  type: 'test'
+  ...
+# Subtest: caller scope query rejected
+ok 7 - caller scope query rejected
+  ---
+  duration_ms: 1.002701
+  type: 'test'
+  ...
+# Subtest: POST rejected
+ok 8 - POST rejected
+  ---
+  duration_ms: 2.763528
+  type: 'test'
+  ...
+# Subtest: invalid port rejected
+ok 9 - invalid port rejected
+  ---
+  duration_ms: 4.603934
+  type: 'test'
+  ...
+# Subtest: credential provider failure generic
+ok 10 - credential provider failure generic
+  ---
+  duration_ms: 2.247104
+  type: 'test'
+  ...
+# Subtest: backend redirect rejected
+ok 11 - backend redirect rejected
+  ---
+  duration_ms: 1.29546
+  type: 'test'
+  ...
+# Subtest: wrong content type rejected
+ok 12 - wrong content type rejected
+  ---
+  duration_ms: 1.287548
+  type: 'test'
+  ...
+# Subtest: response cap enforced
+ok 13 - response cap enforced
+  ---
+  duration_ms: 4.445276
+  type: 'test'
+  ...
+# Subtest: bad UTF-8 rejected
+ok 14 - bad UTF-8 rejected
+  ---
+  duration_ms: 2.519042
+  type: 'test'
+  ...
+# Subtest: actual shape accepted and no identity field
+ok 15 - actual shape accepted and no identity field
+  ---
+  duration_ms: 19.419146
+  type: 'test'
+  ...
+# Subtest: parser rejects authority
+ok 16 - parser rejects authority
+  ---
+  duration_ms: 12.17491
+  type: 'test'
+  ...
+# Subtest: parser rejects dispatch
+ok 17 - parser rejects dispatch
+  ---
+  duration_ms: 12.617933
+  type: 'test'
+  ...
+# Subtest: parser rejects runtime binding
+ok 18 - parser rejects runtime binding
+  ---
+  duration_ms: 12.132476
+  type: 'test'
+  ...
+# Subtest: parser rejects extra identity
+ok 19 - parser rejects extra identity
+  ---
+  duration_ms: 4.844453
+  type: 'test'
+  ...
+# Subtest: parser rejects bad environment
+ok 20 - parser rejects bad environment
+  ---
+  duration_ms: 3.546731
+  type: 'test'
+  ...
+# Subtest: parser rejects duplicate unit
+ok 21 - parser rejects duplicate unit
+  ---
+  duration_ms: 3.099341
+  type: 'test'
+  ...
+# Subtest: parser rejects invalid unit parent
+ok 22 - parser rejects invalid unit parent
+  ---
+  duration_ms: 2.902476
+  type: 'test'
+  ...
+# Subtest: parser rejects wrong company root
+ok 23 - parser rejects wrong company root
+  ---
+  duration_ms: 3.084569
+  type: 'test'
+  ...
+# Subtest: parser rejects unknown position unit
+ok 24 - parser rejects unknown position unit
+  ---
+  duration_ms: 3.089115
+  type: 'test'
+  ...
+# Subtest: parser rejects duplicate position
+ok 25 - parser rejects duplicate position
+  ---
+  duration_ms: 2.426673
+  type: 'test'
+  ...
+# Subtest: parser rejects reporting cycle
+ok 26 - parser rejects reporting cycle
+  ---
+  duration_ms: 2.767023
+  type: 'test'
+  ...
+# Subtest: parser rejects missing manager
+ok 27 - parser rejects missing manager
+  ---
+  duration_ms: 2.405311
+  type: 'test'
+  ...
+# Subtest: parser rejects reserved role
+ok 28 - parser rejects reserved role
+  ---
+  duration_ms: 2.712321
+  type: 'test'
+  ...
+# Subtest: parser rejects bad genesis
+ok 29 - parser rejects bad genesis
+  ---
+  duration_ms: 4.205377
+  type: 'test'
+  ...
+# Subtest: parser rejects unsafe sequence
+ok 30 - parser rejects unsafe sequence
+  ---
+  duration_ms: 3.208695
+  type: 'test'
+  ...
+# Subtest: parser rejects oversized list
+ok 31 - parser rejects oversized list
+  ---
+  duration_ms: 2.594815
+  type: 'test'
+  ...
+# Subtest: invalid contract rejected at proxy
+ok 32 - invalid contract rejected at proxy
+  ---
+  duration_ms: 2.916226
+  type: 'test'
+  ...
+# Subtest: central reader clears data on denied refresh
+ok 33 - central reader clears data on denied refresh
+  ---
+  duration_ms: 4.354229
+  type: 'test'
+  ...
+# Subtest: central reader cancels pending stale response
+ok 34 - central reader cancels pending stale response
+  ---
+  duration_ms: 3.031759
+  type: 'test'
+  ...
+# Subtest: aborted request fails closed
+ok 35 - aborted request fails closed
+  ---
+  duration_ms: 0.418867
+  type: 'test'
+  ...
+# Subtest: credential provider respects abort before backend
+ok 36 - credential provider respects abort before backend
+  ---
+  duration_ms: 10.962179
+  type: 'test'
+  ...
+# Subtest: credential timeout fails closed
+ok 37 - credential timeout fails closed
+  ---
+  duration_ms: 2500.676249
+  type: 'test'
+  ...
+# Subtest: malformed server token is not forwarded
+ok 38 - malformed server token is not forwarded
+  ---
+  duration_ms: 1.332826
+  type: 'test'
+  ...
+# Subtest: SQLite bytes unchanged after all read requests
+ok 39 - SQLite bytes unchanged after all read requests
+  ---
+  duration_ms: 3.262586
+  type: 'test'
+  ...
+1..39
+# tests 39
+# suites 0
+# pass 39
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2851.531743

@@ -1,0 +1,18 @@
+{
+  "revision":"ORG-07C",
+  "status":"REVIEW_ONLY_NOT_APPLIED",
+  "files":{
+    "frontend/organizationProjection.ts":{"symbols":["organizationCap","parseOrganization","Unit","Position","OrganizationProjection"],"purpose":"Strict R3 shape, hierarchy and authority boundary"},
+    "frontend/organizationProxy.ts":{"symbols":["CredentialProvider","bounded","readOrganizationProxy"],"purpose":"Server-only fixed loopback read transport, default deny"},
+    "frontend/OrganizationReadback.tsx":{"symbols":["OrganizationReadback"],"purpose":"Historical hierarchy panel in existing Agent Studio"},
+    "make_product_patch.py":{"symbols":["PINS","blob","once","build"],"purpose":"Generate pinned frontend review patch"},
+    "tests/loopback_fixture.py":{"purpose":"Original R3 SQLite + ASGI HTTP disposable fixture"},
+    "tests/organization.test.cjs":{"purpose":"39 selected proxy/parser/reader tests"},
+    "tests/run_local.py":{"purpose":"Selected strict TypeScript compile + local loopback runner"}
+  },
+  "api":{"browser":"GET /api/demo/organization","backend":"GET /demo/v1/organization/studio-preview","registered_in_product":false,"default":"503 D0_ORGANIZATION_READ_HOLD","cache":"no-store","max_bytes":1048576,"deadline_ms":2500},
+  "db":{"existing_tables":12,"new_tables":0,"production_writes":0},
+  "dependencies":{"new":[],"observed":{"python":"3.13.5","fastapi":"0.128.2","starlette":"0.50.0","uvicorn":"0.48.0","node":"22.16.0","typescript":"5.8.3"}},
+  "authority":"HOLD",
+  "next":"ORG-07C-R2 after runtime evidence and authenticated owner context"
+}

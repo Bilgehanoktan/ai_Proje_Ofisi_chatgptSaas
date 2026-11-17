@@ -1,0 +1,160 @@
+diff --git a/product/ai-company-os-frontend/app/api/demo/organization/route.ts b/product/ai-company-os-frontend/app/api/demo/organization/route.ts
+new file mode 100644
+--- /dev/null
++++ b/product/ai-company-os-frontend/app/api/demo/organization/route.ts
+@@ -0,0 +1,7 @@
++import {readOrganizationProxy} from '../../../../features/organization/organizationProxy';
++import {localBackendPort} from '../../../../features/mvp/localBackend';
++export const dynamic='force-dynamic';
++export async function GET(request:Request){
++ try{return await readOrganizationProxy(request,localBackendPort());}
++ catch{return Response.json({mode:'D0_ORGANIZATION_READ_HOLD'},{status:503,headers:{'Cache-Control':'no-store'}});}
++}
+--- a/product/ai-company-os-frontend/features/data/projectionRead.ts
++++ b/product/ai-company-os-frontend/features/data/projectionRead.ts
+@@ -1,5 +1,6 @@
+ /** Browser-only D0 read transport. No authority, persistence, retry or live adapter. */
+-export const endpointCaps = Object.freeze({mvp:16384,admission:4096,outbox:4096,'office-workbench':4096,'task-budget':8192,lifecycle:8192,'lifecycle-prefix':8192,plan:16384} as const);
++import {organizationCap} from '../organization/organizationProjection';
++export const endpointCaps = Object.freeze({mvp:16384,admission:4096,outbox:4096,'office-workbench':4096,'task-budget':8192,lifecycle:8192,'lifecycle-prefix':8192,plan:16384,organization:organizationCap} as const);
+ export type ProjectionKey=keyof typeof endpointCaps;
+ export type ReadState<T>={phase:'idle'|'loading';data:null}|{phase:'historical';data:T}|{phase:'hold';data:null;reason:'TIMEOUT'|'READBACK_HOLD'};
+ export type Parser<T>=(raw:unknown)=>T|null;
+--- a/product/ai-company-os-frontend/features/data/projectionRegistry.ts
++++ b/product/ai-company-os-frontend/features/data/projectionRegistry.ts
+@@ -1,4 +1,5 @@
+ /** Endpoint and parser pair are fixed, not caller-selected. */
++import {parseOrganization} from '../organization/organizationProjection';
+ import {parseMvpDiagnostics} from '../mvp/mvpDiagnostics';
+ import {parseAdmissionProjection} from '../mvp/admissionProjection';
+ import {parseOutboxProjection} from '../mvp/outboxProjection';
+@@ -8,7 +9,7 @@
+ import {parseLifecyclePrefix} from '../mvp/lifecyclePrefix';
+ import {parsePlanProjection} from '../core-review/planProjection';
+ import {createProjectionReader,type Parser,type ProjectionKey,type ReadState} from './projectionRead';
+-export const projectionParsers=Object.freeze({mvp:parseMvpDiagnostics,admission:parseAdmissionProjection,outbox:parseOutboxProjection,'office-workbench':parseOfficeWorkbench,'task-budget':parseTaskBudgetProjection,lifecycle:parseLifecycleProjection,'lifecycle-prefix':parseLifecyclePrefix,plan:parsePlanProjection} satisfies Record<ProjectionKey,Parser<unknown>>);
++export const projectionParsers=Object.freeze({mvp:parseMvpDiagnostics,admission:parseAdmissionProjection,outbox:parseOutboxProjection,'office-workbench':parseOfficeWorkbench,'task-budget':parseTaskBudgetProjection,lifecycle:parseLifecycleProjection,'lifecycle-prefix':parseLifecyclePrefix,plan:parsePlanProjection,organization:parseOrganization} satisfies Record<ProjectionKey,Parser<unknown>>);
+ export type ProjectionValue<K extends ProjectionKey>=NonNullable<ReturnType<(typeof projectionParsers)[K]>>;
+ export function registeredReader<K extends ProjectionKey>(key:K,publish:(state:ReadState<ProjectionValue<K>>)=>void,transport:typeof fetch=fetch,timeoutMs=4000){
+  if(!Object.hasOwn(projectionParsers,key))throw Error('D0_REGISTRY_HOLD');
+--- a/product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx
++++ b/product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx
+@@ -7,6 +7,7 @@
+ import {roleTaskContext} from './studioContext';
+ import {organizationTemplate} from './studioGovernance';
+ import styles from './EvidenceStudio.module.css';
++import OrganizationReadback from '../organization/OrganizationReadback';
+ import AgentRoleProfile from './AgentRoleProfile';
+ export default function AgentDirectory({roles,selected,onSelect}:{roles:readonly Role[];selected:string|undefined;onSelect:(role:Role)=>void}){
+  const [query,setQuery]=useState(''),[department,setDepartment]=useState(''),[sort,setSort]=useState(false);
+@@ -21,6 +22,7 @@
+   <header className={styles.agentHero}><div><div className="eyebrow">AGENT STUDIO / D0</div><h2>Organizasyon ve rol kataloğu</h2><small>İnsan CEO nihai otorite · statik şablonlar · raporlama hiyerarşisi kanıtı yok</small></div><span className="pill">RESERVED · HOLD</span></header>
+   <div className={styles.agentStats} aria-label="Rol kataloğu özeti"><div><small>Rol şablonu</small><strong>{roles.length}</strong></div><div><small>Departman şablonu</small><strong>{departments.length}</strong></div><div><small>Gerçek aktif çalışan</small><strong>—</strong></div><div><small>Etkin yetki</small><strong>HOLD</strong></div></div>
+   <section className="panel" aria-label="Organizasyon hedef mimarisi"><h3>Organizasyon merkezi · hedef şablon</h3>{organization?<><div className="sectiongrid"><article className="item"><h3>H01 · İnsan CEO</h3><small>Nihai karar otoritesi</small></article><article className="item"><h3>{organization.coordinator.name}</h3><small>Mantıksal operasyon koordinasyonu</small></article>{organization.groups.map(g=><article className="item" key={g.department}><h3>{g.department}</h3>{g.roles.map(r=><p key={r.id}>{r.name} · rol şablonu</p>)}</article>)}</div><p className="sub">Ayrı güven kökleri: {organization.independent.join(" · ")}. QA, bağımsız IV değildir. Gerçek personel, raporlama ataması veya grant doğrulanmadı.</p></>:<p role="status">Rol kataloğu uyuşmuyor · HOLD</p>}</section>
++  <OrganizationReadback/>
+   <div className={styles.filters}><label>Rol ara<input type="search" value={query} onChange={e=>setQuery(e.target.value)}/></label><label>Departman<select value={department} onChange={e=>setDepartment(e.target.value)}><option value="">Tümü</option>{departments.map(d=><option key={d}>{d}</option>)}</select></label><button type="button" aria-pressed={sort} onClick={()=>setSort(v=>!v)}>Rol kimliğine göre sırala</button><button type="button" onClick={()=>{setQuery('');setDepartment('');setSort(false);}}>Temizle</button></div>
+   <p role="status">{rows.length}/{roles.length} rol şablonu · gerçek instance yok</p>
+   {hidden&&<p className={styles.notice} role="status">Seçili rol filtre dışında; bağlam korunuyor. <button type="button" onClick={()=>{setQuery('');setDepartment('');}}>Seçili rolü göster</button></p>}
+diff --git a/product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx b/product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx
+new file mode 100644
+--- /dev/null
++++ b/product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx
+@@ -0,0 +1,16 @@
++'use client';
++import {useProjectionRead} from '../data/useProjectionRead';
++/** Separate historical panel; never joins role templates to runtime identity. */
++export default function OrganizationReadback(){
++ const {state,data,read,reset}=useProjectionRead('organization');
++ return <section className="panel" aria-label="Kalıcı organizasyon kayıtları">
++  <div className="bar"><div><h3>Kalıcı organizasyon kayıtları</h3><small>Sentetik tarihsel okuma · gerçek görev ataması değil</small></div><span className="pill">HOLD</span></div>
++  <button type="button" onClick={()=>void read()} disabled={state.phase==='loading'}>Organizasyonu oku</button> <button type="button" onClick={reset}>Temizle</button>
++  {state.phase==='loading'&&<p role="status">Okunuyor…</p>}
++  {state.phase==='hold'&&<p role="status">Organizasyon bağlantısı doğrulanamadı · HOLD</p>}
++  {state.phase==='idle'&&<p role="status">Kalıcı kayıt henüz okunmadı.</p>}
++  {data&&<><p role="status">Tarihsel revizyon {data.sequence} · {data.units.filter(u=>u.kind==='department').length} departman · {data.positions.length} pozisyon</p>
++   <small>Revizyon: {data.revision}</small><div className="sectiongrid">{data.units.map(u=><article className="item" key={u.id}><h3>{u.id}</h3><small>{u.kind} · üst birim: {u.parent??'—'}</small></article>)}</div>
++   <table><caption>Organizasyon pozisyonları · doluluk kaydı, aktif ajan değil</caption><thead><tr><th>Pozisyon</th><th>Birim</th><th>Rol</th><th>Yönetici</th><th>Doluluk</th></tr></thead><tbody>{data.positions.map(p=><tr key={p.id}><td>{p.id}</td><td>{p.unit}</td><td>{p.role}</td><td>{p.reports_to??'—'}</td><td>{p.occupied?'Dolu':'Boş'}</td></tr>)}</tbody></table></>}
++ </section>;
++}
+diff --git a/product/ai-company-os-frontend/features/organization/organizationProjection.ts b/product/ai-company-os-frontend/features/organization/organizationProjection.ts
+new file mode 100644
+--- /dev/null
++++ b/product/ai-company-os-frontend/features/organization/organizationProjection.ts
+@@ -0,0 +1,43 @@
++/** ORG-07C: strict R3 historical projection, never a live assignment. */
++export const organizationCap=1048576;
++const token=(v:unknown):v is string=>typeof v==='string'&&/^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$/.test(v);
++const sha=(v:unknown):v is string=>typeof v==='string'&&/^[0-9a-f]{64}$/.test(v);
++const role=(v:unknown):v is string=>typeof v==='string'&&v.length<=128&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v)&&!['independent-verifier','policy-review','w-a-witness','iv','wa','w-a','pep','policy-engine','tool-gateway-pep','h01','human-ceo'].includes(v);
++function exact(v:unknown,keys:string):v is Record<string,unknown>{
++ if(v===null||typeof v!=='object'||Array.isArray(v))return false;
++ const k=keys.split(' ');return Object.keys(v).length===k.length&&k.every(x=>Object.hasOwn(v,x));
++}
++type Kind='company'|'division'|'department'|'team';
++export type Unit={id:string;kind:Kind;parent:string|null};
++export type Position={id:string;unit:string;role:string;reports_to:string|null;occupied:boolean};
++export type OrganizationProjection={schema:'org.studio.preview.v0-D0';scope:{tenant_id:string;company_id:string;environment_id:'A0_SAMPLE_ONLY'|'A0_REVIEW_ONLY'};revision:string;sequence:number;previous_revision:string|null;units:Unit[];positions:Position[];decision:'HOLD';authoritative:false;identity_owner:'HOLD';geometry_join:'HOLD';runtime_binding:null;dispatch_allowed:false};
++export function parseOrganization(raw:unknown):OrganizationProjection|null{
++ if(!exact(raw,'schema scope revision sequence previous_revision units positions decision authoritative identity_owner geometry_join runtime_binding dispatch_allowed'))return null;
++ if(raw.schema!=='org.studio.preview.v0-D0'||raw.decision!=='HOLD'||raw.authoritative!==false||raw.identity_owner!=='HOLD'||raw.geometry_join!=='HOLD'||raw.runtime_binding!==null||raw.dispatch_allowed!==false)return null;
++ const s=raw.scope;
++ if(!exact(s,'tenant_id company_id environment_id')||!token(s.tenant_id)||!token(s.company_id)||!/^synthetic-[A-Za-z0-9_.:-]+$/.test(s.tenant_id)||!/^synthetic-[A-Za-z0-9_.:-]+$/.test(s.company_id)||(s.environment_id!=='A0_SAMPLE_ONLY'&&s.environment_id!=='A0_REVIEW_ONLY'))return null;
++ if(!sha(raw.revision)||typeof raw.sequence!=='number'||!Number.isSafeInteger(raw.sequence)||raw.sequence<1||(raw.sequence===1?raw.previous_revision!==null:!sha(raw.previous_revision))||raw.previous_revision===raw.revision)return null;
++ if(!Array.isArray(raw.units)||raw.units.length<1||raw.units.length>4096||!Array.isArray(raw.positions)||raw.positions.length>4096)return null;
++ const units=new Map<string,Unit>(),positions=new Map<string,Position>();
++ for(const u of raw.units){
++  if(!exact(u,'id kind parent')||!token(u.id)||!['company','division','department','team'].includes(u.kind as string)||(u.parent!==null&&!token(u.parent))||units.has(u.id))return null;
++  units.set(u.id,u as Unit);
++ }
++ const allowed:Record<Kind,Kind[]>={company:[],division:['company'],department:['company','division'],team:['department']};
++ if([...units.values()].filter(u=>u.kind==='company').length!==1||units.get(s.company_id)?.kind!=='company')return null;
++ for(const u of units.values())if(u.kind==='company'?u.parent!==null:u.parent===null||!allowed[u.kind].includes(units.get(u.parent)?.kind as Kind))return null;
++ for(const p of raw.positions){
++  if(!exact(p,'id unit role reports_to occupied')||!token(p.id)||!token(p.unit)||!units.has(p.unit)||!role(p.role)||(p.reports_to!==null&&!token(p.reports_to))||typeof p.occupied!=='boolean'||positions.has(p.id)||units.has(p.id))return null;
++  positions.set(p.id,p as Position);
++ }
++ const checked=new Set<string>();
++ for(const p of positions.values()){
++  const chain=new Set<string>();let id:string|null=p.id;
++  while(id!==null&&!checked.has(id)){
++   if(chain.has(id)||!positions.has(id))return null;
++   chain.add(id);id=positions.get(id)!.reports_to;
++  }
++  for(const x of chain)checked.add(x);
++ }
++ return raw as OrganizationProjection;
++}
+diff --git a/product/ai-company-os-frontend/features/organization/organizationProxy.ts b/product/ai-company-os-frontend/features/organization/organizationProxy.ts
+new file mode 100644
+--- /dev/null
++++ b/product/ai-company-os-frontend/features/organization/organizationProxy.ts
+@@ -0,0 +1,29 @@
++/** ORG-07C: server-only proxy seam. A real session owner is NOT supplied here. */
++import {organizationCap,parseOrganization} from './organizationProjection';
++export type CredentialProvider=(request:Request,signal:AbortSignal)=>Promise<string|null>;
++const headers={'Cache-Control':'no-store','Pragma':'no-cache','Vary':'Cookie, Authorization'};
++const hold=()=>Response.json({mode:'D0_ORGANIZATION_READ_HOLD'},{status:503,headers});
++function bounded<T>(work:()=>Promise<T>,signal:AbortSignal):Promise<T>{
++ return new Promise((resolve,reject)=>{
++  if(signal.aborted){reject(Error('aborted'));return;}
++  const stop=()=>{cleanup();reject(Error('aborted'));};
++  const cleanup=()=>signal.removeEventListener('abort',stop);
++  signal.addEventListener('abort',stop,{once:true});
++  Promise.resolve().then(work).then(v=>{cleanup();resolve(v);},e=>{cleanup();reject(e);});
++ });
++}
++export async function readOrganizationProxy(request:Request,port:number,credential?:CredentialProvider,transport:typeof fetch=fetch):Promise<Response>{
++ try{
++  if(request.method!=='GET'||new URL(request.url).search||request.body!==null||request.headers.has('authorization')||request.signal.aborted||!credential||!Number.isInteger(port)||port<1024||port>49151)return hold();
++  const signal=AbortSignal.any([request.signal,AbortSignal.timeout(2500)]);
++  const token=await bounded(()=>credential(request,signal),signal);
++  if(typeof token!=='string'||token.length>4096||!/^[A-Za-z0-9._~+/-]{1,4096}={0,2}$/.test(token)||signal.aborted)return hold();
++  const r=await transport(`http://127.0.0.1:${port}/demo/v1/organization/studio-preview`,{method:'GET',cache:'no-store',redirect:'error',signal,headers:{Accept:'application/json',Authorization:'Bearer '+token}});
++  if(!r.ok||r.redirected||r.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='application/json'||!r.body)return hold();
++  const stream=r.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true});let size=0,text='';
++  try{for(;;){const {done,value}=await stream.read();if(signal.aborted)throw Error('aborted');if(done)break;size+=value.byteLength;if(size>organizationCap)throw Error('cap');text+=decoder.decode(value,{stream:true});}text+=decoder.decode();}
++  finally{await stream.cancel().catch(()=>{});stream.releaseLock();}
++  const parsed=parseOrganization(JSON.parse(text));if(!parsed||signal.aborted)return hold();
++  return Response.json(parsed,{headers});
++ }catch{return hold();}
++}

@@ -1,0 +1,71 @@
+{
+  "revision": "ORG-07C",
+  "parent": "601cba1ef3108a381adb6bf8dd8a67e763eb744d",
+  "ui_base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "branch_inventory": 194,
+  "pins": {
+    "R3_and_ORG07A": {
+      "candidates/ORG-05R3/durable_ops.py": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "candidates/ORG-05R3/integration_guard.py": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+      "candidates/ORG-05R3/office_bridge.py": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+      "candidates/ORG-05R3/operations.py": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+      "candidates/ORG-05R3/operations.sql": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "candidates/ORG-05R3/org_model.py": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+      "candidates/ORG-05R3/persistence.py": "4124099a497f5bc7fd34756664c7e293055e949e",
+      "candidates/ORG-05R3/schema.sql": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "candidates/ORG-05R3/staffing.py": "e0b9078284922d281996869daa15a455572c1785",
+      "candidates/ORG-05R3/studio.schema.json": "eed9627913502ebb09222cf404f867ca305a6a44",
+      "candidates/ORG-05R3/test_durable_ops.py": "8f220550373b69c008ce66a4e74c4d1c45952efc",
+      "candidates/ORG-07A/studio_router.py": "eda507f8e5933c27568064455eccc4cf85bbba0c",
+      "candidates/ORG-07A/test_studio_original.py": "b928799ddc46fb0f49ee2b6e05199fa173777813",
+      "candidates/ORG-07A/test_studio_router.py": "7f4224907d34c0c9f26458c442afdb078db6516e"
+    },
+    "U3A": {
+      "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+      "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+      "product/ai-company-os-frontend/features/data/useProjectionRead.ts": "73ef76f14855875aa50a7e619214a5311c1393f2",
+      "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx": "bb3ad084dd62a094363a44e86805f9693400bb30"
+    }
+  },
+  "tests": {
+    "node_selected": {
+      "pass": 39,
+      "fail": 0,
+      "log": "test.log"
+    },
+    "actual_loopback_R3_SQLite": true,
+    "synthetic_resolver": true,
+    "browser_transport": "injected fetch adapter",
+    "strict_selected_tsc": "PASS",
+    "scratch_patch_exact_outputs": "8/8",
+    "post_test_pins": "14/14",
+    "sqlite_bytes_unchanged": true,
+    "original_07B_regression": "NOT_RUN this round"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0",
+    "node": "22.16.0",
+    "typescript": "5.8.3"
+  },
+  "blocked": {
+    "ORG06R2": "11+1 NOT_RUN at fd91b58e030e4dd74274a58878c48d0616456b34",
+    "real_IAM": "HOLD",
+    "full_next_build": "NOT_RUN",
+    "full_frontend_typecheck": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "full_checkout": false,
+    "product_route_registered": false,
+    "independent_acceptance": "HOLD"
+  },
+  "product_changes": 0,
+  "proposed_product_changes": {
+    "modified": 3,
+    "added": 4,
+    "unchanged_hook": 1
+  },
+  "notes": "Source candidate only. No runtime, PG, Office or W5 changes; no global maturity promotion."
+}
