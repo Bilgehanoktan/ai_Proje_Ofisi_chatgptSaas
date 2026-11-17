@@ -1,0 +1,73 @@
+{
+  "revision": "0230-D5-B",
+  "base": "49fbe17a0c74cb8cd0dc5a575e8bf381c9562ac1",
+  "classification": "ISOLATED_SOURCE_CANDIDATE",
+  "files": [
+    {
+      "file": "identity_fence_review.py",
+      "classes": [
+        "IdentityReadback"
+      ],
+      "functions": [
+        "_review",
+        "readback_digest",
+        "inspect_at_fence"
+      ]
+    },
+    {
+      "file": "test_identity_fence_review.py",
+      "classes": [
+        "IdentityFenceTests"
+      ],
+      "tests": 21
+    },
+    {
+      "file": "run_exact.py",
+      "functions": [
+        "main"
+      ]
+    },
+    {
+      "file": "SOURCE_PINS.json",
+      "pins": 15
+    },
+    {
+      "file": "test.log",
+      "tests": 40
+    },
+    {
+      "file": "HANDOVER.md"
+    },
+    {
+      "file": "PROGRESS.json"
+    }
+  ],
+  "dependencies": [
+    "existing D5 intent_identity.review_bound_intent",
+    "D4-R4 identity_binding.Binding/Review/digest",
+    "Core lifecycle.uint",
+    "Core company_coordination.Member",
+    "Core intent_authority.RootPin/D0IntentAuthority (original fixture tests)",
+    "Python stdlib"
+  ],
+  "new_api": [],
+  "new_db_tables": [],
+  "new_events": [],
+  "new_external_dependencies": [],
+  "product_changes": 0,
+  "tests": {
+    "d5_exact": 19,
+    "d5b_new": 21,
+    "combined_unique": 40,
+    "failed": 0,
+    "exact_import_pins": 15,
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "full_checkout": "NOT_RUN",
+    "real_IAM": "HOLD",
+    "PG": "NOT_RUN",
+    "T1_commit": "NOT_RUN"
+  },
+  "activation_allowed": false,
+  "rollback": "Abandon D5-B branch; no product/database mutation"
+}
