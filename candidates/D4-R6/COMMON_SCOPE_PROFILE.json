@@ -1,0 +1,70 @@
+{
+  "revision": "0229-D4-R6",
+  "status": "PROPOSED_OWNER_REVIEW",
+  "scope": [
+    "synthetic-tenant",
+    "synthetic-company",
+    "A0_SAMPLE_ONLY"
+  ],
+  "strategy": "New separate ORG fixture derived by ORG owner with explicit exact scope and role policies; do not change existing Core valid_scope or ORG A/B policies; no alias conversion or shared credentials.",
+  "existing_core": {
+    "scope": [
+      "synthetic-tenant",
+      "synthetic-company",
+      "A0_SAMPLE_ONLY"
+    ],
+    "schema": "t1_candidate",
+    "port": 55434
+  },
+  "existing_org": {
+    "scopes": [
+      [
+        "synthetic-tenant-a",
+        "synthetic-company-a",
+        "ORG_R4_SAMPLE_ONLY"
+      ],
+      [
+        "synthetic-tenant-b",
+        "synthetic-company-b",
+        "ORG_R4_SAMPLE_ONLY"
+      ]
+    ],
+    "schema": "aicos_org_r4_fixture",
+    "port": 55435
+  },
+  "new_fixture": {
+    "ddl": "NOT_CREATED",
+    "database": "NOT_ASSIGNED",
+    "port": "NOT_ASSIGNED",
+    "credentials": "separate scoped roles",
+    "cross_database_join": "NOT_ASSUMED"
+  },
+  "required_exact_join": [
+    "tenant",
+    "company",
+    "environment",
+    "org_head",
+    "org_sequence",
+    "staffing_digest",
+    "team_digest",
+    "project",
+    "plan_revision",
+    "task",
+    "run",
+    "agent",
+    "principal",
+    "policy_epoch",
+    "witness_epoch",
+    "role_revision",
+    "full_intent_digest"
+  ],
+  "negative_controls": [
+    "old ORG A/B mismatch",
+    "each tenant/company/environment mismatch",
+    "wrong project/plan/task/run/agent/principal",
+    "stale head/role/revocation",
+    "no shared credentials or RLS bypass"
+  ],
+  "independent_authority": false,
+  "source_mutations": 0
+}

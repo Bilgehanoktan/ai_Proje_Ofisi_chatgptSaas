@@ -1,0 +1,53 @@
+{
+  "revision": "0229-D4-R6",
+  "files": [
+    {
+      "file": "probe_inventory.py",
+      "functions": [
+        "expected_ids",
+        "verify_check_set"
+      ],
+      "constants": [
+        "TABLES",
+        "SCOPES",
+        "SCOPE_SUFFIXES",
+        "A_EXTRA",
+        "LOCK_IDS",
+        "EXPECTED_COUNT"
+      ]
+    },
+    {
+      "file": "probe_r2_corrected.py",
+      "type": "exact R2 copy with four inventory/config edits only",
+      "db": "16 existing t1_candidate fixture tables",
+      "actual_pg": "NOT_RUN"
+    },
+    {
+      "file": "scope_r2_corrected.json",
+      "change": "expected_probe_checks 450->454 only"
+    },
+    {
+      "file": "readiness.py",
+      "classes": [
+        "Review"
+      ],
+      "functions": [
+        "review_gates",
+        "scope_review",
+        "outcome_review"
+      ],
+      "authority": false
+    },
+    {
+      "file": "test_readiness.py",
+      "tests": 24
+    }
+  ],
+  "new_tables": [],
+  "new_api": [],
+  "new_event": [],
+  "new_product_dependencies": [],
+  "product_changes": 0,
+  "dependency": "stdlib; corrected probe retains existing psycopg dependency, not installed",
+  "rollback": "return to R5 or original R2; no migration"
+}

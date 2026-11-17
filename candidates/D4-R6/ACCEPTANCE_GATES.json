@@ -1,0 +1,70 @@
+{
+  "revision": "0229-D4-R6",
+  "classification": "READINESS_REVIEW_ONLY",
+  "core_acceptance": "12/16",
+  "no_promotion": true,
+  "gates": [
+    {
+      "id": "r2_exact_pg",
+      "status": "NOT_RUN",
+      "criteria": "Fresh R2 cluster; original policy-only seeds, corrected exact 454 IDs, separate owner probe, source/driver/ACL and stopped-server evidence"
+    },
+    {
+      "id": "r3_race_pg",
+      "status": "NOT_RUN",
+      "criteria": "Fresh R3 race stage; 9 ordered groups; original Company T1, actual blocked PID, rollback and deferred UNKNOWN"
+    },
+    {
+      "id": "r3_lost_ack_pg",
+      "status": "NOT_RUN",
+      "criteria": "Fresh R3 lost-ack stage; 3 ordered groups; real COMMIT plus injected lost ACK, independent read-only readback, no retry"
+    },
+    {
+      "id": "org_pg_26",
+      "status": "NOT_RUN",
+      "criteria": "ORG owner verifies stop of failed auth stage; fresh reviewed AUTH launcher, 26 checks and raw review; no D4 rerun of ORG work"
+    },
+    {
+      "id": "common_scope_owner_review",
+      "status": "HOLD",
+      "criteria": "Core and ORG owners agree new separate ORG fixture exact Core A triple; preserve existing guards and old profiles"
+    },
+    {
+      "id": "canonical_identity_resolver",
+      "status": "HOLD",
+      "criteria": "Authenticated principal issuer/protected resolver, full canonical intent binding, revocation and custody provenance; D0 labels not auth"
+    },
+    {
+      "id": "canonical_org_task_run_binding",
+      "status": "HOLD",
+      "criteria": "Exact current ORG head/staffing/team/history plus canonical plan/task/run/member/agent/principal, same versioned reference"
+    },
+    {
+      "id": "role_scope_acl_provenance",
+      "status": "HOLD",
+      "criteria": "DB role mapping and actual endpoint, schema, policies, column ACL, owner, credential lifecycle and dedicated session proofs"
+    },
+    {
+      "id": "atomic_revocation_fence",
+      "status": "HOLD",
+      "criteria": "Existing authority claim/fence held through T1 commit; all identity/org/role publishers cooperate with same root; expiry and revocation semantics reviewed"
+    },
+    {
+      "id": "unknown_durable_reconciliation",
+      "status": "HOLD",
+      "criteria": "Durable intent consumption and journal, UNKNOWN and PENDING quarantine, independent snapshot/retained evidence, no blind retry or compensation"
+    },
+    {
+      "id": "r03_owner_mapping",
+      "status": "HOLD",
+      "criteria": "Independent R03 owner accepts physical write-set mapping, grants, lock ordering, migration and restore"
+    },
+    {
+      "id": "independent_security_review",
+      "status": "HOLD",
+      "criteria": "Independent reviewers accept exact sources and evidence; actual production authority separately gated"
+    }
+  ],
+  "activation_allowed": false,
+  "owner_notes": "Twelve D4 readiness conditions, not the 16 Core acceptance gates. E2/E3/E4 remain Unified owner; B3 independent remains HOLD."
+}
