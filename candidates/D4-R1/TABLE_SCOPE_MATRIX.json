@@ -1,0 +1,384 @@
+{
+  "revision": "0229-D4-R1",
+  "classification": "PREPARATION_ONLY_NOT_MIGRATION",
+  "core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "d3": "f6cde1c6dece8423c1f809cee9896101f76b2150",
+  "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "org": "94eefafee221f42a070088d82805d0a1fe685186",
+  "core_tables": [
+    {
+      "name": "events",
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "outbox",
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "fences",
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "run_heads",
+      "path": "database/0193/candidate_run_head.sql",
+      "blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "run_leases",
+      "path": "database/0194/candidate_transition_roles.sql",
+      "blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "run_mutations",
+      "path": "database/0194/candidate_transition_roles.sql",
+      "blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "run_audit",
+      "path": "database/0194/candidate_transition_roles.sql",
+      "blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "sample_budgets",
+      "path": "database/0195/candidate_admission_budget.sql",
+      "blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "run_admissions",
+      "path": "database/0195/candidate_admission_budget.sql",
+      "blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "sample_reservations",
+      "path": "database/0195/candidate_admission_budget.sql",
+      "blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "run_lease_renewals",
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "sample_settlements",
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "PASS_SCOPED",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "D3 fixture evidence only; derive role-specific grants from actual T1 writer"
+    },
+    {
+      "name": "terminal_command_anchors",
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "NOT_RUN",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "append only; role-specific grant review"
+    },
+    {
+      "name": "company_run_membership",
+      "path": "database/0204C/company_event_order.sql",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "NOT_RUN",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "provisioning owner review; no broad runtime insert"
+    },
+    {
+      "name": "company_stream_heads",
+      "path": "database/0204C/company_event_order.sql",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "NOT_RUN",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "sequence CAS only"
+    },
+    {
+      "name": "company_event_order",
+      "path": "database/0204C/company_event_order.sql",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "primary_key_prefix": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "d3_fixture": "NOT_RUN",
+      "policy_status": "PROPOSED_NOT_APPLIED",
+      "operation_review": "append only; role-specific grant review"
+    }
+  ],
+  "org_tables": [
+    {
+      "name": "org_revision",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_head",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_unit",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_position",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_definition_ref",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_instance_ref",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_binding",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "org_notice",
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "op_team",
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "op_member",
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "op_entry",
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    },
+    {
+      "name": "op_notice",
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "primary_key_prefix": [
+        "t",
+        "c",
+        "e"
+      ],
+      "all_declared_foreign_keys_scoped": true,
+      "status": "SQLITE_CANDIDATE_PG_NOT_RUN"
+    }
+  ],
+  "unified_ddl_matches": 7,
+  "legacy_0183": "Separate five-table rollback-only aicos_d0_candidate; excluded from T1 count",
+  "canonical_mapping": "HOLD",
+  "actual_pg": "NOT_RUN"
+}

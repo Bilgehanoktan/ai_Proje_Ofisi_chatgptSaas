@@ -1,0 +1,57 @@
+{
+  "revision": "0229-D4-R1",
+  "cases": [
+    {
+      "id": "D4-PG-01",
+      "scenario": "four missing tables, scoped reads/writes, cross-scope denies, owner FORCE RLS, scoped FK",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-02",
+      "scenario": "same-company two projects: stream head first, NOWAIT, stale sequence CAS",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-03",
+      "scenario": "shared budget cap race with two physical connections and complete postimages",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-04",
+      "scenario": "terminal anchor or postimage failure rolls back all T1 roles",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-05",
+      "scenario": "UNKNOWN commit quarantine and independent reconciliation, no automatic retry",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-06",
+      "scenario": "repeatable-read snapshot and read-only rejection",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-07",
+      "scenario": "trusted principal binding, revocation, spoofed scope/role and project membership",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-08",
+      "scenario": "dedicated checkout/close; wrong identity, unsafe flags, dirty state; pool disabled",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D4-PG-09",
+      "scenario": "ORG read-only scope/revision/task/agent/history compatibility; no ORG writes",
+      "status": "NOT_RUN"
+    }
+  ],
+  "requirements": [
+    "R03 owner review",
+    "source-bound isolated fixture",
+    "trusted resolver review",
+    "explicit local execution approval"
+  ],
+  "gate_promotion": false
+}

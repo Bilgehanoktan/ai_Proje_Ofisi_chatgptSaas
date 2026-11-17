@@ -1,0 +1,32 @@
+{
+  "revision": "0229-D4-R1",
+  "branch": "planning/0229-d4-canonical-rls-readiness",
+  "parent": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "status": "SOURCE_REVIEW_MODEL_PASS",
+  "gate": {
+    "done": 12,
+    "total": 16,
+    "percent": 75
+  },
+  "product_files_unchanged": 393,
+  "original_database_files_unchanged": 16,
+  "core_tables": 16,
+  "d3_fixture_tables": 12,
+  "additional_core_tables": 4,
+  "org_candidate_tables": 12,
+  "local_tests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "actual_pg": "NOT_RUN",
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "parallel": {
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "org": "94eefafee221f42a070088d82805d0a1fe685186",
+    "d3": "f6cde1c6dece8423c1f809cee9896101f76b2150",
+    "core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f"
+  },
+  "next": "D4-R2 isolated 16-table fixture and full company T1 test preparation; review complete lock order, authenticated scope adapter and owner boundaries first",
+  "rollback": "4fb39a5b2a41866b10ba836d1a6974e258d8217f"
+}

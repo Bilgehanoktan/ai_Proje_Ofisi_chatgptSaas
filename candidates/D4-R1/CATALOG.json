@@ -1,0 +1,45 @@
+{
+  "revision": "0229-D4-R1",
+  "files": [
+    {
+      "path": "candidates/D4-R1/scope_contract.py",
+      "git_blob": "40b5b9c32647b095982856d247080cbf59d5b0c9",
+      "bytes": 2358,
+      "sha256": "7574ddf3f280ba2ba3b33c05f7973a16069a8deef50b4e733860c97c81661cc6"
+    },
+    {
+      "path": "candidates/D4-R1/test_scope_contract.py",
+      "git_blob": "08b306ce23fedf1bed6bce42e37e00013b9de8b0",
+      "bytes": 3236,
+      "sha256": "e8de612ba1eb4c175c6c669a8d60c1ad1417a2579f07bd2b87944bf68f389efb"
+    },
+    {
+      "path": "candidates/D4-R1/test.log",
+      "git_blob": "892046de1c37be8184822722694b8d97517064e4",
+      "bytes": 1309,
+      "sha256": "45dffae975f3b74b6cfe63c00b61c9a2c16ae1774e247b1d4090c7f5ac58826b"
+    }
+  ],
+  "classes": [
+    "Scope",
+    "Binding",
+    "SessionFacts",
+    "ScopeContractTests"
+  ],
+  "functions": [
+    "review_checkout",
+    "review_release"
+  ],
+  "dependencies": [
+    "Python standard library",
+    "pinned Core/D3/ORG contracts"
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "product_changes": 0,
+  "scope_matrix": "candidates/D4-R1/TABLE_SCOPE_MATRIX.json",
+  "test_plan": "candidates/D4-R1/PG_TEST_PLAN.json",
+  "test": "13 pure checks PASS; PG NOT_RUN",
+  "maintenance": "No auth or pool activation; preserve dedicated connections and UNKNOWN quarantine",
+  "rollback": "4fb39a5b2a41866b10ba836d1a6974e258d8217f"
+}
