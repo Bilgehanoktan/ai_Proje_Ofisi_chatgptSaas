@@ -1,0 +1,104 @@
+{
+  "classification": "REVIEW_ONLY_NOT_AUTHORITY",
+  "source_pins": [
+    {
+      "path": "candidates/D4-R1/scope_contract.py",
+      "git_blob": "40b5b9c32647b095982856d247080cbf59d5b0c9",
+      "bytes": 2358
+    },
+    {
+      "path": "candidates/D4-R2/scope.json",
+      "git_blob": "1cb6d954ac6b0121a4275e61ac2f8ef2cde261c8",
+      "bytes": 3301
+    },
+    {
+      "path": "candidates/D4-R3/HANDOVER.md",
+      "git_blob": "6e6a1bc69b1205e3c739cb6b59b054f41d7a766b",
+      "bytes": 3262
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "git_blob": "e1f52722e1d33841539b709036ed1a100216b9b6",
+      "bytes": 1505
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/model.py",
+      "git_blob": "ebd68c6245c21c7fce16c0b6206dc9626050310a",
+      "bytes": 3221
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "bytes": 7251
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/plan_binding.py",
+      "git_blob": "c445726efb9fbd34410f5189d5aad39dc4a85201",
+      "bytes": 3309
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "bytes": 5065
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "git_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "bytes": 7835
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+      "git_blob": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2",
+      "bytes": 5404
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "git_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "bytes": 2495
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "git_blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "bytes": 16755
+    }
+  ],
+  "trust_inputs": {
+    "request": "untrusted selection, reconstruct from server validated original LogicalIntent and project membership; intent_sha derivation not implemented",
+    "initial": "protected server resolver output only",
+    "latest": "same authoritative resolver re-read, not HTTP parameters",
+    "clock": "trusted monotonic tick domain; expiry check only, rollback detection not implemented",
+    "connect": "server-controlled dedicated role credential factory; no DSN or credentials from request"
+  },
+  "revision_pins": [
+    "registry_revision+registry_sha",
+    "membership_revision+membership_sha",
+    "assignment_revision+assignment_sha",
+    "role_revision+role_sha",
+    "plan_revision",
+    "policy_epoch",
+    "witness_epoch"
+  ],
+  "actor_rule": "authenticated principal equals runtime principal; delegation unsupported; human-to-agent dispatch requires separately approved delegation",
+  "role_rule": "direct session_user=current_user, no role memberships, no owner, no elevated flags; no GUC authority",
+  "future_activation": [
+    "canonical auth/session issuer and revocation provenance",
+    "resolve project/plan/task/run/agent exact membership using existing owner repositories",
+    "canonical full LogicalIntent digest and protected role mapping",
+    "same-transaction identity/role guard and authority fence held through commit; no check-then-act gap",
+    "exact RLS policy and ACL provenance; authenticated endpoint, schema/owner and credential lifecycle",
+    "R2/R3 actual PG evidence and independent review"
+  ],
+  "not_implemented": [
+    "authenticator",
+    "resolver",
+    "credential provider",
+    "revocation fence",
+    "runtime wiring",
+    "role provisioning",
+    "project authorization",
+    "pool",
+    "production IAM"
+  ],
+  "result": "HOLD_ALWAYS",
+  "gate_promotion": false
+}

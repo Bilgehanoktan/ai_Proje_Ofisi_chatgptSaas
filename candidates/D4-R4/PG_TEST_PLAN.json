@@ -1,0 +1,51 @@
+{
+  "status": "NOT_RUN",
+  "cases": [
+    {
+      "id": "R4-PG-01",
+      "scenario": "direct authenticated role A, exact 16 table inventory, no elevated attributes; probe closes dedicated connection",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-02",
+      "scenario": "wrong role / SET ROLE / membership / BYPASSRLS / owner / row_security off",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-03",
+      "scenario": "different tenant/company/environment role and role-map tamper; independently verify actual RLS predicate/ACL provenance",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-04",
+      "scenario": "dirty connection, autocommit, transaction state, failure closing",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-05",
+      "scenario": "identity revocation between resolver calls; no connection or no match",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-06",
+      "scenario": "revocation between final check and T1 commit under existing authoritative fence; not implemented",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-07",
+      "scenario": "project/run/agent substitution, stale assignment/plan, full intent digest substitution with actual protected resolver; not implemented",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R4-PG-08",
+      "scenario": "UNKNOWN commit quarantine/readback; reuse existing T1 and R3 evidence, not implemented by probe",
+      "status": "NOT_RUN"
+    }
+  ],
+  "requires": [
+    "R2/R3 reviewed runtime evidence",
+    "protected resolver/role factory implementation",
+    "R03 ownership and auth review"
+  ],
+  "gate_promotion": false
+}

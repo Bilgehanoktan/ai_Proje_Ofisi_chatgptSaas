@@ -1,0 +1,53 @@
+{
+  "revision": "0229-D4-R4",
+  "files": [
+    {
+      "file": "identity_binding.py",
+      "classes": [
+        "Request",
+        "Binding",
+        "SessionFacts",
+        "Review"
+      ],
+      "functions": [
+        "token",
+        "digest",
+        "revision",
+        "valid_request",
+        "valid_binding",
+        "binding_digest",
+        "review_binding",
+        "review_session",
+        "review_boundary",
+        "disposition"
+      ]
+    },
+    {
+      "file": "session_probe.py",
+      "functions": [
+        "inspect_connection"
+      ],
+      "constants": [
+        "TABLES",
+        "FACTS_SQL"
+      ],
+      "database": "pg_roles, pg_auth_members, pg_class, pg_namespace, t1_candidate 16-table inventory; read-only"
+    },
+    {
+      "file": "test_identity_binding.py",
+      "tests": 22
+    },
+    {
+      "file": "test_session_probe.py",
+      "tests": 11
+    }
+  ],
+  "apis": [],
+  "new_db_tables": [],
+  "events": [],
+  "dependencies": [
+    "Python standard library; psycopg-compatible connection protocol only; no new installed dependency"
+  ],
+  "runtime_changes": 0,
+  "production_permissions": 0
+}
