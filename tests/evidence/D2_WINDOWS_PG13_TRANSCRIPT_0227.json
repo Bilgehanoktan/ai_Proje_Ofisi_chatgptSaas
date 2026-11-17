@@ -1,0 +1,127 @@
+{
+  "revision": "0227",
+  "checkpoint": "D2_PG13_PASS_UPLOADED_TRANSCRIPT_RAW_REPORT_PENDING",
+  "scope": "Actual Windows user-run 13 original PostgreSQL cases; uploaded transcript parsed, not independent replay",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner_blob": "7cde2a62eee46ce4e682451f82a1c6b3245cf94a",
+  "prior_d1": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
+  "transcript": {
+    "name": "Yapıştırılan metin(20261117-165718).txt",
+    "bytes": 13444,
+    "sha256": "b326f1d9fa639a5d7dc301d1432f065250196c72e4a53e57900ee980b009b3ea",
+    "report_line": 304,
+    "exit_line": 305,
+    "stop_line": 309,
+    "explicit_approval": "EVET",
+    "runner_exit": 0,
+    "server_start": "PASS",
+    "server_stop": "PASS",
+    "source_head_clean_and_pg_lock_prechecks": "PASS per execution sequence"
+  },
+  "report": {
+    "revision": "0215",
+    "status": "D0_PG_DIAGNOSTIC_PASS",
+    "source_verified": true,
+    "ddl_verified": true,
+    "actual_pg": "13/13_PASS",
+    "rls": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "suites": [
+      {
+        "suite": "0194",
+        "expected": 5,
+        "status": "PASS",
+        "ran": 5,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0
+      },
+      {
+        "suite": "0196L",
+        "expected": 5,
+        "status": "PASS",
+        "ran": 5,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0
+      },
+      {
+        "suite": "0200S",
+        "expected": 3,
+        "status": "PASS",
+        "ran": 3,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0
+      }
+    ],
+    "source_files": 392
+  },
+  "sources": [
+    {
+      "suite": "0194",
+      "module": "test_pg_transition_mapping_0194",
+      "blob": "75f3fb01653b226830546e3600ef75b8dbcfd636",
+      "source_test_names": [
+        "test_commit_readback",
+        "test_rollback_all_roles",
+        "test_two_writers",
+        "test_row_lock_nowait",
+        "test_stale_lease_rollback"
+      ],
+      "source_count": 5
+    },
+    {
+      "suite": "0196L",
+      "module": "test_pg_lifecycle_mapping_0196",
+      "blob": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b",
+      "source_test_names": [
+        "test_chain",
+        "test_rollback_all_terminal_roles",
+        "test_renewal_vs_terminal",
+        "test_renewal_rollback_expiry",
+        "test_shared_budget_claim_cas"
+      ],
+      "source_count": 5
+    },
+    {
+      "suite": "0200S",
+      "module": "test_pg_snapshot_0200",
+      "blob": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "source_test_names": [
+        "test_actual_admission_snapshot",
+        "test_actual_concurrent_commit_not_visible_until_fresh_snapshot",
+        "test_actual_transaction_rejects_write"
+      ],
+      "source_count": 3
+    }
+  ],
+  "raw_report": {
+    "path": "C:\\AIOS\\core-0227-pg-retry2\\D2_PG13_RESULT.json",
+    "status": "PENDING_UPLOAD",
+    "expected_sha256_reconstructed_crlf": "79085656ad4d782a012642518d9d8724514976082af0c5734c5d04dcfb82cf05",
+    "expected_sha256_reconstructed_lf": "d8f3e1b0f78ecc8eabf58891ea5e58264abba79c1ab8abd611d91bf88a20fb2b",
+    "note": "Expected bytes reconstructed from exact runner serialization of parsed transcript; not measured on original report."
+  },
+  "limits": [
+    "Original sanitized report file not yet uploaded; do not rerun tests.",
+    "Original runner returns aggregate counts, not per-case raw logs; source names verified remotely, not separately logged at runtime.",
+    "No D3 RLS or independent authority acceptance; D2 contains scoped real row-lock and concurrency tests, not complete multi-tenant acceptance.",
+    "No product source or DDL changes."
+  ],
+  "gates": {
+    "done": 10,
+    "total": 16,
+    "percent": 62.5,
+    "newly_closed": 0,
+    "D2": "PASS_TRANSCRIPT_RAW_REPORT_PENDING",
+    "next_if_accepted": 11
+  }
+}

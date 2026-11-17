@@ -249,3 +249,7 @@ User transcript: PG17.12, Psycopg3.3.9 binary, libpq180004, SCRAM loopback 55432
 
 ## 0227-D1 final raw review — PASS
 Raw ZIP 8/8 CRC, 5/5 log/report hashes, 31/31 installed pins, original 28 E1 lock lines exact from reopened E1 archive, two PostgreSQL DB probes PASS; SCRAM loopback and stopped state evidenced. D1 accepted, 10/16 (62.5%). No independent replay, raw binaries absent, PG13/RLS/build open. Source unchanged. Next: docs/0227/D2_PG13_RUNBOOK.md. Evidence: tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json.
+
+
+## 0227-D2 — original PG13 execution PASS, raw report pending
+Uploaded Windows transcript parsed: 0194 5/5, 0196L 5/5, 0200S 3/3, all failure/error/skip counters zero; exact runner source and 13 source test names reviewed; source/DDL verified; exit 0 and server stopped. Raw D2_PG13_RESULT.json pending. Expected report hash reconstructed, not measured on original. 10/16 unchanged pending review; D3/RLS/B3 open. tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json

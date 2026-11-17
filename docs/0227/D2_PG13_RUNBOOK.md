@@ -7,3 +7,7 @@ D1 accepted. Use preserved retry2 disposable cluster only. Do not initialize aga
 ```
 
 Original runner verifies product and DDL pins, rejects remote/unsafe DSN, checks exact suite counts and no skips. Expected 0194=5, 0196L=5, 0200S=3. Report no raw DSNs or credentials. Preserve sanitized report on failure; no automatic retries or schema drop. D2 not run; 13 tests are original and separate from D1 probes. D3 RLS separate, no independent acceptance promotion.
+
+
+## 0227-D2 — original PG13 execution PASS, raw report pending
+Uploaded Windows transcript parsed: 0194 5/5, 0196L 5/5, 0200S 3/3, all failure/error/skip counters zero; exact runner source and 13 source test names reviewed; source/DDL verified; exit 0 and server stopped. Raw D2_PG13_RESULT.json pending. Expected report hash reconstructed, not measured on original. 10/16 unchanged pending review; D3/RLS/B3 open. tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json

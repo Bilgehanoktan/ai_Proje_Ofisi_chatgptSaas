@@ -30,3 +30,7 @@ E1 and D1 PASS; 10/16 integration gates (62.5%). Design/source ordinal scores un
 | 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_D1_RAW_REVIEWED_PASS |
 
 Current evidence: tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json
+
+
+## 0227-D2 — original PG13 execution PASS, raw report pending
+Uploaded Windows transcript parsed: 0194 5/5, 0196L 5/5, 0200S 3/3, all failure/error/skip counters zero; exact runner source and 13 source test names reviewed; source/DDL verified; exit 0 and server stopped. Raw D2_PG13_RESULT.json pending. Expected report hash reconstructed, not measured on original. 10/16 unchanged pending review; D3/RLS/B3 open. tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json

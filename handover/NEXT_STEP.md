@@ -1,2 +1,2 @@
-# NEXT — 0227 D2
-D1 accepted, 10/16. Use existing stopped `C:\AIOS\core-0227-pg-retry2` cluster with `aicos_d0_runner`, reviewed 31-package venv and exact `scripts/run_pg_acceptance_0215.py` blob `7cde2a62eee46ce4e682451f82a1c6b3245cf94a` from source `52219c7...`. Explicit local D2 approval; run 5+5+3 original tests, report outside checkout, stop cluster; no DSN in evidence. D3 separate. See docs/0227/D2_PG13_RUNBOOK.md.
+# NEXT — 0227 D2 report acceptance
+Original PostgreSQL 13/13 PASS on stopped retry2 cluster per uploaded transcript. Collect `C:\AIOS\core-0227-pg-retry2\D2_PG13_RESULT.json` and SHA256; compare exact report bytes and parsed content. No test rerun, no private logs or passwords. 10/16 pending review, then D3 separate. tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json
