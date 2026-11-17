@@ -309,3 +309,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-24 — Acceptance preflight and historical regression isolation
 [Acceptance, evidence boundaries and repair](../UI-P10J/P10J24_ACCEPTANCE.md) · [Runbook](../UI-P10J/P10J24_RUNBOOK.md). Product 492/492 Git blobs unchanged; full tree path/size verified, 17 local SHA pins. Original 0207 lock preserved; three exact historical auxiliary sources isolated outside product, 55/55 historical closure statically matched. Actual 47 model, 8 standalone CSS, 10 isolated adapter tests. Full Core29, W8/build/browser/native/independent acceptance NOT_RUN. No authority change.
+
+
+## UI-P10J-24B — Source recovery and contract diagnostics
+[Recovery and evidence boundaries](../UI-P10J/P10J24B_RECOVERY.md). 61/491 exact local product sources recovered (56 archive paths, five exact remote paths; 44 additional versus P24). Original plan projection 5/5 and selected exact fixture/schema diagnostics 12/12; no product/API/DB/authority change. Full W8, historical Core29 and actual product acceptance remain NOT_RUN. Need exact authenticated full checkout before reviewed dependency preparation.
