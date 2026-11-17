@@ -1,0 +1,49 @@
+{
+  "source_commit": "0839ecc5cedc338e791022d287d0a251cf93506f",
+  "classification": "RECONSTRUCTED_OWNER_LOGS_BYTE_MATCH_NOT_INDEPENDENT_ATTESTATION",
+  "logs": {
+    "runtime_original.log": {
+      "sha256": "4edf8716a3a68f1db38b622ecd8532e7fa0ebff7572fe298983b65dfd2a9c203",
+      "git_blob": "3d9fe7c4700fdb6c4176d35f54638ead32905294",
+      "pass": 11,
+      "ids": [
+        "test_admitted_readback",
+        "test_gate_not_run",
+        "test_no_db_changes",
+        "test_org_notice_tamper",
+        "test_queued_readback",
+        "test_research_seat",
+        "test_stale_head",
+        "test_wrong_environment",
+        "test_wrong_history",
+        "test_wrong_member",
+        "test_wrong_seat"
+      ]
+    },
+    "runtime_notice.log": {
+      "sha256": "018b4a935eb8a052ccaae5ce6d4db46e073b9d3974ab6738a8b5ea3e36fed79b",
+      "git_blob": "7477d8f40bb35da956ba1c6830f1dec86d10e2c9",
+      "pass": 1,
+      "ids": [
+        "test_operation_notice_tamper"
+      ]
+    },
+    "office_readback.log": {
+      "sha256": "61f216fcdb902be93572cb95df3919be5f69c8399773b3705d1718d7af1964fc",
+      "git_blob": "7a43e88c173934e7ba9a807fbf41f7c8c09ad96c",
+      "pass": 8,
+      "ids": [
+        "test_existing_studio_transport_matches_internal_review",
+        "test_project_office_preview",
+        "test_office_stale_pin",
+        "test_role_mismatch",
+        "test_membership_mismatch",
+        "test_stale_head",
+        "test_operation_history",
+        "test_no_mutation"
+      ]
+    }
+  },
+  "total": 20,
+  "rerun": false
+}

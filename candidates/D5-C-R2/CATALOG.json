@@ -1,0 +1,21 @@
+{
+  "revision": "0230-D5-C-R2",
+  "classification": "EVIDENCE_RECONCILIATION_ONLY",
+  "files": {
+    "HANDOVER.md": "Architecture delta and maintenance/next action",
+    "PROGRESS.json": "Acceptance and evidence provenance",
+    "CATALOG.json": "Evidence catalog",
+    "t1_preflight.json": "Actual R1 runner output, exit 2; no T1 run",
+    "ORG_LOG_READBACK.json": "Local SHA256 and Git blob verification, test IDs",
+    "runtime_original.log": "Exact reconstructed owner log readback, 11 reported cases",
+    "runtime_notice.log": "Exact reconstructed owner log readback, 1 reported case",
+    "office_readback.log": "Exact reconstructed owner log readback, 8 reported cases"
+  },
+  "existing_runner": "candidates/D5-C-R1/run_from_git.py",
+  "new_symbols": [],
+  "api_changes": [],
+  "database_changes": [],
+  "new_dependencies": [],
+  "product_changes": [],
+  "rollback": "Omit R2 evidence delta; keep R1 and owner evidence unchanged."
+}
