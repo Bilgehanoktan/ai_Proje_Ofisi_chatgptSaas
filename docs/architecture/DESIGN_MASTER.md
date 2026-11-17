@@ -297,3 +297,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-21 — Skill & Memory Studio
 [Source inventory and boundaries](../UI-P10J/P10J21_SKILL_MEMORY.md) · [Reviewed W8 runbook](../UI-P10J/P10J21_RUNBOOK.md). Six pinned source candidates, local review-role/area filtering and inspection; no actual skill registry, memory access, permission or core changes. Isolated model 10/10; full acceptance NOT_RUN.
+
+
+## UI-P10J-22 — Finance & Security Studio
+[Source inspection, maintenance and rollback](../UI-P10J/P10J22_FINANCE_SECURITY.md) · [W8 runbook](../UI-P10J/P10J22_RUNBOOK.md). Eight pinned backend source references (3 finance, 5 security), domain-local inspector/search, unchanged model guards. No live financial data, receipt, grant, retry, release or backend change. 12/12 isolated model; full acceptance NOT_RUN.
