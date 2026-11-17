@@ -13,3 +13,5 @@ python candidates/ORG-06R2/run_checkout.py --repo . --evidence ../org06r2-eviden
 ```
 
 Evidence directory must not exist. Raw logs stay local (may contain local paths); share only after review/redaction. If git/commit missing, obtain the exact source using authorized local Git access; do not relax pins. If archive mismatch, inspect Git attributes/bytes. If dependency mismatch, use reviewed isolated dependencies. If tests fail, retain logs and fix only the owned bridge/test boundary, coordinate owner changes instead of merging. Rollback: keep the original ORG-06 commit; ignore R2 delta; no persistent DB migration to reverse. Next: execute 11+1 in exact checkout, review actual evidence, then ORG-07 existing Studio API read context; keep ORG-08 and PostgreSQL owner separate.
+
+Discovery safety: the additional scenario is explicitly invoked via main(root), not automatically discovered. Standard discovery reran the same four preflight fixture tests, 4/4 PASS; this is not four additional unique tests.
