@@ -1,0 +1,73 @@
+{
+  "revision": "UI-P10J-24",
+  "parent": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+  "manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+  "product_files": 492,
+  "manifest_entries": 491,
+  "retained_product_blobs": 492,
+  "product_change": 0,
+  "files": [
+    {
+      "path": "tests/integration/w8_p10j24.py",
+      "blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+      "symbols": [
+        "blob",
+        "safe_path",
+        "read_exact",
+        "materialize_locked",
+        "materialize_history",
+        "extend_candidate",
+        "load_candidate"
+      ],
+      "change": "add; exact historic source isolation and W8 hook"
+    },
+    {
+      "path": "tests/integration/test_p10j24_historical.py",
+      "blob": "18efc4ef225b09dc7cea38789a87dce4610563d0",
+      "symbols": [
+        "HistoryTests"
+      ],
+      "change": "10 isolated helper/adapter tests"
+    },
+    {
+      "path": "tests/integration/historical_0207/app/api/lifecycle_prefix_projection.py",
+      "blob": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+      "change": "exact historical bytes; not product source"
+    },
+    {
+      "path": "tests/integration/historical_0207/app/core/agent_runtime/scheduler_review.py",
+      "blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "change": "exact historical bytes; not product source"
+    },
+    {
+      "path": "tests/integration/historical_0207/app/core/transaction/postgres_admission_mapping.py",
+      "blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "change": "exact historical bytes; not product source"
+    }
+  ],
+  "dependencies": [
+    "existing W8 chain",
+    "existing immutable core_0207_source_lock.json and run_core_0207.py",
+    "Python standard library"
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "dependency_changes": [],
+  "authority_changes": [],
+  "tests": {
+    "model": "47/47",
+    "standalone_css": "8/8",
+    "adapter": "10/10 synthetic and file isolation",
+    "remote_history_closure": "55/55 static path, blob, size",
+    "actual_core29": "NOT_RUN",
+    "w8": "NOT_RUN",
+    "next_build": "NOT_RUN",
+    "actual_product_captures": "0/99"
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}
