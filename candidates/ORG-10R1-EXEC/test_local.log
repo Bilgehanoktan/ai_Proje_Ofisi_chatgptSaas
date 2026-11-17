@@ -1,0 +1,60 @@
+test_mock_failure_preserves_stage (test_launch_common.MockExecution.test_mock_failure_preserves_stage) ... EXACT_ARCHIVE_PASS 1; RUNTIME_FINGERPRINT 7717520110454c6532689344cdf5a63dddf8235f8d968feec83d1f1c6019600b
+SOURCE_DERIVATION_AND_R3_PASS
+INITDB_PASS
+SERVER_STARTED
+ADMIN_IDENTITY_PASS
+BOOTSTRAP_PASS
+SCHEMA_PASS
+HOLD: CalledProcessError
+Preserve stage and evidence. No automatic retry/delete. Stop only after positive stage identity review.
+ok
+test_mock_full_order (test_launch_common.MockExecution.test_mock_full_order) ... EXACT_ARCHIVE_PASS 1; RUNTIME_FINGERPRINT 7717520110454c6532689344cdf5a63dddf8235f8d968feec83d1f1c6019600b
+SOURCE_DERIVATION_AND_R3_PASS
+INITDB_PASS
+SERVER_STARTED
+ADMIN_IDENTITY_PASS
+BOOTSTRAP_PASS
+SCHEMA_PASS
+RUNNER_EXIT_ZERO
+REPORT_MATCH_UNATTESTED
+MAINTAIN_ACL_48_PASS
+POST_SOURCE_RUNTIME_PASS
+SERVER_STOPPED
+ok
+test_archive (test_launch_common.Preflight.test_archive) ... ok
+test_archive_case (test_launch_common.Preflight.test_archive_case) ... ok
+test_archive_size (test_launch_common.Preflight.test_archive_size) ... ok
+test_archive_tree_mismatch (test_launch_common.Preflight.test_archive_tree_mismatch) ... ok
+test_clean_env (test_launch_common.Preflight.test_clean_env) ... ok
+test_execute_review_mismatch (test_launch_common.Preflight.test_execute_review_mismatch) ... EXACT_ARCHIVE_PASS 1; RUNTIME_FINGERPRINT 03356e6d625d5888c4f615bdd6606d93c23406e41fff270ee1677788e100c2d9
+HOLD: REVIEWED_FINGERPRINT_MISMATCH
+ok
+test_existing_path (test_launch_common.Preflight.test_existing_path) ... ok
+test_identity (test_launch_common.Preflight.test_identity) ... ok
+test_materialize_and_drift (test_launch_common.Preflight.test_materialize_and_drift) ... ok
+test_overlap (test_launch_common.Preflight.test_overlap) ... ok
+test_path_traversal (test_launch_common.Preflight.test_path_traversal) ... ok
+test_pid_mismatch (test_launch_common.Preflight.test_pid_mismatch) ... ok
+test_preflight_no_exec (test_launch_common.Preflight.test_preflight_no_exec) ... EXACT_ARCHIVE_PASS 1; RUNTIME_FINGERPRINT 03356e6d625d5888c4f615bdd6606d93c23406e41fff270ee1677788e100c2d9
+PREFLIGHT_ONLY; independent runtime review and port owner approval required; PG NOT_RUN
+ok
+test_tree (test_launch_common.Preflight.test_tree) ... ok
+test_version (test_launch_common.Preflight.test_version) ... ok
+test_version_other (test_launch_common.Preflight.test_version_other) ... ok
+test_reject_bool_acl (test_launch_common.Review.test_reject_bool_acl) ... ok
+test_reject_bool_count (test_launch_common.Review.test_reject_bool_count) ... ok
+test_reject_detail (test_launch_common.Review.test_reject_detail) ... ok
+test_reject_duplicate_json (test_launch_common.Review.test_reject_duplicate_json) ... ok
+test_reject_failure (test_launch_common.Review.test_reject_failure) ... ok
+test_reject_missing (test_launch_common.Review.test_reject_missing) ... ok
+test_reject_nan (test_launch_common.Review.test_reject_nan) ... ok
+test_reject_order (test_launch_common.Review.test_reject_order) ... ok
+test_reject_pin (test_launch_common.Review.test_reject_pin) ... ok
+test_reject_size (test_launch_common.Review.test_reject_size) ... ok
+test_reject_unknown_field (test_launch_common.Review.test_reject_unknown_field) ... ok
+test_valid (test_launch_common.Review.test_valid) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.028s
+
+OK

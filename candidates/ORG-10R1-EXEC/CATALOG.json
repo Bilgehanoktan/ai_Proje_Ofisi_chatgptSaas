@@ -1,0 +1,80 @@
+{
+  "api_changes": [],
+  "files": {
+    "HANDOVER.md": {
+      "kind": "architecture, change, maintenance and rollback"
+    },
+    "RUN.md": {
+      "kind": "controlled execution"
+    },
+    "SHA256SUMS": {
+      "kind": "manifest"
+    },
+    "TEST_EVIDENCE.json": {
+      "kind": "test boundaries"
+    },
+    "launch_common.py": {
+      "dependencies": [
+        "Python stdlib",
+        "exact ORG-10 source archive",
+        "reviewed PostgreSQL 17.12",
+        "psycopg and psycopg-binary 3.3.9"
+      ],
+      "functions": [
+        "require",
+        "object_hash",
+        "sha256",
+        "safe_components",
+        "git_tree",
+        "read_archive",
+        "materialize",
+        "verify_materialized",
+        "read_exact",
+        "canonical_json",
+        "new_file",
+        "regular",
+        "fingerprint",
+        "clean_env",
+        "check_port",
+        "fresh",
+        "validate_paths",
+        "non_admin",
+        "parse_version",
+        "identity",
+        "digest",
+        "strict_json",
+        "source_r3_pins",
+        "exact_json",
+        "review_report",
+        "main"
+      ],
+      "inputs": [
+        "archive",
+        "pg-bin",
+        "fresh review manifest",
+        "reviewed fingerprint",
+        "fresh stage and evidence",
+        "explicit execute"
+      ],
+      "kind": "isolated execution and strict report review",
+      "outputs": [
+        "runtime fingerprint manifest",
+        "pg_report.json",
+        "launch_report.json"
+      ],
+      "sha256": "abe425aacb89ee32edb1b89875302556ad25e37ce7b956b43e4503a22c16cbda"
+    },
+    "test_launch_common.py": {
+      "count": 30,
+      "kind": "local mocked fixture checks"
+    },
+    "test_local.log": {
+      "kind": "local output"
+    }
+  },
+  "gates": "HOLD",
+  "parent": "5c7eb6b148e6e96247682653ff70dccc4a7ba823",
+  "product_changes": [],
+  "revision": "ORG-10R1",
+  "schema_changes": []
+}
