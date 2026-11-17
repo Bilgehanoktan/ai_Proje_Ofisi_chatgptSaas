@@ -1,0 +1,87 @@
+{
+  "revision": "UNIFIED-U2",
+  "parent": "b03e56ac6849654f52f7e421590becf3e3719dd0",
+  "source_commit": "954d50911c5fa194f698a747fe650939256e34ba",
+  "source_tree": "849f7c49e78827f4f5633664576ef086e53c86c4",
+  "branch": "integration/unified-u2-shared-runtime",
+  "product_files": 505,
+  "manifest_entries": 504,
+  "remote_path_size_matches": 504,
+  "old_product_blobs_unchanged": 498,
+  "old_manifest_entries_unchanged": 498,
+  "missing": [],
+  "unlisted": [],
+  "removed": [],
+  "added": [
+    "catalog/revisions/TECHNICAL_CATALOG_UNIFIED_U2.json",
+    "docs/UNIFIED-U2/ARCHITECTURE_AND_PLAN.md",
+    "docs/UNIFIED-U2/OFFICE_FIELD_REVIEW_55.json",
+    "docs/UNIFIED-U2/RECONCILIATION.json",
+    "docs/UNIFIED-U2/TEST_EVIDENCE.json",
+    "handover/UNIFIED_U2_CURRENT.json",
+    "product/ai-company-os-frontend/features/data/sharedReplaySession.ts",
+    "product/ai-company-os-frontend/tests/unified-shared-session.test.cjs",
+    "progress/UNIFIED_U2_MATRIX_24.json",
+    "tests/integration/run_unified_u2_session.py"
+  ],
+  "changed": [
+    "PROJECT_INDEX.md",
+    "docs/architecture/DESIGN_MASTER.md",
+    "handover/NEXT_STEP_UI.md",
+    "product/SOURCE_MANIFEST.json",
+    "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+    "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+    "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+    "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx"
+  ],
+  "case_aliases": 0,
+  "manifest_blob": "940f8d44f49b848b377badee67f162603724c05f",
+  "exact_new_blobs": {
+    "features/data/sharedReplaySession.ts": "90dcd080c6ed53c4a8ff8e2aad1978509725515e",
+    "features/data/SharedSnapshotProvider.tsx": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+    "features/data/SharedSnapshotPanel.tsx": "6f62688761d8cf2f4b2e759e5fd30eef07881141",
+    "features/mvp/StudioContextPanel.tsx": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+    "components/dashboard/OfficePanel.tsx": "eacb81100fb34a8e74f619a5a8e2283a97337253",
+    "tests/unified-shared-session.test.cjs": "0de40e28d6fead7bd13d9958c73edd1c2df2f1ca"
+  },
+  "exact_original_blobs": {
+    "product/ai-company-os-frontend/features/mvp/lifecyclePrefix.ts": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c",
+    "product/ai-company-os-frontend/features/mvp/historicalJoin.ts": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "product/ai-company-os-frontend/features/mvp/studioContext.ts": "722f085bf56e0f9bdfeb666e1e29e1de8d1e1b4e",
+    "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+    "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+    "product/ai-company-os-frontend/fixtures/core.plan.projection.json": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+    "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+    "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py": "54b3ff7bf96ecd032fa72851183fe671e69a6418",
+    "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822"
+  },
+  "harness": {
+    "path": "tests/integration/run_unified_u2_session.py",
+    "blob": "c27eb541d4ad4c26f879dd5a45e98f20dd81de2f",
+    "sha256": "5f1e2931931304576e89cba9620ff2bd3cd8fad73c8641578095920d1be6397a"
+  },
+  "other_heads_unchanged": true,
+  "observed_heads_before": {
+    "integration/unified-u1-core-ui-office": "b03e56ac6849654f52f7e421590becf3e3719dd0",
+    "integration/0227-local-environment-preflight": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "integration/p10j24-product-acceptance": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+    "integration/p10j23-premium-management-eds": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+  },
+  "observed_heads_after": {
+    "integration/unified-u1-core-ui-office": "b03e56ac6849654f52f7e421590becf3e3719dd0",
+    "integration/0227-local-environment-preflight": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "integration/p10j24-product-acceptance": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+    "integration/p10j23-premium-management-eds": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+  },
+  "full_local_checkout": "BLOCKED_DNS",
+  "full_byte_audit": "NOT_RUN",
+  "real_db": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "office_join": "JOIN_HOLD",
+  "no_merge": true
+}
