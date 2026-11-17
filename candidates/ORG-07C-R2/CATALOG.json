@@ -1,0 +1,42 @@
+{
+  "revision": "ORG-07C-R2",
+  "scope": "review only",
+  "files": {
+    "review_manifest.py": {
+      "symbols": [
+        "git_blob",
+        "row",
+        "review_delta",
+        "overlay",
+        "main"
+      ],
+      "purpose": "Pin ORG07C scope and staged bytes; transform exact U3A manifest only to separate review output"
+    },
+    "test_review_manifest.py": {
+      "symbols": [
+        "ReviewTests"
+      ],
+      "tests": 9
+    },
+    "MANIFEST_DELTA.json": {
+      "purpose": "7 exact changed entries + 4 original row pins"
+    },
+    "SOURCE_MANIFEST_REVIEW.json": {
+      "purpose": "508-entry prospective U3A manifest, not product manifest"
+    },
+    "GENERAL_STATUS.json": {
+      "purpose": "24 official baseline scores plus separately scoped branch observations"
+    },
+    "EVIDENCE.json": {
+      "purpose": "Actual local test counts, remote readback, blockers"
+    }
+  },
+  "api_changes": 0,
+  "database_changes": 0,
+  "dependencies": [
+    "Python stdlib",
+    "existing ORG07C test environment"
+  ],
+  "maintenance": "Do not overwrite product/SOURCE_MANIFEST.json; replay only against exact pinned U3A base; rebase only after owner review",
+  "next": "Receive ORG06R2 and IAM owner evidence, coordinate U3B, apply/re-audit pinned full product and run full acceptance"
+}

@@ -1,0 +1,235 @@
+{
+  "revision": "ORG-07C-R2",
+  "date": "2026-11-17",
+  "scope": "cross-branch observed readback; no merge or maturity promotion",
+  "baseline": {
+    "ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+    "path": "progress/history/TRACK_0227_D3_ACCEPTED.json",
+    "git_blob": "574f14af7eed4ff38cce6724e5156801817b457d",
+    "score_note": "ordinal editorial estimates, not completion percentages or ETA; no weighted total; track per area changes with evidence and preserve history"
+  },
+  "rows": [
+    {
+      "id": 1,
+      "area": "Frontend",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_0217_STUDIO_CONTEXT"
+    },
+    {
+      "id": 2,
+      "area": "UI/UX Design System",
+      "design": 50,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_0217_STUDIO_CONTEXT"
+    },
+    {
+      "id": 3,
+      "area": "Office Engine",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_0217_HISTORICAL_LABEL"
+    },
+    {
+      "id": 4,
+      "area": "API & Contracts",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_ACTUAL_SCHEMA_HTTP"
+    },
+    {
+      "id": 5,
+      "area": "Backend",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_0217_SIGNED_FIXTURE"
+    },
+    {
+      "id": 6,
+      "area": "Orchestrator",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_0204C_REPLAY"
+    },
+    {
+      "id": 7,
+      "area": "Task Engine & DAG",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_ORIGINAL_0224_SQL8_RAW_REVIEWED"
+    },
+    {
+      "id": 8,
+      "area": "Agent Runtime",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_0217_SIGNED_FIXTURE"
+    },
+    {
+      "id": 9,
+      "area": "AI Model Gateway",
+      "design": 50,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_0210_DENIAL"
+    },
+    {
+      "id": 10,
+      "area": "Skill & Tool Engine",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_D0_REVIEW"
+    },
+    {
+      "id": 11,
+      "area": "Database",
+      "design": 75,
+      "source": 25,
+      "official_test": "D1_D2_D3_SCOPED_PASS_CANONICAL_RLS_OPEN"
+    },
+    {
+      "id": 12,
+      "area": "Event Store & Messaging",
+      "design": 75,
+      "source": 50,
+      "official_test": "PARTIAL_PASS_0211_COMPONENT_CLAIM"
+    },
+    {
+      "id": 13,
+      "area": "Memory & Knowledge",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_ORIGINAL_0221_SQL10_RAW_REVIEWED"
+    },
+    {
+      "id": 14,
+      "area": "Security & IAM",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL"
+    },
+    {
+      "id": 15,
+      "area": "Independent Verifier",
+      "design": 75,
+      "source": 25,
+      "official_test": "HOLD_INDEPENDENT_ACCEPTANCE"
+    },
+    {
+      "id": 16,
+      "area": "SaaS & Multi-Tenant",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_0204C_REPLAY"
+    },
+    {
+      "id": 17,
+      "area": "Ürün ve iş modülleri",
+      "design": 75,
+      "source": 25,
+      "official_test": "NOT_RUN"
+    },
+    {
+      "id": 18,
+      "area": "Dış sistem entegrasyonları",
+      "design": 75,
+      "source": 0,
+      "official_test": "NOT_RUN"
+    },
+    {
+      "id": 19,
+      "area": "Finans & Billing",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_0205R_POOL"
+    },
+    {
+      "id": 20,
+      "area": "Test & QA",
+      "design": 75,
+      "source": 25,
+      "official_test": "E1_ORIGINAL24_D2_PG13_D3_FIXTURE230_RAW_REVIEWED_FULL_REGRESSION_OPEN"
+    },
+    {
+      "id": 21,
+      "area": "DevOps & Infrastructure",
+      "design": 75,
+      "source": 25,
+      "official_test": "D1_D2_D3_SCOPED_PASS_CANONICAL_RLS_OPEN"
+    },
+    {
+      "id": 22,
+      "area": "Monitoring & Observability",
+      "design": 50,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_HISTORICAL_READBACK"
+    },
+    {
+      "id": 23,
+      "area": "Backup & Disaster Recovery",
+      "design": 75,
+      "source": 25,
+      "official_test": "PARTIAL_PASS_0217_RESTORE_RESIDUAL"
+    },
+    {
+      "id": 24,
+      "area": "Teknik katalog & dokümantasyon",
+      "design": 75,
+      "source": 75,
+      "official_test": "CATALOG_UPDATED"
+    }
+  ],
+  "gates": {
+    "core": "12/16 TRACK-0227 D3 scoped",
+    "ui": "21/40 historical P10J24B",
+    "mvp": "0/11",
+    "HD": "0/36",
+    "office_v0": "0/55 JOIN_HOLD",
+    "independent": "0/7"
+  },
+  "observations": {
+    "unified": {
+      "ref": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "files": 505,
+      "manifest": 504,
+      "full": "BLOCKED",
+      "selected_regressions": "63/63 historical",
+      "runner_mechanics": "10/10 fake parent"
+    },
+    "core": {
+      "ref": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "selected": "86/86 historical pure/local review",
+      "canonical_RLS": "HOLD",
+      "pg_company": "NOT_RUN"
+    },
+    "organization": {
+      "ref": "73693e2b8864e3eb735bba40f2935191c0d83bef",
+      "r3_sqlite_api": "12/12 historical",
+      "org07c": "39/39 rerun this turn",
+      "manifest_review": "9/9 this turn",
+      "org06r2": "12 NOT_RUN",
+      "iam": "HOLD"
+    },
+    "org_pg": {
+      "ref": "ba6c72a2508e3eab579c33f48e52008d1d601897",
+      "reported": "26/26 user-reported hash-matched",
+      "formal": "HOLD"
+    },
+    "office": {
+      "ref": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352",
+      "selected": "35 historical boundary/mock-owner tests",
+      "actual_integration": "0/8 NOT_RUN"
+    },
+    "w5": {
+      "ref": "07eae266cfcdb6de8a4b65cca5b07101ecef2fcb",
+      "selected": "80 historical selected methods",
+      "real_effect": "HOLD"
+    },
+    "skill_studio": {
+      "ref": "ba20cd64eba0f09390818c294ae8894fab9a3acf",
+      "selected": "41 historical model tests",
+      "browser": "NOT_RUN"
+    }
+  },
+  "priority": "Core E2/E3/E4/B3 and canonical IAM/RLS; U3B exact clean locked combined checkout; ORG06R2 owner evidence; coordinate shared manifest/UI before activation",
+  "scores_promoted": false
+}

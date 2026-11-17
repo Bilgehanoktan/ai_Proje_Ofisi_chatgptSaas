@@ -1,0 +1,59 @@
+{
+  "revision": "ORG-07C-R2",
+  "parent": "73693e2b8864e3eb735bba40f2935191c0d83bef",
+  "branch_inventory": {
+    "initial": 195,
+    "last_review": 196
+  },
+  "local": {
+    "org07c_package": "32/32 SHA256 verified",
+    "regression": {
+      "pass": 39,
+      "fail": 0,
+      "log_sha256": "e9c71a51e2d3ccf3bc69ba601ace23902052b29edf0b99c68b28a2fae1fe80fc"
+    },
+    "manifest_tests": {
+      "pass": 9,
+      "fail": 0,
+      "log_sha256": "1e898898e91752300467cfdd5f0ebbf1a561601fe4590a92f83d310d63b5f0bc"
+    },
+    "scratch_patch": {
+      "check": "PASS",
+      "apply": "PASS",
+      "output_pins": "8/8",
+      "log_sha256": "d36f79d2e27aaf90be10cca0e4cdb511da27632bd8d7ccbae207585a14685dde"
+    },
+    "full_checkout": false,
+    "locked_build": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "remote": {
+    "base_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "base_manifest_paths": 504,
+    "base_product_nonmanifest_paths": 504,
+    "missing": 0,
+    "extra": 0,
+    "base_rows_verified": 4,
+    "prospective_changed": 3,
+    "prospective_added": 4,
+    "prospective_unchanged": 501,
+    "prospective_rows": 508,
+    "review_blob": "5de46ab8b2fc8ad0258abf5dd6f4dcc2fdd85d87",
+    "review_readback": "PASS",
+    "full_byte_audit": false,
+    "base_pins_matching": [
+      "U3A",
+      "P10J24B",
+      "EXT06"
+    ],
+    "new_path_collisions": 0
+  },
+  "gates": {
+    "org06r2": "11+1 NOT_RUN",
+    "canonical_IAM": "HOLD",
+    "product_registration": "NOT_APPLIED",
+    "main_merge": "NO",
+    "independent": "HOLD"
+  },
+  "product_changes": 0
+}
