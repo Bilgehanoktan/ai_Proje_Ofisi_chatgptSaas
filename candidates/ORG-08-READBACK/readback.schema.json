@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Internal synthetic readback candidate; NOT public API or canonical contract",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "org.runtime.office.readback.v0-D0"
+    },
+    "mode": {
+      "const": "D0_INTERNAL_REVIEW_ONLY"
+    },
+    "org_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^demo-[A-Za-z0-9_.:-]{1,123}$"
+    },
+    "plan_revision": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+    },
+    "seat_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+    },
+    "role": {
+      "enum": [
+        "orchestrator",
+        "research",
+        "engineer",
+        "qa"
+      ]
+    },
+    "history_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "history_head": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "office_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "office_pairs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "meeting_proposed": {
+      "type": "boolean"
+    },
+    "structural_match": {
+      "const": true
+    },
+    "freshness": {
+      "const": "HISTORICAL_SAMPLE"
+    },
+    "decision": {
+      "const": "HOLD"
+    },
+    "authoritative": {
+      "const": false
+    },
+    "identity_owner": {
+      "const": "HOLD"
+    },
+    "geometry_join": {
+      "const": "HOLD"
+    },
+    "runtime_binding": {
+      "const": null
+    },
+    "dispatch_allowed": {
+      "const": false
+    },
+    "release_ready": {
+      "const": false
+    },
+    "atomic_cross_store": {
+      "const": false
+    }
+  },
+  "required": [
+    "schema",
+    "mode",
+    "org_revision",
+    "project_id",
+    "plan_revision",
+    "task_id",
+    "seat_id",
+    "role",
+    "history_count",
+    "history_head",
+    "office_revision",
+    "office_pairs",
+    "meeting_proposed",
+    "structural_match",
+    "freshness",
+    "decision",
+    "authoritative",
+    "identity_owner",
+    "geometry_join",
+    "runtime_binding",
+    "dispatch_allowed",
+    "release_ready",
+    "atomic_cross_store"
+  ],
+  "additionalProperties": false
+}

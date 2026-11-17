@@ -1,0 +1,93 @@
+{
+  "revision": "ORG-08-READBACK",
+  "local": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "jsonschema": "4.26.0",
+    "tests_pass": 35,
+    "schema_boundary": 26,
+    "mock_owner_adapter": 6,
+    "compiled": 5,
+    "exact_R3_schema_blobs": 2,
+    "checkout_attempt_exit": 2,
+    "actual_new_integration_executed": 0,
+    "actual_new_integration_planned": 8,
+    "original_ORG06R2_12": "NOT_RUN",
+    "existing_router_asgi_cross_checks": 3,
+    "exact_ORG07A_router_blob": "eda507f8e5933c27568064455eccc4cf85bbba0c",
+    "router_owner_responses": "MOCKED",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "httpx": "0.28.1",
+    "original_ORG07A_6": "NOT_RUN"
+  },
+  "parallel": {
+    "ORG06R2": {
+      "ref": "fd91b58e030e4dd74274a58878c48d0616456b34",
+      "selected_match": 27,
+      "missing": 2,
+      "different": 0,
+      "candidate_path_overlap": 0
+    },
+    "PG": {
+      "ref": "ba6c72a2508e3eab579c33f48e52008d1d601897",
+      "selected_match": 24,
+      "missing": 5,
+      "different": 0,
+      "candidate_path_overlap": 0
+    },
+    "D4": {
+      "ref": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "selected_match": 13,
+      "missing": 16,
+      "different": 0,
+      "candidate_path_overlap": 0
+    },
+    "U3A": {
+      "ref": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "selected_match": 13,
+      "missing": 16,
+      "different": 0,
+      "candidate_path_overlap": 0
+    },
+    "A6": {
+      "ref": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+      "selected_match": 9,
+      "missing": 19,
+      "different": 1,
+      "candidate_path_overlap": 0
+    },
+    "UI": {
+      "ref": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "selected_match": 13,
+      "missing": 16,
+      "different": 0,
+      "candidate_path_overlap": 0
+    },
+    "W5": {
+      "ref": "01bc99b5fe30aa4f0f0be3dfdfcf64e8b0d2f836",
+      "selected_match": 13,
+      "missing": 16,
+      "different": 0,
+      "candidate_path_overlap": 0
+    },
+    "ORG07A": {
+      "ref": "a2f4461d558af0f69e51cf1570ccea64b7d9ac20",
+      "selected_match": 29,
+      "missing": 0,
+      "different": 0,
+      "candidate_path_overlap": 0
+    }
+  },
+  "a6_different_path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+  "pg_evidence": "26/26 user-reported hash-matched, not rerun, not independent acceptance",
+  "gate_promotion": false,
+  "source_edits": 0,
+  "limitation": "No full exact local checkout, no actual owner integration execution, no real IAM, production HTTP, Office engine or cross-store atomicity.",
+  "parallel_basis": "Seven prior branch observations of 27 pins; two new ORG-07A pins are branch-local and absent at recorded earlier refs. ORG-07A parent tree verified after pivot. Selected-pin comparison only.",
+  "superseded_draft": {
+    "revision": "ORG-07-08-READBACK",
+    "status": "LOCAL_SUPERSEDED_NOT_COMMITTED",
+    "reason": "ORG-07A appeared during prepublication branch search; duplicate Studio wrapper removed, 5 duplicate transport tests excluded, new three ASGI cross checks added; no branch merge."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "revision": "ORG-08-READBACK",
+  "parent": "a2f4461d558af0f69e51cf1570ccea64b7d9ac20",
+  "files": {
+    "preview_boundary.py": {
+      "symbols": [
+        "Hold",
+        "ReviewPins",
+        "require",
+        "blob",
+        "token",
+        "digest",
+        "schema_validator",
+        "validate",
+        "scope_ok",
+        "validate_studio",
+        "hold_preview",
+        "join_historical"
+      ],
+      "purpose": "Strict existing schema and exact historical readback comparison"
+    },
+    "preview_reader.py": {
+      "symbols": [
+        "verify_checkout",
+        "owners",
+        "review_project"
+      ],
+      "purpose": "Call existing owner readers; no registered route or grant"
+    },
+    "readback.schema.json": {
+      "purpose": "Internal only readback output contract"
+    },
+    "test_preview_boundary.py": {
+      "purpose": "32 actual local checks: 26 pure schema/boundary + 6 simulated owner adapter"
+    },
+    "test_preview_checkout.py": {
+      "purpose": "Eight prepared actual-source scenarios; blocked at checkout preflight"
+    },
+    "SOURCE_PINS.json": {
+      "purpose": "29 selected local Git blobs and 5 reviewed external references"
+    },
+    "IAM_RUNTIME_ALIGNMENT.json": {
+      "purpose": "D4 17-field mapping, unresolved authority and Office boundaries"
+    },
+    "HANDOVER.md": {
+      "purpose": "Architecture delta, tests, maintenance, rollback and next step"
+    },
+    "test_local.log": {
+      "purpose": "Actual local unit test results"
+    },
+    "checkout_blocked.log": {
+      "purpose": "Actual preflight stop; no integration execution"
+    },
+    "TEST_EVIDENCE.json": {
+      "purpose": "Test classification, parallel branch observations and limitations"
+    },
+    "test_studio_cross_readback.py": {
+      "purpose": "Three actual local ASGI cross-component checks using exact existing ORG-07A transport and synthetic owner responses",
+      "symbols": [
+        "load_router",
+        "CrossReadbackTests"
+      ]
+    }
+  },
+  "api_registered": [],
+  "db_changes": [],
+  "event_changes": [],
+  "dependencies": [
+    "Python stdlib",
+    "jsonschema==4.26.0 (existing R3 test dependency)",
+    "fastapi==0.128.2, starlette==0.50.0, httpx==0.28.1 (observed isolated ORG-07A test versions; not a product lock)"
+  ],
+  "tests": {
+    "local_schema_boundary": 26,
+    "local_mock_owner_adapter": 6,
+    "local_existing_router_asgi_cross_checks": 3,
+    "actual_integration_prepared": 8,
+    "actual_integration_executed": 0
+  },
+  "gates": {
+    "canonical_iam": "HOLD",
+    "runtime": "HOLD",
+    "office": "HOLD",
+    "product": "HOLD",
+    "independent_security": "HOLD"
+  }
+}
