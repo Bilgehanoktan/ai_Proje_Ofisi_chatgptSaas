@@ -1,0 +1,15 @@
+{
+  "revision":"W5-J",
+  "parent":"07eae266cfcdb6de8a4b65cca5b07101ecef2fcb",
+  "files":[
+    {"path":"run_exact.py","symbols":["git_blob","read_pin","verify_sources","run"],"purpose":"Isolated exact-source test runner"},
+    {"path":"SOURCE_PINS.json","purpose":"Inherited 69 plus 25 additional parent file pins"},
+    {"path":"ACCEPTANCE_GATES.json","purpose":"J1-J6 machine-readable gate and authority separation"},
+    {"path":"TEST_EVIDENCE.json","purpose":"Executed group counts, environment, raw-log digests"},
+    {"path":"HANDOVER.md","purpose":"Owner mapping, canonical architecture, maintenance, rollback and next step"}
+  ],
+  "api_changes":[],"db_changes":[],"dependency_changes":[],"product_changes":[],
+  "dependencies":{"runner":"Python stdlib; existing cryptography 46.0.4 for H/I; 94 parent-pinned files","product_lock":"NOT_VERIFIED"},
+  "status":"LOCAL_PASS_PRODUCT_HOLD",
+  "next":"J2/J3 owner contract and physical/independent evidence, J4 reviewed wiring, J5 owner PG and product acceptance, J6 human/IV"
+}

@@ -1,0 +1,24 @@
+{
+  "revision": "W5-J",
+  "parent": "07eae266cfcdb6de8a4b65cca5b07101ecef2fcb",
+  "status": "LOCAL_REGRESSION_PASS_PRODUCT_HOLD",
+  "design_score": 50,
+  "source_score": 25,
+  "gates": [
+    {"id":"J1","owner":"W5/QA","status":"PASS_LOCAL","evidence":"94 exact parent pins; 170 tests, zero failures/errors/skips; selected source only"},
+    {"id":"J2","owner":"T1/Budget","status":"HOLD","criterion":"Physical per-invocation membership and atomic reservation/usage/reconciliation readback; owner-approved R03 mapping and migration"},
+    {"id":"J3","owner":"Core/D5/PEP/WA/IV","status":"HOLD","criterion":"Protected identity reader, common root publication, expiry-through-commit, independent key/clock/head custody and atomic replay/restore/revocation proof"},
+    {"id":"J4","owner":"Runtime/Integration","status":"HOLD","criterion":"Owner-approved call sites inside existing fence/T1; separate prospective and consumed phases; no default startup or projection hook"},
+    {"id":"J5","owner":"D4/ORG/Unified/QA","status":"NOT_RUN","criterion":"Actual PG/RLS 454 owner probes, company races/lost ACK, ORG membership, W5 physical negatives and full locked product acceptance"},
+    {"id":"J6","owner":"Human/IV","status":"HOLD","criterion":"Explicit release scope, provider, data, budget, effect, independent custody and evidence acceptance"}
+  ],
+  "pg_preflight": {"psql":false,"postgres":false,"docker":false,"podman":false,"psycopg":false,"psycopg2":false,"approved_endpoint_supplied":false},
+  "decision":"HOLD",
+  "provider_call_allowed":false,
+  "tool_call_allowed":false,
+  "spend_allowed":false,
+  "retry_allowed":false,
+  "settlement_allowed":false,
+  "main_merge_allowed":false,
+  "independent_accepted":false
+}
