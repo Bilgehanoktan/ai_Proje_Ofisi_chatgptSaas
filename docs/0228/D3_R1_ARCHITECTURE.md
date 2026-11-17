@@ -17,3 +17,6 @@ Real SQL execution, Windows bootstrap, owner probe and actual tenant isolation a
 
 ## Evidence
 Source manifest: tests/fixtures/0228-d3/SOURCE_MANIFEST.json. Static 12 source checks, Python compile PASS, 11 pure guard checks. Actual PG NOT_RUN. Canonical 0227 acceptance remains 11/16 (68.75%). Next: D3-R2 source-bound isolated Windows bootstrap with safe ephemeral login provisioning, then actual probe/owner tests and raw review.
+
+## Transfer verification
+8/8 fixture blob and byte-size pins checked, 25/25 seed insert column arities checked. UTF-8 size metadata for 01_schema.sql corrected from character count to actual byte count (9100); source unchanged. All 0227 files preserved. Structural checks only, no actual PostgreSQL execution.

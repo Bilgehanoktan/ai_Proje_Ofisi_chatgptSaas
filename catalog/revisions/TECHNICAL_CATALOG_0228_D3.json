@@ -11,7 +11,7 @@
     {
       "path": "tests/fixtures/0228-d3/01_schema.sql",
       "git_blob": "22a68921e6bf9047c231f789d3a03ca08d4341d0",
-      "bytes": 9098,
+      "bytes": 9100,
       "purpose": "12-table derived fixture schema"
     },
     {
@@ -100,5 +100,144 @@
   "actual_pg": "NOT_RUN",
   "maintenance": "Preserve logs; stop only new cluster; no retry on dirty fixture.",
   "rollback": "Abandon isolated branch/fixture, retain 0227.",
-  "next": "D3-R2 bootstrap and real execution"
+  "next": "D3-R2 bootstrap and real execution",
+  "readback": {
+    "status": "PASS",
+    "fixture_blob_matches": 8,
+    "fixture_byte_size_matches": 8,
+    "correction": "01_schema.sql size corrected from JS character count 9098 to UTF-8 byte count 9100; original SQL blob unchanged.",
+    "seed_column_arity": {
+      "passed": 25,
+      "checks": [
+        {
+          "tenant": "A",
+          "table": "events",
+          "columns": 8
+        },
+        {
+          "tenant": "A",
+          "table": "outbox",
+          "columns": 6
+        },
+        {
+          "tenant": "A",
+          "table": "fences",
+          "columns": 6
+        },
+        {
+          "tenant": "A",
+          "table": "run_heads",
+          "columns": 11
+        },
+        {
+          "tenant": "A",
+          "table": "run_leases",
+          "columns": 17
+        },
+        {
+          "tenant": "A",
+          "table": "run_mutations",
+          "columns": 10
+        },
+        {
+          "tenant": "A",
+          "table": "run_audit",
+          "columns": 15
+        },
+        {
+          "tenant": "A",
+          "table": "sample_budgets",
+          "columns": 13
+        },
+        {
+          "tenant": "A",
+          "table": "run_admissions",
+          "columns": 10
+        },
+        {
+          "tenant": "A",
+          "table": "sample_reservations",
+          "columns": 10
+        },
+        {
+          "tenant": "A",
+          "table": "run_lease_renewals",
+          "columns": 10
+        },
+        {
+          "tenant": "A",
+          "table": "sample_settlements",
+          "columns": 14
+        },
+        {
+          "tenant": "B",
+          "table": "events",
+          "columns": 8
+        },
+        {
+          "tenant": "B",
+          "table": "outbox",
+          "columns": 6
+        },
+        {
+          "tenant": "B",
+          "table": "fences",
+          "columns": 6
+        },
+        {
+          "tenant": "B",
+          "table": "run_heads",
+          "columns": 11
+        },
+        {
+          "tenant": "B",
+          "table": "run_leases",
+          "columns": 17
+        },
+        {
+          "tenant": "B",
+          "table": "run_mutations",
+          "columns": 10
+        },
+        {
+          "tenant": "B",
+          "table": "run_audit",
+          "columns": 15
+        },
+        {
+          "tenant": "B",
+          "table": "sample_budgets",
+          "columns": 13
+        },
+        {
+          "tenant": "B",
+          "table": "run_admissions",
+          "columns": 10
+        },
+        {
+          "tenant": "B",
+          "table": "sample_reservations",
+          "columns": 10
+        },
+        {
+          "tenant": "B",
+          "table": "run_lease_renewals",
+          "columns": 10
+        },
+        {
+          "tenant": "B",
+          "table": "sample_settlements",
+          "columns": 14
+        },
+        {
+          "tenant": "B",
+          "table": "events",
+          "columns": 8
+        }
+      ]
+    },
+    "previous_files_unchanged": true,
+    "product_files_unchanged": 393,
+    "original_database_files_unchanged": 16
+  }
 }
