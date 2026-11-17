@@ -61,3 +61,35 @@
 .eds-frame .plan-progress-grid summary{cursor:pointer}
 .eds-frame .plan-progress-grid li{margin-block:8px}
 .eds-frame .plan-progress-grid small{display:block}
+
+/* P10J23: management presentation only. Keep workspace/office geometry and semantic tokens unchanged. */
+.eds-frame[data-eds-theme=dark]{--management-shadow:0 8px 24px #05091140;--management-rule:#4b5b70}
+.eds-frame[data-eds-theme=light]{--management-shadow:0 6px 20px #1720330d;--management-rule:#a8b5c8}
+.eds-frame .shell:not(.shell-office) main>.topline{padding-block:8px 16px;border-bottom:1px solid var(--management-rule);gap:16px;align-items:flex-start}
+.eds-frame .shell:not(.shell-office) main>.topline h1{font-size:clamp(26px,3vw,40px);line-height:1.13;letter-spacing:-.035em;overflow-wrap:anywhere}
+.eds-frame .shell:not(.shell-office) main>.topline .eyebrow{font-size:11px;letter-spacing:.12em}
+.eds-frame .shell:not(.shell-office) main>.topline .chips{align-items:center}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel){margin-block:16px;padding:clamp(14px,1.9vw,24px);border-radius:18px;box-shadow:var(--management-shadow);min-width:0;overflow-wrap:anywhere}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) h2{font-size:clamp(18px,1.7vw,23px);line-height:1.25;letter-spacing:-.025em}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) h3{font-size:15px;line-height:1.35}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) .sectiongrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,248px),1fr));gap:12px}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) .item{background:var(--surface-raised);border-radius:13px;padding:16px;min-width:0}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) .item p{line-height:1.6}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) :is(input[type=search],input[type=text],input:not([type]),textarea){min-width:0;max-width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--outline-strong);border-radius:10px;background:var(--panel);color:var(--text);font:inherit}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) :is(input,textarea)::placeholder{color:var(--muted);opacity:1}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) .chips{gap:8px}
+.eds-frame .shell:not(.shell-office) main>.metrics{grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr));gap:14px}
+.eds-frame .shell:not(.shell-office) main>.metrics>.metric{min-width:0;padding:18px;border-radius:16px;box-shadow:var(--management-shadow);overflow-wrap:anywhere}
+.eds-frame .shell:not(.shell-office) main>.metrics>.metric .value{font-variant-numeric:tabular-nums;font-size:clamp(25px,3vw,34px)}
+.eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) :is(code,dd){overflow-wrap:anywhere}
+@media(max-width:680px){
+ .eds-frame .shell:not(.shell-office) main>.topline{gap:12px;padding-block:4px 12px}
+ .eds-frame .shell:not(.shell-office) main>.topline>div{min-width:0;max-width:100%}
+ .eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel){margin-block:12px;padding:14px}
+ .eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) :is(input[type=search],input[type=text],input:not([type]),textarea){font-size:16px}
+ .eds-frame .shell:not(.shell-office) main>.metrics{gap:10px}
+}
+@media(max-width:420px){
+ .eds-frame .shell:not(.shell-office) main>.metrics{grid-template-columns:minmax(0,1fr)}
+ .eds-frame .shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel) .sectiongrid{grid-template-columns:minmax(0,1fr)}
+}
