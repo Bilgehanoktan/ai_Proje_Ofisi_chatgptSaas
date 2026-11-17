@@ -1,0 +1,128 @@
+{
+  "revision": "0227",
+  "checkpoint": "D3_SCOPED_FIXTURE_EVIDENCE_TRANSFER",
+  "status": "PASS_NON_OWNER_RLS_LOCK_FIXTURE_RAW_REVIEWED",
+  "source_branch": "integration/0228-d3-rls-fixture",
+  "source_review_commit": "426a2e69dd193a9ec8f61181cc809c28fc50733c",
+  "source_review_path": "tests/evidence/D3_R4_RAW_EVIDENCE_REVIEW_0228.json",
+  "source_review_blob": "a623e526b1f7ffdc837f320431257247d858fbfb",
+  "executed_commit": "f6fba86b004258761d7ac089bedfa5d8a169f601",
+  "raw_report_files": [
+    {
+      "path": "tests/evidence/0228-d3-raw/D3_PROBE.json",
+      "git_blob": "1477979d48fa53e93855548e068e15048ff15762",
+      "bytes": 23198,
+      "sha256": "2cd006db43a1e976f546a9df8c1f20bbbb44599a56841f22dd65e26f40706dbd"
+    },
+    {
+      "path": "tests/evidence/0228-d3-raw/D3_REVIEW.json",
+      "git_blob": "11c385c0e4a28737a4f92de1d9d6651ef603317d",
+      "bytes": 731,
+      "sha256": "06aba762bf93c7d1eb9e67459f2b98b405aba1b118d121607849802c0148ff6e"
+    },
+    {
+      "path": "tests/evidence/0228-d3-raw/D3_FINAL.json",
+      "git_blob": "bed8ab7b400840be251c0965f4fd59371e41f6c0",
+      "bytes": 799,
+      "sha256": "26b30cc3e52807ceb0597e4ce2b96e94c6f0aecb9abb84477996068567e2bb7b"
+    }
+  ],
+  "archive": {
+    "name": "AIOS_0228_D3_EVIDENCE.zip",
+    "bytes": 5009,
+    "sha256": "7d4f25d5f1c8f32621a0662ed48a3def38124942c91b252e12439c850e8c05ab",
+    "entries": 7,
+    "crc": "PASS",
+    "normalized_unique_safe_paths": 7
+  },
+  "checks": {
+    "expected_ordered_ids": 230,
+    "actual_unique_ids": 230,
+    "passed": 230,
+    "failed": 0,
+    "exact_detail_fields_checked": 158,
+    "groups": {
+      "table_access": 192,
+      "session_identity": 14,
+      "transaction_and_isolation": 17,
+      "role_policy_inventory": 7
+    },
+    "sqlstate_counts": {
+      "23503": 1,
+      "23514": 1,
+      "25006": 1,
+      "42501": 97,
+      "55P03": 1
+    },
+    "owner": {
+      "insert_denied_sqlstate": "42501",
+      "status": "PASS",
+      "tables_hidden": 12
+    },
+    "bootstrap": [
+      "roles_and_database",
+      "schema_and_policies",
+      "direct_login_seeds",
+      "owner_force_rls",
+      "runtime_probes"
+    ],
+    "server": {
+      "auth": "scram-sha-256",
+      "cluster": "aicos_d3_0228_disposable",
+      "data_directory_match": true,
+      "driver": "3.3.9",
+      "host": "127.0.0.1",
+      "libpq_version": 180004,
+      "port": 55433,
+      "pq_impl": "binary",
+      "version_num": 170012
+    }
+  },
+  "criterion_review": {
+    "criterion": "Non-owner RLS/lock contention",
+    "decision": "PASS_SCOPED_FIXTURE",
+    "basis": [
+      "actual authenticated non-owner A/B and unmapped roles, 12 tables ENABLE/FORCE, 48 policies",
+      "same tenant permitted scope; cross-tenant DML/read rejected or zero rows; owner DML denied",
+      "actual same-scope NOWAIT 55P03, other scope non-blocking, stale budget CAS, cap/rollback/repeatable-read controls"
+    ],
+    "not_covered": [
+      "Canonical product policy deployment or dynamic IAM",
+      "Production app pool integration and identity rebinding",
+      "Full company-stream/T1 multi-project PG race, lock order and UNKNOWN quarantine",
+      "Independent security/custody/effect authority"
+    ]
+  },
+  "gate": {
+    "previous": 11,
+    "done": 12,
+    "total": 16,
+    "percent": 75,
+    "closed": "D3",
+    "remaining": [
+      "E2",
+      "E3",
+      "E4",
+      "B3"
+    ]
+  },
+  "transfer_method": "Evidence metadata only, no merge, no fixture SQL, no product/database code change; exact source and raw report pins retained",
+  "limitations": [
+    "Actual user-run Windows fixture, no independent replay.",
+    "Raw binary archives not included; verified report/logs and D1-matching hashes, not independent binary execution.",
+    "Probe counts are fixture controls, not 230 distinct original product tests; do not add to historic 307.",
+    "Owner DDL power remains; no SECURITY DEFINER functions in fixture, not proof about future production functions.",
+    "No product or original DDL changes. No credentials retained intentionally; no rerun in same stage."
+  ],
+  "parallel_heads_observed": {
+    "integration/p10j24-product-acceptance": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+    "integration/p10j24b-source-recovery": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "integration/unified-u3a-product-acceptance": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "integration/0228-d3-rls-fixture": "426a2e69dd193a9ec8f61181cc809c28fc50733c",
+    "planning/org-05-integration-readiness": "c2e15eaa31c17fe6a4c91aaa3aa7e446b59bc235",
+    "planning/org-05r2-persistence-contract": "85fe0f912c33b9b1b984f85ae1ba96b6fd3711a0",
+    "planning/org-05r3-durable-operations": "85fe0f912c33b9b1b984f85ae1ba96b6fd3711a0"
+  },
+  "next": "Coordinate remaining E2/E3/E4 acceptance with unified U3 owner; review exact branch/evidence compatibility before transferring any result. B3 independent authority remains HOLD; canonical RLS and company-stream T1 PG remain open."
+}

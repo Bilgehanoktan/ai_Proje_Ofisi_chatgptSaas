@@ -1,6 +1,6 @@
 # 24 Teknik Alan — TRACK-0227
 
-E1, D1 and D2 PASS; 11/16 integration gates (68.75%). Design/source ordinal scores unchanged. Historical selected 307 not rerun; 24 original SQLite and 13 original PostgreSQL tests raw-reviewed separately. RLS/full build/browser remain open.
+E1, D1, D2 and scoped D3 PASS; 12/16 integration gates (75%). Scores unchanged. Historical 307, original SQLite24, PG13 and D3 fixture230 are distinct scopes, not additive unique product count. Full build/browser, canonical RLS and independent acceptance remain open.
 
 | ID | Alan | Tasarım | Kaynak | Gerçek test durumu | Bu tur |
 |---:|---|---:|---:|---|---|
@@ -14,7 +14,7 @@ E1, D1 and D2 PASS; 11/16 integration gates (68.75%). Design/source ordinal scor
 | 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 | 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_0210_DENIAL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
-| 11 | Database | 75 | 25 | D1_D2_PASS_RLS_OPEN | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 11 | Database | 75 | 25 | D1_D2_D3_SCOPED_PASS_CANONICAL_RLS_OPEN | 0227_D3_SCOPED_FIXTURE_RAW_REVIEWED_PASS |
 | 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM | 0227_D2_PG13_RAW_REVIEWED_PASS |
 | 13 | Memory & Knowledge | 75 | 25 | PARTIAL_PASS_ORIGINAL_0221_SQL10_RAW_REVIEWED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 | 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
@@ -23,10 +23,10 @@ E1, D1 and D2 PASS; 11/16 integration gates (68.75%). Design/source ordinal scor
 | 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL | 0227_D2_PG13_RAW_REVIEWED_PASS |
-| 20 | Test & QA | 75 | 25 | E1_ORIGINAL24_D2_PG13_RAW_REVIEWED_FULL_REGRESSION_OPEN | 0227_D2_PG13_RAW_REVIEWED_PASS |
-| 21 | DevOps & Infrastructure | 75 | 25 | D1_D2_PASS_RLS_OPEN | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 20 | Test & QA | 75 | 25 | E1_ORIGINAL24_D2_PG13_D3_FIXTURE230_RAW_REVIEWED_FULL_REGRESSION_OPEN | 0227_D3_SCOPED_FIXTURE_RAW_REVIEWED_PASS |
+| 21 | DevOps & Infrastructure | 75 | 25 | D1_D2_D3_SCOPED_PASS_CANONICAL_RLS_OPEN | 0227_D3_SCOPED_FIXTURE_RAW_REVIEWED_PASS |
 | 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0217_RESTORE_RESIDUAL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
-| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_D3_SCOPED_FIXTURE_RAW_REVIEWED_PASS |
 
-Current evidence: tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json
+Current evidence: tests/evidence/D3_EVIDENCE_TRANSFER_0227.json

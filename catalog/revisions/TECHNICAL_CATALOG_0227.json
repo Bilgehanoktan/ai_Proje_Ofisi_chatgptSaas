@@ -202,5 +202,15 @@
     ],
     "scope": "Design review only, no DDL or runtime change",
     "test": "NOT_RUN"
+  },
+  "d3_evidence_transfer": {
+    "evidence": "tests/evidence/D3_EVIDENCE_TRANSFER_0227.json",
+    "source_review_commit": "426a2e69dd193a9ec8f61181cc809c28fc50733c",
+    "scope": "PASS_NON_OWNER_RLS_LOCK_FIXTURE_RAW_REVIEWED",
+    "fixture_controls": 230,
+    "product_changes": 0,
+    "original_db_changes": 0,
+    "maintenance": "Preserve stopped disposable D3 and accepted D1/D2; no rerun/migration. Verify raw report pins in source branch.",
+    "rollback": "Evidence-only revert if invalidated; no runtime migration to reverse."
   }
 }
