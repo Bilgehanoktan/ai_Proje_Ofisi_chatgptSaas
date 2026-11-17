@@ -1,0 +1,44 @@
+{
+  "revision": "ORG-07C-R3",
+  "parent_evidence_commit": "a11155a1c284e128ba9593e8a05d2727a205c96e",
+  "environment": "Node v22.16.0 isolated local filesystem; synthetic fixtures only",
+  "exact_source_git_blobs": {
+    "review_evidence.mjs": "cc6729687b035ae97fd48f8eca3a97f138f04073",
+    "review_cli.mjs": "a127e81b1c3b856b158dfc7017f4fe79462f2c9f"
+  },
+  "source_sha256": {
+    "review_evidence.mjs": "d3aaf88da8a8888c56e3478ea0d809deb44c625beee28c06528132253add84eb",
+    "review_cli.mjs": "053fa99a4a8f05628af112af207615423edccdb98a1dd7072c9320b6f9ca4c44"
+  },
+  "selftest": {
+    "pass": 24,
+    "fail": 0,
+    "duplicates_v8_cases": true,
+    "raw_log_sha256": "0529682c3f8467d52b840bdaae571d66f88497b7468c6ca8a228d29e24d1ce92"
+  },
+  "cli_cases": {
+    "pass": 6,
+    "fail": 0,
+    "names": [
+      "synthetic files and exact SHA256",
+      "failure log",
+      "missing file",
+      "invalid UTF8",
+      "invalid JSON",
+      "oversize"
+    ],
+    "raw_log_sha256": "68cca4b284d9b1c75710098106777ad961385150d6bf9cefc0ec08b1e4849bc0"
+  },
+  "unique_selected_checks": 30,
+  "scope": "No actual ORG-06R2 execution, no product test or independent acceptance. Supersedes CLI NOT_RUN only in R3 helper evidence. Raw logs in local delta ZIP.",
+  "prior_tree_comparison": {
+    "prior_files_unchanged": 1793,
+    "product_files_unchanged": 393,
+    "additions": 5
+  },
+  "branch_count_before_evidence": 201,
+  "activation": "HOLD",
+  "owner_runtime": "11+1 NOT_RUN",
+  "canonical_IAM": "HOLD",
+  "product_registration": "NOT_APPLIED"
+}
