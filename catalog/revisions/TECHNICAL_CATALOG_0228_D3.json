@@ -1,5 +1,5 @@
 {
-  "revision": "0228-D3-R1",
+  "revision": "0228-D3-R2",
   "base_commit": "bebee3198ede68cd201cba363752a9006be35581",
   "files": [
     {
@@ -49,6 +49,65 @@
       "git_blob": "6ce374bc2801d9223658d05959cb1c25178b5ba9",
       "bytes": 15070,
       "purpose": "actual PG probe runner; main, validate_dsn, table, run_probe"
+    },
+    {
+      "path": "scripts/run_d3_0228.py",
+      "git_blob": "be3ae5843e1f8d240fd42de4dc383862b4e908a8",
+      "bytes": 16342,
+      "sha256": "d201e8704db1b09f14d589f2c31c28bb41153c951a3798748f77158ef30485ce",
+      "purpose": "Guarded disposable Windows PostgreSQL bootstrap and D3-R1 actual probes",
+      "functions": [
+        "need",
+        "sha",
+        "blob",
+        "file",
+        "write",
+        "load",
+        "git",
+        "fixture_check",
+        "fixed_paths",
+        "input_check",
+        "bootstrap_statements",
+        "expected_ids",
+        "safe_error",
+        "child",
+        "main"
+      ],
+      "cli": "--repo, --commit; --child internal explicit ACK only",
+      "dependencies": [
+        "original pinned D1 helper",
+        "R1 fixture manifest and 8 sources",
+        "E1 wheel archive and D1 combined lock",
+        "Python 3.14.3",
+        "PostgreSQL 17.12",
+        "psycopg 3.3.9 binary",
+        "Windows whoami/icacls/PowerShell"
+      ]
+    },
+    {
+      "path": "scripts/test_d3_bootstrap.py",
+      "git_blob": "7eff356cede4b56a24ab5fe31b3b5f1cc75c4018",
+      "bytes": 3665,
+      "sha256": "637f2d2cfbdf719a73a267508567ce46ff187ee9a2456888660b2587bcf9192d",
+      "purpose": "Pure bootstrap guard regression tests; no PostgreSQL connection",
+      "classes": [
+        "BootstrapTests"
+      ],
+      "functions": [
+        "test_accepted_stage_denied",
+        "test_child_without_ack_denied",
+        "test_child_wrong_path_denied",
+        "test_exact_probe_inventory",
+        "test_existing_stage_denied",
+        "test_fresh_path",
+        "test_input_hash_tamper",
+        "test_report_exclusive",
+        "test_role_sql_extra_statement_denied",
+        "test_role_statements",
+        "test_root_symlink_denied",
+        "test_safe_error",
+        "test_wrong_source_path_denied"
+      ]
     }
   ],
   "dependencies": [
@@ -57,7 +116,7 @@
     "Python 3.14.3",
     "five original pinned DDLs"
   ],
-  "db": "12 separate fixture tables; 4 non-superuser roles; 48 policies; port 55433",
+  "db": "12 separate fixture tables, 48 policies, 4 non-superuser fixture identities plus disposable administrator, port 55433; no product database changes",
   "api_changes": [],
   "product_changes": 0,
   "original_db_changes": 0,
@@ -98,9 +157,9 @@
     }
   },
   "actual_pg": "NOT_RUN",
-  "maintenance": "Preserve logs; stop only new cluster; no retry on dirty fixture.",
+  "maintenance": "On failure preserve D3 stage and sanitized reports, stop only D3 cluster; never retry in place or delete automatically. Do not share server-private.log, data or tmp.",
   "rollback": "Abandon isolated branch/fixture, retain 0227.",
-  "next": "D3-R2 bootstrap and real execution",
+  "next": "D3-R3 Windows run, then D3-R4 raw review",
   "readback": {
     "status": "PASS",
     "fixture_blob_matches": 8,
@@ -239,5 +298,44 @@
     "previous_files_unchanged": true,
     "product_files_unchanged": 393,
     "original_database_files_unchanged": 16
-  }
+  },
+  "r2_test": {
+    "python_compile": "PASS",
+    "local_unittest": {
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "names": [
+        "test_accepted_stage_denied",
+        "test_child_without_ack_denied",
+        "test_child_wrong_path_denied",
+        "test_exact_probe_inventory",
+        "test_existing_stage_denied",
+        "test_fresh_path",
+        "test_input_hash_tamper",
+        "test_report_exclusive",
+        "test_role_sql_extra_statement_denied",
+        "test_role_statements",
+        "test_root_symlink_denied",
+        "test_safe_error",
+        "test_wrong_source_path_denied"
+      ],
+      "seconds": 0.012
+    },
+    "expected_runtime_probe_ids": 230,
+    "owner_checks": {
+      "hidden_tables": 12,
+      "insert_denial_sqlstate": "42501",
+      "status": "NOT_RUN"
+    },
+    "accepted_d1_raw_hashes_rechecked": {
+      "review": "ce09749cc9507961cec8120c712cc599556fc83d6ecf1f0da2eae4546a4dd407",
+      "lock": "576dc61d00895bf3ba624b881b49785c1617b1e476bd4b7dec3ea05217c9b4ac",
+      "final": "5e50f13bf80cf221c981fe535bcd3bcbfeb02e3adc0dc65363e6996064545177",
+      "source": "uploaded D1 ZIP"
+    }
+  },
+  "bootstrap_manifest": "tests/fixtures/0228-d3/R2_BOOTSTRAP_MANIFEST.json",
+  "rollback_r2": "f2f0c548d5de6d5cc166ac103520d4ede007e959"
 }

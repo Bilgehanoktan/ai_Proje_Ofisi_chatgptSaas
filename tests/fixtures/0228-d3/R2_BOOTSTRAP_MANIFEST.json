@@ -1,0 +1,32 @@
+{
+  "revision": "0228-D3-R2",
+  "parent": "f2f0c548d5de6d5cc166ac103520d4ede007e959",
+  "classification": "DISPOSABLE_FIXTURE_BOOTSTRAP_CANDIDATE",
+  "files": [
+    {
+      "path": "scripts/run_d3_0228.py",
+      "git_blob": "be3ae5843e1f8d240fd42de4dc383862b4e908a8",
+      "bytes": 16342,
+      "sha256": "d201e8704db1b09f14d589f2c31c28bb41153c951a3798748f77158ef30485ce",
+      "purpose": "Guarded disposable Windows PostgreSQL bootstrap and D3-R1 actual probes"
+    },
+    {
+      "path": "scripts/test_d3_bootstrap.py",
+      "git_blob": "7eff356cede4b56a24ab5fe31b3b5f1cc75c4018",
+      "bytes": 3665,
+      "sha256": "637f2d2cfbdf719a73a267508567ce46ff187ee9a2456888660b2587bcf9192d",
+      "purpose": "Pure bootstrap guard regression tests; no PostgreSQL connection"
+    }
+  ],
+  "r1_manifest": {
+    "path": "tests/fixtures/0228-d3/SOURCE_MANIFEST.json",
+    "git_blob": "78b656a97302553a77b56ddaa630ad748f7746e0",
+    "files": 8
+  },
+  "d1_helper": {
+    "path": "scripts/run_d1_0227_authfix.py",
+    "git_blob": "d20bbb6740901e2abf02d445b20cfa34f4b93d50"
+  },
+  "accepted_lock_sha256": "576dc61d00895bf3ba624b881b49785c1617b1e476bd4b7dec3ea05217c9b4ac",
+  "runtime": "NOT_RUN"
+}
