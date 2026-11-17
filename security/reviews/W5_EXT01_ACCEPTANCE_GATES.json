@@ -1,0 +1,62 @@
+{
+  "revision": "W5-EXT-01",
+  "normative": false,
+  "default": "DENY",
+  "tests": [
+    {
+      "id": "EXT-G01",
+      "criterion": "Exact source bytes, SHA256 and dependency lock/SBOM",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G02",
+      "criterion": "Selected instructions/scripts, vulnerability and third-party license review",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G03",
+      "criterion": "Isolated disposable worktree/home, read-only inputs, no secrets, network deny",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G04",
+      "criterion": "Superpowers deletion, shared-tree fallback, hooks, merge/push/cleanup denied",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G05",
+      "criterion": "UI global/legacy/force/persist and path escape denied; EDS preserved",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G06",
+      "criterion": "Watch local + no-whisper, no cookies/URL/keys; FFmpeg path/protocol/time/size/frame quotas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G07",
+      "criterion": "Untrusted prompt/media cannot modify policies or grants",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G08",
+      "criterion": "Existing tenant/environment/run/role scope, exact SourcePin and manifest; no effective tools",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G09",
+      "criterion": "Revocation, rollback, audit, resource and budget caps tested",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EXT-G10",
+      "criterion": "Exact checkout/build/regression, owner review and separate independent acceptance",
+      "status": "NOT_RUN"
+    }
+  ],
+  "independent_acceptance": "HOLD",
+  "install": "NOT_RUN",
+  "network": "DENY",
+  "spend": "DENY",
+  "runtime_grants": "NONE"
+}
