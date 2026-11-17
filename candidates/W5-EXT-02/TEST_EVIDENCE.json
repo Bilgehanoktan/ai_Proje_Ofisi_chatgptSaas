@@ -1,0 +1,146 @@
+{
+  "revision": "W5-EXT-02",
+  "environment": "JavaScript V8 isolate (connector execution environment); no Node execution",
+  "command": "runCases() invoked directly against the same authored reviewPacket function serialized into review_packet.mjs; test harness serialized from runCases and fixture",
+  "result": "PASS",
+  "passed": 34,
+  "cases": [
+    {
+      "name": "valid plan remains advisory",
+      "result": "PASS"
+    },
+    {
+      "name": "null packet",
+      "result": "PASS"
+    },
+    {
+      "name": "unexpected authorization field",
+      "result": "PASS"
+    },
+    {
+      "name": "invalid base",
+      "result": "PASS"
+    },
+    {
+      "name": "zero base",
+      "result": "PASS"
+    },
+    {
+      "name": "unsafe task id",
+      "result": "PASS"
+    },
+    {
+      "name": "unknown mode",
+      "result": "PASS"
+    },
+    {
+      "name": "shared directory fallback",
+      "result": "PASS"
+    },
+    {
+      "name": "missing worktree review",
+      "result": "PASS"
+    },
+    {
+      "name": "ownership conflict",
+      "result": "PASS"
+    },
+    {
+      "name": "stale ownership head",
+      "result": "PASS"
+    },
+    {
+      "name": "ownership grant injection",
+      "result": "PASS"
+    },
+    {
+      "name": "reject MERGE",
+      "result": "PASS"
+    },
+    {
+      "name": "reject PUSH",
+      "result": "PASS"
+    },
+    {
+      "name": "reject DELETE",
+      "result": "PASS"
+    },
+    {
+      "name": "reject INSTALL",
+      "result": "PASS"
+    },
+    {
+      "name": "reject HOOK",
+      "result": "PASS"
+    },
+    {
+      "name": "reject NETWORK",
+      "result": "PASS"
+    },
+    {
+      "name": "reject SUBAGENT",
+      "result": "PASS"
+    },
+    {
+      "name": "reject CLEANUP",
+      "result": "PASS"
+    },
+    {
+      "name": "duplicate steps",
+      "result": "PASS"
+    },
+    {
+      "name": "plan must come first",
+      "result": "PASS"
+    },
+    {
+      "name": "handoff must include review",
+      "result": "PASS"
+    },
+    {
+      "name": "handoff review before verify",
+      "result": "PASS"
+    },
+    {
+      "name": "handoff without evidence",
+      "result": "PASS"
+    },
+    {
+      "name": "blocked test",
+      "result": "PASS"
+    },
+    {
+      "name": "not run with fake report",
+      "result": "PASS"
+    },
+    {
+      "name": "pass with missing evidence",
+      "result": "PASS"
+    },
+    {
+      "name": "pass with stale head",
+      "result": "PASS"
+    },
+    {
+      "name": "pass with invalid digest",
+      "result": "PASS"
+    },
+    {
+      "name": "actual provider test not allowed",
+      "result": "PASS"
+    },
+    {
+      "name": "reported failure",
+      "result": "PASS"
+    },
+    {
+      "name": "synthetic pass is only reported",
+      "result": "PASS"
+    },
+    {
+      "name": "product local pass is only reported",
+      "result": "PASS"
+    }
+  ],
+  "limitations": "Synthetic pure function cases, not a product, plugin, sandbox, Git, or independent security test. Node module import NOT_RUN."
+}
