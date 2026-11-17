@@ -1,0 +1,105 @@
+{
+  "execution_plan": {
+    "completed": 5,
+    "total": 7
+  },
+  "gates": {
+    "common_scope_pg": "HOLD",
+    "custody": "UNATTESTED",
+    "independent_security": "HOLD",
+    "office_placement": "HOLD",
+    "product": "HOLD",
+    "real_iam": "HOLD"
+  },
+  "limits": [
+    "Log byte matches prove consistency with supplied digest, not independent execution attestation.",
+    "Original report file and original source archive were not directly received in this turn.",
+    "SQLite tests use synthetic data, historical readback and synthetic resolver; no live IAM, product router registration or real Office geometry.",
+    "D4 common scope fixture and owner publication/fence protocol remain unresolved."
+  ],
+  "logs": {
+    "office_readback.log": {
+      "exact_test_ids": [
+        "test_existing_studio_transport_matches_internal_review",
+        "test_project_office_preview",
+        "test_office_stale_pin",
+        "test_role_mismatch",
+        "test_membership_mismatch",
+        "test_stale_head",
+        "test_operation_history",
+        "test_no_mutation"
+      ],
+      "hash_match": true,
+      "pass": 8,
+      "sha256": "61f216fcdb902be93572cb95df3919be5f69c8399773b3705d1718d7af1964fc"
+    },
+    "runtime_notice.log": {
+      "exact_test_ids": [
+        "test_operation_notice_tamper"
+      ],
+      "hash_match": true,
+      "pass": 1,
+      "sha256": "018b4a935eb8a052ccaae5ce6d4db46e073b9d3974ab6738a8b5ea3e36fed79b"
+    },
+    "runtime_original.log": {
+      "exact_test_ids": [
+        "test_queued_readback",
+        "test_admitted_readback",
+        "test_wrong_seat",
+        "test_research_seat",
+        "test_stale_head",
+        "test_wrong_history",
+        "test_wrong_member",
+        "test_wrong_environment",
+        "test_gate_not_run",
+        "test_org_notice_tamper",
+        "test_no_db_changes"
+      ],
+      "hash_match": true,
+      "pass": 11,
+      "sha256": "4edf8716a3a68f1db38b622ecd8532e7fa0ebff7572fe298983b65dfd2a9c203"
+    }
+  },
+  "new_execution_here": false,
+  "next": "ORG-07C-R2 and D5-C can consume this evidence by exact reference; coordinate owner-owned authenticated context, common scope and protected identity publication. No parallel implementation or automatic merge.",
+  "observed": {
+    "after_encoding": "utf-8",
+    "before_encoding": "cp1254",
+    "exit_code": 0,
+    "office": 8,
+    "post_run_integrity": "PASS",
+    "runtime": 12,
+    "utf8_mode": 1,
+    "windows_owner_tests": 20
+  },
+  "original_integration_plan": {
+    "additional_studio": 6,
+    "pass": 26,
+    "total": 26
+  },
+  "parallel_heads": {
+    "d4r6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "d5c": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+    "office_a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "org06r2": "fd91b58e030e4dd74274a58878c48d0616456b34",
+    "org07b": "601cba1ef3108a381adb6bf8dd8a67e763eb744d",
+    "org07c_r2": "3ad85986e3e55e2b89306f15fef93b8c116a886e",
+    "org08": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352",
+    "pg": "ba6c72a2508e3eab579c33f48e52008d1d601897",
+    "u3a": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "parent": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352",
+  "prior_evidence": {
+    "pg": 26,
+    "pg_custody": "UNATTESTED",
+    "studio_additional": 6,
+    "studio_original": 6
+  },
+  "report_original_hash_available": false,
+  "report_reconstruction_sha256": "26487ef715abc40d2f754b82843e1dadd4e1b14480b40847133a1e47a87f8871",
+  "revision": "ORG-09R1-EVIDENCE",
+  "runner_sha256": "e0bb952d324f23a1a66b6762953e577fcc944b346f1052517f5877c7ef568704",
+  "source": "user-provided Windows console transcript; no direct machine access",
+  "source_changes": 0,
+  "transcript_sha256": "8f66c4bd6285c030e1b990d0574ae0b93eeeef0f3bb2b8d258d0f68270b3a6af"
+}

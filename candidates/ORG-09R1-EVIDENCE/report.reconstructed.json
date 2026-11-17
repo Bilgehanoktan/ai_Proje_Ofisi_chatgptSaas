@@ -1,0 +1,93 @@
+{
+  "archive_commit": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352",
+  "archive_sha256": "c96e266f0da096ea4746b6d444df7c5ea2b6c46c9a2a190260dbe47ec12861b5",
+  "archive_tree": "0987d2dbd90178202eba6a2eb6dc2e5dbe9483d4",
+  "child_text_encoding_policy": "EXPLICIT_X_UTF8",
+  "dependencies": {
+    "cryptography": "46.0.4",
+    "fastapi": "0.128.2",
+    "httpx": "0.28.1",
+    "jsonschema": "4.26.0",
+    "starlette": "0.50.0"
+  },
+  "historical_commit": "17be56406408d572ebc66cf6fe7c1b6d83f18d76",
+  "historical_tree": "ff7b149d066387060173afa3c78f26b74a72b731",
+  "independent_security": "HOLD",
+  "office_placement": "HOLD",
+  "passed_here": 20,
+  "pg_evidence": {
+    "commit": "ba6c72a2508e3eab579c33f48e52008d1d601897",
+    "custody": "UNATTESTED",
+    "rerun": false
+  },
+  "post_run_source_integrity": "PASS",
+  "product_acceptance": "HOLD",
+  "profile": "ORG09_SYNTHETIC_SQLITE_ONLY",
+  "python": "3.14.3",
+  "real_iam": "HOLD",
+  "sqlite": "3.50.4",
+  "status": "PASS_LOCAL_SQLITE_ONLY",
+  "studio_owner_evidence": {
+    "additional_pass": 6,
+    "commit": "601cba1ef3108a381adb6bf8dd8a67e763eb744d",
+    "original_pass": 6,
+    "rerun": false
+  },
+  "suites": [
+    {
+      "elapsed_ms": 1642,
+      "expected": 11,
+      "expected_ids": [
+        "test_queued_readback",
+        "test_admitted_readback",
+        "test_wrong_seat",
+        "test_research_seat",
+        "test_stale_head",
+        "test_wrong_history",
+        "test_wrong_member",
+        "test_wrong_environment",
+        "test_gate_not_run",
+        "test_org_notice_tamper",
+        "test_no_db_changes"
+      ],
+      "id": "runtime_original",
+      "log": "runtime_original.log",
+      "log_sha256": "4edf8716a3a68f1db38b622ecd8532e7fa0ebff7572fe298983b65dfd2a9c203",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "elapsed_ms": 411,
+      "expected": 1,
+      "expected_ids": [
+        "test_operation_notice_tamper"
+      ],
+      "id": "runtime_notice",
+      "log": "runtime_notice.log",
+      "log_sha256": "018b4a935eb8a052ccaae5ce6d4db46e073b9d3974ab6738a8b5ea3e36fed79b",
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "elapsed_ms": 2152,
+      "expected": 8,
+      "expected_ids": [
+        "test_existing_studio_transport_matches_internal_review",
+        "test_project_office_preview",
+        "test_office_stale_pin",
+        "test_role_mismatch",
+        "test_membership_mismatch",
+        "test_stale_head",
+        "test_operation_history",
+        "test_no_mutation"
+      ],
+      "id": "office_readback",
+      "log": "office_readback.log",
+      "log_sha256": "61f216fcdb902be93572cb95df3919be5f69c8399773b3705d1718d7af1964fc",
+      "returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "verified_current_blobs": 1770,
+  "verified_historical_blobs": 1739
+}
