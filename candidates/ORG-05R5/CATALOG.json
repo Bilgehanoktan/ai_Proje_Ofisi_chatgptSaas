@@ -1,0 +1,95 @@
+{
+  "revision": "ORG-05R5",
+  "parent": "49499807a9a0c37d34375a17d1f5fbacc31ac4b3",
+  "files": {
+    "pg_transaction.py": {
+      "symbols": [
+        "Hold",
+        "CommitUnknown",
+        "CleanupHold",
+        "require",
+        "context",
+        "run",
+        "R3Read.execute",
+        "lock_head",
+        "insert"
+      ],
+      "responsibility": "transaction and fixture context boundary"
+    },
+    "pg_operations.py": {
+      "symbols": [
+        "TaskReference",
+        "reference_check",
+        "PgOperations.record",
+        "PgOperations.create_team",
+        "PgOperations.append_proposal",
+        "PgOperations.history",
+        "PgOperations.read_current"
+      ],
+      "responsibility": "scoped atomic proposals and readback"
+    },
+    "run_pg_acceptance.py": {
+      "symbols": [
+        "verify_sources",
+        "main"
+      ],
+      "responsibility": "26 actual PG scenarios NOT_RUN"
+    },
+    "test_pg_protocol.py": {
+      "symbols": [
+        "Protocol",
+        "References"
+      ],
+      "responsibility": "29 executed fake DB tests"
+    },
+    "bootstrap_roles.sql": {
+      "responsibility": "fresh cluster role bootstrap, NOT_RUN"
+    },
+    "RUNBOOK.md": {
+      "responsibility": "manual Windows execution"
+    },
+    "ARCHITECTURE_DELTA.md": {
+      "responsibility": "ownership and architecture"
+    },
+    "HANDOVER.md": {
+      "responsibility": "maintenance, diagnosis, rollback, next"
+    },
+    "ACCEPTANCE_MATRIX.json": {
+      "responsibility": "test status"
+    },
+    "test_protocol.log": {
+      "responsibility": "actual local evidence"
+    },
+    "TEST_EVIDENCE.json": {
+      "responsibility": "evidence boundaries"
+    },
+    "SHA256SUMS": {
+      "responsibility": "package integrity"
+    }
+  },
+  "tables_reused": [
+    "org_revision",
+    "org_head",
+    "org_unit",
+    "org_position",
+    "org_definition_ref",
+    "org_instance_ref",
+    "org_binding",
+    "org_notice",
+    "op_team",
+    "op_member",
+    "op_entry",
+    "op_notice"
+  ],
+  "new_tables": 0,
+  "dependencies": [
+    "Python stdlib",
+    "exact seven R3 modules",
+    "exact R4 SQL",
+    "psycopg 3.3.9 (planned only)",
+    "PostgreSQL 17 (planned only)"
+  ],
+  "api": "no registered HTTP route; internal read_current only",
+  "events": "HOLD local notices only",
+  "product_changes": 0
+}
