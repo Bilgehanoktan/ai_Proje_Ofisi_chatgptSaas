@@ -1,0 +1,60 @@
+{
+  "revision": "ORG-07B",
+  "parent": "a2f4461d558af0f69e51cf1570ccea64b7d9ac20",
+  "source_pins": {
+    "candidates/ORG-05R3/durable_ops.py": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+    "candidates/ORG-05R3/integration_guard.py": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+    "candidates/ORG-05R3/office_bridge.py": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+    "candidates/ORG-05R3/operations.py": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+    "candidates/ORG-05R3/operations.sql": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+    "candidates/ORG-05R3/org_model.py": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+    "candidates/ORG-05R3/persistence.py": "4124099a497f5bc7fd34756664c7e293055e949e",
+    "candidates/ORG-05R3/schema.sql": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+    "candidates/ORG-05R3/staffing.py": "e0b9078284922d281996869daa15a455572c1785",
+    "candidates/ORG-05R3/studio.schema.json": "eed9627913502ebb09222cf404f867ca305a6a44",
+    "candidates/ORG-05R3/test_durable_ops.py": "8f220550373b69c008ce66a4e74c4d1c45952efc",
+    "candidates/ORG-07A/studio_router.py": "eda507f8e5933c27568064455eccc4cf85bbba0c",
+    "candidates/ORG-07A/test_studio_original.py": "b928799ddc46fb0f49ee2b6e05199fa173777813",
+    "candidates/ORG-07A/test_studio_router.py": "7f4224907d34c0c9f26458c442afdb078db6516e"
+  },
+  "tests": {
+    "original_R3_SQLite_ASGI": {
+      "pass": 6,
+      "fail": 0,
+      "log": "original.log"
+    },
+    "additional_R3_SQLite_ASGI": {
+      "pass": 6,
+      "fail": 0,
+      "log": "boundaries.log"
+    },
+    "transport_regression": {
+      "pass": 25,
+      "fail": 0,
+      "log": "transport.log",
+      "reader": "test double"
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "httpx": "0.28.1",
+    "jsonschema": "4.26.0"
+  },
+  "limits": {
+    "full_checkout": false,
+    "product_locked_dependencies": false,
+    "real_IAM": false,
+    "product_route_registered": false,
+    "ORG_06R2": "NOT_RUN at fd91b58e030e4dd74274a58878c48d0616456b34",
+    "postgresql": "separate owner",
+    "independent_acceptance": "HOLD"
+  },
+  "branch_inventory": {
+    "initial": 189,
+    "last_review": 190
+  },
+  "product_changes": 0
+}

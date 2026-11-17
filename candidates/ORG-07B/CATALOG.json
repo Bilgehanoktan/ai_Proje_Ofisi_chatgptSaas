@@ -1,0 +1,13 @@
+{
+  "revision": "ORG-07B",
+  "file": "test_studio_boundaries.py",
+  "symbols": ["git_blob", "main", "BoundaryTests", "resolve", "get", "denied"],
+  "api": {"method": "GET", "path": "/demo/v1/organization/studio-preview", "owner": "ORG-07A", "registered_in_product": false},
+  "database": {"engine": "SQLite", "existing_tables": 12, "schema_changes": 0, "read_path": "durable_ops.studio_read -> Store.studio_view", "fixture_writes_only": true},
+  "dependencies": ["original R3 and ORG-07A Git pins", "FastAPI", "Starlette", "httpx", "jsonschema", "sqlite3"],
+  "new_tests": 6,
+  "original_tests": 6,
+  "transport_regression": 25,
+  "authority": "HOLD",
+  "next": "ORG-07C: server-owned authenticated composition and existing UI/proxy integration after ORG-06R2 evidence"
+}
