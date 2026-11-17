@@ -1,0 +1,47 @@
+{
+  "revision": "0229-D4-R3",
+  "files": [
+    {
+      "path": "company_pg.py",
+      "symbols": [
+        "LostAck",
+        "CompanyFixture",
+        "seed",
+        "connect",
+        "snapshot",
+        "dump",
+        "company",
+        "pool_budget",
+        "execute",
+        "race",
+        "run",
+        "run_lost_ack"
+      ],
+      "database": "16 existing t1_candidate tables, no new schema",
+      "apis": []
+    },
+    {
+      "path": "run_d4_r3.py",
+      "symbols": [
+        "fixture_check",
+        "fixed_paths",
+        "input_check",
+        "bootstrap_statements",
+        "child",
+        "main"
+      ],
+      "dependencies": "Python 3.14.3 Windows; existing D1 helper, offline lock, PostgreSQL 17.12, psycopg 3.3.9 binary"
+    }
+  ],
+  "events": [
+    "D0_RUN_ADMISSION",
+    "D0_RUN_TRANSITION",
+    "D0_LEASE_RENEWAL",
+    "D0_RUN_FAILURE"
+  ],
+  "new_product_dependencies": [],
+  "product_changes": 0,
+  "pg": "NOT_RUN",
+  "core": "12/16",
+  "next": "R3 runtime evidence before R4"
+}

@@ -19,7 +19,7 @@ from app.core.event_store.company_coordination import (
     SCOPE, Member, Allocation, Pool, CompanyCoordinatedMapping, inspect_company)
 from app.core.event_store.retained_history import ReferenceStore, ReferenceReader
 from app.core.event_store.terminal_anchor import anchor_from_pin, verify_anchor
-from app.core.transaction.postgres_admission_mapping import D0PostgresAdmissionMapping
+from app.core.transaction.postgres_admission_mapping import D0PostgresAdmissionMapping, reconcile_admission
 from app.core.transaction.postgres_lifecycle_mapping import AdmissionBinding, reconcile_lifecycle
 from app.core.transaction.postgres_session import postgres_transaction, CommitOutcomeUnknown
 from app.core.transaction.port import LogicalT1Coordinator
@@ -179,6 +179,9 @@ class CompanyFixture:
                 need(db.execute(sql.SQL("SELECT count(*) FROM {}").format(sql.Identifier("t1_candidate",t))).fetchone()==(1,),"D4_RACE_EXTRA_ROW_"+t)
             for t in ("sample_settlements","run_lease_renewals","terminal_command_anchors"):
                 need(db.execute(sql.SQL("SELECT count(*) FROM {}").format(sql.Identifier("t1_candidate",t))).fetchone()==(0,),"D4_RACE_EXTRA_ROW_"+t)
+        with self.snapshot() as db, db.cursor() as cur:
+            winner=reconcile_admission(cur,PLAN,a,ia)
+            need(winner.exact_sample_match and not winner.retry_allowed,"D4_WINNER_RECONCILIATION_HOLD")
         return ea
 
     def run(self, mark):
