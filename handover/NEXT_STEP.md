@@ -1,2 +1,2 @@
-# NEXT — 0227 D1 connection diagnostic
-Existing `C:\AIOS\core-0227-pg-retry1` cluster initialized and started/stopped; connection child HOLD. Start only that cluster on loopback 55432, read-only psql admin connection and role/database inventory, stop in finally. Preserve existing stage; do not rerun initializer or drop objects. Diagnose before recovery. 9/16. tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json
+# NEXT — 0227 D1 authentication retry
+Use fresh `C:\AIOS\core-0227-pg-retry2`, copy only ZIP and wheels from original download stage. Run pinned `scripts/run_d1_0227_authfix.py` SHA256 adf0b5053ec01f4f7589e38d6a1b353fe3f1c0af2720e86ec241dd9c44ed8a41; explicit EVET; choose test role password twice, admin generated and not retained. Preserve failed stages; no credential/private log transfer. Raw review before D1 promotion. 9/16. tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json

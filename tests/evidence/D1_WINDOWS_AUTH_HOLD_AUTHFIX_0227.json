@@ -1,0 +1,58 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_ADMIN_AUTHENTICATION_FAILED_AUTHFIX_CANDIDATE_READY",
+  "scope": "User-run psql diagnostic transcript plus locally tested candidate mechanics; not independent Windows execution",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "prior": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json",
+  "observed": {
+    "stage": "C:\\AIOS\\core-0227-pg-retry1",
+    "start": "PASS",
+    "host": "127.0.0.1",
+    "port": 55432,
+    "role": "aicos_pg_admin",
+    "psql_exit": 2,
+    "error": "FATAL: password authentication failed",
+    "stop": "PASS",
+    "role_db_inventory": "NOT_RUN"
+  },
+  "finding": "Authentication rejected; exact reason for differing credentials unknown. No proof of driver defect.",
+  "candidate": {
+    "path": "scripts/run_d1_0227_authfix.py",
+    "git_blob": "d20bbb6740901e2abf02d445b20cfa34f4b93d50",
+    "sha256": "adf0b5053ec01f4f7589e38d6a1b353fe3f1c0af2720e86ec241dd9c44ed8a41",
+    "credential_mode": "random ASCII ephemeral admin, temporary ACL-protected initdb pwfile verified before secret write and removed in finally, same secret passed to child via stdin; user chooses test role secret twice with ASCII validation",
+    "stage": "C:\\AIOS\\core-0227-pg-retry2",
+    "original_stages_preserved": true,
+    "server_auth": "SCRAM unchanged",
+    "windows_acl": "Only new temporary file DACL restricted; no persistent Windows security setting changed",
+    "admin_credential": "Not retained; cluster disposable, D2 uses test role only; D3 requires separate fixture",
+    "reference": [
+      "https://www.postgresql.org/docs/17/app-initdb.html",
+      "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls"
+    ]
+  },
+  "checks": {
+    "python_compile": "PASS",
+    "synthetic": [
+      "password ASCII/length guard",
+      "mock ACL-before-write and cleanup success",
+      "mock ACL-before-write and cleanup after initdb failure",
+      "mock ACL failure blocks initdb and cleans up"
+    ],
+    "synthetic_pass": 4,
+    "actual_windows": "NOT_RUN",
+    "actual_pg": "NOT_RUN"
+  },
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  },
+  "limits": [
+    "No real Windows ACL, initdb or Psycopg connection test of authfix yet.",
+    "Password file deletion is ordinary unlink, not guaranteed forensic erasure; abrupt termination may leave file protected by ACL; never include tmp/private logs in evidence.",
+    "No admin credential retained by design; no use for persistent/production cluster.",
+    "No product changes, no E1 mutation, no D1 promotion."
+  ]
+}

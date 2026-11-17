@@ -126,3 +126,7 @@ User transcript confirms all 3 PyPI checks and reaches postgres 17.12/initdb aft
 
 ## 0227-D1 retry1 connection HOLD
 User reports initdb and PostgreSQL start/stop successful, child OperationalError masked by runner; exact failing statement unknown. No D1 acceptance. Preserve retry1 and diagnose with interactive read-only psql connection and role/database existence checks, then stop own cluster. No password or private log transfer; no reinstallation or grants. 9/16. Evidence: tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json
+
+
+## 0227-D1 authentication diagnosis and candidate fix
+User psql diagnostic starts server, reaches loopback 55432, FATAL password authentication failed (exit 2), stops successfully. Exact mismatch cause unknown. New scripts/run_d1_0227_authfix.py generates ephemeral ASCII admin, restricts and verifies temporary pwfile ACL before writing, removes file in finally, sends same credentials to child via stdin; SCRAM preserved; test password user-held. Compile and four synthetic controls PASS; Windows not run. Retry2 fresh input-only copy; old stages preserved. 9/16 unchanged. tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json

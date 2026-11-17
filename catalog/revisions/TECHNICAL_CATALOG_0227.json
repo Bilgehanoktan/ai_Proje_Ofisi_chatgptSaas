@@ -74,6 +74,30 @@
       ],
       "test": "Local compile and synthetic guards only, actual Windows NOT_RUN",
       "rollback": "Stop own cluster via pg_ctl -D <pgroot>/data -m fast -w stop; preserve failed stage and evidence; no deletion or E1 changes."
+    },
+    {
+      "path": "scripts/run_d1_0227_authfix.py",
+      "git_blob": "d20bbb6740901e2abf02d445b20cfa34f4b93d50",
+      "sha256": "adf0b5053ec01f4f7589e38d6a1b353fe3f1c0af2720e86ec241dd9c44ed8a41",
+      "purpose": "D1 authentication retry without manual bootstrap admin password",
+      "functions": [
+        "valid_password",
+        "protected_initdb",
+        "connect_stage",
+        "main"
+      ],
+      "dependencies": [
+        "Original D1 dependency pins",
+        "whoami.exe",
+        "icacls.exe",
+        "PowerShell 5.1"
+      ],
+      "api_changes": [],
+      "db_changes": [
+        "Fresh disposable cluster only"
+      ],
+      "test": "Compile + four local synthetic controls; Windows NOT_RUN",
+      "rollback": "Keep old stages; stop only own cluster; no retained admin, no production reuse."
     }
   ],
   "source_evidence": "tests/evidence/TEST_EVIDENCE_0227.json",
