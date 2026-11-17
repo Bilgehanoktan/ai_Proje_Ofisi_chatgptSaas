@@ -1,0 +1,30 @@
+{
+  "revision": "0229-D4-R3",
+  "classification": "D0_SOURCE_CANDIDATE",
+  "scenarios": {
+    "race": [
+      "coherent_two_project_preimage",
+      "actual_two_connections_stream_wait_single_winner",
+      "race_full_company_postimage",
+      "project_cap_rejected_no_writes",
+      "fresh_second_project_shared_budget",
+      "original_transition_renewal_chain",
+      "anchor_sql_failure_all_16_postimages_unchanged",
+      "deferred_fk_unknown_absence_no_retry"
+    ],
+    "lost_ack": [
+      "lost_ack_preimage",
+      "repeatable_read_and_read_only",
+      "lost_ack_actual_commit_exact_readback_no_retry"
+    ]
+  },
+  "no_retry": true,
+  "actual_pg": "NOT_RUN",
+  "acceptance": "HOLD",
+  "r2_issue": {
+    "expected_in_file": 450,
+    "actual_ids": 454,
+    "formula": "4*16*6 + 4*11 + 5 + 16 + 5",
+    "disposition": "R2 original preserved; not executed with R3 coherent seed"
+  }
+}
