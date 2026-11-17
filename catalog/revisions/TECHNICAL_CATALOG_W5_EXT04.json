@@ -1,0 +1,30 @@
+{
+  "revision": "W5-EXT-04",
+  "status": "QUARANTINED",
+  "parent": "1e36aa5f0092c4f58d2bbb205319e28f77a6f76a",
+  "files": [
+    "candidates/W5-EXT-04/local_video.py",
+    "candidates/W5-EXT-04/test_local_video.py",
+    "candidates/W5-EXT-04/TEST_LOG.txt",
+    "candidates/W5-EXT-04/synthetic.y4m",
+    "candidates/W5-EXT-04/frame_00.pgm",
+    "candidates/W5-EXT-04/frame_02.pgm",
+    "candidates/W5-EXT-04/frame_05.pgm",
+    "candidates/W5-EXT-04/SOURCE_PINS.json",
+    "candidates/W5-EXT-04/TEST_EVIDENCE.json"
+  ],
+  "symbols": {
+    "fixture_bytes": "deterministic Y4M",
+    "_parse": "bounded narrow parser",
+    "_observe": "geometry and change observations",
+    "review": "strict fixture-only inspection",
+    "frame_pgm": "bounded in-memory image"
+  },
+  "new_api": 0,
+  "new_db": 0,
+  "new_dependencies": 0,
+  "product_changes": 0,
+  "authority": "NONE",
+  "tests": 19,
+  "limitations": "no arbitrary video, semantic analysis, OS sandbox or upstream execution"
+}

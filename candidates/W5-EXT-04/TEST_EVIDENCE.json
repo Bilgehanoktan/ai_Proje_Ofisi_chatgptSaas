@@ -1,0 +1,91 @@
+{
+  "revision": "W5-EXT-04",
+  "environment": "Linux Python 3.13.5",
+  "command": "python -B -m unittest -v test_local_video.py",
+  "result": "19/19 PASS",
+  "test_duration_s": 0.017,
+  "source_manifest": [
+    {
+      "path": "local_video.py",
+      "git_blob": "85855a5c4278c061ec0d0a63916ad7668a998e30",
+      "sha256": "47fad90e4539852db64f849b4c7fa9392f9c0447af3a68dfd14ab15eafe9a020",
+      "bytes": 3927
+    },
+    {
+      "path": "test_local_video.py",
+      "git_blob": "75142e96ec9dea0cd1a2e5d237eff72fc0669b11",
+      "sha256": "75cb24e1dd232ef1ed7d5da80d88f0e704b646372efffa4aeee6d656adb30a8b",
+      "bytes": 4168
+    },
+    {
+      "path": "TEST_LOG.txt",
+      "git_blob": "6e6947be7b52f354fdf6774bf7380a1a264889b9",
+      "sha256": "dd97aae25381bcf2ef894ee1dacd4d797a409533c2d67ce6322b9cd69751fc89",
+      "bytes": 1536
+    },
+    {
+      "path": "synthetic.y4m",
+      "git_blob": "50a642bf680872a55f732a68e5f7a839bd5d8bc2",
+      "sha256": "4242b32a426f890825d6e8a44e2c93a26aee4b8a6b17fa0ff7b7c30c7876e42e",
+      "bytes": 24661
+    },
+    {
+      "path": "frame_00.pgm",
+      "git_blob": "74aa5dd41003c44ddcb34175fb653f12d1d7d5b3",
+      "sha256": "25bfed8de77926495401079e20e041d24e4973226de5592e008a80da1e0f1a21",
+      "bytes": 3085
+    },
+    {
+      "path": "frame_02.pgm",
+      "git_blob": "aeddfc67374f1c79b4c066e6020f6771ac400f0e",
+      "sha256": "3c06de766da48f1c3a1cb26aa773a9dc362cdb87ac67b8ce890477d8e0bfb70d",
+      "bytes": 3085
+    },
+    {
+      "path": "frame_05.pgm",
+      "git_blob": "6df173fea24c34d0a2ad71075c72efddb0276823",
+      "sha256": "e9c2b52213fadc829f6187589547a87b1f4956cc11a38a43da9a24c5ce0ce587",
+      "bytes": 3085
+    }
+  ],
+  "fixture": {
+    "format": "YUV4MPEG2 Cmono",
+    "width": 64,
+    "height": 48,
+    "fps": 4,
+    "frames": 8,
+    "duration_ms": 2000,
+    "scenes": [
+      {
+        "frame": 2,
+        "timestamp_ms": 500,
+        "box": [
+          8,
+          12,
+          24,
+          28
+        ],
+        "changed_pixels": 256
+      },
+      {
+        "frame": 5,
+        "timestamp_ms": 1250,
+        "box": [
+          36,
+          12,
+          52,
+          28
+        ],
+        "changed_pixels": 512
+      }
+    ]
+  },
+  "local_observations_sha256": "efb397af0d487fa0de8e40e2f3345979dd3fe774e5fbcd173f472904bfe81656",
+  "limits": "exact fixture bytes only; no external IO inside module; no OS sandbox or adversarial codec test",
+  "upstream_install": "NOT_RUN",
+  "ffmpeg": "NOT_RUN",
+  "semantic_model": "NOT_RUN",
+  "network_sandbox": "NOT_RUN",
+  "product": "NOT_RUN",
+  "independent": "HOLD"
+}
