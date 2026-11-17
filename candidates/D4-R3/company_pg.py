@@ -186,7 +186,12 @@ class CompanyFixture:
 
     def run(self, mark):
         need(self.company().structural_match and self.budget==base.BUDGET,"D4_INITIAL_HOLD")
+        with self.snapshot() as db:
+            for t in TABLES:
+                n=db.execute(sql.SQL("SELECT count(*) FROM {} WHERE (tenant_id,company_id,environment_id)<>(%s,%s,%s)").format(sql.Identifier("t1_candidate",t)),SCOPE).fetchone()
+                need(n==(0,),"D4_FOREIGN_VISIBLE_"+t)
         mark("coherent_two_project_preimage")
+        mark("foreign_scope_hidden_all_16")
         self.race()
         mark("actual_two_connections_stream_wait_single_winner")
         mark("race_full_company_postimage")

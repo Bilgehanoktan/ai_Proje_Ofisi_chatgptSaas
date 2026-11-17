@@ -177,6 +177,7 @@ def child(repo,root,commit,scenario):
         expected=json.loads((folder/'RUN_PLAN.json').read_text(encoding='utf-8'))['scenarios'][scenario]
         need(report['checks']==expected and result['retry_allowed'] is False,'SCENARIO_CHECK_INVENTORY_HOLD')
         report['result']=result
+        report['server']={'version_num':170012,'host':'127.0.0.1','port':PORT,'cluster':CLUSTER,'driver':psycopg.__version__,'pq_impl':psycopg.pq.__impl__,'auth':'scram-sha-256','owner_force_tables':16}
         with connect(ADMIN) as c:
             for role in RUNTIME:c.execute(sql.SQL('ALTER ROLE {} NOLOGIN PASSWORD NULL').format(sql.Identifier(role)))
         report['status']='D4_R3_SCENARIO_PROBES_PASS';boot(stage)
@@ -194,7 +195,7 @@ def main():
     print(json.dumps(review,indent=2));need(input('Approve isolated D4-R3 scenario only? EVET/HAYIR: ')=='EVET','APPROVAL_HOLD')
     with socket.socket() as s:s.bind(('127.0.0.1',PORT))
     root.mkdir();(root/'tmp').mkdir();logs=root/'evidence';logs.mkdir();write(logs/'D4_REVIEW.json',review)
-    final={'status':'HOLD','server_stopped':False,'source_preserved':False,'fixture_preserved':False,'accepted_inputs_preserved':False,'canonical_mapping':'HOLD','independent_acceptance':'HOLD'};ctl=None;e=None;stage='venv'
+    final={'status':'HOLD','scenario':a.scenario,'fixture_commit':a.commit,'server_stopped':False,'source_preserved':False,'fixture_preserved':False,'accepted_inputs_preserved':False,'canonical_mapping':'HOLD','independent_acceptance':'HOLD'};ctl=None;e=None;stage='venv'
     try:
         e=h.env_local(root);h.run([sys.executable,'-m','venv',root/'.venv'],root,e,logs/'01_venv.log');py=root/'.venv/Scripts/python.exe'
         h.run([py,'-m','pip','--isolated','install','--no-index','--find-links',e1/'locks/wheels','--find-links',d1/'wheels','--require-hashes','-r',d1/'pg.lock'],root,e,logs/'02_pip_install.log')
@@ -219,7 +220,7 @@ def main():
             need(not list((root/'tmp').glob('initdb-*.pw')),'TEMP_SECRET_HOLD')
         except Exception as exc:final['status']='HOLD';final['postcheck_failure']=safe_error(exc)
         final['logs']={p.name:sha(p) for p in logs.iterdir() if p.is_file()};write(logs/'D4_FINAL.json',final)
-    print(json.dumps(final,indent=2));return 0 if final['status']=='D3_LOCAL_PASS_RAW_REVIEW_REQUIRED' else 1
+    print(json.dumps(final,indent=2));return 0 if final['status']=='D4_R3_SCENARIO_PASS_RAW_REVIEW_REQUIRED' else 1
 
 if __name__=='__main__':
     try:raise SystemExit(main())
