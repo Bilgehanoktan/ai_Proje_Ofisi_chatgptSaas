@@ -1,23 +1,23 @@
 {
-  "revision": "0228-D3-R3",
+  "revision": "0228-D3-R4",
   "branch": "integration/0228-d3-rls-fixture",
   "parent": "bebee3198ede68cd201cba363752a9006be35581",
-  "status": "D3_LOCAL_PASS_TRANSCRIPT_RAW_REVIEW_PENDING",
-  "canonical_handover": "handover/CURRENT.json remains 0227 D2 accepted; branch-specific handover only",
+  "status": "D3_NON_OWNER_RLS_LOCK_CONTENTION_PASS_RAW_REVIEWED",
+  "canonical_handover": "0227 core evidence-only transfer pending; no source merge",
   "product_files": 393,
   "original_database_files": 16,
   "source_manifest": "tests/fixtures/0228-d3/SOURCE_MANIFEST.json",
   "architecture": "docs/0228/D3_R2_ARCHITECTURE.md",
   "catalog": "catalog/revisions/TECHNICAL_CATALOG_0228_D3.json",
-  "evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json",
+  "evidence": "tests/evidence/D3_R4_RAW_EVIDENCE_REVIEW_0228.json",
   "progress": "progress/0228_D3_PROGRESS.json",
   "gate": {
-    "done": 11,
+    "done": 12,
     "total": 16,
-    "percent": 68.75
+    "percent": 75
   },
-  "actual_pg": "PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING",
-  "next": "D3-R4: collect evidence only from C:/AIOS/core-0228-d3; verify six final hashes, 230 ordered check IDs, owner and bootstrap results, fixture scope and acceptance criteria. No rerun.",
+  "actual_pg": "PASS_230_RAW_REVIEWED_SCOPED_FIXTURE",
+  "next": "D3 scoped fixture gate accepted. Transfer only evidence metadata to core with CAS; coordinate E2/E3/E4 with unified U3 owner; B3 and canonical RLS/company-stream binding remain open.",
   "parallel": {
     "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
     "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
@@ -51,5 +51,6 @@
     "actual_pg": "NOT_RUN"
   },
   "r2_evidence": "tests/evidence/D3_R2_BOOTSTRAP_0228.json",
-  "executed_commit": "f6fba86b004258761d7ac089bedfa5d8a169f601"
+  "executed_commit": "f6fba86b004258761d7ac089bedfa5d8a169f601",
+  "r3_evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json"
 }

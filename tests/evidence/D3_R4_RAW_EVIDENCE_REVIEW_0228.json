@@ -1,0 +1,146 @@
+{
+  "revision": "0228-D3-R4",
+  "status": "D3_NON_OWNER_RLS_LOCK_CONTENTION_PASS_RAW_REVIEWED",
+  "scope": "Current binary D3 criterion only: non-owner RLS and lock contention on independently separated disposable fixture, not canonical product RLS or independent security acceptance",
+  "executed_commit": "f6fba86b004258761d7ac089bedfa5d8a169f601",
+  "runner_blob": "be3ae5843e1f8d240fd42de4dc383862b4e908a8",
+  "fixture_manifest_blob": "78b656a97302553a77b56ddaa630ad748f7746e0",
+  "accepted_source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "archive": {
+    "name": "AIOS_0228_D3_EVIDENCE.zip",
+    "bytes": 5009,
+    "sha256": "7d4f25d5f1c8f32621a0662ed48a3def38124942c91b252e12439c850e8c05ab",
+    "entries": 7,
+    "crc": "PASS",
+    "normalized_unique_safe_paths": 7
+  },
+  "raw_report_files": [
+    {
+      "path": "tests/evidence/0228-d3-raw/D3_PROBE.json",
+      "git_blob": "1477979d48fa53e93855548e068e15048ff15762",
+      "bytes": 23198,
+      "sha256": "2cd006db43a1e976f546a9df8c1f20bbbb44599a56841f22dd65e26f40706dbd"
+    },
+    {
+      "path": "tests/evidence/0228-d3-raw/D3_REVIEW.json",
+      "git_blob": "11c385c0e4a28737a4f92de1d9d6651ef603317d",
+      "bytes": 731,
+      "sha256": "06aba762bf93c7d1eb9e67459f2b98b405aba1b118d121607849802c0148ff6e"
+    },
+    {
+      "path": "tests/evidence/0228-d3-raw/D3_FINAL.json",
+      "git_blob": "bed8ab7b400840be251c0965f4fd59371e41f6c0",
+      "bytes": 799,
+      "sha256": "26b30cc3e52807ceb0597e4ce2b96e94c6f0aecb9abb84477996068567e2bb7b"
+    }
+  ],
+  "final_log_hashes": {
+    "01_venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "02_pip_install.log": "f50acaa0c0476c40e20ac3b361d206b91f478a5fd966b33413cd3fc7191639d6",
+    "03_pip_check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "04_pip_list.json": "0aec778594b6e99f3d85d11b74b149d9d68acc75cafcf8fb31b1f38fc4157b71",
+    "D3_PROBE.json": "2cd006db43a1e976f546a9df8c1f20bbbb44599a56841f22dd65e26f40706dbd",
+    "D3_REVIEW.json": "06aba762bf93c7d1eb9e67459f2b98b405aba1b118d121607849802c0148ff6e"
+  },
+  "hash_matches": 6,
+  "transcript_hash_matches": 6,
+  "checks": {
+    "expected_ordered_ids": 230,
+    "actual_unique_ids": 230,
+    "passed": 230,
+    "failed": 0,
+    "exact_detail_fields_checked": 158,
+    "groups": {
+      "table_access": 192,
+      "session_identity": 14,
+      "transaction_and_isolation": 17,
+      "role_policy_inventory": 7
+    },
+    "sqlstate_counts": {
+      "23503": 1,
+      "23514": 1,
+      "25006": 1,
+      "42501": 97,
+      "55P03": 1
+    },
+    "owner": {
+      "insert_denied_sqlstate": "42501",
+      "status": "PASS",
+      "tables_hidden": 12
+    },
+    "bootstrap": [
+      "roles_and_database",
+      "schema_and_policies",
+      "direct_login_seeds",
+      "owner_force_rls",
+      "runtime_probes"
+    ],
+    "server": {
+      "auth": "scram-sha-256",
+      "cluster": "aicos_d3_0228_disposable",
+      "data_directory_match": true,
+      "driver": "3.3.9",
+      "host": "127.0.0.1",
+      "libpq_version": 180004,
+      "port": 55433,
+      "pq_impl": "binary",
+      "version_num": 170012
+    }
+  },
+  "dependency_inventory": {
+    "installed": 32,
+    "locked": 31,
+    "pip_bootstrap": "25.3",
+    "pip_check": "No broken requirements found.",
+    "four_install_log_hashes_match_d1": true
+  },
+  "final": {
+    "status": "D3_LOCAL_PASS_RAW_REVIEW_REQUIRED",
+    "server_stopped": true,
+    "source_preserved": true,
+    "fixture_preserved": true,
+    "accepted_inputs_preserved": true,
+    "canonical_mapping": "HOLD",
+    "independent_acceptance": "HOLD",
+    "logs": {
+      "01_venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "02_pip_install.log": "f50acaa0c0476c40e20ac3b361d206b91f478a5fd966b33413cd3fc7191639d6",
+      "03_pip_check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "04_pip_list.json": "0aec778594b6e99f3d85d11b74b149d9d68acc75cafcf8fb31b1f38fc4157b71",
+      "D3_PROBE.json": "2cd006db43a1e976f546a9df8c1f20bbbb44599a56841f22dd65e26f40706dbd",
+      "D3_REVIEW.json": "06aba762bf93c7d1eb9e67459f2b98b405aba1b118d121607849802c0148ff6e"
+    }
+  },
+  "criterion_review": {
+    "criterion": "Non-owner RLS/lock contention",
+    "decision": "PASS_SCOPED_FIXTURE",
+    "basis": [
+      "actual authenticated non-owner A/B and unmapped roles, 12 tables ENABLE/FORCE, 48 policies",
+      "same tenant permitted scope; cross-tenant DML/read rejected or zero rows; owner DML denied",
+      "actual same-scope NOWAIT 55P03, other scope non-blocking, stale budget CAS, cap/rollback/repeatable-read controls"
+    ],
+    "not_covered": [
+      "Canonical product policy deployment or dynamic IAM",
+      "Production app pool integration and identity rebinding",
+      "Full company-stream/T1 multi-project PG race, lock order and UNKNOWN quarantine",
+      "Independent security/custody/effect authority"
+    ]
+  },
+  "limitations": [
+    "Actual user-run Windows fixture, no independent replay.",
+    "Raw binary archives not included; verified report/logs and D1-matching hashes, not independent binary execution.",
+    "Probe counts are fixture controls, not 230 distinct original product tests; do not add to historic 307.",
+    "Owner DDL power remains; no SECURITY DEFINER functions in fixture, not proof about future production functions.",
+    "No product or original DDL changes. No credentials retained intentionally; no rerun in same stage."
+  ],
+  "gate": {
+    "previous": 11,
+    "done": 12,
+    "total": 16,
+    "percent": 75,
+    "closed": "D3",
+    "scope": "Evidence acceptance only; canonical mapping, independent acceptance HOLD",
+    "core_transfer": "PENDING_METADATA_ONLY"
+  },
+  "prior": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json"
+}

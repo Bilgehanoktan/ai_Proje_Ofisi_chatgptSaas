@@ -1,19 +1,19 @@
 {
-  "revision": "0228-D3-R3",
+  "revision": "0228-D3-R4",
   "branch": "integration/0228-d3-rls-fixture",
   "base": "bebee3198ede68cd201cba363752a9006be35581",
   "gate": {
-    "done": 11,
+    "done": 12,
     "total": 16,
-    "percent": 68.75
+    "percent": 75
   },
   "design": "CANDIDATE",
   "source": "BOOTSTRAP_CANDIDATE_LOCAL_GUARDS_PASS",
   "static_source_pass": 12,
   "python_compile": "PASS",
   "local_guards_pass": 11,
-  "actual_pg": "PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING",
-  "d3": "RAW_REVIEW_PENDING",
+  "actual_pg": "PASS_230_RAW_REVIEWED_SCOPED_FIXTURE",
+  "d3": "PASS_SCOPED_FIXTURE_RAW_REVIEWED",
   "b3": "HOLD",
   "e2": "OPEN",
   "e3": "OPEN",
@@ -31,6 +31,7 @@
   "bootstrap_local_guards_pass": 13,
   "expected_runtime_probes": 230,
   "bootstrap_manifest": "tests/fixtures/0228-d3/R2_BOOTSTRAP_MANIFEST.json",
-  "next": "D3-R4: collect evidence only from C:/AIOS/core-0228-d3; verify six final hashes, 230 ordered check IDs, owner and bootstrap results, fixture scope and acceptance criteria. No rerun.",
-  "r3_evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json"
+  "next": "D3 scoped fixture gate accepted. Transfer only evidence metadata to core with CAS; coordinate E2/E3/E4 with unified U3 owner; B3 and canonical RLS/company-stream binding remain open.",
+  "r3_evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json",
+  "r4_evidence": "tests/evidence/D3_R4_RAW_EVIDENCE_REVIEW_0228.json"
 }

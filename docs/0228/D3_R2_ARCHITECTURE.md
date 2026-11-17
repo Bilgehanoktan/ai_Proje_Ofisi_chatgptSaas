@@ -16,3 +16,6 @@ Use fresh source checkout of exact committed R2 ref on Windows, local core-0227-
 
 ## D3-R3 actual Windows run — transcript PASS
 Exact R2 commit f6fba86b004258761d7ac089bedfa5d8a169f601; user approved EVET, initialized and started isolated 55433 cluster, completed runner successfully and stopped. Final status D3_LOCAL_PASS_RAW_REVIEW_REQUIRED; accepted inputs/source/fixture preserved. 230 exact ordered checks required by runner, raw probe and owner details pending. D3 gate not promoted; 11/16. See tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json. Do not rerun or share private logs/data/tmp. D3-R4 review next.
+
+## D3-R4 raw evidence review — scoped PASS
+ZIP 7/7 CRC; 6/6 final hashes match transcript and raw files; ordered 230/230 checks and 158 exact detail records; owner 12 hidden and insert denied. Current D3 binary gate non-owner RLS/lock contention satisfied (fixture scope); 12/16 after evidence-only transfer. Three raw JSON blobs match uploaded bytes by Git blob pin. No canonical product RLS, company-stream/T1 PG race, pool integration or independent security acceptance. No product/DDL changes. Evidence: tests/evidence/D3_R4_RAW_EVIDENCE_REVIEW_0228.json

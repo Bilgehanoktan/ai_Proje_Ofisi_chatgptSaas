@@ -1,0 +1,1119 @@
+{
+  "bootstrap": [
+    "roles_and_database",
+    "schema_and_policies",
+    "direct_login_seeds",
+    "owner_force_rls",
+    "runtime_probes"
+  ],
+  "canonical_mapping": "HOLD",
+  "checks": [
+    {
+      "id": "authenticated_runtime_and_unmapped_profiles",
+      "status": "PASS"
+    },
+    {
+      "id": "owner_nologin_nobypass",
+      "status": "PASS"
+    },
+    {
+      "id": "all_12_owned_enabled_forced",
+      "status": "PASS"
+    },
+    {
+      "id": "all_48_command_policies",
+      "status": "PASS"
+    },
+    {
+      "id": "no_fixture_definer_functions",
+      "status": "PASS"
+    },
+    {
+      "id": "unmapped_no_rows",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "unmapped_insert_denied",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_events_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_outbox_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_fences_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "a_run_heads_update_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_heads_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_leases_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_leases_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_leases_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_leases_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "a_run_leases_update_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "a_run_leases_delete_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_leases_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_leases_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_mutations_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_audit_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "a_sample_budgets_update_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_budgets_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_admissions_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_reservations_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_run_lease_renewals_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "a_sample_settlements_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "a_forged_context_denied",
+      "status": "PASS"
+    },
+    {
+      "id": "a_reset_preserves_authenticated_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "a_set_role_aicos_d3_tenant_b",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_set_role_aicos_d3_owner",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_session_authorization_denied",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_rls_off_denied",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "a_join_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_own_read",
+      "rows": 2,
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_events_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_outbox_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_fences_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "b_run_heads_update_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_heads_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_leases_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_leases_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_leases_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_leases_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "b_run_leases_update_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "b_run_leases_delete_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_leases_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_leases_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_mutations_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_audit_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "cross": 0,
+      "id": "b_sample_budgets_update_scope",
+      "own": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_budgets_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_admissions_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_reservations_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_run_lease_renewals_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_own_read",
+      "rows": 1,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_cross_read",
+      "rows": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_cross_insert",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_scope_rebind",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_append_only_update",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_delete_privilege",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_no_elevated_table_privilege",
+      "status": "PASS"
+    },
+    {
+      "id": "b_sample_settlements_column_update_grants",
+      "status": "PASS"
+    },
+    {
+      "id": "b_forged_context_denied",
+      "status": "PASS"
+    },
+    {
+      "id": "b_reset_preserves_authenticated_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "b_set_role_aicos_d3_tenant_a",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_set_role_aicos_d3_owner",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_session_authorization_denied",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_rls_off_denied",
+      "sqlstate": "42501",
+      "status": "PASS"
+    },
+    {
+      "id": "b_join_scope",
+      "status": "PASS"
+    },
+    {
+      "id": "b_only_event_exists",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_scope_fk_missing",
+      "sqlstate": "23503",
+      "status": "PASS"
+    },
+    {
+      "id": "rollback_visible_inside",
+      "status": "PASS"
+    },
+    {
+      "id": "rollback_restores",
+      "status": "PASS"
+    },
+    {
+      "id": "same_scope_nowait_contention",
+      "sqlstate": "55P03",
+      "status": "PASS"
+    },
+    {
+      "id": "other_scope_not_blocked",
+      "status": "PASS"
+    },
+    {
+      "id": "lock_released",
+      "status": "PASS"
+    },
+    {
+      "id": "two_connections_same_revision",
+      "status": "PASS"
+    },
+    {
+      "id": "first_budget_cas",
+      "status": "PASS"
+    },
+    {
+      "id": "stale_budget_cas",
+      "status": "PASS"
+    },
+    {
+      "id": "cap_constraint",
+      "sqlstate": "23514",
+      "status": "PASS"
+    },
+    {
+      "id": "other_budget_unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "second_connection_commit",
+      "status": "PASS"
+    },
+    {
+      "id": "snapshot_stable",
+      "status": "PASS"
+    },
+    {
+      "id": "read_only_write_denied",
+      "sqlstate": "25006",
+      "status": "PASS"
+    },
+    {
+      "id": "fresh_snapshot_visible",
+      "status": "PASS"
+    },
+    {
+      "id": "other_budget_still_unchanged",
+      "status": "PASS"
+    }
+  ],
+  "classification": "DISPOSABLE_FIXTURE_ONLY",
+  "fixture_commit": "f6fba86b004258761d7ac089bedfa5d8a169f601",
+  "independent_acceptance": "HOLD",
+  "owner": {
+    "insert_denied_sqlstate": "42501",
+    "status": "PASS",
+    "tables_hidden": 12
+  },
+  "passed": 230,
+  "server": {
+    "auth": "scram-sha-256",
+    "cluster": "aicos_d3_0228_disposable",
+    "data_directory_match": true,
+    "driver": "3.3.9",
+    "host": "127.0.0.1",
+    "libpq_version": 180004,
+    "port": 55433,
+    "pq_impl": "binary",
+    "version_num": 170012
+  },
+  "status": "D3_FIXTURE_PROBES_PASS"
+}
