@@ -1,0 +1,213 @@
+{
+  "revision": "0230-D5-B",
+  "definition": "Separate branch-record acceptance metrics and ordinal 24-area scores; not overall product completion.",
+  "core": {
+    "done": 12,
+    "total": 16,
+    "source": "progress/INTEGRATION_GATES_0227.json",
+    "blob": "50df93704c63a7fa12ff5f6b93183b243e5f8a63",
+    "groups": [
+      [
+        "A Core recovery",
+        3,
+        3
+      ],
+      [
+        "B Intent Authority + T1",
+        2,
+        3
+      ],
+      [
+        "C Company + Terminal",
+        3,
+        3
+      ],
+      [
+        "D scoped PG/RLS",
+        3,
+        3
+      ],
+      [
+        "E Working product",
+        1,
+        4
+      ]
+    ]
+  },
+  "ui": {
+    "done": 21,
+    "total": 40,
+    "source": "catalog/revisions/TECHNICAL_CATALOG_UI_P10J24B.json",
+    "blob": "6e7d099d9b22fe7f9cc627bb1d92d1227cd71380"
+  },
+  "mvp": {
+    "done": 0,
+    "total": 11,
+    "source": "docs/UNIFIED-U3A/ARCHITECTURE_AND_RUNBOOK.md",
+    "blob": "a84488547edf0986c70c8a298587d6b3b9403a46"
+  },
+  "independent": {
+    "done": 0,
+    "total": 7,
+    "source": "catalog/revisions/TECHNICAL_CATALOG_UI_P10J24B.json"
+  },
+  "office": {
+    "canonical_join": "0/55",
+    "hd": "0/36",
+    "a5r3": "44 selected model PASS",
+    "native_build": "NOT_RUN",
+    "source": "progress/UX_PREMIUM_07_A5R3_INTEGRATION.json",
+    "blob": "da80f5c9a5ad8be1a32abdbbb942a68a4956882c"
+  },
+  "org": {
+    "bridge": "26 protocol PASS (historical)",
+    "r2": "4 preflight PASS; 12 exact integration NOT_RUN",
+    "source": "candidates/ORG-06R2/HANDOVER.md",
+    "blob": "f2d50f414031ef5c752c72aee57303fac6f84bc8"
+  },
+  "w5": {
+    "tests": "90/90 PASS historical",
+    "source": "docs/w5-model-effect-budget/DURABLE_PROVIDER_RUNTIME_HANDOVER.md",
+    "blob": "52aa1b41bf53b031cf650e8faa24c92447cfc2aa"
+  },
+  "d4": {
+    "gates_open": 12,
+    "source": "candidates/D4-R6/ACCEPTANCE_GATES.json",
+    "blob": "6a6bb79d9aa58202116289e6f178fe3204823c11"
+  },
+  "d5b": {
+    "new": 21,
+    "prior_exact": 19,
+    "combined": 40,
+    "source_pins": 15,
+    "gate_promotions": 0
+  },
+  "tracker24": {
+    "source": "progress/DEVELOPMENT_TRACKER_24.md",
+    "blob": "9a3705e34a3232735fa6e1489d04af9da19f5ea0",
+    "design_mean": 71.875,
+    "source_mean": 34.375,
+    "rows": [
+      [
+        "Frontend",
+        75,
+        50
+      ],
+      [
+        "UI/UX",
+        50,
+        50
+      ],
+      [
+        "Office Engine",
+        75,
+        50
+      ],
+      [
+        "API & Contracts",
+        75,
+        50
+      ],
+      [
+        "Backend",
+        75,
+        50
+      ],
+      [
+        "Orchestrator",
+        75,
+        50
+      ],
+      [
+        "Task Engine & DAG",
+        75,
+        50
+      ],
+      [
+        "Agent Runtime",
+        75,
+        25
+      ],
+      [
+        "Model Gateway",
+        50,
+        25
+      ],
+      [
+        "Skill & Tool",
+        75,
+        25
+      ],
+      [
+        "Database",
+        75,
+        25
+      ],
+      [
+        "Event Store",
+        75,
+        50
+      ],
+      [
+        "Memory & Knowledge",
+        75,
+        25
+      ],
+      [
+        "Security & IAM",
+        75,
+        25
+      ],
+      [
+        "Independent Verifier",
+        75,
+        25
+      ],
+      [
+        "SaaS & Multi-Tenant",
+        75,
+        25
+      ],
+      [
+        "Product modules",
+        75,
+        25
+      ],
+      [
+        "External integrations",
+        75,
+        0
+      ],
+      [
+        "Finance & Billing",
+        75,
+        25
+      ],
+      [
+        "Test & QA",
+        75,
+        25
+      ],
+      [
+        "DevOps",
+        75,
+        25
+      ],
+      [
+        "Observability",
+        50,
+        25
+      ],
+      [
+        "Backup & Recovery",
+        75,
+        25
+      ],
+      [
+        "Technical catalog",
+        75,
+        75
+      ]
+    ]
+  }
+}
