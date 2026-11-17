@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ORG-05R2 D0 read-only studio projection",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "org.studio.preview.v0-D0"
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "tenant_id": {
+          "type": "string",
+          "pattern": "^synthetic-[A-Za-z0-9_.:-]+$",
+          "maxLength": 128
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^synthetic-[A-Za-z0-9_.:-]+$",
+          "maxLength": 128
+        },
+        "environment_id": {
+          "enum": [
+            "A0_SAMPLE_ONLY",
+            "A0_REVIEW_ONLY"
+          ]
+        }
+      },
+      "required": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "additionalProperties": false
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "previous_revision": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "units": {
+      "type": "array",
+      "maxItems": 4096,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+          },
+          "kind": {
+            "enum": [
+              "company",
+              "division",
+              "department",
+              "team"
+            ]
+          },
+          "parent": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "parent"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "positions": {
+      "type": "array",
+      "maxItems": 4096,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+          },
+          "unit": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+          },
+          "role": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "maxLength": 128
+          },
+          "reports_to": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "occupied": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "unit",
+          "role",
+          "reports_to",
+          "occupied"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "decision": {
+      "const": "HOLD"
+    },
+    "authoritative": {
+      "const": false
+    },
+    "identity_owner": {
+      "const": "HOLD"
+    },
+    "geometry_join": {
+      "const": "HOLD"
+    },
+    "runtime_binding": {
+      "const": null
+    },
+    "dispatch_allowed": {
+      "const": false
+    }
+  },
+  "required": [
+    "schema",
+    "scope",
+    "revision",
+    "sequence",
+    "previous_revision",
+    "units",
+    "positions",
+    "decision",
+    "authoritative",
+    "identity_owner",
+    "geometry_join",
+    "runtime_binding",
+    "dispatch_allowed"
+  ],
+  "additionalProperties": false
+}

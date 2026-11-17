@@ -1,0 +1,72 @@
+{
+  "revision": "ORG-05R2",
+  "parent": "c2e15eaa31c17fe6a4c91aaa3aa7e446b59bc235",
+  "status": "D0_SQLITE_CANDIDATE_HOLD",
+  "files": {
+    "schema.sql": {
+      "tables": [
+        "org_revision",
+        "org_head",
+        "org_unit",
+        "org_position",
+        "org_definition_ref",
+        "org_instance_ref",
+        "org_binding",
+        "org_notice"
+      ]
+    },
+    "persistence.py": {
+      "symbols": [
+        "Scope.key",
+        "initialize",
+        "revision_id",
+        "notice_id",
+        "Store._connect",
+        "Store._head",
+        "Store._read",
+        "Store.record",
+        "Store.read",
+        "Store.audit",
+        "Store.studio_view"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "pathlib",
+        "dataclasses",
+        "org_model",
+        "staffing",
+        "operations",
+        "integration_guard",
+        "schema.sql"
+      ]
+    },
+    "studio.schema.json": {
+      "contract": "org.studio.preview.v0-D0",
+      "route_proposal": "GET /demo/v1/org/studio-preview",
+      "route_registered": false
+    },
+    "test_persistence.py": {
+      "class": "PersistenceTests",
+      "tests": 25,
+      "dependency": "jsonschema==4.26.0"
+    }
+  },
+  "tests": {
+    "actual_local_pass": 118,
+    "new": 25,
+    "regression": 93,
+    "postgresql": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "http": "NOT_RUN",
+    "canonical_event_store": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "event": {
+    "kind": "ORG_REVISION_RECORDED_D0",
+    "state": "HOLD",
+    "published": false
+  },
+  "owner_status": "HOLD",
+  "product_changes": 0,
+  "next": "ORG-05R3"
+}
