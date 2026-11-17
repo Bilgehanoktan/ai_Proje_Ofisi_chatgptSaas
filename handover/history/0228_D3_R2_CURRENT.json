@@ -1,0 +1,53 @@
+{
+  "revision": "0228-D3-R2",
+  "branch": "integration/0228-d3-rls-fixture",
+  "parent": "bebee3198ede68cd201cba363752a9006be35581",
+  "status": "D3_BOOTSTRAP_SOURCE_CANDIDATE_GUARDS_PASS",
+  "canonical_handover": "handover/CURRENT.json remains 0227 D2 accepted; branch-specific handover only",
+  "product_files": 393,
+  "original_database_files": 16,
+  "source_manifest": "tests/fixtures/0228-d3/SOURCE_MANIFEST.json",
+  "architecture": "docs/0228/D3_R2_ARCHITECTURE.md",
+  "catalog": "catalog/revisions/TECHNICAL_CATALOG_0228_D3.json",
+  "evidence": "tests/evidence/D3_R2_BOOTSTRAP_0228.json",
+  "progress": "progress/0228_D3_PROGRESS.json",
+  "gate": {
+    "done": 11,
+    "total": 16,
+    "percent": 68.75
+  },
+  "actual_pg": "NOT_RUN",
+  "next": "D3-R3: explicit EVET local Windows disposable execution on 55433 using exact R2 commit; collect only evidence folder. D3-R4 raw review; no retry on dirty stage.",
+  "parallel": {
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "integration/p10j24-product-acceptance": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+    "integration/p10j24b-source-recovery": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "integration/unified-u3a-product-acceptance": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "integration/0227-local-environment-preflight": "bebee3198ede68cd201cba363752a9006be35581",
+    "integration/0228-d3-rls-fixture": "f2f0c548d5de6d5cc166ac103520d4ede007e959"
+  },
+  "rollback": "bebee3198ede68cd201cba363752a9006be35581",
+  "readback": {
+    "status": "PASS",
+    "source_blob_and_size": 8,
+    "seed_arity_pass": 25,
+    "original_files_unchanged": true,
+    "correction": "UTF-8 byte metadata only; source blob unchanged"
+  },
+  "r1_parent": "f2f0c548d5de6d5cc166ac103520d4ede007e959",
+  "r1_architecture": "docs/0228/D3_R1_ARCHITECTURE.md",
+  "r1_evidence": "tests/evidence/D3_R1_STATIC_0228.json",
+  "bootstrap_manifest": "tests/fixtures/0228-d3/R2_BOOTSTRAP_MANIFEST.json",
+  "rollback_r2": "f2f0c548d5de6d5cc166ac103520d4ede007e959",
+  "r2_readback": {
+    "status": "PASS",
+    "source_commit": "49196196bb76605ad476bff6afd812c891b6c6bb",
+    "source_blob_and_size": 2,
+    "original_product_files_unchanged": 393,
+    "original_database_files_unchanged": 16,
+    "r1_fixture_sources_unchanged": 9,
+    "branch_only": "integration/0228-d3-rls-fixture",
+    "actual_pg": "NOT_RUN"
+  }
+}

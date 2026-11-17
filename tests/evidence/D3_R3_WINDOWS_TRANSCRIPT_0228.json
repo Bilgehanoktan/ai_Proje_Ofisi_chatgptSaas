@@ -1,0 +1,66 @@
+{
+  "revision": "0228-D3-R3",
+  "status": "D3_LOCAL_PASS_TRANSCRIPT_RAW_REVIEW_PENDING",
+  "scope": "User uploaded Windows transcript, actual run; not raw report review or independent replay",
+  "executed_commit": "f6fba86b004258761d7ac089bedfa5d8a169f601",
+  "runner_blob": "be3ae5843e1f8d240fd42de4dc383862b4e908a8",
+  "fixture_manifest_blob": "78b656a97302553a77b56ddaa630ad748f7746e0",
+  "accepted_source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "transcript": {
+    "name": "Yapıştırılan metin(20261117-174842).txt",
+    "lines": 544,
+    "execution_lines": [
+      467,
+      544
+    ],
+    "approval": "EVET",
+    "prior_approval_hold": "lowercase evet, no setup",
+    "source_before_after": "MATCH 392 manifest / 393 product",
+    "initdb": "PASS",
+    "start": "PASS",
+    "stop": "PASS"
+  },
+  "final": {
+    "status": "D3_LOCAL_PASS_RAW_REVIEW_REQUIRED",
+    "server_stopped": true,
+    "source_preserved": true,
+    "fixture_preserved": true,
+    "accepted_inputs_preserved": true,
+    "canonical_mapping": "HOLD",
+    "independent_acceptance": "HOLD",
+    "logs": {
+      "01_venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "02_pip_install.log": "f50acaa0c0476c40e20ac3b361d206b91f478a5fd966b33413cd3fc7191639d6",
+      "03_pip_check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "04_pip_list.json": "0aec778594b6e99f3d85d11b74b149d9d68acc75cafcf8fb31b1f38fc4157b71",
+      "D3_PROBE.json": "2cd006db43a1e976f546a9df8c1f20bbbb44599a56841f22dd65e26f40706dbd",
+      "D3_REVIEW.json": "06aba762bf93c7d1eb9e67459f2b98b405aba1b118d121607849802c0148ff6e"
+    }
+  },
+  "inference": {
+    "expected_probe_count": 230,
+    "runner_requires_exact_ordered_ids_all_PASS_and_child_exit_zero": true,
+    "raw_probe_report": "PENDING",
+    "owner_probe": "required by runner; raw details pending"
+  },
+  "raw_requested": [
+    "01_venv.log",
+    "02_pip_install.log",
+    "03_pip_check.log",
+    "04_pip_list.json",
+    "D3_PROBE.json",
+    "D3_REVIEW.json",
+    "D3_FINAL.json"
+  ],
+  "limits": [
+    "No raw reports uploaded yet; exact 230 IDs and SQLSTATE details not independently reviewed.",
+    "Fixture not canonical product schema or IAM; company-stream/T1 mapping and independent security remain open.",
+    "No changes to parallel branches, product or original DB files. Unified module collision is outside D3."
+  ],
+  "gate": {
+    "done": 11,
+    "total": 16,
+    "percent": 68.75,
+    "promotion": false
+  }
+}

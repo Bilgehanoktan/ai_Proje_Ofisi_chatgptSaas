@@ -1,5 +1,5 @@
 {
-  "revision": "0228-D3-R2",
+  "revision": "0228-D3-R3",
   "base_commit": "bebee3198ede68cd201cba363752a9006be35581",
   "files": [
     {
@@ -156,10 +156,10 @@
       ]
     }
   },
-  "actual_pg": "NOT_RUN",
+  "actual_pg": "PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING",
   "maintenance": "On failure preserve D3 stage and sanitized reports, stop only D3 cluster; never retry in place or delete automatically. Do not share server-private.log, data or tmp.",
   "rollback": "Abandon isolated branch/fixture, retain 0227.",
-  "next": "D3-R3 Windows run, then D3-R4 raw review",
+  "next": "D3-R4: collect evidence only from C:/AIOS/core-0228-d3; verify six final hashes, 230 ordered check IDs, owner and bootstrap results, fixture scope and acceptance criteria. No rerun.",
   "readback": {
     "status": "PASS",
     "fixture_blob_matches": 8,
@@ -347,5 +347,6 @@
     "r1_fixture_sources_unchanged": 9,
     "branch_only": "integration/0228-d3-rls-fixture",
     "actual_pg": "NOT_RUN"
-  }
+  },
+  "r3_evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json"
 }

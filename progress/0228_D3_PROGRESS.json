@@ -1,5 +1,5 @@
 {
-  "revision": "0228-D3-R2",
+  "revision": "0228-D3-R3",
   "branch": "integration/0228-d3-rls-fixture",
   "base": "bebee3198ede68cd201cba363752a9006be35581",
   "gate": {
@@ -12,8 +12,8 @@
   "static_source_pass": 12,
   "python_compile": "PASS",
   "local_guards_pass": 11,
-  "actual_pg": "NOT_RUN",
-  "d3": "OPEN",
+  "actual_pg": "PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING",
+  "d3": "RAW_REVIEW_PENDING",
   "b3": "HOLD",
   "e2": "OPEN",
   "e3": "OPEN",
@@ -31,5 +31,6 @@
   "bootstrap_local_guards_pass": 13,
   "expected_runtime_probes": 230,
   "bootstrap_manifest": "tests/fixtures/0228-d3/R2_BOOTSTRAP_MANIFEST.json",
-  "next": "D3-R3 Windows run, then D3-R4 raw review"
+  "next": "D3-R4: collect evidence only from C:/AIOS/core-0228-d3; verify six final hashes, 230 ordered check IDs, owner and bootstrap results, fixture scope and acceptance criteria. No rerun.",
+  "r3_evidence": "tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json"
 }

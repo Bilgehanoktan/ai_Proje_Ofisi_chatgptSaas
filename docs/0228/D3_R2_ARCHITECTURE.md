@@ -13,3 +13,6 @@ Actual local Python compile and 13 pure unit tests PASS; expected 230 runtime ID
 
 ## Runbook / maintenance
 Use fresh source checkout of exact committed R2 ref on Windows, local core-0227-clean, core-0227-e1 and core-0227-pg-retry2 preserved. Run py -3.14 -I -B <source>/scripts/run_d3_0228.py --repo <source> --commit <exact R2 commit>. User enters EVET only after reviewing pins and scope. No password input. On failure do not rerun in same stage or delete any data. Keep private logs and data locally. Submit only evidence/ folder (D3_REVIEW.json, D3_PROBE.json if generated, D3_FINAL.json and pip logs). Verify exact IDs, server identity, owner checks and final hashes before deciding D3-R4 gate. Preserve previous stages; rollback by abandoning D3 candidate and returning to R1/0227. No automatic cleanup, CI or merge.
+
+## D3-R3 actual Windows run — transcript PASS
+Exact R2 commit f6fba86b004258761d7ac089bedfa5d8a169f601; user approved EVET, initialized and started isolated 55433 cluster, completed runner successfully and stopped. Final status D3_LOCAL_PASS_RAW_REVIEW_REQUIRED; accepted inputs/source/fixture preserved. 230 exact ordered checks required by runner, raw probe and owner details pending. D3 gate not promoted; 11/16. See tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json. Do not rerun or share private logs/data/tmp. D3-R4 review next.

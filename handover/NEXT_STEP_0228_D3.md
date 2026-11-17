@@ -1,2 +1,3 @@
-# NEXT — 0228 D3-R3
-R2 bootstrap candidate ready; Python compile and 13 local pure checks PASS. Actual Windows PG/RLS NOT_RUN. Clone exact R2 branch to C:\\AIOS\\core-0228-d3-source with autocrlf disabled, detach at delivered commit, run scripts/run_d3_0228.py via py -3.14 -I -B with exact --repo and --commit. Explicit EVET after review. New disposable C:\\AIOS\\core-0228-d3 cluster on 55433; no password entry; preserve 55432 and existing accepted stages. Send only evidence folder, not private logs/data/tmp. If HOLD, do not retry in place. D3-R4 raw review before gate. 11/16 unchanged.
+# NEXT — 0228 D3-R4
+D3-R4: collect evidence only from C:/AIOS/core-0228-d3; verify six final hashes, 230 ordered check IDs, owner and bootstrap results, fixture scope and acceptance criteria. No rerun.
+Keep stopped stage and previous environments. 11/16 unchanged. tests/evidence/D3_R3_WINDOWS_TRANSCRIPT_0228.json
