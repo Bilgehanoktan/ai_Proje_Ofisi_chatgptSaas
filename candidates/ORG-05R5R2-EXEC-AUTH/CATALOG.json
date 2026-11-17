@@ -1,0 +1,39 @@
+{
+  "revision": "ORG-05R5R2-EXEC-AUTH",
+  "parent": "cd8b522e6b0e996cd4747acc9124a8f46446a1fa",
+  "files": {
+    "launch_disposable.py": {
+      "sha256": "26fed5e6c529252fbd4bb5a38b3f70cfb9e64a73045e0202781bf15668df7313",
+      "functions": [
+        "read_admin_password",
+        "admin_env",
+        "validate_recovery",
+        "main"
+      ],
+      "purpose": "Admin password input and verified disposable stage stop"
+    },
+    "test_auth.py": {
+      "purpose": "9 recovery/password tests"
+    },
+    "test_launch_disposable.py": {
+      "purpose": "14 inherited launcher tests"
+    },
+    "test_auth.log": {
+      "purpose": "local test evidence"
+    },
+    "HANDOVER.md": {
+      "purpose": "change and recovery record"
+    }
+  },
+  "api_changes": [],
+  "database_changes": [],
+  "dependencies": [],
+  "tests": {
+    "local": {
+      "passed": 23,
+      "type": "mock/local"
+    },
+    "postgres": "0/26 NOT_RUN"
+  },
+  "product": "HOLD"
+}
