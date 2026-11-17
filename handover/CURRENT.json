@@ -3,7 +3,7 @@
   "branch": "integration/0227-local-environment-preflight",
   "parent_commit": "c715e1edfd1af021b4c0be0681c6958455b6a26f",
   "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
-  "product": "D0_E1_D1_PASS_RAW_REVIEWED_PG13_BUILD_OPEN",
+  "product": "D0_E1_D1_D2_PASS_RAW_REVIEWED_RLS_BUILD_OPEN",
   "product_files": 393,
   "manifest_entries": 392,
   "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
@@ -13,7 +13,7 @@
   "actual_prefix_db_route": "ORIGINAL_DB4_PASS",
   "combined_product_tests": "PASS_SELECTED_PRIOR_307_AND_ORIGINAL24_RAW_REVIEWED_FULL_NOT_RUN",
   "locked_core29": "PASS_TRANSFERRED_A0F_HISTORICAL_LOCKED_29",
-  "postgresql_13": "PASS_13_USER_TRANSCRIPT_RAW_REPORT_PENDING",
+  "postgresql_13": "PASS_13_RAW_REVIEWED",
   "rls": "NOT_RUN",
   "full_build_browser": "NOT_RUN",
   "independent_acceptance": "HOLD",
@@ -27,13 +27,13 @@
     "0209-D-03",
     "0210-D-04"
   ],
-  "integration_gate_done": 10,
+  "integration_gate_done": 11,
   "integration_gate_total": 16,
-  "integration_gate_percent": 62.5,
+  "integration_gate_percent": 68.75,
   "transfer_evidence": "tests/evidence/A3_EVIDENCE_TRANSFER_0227.json",
   "test_evidence": "tests/evidence/TEST_EVIDENCE_0227.json",
   "previous_pointer": "handover/history/CURRENT_0226.json",
-  "next": "Collect only existing D2_PG13_RESULT.json and SHA256; compare against uploaded transcript and exact runner serialization before D2 promotion. D3 separate RLS/lock scope; no rerun.",
+  "next": "D3 scope review: separate two-tenant PostgreSQL fixture, trusted principal mapping, non-owner RLS and lock contention. Do not change original DDL pins or accepted retry2 cluster. E2/E3/E4 and B3 remain open.",
   "research_sql8": "ORIGINAL_PASS_8_RAW_REVIEWED",
   "residual": {
     "exact_full_checkout": "PASS_E1_WINDOWS_RAW_REVIEWED",
@@ -43,7 +43,7 @@
     "original_0224_SQL8": "PASS_SQLITE_8_RAW_REVIEWED",
     "original_0223_DB4": "PASS_SQLITE_ROUTER_4",
     "full_0224_research_result_slice": "ORIGINAL_SQL8_PASS_RAW_REVIEWED_SCOPE_ONLY",
-    "postgresql_13": "PASS_13_USER_TRANSCRIPT_RAW_REPORT_PENDING",
+    "postgresql_13": "PASS_13_RAW_REVIEWED",
     "rls": "NOT_RUN",
     "full_backend_build": "NOT_RUN",
     "full_frontend_build": "NOT_RUN",
@@ -72,5 +72,6 @@
   "d1_authfix_evidence": "tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json",
   "d1_connection_transcript_evidence": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
   "d1_raw_review_evidence": "tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json",
-  "d2_transcript_evidence": "tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json"
+  "d2_transcript_evidence": "tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json",
+  "d2_raw_review_evidence": "tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json"
 }

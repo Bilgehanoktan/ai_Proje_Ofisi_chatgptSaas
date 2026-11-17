@@ -158,5 +158,49 @@
     "scope": "Actual original PG13 user transcript and source review, raw report pending",
     "product_changes": 0,
     "maintenance": "Preserve stopped retry2 cluster and sanitized report; do not rerun or drop schema; D3 separate."
+  },
+  "d2_raw_review": {
+    "evidence": "tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json",
+    "scope": "Original PG13 raw accepted; source test inventory preserved",
+    "product_changes": 0,
+    "maintenance": "Keep accepted retry2 stopped, do not drop/reinitialize or reuse as D3. Preserve original DDL pins and raw report.",
+    "rollback": "Revert evidence-only commit if invalidated; no runtime rollback required."
+  },
+  "d3_scope_review": {
+    "document": "docs/0227/D3_RLS_SCOPE_REVIEW.md",
+    "ddl_inventory": [
+      {
+        "path": "database/0192/candidate_event_outbox_fence.sql",
+        "git_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "tables": 3,
+        "rls": false
+      },
+      {
+        "path": "database/0193/candidate_run_head.sql",
+        "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "tables": 1,
+        "rls": false
+      },
+      {
+        "path": "database/0194/candidate_transition_roles.sql",
+        "git_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "tables": 3,
+        "rls": false
+      },
+      {
+        "path": "database/0195/candidate_admission_budget.sql",
+        "git_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "tables": 3,
+        "rls": false
+      },
+      {
+        "path": "database/0196L/candidate_lease_settlement.sql",
+        "git_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "tables": 2,
+        "rls": false
+      }
+    ],
+    "scope": "Design review only, no DDL or runtime change",
+    "test": "NOT_RUN"
   }
 }

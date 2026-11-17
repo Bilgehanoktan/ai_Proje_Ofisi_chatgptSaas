@@ -253,3 +253,7 @@ Raw ZIP 8/8 CRC, 5/5 log/report hashes, 31/31 installed pins, original 28 E1 loc
 
 ## 0227-D2 — original PG13 execution PASS, raw report pending
 Uploaded Windows transcript parsed: 0194 5/5, 0196L 5/5, 0200S 3/3, all failure/error/skip counters zero; exact runner source and 13 source test names reviewed; source/DDL verified; exit 0 and server stopped. Raw D2_PG13_RESULT.json pending. Expected report hash reconstructed, not measured on original. 10/16 unchanged pending review; D3/RLS/B3 open. tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json
+
+
+## 0227-D2 final raw review — PASS
+Original Windows JSON: 937 bytes, SHA256 79085656ad4d782a012642518d9d8724514976082af0c5734c5d04dcfb82cf05, exact CRLF serialization and prior transcript match. 13/13 PG cases, source/DDL verified; 11/16 (68.75%). D3 separate RLS/non-owner contention, E2/E3/E4 and B3 open; source unchanged. Evidence: tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json; next: docs/0227/D3_RLS_SCOPE_REVIEW.md.

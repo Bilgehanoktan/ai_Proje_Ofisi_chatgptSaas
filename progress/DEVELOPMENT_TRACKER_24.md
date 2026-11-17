@@ -1,6 +1,6 @@
 # 24 Teknik Alan — TRACK-0227
 
-E1 and D1 PASS; 10/16 integration gates (62.5%). Design/source ordinal scores unchanged. Prior selected 307 not rerun; 24 original SQLite tests raw-reviewed; D1 probes separately. PG13/RLS/full build remain open.
+E1, D1 and D2 PASS; 11/16 integration gates (68.75%). Design/source ordinal scores unchanged. Historical selected 307 not rerun; 24 original SQLite and 13 original PostgreSQL tests raw-reviewed separately. RLS/full build/browser remain open.
 
 | ID | Alan | Tasarım | Kaynak | Gerçek test durumu | Bu tur |
 |---:|---|---:|---:|---|---|
@@ -8,29 +8,25 @@ E1 and D1 PASS; 10/16 integration gates (62.5%). Design/source ordinal scores un
 | 2 | UI/UX Design System | 50 | 50 | PARTIAL_PASS_0217_STUDIO_CONTEXT | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 3 | Office Engine | 75 | 50 | PARTIAL_PASS_0217_HISTORICAL_LABEL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 4 | API & Contracts | 75 | 50 | PARTIAL_PASS_ACTUAL_SCHEMA_HTTP | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
-| 5 | Backend | 75 | 50 | PARTIAL_PASS_0217_SIGNED_FIXTURE | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
-| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0204C_REPLAY | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
-| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_ORIGINAL_0224_SQL8_RAW_REVIEWED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 5 | Backend | 75 | 50 | PARTIAL_PASS_0217_SIGNED_FIXTURE | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 6 | Orchestrator | 75 | 50 | PARTIAL_PASS_0204C_REPLAY | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 7 | Task Engine & DAG | 75 | 50 | PARTIAL_PASS_ORIGINAL_0224_SQL8_RAW_REVIEWED | 0227_D2_PG13_RAW_REVIEWED_PASS |
 | 8 | Agent Runtime | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 | 9 | AI Model Gateway | 50 | 25 | PARTIAL_PASS_0210_DENIAL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 10 | Skill & Tool Engine | 75 | 25 | PARTIAL_PASS_D0_REVIEW | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
-| 11 | Database | 75 | 25 | D1_PASS_PG13_RLS_OPEN | 0227_D1_RAW_REVIEWED_PASS |
-| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
+| 11 | Database | 75 | 25 | D1_D2_PASS_RLS_OPEN | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 12 | Event Store & Messaging | 75 | 50 | PARTIAL_PASS_0211_COMPONENT_CLAIM | 0227_D2_PG13_RAW_REVIEWED_PASS |
 | 13 | Memory & Knowledge | 75 | 25 | PARTIAL_PASS_ORIGINAL_0221_SQL10_RAW_REVIEWED | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 | 14 | Security & IAM | 75 | 25 | PARTIAL_PASS_0217_SIGNED_FIXTURE_RESTORE_RESIDUAL | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
 | 15 | Independent Verifier | 75 | 25 | HOLD_INDEPENDENT_ACCEPTANCE | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 16 | SaaS & Multi-Tenant | 75 | 25 | PARTIAL_PASS_0204C_REPLAY | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 17 | Ürün ve iş modülleri | 75 | 25 | NOT_RUN | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 18 | Dış sistem entegrasyonları | 75 | 0 | NOT_RUN | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
-| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
-| 20 | Test & QA | 75 | 25 | E1_PASS_ORIGINAL24_RAW_REVIEWED_FULL_REGRESSION_OPEN | 0227_E1_RAW_REVIEWED_ORIGINAL24_PASS |
-| 21 | DevOps & Infrastructure | 75 | 25 | D1_PASS_PG13_RLS_OPEN | 0227_D1_RAW_REVIEWED_PASS |
+| 19 | Finans & Billing | 75 | 25 | PARTIAL_PASS_0205R_POOL | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 20 | Test & QA | 75 | 25 | E1_ORIGINAL24_D2_PG13_RAW_REVIEWED_FULL_REGRESSION_OPEN | 0227_D2_PG13_RAW_REVIEWED_PASS |
+| 21 | DevOps & Infrastructure | 75 | 25 | D1_D2_PASS_RLS_OPEN | 0227_D2_PG13_RAW_REVIEWED_PASS |
 | 22 | Monitoring & Observability | 50 | 25 | PARTIAL_PASS_HISTORICAL_READBACK | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
 | 23 | Backup & Disaster Recovery | 75 | 25 | PARTIAL_PASS_0217_RESTORE_RESIDUAL | 0227_CARRY_FORWARD_NO_SCORE_PROMOTION |
-| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_D1_RAW_REVIEWED_PASS |
+| 24 | Teknik katalog & dokümantasyon | 75 | 75 | CATALOG_UPDATED | 0227_D2_PG13_RAW_REVIEWED_PASS |
 
-Current evidence: tests/evidence/D1_RAW_EVIDENCE_REVIEW_0227.json
-
-
-## 0227-D2 — original PG13 execution PASS, raw report pending
-Uploaded Windows transcript parsed: 0194 5/5, 0196L 5/5, 0200S 3/3, all failure/error/skip counters zero; exact runner source and 13 source test names reviewed; source/DDL verified; exit 0 and server stopped. Raw D2_PG13_RESULT.json pending. Expected report hash reconstructed, not measured on original. 10/16 unchanged pending review; D3/RLS/B3 open. tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json
+Current evidence: tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json

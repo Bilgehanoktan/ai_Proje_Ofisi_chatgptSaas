@@ -64,7 +64,7 @@
     {
       "id": "D",
       "name": "PG/RLS",
-      "done": 1,
+      "done": 2,
       "total": 3,
       "criteria": [
         [
@@ -73,7 +73,7 @@
         ],
         [
           "13 actual PG tests",
-          false
+          true
         ],
         [
           "Non-owner RLS/lock contention",
@@ -106,9 +106,9 @@
       ]
     }
   ],
-  "done": 10,
+  "done": 11,
   "total": 16,
-  "percent": 62.5,
+  "percent": 68.75,
   "prior_0214_evidence": "0214 exact original wrapper with new D0 fixture recorded 10/10, one restore residual; inherited prior result from pinned manifest and prior conversation, not rerun 0215. Original six 0213 fixture tests NOT_RUN.",
   "current_0215": "46 new diagnostic checks; no new binary acceptance gate passed; independent custody, PG/RLS, pinned build and browser remain HOLD.",
   "previous": "progress/INTEGRATION_GATES_0226.json",
@@ -233,5 +233,11 @@
     "status": "PASS_13_USER_TRANSCRIPT_RAW_REPORT_PENDING",
     "evidence": "tests/evidence/D2_WINDOWS_PG13_TRANSCRIPT_0227.json",
     "gate_promotion": false
+  },
+  "current_0227_D2_raw_review": {
+    "status": "PASS_13_RAW_REVIEWED",
+    "evidence": "tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json",
+    "gate_promotion": true,
+    "new_binary_gates": 1
   }
 }
