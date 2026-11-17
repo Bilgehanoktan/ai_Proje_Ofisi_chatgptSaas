@@ -1,6 +1,6 @@
 {
   "baseline": "167e5239882dc7b49bd96647412fe6761da0be5e",
-  "status": "ISOLATED_41_TESTS_PASS_NO_PRODUCT_PROMOTION",
+  "status": "ISOLATED_62_PASS_9_NOT_RUN_NO_PRODUCT_PROMOTION",
   "pins": [
     {
       "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
@@ -192,7 +192,7 @@
     "deferred": "sample_adapter.py differs across branches; no edit. Common registry/provider/fallback/runtime pins match.",
     "new_paths_only": true
   },
-  "previous_checkpoint_status": "ISOLATED_29_TESTS_PASS_NO_PRODUCT_PROMOTION",
+  "previous_checkpoint_status": "ISOLATED_41_TESTS_PASS_NO_PRODUCT_PROMOTION",
   "w5_decision_accounting": {
     "checkpoint": "W5_DECISION_ACCOUNTING_01",
     "parent": "6167e4c593a11bf9fcacfdb5d5b7572db0d6e7c8",
@@ -342,6 +342,107 @@
     ],
     "local_full_catalog_sha256": "3355dbc45d1dcb8bb7bcf718b6d75fd5a45a700505d517f7b491e23b6b7c35ce"
   },
-  "latest_evidence": "docs/w5-model-effect-budget/DECISION_ACCOUNTING_TEST_EVIDENCE.json",
-  "latest_handover": "docs/w5-model-effect-budget/DECISION_ACCOUNTING_HANDOVER.md"
+  "latest_evidence": "docs/w5-model-effect-budget/INVOCATION_RECEIPT_TEST_EVIDENCE.json",
+  "latest_handover": "docs/w5-model-effect-budget/INVOCATION_RECEIPT_HANDOVER.md",
+  "w5_invocation_receipt": {
+    "checkpoint": "W5_INVOCATION_RECEIPT",
+    "parent": "db38b65dc1120cf5cc25222774295662f9d7d120",
+    "status": "PARTIAL_REGRESSION_62_PASS_9_NOT_RUN",
+    "new_source_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+        "git_blob": "71b1bc0adc4787c50b26b6d8d137ef9e421eb410",
+        "sha256": "c4cf140935f89cf7d5e0b8b065bf15ab35ef52a07073e97d936991166e70bf14",
+        "bytes": 4610
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+        "git_blob": "8e6cedceceb01901e830e5eb80f700b9485e980e",
+        "sha256": "fb18a61f3f0b59bcef44b346183ee955c7935d547c398e70991da5415a5de090",
+        "bytes": 6865
+      },
+      {
+        "path": "tests/w5/test_invocation_receipt_review.py",
+        "git_blob": "ba4edfe0b2fa93c3f3825a07a583cb0c289bd5a3",
+        "sha256": "d6f0de0543273d35b024c122acd26e7988057234ec6d8683a86ff7584e9ccbd6",
+        "bytes": 10250
+      }
+    ],
+    "symbols": [
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+        "classes": [
+          "InvocationRouteContext",
+          "InvocationRouteReview"
+        ],
+        "functions": [
+          "inspect_invocation_route"
+        ],
+        "dependencies": [
+          "runtime_binding",
+          "routing_decision",
+          "profile_registry",
+          "provider_contract",
+          "token_accounting",
+          "core.agent_runtime.lifecycle",
+          "core.transaction.review"
+        ]
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+        "classes": [
+          "ReceiptLookup",
+          "ReceiptReadback",
+          "ReservationUsageReceiptPort",
+          "ReceiptPortReview"
+        ],
+        "functions": [
+          "make_receipt_lookup",
+          "receipt_readback_digest",
+          "inspect_receipt_readback"
+        ],
+        "methods": [
+          "ReservationUsageReceiptPort.read_receipts"
+        ],
+        "dependencies": [
+          "invocation_route_binding",
+          "token_accounting",
+          "budget_engine.reservation_review",
+          "core.agent_runtime.lifecycle",
+          "core.transaction.review",
+          "typing",
+          "hashlib",
+          "json",
+          "dataclasses"
+        ]
+      },
+      {
+        "path": "tests/w5/test_invocation_receipt_review.py",
+        "tests": 21,
+        "dependencies": [
+          "test_router_cost_review",
+          "invocation_route_binding",
+          "reservation_usage_receipt",
+          "runtime_binding",
+          "token_accounting",
+          "routing_decision",
+          "budget_engine.reservation_review"
+        ]
+      }
+    ],
+    "api": [],
+    "db": [],
+    "events": [],
+    "external_dependencies": [],
+    "scores": {
+      "design": 50,
+      "source": 25
+    },
+    "local_full_catalog_sha256": "577bb9a6da38220c23cd2ccd19a00a05e2b4853375bc09ad1ec8114132127ec0",
+    "next": [
+      "Recover exact original Effect & Budget dependencies and rerun complete W5 suite.",
+      "Joint owner review of per-invocation receipt identity and durable readback with T1/Budget/PEP. No second ledger.",
+      "Keep provider and spend HOLD."
+    ]
+  }
 }
