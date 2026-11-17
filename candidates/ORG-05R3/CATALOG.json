@@ -1,0 +1,38 @@
+{
+  "revision": "ORG-05R3",
+  "parent": "85fe0f912c33b9b1b984f85ae1ba96b6fd3711a0",
+  "status": "D0_HOLD",
+  "tables": [
+    "op_team",
+    "op_member",
+    "op_entry",
+    "op_notice"
+  ],
+  "symbols": [
+    "TaskPin",
+    "HistoryPin",
+    "OfficePin",
+    "OperationsStore.create_team",
+    "OperationsStore.append_proposal",
+    "OperationsStore.history",
+    "OperationsStore.combined",
+    "ReadSession",
+    "studio_read"
+  ],
+  "tests": {
+    "new": 23,
+    "regression": 118,
+    "pass": 141,
+    "pg": "NOT_RUN",
+    "http": "NOT_RUN",
+    "event_store": "NOT_RUN",
+    "independent": "HOLD",
+    "standalone_resource_warnings": 0
+  },
+  "product_changes": 0,
+  "next": "ORG-05R4",
+  "contracts": [
+    "studio.schema.json",
+    "combined.schema.json"
+  ]
+}

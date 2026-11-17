@@ -1,0 +1,2 @@
+# Evidence reconstruction
+The local package's raw test.log is stored losslessly as test.log.gz in GitHub. Recreate test.log before running sha256sum -c SHA256SUMS: gzip -dc test.log.gz > test.log. Local raw Git blob d538a28c3af4886e351adb7b72fe915e1738d00e; compressed Git blob 4324f41c0d832dc966e2d993310e60651da9270e. The standalone test_new.log is stored directly. All other 27 local manifest/package files retained with exact Git blob IDs. No claim of PostgreSQL or real authentication acceptance.

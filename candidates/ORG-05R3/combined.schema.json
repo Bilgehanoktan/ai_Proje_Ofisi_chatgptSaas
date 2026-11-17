@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "org.combined.preview.v0-D0"
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "tenant_id": {
+          "type": "string",
+          "pattern": "^synthetic-[A-Za-z0-9_.:-]+$",
+          "maxLength": 128
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^synthetic-[A-Za-z0-9_.:-]+$",
+          "maxLength": 128
+        },
+        "environment_id": {
+          "enum": [
+            "A0_SAMPLE_ONLY",
+            "A0_REVIEW_ONLY"
+          ]
+        }
+      },
+      "required": [
+        "tenant_id",
+        "company_id",
+        "environment_id"
+      ],
+      "additionalProperties": false
+    },
+    "org_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "staffing_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "project": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+    },
+    "history": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "head": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "count",
+        "head"
+      ],
+      "additionalProperties": false
+    },
+    "proposals": {
+      "type": "array",
+      "maxItems": 4096,
+      "items": {
+        "type": "object",
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4096
+          },
+          "plan_revision": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "task": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+          },
+          "sender": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+          },
+          "recipient": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+          },
+          "kind": {
+            "enum": [
+              "delegation",
+              "handoff"
+            ]
+          },
+          "decision": {
+            "const": "HOLD"
+          },
+          "digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "sequence",
+          "plan_revision",
+          "task",
+          "sender",
+          "recipient",
+          "kind",
+          "decision",
+          "digest"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "office_revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "office_pairs": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4096
+    },
+    "meeting_proposed": {
+      "type": "boolean"
+    },
+    "geometry_join": {
+      "const": "HOLD"
+    },
+    "runtime_binding": {
+      "const": null
+    },
+    "decision": {
+      "const": "HOLD"
+    },
+    "authoritative": {
+      "const": false
+    },
+    "dispatch_allowed": {
+      "const": false
+    }
+  },
+  "required": [
+    "schema",
+    "scope",
+    "org_revision",
+    "staffing_revision",
+    "project",
+    "history",
+    "proposals",
+    "office_revision",
+    "office_pairs",
+    "meeting_proposed",
+    "geometry_join",
+    "runtime_binding",
+    "decision",
+    "authoritative",
+    "dispatch_allowed"
+  ],
+  "additionalProperties": false
+}
