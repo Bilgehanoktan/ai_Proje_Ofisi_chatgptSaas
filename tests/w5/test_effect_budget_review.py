@@ -66,7 +66,7 @@ class EffectBudgetReviewTests(unittest.TestCase):
 
     def test_effect_mutations(self):
         f=fixture()
-        for field,value in [("effect_digest","b"*64),("admission_id","other"),("grant_id","other"),("lease_id","other"),("budget_id","other"),("fence",2),("action","OTHER"),("policy_epoch",4),("witness_epoch",4)]:
+        for field,value in [("effect_digest","b"*64),("admission_id","other"),("grant_id","other"),("lease_id","other"),("budget_id","other"),("fence",2),("action","OTHER"),("tool_id","other"),("policy_epoch",4),("witness_epoch",4)]:
             with self.subTest(field=field):
                 self.check({"effect":replace(f["effect"],**{field:value})},"MODEL_EFFECT_BINDING_HOLD")
 
