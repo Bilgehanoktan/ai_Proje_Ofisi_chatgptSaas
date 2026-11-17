@@ -1,0 +1,205 @@
+{
+  "checks": [
+    {
+      "detail": {
+        "cluster": "aicos_org_r5_disposable",
+        "policies": 25,
+        "tables": 12
+      },
+      "elapsed_ms": 2008,
+      "id": "PG01_FRESH_AND_RLS_INVENTORY",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "loser": [
+          "sqlstate",
+          "23505"
+        ],
+        "revision": "eac1762bc4e2c642096e93c4dc89b9440398cb2c1c92975c024af6976e5d5661"
+      },
+      "elapsed_ms": 253,
+      "id": "PG02_GENESIS_RACE",
+      "status": "PASS"
+    },
+    {
+      "detail": "9ceac173de3d73d0453b61a804921daad168aba9c85df6c1df30e0b55add82d7",
+      "elapsed_ms": 205,
+      "id": "PG03_OTHER_SCOPE_GENESIS",
+      "status": "PASS"
+    },
+    {
+      "detail": "efea0d5c60da4b1a0a30b0543571fd3c970e112af32c1403a6abb72f6f0aee44",
+      "elapsed_ms": 51,
+      "id": "PG04_TEAM",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "counts": [
+          0,
+          0
+        ],
+        "sqlstate": "23514"
+      },
+      "elapsed_ms": 364,
+      "id": "PG05_ATOMIC_ROLLBACK",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "other_scope": "PASS",
+        "same_scope": "55P03"
+      },
+      "elapsed_ms": 124,
+      "id": "PG06_LOCK_ISOLATION",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 1,
+        "head": "229a9112e06ca5f620a8edd2375093ff84f6256d6e1998fc0316b7eaa811fea8",
+        "loser": [
+          "hold",
+          "HISTORY_CAS"
+        ]
+      },
+      "elapsed_ms": 197,
+      "id": "PG07_HANDOFF_CAS_RACE",
+      "status": "PASS"
+    },
+    {
+      "detail": "HISTORY_CAS",
+      "elapsed_ms": 62,
+      "id": "PG08_STALE_HISTORY",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "count": 2,
+        "head": "02dd5e50757e573062b31215a13028bdd74d9d2dc98618e5b618fefde3e687b5"
+      },
+      "elapsed_ms": 74,
+      "id": "PG09_DELEGATION",
+      "status": "PASS"
+    },
+    {
+      "detail": null,
+      "elapsed_ms": 68,
+      "id": "PG10_REOPEN_HISTORY",
+      "status": "PASS"
+    },
+    {
+      "detail": null,
+      "elapsed_ms": 44,
+      "id": "PG11_CROSS_SCOPE_READ",
+      "status": "PASS"
+    },
+    {
+      "detail": "42501",
+      "elapsed_ms": 38,
+      "id": "PG12_FOREIGN_TENANT",
+      "status": "PASS"
+    },
+    {
+      "detail": "42501",
+      "elapsed_ms": 39,
+      "id": "PG13_FOREIGN_COMPANY",
+      "status": "PASS"
+    },
+    {
+      "detail": "42501",
+      "elapsed_ms": 36,
+      "id": "PG14_FOREIGN_ENV",
+      "status": "PASS"
+    },
+    {
+      "detail": "23503",
+      "elapsed_ms": 153,
+      "id": "PG15_CROSS_SCOPE_FK",
+      "status": "PASS"
+    },
+    {
+      "detail": "42501",
+      "elapsed_ms": 37,
+      "id": "PG16_IMMUTABLE_UPDATE",
+      "status": "PASS"
+    },
+    {
+      "detail": "42501",
+      "elapsed_ms": 34,
+      "id": "PG17_IMMUTABLE_DELETE",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "reader": "42501",
+        "unmapped": "42501"
+      },
+      "elapsed_ms": 55,
+      "id": "PG18_READER_UNMAPPED_DENIED",
+      "status": "PASS"
+    },
+    {
+      "detail": "TASK_REFERENCE",
+      "elapsed_ms": 47,
+      "id": "PG19_REFERENCE_MISMATCH",
+      "status": "PASS"
+    },
+    {
+      "detail": "2036c6abbd73af88eb08fabfad89237f723f42f4f459c40b8de59a5b0a4ccc9f",
+      "elapsed_ms": 73,
+      "id": "PG20_REVISION_SUCCESSOR",
+      "status": "PASS"
+    },
+    {
+      "detail": "STALE_ORG",
+      "elapsed_ms": 40,
+      "id": "PG21_STALE_REVISION",
+      "status": "PASS"
+    },
+    {
+      "detail": null,
+      "elapsed_ms": 51,
+      "id": "PG22_ARCHIVED_HISTORY",
+      "status": "PASS"
+    },
+    {
+      "detail": "STALE_HEAD",
+      "elapsed_ms": 40,
+      "id": "PG23_STALE_HEAD",
+      "status": "PASS"
+    },
+    {
+      "detail": null,
+      "elapsed_ms": 63,
+      "id": "PG24_READER_CURRENT",
+      "status": "PASS"
+    },
+    {
+      "detail": "HEAD_MISMATCH",
+      "elapsed_ms": 35,
+      "id": "PG25_READER_STALE_HEAD",
+      "status": "PASS"
+    },
+    {
+      "detail": null,
+      "elapsed_ms": 83,
+      "id": "PG26_FINAL_COUNTS",
+      "status": "PASS"
+    }
+  ],
+  "driver": "3.3.9",
+  "profile": "ORG-05R5_DISPOSABLE_ONLY",
+  "schema_sha256": "f5ebb556ccc9b37a0f2bd0e05f36c7cf85a5bd54de9c1d0244845f146f7b3731",
+  "source_pins": {
+    "durable_ops.py": "c68f07b1f802983ba87f3486ce51d330e7e4b3a59c4fc98ff7f80de3a5d6bdb1",
+    "integration_guard.py": "3fba6f345356725be61f8d7aa5460a95f0a376705fc8dfefe37d3c7686c55042",
+    "office_bridge.py": "e8a2eb953313bc2342fa9c0264358ab6eda16eb6a40b0a36036d2a04991615a3",
+    "operations.py": "ac57a06a9f0c6a9b6a9886f04456962582f8aa080478a95654a2e1032c66e82b",
+    "org_model.py": "a864d7bd6f1ca1fe17095c953529dc739f95ad2073e121bdb90014d1a16ea46e",
+    "persistence.py": "beffb280340c1c3da13f13248d5049d6d51d87ad05e5448a3373168919ecfd34",
+    "staffing.py": "51131102e6c601c2efaf6ec18e430b87dd221edec9650d9c8391a3bcff131d32"
+  },
+  "status": "PASS_DISPOSABLE_FIXTURE_ONLY"
+}

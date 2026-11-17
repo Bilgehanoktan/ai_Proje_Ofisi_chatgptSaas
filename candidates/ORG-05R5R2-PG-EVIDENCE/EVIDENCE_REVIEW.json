@@ -1,0 +1,59 @@
+{
+  "limitations": [
+    "No direct access to user machine or original report file; digest match establishes consistency with reported digest, not independent execution attestation.",
+    "PG12 changes both tenant and company; tenant-only probe outstanding.",
+    "RLS and structural references are fixture-only, not IAM or canonical task ownership.",
+    "No server log or independent custody evidence reviewed."
+  ],
+  "local_review": {
+    "hash_match": true,
+    "not_a_new_postgres_execution": true,
+    "ordered_ids_and_all_details_verified": true,
+    "runner_sha256_verified": true,
+    "transcript_ddl_counts_verified": true
+  },
+  "next": "coordinate ORG-06R2 exact SQLite read bridge tests and D4-R6 common scope review; do not duplicate their tasks; retain independent acceptance HOLD",
+  "no_merge": true,
+  "observed": {
+    "driver": "3.3.9",
+    "encoding": "UTF8 (launcher argument)",
+    "exit_code": 0,
+    "locale": "C",
+    "new_stage_stopped": true,
+    "old_stage_already_stopped": true,
+    "policies_created": 25,
+    "port": 55435,
+    "postgres": "17.12",
+    "reported_elapsed_ms_sum": 4274,
+    "reported_fail": 0,
+    "reported_pass": 26,
+    "roles_created": 5,
+    "source_preflight": 20,
+    "tables_created": 12
+  },
+  "parallel_heads": {
+    "a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "auth": "90ffa42da6cb1b2b66b01c22210cd63b09f0f700",
+    "d4r6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "org06r2": "fd91b58e030e4dd74274a58878c48d0616456b34",
+    "parallel_org_r5r3": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+    "ui": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "w5": "01bc99b5fe30aa4f0f0be3dfdfcf64e8b0d2f836"
+  },
+  "report_bytes": 5153,
+  "report_sha256": "1af84bcbbd80e605a9222f6440ff10c44f20b29840964e78ef19045e27596df1",
+  "revision": "ORG-05R5R2-PG-EVIDENCE",
+  "source": "user supplied Windows console transcript; exact report reconstructed from printed JSON, CRLF, no terminal newline",
+  "status": {
+    "canonical_iam": "HOLD",
+    "fixture_custody": "UNATTESTED",
+    "fixture_execution": "USER_REPORTED_26_OF_26_PASS_HASH_MATCHED",
+    "formal_acceptance": "HOLD",
+    "independent_security": "HOLD",
+    "product": "HOLD",
+    "runtime_office": "HOLD"
+  },
+  "transcript_retained": "user attachment only; private paths excluded from repository",
+  "transcript_sha256": "5adeaa08c9080a58c9bf539914793fe09c9c9b1a3742d6a67dbce4dc898e4a3c"
+}
