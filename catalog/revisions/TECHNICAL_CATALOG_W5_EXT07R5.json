@@ -1,0 +1,117 @@
+{
+  "revision": "W5-EXT-07R5",
+  "base": "ba20cd64eba0f09390818c294ae8894fab9a3acf",
+  "product_delta": 0,
+  "api_delta": [],
+  "db_delta": [],
+  "dependency_delta": [],
+  "source_paths": [
+    {
+      "path": "candidates/W5-EXT-07/test_verify_ext07.py",
+      "git_blob": "306c13fefc4b81188d51601b1ac970f590283c70",
+      "bytes": 1876
+    },
+    {
+      "path": "candidates/W5-EXT-07/verify_ext07.py",
+      "git_blob": "2111a1220bb85a4cb18c9126490df6d3b4bbf3c3",
+      "bytes": 5244
+    },
+    {
+      "path": "candidates/W5-EXT-07R2/emit_projection.py",
+      "git_blob": "b46b95ca73319ae3c3efe83c55dedde509db44c0",
+      "bytes": 1687
+    },
+    {
+      "path": "candidates/W5-EXT-07R2/test_cross_layer.cjs",
+      "git_blob": "c065867a002b2e2705703a6c70beb8e03c1f7a3f",
+      "bytes": 2100
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/integration/browser_ext07r3.py",
+      "git_blob": "eab2719367a67e1b4ebeafe8cd243137020a9421",
+      "bytes": 5082
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/integration/collect_preflight.py",
+      "git_blob": "ce176aadfc04f5e3fd4b2bb03fc0cec5cb9879a4",
+      "bytes": 3729
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/integration/test_collect_preflight.py",
+      "git_blob": "d525111bd88c6e7575097c57a3ca96a848b52085",
+      "bytes": 2105
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/integration/test_w8_ext07r3.py",
+      "git_blob": "58dff1539f3ccbf083344b80356ce5d00d2d4ef0",
+      "bytes": 4258
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/integration/w8_ext07r3.py",
+      "git_blob": "01fad105086431d780082626e6359f81a4cdea6c",
+      "bytes": 8276
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/original/scripts/parallel_preflight.py",
+      "git_blob": "e8f492a2a6fe27a1b971c0900d4e21bd4c9b8760",
+      "bytes": 2752
+    },
+    {
+      "path": "candidates/W5-EXT-07R3/original/tests/test_parallel_preflight.py",
+      "git_blob": "057a3be755d51e11f963af9e625e9ef09f15c2fb",
+      "bytes": 1761
+    }
+  ],
+  "symbols": {
+    "verify_ext07": [
+      "safe_file",
+      "read",
+      "load",
+      "sha",
+      "blob",
+      "verify",
+      "main"
+    ],
+    "emit_projection": [
+      "project"
+    ],
+    "collect_preflight": [
+      "git",
+      "commit",
+      "inventory",
+      "load_exact",
+      "collect"
+    ],
+    "w8_ext07r3": [
+      "blob",
+      "exact",
+      "lock_bytes",
+      "lock_command",
+      "clear",
+      "png_structure",
+      "browser_report",
+      "extend",
+      "load"
+    ],
+    "browser_ext07r3": [
+      "run"
+    ]
+  },
+  "tests": {
+    "original_r1": 8,
+    "adapter_mechanics": 12,
+    "git_collector": 4,
+    "canonical_original_historical": 12,
+    "full_product": "NOT_RUN"
+  },
+  "dependencies": [
+    "Python standard library",
+    "Git",
+    "existing W8 runner chain",
+    "Node/TypeScript exact product lock",
+    "Playwright 1.57.0 via W8 reviewed wheelhouse",
+    "explicit reviewed Chromium executable"
+  ],
+  "rollback": "ba20cd64eba0f09390818c294ae8894fab9a3acf",
+  "authority": "HOLD"
+}
