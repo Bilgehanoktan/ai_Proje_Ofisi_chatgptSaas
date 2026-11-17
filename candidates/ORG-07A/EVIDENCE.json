@@ -1,0 +1,35 @@
+{
+  "base": "fd91b58e030e4dd74274a58878c48d0616456b34",
+  "scope": "isolated transport candidate, no product route registration",
+  "transport": {
+    "pass": 25,
+    "fail": 0,
+    "mocked_R3_reader_resolver": true,
+    "actual_ASGI_TestClient": true
+  },
+  "original_R3_SQLite": {
+    "status": "NOT_RUN",
+    "count": 6,
+    "reason": "exact local R3 source checkout unavailable"
+  },
+  "ORG_06R2": {
+    "original": "NOT_RUN",
+    "additional": "NOT_RUN",
+    "owner": "separate branch"
+  },
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "observed_dependencies": {
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "httpx": "0.28.1",
+    "jsonschema": "4.26.0"
+  },
+  "pinned_product_environment": false,
+  "source_changes": {
+    "existing_product": 0,
+    "existing_candidate": 0,
+    "database": 0
+  },
+  "independent_acceptance": "HOLD"
+}

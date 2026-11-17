@@ -1,0 +1,61 @@
+{
+  "revision": "ORG-07A",
+  "base": "fd91b58e030e4dd74274a58878c48d0616456b34",
+  "files": {
+    "studio_router.py": {
+      "symbols": [
+        "ServerReadContext",
+        "load_validator",
+        "deny",
+        "build_router",
+        "studio_preview",
+        "read_preview",
+        "resolve_once"
+      ],
+      "role": "read-only HTTP adapter, not IAM"
+    },
+    "test_studio_router.py": {
+      "symbols": [
+        "Tests",
+        "Scope",
+        "Session",
+        "projection"
+      ],
+      "tests": 25
+    },
+    "test_studio_original.py": {
+      "symbols": [
+        "main",
+        "OriginalTests"
+      ],
+      "tests": 6,
+      "status": "NOT_RUN"
+    },
+    "studio.schema.json": {
+      "role": "local exact copy of R3 original schema; remote source is candidates/ORG-05R3/studio.schema.json",
+      "git_blob": "eed9627913502ebb09222cf404f867ca305a6a44"
+    }
+  },
+  "api": {
+    "method": "GET",
+    "path": "/demo/v1/organization/studio-preview",
+    "registered_in_product": false,
+    "request": "single Bearer header; no request scope, revision, body or query",
+    "success": 200,
+    "denied": 403,
+    "cache": "no-store"
+  },
+  "db": {
+    "new_tables": [],
+    "existing_reader": "durable_ops.studio_read -> Store.studio_view",
+    "writes": false
+  },
+  "dependencies": {
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "httpx": "0.28.1",
+    "jsonschema": "4.26.0"
+  },
+  "authority": "HOLD",
+  "next": "R3 original ASGI+SQLite tests and ORG-06R2 evidence, then ORG-07B composition with existing server IAM owner."
+}
