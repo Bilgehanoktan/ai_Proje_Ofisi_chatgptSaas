@@ -1,0 +1,52 @@
+{
+  "status": "NOT_RUN",
+  "cases": [
+    {
+      "id": "R5-01",
+      "scenario": "Separate approved common D0 fixture; no alias, old profiles rejected",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-02",
+      "scenario": "Actual ORG read_current and current team validated by original owner; same scope/sequence and retained pins",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-03",
+      "scenario": "Actual RLS role isolation on each DB and full 12/16 schema+ACL provenance; no cross-role connection",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-04",
+      "scenario": "Real canonical task plan role, Core membership, run/agent/principal exact join; reject substitutions",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-05",
+      "scenario": "Org head changes, team changes or position reassignment between readback and T1; fence/atomic consistency owner design",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-06",
+      "scenario": "Proposal history and op_notice HOLD; verify original durable chain and no dispatch or grant",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-07",
+      "scenario": "Revocation and UNKNOWN across separate stores; no retry and independent evidence",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R5-08",
+      "scenario": "Real ORG and Core PostgreSQL tests, R2/R3 evidence, dedicated session close, no provider or PROD",
+      "status": "NOT_RUN"
+    }
+  ],
+  "prerequisites": [
+    "R2 counter and live 16-table probe",
+    "R3 two scenarios actual PG",
+    "ORG locale repair and raw 26-check evidence",
+    "approved common scope and canonical resolver/owner readbacks",
+    "R03 and independent security review"
+  ]
+}

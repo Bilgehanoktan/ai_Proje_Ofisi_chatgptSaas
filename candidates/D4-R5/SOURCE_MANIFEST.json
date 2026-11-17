@@ -1,0 +1,174 @@
+{
+  "revision": "0229-D4-R5",
+  "parent": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+  "tested_commit": "4c702518c70f419df4082566aa2b93e4505573eb",
+  "local_python": "3.13.5",
+  "tested_files": [
+    {
+      "path": "candidates/D4-R5/org_bridge.py",
+      "git_blob": "935d521b30dffe5eb1667222d4df5c914b807adf",
+      "sha256": "37c240b0fe35733495d817c6771028f2cfe41299914ef815c06879085521b390",
+      "bytes": 4612
+    },
+    {
+      "path": "candidates/D4-R5/test_org_bridge.py",
+      "git_blob": "c5c6dfc104ed2c4a7fcc34c71ededb9a9b0a43e4",
+      "sha256": "4c7d5590eaa711a6ab9a97d8cdbacbe4c0b5db0d7a7b15c44f9ef2d39fecf7a9",
+      "bytes": 5707
+    },
+    {
+      "path": "candidates/D4-R5/r4_regression.log",
+      "git_blob": "d61c15ceefe7ecd5d3484c24230ab71626ef94a6",
+      "sha256": "7989031830e9383573b9bee18b050f409fb554a016f9a1ff7c46be07ae6aff9e",
+      "bytes": 2752
+    },
+    {
+      "path": "candidates/D4-R5/test.log",
+      "git_blob": "0d898f91ab1074f717228bc47744143eb7956084",
+      "sha256": "11e884fd9d5b854d7469c8b99c6af3b8fdd5add7b0e65d376b8305fe07e5d097",
+      "bytes": 2334
+    }
+  ],
+  "org_source_pins": [
+    {
+      "path": "candidates/ORG-05R3/org_model.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+      "bytes": 2342,
+      "locale_match": true,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/ORG-05R3/staffing.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "e0b9078284922d281996869daa15a455572c1785",
+      "bytes": 3179,
+      "locale_match": true,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+      "bytes": 3620,
+      "locale_match": true,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/ORG-05R3/persistence.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "4124099a497f5bc7fd34756664c7e293055e949e",
+      "bytes": 8075,
+      "locale_match": true,
+      "local_executed": false
+    },
+    {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "bytes": 8942,
+      "locale_match": true,
+      "local_executed": false
+    },
+    {
+      "path": "candidates/ORG-05R4/PG_SCHEMA_R4.sql",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "a21963573ed1a75df4ef1679f206874f8d0ce293",
+      "bytes": 24421,
+      "locale_match": true,
+      "local_executed": false
+    },
+    {
+      "path": "candidates/ORG-05R5/pg_operations.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "73c248f911790729357998845a614e1cae2a07ab",
+      "bytes": 7268,
+      "locale_match": true,
+      "local_executed": false
+    },
+    {
+      "path": "candidates/ORG-05R5/pg_transaction.py",
+      "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+      "git_blob": "04f2fec12dce83d7a311a19192ab773f654119ea",
+      "bytes": 5796,
+      "locale_match": true,
+      "local_executed": false
+    }
+  ],
+  "core_source_pins": [
+    {
+      "path": "candidates/D4-R4/identity_binding.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/D4-R4/session_probe.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "ff419ec40cfd49edd218b8c0a13fc06f193c50aa",
+      "bytes": 3609,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/D4-R4/test_identity_binding.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "b98d86e46be32451479c3cbdc39ddf6ff1611c73",
+      "bytes": 3556,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/D4-R4/test_session_probe.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "719ebf952b2698277d9bc0d8b49c0ba3fefa2097",
+      "bytes": 3888,
+      "local_executed": true
+    },
+    {
+      "path": "candidates/D4-R2/scope.json",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "1cb6d954ac6b0121a4275e61ac2f8ef2cde261c8",
+      "bytes": 3301,
+      "local_executed": false
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "bytes": 7251,
+      "local_executed": false
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "bytes": 16755,
+      "local_executed": false
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/plan_binding.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "c445726efb9fbd34410f5189d5aad39dc4a85201",
+      "bytes": 3309,
+      "local_executed": false
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "ref": "6bf58d2e0f2062c52aa8c48d0c8060a3ecd14891",
+      "git_blob": "e1f52722e1d33841539b709036ed1a100216b9b6",
+      "bytes": 1505,
+      "local_executed": false
+    }
+  ],
+  "org_scope_ref": {
+    "ref": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+    "path": "candidates/ORG-05R5R3/SCOPE_BOUNDARY.json",
+    "git_blob": "5d4482fbaf051e3f5d4d68204d43be2d6612156a"
+  },
+  "locale_ref": {
+    "ref": "cd8b522e6b0e996cd4747acc9124a8f46446a1fa",
+    "path": "candidates/ORG-05R5R2-EXEC-LOCALE/HANDOVER.md",
+    "git_blob": "3924a0a4dff0f4dfad21eb1393d00bfa9187f4a0"
+  },
+  "integrity": "4 local files match GitHub blobs; 3 exact ORG input files and 4 exact R4 inputs used in local tests; all 8 ORG shared source pins match locale branch. No full binary archive."
+}

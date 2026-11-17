@@ -1,0 +1,128 @@
+{
+  "revision": "0229-D4-R5",
+  "classification": "REVIEW_ONLY",
+  "scope": {
+    "core_runtime": [
+      "synthetic-tenant",
+      "synthetic-company",
+      "A0_SAMPLE_ONLY"
+    ],
+    "d4_rls_scopes": [
+      [
+        "synthetic-tenant",
+        "synthetic-company",
+        "A0_SAMPLE_ONLY"
+      ],
+      [
+        "synthetic-tenant-b",
+        "synthetic-company",
+        "A0_SAMPLE_ONLY"
+      ],
+      [
+        "synthetic-tenant",
+        "synthetic-company-c",
+        "A0_SAMPLE_ONLY"
+      ],
+      [
+        "synthetic-tenant",
+        "synthetic-company",
+        "D4_ENV_ONLY"
+      ]
+    ],
+    "org_scopes": [
+      [
+        "synthetic-tenant-a",
+        "synthetic-company-a",
+        "ORG_R4_SAMPLE_ONLY"
+      ],
+      [
+        "synthetic-tenant-b",
+        "synthetic-company-b",
+        "ORG_R4_SAMPLE_ONLY"
+      ]
+    ],
+    "exact_overlap": [],
+    "status": "HOLD_COMMON_SCOPE",
+    "proposed_owner_review": "New separate ORG fixture aligned exactly with existing Core D0 A triple; preserve current ORG A/B and D4 R2/R3 test sources. No alias or migration. Requires Core/ORG owner agreement and new test evidence."
+  },
+  "crosswalk": [
+    {
+      "org": "org_revision.rev",
+      "core": "OrgPin.head",
+      "rule": "durable head digest; not plan revision or integer R4 revision"
+    },
+    {
+      "org": "org_revision.seq",
+      "core": "OrgPin.sequence",
+      "rule": "separate monotonic organization sequence"
+    },
+    {
+      "org": "org_revision.staffing_digest",
+      "core": "OrgPin.staffing_sha",
+      "rule": "original Staffing.revision()"
+    },
+    {
+      "org": "org_unit + org_position",
+      "core": "department_id + seat + task_role",
+      "rule": "original department and position model"
+    },
+    {
+      "org": "org_definition_ref + org_instance_ref + org_binding",
+      "core": "Request.agent",
+      "rule": "exact occupied seat / instance / definition role"
+    },
+    {
+      "org": "op_team + op_member",
+      "core": "Request.project",
+      "rule": "original ProjectTeam/context and team_digest, not authenticated membership"
+    },
+    {
+      "org": "TaskReference.scope/project/plan/task/role/recipient_instance/principal",
+      "core": "normalized task_ref",
+      "rule": "no run_id; owner must validate reference provenance"
+    },
+    {
+      "org": "company_run_membership",
+      "core": "member_row and core_scope",
+      "rule": "exact Core Member.row including run_id and initial_version; separate member_sha"
+    },
+    {
+      "org": "D4-R4 Binding",
+      "core": "OrgPin.binding_sha",
+      "rule": "existing review digest; not canonical IAM"
+    },
+    {
+      "org": "op_entry + op_notice",
+      "core": "proposal-only",
+      "rule": "original delegation/handoff rule; not durable history verification or grant"
+    }
+  ],
+  "org_rls": {
+    "schema": "aicos_org_r4_fixture",
+    "table_count": 12,
+    "enable_force_static": [
+      "org_revision",
+      "org_head",
+      "org_unit",
+      "org_position",
+      "org_definition_ref",
+      "org_instance_ref",
+      "org_binding",
+      "org_notice",
+      "op_team",
+      "op_member",
+      "op_entry",
+      "op_notice"
+    ],
+    "actual_pg": "NOT_RUN",
+    "role_mapping": "ORG reader/writers distinct from Core runtime; no cross-role reuse"
+  },
+  "core_rls": {
+    "schema": "t1_candidate",
+    "table_count": 16,
+    "actual_d4_pg": "NOT_RUN"
+  },
+  "source_provenance": "Protected resolver, exact current org head/sequence, durable history, task plan role, authenticated membership, canonical Member row and R4 role mapping are external owner obligations; no implementation or atomic cross-store snapshot.",
+  "delegation": "Original propose returns HOLD; no principal substitution, run derivation, external action, or grant. Separate approved delegation contract required.",
+  "no_product_mutation": true
+}

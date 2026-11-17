@@ -1,0 +1,61 @@
+{
+  "revision": "0229-D4-R5",
+  "files": [
+    {
+      "path": "org_bridge.py",
+      "classes": [
+        "OrgPin",
+        "Review"
+      ],
+      "functions": [
+        "valid_pin",
+        "inspect_org",
+        "inspect_proposal"
+      ],
+      "dependencies": [
+        "D4-R4 identity_binding.py",
+        "ORG-05R3 staffing.py",
+        "ORG-05R3 operations.py",
+        "ORG-05R3 org_model.py",
+        "Python stdlib"
+      ]
+    },
+    {
+      "path": "test_org_bridge.py",
+      "tests": 29
+    },
+    {
+      "path": "test.log",
+      "evidence": "29/29 local Python"
+    },
+    {
+      "path": "r4_regression.log",
+      "evidence": "33/33 actual rerun"
+    }
+  ],
+  "database": {
+    "read_contract_only": [
+      "org_revision",
+      "org_head",
+      "org_unit",
+      "org_position",
+      "org_definition_ref",
+      "org_instance_ref",
+      "org_binding",
+      "org_notice",
+      "op_team",
+      "op_member",
+      "op_entry",
+      "op_notice",
+      "company_run_membership"
+    ],
+    "new_tables": [],
+    "new_sql": []
+  },
+  "events": [],
+  "api": [],
+  "product_changes": 0,
+  "pg": "NOT_RUN",
+  "runtime_dispatch": false,
+  "rollback": "Abandon candidate; no schema or product change"
+}
