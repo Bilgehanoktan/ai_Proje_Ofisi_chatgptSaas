@@ -1,0 +1,45 @@
+{
+  "revision": "W5-EXT-05",
+  "parent": "384093218b88465bb9b804d43af10e576755b2bc",
+  "scope": "candidate-only",
+  "files": [
+    "candidates/W5-EXT-05/build_catalog.py",
+    "candidates/W5-EXT-05/catalog_review.py",
+    "candidates/W5-EXT-05/test_catalog_review.py",
+    "candidates/W5-EXT-05/validate_schemas.py",
+    "candidates/W5-EXT-05/CATALOG_LOCK.json",
+    "candidates/W5-EXT-05/CATALOG_PROJECTION.json",
+    "candidates/W5-EXT-05/CORE_PINS.json",
+    "candidates/W5-EXT-05/TEST_EVIDENCE.json",
+    "candidates/W5-EXT-05/SCHEMA_EVIDENCE.json",
+    "candidates/W5-EXT-05/TEST_LOG.txt",
+    "candidates/W5-EXT-05/PREPARE.md",
+    "candidates/W5-EXT-05/catalog/{superpowers,ui-ux-pro-max,watch}/{manifest,input.schema,output.schema}.json"
+  ],
+  "symbols": {
+    "Bundle": "raw manifest/schema/artifact bytes",
+    "CatalogReference": "local expected pins, not independent authority",
+    "Review": "immutable disabled diagnostic projection",
+    "review_candidate": "existing manifest and capability checks, no execution",
+    "build": "developer-only deterministic catalog builder",
+    "main": "optional JSON Schema evidence"
+  },
+  "canonical_dependencies": [
+    "app/core/agent_runtime/lifecycle.py",
+    "app/engines/skill_engine/manifest_review.py",
+    "app/engines/skill_engine/resolver.py",
+    "app/engines/model_gateway/registry.py",
+    "app/core/policy/gateway_review.py"
+  ],
+  "new_product_files": 0,
+  "new_apis": 0,
+  "new_db": 0,
+  "new_dependencies": 0,
+  "tests": {
+    "catalog": 31,
+    "gateway": 9,
+    "schema": 25
+  },
+  "authority": "NONE",
+  "next": "EXT-06"
+}
