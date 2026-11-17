@@ -139,5 +139,11 @@
     "evidence": "tests/evidence/D1_WINDOWS_RETRY1_CONNECTION_HOLD_0227.json",
     "scope": "Read-only diagnostic of existing isolated cluster; preserve partial state and original failure evidence",
     "product_changes": 0
+  },
+  "d1_connection_transcript": {
+    "evidence": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
+    "scope": "Actual Windows disposable PostgreSQL connection/probe transcript; raw review pending",
+    "product_changes": 0,
+    "maintenance": "Preserve stopped retry2 cluster and user-held test role credential. D2 only with explicit scope and original runner; no reinstall."
   }
 }

@@ -1,2 +1,2 @@
-# NEXT — 0227 D1 authentication retry
-Use fresh `C:\AIOS\core-0227-pg-retry2`, copy only ZIP and wheels from original download stage. Run pinned `scripts/run_d1_0227_authfix.py` SHA256 adf0b5053ec01f4f7589e38d6a1b353fe3f1c0af2720e86ec241dd9c44ed8a41; explicit EVET; choose test role password twice, admin generated and not retained. Preserve failed stages; no credential/private log transfer. Raw review before D1 promotion. 9/16. tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json
+# NEXT — 0227 D1 raw acceptance
+Retry2 connection and rollback PASS per user transcript. Collect only `D1_REVIEW.json`, `pg.lock`, and `evidence/` from `C:\AIOS\core-0227-pg-retry2`. Exclude passwords, data, tmp, private server logs. Verify raw hashes and reports before D1 promotion. Preserve stopped cluster for D2 original PG13; no reinstall. 9/16. tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json

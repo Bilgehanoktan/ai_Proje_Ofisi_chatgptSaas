@@ -246,8 +246,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_AUTHFIX_CANDIDATE",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json",
+      "tur_durumu": "0227_D1_CONNECTION_PASS_RAW_REVIEW_PENDING",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -456,8 +456,8 @@
       "onceki_kaynak": 25,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_AUTHFIX_CANDIDATE",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json",
+      "tur_durumu": "0227_D1_CONNECTION_PASS_RAW_REVIEW_PENDING",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "PARTIAL_INTEGRATED",
@@ -519,15 +519,15 @@
       "onceki_kaynak": 75,
       "tasarim_delta": 0,
       "kaynak_delta": 0,
-      "tur_durumu": "0227_D1_AUTHFIX_CANDIDATE",
-      "tur_kaniti": "tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json",
+      "tur_durumu": "0227_D1_CONNECTION_PASS_RAW_REVIEW_PENDING",
+      "tur_kaniti": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json",
       "product_build": "NOT_RUN",
       "product_acceptance": "NOT_RUN",
       "latest_candidate_product_integration": "CATALOG_UPDATED",
       "integration_status": "CATALOG_UPDATED"
     }
   ],
-  "note": "D1 admin auth failure confirmed via psql; authfix candidate local compile+4 synthetic controls, no Windows replay; 9/16 unchanged.",
+  "note": "D1 retry2 actual Windows PostgreSQL 17.12 / Psycopg 3.3.9 two DB connections and rollback PASS per transcript, stopped; raw review pending. 9/16 unchanged.",
   "integration_tracking": {
     "scope": "0226 recovered original test suites",
     "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
@@ -575,7 +575,7 @@
       "normative_authority": "HOLD",
       "locked_core29": "PASS_TRANSFERRED_A0F_HISTORICAL_LOCKED_29",
       "original_0219_company_fence6": "PASS_SQLITE_6_RAW_REVIEWED",
-      "postgresql_environment": "ADMIN_AUTH_FAILURE_CONFIRMED_AUTHFIX_CANDIDATE_READY"
+      "postgresql_environment": "D1_CONNECTION_PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING"
     },
     "recovered_original_tests": 0,
     "original_scheduled_admission_sql6": "PASS_6",
@@ -626,6 +626,10 @@
     "d1_authfix": {
       "status": "AUTHFIX_CANDIDATE_READY_WINDOWS_NOT_RUN",
       "evidence": "tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json"
+    },
+    "d1_connection": {
+      "status": "PASS_USER_TRANSCRIPT_RAW_REVIEW_PENDING",
+      "evidence": "tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json"
     }
   },
   "integration_gate": {

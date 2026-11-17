@@ -1,0 +1,77 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_RETRY2_CONNECTION_PASS_RAW_REVIEW_PENDING",
+  "scope": "User-run Windows transcript; actual PostgreSQL connection and probes, raw evidence not yet uploaded or independently replayed",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "runner_blob": "d20bbb6740901e2abf02d445b20cfa34f4b93d50",
+  "stage": "C:\\AIOS\\core-0227-pg-retry2",
+  "prior": "tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json",
+  "observed": {
+    "approval": "EVET isolated D1 only",
+    "review_sha256": "ce09749cc9507961cec8120c712cc599556fc83d6ecf1f0da2eae4546a4dd407",
+    "combined_lock_sha256": "576dc61d00895bf3ba624b881b49785c1617b1e476bd4b7dec3ea05217c9b4ac",
+    "postgresql_archive_sha256": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+    "server_version_num": 170012,
+    "psycopg": "3.3.9",
+    "pq_impl": "binary",
+    "libpq_version": 180004,
+    "server_address": "127.0.0.1/32",
+    "port": 55432,
+    "listen_addresses": "127.0.0.1",
+    "auth_methods": [
+      "scram-sha-256"
+    ],
+    "source_before_after": "MATCH 392 manifest entries / 393 product files",
+    "databases": [
+      {
+        "database": "aicos_d0_0194_0227",
+        "role": "aicos_d0_runner",
+        "superuser": false,
+        "bypassrls": false,
+        "createdb": false,
+        "createrole": false,
+        "replication": false,
+        "can_create_schema": true,
+        "t1_candidate_absent": true,
+        "write_read_rollback": "PASS"
+      },
+      {
+        "database": "aicos_d0_0196l_0227",
+        "role": "aicos_d0_runner",
+        "superuser": false,
+        "bypassrls": false,
+        "createdb": false,
+        "createrole": false,
+        "replication": false,
+        "can_create_schema": true,
+        "t1_candidate_absent": true,
+        "write_read_rollback": "PASS"
+      }
+    ],
+    "server_stop": "PASS",
+    "final_marker": "D1 local PASS; server stopped."
+  },
+  "anomaly": "Retry2 directory and wheels already existed at start; shell continued after interactive throw and copy errors. Exact runner fresh-stage guard and input hash checks subsequently passed per transcript; no proof of clean directory prior to runner. Do not repeat copy/install.",
+  "limitations": [
+    "No raw logs or final JSON yet inspected; D1 binary gate not promoted.",
+    "Admin secret not retained by design; D2 use test role; no RLS acceptance inferred from NOBYPASSRLS.",
+    "PG13 NOT_RUN; no full build/browser or independent authority test. No product changes."
+  ],
+  "raw_requested": [
+    "D1_REVIEW.json",
+    "pg.lock",
+    "evidence/01_venv.log",
+    "evidence/02_pip_install.log",
+    "evidence/03_pip_check.log",
+    "evidence/04_pip_list.json",
+    "evidence/D1_CONNECTION.json",
+    "evidence/D1_FINAL.json"
+  ],
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  }
+}

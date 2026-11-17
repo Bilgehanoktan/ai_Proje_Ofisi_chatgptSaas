@@ -233,3 +233,7 @@ User reports initdb and PostgreSQL start/stop successful, child OperationalError
 
 ## 0227-D1 authentication diagnosis and candidate fix
 User psql diagnostic starts server, reaches loopback 55432, FATAL password authentication failed (exit 2), stops successfully. Exact mismatch cause unknown. New scripts/run_d1_0227_authfix.py generates ephemeral ASCII admin, restricts and verifies temporary pwfile ACL before writing, removes file in finally, sends same credentials to child via stdin; SCRAM preserved; test password user-held. Compile and four synthetic controls PASS; Windows not run. Retry2 fresh input-only copy; old stages preserved. 9/16 unchanged. tests/evidence/D1_WINDOWS_AUTH_HOLD_AUTHFIX_0227.json
+
+
+## 0227-D1 retry2 connection PASS — raw review pending
+User transcript: PG17.12, Psycopg3.3.9 binary, libpq180004, SCRAM loopback 55432, two separate DBs with non-superuser/non-BYPASSRLS test role; both write/read/rollback PASS; source before/after match, server stopped. Existing input-directory/copy errors preceded successful runner preflight; retain anomaly and do not rerun install. Raw evidence pending; 9/16 unchanged; PG13 and RLS NOT_RUN. tests/evidence/D1_WINDOWS_CONNECTION_TRANSCRIPT_0227.json
