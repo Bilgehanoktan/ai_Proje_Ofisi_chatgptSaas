@@ -1,0 +1,64 @@
+{
+  "revision": "ORG-05R4-PG",
+  "core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "owner_accepted": 0,
+  "review_only": true,
+  "entries": [
+    {
+      "boundary": "identity",
+      "path": "product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "blob": "e1f52722e1d33841539b709036ed1a100216b9b6",
+      "finding": "RegistrySnapshot D0 labels not authenticated. No principal/grant/runtime ownership inference.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "plan",
+      "path": "product/ai-company-os-backend/contracts/source/core.plan.projection.schema.json",
+      "blob": "15695c990538cb8b017bf41e5cd8f29d65254b61",
+      "finding": "Company/project absent; run_id null; dispatch false.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "office",
+      "path": "product/ai-company-os-backend/contracts/source/office.snapshot.demo.schema.json",
+      "blob": "ba6b81452a3d07de20b3161ba90f14f7788b64b3",
+      "finding": "Company absent; agents empty; draft layout; A6 0/55.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "replay",
+      "path": "product/ai-company-os-backend/contracts/source/ceo.office.shared.snapshot.schema.json",
+      "blob": "35341938ec016b1b125a01e72eea1cc8a60e5b8a",
+      "finding": "Project/world null; finite historical replay only.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "envelope",
+      "path": "docs/0158/KURTARILAN_A0_SEMALAR/NS-C1.json",
+      "blob": "2c3d18103c3b1b27448df03ba9cd47388cf85b0c",
+      "finding": "Unratified EventEnvelope needs issuer/time/scope/aggregate/causal/policy/outbox evidence.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "causal",
+      "path": "docs/0158/KURTARILAN_A0_SEMALAR/KS-C4.json",
+      "blob": "7a83665ef7d825d6334b4e51d56f8555df7be01b",
+      "finding": "CausalEvent needs event ID/type, scope, causal link, committed time, issuer, revision.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "audit",
+      "path": "docs/0158/KURTARILAN_A0_SEMALAR/NS-C4.json",
+      "blob": "73175147d0dcd5c62996d8498bcea4bce9265218",
+      "finding": "Unratified AuditEvent needs actor, operation, chain, time, witness and signature.",
+      "decision": "HOLD"
+    },
+    {
+      "boundary": "studio",
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "finding": "Stub ReadSession resolver; no real HTTP/auth/clock/revocation.",
+      "decision": "HOLD"
+    }
+  ]
+}

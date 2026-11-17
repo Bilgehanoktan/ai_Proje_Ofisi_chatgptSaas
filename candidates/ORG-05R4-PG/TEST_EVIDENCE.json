@@ -1,0 +1,52 @@
+{
+  "revision": "ORG-05R4-PG",
+  "parent": "94eefafee221f42a070088d82805d0a1fe685186",
+  "observed_heads": {
+    "planning/org-05r3-durable-operations": "94eefafee221f42a070088d82805d0a1fe685186",
+    "planning/org-05r4-controlled-integration": "49499807a9a0c37d34375a17d1f5fbacc31ac4b3",
+    "integration/0227-local-environment-preflight": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+    "integration/p10j24b-source-recovery": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "integration/ux-premium-07-a5r3-floor-render": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "planning/ux-premium-07-a6-review": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "integration/unified-u3a-product-acceptance": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1"
+  },
+  "new_tests": {
+    "pass": 18,
+    "total": 18,
+    "initial_failure": "Two expected FK counts 15 were incorrect; exact DDL has 18. Corrected assertions, no schema change."
+  },
+  "parent_141": "historical NOT_RERUN",
+  "inventory": {
+    "tables": 12,
+    "foreign_keys": 18,
+    "unique_indexes": 18,
+    "roles": 7,
+    "policies": 25,
+    "enable": 12,
+    "force": 12,
+    "update": "org_head.rev only"
+  },
+  "sql": {
+    "bytes": 29390,
+    "sha256": "45b35d568e6e8717005f7f67439e8eb6242c26ebc1fb32fef628209cf2b67f1b"
+  },
+  "log": {
+    "blob": "c6459dee79f990f945e069809aa40249e09414ad",
+    "sha256": "812718f17fb6b7017cfb2243fc74721a936a9233b138d575f607a800dd00a646"
+  },
+  "core_D3": {
+    "ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+    "blob": "a8dfa3bbe17a35ed67e5a00f08f20c90a50fc27e",
+    "probes": 230,
+    "gate": "12/16",
+    "org_scope": false
+  },
+  "pg": "NOT_RUN",
+  "http": "NOT_RUN",
+  "product_integration": "HOLD",
+  "new_gate": 0
+}

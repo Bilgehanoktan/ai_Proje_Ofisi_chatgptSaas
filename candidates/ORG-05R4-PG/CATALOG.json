@@ -1,0 +1,55 @@
+{
+  "revision": "ORG-05R4-PG",
+  "parent": "94eefafee221f42a070088d82805d0a1fe685186",
+  "files": [
+    {
+      "path": "reference/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "sha256": "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed",
+      "bytes": 2787
+    },
+    {
+      "path": "reference/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "sha256": "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77",
+      "bytes": 1725
+    },
+    {
+      "path": "pg_preflight.py",
+      "blob": "d0e411289c3c7cf510bbe9156c688cf47159da68",
+      "sha256": "5bd55fbd0be02011da8556cd76352f2595780a146ae2f36a5ee432c4ac2c7fe3",
+      "bytes": 7741
+    },
+    {
+      "path": "test_pg_preflight.py",
+      "blob": "060eee3a4184fcf69173d8c8adbc2ef21cb7dd28",
+      "sha256": "825966e5c43342b813d3d7025ce8a5336783ad3afc08c883701edf37a322aece",
+      "bytes": 4886
+    }
+  ],
+  "symbols": [
+    "load",
+    "inventory",
+    "predicate",
+    "render",
+    "generate"
+  ],
+  "database": {
+    "schema": "aicos_org_r4",
+    "database": "aicos_org_r4_fixture",
+    "tables": 12,
+    "foreign_keys": 18,
+    "policies": 25,
+    "role_profiles": 7,
+    "executed": false
+  },
+  "api_changes": [],
+  "event_changes": [],
+  "dependencies": "stdlib only",
+  "test": {
+    "pass": 18,
+    "total": 18,
+    "initial_failure": "Two expected FK counts 15 were incorrect; exact DDL has 18. Corrected assertions, no schema change."
+  },
+  "rollback": "94eefafee221f42a070088d82805d0a1fe685186"
+}
