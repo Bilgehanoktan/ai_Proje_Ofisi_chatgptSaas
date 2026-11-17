@@ -1,0 +1,256 @@
+TAP version 13
+# Subtest: historical catalog
+ok 1 - historical catalog
+  ---
+  duration_ms: 2.039521
+  type: 'test'
+  ...
+# Subtest: all skills
+ok 2 - all skills
+  ---
+  duration_ms: 2.377513
+  type: 'test'
+  ...
+# Subtest: research
+ok 3 - research
+  ---
+  duration_ms: 0.438658
+  type: 'test'
+  ...
+# Subtest: engineer
+ok 4 - engineer
+  ---
+  duration_ms: 0.536058
+  type: 'test'
+  ...
+# Subtest: qa
+ok 5 - qa
+  ---
+  duration_ms: 0.243198
+  type: 'test'
+  ...
+# Subtest: orchestrator no match
+ok 6 - orchestrator no match
+  ---
+  duration_ms: 0.160785
+  type: 'test'
+  ...
+# Subtest: research department
+ok 7 - research department
+  ---
+  duration_ms: 0.38523
+  type: 'test'
+  ...
+# Subtest: engineering department
+ok 8 - engineering department
+  ---
+  duration_ms: 0.244577
+  type: 'test'
+  ...
+# Subtest: quality department
+ok 9 - quality department
+  ---
+  duration_ms: 0.312218
+  type: 'test'
+  ...
+# Subtest: management department empty
+ok 10 - management department empty
+  ---
+  duration_ms: 0.654264
+  type: 'test'
+  ...
+# Subtest: combined same role and department
+ok 11 - combined same role and department
+  ---
+  duration_ms: 0.281016
+  type: 'test'
+  ...
+# Subtest: cross-role department must not join
+ok 12 - cross-role department must not join
+  ---
+  duration_ms: 0.163143
+  type: 'test'
+  ...
+# Subtest: trimmed search
+ok 13 - trimmed search
+  ---
+  duration_ms: 0.166306
+  type: 'test'
+  ...
+# Subtest: search by path
+ok 14 - search by path
+  ---
+  duration_ms: 0.112174
+  type: 'test'
+  ...
+# Subtest: search by version
+ok 15 - search by version
+  ---
+  duration_ms: 0.101066
+  type: 'test'
+  ...
+# Subtest: invalid role
+ok 16 - invalid role
+  ---
+  duration_ms: 0.089072
+  type: 'test'
+  ...
+# Subtest: invalid department
+ok 17 - invalid department
+  ---
+  duration_ms: 0.077247
+  type: 'test'
+  ...
+# Subtest: query bounds
+ok 18 - query bounds
+  ---
+  duration_ms: 0.111617
+  type: 'test'
+  ...
+# Subtest: query type
+ok 19 - query type
+  ---
+  duration_ms: 0.114062
+  type: 'test'
+  ...
+# Subtest: selected visible only
+ok 20 - selected visible only
+  ---
+  duration_ms: 0.133777
+  type: 'test'
+  ...
+# Subtest: selection found
+ok 21 - selection found
+  ---
+  duration_ms: 0.077719
+  type: 'test'
+  ...
+# Subtest: missing selection
+ok 22 - missing selection
+  ---
+  duration_ms: 0.108961
+  type: 'test'
+  ...
+# Subtest: all boundaries false
+ok 23 - all boundaries false
+  ---
+  duration_ms: 0.096451
+  type: 'test'
+  ...
+# Subtest: changed projection denied
+ok 24 - changed projection denied
+  ---
+  duration_ms: 0.111849
+  type: 'test'
+  ...
+# Subtest: enabled denied
+ok 25 - enabled denied
+  ---
+  duration_ms: 0.080097
+  type: 'test'
+  ...
+# Subtest: installed denied
+ok 26 - installed denied
+  ---
+  duration_ms: 0.735292
+  type: 'test'
+  ...
+# Subtest: effective tools denied
+ok 27 - effective tools denied
+  ---
+  duration_ms: 0.124055
+  type: 'test'
+  ...
+# Subtest: forged grant denied
+ok 28 - forged grant denied
+  ---
+  duration_ms: 0.089153
+  type: 'test'
+  ...
+# Subtest: forged dispatch denied
+ok 29 - forged dispatch denied
+  ---
+  duration_ms: 0.078695
+  type: 'test'
+  ...
+# Subtest: forged IV denied
+ok 30 - forged IV denied
+  ---
+  duration_ms: 0.076525
+  type: 'test'
+  ...
+# Subtest: forged G7 denied
+ok 31 - forged G7 denied
+  ---
+  duration_ms: 0.123788
+  type: 'test'
+  ...
+# Subtest: forged G8 denied
+ok 32 - forged G8 denied
+  ---
+  duration_ms: 0.08369
+  type: 'test'
+  ...
+# Subtest: modified digest denied
+ok 33 - modified digest denied
+  ---
+  duration_ms: 0.094924
+  type: 'test'
+  ...
+# Subtest: modified source denied
+ok 34 - modified source denied
+  ---
+  duration_ms: 0.074014
+  type: 'test'
+  ...
+# Subtest: modified evidence denied
+ok 35 - modified evidence denied
+  ---
+  duration_ms: 0.072505
+  type: 'test'
+  ...
+# Subtest: modified role denied
+ok 36 - modified role denied
+  ---
+  duration_ms: 0.072366
+  type: 'test'
+  ...
+# Subtest: fake live count denied
+ok 37 - fake live count denied
+  ---
+  duration_ms: 0.070999
+  type: 'test'
+  ...
+# Subtest: duplicate row denied
+ok 38 - duplicate row denied
+  ---
+  duration_ms: 0.118145
+  type: 'test'
+  ...
+# Subtest: unknown field denied
+ok 39 - unknown field denied
+  ---
+  duration_ms: 0.084511
+  type: 'test'
+  ...
+# Subtest: null denied
+ok 40 - null denied
+  ---
+  duration_ms: 0.035761
+  type: 'test'
+  ...
+# Subtest: fresh cloned read protects snapshot
+ok 41 - fresh cloned read protects snapshot
+  ---
+  duration_ms: 0.121451
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 130.298051

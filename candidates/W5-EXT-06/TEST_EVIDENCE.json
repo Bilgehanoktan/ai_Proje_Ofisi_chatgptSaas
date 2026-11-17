@@ -1,0 +1,70 @@
+{
+  "revision": "W5-EXT-06",
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 (preinstalled; product pin 5.9.3)",
+    "os": "Linux"
+  },
+  "test_command": "EXT06_MODEL=/tmp/ext06-js/skillStudioModel.js node --test tests/skillStudioModel.test.cjs",
+  "compile_command": "tsc --strict --target ES2020 --module commonjs --esModuleInterop --resolveJsonModule --outDir /tmp/ext06-js overlay/features/capabilities/ext06/skillStudioModel.ts",
+  "node_model_tests": {
+    "passed": 41,
+    "total": 41
+  },
+  "typescript_model": "PASS",
+  "tsx_transpile_syntax": {
+    "passed": 2,
+    "total": 2
+  },
+  "full_react_typecheck": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "product_build": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "source_pins": {
+    "ext05_commit": "c0d4d037b55f3871730f65dcaf1aa79f03c4d3da",
+    "ui_commit": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "capability_before_blob": "b95d618c8bfc1f4c00bfe4c7aee880f43ae7bd0d",
+    "eds_blob": "9ac0f950a11eccc8c4b9290c3b98a21aa7d44387",
+    "roles_blob": "076e6848e24d59e9601d1932ade5d34afd8464b9",
+    "projection_blob": "436ceb58f36690087324d6ebdfbdbd6601c60427",
+    "lock_blob": "7ff6373c6545eac5e1ea79ca5cbf720c34eecefe"
+  },
+  "files": {
+    "overlay/features/capabilities/CapabilityReadback.tsx": {
+      "bytes": 4957,
+      "sha256": "0b0506ecdd9979d22e4634fda78946e111c0813143cbd58d9d1afb7f142e4950",
+      "git_blob": "52f2a7278f5a6eebde08bf5c27c12136131bd97c"
+    },
+    "overlay/features/capabilities/ext06/ExternalSkillCatalog.module.css": {
+      "bytes": 1292,
+      "sha256": "c44d64a61ab0c99546f52db5c314f2ce4cb69c61c35648eec196ed7a2b62f568",
+      "git_blob": "53d2ff896064617a3bebca0bbacd1f8a531799a2"
+    },
+    "overlay/features/capabilities/ext06/ExternalSkillCatalog.tsx": {
+      "bytes": 5505,
+      "sha256": "9a71ba7c79649cf350941f0102bd4ab1bae8ddacc7702df2553d78f83160188c",
+      "git_blob": "9c46949b0b9777ad0695b2df52d73c9198123cfb"
+    },
+    "overlay/features/capabilities/ext06/skillData.json": {
+      "bytes": 8264,
+      "sha256": "b4e288b3dbac3b8febe7b5dbd35dee6f6f265416d78e31212df5e7eeda7873d8",
+      "git_blob": "8bc02f5e04b9dd6acd49540cabfef8003dc3405b"
+    },
+    "overlay/features/capabilities/ext06/skillStudioModel.ts": {
+      "bytes": 3792,
+      "sha256": "5b11cc465901de5da4f8723b4869d65da56ceb20211874d5929a4e1f5dd62a45",
+      "git_blob": "98ddc8551be46ddd19372ade6ac4fab6fbbfcd66"
+    },
+    "tests/skillStudioModel.test.cjs": {
+      "bytes": 4571,
+      "sha256": "08b796e15f1cdf31f0e4df91795a731f77bfbb8e9bd63489c4f7d7b5f4fd2b86",
+      "git_blob": "f54d6dd7d1f25be9c50e5c4e9c360ff47392f153"
+    },
+    "TEST_LOG.txt": {
+      "bytes": 4569,
+      "sha256": "239bcb54d54dc2ebf507cbba27927aee5c11a9053bfb68c3bc22ba247b22e80e",
+      "git_blob": "c6a5e16f939851ee8daf694df8726881078374e8"
+    }
+  },
+  "limits": "Static historical JSON projection, local model tests and TSX syntax transpile only. No real registry, grants, build, React render, browser, installation or external effect. Full product source archive unavailable locally."
+}

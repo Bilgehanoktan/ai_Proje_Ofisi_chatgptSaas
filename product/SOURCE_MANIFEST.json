@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UNIFIED-U3A",
-  "status": "D0_ACCEPTANCE_RUNNER_PREPARED_FULL_BUILD_BLOCKED",
+  "doc_revision": "W5-EXT-06",
+  "status": "D0_SKILL_STUDIO_ISOLATED_SOURCE_INTEGRATION_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e014868ae03cf73487aba156647eeac9442422cb",
+  "parent_git_commit": "c0d4d037b55f3871730f65dcaf1aa79f03c4d3da",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1207,8 +1207,24 @@
       "sha256": "65cdefc209e3942dd06f71a3d15157efe1034e1ce9e9582263fdf04d9aea1c9a"
     },
     "ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx": {
-      "bytes": 4781,
-      "sha256": "b30269dbb2aade62b97835b8ec3265f84d0832a63b3a4dad29a1cdea8b24d6f2"
+      "bytes": 4957,
+      "sha256": "0b0506ecdd9979d22e4634fda78946e111c0813143cbd58d9d1afb7f142e4950"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.module.css": {
+      "bytes": 1292,
+      "sha256": "c44d64a61ab0c99546f52db5c314f2ce4cb69c61c35648eec196ed7a2b62f568"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.tsx": {
+      "bytes": 5505,
+      "sha256": "9a71ba7c79649cf350941f0102bd4ab1bae8ddacc7702df2553d78f83160188c"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/skillData.json": {
+      "bytes": 8264,
+      "sha256": "b4e288b3dbac3b8febe7b5dbd35dee6f6f265416d78e31212df5e7eeda7873d8"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/skillStudioModel.ts": {
+      "bytes": 3792,
+      "sha256": "5b11cc465901de5da4f8723b4869d65da56ceb20211874d5929a4e1f5dd62a45"
     },
     "ai-company-os-frontend/features/capabilities/studioCatalog.ts": {
       "bytes": 3293,
@@ -2023,8 +2039,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "940f8d44f49b848b377badee67f162603724c05f",
-  "source_git_commit_note": "Workflow draft shared readback panel only; no runtime, schema, dependencies or DB changes. U3 acceptance runner and historical auxiliary overlay outside product.",
+  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "source_git_commit_note": "Four new EXT-06 frontend files and one CapabilityReadback modification. Exact changed bytes verified locally; 503 unchanged entries retained from pinned parent without full raw byte revalidation. No backend/API/DB/runtime/dependency change. No unified or independent acceptance.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

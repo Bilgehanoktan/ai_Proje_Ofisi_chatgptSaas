@@ -1,0 +1,62 @@
+{
+  "revision": "W5-EXT-06",
+  "parent": "c0d4d037b55f3871730f65dcaf1aa79f03c4d3da",
+  "scope": "isolated-product-source",
+  "changed_sources": [
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+      "git_blob": "52f2a7278f5a6eebde08bf5c27c12136131bd97c",
+      "sha256": "0b0506ecdd9979d22e4634fda78946e111c0813143cbd58d9d1afb7f142e4950",
+      "bytes": 4957
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.module.css",
+      "git_blob": "53d2ff896064617a3bebca0bbacd1f8a531799a2",
+      "sha256": "c44d64a61ab0c99546f52db5c314f2ce4cb69c61c35648eec196ed7a2b62f568",
+      "bytes": 1292
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.tsx",
+      "git_blob": "9c46949b0b9777ad0695b2df52d73c9198123cfb",
+      "sha256": "9a71ba7c79649cf350941f0102bd4ab1bae8ddacc7702df2553d78f83160188c",
+      "bytes": 5505
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/skillData.json",
+      "git_blob": "8bc02f5e04b9dd6acd49540cabfef8003dc3405b",
+      "sha256": "b4e288b3dbac3b8febe7b5dbd35dee6f6f265416d78e31212df5e7eeda7873d8",
+      "bytes": 8264
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/skillStudioModel.ts",
+      "git_blob": "98ddc8551be46ddd19372ade6ac4fab6fbbfcd66",
+      "sha256": "5b11cc465901de5da4f8723b4869d65da56ceb20211874d5929a4e1f5dd62a45",
+      "bytes": 3792
+    }
+  ],
+  "symbols": {
+    "ExternalSkillCatalog": "read-only component",
+    "readSkillCatalog": "exact snapshot/disabled structure",
+    "filterSkills": "role and department same-role intersection plus query",
+    "selectedSkill": "visible-only",
+    "emptyFilter": "initial filters",
+    "skillBoundary": "no install, grant, dispatch or release"
+  },
+  "dependencies": "existing React/Next/TypeScript only",
+  "new_dependencies": 0,
+  "new_apis": 0,
+  "new_db": 0,
+  "new_backend_files": 0,
+  "product_additions": 4,
+  "product_component_modifications": 1,
+  "manifest_entries": 508,
+  "tests": {
+    "node_model": 41,
+    "tsx_syntax": 2,
+    "strict_model": "PASS",
+    "full_typecheck": "NOT_RUN",
+    "build": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "authority": "NONE"
+}
