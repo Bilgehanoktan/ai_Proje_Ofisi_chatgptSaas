@@ -1,0 +1,61 @@
+{
+  "revision": "UX-PREMIUM-07-A5R2",
+  "parent": "7f8ef6d90c587e018033b667b4fffb071bfcf464",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumFloorTraffic.ts",
+      "change": "ADD",
+      "sha256": "e086719d04984b2e7debee33be4b3133fc470935272216dcc625119c44e90703",
+      "types": [
+        "FloorSeed",
+        "FloorGoal",
+        "FloorToken"
+      ],
+      "exports": [
+        "portalLandingCandidates",
+        "createFloorTraffic"
+      ],
+      "methods": [
+        "snapshot",
+        "setGoals",
+        "cancelGoal",
+        "requestTransfer",
+        "cancelTransfer",
+        "advancePortal",
+        "advanceTraffic"
+      ],
+      "internal": [
+        "route",
+        "fixedFor",
+        "apply",
+        "reset",
+        "clearReached"
+      ],
+      "dependencies": [
+        "premiumHybridLayout",
+        "premiumActorIdentity",
+        "premiumTraffic",
+        "premiumRouting",
+        "premiumDynamicFloors"
+      ],
+      "api": [],
+      "database": [],
+      "diagnosis": "docs/UX-PREMIUM-07/A5R2_FLOOR_TRAFFIC.md"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-floor-traffic.test.cjs",
+      "change": "ADD",
+      "sha256": "5dd909527ca5764d43019ea5208eae71e31ad966316969b147d5edd8983367cf",
+      "dependencies": [
+        "node:test",
+        "node:assert/strict",
+        "compiled premiumFloorTraffic",
+        "compiled premiumHybridLayout",
+        "compiled premiumActorIdentity"
+      ],
+      "test_count": 17
+    }
+  ],
+  "authority": "none",
+  "rollback": "7f8ef6d90c587e018033b667b4fffb071bfcf464"
+}

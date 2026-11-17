@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UX-PREMIUM-07-A5R1",
-  "status": "D0_ISOLATED_FLOOR_PORTAL_MODEL_TESTED_NATIVE_NOT_RUN",
+  "doc_revision": "UX-PREMIUM-07-A5R2",
+  "status": "D0_GEOMETRY_IDENTITY_PORTAL_TRAFFIC_MODEL_TESTED_NATIVE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "d8671883a77ee7f97b1fc3528e3ffdc1831b3856",
+  "parent_git_commit": "7f8ef6d90c587e018033b667b4fffb071bfcf464",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1378,6 +1378,10 @@
       "bytes": 8557,
       "sha256": "b65acc33a6dbc233a221a7c90c6ba21441aa99d52c4efeb90f40c330ed2f5eb3"
     },
+    "ai-company-os-frontend/office/engine/premiumFloorTraffic.ts": {
+      "bytes": 10465,
+      "sha256": "e086719d04984b2e7debee33be4b3133fc470935272216dcc625119c44e90703"
+    },
     "ai-company-os-frontend/office/engine/premiumHybridLayout.ts": {
       "bytes": 10955,
       "sha256": "b0c13f8544a1fc4403b98a4cead5a55c986a6986158848f6aaa1dacab93e9328"
@@ -1530,6 +1534,10 @@
       "bytes": 6808,
       "sha256": "7fb5b7f01f576af06365936111e1725642977ad47c0097e7ed928516a622b8a7"
     },
+    "ai-company-os-frontend/tests/premium-floor-traffic.test.cjs": {
+      "bytes": 10077,
+      "sha256": "5dd909527ca5764d43019ea5208eae71e31ad966316969b147d5edd8983367cf"
+    },
     "ai-company-os-frontend/tests/premium-geometry.test.cjs": {
       "bytes": 1812,
       "sha256": "2cb318c5881a449e7a225a02a2b32b21e03d9c95bdea66583ff0d149d2579c2a"
@@ -1647,6 +1655,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "397f87b7d9a9227ee435b1501347c6460fc73c5e",
-  "source_git_commit_note": "A5R1 final: two additive pins, passive cabin correction, 15 isolated tests; no renderer import, A4R2 acceptance NOT_RUN."
+  "parent_source_manifest_blob": "0cabfe3124bc7ebe6c5cfff7b19f0bf1a0b0245a",
+  "source_git_commit_note": "Two additive A5R2 adapter/test paths; all A1–A5R1 pins preserved; no native or OfficeV0 join."
 }

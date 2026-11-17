@@ -21,3 +21,7 @@ Priority zero: upload full archive of P10G or use exact user-local checkout with
 
 ## UX-PREMIUM-07-A5R1 (isolated candidate)
 [A5R1 current](UX_PREMIUM_07_A5R1_CURRENT.json). Next A5R2 geometry/identity/traffic adapter and reservation integration; actual A4R2 Windows test stays NOT_RUN, native rendering and real activation held. A6 independent.
+
+
+## UX-PREMIUM-07-A5R2
+[Current](UX_PREMIUM_07_A5R2_CURRENT.json). Next A5R3 read-only multi-floor render bridge over single D0 world, selected floor and transition; existing native scene and A4R2 Windows acceptance NOT_RUN. A6 separate, no auto merge.
