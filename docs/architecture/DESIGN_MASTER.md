@@ -313,3 +313,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U2 — shared historical replay session
 [Architecture](../UNIFIED-U2/ARCHITECTURE_AND_PLAN.md). Single generation-guarded shared read/reset/TTL controller, no real authority. Exact router/wire and HTTP proxy with fixture reader: 14 tests +49 U1/A5 rerun; React syntax only. A6 55 HOLD; U3 actual DB and browser open.
+
+
+## UNIFIED-U3A — source-bound acceptance checkpoint
+[Runbook](../UNIFIED-U3A/ARCHITECTURE_AND_RUNBOOK.md). WorkflowDraft shared panel repaired; exact P24 history overlay and W8 rebind; 63 selected rerun +10 adapter mechanics, full product build blocked. Core D2 historical 11/16, JOIN_HOLD.

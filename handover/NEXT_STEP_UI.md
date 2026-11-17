@@ -72,3 +72,7 @@ Priority: obtain exact full P10H GitHub archive (not selected evidence ZIP), ver
 
 ## UNIFIED-U2
 [Current](UNIFIED_U2_CURRENT.json). U3 exact unified checkout and reviewed locks, P10J24 historical overlay rebind, DB-backed original tests, Next build and actual browser. U4 remains parallel. No main/CI/PROD or actual runtime join.
+
+
+## UNIFIED-U3A
+[Current](UNIFIED_U3A_CURRENT.json). U3B clean full checkout and reviewed locks, original full W8 + unified browser; D3 core separate. No actual full acceptance yet.
