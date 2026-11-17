@@ -105,5 +105,10 @@
     "path": "tests/evidence/D1_WINDOWS_INVENTORY_0227.json",
     "scope": "Windows read-only inventory and candidate selection; no product source/DDL/API changes",
     "rollback": "No installation to revert; retain E1 unchanged."
+  },
+  "d1_initdb_recovery": {
+    "evidence": "tests/evidence/D1_WINDOWS_INITDB_HOLD_0227.json",
+    "reason": "Password mismatch before cluster start; preserve failed stage; retry fresh input-only copy.",
+    "product_changes": 0
   }
 }

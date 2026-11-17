@@ -1,0 +1,41 @@
+{
+  "revision": "0227",
+  "checkpoint": "D1_INITDB_PASSWORD_MISMATCH_FRESH_STAGE_GUARD",
+  "source_commit": "52219c7a222bae41735c9a9b9f7f7082462982b4",
+  "runner_blob": "f40f5fc348915c7c7cf5bbc0cb9c6aa6644d40c6",
+  "scope": "User Windows transcript, no independent replay",
+  "source_integrity": {
+    "verified_manifest_entries": 392,
+    "product_files": 393,
+    "status": "MATCH"
+  },
+  "registry": {
+    "new_wheels": "3/3 local PyPI JSON exact hash checks passed per runner output",
+    "combined_lock_sha256": "576dc61d00895bf3ba624b881b49785c1617b1e476bd4b7dec3ea05217c9b4ac",
+    "install": "31 locked packages and PostgreSQL executable 17.12 reached per exact runner sequence, raw logs not reviewed"
+  },
+  "approval": "EVET for isolated D1",
+  "failure": {
+    "stage": "initdb",
+    "message": "Parolalar uyuşmadı.",
+    "runner_status": "HOLD CalledProcessError",
+    "retry_guard": "FRESH_D1_STAGE_HOLD: server",
+    "connection": "NOT_RUN",
+    "pg13": "NOT_RUN",
+    "rls": "NOT_RUN"
+  },
+  "recovery": {
+    "mode": "fresh separate directory; copy only previously downloaded server ZIP and wheels",
+    "old_stage": "preserve C:\\AIOS\\core-0227-pg",
+    "new_stage": "C:\\AIOS\\core-0227-pg-retry1",
+    "no_delete": true,
+    "no_e1_mutation": true,
+    "no_password_in_evidence": true
+  },
+  "gates": {
+    "done": 9,
+    "total": 16,
+    "percent": 56.25,
+    "newly_closed": 0
+  }
+}
