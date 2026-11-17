@@ -1,0 +1,54 @@
+{
+  "baseline": "167e5239882dc7b49bd96647412fe6761da0be5e",
+  "status": "SOURCE_CANDIDATE_NOT_RUN",
+  "pins": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
+      "git_blob": "11801d62f327c5921d44bb96870cd14d079446a2",
+      "lines": 94
+    },
+    {
+      "path": "tests/w5/test_effect_budget_review.py",
+      "git_blob": "1f781079b377feeea531e42ab46a8f5a737ae27a",
+      "lines": 23
+    }
+  ],
+  "architecture": "D08/D14/D21; D30-05A; existing T1 admission is not model effect authority",
+  "catalog": {
+    "classes": [
+      "ReservationObservation",
+      "EffectBudgetReview"
+    ],
+    "functions": [
+      "inspect_effect_budget"
+    ],
+    "dependencies": [
+      "runtime_binding",
+      "transaction.review",
+      "postgres_admission_mapping",
+      "postgres_transition_mapping",
+      "agent_runtime.lifecycle",
+      "budget_engine.reservation_review",
+      "policy.gateway_review"
+    ],
+    "api": [],
+    "db_changes": [],
+    "external_dependencies": []
+  },
+  "tests": {
+    "authored": 3,
+    "executed": 0
+  },
+  "scores": {
+    "design": 50,
+    "source": 25
+  },
+  "blockers": [
+    "No per-invocation reservation identity in current schema",
+    "No independent custody or current readback",
+    "Global product manifest unchanged; candidate not promoted",
+    "Full test matrix not implemented"
+  ],
+  "next": "Exact checkout, positive and adversarial fixture tests; inspect historical reservation readback and independent authority before any wiring. No shared source modifications.",
+  "rollback": "Revert candidate commits on isolated branch only."
+}
