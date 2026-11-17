@@ -1,0 +1,19 @@
+{
+  "revision": "0230-D5-C-R1",
+  "parent": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+  "classification": "LOCAL_RECOVERY_TOOL_ONLY",
+  "files": {
+    "run_from_git.py": {"symbols": ["blob", "git", "safe_path", "read_tree", "recover", "outcome", "run"], "purpose": "Read exact local Git objects, stage verified inputs, invoke original runner and retain evidence", "dependencies": ["Python standard library", "local Git", "original runner", "cryptography 46.0.4 via original runner"]},
+    "test_run_from_git.py": {"symbols": ["RecoveryTests"], "purpose": "13 synthetic real-Git fixture tests, not T1 acceptance", "dependencies": ["unittest", "local Git"]},
+    "fixture_tests.log": {"purpose": "Actual helper test output"},
+    "actual_preflight.json": {"purpose": "Actual blocked attempt, no original test run"},
+    "EVIDENCE.json": {"purpose": "Remote source metadata comparisons and local evidence hashes"},
+    "PROGRESS.json": {"purpose": "Acceptance metrics and blockers"},
+    "HANDOVER.md": {"purpose": "Architecture delta, scope, maintenance, rollback and next step"}
+  },
+  "api_changes": [],
+  "database_changes": [],
+  "product_changes": [],
+  "new_runtime_dependencies": [],
+  "rollback": "Discard additive R1 files; unchanged D5-C parent; no database migration."
+}
