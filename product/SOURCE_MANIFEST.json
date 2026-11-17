@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10J-21",
-  "status": "D0_SKILL_MEMORY_SOURCE_STUDIO_FULL_ACCEPTANCE_NOT_RUN",
+  "doc_revision": "UI-P10J-22",
+  "status": "D0_FINANCE_SECURITY_SOURCE_INSPECTOR_FULL_ACCEPTANCE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "ae3f5e45c8dc77359f5ae7701efc833585d3c4a9",
+  "parent_git_commit": "df4c95688424c7c43d38941d219cf05932dd9040",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1286,6 +1286,10 @@
       "bytes": 2652,
       "sha256": "dcec6ef54955f7efce0eaad908eb77995408f3bfc33eec0637c05f10d97400f8"
     },
+    "ai-company-os-frontend/features/evidence/ControlSourceInspector.tsx": {
+      "bytes": 1986,
+      "sha256": "30fd0f830b684cd859f440f6141f8c1028fb969cbc12200873560c3e8b01b0e5"
+    },
     "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx": {
       "bytes": 1316,
       "sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8"
@@ -1297,6 +1301,10 @@
     "ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx": {
       "bytes": 3658,
       "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    },
+    "ai-company-os-frontend/features/evidence/controlSourceCatalog.ts": {
+      "bytes": 4008,
+      "sha256": "aca7a8a55b7f97da904823ef45ca70270683be6b7e8a546f178d948c9aa85a00"
     },
     "ai-company-os-frontend/features/evidence/evidenceContext.ts": {
       "bytes": 1599,
@@ -1327,8 +1335,8 @@
       "sha256": "1ee8cfb034ac99a9b45b89837c34edb6c24f3d91a5c0b593c1c243f30174d45f"
     },
     "ai-company-os-frontend/features/finance/FinanceStudio.tsx": {
-      "bytes": 2770,
-      "sha256": "b24a8d469b4f2ea62d6a2875ab0026808fc9d32bfc48dd4132d87eadc9549edb"
+      "bytes": 2933,
+      "sha256": "bfa530329a272e41c93d80e2d753c83ae7bcd7406c15a5246271c8f9f9f2967e"
     },
     "ai-company-os-frontend/features/finance/financeModel.ts": {
       "bytes": 4194,
@@ -1487,8 +1495,8 @@
       "sha256": "2d67b7e66b9f5dda4298f4837b31945face2378cc8ee74296330e28129c26746"
     },
     "ai-company-os-frontend/features/security/SecurityStudio.tsx": {
-      "bytes": 3162,
-      "sha256": "29cb0fc326cba584530200ce90ffe8754868f91e99c12fe19578efd29a0afe6b"
+      "bytes": 3344,
+      "sha256": "c12c4afbde0f77682fbd4f409ccb721ca38f818cf63614868cad2a96acfbff23"
     },
     "ai-company-os-frontend/features/security/securityModel.ts": {
       "bytes": 5576,
@@ -1942,6 +1950,10 @@
       "bytes": 2191,
       "sha256": "43c6b12db5963baea05f05a614be9ce1703e8506336eab33060114fbdd4804dd"
     },
+    "ai-company-os-frontend/tests/ui-p10j22-control-sources.test.cjs": {
+      "bytes": 2296,
+      "sha256": "8a0fec0a6414677fd9f1b05e807aefbf6e0dcf25eaf7122130bac63021f0f364"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -1959,8 +1971,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "9672f2e26f0635448f56cc02d338641bbe3ed5a5",
-  "source_git_commit_note": "Local UI delta only; no branch merge or backend transfer.",
+  "parent_source_manifest_blob": "ce8b61352b9b56825a8ecd01238025fc07b7d2d2",
+  "source_git_commit_note": "Five UI-only source/test changes; no backend, office or authority transfer.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }
