@@ -1,0 +1,37 @@
+{
+  "revision": "UI-P10J-24",
+  "parent": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+  "scope": "acceptance preflight and W8 historical test isolation; no production source changes",
+  "changed_areas": [
+    {
+      "id": 1,
+      "name": "Frontend",
+      "source": "unchanged",
+      "test": "47/47 isolated model; full Next NOT_RUN"
+    },
+    {
+      "id": 2,
+      "name": "UI/UX",
+      "source": "unchanged",
+      "test": "8/8 standalone CSS; 0/99 product images"
+    },
+    {
+      "id": 20,
+      "name": "Test & QA",
+      "source": "historical runner adapter and exact auxiliary bytes",
+      "test": "10/10 isolated; full W8 and Core29 NOT_RUN"
+    },
+    {
+      "id": 24,
+      "name": "Technical catalog",
+      "source": "updated"
+    }
+  ],
+  "remaining_areas": "unchanged; no gate promotion",
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}
