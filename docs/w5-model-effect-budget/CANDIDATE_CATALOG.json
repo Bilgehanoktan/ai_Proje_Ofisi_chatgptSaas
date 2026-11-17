@@ -1,6 +1,6 @@
 {
   "baseline": "167e5239882dc7b49bd96647412fe6761da0be5e",
-  "status": "SOURCE_CANDIDATE_NOT_RUN",
+  "status": "PARTIAL_ISOLATED_TEST_PASS_NO_PRODUCT_PROMOTION",
   "pins": [
     {
       "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
@@ -11,16 +11,38 @@
       "path": "tests/w5/test_effect_budget_review.py",
       "git_blob": "05e44ee6ef859e13e3eeb5b06e02e872c86bf159",
       "lines": 87
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "git_blob": "ec16d064a0ac12fe46c72230399e41c2c56e2a83",
+      "lines": 54
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "git_blob": "b90b0853ba466b89fd82bc38512517637afe1e02",
+      "lines": 70
+    },
+    {
+      "path": "tests/w5/test_model_profile_review.py",
+      "git_blob": "b48e46c9128832fb20f49e9dd9aa33086aee2e08",
+      "lines": 94
     }
   ],
   "architecture": "D08/D14/D21; D30-05A; existing T1 admission is not model effect authority",
   "catalog": {
     "classes": [
       "ReservationObservation",
-      "EffectBudgetReview"
+      "EffectBudgetReview",
+      "ModelProfile",
+      "CapabilityQuery",
+      "CapabilityReview"
     ],
     "functions": [
-      "inspect_effect_budget"
+      "inspect_effect_budget",
+      "valid_profile",
+      "profile_digest",
+      "catalog_digest",
+      "inspect_capabilities"
     ],
     "dependencies": [
       "runtime_binding",
@@ -29,18 +51,34 @@
       "postgres_transition_mapping",
       "agent_runtime.lifecycle",
       "budget_engine.reservation_review",
-      "policy.gateway_review"
+      "policy.gateway_review",
+      "registry",
+      "provider_contract",
+      "profile_registry",
+      "dataclasses",
+      "hashlib",
+      "json"
     ],
     "api": [],
     "db_changes": [],
     "external_dependencies": []
   },
   "tests": {
-    "authored_methods": 9,
-    "authored_cases": 32,
-    "executed": 0,
-    "status": "NOT_RUN",
-    "reason": "Container git ls-remote failed DNS; no exact checkout"
+    "effect_budget": {
+      "authored_methods": 9,
+      "authored_cases": 32,
+      "executed": 0,
+      "status": "NOT_RUN",
+      "reason": "Container git ls-remote failed DNS; no exact checkout"
+    },
+    "profile_capability": {
+      "authored_methods": 10,
+      "executed": 10,
+      "passed": 10,
+      "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
+      "verified_source_files": 16,
+      "evidence": "docs/w5-model-effect-budget/PROFILE_CAPABILITY_TEST_EVIDENCE.json"
+    }
   },
   "scores": {
     "design": 50,
@@ -49,13 +87,38 @@
   "blockers": [
     "No per-invocation reservation identity in current schema",
     "No independent custody or current readback",
-    "Global product manifest unchanged; candidate not promoted",
-    "Exact checkout and tests blocked by DNS; revocation/concurrency/restore acceptance remains open"
+    "Global product manifest unchanged; candidates not promoted",
+    "Direct full checkout blocked by DNS; effect/budget suite still NOT_RUN",
+    "Revocation/concurrency/restore acceptance remains open",
+    "Real data taxonomy, provider profiles, prices, latency limits, ranking and scoring not approved; no defaults selected"
   ],
-  "next": "Run exact branch tests with backend PYTHONPATH; inspect failures; then isolated registry/router design against D30-05A. No shared source modifications.",
+  "next": "In parallel: recover exact effect/budget dependencies and execute its nine tests; prepare policy-aware router and cost estimator design using explicit pinned policies only, preserving HOLD and no final selection until budget/effect proof. Recheck paths against current parallel branches before editing. No shared source modifications.",
   "rollback": "Revert candidate commits on isolated branch only.",
   "changes": [
     "Expanded diagnostic fixture tests",
-    "Bind attempt, current lease lineage, adapter identity and strict reservation integer types"
+    "Bind attempt, current lease lineage, adapter identity and strict reservation integer types",
+    "Add immutable disabled ModelProfile and canonical profile/catalog digest",
+    "Filter candidates by explicit digest allowlist, data/region, complexity, capability, token boundaries; no authority or ranking",
+    "Run ten actual isolated tests with 16 exact source file pins"
+  ],
+  "conflict_review": {
+    "scope": "Seven parallel branch heads directly inspected via model_gateway directory listings; tests/w5 absent on each; compare endpoint capped at 300 on two. No exhaustive merge guarantee.",
+    "branches": [
+      "integration/0227-local-environment-preflight",
+      "integration/p10j24b-source-recovery",
+      "integration/ux-premium-07-a5r3-floor-render",
+      "integration/unified-u2-shared-runtime",
+      "planning/org-01-hierarchy-audit",
+      "planning/ux-premium-07-a6-review",
+      "workstream/0196-memory-model"
+    ],
+    "deferred": "sample_adapter.py differs across branches; no edit. Common registry/provider/fallback/runtime pins match.",
+    "new_paths_only": true
+  },
+  "design_choices": [
+    "D0 run-scoped metadata, not a tenant-wide production catalog",
+    "One profile per exact adapter id/revision and one per provider/model/revision within a D0 catalog; provisional engineering constraint",
+    "Catalog digest order independent; returned digest sorting is not ranking",
+    "Explicit supplied allowlist is diagnostic only, not independently authenticated policy"
   ]
 }
