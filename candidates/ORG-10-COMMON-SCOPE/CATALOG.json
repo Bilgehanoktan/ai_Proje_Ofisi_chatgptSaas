@@ -1,0 +1,133 @@
+{
+  "api_changes": [],
+  "dependencies": {
+    "actual_pg": "reviewed PG17, psycopg and psycopg-binary 3.3.9, exact seven R3 modules",
+    "derivation": "Python stdlib",
+    "product_changes": []
+  },
+  "files": {
+    "COMMON_SCOPE_PROFILE.json": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "HANDOVER.md": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "OWNER_HANDOFF.json": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "PG_ACCEPTANCE_MATRIX.json": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "PG_SCHEMA_ORG10.sql": {
+      "policies": 25,
+      "purpose": "isolated derived DDL; NOT_RUN",
+      "tables": [
+        "org_revision",
+        "org_head",
+        "org_unit",
+        "org_position",
+        "org_definition_ref",
+        "org_instance_ref",
+        "org_binding",
+        "org_notice",
+        "op_team",
+        "op_member",
+        "op_entry",
+        "op_notice"
+      ]
+    },
+    "RUN.md": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "SHA256SUMS": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "SOURCE_PINS.json": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "TEST_EVIDENCE.json": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "bootstrap_roles.sql": {
+      "purpose": "fresh cluster setup; NOT_RUN",
+      "roles": [
+        "aicos_org10_owner",
+        "aicos_org10_writer_a",
+        "aicos_org10_writer_b",
+        "aicos_org10_reader_a",
+        "aicos_org10_unmapped"
+      ]
+    },
+    "derive_common.py": {
+      "functions": [
+        "sha",
+        "exact",
+        "names",
+        "source",
+        "derive",
+        "verify_generated",
+        "main"
+      ],
+      "purpose": "exact read-only derivation/verification"
+    },
+    "pg_operations.py": {
+      "classes": [
+        "TaskReference",
+        "PgOperations"
+      ],
+      "functions": [
+        "reference_check"
+      ],
+      "purpose": "unchanged source bytes; record/create_team/append_proposal/history/read_current"
+    },
+    "pg_transaction.py": {
+      "classes": [
+        "Hold",
+        "CommitUnknown",
+        "CleanupHold",
+        "R3Read"
+      ],
+      "functions": [
+        "context",
+        "run",
+        "lock_head",
+        "insert"
+      ],
+      "purpose": "isolated derived R5 profile + port/TCP guard"
+    },
+    "run_pg_acceptance.py": {
+      "functions": [
+        "verify_sources",
+        "main"
+      ],
+      "planned_cases": 31,
+      "purpose": "derived original fixture tests + five new checks; NOT_RUN"
+    },
+    "test_common_profile.py": {
+      "classes": [
+        "DerivedSource",
+        "ProfileBoundary"
+      ],
+      "tests": 26
+    },
+    "test_local.log": {
+      "purpose": "versioned scope/evidence/handover documentation"
+    },
+    "test_pg_protocol.py": {
+      "classes": [
+        "Protocol",
+        "References",
+        "Fake",
+        "Cursor"
+      ],
+      "tests": 29
+    }
+  },
+  "gates": "HOLD",
+  "new_fixture_policies": 25,
+  "new_fixture_tables": 12,
+  "parent": "0839ecc5cedc338e791022d287d0a251cf93506f",
+  "product_schema_changes": [],
+  "revision": "ORG-10",
+  "rollback": "omit additive candidate; no migration"
+}

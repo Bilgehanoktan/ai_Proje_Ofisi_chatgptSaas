@@ -1,0 +1,185 @@
+{
+  "checks": [
+    {
+      "id": "PG01_FRESH_AND_RLS_INVENTORY",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG02_GENESIS_RACE",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG03_OTHER_SCOPE_GENESIS",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG04_TEAM",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG05_ATOMIC_ROLLBACK",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG06_LOCK_ISOLATION",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG07_HANDOFF_CAS_RACE",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG08_STALE_HISTORY",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG09_DELEGATION",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG10_REOPEN_HISTORY",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG11_CROSS_SCOPE_READ",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG12_FOREIGN_TENANT",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG13_FOREIGN_COMPANY",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG14_FOREIGN_ENV",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG15_CROSS_SCOPE_FK",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG16_IMMUTABLE_UPDATE",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG17_IMMUTABLE_DELETE",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG18_READER_UNMAPPED_DENIED",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG19_REFERENCE_MISMATCH",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG20_REVISION_SUCCESSOR",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG21_STALE_REVISION",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG22_ARCHIVED_HISTORY",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG23_STALE_HEAD",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG24_READER_CURRENT",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG25_READER_STALE_HEAD",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PG26_FINAL_COUNTS",
+      "origin": "R5 derived on new fixture",
+      "status": "NOT_RUN"
+    },
+    {
+      "expected": {
+        "scope": "only tenant changed",
+        "sqlstate": "42501"
+      },
+      "id": "PG27_TENANT_ONLY",
+      "origin": "ORG-10",
+      "status": "NOT_RUN"
+    },
+    {
+      "expected": {
+        "sqlstate": "42501"
+      },
+      "id": "PG28_OLD_SCOPE_A",
+      "origin": "ORG-10",
+      "status": "NOT_RUN"
+    },
+    {
+      "expected": {
+        "sqlstate": "42501"
+      },
+      "id": "PG29_OLD_SCOPE_B",
+      "origin": "ORG-10",
+      "status": "NOT_RUN"
+    },
+    {
+      "expected": {
+        "other_scope_hidden": true,
+        "reader_matches": true,
+        "tables": 12
+      },
+      "id": "PG30_REVERSE_SCOPE_READ",
+      "origin": "ORG-10",
+      "status": "NOT_RUN"
+    },
+    {
+      "expected": {
+        "checks": 360,
+        "roles": 4,
+        "tables": 12
+      },
+      "id": "PG31_ACL_MATRIX",
+      "origin": "ORG-10",
+      "status": "NOT_RUN"
+    }
+  ],
+  "pg12_limit": "Original PG12 changes tenant and company; PG27 is the independent tenant-only test.",
+  "prior_pg_evidence_reused_as_pass": false,
+  "profile": "ORG10_COMMON_SCOPE_DISPOSABLE_ONLY",
+  "remaining": "Exact Core Research references, canonical authenticated principal/role, protected publication and Office product not tested.",
+  "revision": "ORG-10",
+  "status": "NOT_RUN"
+}
