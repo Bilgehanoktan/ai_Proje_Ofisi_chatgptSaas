@@ -4,7 +4,7 @@ from .runtime_binding import InvocationEnvelope, inspect_invocation
 from app.core.transaction.review import LogicalIntent, Operation, valid_intent
 from app.core.transaction.postgres_admission_mapping import ClaimSpec, claim_digest, valid_budget
 from app.core.transaction.postgres_transition_mapping import transaction_ref
-from app.core.agent_runtime.lifecycle import RunState, uint, token
+from app.core.agent_runtime.lifecycle import RunState, uint, token, valid_lease
 from app.engines.budget_engine.reservation_review import BudgetSnapshot, valid_budget as valid_snapshot
 from app.core.policy.gateway_review import EffectScope, valid_effect
 
@@ -49,9 +49,11 @@ def inspect_effect_budget(envelope, registry, invocation_pin, current_run, curre
                 or claim.before.version != admission.expected_version
                 or admission.request_digest != claim_digest(claim)):
             return EffectBudgetReview("ADMISSION_BINDING_HOLD")
-        if (admission.scope != envelope.run.scope or claim.lease.scope != admission.scope
+        if (admission.scope != envelope.run.scope or not valid_lease(claim.lease) or claim.lease.scope != admission.scope
                 or claim.lease.lease_id != admission.lease_ref
                 or claim.lease.grant_id != admission.grant_ref
+                or (claim.lease.policy_epoch, claim.lease.witness_epoch) != (admission.policy_epoch, admission.witness_epoch)
+                or (claim.budget.policy_epoch, claim.budget.witness_epoch) != (admission.policy_epoch, admission.witness_epoch)
                 or claim.budget.budget_id != admission.budget_ref
                 or not token(claim.admission_id) or not uint(claim.amount_minor)
                 or claim.amount_minor == 0
