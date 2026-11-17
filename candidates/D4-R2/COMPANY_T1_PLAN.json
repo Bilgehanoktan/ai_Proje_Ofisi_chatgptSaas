@@ -1,0 +1,86 @@
+{
+  "status": "NOT_RUN",
+  "scope": "A exact Core D0 synthetic triple; B/C/D policy probes only",
+  "source_pins": {
+    "company_coordination": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+    "postgres_admission_mapping": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+    "postgres_transition_mapping": "e722a9188a76034f5133c3f61be1da16930a8924",
+    "postgres_lifecycle_mapping": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+    "postgres_session": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+    "existing_sqlite_test": "ce4f8fb249787c9e18a03a63225dbcddf7445650"
+  },
+  "lock_paths": [
+    {
+      "path": "CompanyCoordinatedMapping",
+      "order": [
+        "company_stream_heads FOR UPDATE",
+        "mapping.lock_and_validate",
+        "original writer roles",
+        "finish_company_step sequence CAS + order + postimage"
+      ]
+    },
+    {
+      "path": "admission",
+      "order": [
+        "plan run_heads ordered run_id",
+        "check existing lease",
+        "budget FOR UPDATE"
+      ]
+    },
+    {
+      "path": "ordinary",
+      "order": [
+        "run head",
+        "lease"
+      ]
+    },
+    {
+      "path": "renewal/terminal",
+      "order": [
+        "run head",
+        "lease",
+        "admission binding",
+        "budget"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "R3-01",
+      "scenario": "fresh coherent two-project seed, not policy seed",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R3-02",
+      "scenario": "actual CompanyCoordinatedMapping + original admission, two independent connections; stale loser no writes",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R3-03",
+      "scenario": "budget race with shared cap and complete before/after images",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R3-04",
+      "scenario": "terminal anchor and deferred FK failure rolls back all roles",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R3-05",
+      "scenario": "commit UNKNOWN quarantine/reconcile no retry",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "R3-06",
+      "scenario": "repeatable read snapshot, read-only rejection",
+      "status": "NOT_RUN"
+    }
+  ],
+  "blockers": [
+    "fresh reviewed bootstrap and exact locked environment",
+    "R03 owner review",
+    "confirm all company writers use stream-first wrapper",
+    "coherent fixture distinct from policy rows",
+    "canonical identity and project authorization deferred to R4"
+  ]
+}

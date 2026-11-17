@@ -1,0 +1,20 @@
+-- Direct aicos_d4_seed_b login only. Policy coverage rows, NOT coherent T1 history.
+BEGIN;
+DO $guard$ BEGIN IF current_database() <> 'aicos_d4_0229' OR current_setting('cluster_name') <> 'aicos_d4_0229_disposable' OR current_setting('port') <> '55434' OR session_user <> 'aicos_d4_seed_b' OR current_user <> session_user OR inet_server_addr() IS DISTINCT FROM '127.0.0.1'::inet THEN RAISE EXCEPTION 'D4_SEED_SCOPE_HOLD'; END IF; END $guard$;
+INSERT INTO t1_candidate.events VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1',1,'event-1','D0_RUN_ADMISSION','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+INSERT INTO t1_candidate.outbox VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1','event-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+INSERT INTO t1_candidate.fences VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','effect-1','idem-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+INSERT INTO t1_candidate.run_heads VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','plan-1','task-1','run-1','agent-1','principal-1','RUNNING',2,0);
+INSERT INTO t1_candidate.run_leases VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1','plan-1','task-1','agent-1','principal-1','lease-1','grant-1',2,1,1,1,1,100,10);
+INSERT INTO t1_candidate.run_mutations VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','QUEUED','ADMITTED',0);
+INSERT INTO t1_candidate.run_audit VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','effect-1','idem-1','grant-1','lease-1',1,1,1,'lease-digest-1');
+INSERT INTO t1_candidate.sample_budgets VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','budget-1',1,'TRY',100,40,0,false,1,1,'budget-digest-1');
+INSERT INTO t1_candidate.run_admissions VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1','admission-1','tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','lease-1','grant-1','budget-1');
+INSERT INTO t1_candidate.sample_reservations VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1','budget-1',1,40,'TRY','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','tx-1');
+INSERT INTO t1_candidate.run_lease_renewals VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','lease-old','lease-new',2);
+INSERT INTO t1_candidate.sample_settlements VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','admission-1','budget-1',40,0,2,'lease-digest-1','D0_LOCAL_FAILURE_NO_EFFECT');
+INSERT INTO t1_candidate.terminal_command_anchors VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','plan-1','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
+INSERT INTO t1_candidate.company_run_membership VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY','project-1','plan-1','task-1','run-1','agent-1','principal-1',0);
+INSERT INTO t1_candidate.company_stream_heads VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY',1);
+INSERT INTO t1_candidate.company_event_order VALUES ('synthetic-tenant-b','synthetic-company','A0_SAMPLE_ONLY',1,'project-1','run-1',1,'tx-1','aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa','[]');
+COMMIT;

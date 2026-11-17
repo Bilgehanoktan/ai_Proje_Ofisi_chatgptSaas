@@ -1,0 +1,124 @@
+{
+  "revision": "0229-D4-R2",
+  "classification": "DISPOSABLE_FIXTURE_NOT_CANONICAL",
+  "database": "aicos_d4_0229",
+  "cluster_name": "aicos_d4_0229_disposable",
+  "host": "127.0.0.1",
+  "port": 55434,
+  "postgres_version_num": 170012,
+  "scope": {
+    "a": [
+      "synthetic-tenant",
+      "synthetic-company",
+      "A0_SAMPLE_ONLY"
+    ],
+    "b": [
+      "synthetic-tenant-b",
+      "synthetic-company",
+      "A0_SAMPLE_ONLY"
+    ],
+    "c": [
+      "synthetic-tenant",
+      "synthetic-company-c",
+      "A0_SAMPLE_ONLY"
+    ],
+    "d": [
+      "synthetic-tenant",
+      "synthetic-company",
+      "D4_ENV_ONLY"
+    ]
+  },
+  "runtime_roles": {
+    "a": "aicos_d4_run_a",
+    "b": "aicos_d4_run_b",
+    "c": "aicos_d4_run_c",
+    "d": "aicos_d4_run_d"
+  },
+  "seed_roles": {
+    "a": "aicos_d4_seed_a",
+    "b": "aicos_d4_seed_b",
+    "c": "aicos_d4_seed_c",
+    "d": "aicos_d4_seed_d"
+  },
+  "owner": "aicos_d4_owner",
+  "unmapped": "aicos_d4_unmapped",
+  "tables": [
+    "events",
+    "outbox",
+    "fences",
+    "run_heads",
+    "run_leases",
+    "run_mutations",
+    "run_audit",
+    "sample_budgets",
+    "run_admissions",
+    "sample_reservations",
+    "run_lease_renewals",
+    "sample_settlements",
+    "terminal_command_anchors",
+    "company_run_membership",
+    "company_stream_heads",
+    "company_event_order"
+  ],
+  "update_columns": {
+    "run_heads": [
+      "state",
+      "version"
+    ],
+    "run_leases": [
+      "lease_version",
+      "heartbeat_revision",
+      "expires_tick",
+      "heartbeat_tick"
+    ],
+    "sample_budgets": [
+      "revision",
+      "outstanding_minor"
+    ],
+    "company_stream_heads": [
+      "sequence"
+    ]
+  },
+  "source_pins": [
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "git_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "git_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "git_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    },
+    {
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "git_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "git_blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    },
+    {
+      "path": "database/0204C/company_event_order.sql",
+      "git_blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "ref": "1b93534521570c8975f6ba1c3e2ffc4648e8a160"
+    }
+  ],
+  "d3_seed": {
+    "ref": "f6cde1c6dece8423c1f809cee9896101f76b2150",
+    "git_blob": "a7a5dda09b5460519fb20dd3f9744e7366292fc1"
+  },
+  "pg": "NOT_RUN"
+}

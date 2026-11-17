@@ -1,0 +1,215 @@
+{
+  "revision": "0229-D4-R2",
+  "database": [
+    {
+      "table": "events",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0192/candidate_event_outbox_fence.sql"
+    },
+    {
+      "table": "outbox",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0192/candidate_event_outbox_fence.sql"
+    },
+    {
+      "table": "fences",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0192/candidate_event_outbox_fence.sql"
+    },
+    {
+      "table": "run_heads",
+      "runtime_operations": [
+        "SELECT",
+        "UPDATE"
+      ],
+      "update_columns": [
+        "state",
+        "version"
+      ],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0193/candidate_run_head.sql"
+    },
+    {
+      "table": "run_leases",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "update_columns": [
+        "lease_version",
+        "heartbeat_revision",
+        "expires_tick",
+        "heartbeat_tick"
+      ],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0194/candidate_transition_roles.sql"
+    },
+    {
+      "table": "run_mutations",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0194/candidate_transition_roles.sql"
+    },
+    {
+      "table": "run_audit",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0194/candidate_transition_roles.sql"
+    },
+    {
+      "table": "sample_budgets",
+      "runtime_operations": [
+        "SELECT",
+        "UPDATE"
+      ],
+      "update_columns": [
+        "revision",
+        "outstanding_minor"
+      ],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0195/candidate_admission_budget.sql"
+    },
+    {
+      "table": "run_admissions",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0195/candidate_admission_budget.sql"
+    },
+    {
+      "table": "sample_reservations",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0195/candidate_admission_budget.sql"
+    },
+    {
+      "table": "run_lease_renewals",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0196L/candidate_lease_settlement.sql"
+    },
+    {
+      "table": "sample_settlements",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0196L/candidate_lease_settlement.sql"
+    },
+    {
+      "table": "terminal_command_anchors",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0203T/terminal_command_anchors.sql"
+    },
+    {
+      "table": "company_run_membership",
+      "runtime_operations": [
+        "SELECT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0204C/company_event_order.sql"
+    },
+    {
+      "table": "company_stream_heads",
+      "runtime_operations": [
+        "SELECT",
+        "UPDATE"
+      ],
+      "update_columns": [
+        "sequence"
+      ],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0204C/company_event_order.sql"
+    },
+    {
+      "table": "company_event_order",
+      "runtime_operations": [
+        "SELECT",
+        "INSERT"
+      ],
+      "update_columns": [],
+      "seed": "INSERT_ONLY",
+      "unmapped": "SELECT_PRIVILEGE_NO_POLICY",
+      "source": "database/0204C/company_event_order.sql"
+    }
+  ],
+  "api_changes": [],
+  "product_changes": [],
+  "dependencies": {
+    "python": "existing psycopg required for future probe; no new product dependency"
+  },
+  "symbols": {
+    "probe": [
+      "connect_checked",
+      "expect_error",
+      "main"
+    ],
+    "source_mapping": [
+      "CompanyCoordinatedMapping.lock_and_validate",
+      "prepare_company_step",
+      "finish_company_step",
+      "PostgresAdmissionMapping.lock_and_validate",
+      "postgres_transaction"
+    ]
+  },
+  "gate_promotion": false
+}
