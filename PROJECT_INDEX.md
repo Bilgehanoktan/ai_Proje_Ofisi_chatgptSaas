@@ -217,3 +217,7 @@ Exact source 752b225deac4557a548faec7191a090fbfba19f7; see docs/UI-P10J/P10J08_W
 
 ## UI-P10J-09 — verified delivery and real UI review
 See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J09.json, catalog/revisions/TECHNICAL_CATALOG_UI_P10J09.json and progress/UI_P10J09.json. No product changes; next mobile shell and controlled core reconciliation.
+
+
+## UNIFIED-U1 — isolated convergence candidate
+[Plan](docs/UNIFIED-U1/INTEGRATION_PLAN.md) · [Current](handover/UNIFIED_U1_CURRENT.json) · [24-area matrix](progress/UNIFIED_U1_MATRIX_24.json) · [scope](docs/UNIFIED-U1/THREE_WAY_SCOPE.json).

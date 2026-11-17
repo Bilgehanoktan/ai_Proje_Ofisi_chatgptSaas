@@ -305,3 +305,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-23 — Premium management EDS
 [Design and evidence](../UI-P10J/P10J23_PREMIUM_EDS.md) · [Runbook](../UI-P10J/P10J23_RUNBOOK.md). Scoped append-only CSS, 8/8 standalone Chromium fixtures; no office/core/authority change, product acceptance NOT_RUN.
+
+
+## UNIFIED-U1 — controlled convergence
+[Plan](../UNIFIED-U1/INTEGRATION_PLAN.md). UI-P10J23 base; exact seven A5 files; existing historical provider and isolated D0 floor view colocated. 49 selected model PASS; 3 TSX syntax only. No real join, no full build or gate promotion. Original core/office/A6 heads retained.

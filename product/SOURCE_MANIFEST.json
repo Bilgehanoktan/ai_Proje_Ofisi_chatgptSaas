@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UI-P10J-23",
-  "status": "D0_SCOPED_PREMIUM_MANAGEMENT_EDS_FULL_ACCEPTANCE_NOT_RUN",
+  "doc_revision": "UNIFIED-U1",
+  "status": "D0_UNIFIED_SOURCE_CANDIDATE_SELECTED_TESTS_PASS_FULL_BUILD_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "1ec4576cfa9898dc202427f03e4340544c01e2cb",
+  "parent_git_commit": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1059,8 +1059,12 @@
       "sha256": "a733017b66d72f6c1e136519a4b32e0f37e0ba6e009ef872d7229a6c8f21c120"
     },
     "ai-company-os-frontend/app/office/premium/page.tsx": {
-      "bytes": 1359,
-      "sha256": "476d67c33c7a85be34264cade91a8106d3b6b37c0e59be45b745ed577d4dc235"
+      "bytes": 1488,
+      "sha256": "05a8059df3ee9b975f54d2db29de37f902e839f4a5e88a147993a905b463bfeb"
+    },
+    "ai-company-os-frontend/app/office/premium/unified/page.tsx": {
+      "bytes": 680,
+      "sha256": "6774c6ee4ea014816e5479cbd5fd50950fd6f3fc7eb24ed3fbe02f5e9c850303"
     },
     "ai-company-os-frontend/app/page.tsx": {
       "bytes": 145,
@@ -1590,6 +1594,10 @@
       "bytes": 6288,
       "sha256": "84a7d5a27af92cc8adee06034f80748f3a8ee0af1b05aed53a16bc51e2eebf66"
     },
+    "ai-company-os-frontend/office/components/UnifiedOfficePreview.tsx": {
+      "bytes": 1487,
+      "sha256": "b898e04ed830fb797e74e91d899595928dfdddd65a10aa9508861b21e7a9835b"
+    },
     "ai-company-os-frontend/office/engine/cameraInput.ts": {
       "bytes": 1222,
       "sha256": "1e8abb6015e25ff6bcb0039c0d059c9542a4c910bc08f729a79719871e997b0c"
@@ -1617,6 +1625,22 @@
     "ai-company-os-frontend/office/engine/premiumActorIdentity.ts": {
       "bytes": 5650,
       "sha256": "43e1e0532cf98e82cffbaaaf99e659408658c6753c6d41ff1a0fa7b436ae02e0"
+    },
+    "ai-company-os-frontend/office/engine/premiumDynamicFloors.ts": {
+      "bytes": 8557,
+      "sha256": "b65acc33a6dbc233a221a7c90c6ba21441aa99d52c4efeb90f40c330ed2f5eb3"
+    },
+    "ai-company-os-frontend/office/engine/premiumFloorRender.ts": {
+      "bytes": 5499,
+      "sha256": "d409f536a60142297484eb89e3de3e28a32df70201518ab81fcfda477175c4e5"
+    },
+    "ai-company-os-frontend/office/engine/premiumFloorSvg.ts": {
+      "bytes": 3416,
+      "sha256": "e2f8f5059b0b3201eccf651db1dadb074f2c74645982d55cdaa908c5d6ccb277"
+    },
+    "ai-company-os-frontend/office/engine/premiumFloorTraffic.ts": {
+      "bytes": 10465,
+      "sha256": "e086719d04984b2e7debee33be4b3133fc470935272216dcc625119c44e90703"
     },
     "ai-company-os-frontend/office/engine/premiumHybridLayout.ts": {
       "bytes": 10955,
@@ -1661,6 +1685,10 @@
     "ai-company-os-frontend/office/engine/stationDecor.ts": {
       "bytes": 779,
       "sha256": "91ccb1fff12ccbaf706fa14fef06edf9b88322ddee21b9109057c5944f110b5f"
+    },
+    "ai-company-os-frontend/office/engine/unifiedOfficePreview.ts": {
+      "bytes": 1676,
+      "sha256": "f514b3ae32e0b230b56016e805e2f60eb928b48f0294bdc174aa8e8a11c7acf0"
     },
     "ai-company-os-frontend/office/engine/wallDecor.ts": {
       "bytes": 1230,
@@ -1785,6 +1813,18 @@
     "ai-company-os-frontend/tests/premium-camera.test.cjs": {
       "bytes": 1708,
       "sha256": "99daf9c27ed325485a67ff85275a0a51101d0cd798d5f7af4317e63207ce7fbb"
+    },
+    "ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs": {
+      "bytes": 6808,
+      "sha256": "7fb5b7f01f576af06365936111e1725642977ad47c0097e7ed928516a622b8a7"
+    },
+    "ai-company-os-frontend/tests/premium-floor-render.test.cjs": {
+      "bytes": 7470,
+      "sha256": "eeee35ab782cd6cd90ba27cab143277d5780f9f6653568fdcab20c9d9571b2ad"
+    },
+    "ai-company-os-frontend/tests/premium-floor-traffic.test.cjs": {
+      "bytes": 10077,
+      "sha256": "5dd909527ca5764d43019ea5208eae71e31ad966316969b147d5edd8983367cf"
     },
     "ai-company-os-frontend/tests/premium-geometry.test.cjs": {
       "bytes": 1812,
@@ -1954,6 +1994,10 @@
       "bytes": 2296,
       "sha256": "8a0fec0a6414677fd9f1b05e807aefbf6e0dcf25eaf7122130bac63021f0f364"
     },
+    "ai-company-os-frontend/tests/unified-office-preview.test.cjs": {
+      "bytes": 2109,
+      "sha256": "fae656229c129f706748372f13f0da8dcbc9cd9a6ab1e14de758be83bbc2daa0"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -1971,8 +2015,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "3d7bb6a05f523b2691c8a7cfe048f030e2d94c91",
-  "source_git_commit_note": "Append-only scoped EDS management presentation; no layout, office or backend transfer.",
-  "additional_parent_git_commit": null,
-  "additional_parent_source_manifest_blob": null
+  "parent_source_manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+  "source_git_commit_note": "Single Git parent UI-P10J23; exact seven office blobs transferred, no Git merge. Core 0227 lineage separately pinned; prior records retained; one scoped link change.",
+  "additional_parent_git_commit": "089a4a256cdf0fc835035041ac519b4c15250542",
+  "additional_parent_source_manifest_blob": "d14c7fd5d19770ec1e42cb414d600c317a30c556"
 }
