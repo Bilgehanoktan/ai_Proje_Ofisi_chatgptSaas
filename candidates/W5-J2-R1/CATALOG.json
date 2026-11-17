@@ -1,0 +1,415 @@
+{
+  "revision": "W5-J2-R1",
+  "status": "D0_CANDIDATE_HOLD",
+  "files": {
+    "membership_review.py": {
+      "sha256": "21a1ee0353d54bc5666bfee8252025f8d8c8d1202a6d41705060a4cda85e1a37",
+      "symbols": [
+        {
+          "name": "Review",
+          "kind": "ClassDef",
+          "line": 25
+        },
+        {
+          "name": "_uint",
+          "kind": "FunctionDef",
+          "line": 37
+        },
+        {
+          "name": "_token",
+          "kind": "FunctionDef",
+          "line": 41
+        },
+        {
+          "name": "_pin",
+          "kind": "FunctionDef",
+          "line": 45
+        },
+        {
+          "name": "_currency",
+          "kind": "FunctionDef",
+          "line": 49
+        },
+        {
+          "name": "_shape",
+          "kind": "FunctionDef",
+          "line": 53
+        },
+        {
+          "name": "_scope",
+          "kind": "FunctionDef",
+          "line": 57
+        },
+        {
+          "name": "_binding_ok",
+          "kind": "FunctionDef",
+          "line": 61
+        },
+        {
+          "name": "_keys",
+          "kind": "FunctionDef",
+          "line": 72
+        },
+        {
+          "name": "_budget_ok",
+          "kind": "FunctionDef",
+          "line": 79
+        },
+        {
+          "name": "_phase",
+          "kind": "FunctionDef",
+          "line": 88
+        },
+        {
+          "name": "_consumed",
+          "kind": "FunctionDef",
+          "line": 113
+        },
+        {
+          "name": "review_membership",
+          "kind": "FunctionDef",
+          "line": 118
+        }
+      ]
+    },
+    "test_membership_review.py": {
+      "sha256": "198e9c1b494634c49d358e6f1d165502de15067446da54ffd3f41b1e9dd90bfc",
+      "symbols": [
+        {
+          "name": "fixture",
+          "kind": "FunctionDef",
+          "line": 5
+        },
+        {
+          "name": "consumed",
+          "kind": "FunctionDef",
+          "line": 21
+        },
+        {
+          "name": "usage",
+          "kind": "FunctionDef",
+          "line": 22
+        },
+        {
+          "name": "reconciled",
+          "kind": "FunctionDef",
+          "line": 23
+        },
+        {
+          "name": "ReviewTests",
+          "kind": "ClassDef",
+          "line": 26
+        },
+        {
+          "name": "setUp",
+          "kind": "FunctionDef",
+          "line": 27
+        },
+        {
+          "name": "check",
+          "kind": "FunctionDef",
+          "line": 28
+        },
+        {
+          "name": "test_reserved",
+          "kind": "FunctionDef",
+          "line": 35
+        },
+        {
+          "name": "test_consumed",
+          "kind": "FunctionDef",
+          "line": 36
+        },
+        {
+          "name": "test_usage",
+          "kind": "FunctionDef",
+          "line": 37
+        },
+        {
+          "name": "test_reconciled",
+          "kind": "FunctionDef",
+          "line": 38
+        },
+        {
+          "name": "test_no_membership",
+          "kind": "FunctionDef",
+          "line": 39
+        },
+        {
+          "name": "test_duplicate",
+          "kind": "FunctionDef",
+          "line": 40
+        },
+        {
+          "name": "test_duplicate_retry",
+          "kind": "FunctionDef",
+          "line": 41
+        },
+        {
+          "name": "test_reservation_alias",
+          "kind": "FunctionDef",
+          "line": 42
+        },
+        {
+          "name": "test_idempotency_alias",
+          "kind": "FunctionDef",
+          "line": 43
+        },
+        {
+          "name": "test_invocation_alias",
+          "kind": "FunctionDef",
+          "line": 44
+        },
+        {
+          "name": "test_membership_alias",
+          "kind": "FunctionDef",
+          "line": 45
+        },
+        {
+          "name": "test_binding_mismatch",
+          "kind": "FunctionDef",
+          "line": 46
+        },
+        {
+          "name": "test_unknown_no_ack",
+          "kind": "FunctionDef",
+          "line": 49
+        },
+        {
+          "name": "test_unknown_after_consume",
+          "kind": "FunctionDef",
+          "line": 50
+        },
+        {
+          "name": "test_unknown_not_zero",
+          "kind": "FunctionDef",
+          "line": 51
+        },
+        {
+          "name": "test_unknown_budget",
+          "kind": "FunctionDef",
+          "line": 52
+        },
+        {
+          "name": "test_stale_budget",
+          "kind": "FunctionDef",
+          "line": 53
+        },
+        {
+          "name": "test_budget_reference",
+          "kind": "FunctionDef",
+          "line": 54
+        },
+        {
+          "name": "test_budget_currency",
+          "kind": "FunctionDef",
+          "line": 55
+        },
+        {
+          "name": "test_budget_epoch",
+          "kind": "FunctionDef",
+          "line": 56
+        },
+        {
+          "name": "test_balance",
+          "kind": "FunctionDef",
+          "line": 57
+        },
+        {
+          "name": "test_recognized_balance",
+          "kind": "FunctionDef",
+          "line": 58
+        },
+        {
+          "name": "test_budget_limit",
+          "kind": "FunctionDef",
+          "line": 59
+        },
+        {
+          "name": "test_transaction_alias",
+          "kind": "FunctionDef",
+          "line": 60
+        },
+        {
+          "name": "test_receipt_alias",
+          "kind": "FunctionDef",
+          "line": 61
+        },
+        {
+          "name": "test_overrun",
+          "kind": "FunctionDef",
+          "line": 62
+        },
+        {
+          "name": "test_conservation",
+          "kind": "FunctionDef",
+          "line": 63
+        },
+        {
+          "name": "test_partial_usage",
+          "kind": "FunctionDef",
+          "line": 64
+        },
+        {
+          "name": "test_orphan_reconciliation",
+          "kind": "FunctionDef",
+          "line": 65
+        },
+        {
+          "name": "test_wrong_scope",
+          "kind": "FunctionDef",
+          "line": 66
+        },
+        {
+          "name": "test_bool_amount",
+          "kind": "FunctionDef",
+          "line": 67
+        },
+        {
+          "name": "test_rowset_type",
+          "kind": "FunctionDef",
+          "line": 68
+        },
+        {
+          "name": "test_rowset_cap",
+          "kind": "FunctionDef",
+          "line": 69
+        },
+        {
+          "name": "test_unrelated",
+          "kind": "FunctionDef",
+          "line": 70
+        },
+        {
+          "name": "test_key_namespaces",
+          "kind": "FunctionDef",
+          "line": 71
+        },
+        {
+          "name": "test_no_mutation",
+          "kind": "FunctionDef",
+          "line": 72
+        },
+        {
+          "name": "test_zero_known_usage",
+          "kind": "FunctionDef",
+          "line": 74
+        }
+      ]
+    },
+    "test_physical_constraints.py": {
+      "sha256": "3947c3bc4582aefc9367c89e52e89df2ca364b87afa43f376dd419de1a3da993",
+      "symbols": [
+        {
+          "name": "FixtureTests",
+          "kind": "ClassDef",
+          "line": 27
+        },
+        {
+          "name": "setUp",
+          "kind": "FunctionDef",
+          "line": 28
+        },
+        {
+          "name": "connect",
+          "kind": "FunctionDef",
+          "line": 32
+        },
+        {
+          "name": "insert",
+          "kind": "FunctionDef",
+          "line": 34
+        },
+        {
+          "name": "receipt",
+          "kind": "FunctionDef",
+          "line": 37
+        },
+        {
+          "name": "balances",
+          "kind": "FunctionDef",
+          "line": 39
+        },
+        {
+          "name": "count",
+          "kind": "FunctionDef",
+          "line": 40
+        },
+        {
+          "name": "test_reservation_unique",
+          "kind": "FunctionDef",
+          "line": 41
+        },
+        {
+          "name": "test_invocation_key_unique",
+          "kind": "FunctionDef",
+          "line": 44
+        },
+        {
+          "name": "test_invocation_pin_unique",
+          "kind": "FunctionDef",
+          "line": 47
+        },
+        {
+          "name": "test_membership_unique",
+          "kind": "FunctionDef",
+          "line": 50
+        },
+        {
+          "name": "test_receipt_role_once",
+          "kind": "FunctionDef",
+          "line": 53
+        },
+        {
+          "name": "test_receipt_alias_cross_member_role",
+          "kind": "FunctionDef",
+          "line": 56
+        },
+        {
+          "name": "test_orphan_receipt",
+          "kind": "FunctionDef",
+          "line": 59
+        },
+        {
+          "name": "test_atomic_rollback",
+          "kind": "FunctionDef",
+          "line": 61
+        },
+        {
+          "name": "test_concurrent_writer",
+          "kind": "FunctionDef",
+          "line": 67
+        },
+        {
+          "name": "test_unknown_preserves_balance",
+          "kind": "FunctionDef",
+          "line": 74
+        },
+        {
+          "name": "test_known_settlement_cas_and_rollback",
+          "kind": "FunctionDef",
+          "line": 79
+        },
+        {
+          "name": "test_known_settlement_commit_once",
+          "kind": "FunctionDef",
+          "line": 88
+        }
+      ]
+    }
+  },
+  "dependencies": [
+    "Python standard library: dataclasses,re,sqlite3,tempfile,unittest,pathlib"
+  ],
+  "api_added": [],
+  "product_db_changed": [],
+  "test_fixture_tables": [
+    "fixture_budget",
+    "fixture_member",
+    "fixture_receipt"
+  ],
+  "owner_approved": false,
+  "maintenance": "HANDOVER.md",
+  "design_score": 50,
+  "source_score": 25
+}

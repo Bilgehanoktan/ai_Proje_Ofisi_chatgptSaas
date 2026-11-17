@@ -1,0 +1,31 @@
+{
+  "parent_commit": "147502d831ab146b8825585fc7ac390f951beb84",
+  "parent_tree": "c6b8dc3c9dd65312993cbf95ef8988e61cb31aa4",
+  "reference_blobs": {
+    "database/0195/candidate_admission_budget.sql": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+    "database/0196L/candidate_lease_settlement.sql": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+    "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+    "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py": "e722a9188a76034f5133c3f61be1da16930a8924",
+    "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "product/ai-company-os-backend/app/engines/budget_engine/reservation_review.py": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+    "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py": "71b1bc0adc4787c50b26b6d8d137ef9e421eb410",
+    "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py": "5132f5270c25c27d5cff08efa916dee8495dae5d",
+    "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py": "8e6cedceceb01901e830e5eb80f700b9485e980e",
+    "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py": "532e4594a01690fd0afa4d7e78021fa84784b30d",
+    "candidates/W5-G/run_level_receipt_diagnostic.sql": "62e97424caf43e5a917c4428bb70eeaa34fae903",
+    "candidates/W5-H/receipt_pep_review.py": "8fd3c95e7c75b71ebadfbe5e11db100d473735c5",
+    "candidates/W5-I/capability_runtime_review.py": "d698bbfd288a6024743d4605f3e34a2b2a29ac3b",
+    "candidates/W5-J/HANDOVER.md": "50052ee831f45c52239a8ea62879339cfb912b1b",
+    "candidates/W5-J/ACCEPTANCE_GATES.json": "c2d9a1b422c2554443a1f1a54516d085ea9320aa",
+    "candidates/W5-J/TEST_EVIDENCE.json": "17d584949ad531df22e4da8ea0f44c435e14d1e0"
+  },
+  "checked_complete_remote_trees": {
+    "workstream/w5-j-regression-acceptance": {"sha":"147502d831ab146b8825585fc7ac390f951beb84","blobs":1659},
+    "planning/0229-d4-r6-canonical-readiness": {"sha":"c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a","blobs":1693},
+    "planning/org-08-office-runtime-readback": {"sha":"663b7b1a60d8444c9b972f3fa30e8a4ecc83b352","blobs":1770},
+    "planning/0230-d5c-r2-org-evidence": {"sha":"946bc24cd943d6c3550f7f6c1eadcc42ee1bbd06","blobs":1735},
+    "planning/w5-ext-07r5-acceptance-transfer": {"sha":"b5679ad72c6a2d6b7202b8983c1459b7ee997294","blobs":1909},
+    "integration/unified-u3a-product-acceptance": {"sha":"8a3b05aadd32b214f3f8988fc9c793f853fbe3d0","blobs":1808}
+  },
+  "result": "No W5-J2-R1 path in six checked trees; 0195/0196L/admission writer pins identical. Selected refs only, not global lock. No branch mutation."
+}
