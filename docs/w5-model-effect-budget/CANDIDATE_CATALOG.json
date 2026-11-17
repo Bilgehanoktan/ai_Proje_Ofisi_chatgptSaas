@@ -1,6 +1,6 @@
 {
   "baseline": "167e5239882dc7b49bd96647412fe6761da0be5e",
-  "status": "ISOLATED_62_PASS_9_NOT_RUN_NO_PRODUCT_PROMOTION",
+  "status": "ISOLATED_90_PASS_NO_PRODUCT_PROMOTION",
   "pins": [
     {
       "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
@@ -192,7 +192,7 @@
     "deferred": "sample_adapter.py differs across branches; no edit. Common registry/provider/fallback/runtime pins match.",
     "new_paths_only": true
   },
-  "previous_checkpoint_status": "ISOLATED_41_TESTS_PASS_NO_PRODUCT_PROMOTION",
+  "previous_checkpoint_status": "ISOLATED_62_PASS_9_NOT_RUN_NO_PRODUCT_PROMOTION",
   "w5_decision_accounting": {
     "checkpoint": "W5_DECISION_ACCOUNTING_01",
     "parent": "6167e4c593a11bf9fcacfdb5d5b7572db0d6e7c8",
@@ -342,8 +342,8 @@
     ],
     "local_full_catalog_sha256": "3355dbc45d1dcb8bb7bcf718b6d75fd5a45a700505d517f7b491e23b6b7c35ce"
   },
-  "latest_evidence": "docs/w5-model-effect-budget/INVOCATION_RECEIPT_TEST_EVIDENCE.json",
-  "latest_handover": "docs/w5-model-effect-budget/INVOCATION_RECEIPT_HANDOVER.md",
+  "latest_evidence": "docs/w5-model-effect-budget/DURABLE_PROVIDER_RUNTIME_TEST_EVIDENCE.json",
+  "latest_handover": "docs/w5-model-effect-budget/DURABLE_PROVIDER_RUNTIME_HANDOVER.md",
   "w5_invocation_receipt": {
     "checkpoint": "W5_INVOCATION_RECEIPT",
     "parent": "db38b65dc1120cf5cc25222774295662f9d7d120",
@@ -444,5 +444,122 @@
       "Joint owner review of per-invocation receipt identity and durable readback with T1/Budget/PEP. No second ledger.",
       "Keep provider and spend HOLD."
     ]
+  },
+  "w5_durable_provider_runtime": {
+    "checkpoint": "W5_DURABLE_PROVIDER_RUNTIME",
+    "parent": "8570530ef149ef91524037b9d7609bdb205d06f4",
+    "status": "D0_SOURCE_CANDIDATE_90_PASS",
+    "new_source_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+        "git_blob": "532e4594a01690fd0afa4d7e78021fa84784b30d",
+        "sha256": "63c92d25f1a3fb8d004320c74d10bff96876abe3bfa29e42fda189d63c07f3ec",
+        "size": 4718
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+        "git_blob": "4a6c7a9206cb28823b90f475a33eaf31e35b8ed9",
+        "sha256": "a6e585285cafd1db50c47ab7aae9c1cda681f9f2c86ae5e385f51903622bc0cb",
+        "size": 1972
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+        "git_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1",
+        "sha256": "8ac722750f0cf0c8d2bb77db3f1199ffee8edc3a2bb8f49d7396f55e342e0389",
+        "size": 1865
+      },
+      {
+        "path": "tests/w5/test_durable_provider_runtime_review.py",
+        "git_blob": "a1b4736a07e8559e9ed1eb45c772948d0a79e0d2",
+        "sha256": "418d35e281a38d4f257859ff0430d8008ae075cf452161de03b1e2423da9384e",
+        "size": 7250
+      }
+    ],
+    "symbols": [
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+        "classes": [
+          "OwnerReceiptSnapshot",
+          "DurableReceiptOwnerPort",
+          "OwnerReceiptReview"
+        ],
+        "functions": [
+          "owner_snapshot_digest",
+          "inspect_owner_snapshot"
+        ],
+        "methods": [
+          "DurableReceiptOwnerPort.read_snapshot"
+        ],
+        "dependencies": [
+          "reservation_usage_receipt",
+          "token_accounting",
+          "budget_engine.reservation_review",
+          "core.agent_runtime.lifecycle",
+          "core.transaction.review",
+          "dataclasses",
+          "typing",
+          "hashlib",
+          "json"
+        ]
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+        "classes": [
+          "ProviderPreflightReview"
+        ],
+        "functions": [
+          "inspect_provider_preflight"
+        ],
+        "dependencies": [
+          "provider_contract",
+          "invocation_route_binding",
+          "durable_receipt_adapter",
+          "dataclasses"
+        ]
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+        "classes": [
+          "RuntimeModelReview"
+        ],
+        "functions": [
+          "inspect_runtime_model"
+        ],
+        "dependencies": [
+          "core.agent_runtime.lifecycle",
+          "invocation_route_binding",
+          "provider_preflight",
+          "dataclasses"
+        ]
+      },
+      {
+        "path": "tests/w5/test_durable_provider_runtime_review.py",
+        "classes": [
+          "DurableProviderRuntimeTests"
+        ],
+        "tests": 19
+      }
+    ],
+    "api": [],
+    "db": [],
+    "events": [],
+    "external_dependencies": [],
+    "scores": {
+      "design": 50,
+      "source": 25
+    },
+    "local_full_catalog_sha256": "e47f01ac05290b82d08699567c4aeaab7defefdaed98495649223b1c4323a43c",
+    "next": [
+      "T1/Budget owner-approved physical per-invocation receipt mapping and consistent readback; no new ledger.",
+      "Independent receipt custody, PEP effect enforcement, controlled integration review.",
+      "Keep real provider/spend/dispatch HOLD."
+    ]
+  },
+  "full_w5_regression": {
+    "status": "PASS",
+    "test_count": 90,
+    "effect_budget": 9,
+    "prior_test_count": 71,
+    "new_test_count": 19
   }
 }

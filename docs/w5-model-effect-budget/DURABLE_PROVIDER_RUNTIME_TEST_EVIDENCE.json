@@ -1,0 +1,246 @@
+{
+  "checkpoint": "W5_DURABLE_PROVIDER_RUNTIME",
+  "parent": "8570530ef149ef91524037b9d7609bdb205d06f4",
+  "status": "D0_SOURCE_CANDIDATE_90_PASS",
+  "python": "3.13.5",
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. python -m unittest discover -s tests/w5 -p 'test_*review.py' -v",
+  "layout": "isolated app source slice",
+  "tests": {
+    "profile_capability": 10,
+    "router_cost": 10,
+    "decision_accounting": 21,
+    "invocation_receipt": 21,
+    "effect_budget": 9,
+    "durable_provider_runtime": 19,
+    "total": 90,
+    "pass": 90,
+    "fail": 0
+  },
+  "parent_exact": 48,
+  "prior_pins": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "git_blob": "ea66a72bdb84c267ded348342a941ce8e5927005"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "git_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+      "git_blob": "5680fa428be81645a43d7442ec161c0c10384986"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+      "git_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "git_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "git_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+      "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+      "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+      "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+      "git_blob": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+      "git_blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+      "git_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/t1_review.py",
+      "git_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "git_blob": "04487bda631e9133f3904451a39fc8722e985997"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "git_blob": "b0dde358be781b48e06b8901acc63ef31b013db0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "git_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "git_blob": "e722a9188a76034f5133c3f61be1da16930a8924"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/__init__.py",
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/budget_engine/__init__.py",
+      "git_blob": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/budget_engine/reservation_review.py",
+      "git_blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+      "git_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "git_blob": "b90b0853ba466b89fd82bc38512517637afe1e02"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+      "git_blob": "b244e311574fd2fb31b7e30a7f4026095cbca8f2"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
+      "git_blob": "9402a274356645daa4fd2c4d09297c506377314a"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+      "git_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "git_blob": "ec16d064a0ac12fe46c72230399e41c2c56e2a83"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py",
+      "git_blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+      "git_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "git_blob": "fa0f058486cc9dfe263fa9562f1bd4387b91760b"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+      "git_blob": "3d136ad8a06f5e21d074748e371a1ed614b0c276"
+    },
+    {
+      "path": "tests/w5/test_effect_budget_review.py",
+      "git_blob": "05e44ee6ef859e13e3eeb5b06e02e872c86bf159"
+    },
+    {
+      "path": "tests/w5/test_model_profile_review.py",
+      "git_blob": "b48e46c9128832fb20f49e9dd9aa33086aee2e08"
+    },
+    {
+      "path": "tests/w5/test_router_cost_review.py",
+      "git_blob": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+      "git_blob": "031ec8f8e4cfc86d8e3a17f0d4e0d266ae1657f8"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+      "git_blob": "5132f5270c25c27d5cff08efa916dee8495dae5d"
+    },
+    {
+      "path": "tests/w5/test_decision_accounting_review.py",
+      "git_blob": "fc458e97e011ed154bce2619dd236912ada1621f"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+      "git_blob": "71b1bc0adc4787c50b26b6d8d137ef9e421eb410"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+      "git_blob": "8e6cedceceb01901e830e5eb80f700b9485e980e"
+    },
+    {
+      "path": "tests/w5/test_invocation_receipt_review.py",
+      "git_blob": "ba4edfe0b2fa93c3f3825a07a583cb0c289bd5a3"
+    }
+  ],
+  "new_source_pins": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+      "git_blob": "532e4594a01690fd0afa4d7e78021fa84784b30d",
+      "sha256": "63c92d25f1a3fb8d004320c74d10bff96876abe3bfa29e42fda189d63c07f3ec",
+      "size": 4718
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+      "git_blob": "4a6c7a9206cb28823b90f475a33eaf31e35b8ed9",
+      "sha256": "a6e585285cafd1db50c47ab7aae9c1cda681f9f2c86ae5e385f51903622bc0cb",
+      "size": 1972
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "git_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1",
+      "sha256": "8ac722750f0cf0c8d2bb77db3f1199ffee8edc3a2bb8f49d7396f55e342e0389",
+      "size": 1865
+    },
+    {
+      "path": "tests/w5/test_durable_provider_runtime_review.py",
+      "git_blob": "a1b4736a07e8559e9ed1eb45c772948d0a79e0d2",
+      "sha256": "418d35e281a38d4f257859ff0430d8008ae075cf452161de03b1e2423da9384e",
+      "size": 7250
+    }
+  ],
+  "raw_log_sha256": "398809c6ac6aac2bad83f20b923f50146447f306a59d4b9d4f51a208f7fb7582",
+  "local_full_evidence_sha256": "0bc2c05727e77334ae49d7349da3c62a547da67beaa82f1e5f5dc5b07c3ca2ae",
+  "limits": [
+    "Original nine Effect & Budget tests rerun unchanged; prior transfer failure resolved.",
+    "No full product, PostgreSQL, actual provider, spend, dispatch, CI or independent acceptance."
+  ]
+}
