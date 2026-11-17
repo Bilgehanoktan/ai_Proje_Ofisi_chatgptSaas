@@ -4,13 +4,13 @@
   "pins": [
     {
       "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
-      "git_blob": "11801d62f327c5921d44bb96870cd14d079446a2",
-      "lines": 94
+      "git_blob": "9402a274356645daa4fd2c4d09297c506377314a",
+      "lines": 97
     },
     {
       "path": "tests/w5/test_effect_budget_review.py",
-      "git_blob": "1f781079b377feeea531e42ab46a8f5a737ae27a",
-      "lines": 23
+      "git_blob": "05e44ee6ef859e13e3eeb5b06e02e872c86bf159",
+      "lines": 87
     }
   ],
   "architecture": "D08/D14/D21; D30-05A; existing T1 admission is not model effect authority",
@@ -36,8 +36,11 @@
     "external_dependencies": []
   },
   "tests": {
-    "authored": 3,
-    "executed": 0
+    "authored_methods": 9,
+    "authored_cases": 32,
+    "executed": 0,
+    "status": "NOT_RUN",
+    "reason": "Container git ls-remote failed DNS; no exact checkout"
   },
   "scores": {
     "design": 50,
@@ -47,8 +50,12 @@
     "No per-invocation reservation identity in current schema",
     "No independent custody or current readback",
     "Global product manifest unchanged; candidate not promoted",
-    "Full test matrix not implemented"
+    "Exact checkout and tests blocked by DNS; revocation/concurrency/restore acceptance remains open"
   ],
-  "next": "Exact checkout, positive and adversarial fixture tests; inspect historical reservation readback and independent authority before any wiring. No shared source modifications.",
-  "rollback": "Revert candidate commits on isolated branch only."
+  "next": "Run exact branch tests with backend PYTHONPATH; inspect failures; then isolated registry/router design against D30-05A. No shared source modifications.",
+  "rollback": "Revert candidate commits on isolated branch only.",
+  "changes": [
+    "Expanded diagnostic fixture tests",
+    "Bind attempt, current lease lineage, adapter identity and strict reservation integer types"
+  ]
 }
