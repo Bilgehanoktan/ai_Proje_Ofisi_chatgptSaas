@@ -305,3 +305,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UI-P10J-23 — Premium management EDS
 [Design and evidence](../UI-P10J/P10J23_PREMIUM_EDS.md) · [Runbook](../UI-P10J/P10J23_RUNBOOK.md). Scoped append-only CSS, 8/8 standalone Chromium fixtures; no office/core/authority change, product acceptance NOT_RUN.
+
+
+## UI-P10J-24 — Acceptance preflight and historical regression isolation
+[Acceptance, evidence boundaries and repair](../UI-P10J/P10J24_ACCEPTANCE.md) · [Runbook](../UI-P10J/P10J24_RUNBOOK.md). Product 492/492 Git blobs unchanged; full tree path/size verified, 17 local SHA pins. Original 0207 lock preserved; three exact historical auxiliary sources isolated outside product, 55/55 historical closure statically matched. Actual 47 model, 8 standalone CSS, 10 isolated adapter tests. Full Core29, W8/build/browser/native/independent acceptance NOT_RUN. No authority change.
