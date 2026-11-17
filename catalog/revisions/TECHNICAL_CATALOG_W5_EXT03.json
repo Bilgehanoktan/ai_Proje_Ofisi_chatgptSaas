@@ -1,0 +1,73 @@
+{
+  "revision": "W5-EXT-03",
+  "parent": "0e438a3dd59082170acf141138f1a758562fc08a",
+  "files": [
+    "candidates/W5-EXT-03/contrast_review.mjs",
+    "candidates/W5-EXT-03/test_contrast_review.mjs",
+    "candidates/W5-EXT-03/RECOMMENDATIONS.json",
+    "candidates/W5-EXT-03/SOURCE_PINS.json",
+    "candidates/W5-EXT-03/TEST_EVIDENCE.json"
+  ],
+  "symbols": {
+    "luminance": "sRGB luminance",
+    "ratio": "contrast ratio",
+    "parseEDS": "narrow explicit theme token parser",
+    "auditEDS": "17 selected pairs per theme",
+    "runTests": "synthetic helper regression"
+  },
+  "recommendations": [
+    {
+      "id": "UIX-01",
+      "area": "EDS",
+      "priority": "P1",
+      "status": "ADVISORY"
+    },
+    {
+      "id": "UIX-02",
+      "area": "CEO",
+      "priority": "P0",
+      "status": "ADVISORY"
+    },
+    {
+      "id": "UIX-03",
+      "area": "Agent",
+      "priority": "P1",
+      "status": "ADVISORY"
+    },
+    {
+      "id": "UIX-04",
+      "area": "Project + Workflow",
+      "priority": "P0",
+      "status": "ADVISORY"
+    },
+    {
+      "id": "UIX-05",
+      "area": "Finance",
+      "priority": "P0",
+      "status": "ADVISORY"
+    },
+    {
+      "id": "UIX-06",
+      "area": "Security + Capability",
+      "priority": "P0",
+      "status": "ADVISORY"
+    },
+    {
+      "id": "UIX-07",
+      "area": "Performance / implementation",
+      "priority": "P1",
+      "status": "ADVISORY"
+    }
+  ],
+  "new_api": 0,
+  "new_db": 0,
+  "new_dependencies": 0,
+  "product_changes": 0,
+  "authority": "NONE",
+  "tests": {
+    "static_contrasts": 34,
+    "synthetic_helper": 13,
+    "browser": "NOT_RUN",
+    "node_module": "NOT_RUN"
+  }
+}

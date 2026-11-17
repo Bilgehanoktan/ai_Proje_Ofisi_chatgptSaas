@@ -1,0 +1,104 @@
+{
+  "revision": "W5-EXT-03",
+  "status": "ADVISORY",
+  "ui_commit": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+  "upstream_commit": "e59ff376a41f7ca47b7541ad5c116495cbade3ee",
+  "product_write": false,
+  "install": false,
+  "recommendations": [
+    {
+      "id": "UIX-01",
+      "area": "EDS",
+      "priority": "P1",
+      "paths": [
+        "product/ai-company-os-frontend/app/globals.css",
+        "product/ai-company-os-frontend/design-system/eds.css"
+      ],
+      "observed": "Base body is 14px; P10J23 mobile inputs are 16px. 44px min-height on selected controls, not proof of all target dimensions.",
+      "proposal": "Measure actual mobile text and target widths; consider 16px for reading content only if layout remains intact. Keep 44px project target; never override office workspace.",
+      "acceptance": "320/375/414/768/1024/1440 CSS px, both themes, 200% zoom, long Turkish text; no page horizontal overflow except labeled graph/table regions; keyboard focus visible. NOT_RUN.",
+      "upstream": "UX 22,28,36,41,65,67"
+    },
+    {
+      "id": "UIX-02",
+      "area": "CEO",
+      "priority": "P0",
+      "paths": [
+        "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+        "product/ai-company-os-frontend/design-system/MetricCards.tsx"
+      ],
+      "observed": "OperationalReadback already renders labeled meters, exact counts, historical sample budget and unknown run. SharedSnapshotPanel distinguishes loading/history/HOLD.",
+      "proposal": "Preserve current meter and evidence text; only add labeled time-series if scoped time-series data exists. Never interpolate missing data, fabricate live KPIs or use animated pulse as authority.",
+      "acceptance": "Idle/loading/HOLD/history/expiry; null stays —; counts match exact source, scope/sequence visible. Browser NOT_RUN.",
+      "upstream": "Charts 1,2,8,23; UX 37,78,79"
+    },
+    {
+      "id": "UIX-03",
+      "area": "Agent",
+      "priority": "P1",
+      "paths": [
+        "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+        "product/ai-company-os-frontend/design-system/Navigation.tsx"
+      ],
+      "observed": "Role button has text, decorative image and aria-pressed; role detail is template, not worker.",
+      "proposal": "Review keyboard focus and narrow layout of role selector/detail tabs; retain role template and REZERV/HOLD labels. No performance radar without verified measurements.",
+      "acceptance": "Tab/Shift+Tab, keyboard selection, focus visible after selection, no identity inference from portrait or color; NOT_RUN.",
+      "upstream": "UX 28,37,41; Charts 14"
+    },
+    {
+      "id": "UIX-04",
+      "area": "Project + Workflow",
+      "priority": "P0",
+      "paths": [
+        "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+        "product/ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+        "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx"
+      ],
+      "observed": "Board/table, graph/list and labeled scroll regions exist. Draft already supports selects and graph pick in addition to drag.",
+      "proposal": "Test parity of drag-free alternative, graph/list navigation and keyboard editing. Preserve reference vs draft edges and explicit HOLD; no process mining without events.",
+      "acceptance": "Keyboard-only edge add/remove, cycle rejection, undo/redo, identical selected context in list/graph, labeled region scroll and no canonical write. NOT_RUN.",
+      "upstream": "UX 41,69,71; Charts 16,25"
+    },
+    {
+      "id": "UIX-05",
+      "area": "Finance",
+      "priority": "P0",
+      "paths": [
+        "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+        "product/ai-company-os-frontend/features/finance/financeModel.ts"
+      ],
+      "observed": "Finance model insists unverified revenue is null; UI says UNVERIFIED/NO SPEND.",
+      "proposal": "Keep unknowns distinct from zero. Future approved budget vs target can use labeled bars/bullets; never create charts from null or unverified sample.",
+      "acceptance": "Null stays —; explicit unit/currency and provenance, no inferred revenue/spend, accessible data table if chart exists. NOT_RUN.",
+      "upstream": "Charts 2,8,18; UX 37"
+    },
+    {
+      "id": "UIX-06",
+      "area": "Security + Capability",
+      "priority": "P0",
+      "paths": [
+        "product/ai-company-os-frontend/features/security/SecurityStudio.tsx",
+        "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+        "product/ai-company-os-frontend/design-system/EvidencePanel.tsx"
+      ],
+      "observed": "Explicit DENY/HOLD, read-only source inspector, candidate vs installed distinctions already present.",
+      "proposal": "Use existing evidence labels, reason codes and focus-safe status messages. Future EXT-06 catalog shows pin, review and effective grant separately, no enable control.",
+      "acceptance": "No color-only status; keyboard-readable reasons; candidate not installed; unknown not zero; DENY/HOLD never restyled as success. NOT_RUN.",
+      "upstream": "UX 28,37,41,78,79"
+    },
+    {
+      "id": "UIX-07",
+      "area": "Performance / implementation",
+      "priority": "P1",
+      "paths": [
+        "product/ai-company-os-frontend/package.json",
+        "product/ai-company-os-frontend/design-system/ThemeFrame.tsx"
+      ],
+      "observed": "Frontend pins Next 15.5.29; selected upstream Next.js CSV applies to 16.2.",
+      "proposal": "Do not apply 16.2-specific recommendations or upgrade dependencies. Retain local system fonts, icons and existing projection layer; check bundle/CLS before adding visualization dependencies.",
+      "acceptance": "Exact pinned build, bundle comparison, no remote font/icon calls, no new dependency; NOT_RUN.",
+      "upstream": "Skill priorities 3/5; Next.js dataset scope mismatch"
+    }
+  ]
+}
