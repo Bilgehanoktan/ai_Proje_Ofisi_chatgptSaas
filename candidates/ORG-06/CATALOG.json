@@ -1,0 +1,17 @@
+{
+  "revision": "ORG-06",
+  "parent": "1d0d587d8e42a2f0324712e614b7a85d6245cffa",
+  "files": {
+    "org_core_bridge.py": {"symbols": ["BindingReview", "Hold", "require", "_dependencies", "review_research_binding"], "purpose": "Read-only historical Core/ORG join; no authority"},
+    "test_org_core_bridge.py": {"symbols": ["Tests"], "purpose": "26 protocol/mock tests; one real SQLite read transaction open/close exercise"},
+    "test_org_core_checkout.py": {"symbols": ["CheckoutTests"], "purpose": "11 original-source dual SQLite tests; selected Git pins before imports; NOT_RUN"},
+    "SOURCE_PINS.json": {"purpose": "21 selected Git blob pins, 12 Core cross-branch matches"},
+    "HANDOVER.md": {"purpose": "Architecture delta, maintenance and next step"},
+    "test_protocol.log": {"purpose": "Raw 26 local test outputs"}
+  },
+  "existing_dependencies": ["Core inspect_research_slice, ResearchSliceReview, RunHistoryPin, TaskHistory, Member, lifecycle Scope", "R3 OperationsStore, HistoryPin, ReviewPin, inspect_runtime", "Python standard library"],
+  "new_external_dependencies": [],
+  "api_changes": [], "database_changes": [], "event_changes": [], "product_changes": [],
+  "tests": {"local_protocol": {"pass": 26, "type": "mock-owner protocol and SQLite connection lifecycle"}, "compile": 3, "full_checkout": {"planned": 11, "executed": 0, "status": "NOT_RUN"}, "pg": "OTHER_OWNER_NOT_RERUN"},
+  "gates": {"canonical_reference_bridge": "SOURCE_CANDIDATE_LOCAL_PROTOCOL_PASS", "real_sqlite_core_org": "NOT_RUN", "canonical_identity": "HOLD", "studio_api": "HOLD", "office_runtime": "HOLD", "product": "HOLD"}
+}
