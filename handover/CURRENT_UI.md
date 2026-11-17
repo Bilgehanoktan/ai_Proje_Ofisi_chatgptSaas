@@ -1,3 +1,9 @@
+# UI-P10J-21 — Skill & Memory Studio
+
+Parent ae3f5e45c8dc77359f5ae7701efc833585d3c4a9; manifest ce8b61352b9b56825a8ecd01238025fc07b7d2d2; 489 product files. Two additions, one replacement, 485 previous source pins retained. 10/10 actual isolated model tests and TSX transpile; W8 wrapper AST only, full build/browser/PG NOT_RUN. 99 inherited planned captures unchanged; extra manual Studio scenarios NOT_RUN. No backend/office/core transfer or authority change. Core 9/16 and UI 21/40 historical; independent 0/7. [Revision](../docs/UI-P10J/P10J21_SKILL_MEMORY.md) · [Runbook](../docs/UI-P10J/P10J21_RUNBOOK.md). Next P10J22 Finance & Security Studio after latest parallel head check.
+
+---
+
 # UI-P10J-20 — Workflow inspector / A4R2 source
 
 Parent b5cfa4fe8d839037bbb760f6361a474b42f8578a; manifest 9672f2e26f0635448f56cc02d338641bbe3ed5a5; 487 product files. 16/16 local tests + 5/5 doubled adapter groups; exact A4R2 scene and native script. W8/build/browser/PG NOT_RUN; 94 UI + 5 native planned captures; core 9/16 separately. No new gate. [Revision handover](../docs/UI-P10J/P10J20_WORKFLOW_INSPECTOR.md) · [Runbook](../docs/UI-P10J/P10J20_RUNBOOK.md). Next P10J21 Skill & Memory Studio, reviewed W8.
