@@ -1,0 +1,91 @@
+{
+  "revision": "0230-D5-C",
+  "parent": "585b2eab9558de57512343ed5c43f349e38bc3cf",
+  "classification": "DIAGNOSTIC_ONLY_HOLD",
+  "files": [
+    {
+      "file": "fence_probe.py",
+      "functions": [
+        "check_before_claim",
+        "stop_inside_fence"
+      ]
+    },
+    {
+      "file": "build_probe.py",
+      "functions": [
+        "probe_source"
+      ]
+    },
+    {
+      "file": "test_fence_insertion.py",
+      "classes": [
+        "FenceInsertionTests"
+      ],
+      "tests": 13
+    },
+    {
+      "file": "run_exact.py",
+      "functions": [
+        "main"
+      ]
+    },
+    {
+      "file": "run_original_t1.py",
+      "functions": [
+        "read_exact",
+        "blob",
+        "main"
+      ]
+    },
+    {
+      "file": "SOURCE_PINS.json",
+      "entries": 19
+    },
+    {
+      "file": "combined.log",
+      "tests": 63
+    },
+    {
+      "file": "t1_preflight.log",
+      "status": "BLOCKED"
+    },
+    {
+      "file": "HANDOVER.md"
+    },
+    {
+      "file": "PROGRESS.json"
+    },
+    {
+      "file": "CATALOG.json"
+    }
+  ],
+  "dependencies": [
+    "original Core intent_authority.D0IntentAuthority/RootPin",
+    "D5-B identity_fence_review.IdentityReadback/readback_digest/inspect_at_fence",
+    "D5-A intent_identity",
+    "D4-R4 identity_binding",
+    "Python stdlib; original 0212/0214 runner checks existing cryptography 46.0.4"
+  ],
+  "new_api": [],
+  "new_tables": [],
+  "new_events": [],
+  "new_external_dependencies": [],
+  "product_changes": 0,
+  "test_evidence": {
+    "d5c_probe": 13,
+    "d5_ab": 40,
+    "original_0211": 10,
+    "total": 63,
+    "failed": 0,
+    "original_t1": {
+      "0212": 7,
+      "0214": 10,
+      "run": 0
+    },
+    "root_restore_residual": "REPRODUCED_NOT_SECURITY_PASS",
+    "python": "3.13.5",
+    "sqlite": "3.46.1"
+  },
+  "activation_allowed": false,
+  "rollback": "Abandon isolated branch; no product or persistent migration."
+}
