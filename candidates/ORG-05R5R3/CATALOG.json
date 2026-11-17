@@ -1,0 +1,69 @@
+{
+  "revision": "ORG-05R5R3",
+  "parent": "80bc6f4e4d46e9341660e7e7a85ba5a917168c54",
+  "files": {
+    "run_isolated_pg.py": {
+      "symbols": [
+        "Hold",
+        "require",
+        "safe_env",
+        "non_admin",
+        "executable",
+        "validate_port",
+        "child",
+        "verify_reviewer",
+        "verify_version",
+        "verify_driver",
+        "verify_location",
+        "launch",
+        "main"
+      ],
+      "purpose": "Explicit isolated PG17 test launcher; reuse existing R5 SQL/runner and R5R2 evidence review"
+    },
+    "test_run_isolated_pg.py": {
+      "symbols": [
+        "Launcher"
+      ],
+      "purpose": "20 local launcher unit and mocked process tests"
+    },
+    "test_launcher.log": {
+      "purpose": "Raw local test log"
+    },
+    "SCOPE_BOUNDARY.json": {
+      "purpose": "Pinned Core/ORG contract incompatibility and remaining owner checks"
+    },
+    "HANDOVER.md": {
+      "purpose": "Architecture delta, maintenance, rollback, test and usage evidence"
+    }
+  },
+  "dependencies": {
+    "new": [],
+    "existing_required_for_real_run": [
+      "PostgreSQL 17",
+      "psycopg 3.3.9",
+      "Python standard library"
+    ]
+  },
+  "api_changes": [],
+  "db_schema_changes": [],
+  "event_changes": [],
+  "source_hash_checks": {
+    "github_r5": 12,
+    "github_r3": 7,
+    "github_r4": 1,
+    "local_r5r2": 5
+  },
+  "local_tests": {
+    "launcher": 20,
+    "r5r2_regression": 20,
+    "postgres_executed": 0,
+    "postgres_prepared": 26
+  },
+  "gates": {
+    "pg": "NOT_RUN",
+    "canonical_identity": "HOLD_SCOPE_MISMATCH",
+    "studio_api": "HOLD",
+    "runtime_office": "HOLD",
+    "product": "HOLD"
+  }
+}
