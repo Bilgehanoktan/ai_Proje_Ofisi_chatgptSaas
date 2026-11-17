@@ -1,0 +1,41 @@
+{
+  "revision": "UX-PREMIUM-07-A5R1",
+  "parent": "d8671883a77ee7f97b1fc3528e3ffdc1831b3856",
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "os": "Linux",
+    "pinned_typescript": "5.9.3 NOT_RUN"
+  },
+  "command": "tsc --strict --target ES2020 --module commonjs --outDir /tmp/a5test office/engine/premiumDynamicFloors.ts && A5_MODEL=/tmp/a5test/premiumDynamicFloors.js node --test tests/premium-dynamic-floors.test.cjs",
+  "actual": {
+    "tests": 12,
+    "pass": 12,
+    "fail": 0,
+    "strict_compile": "PASS",
+    "scope": "isolated fixture"
+  },
+  "cases": [
+    "three active floors and passive draft",
+    "one transfer commit",
+    "occupied exit and reservation",
+    "same role/capacity",
+    "positioning cancellation",
+    "boarding vs travel cancellation",
+    "stale/forged/cross-world token",
+    "duplicate/replay/off-landing",
+    "invalid floor/portal/actor",
+    "collision and jump",
+    "immutable model",
+    "reciprocal transfer hold/cancel"
+  ],
+  "blobs": {
+    "ai-company-os-frontend/office/engine/premiumDynamicFloors.ts": "80c72de3d0b4943a7973378acaecf61ecc3e3ee3",
+    "ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs": "dc15928a1f43ec6a9113620bd3ef9fa15c2cb3c8"
+  },
+  "full_build": "NOT_RUN",
+  "native": "NOT_RUN",
+  "a4r2_windows": "NOT_RUN",
+  "office_v0": "JOIN_HOLD",
+  "independent": "HOLD"
+}

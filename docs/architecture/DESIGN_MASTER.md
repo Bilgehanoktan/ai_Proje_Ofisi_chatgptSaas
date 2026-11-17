@@ -213,3 +213,7 @@ Inspect source hashes before test. For root replacement/restore preserve evidenc
 
 ## UX-PREMIUM-07-A0B — reviewed W8 and native smoke extension
 [Scope, evidence, replay](../UX-PREMIUM-07/A0B_BUILD_ACCEPTANCE.md). 31 selected product Node +12 adapter checks, full checkout/build/native BLOCKED/NOT_RUN. No product, API, DB, pin or normative changes. A1–A5 deferred, JOIN_HOLD and independent HOLD.
+
+
+## UX-PREMIUM-07-A5R1 — isolated dynamic floor model
+[A5R1 architecture and limitations](../UX-PREMIUM-07/A5R1_DYNAMIC_FLOORS.md). 12/12 isolated synthetic tests, two additive source files. A4R2 Windows/native and full build NOT_RUN; OfficeV0 JOIN_HOLD. No actual floor activation, no core merge or normative change.

@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UX-PREMIUM-07-A4R2",
-  "status": "D0_NATIVE_ACCEPTANCE_HARNESS_READY_BUILD_BLOCKED",
+  "doc_revision": "UX-PREMIUM-07-A5R1",
+  "status": "D0_ISOLATED_FLOOR_PORTAL_MODEL_TESTED_NATIVE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+  "parent_git_commit": "d8671883a77ee7f97b1fc3528e3ffdc1831b3856",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1374,6 +1374,10 @@
       "bytes": 5650,
       "sha256": "43e1e0532cf98e82cffbaaaf99e659408658c6753c6d41ff1a0fa7b436ae02e0"
     },
+    "ai-company-os-frontend/office/engine/premiumDynamicFloors.ts": {
+      "bytes": 8523,
+      "sha256": "89c479b6a3b40ce4f061726586c782c3e67cc9f8caa14562144b2501c9c2b5cd"
+    },
     "ai-company-os-frontend/office/engine/premiumHybridLayout.ts": {
       "bytes": 10955,
       "sha256": "b0c13f8544a1fc4403b98a4cead5a55c986a6986158848f6aaa1dacab93e9328"
@@ -1522,6 +1526,10 @@
       "bytes": 1708,
       "sha256": "99daf9c27ed325485a67ff85275a0a51101d0cd798d5f7af4317e63207ce7fbb"
     },
+    "ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs": {
+      "bytes": 5464,
+      "sha256": "0b81aaf57cdbd37346a2bb0235b9e5320da4212d9b08b958512ddc6f1ae3a907"
+    },
     "ai-company-os-frontend/tests/premium-geometry.test.cjs": {
       "bytes": 1812,
       "sha256": "2cb318c5881a449e7a225a02a2b32b21e03d9c95bdea66583ff0d149d2579c2a"
@@ -1639,8 +1647,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42",
-  "source_git_commit_note": "A0C baseline unchanged except manifest; two new static candidate files; not yet imported by renderer or accepted by W8.",
-  "additional_parent_git_commit": "e33ffb633bc5a445aec1fb4946625884d503c348",
-  "additional_parent_source_manifest_blob": "a20d3078bce3724435cbe6e6e2499d23f1e72c7c"
+  "parent_source_manifest_blob": "397f87b7d9a9227ee435b1501347c6460fc73c5e",
+  "source_git_commit_note": "A5R1 two additive source pins; no renderer import, A4R2 acceptance NOT_RUN; no A6 or other track merge."
 }

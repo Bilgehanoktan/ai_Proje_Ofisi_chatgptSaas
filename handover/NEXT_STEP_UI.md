@@ -17,3 +17,7 @@ Priority zero: upload full archive of P10G or use exact user-local checkout with
 
 ## UX-PREMIUM-07-A0B
 [Reviewed W8 rebind and native smoke](../docs/UX-PREMIUM-07/A0B_BUILD_ACCEPTANCE.md). P0 actual clean checkout, review lock, install/test/smoke using w8_ux_a0b.py; 31 selected Node and 12 adapter checks not full build. A1–A5 deferred until A0 review; A6 contract-only, JOIN_HOLD. No core merge.
+
+
+## UX-PREMIUM-07-A5R1 (isolated candidate)
+[A5R1 current](UX_PREMIUM_07_A5R1_CURRENT.json). Next A5R2 geometry/identity/traffic adapter and reservation integration; actual A4R2 Windows test stays NOT_RUN, native rendering and real activation held. A6 independent.

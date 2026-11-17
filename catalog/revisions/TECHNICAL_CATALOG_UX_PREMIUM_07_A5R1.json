@@ -1,0 +1,51 @@
+{
+  "revision": "UX-PREMIUM-07-A5R1",
+  "base": "d8671883a77ee7f97b1fc3528e3ffdc1831b3856",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumDynamicFloors.ts",
+      "change": "ADD",
+      "sha256": "89c479b6a3b40ce4f061726586c782c3e67cc9f8caa14562144b2501c9c2b5cd",
+      "types": [
+        "Cell",
+        "Lifecycle",
+        "Floor",
+        "Stop",
+        "Portal",
+        "Actor",
+        "Token",
+        "Request",
+        "Phase"
+      ],
+      "exports": [
+        "nextFloorReview",
+        "createDynamicFloors"
+      ],
+      "methods": [
+        "snapshot",
+        "move",
+        "request",
+        "cancel",
+        "advance"
+      ],
+      "dependencies": [],
+      "api": [],
+      "database": [],
+      "purpose": "D0 fixture floor/portal lifecycle review and exclusive transfer reservation",
+      "diagnosis": "See A5R1_DYNAMIC_FLOORS.md",
+      "rollback": "remove additive candidate or revert to parent"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs",
+      "change": "ADD",
+      "sha256": "0b81aaf57cdbd37346a2bb0235b9e5320da4212d9b08b958512ddc6f1ae3a907",
+      "dependencies": [
+        "node:test",
+        "node:assert/strict",
+        "compiled premiumDynamicFloors"
+      ],
+      "test_count": 12
+    }
+  ],
+  "authority": "none"
+}
