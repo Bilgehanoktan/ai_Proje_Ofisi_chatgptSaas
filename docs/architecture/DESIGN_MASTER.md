@@ -309,3 +309,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U1 — controlled convergence
 [Plan](../UNIFIED-U1/INTEGRATION_PLAN.md). UI-P10J23 base; exact seven A5 files; existing historical provider and isolated D0 floor view colocated. 49 selected model PASS; 3 TSX syntax only. No real join, no full build or gate promotion. Original core/office/A6 heads retained.
+
+
+## UNIFIED-U2 — shared historical replay session
+[Architecture](../UNIFIED-U2/ARCHITECTURE_AND_PLAN.md). Single generation-guarded shared read/reset/TTL controller, no real authority. Exact router/wire and HTTP proxy with fixture reader: 14 tests +49 U1/A5 rerun; React syntax only. A6 55 HOLD; U3 actual DB and browser open.

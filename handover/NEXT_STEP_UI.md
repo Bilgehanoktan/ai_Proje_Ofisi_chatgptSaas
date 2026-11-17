@@ -68,3 +68,7 @@ Priority: obtain exact full P10H GitHub archive (not selected evidence ZIP), ver
 
 ## UNIFIED-U1
 [Current](UNIFIED_U1_CURRENT.json). U2 shared core presentation/contract reconciliation, U3 source-bound build/DB gates, U4 native office parallel, U5 canonical owner evidence, U6 MVP. Original parallel handovers remain authoritative for their own branches. No automatic merge.
+
+
+## UNIFIED-U2
+[Current](UNIFIED_U2_CURRENT.json). U3 exact unified checkout and reviewed locks, P10J24 historical overlay rebind, DB-backed original tests, Next build and actual browser. U4 remains parallel. No main/CI/PROD or actual runtime join.

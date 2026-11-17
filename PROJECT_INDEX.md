@@ -221,3 +221,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U1 — isolated convergence candidate
 [Plan](docs/UNIFIED-U1/INTEGRATION_PLAN.md) · [Current](handover/UNIFIED_U1_CURRENT.json) · [24-area matrix](progress/UNIFIED_U1_MATRIX_24.json) · [scope](docs/UNIFIED-U1/THREE_WAY_SCOPE.json).
+
+
+## UNIFIED-U2
+[Architecture](docs/UNIFIED-U2/ARCHITECTURE_AND_PLAN.md) · [55 field review](docs/UNIFIED-U2/OFFICE_FIELD_REVIEW_55.json) · [Current](handover/UNIFIED_U2_CURRENT.json).

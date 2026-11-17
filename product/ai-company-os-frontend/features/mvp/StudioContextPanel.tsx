@@ -3,13 +3,13 @@ import {useSharedSnapshot} from '../data/SharedSnapshotProvider';
 import {readPlanProjection} from '../core-review/planProjection';
 import {reviewStudioEvidence,rolePlanTasks,type StudioSelection} from './studioContext';
 export default function StudioContextPanel({selection}:{selection:StudioSelection}){
- const {state,read,planRead}=useSharedSnapshot();
+ const {state,read,reset,planRead}=useSharedSnapshot();
  const view=readPlanProjection(planRead.data??undefined);
  const plan=view.ok?view.plan:null;
  const result=reviewStudioEvidence(plan,selection,state.data),obs=result.observation;
  const tasks=plan?(selection.kind==='role'?rolePlanTasks(plan.tasks,selection.id):plan.tasks.filter(t=>t.id===selection.id)):[];
  return <section className="panel projection-summary" aria-label="Studio kimlik ve kanıt bağlamı">
- <div className="bar"><div><div className="eyebrow">0223 / STUDIO CONTEXT · READ ONLY</div><h3>Plan ve kanıt bağlantısı</h3></div><div className="chips"><button type="button" onClick={planRead.read}>Backend planını oku</button><button type="button" onClick={read}>Ortak geçmişi oku</button></div></div>
+ <div className="bar"><div><div className="eyebrow">0223 / STUDIO CONTEXT · READ ONLY</div><h3>Plan ve kanıt bağlantısı</h3></div><div className="chips"><button type="button" onClick={planRead.read}>Backend planını oku</button><button type="button" disabled={state.phase==='loading'} onClick={read}>Ortak geçmişi oku</button><button type="button" disabled={state.phase==='idle'} onClick={reset}>Ortak geçmişi temizle</button></div></div>
  <p role="status">{planRead.state.phase==='historical'?'Backend derleyici yanıtı sabit planla eşleşti':planRead.state.phase==='loading'?'Backend planı okunuyor':planRead.state.phase==='hold'?'Backend planı HOLD · yalnız çevrimdışı referans':'Backend okunmadı · çevrimdışı referans'} · gerçek yürütme yok</p>
  <div className="empty"><strong>Seçim: {selection.id||'—'} · {selection.kind==='role'?'Rol şablonu':'DAG düğümü'}</strong><p>{tasks.length?tasks.map(t=>t.label+' ('+t.id+')').join(' · '):'Eşleşen plan görevi yok'}</p><small>Plan: {plan?.revision??'—'} · Instance / run ataması: doğrulanmadı · Model ve Skill profili: doğrulanmadı · HOLD</small></div>
  <h3>Bağımsız tarihsel Runtime gözlemi · seçime bağlı değil</h3>

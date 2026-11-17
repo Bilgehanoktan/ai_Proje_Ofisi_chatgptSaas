@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UNIFIED-U1",
-  "status": "D0_UNIFIED_SOURCE_CANDIDATE_SELECTED_TESTS_PASS_FULL_BUILD_NOT_RUN",
+  "doc_revision": "UNIFIED-U2",
+  "status": "D0_SHARED_REPLAY_SESSION_HTTP_FIXTURE_TESTED_FULL_ACCEPTANCE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+  "parent_git_commit": "b03e56ac6849654f52f7e421590becf3e3719dd0",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1083,8 +1083,8 @@
       "sha256": "a1bced233fed3cce70e211df3b8c95826a047a84f8dada8584508dde7ba04630"
     },
     "ai-company-os-frontend/components/dashboard/OfficePanel.tsx": {
-      "bytes": 3266,
-      "sha256": "b003bdedd86a331351a98337a26e404ffdfdd527e8cc90d28414625a16529b5e"
+      "bytes": 3358,
+      "sha256": "7d75044a6b8083467b9acf77d996e3adf35c2debdde74d5a88c3157bc4c30dcc"
     },
     "ai-company-os-frontend/components/dashboard/OperationPanel.tsx": {
       "bytes": 871,
@@ -1247,12 +1247,12 @@
       "sha256": "30d3421e1e0dc91b0e93d49f939e9523b47a371071abb1d0e59a3ea536537bc5"
     },
     "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": {
-      "bytes": 1716,
-      "sha256": "d81d6a1572961c81d8e3193cb977160652f403b2d3493714644f5b8f3e0c8557"
+      "bytes": 2002,
+      "sha256": "93a1cfa49f86b220c11387425e8800d60876b5c362f5b66a21c39594c92dd216"
     },
     "ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": {
-      "bytes": 2205,
-      "sha256": "965bdfe15a45cb7b38cecc0f5a521fbb596722475ea5b9794ff17b24a40ca9ec"
+      "bytes": 1354,
+      "sha256": "2fe6316918d262665054d05a034b5d1d1bc6200ac1b1dd0b21956de89a8d4c9c"
     },
     "ai-company-os-frontend/features/data/projectionRead.ts": {
       "bytes": 2984,
@@ -1269,6 +1269,10 @@
     "ai-company-os-frontend/features/data/projectionSession.ts": {
       "bytes": 356,
       "sha256": "1c75541034878b2bce1951a401271e1060e193991863c583a754ff905176ee0a"
+    },
+    "ai-company-os-frontend/features/data/sharedReplaySession.ts": {
+      "bytes": 2458,
+      "sha256": "c382c9c2ff500a8da5bff6b3881812637d21a6488d7dbc801cfdad3fa5dc2689"
     },
     "ai-company-os-frontend/features/data/sharedSnapshot.ts": {
       "bytes": 3270,
@@ -1387,8 +1391,8 @@
       "sha256": "396fa72faf5af310c3dd3f45afe01181ecfa823e638ffa8d804b3d36601bf44c"
     },
     "ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": {
-      "bytes": 3159,
-      "sha256": "7dbd3019867bc8e8868be0f5eec4e5d9aab6dcb126e88c85d98aca1c0152e62f"
+      "bytes": 3302,
+      "sha256": "212e106dfc3c2c177a20e39497d8de44a4b3ba53fe7e067de918a9e3c4081749"
     },
     "ai-company-os-frontend/features/mvp/TaskBudgetPanel.tsx": {
       "bytes": 1447,
@@ -1998,6 +2002,10 @@
       "bytes": 2109,
       "sha256": "fae656229c129f706748372f13f0da8dcbc9cd9a6ab1e14de758be83bbc2daa0"
     },
+    "ai-company-os-frontend/tests/unified-shared-session.test.cjs": {
+      "bytes": 6526,
+      "sha256": "9407c69fd00467ce5062b0e1796b38abfbfc51677918a13665273b22acbbad45"
+    },
     "ai-company-os-frontend/tests/workbench-snapshot.test.cjs": {
       "bytes": 1573,
       "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5"
@@ -2015,8 +2023,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
-  "source_git_commit_note": "Single Git parent UI-P10J23; exact seven office blobs transferred, no Git merge. Core 0227 lineage separately pinned; prior records retained; one scoped link change.",
-  "additional_parent_git_commit": "089a4a256cdf0fc835035041ac519b4c15250542",
-  "additional_parent_source_manifest_blob": "d14c7fd5d19770ec1e42cb414d600c317a30c556"
+  "parent_source_manifest_blob": "335895df70e5702d2d7ab26c8a737de9a5bd98e1",
+  "source_git_commit_note": "Single U1 parent; two new and four modified product files; historical DB fixture substituted only in external test harness; original API/schema/DB unchanged.",
+  "additional_parent_git_commit": null,
+  "additional_parent_source_manifest_blob": null
 }
