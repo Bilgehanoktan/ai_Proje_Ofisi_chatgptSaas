@@ -1,6 +1,6 @@
 {
   "baseline": "167e5239882dc7b49bd96647412fe6761da0be5e",
-  "status": "ISOLATED_29_TESTS_PASS_NO_PRODUCT_PROMOTION",
+  "status": "ISOLATED_41_TESTS_PASS_NO_PRODUCT_PROMOTION",
   "pins": [
     {
       "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
@@ -191,5 +191,157 @@
     ],
     "deferred": "sample_adapter.py differs across branches; no edit. Common registry/provider/fallback/runtime pins match.",
     "new_paths_only": true
-  }
+  },
+  "previous_checkpoint_status": "ISOLATED_29_TESTS_PASS_NO_PRODUCT_PROMOTION",
+  "w5_decision_accounting": {
+    "checkpoint": "W5_DECISION_ACCOUNTING_01",
+    "parent": "6167e4c593a11bf9fcacfdb5d5b7572db0d6e7c8",
+    "status": "PASS_ISOLATED_SYNTHETIC_UNIT_TEST_ONLY",
+    "source_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+        "git_blob": "031ec8f8e4cfc86d8e3a17f0d4e0d266ae1657f8",
+        "sha256": "749a955dca129d46ba8dff3bdb8ca4751b54b343c5ebd10767ca403092afdd92",
+        "size": 5909
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+        "git_blob": "5132f5270c25c27d5cff08efa916dee8495dae5d",
+        "sha256": "8048bb29f90e3d3e6023759785fd1d3b74bacc999e11106f0b1a5fc30c13a200",
+        "size": 7663
+      },
+      {
+        "path": "tests/w5/test_decision_accounting_review.py",
+        "git_blob": "fc458e97e011ed154bce2619dd236912ada1621f",
+        "sha256": "5068c34437831d20d95a53807bbfe5c28566610f18feb5f6607a2aec79259850",
+        "size": 10566
+      }
+    ],
+    "symbols": [
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+        "classes": [
+          "RoutingDecisionRecord"
+        ],
+        "functions": [
+          "_valid_query",
+          "routing_decision_digest",
+          "make_routing_decision",
+          "verify_routing_decision"
+        ],
+        "dependencies": [
+          "dataclasses",
+          "hashlib",
+          "json",
+          "core.agent_runtime.lifecycle",
+          "core.transaction.review",
+          "capability_resolver",
+          "cost_estimator",
+          "profile_registry",
+          "registry",
+          "router"
+        ]
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+        "classes": [
+          "UsageBinding",
+          "ReservationEvidence",
+          "UsageEvidence",
+          "ReconciliationEvidence",
+          "AccountingReview"
+        ],
+        "functions": [
+          "valid_usage_binding",
+          "accounting_evidence_digest",
+          "inspect_token_accounting"
+        ],
+        "dependencies": [
+          "dataclasses",
+          "hashlib",
+          "json",
+          "core.agent_runtime.lifecycle",
+          "core.transaction.review",
+          "cost_estimator",
+          "routing_decision"
+        ]
+      },
+      {
+        "path": "tests/w5/test_decision_accounting_review.py",
+        "classes": [
+          "DecisionAccountingTests"
+        ],
+        "methods": [
+          "setUp",
+          "replay",
+          "review",
+          "observations",
+          "test_actual_not_recomputed_from_tokens",
+          "test_attempt_and_invocation_mismatch",
+          "test_complete_match_stays_hold",
+          "test_duplicate_and_incomplete_records",
+          "test_estimate_not_reservation_or_actual",
+          "test_frozen_record_and_observations",
+          "test_insufficient_reservation_and_usage_overrun",
+          "test_invalid_money_and_token_types",
+          "test_invalid_references_do_not_create_records",
+          "test_missing_wrong_and_stale_evidence_pins",
+          "test_no_candidates_and_exclusions_recorded",
+          "test_order_independent_replay",
+          "test_pin_epoch_or_metrics_changes",
+          "test_receipt_alias_rejected",
+          "test_reconciliation_arithmetic_and_evidence_binding",
+          "test_record_matches_real_router",
+          "test_reserved_not_actual",
+          "test_route_binding_failures",
+          "test_tampered_cost_rejected_even_rehashed",
+          "test_unknown_usage_never_zero_filled",
+          "test_zero_usage_explicit_not_unknown"
+        ],
+        "dependencies": [
+          "dataclasses",
+          "unittest",
+          "test_router_cost_review",
+          "router",
+          "routing_decision",
+          "token_accounting"
+        ]
+      }
+    ],
+    "api": [],
+    "database": [],
+    "events": [],
+    "external_dependencies": [],
+    "tests": {
+      "new": 21,
+      "regression": 20,
+      "pass": 41
+    },
+    "scores": {
+      "design": 50,
+      "source": 25
+    },
+    "architecture": "D08/D14/D21; D30-05A; phase 3",
+    "choices": [
+      "D0 strict ceilings",
+      "Distinct receipt pins",
+      "Exact recognized + released = reserved observation; no actual settlement",
+      "No model selection, no fallback"
+    ],
+    "blockers": [
+      "Full repository checkout DNS blocked; exact isolated source subset only",
+      "Previous nine effect/budget tests historical PASS; not rerun here",
+      "No independent security, actual receipts, runtime lease/fence binding, live provider, real spend, PG/RLS or full build",
+      "Frozen records are not durable append-only storage; SHA-256 is not a signature",
+      "No shared manifest promotion or new execution grant; scores 50/25 unchanged"
+    ],
+    "next": [
+      "Bind exact invocation envelope to route/profile and current run/attempt/lease/fence",
+      "Define per-invocation reservation and usage receipt port with existing T1/Budget/PEP owners; do not implement a second ledger",
+      "Recheck Core, Unified, W5-EXT and other active branches before shared edits"
+    ],
+    "local_full_catalog_sha256": "3355dbc45d1dcb8bb7bcf718b6d75fd5a45a700505d517f7b491e23b6b7c35ce"
+  },
+  "latest_evidence": "docs/w5-model-effect-budget/DECISION_ACCOUNTING_TEST_EVIDENCE.json",
+  "latest_handover": "docs/w5-model-effect-budget/DECISION_ACCOUNTING_HANDOVER.md"
 }
