@@ -1,0 +1,69 @@
+{
+  "revision": "UI-P10J-24B",
+  "parent": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+  "manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+  "product_source_change": 0,
+  "source_recovery": {
+    "archives_scanned": 39,
+    "archive_file_occurrences": 1484,
+    "unique_blobs": 341,
+    "archive_recovered_product_paths": 56,
+    "additional_fetched_product_paths": 5,
+    "verified_product_paths": 61,
+    "previous_verified": 17,
+    "additional_verified": 44,
+    "remaining": 430,
+    "criteria": [
+      "exact Git blob",
+      "SHA-256",
+      "byte size",
+      "canonical path"
+    ],
+    "recovery_evidence_sha256": "85f60ff85b6a150f28a56bd8113cd880bb98ea6e8ef3d63123361bdcc963e50e"
+  },
+  "actual_tests": {
+    "original_plan_projection": {
+      "passed": 5,
+      "failed": 0,
+      "log_sha256": "3fd81f5f8c598b32893f987fcde8b8c9fcc8b7f74ea13a9df65d6ff8f20af447"
+    },
+    "contract_diagnostics": {
+      "passed": 12,
+      "failed": 0,
+      "positive": 4,
+      "negative": 8,
+      "source_paths": 16,
+      "shared_pairs": 8,
+      "blob": "d903ad980e071fd8ed72204e25396777d08c40bc",
+      "sha256": "8fc12a30896d8fd18966cfd03f55c83db37346227f3815b371ed5097b9eb0da2",
+      "log_sha256": "227090becf93a90b36497fe0ac1b98b3dd9e2e8e7283c22727a7e738cf63c0ac",
+      "jsonschema": "4.26.0",
+      "scope": "original static D0 schemas and fixtures; not API or runtime security acceptance"
+    },
+    "total": 17,
+    "python": "3.13.5"
+  },
+  "parallel_heads": {
+    "core": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "office": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+    "merge": false
+  },
+  "blockers": {
+    "direct_git": "DNS failure; exit 128",
+    "full_local_checkout": "BLOCKED",
+    "dependency_review": "not available; previous offline npm/pip failures not rerun",
+    "actual_core29": "NOT_RUN",
+    "full_w8": "NOT_RUN",
+    "next_build": "NOT_RUN",
+    "product_captures": "0/99",
+    "windows": "deferred",
+    "independent": "HOLD"
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}
