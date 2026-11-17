@@ -1,0 +1,1379 @@
+{
+  "revision": "UI-P10J-24",
+  "parent": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+  "source_manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+  "status": "PARTIAL_DIAGNOSTIC_ACCEPTANCE_FULL_W8_BLOCKED",
+  "product_tree": {
+    "files": 492,
+    "manifest_entries": 491,
+    "paths_and_sizes_match": 491,
+    "unexpected": 0,
+    "local_sha256_matches": 17,
+    "local_full_audit": "NOT_RUN",
+    "product_change": 0,
+    "shared_contracts": 13,
+    "shared_fixtures": 4,
+    "auxiliary_pins_before": 21,
+    "auxiliary_pins_after": 24,
+    "milestone_mirror_match": true
+  },
+  "parallel": [
+    {
+      "name": "Core 0227",
+      "ref": "167e5239882dc7b49bd96647412fe6761da0be5e",
+      "truncated": false,
+      "identical": 372,
+      "ui_only": [
+        "product/ai-company-os-backend/tests/test_authority_boundary_p10g.py",
+        "product/ai-company-os-backend/tests/test_authority_sqlite_p10f.py",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+        "product/ai-company-os-frontend/app/office/premium/hybrid/page.tsx",
+        "product/ai-company-os-frontend/app/office/premium/native/page.tsx",
+        "product/ai-company-os-frontend/app/office/premium/page.tsx",
+        "product/ai-company-os-frontend/features/capabilities/studioCatalog.ts",
+        "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+        "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.module.css",
+        "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.tsx",
+        "product/ai-company-os-frontend/features/ceo-dashboard/sectionModel.ts",
+        "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+        "product/ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css",
+        "product/ai-company-os-frontend/features/evidence/AgentRoleProfile.tsx",
+        "product/ai-company-os-frontend/features/evidence/ControlSourceInspector.tsx",
+        "product/ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+        "product/ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+        "product/ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+        "product/ai-company-os-frontend/features/evidence/controlSourceCatalog.ts",
+        "product/ai-company-os-frontend/features/evidence/evidenceContext.ts",
+        "product/ai-company-os-frontend/features/evidence/evidenceModel.ts",
+        "product/ai-company-os-frontend/features/evidence/evidenceReview.ts",
+        "product/ai-company-os-frontend/features/evidence/historicalEvidence.ts",
+        "product/ai-company-os-frontend/features/evidence/studioContext.ts",
+        "product/ai-company-os-frontend/features/evidence/studioGovernance.ts",
+        "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+        "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+        "product/ai-company-os-frontend/features/graph/graphPresentation.ts",
+        "product/ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+        "product/ai-company-os-frontend/features/project-management/ProjectRoadmap.module.css",
+        "product/ai-company-os-frontend/features/project-management/ProjectRoadmap.tsx",
+        "product/ai-company-os-frontend/features/project-management/dependencyNeighborhood.ts",
+        "product/ai-company-os-frontend/features/workflow/DraftInspector.module.css",
+        "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+        "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+        "product/ai-company-os-frontend/features/workflow/ParallelStudio.module.css",
+        "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+        "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+        "product/ai-company-os-frontend/features/workflow/draftGraph.ts",
+        "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+        "product/ai-company-os-frontend/features/workflow/draftInspector.ts",
+        "product/ai-company-os-frontend/features/workflow/draftOverview.ts",
+        "product/ai-company-os-frontend/features/workflow/readbackBoundary.ts",
+        "product/ai-company-os-frontend/features/workflow/readbackCatalog.ts",
+        "product/ai-company-os-frontend/features/workflow/readbackPresentation.ts",
+        "product/ai-company-os-frontend/office/assets/premiumOfficeHtml.ts",
+        "product/ai-company-os-frontend/office/engine/cameraInput.ts",
+        "product/ai-company-os-frontend/office/engine/decorCatalog.ts",
+        "product/ai-company-os-frontend/office/engine/deskAccessories.ts",
+        "product/ai-company-os-frontend/office/engine/premiumActorIdentity.ts",
+        "product/ai-company-os-frontend/office/engine/premiumHybridLayout.ts",
+        "product/ai-company-os-frontend/office/engine/premiumHybridRender.ts",
+        "product/ai-company-os-frontend/office/engine/premiumIdentityTraffic.ts",
+        "product/ai-company-os-frontend/office/engine/premiumLift.ts",
+        "product/ai-company-os-frontend/office/engine/premiumModel.ts",
+        "product/ai-company-os-frontend/office/engine/premiumOfficeV0.ts",
+        "product/ai-company-os-frontend/office/engine/premiumPresentation.ts",
+        "product/ai-company-os-frontend/office/engine/premiumRouting.ts",
+        "product/ai-company-os-frontend/office/engine/premiumTraffic.ts",
+        "product/ai-company-os-frontend/office/engine/roomAccents.ts",
+        "product/ai-company-os-frontend/office/engine/stationDecor.ts",
+        "product/ai-company-os-frontend/office/engine/wallDecor.ts",
+        "product/ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx",
+        "product/ai-company-os-frontend/office/scenes/PremiumNativeScene.tsx",
+        "product/ai-company-os-frontend/office/scenes/premiumArt.ts",
+        "product/ai-company-os-frontend/office/scenes/premiumAtlasPaint.ts",
+        "product/ai-company-os-frontend/tests/premium-actor-identity.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-camera.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-geometry.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-hybrid-layout.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-hybrid-render.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-identity-traffic.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-model.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-office-v0.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-presentation.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-routing.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-traffic-boundary.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-traffic.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10b-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10c-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10d-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10e-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10f-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10g-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10h-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10i-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j05-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j11-sections.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j12-studio.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j14-governance.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j17-ceo.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j19-roadmap.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j21-capabilities.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j22-control-sources.test.cjs",
+        "product/ai-company-os-frontend/tests/workflow-draft.test.cjs"
+      ],
+      "other_only": [],
+      "divergent": [
+        {
+          "path": "product/SOURCE_MANIFEST.json",
+          "ui": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+          "other": "981a13fc226184dc3a911ae0d94e0042285ff302"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+          "ui": "2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d",
+          "other": "3e16b9952af6886b6579729108a0278042ac4052"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+          "ui": "0de1a4ddd21fa7a54f97e0fbdb2f5a151f05f376",
+          "other": "187289ca6e97dbfa30d5237207e6b4f797638f01"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+          "ui": "ca4ae08572c05f63b171f05b72a5fa31b6ead1b9",
+          "other": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.module.css",
+          "ui": "2b7649d904056f1c4a588bb3764ee9b343dd0d4e",
+          "other": "20b81d1d78ef5a11e5f196f60d5f2426e67dfd35"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+          "ui": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+          "other": "b25760113ad7dd163e2f2c751425232609ab712e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/eds.css",
+          "ui": "9ac0f950a11eccc8c4b9290c3b98a21aa7d44387",
+          "other": "d5227c57cbf033a7269abe409ee5929819bc2a0d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+          "ui": "b95d618c8bfc1f4c00bfe4c7aee880f43ae7bd0d",
+          "other": "96e602c1e1add9eba5a59b7e10b2a3da9d51365e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+          "ui": "3cf52a0fa79cdae441c5124d537f20b051d01f28",
+          "other": "593af6fd77724bd3b771fc408e4dbda4464abaa8"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+          "ui": "65a2bbe1e7c9dfb6223df669d15ce87ce85a9a86",
+          "other": "d80f97e1e6255221df3a9fd17accf330cce4eb5c"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+          "ui": "73ef76f14855875aa50a7e619214a5311c1393f2",
+          "other": "01e32cc20d639bf99b3e4e5e9d937ccbb8b879d0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+          "ui": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+          "other": "934edeaa248526261623be36e84b039e671b2b33"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+          "ui": "64725b14c80ce4a6ae838d47c923cbde0ac3af30",
+          "other": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+          "ui": "4c1c2ed5aa96702fd71929fec0d3f5af46057c26",
+          "other": "46827e7a4925cf56efdcda498250ce5e0f05e10e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+          "ui": "ee7e65f44d9852130708ade29e8bce3e483b4766",
+          "other": "06c814cd4254122fae17ca91766fbb75274ac953"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+          "ui": "091e37581f95e7ce3bf8dcf3d2641bdc11c37a8b",
+          "other": "5813c2a39888029aaf629b39ca51318489ef6d7d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/security/SecurityStudio.tsx",
+          "ui": "7984cd8560269bde141dc5048ada0cb7d942274e",
+          "other": "756f2049db76899007baf5900bdbc7d84d8bc96a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+          "ui": "2682eb756362593f3cf2b379d57cb418ce6abad3",
+          "other": "6ec7bec831e72b52b226079a1838e6075b978784"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+          "ui": "74dd811061a7c66663d7c842d431222cbe25cdc6",
+          "other": "3ffa3df3f3248a51956d1c55b1d3cb9ffcbaa417"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+          "ui": "46be91ef34615773ddbfd205b9331e7861c8251b",
+          "other": "756a324c59d86647582462c9a32a8f0068913724"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/scenes/OfficeScene.tsx",
+          "ui": "1dbddc3be56941c317d1b9dba067c4eac2cd70e8",
+          "other": "edc39bfc6814e1cff97233fc525dc04366f48866"
+        }
+      ]
+    },
+    {
+      "name": "Office A5R3",
+      "ref": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "truncated": false,
+      "identical": 365,
+      "ui_only": [
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py",
+        "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py",
+        "product/ai-company-os-backend/app/core/transaction/effect_fence_reference.py",
+        "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+        "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+        "product/ai-company-os-backend/contracts/source/ceo.office.shared.snapshot.schema.json",
+        "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+        "product/ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+        "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+        "product/ai-company-os-backend/tests/test_external_claim_review_0215.py",
+        "product/ai-company-os-backend/tests/test_lifecycle_db_http_0225.py",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+        "product/ai-company-os-backend/tests/test_pinned_research_t1_0225.py",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py",
+        "product/ai-company-os-backend/tests/test_research_t1_integration_0225.py",
+        "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+        "product/ai-company-os-backend/tests/test_sample_task_0221.py",
+        "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+        "product/ai-company-os-backend/tests/test_shared_snapshot_0222.py",
+        "product/ai-company-os-backend/tests/test_shared_snapshot_db_0223.py",
+        "product/ai-company-os-backend/tests/test_signed_consume_reference_0217.py",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+        "product/ai-company-os-frontend/contracts/generated/ceo.office.shared.snapshot.schema.json",
+        "product/ai-company-os-frontend/features/capabilities/studioCatalog.ts",
+        "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+        "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.module.css",
+        "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.tsx",
+        "product/ai-company-os-frontend/features/ceo-dashboard/sectionModel.ts",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts",
+        "product/ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css",
+        "product/ai-company-os-frontend/features/evidence/AgentRoleProfile.tsx",
+        "product/ai-company-os-frontend/features/evidence/ControlSourceInspector.tsx",
+        "product/ai-company-os-frontend/features/evidence/controlSourceCatalog.ts",
+        "product/ai-company-os-frontend/features/evidence/studioContext.ts",
+        "product/ai-company-os-frontend/features/evidence/studioGovernance.ts",
+        "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+        "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+        "product/ai-company-os-frontend/features/graph/graphPresentation.ts",
+        "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+        "product/ai-company-os-frontend/features/mvp/historicalEvidence.ts",
+        "product/ai-company-os-frontend/features/mvp/historicalPresentation.ts",
+        "product/ai-company-os-frontend/features/mvp/studioContext.ts",
+        "product/ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+        "product/ai-company-os-frontend/features/project-management/ProjectRoadmap.module.css",
+        "product/ai-company-os-frontend/features/project-management/ProjectRoadmap.tsx",
+        "product/ai-company-os-frontend/features/project-management/dependencyNeighborhood.ts",
+        "product/ai-company-os-frontend/features/workflow/DraftInspector.module.css",
+        "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+        "product/ai-company-os-frontend/features/workflow/draftInspector.ts",
+        "product/ai-company-os-frontend/features/workflow/draftOverview.ts",
+        "product/ai-company-os-frontend/features/workflow/readbackBoundary.ts",
+        "product/ai-company-os-frontend/office/engine/roomAccents.ts",
+        "product/ai-company-os-frontend/scripts/run-studio-0223.cjs",
+        "product/ai-company-os-frontend/tests/historical-evidence-0214.test.cjs",
+        "product/ai-company-os-frontend/tests/historical-presentation-0215.test.cjs",
+        "product/ai-company-os-frontend/tests/plan-proxy-0223.test.cjs",
+        "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+        "product/ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+        "product/ai-company-os-frontend/tests/studio-context-0223.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10h-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10i-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j05-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j11-sections.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j12-studio.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j14-governance.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j17-ceo.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j19-roadmap.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j21-capabilities.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j22-control-sources.test.cjs"
+      ],
+      "other_only": [
+        "product/ai-company-os-frontend/office/engine/premiumDynamicFloors.ts",
+        "product/ai-company-os-frontend/office/engine/premiumFloorRender.ts",
+        "product/ai-company-os-frontend/office/engine/premiumFloorSvg.ts",
+        "product/ai-company-os-frontend/office/engine/premiumFloorTraffic.ts",
+        "product/ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-floor-render.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-floor-traffic.test.cjs"
+      ],
+      "divergent": [
+        {
+          "path": "product/SOURCE_MANIFEST.json",
+          "ui": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+          "other": "d14c7fd5d19770ec1e42cb414d600c317a30c556"
+        },
+        {
+          "path": "product/ai-company-os-backend/CONTRACT_PIN.md",
+          "ui": "212db95a20268bb6261a5832446a1d9718b2195b",
+          "other": "f997a337773dd26e2011a604aad3e31d47b2fb17"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+          "ui": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822",
+          "other": "b465e37d2959b1c29dd0e14980f286de86c1c906"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+          "ui": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+          "other": "719ce306304bca7b294483c1a8f7c74c64dd0b73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+          "ui": "b43a8d1129138b917c499ad1091ac61940af1846",
+          "other": "350fd89572d047d9ac89f3a6c80b494772e563ba"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "ui": "fa47acd32adb309896f762ec50e47bf26641adbb",
+          "other": "e015a0fb7f2eff07117dc5f9acb309e5bbcb6f52"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+          "ui": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+          "other": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+          "ui": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+          "other": "783e9842c4712dac37b650354286f3f7c06290f0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/CONTRACT_PIN.md",
+          "ui": "212db95a20268bb6261a5832446a1d9718b2195b",
+          "other": "f997a337773dd26e2011a604aad3e31d47b2fb17"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/layout.tsx",
+          "ui": "29f15f7920c11b64db7526e0b53721e9ce60022a",
+          "other": "ba4cb5b81def3aefd93be62d163f0d5aa503e35f"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/office/premium/page.tsx",
+          "ui": "d88f283005fff2585c9d961097c0f2b5fcfb763e",
+          "other": "dba6bfe8e9f73e7d2b7489e5fd0060e7ec127c82"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+          "ui": "e7feeb6dffab3408cbe7afce836afded5ad42229",
+          "other": "560bce08058a7a68aea0523e5d1a57e844363d39"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+          "ui": "0de1a4ddd21fa7a54f97e0fbdb2f5a151f05f376",
+          "other": "187289ca6e97dbfa30d5237207e6b4f797638f01"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+          "ui": "ca4ae08572c05f63b171f05b72a5fa31b6ead1b9",
+          "other": "a55f1004df509ce4759c228b67beef0f6729bd72"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx",
+          "ui": "6118c9d5a57f7991094e72ef9903fa65a5e6c724",
+          "other": "8d6e5f9790ac7908178b262562de6afc206cd301"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.module.css",
+          "ui": "2b7649d904056f1c4a588bb3764ee9b343dd0d4e",
+          "other": "20b81d1d78ef5a11e5f196f60d5f2426e67dfd35"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+          "ui": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+          "other": "b25760113ad7dd163e2f2c751425232609ab712e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+          "ui": "faee00939e584b7339729a2b1a072af8cd8d0df1",
+          "other": "4831d41af6c33cd85e183fabc1751bb0ca1d7620"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/eds.css",
+          "ui": "9ac0f950a11eccc8c4b9290c3b98a21aa7d44387",
+          "other": "d5227c57cbf033a7269abe409ee5929819bc2a0d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+          "ui": "b95d618c8bfc1f4c00bfe4c7aee880f43ae7bd0d",
+          "other": "96e602c1e1add9eba5a59b7e10b2a3da9d51365e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+          "ui": "3cf52a0fa79cdae441c5124d537f20b051d01f28",
+          "other": "864ec1a8c5e069c1614640e7db91614851d93293"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+          "ui": "65a2bbe1e7c9dfb6223df669d15ce87ce85a9a86",
+          "other": "d80f97e1e6255221df3a9fd17accf330cce4eb5c"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/core-review/CorePreview.tsx",
+          "ui": "1cde40d7c912ef389a562e687676d03cc09b40bb",
+          "other": "38cc1aa3852aa9bfea8f402726196da64e627152"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/core-review/planProjection.ts",
+          "ui": "e337a8da904e31b027f02d5876ab451d8da1d699",
+          "other": "2981fd4fbff4c7f3215a8b59b1a5ff58e7eb1830"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+          "ui": "5456a3812117d4f4d9503e4875625e58bea0382b",
+          "other": "ba82bc6ff78ad85a0003cdb520dc674ec7800bf1"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+          "ui": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+          "other": "a9293468f0e5249e641f80fc5b91c2d2f9f67d39"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+          "ui": "73ef76f14855875aa50a7e619214a5311c1393f2",
+          "other": "01e32cc20d639bf99b3e4e5e9d937ccbb8b879d0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+          "ui": "bb3ad084dd62a094363a44e86805f9693400bb30",
+          "other": "94339b3186ee83a3563031fb39742ac0bc9b6cc6"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+          "ui": "6b87f0d00ac5406fec4b6f5e92db9d5fb94d4b26",
+          "other": "67edc97176bb5a257afc0121ae34ac53315288af"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+          "ui": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+          "other": "934edeaa248526261623be36e84b039e671b2b33"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+          "ui": "64725b14c80ce4a6ae838d47c923cbde0ac3af30",
+          "other": "69737471493a4233d94dc74da94a492d7fb844bf"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+          "ui": "4c1c2ed5aa96702fd71929fec0d3f5af46057c26",
+          "other": "fcbe651133d797c814b95214ec726eeddbe2c49a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+          "ui": "ee7e65f44d9852130708ade29e8bce3e483b4766",
+          "other": "06c814cd4254122fae17ca91766fbb75274ac953"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+          "ui": "091e37581f95e7ce3bf8dcf3d2641bdc11c37a8b",
+          "other": "3e043d753ab51d6b997b6a34258d7d1a60854502"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/security/SecurityStudio.tsx",
+          "ui": "7984cd8560269bde141dc5048ada0cb7d942274e",
+          "other": "756f2049db76899007baf5900bdbc7d84d8bc96a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+          "ui": "420869b823ea9ef787b294b8e08e9e4ee4522aca",
+          "other": "f788ad952e2e8258399b55cd9b3eb24700cd0c4b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/ParallelStudio.module.css",
+          "ui": "d834f6615540232f259e5d920c06c16b9488e686",
+          "other": "dacf4f6b1788255b844970b2cd2355ea96fa562d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+          "ui": "b41ee9d0cabd206327f7ea2769932a10bc6d0e4f",
+          "other": "c76576aae563e1d7c2e82ce241871ba4841bb8ca"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+          "ui": "d7bde30e7f91db72cd9c2c57531836bb3f355bac",
+          "other": "e08648fc3ce0c8f320f0d8f547a1b816b7176be3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+          "ui": "d7cf426e00e5d55f83c382d176cf699e96ccae16",
+          "other": "f3848b52ccb9157d043c0af14f6e776a03d50439"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+          "ui": "2682eb756362593f3cf2b379d57cb418ce6abad3",
+          "other": "b33c600966052581cd5cc65e19e339acb52f92c9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+          "ui": "74dd811061a7c66663d7c842d431222cbe25cdc6",
+          "other": "3ffa3df3f3248a51956d1c55b1d3cb9ffcbaa417"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+          "ui": "46be91ef34615773ddbfd205b9331e7861c8251b",
+          "other": "d978aa438747b4b02632f0a79cebfc8f8c2d0cb4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-registry.test.cjs",
+          "ui": "d7cdc2f1918d7328e4b180558488987ca00ad444",
+          "other": "0e44dbaf1e2297ea9a1cf2388bfb2aad8d062d0a"
+        }
+      ]
+    },
+    {
+      "name": "A6 review",
+      "ref": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+      "truncated": false,
+      "identical": 355,
+      "ui_only": [
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py",
+        "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py",
+        "product/ai-company-os-backend/app/core/transaction/effect_fence_reference.py",
+        "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+        "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+        "product/ai-company-os-backend/contracts/source/ceo.office.shared.snapshot.schema.json",
+        "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+        "product/ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+        "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+        "product/ai-company-os-backend/tests/test_external_claim_review_0215.py",
+        "product/ai-company-os-backend/tests/test_lifecycle_db_http_0225.py",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+        "product/ai-company-os-backend/tests/test_pinned_research_t1_0225.py",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py",
+        "product/ai-company-os-backend/tests/test_research_t1_integration_0225.py",
+        "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+        "product/ai-company-os-backend/tests/test_sample_task_0221.py",
+        "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+        "product/ai-company-os-backend/tests/test_shared_snapshot_0222.py",
+        "product/ai-company-os-backend/tests/test_shared_snapshot_db_0223.py",
+        "product/ai-company-os-backend/tests/test_signed_consume_reference_0217.py",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+        "product/ai-company-os-frontend/app/office/premium/hybrid/page.tsx",
+        "product/ai-company-os-frontend/contracts/generated/ceo.office.shared.snapshot.schema.json",
+        "product/ai-company-os-frontend/features/capabilities/studioCatalog.ts",
+        "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+        "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.module.css",
+        "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.tsx",
+        "product/ai-company-os-frontend/features/ceo-dashboard/sectionModel.ts",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts",
+        "product/ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css",
+        "product/ai-company-os-frontend/features/evidence/AgentRoleProfile.tsx",
+        "product/ai-company-os-frontend/features/evidence/ControlSourceInspector.tsx",
+        "product/ai-company-os-frontend/features/evidence/controlSourceCatalog.ts",
+        "product/ai-company-os-frontend/features/evidence/studioContext.ts",
+        "product/ai-company-os-frontend/features/evidence/studioGovernance.ts",
+        "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+        "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+        "product/ai-company-os-frontend/features/graph/graphPresentation.ts",
+        "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+        "product/ai-company-os-frontend/features/mvp/historicalEvidence.ts",
+        "product/ai-company-os-frontend/features/mvp/historicalPresentation.ts",
+        "product/ai-company-os-frontend/features/mvp/studioContext.ts",
+        "product/ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+        "product/ai-company-os-frontend/features/project-management/ProjectRoadmap.module.css",
+        "product/ai-company-os-frontend/features/project-management/ProjectRoadmap.tsx",
+        "product/ai-company-os-frontend/features/project-management/dependencyNeighborhood.ts",
+        "product/ai-company-os-frontend/features/workflow/DraftInspector.module.css",
+        "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+        "product/ai-company-os-frontend/features/workflow/draftInspector.ts",
+        "product/ai-company-os-frontend/features/workflow/draftOverview.ts",
+        "product/ai-company-os-frontend/features/workflow/readbackBoundary.ts",
+        "product/ai-company-os-frontend/office/engine/premiumActorIdentity.ts",
+        "product/ai-company-os-frontend/office/engine/premiumHybridLayout.ts",
+        "product/ai-company-os-frontend/office/engine/premiumHybridRender.ts",
+        "product/ai-company-os-frontend/office/engine/premiumIdentityTraffic.ts",
+        "product/ai-company-os-frontend/office/engine/roomAccents.ts",
+        "product/ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx",
+        "product/ai-company-os-frontend/scripts/run-studio-0223.cjs",
+        "product/ai-company-os-frontend/tests/historical-evidence-0214.test.cjs",
+        "product/ai-company-os-frontend/tests/historical-presentation-0215.test.cjs",
+        "product/ai-company-os-frontend/tests/plan-proxy-0223.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-actor-identity.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-hybrid-layout.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-hybrid-render.test.cjs",
+        "product/ai-company-os-frontend/tests/premium-identity-traffic.test.cjs",
+        "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+        "product/ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+        "product/ai-company-os-frontend/tests/studio-context-0223.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10h-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10i-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j05-model.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j11-sections.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j12-studio.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j14-governance.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j17-ceo.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j19-roadmap.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j21-capabilities.test.cjs",
+        "product/ai-company-os-frontend/tests/ui-p10j22-control-sources.test.cjs"
+      ],
+      "other_only": [],
+      "divergent": [
+        {
+          "path": "product/SOURCE_MANIFEST.json",
+          "ui": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+          "other": "f5b011cc9f72e85a7d1c371705e11e6dacfc9c42"
+        },
+        {
+          "path": "product/ai-company-os-backend/CONTRACT_PIN.md",
+          "ui": "212db95a20268bb6261a5832446a1d9718b2195b",
+          "other": "f997a337773dd26e2011a604aad3e31d47b2fb17"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+          "ui": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822",
+          "other": "b465e37d2959b1c29dd0e14980f286de86c1c906"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+          "ui": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+          "other": "719ce306304bca7b294483c1a8f7c74c64dd0b73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+          "ui": "b43a8d1129138b917c499ad1091ac61940af1846",
+          "other": "350fd89572d047d9ac89f3a6c80b494772e563ba"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "ui": "fa47acd32adb309896f762ec50e47bf26641adbb",
+          "other": "e015a0fb7f2eff07117dc5f9acb309e5bbcb6f52"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+          "ui": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+          "other": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+          "ui": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+          "other": "783e9842c4712dac37b650354286f3f7c06290f0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/CONTRACT_PIN.md",
+          "ui": "212db95a20268bb6261a5832446a1d9718b2195b",
+          "other": "f997a337773dd26e2011a604aad3e31d47b2fb17"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/layout.tsx",
+          "ui": "29f15f7920c11b64db7526e0b53721e9ce60022a",
+          "other": "ba4cb5b81def3aefd93be62d163f0d5aa503e35f"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/office/premium/page.tsx",
+          "ui": "d88f283005fff2585c9d961097c0f2b5fcfb763e",
+          "other": "dba6bfe8e9f73e7d2b7489e5fd0060e7ec127c82"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+          "ui": "e7feeb6dffab3408cbe7afce836afded5ad42229",
+          "other": "560bce08058a7a68aea0523e5d1a57e844363d39"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+          "ui": "0de1a4ddd21fa7a54f97e0fbdb2f5a151f05f376",
+          "other": "187289ca6e97dbfa30d5237207e6b4f797638f01"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+          "ui": "ca4ae08572c05f63b171f05b72a5fa31b6ead1b9",
+          "other": "a55f1004df509ce4759c228b67beef0f6729bd72"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx",
+          "ui": "6118c9d5a57f7991094e72ef9903fa65a5e6c724",
+          "other": "8d6e5f9790ac7908178b262562de6afc206cd301"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.module.css",
+          "ui": "2b7649d904056f1c4a588bb3764ee9b343dd0d4e",
+          "other": "20b81d1d78ef5a11e5f196f60d5f2426e67dfd35"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+          "ui": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+          "other": "b25760113ad7dd163e2f2c751425232609ab712e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+          "ui": "faee00939e584b7339729a2b1a072af8cd8d0df1",
+          "other": "4831d41af6c33cd85e183fabc1751bb0ca1d7620"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/eds.css",
+          "ui": "9ac0f950a11eccc8c4b9290c3b98a21aa7d44387",
+          "other": "d5227c57cbf033a7269abe409ee5929819bc2a0d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+          "ui": "b95d618c8bfc1f4c00bfe4c7aee880f43ae7bd0d",
+          "other": "96e602c1e1add9eba5a59b7e10b2a3da9d51365e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+          "ui": "3cf52a0fa79cdae441c5124d537f20b051d01f28",
+          "other": "864ec1a8c5e069c1614640e7db91614851d93293"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+          "ui": "65a2bbe1e7c9dfb6223df669d15ce87ce85a9a86",
+          "other": "d80f97e1e6255221df3a9fd17accf330cce4eb5c"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/core-review/CorePreview.tsx",
+          "ui": "1cde40d7c912ef389a562e687676d03cc09b40bb",
+          "other": "38cc1aa3852aa9bfea8f402726196da64e627152"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/core-review/planProjection.ts",
+          "ui": "e337a8da904e31b027f02d5876ab451d8da1d699",
+          "other": "2981fd4fbff4c7f3215a8b59b1a5ff58e7eb1830"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+          "ui": "5456a3812117d4f4d9503e4875625e58bea0382b",
+          "other": "ba82bc6ff78ad85a0003cdb520dc674ec7800bf1"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+          "ui": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+          "other": "a9293468f0e5249e641f80fc5b91c2d2f9f67d39"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+          "ui": "73ef76f14855875aa50a7e619214a5311c1393f2",
+          "other": "01e32cc20d639bf99b3e4e5e9d937ccbb8b879d0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+          "ui": "bb3ad084dd62a094363a44e86805f9693400bb30",
+          "other": "94339b3186ee83a3563031fb39742ac0bc9b6cc6"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+          "ui": "6b87f0d00ac5406fec4b6f5e92db9d5fb94d4b26",
+          "other": "67edc97176bb5a257afc0121ae34ac53315288af"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+          "ui": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+          "other": "934edeaa248526261623be36e84b039e671b2b33"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+          "ui": "64725b14c80ce4a6ae838d47c923cbde0ac3af30",
+          "other": "69737471493a4233d94dc74da94a492d7fb844bf"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+          "ui": "4c1c2ed5aa96702fd71929fec0d3f5af46057c26",
+          "other": "fcbe651133d797c814b95214ec726eeddbe2c49a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+          "ui": "ee7e65f44d9852130708ade29e8bce3e483b4766",
+          "other": "06c814cd4254122fae17ca91766fbb75274ac953"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+          "ui": "091e37581f95e7ce3bf8dcf3d2641bdc11c37a8b",
+          "other": "3e043d753ab51d6b997b6a34258d7d1a60854502"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/security/SecurityStudio.tsx",
+          "ui": "7984cd8560269bde141dc5048ada0cb7d942274e",
+          "other": "756f2049db76899007baf5900bdbc7d84d8bc96a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+          "ui": "420869b823ea9ef787b294b8e08e9e4ee4522aca",
+          "other": "f788ad952e2e8258399b55cd9b3eb24700cd0c4b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/ParallelStudio.module.css",
+          "ui": "d834f6615540232f259e5d920c06c16b9488e686",
+          "other": "dacf4f6b1788255b844970b2cd2355ea96fa562d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+          "ui": "b41ee9d0cabd206327f7ea2769932a10bc6d0e4f",
+          "other": "c76576aae563e1d7c2e82ce241871ba4841bb8ca"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+          "ui": "d7bde30e7f91db72cd9c2c57531836bb3f355bac",
+          "other": "e08648fc3ce0c8f320f0d8f547a1b816b7176be3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+          "ui": "d7cf426e00e5d55f83c382d176cf699e96ccae16",
+          "other": "f3848b52ccb9157d043c0af14f6e776a03d50439"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+          "ui": "2682eb756362593f3cf2b379d57cb418ce6abad3",
+          "other": "b33c600966052581cd5cc65e19e339acb52f92c9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+          "ui": "74dd811061a7c66663d7c842d431222cbe25cdc6",
+          "other": "3ffa3df3f3248a51956d1c55b1d3cb9ffcbaa417"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+          "ui": "46be91ef34615773ddbfd205b9331e7861c8251b",
+          "other": "d978aa438747b4b02632f0a79cebfc8f8c2d0cb4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-registry.test.cjs",
+          "ui": "d7cdc2f1918d7328e4b180558488987ca00ad444",
+          "other": "0e44dbaf1e2297ea9a1cf2388bfb2aad8d062d0a"
+        }
+      ]
+    }
+  ],
+  "history": {
+    "original_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "historical_commit": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+    "before": 52,
+    "after_static": 55,
+    "closure": [
+      {
+        "path": "database/0192/candidate_event_outbox_fence.sql",
+        "source": "database/0192/candidate_event_outbox_fence.sql",
+        "expected_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "actual_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "bytes": 1346,
+        "actual_bytes": 1346
+      },
+      {
+        "path": "database/0193/candidate_run_head.sql",
+        "source": "database/0193/candidate_run_head.sql",
+        "expected_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "actual_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "bytes": 878,
+        "actual_bytes": 878
+      },
+      {
+        "path": "database/0194/candidate_transition_roles.sql",
+        "source": "database/0194/candidate_transition_roles.sql",
+        "expected_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "actual_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "bytes": 2437,
+        "actual_bytes": 2437
+      },
+      {
+        "path": "database/0195/candidate_admission_budget.sql",
+        "source": "database/0195/candidate_admission_budget.sql",
+        "expected_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "actual_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "bytes": 2134,
+        "actual_bytes": 2134
+      },
+      {
+        "path": "database/0196L/candidate_lease_settlement.sql",
+        "source": "database/0196L/candidate_lease_settlement.sql",
+        "expected_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "actual_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "bytes": 1751,
+        "actual_bytes": 1751
+      },
+      {
+        "path": "database/0203T/terminal_command_anchors.sql",
+        "source": "database/0203T/terminal_command_anchors.sql",
+        "expected_blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "actual_blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "bytes": 1031,
+        "actual_bytes": 1031
+      },
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "source": "product/ai-company-os-backend/app/__init__.py",
+        "expected_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "actual_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "actual_bytes": 0
+      },
+      {
+        "path": "product/ai-company-os-backend/app/api/__init__.py",
+        "source": "product/ai-company-os-backend/app/api/__init__.py",
+        "expected_blob": "2d899e27663a6e414765904ffd9c4624a825adde",
+        "actual_blob": "2d899e27663a6e414765904ffd9c4624a825adde",
+        "bytes": 53,
+        "actual_bytes": 53
+      },
+      {
+        "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+        "source": "tests/integration/historical_0207/app/api/lifecycle_prefix_projection.py",
+        "expected_blob": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+        "actual_blob": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+        "bytes": 777,
+        "actual_bytes": 777
+      },
+      {
+        "path": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+        "source": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+        "expected_blob": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+        "actual_blob": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+        "bytes": 774,
+        "actual_bytes": 774
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/__init__.py",
+        "expected_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "actual_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "actual_bytes": 59
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "expected_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "actual_bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "source": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "expected_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "actual_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "actual_bytes": 7251
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+        "source": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+        "expected_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+        "actual_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+        "bytes": 2994,
+        "actual_bytes": 2994
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "source": "tests/integration/historical_0207/app/core/agent_runtime/scheduler_review.py",
+        "expected_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+        "actual_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+        "bytes": 2285,
+        "actual_bytes": 2285
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+        "source": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+        "expected_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+        "actual_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+        "bytes": 1698,
+        "actual_bytes": 1698
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+        "expected_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+        "actual_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+        "bytes": 66,
+        "actual_bytes": 66
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+        "source": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+        "expected_blob": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+        "actual_blob": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+        "bytes": 3597,
+        "actual_bytes": 3597
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+        "source": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+        "expected_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+        "actual_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+        "bytes": 1868,
+        "actual_bytes": 1868
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+        "source": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+        "expected_blob": "2b9a01807621eac35239baab55b10df6b1edb91b",
+        "actual_blob": "2b9a01807621eac35239baab55b10df6b1edb91b",
+        "bytes": 6879,
+        "actual_bytes": 6879
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+        "source": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+        "expected_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+        "actual_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+        "bytes": 3802,
+        "actual_bytes": 3802
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "expected_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "actual_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "bytes": 287,
+        "actual_bytes": 287
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+        "expected_blob": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+        "actual_blob": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+        "bytes": 9374,
+        "actual_bytes": 9374
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "expected_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "actual_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "bytes": 3093,
+        "actual_bytes": 3093
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "expected_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "actual_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "bytes": 9251,
+        "actual_bytes": 9251
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+        "expected_blob": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+        "actual_blob": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+        "bytes": 3394,
+        "actual_bytes": 3394
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+        "expected_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+        "actual_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+        "bytes": 1548,
+        "actual_bytes": 1548
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+        "expected_blob": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+        "actual_blob": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+        "bytes": 8523,
+        "actual_bytes": 8523
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+        "expected_blob": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+        "actual_blob": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+        "bytes": 8011,
+        "actual_bytes": 8011
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+        "source": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+        "expected_blob": "3108a4ba72d999984502e2687a4e6589b079df1d",
+        "actual_blob": "3108a4ba72d999984502e2687a4e6589b079df1d",
+        "bytes": 7640,
+        "actual_bytes": 7640
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "expected_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "actual_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "bytes": 259,
+        "actual_bytes": 259
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "source": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "expected_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "actual_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "bytes": 3082,
+        "actual_bytes": 3082
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "source": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "expected_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "actual_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "bytes": 692,
+        "actual_bytes": 692
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "expected_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "actual_bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "source": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "expected_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "actual_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "bytes": 1335,
+        "actual_bytes": 1335
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "expected_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "actual_bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "source": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "expected_blob": "04487bda631e9133f3904451a39fc8722e985997",
+        "actual_blob": "04487bda631e9133f3904451a39fc8722e985997",
+        "bytes": 3367,
+        "actual_bytes": 3367
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "expected_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "actual_bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "expected_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "actual_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "bytes": 4286,
+        "actual_bytes": 4286
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+        "source": "tests/integration/historical_0207/app/core/transaction/postgres_admission_mapping.py",
+        "expected_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+        "actual_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+        "bytes": 13176,
+        "actual_bytes": 13176
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+        "expected_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+        "actual_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+        "bytes": 18997,
+        "actual_bytes": 18997
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+        "expected_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+        "actual_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+        "bytes": 2495,
+        "actual_bytes": 2495
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+        "expected_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+        "actual_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+        "bytes": 8493,
+        "actual_bytes": 8493
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "expected_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "actual_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "bytes": 5065,
+        "actual_bytes": 5065
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+        "source": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+        "expected_blob": "b011ae715b424a185963af552f524586115a23ec",
+        "actual_blob": "b011ae715b424a185963af552f524586115a23ec",
+        "bytes": 1105,
+        "actual_bytes": 1105
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+        "source": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+        "expected_blob": "53459c4b6961455dc183cb3b20382559862e98f6",
+        "actual_blob": "53459c4b6961455dc183cb3b20382559862e98f6",
+        "bytes": 6096,
+        "actual_bytes": 6096
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "source": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "expected_blob": "c30130313541ea9d857724de1bab98ad088374af",
+        "actual_blob": "c30130313541ea9d857724de1bab98ad088374af",
+        "bytes": 10496,
+        "actual_bytes": 10496
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+        "source": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+        "expected_blob": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+        "actual_blob": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+        "bytes": 6541,
+        "actual_bytes": 6541
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+        "source": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+        "expected_blob": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+        "actual_blob": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+        "bytes": 14286,
+        "actual_bytes": 14286
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+        "source": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+        "expected_blob": "7517cb4bdd2458684aa4540b127669ce1902521d",
+        "actual_blob": "7517cb4bdd2458684aa4540b127669ce1902521d",
+        "bytes": 3867,
+        "actual_bytes": 3867
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+        "source": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+        "expected_blob": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+        "actual_blob": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+        "bytes": 3757,
+        "actual_bytes": 3757
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+        "source": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+        "expected_blob": "9db44143d1d5395e222d111a4e847930f019208e",
+        "actual_blob": "9db44143d1d5395e222d111a4e847930f019208e",
+        "bytes": 9848,
+        "actual_bytes": 9848
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+        "source": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+        "expected_blob": "c9963f21766da435a00a18a5f49073ebe8603664",
+        "actual_blob": "c9963f21766da435a00a18a5f49073ebe8603664",
+        "bytes": 3163,
+        "actual_bytes": 3163
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+        "source": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+        "expected_blob": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+        "actual_blob": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+        "bytes": 6939,
+        "actual_bytes": 6939
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "source": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "expected_blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "actual_blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "bytes": 14108,
+        "actual_bytes": 14108
+      }
+    ],
+    "runner": "NOT_RUN",
+    "adapter_blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+    "test_blob": "18efc4ef225b09dc7cea38789a87dce4610563d0"
+  },
+  "actual_runs": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 unpinned; product 5.9.3",
+    "python": "3.13.5",
+    "chromium": "144.0.7559.96",
+    "model": {
+      "p21": 10,
+      "p22": 12,
+      "finance": 12,
+      "security": 13,
+      "total": 47
+    },
+    "standalone_css_fixture": 8,
+    "synthetic_adapter": 10,
+    "all_current_checks": 65
+  },
+  "logs_sha256": {
+    "finance.log": "d32030ab45b8aa6a6409b1699b0de5ac8297fd69666a947cfe93ebcef25941d0",
+    "git-access.log": "e0ea512e8776730982b0170605d767ef3f798a39f2cfe226d9c45136728caf86",
+    "historical-adapter.log": "983fcf31d7d6aba553aefebf2ab24e09b74c48685eefe4bbef59252342b97f7c",
+    "npm-offline.log": "1b2a5bd36ad1c3b6628e37e2db01abb11f6f00bd8ed545b6a40fb2826a6b75ef",
+    "p21.log": "e714ea9be72cb36381311390e464a7500f45ce53b5a3f600057d38614db0e2e9",
+    "p22.log": "480c10df93f148145d208e873aab0576777200747e4a57df9bdd37e49b3a42cc",
+    "pip-offline.log": "dd10ec4b8d0724a9005d572ae30a5b3d2716efa7fa69b86f5e1197f6a33ee1f6",
+    "security.log": "85b1733343ac018d517b814b8cf5e0ba7d30579deae42b20f9a507ba66a4b219",
+    "visual.log": "f6b755f49dcaacc6e9a5a28ea9d83149bdc24c1fd9288c4abb1570a5ca993255"
+  },
+  "blockers": {
+    "checkout": "git DNS failure exit 128",
+    "npm": "offline ENOTCACHED exit 1",
+    "pip": "no-index fastapi==0.163.0 unavailable exit 1",
+    "review": "no new approved REVIEW.json",
+    "full_w8": "NOT_RUN",
+    "next_build": "NOT_RUN",
+    "full_backend": "NOT_RUN",
+    "actual_product_captures": "0/99",
+    "windows_native": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}
