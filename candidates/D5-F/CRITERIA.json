@@ -1,0 +1,16 @@
+{
+  "id":"D5-F-RECOVERY-SCOPE-v1",
+  "scope":"D5-F publication recovery and restore only; not whole D5 or project",
+  "standard":"f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+  "weights":{"design":15,"source":35,"functional_tests":20,"integration":20,"final_acceptance":10},
+  "baseline":{"design":[1,2],"source":[1,3],"functional_tests":[0,7],"integration":[0,2],"final_acceptance":[0,1]},
+  "criteria":{
+    "design":{"D01":"Existing D5-D P07/P08 recovery and restore requirements","D02":"Explicit recovery disposition and remaining owner/custody boundaries"},
+    "source":{"S01":"Existing pinned D5-E publication fixture","S02":"Complete exact original T1 backend and DDL available locally","S03":"Actual owner recovery/readback implementation, not a second fixture"},
+    "functional_tests":{"F01":"Lost finalization acknowledgement: actual committed state, old request blocked without reapply","F02":"Failure before final commit: durable pending, no retry","F03":"Restore authority alone: stale claims blocked by owner readback or retained pin","F04":"Restore owner alone: stale claims blocked","F05":"Restore both: externally retained latest pin rejects stale restoration","F06":"Restore all local state plus stale reference: prevent reuse of consumed scope","F07":"Nonparticipating external writer cannot change owner while fence held"},
+    "integration":{"I01":"Original 17 T1 regression exact source rerun and evidence review","I02":"Actual protected owner recovery integrated and tested with canonical transaction"},
+    "final_acceptance":{"A01":"Independent custody, restore and recovery acceptance"}
+  },
+  "baseline_evidence":{"D01":"D5-D/OWNER_CONTRACT.md P07/P08","S01":"D5-E source and 15 fixture cases"},
+  "scoring_note":"Baseline established before this run, not a previous published percentage. F01-F05 fixture scope only; F06/F07 are required guarantees and known residual reproduction is not a pass. Source excludes test code. All criteria equal within stage. No whole D5 percentage until approved complete workstream inventory."
+}
