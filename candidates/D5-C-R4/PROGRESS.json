@@ -1,0 +1,18 @@
+{
+  "revision": "D5-C-R4",
+  "parent": "78da1ae5da98e40c256824b53558811dc412704c",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "classification": "PREPARED_PG_DIAGNOSTIC_NOT_RUN",
+  "preflight": {"pass": 6, "total": 6, "fail": 0, "skip": 0, "exit_code": 0, "python": "3.13.5"},
+  "actual_pg": {"pass": 0, "total": 4, "status": "NOT_RUN", "ids": ["PG01", "PG02", "PG03", "PG04"]},
+  "original_T1_rerun": 0,
+  "original_IAM_rerun": 0,
+  "scored_D5_C_R4": "HESAPLANAMADI",
+  "D5_G1": {"previous": 42.5, "current": 42.5, "delta_pp": 0},
+  "D5_F": {"previous": 62.619, "current": 62.619, "delta_pp": 0},
+  "acceptance": {"core": [12,16], "ui": [21,40], "org_plan": [5,7], "mvp": [0,11], "independent": [0,7]},
+  "new_gates": 0,
+  "product_changes": 0,
+  "blockers": ["fresh isolated PG stage and port allocation", "PG and driver unavailable locally", "protected publisher", "trusted COMMIT expiry", "live ORG membership", "independent custody"],
+  "activation": "HOLD"
+}

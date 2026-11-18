@@ -1,0 +1,21 @@
+{
+  "revision": "D5-C-R4",
+  "classification": "PG_TRANSPORT_DIAGNOSTIC_ONLY",
+  "files": {
+    "run_pg_expiry.py": ["load_transport", "validate_target", "SETUP", "run", "main"],
+    "test_preflight.py": ["Preflight"],
+    "postgres_session.original.py": ["PostgresSession", "postgres_transaction", "CommitOutcomeUnknown"],
+    "preflight.log": [],
+    "exit_code.txt": [],
+    "HANDOVER.md": [],
+    "PROGRESS.json": []
+  },
+  "original_source_pin": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+  "diagnostic_only_db_objects": ["d5c_r4_probe.observation", "d5c_r4_probe.check_at_end", "expiry_probe"],
+  "dependencies": {"offline": "Python standard library", "deferred_execution": "PostgreSQL 17.12 and reviewed Psycopg 3.3.9 environment"},
+  "product_changes": 0,
+  "apis": [],
+  "product_database_migrations": [],
+  "events": [],
+  "activation": "HOLD"
+}
