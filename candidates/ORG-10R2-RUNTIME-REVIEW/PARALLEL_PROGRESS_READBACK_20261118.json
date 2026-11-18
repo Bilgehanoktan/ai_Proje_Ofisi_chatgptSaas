@@ -1,0 +1,203 @@
+{
+  "revision": "ORG-10R2-PARALLEL-READBACK-20261118",
+  "scope": "Read-only cross-lane evidence reconciliation, no new product source or runtime execution",
+  "parent": "b0bcf4848e2781ff8d1aeb26e807f6956c008f96",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "architecture": {
+    "design_master_index_blob": "ecf901eb19965440015b3a7b1ba37685da1371cb",
+    "integration_sequence_blob": "b6ec523ffad93c92721f70c0431e0ad7155956b0",
+    "preserve_authority": "CEO-0174/0179=B; no main merge, CI, production, independent acceptance or new grants"
+  },
+  "parallel": [
+    {
+      "lane": "Core",
+      "head": "f6cde1c6dece8423c1f809cee9896101f76b2150",
+      "evidence": "D3_R4_RAW_EVIDENCE_REVIEW_0228.json",
+      "accepted": [
+        12,
+        16
+      ],
+      "prior": [
+        11,
+        16
+      ],
+      "d3_fixture_probes": 230,
+      "scope_limit": "isolated fixture, not canonical product RLS"
+    },
+    {
+      "lane": "D5-F-R2",
+      "head": "38227d51f02bd61da654cf4786a53c72e53ccf86",
+      "previous": 40.9524,
+      "current": 62.619,
+      "delta_points": 21.6667,
+      "tests": [
+        17,
+        17
+      ],
+      "scope_limit": "exact original synthetic SQLite; restore residual reproduced; no inheritance to MEM-03 or live authority"
+    },
+    {
+      "lane": "ORG-07C-R8",
+      "head": "9894e4befafc25155030e1ad338da6ef35359ba2",
+      "criteria": [
+        0,
+        14
+      ],
+      "weighted": 0,
+      "scope_limit": "R8 only; its historical T1 NOT_RUN is superseded by D5-F-R2 original test evidence, but protected-session requirements remain open"
+    },
+    {
+      "lane": "W5-MEM-03",
+      "head": "0bbcb5853eb7235dcbeefbd4fadae11383ddb715",
+      "previous": 0,
+      "current": 50,
+      "delta_points": 50,
+      "tests": "9 new NOT_RUN; prior MEM02 107 reported not rerun",
+      "scope_limit": "MEM03 only; changes snapshot_store, joint_context, memory_witness require exact D5 cross-regression"
+    },
+    {
+      "lane": "W5-J2-R4",
+      "head": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "candidate_tests_pass": 177,
+      "executions_including_reruns": 225,
+      "pg": [
+        0,
+        22
+      ],
+      "scope_limit": "fixture/diagnostic; provider and spend HOLD"
+    },
+    {
+      "lane": "W5-J",
+      "head": "147502d831ab146b8825585fc7ac390f951beb84",
+      "selected_local": [
+        170,
+        170
+      ],
+      "scope_limit": "local regression; Windows reported pass raw pending; do not add to J2 without dedup"
+    },
+    {
+      "lane": "D4-R6",
+      "head": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "scope_limit": "owner scope/fence review, PG31 not inherited"
+    },
+    {
+      "lane": "A6",
+      "head": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+      "static_review": [
+        55,
+        55
+      ],
+      "owner_acceptance": [
+        0,
+        55
+      ]
+    },
+    {
+      "lane": "Premium UI",
+      "head": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "accepted": [
+        21,
+        40
+      ],
+      "local_source_pins": [
+        61,
+        491
+      ]
+    },
+    {
+      "lane": "Unified U3A",
+      "head": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "mvp": [
+        0,
+        11
+      ],
+      "hd": [
+        0,
+        36
+      ],
+      "independent": [
+        0,
+        7
+      ],
+      "scope_limit": "full locked build/browser BLOCKED"
+    },
+    {
+      "lane": "EXT07R6",
+      "head": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+      "scope_limit": "original npm lock recovery deferred by user"
+    }
+  ],
+  "org10": {
+    "criteria_ref": "PROPOSED_PROGRESS_BASELINE.json",
+    "status": "PROPOSAL_NOT_ADOPTED",
+    "counts": {
+      "design": [
+        2,
+        3
+      ],
+      "source": [
+        3,
+        3
+      ],
+      "functional": [
+        3,
+        5
+      ],
+      "integration": [
+        1,
+        3
+      ],
+      "final_acceptance": [
+        0,
+        1
+      ]
+    },
+    "illustrative_weighted_percent": 63.6666666667,
+    "illustrative_only": true,
+    "official_weighted_percent": "HESAPLANAMADI",
+    "execution_plan_previous": [
+      2,
+      8
+    ],
+    "execution_plan_current": [
+      2,
+      8
+    ],
+    "org_plan_previous": [
+      5,
+      7
+    ],
+    "org_plan_current": [
+      5,
+      7
+    ],
+    "pg": [
+      0,
+      31
+    ],
+    "maintain": [
+      0,
+      48
+    ],
+    "port_55436": "NOT_EXPLICITLY_APPROVED",
+    "runtime_review": "HOLD",
+    "new_tests": 0,
+    "new_product_gates": 0
+  },
+  "ordinal": {
+    "source": "TRACK_0227_D2_ACCEPTED.json",
+    "blob": "1edbadfa508be9a2d33250eed12c4cfd8bf65c90",
+    "areas": 24,
+    "design_mean": 71.875,
+    "source_mean": 34.375,
+    "delta": 0,
+    "note": "ordinal scores, not completion percentages"
+  },
+  "next": "Existing ORG-10R1 runner only after independent runtime review and explicit D4/ORG port allocation. Then review original PG/launch reports; ORG-11 only after PG acceptance, coordinate protected-session owners. No repeated T1 original run; exact merged-source cross-regression separately owned.",
+  "limitations": [
+    "No real PostgreSQL or psycopg in current runtime. No new execution this turn.",
+    "No implicit approval inferred from general continue request.",
+    "Published heads observed, no guarantee against uncommitted parallel work.",
+    "Global weighted project percentage not calculable without agreed full lane criteria and weights."
+  ]
+}
