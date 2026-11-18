@@ -253,3 +253,7 @@ Original Windows JSON: 937 bytes, SHA256 79085656ad4d782a012642518d9d87245149760
 
 ## 0227 D3 scoped acceptance — evidence transfer
 D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fixture controls, 7/7 ZIP entries, 6/6 file hashes, owner FORCE RLS and non-owner contention. D3 current binary criterion PASS; 12/16 (75%). Evidence-only transfer, no source merge, no product RLS deployment. Canonical policy, pool integration, full company stream PG and independent security HOLD/open. Remaining E2/E3/E4 and B3; coordinate Unified U3 owner. tests/evidence/D3_EVIDENCE_TRANSFER_0227.json
+
+
+## D5-G2 — branch-local continuation
+[Handover](../candidates/D5-G2/HANDOVER.md) · [Progress](../candidates/D5-G2/PROGRESS.json). 33 local IAM component assertions; updated original T1/ORG NOT_RUN, no gate promotion.

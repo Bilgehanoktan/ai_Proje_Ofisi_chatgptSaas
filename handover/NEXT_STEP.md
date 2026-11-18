@@ -1,2 +1,6 @@
 # NEXT — 0227 post-D3
 D3 scoped RLS/lock contention accepted through metadata-only transfer from 426a2e69dd193a9ec8f61181cc809c28fc50733c; 12/16. E2/E3/E4 are remaining product gates; first coordinate existing Unified U3 acceptance branch and compare exact sources/locks/evidence, no duplicate execution. B3 independent custody/effect authority remains HOLD. Canonical product RLS, dynamic IAM/pool integration and full company-stream PG not accepted. Keep D1/D2 and D3 stopped; no merge or migration. tests/evidence/D3_EVIDENCE_TRANSFER_0227.json
+
+
+## D5-G2 — branch-local next
+[Run exact G2 regression](../candidates/D5-G2/run_regression.py), then joint D4 request/session/ORG owner binding and protected publication. Do not change canonical product acceptance or merge; owner/clock/custody HOLD.

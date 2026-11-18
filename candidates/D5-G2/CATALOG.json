@@ -1,0 +1,105 @@
+{
+  "revision": "D5-G2",
+  "classification": "isolated_product_source_delta",
+  "files": {
+    "product/ai-company-os-backend/app/core/iam_session.py": {
+      "modified": true,
+      "classes": [
+        "D0SessionResolver",
+        "SessionClaimCheck"
+      ],
+      "new_symbols": [
+        "D0SessionResolver._state",
+        "bootstrap_durable",
+        "open_durable",
+        "durable_pin",
+        "_durable_now",
+        "_read_durable",
+        "_resolve_durable",
+        "_revoke_durable",
+        "SessionClaimCheck.inspect"
+      ],
+      "modified_symbols": [
+        "__init__",
+        "resolve",
+        "revoke_local"
+      ],
+      "dependencies": [
+        "Python stdlib sqlite3",
+        "contextlib",
+        "json",
+        "dataclasses",
+        "existing app.core.transaction.intent_authority"
+      ]
+    },
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py": {
+      "modified": true,
+      "classes": [
+        "D0IntentAuthority"
+      ],
+      "new_symbols": [
+        "D0IntentAuthority._iam_mode",
+        "D0IntentAuthority._check_iam"
+      ],
+      "modified_symbols": [
+        "create",
+        "publish",
+        "claim_and_fence"
+      ],
+      "unchanged": [
+        "RootPin",
+        "execute_authority_fenced_transition"
+      ],
+      "dependencies": [
+        "existing app.core.iam_session.SessionClaimCheck"
+      ]
+    },
+    "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
+      "new": true,
+      "classes": [
+        "DurableTests"
+      ],
+      "tests": 19,
+      "dependencies": [
+        "Python stdlib unittest, threading, sqlite3, tempfile, mock",
+        "two actual product modules"
+      ]
+    },
+    "candidates/D5-G2/run_regression.py": {
+      "new": true,
+      "symbols": [
+        "require",
+        "blob",
+        "read",
+        "main"
+      ],
+      "dependencies": [
+        "Python stdlib",
+        "existing cryptography 46.0.4 for original tests"
+      ],
+      "scope": "full checkout NOT_RUN"
+    },
+    "candidates/D5-G2/test.log": "33 actual test assertions",
+    "candidates/D5-G2/regression_preflight.log": "missing checkout BLOCKED"
+  },
+  "database": {
+    "scope": "exclusive new D0 Authority SQLite only, no migration",
+    "tables": {
+      "iam_bootstrap": "root transaction mode marker",
+      "iam_meta": "clock domain",
+      "iam_sessions": "sealed bootstrap records, credential hash",
+      "iam_revocations": "append-only ordered CAS revocations",
+      "iam_claim_pins": "exact session digest per original claim scope",
+      "iam_clock": "local high-water and fault flag"
+    },
+    "existing": [
+      "roots",
+      "claims"
+    ],
+    "no_canonical_db_changes": true
+  },
+  "apis": [],
+  "events": [],
+  "new_external_dependencies": [],
+  "activation": "HOLD"
+}

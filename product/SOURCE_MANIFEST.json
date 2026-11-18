@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "D5-G1",
-  "status": "D0_ISOLATED_IAM_SESSION_SOURCE_LOCAL_TESTED_NOT_ACTIVATED",
+  "doc_revision": "D5-G2",
+  "status": "D0_ISOLATED_IAM_AUTHORITY_COMPONENT_TESTED_NOT_ACTIVATED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "13d061a6bd79c96825de4ff1da136d2e42beef4f",
+  "parent_git_commit": "78da1ae5da98e40c256824b53558811dc412704c",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -303,8 +303,8 @@
       "sha256": "82f2a1f452471ae0a0079134065973eb1d4488b64a7d726946fb0d18fe9840fe"
     },
     "ai-company-os-backend/app/core/iam_session.py": {
-      "bytes": 5243,
-      "sha256": "1f4f5709850c89ee893e71c60cf22fc3d7582f293e2e872de690f1e63f981c4a"
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
     },
     "ai-company-os-backend/app/core/iv_review.py": {
       "bytes": 373,
@@ -415,8 +415,8 @@
       "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
     },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
-      "bytes": 7835,
-      "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+      "bytes": 9184,
+      "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
@@ -741,6 +741,10 @@
     "ai-company-os-backend/tests/test_history_readback_0198.py": {
       "bytes": 6541,
       "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773"
+    },
+    "ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
     },
     "ai-company-os-backend/tests/test_iam_session_d5g1.py": {
       "bytes": 4691,
@@ -1583,6 +1587,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
-  "source_git_commit_note": "Current commit cannot self-reference; see immutable commit and branch readback. Original entries retained; new two entries locally hashed."
+  "parent_source_manifest_blob": "40136a75e9bda468a5661932e94cf276707a81f8",
+  "source_git_commit_note": "Current commit cannot self-reference; exact branch commit and readback. Three product entries changed; remaining entries retained."
 }

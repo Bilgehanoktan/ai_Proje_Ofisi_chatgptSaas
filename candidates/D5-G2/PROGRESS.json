@@ -1,0 +1,115 @@
+{
+  "revision": "D5-G2",
+  "parent": "78da1ae5da98e40c256824b53558811dc412704c",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "criteria": "D5-G1-D0-session-v1",
+  "criteria_blob": "c81622b91a49cd0e39a4245147ca1427cabeb413",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "partial_criteria": {
+    "S02": "actual durable local IAM revocation and original Authority lock integrated; joint publisher contract/representation incomplete",
+    "F05": "actual local IAM/fence races only, no ORG/T1 writer",
+    "F06": "normal reopen/old DB + new pin tested, full restore residual reproduced",
+    "I02": "component connection only, no ORG/T1 composition"
+  },
+  "tests": {
+    "new": 19,
+    "regression": 14,
+    "pass": 33,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "log_sha256": "15080d09c51b3695dc71b4dd5d39b4b562a5d0cadd270def28f788803dbbefaa",
+    "log_blob": "9ee5446b31644697ffe21b88058bbec584e52926",
+    "full_restore_residual": 1,
+    "original_t1": "NOT_RUN on G2",
+    "org": "NOT_RUN",
+    "full_checkout": "BLOCKED_DNS",
+    "regression_preflight_exit": 2,
+    "planned_regression_cases": 50
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gate": 0,
+  "blockers": [
+    "full updated original T1 regression",
+    "actual D4 and canonical intent binding",
+    "current ORG membership and joint publisher",
+    "trusted commit clock",
+    "external independent custody",
+    "actual account issuance"
+  ],
+  "activation": "HOLD"
+}
