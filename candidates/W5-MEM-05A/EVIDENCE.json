@@ -338,5 +338,26 @@
   },
   "ownership": "D5-G2 33 historical IAM assertions and pending 50 regression; no D5-G2 run, no ORG PG31/ACL48, no D5 0212/0214 repetition; distinct 0209 17 test IDs. Latest Studio and ORG checked: same original scoped T1/Memory source blobs; no new MEM05A path. No global lock.",
   "promotion": "PROMOTION_MATRIX.json; no target modified",
-  "acceptance": "D0 local only, actual owner session, RLS/PG, D5 root custody, full locked unified checkout/build and independent acceptance HOLD"
+  "acceptance": "D0 local only, actual owner session, RLS/PG, D5 root custody, full locked unified checkout/build and independent acceptance HOLD",
+  "final_parallel_recheck": {
+    "branch_count": 234,
+    "studio": {
+      "previous": "4e13f7f79aed7b953fb8c09692ac11c8472c6fc5",
+      "current": "5ffd6bd257b8afaa55a6664dffb38c5fa8ff2788",
+      "changed": [
+        "docs/ORG-07C-R8-INTEGRATION/LOCK_RECOVERY_HANDOFF.json"
+      ],
+      "source_matrix": "40 match, 11 delta unchanged"
+    },
+    "org": {
+      "previous": "078aa93e94a277a22df3d33ffe29099d125c1b99",
+      "current": "58bbac8b7955e218b515534fb9ee65cf05024612",
+      "changed": [
+        "candidates/ORG-10R2-RUNTIME-REVIEW/HANDOVER_PYTHON_BASE_REVIEW.md",
+        "candidates/ORG-10R2-RUNTIME-REVIEW/ORG10_CLEAN_RUNTIME_PREP.txt",
+        "candidates/ORG-10R2-RUNTIME-REVIEW/PYTHON_BASE_REVIEW_EVIDENCE.json"
+      ],
+      "scope": "documentation/evidence only; no tested source path changed"
+    }
+  }
 }
