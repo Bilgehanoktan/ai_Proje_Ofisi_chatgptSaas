@@ -1,0 +1,44 @@
+{
+  "revision": "W5-MEM-01",
+  "date": "2026-11-18",
+  "parent": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "ext07r6_deferred": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+  "scope": "D0 synthetic SQLite on exact eight-file subset; no full checkout",
+  "source_pins": {
+    "app/core/t1_review.py": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+    "app/core/runtime_preview.py": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+    "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "app/engines/memory_engine/retrieval.py": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+    "app/engines/memory_engine/snapshot_store.py": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+    "app/engines/memory_engine/runtime_binding.py": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+    "app/engines/knowledge_engine/provenance.py": "7d710685366a55c117e49043a64f1eeabf5079cf"
+  },
+  "test_blob": "60608147f84cf74f9ac5849f66cd8eeb92c9c9ea",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "results": {
+    "run": 7,
+    "pass": 7,
+    "controls": 5,
+    "residual_reproduced": 2,
+    "exit": 0
+  },
+  "findings": [
+    {
+      "id": "MEM-01",
+      "status": "REPRODUCED_NOT_FIXED",
+      "description": "Same source id and revision with changed content digest can be published with coherent source/span/ACL; structural match only."
+    },
+    {
+      "id": "MEM-02",
+      "status": "REPRODUCED_NOT_FIXED",
+      "description": "Tombstoned ancestor detachment with unchanged target revision/digest and coherent ACL/source can produce later structural match; old pin rejected, access/release false."
+    }
+  ],
+  "proposed": "Bind identity/revision to immutable content and ancestor revision identities over retained history. Owner decision required before altering existing publish_snapshot transaction. Keep valid new revisions, no second store.",
+  "next": "MEM-02 owner review; exact patch then original 0194/0196/0209 regression and restore tests",
+  "limits": "Original regression, full checkout, witness integration, PostgreSQL, build and independent acceptance NOT_RUN/HOLD; no product or authority change; source scores unchanged. Original test_graph_edge_changes_digest allows graph changes with ACL mismatch diagnostic; no claim of live bypass. Recovered snapshot source initially had transcription mismatch, corrected before test. Namespace-package subset only.",
+  "reproduce": "PYTHONPATH=product/ai-company-os-backend python -B candidates/W5-MEM-01/test_lineage_continuity.py",
+  "rollback": "Omit additive tests and report, preserve base, no database migration."
+}
