@@ -1,0 +1,159 @@
+{
+  "revision": "ORG-10-EXECUTION-GATE-BASELINE",
+  "scope": "ORG-10 common-scope disposable PG fixture only; not ORG-11, live IAM, Office, or unified product",
+  "status": "PROPOSED_WEIGHTED_CRITERIA_NOT_ADOPTED",
+  "reporting_standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "sources": {
+    "fixture": "5c7eb6b148e6e96247682653ff70dccc4a7ba823",
+    "launcher": "3eadb02d06dbb4fb967ba8f74a86a01238c540a3",
+    "runtime_evidence": "5410e56d9441e2ecda3eca309b942657c2621a00",
+    "acceptance_matrix_blob": "b2f1d81a84542d9af56ce0c773cb01c226d39d61",
+    "runbook_blob": "44a7286184e031e3654c107c1980616c4d1a6744"
+  },
+  "phase_criteria": [
+    {
+      "phase": "design",
+      "weight": 15,
+      "criteria": [
+        {
+          "id": "D01",
+          "description": "Exact common scope and negative control contract, no aliases",
+          "status": "CANDIDATE_DOCUMENTED"
+        },
+        {
+          "id": "D02",
+          "description": "Role, cluster and isolation profile agreed by D4/ORG owner",
+          "status": "HOLD"
+        },
+        {
+          "id": "D03",
+          "description": "31 original acceptance IDs and supplemental MAINTAIN criteria defined",
+          "status": "CANDIDATE_DOCUMENTED"
+        }
+      ]
+    },
+    {
+      "phase": "source",
+      "weight": 35,
+      "criteria": [
+        {
+          "id": "S01",
+          "description": "Six pinned inputs and exact derived source outputs",
+          "status": "PASS_LOCAL"
+        },
+        {
+          "id": "S02",
+          "description": "Exact archive launcher and evidence reviewer",
+          "status": "PASS_LOCAL"
+        },
+        {
+          "id": "S03",
+          "description": "Runtime archive comparison tool delivered",
+          "status": "PASS_LOCAL"
+        }
+      ]
+    },
+    {
+      "phase": "functional",
+      "weight": 20,
+      "criteria": [
+        {
+          "id": "F01",
+          "description": "55 ORG-10 static/fake DB checks",
+          "status": "PASS_LOCAL"
+        },
+        {
+          "id": "F02",
+          "description": "30 launcher checks",
+          "status": "PASS_LOCAL"
+        },
+        {
+          "id": "F03",
+          "description": "10 archive verifier checks",
+          "status": "PASS_LOCAL"
+        },
+        {
+          "id": "F04",
+          "description": "31 real PG checks including PG01 and PG31",
+          "status": "NOT_RUN"
+        },
+        {
+          "id": "F05",
+          "description": "48 additional MAINTAIN ACL observations, zero granted",
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "phase": "integration",
+      "weight": 20,
+      "criteria": [
+        {
+          "id": "I01",
+          "description": "Exact archive and runtime manifest preflight",
+          "status": "PASS_USER_EVIDENCE"
+        },
+        {
+          "id": "I02",
+          "description": "Independently reviewed runtime evidence and explicit port allocation",
+          "status": "HOLD"
+        },
+        {
+          "id": "I03",
+          "description": "Actual launcher execution, identity guards, verified clean stop and post-run source/runtime match",
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "phase": "final_acceptance",
+      "weight": 10,
+      "criteria": [
+        {
+          "id": "A01",
+          "description": "Original PG/launch reports and sanitized logs reviewed; independent fixture acceptance decision",
+          "status": "HOLD"
+        }
+      ]
+    }
+  ],
+  "execution_plan": {
+    "previous": [
+      2,
+      8
+    ],
+    "current": [
+      2,
+      8
+    ],
+    "delta": 0
+  },
+  "organization_plan": {
+    "previous": [
+      5,
+      7
+    ],
+    "current": [
+      5,
+      7
+    ],
+    "delta": 0
+  },
+  "weighted_development": {
+    "previous": "NOT_CALCULABLE",
+    "current": "NOT_CALCULABLE_PENDING_ADOPTION",
+    "delta": "NOT_CALCULABLE"
+  },
+  "product_acceptance": {
+    "previous": "HOLD",
+    "current": "HOLD",
+    "new_gates": 0
+  },
+  "scope_limit": "No global ORG or product percent; historical tests not reused as PG31 passes; criteria proposal does not waive existing approvals.",
+  "blockers": [
+    "No explicit allocation of port 55436 supplied in current message; D4/ORG owner review required.",
+    "Actual external runtime review still HOLD; user archive comparison and signature transcripts are not independent raw binary review. Public PyPI psycopg digest corroborated, Chocolatey secondary PG digest corroborated; EDB direct checksum and binary wheel digest not independently retrieved this turn. No raw archives or complete base interpreter custody reviewed.",
+    "No local PostgreSQL server/driver available; no execution performed."
+  ],
+  "next": "Obtain scoped owner port approval and independent runtime review of exact fingerprint; run unchanged pinned launcher on fresh isolated stage, then review original reports."
+}
