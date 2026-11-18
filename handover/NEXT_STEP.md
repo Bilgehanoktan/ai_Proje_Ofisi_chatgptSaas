@@ -8,3 +8,6 @@ D3 scoped RLS/lock contention accepted through metadata-only transfer from 426a2
 
 ## D5-G4 — branch-local next
 Complete original G2 50-case regression on G2/G3 manifest. Then actual ORG owner reader and same-intent session reference through original authority/T1 under reviewed joint contract. See [handover](../candidates/D5-G4/HANDOVER.md). No activation or independent acceptance.
+
+## D5-G5 — next
+Run exact G5 26-test closure and original G2 50 on its own manifest. Actual current Core and ORG assignment/role evidence, protected publisher and original T1 wiring remain HOLD. [Runbook](../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md).

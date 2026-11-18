@@ -1,0 +1,105 @@
+{
+  "revision": "D5-G5",
+  "parent": "ed638c4bc8d69cec267392251f6efe40f464fc9a",
+  "criteria": "D5-G1-D0-session-v1",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "partial_criteria": {
+    "S03": "Actual existing R3 source readback adapter added; no actual assignment or live Core/ORG owner provenance; NOT_RUN",
+    "S02": "Joint protected publisher incomplete",
+    "F05": "12 new test candidates; NOT_RUN",
+    "I02": "G4 + R3 source composition only, no T1 writer"
+  },
+  "tests": {
+    "new_planned": 12,
+    "g4_regression_planned": 14,
+    "executed": 0,
+    "original_G2_50": "NOT_RUN",
+    "actual_PG": "NOT_RUN",
+    "source_pins_planned": 31
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "activation": "HOLD",
+  "blockers": [
+    "G2 50",
+    "G5 26",
+    "Core persisted member and role provenance",
+    "actual ORG assignment not proposal",
+    "protected publisher",
+    "original T1 wiring and strict commit clock",
+    "independent custody"
+  ]
+}

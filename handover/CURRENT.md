@@ -261,3 +261,6 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G4 — branch-local continuation
 [Handover](../candidates/D5-G4/HANDOVER.md) · [Progress](../candidates/D5-G4/PROGRESS.json). 14/14 new review tests and 18/18 pins; no grant or gate promotion. G2 50 NOT_RUN.
+
+## D5-G5 — branch-local source integration
+[Handover](../candidates/D5-G5/HANDOVER.md) · [Progress](../candidates/D5-G5/PROGRESS.json). 12+14 planned tests, no gate promotion.

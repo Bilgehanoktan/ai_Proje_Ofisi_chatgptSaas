@@ -1,0 +1,103 @@
+{
+  "revision": "D5-G5",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "symbols": [
+        "JOIN_FIELDS",
+        "OrgReadback",
+        "org_reference_digest",
+        "read_current_org_reference",
+        "inspect_org_session_reference"
+      ],
+      "depends": [
+        "existing G4 identity_fence_review",
+        "D4 identity_binding",
+        "exact R3 durable_ops, integration_guard, operations"
+      ],
+      "db_reads": [
+        "org_head",
+        "org_revision",
+        "org_unit",
+        "org_position",
+        "org_definition_ref",
+        "org_instance_ref",
+        "org_binding",
+        "org_notice",
+        "op_team",
+        "op_member",
+        "op_entry",
+        "op_notice"
+      ],
+      "writes": [],
+      "api": [],
+      "events": []
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "symbols": [
+        "OrgSessionTests"
+      ],
+      "status": "12 NOT_RUN"
+    },
+    {
+      "path": "candidates/D5-G5/run_exact.py",
+      "symbols": [
+        "main"
+      ],
+      "status": "NOT_RUN"
+    }
+  ],
+  "owner_files": [
+    {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/integration_guard.py",
+      "blob": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/office_bridge.py",
+      "blob": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.py",
+      "blob": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/org_model.py",
+      "blob": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/persistence.py",
+      "blob": "4124099a497f5bc7fd34756664c7e293055e949e",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "change": "exact source transfer, no edits"
+    },
+    {
+      "path": "candidates/ORG-05R3/staffing.py",
+      "blob": "e0b9078284922d281996869daa15a455572c1785",
+      "change": "exact source transfer, no edits"
+    }
+  ],
+  "new_tables": [],
+  "new_dependencies": [],
+  "new_roles": [],
+  "new_api": [],
+  "new_authority": false
+}

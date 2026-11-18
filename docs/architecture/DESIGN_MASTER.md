@@ -269,3 +269,6 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G4 — D4/IAM session readback (branch-local)
 [Architecture & runbook](../../candidates/D5-G4/ARCHITECTURE_AND_RUNBOOK.md). Three source modules and one test transferred; actual 14 selected tests. No product activation; G2 50 regression and ORG/T1 joint publication HOLD.
+
+## D5-G5 — branch-local ORG readback
+[Architecture & runbook](../../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md). Existing R3 readback with G4 session; tests NOT_RUN, all authority HOLD.

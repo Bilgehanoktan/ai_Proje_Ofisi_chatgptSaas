@@ -194,3 +194,6 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## 0227
 [Architecture](docs/0227/ARCHITECTURE_AND_CATALOG.md) · [Workstation execution](docs/0227/CONNECTED_WORKSTATION_0227.md) · [Catalog](catalog/revisions/TECHNICAL_CATALOG_0227.json) · [Evidence](tests/evidence/TEST_EVIDENCE_0227.json) · [Gates](progress/INTEGRATION_GATES_0227.json) · [Next](handover/NEXT_STEP_0227.md).
+
+## D5-G5
+[Architecture](candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md) · [Catalog](candidates/D5-G5/CATALOG.json) · [Progress](candidates/D5-G5/PROGRESS.json) · [Handover](candidates/D5-G5/HANDOVER.md)
