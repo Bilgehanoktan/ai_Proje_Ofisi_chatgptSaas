@@ -1,0 +1,150 @@
+{
+  "id": "ORG-07C-R8-E02",
+  "classification": "USER_EXECUTED_WINDOWS_SQLITE_REGRESSION_TRANSCRIPT_HASH_MATCH_NOT_INDEPENDENT_ATTESTATION",
+  "date": "2026-11-18",
+  "parent": "9894e4befafc25155030e1ad338da6ef35359ba2",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "transcript": {
+    "bytes": 38793,
+    "sha256": "f838131072b894d454ea60cd7d4617582455fed9c45564d94d53b1ef29a136f5",
+    "privacy": "full transcript retained by user; no local account paths copied to GitHub",
+    "verification": "Extracted successful log from uploaded transcript, reconstructed CRLF plus final newline in local Python, SHA256 matches both report and Get-FileHash. Not direct collection from Windows, not independent attestation."
+  },
+  "report": {
+    "revision": "0230-D5-C-R1",
+    "commit": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+    "status": "PASS_LOCAL_SQLITE_ONLY",
+    "original_t1": "17_PASS",
+    "python": "3.14.3",
+    "sqlite": "3.50.4",
+    "product_changes": 0,
+    "gate_promotions": 0,
+    "scope": "synthetic SQLite only; no PG/IAM/independent acceptance",
+    "recovery": {
+      "backend": 237,
+      "ddl": 3,
+      "explicit_test_pins": 3,
+      "files": 242
+    },
+    "log_sha256": "b73745b911c15c7be571e37c15067b127d26b2bf0340984c3d3e6853c1be47b7",
+    "returncode": 0
+  },
+  "log_reconstructed_crlf": "PIN_MATCH: 237 backend manifest entries + 3 original DDL; 3 explicit test pins\r\ntest_actual_commit_and_readback (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_actual_commit_and_readback) ... ok\r\ntest_product_database_restore_no_replay (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_product_database_restore_no_replay) ... ok\r\ntest_revocation_first_no_t1 (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_revocation_first_no_t1) ... ok\r\ntest_rollback_does_not_enable_retry (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_rollback_does_not_enable_retry) ... ok\r\ntest_root_publisher_waits_through_actual_commit (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_root_publisher_waits_through_actual_commit) ... ok\r\ntest_two_claimants_only_one_commit (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_two_claimants_only_one_commit) ... ok\r\ntest_unknown_commit_quarantined (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_unknown_commit_quarantined) ... ok\r\ntest_concurrent_claim_one_original_commit (test_authority_fullchain_0214.FullChainTests.test_concurrent_claim_one_original_commit) ... ok\r\ntest_expired_lease_quarantine (test_authority_fullchain_0214.FullChainTests.test_expired_lease_quarantine) ... ok\r\ntest_full_original_wrapper_commit (test_authority_fullchain_0214.FullChainTests.test_full_original_wrapper_commit) ... ok\r\ntest_full_restore_residual_reproduced_not_security_pass (test_authority_fullchain_0214.FullChainTests.test_full_restore_residual_reproduced_not_security_pass) ... ok\r\ntest_lost_commit_reply_no_retry (test_authority_fullchain_0214.FullChainTests.test_lost_commit_reply_no_retry) ... ok\r\ntest_restore_journal_t1_but_not_authority_blocks_replay (test_authority_fullchain_0214.FullChainTests.test_restore_journal_t1_but_not_authority_blocks_replay) ... ok\r\ntest_revocation_before_claim_no_writes (test_authority_fullchain_0214.FullChainTests.test_revocation_before_claim_no_writes) ... ok\r\ntest_revoked_memory_before_t1_quarantines (test_authority_fullchain_0214.FullChainTests.test_revoked_memory_before_t1_quarantines) ... ok\r\ntest_root_publisher_waits_through_commit (test_authority_fullchain_0214.FullChainTests.test_root_publisher_waits_through_commit) ... ok\r\ntest_wrong_signature_key_no_commit (test_authority_fullchain_0214.FullChainTests.test_wrong_signature_key_no_commit) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 17 tests in 1.969s\r\n\r\nOK\r\n",
+  "log_bytes": 2491,
+  "prior_attempts": [
+    {
+      "status": "BLOCKED",
+      "cause": "missing cryptography",
+      "log_sha256": "accf54dcf3bd25642410cec433f87eafe6fe86f00df7b1fc8d7075c55550ac9f"
+    },
+    {
+      "status": "FAIL_OR_INCOMPLETE",
+      "errors": 17,
+      "cause": "path guard rejects Windows short temporary path; canonical TEMP resolved issue",
+      "log_sha256": "13859a5006ea1c26026d4c90448aac8558cc314826669dbf787d9d9dd74ee40c"
+    }
+  ],
+  "environment": {
+    "cryptography": "46.0.4",
+    "cffi": "2.1.1",
+    "pycparser": "3.12",
+    "pip_check": "PASS",
+    "temp_path_check": "PASS",
+    "environment_restored": true
+  },
+  "d5f_reconciliation": {
+    "criteria_blob": "07cb604ac9715f248922b901e5de2b0422350652",
+    "previous_progress_blob": "c8d621cdcf60c268cc8e896a56529f28add806c8",
+    "newly_supported": [
+      "S02",
+      "I01"
+    ],
+    "previous": {
+      "design": [
+        2,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional": [
+        5,
+        7
+      ],
+      "integration": [
+        0,
+        2
+      ],
+      "final": [
+        0,
+        1
+      ]
+    },
+    "evidence_supported": {
+      "design": [
+        2,
+        2
+      ],
+      "source": [
+        2,
+        3
+      ],
+      "functional": [
+        5,
+        7
+      ],
+      "integration": [
+        1,
+        2
+      ],
+      "final": [
+        0,
+        1
+      ]
+    },
+    "previous_percent": 40.9524,
+    "evidence_supported_percent": 62.619,
+    "delta_pp": 21.6667,
+    "scope": "D5-F recovery only; cross-lane evidence reconciliation for owner review, original D5-F PROGRESS unchanged",
+    "open": [
+      "S03",
+      "F06",
+      "F07",
+      "I02",
+      "A01"
+    ],
+    "note": "Full restore residual test OK reproduces weakness, not security PASS. Strict expiry through COMMIT unresolved."
+  },
+  "r8": {
+    "previous": "0/14",
+    "current": "0/14",
+    "weighted_percent": 0,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "changes": "Add evidence record only; no product code, API, database, dependency or architecture change; no actual grant, PG, main merge, CI, activation.",
+  "handover": "D5 owner consume S02/I01 evidence, address retained non-restored custody, writer participation, strict commit expiry; ORG-10 separate runtime review and port approval. R8 stays default HOLD. Preserve prior evidence; no rerun solely to duplicate successful result.",
+  "rollback": "Omit additive record; retain all original evidence; no data migration."
+}
