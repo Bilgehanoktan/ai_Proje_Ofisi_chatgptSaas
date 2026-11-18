@@ -1,0 +1,104 @@
+{
+  "revision": "ORG-07C-R5",
+  "parent": "97d619d27d8aea395d45f78a8d0857a50c078b0b",
+  "initial_branches": 208,
+  "prewrite_branches": 209,
+  "open_prs": 3,
+  "observed_heads": [
+    [
+      "integration/unified-u3a-product-acceptance",
+      "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+    ],
+    [
+      "planning/org-07c-r2-manifest-preflight",
+      "3ad85986e3e55e2b89306f15fef93b8c116a886e"
+    ],
+    [
+      "planning/org-07c-r3-runtime-evidence-review",
+      "c8d7659301489501a1b09f808f269c6353f93db0"
+    ],
+    [
+      "planning/org-07c-r4-owner-evidence-reconciliation",
+      "97d619d27d8aea395d45f78a8d0857a50c078b0b"
+    ],
+    [
+      "planning/org-07c-studio-product-review",
+      "73693e2b8864e3eb735bba40f2935191c0d83bef"
+    ],
+    [
+      "planning/org-08-office-runtime-readback",
+      "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352"
+    ],
+    [
+      "planning/org-10-common-scope-fixture",
+      "5c7eb6b148e6e96247682653ff70dccc4a7ba823"
+    ],
+    [
+      "planning/org-10r1-controlled-pg-execution",
+      "3eadb02d06dbb4fb967ba8f74a86a01238c540a3"
+    ],
+    [
+      "planning/org-10r2-runtime-review",
+      "8a132a5b4b5b0dee1cc05e02d6fc7d4e7ae3fb54"
+    ],
+    [
+      "planning/ux-premium-07-a6-review",
+      "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+    ],
+    [
+      "planning/0229-d4-r6-canonical-readiness",
+      "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a"
+    ],
+    [
+      "planning/0230-d5c-protected-reader",
+      "9b66592ff67638e0a1504d327c6cf95ef4d7ac21"
+    ],
+    [
+      "planning/0230-d5c-r1-t1-recovery",
+      "ed278389047e10b75c8e31d6fa52f7cd03c16cef"
+    ],
+    [
+      "planning/0230-d5c-r2-org-evidence",
+      "946bc24cd943d6c3550f7f6c1eadcc42ee1bbd06"
+    ],
+    [
+      "workstream/w5-j2-r1-invocation-membership",
+      "d8cf5505444cb9e2a2dca2a3e054b92e0d33d349"
+    ],
+    [
+      "workstream/w5-j2-r2-allocation-fixture",
+      "66f0193e242d7d1952d9ed9c6da55763ffbb98da"
+    ],
+    [
+      "workstream/w5-j2-r3-canonical-checkpoint",
+      "6f8dd186b65976c57a6a97da523f55f66c28e601"
+    ]
+  ],
+  "node": "22.16.0",
+  "typescript": "5.8.3",
+  "compile": "PASS",
+  "tests": {
+    "pass": 20,
+    "fail": 0,
+    "skipped": 0,
+    "scope": "synthetic consumer transport; original proxy baseline + bound adapter"
+  },
+  "source_pins": {
+    "original/organizationProxy.ts": "f257f77ca5887b2477bdf3fc3f68e2b37c735eff",
+    "original/organizationProjection.ts": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+    "src/organizationOwnerBinding.ts": "77d57353ae4365756fd3f76435cca2248d7644ff",
+    "tests/owner_binding.test.cjs": "f9ef0f589cdfe6c268e42a4fc1be05d1b61013f0"
+  },
+  "local_sha256": {
+    "src/organizationOwnerBinding.ts": "ddce96fd41ccc65f9002e58066891f5e0c9132405166a0c6b2e22252a9fc9154",
+    "tests/owner_binding.test.cjs": "c7a1855858db622bbf0ab135f78c14c960a1fe53d7dbf94e9437572edcc0eb43",
+    "evidence/test.log": "aaa002cff686fabd6ea823c6653fa33e1dfd3eb4aef41c52bc82143f623562e1",
+    "evidence/compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "product_changes": 0,
+  "actual_iam": "HOLD",
+  "product_build": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "independent": "HOLD",
+  "local_package": "ORG-07C-R5_STUDIO_BINDING.zip contains raw logs and local SHA256 manifest"
+}

@@ -1,0 +1,37 @@
+{
+  "revision": "ORG-07C-R5",
+  "files": [
+    {
+      "path": "src/organizationOwnerBinding.ts",
+      "symbols": [
+        "OwnerReadBinding",
+        "OwnerReadProvider",
+        "snapshot",
+        "readOwnerBoundOrganization"
+      ],
+      "purpose": "consumer-side scope/revision comparison"
+    },
+    {
+      "path": "tests/owner_binding.test.cjs",
+      "purpose": "20 synthetic regression tests"
+    },
+    {
+      "path": "OWNER_EVIDENCE_REFERENCE.json",
+      "purpose": "versioned downstream evidence references, unaccepted"
+    },
+    {
+      "path": "EVIDENCE.json",
+      "purpose": "execution metadata and SHA256"
+    },
+    {
+      "path": "HANDOVER.md",
+      "purpose": "architecture, limitations, maintenance, rollback, next"
+    }
+  ],
+  "existing_sources": "unchanged; two exact pinned copies in original/ for standalone test closure",
+  "api": [],
+  "database": [],
+  "dependencies": [],
+  "product_changes": 0,
+  "official_scores_changed": false
+}
