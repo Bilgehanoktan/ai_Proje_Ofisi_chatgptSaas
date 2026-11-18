@@ -1,0 +1,156 @@
+{
+  "revision": "D5-F-R1",
+  "parent": "34d3afc60ff5a12ea85fd0622d2d3bea17b4193c",
+  "scope": "remote Git metadata and source transfer preflight, not byte recovery or runtime test",
+  "branches_observed": 222,
+  "original": {
+    "commit": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+    "manifest": "981a13fc226184dc3a911ae0d94e0042285ff302",
+    "backend_entries": 237,
+    "bytes": 1057500,
+    "metadata_size_matches": 237,
+    "runner": "14f0a4dd0bde11c5e40b4f8e5e6bf17cbaf4b392"
+  },
+  "comparison": [
+    {
+      "lane": "D5-F",
+      "commit": "34d3afc60ff5a12ea85fd0622d2d3bea17b4193c",
+      "exact": 237,
+      "missing": 0,
+      "changed": 0,
+      "additional": 0,
+      "pin_match": 6
+    },
+    {
+      "lane": "D4-R6",
+      "commit": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "exact": 237,
+      "missing": 0,
+      "changed": 0,
+      "additional": 0,
+      "pin_match": 6
+    },
+    {
+      "lane": "ORG-10R2",
+      "commit": "99465158e14c8e47704822b5e20b2ca23f57ff49",
+      "exact": 237,
+      "missing": 0,
+      "changed": 0,
+      "additional": 0,
+      "pin_match": 6
+    },
+    {
+      "lane": "W5-J2-R4",
+      "commit": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "exact": 237,
+      "missing": 0,
+      "changed": 0,
+      "additional": 12,
+      "pin_match": 6
+    },
+    {
+      "lane": "U3A",
+      "commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "exact": 236,
+      "missing": 0,
+      "changed": 1,
+      "additional": 3,
+      "pin_match": 6,
+      "manifest": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+      "difference": {
+        "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+        "original": "3e16b9952af6886b6579729108a0278042ac4052",
+        "other": "2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d"
+      }
+    }
+  ],
+  "all_trees_complete": true,
+  "org_evidence": {
+    "reported_archive_matches": 1675,
+    "reported_mismatch": 0,
+    "pg31": "NOT_RUN",
+    "maintain48": "NOT_RUN",
+    "owner_custody": "HOLD"
+  },
+  "local": {
+    "cryptography": "46.0.4",
+    "git_ls_remote": "Could not resolve host: github.com",
+    "exact_archive_available": false,
+    "original_test_runs": 0
+  },
+  "progress": {
+    "standard": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+    "criteria": "D5-F-RECOVERY-SCOPE-v1",
+    "previous_counts": {
+      "design": [
+        2,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional_tests": [
+        5,
+        7
+      ],
+      "integration": [
+        0,
+        2
+      ],
+      "final_acceptance": [
+        0,
+        1
+      ]
+    },
+    "current_counts": {
+      "design": [
+        2,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional_tests": [
+        5,
+        7
+      ],
+      "integration": [
+        0,
+        2
+      ],
+      "final_acceptance": [
+        0,
+        1
+      ]
+    },
+    "previous_percent": 40.9524,
+    "current_percent": 40.9524,
+    "delta": 0,
+    "whole_d5": "HESAPLANAMADI",
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "product_changes": 0,
+  "gate_promotions": 0,
+  "activation": "HOLD"
+}
