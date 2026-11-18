@@ -1,0 +1,70 @@
+{
+  "revision": "ORG-10R2-EVIDENCE",
+  "classification": "USER_TRANSCRIPT_RECONSTRUCTED_HASH_MATCH_NOT_INDEPENDENT_ATTESTATION",
+  "source_commit": "8a132a5b4b5b0dee1cc05e02d6fc7d4e7ae3fb54",
+  "manifest_sha256": "50870555adc6334556feefdd8323d42241229099e1cb3ccea5707de779cf6ef4",
+  "archive_review_sha256": "dc3be522a5b4be342d3f04955c11c119e1ad7d9e311647a33ee923beaebc04fb",
+  "archive_review_exit_code": 0,
+  "archive_comparison": "MATCH_REPORTED",
+  "results": [
+    {
+      "component": "PostgreSQL",
+      "matched": 1572,
+      "expected": 1572,
+      "archive_sha256": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c"
+    },
+    {
+      "component": "psycopg",
+      "matched": 89,
+      "expected": 89,
+      "local_metadata": 3,
+      "archive_sha256": "d2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6"
+    },
+    {
+      "component": "psycopg-binary",
+      "matched": 14,
+      "expected": 14,
+      "local_metadata": 2,
+      "archive_sha256": "109c5df5b0e5117e01a42d3b56a2f4ccd5431bd54d25efdfc89df095ac9f9605"
+    }
+  ],
+  "total_matched": 1675,
+  "missing": 0,
+  "extra": 0,
+  "mismatch": 0,
+  "python_base_provenance": "HOLD",
+  "port_owner_approval": "HOLD",
+  "pg": {
+    "passed": 0,
+    "total": 31,
+    "status": "NOT_RUN"
+  },
+  "maintain": {
+    "passed": 0,
+    "total": 48,
+    "status": "NOT_RUN"
+  },
+  "progress": {
+    "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+    "execution_plan": {
+      "previous": 2,
+      "current": 2,
+      "total": 8,
+      "note": "archive comparison subcriterion advanced, combined runtime-review gate remains HOLD"
+    },
+    "development_weighted_percent": "NOT_CALCULABLE_NO_APPROVED_PHASE_CRITERION_BASELINE",
+    "organization_plan": {
+      "previous": 5,
+      "current": 5,
+      "total": 7
+    },
+    "product_acceptance": "HOLD",
+    "new_product_gates": 0
+  },
+  "limits": [
+    "Original report reconstructed from user transcript, SHA256 match; raw archive contents not independently inspected in assistant runtime.",
+    "Python base stdlib, DLLs and local metadata not publisher-byte verified. No full runtime attestation.",
+    "Port owner approval not supplied; no execution, schema or product change."
+  ],
+  "next": "Read-only base Python executable/DLL signature and local provenance inspection; explicit scoped owner approval for port 55436; keep execute gate HOLD until review is complete."
+}
