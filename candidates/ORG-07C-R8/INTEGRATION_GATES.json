@@ -1,0 +1,83 @@
+{
+  "id": "ORG-07C-R8",
+  "classification": "PLANNING_BASELINE_ONLY",
+  "date": "2026-11-18",
+  "status": "HOLD",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "pins": {
+    "r7_handover": "58824648c7be6b5ed62e39341ccd1bb0065a5346",
+    "u3a": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "org10r2_review": "fa99da0718cda54f65b2e31dd839ea19b01fcf2e",
+    "d5e_handover": "fb1cdb3a0166bd15a37625c553ce2e518568bb0b"
+  },
+  "criteria": [
+    {
+      "stage": "design",
+      "weight": 15,
+      "items": [
+        "D1 owner-approved protected session contract",
+        "D2 owner-approved Studio consumer boundary"
+      ]
+    },
+    {
+      "stage": "source",
+      "weight": 35,
+      "items": [
+        "S1 actual protected session provider",
+        "S2 actual ORG scope/revision/revocation binding",
+        "S3 approved route registration"
+      ]
+    },
+    {
+      "stage": "functional",
+      "weight": 20,
+      "items": [
+        "F1 real valid session read",
+        "F2 revoked membership denied",
+        "F3 pending/unknown/recovery fail closed",
+        "F4 R7 regression on integrated source"
+      ]
+    },
+    {
+      "stage": "integration",
+      "weight": 20,
+      "items": [
+        "I1 full exact product tree patch",
+        "I2 locked product build",
+        "I3 real browser acceptance run"
+      ]
+    },
+    {
+      "stage": "acceptance",
+      "weight": 10,
+      "items": [
+        "A1 Studio product acceptance",
+        "A2 independent security acceptance"
+      ]
+    }
+  ],
+  "baseline": {
+    "previous": "HESAPLANAMADI",
+    "current": "0/14; weighted 0% for R8-specific gates only",
+    "delta": null,
+    "all_criteria": "NOT_RUN_OR_UNAPPROVED",
+    "official_acceptance": "unchanged; no new acceptance evidence"
+  },
+  "ownership": {
+    "D5": "real IAM/publication",
+    "ORG10": "runtime provenance and PG; 31+48 NOT_RUN",
+    "Unified": "full checkout and locked build/browser",
+    "R8": "consumer binding after owner gates"
+  },
+  "catalog": {
+    "new_file": "candidates/ORG-07C-R8/INTEGRATION_GATES.json",
+    "product_symbols": [],
+    "api_changes": [],
+    "db_changes": [],
+    "dependencies": []
+  },
+  "architecture": "No change; default 503 HOLD; no provider registration; no grants or migrations.",
+  "handover": "U3A compare identical to R7 target. ORG10R2 manifest preflight only, raw archive comparison NOT_RUN. D5E synthetic only. Next obtain owner-approved session contract and exact checkout via respective owners; no duplicate fixture.",
+  "rollback": "Omit additive planning branch; no product changes.",
+  "tests_this_turn": 0
+}
