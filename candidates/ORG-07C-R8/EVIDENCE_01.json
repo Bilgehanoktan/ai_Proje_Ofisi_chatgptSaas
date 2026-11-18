@@ -1,0 +1,119 @@
+{
+  "id": "ORG-07C-R8-E01",
+  "classification": "SOURCE_READBACK_AND_DEPENDENCY_REVIEW_ONLY",
+  "date": "2026-11-18",
+  "r8_baseline": "9da2e8b9770fd7c98b8c1656862ae249e1546d3b",
+  "d5f": {
+    "handover_blob": "23afe25973b00b0d46037e2e649d0a0cfa888d2f",
+    "progress_blob": "c8d621cdcf60c268cc8e896a56529f28add806c8",
+    "development_percent": 40.9524,
+    "scope": "D5-F only",
+    "open": [
+      "F06 all local stores plus old pin can reuse consumed scope",
+      "F07 external nonparticipating writer bypasses fence",
+      "strict expiry through COMMIT unresolved"
+    ]
+  },
+  "d5c_byte_audit": {
+    "commit": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+    "method": "GitHub contents base64 decoded; independently recomputed Git blob SHA-1 over blob length header and raw bytes, matched pinned and returned SHA. SHA-1 implementation known abc vector verified. No full SHA-256 manifest audit or execution.",
+    "rows": [
+      {
+        "path": "product/SOURCE_MANIFEST.json",
+        "bytes": 70162,
+        "expected": "981a13fc226184dc3a911ae0d94e0042285ff302",
+        "computed": "981a13fc226184dc3a911ae0d94e0042285ff302",
+        "returned": "981a13fc226184dc3a911ae0d94e0042285ff302",
+        "status": "MATCH"
+      },
+      {
+        "path": "candidates/D5-C/run_original_t1.py",
+        "bytes": 3681,
+        "expected": "14f0a4dd0bde11c5e40b4f8e5e6bf17cbaf4b392",
+        "computed": "14f0a4dd0bde11c5e40b4f8e5e6bf17cbaf4b392",
+        "returned": "14f0a4dd0bde11c5e40b4f8e5e6bf17cbaf4b392",
+        "status": "MATCH"
+      },
+      {
+        "path": "database/0192/candidate_event_outbox_fence.sql",
+        "bytes": 1346,
+        "expected": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "computed": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "returned": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "status": "MATCH"
+      },
+      {
+        "path": "database/0193/candidate_run_head.sql",
+        "bytes": 878,
+        "expected": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "computed": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "returned": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "status": "MATCH"
+      },
+      {
+        "path": "database/0194/candidate_transition_roles.sql",
+        "bytes": 2437,
+        "expected": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "computed": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "returned": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "status": "MATCH"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "bytes": 14108,
+        "expected": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "computed": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "returned": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "status": "MATCH"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+        "bytes": 5481,
+        "expected": "9296347d9253d74902ed1c6a89e273d8e516f2b5",
+        "computed": "9296347d9253d74902ed1c6a89e273d8e516f2b5",
+        "returned": "9296347d9253d74902ed1c6a89e273d8e516f2b5",
+        "status": "MATCH"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+        "bytes": 9712,
+        "expected": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+        "computed": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+        "returned": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+        "status": "MATCH"
+      }
+    ],
+    "matched": 8,
+    "full_242_local_recovery": "NOT_RUN",
+    "original_t1": "NOT_RUN",
+    "network_probe": "git ls-remote: Could not resolve host github.com"
+  },
+  "org10": {
+    "review_handover_blob": "7e81026484efe3b859257564ed13f0d45c6c777d",
+    "run_blob": "44a7286184e031e3654c107c1980616c4d1a6744",
+    "pg_checks": "31+48 NOT_RUN",
+    "required": "original publisher archive/wheels and supplied runtime manifest, independent review and separate port 55436 owner approval"
+  },
+  "studio": {
+    "binding_blob": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51",
+    "projection_blob": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+    "route_blob": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+    "proxy_blob": "f257f77ca5887b2477bdf3fc3f68e2b37c735eff",
+    "observation": "R7 snapshot and projection parser intentionally restrict synthetic tenant/company and A0 environments, projection schema mandates historical HOLD; route passes no owner. Real product cannot be activated by provider registration alone. Require owner-approved separate real read contract and preservation of existing synthetic parser; no schema or permission decision made."
+  },
+  "unified_target": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "unified_compare": "identical",
+  "progress": {
+    "r8_previous": "0/14",
+    "r8_current": "0/14",
+    "weighted_previous": 0,
+    "weighted_current": 0,
+    "delta_percentage_points": 0,
+    "product_acceptance": "unchanged",
+    "functional_tests_this_turn": 0
+  },
+  "architecture": "HOLD unchanged; no real IAM, PG, route registration, main merge, CI, grant, or product source edit.",
+  "catalog_delta": "This evidence file only; no product API/DB/symbol/dependency additions.",
+  "next": "Run unchanged R1 recovery against locally available exact Git objects; no repin. ORG owner review and separate port approval before PG. D5 owners must resolve custody/writer participation/clock before actual protected session. R8 then binds approved real read contract; Unified retains full build/browser ownership.",
+  "rollback": "Omit this additive evidence record; existing gates and historical evidence preserved."
+}
