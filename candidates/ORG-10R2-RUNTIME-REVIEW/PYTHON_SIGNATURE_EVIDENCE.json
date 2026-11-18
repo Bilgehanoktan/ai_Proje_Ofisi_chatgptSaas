@@ -1,0 +1,82 @@
+{
+  "revision": "ORG-10R2-PYTHON-SIGNATURE-EVIDENCE",
+  "source_commit": "99465158e14c8e47704822b5e20b2ca23f57ff49",
+  "classification": "USER_WINDOWS_AUTHENTICODE_TRANSCRIPT_NOT_INDEPENDENT_ATTESTATION",
+  "python_version": "3.14.3",
+  "signer_reported": "CN=Python Software Foundation, O=Python Software Foundation, L=Beaverton, S=Oregon, C=US",
+  "files": [
+    {
+      "file": "base/python.exe",
+      "sha256": "cce21c0e8710e304273e98ac4b2b0f5aceb639acbcd2343cbaa5c4e81619c45b",
+      "signature_status_reported": "Valid"
+    },
+    {
+      "file": "base/python314.dll",
+      "sha256": "1ac15e2224581fc678bbd17728b9aa538d47b891b72c76499ef07e54cd74f151",
+      "signature_status_reported": "Valid"
+    },
+    {
+      "file": "base/python3.dll",
+      "sha256": "be1017ca4ca8ff837efbb343d5c8f739bd67bd1c43fb41068a539b19357c0213",
+      "signature_status_reported": "Valid"
+    },
+    {
+      "file": "venv/Scripts/python.exe",
+      "sha256": "97c3228a59dcc05a771ab4eeec8126ce3f36ebb53616b479adc9f2c8050a9e84",
+      "signature_status_reported": "Valid"
+    }
+  ],
+  "reported_valid": 4,
+  "reported_total": 4,
+  "venv_executable_manifest_hash_match": true,
+  "manifest_sha256": "50870555adc6334556feefdd8323d42241229099e1cb3ccea5707de779cf6ef4",
+  "archive_comparison_evidence_sha256": "dc3be522a5b4be342d3f04955c11c119e1ad7d9e311647a33ee923beaebc04fb",
+  "manifest_review": {
+    "archive_publisher_byte_matches": 1675,
+    "pip_generated_metadata_not_publisher_verified": 5,
+    "venv_executable_hash_match_and_valid_signature_reported": 1
+  },
+  "python_base_full_provenance": "HOLD_STDLIB_AND_OTHER_DEPENDENCIES_NOT_INDEPENDENTLY_VERIFIED",
+  "port_owner_approval": "NOT_RECEIVED",
+  "execution": "HOLD",
+  "pg": {
+    "passed": 0,
+    "total": 31,
+    "status": "NOT_RUN"
+  },
+  "maintain": {
+    "passed": 0,
+    "total": 48,
+    "status": "NOT_RUN"
+  },
+  "independent_security": "HOLD",
+  "product_acceptance": "HOLD",
+  "progress": {
+    "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+    "previous_plan": [
+      2,
+      8
+    ],
+    "current_plan": [
+      2,
+      8
+    ],
+    "subcriterion": "4/4 local Authenticode reported valid; no full runtime-review gate closed",
+    "organization_plan_previous": [
+      5,
+      7
+    ],
+    "organization_plan_current": [
+      5,
+      7
+    ],
+    "weighted_development": "NOT_CALCULABLE_NO_FIXED_PHASE_DENOMINATORS",
+    "new_product_gates": 0
+  },
+  "limits": [
+    "Signatures and hashes reported by user Windows; no raw PE files, certificate chain, or independent signature replay available.",
+    "Manifest verifies only venv executable, not base stdlib and all transitive runtime dependencies.",
+    "No port approval, no PG execution or grant. Do not treat observed fingerprint as independent full-runtime attestation."
+  ],
+  "next": "Explicit owner allocation of port 55436; resolve scoped runtime-review decision under existing execution policy; no full independent security or product acceptance."
+}
