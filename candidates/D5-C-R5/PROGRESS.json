@@ -2,13 +2,14 @@
   "revision": "D5-C-R5",
   "parent": "f629fff2378a1368b1c2ec3d882d9cf8dfc2d98e",
   "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
-  "classification": "WINDOWS_EXECUTION_HANDOFF_ONLY",
+  "classification": "WINDOWS_REAL_PG_DIAGNOSTIC_USER_TRANSCRIPT_HASH_MATCH",
   "initial_branches": 232,
   "pre_transfer_branches": 232,
   "port": {
     "candidate": 55437,
-    "explicit_allocation": "PENDING_AT_LAUNCH",
-    "windows_availability": "NOT_CHECKED"
+    "explicit_allocation": "USER_EVET_SCOPED",
+    "windows_availability": "PASS_AT_LAUNCH",
+    "server_stopped": "REPORTED_TRUE"
   },
   "local_preflight": {
     "pass": 6,
@@ -18,11 +19,14 @@
     "log_blob": "4920fd4fd424ba412bfd76d439c2db60b5f502e9"
   },
   "pg": {
-    "pass": 0,
+    "previous_pass": 0,
+    "pass": 4,
     "total": 4,
-    "status": "NOT_RUN"
+    "status": "PASS_DIAGNOSTIC_USER_EXECUTED",
+    "delta": 4,
+    "strict_expiry": "GAP_REPRODUCED_PG03"
   },
-  "windows": "NOT_RUN",
+  "windows": "PASS_DIAGNOSTIC_USER_TRANSCRIPT",
   "original_r4_rerun": 0,
   "D5_G1_G2": {
     "previous": 42.5,
@@ -60,11 +64,31 @@
   "new_gates": 0,
   "product_changes": 0,
   "blockers": [
-    "Windows runtime and original binary inputs not available here",
-    "explicit port allocation and live port check",
-    "actual PG raw execution",
-    "strict durable COMMIT expiry",
-    "joint IAM/ORG publisher and custody"
+    "strict durable COMMIT expiry (PG03 proven)",
+    "PG04 deferred check not durable COMMIT guarantee",
+    "actual joint IAM/ORG protected publisher and T1 wiring",
+    "independent custody",
+    "original raw Windows evidence not directly uploaded"
   ],
-  "activation": "HOLD"
+  "activation": "HOLD",
+  "evidence": {
+    "attempt_01": "WINDOWS_ATTEMPT_01_HOLD.json",
+    "attempt_02": "WINDOWS_ATTEMPT_02_REVIEW.md",
+    "reconstructed_hashes_match": [
+      2,
+      2
+    ],
+    "original_raw_files": "NOT_UPLOADED",
+    "independent_execution": "NOT_RUN",
+    "source_pin_count": 3,
+    "product_acceptance": "HOLD"
+  },
+  "parallel": {
+    "inventory": 240,
+    "G3": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+    "G4": "ed638c4bc8d69cec267392251f6efe40f464fc9a",
+    "G5": "1a9464966c1c5c67415e279b20bae3b19107554c",
+    "ORG10R2": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "D4_owner": "c3ee73f5430368f4c2c6ed3cbe71a3728d0c5c02"
+  }
 }

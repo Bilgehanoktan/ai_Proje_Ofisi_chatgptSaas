@@ -1,0 +1,56 @@
+{
+  "classification": "PG_TRANSPORT_DIAGNOSTIC_ONLY",
+  "source_pin": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+  "cases": [
+    {
+      "id": "PG01",
+      "status": "PASS_DIAGNOSTIC",
+      "body_before_deadline": true,
+      "precommit_at": "2026-11-19T00:33:19.888626+03:00",
+      "precommit_before_deadline": true,
+      "outcome": "COMMIT",
+      "readback_rows": 1,
+      "body_at": "2026-11-19T00:33:19.887482+03:00",
+      "deadline": "2026-11-19T00:33:49.879691+03:00",
+      "deferred_at": "2026-11-19T00:33:19.889482+03:00",
+      "observed": "COMMIT_VALID"
+    },
+    {
+      "id": "PG02",
+      "status": "PASS_DIAGNOSTIC",
+      "body_before_deadline": false,
+      "outcome": "BODY_REJECTED",
+      "readback_rows": 0,
+      "observed": "BODY_REJECTED"
+    },
+    {
+      "id": "PG03",
+      "status": "PASS_DIAGNOSTIC",
+      "body_before_deadline": true,
+      "precommit_at": "2026-11-19T00:33:20.249252+03:00",
+      "precommit_before_deadline": true,
+      "outcome": "COMMIT",
+      "readback_rows": 1,
+      "body_at": "2026-11-19T00:33:20.247762+03:00",
+      "deadline": "2026-11-19T00:33:21.247536+03:00",
+      "deferred_at": "2026-11-19T00:33:22.766904+03:00",
+      "observed": "COMMIT_LATE"
+    },
+    {
+      "id": "PG04",
+      "status": "PASS_DIAGNOSTIC",
+      "body_before_deadline": true,
+      "precommit_at": "2026-11-19T00:33:23.014806+03:00",
+      "precommit_before_deadline": true,
+      "sqlstate": "P0001",
+      "expected_guard_error": true,
+      "outcome": "UNKNOWN",
+      "readback_rows": 0,
+      "observed": "UNKNOWN_ZERO_READBACK"
+    }
+  ],
+  "schema_created": true,
+  "cleanup_verified": true,
+  "activation": "HOLD",
+  "status": "PASS_DIAGNOSTIC"
+}
