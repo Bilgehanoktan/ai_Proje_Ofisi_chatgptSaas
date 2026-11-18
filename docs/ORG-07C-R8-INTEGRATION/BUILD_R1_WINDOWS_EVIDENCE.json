@@ -1,0 +1,124 @@
+{
+  "revision": "ORG-07C-R8-BUILD-R1-WINDOWS-PASS",
+  "date": "2026-11-18",
+  "classification": "USER_EXECUTED_FULL_LOCKED_FRONTEND_BUILD_CONSOLE_EVIDENCE",
+  "source_commit": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+  "source_manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "gates_blob": "431ab1cf80a7932362734ea2ef89df393f24f914",
+  "transcript": {
+    "bytes": 47224,
+    "sha256": "1ae48cd61ab338e5280550086491100a2b45421c07269de69a4345f27d1a314f",
+    "raw_log_files": "NOT_RECEIVED; hashes reported by user, no independent raw log comparison"
+  },
+  "review": {
+    "sha256": "1a9a1ec8bedb68b28b100d5fc06770117070b8b9a74a3ae1adc40328ec784f4b",
+    "approval": "ONAY",
+    "reconstructed_from_exact_runner": "636 byte CRLF; SHA256 independently computed and matches console; raw original REVIEW_R1.json not received"
+  },
+  "source_integrity": {
+    "before": 509,
+    "after": "PASS per console and runner",
+    "casefold_module_stems": "PASS",
+    "old_failed_stage": "preserved"
+  },
+  "logs": [
+    {
+      "name": "01-npm-install.log",
+      "exit": 0,
+      "sha256": "f32486b9fb0fc3871d648d70b0d3d2e964180a856bbeb23555e324305ceae2b7",
+      "installed": 30,
+      "seconds": 16
+    },
+    {
+      "name": "02-workflow-inspector.log",
+      "exit": 0,
+      "sha256": "dffea7311230684b26463035355153badca7a56a1ea234ab798b4c4710a8bff5",
+      "pass": 16,
+      "fail": 0,
+      "duration_ms": 245.6372,
+      "test_blob": "de8b825af52e24e372f6ec9f71788c8ab08cd536",
+      "cases": [
+        "preview idle without both endpoints",
+        "valid preview shows wave impact, no mutation",
+        "preview rejects reference and existing draft duplicates",
+        "cycle and invalid endpoint rejected by original guard",
+        "invalid existing graph fails closed",
+        "reference and draft direction and wave exact",
+        "unknown selection has no inferred task",
+        "add undo redo recalculate inspection and preview",
+        "reject leaves history unchanged, new edit after undo clears redo",
+        "reference removal does not mutate history",
+        "draft removal is reversible",
+        "history reset and bounded undo entries",
+        "JSX shows distinct reference/draft and only draft remove",
+        "inspector callbacks select endpoints, navigate and remove only local edge",
+        "JSX preview and history counters are read-only",
+        "empty selected task shows HOLD with no removal controls"
+      ]
+    },
+    {
+      "name": "03-next-build.log",
+      "exit": 0,
+      "sha256": "429492bc5091bfb0634fc621e14e3afafbf9658d3ea0ca8b90109de6a5a82bc8",
+      "next": "15.5.29",
+      "static_pages": "9/9",
+      "routes": [
+        "/",
+        "/_not-found",
+        "/api/demo/admission",
+        "/api/demo/lifecycle",
+        "/api/demo/lifecycle-prefix",
+        "/api/demo/mvp",
+        "/api/demo/office-workbench",
+        "/api/demo/organization",
+        "/api/demo/outbox",
+        "/api/demo/plan",
+        "/api/demo/shared-snapshot",
+        "/api/demo/task-budget",
+        "/office",
+        "/office/premium",
+        "/office/premium/hybrid",
+        "/office/premium/native",
+        "/office/premium/unified"
+      ],
+      "warnings": [
+        "three CSS modules autoprefixer start/end",
+        "webpack nonserializable warning cache"
+      ],
+      "module_collision": "not reproduced in R1 output",
+      "projection_type_error": "not reproduced"
+    },
+    {
+      "name": "04-typecheck.log",
+      "exit": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+  "scope": "Frontend only, no backend, PG, IAM activation, provider call, CI/main/PROD. Browser NOT_RUN; prior 31 R8 cases not rerun on R1.",
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "completed": [
+      "I1",
+      "F4"
+    ],
+    "I2": "FRONTEND_BUILD_PASS; full locked product criterion pending Unified owner review/full-stack",
+    "I3": "NOT_RUN",
+    "canonical_acceptance": "unchanged",
+    "conditional_if_I2_accepted_percent": 18.333333333333332
+  },
+  "parallel": {
+    "observed_branches": 236,
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "premium": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "ext": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "d5g2": "9ca667e816dac269084ef8f62051da5fe458eb12"
+  },
+  "next": "Preserve raw REVIEW_R1 and four logs; local loopback frontend-only HTTP and browser smoke with backend absent, closed organization 503/HOLD, no cross-lane acceptance. Share exact source repair/build evidence with Unified owner.",
+  "architecture_delta": "None; closed provider remains absent",
+  "catalog_delta": "Evidence only; no source, API, DB or dependencies changed in this commit",
+  "rollback": "Stop local server only; keep stages and evidence."
+}
