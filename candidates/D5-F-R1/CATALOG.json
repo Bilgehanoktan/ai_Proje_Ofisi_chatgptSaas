@@ -1,0 +1,54 @@
+{
+  "revision": "D5-F-R1",
+  "scope": "candidate-only read-only composition",
+  "files": {
+    "recovery_adapter.py": {
+      "class": "PublicationRecoveryReview",
+      "functions": [
+        "_ro",
+        "_observation",
+        "review_publication_recovery"
+      ],
+      "dependencies": [
+        "0205-R WitnessReader and review_recovery",
+        "D5-E derived authority _head and _publication_state",
+        "sqlite3",
+        "existing owner_state synthetic readback"
+      ],
+      "api": "no product API",
+      "db": "read-only existing fixture tables; no new schema",
+      "permissions": "no grant, replay, publish, retry, dispatch, spend or finalize"
+    },
+    "test_recovery_adapter.py": {
+      "class": "AdapterTests",
+      "tests": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14"
+      ],
+      "dependencies": [
+        "existing D5-E/F test harness",
+        "0204-C CompanySQLTests",
+        "0205-R witness store and reader"
+      ]
+    },
+    "SOURCE_AUDIT.json": "18 connector byte checks; 9 local recovery files; 4 fixture pins",
+    "PROGRESS.json": "unchanged parent criteria and new diagnostics",
+    "HANDOVER.md": "architecture delta, maintenance and rollback"
+  },
+  "product_changes": 0,
+  "db_migrations": 0,
+  "new_packages": 0,
+  "external_api_changes": 0
+}
