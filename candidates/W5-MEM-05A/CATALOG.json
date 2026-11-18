@@ -1,0 +1,45 @@
+{
+  "revision": "W5-MEM-05A",
+  "inherits": [
+    "../W5-MEM-04/CATALOG.json",
+    "../W5-MEM-03/CATALOG.json"
+  ],
+  "new_test": {
+    "path": "product/ai-company-os-backend/tests/test_runtime_memory_t1_w5_mem05a.py",
+    "blob": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+    "symbols": [
+      "RuntimeMemoryT1Tests",
+      "advance",
+      "bind_current",
+      "prepare",
+      "suffix_matches",
+      "rollback"
+    ],
+    "tests": 9
+  },
+  "existing_contract": {
+    "coordinator": "app/core/transaction/port.py:LogicalT1Coordinator",
+    "transport": "app/core/transaction/postgres_session.py:postgres_transaction",
+    "mapping": "app/core/transaction/witnessed_mapping.py:WitnessedTransitionMapping._check",
+    "physical_candidate": "app/core/transaction/postgres_transition_mapping.py:D0PostgresTransitionMapping",
+    "memory": "app/core/agent_runtime/memory_witness.py:inspect_witnessed_context",
+    "checkpoint": "app/core/agent_runtime/memory_checkpoint.py:inspect_checkpoint_suffix (diagnostic only)",
+    "database": [
+      "run_heads",
+      "run_leases",
+      "run_mutations",
+      "run_audit",
+      "events",
+      "outbox",
+      "fences"
+    ]
+  },
+  "new_runtime_source": 0,
+  "new_tables": 0,
+  "new_api": 0,
+  "new_events": 0,
+  "new_dependencies": 0,
+  "source_pins": "SOURCE_PINS.json",
+  "promotion": "PROMOTION_MATRIX.json",
+  "runbook": "ARCHITECTURE_AND_RUNBOOK.md"
+}

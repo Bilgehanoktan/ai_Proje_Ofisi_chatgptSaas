@@ -1,0 +1,24 @@
+# W5-MEM-05A — Runtime–Memory original contract verification (D0)
+Parent c7aca5997c9fbaba9f39f40c5ce9c962d85d252e. CEO-0174/0179=B. Read the current Design Master, roadmap, TRACK-0227 (574f14af7eed4ff38cce6724e5156801817b457d) and reporting standard (77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16). No new authority.
+
+## What / why / where / how
+Existing 0209 WitnessedTransitionMapping._check already calls inspect_witnessed_context, which calls the exact MEM03 full signed history and joint Memory/Model review. No new adapter needed. Actual original chain: transition_command.validate_transition -> LogicalT1Coordinator.commit_transition -> postgres_transaction/PostgresSession -> WitnessedTransitionMapping + D0PostgresTransitionMapping -> locked run-head, lease, six base roles, postimage, receipt. Original _check runs after locked preimage and before receipt; each full witnessed read has two memory observations. It is not a proof of distributed atomicity or expiry through commit. MEM04 checkpoint is separate diagnostic, not a T1 replacement, not an authority, no raw retrieval/provider/tool/release/spend grant. Existing 0210 local revocation fence and 0211 authority wrapper stay untouched, D5 owns their protected publisher.
+
+New product test only: tests/test_runtime_memory_t1_w5_mem05a.py, composition of original WitnessedSqlTests and HistoryCommitmentTests. Real temporary SQLite, original 0192/0193/0194 DDL, original SQL mapping (fixture translates PostgreSQL placeholders/schema and removes FOR UPDATE; not PG lock evidence). Nine tests cover exact multi-generation valid transition and read-only memory/witness, four full history checks with valid checkpoint, coherent genesis/middle rewrite, prefix signature corruption, rewrite during AUDIT with all seven tables restored, signed pending, stale pin, missing history. Prefix tamper can still match suffix but original T1 rejects. Original 0209 10+7 tests (different from D5 0212/0214) and 138 Memory tests rerun. 164/164 twice; raw log blobs preserved. Original final-check-to-COMMIT gap is deliberately reproduced; no provider effect or security acceptance.
+
+## Controlled source promotion
+50 original local files exact, 14 additional recovery files, 1 new test. Core 0227 and Unified U3A share 40/50 exact paths; 10 original memory deltas plus new test in PROMOTION_MATRIX.json; latest Studio head compared too. Only tested source subset, not full project merge. MEM04 already contains original Core SQL components, so this source-identical integration child preserves previous versions and does not fork another runtime. No automatic overlay of active Core, Unified, Studio or IAM branches; all remain intact. Owner-approved promotion must match exact preimage blobs and include fixture dependency paths, recompute target manifest and perform locked unified build/tests. No global lock or unpublished branch visibility.
+
+## Owner boundary
+D5-G2 durable IAM source and previous G1/G1-R1 are separate. G2's 50-test combined run remains owner task. Exact session identity/principal kind/agent instance/issuer-clock, current ORG membership+assignment, D4 role/session/RLS, protected common publisher and independent monotonic custody remain prerequisites. No new IAM, authority, role, DB, HTTP, event or dependency. Memory uses current signed head and exact model input span; keep RootPin, IAM/ORG refs, checkpoint pin and model economic identity distinct. No bypass of full audit for checkpoint. No compaction or archive/prune.
+
+## Reproduce
+From pinned repo root in PowerShell:
+```powershell
+$env:PYTHONPATH = 'product/ai-company-os-backend;product/ai-company-os-backend/tests;candidates/W5-MEM-01;candidates/W5-MEM-02'
+python -B -m unittest -v test_memory_access_0194 test_memory_store_0196 test_runtime_memory_model_0207 test_joint_context_0208 test_memory_witness_0209 test_revision_continuity test_witness_continuity test_memory_history_w5_mem03 test_memory_checkpoint_w5_mem04 test_witnessed_t1_0209 test_witnessed_sql_0209 test_runtime_memory_t1_w5_mem05a
+```
+Linux uses colon. Verify pins before execution. On HOLD preserve all memory/witness/T1 data and trusted external pins; no force repin, retry, release, or skip of full audit. On unknown commit reconcile exact durable receipt, never infer rollback. Rollback source only: isolated checkout c7aca5997c9fbaba9f39f40c5ce9c962d85d252e, remove new test and evidence, restore parent manifest; no DB migration to undo. No CI, main merge, actual PG/real authority/customer data/external effects/PROD.
+
+## Next
+MEM-05B owner contract alignment with current D5-G2, ORG and D4; do not duplicate owner work. MEM-05C W5-J2 model invocation/receipt/budget, MEM-05D D5 custody/recovery, MEM-05E full locked unified regression and actual PostgreSQL when authorized. Current package's functional stage complete; product integration gates HOLD.
