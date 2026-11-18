@@ -1,0 +1,44 @@
+{
+  "revision": "D5-C-R5",
+  "type": "USER_REPORTED_WINDOWS_ATTEMPT_01",
+  "date": "2026-11-19",
+  "parent": "b6ba1bcc352f42d5e2d0f4507779e41d61af47d9",
+  "source_integrity": "PREFLIGHT_PASS_USER_TRANSCRIPT",
+  "input_postcheck": true,
+  "port": 55437,
+  "allocation": "USER_EVET",
+  "stage": "%USERPROFILE%/AIOS_D5C_R5_20261119_002154",
+  "exit": 2,
+  "pg_exit": null,
+  "error_class": "CalledProcessError",
+  "initdb": {
+    "status": "FAIL",
+    "phase": "post-bootstrap initialization",
+    "error": "invalid byte sequence for encoding UTF8: 0xdd 0x4c",
+    "data_directory_removal": "reported by initdb"
+  },
+  "server_stopped_flag": false,
+  "interpretation": "launcher only sets stopped after pg_ctl start attempted; initdb failed earlier. Verify no matching process and no port listener before fresh run.",
+  "report_sha256": {},
+  "pg": {
+    "pass": 0,
+    "total": 4,
+    "status": "NOT_RUN"
+  },
+  "diagnosis": "Probable non-ASCII PostgreSQL executable/install/data path from USERPROFILE; known upstream Windows limitation. Not yet confirmed by successful ASCII stage.",
+  "references": [
+    "https://www.postgresql.org/message-id/16926-e4ef345545d185ab%40postgresql.org",
+    "https://www.postgresql.org/message-id/642665.1738684548%40sss.pgh.pa.us"
+  ],
+  "correction": "Preserve failed stage. Verify no process from that stage and no listener on 55437; use a fresh ASCII-only C:\\AIOS\\D5C_R5_ASCII_<timestamp> sibling stage, exact existing runner, preflight and explicit EVET. No encoding/role/auth/source changes. No automatic retry.",
+  "parallel": {
+    "inventory": 240,
+    "G3": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+    "G4": "ed638c4bc8d69cec267392251f6efe40f464fc9a",
+    "ORG10R2": "bed005f91564f90fe322eb6b761b314392ec9d04"
+  },
+  "product_changes": 0,
+  "new_gates": 0,
+  "weighted_delta": "none",
+  "activation": "HOLD"
+}
