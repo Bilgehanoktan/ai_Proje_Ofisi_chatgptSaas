@@ -1,0 +1,445 @@
+{
+  "id": "ORG-07C-R8-E03",
+  "date": "2026-11-18",
+  "parent": "41a9c412400df7c32accfe2bdd57811980f728a3",
+  "classification": "STATIC_CROSS_LANE_READBACK_ONLY",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "architecture": {
+    "index_blob": "e2f749ba8bd8e4031be94f5283820b7e2040be05",
+    "sequence_blob": "b6ec523ffad93c92721f70c0431e0ad7155956b0",
+    "patch_blob": "3be745832bcdb908625f99164296dff9aa06f928",
+    "session_contract_blob": "306037f878d08f25252198b1144bbd626cd04d96",
+    "owner_contract_blob": "27991b3c75402c9adce024dcf3888db1fbdc2479",
+    "status": "HOLD; no architecture change"
+  },
+  "inventory": {
+    "branches": 225,
+    "open_prs": [
+      1,
+      2,
+      3
+    ],
+    "limit": "published heads only, no exclusive lock or visibility of uncommitted work"
+  },
+  "cross_lane": {
+    "method": "Compare exact five preimage blobs and absence of five addition targets against complete Git trees; null means absence.",
+    "checks": [
+      {
+        "lane": "Unified U3A",
+        "head": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "checks": [
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+            "expected": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "observed": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+            "expected": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "observed": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+            "expected": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "observed": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+            "expected": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "observed": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+            "expected": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "observed": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          }
+        ],
+        "pass": 10,
+        "total": 10
+      },
+      {
+        "lane": "Premium P10J24B",
+        "head": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+        "checks": [
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+            "expected": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "observed": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+            "expected": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "observed": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+            "expected": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "observed": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+            "expected": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "observed": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+            "expected": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "observed": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          }
+        ],
+        "pass": 10,
+        "total": 10
+      },
+      {
+        "lane": "EXT07R6",
+        "head": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+        "checks": [
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+            "expected": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "observed": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+            "expected": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "observed": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+            "expected": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "observed": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+            "expected": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "observed": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+            "expected": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "observed": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          }
+        ],
+        "pass": 10,
+        "total": 10
+      },
+      {
+        "lane": "W5-MEM-03R1",
+        "head": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
+        "checks": [
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+            "expected": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "observed": "5456a3812117d4f4d9503e4875625e58bea0382b",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+            "expected": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "observed": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+            "expected": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "observed": "73ef76f14855875aa50a7e619214a5311c1393f2",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+            "expected": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "observed": "bb3ad084dd62a094363a44e86805f9693400bb30",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+            "expected": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "observed": "9231711d7efb18dd18b68e3322f62337a6477484",
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+            "expected": null,
+            "observed": null,
+            "match": true
+          }
+        ],
+        "pass": 10,
+        "total": 10
+      }
+    ],
+    "pass": 40,
+    "total": 40,
+    "limit": "not a merge, full checkout, runtime or functional test"
+  },
+  "owner_evidence": {
+    "d5f_r2": {
+      "commit": "38227d51f02bd61da654cf4786a53c72e53ccf86",
+      "progress_blob": "516bcb65d25be8e07c8a988dfe76c95c1fe4943c",
+      "original_tests": "17/17 PASS; exact 1718-file source tree; separate local execution from Windows E02; same test identities",
+      "development": 62.619,
+      "remaining": [
+        "S03",
+        "F06",
+        "F07",
+        "I02",
+        "A01"
+      ],
+      "limit": "full restore residual reproduced; no real IAM or security acceptance"
+    },
+    "org10r2": {
+      "commit": "67e8b70075a121437c8ba7b4254ed28e6c9513eb",
+      "pg": [
+        0,
+        31
+      ],
+      "acl": [
+        0,
+        48
+      ],
+      "runtime": "HOLD; independent runtime review and explicit 55436 allocation outstanding"
+    },
+    "d5_g": "Parallel chat reports MEM-03 cross regression and IAM source review; no D5-G head identified in observed branch inventory; treat as reported, not owner-approved evidence."
+  },
+  "consumer_findings": [
+    {
+      "id": "R8-C01",
+      "source": "candidates/ORG-07C-R7/frontend/route.ts",
+      "blob": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+      "finding": "GET passes no OwnerReadProvider; returns default HOLD 503 in candidate. No activation."
+    },
+    {
+      "id": "R8-C02",
+      "source": "candidates/ORG-07C-R7/frontend/organizationOwnerBinding.ts",
+      "blob": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51",
+      "finding": "Only synthetic scope and 64-hex revision accepted. Cannot prove principal, expiry, revocation or publication freshness; actual owner must enforce these server-side. Do not broaden allowlist or expose credentials."
+    },
+    {
+      "id": "R8-C03",
+      "source": "product/ai-company-os-backend/app/api/demo.py",
+      "blob": "4d80172bc467953039ff57296055f68d740a3ff2",
+      "finding": "U3A entrypoint has no explicit organization studio route or organization router registration. Owner-backed route still required; frontend cannot create authority."
+    }
+  ],
+  "ownership": {
+    "D5": "protected IAM, publication/restore, F06/F07 and commit expiry",
+    "ORG10": "PG membership and provenance",
+    "R8": "consume approved owner session and exact scoped revision; no new owner",
+    "Unified": "full exact combined product build/browser"
+  },
+  "progress": {
+    "criteria": "ORG-07C-R8 original INTEGRATION_GATES.json",
+    "previous": {
+      "design": [
+        0,
+        2
+      ],
+      "source": [
+        0,
+        3
+      ],
+      "functional": [
+        0,
+        4
+      ],
+      "integration": [
+        0,
+        3
+      ],
+      "acceptance": [
+        0,
+        2
+      ]
+    },
+    "current": {
+      "design": [
+        0,
+        2
+      ],
+      "source": [
+        0,
+        3
+      ],
+      "functional": [
+        0,
+        4
+      ],
+      "integration": [
+        0,
+        3
+      ],
+      "acceptance": [
+        0,
+        2
+      ]
+    },
+    "previous_percent": 0,
+    "current_percent": 0,
+    "delta_pp": 0,
+    "canonical_acceptance": {
+      "core": [
+        12,
+        16
+      ],
+      "ui": [
+        21,
+        40
+      ],
+      "org_plan": [
+        5,
+        7
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "independent": [
+        0,
+        7
+      ]
+    },
+    "new_functional_tests": 0,
+    "gate_promotions": 0
+  },
+  "catalog": {
+    "new_record": "candidates/ORG-07C-R8/EVIDENCE_03_CROSS_LANE_COMPATIBILITY.json",
+    "product_files_changed": 0,
+    "symbols": [],
+    "apis": [],
+    "db": [],
+    "dependencies": []
+  },
+  "handover": "Reuse existing R7 patch. Await owner-reviewed D5 protected session contract and ORG membership acceptance. Recheck five preimages/five absence targets on actual integration commit; then owner-approved route binding, exact full checkout, locked build and real browser acceptance under Unified. Do not repeat original T1 or create alternate IAM, PG or Studio fixture.",
+  "maintenance": "On any drift stop and coordinate source owner; never repin silently. Missing/expired/revoked/pending/unknown/restored/untrusted session stays HOLD; never log token.",
+  "rollback": "Omit additive evidence record; no product or data change. Retain previous records.",
+  "restrictions": "CEO-0174/0179=B; no main merge, CI, grants, external effects, real customer data, spending, production or independent acceptance."
+}
