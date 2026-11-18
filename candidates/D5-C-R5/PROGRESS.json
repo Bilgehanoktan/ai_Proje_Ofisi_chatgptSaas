@@ -1,0 +1,70 @@
+{
+  "revision": "D5-C-R5",
+  "parent": "f629fff2378a1368b1c2ec3d882d9cf8dfc2d98e",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "classification": "WINDOWS_EXECUTION_HANDOFF_ONLY",
+  "initial_branches": 232,
+  "pre_transfer_branches": 232,
+  "port": {
+    "candidate": 55437,
+    "explicit_allocation": "PENDING_AT_LAUNCH",
+    "windows_availability": "NOT_CHECKED"
+  },
+  "local_preflight": {
+    "pass": 6,
+    "total": 6,
+    "exit": 0,
+    "environment": "Linux CPython 3.13.5",
+    "log_blob": "4920fd4fd424ba412bfd76d439c2db60b5f502e9"
+  },
+  "pg": {
+    "pass": 0,
+    "total": 4,
+    "status": "NOT_RUN"
+  },
+  "windows": "NOT_RUN",
+  "original_r4_rerun": 0,
+  "D5_G1_G2": {
+    "previous": 42.5,
+    "current": 42.5,
+    "delta_pp": 0
+  },
+  "D5_F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "weighted_R5": "HESAPLANAMADI",
+  "acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_gates": 0,
+  "product_changes": 0,
+  "blockers": [
+    "Windows runtime and original binary inputs not available here",
+    "explicit port allocation and live port check",
+    "actual PG raw execution",
+    "strict durable COMMIT expiry",
+    "joint IAM/ORG publisher and custody"
+  ],
+  "activation": "HOLD"
+}

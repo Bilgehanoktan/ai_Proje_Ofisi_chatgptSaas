@@ -1,0 +1,44 @@
+{
+  "revision": "D5-C-R5",
+  "files": {
+    "run_windows.py": [
+      "require",
+      "blob",
+      "load_inputs",
+      "check_port",
+      "check_roots",
+      "write",
+      "child",
+      "main"
+    ],
+    "test_windows_preflight.py": [
+      "LaunchPreflight"
+    ],
+    "run_pg_expiry.py": "exact R4 diagnostic",
+    "postgres_session.original.py": "exact product transport",
+    "run_d1_0227_authfix.py": "exact D1 helper, no main invocation",
+    "RUN.md": "operator instructions",
+    "HANDOVER.md": "architecture, evidence, rollback",
+    "PROGRESS.json": "scope status",
+    "preflight.log": "actual local output",
+    "exit_code.txt": "actual local exit"
+  },
+  "source_pins": {
+    "run_pg_expiry.py": "99dbb6320807478a516c726790c02491292739cf",
+    "postgres_session.original.py": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+    "run_d1_0227_authfix.py": "d20bbb6740901e2abf02d445b20cfa34f4b93d50"
+  },
+  "dependencies": [
+    "CPython 3.14.3 Windows",
+    "PostgreSQL 17.12 original D1 ZIP",
+    "psycopg 3.3.9",
+    "psycopg-binary 3.3.9",
+    "tzdata 2026.6"
+  ],
+  "diagnostic_database": "d5c_r4_db",
+  "diagnostic_role": "d5c_r4_role",
+  "new_product_api": [],
+  "new_product_db": [],
+  "product_changes": 0,
+  "activation": "HOLD"
+}
