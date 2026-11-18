@@ -1,0 +1,129 @@
+{
+  "revision": "D5-F-R2",
+  "parent": "59c2d8b9b1777c36f0cd95a761c3a791caa89a73",
+  "source_commit": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+  "source_tree": "1553409909ed76488cf3b4d49ccf1857aa8b3ae0",
+  "archive_sha256": "b7969b76116768335877f1f08619bfa316a3c5945051ee379da9c2fc0570869b",
+  "archive_files": 1718,
+  "full_tree_match": true,
+  "backend_manifest_entries": 237,
+  "ddl_pins": 3,
+  "explicit_test_pins": 3,
+  "runner_blob": "14f0a4dd0bde11c5e40b4f8e5e6bf17cbaf4b392",
+  "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "cryptography": "46.0.4",
+  "command": "python -I -B candidates/D5-C/run_original_t1.py",
+  "exit_code": 0,
+  "tests": {
+    "0212": 7,
+    "0214": 10,
+    "pass": 17,
+    "fail": 0,
+    "skip": 0,
+    "restore_residual_reproduced": 1
+  },
+  "log_sha256": "401f116221de85246c7f66f84e705efca7b6d232da063561083e5fa6e4d2ed3f",
+  "scope": "exact historical product source, local synthetic SQLite only; no independent acceptance",
+  "reporting_standard": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+  "criteria": "D5-F-RECOVERY-SCOPE-v1",
+  "previous_counts": {
+    "design": [
+      2,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional_tests": [
+      5,
+      7
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "final_acceptance": [
+      0,
+      1
+    ]
+  },
+  "current_counts": {
+    "design": [
+      2,
+      2
+    ],
+    "source": [
+      2,
+      3
+    ],
+    "functional_tests": [
+      5,
+      7
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "final_acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 40.9524,
+  "current_percent": 62.619,
+  "delta_percentage_points": 21.6667,
+  "whole_D5": "HESAPLANAMADI",
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "remaining": [
+    "S03",
+    "F06",
+    "F07",
+    "I02",
+    "A01"
+  ],
+  "branches_observed": 222,
+  "parallel": {
+    "W5-MEM-02": {
+      "commit": "1bbcf88035ae0e59162cffa5a16cc30844f3cbec",
+      "snapshot_store_changed": true,
+      "fullchain_0214_direct_import": true,
+      "result_transfer": "HOLD; exact new candidate regression required with owner"
+    },
+    "ORG-10R2": {
+      "commit": "5410e56d9441e2ecda3eca309b942657c2621a00",
+      "reported_python_signatures_valid": 4,
+      "PG31": "NOT_RUN",
+      "base_provenance": "HOLD"
+    },
+    "D4-R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "W5-J2-R4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "U3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "product_changes": 0,
+  "gate_promotions": 0,
+  "activation": "HOLD"
+}

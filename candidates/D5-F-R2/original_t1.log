@@ -1,0 +1,23 @@
+PIN_MATCH: 237 backend manifest entries + 3 original DDL; 3 explicit test pins
+test_actual_commit_and_readback (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_actual_commit_and_readback) ... ok
+test_product_database_restore_no_replay (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_product_database_restore_no_replay) ... ok
+test_revocation_first_no_t1 (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_revocation_first_no_t1) ... ok
+test_rollback_does_not_enable_retry (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_rollback_does_not_enable_retry) ... ok
+test_root_publisher_waits_through_actual_commit (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_root_publisher_waits_through_actual_commit) ... ok
+test_two_claimants_only_one_commit (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_two_claimants_only_one_commit) ... ok
+test_unknown_commit_quarantined (test_intent_authority_t1_0212.IntentAuthorityT1Tests.test_unknown_commit_quarantined) ... ok
+test_concurrent_claim_one_original_commit (test_authority_fullchain_0214.FullChainTests.test_concurrent_claim_one_original_commit) ... ok
+test_expired_lease_quarantine (test_authority_fullchain_0214.FullChainTests.test_expired_lease_quarantine) ... ok
+test_full_original_wrapper_commit (test_authority_fullchain_0214.FullChainTests.test_full_original_wrapper_commit) ... ok
+test_full_restore_residual_reproduced_not_security_pass (test_authority_fullchain_0214.FullChainTests.test_full_restore_residual_reproduced_not_security_pass) ... ok
+test_lost_commit_reply_no_retry (test_authority_fullchain_0214.FullChainTests.test_lost_commit_reply_no_retry) ... ok
+test_restore_journal_t1_but_not_authority_blocks_replay (test_authority_fullchain_0214.FullChainTests.test_restore_journal_t1_but_not_authority_blocks_replay) ... ok
+test_revocation_before_claim_no_writes (test_authority_fullchain_0214.FullChainTests.test_revocation_before_claim_no_writes) ... ok
+test_revoked_memory_before_t1_quarantines (test_authority_fullchain_0214.FullChainTests.test_revoked_memory_before_t1_quarantines) ... ok
+test_root_publisher_waits_through_commit (test_authority_fullchain_0214.FullChainTests.test_root_publisher_waits_through_commit) ... ok
+test_wrong_signature_key_no_commit (test_authority_fullchain_0214.FullChainTests.test_wrong_signature_key_no_commit) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 2.583s
+
+OK
