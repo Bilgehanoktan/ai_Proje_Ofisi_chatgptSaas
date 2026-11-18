@@ -1,0 +1,87 @@
+{
+  "revision": "ORG-07C-R8-R1-MANUAL-VISUAL",
+  "date": "2026-11-19",
+  "classification": "USER_BROWSER_SCREENSHOT_VISUAL_EVIDENCE_PARTIAL",
+  "source_commit": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+  "manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+  "screenshots": [
+    {
+      "ordinal": 1,
+      "sha256": "a66300854d9a535d31fd66dad75311ac61b4965660189b63160cbe24d3bbf473",
+      "width": 1734,
+      "height": 868,
+      "observation": "CEO Command Center: static-only, KPI values unverified, HOLD"
+    },
+    {
+      "ordinal": 2,
+      "sha256": "40b166e171199ca9ff41b1c95da821684d8283904c176d786e838fc9e803cbaa",
+      "width": 1919,
+      "height": 1106,
+      "observation": "/office: four reserved stations and isometric layout; no active agent"
+    },
+    {
+      "ordinal": 3,
+      "sha256": "2445420dca39de038bce92a79d493beb636e1e00c2971f5dfbb30c2dd608ddb1",
+      "width": 1882,
+      "height": 1088,
+      "observation": "/office/premium: decorative floor, role templates, minimap and motion controls"
+    },
+    {
+      "ordinal": 4,
+      "sha256": "0c54ef9de3516e9aad6a4fb5bf80772b5562bd25bf06e7ddf216550ad2782eaf",
+      "width": 1919,
+      "height": 1108,
+      "observation": "Workflow Studio: selected reference node, DAG and HOLD; not a demonstrated edit"
+    },
+    {
+      "ordinal": 5,
+      "sha256": "7fe2a9fc61bc2db210c2c22246ca6766761948c333dd835ca8e2382cee7a1509",
+      "width": 1903,
+      "height": 1074,
+      "observation": "Project Studio: 7 tasks, 7 dependencies, 6 waves, 7 HOLD; not live progress"
+    },
+    {
+      "ordinal": 6,
+      "sha256": "034a3db35f1299359dfda5fa85d55d7f3b222065d3d4e93ed6ed160790bfbcac",
+      "width": 1773,
+      "height": 506,
+      "observation": "Project Studio header: ADMISSION DENY and RELEASE HOLD"
+    },
+    {
+      "ordinal": 7,
+      "sha256": "a227fd805bd2c2be08247854dcae9118cc7364a2aa5de69238cb332ed304661b",
+      "width": 1919,
+      "height": 1114,
+      "observation": "Agent Studio: 4 roles, 4 department templates; organization panel initial unread, HOLD"
+    }
+  ],
+  "raw_image_transfer": "Not uploaded to repository; screenshots contain personal browser UI. Only hashes/dimensions and product observations retained.",
+  "observations": "Six distinct UI areas visible in seven images; no live agent, finance, grant or release claimed. Organization panel shown idle, not clicked-result evidence. HTTP 9/9 prior evidence separate. No full browser acceptance or proof of interactions, current source identity from screenshots alone, console or same-document shared state.",
+  "incident": {
+    "message": "WinError 10048 on bind 127.0.0.1:17680",
+    "source_and_build_log_pins": "PASS reported",
+    "cause": "Port occupied at bind; listener identity not established",
+    "action": "Read-only port/PID check; no terminate, no firewall changes; concurrent D5-C-R5 preflight left untouched."
+  },
+  "parallel": {
+    "observed_branches": 240,
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "d5c_r5": "b6ba1bcc352f42d5e2d0f4507779e41d61af47d9",
+    "d5g4": "ed638c4bc8d69cec267392251f6efe40f464fc9a"
+  },
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "completed": [
+      "I1",
+      "F4"
+    ],
+    "I2": "frontend build PASS; Unified full product gate pending",
+    "I3": "partial visual evidence; full browser acceptance not demonstrated",
+    "canonical_acceptance": "unchanged"
+  },
+  "architecture_delta": "none",
+  "catalog_delta": "Evidence record only; no product files/API/DB/dependencies modified",
+  "next": "Identify listener and verify local page, click organization read and clear, verify HOLD and no historical data, Workflow select/preview, inspect browser console; coordinate full-stack owner; preserve existing permissions."
+}
