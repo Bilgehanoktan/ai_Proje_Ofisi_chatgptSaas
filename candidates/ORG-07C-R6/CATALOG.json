@@ -1,0 +1,71 @@
+{
+  "revision": "ORG-07C-R6",
+  "architecture_delta": "Relocate R5 consumer into ORG07C review patch; default route deny",
+  "files": [
+    {
+      "path": "staged/features/organization/organizationOwnerBinding.ts",
+      "symbols": [
+        "OwnerReadBinding",
+        "OwnerReadProvider",
+        "snapshot",
+        "readOwnerBoundOrganization"
+      ],
+      "change": "only import relocation"
+    },
+    {
+      "path": "staged/app/api/demo/organization/route.ts",
+      "symbols": [
+        "GET",
+        "dynamic"
+      ],
+      "change": "uses owner-bound consumer without owner"
+    },
+    {
+      "path": "PRODUCT_REVIEW.patch",
+      "change": "8 product paths review only"
+    },
+    {
+      "path": "MANIFEST_DELTA.json",
+      "change": "8 prospective rows"
+    },
+    {
+      "path": "SOURCE_MANIFEST_REVIEW.json",
+      "change": "509 prospective rows"
+    },
+    {
+      "path": "SESSION_CONTRACT.json",
+      "change": "proposed boundary, no owner implementation"
+    },
+    {
+      "path": "tests/owner_binding_product.test.cjs",
+      "change": "20 relocated original tests"
+    },
+    {
+      "path": "tests/route.test.cjs",
+      "change": "8 new tests"
+    },
+    {
+      "path": "tests/process.d.ts",
+      "change": "test-only compile shim"
+    },
+    {
+      "path": "EVIDENCE.json",
+      "change": "test/source comparison"
+    },
+    {
+      "path": "HANDOVER.md",
+      "change": "architecture/maintenance/rollback"
+    }
+  ],
+  "api": [
+    {
+      "method": "GET",
+      "path": "/api/demo/organization",
+      "status": "PROPOSED_NOT_REGISTERED",
+      "default": "503 HOLD"
+    }
+  ],
+  "database": [],
+  "dependencies": [],
+  "product_changes": 0
+}

@@ -1,0 +1,113 @@
+{
+  "revision": "ORG-07C-R6",
+  "parent": "32195996f13a24f06832e2d0ee0da4ff66de051a",
+  "initial_branches": 212,
+  "last_prewrite_observation": 213,
+  "open_prs": 3,
+  "owners": {
+    "ORG-07C-R5": "32195996f13a24f06832e2d0ee0da4ff66de051a",
+    "U3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "EXT-07R6": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "P10J24B": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "D5-C-R3": "dfd46e5b81388d067ae4598a3fdbae20246ff3f5",
+    "ORG-10R2": "8a132a5b4b5b0dee1cc05e02d6fc7d4e7ae3fb54",
+    "D4-R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "ORG-08": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352",
+    "W5-J2-R4": "12d5149ef891b69a909162f8eecfe5847858e8b4"
+  },
+  "comparisons": [
+    {
+      "name": "U3A",
+      "product_files": 505,
+      "matched_inputs": 5,
+      "input_count": 5,
+      "absent_new_paths": 5,
+      "added_count": 5,
+      "mismatches": [],
+      "collisions": []
+    },
+    {
+      "name": "EXT-07R6",
+      "product_files": 509,
+      "matched_inputs": 5,
+      "input_count": 5,
+      "absent_new_paths": 5,
+      "added_count": 5,
+      "mismatches": [],
+      "collisions": []
+    },
+    {
+      "name": "P10J24B",
+      "product_files": 492,
+      "matched_inputs": 5,
+      "input_count": 5,
+      "absent_new_paths": 5,
+      "added_count": 5,
+      "mismatches": [],
+      "collisions": []
+    }
+  ],
+  "base_manifest": {
+    "commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "path_size_matches": 504,
+    "full_bytes_audited": false,
+    "prior_base_rows_match": 4,
+    "review_entries": 509,
+    "prior_review_entries": 508,
+    "product_manifest_changed": false
+  },
+  "patch": {
+    "old_blob": "4823920caaa11d765fff9c012b5d58e85d9b0b8a",
+    "original_paths": 7,
+    "combined_paths": 8,
+    "combined_outputs": 9,
+    "unchanged_hook": true,
+    "full_patch_remote_text_hunk_check": "PASS",
+    "local_git_apply_delta": "PASS",
+    "full_patch_git_apply_local": "NOT_RUN",
+    "expected_output_blobs": {
+      "product/ai-company-os-frontend/features/data/projectionRead.ts": "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "b8d4419253c201741a6f2f5aac31906a9a528110",
+      "product/ai-company-os-frontend/features/data/useProjectionRead.ts": "73ef76f14855875aa50a7e619214a5311c1393f2",
+      "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+      "product/ai-company-os-frontend/features/organization/organizationProjection.ts": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+      "product/ai-company-os-frontend/features/organization/organizationProxy.ts": "f257f77ca5887b2477bdf3fc3f68e2b37c735eff",
+      "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx": "990b06ee2b5adc115547615719610ccc02a66061",
+      "product/ai-company-os-frontend/app/api/demo/organization/route.ts": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+      "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51"
+    }
+  },
+  "local_test": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "strict_compile": "PASS",
+    "r5_regression": 20,
+    "new_route": 8,
+    "total": 28,
+    "fail": 0,
+    "skip": 0,
+    "log_sha256": "8ed51fcd881a6bb6e9d0ae29a7f35c3e8bdd2d9686c2daaff62711d3364a545a",
+    "compile_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "isolated TS route direct invocation and synthetic injected fetch; not Next server or real IAM"
+  },
+  "gates": {
+    "route_registration": "NOT_APPLIED",
+    "provider": "ABSENT",
+    "activation": "HOLD",
+    "actual_iam": "HOLD",
+    "full_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "official": {
+    "core": "12/16",
+    "ui": "21/40",
+    "org": "5/7",
+    "mvp": "0/11",
+    "hd": "0/36",
+    "office": "0/55",
+    "independent": "0/7",
+    "scores_changed": false
+  }
+}

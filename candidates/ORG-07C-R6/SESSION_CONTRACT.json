@@ -1,0 +1,38 @@
+{
+  "revision": "ORG-07C-R6",
+  "status": "PROPOSED_NOT_OWNER_APPROVED",
+  "backend": {
+    "source": "candidates/ORG-05R3/durable_ops.py",
+    "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+    "session": "ReadSession(scope, principal, expires, permission)",
+    "read": "studio_read(path,credential,resolve,expected_head,now)",
+    "permission": "org.preview.read",
+    "principal": "demo-* only",
+    "scope": "synthetic SQLite only"
+  },
+  "frontend": {
+    "source": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+    "owner": "OwnerReadProvider(request, signal)",
+    "binding": [
+      "credential",
+      "scope",
+      "revision"
+    ],
+    "scope": "must equal trusted session scope",
+    "revision": "must equal server-owned expected_head; never request supplied"
+  },
+  "authority": {
+    "credential": "opaque server-side only",
+    "principal_expiry_permission": "backend/IAM owned; never serialized",
+    "revision_source": "server publication owner pending",
+    "owner_implementation": "ABSENT",
+    "actual_iam": "HOLD",
+    "atomic_revocation": "HOLD",
+    "independent": "HOLD"
+  },
+  "evidence": {
+    "ref": "candidates/ORG-07C-R5/OWNER_EVIDENCE_REFERENCE.json",
+    "owner_report": "original missing; R4 format mismatch; UNATTESTED"
+  },
+  "d5_commit": "dfd46e5b81388d067ae4598a3fdbae20246ff3f5"
+}
