@@ -1,0 +1,116 @@
+& {
+    $ErrorActionPreference = 'Stop'
+    $Downloads = Join-Path $env:USERPROFILE 'Downloads'
+    $Root = 'C:\AIOS\org10-runtime-clean-01'
+    $Base = Join-Path $Root 'python'
+    $Venv = Join-Path $Root 'venv'
+    $Site = Join-Path $Venv 'Lib\site-packages'
+    $Manifest = 'C:\AIOS\ORG10_RUNTIME_REVIEW_02.json'
+    $Report = 'C:\AIOS\ORG10_CLEAN_RUNTIME_REPORT_01.json'
+    $Runner = Join-Path $Downloads 'launch_org10_common.py'
+    $Archive = Join-Path $Downloads 'ai_Proje_Ofisi_chatgptSaas-5c7eb6b148e6e96247682653ff70dccc4a7ba823.zip'
+    $Pg = 'C:\AIOS\core-0227-pg-retry2\server\pgsql\bin'
+    $Search = @($Downloads, 'C:\AIOS', 'C:\AIOS\core-0227-pg-retry2', 'C:\AIOS\core-0227-pg-retry2\wheels')
+    $Search += @(Get-ChildItem -LiteralPath $Downloads -Directory | Where-Object { $_.Name -match '^ORG10_(RUNTIME_DELIVERY|PYTHON_REVIEW)_' } | Select-Object -ExpandProperty FullName)
+    function Find-PinnedFile($Names, $Pin) {
+        foreach ($Dir in $Search) {
+            foreach ($Name in $Names) {
+                $File = Join-Path $Dir $Name
+                if ((Test-Path -LiteralPath $File -PathType Leaf) -and ((Get-FileHash -LiteralPath $File -Algorithm SHA256).Hash.ToLowerInvariant() -eq $Pin)) { return $File }
+            }
+        }
+        throw ('PINNED_FILE_MISSING: ' + ($Names -join ', '))
+    }
+    function Assert-Hash($File, $Pin) {
+        if (!(Test-Path -LiteralPath $File -PathType Leaf) -or ((Get-FileHash -LiteralPath $File -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Pin)) { throw ('HASH_HOLD: ' + (Split-Path $File -Leaf)) }
+    }
+    foreach ($Path in @($Root,$Manifest,$Report)) { if (Test-Path -LiteralPath $Path) { throw ('FRESH_PATH_REQUIRED: ' + $Path) } }
+    if (!(Test-Path -LiteralPath $Archive -PathType Leaf) -or !(Test-Path -LiteralPath $Pg -PathType Container)) { throw 'EXISTING_SOURCE_OR_PG_MISSING' }
+    Assert-Hash $Runner 'abe425aacb89ee32edb1b89875302556ad25e37ce7b956b43e4503a22c16cbda'
+    $PythonZip = Find-PinnedFile @('python-3.14.3-amd64.zip') 'ec781bb03f9638d136b24da7c83b4db1652ce767848aa856a30bb87cfdb1abe4'
+    $PgZip = Find-PinnedFile @('postgresql-17.12.zip','postgresql-17.12-1-windows-x64-binaries.zip') 'a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c'
+    $Wheels = @(
+        (Find-PinnedFile @('psycopg-3.3.9-py3-none-any.whl') 'd2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6'),
+        (Find-PinnedFile @('psycopg_binary-3.3.9-cp314-cp314-win_amd64.whl') '109c5df5b0e5117e01a42d3b56a2f4ccd5431bd54d25efdfc89df095ac9f9605'),
+        (Find-PinnedFile @('tzdata-2026.6-py2.py3-none-any.whl') '0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec')
+    )
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    function Test-ExtractedZip($ZipFile, $Directory, $ExpectedCount) {
+        $Zip = [IO.Compression.ZipFile]::OpenRead($ZipFile)
+        $Count = 0
+        try {
+            foreach ($Entry in $Zip.Entries) {
+                if ([string]::IsNullOrEmpty($Entry.Name)) { continue }
+                $File = Join-Path $Directory ($Entry.FullName.Replace('/', '\'))
+                if (!(Test-Path -LiteralPath $File -PathType Leaf)) { throw ('MISSING: ' + $Entry.FullName) }
+                $Stream = $Entry.Open()
+                $Sha = [Security.Cryptography.SHA256]::Create()
+                try { $Expected = [BitConverter]::ToString($Sha.ComputeHash($Stream)).Replace('-','').ToLowerInvariant() }
+                finally { $Stream.Dispose(); $Sha.Dispose() }
+                Assert-Hash $File $Expected
+                $Count++
+            }
+        } finally { $Zip.Dispose() }
+        if ($Count -ne $ExpectedCount) { throw 'ZIP_COUNT_HOLD' }
+        return $Count
+    }
+    function Assert-TreeCount($Directory,$Expected) {
+        $Items = @(Get-ChildItem -LiteralPath $Directory -Force -Recurse)
+        if (@($Items | Where-Object { $_.Attributes -band [IO.FileAttributes]::ReparsePoint }).Count -ne 0) { throw 'REPARSE_POINT_HOLD' }
+        if (@($Items | Where-Object { !$_.PSIsContainer }).Count -ne $Expected) { throw 'EXTRA_OR_MISSING_FILE_HOLD' }
+    }
+    New-Item -ItemType Directory -Path $Root | Out-Null
+    [IO.Compression.ZipFile]::ExtractToDirectory($PythonZip,$Base)
+    $BaseCount = Test-ExtractedZip $PythonZip $Base 3725
+    Assert-TreeCount $Base 3725
+    Write-Host "BASE ZIP: $BaseCount/3725 PASS" -ForegroundColor Green
+    $BasePy = Join-Path $Base 'python.exe'
+    & $BasePy -I -B -X utf8 -m venv --without-pip --without-scm-ignore-files $Venv
+    if ($LASTEXITCODE -ne 0) { throw 'VENV_CREATE_HOLD' }
+    $Py = Join-Path $Venv 'Scripts\python.exe'
+    Assert-Hash $Py '97c3228a59dcc05a771ab4eeec8126ce3f36ebb53616b479adc9f2c8050a9e84'
+    if (!(Test-Path -LiteralPath $Site -PathType Container)) { throw 'VENV_SITE_MISSING' }
+    Assert-TreeCount $Site 0
+    # Three pinned wheels have no .data relocation, entry-point scripts, .pth or .pyc.
+    # Use exact archive payloads in the fresh venv site-packages; no network/pip execution.
+    $Counts = @(90,15,633)
+    $Results = @()
+    for ($Index=0; $Index -lt $Wheels.Count; $Index++) {
+        $Wheel = $Wheels[$Index]
+        [IO.Compression.ZipFile]::ExtractToDirectory($Wheel,$Site)
+        $Count = Test-ExtractedZip $Wheel $Site $Counts[$Index]
+        $Results += [ordered]@{ name=(Split-Path $Wheel -Leaf); matched=$Count; expected=$Counts[$Index]; sha256=(Get-FileHash -LiteralPath $Wheel -Algorithm SHA256).Hash.ToLowerInvariant() }
+        Write-Host "WHEEL: $(Split-Path $Wheel -Leaf) $Count/$($Counts[$Index]) PASS" -ForegroundColor Green
+    }
+    Assert-TreeCount $Site 738
+    if (!(Select-String -LiteralPath (Join-Path $Venv 'pyvenv.cfg') -Pattern '^include-system-site-packages\s*=\s*false\s*$' -Quiet)) { throw 'VENV_ISOLATION_HOLD' }
+    Push-Location -LiteralPath $Root
+    try {
+        & $Py -I -B -X utf8 $Runner --archive $Archive --pg-bin $Pg --manifest $Manifest
+        if ($LASTEXITCODE -ne 0) { throw 'PREFLIGHT_HOLD' }
+    } finally { Pop-Location }
+    # Ensure base and wheel contents stayed unchanged during the read-only preflight.
+    $BaseCount = Test-ExtractedZip $PythonZip $Base 3725
+    Assert-TreeCount $Base 3725
+    for ($Index=0; $Index -lt $Wheels.Count; $Index++) { $null = Test-ExtractedZip $Wheels[$Index] $Site $Counts[$Index] }
+    Assert-TreeCount $Site 738
+    $Evidence = [ordered]@{
+        classification='FRESH_RUNTIME_PREPARATION_ONLY_NOT_PG_EXECUTION'
+        python_archive_sha256=(Get-FileHash -LiteralPath $PythonZip -Algorithm SHA256).Hash.ToLowerInvariant()
+        pg_archive_sha256=(Get-FileHash -LiteralPath $PgZip -Algorithm SHA256).Hash.ToLowerInvariant()
+        base_matched=$BaseCount
+        base_expected=3725
+        site_matched=738
+        site_expected=738
+        wheels=$Results
+        venv_executable_sha256=(Get-FileHash -LiteralPath $Py -Algorithm SHA256).Hash.ToLowerInvariant()
+        manifest_sha256=(Get-FileHash -LiteralPath $Manifest -Algorithm SHA256).Hash.ToLowerInvariant()
+        system_site_packages=$false
+        pg_execution='NOT_RUN'
+        status='PREFLIGHT_READY_FOR_EXTERNAL_REVIEW'
+    }
+    [IO.File]::WriteAllText($Report, ($Evidence | ConvertTo-Json -Depth 8), (New-Object Text.UTF8Encoding($false)))
+    Get-FileHash -LiteralPath $Manifest,$Report -Algorithm SHA256
+    Write-Host 'PREPARATION PASS; POSTGRESQL NOT_RUN' -ForegroundColor Green
+    explorer.exe /select,"$Report"
+}

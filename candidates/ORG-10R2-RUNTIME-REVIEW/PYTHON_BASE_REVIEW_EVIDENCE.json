@@ -1,0 +1,177 @@
+{
+  "revision": "ORG-10R4-PYTHON-REVIEW",
+  "parent": "078aa93e94a277a22df3d33ffe29099d125c1b99",
+  "classification": "ACTUAL_STATIC_COMPARISON_HOLD",
+  "inventory_sha256": "d553d97d522cce574cf8a83746ce4c2c537b32c108a18818d5db08055826b1bf",
+  "full_report_sha256": "e55e8aa10045be9dee7ccd04c4eb67fd8cbf8e123575feee3f62d475567a48d5",
+  "base_zip": {
+    "sha256": "ec781bb03f9638d136b24da7c83b4db1652ce767848aa856a30bb87cfdb1abe4",
+    "files": 3725,
+    "crc": "PASS",
+    "unsafe_paths": 0
+  },
+  "base_comparison": {
+    "root": {
+      "matched": 7,
+      "reference": 8,
+      "installed": 8
+    },
+    "dlls": {
+      "matched": 26,
+      "reference": 31,
+      "installed": 45,
+      "mismatch": [
+        "sqlite3.dll",
+        "tcl86t.dll",
+        "tk86t.dll",
+        "zlib1.dll"
+      ],
+      "extra": 15,
+      "missing": [
+        "python.cat"
+      ]
+    },
+    "lib": {
+      "matched": 769,
+      "reference": 770,
+      "installed": 2682,
+      "mismatch": [
+        "venv/scripts/common/Activate.ps1"
+      ],
+      "extra": 1912
+    },
+    "note": "Reference is install-manager ZIP, not the traditional installer; differences not evidence of malware. Generated pyc (276 base,505 site) not publisher verified. Extra test files and MSI catalog not assumed malicious or verified."
+  },
+  "wheels": {
+    "psycopg": [
+      89,
+      89
+    ],
+    "psycopg_binary": [
+      14,
+      14
+    ],
+    "tzdata": [
+      632,
+      632
+    ],
+    "pip_bundled": [
+      468,
+      468
+    ],
+    "publisher_files": [
+      1203,
+      1203
+    ],
+    "record_checks": 735,
+    "system_site_packages": false
+  },
+  "pg_prior": {
+    "review_report_sha256": "dc3be522a5b4be342d3f04955c11c119e1ad7d9e311647a33ee923beaebc04fb",
+    "preserved": true,
+    "prior_bytes": 386263884,
+    "current_mounted_copy_bytes": 364904448,
+    "current_mounted_copy_sha256": "1f92314dbb8046a7f479172e0395a64ba8bcdecd62e5e16e57aaf34bceb6780d",
+    "current_zip_valid": false,
+    "status": "CURRENT_COPY_NOT_ORIGINAL; prior evidence retained, no new PG raw comparison claimed. Check user's local archive again, no claim user's file is corrupt."
+  },
+  "prep": {
+    "script_blob": "5efce708346d8019612ddeb94acf384978d35831",
+    "sha256": "61803d5def5b67e2adce835386046e5099b40acf969c41e082b80b699bf2b150",
+    "status": "SOURCE_CANDIDATE_WINDOWS_NOT_RUN",
+    "method": "User-executed fresh directory; exact verified CPython full ZIP and 3 pinned wheels, no pip/network/system install; wheel layouts checked no .data, .pth, pyc, entry points, 738 distinct files. Existing venv and PG unchanged; original launcher preflight only, fresh manifest. Verify extracted 3725 base+738 site bytes before and after preflight. No PG execution. No reviewed fingerprint issued.",
+    "catalog": {
+      "files": [
+        "ORG10_CLEAN_RUNTIME_PREP.txt"
+      ],
+      "functions": [
+        "Find-PinnedFile",
+        "Assert-Hash",
+        "Test-ExtractedZip",
+        "Assert-TreeCount"
+      ],
+      "api_changes": 0,
+      "db_changes": 0,
+      "product_changes": 0,
+      "dependency_versions_unchanged": true
+    },
+    "rollback": "Preserve fresh stage on failure, do not use it. Old runtime and original evidence unchanged."
+  },
+  "port": "APPROVED_USER_55436",
+  "external_runtime_review": "HOLD_FRESH_ENV_NOT_RUN",
+  "joint_scope_owner_review": "HOLD_D02",
+  "progress": {
+    "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+    "proposed_baseline_blob": "5e40f9c48e86e3362cd09cc0c3a28d0a60a481d2",
+    "previous_counts": {
+      "design": [
+        2,
+        3
+      ],
+      "source": [
+        3,
+        3
+      ],
+      "functional": [
+        3,
+        5
+      ],
+      "integration": [
+        1,
+        3
+      ],
+      "final_acceptance": [
+        0,
+        1
+      ]
+    },
+    "current_counts": {
+      "design": [
+        2,
+        3
+      ],
+      "source": [
+        3,
+        3
+      ],
+      "functional": [
+        3,
+        5
+      ],
+      "integration": [
+        1,
+        3
+      ],
+      "final_acceptance": [
+        0,
+        1
+      ]
+    },
+    "proposed_weighted_previous": 63.6666666667,
+    "proposed_weighted_current": 63.6666666667,
+    "delta": 0,
+    "official_weighted": "NOT_CALCULABLE_PENDING_ADOPTION",
+    "execution_plan_previous": [
+      3,
+      8
+    ],
+    "execution_plan_current": [
+      3,
+      8
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "pg": [
+      0,
+      31
+    ],
+    "acl": [
+      0,
+      48
+    ],
+    "new_product_gates": 0
+  },
+  "next": "Run only fresh preparation on user Windows, collect two JSON reports, review exact new fingerprint and D4/ORG owner profile; then existing launcher. No new DB tests or product changes."
+}
