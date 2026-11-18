@@ -1,0 +1,39 @@
+{
+  "revision": "ORG-07C-R8-ORIGINAL-LOCK-RECOVERY-HANDOFF",
+  "date": "2026-11-18",
+  "classification": "USER_WORKSTATION_HASH_OUTPUT_MATCH_RAW_ARCHIVE_NOT_RECEIVED",
+  "archive": {
+    "name": "AIOS_PREMIUM_A0C_EVIDENCE_20261117_000117.zip",
+    "expected_sha256": "1d9267628a6b253840cf4144fa99026729ba64f7f779b1cd6d02493f4672c68c",
+    "reported_sha256": "1d9267628a6b253840cf4144fa99026729ba64f7f779b1cd6d02493f4672c68c",
+    "status": "USER_REPORTED_MATCH"
+  },
+  "lock": {
+    "member": "package-lock.json",
+    "expected_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "reported_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "status": "USER_REPORTED_MATCH",
+    "raw_bytes": "NOT_RECEIVED"
+  },
+  "prior_decision": {
+    "commit": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "blob": "144dcacb33474f815eadd933989d79891fa45795",
+    "no_regenerated_lock": true
+  },
+  "runner_warning": {
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "path": "tests/integration/w8_local.py",
+    "blob": "8b3722373ba252bba9c077331840975d53383726",
+    "observed": "Base prepare() invokes npm install --package-lock-only at line 114. Do not invoke legacy prepare blindly; Unified owner must verify full wrapper chain and implement/use exact recovered-lock staging with fresh REVIEW; no repinning."
+  },
+  "ownership": "Unified and EXT owners retain build/lock review. R8 records handoff only; no owner branch change, no duplicate runner.",
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "canonical_acceptance": "unchanged"
+  },
+  "next": "Receive raw archive or exact extracted lock; independently hash; inspect lock against pinned package.json and provenance; owner prepares reviewed exact-lock stage. No install, build, browser or IAM activation yet.",
+  "catalog_delta": "Evidence handoff only; no source, API, DB or dependency change.",
+  "rollback": "Omit additive evidence; keep existing source and original archive."
+}
