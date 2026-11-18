@@ -1,0 +1,44 @@
+{
+  "id": "MEM-05C-R1",
+  "new_files": {
+    "run_archive.py": {
+      "functions": [
+        "git_blob",
+        "checked_path",
+        "read_pinned",
+        "load_pins",
+        "stage_sources",
+        "main"
+      ],
+      "purpose": "portable exact source runner"
+    },
+    "test_archive_runner.py": {
+      "class": "ArchiveRunnerTests",
+      "tests": 10,
+      "purpose": "helper mechanics only"
+    },
+    "overlay/": {
+      "files": 13,
+      "purpose": "exact original Gateway copies; no changes to product paths"
+    },
+    "helper.log": {
+      "purpose": "actual local helper log"
+    },
+    "ARCHITECTURE_AND_RUNBOOK.md": {
+      "purpose": "source review, diagnosis, rollback"
+    },
+    "EVIDENCE.json": {
+      "purpose": "evidence boundaries"
+    },
+    "PROGRESS.json": {
+      "purpose": "fixed MEM05C criterion carry forward"
+    },
+    "HANDOVER.json": {
+      "purpose": "owner handoff"
+    }
+  },
+  "api_changes": [],
+  "database_changes": [],
+  "dependency_changes": [],
+  "product_source_changes": 0
+}
