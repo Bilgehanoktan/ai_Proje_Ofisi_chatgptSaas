@@ -1,0 +1,102 @@
+{
+  "revision": "W5-MEM-05B",
+  "parent": "e373e45447e686364d665bf9e910ccd52dae47fd",
+  "parent_tree": "562f640df9c02b3e3d70924b069753312d1bab4c",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "dependency_lock": "NOT_VERIFIED",
+    "scope": "51 exact MEM05A files; 2 exact D5-G2/G3 owner modules loaded into disposable diagnostic process without product overlay; 1 new test; actual temporary SQLite and ephemeral Ed25519. No protected G2 T1 execution, actual PG, live ORG, or provider."
+  },
+  "local_baseline": {
+    "zip": "AI_Company_OS_W5_MEM05A_RUNTIME_MEMORY_EVIDENCE.zip",
+    "crc": "PASS 61 entries",
+    "sha256sums": "60/60 PASS",
+    "exact_source": "51/51 Git blob, SHA256, bytes PASS"
+  },
+  "owner_source": "2/2 local Git blob and SHA256 PASS, cross-check G3 remote 13-file report (historical); no G2 original 50 test run",
+  "local_new": {
+    "test_owner_memory_boundary.py": {
+      "blob": "b4b388b9b145de87312f25a25bcb5f7c00d1725f",
+      "bytes": 8265,
+      "sha256": "e0451e22bec9889e3d6ab43752252d5fb49c8671a2b745ae6e3c5555d03510cc"
+    },
+    "CRITERIA.json": {
+      "blob": "62a48d4afbc97b2304b749b261e323122dfad771",
+      "bytes": 1559,
+      "sha256": "dd830cfe5aee7828c836119c47d71823052c6cea9bcfe623d75dde87f318b345"
+    },
+    "FIRST_DIAGNOSTIC_LOG.txt": {
+      "blob": "10f067fc2901b4ec185141224a5cf0194d4893bc",
+      "bytes": 1400,
+      "sha256": "3c61d645d1bb7ee0f55bd323670613b911bb773d9d43877f3c288bca3ae757e0",
+      "count": 8,
+      "seconds": 0.374,
+      "exit": 0
+    },
+    "SECOND_DIAGNOSTIC_LOG.txt": {
+      "blob": "ee00a3903415c7bf831998f5201321efe004d621",
+      "bytes": 1400,
+      "sha256": "c4d4f8638d65d8ff3d1992e38a363264559706f1acb8d6956257a56539be50dd",
+      "count": 8,
+      "seconds": 0.465,
+      "exit": 0
+    },
+    "diagnostic_exit_code.txt": {
+      "blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  },
+  "tests": {
+    "new_unique": 8,
+    "controls": 3,
+    "residuals": 5,
+    "first": 8,
+    "repeat": 8,
+    "failed": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "previous_164": "HISTORICAL_MEM05A_NOT_RERUN",
+    "protected_iam_t1": "NOT_RUN",
+    "live_org": "NOT_RUN",
+    "pg": "NOT_RUN",
+    "details": [
+      "same-principal distinct sessions not bound",
+      "HUMAN/other-agent owner observations not inputs",
+      "durable revoke denied by IAM, Memory still match-only",
+      "IAM expiry denied by IAM, Memory clock unchanged",
+      "IAM revoke during original SQL AUDIT still local commit (not G2 fence)",
+      "signed ancestor ACL-only DENY with active IAM rejects before roles",
+      "signed ACL-only deny during AUDIT rolls back all original tables",
+      "task/run/agent/principal mismatch rejected (4 subcases)"
+    ]
+  },
+  "parallel": {
+    "initial": 235,
+    "prepublish": 235,
+    "refs": {
+      "memory": "e373e45447e686364d665bf9e910ccd52dae47fd",
+      "core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+      "d5g2": "9ca667e816dac269084ef8f62051da5fe458eb12",
+      "d5g3": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+      "org": "56c0acd21f148c8835bc139929eccb6d50b739a4",
+      "d4": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "studio": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+      "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "model": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "standard": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788"
+    },
+    "changed_since_initial": {
+      "studio": "frontend build/lock repair, no tested backend path",
+      "org": "R7 reviewed runtime evidence + R8/R9 A selected original launcher; D02 HOLD, PG31/48 NOT_RUN",
+      "d5g3": "13 remote bytes verified, exact 50 NOT_RUN"
+    },
+    "no_published_MEM05B_competitor": true,
+    "no_global_lock": true
+  },
+  "product_changes": 0,
+  "scope": "No new runtime source, API, SQL, roles, grants, dependencies or manifest changes. No claim of current owner acceptance."
+}

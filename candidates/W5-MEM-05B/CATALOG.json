@@ -1,0 +1,50 @@
+{
+  "revision": "W5-MEM-05B",
+  "inherits": "../W5-MEM-05A/CATALOG.json",
+  "new_candidate": {
+    "path": "candidates/W5-MEM-05B/test_owner_memory_boundary.py",
+    "symbols": [
+      "load_owner",
+      "OwnerMemoryBoundaryTests",
+      "resolve",
+      "assert_memory_match_only",
+      "denied_snapshot",
+      "publish_denial"
+    ],
+    "unique_tests": 8,
+    "scope": "diagnostic not runtime"
+  },
+  "owner_modules": {
+    "product/ai-company-os-backend/app/core/iam_session.py": {
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
+    },
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py": {
+      "blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "bytes": 9184,
+      "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    }
+  },
+  "existing_contracts": [
+    "Scope",
+    "MemoryAclView",
+    "MemoryWitness",
+    "JointContext",
+    "binding_digest",
+    "WitnessedTransitionMapping",
+    "D0SessionResolver",
+    "SessionClaimCheck",
+    "D0IntentAuthority",
+    "ORG-06 BindingReview",
+    "D4 Request/Binding"
+  ],
+  "new_runtime_source": 0,
+  "new_db": 0,
+  "new_http_api": 0,
+  "new_dependencies": 0,
+  "new_events": 0,
+  "product_manifest": "unchanged",
+  "contract": "OWNER_MEMORY_CONTRACT.json",
+  "maintenance": "ARCHITECTURE_AND_RUNBOOK.md"
+}

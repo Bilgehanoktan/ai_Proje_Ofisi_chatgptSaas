@@ -1,0 +1,33 @@
+{
+  "revision": "W5-MEM-05B",
+  "parent": "e373e45447e686364d665bf9e910ccd52dae47fd",
+  "branch": "planning/w5-mem-05b-owner-memory-boundary",
+  "refs": {
+    "memory": "e373e45447e686364d665bf9e910ccd52dae47fd",
+    "core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+    "d5g2": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "d5g3": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+    "org": "56c0acd21f148c8835bc139929eccb6d50b739a4",
+    "d4": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "studio": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "model": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "standard": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788"
+  },
+  "architecture": "candidates/W5-MEM-05B/ARCHITECTURE_AND_RUNBOOK.md",
+  "catalog": "candidates/W5-MEM-05B/CATALOG.json",
+  "evidence": "candidates/W5-MEM-05B/EVIDENCE.json",
+  "progress": "candidates/W5-MEM-05B/PROGRESS.json",
+  "contract": "candidates/W5-MEM-05B/OWNER_MEMORY_CONTRACT.json",
+  "rollback": "e373e45447e686364d665bf9e910ccd52dae47fd",
+  "decision": "No G2/ORG source overlay or new runtime adapter before owner baseline. Only diagnostic and handoff.",
+  "next": "D5-G3 exact 50 and ORG D02/PG31/48/ORG11 owner dependencies; then exact protected Memory/T1 binding and tests. Parallel MEM05C review only if owner scope clear.",
+  "remaining": [
+    "D5-G3 exact 50 regression",
+    "D4-ORG D02 joint approval",
+    "ORG PG31 and supplementary 48",
+    "ORG-11 live exact 17-field join",
+    "D5 protected shared publisher and clock/custody",
+    "Unified locked build and owner-reviewed activation"
+  ]
+}

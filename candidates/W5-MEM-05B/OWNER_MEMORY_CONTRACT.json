@@ -1,0 +1,128 @@
+{
+  "revision": "W5-MEM-05B",
+  "status": "PROPOSED_MEMORY_OWNER_HANDOFF_HOLD",
+  "scope": [
+    "synthetic-tenant",
+    "synthetic-company",
+    "A0_SAMPLE_ONLY"
+  ],
+  "ordered_org_join": [
+    "tenant",
+    "company",
+    "environment",
+    "org_head",
+    "org_sequence",
+    "staffing_digest",
+    "team_digest",
+    "project",
+    "plan_revision",
+    "task",
+    "run",
+    "agent",
+    "principal",
+    "policy_epoch",
+    "witness_epoch",
+    "role_revision",
+    "full_intent_digest"
+  ],
+  "exact_owner_refs": {
+    "org_profile": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+    "d4_profile": "1d88c65cee2c1a01a3d20595ace6bfca2a4fe011",
+    "org_historical_bridge": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+    "g3_request_handoff": "2520cdfd66447dbece7d13a56fba2a0ae476a285",
+    "d5_joint_owner_contract": "27991b3c75402c9adce024dcf3888db1fbdc2479"
+  },
+  "field_groups": [
+    {
+      "owner": "D5 IAM",
+      "existing": [
+        "SessionObservation.principal_id",
+        "kind",
+        "scope",
+        "agent_instance_id",
+        "session_id",
+        "expires",
+        "revision",
+        "D0SessionResolver.durable_pin"
+      ],
+      "required": "Server-selected exact AGENT observation and same session, owner-retained pin, issuer/domain and trusted clock; HUMAN delegation not approved. No credential/digest logs.",
+      "status": "HOLD_NOT_BOUND"
+    },
+    {
+      "owner": "ORG",
+      "existing": [
+        "tenant",
+        "company",
+        "environment",
+        "org_head",
+        "org_sequence",
+        "staffing_digest",
+        "team_digest",
+        "project",
+        "plan_revision",
+        "task",
+        "run",
+        "agent",
+        "principal",
+        "policy_epoch",
+        "witness_epoch",
+        "role_revision",
+        "full_intent_digest"
+      ],
+      "required": "Current owner readback, never historical ORG-06 BindingReview (authoritative=False, runtime_binding=None). No project alias, no self-asserted member. D02 owner concurrence and PG31/ACL48 pending; user option A retains original launcher only.",
+      "status": "HOLD_NOT_IMPLEMENTED"
+    },
+    {
+      "owner": "D4/D5",
+      "existing": [
+        "derive_request",
+        "full_intent_digest",
+        "Binding.request",
+        "registry/membership/assignment/role revision+digest",
+        "DB role/database/cluster",
+        "active",
+        "expiry"
+      ],
+      "required": "Reuse D5 derive_request and D4 review_binding/inspect_at_fence. Bind same exact original intent; no caller Request, no alias; session expiry clock domain distinct.",
+      "status": "HOLD"
+    },
+    {
+      "owner": "Memory",
+      "existing": [
+        "Scope",
+        "RunObservation.version/attempt",
+        "LeaseObservation",
+        "MemoryAclView.acl_revision",
+        "tombstone_epoch/sequence",
+        "SnapshotPin",
+        "LatestWitnessPin",
+        "JointContext",
+        "binding_digest"
+      ],
+      "required": "Retain all exact pins and full signed history. ACL-only deny and tombstones remain independent, no raw content or allow. Do not replace signed history with checkpoint; do not put composite owner hash into Witness record_sha or reuse IAM pin as ACL revision.",
+      "status": "D0_MEMORY_PROTECTIONS_VERIFIED_OWNER_BINDING_HOLD"
+    },
+    {
+      "owner": "Core/D5",
+      "existing": [
+        "D0IntentAuthority.claim_and_fence",
+        "SessionClaimCheck",
+        "WitnessedTransitionMapping",
+        "LogicalT1Coordinator",
+        "D0IntentJournal"
+      ],
+      "required": "Single original claim, same root fence, protected same-session/ORG/role read and re-read, memory and witness before original roles and receipt. Preserve unknown/pending quarantine; no automatic retry. G2 wrapper still requires approved wiring; no second claim or publisher.",
+      "status": "HOLD"
+    }
+  ],
+  "publication": "D5-D owner proposal: durable PENDING before cross-store change, shared root fence, exact owner readback/finalization; fail closed on missing/pending/unknown. No atomicity or expiry through COMMIT proven. Do not mutate versioned Scope/MemoryWitness wire profiles unilaterally.",
+  "unmet": [
+    "D5-G3 exact 50 regression",
+    "D4-ORG D02 joint approval",
+    "ORG PG31 and supplementary 48",
+    "ORG-11 live exact 17-field join",
+    "D5 protected shared publisher and clock/custody",
+    "Unified locked build and owner-reviewed activation"
+  ],
+  "decision": "No new runtime adapter, no product source promotion before owner regression; test-only separate exact owner inputs. MEM05C can proceed at contract review scope without duplicating Model owner."
+}
