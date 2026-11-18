@@ -4,7 +4,7 @@ const root=path.join(__dirname,'../features/workflow');
 const modules={};
 const jsx=(type,props)=>({type,props});
 function load(name){if(modules[name])return modules[name];const file=path.join(root,name);const result=ts.transpileModule(fs.readFileSync(file,'utf8'),{fileName:file,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true},reportDiagnostics:true});assert.equal(result.diagnostics.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0);const mod={exports:{}};vm.runInNewContext(result.outputText,{exports:mod.exports,module:mod,require:id=>{if(id==='react/jsx-runtime')return {jsx,jsxs:jsx};if(id.endsWith('.css'))return {};return load(id.slice(2)+'.ts')}});return modules[name]=mod.exports}
-const {inspectDraft,previewDraftEdge}=load('draftInspector.ts'),{editDraft,emptyDraftHistory}=load('draftHistory.ts'),{default:Inspector}=load('DraftInspector.tsx');
+const {inspectDraft,previewDraftEdge}=load('draftInspector.ts'),{editDraft,emptyDraftHistory}=load('draftHistory.ts'),{default:Inspector}=load('WorkflowDraftInspector.tsx');
 const tasks=[['plan','Plan','orchestrator',[]],['draft','Draft','engineer',['plan']],['research','Research','research',['plan']],['merge','Merge','engineer',['draft','research']],['qa','QA','qa',['merge']],['iv','IV','independent-verifier',['qa']],['release','Release','human-authority',['iv']]].map(([id,label,role,depends_on])=>({id,label,role,depends_on}));
 const edge={from:'draft',to:'research'},reverse={from:'research',to:'draft'};
 const add=(d=emptyDraftHistory(),e=edge)=>editDraft(tasks,d,{kind:'add',edge:e});

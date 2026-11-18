@@ -1,0 +1,69 @@
+{
+  "revision": "ORG-07C-R8-BUILD-R1",
+  "date": "2026-11-18",
+  "parent": "a1b0aefe0a64fa82007b509c9f3a1bf3c00345b2",
+  "source_base": "9675d4e1c3238776d1e744e0d82d6df70cfcbcd9",
+  "previous_manifest": "58e8b050713675d0727a90915c05dea458620b58",
+  "new_manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+  "windows": {
+    "install": "PASS",
+    "installed_packages": 30,
+    "install_exit": 0,
+    "install_log_sha256": "fb1764a0ac49c6f8c5d7283b1c98cc34d576278eb00e9be95449fa7f135acfa6",
+    "build": "FAIL",
+    "build_exit": 1,
+    "build_log_sha256": "524d5b97b6bbeb3c0dcab477e59de6479630b6efef386b7c4585b177e84dca2a",
+    "raw_logs": "NOT_RECEIVED",
+    "transcript_sha256": "455ec70c4cea3079ea56484ddfd665d72498cd4a60d29987a3f2402301d8a4a8",
+    "typecheck": "NOT_RUN",
+    "failure": [
+      "case-insensitive module stem collision DraftInspector.tsx/draftInspector.ts",
+      "readbackLabels indexed by broader ProjectionKey"
+    ]
+  },
+  "changes": {
+    "rename": {
+      "from": "ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+      "to": "ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+      "unchanged_blob": "b57e27761e60351e62224b569ad107cd54fd8daf"
+    },
+    "edits": [
+      {
+        "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+        "blob": "9ce6776fd2cda03f6f033cc47ad285d2b93e96cd",
+        "sha256": "8800ac197393bf7d67ad8c495b77d8026b94211a7d8477339404c14d79c85991"
+      },
+      {
+        "path": "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+        "blob": "de8b825af52e24e372f6ec9f71788c8ab08cd536",
+        "sha256": "aa77422f9d88642d75785355d2217960ff1868a3d5d874056df7c9cf05e9ea8e"
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+        "blob": "70e6a4071d4f47a3eea260abe6baad716fb50fe8",
+        "sha256": "915012ceca4b0c5094e6c48890de3b87eaeab78bb200944f5b713eb08a34e478"
+      }
+    ],
+    "unchanged_logic_blob": "e61abe72c4865f7e1b0b78cab9f277b04de6804c",
+    "unchanged_lock": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "manifest_files": 509
+  },
+  "verification": {
+    "preimage_sha256": "5/5 MATCH",
+    "casefold_module_stem_collisions": 0,
+    "build": "NOT_RUN",
+    "existing_inspector_tests": "NOT_RUN",
+    "windows": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "ownership": "Isolated R8 branch compatibility patch only; source preimages shared with U3A and Premium; hand off rename/narrowing to owners, do not merge or modify other branches. Original U3A runner remains pinned to original tree, not runnable on R1 without owner rebind.",
+  "catalog_delta": "WorkflowDraftInspector.tsx rename (component symbol DraftInspector unchanged), WorkflowDraft.tsx import, ui-p10j20-inspector.test.cjs loader path, ProjectionReadbackCenter.tsx ReadbackCheck parameter narrows to catalog ReadbackKey. No API/DB/dependency/auth changes.",
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "canonical_acceptance": "unchanged"
+  },
+  "next": "Fresh exact source review and isolated Windows build with original lock; preserve failed stage/logs. Full-stack and independent acceptance remain HOLD.",
+  "rollback": "Use previous commit and original evidence; never overwrite failed stage."
+}

@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "ORG-07C-R8-CLOSED-INTEGRATION",
-  "status": "D0_CLOSED_STUDIO_SOURCE_INTEGRATED_TEST_NOT_RUN",
+  "doc_revision": "ORG-07C-R8-CLOSED-INTEGRATION-BUILD-R1",
+  "status": "D0_CLOSED_STUDIO_BUILD_REPAIR_SOURCE_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "parent_git_commit": "a1b0aefe0a64fa82007b509c9f3a1bf3c00345b2",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1538,10 +1538,6 @@
       "bytes": 1191,
       "sha256": "df0bab119e35952873362f0356e217f6a1f833c257f7d1dc1bdecc34b8347fb2"
     },
-    "ai-company-os-frontend/features/workflow/DraftInspector.tsx": {
-      "bytes": 3217,
-      "sha256": "349a4acb8b7144b1e168f54254d3b0fa1e27c0341e53157bc6906950c456c937"
-    },
     "ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx": {
       "bytes": 3330,
       "sha256": "5a4b716c62470f7c569067960a6b4bbdf58380a470a68b95b474d5d3bc1ab026"
@@ -1551,12 +1547,16 @@
       "sha256": "9f2e2c050d912b902cd999e8027b228b69a05ad7297a36417f848555d47ca0ff"
     },
     "ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx": {
-      "bytes": 3075,
-      "sha256": "cd349cfecba4ad097c9a79cd854a60b5be333c0862924a3b5bb0bd2e8127c1f3"
+      "bytes": 3071,
+      "sha256": "915012ceca4b0c5094e6c48890de3b87eaeab78bb200944f5b713eb08a34e478"
     },
     "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx": {
-      "bytes": 5787,
-      "sha256": "1ab583553a1d0315acf193eb1f3637ed3a39d62fd1d5de166120f5e23b82ecc0"
+      "bytes": 5795,
+      "sha256": "8800ac197393bf7d67ad8c495b77d8026b94211a7d8477339404c14d79c85991"
+    },
+    "ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx": {
+      "bytes": 3217,
+      "sha256": "349a4acb8b7144b1e168f54254d3b0fa1e27c0341e53157bc6906950c456c937"
     },
     "ai-company-os-frontend/features/workflow/draftGraph.ts": {
       "bytes": 1365,
@@ -2007,8 +2007,8 @@
       "sha256": "b30122cc0c22aae3aebed9a71d4a46dadcf22e61933d0d451764d18b1a63c1d1"
     },
     "ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs": {
-      "bytes": 6466,
-      "sha256": "7907d61a3c1e091dd4d48e422c91bf6af7398dd48d4d03ce36d3630ee3eafb23"
+      "bytes": 6474,
+      "sha256": "aa77422f9d88642d75785355d2217960ff1868a3d5d874056df7c9cf05e9ea8e"
     },
     "ai-company-os-frontend/tests/ui-p10j21-capabilities.test.cjs": {
       "bytes": 2191,
@@ -2043,8 +2043,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
-  "source_git_commit_note": "Exact reviewed R6/R7 product source delta; actual provider absent; no runtime authority.",
+  "parent_source_manifest_blob": "58e8b050713675d0727a90915c05dea458620b58",
+  "source_git_commit_note": "Minimal Windows build compatibility repair; original Workflow component bytes preserved under unique module stem; local readback key narrowed; no authority change.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }
