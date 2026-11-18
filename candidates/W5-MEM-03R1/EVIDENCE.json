@@ -1,0 +1,245 @@
+{
+  "revision": "W5-MEM-03R1",
+  "parent": "0bbcb5853eb7235dcbeefbd4fadae11383ddb715",
+  "source_commit": "0bbcb5853eb7235dcbeefbd4fadae11383ddb715",
+  "source_tree": "8ad100ddd8141a80df9a5ee121c9302976b0911c",
+  "scope": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "cffi": "2.0.0",
+    "pycparser": "3.0",
+    "os": "Linux x86_64",
+    "dependency_lock": "NOT_VERIFIED",
+    "scope": "34 exact original files, including 8 package initializers and 3 requirements; disposable synthetic SQLite; ephemeral Ed25519 keys"
+  },
+  "source_pins": {
+    "candidates/W5-MEM-01/test_lineage_continuity.py": {
+      "blob": "60608147f84cf74f9ac5849f66cd8eeb92c9c9ea",
+      "bytes": 6792
+    },
+    "candidates/W5-MEM-02/test_revision_continuity.py": {
+      "blob": "907dede712a5b5469978ddc855ecf9b17e526ba9",
+      "bytes": 9481
+    },
+    "candidates/W5-MEM-02/test_witness_continuity.py": {
+      "blob": "f863db45dfdc10be9c4f4d34b34d4c452db11bcd",
+      "bytes": 2697
+    },
+    "product/ai-company-os-backend/app/__init__.py": {
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "product/ai-company-os-backend/app/core/__init__.py": {
+      "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "bytes": 59,
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/__init__.py": {
+      "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py": {
+      "blob": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+      "bytes": 3851,
+      "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": {
+      "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "bytes": 7251,
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
+      "blob": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+      "bytes": 11744,
+      "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0"
+    },
+    "product/ai-company-os-backend/app/core/runtime_preview.py": {
+      "blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+      "bytes": 725,
+      "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+    },
+    "product/ai-company-os-backend/app/core/t1_review.py": {
+      "blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+      "bytes": 517,
+      "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+    },
+    "product/ai-company-os-backend/app/core/transaction/__init__.py": {
+      "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    "product/ai-company-os-backend/app/core/transaction/review.py": {
+      "blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "bytes": 5065,
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+    },
+    "product/ai-company-os-backend/app/engines/__init__.py": {
+      "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "bytes": 52,
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "product/ai-company-os-backend/app/engines/knowledge_engine/__init__.py": {
+      "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "bytes": 52,
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py": {
+      "blob": "7d710685366a55c117e49043a64f1eeabf5079cf",
+      "bytes": 1391,
+      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+    },
+    "product/ai-company-os-backend/app/engines/memory_engine/__init__.py": {
+      "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "bytes": 52,
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py": {
+      "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+      "bytes": 2715,
+      "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+    },
+    "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py": {
+      "blob": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+      "bytes": 5319,
+      "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
+    },
+    "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
+      "blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+      "bytes": 13027,
+      "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/__init__.py": {
+      "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+      "bytes": 52,
+      "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/fallback.py": {
+      "blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+      "bytes": 1391,
+      "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py": {
+      "blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+      "bytes": 2986,
+      "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/registry.py": {
+      "blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      "bytes": 1305,
+      "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+    },
+    "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py": {
+      "blob": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+      "bytes": 3373,
+      "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
+    },
+    "product/ai-company-os-backend/requirements-history-signatures.txt": {
+      "blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+      "bytes": 120,
+      "sha256": "a2b52ebff7bc0ae138ca5cc06dc483826e5ec245fb506c76d01411a9beccd020"
+    },
+    "product/ai-company-os-backend/requirements-test.txt": {
+      "blob": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187",
+      "bytes": 92,
+      "sha256": "ba0bd6f14734ee8ea5631476bfff673b07b96b0b22c4e493a7c92bc0dae8a0e4"
+    },
+    "product/ai-company-os-backend/requirements.txt": {
+      "blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+      "bytes": 128,
+      "sha256": "e1e7b627b7f83b54687170391406cbf996a85dfb02fed06591b301c01a78799a"
+    },
+    "product/ai-company-os-backend/tests/test_joint_context_0208.py": {
+      "blob": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd",
+      "bytes": 9128,
+      "sha256": "9fd2c905a6821d0bcf33e09ea707dae1ab190225b016d66ff7cf2ef60f63d822"
+    },
+    "product/ai-company-os-backend/tests/test_memory_access_0194.py": {
+      "blob": "a792abc90b7a09fb703982f6efd1cd4f648b073c",
+      "bytes": 7089,
+      "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
+    },
+    "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
+      "blob": "8c8683fc3e553231c9ba81222e4e0b2ccd97a72f",
+      "bytes": 6306,
+      "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e"
+    },
+    "product/ai-company-os-backend/tests/test_memory_store_0196.py": {
+      "blob": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+      "bytes": 8092,
+      "sha256": "a68353c3be40c64eaa0f91623305a3354d004180a1ffdfb73fa510f233bb6f8e"
+    },
+    "product/ai-company-os-backend/tests/test_memory_witness_0209.py": {
+      "blob": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb",
+      "bytes": 10155,
+      "sha256": "3485e328bc7900d24b91681bd6f49adea48938e3d44ccdc4632ec2ae77df02ad"
+    },
+    "product/ai-company-os-backend/tests/test_runtime_memory_model_0207.py": {
+      "blob": "01f3110955e4c9e02ed7244a305216163d34df99",
+      "bytes": 4628,
+      "sha256": "6787ddf20de8a9f0097ad3d58d3c9cf30b4b4268324028ec4a5070bd40ac26b1"
+    }
+  },
+  "source_files": 34,
+  "source_bytes": 125733,
+  "product_source_delta": 0,
+  "test_expectation_delta": 0,
+  "manifest_blob": "de9b06c7d7d043894b0b4c077c2d9237d8fb8c85",
+  "parallel": {
+    "inventory": 224,
+    "heads": {
+      "ORG10R2": "f942124b42393fc37e8c88892678b53a1c1e4265",
+      "D5F": "ab0886ca6ada2e099cbd46b0f04d1aa264e6328b",
+      "D5F_R1": "66bbc604cae37d86d278c28008273e266622ad1c",
+      "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "W5J2R4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "UnifiedU3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "EXT07R6": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+    },
+    "review": "7 complete untruncated parallel trees; namespace absent, original three Memory blobs unchanged on these branches; no merge, no uncommitted-work visibility"
+  },
+  "first_attempt": {
+    "status": "IMPORT_ERROR",
+    "executed": 99,
+    "loader_errors": 1,
+    "reason": "MEM-03 prior runbook omitted MEM-01 fixture path; exact fixture restored, not changed",
+    "raw_log": {
+      "bytes": 12540,
+      "sha256": "bdee3c7e9100965ea94ace4f388fd97496c5c26dba2b7f4cd5d08760d67c0f05",
+      "blob": "505d3fad7cf555366f6bbd0dcf29b254f20a2d07",
+      "location": "local evidence ZIP"
+    }
+  },
+  "final": {
+    "pass": 116,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit": 0,
+    "seconds": 0.974,
+    "groups": {
+      "test_memory_access_0194.MemoryAccessTests": 17,
+      "test_memory_store_0196.SnapshotStoreTests": 15,
+      "test_runtime_memory_model_0207.RuntimeMemoryModelTests": 7,
+      "test_joint_context_0208.JointContextTests": 26,
+      "test_memory_witness_0209.MemoryWitnessTests": 23,
+      "test_revision_continuity.RevisionContinuityTests": 17,
+      "test_witness_continuity.WitnessContinuityTests": 2,
+      "test_memory_history_w5_mem03.HistoryCommitmentTests": 9
+    },
+    "log": {
+      "bytes": 14510,
+      "sha256": "c1572d65a791b71e3c44afa1e3255c125ea1b624edc1ee5927b4f27dc467377a",
+      "blob": "58a0fd6b745aedbcff45a42e526f0e7b933a44dc"
+    }
+  },
+  "repeat": {
+    "pass": 116,
+    "exit": 0,
+    "seconds": 0.905,
+    "sha256": "42f9213e0feb2d5cc7a94a3ef841ff731555dabb61f3f5a2f5ebc23b8b9f5a9f"
+  },
+  "acceptance": "D0 local only; full checkout/build, transitive dependency lock, Windows, PostgreSQL/T1, independent trust and canonical integration HOLD"
+}
