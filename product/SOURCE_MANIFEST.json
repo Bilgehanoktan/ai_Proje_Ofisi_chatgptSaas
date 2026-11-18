@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UNIFIED-U3A",
-  "status": "D0_ACCEPTANCE_RUNNER_PREPARED_FULL_BUILD_BLOCKED",
+  "doc_revision": "W5-MEM-02",
+  "status": "D0_MEMORY_REVISION_CONTINUITY_CANDIDATE_LOCAL_TESTED_FULL_PRODUCT_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e014868ae03cf73487aba156647eeac9442422cb",
+  "parent_git_commit": "b55b8348e19da2a5e0794ce90db081174ee46b09",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -495,8 +495,8 @@
       "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
     },
     "ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
-      "bytes": 9580,
-      "sha256": "ac03b3ab7ce63b851853f61d8b68f76c17bcf1e7a61518e6c42acfd378ebe169"
+      "bytes": 12300,
+      "sha256": "a478317411e15d80bdc7555667238a2368ed51ca2091d086c10e2e0ccd88ad2c"
     },
     "ai-company-os-backend/app/engines/model_gateway/__init__.py": {
       "bytes": 52,
@@ -795,8 +795,8 @@
       "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
     },
     "ai-company-os-backend/tests/test_memory_store_0196.py": {
-      "bytes": 8077,
-      "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98"
+      "bytes": 8092,
+      "sha256": "a68353c3be40c64eaa0f91623305a3354d004180a1ffdfb73fa510f233bb6f8e"
     },
     "ai-company-os-backend/tests/test_memory_witness_0209.py": {
       "bytes": 10155,
@@ -2023,8 +2023,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "940f8d44f49b848b377badee67f162603724c05f",
-  "source_git_commit_note": "Workflow draft shared readback panel only; no runtime, schema, dependencies or DB changes. U3 acceptance runner and historical auxiliary overlay outside product.",
+  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "source_git_commit_note": "Existing snapshot_store.py bounded retained-history immutability checks and one 0196 expectation change; no schema/API/dependency changes, full product acceptance HOLD.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

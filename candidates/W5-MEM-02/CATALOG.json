@@ -1,0 +1,56 @@
+{
+  "revision": "W5-MEM-02",
+  "domain": "D09/D19/D20; W5 Memory/Knowledge, owner scope D0",
+  "changed_files": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "symbols": {
+        "_check_successor": "Extract existing monotonic run/target/tombstone/ACL successor guard",
+        "_bind_revisions": "Bind (node_id,revision) to digest and sorted exact parent pins in retained history",
+        "_review_history": "Read contiguous generations, validate each via _load, replay successor and immutable revision checks; cap generations and metadata/raw bytes",
+        "publish_snapshot": "Existing BEGIN IMMEDIATE/CAS and rollback, adds history replay before INSERT",
+        "inspect_stored_memory": "Read-only history replay before access review",
+        "inspect_stored_memory_input": "Read-only history replay before exact byte-span review",
+        "HISTORY_LIMIT": 512,
+        "HISTORY_BYTES": 67108864
+      },
+      "errors": [
+        "MEMORY_SNAPSHOT_REVISION_IMMUTABLE_HOLD",
+        "MEMORY_SNAPSHOT_HISTORY_HOLD",
+        "MEMORY_SNAPSHOT_HISTORY_LIMIT_HOLD"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "change": "Only test_graph_edge_changes_digest advances cache rev to v3; baseline preserved in parent"
+    }
+  ],
+  "new_tests": [
+    "test_revision_continuity.py (17)",
+    "test_witness_continuity.py (2)"
+  ],
+  "database": {
+    "table": "snapshots",
+    "columns": [
+      "generation",
+      "digest",
+      "graph",
+      "metadata",
+      "raw"
+    ],
+    "schema_change": false,
+    "new_query": "Bounded SELECT of generation/digest/graph/length(metadata)/length(raw) ORDER BY generation inside existing transaction",
+    "migration": false
+  },
+  "dependencies": "No dependency delta; stdlib SQLite plus existing witness cryptography",
+  "api": "No new API or contract",
+  "events": "No new event",
+  "authority": "HOLD",
+  "traceability": [
+    "MEM01 residual digest rebind -> test_same_source_revision_new_digest_rejected",
+    "MEM01 residual ancestor rebind -> test_same_target_revision_detaching_revoked_ancestor_rejected",
+    "legacy conflict -> test_legacy_coherent_conflicting_row_holds and test_even_signed_legacy_conflict_cannot_match_joint_context",
+    "pending conflict -> test_rejected_write_leaves_signed_pending_hold"
+  ],
+  "maintenance": "ARCHITECTURE_AND_RUNBOOK.md"
+}
