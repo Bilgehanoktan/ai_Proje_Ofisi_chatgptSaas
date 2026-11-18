@@ -1,0 +1,43 @@
+{
+  "revision": "ORG-07C-R8-R1-LOCAL-HTTP",
+  "date": "2026-11-19",
+  "classification": "USER_EXECUTED_LOCAL_HTTP_SMOKE_RAW_FILE_VERIFIED",
+  "source_commit": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+  "manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+  "raw": {
+    "path": "docs/ORG-07C-R8-INTEGRATION/05-local-http-evidence.json",
+    "sha256": "731433574ce9af048d556811bc8f33cc87dd2ebf853e41968ffc26b7af9eb46f",
+    "git_blob": "53ab9df3daae565731e59d17c810e3cc966fbe11",
+    "bytes": 1694
+  },
+  "checks": {
+    "pages_200": 6,
+    "organization_expected_503": 3,
+    "total": 9,
+    "failed": 0
+  },
+  "limits": "Uploaded report bytes verified; raw HTTP response bodies not supplied. Backend not started, browser user reports page opened but no DOM/interactive acceptance. Server stopped by user; restart helper delivered, not executed yet.",
+  "restart": {
+    "file": "R8_R1_restart_preview.py",
+    "sha256": "ede0a94b105768debe39e8a0b2572f271e2eed6e01624e0b5bae629396b9e8cd",
+    "changes": "New unique log/report names only, preserves original; AST parsed; Windows run NOT_RUN"
+  },
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "completed": [
+      "I1",
+      "F4"
+    ],
+    "I2": "frontend build PASS; Unified full product acceptance pending",
+    "I3": "HTTP smoke PASS; browser acceptance NOT_RUN",
+    "canonical_acceptance": "unchanged"
+  },
+  "parallel": {
+    "observed_branches": 238
+  },
+  "architecture_delta": "none",
+  "catalog_delta": "Evidence only; no product changes",
+  "next": "Restart approved local frontend; capture manual browser evidence and raw build logs; no backend or grant activation."
+}

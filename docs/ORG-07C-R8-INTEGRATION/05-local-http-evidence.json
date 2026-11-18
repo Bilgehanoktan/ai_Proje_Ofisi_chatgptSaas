@@ -1,0 +1,57 @@
+{
+  "source_manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+  "scope": "local frontend only; backend not started; browser manual NOT_RUN",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "body_sha256": "d7483c28a8a6211b5dee92cb9f24fc997bc255c6f5ac9a49af296db2a3b34af2"
+    },
+    {
+      "path": "/office",
+      "status": 200,
+      "body_sha256": "9f625fe93f0b2f07b312e31e05b536ec6868db1630a7da6697ac8db6db7c284a"
+    },
+    {
+      "path": "/office/premium",
+      "status": 200,
+      "body_sha256": "6afca7a7f9022b948cc554fc8d7b0ce5dd055d4807a4b30c2ae471c482091c4a"
+    },
+    {
+      "path": "/office/premium/hybrid",
+      "status": 200,
+      "body_sha256": "cbaa2de02cc527d46c36e136a5e4b7e58a2633a7a2102fe4ff0303a6cd418170"
+    },
+    {
+      "path": "/office/premium/native",
+      "status": 200,
+      "body_sha256": "a87650a9822bae83915b0e69a25c43a359056c7d910cceb75d35af63c6377ba2"
+    },
+    {
+      "path": "/office/premium/unified",
+      "status": 200,
+      "body_sha256": "8c95f7ad6f5b7f2af36626ac839902faf388b9457547167df4f46cb10d470a77"
+    },
+    {
+      "path": "/api/demo/organization",
+      "case": "plain",
+      "status": 503,
+      "mode": "D0_ORGANIZATION_READ_HOLD",
+      "cache_control": "no-store"
+    },
+    {
+      "path": "/api/demo/organization",
+      "case": "synthetic_query",
+      "status": 503,
+      "mode": "D0_ORGANIZATION_READ_HOLD",
+      "cache_control": "no-store"
+    },
+    {
+      "path": "/api/demo/organization",
+      "case": "synthetic_header",
+      "status": 503,
+      "mode": "D0_ORGANIZATION_READ_HOLD",
+      "cache_control": "no-store"
+    }
+  ]
+}
