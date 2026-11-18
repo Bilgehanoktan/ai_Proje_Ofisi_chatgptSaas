@@ -83,7 +83,16 @@
       "UnifiedU3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
       "EXT07R6": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
     },
-    "review": "8 complete trees including parent; no MEM04 namespace or checkpoint module in compared heads. D5-G owns cross-regression and IAM/T1 owner review; exact three MEM03 overlay blobs and 17/17 T1 historical cross-regression found, not rerun or counted. No global lock or merge."
+    "review": "8 complete trees including parent; no MEM04 namespace or checkpoint module in compared heads. D5-G owns cross-regression and IAM/T1 owner review; exact three MEM03 overlay blobs and 17/17 T1 historical cross-regression found, not rerun or counted. No global lock or merge.",
+    "org_recheck": {
+      "previous": "67e8b70075a121437c8ba7b4254ed28e6c9513eb",
+      "current": "a63d718b2000a6d894f7c53d0048f0985d676708",
+      "changes": [
+        "candidates/ORG-10R2-RUNTIME-REVIEW/HANDOVER_PORT_ALLOCATION.md",
+        "candidates/ORG-10R2-RUNTIME-REVIEW/PORT_ALLOCATION_EVIDENCE.json"
+      ],
+      "review": "complete untruncated tree and compare; original memory blobs unchanged, no MEM04 paths"
+    }
   },
   "limits": {
     "checkpoint_body": 8388608,
@@ -91,5 +100,19 @@
     "snapshot_accounted_bytes": 67108864,
     "witness_records": 4096
   },
-  "acceptance": "D0 local only. No archive/prune, canonical runtime, independent custody, full checkout/lock, Windows or PostgreSQL acceptance."
+  "acceptance": "D0 local only. No archive/prune, canonical runtime, independent custody, full checkout/lock, Windows or PostgreSQL acceptance.",
+  "readback": {
+    "source_commit": "5fe67b75e09b4b6ee4e99212b4b50876efddb7ff",
+    "source_tree": "2531232947fc2c77f5520f3d2e820a0b455ae137",
+    "baseline_files": 1832,
+    "unchanged_blobs": 1831,
+    "new_files": 12,
+    "removed": 0,
+    "product_files": 508,
+    "manifest_path_size": "507/507",
+    "manifest_sha": "9d5ccdbe382b3f13aca34a28878df3d71310a899",
+    "new_sources_exact_blob": "2/2",
+    "raw_test_logs_exact_blob": "2/2",
+    "full_checkout": "NOT_VERIFIED"
+  }
 }
