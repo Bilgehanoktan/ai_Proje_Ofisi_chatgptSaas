@@ -1,0 +1,120 @@
+{
+  "revision": "D5-G-R1",
+  "parent": "ab0886ca6ada2e099cbd46b0f04d1aa264e6328b",
+  "scope": "read-only evidence reconciliation; no new T1 run, no owner implementation",
+  "original_source": "9b66592ff67638e0a1504d327c6cf95ef4d7ac21",
+  "original_source_tree": "1553409909ed76488cf3b4d49ccf1857aa8b3ae0",
+  "original_full_archive": {
+    "reported_files": 1718,
+    "reported_sha256": "b7969b76116768335877f1f08619bfa316a3c5945051ee379da9c2fc0570869b",
+    "current_local_copy": false
+  },
+  "current_source_check": {
+    "D5_F_R1": "66bbc604cae37d86d278c28008273e266622ad1c",
+    "backend_tree_equal": 237,
+    "backend_paths_sizes_modes_match": 237,
+    "explicit_blob_byte_checks": 8,
+    "full_237_byte_audit_this_turn": false,
+    "local_git_dns": "BLOCKED",
+    "bulk_connector_limit": "BLOCKED",
+    "notes": "237 full byte checks and 1718-file original tree were reported by D5-F-R2, not repeated here."
+  },
+  "evidence_files": [
+    {
+      "path": "candidates/D5-F-R2/original_t1.log",
+      "sha256": "401f116221de85246c7f66f84e705efca7b6d232da063561083e5fa6e4d2ed3f",
+      "git_blob": "272cffdbe2918891f5de173c40cace1b53dc45b3",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/mem03_t1_cross_regression.log",
+      "sha256": "63ef8a734cbdce66805faa4218b20dc2261ec227253dd7e8c90b19b30a380fe3",
+      "git_blob": "e4ffc7227a3d77347c1fb749c284d587b948deaa",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-F-R2/exit_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "git_blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/exit_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "git_blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-F-R2/PROGRESS.json",
+      "sha256": "b9723dc1f27550902babce9c347f7918e7066a5b6516cbfd89dc3a24db12fd53",
+      "git_blob": "516bcb65d25be8e07c8a988dfe76c95c1fe4943c",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/PROGRESS.json",
+      "sha256": "a3fd1886e667205fe3f56c8b4a4d2b521acf71ad6cccc7b37e4be7cb0f02fd75",
+      "git_blob": "282456255972687501d7a14970ea37fa3a77f63a",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/overlay/joint_context.py",
+      "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c",
+      "git_blob": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/overlay/memory_witness.py",
+      "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0",
+      "git_blob": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/overlay/snapshot_store.py",
+      "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0",
+      "git_blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+      "sha256_match": true
+    },
+    {
+      "path": "candidates/D5-G/run_cross_regression.py",
+      "sha256": "b50e231acbe680201ebd7cf3a8dd7982cc1da91e2502ea37129514b444d4e077",
+      "git_blob": "4e59c9d4f33fed17a7eff264c3db5f4046a7a700",
+      "sha256_match": true
+    }
+  ],
+  "original_t1": {
+    "recorded_pass": 17,
+    "exit": 0,
+    "unique_ids": 17
+  },
+  "mem03_cross": {
+    "recorded_pass": 17,
+    "exit": 0,
+    "unique_ids": 17,
+    "overlaid_files": 3,
+    "original_files": 234,
+    "full_mem03_checkout": false
+  },
+  "same_test_ids": true,
+  "unique_t1_ids": 17,
+  "new_run": 0,
+  "residual_full_restore_reproduced": true,
+  "independent_accepted": false,
+  "owners": {
+    "D4": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "ORG10R2": "67e8b70075a121437c8ba7b4254ed28e6c9513eb",
+    "ORG07C_R7": "5996e76d02755cb0b34f8fad59f8b113e44bc5c2",
+    "MEM03R1": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
+    "Unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "owner_source_pins": {
+    "registry": "e1f52722e1d33841539b709036ed1a100216b9b6",
+    "trust_boundary": "b662f4c5d0464a5b615bd8d0538193ae0c20add8",
+    "security_facade": "0d7006647df77b55bf79f00fc1e3cc4b237fd4bd",
+    "org_bridge": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+    "d5_readback": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+    "owner_contract": "27991b3c75402c9adce024dcf3888db1fbdc2479"
+  },
+  "decision_status": "OPEN: existing authenticated resolver or approved single identity source; no provider selected",
+  "product_changes": 0,
+  "activation": "HOLD"
+}
