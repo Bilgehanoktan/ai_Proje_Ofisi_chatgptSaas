@@ -1,0 +1,160 @@
+{
+  "revision": "ORG-10R3-RAW-ARCHIVE-REVIEW",
+  "date": "2026-11-18",
+  "parent": "a63d718b2000a6d894f7c53d0048f0985d676708",
+  "classification": "ACTUAL_EXTERNAL_STATIC_ARCHIVE_REVIEW_AGAINST_PRIOR_USER_MANIFEST_NOT_EXECUTION_OR_SECURITY_ATTESTATION",
+  "source_pins": {
+    "fixture_commit": "5c7eb6b148e6e96247682653ff70dccc4a7ba823",
+    "launcher_commit": "3eadb02d06dbb4fb967ba8f74a86a01238c540a3",
+    "launcher_sha256": "abe425aacb89ee32edb1b89875302556ad25e37ce7b956b43e4503a22c16cbda",
+    "archive_verifier_sha256": "c6ba98704cdbbcfeea22861b5cae12e62e2e693412609a8611f68e840ee0bb36",
+    "manifest_sha256": "50870555adc6334556feefdd8323d42241229099e1cb3ccea5707de779cf6ef4"
+  },
+  "actual_run": {
+    "command": "python -B review_runtime_archives.py --manifest ORG10_RUNTIME_REVIEW_01.json --search /mnt/data --report ORG10_ARCHIVE_REVIEW_INDEPENDENT_01.json",
+    "exit_code": 0,
+    "report_sha256": "dc3be522a5b4be342d3f04955c11c119e1ad7d9e311647a33ee923beaebc04fb",
+    "previous_windows_report_hash_match": true,
+    "extra_checks_sha256": "73642fa620ad06c3601fb66c0679735018616648212fde9c3f554f338f1aa70b",
+    "archives": [
+      {
+        "name": "postgresql-17.12.zip",
+        "sha256": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+        "bytes": 386263884,
+        "entries": 22221,
+        "files": 20657,
+        "directories": 1564,
+        "matched": 1572,
+        "uncompressed_bytes": 1007692169,
+        "sha256_match": true,
+        "crc": "PASS",
+        "unsafe_paths": 0,
+        "symlinks": 0,
+        "casefold_collisions": 0
+      },
+      {
+        "name": "psycopg-3.3.9-py3-none-any.whl",
+        "sha256": "d2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6",
+        "bytes": 219041,
+        "entries": 90,
+        "files": 90,
+        "directories": 0,
+        "matched": 89,
+        "record_hash_and_size": 89,
+        "record_rows": 90,
+        "uncompressed_bytes": 756510,
+        "tag": "py3-none-any",
+        "requires_python": ">=3.10",
+        "active_windows_dependency": "tzdata",
+        "sha256_match": true,
+        "crc": "PASS",
+        "unsafe_paths": 0,
+        "symlinks": 0,
+        "casefold_collisions": 0
+      },
+      {
+        "name": "psycopg_binary-3.3.9-cp314-cp314-win_amd64.whl",
+        "sha256": "109c5df5b0e5117e01a42d3b56a2f4ccd5431bd54d25efdfc89df095ac9f9605",
+        "bytes": 3009572,
+        "entries": 18,
+        "files": 15,
+        "directories": 3,
+        "matched": 14,
+        "record_hash_and_size": 14,
+        "record_rows": 15,
+        "uncompressed_bytes": 7337028,
+        "tag": "cp314-cp314-win_amd64",
+        "requires_python": ">=3.10",
+        "sha256_match": true,
+        "crc": "PASS",
+        "unsafe_paths": 0,
+        "symlinks": 0,
+        "casefold_collisions": 0
+      }
+    ],
+    "matched": [
+      1675,
+      1675
+    ],
+    "missing": 0,
+    "extra": 0,
+    "mismatch": 0,
+    "pip_generated_metadata_excluded": 5
+  },
+  "review": {
+    "postgresql_and_driver_external_archive_match": "PASS",
+    "prior_publisher_checks": "3/3 user Windows, now exact uploaded distributions hash-match pinned values",
+    "prior_python_authenticode": "4/4 user Windows; venv exe hash matches manifest",
+    "port_allocation": "APPROVED_USER; recheck availability at launch",
+    "python_base_full_provenance": "HOLD",
+    "tzdata": "Windows dependency observed in exact wheel METADATA, not part of pinned runtime manifest; installed version/files not yet inspected",
+    "external_runtime_review": "HOLD_REMAINING_PYTHON_BASE_AND_DEPENDENCY_REVIEW",
+    "reviewed_fingerprint_issued": false,
+    "base_reference": {
+      "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.zip",
+      "sha256": "ec781bb03f9638d136b24da7c83b4db1652ce767848aa856a30bb87cfdb1abe4",
+      "publisher_manifest": "https://www.python.org/ftp/python/3.14.3/windows-3.14.3.json",
+      "status": "PUBLISHER_REFERENCE_FOUND_DOWNLOAD_BLOCKED"
+    },
+    "tzdata_reference": {
+      "version": "2026.6",
+      "sha256": "0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec",
+      "publisher": "https://pypi.org/project/tzdata/2026.6/",
+      "status": "PUBLISHER_HASH_CONFIRMED_PRIOR_D1_PIN; LOCAL_VERSION_NOT_ASSUMED"
+    }
+  },
+  "prior_report_compatibility": {
+    "original_R5_evidence": "bare 64-hex revision and history head details confirmed on PG02/03/04/07/09/20; no reviewer digest-format change indicated",
+    "scope": "historical report not PG31 execution"
+  },
+  "parallel": {
+    "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "D5G": "ab0886ca6ada2e099cbd46b0f04d1aa264e6328b",
+    "ORG07CR8": "dd734bf31977c84fee85ab6d23d11cd9804804a0",
+    "MEM03": "0bbcb5853eb7235dcbeefbd4fadae11383ddb715",
+    "Unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "progress": {
+    "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+    "proposed_baseline_blob": "5e40f9c48e86e3362cd09cc0c3a28d0a60a481d2",
+    "criterion": "I02 distribution subcondition met; base and dependency review plus joint profile decision remain HOLD; no retroactive criterion change",
+    "proposed_weighted_previous": 63.6666666667,
+    "proposed_weighted_current": 63.6666666667,
+    "delta_points": 0,
+    "official_weighted": "NOT_CALCULABLE_PENDING_ADOPTION",
+    "execution_plan_previous": [
+      3,
+      8
+    ],
+    "execution_plan_current": [
+      3,
+      8
+    ],
+    "organization_plan_previous": [
+      5,
+      7
+    ],
+    "organization_plan_current": [
+      5,
+      7
+    ],
+    "pg": [
+      0,
+      31
+    ],
+    "maintain": [
+      0,
+      48
+    ],
+    "new_product_gates": 0
+  },
+  "limits": [
+    "Windows binary archives inspected as data, not executed; no raw independent OS or signature-chain verification.",
+    "PG ZIP CRC covers all 20657 files; only bin/lib/share 1572 matched to prior inventory. Remaining package areas not part of runtime manifest.",
+    "Generated RECORD/INSTALLER/REQUESTED files outside publisher byte matching. Report retains original historical HOLD fields; port approval is separate subsequent record.",
+    "No complete base Python/venv import path or OS dependency review; no production or independent security acceptance.",
+    "No real PostgreSQL or psycopg in this runtime; no DB run; no product source edits."
+  ],
+  "next": "Collect official full CPython 3.14.3 x64 ZIP, existing base and venv hash inventory, actual installed tzdata wheel/version; review exact overlaps and any unreviewed executable inputs without installing or changing runtime. Recheck D4/ORG common fixture owner contract. Then only existing launcher after review. No repeat of passed archive review.",
+  "rollback": "Evidence-only additive record; preserve parent and prior hashes, no migration or deletion."
+}
