@@ -1,0 +1,52 @@
+# W5-J2-R4 — shared transaction and ownership proposal
+
+**Disposition:** User instructed implementation of the four R3 choices. This revision implements the local candidate and specifies the owner-facing mapping; it does not record T1/Budget/D5/D4 or independent acceptance. No main merge, migration, real execution, provider or settlement grant.
+
+## Decision and existing owner boundary
+
+| ID | User-directed implementation direction | Existing owner / change required before canonical integration |
+|---|---|---|
+| R4-01 | Allocate from an already reserved run pool, never debit the same amount twice | T1/Budget: preserve 0195 admission and immutable original issuance; owner-approved pool/membership persistence and CAS |
+| R4-02 | Explicit mandatory operation and write-set per economic phase | T1: add explicit operation/transition semantics and role coverage to existing `review.py`, `port.py`, `postgres_session.py`, mapping, and validators; do not inject into ordinary STATE_MUTATION |
+| R4-03 | Close partially used pool by releasing only its unallocated remainder after every member is RECONCILED | T1/Budget: change original lifecycle mapping, not failure-only `sample_settlements` history; separately protect untouched failure-only entry point, renewal/readback, and terminal run-state semantics |
+| R4-04 | Keep original run authority claim and use invocation-level durable economic identity | D5: owner-approved parent-child claim lifecycle, same root and protected reader, persistent alias uniqueness and phase progression; never weaken current run-unique fence or reissue claims |
+
+The original operation enum has ADMISSION/STATE_MUTATION/TERMINAL, fixed role iteration and head-version increment. D5 original claim and journal are run-unique and D5-C diagnostic stops before T1. The candidate names below cannot be passed to the original coordinator, and no additional writer is installed. R4 generated fixture is a minimal deterministic patch to the exact R2 disposable source; it is not a second product engine. Original R1–R3 are unchanged.
+
+## Phase mapping and canonical transaction specification (owner review)
+
+All phases require existing six logical roles HEAD/MUTATION/FENCE/EVENT/OUTBOX/AUDIT, in addition to the phase roles below. The proposed HEAD and BUDGET revisions both advance once for each phase; owner must define same-state head mutation semantics, version rules, event type, request serialization and migration. `LEASE` is a locked read/verification on nonterminal phases, and a write role on partial terminal. `ADMISSION` remains immutable read evidence. Role names `POOL`, `MEMBERSHIP`, `RECEIPT`, `QUARANTINE`, `TERMINAL_REMAINDER` are proposed logical roles, **not** existing physical tables or accepted names.
+
+| Phase | Extra mandatory write roles | Budget delta and member/pool semantics |
+|---|---|---|
+| ALLOCATE | BUDGET, POOL, MEMBERSHIP, RECEIPT | outstanding unchanged; free -= reserved; immutable allocation, exact issuance identity; reservation receipt |
+| CONSUME | BUDGET, MEMBERSHIP, RECEIPT | no monetary delta; once per invocation; consume receipt distinct from admission/allocate; not a provider grant |
+| USAGE | BUDGET, MEMBERSHIP, RECEIPT | no monetary delta; known actual usage bound to consume, ceiling and tokens |
+| RECONCILE | BUDGET, MEMBERSHIP, RECEIPT | outstanding -= allocated; recognized += actual; released = allocated - actual; no same-run recycling |
+| UNKNOWN | BUDGET, MEMBERSHIP, QUARANTINE | no monetary delta; sticky quarantine, no retry or settlement; preserve receipts; independent resolution is separate, not implemented |
+| CLOSE_PARTIAL | LEASE, BUDGET, POOL, TERMINAL_REMAINDER | outstanding -= free; free=0; released += prior free; preserve all member/receipt history; close only after all members reconciled, no unknown; canonical lease removal/terminal transition is not implemented in fixture |
+
+Proposed physical ownership: current `run_heads`, `run_admissions`, `run_leases`, `sample_budgets`, `sample_reservations`, `run_mutations`, `fences`, `events`, `outbox`, `run_audit` remain T1/Budget authority. Add owner-defined pool projection, full scoped invocation membership, immutable typed role receipts, durable quarantine, terminal remainder record with composite tenant/company/environment and run/budget FKs. Preserve original admission transaction/request/receipt and separately persist phase transaction/request, issuance revision, allocation revision, current budget revision, attempt, fence, epochs, route/profile/invocation digests. No physical DDL shipped; the five R2 fixture tables are not a migration.
+
+Canonical owner integration sequence:
+
+1. Read existing run authority/claim, original admission binding, full current protected identity and root; compare the same immutable proposed operation identity before claim. No user-supplied token creates authority.
+2. Within original owner fence maintain ROOT -> WITNESS -> MEMORY -> COMPANY_STREAM -> RUN -> LEASE -> BUDGET -> POOL -> MEMBERSHIP order. Last two locks and root-publication protocol require D4/D5 approval. All writers must participate. Verify protected reader under the same root prior to the original journal/transaction; verify freshness and revocation through actual COMMIT, not merely before COMMIT. Existing D5-C diagnostic always stops; do not attach to live claim.
+3. Use existing `LogicalT1Coordinator` and `postgres_transaction` after owner approves operation expansion; acquire dedicated scoped connection (no autocommit). Lock/read actual rows, validate CAS and exact current references, check persistent aliases, perform all phase writes in one transaction, verify complete scoped write-set and before/after, then COMMIT. Original `PostgresSession` delegates to mapping; do not add competing writer or fabricate role observations. Any failure before COMMIT rolls back; commit/close ambiguity is UNKNOWN and requires independent exact readback, never automatic retry.
+4. Independent readback uses separate scoped session and trusted owner evidence, not the aggregate budget, R2 fixture or comparison digest. Apply forced RLS/least privilege and audit, restore and replay tests. All 22 original PG scenario IDs remain NOT_RUN; implement tests against approved mapping, not the SQLite fixture.
+
+## Run fence and economic identities
+
+`run_scope_pin()` hashes the exact existing Scope field shape (tenant, company, environment, plan, task, run, agent instance, principal). It does not mint or replace `RootPin` or `D0IntentAuthority` claims. `ParentObservation` contains externally supplied original scope/claim/record/key/recovery epoch, lease and grant digests, and expiry observation. Candidate equality compares recovery epoch to binding witness epoch (owner review); these are not independent custody. No caller-supplied plan or hash permits action. Parent identity must be verified against original protected source; per-invocation aliases are durable scoped uniqueness constraints, not alternative claims that bypass the parent.
+
+`economic_keys()` reuses R1/W5-H equality identities: reservation=(scope triple,budget,reservation), invocation idempotency=(scope triple,key), invocation digest=(scope triple,pin), membership=(scope triple,pin). Domain-separated comparison hashes are candidate-only, not original W5-H hashes or signatures. Match any alias -> HOLD; absence in supplied history is never proof of uniqueness. Attempt/route/profile/effect/phase tx drift does not reset economic uniqueness when a retained identity matches. Phase key is scoped stable idempotency identity + phase; it must not be the sole uniqueness constraint. Persist every alias and reject any alias collision across attempts and runs before claim/writes; distinct phase receipt and tx per phase. Terminal closure has one stable run-scope key independent of chosen membership anchor. Full member history and current admission remain owner obligations.
+
+`plan_operation()` and `inspect_operation()` bind a prospective write-set to phase, scope, parent, binding, supplied request/tx, revisions, explicit role order and expiry observation, check exact distinct role records, and return HOLD even on full structural match. Parent claim/lease/grant digests and request digest are supplied observations, not verified owner readback or a recomputation of actual command. The comparator does not check phase state or actual physical data, lock acquisition, custody, atomic revocation or actual commit. Same-state HEAD advancement and BUDGET revision per phase, role IDs and ordering, fixed 4096 history bound, and terminal anchor handling are engineering proposals. Never install this comparator as the canonical gate.
+
+## R4 fixture behavior / safety limits
+
+`fixture_patch.py` checks exact R2 SHA-256, replaces four exact contexts, and generates a disposable test file. Original transaction implementation, membership/receipt invariants and SQL schema are reused. `close_partial()` shares original `_transaction` and locks, CAS, budget write, event/outbox/audit verification, commit/rollback/lost-ACK behavior. It checks all members RECONCILED, pool conservation and no unknown, changes only unused remainder, retains membership/receipt history, closes even if free=0, and prevents old close_unused for any historical member. No product HEAD/LEASE/FENCE roles or D5 claim actually run; existing fixture journal records only EVENT/OUTBOX/AUDIT. Old R3 projection rejects new partial-closed pool as invalid, tested fail-closed; update owner-approved projection before wiring. R2 fixture has fixed synthetic scope, 16 pools and no independent custody/restore guarantee; released member capacity cannot be reallocated within same run. Unknown on any run of fixture budget blocks partial closure. No automatic unknown resolution.
+
+## Acceptance and handoff
+
+T1/Budget owners must accept physical role strategy, migration/R03, terminal behavior, renewal compatibility, and original entrypoint guard; D5 owner must approve/run parent-child durable authority and protected reader across commit; D4 must accept scoped DDL/lock/RLS. Human/IV separate. User direction is not independent owner signature or permission for PG/PROD. Next R5: owner-reviewed extension of exact existing coordinator/mapping, executable 22 PG cases in approved disposable environment, then independent readback and J2 decision. W5-J Windows raw logs still pending. J2/J3/J4/J6 HOLD, J5 NOT_RUN.

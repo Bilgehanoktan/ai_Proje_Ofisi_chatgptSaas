@@ -1,0 +1,511 @@
+{
+  "revision": "W5-J2-R4",
+  "status": "CANDIDATE_ONLY",
+  "python_files": {
+    "fixture_patch.py": {
+      "sha256": "57d767152bb76976260f499663fc7c360e70d717410165ed4b41af88aa5bdcbd",
+      "symbols": [
+        {
+          "kind": "FunctionDef",
+          "name": "build_fixture",
+          "line": 38
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "write_fixture",
+          "line": 49
+        }
+      ]
+    },
+    "operation_contract.py": {
+      "sha256": "90aed4e63820aa7830bee47a5acf6c0753905d1eed3d1bad566dac9493bbc2ca",
+      "symbols": [
+        {
+          "kind": "FunctionDef",
+          "name": "canonical",
+          "line": 23
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "digest",
+          "line": 27
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "economic_keys",
+          "line": 30
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "run_scope_pin",
+          "line": 37
+        },
+        {
+          "kind": "ClassDef",
+          "name": "ParentObservation",
+          "line": 44
+        },
+        {
+          "kind": "ClassDef",
+          "name": "OperationPlan",
+          "line": 56
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "_roles",
+          "line": 79
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "plan_operation",
+          "line": 84
+        },
+        {
+          "kind": "ClassDef",
+          "name": "RoleObservation",
+          "line": 114
+        },
+        {
+          "kind": "ClassDef",
+          "name": "Review",
+          "line": 128
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "plan_digest",
+          "line": 138
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "inspect_operation",
+          "line": 143
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "inspect_aliases",
+          "line": 171
+        }
+      ]
+    },
+    "run_exact.py": {
+      "sha256": "be40512bbd2fec4bf6b4bc67034aacb24d7c268f491f3b1efe2124680af171e2",
+      "symbols": [
+        {
+          "kind": "FunctionDef",
+          "name": "sha",
+          "line": 22
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "unique",
+          "line": 24
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "verify",
+          "line": 31
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "run_group",
+          "line": 45
+        }
+      ]
+    },
+    "test_operation_contract.py": {
+      "sha256": "7f156332968a63142621e7d5b1ff0c3fa7c7d997305467ccaa07a5a03bd547a8",
+      "symbols": [
+        {
+          "kind": "ClassDef",
+          "name": "OperationContractTests",
+          "line": 7
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "setUp",
+          "line": 8
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "plan",
+          "line": 10
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "rows",
+          "line": 15
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "check",
+          "line": 17
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_all_phase_roles_exact",
+          "line": 23
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_no_fake_canonical_operation",
+          "line": 28
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_parent_scope",
+          "line": 31
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_epoch",
+          "line": 33
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_expired_initial",
+          "line": 35
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_expired_before_readback",
+          "line": 37
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_clock_regression",
+          "line": 38
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_root_revoked_or_changed",
+          "line": 39
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_admission_alias",
+          "line": 42
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_allocation_tx_revision",
+          "line": 45
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_reservation_alias_later",
+          "line": 48
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_missing_role",
+          "line": 50
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_extra_duplicate_role",
+          "line": 52
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_role_order",
+          "line": 54
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_duplicate_row_id",
+          "line": 56
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_role_binding_mutations",
+          "line": 58
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_expected_plan_pin",
+          "line": 62
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_forged_plan_roles",
+          "line": 63
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_forged_economic_keys",
+          "line": 64
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_binding_drift",
+          "line": 65
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_identity_stable_across_attempt_route_profile_effect_tx",
+          "line": 66
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_alias_across_run",
+          "line": 70
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_distinct_invocation_same_run",
+          "line": 72
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_phase_key_separation",
+          "line": 74
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_consume_key_stable_retry",
+          "line": 76
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_terminal_identity_run_level",
+          "line": 79
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_terminal_scope_wrong",
+          "line": 81
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_bad_history",
+          "line": 83
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_invalid_bool_revisions",
+          "line": 84
+        }
+      ]
+    },
+    "test_partial_close.py": {
+      "sha256": "896382b34e2f55270e0d1e9a60c358fc7bd7f69a0213010de905353931efb907",
+      "symbols": [
+        {
+          "kind": "ClassDef",
+          "name": "PartialCloseTests",
+          "line": 13
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "setUp",
+          "line": 14
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "read",
+          "line": 19
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "alloc",
+          "line": 20
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "step",
+          "line": 22
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "settle",
+          "line": 24
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "close",
+          "line": 28
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "rejects",
+          "line": 30
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_two_run_partial_close",
+          "line": 34
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_two_members_same_run",
+          "line": 39
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_full_allocation_zero_remainder",
+          "line": 42
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_zero_cost_known_not_unknown",
+          "line": 44
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_unused_legacy_still_works",
+          "line": 46
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_legacy_close_after_usage_rejected",
+          "line": 48
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_reserved_blocks_close",
+          "line": 50
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_consumed_blocks_close",
+          "line": 51
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_usage_known_blocks_close",
+          "line": 53
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_unknown_blocks_close",
+          "line": 55
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_unknown_other_run_blocks_close",
+          "line": 57
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_other_run_pending_does_not_block_known_close",
+          "line": 59
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_stale_revision",
+          "line": 61
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_double_close",
+          "line": 62
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_reallocate_closed",
+          "line": 63
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_transaction_alias",
+          "line": 64
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_admission_alias",
+          "line": 65
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_fault_rollback_all",
+          "line": 66
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_lost_ack_no_double_release",
+          "line": 70
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_competing_writer",
+          "line": 74
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_closed_release_drift",
+          "line": 93
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_journal_kind_drift",
+          "line": 98
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_reconciled_receipt_history_retained",
+          "line": 103
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_patch_exact_and_no_overwrite",
+          "line": 105
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_second_run_unused_after_partial",
+          "line": 109
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_both_runs_partial",
+          "line": 112
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_r3_projection_remains_fail_closed",
+          "line": 115
+        },
+        {
+          "kind": "ClassDef",
+          "name": "Paused",
+          "line": 77
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "writer",
+          "line": 84
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "_fault",
+          "line": 79
+        }
+      ]
+    }
+  },
+  "docs": {
+    "OWNER_CONTRACT.md": "phase roles, owner mapping, shared transaction and limitations",
+    "HANDOVER.md": "maintenance, rollback, evidence, next",
+    "DECISIONS.json": "user-directed candidate choices and owner gate",
+    "TEST_EVIDENCE.json": "actual logs and counts",
+    "PG_PREFLIGHT.json": "actual blocked prior checkpoint",
+    "SOURCE_PINS.json": "parent and remote reference pins",
+    "ACCEPTANCE_GATES.json": "unchanged gate boundaries",
+    "SOURCE_MANIFEST.json": "delivery hashes",
+    "test.log": "raw local regression"
+  },
+  "product_changes": [],
+  "api_changes": [],
+  "db_changes": [],
+  "dependencies_added": [],
+  "fixture_tables": [
+    "b",
+    "pool",
+    "member",
+    "receipt",
+    "journal"
+  ],
+  "fixture_schema_changed": false,
+  "design_score": 50,
+  "source_score": 25
+}

@@ -1,0 +1,33 @@
+{
+  "revision": "W5-J2-R4",
+  "user_direction": "implement four R3 proposed choices",
+  "status": "CANDIDATE_IMPLEMENTED_OWNER_ACCEPTANCE_PENDING",
+  "decisions": [
+    {
+      "id": "R4-01",
+      "direction": "allocate from existing run reservation",
+      "owner": "T1/Budget",
+      "status": "PASS_LOCAL_FIXTURE_OWNER_REVIEW"
+    },
+    {
+      "id": "R4-02",
+      "direction": "explicit per-phase mandatory T1 roles",
+      "owner": "T1",
+      "status": "PASS_LOCAL_CONTRACT_NOT_CANONICAL"
+    },
+    {
+      "id": "R4-03",
+      "direction": "release only unallocated remainder after all members reconciled",
+      "owner": "T1/Budget",
+      "status": "PASS_LOCAL_FIXTURE_OWNER_REVIEW"
+    },
+    {
+      "id": "R4-04",
+      "direction": "preserve run claim with invocation economic identity",
+      "owner": "D5/T1",
+      "status": "PASS_LOCAL_CONTRACT_NOT_AUTHORITY"
+    }
+  ],
+  "independent_accepted": false,
+  "prior_decisions_preserved": true
+}
