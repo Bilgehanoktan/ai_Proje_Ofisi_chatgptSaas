@@ -1,0 +1,113 @@
+{
+  "revision": "ORG-10R2-PUBLISHER-CHECKSUM-EVIDENCE",
+  "date": "2026-11-18",
+  "parent": "f942124b42393fc37e8c88892678b53a1c1e4265",
+  "classification": "USER_WINDOWS_PUBLISHER_ENDPOINT_TRANSCRIPT_REVIEW_NOT_INDEPENDENT_BINARY_ATTESTATION",
+  "manifest_sha256": "50870555adc6334556feefdd8323d42241229099e1cb3ccea5707de779cf6ef4",
+  "manifest_rehashed_here": true,
+  "archive_review_sha256": "dc3be522a5b4be342d3f04955c11c119e1ad7d9e311647a33ee923beaebc04fb",
+  "reconstructed_archive_review_rehashed_here": true,
+  "checks": [
+    {
+      "component": "psycopg",
+      "version": "3.3.9",
+      "filename": "psycopg-3.3.9-py3-none-any.whl",
+      "publisher_endpoint": "https://pypi.org/pypi/psycopg/3.3.9/json",
+      "expected_sha256": "d2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6",
+      "status": "PASS_REPORTED",
+      "matched_installed_files": 89
+    },
+    {
+      "component": "psycopg-binary",
+      "version": "3.3.9",
+      "filename": "psycopg_binary-3.3.9-cp314-cp314-win_amd64.whl",
+      "publisher_endpoint": "https://pypi.org/pypi/psycopg-binary/3.3.9/json",
+      "expected_sha256": "109c5df5b0e5117e01a42d3b56a2f4ccd5431bd54d25efdfc89df095ac9f9605",
+      "status": "PASS_REPORTED",
+      "matched_installed_files": 14
+    },
+    {
+      "component": "PostgreSQL",
+      "version": "17.12",
+      "filename": "postgresql-17.12-1-windows-x64-binaries.zip",
+      "publisher_endpoint": "https://get.enterprisedb.com/postgresql/postgresql-17.12-1-windows-x64-binaries.zip.sha256",
+      "expected_sha256": "a2cd8a774389347b70be7748ac4a37ef43cb6ee539c5fc3e85ae264b15e4a04c",
+      "status": "PASS_REPORTED",
+      "matched_installed_files": 1572
+    }
+  ],
+  "port": {
+    "number": 55436,
+    "observed": "NO_TCP_ROWS_REPORTED_AT_CHECK_TIME",
+    "owner_approval": "NOT_EXPLICITLY_RECEIVED",
+    "reserved": false,
+    "require_recheck_at_launch": true
+  },
+  "runtime_review": {
+    "publisher_checks": [
+      3,
+      3
+    ],
+    "archive_byte_matches": [
+      1675,
+      1675
+    ],
+    "local_metadata_outside_publisher_match": 5,
+    "python_signatures_reported": [
+      4,
+      4
+    ],
+    "python_base_full_provenance": "HOLD",
+    "external_review": "HOLD_PENDING_INDEPENDENT_REVIEW_DECISION",
+    "limitations": [
+      "Publisher HTTP response bodies not supplied; local transcript reports PASS. Direct retrieval from assistant web runtime failed (cache miss).",
+      "Raw original distributions, full base Python standard library and transitive DLL/OS dependencies not independently inspected. This evidence is not independent security acceptance.",
+      "Port absence is not allocation, nor guaranteed future availability."
+    ]
+  },
+  "parallel_heads": {
+    "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "D5FR1": "66bbc604cae37d86d278c28008273e266622ad1c",
+    "ORG07CR8": "41a9c412400df7c32accfe2bdd57811980f728a3",
+    "Unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "progress": {
+    "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+    "org10_proposed_criteria_blob": "5e40f9c48e86e3362cd09cc0c3a28d0a60a481d2",
+    "proposed_weighted_previous": 63.6666666667,
+    "proposed_weighted_current": 63.6666666667,
+    "delta_points": 0,
+    "official_weighted": "NOT_CALCULABLE_PENDING_ADOPTION",
+    "execution_plan_previous": [
+      2,
+      8
+    ],
+    "execution_plan_current": [
+      2,
+      8
+    ],
+    "org_plan_previous": [
+      5,
+      7
+    ],
+    "org_plan_current": [
+      5,
+      7
+    ],
+    "pg": {
+      "pass": 0,
+      "total": 31,
+      "status": "NOT_RUN"
+    },
+    "maintain": {
+      "pass": 0,
+      "total": 48,
+      "status": "NOT_RUN"
+    },
+    "new_product_gates": 0
+  },
+  "product": "HOLD",
+  "independent_security": "HOLD",
+  "next": "Do not repeat passed checks. Obtain explicit D4/ORG owner allocation and external runtime-review decision under existing RUN.md gate. Then invoke existing exact launcher only on fresh disposable stage. No new prototype or product change.",
+  "rollback": "Omit additive evidence record; keep all prior source and evidence."
+}
