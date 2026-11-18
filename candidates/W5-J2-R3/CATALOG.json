@@ -1,0 +1,260 @@
+{
+  "revision": "W5-J2-R3",
+  "status": "DIAGNOSTIC_ONLY",
+  "files": {
+    "checkpoint.py": {
+      "sha256": "322b9c43f26487c8801e9787ff0a453a73c8f57aaf94d80074cf94cd36d69c6e",
+      "symbols": [
+        {
+          "type": "FunctionDef",
+          "name": "_unique_pairs",
+          "line": 18
+        },
+        {
+          "type": "FunctionDef",
+          "name": "verify_plan",
+          "line": 26
+        },
+        {
+          "type": "FunctionDef",
+          "name": "verify_parent_manifests",
+          "line": 36
+        },
+        {
+          "type": "FunctionDef",
+          "name": "local_checkpoint",
+          "line": 54
+        }
+      ],
+      "dependencies": [
+        "hashlib",
+        "importlib.util",
+        "json",
+        "pathlib",
+        "shutil"
+      ]
+    },
+    "terminal_diagnostic.py": {
+      "sha256": "4dc41895c5f6e7056cf2724efd8dc35581b605954b9ff80088ab69a3eff8dc1a",
+      "symbols": [
+        {
+          "type": "ClassDef",
+          "name": "TerminalReview",
+          "line": 8
+        },
+        {
+          "type": "FunctionDef",
+          "name": "inspect_terminal_projection",
+          "line": 22
+        }
+      ],
+      "dependencies": [
+        "dataclasses",
+        "membership_review"
+      ]
+    },
+    "test_checkpoint.py": {
+      "sha256": "f4e669267d4ded1fd3e07f323be6c842781eaa6b51965ae1bbb199c9333139d2",
+      "symbols": [
+        {
+          "type": "ClassDef",
+          "name": "CheckpointTests",
+          "line": 9
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_exact_inventory",
+          "line": 10
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_tampered_plan",
+          "line": 11
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_pass_forgery",
+          "line": 13
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_no_parent",
+          "line": 16
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_manifest_repin_rejected",
+          "line": 19
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_exact_parent_manifest",
+          "line": 24
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_no_gate_promotion",
+          "line": 25
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_all_22_not_run",
+          "line": 29
+        }
+      ],
+      "dependencies": [
+        "checkpoint",
+        "json",
+        "pathlib",
+        "shutil",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    "test_terminal_diagnostic.py": {
+      "sha256": "5b2601598ea1b41487452ba66f6c6836e3feabc7c647b294fec6642d7ae51274",
+      "symbols": [
+        {
+          "type": "ClassDef",
+          "name": "TerminalDiagnosticTests",
+          "line": 9
+        },
+        {
+          "type": "FunctionDef",
+          "name": "setUp",
+          "line": 10
+        },
+        {
+          "type": "FunctionDef",
+          "name": "read",
+          "line": 14
+        },
+        {
+          "type": "FunctionDef",
+          "name": "review",
+          "line": 15
+        },
+        {
+          "type": "FunctionDef",
+          "name": "alloc",
+          "line": 20
+        },
+        {
+          "type": "FunctionDef",
+          "name": "step",
+          "line": 22
+        },
+        {
+          "type": "FunctionDef",
+          "name": "settle",
+          "line": 24
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_untouched",
+          "line": 28
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_partial_full_release_steals_other_run_capacity",
+          "line": 30
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_zero_cost_still_historical_allocation",
+          "line": 33
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_fully_allocated",
+          "line": 35
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_multiple_reconciled",
+          "line": 37
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_reserved",
+          "line": 39
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_consumed",
+          "line": 40
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_usage_known",
+          "line": 41
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_unknown_other_run",
+          "line": 43
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_closed",
+          "line": 44
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_missing_run",
+          "line": 45
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_tampered_balance",
+          "line": 46
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_tampered_pool",
+          "line": 48
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_duplicate_member",
+          "line": 50
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_bool_cost",
+          "line": 52
+        },
+        {
+          "type": "FunctionDef",
+          "name": "test_other_run_unaffected",
+          "line": 54
+        }
+      ],
+      "dependencies": [
+        "allocation_fixture",
+        "copy",
+        "pathlib",
+        "tempfile",
+        "terminal_diagnostic",
+        "test_allocation_fixture",
+        "unittest"
+      ]
+    }
+  },
+  "documents": {
+    "OWNER_CHECKPOINT.md": "source-confirmed owner decisions and proposed T1 role/physical mapping",
+    "HANDOVER.md": "maintenance, limitations, rollback and next",
+    "PG_PREFLIGHT.json": "actual blocked local preflight",
+    "TEST_EVIDENCE.json": "actual 121 test evidence",
+    "test.log": "raw combined log",
+    "SOURCE_PINS.json": "commit/blob pins",
+    "ACCEPTANCE_GATES.json": "J2\u2013J6 unchanged",
+    "SOURCE_MANIFEST.json": "delivery integrity"
+  },
+  "api_changes": [],
+  "database_changes": [],
+  "product_changes": [],
+  "dependencies_added": [],
+  "source_score": 25,
+  "design_score": 50
+}

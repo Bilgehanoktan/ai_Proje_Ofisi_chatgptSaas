@@ -1,0 +1,148 @@
+{
+  "decision": "HOLD",
+  "status": "BLOCKED",
+  "parent_manifest_verified": 19,
+  "pg_inventory_count": 22,
+  "pg_executed": 0,
+  "pg_passed": 0,
+  "pg_cases": [
+    {
+      "id": "J2-PG-01",
+      "scenario": "existing run admission debit once; two allocations no additional debit",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-02",
+      "scenario": "simultaneous allocations from same pool over capacity; one winner",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-03",
+      "scenario": "distinct run pool isolation with shared budget",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-04",
+      "scenario": "duplicate invocation key across attempts/route changes",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-05",
+      "scenario": "duplicate invocation digest and reservation identity",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-06",
+      "scenario": "receipt alias across members and roles",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-07",
+      "scenario": "scope mismatch including composite FK and RLS",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-08",
+      "scenario": "stale budget CAS, fence, grant and epochs",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-09",
+      "scenario": "D5 revocation or expiry before commit; rollback all roles",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-10",
+      "scenario": "unknown without consume receipt; preserve outstanding",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-11",
+      "scenario": "unknown after consume; block retry/settlement and release",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-12",
+      "scenario": "known usage ceiling/token mismatch; HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-13",
+      "scenario": "exact reconciliation once; recognized plus released conservation",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-14",
+      "scenario": "concurrent reconcile same economic identity",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-15",
+      "scenario": "run terminal release while unresolved membership",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-16",
+      "scenario": "partial pool closure owner decision and no double release",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-17",
+      "scenario": "failure injection after every original T1 write role",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-18",
+      "scenario": "lost ACK after commit; independent exact readback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-19",
+      "scenario": "lost ACK before commit; no automatic retry",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-20",
+      "scenario": "restore stale membership/receipt or witness epoch; deny",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-21",
+      "scenario": "no dirty read across PG sessions; independent readback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "J2-PG-22",
+      "scenario": "least privilege and forced RLS negative cases",
+      "status": "NOT_RUN"
+    }
+  ],
+  "tools": {
+    "psql": false,
+    "postgres": false,
+    "docker": false,
+    "podman": false
+  },
+  "drivers": {
+    "psycopg": false,
+    "psycopg2": false
+  },
+  "approved_endpoint_supplied": false,
+  "owner_approval_supplied": false,
+  "blockers": [
+    "R03_OWNER_DECISION_NOT_SUPPLIED",
+    "INVOCATION_OPERATION_NOT_SUPPORTED",
+    "LEGACY_TERMINAL_RELEASE_INCOMPATIBLE",
+    "RUN_SCOPED_CLAIM_AND_JOURNAL",
+    "D5_PROTECTED_READER_DIAGNOSTIC_ONLY",
+    "OWNER_PG_TEST_IMPLEMENTATION_NOT_SUPPLIED",
+    "APPROVED_DISPOSABLE_PG_ENDPOINT_NOT_SUPPLIED",
+    "INDEPENDENT_ACCEPTANCE_NOT_SUPPLIED"
+  ],
+  "provider_call_allowed": false,
+  "spend_allowed": false,
+  "retry_allowed": false,
+  "settlement_allowed": false,
+  "commit_allowed": false,
+  "independent_accepted": false
+}
