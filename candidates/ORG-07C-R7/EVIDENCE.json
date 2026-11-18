@@ -1,0 +1,76 @@
+{
+  "revision": "ORG-07C-R7",
+  "parent": "cb02652ae9b51d56a70294535209903b23e38e3e",
+  "target": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "initial_branches": 216,
+  "prewrite_branches": 216,
+  "open_prs": 3,
+  "observed_heads": {
+    "planning/org-07c-r6-product-composition": "cb02652ae9b51d56a70294535209903b23e38e3e",
+    "integration/unified-u3a-product-acceptance": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "planning/w5-ext-07r6-source-preflight": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "integration/p10j24b-source-recovery": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "planning/0230-d5d-joint-authority-contract": "dfda007bb51ea8d9069bae7d03f148872f32c934",
+    "planning/org-10r2-runtime-review": "8a132a5b4b5b0dee1cc05e02d6fc7d4e7ae3fb54",
+    "planning/0229-d4-r6-canonical-readiness": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "planning/org-08-office-runtime-readback": "663b7b1a60d8444c9b972f3fa30e8a4ecc83b352",
+    "workstream/w5-j2-r4-shared-transaction-contract": "12d5149ef891b69a909162f8eecfe5847858e8b4"
+  },
+  "actual_local": {
+    "git": "2.47.3",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "r6_zip_crc": "PASS",
+    "r6_sha256": "18/18",
+    "base_pins": 5,
+    "output_pins": 10,
+    "patch_blob": "3be745832bcdb908625f99164296dff9aa06f928",
+    "patch_sha256": "2ef640419d6259892175c090874f317a79023e174b0d50460dbfcdb93bbea457",
+    "checks": [
+      "full_patch_check",
+      "full_patch_apply",
+      "all_output_blobs",
+      "exact_reverse",
+      "changed_anchor_rejected",
+      "new_path_collision_rejected",
+      "baseline_preserved"
+    ],
+    "compile": "PASS",
+    "regression": 28,
+    "new_reader_route": 3,
+    "total_node": 31,
+    "fail": 0,
+    "skip": 0,
+    "source_scope": "exact five-file base subset, ten-file output subset; injected local route fetch; not full checkout, Next/browser or real IAM",
+    "manifest_rows_matched": 10,
+    "manifest_review_rows": 509,
+    "manifest_review_blob": "41c240949efe14c93579290934c0b9d6266e52b6"
+  },
+  "local_evidence_sha256": {
+    "verify_patch.py": "91c1f32e509a11018075efb00342e3056e5bb559ce5a8cd7a040a9f5ce43dd7f",
+    "tests/closed_reader.test.cjs": "b1e898c111a75737db51ca4b137af6a5a028436538c3fb25e2d143876fa522f1",
+    "evidence/patch.json": "1347f843246f8b192b957b8baacafa70e6877d0172adfccdb0557a19386b37e2",
+    "evidence/git_apply.log": "038d8182c13f79a97664d2e39d022f5af8628890f196ec7adb88d904048321d9",
+    "evidence/test.log": "0f917f25c2dbcab8d5e56da6e2ce4c284e29051b131dbdff2ef88e149030a619",
+    "evidence/compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "gates": {
+    "product": "NOT_APPLIED",
+    "actual_IAM": "HOLD",
+    "full_checkout": "BLOCKED_DNS",
+    "locked_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "independent": "HOLD",
+    "original_windows_report": "ABSENT_UNATTESTED"
+  },
+  "official": {
+    "core": "12/16",
+    "ui": "21/40",
+    "org": "5/7",
+    "mvp": "0/11",
+    "hd": "0/36",
+    "office": "0/55",
+    "independent": "0/7",
+    "changed": false
+  }
+}

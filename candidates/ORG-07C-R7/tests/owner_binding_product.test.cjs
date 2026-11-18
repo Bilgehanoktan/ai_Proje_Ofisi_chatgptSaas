@@ -1,0 +1,23 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {readOwnerBoundOrganization:read}=require('../build/features/organization/organizationOwnerBinding.js');
+const {readOrganizationProxy:original}=require('../build/features/organization/organizationProxy.js');
+const scope={tenant_id:'synthetic-tenant',company_id:'synthetic-company',environment_id:'A0_SAMPLE_ONLY'};
+const rev='a'.repeat(64);const token='opaque-test-credential';
+const req=()=>new Request('http://localhost/api/demo/organization');
+const binding=()=>({credential:token,scope:{...scope},revision:rev});
+const projection=(s=scope,r=rev)=>({schema:'org.studio.preview.v0-D0',scope:{...s},revision:r,sequence:1,previous_revision:null,units:[{id:s.company_id,kind:'company',parent:null}],positions:[],decision:'HOLD',authoritative:false,identity_owner:'HOLD',geometry_join:'HOLD',runtime_binding:null,dispatch_allowed:false});
+const fake=(v=projection())=>async()=>Response.json(v);
+async function denied(p){const r=await p;assert.equal(r.status,503);assert.equal(r.headers.get('cache-control'),'no-store');assert.deepEqual(await r.json(),{mode:'D0_ORGANIZATION_READ_HOLD'});}
+test('baseline original accepts structurally valid different tenant; bound consumer refuses',async()=>{const v=projection({...scope,tenant_id:'synthetic-other'});assert.equal((await original(req(),18000,async()=>token,fake(v))).status,200);await denied(read(req(),18000,async()=>binding(),fake(v)));});
+test('matching historical projection stays HOLD, no owner metadata or credential returned',async()=>{let n=0;const r=await read(req(),18000,async()=>{n++;return binding()},async(url,init)=>{assert.equal(url,'http://127.0.0.1:18000/demo/v1/organization/studio-preview');assert.equal(init.headers.Authorization,'Bearer '+token);return Response.json(projection())});assert.equal(n,1);assert.equal(r.status,200);assert.equal(r.headers.get('cache-control'),'no-store');const body=await r.json();assert.deepEqual(body,projection());assert.ok(!JSON.stringify(body).includes(token));});
+for(const [name,v] of [['tenant',projection({...scope,tenant_id:'synthetic-other'})],['company',projection({...scope,company_id:'synthetic-other'})],['environment',projection({...scope,environment_id:'A0_REVIEW_ONLY'})],['revision',projection(scope,'b'.repeat(64))]])test('valid different '+name+' denied',async()=>denied(read(req(),18000,async()=>binding(),fake(v))));
+for(const [name,modify] of [['missing scope',b=>delete b.scope],['scope extra',b=>b.scope.extra='x'],['non synthetic',b=>b.scope.tenant_id='real'],['bad revision',b=>b.revision='x'],['unexpected authority',b=>b.authorized=true],['bad credential',b=>b.credential='bad\nvalue']])test('invalid owner reference '+name+' denied without backend',async()=>{const b=binding();modify(b);let calls=0;await denied(read(req(),18000,async()=>b,async()=>{calls++;return Response.json(projection())}));assert.equal(calls,0)});
+test('no owner no backend',async()=>{let n=0;await denied(read(req(),18000,undefined,async()=>{n++;return Response.json(projection())}));assert.equal(n,0)});
+test('null owner result no backend',async()=>{let n=0;await denied(read(req(),18000,async()=>null,async()=>{n++;return Response.json(projection())}));assert.equal(n,0)});
+test('mutable owner reference cannot redirect response after capture',async()=>{const b=binding();await denied(read(req(),18000,async()=>b,async()=>{b.scope.tenant_id='synthetic-other';b.revision='b'.repeat(64);return Response.json(projection(b.scope,b.revision))}));});
+test('caller query cannot select owner scope',async()=>{let n=0;await denied(read(new Request('http://localhost/api/demo/organization?tenant=synthetic-other'),18000,async()=>{n++;return binding()},fake()));assert.equal(n,0)});
+test('caller Authorization cannot select binding',async()=>{let n=0;await denied(read(new Request('http://localhost/api/demo/organization',{headers:{Authorization:'Bearer x'}}),18000,async()=>{n++;return binding()},fake()));assert.equal(n,0)});
+test('abort during downstream read fails closed',async()=>{const c=new AbortController();await denied(read(new Request('http://localhost/api/demo/organization',{signal:c.signal}),18000,async()=>binding(),async()=>{c.abort();return Response.json(projection())}));});
+test('owner exception redacted',async()=>denied(read(req(),18000,async()=>{throw Error(token)},fake())));
+test('backend HOLD remains generic',async()=>denied(read(req(),18000,async()=>binding(),async()=>Response.json({secret:token},{status:403}))));

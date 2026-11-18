@@ -1,0 +1,34 @@
+{
+  "revision": "ORG-07C-R7",
+  "files": [
+    {
+      "path": "verify_patch.py",
+      "symbols": [
+        "blob",
+        "sha",
+        "verify",
+        "once",
+        "generate",
+        "main"
+      ],
+      "purpose": "exact patch reproduction and Git checks"
+    },
+    {
+      "path": "tests/closed_reader.test.cjs",
+      "purpose": "3 consumer-route tests"
+    },
+    {
+      "path": "EVIDENCE.json",
+      "purpose": "actual test/source/log digest records"
+    },
+    {
+      "path": "HANDOVER.md",
+      "purpose": "architecture delta, owner requirements, maintenance/rollback"
+    }
+  ],
+  "product_changes": 0,
+  "api": [],
+  "database": [],
+  "dependencies": [],
+  "existing_route": "GET /api/demo/organization remains unregistered 503 HOLD"
+}
