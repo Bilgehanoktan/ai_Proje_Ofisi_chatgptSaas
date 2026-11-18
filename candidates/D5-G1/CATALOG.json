@@ -1,0 +1,52 @@
+{
+  "revision": "D5-G1",
+  "files": {
+    "product/ai-company-os-backend/app/core/iam_session.py": {
+      "classes": [
+        "SessionRecord",
+        "SessionObservation",
+        "D0SessionResolver"
+      ],
+      "functions": [
+        "credential_digest",
+        "_demo_id",
+        "_tick",
+        "D0SessionResolver.__init__",
+        "D0SessionResolver._now",
+        "D0SessionResolver.resolve",
+        "D0SessionResolver.revoke_local"
+      ],
+      "dependencies": [
+        "Python stdlib dataclasses",
+        "hashlib",
+        "hmac",
+        "threading",
+        "time",
+        "re"
+      ],
+      "scope": "D0 process-local bootstrap session registry; no grant"
+    },
+    "product/ai-company-os-backend/tests/test_iam_session_d5g1.py": {
+      "classes": [
+        "SessionTests"
+      ],
+      "tests": 14,
+      "dependencies": [
+        "unittest",
+        "secrets",
+        "dataclasses",
+        "app.core.iam_session"
+      ]
+    },
+    "product/SOURCE_MANIFEST.json": "two new entries, prior entries unchanged",
+    "candidates/D5-G1/CRITERIA.json": "frozen scoped rubric",
+    "candidates/D5-G1/test.log": "actual local output",
+    "candidates/D5-G1/HANDOVER.md": "architecture, maintenance and rollback",
+    "candidates/D5-G1/PROGRESS.json": "scoped progress"
+  },
+  "apis": [],
+  "database": [],
+  "events": [],
+  "new_external_dependencies": [],
+  "runtime_activation": "HOLD"
+}

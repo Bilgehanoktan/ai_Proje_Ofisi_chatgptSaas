@@ -1,0 +1,88 @@
+{
+  "revision": "D5-G1",
+  "parent": "13d061a6bd79c96825de4ff1da136d2e42beef4f",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "criteria": "D5-G1-D0-session-v1",
+  "previous_scope": "HESAPLANAMADI",
+  "new_scope_baseline": 0,
+  "counts": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "passed": [
+    "D01",
+    "S01",
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "I01"
+  ],
+  "weighted": 42.5,
+  "delta_from_new_baseline": 42.5,
+  "integration_scope": "I01 source placement and manifest only, no runtime integration; subject to exact readback",
+  "tests": {
+    "local": 14,
+    "pass": 14,
+    "fail": 0,
+    "skip": 0,
+    "python": "3.13.5",
+    "log_blob": "607992c12391260eec4df27429c32cfeac02de21",
+    "log_sha256": "8c26e337b0e859bf8a5268072056facf4c3e9d111b8edb74753db5ed7e18cdc9",
+    "exit": 0
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta": 0
+  },
+  "acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_gate": 0,
+  "blockers": [
+    "no actual account verification/issuer",
+    "no protected durable IAM publisher",
+    "no live ORG membership/role binding",
+    "no trusted commit-time clock or independent custody",
+    "no full checkout/regression"
+  ],
+  "activation": "HOLD"
+}
