@@ -1,0 +1,48 @@
+{
+  "revision": "ORG-07C-R8-WINDOWS-RAW-EVIDENCE",
+  "source_commit": "9675d4e1c3238776d1e744e0d82d6df70cfcbcd9",
+  "prior_evidence_blob": "8aafa06db8955971108b51e962f56f2f64f27cdf",
+  "prior_progress_blob": "7d7f3950911571566988500e4d8741c584b24480",
+  "original_filename": "test-results.log",
+  "path": "docs/ORG-07C-R8-INTEGRATION/test-results.log",
+  "bytes": 4256,
+  "encoding": "UTF-16LE BOM; CRLF; original console mojibake preserved",
+  "sha256": "70a1c892a7742409788b17cc1729eb7f080a8ee742f1d97e8b8a5a4014f04829",
+  "git_blob": "8258ca5553a15fda41cf41c670a1ad1422c6fdc2",
+  "verification": "Uploaded original bytes hashed in Python; SHA256 matches user PowerShell output exactly. Original byte count and Git blob independently matched to recreated transfer bytes before Git commit; 31 unique lines and 8 summary lines; all match prior evidence. No new test run.",
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "completed": [
+      "I1",
+      "F4"
+    ],
+    "canonical_acceptance": {
+      "core": [
+        12,
+        16
+      ],
+      "ui": [
+        21,
+        40
+      ],
+      "org_plan": [
+        5,
+        7
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "independent": [
+        0,
+        7
+      ]
+    }
+  },
+  "scope": "Raw evidence only; not Next build, browser, real IAM/ORG authorization or independent security acceptance",
+  "catalog_delta": "Add raw log and evidence verification record only; no product/source/API/DB/dependency changes",
+  "next": "Unified/EXT original lock recovery remains deferred until user supplies exact lock/archive. D5-G2 and ORG owner gates remain HOLD. Do not duplicate R7/R8 tests.",
+  "rollback": "Preserve original evidence; prior source commit unchanged."
+}
