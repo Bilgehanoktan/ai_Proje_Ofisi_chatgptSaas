@@ -1,0 +1,82 @@
+{
+  "revision": "D5-G1-R1",
+  "classification": "diagnostic_only",
+  "files": [
+    {
+      "path": "candidates/D5-G1-R1/test_session_binding_loss.py",
+      "symbols": [
+        "load_exact",
+        "SessionBindingLoss"
+      ],
+      "purpose": "pin and execute original G1 and D4 code against deliberately incomplete projection"
+    },
+    {
+      "path": "candidates/D5-G1-R1/test.log",
+      "purpose": "raw local unittest output"
+    },
+    {
+      "path": "candidates/D5-G1-R1/exit_code.txt",
+      "purpose": "exit status"
+    },
+    {
+      "path": "candidates/D5-G1-R1/HANDOVER.md",
+      "purpose": "architecture, owner mapping, maintenance and rollback"
+    },
+    {
+      "path": "candidates/D5-G1-R1/PROGRESS.json",
+      "purpose": "unchanged criteria counts"
+    },
+    {
+      "path": "candidates/D5-G1-R1/CATALOG.json",
+      "purpose": "technical delta"
+    }
+  ],
+  "product_files_changed": 0,
+  "apis": [],
+  "database": [],
+  "events": [],
+  "dependencies": [
+    "Python standard library"
+  ],
+  "existing_interfaces": [
+    "D0SessionResolver.resolve",
+    "D0SessionResolver.revoke_local",
+    "SessionObservation",
+    "D4 Binding",
+    "D4 review_binding",
+    "D5-B IdentityReadback"
+  ],
+  "findings": [
+    {
+      "id": "G1R1-01",
+      "fields": [
+        "session_id"
+      ],
+      "status": "GAP_REPRODUCED_IN_LOSSY_TEST"
+    },
+    {
+      "id": "G1R1-02",
+      "fields": [
+        "session_id",
+        "revision"
+      ],
+      "status": "GAP_REPRODUCED_IN_LOSSY_TEST"
+    },
+    {
+      "id": "G1R1-03",
+      "fields": [
+        "kind",
+        "agent_instance_id"
+      ],
+      "status": "GAP_REPRODUCED_IN_LOSSY_TEST"
+    },
+    {
+      "id": "G1R1-04",
+      "fields": [
+        "agent_instance_id"
+      ],
+      "status": "GAP_REPRODUCED_IN_LOSSY_TEST"
+    }
+  ],
+  "no_authority": true
+}

@@ -1,0 +1,108 @@
+{
+  "revision": "D5-G1-R1",
+  "parent": "97f03aca9d9ed84e85a0249ee39cb035e7df9fd8",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "criteria": "D5-G1-D0-session-v1",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "tests": {
+    "diagnostic_pass": 5,
+    "gap_reproductions": 4,
+    "negative_control": 1,
+    "fail": 0,
+    "skip": 0,
+    "exit_code": 0,
+    "python": "3.13.5",
+    "source_git_blobs": [
+      "864fe30c72ebcc6783575c62f98748fb2d9cfff6",
+      "e1e977880324664bb359eee3286223a796878f44"
+    ],
+    "test_sha256": "f0d48a9f9211bffcbb4011ae7ef592048041a55c9754512fc6aa211ee4495f76",
+    "log_sha256": "0fa6274e9eb4eda485aaa79c5ec58bf65a835663da1f78ed5da98ad6e971fd00",
+    "original_T1_rerun": 0,
+    "original_G1_rerun": 0
+  },
+  "acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "gate_promotions": 0,
+  "blockers": [
+    "protected publisher",
+    "exact live ORG membership",
+    "same-session IAM/D4/D5 identity binding",
+    "independent custody",
+    "trusted COMMIT expiry",
+    "actual account authentication",
+    "full checkout"
+  ],
+  "activation": "HOLD"
+}
