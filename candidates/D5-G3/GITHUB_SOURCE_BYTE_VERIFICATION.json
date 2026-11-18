@@ -1,0 +1,154 @@
+{
+  "revision": "D5-G3",
+  "classification": "REMOTE_BYTE_VERIFICATION_NOT_TEST_EXECUTION",
+  "date": "2026-11-18",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "source_commit": "9ca667e816dac269084ef8f62051da5fe458eb12",
+  "previous_g3_commit": "3439fc2a08e02995cc5c1c8d4151c97c75ff43c9",
+  "manifest_blob": "15e446e4d14c95d81d1e152efa2e8cb11122b3e3",
+  "repository_visibility": "private",
+  "method": "GitHub authorized connector fetched original base64 bytes at immutable commit; decoded bytes, independently computed SHA256 and matched manifest size and digest. Empty SHA256 known-answer self-check passed. Only 13 selected files verified at byte level.",
+  "verified_files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+      "bytes": 20298,
+      "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "bytes": 9184,
+      "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "bytes": 4286,
+      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "bytes": 2495,
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "bytes": 8493,
+      "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "bytes": 5065,
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+      "blob": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2",
+      "bytes": 5404,
+      "sha256": "279f377da4be9a4425a1bc77ba160217e811c7e0c31e1cbccccbeb6cf9ea716b",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+      "blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+      "bytes": 9712,
+      "sha256": "ba9c77f0c7b529b532a91c25aee88f6b3aa1136181a79206180d5c5e6d0312b9",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+      "bytes": 4691,
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+      "blob": "9296347d9253d74902ed1c6a89e273d8e516f2b5",
+      "bytes": 5481,
+      "sha256": "1cae8b04454f40b5e03fafe3106ef0472ca0267ac617c33462eb13a57fcbf626",
+      "result": "MATCH"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+      "blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "bytes": 14108,
+      "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3",
+      "result": "MATCH"
+    }
+  ],
+  "remote_byte_checks": {
+    "pass": 13,
+    "total": 13
+  },
+  "backend_manifest_paths": 240,
+  "static_test_method_count": {
+    "T1_0212": 7,
+    "T1_0214": 10,
+    "IAM_G1": 14,
+    "IAM_G2": 19,
+    "total": 50
+  },
+  "execution": {
+    "selected_regression": "NOT_RUN",
+    "previous_G2_IAM": "33 historical pass, not rerun",
+    "local_git": "DNS failure",
+    "connector_zipball": "unsupported endpoint",
+    "actions_runs": 0,
+    "releases": 0,
+    "full_local_checkout": "unavailable"
+  },
+  "inventory": {
+    "branches": 235,
+    "open_prs": [
+      3,
+      2,
+      1
+    ],
+    "g3_head_unchanged_before_record": true,
+    "ORG_R8": "a1b0aefe0a64fa82007b509c9f3a1bf3c00345b2",
+    "ORG10": "10b0bc41703b694b0ee112a003739aa80fe9e1cc",
+    "D5_C_R4": "f629fff2378a1368b1c2ec3d882d9cf8dfc2d98e"
+  },
+  "progress": {
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "canonical_core": [
+      12,
+      16
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "new_gate_promotions": 0
+  },
+  "catalog_delta": "One evidence JSON only, no product, API, database, dependency or runtime changes.",
+  "next": "Use existing immutable GitHub source and original run_regression.py. Do not request duplicate source uploads for source inspection. Actual execution still requires an authorized local checkout or equivalent exact source transfer. D4/ORG/T1 integration and activation HOLD.",
+  "rollback": "Omit additive evidence record; G2 source remains unchanged."
+}
