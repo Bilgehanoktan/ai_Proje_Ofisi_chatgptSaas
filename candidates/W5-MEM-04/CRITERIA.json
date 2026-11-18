@@ -1,0 +1,32 @@
+{
+  "scope": "MEM-04 D0 authenticated checkpoint and non-destructive retention diagnostic, not full Memory Engine",
+  "weights": [
+    15,
+    35,
+    20,
+    20,
+    10
+  ],
+  "design": [
+    "D1 pinned history/parallel ownership and threat boundary",
+    "D2 signed checkpoint with explicit prefix-audit limitation and retention HOLD"
+  ],
+  "source": [
+    "S1 full audited checkpoint and canonical signed summary",
+    "S2 anchored Witness suffix and revision/tombstone continuity",
+    "S3 bounded retention/restore diagnostic, no grant or pruning"
+  ],
+  "functional": [
+    "F1 signed checkpoint creation, read-only suffix and no replay instrumentation",
+    "F2 signature/pin/restore/scope/pending failures",
+    "F3 revision/tombstone/suffix tamper and explicit prefix limitation",
+    "F4 bounds/retention and 116 original regressions"
+  ],
+  "integration": [
+    "I1 full locked unified product and D5 owner integration",
+    "I2 canonical PostgreSQL and independent checkpoint/retention restore process"
+  ],
+  "acceptance": [
+    "A1 independent trust custody and product acceptance"
+  ]
+}

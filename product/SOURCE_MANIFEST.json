@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "W5-MEM-03",
-  "status": "D0_SIGNED_HISTORY_COMMITMENT_SOURCE_INTEGRATED_TEST_PENDING",
+  "doc_revision": "W5-MEM-04",
+  "status": "D0_SIGNED_CHECKPOINT_SUFFIX_LOCAL_REGRESSION_PASS_CANONICAL_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "1bbcf88035ae0e59162cffa5a16cc30844f3cbec",
+  "parent_git_commit": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -97,6 +97,10 @@
     "ai-company-os-backend/app/core/agent_runtime/lifecycle.py": {
       "bytes": 7251,
       "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py": {
+      "bytes": 9560,
+      "sha256": "9746b81ee3e71aa765b6885e98d6cdf979d614573d945c1a94850393e3dd7df3"
     },
     "ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
       "bytes": 11744,
@@ -793,6 +797,10 @@
     "ai-company-os-backend/tests/test_memory_access_0194.py": {
       "bytes": 7089,
       "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
+    },
+    "ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py": {
+      "bytes": 12009,
+      "sha256": "82a59fd44f31e0f2e15a987ff4336b661bed8c424eb7a4e16b2e368c4febdda7"
     },
     "ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
       "bytes": 6306,
@@ -2027,8 +2035,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "dd8f522b472e104f3bf5863b725a28f76ff8e2a7",
-  "source_git_commit_note": "Self-reference excluded; immutable source commit and readback in candidate evidence.",
+  "parent_source_manifest_blob": "de9b06c7d7d043894b0b4c077c2d9237d8fb8c85",
+  "source_git_commit_note": "Self-reference excluded; exact new source blobs and local SHA-256 in MEM04 EVIDENCE.json. Full checkout not verified.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

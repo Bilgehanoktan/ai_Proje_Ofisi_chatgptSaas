@@ -1,0 +1,95 @@
+{
+  "revision": "W5-MEM-04",
+  "parent": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
+  "parent_tree": "e6a628e468cb26c5bad4f0614325485fcd15f6d4",
+  "baseline": {
+    "files": 34,
+    "sha256_and_git_blob": "34/34 verified and unchanged",
+    "regression": 116,
+    "exit": 0,
+    "seconds": 1.322,
+    "source_package": "AI_Company_OS_W5_MEM03R1_REGRESSION_EVIDENCE.zip"
+  },
+  "source_pins": {
+    "product/ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py": {
+      "blob": "3a1a3d712c5474d7a90bc11b6d5a52cc31b00921",
+      "bytes": 9560,
+      "sha256": "9746b81ee3e71aa765b6885e98d6cdf979d614573d945c1a94850393e3dd7df3"
+    },
+    "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py": {
+      "blob": "15e6d92252a655704d3654d68361e8a03d550cc5",
+      "bytes": 12009,
+      "sha256": "82a59fd44f31e0f2e15a987ff4336b661bed8c424eb7a4e16b2e368c4febdda7"
+    }
+  },
+  "logs": {
+    "FINAL_COMBINED_LOG.txt": {
+      "blob": "6b227f90f6603ed3a711ff165bd2fa1bcc7af922",
+      "bytes": 17726,
+      "sha256": "72ee85c2cf3089bd2bd6cc75f2c85ca6f50bcacf98a0a80a05b6848354ca9cc4",
+      "pass": 138,
+      "seconds": 1.609,
+      "exit": 0
+    },
+    "SECOND_COMBINED_LOG.txt": {
+      "blob": "3dc4f0eac8241eae5d8fef1af52e06ca5775ddaf",
+      "bytes": 99,
+      "sha256": "84e1515b4e199023780a6cb380651ae58d21c80a6f10ffbcd1d6c5af79e7a053",
+      "pass": 138,
+      "seconds": 1.5,
+      "exit": 0
+    },
+    "exit_code.txt": {
+      "blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    "second_exit_code.txt": {
+      "blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    }
+  },
+  "tests": {
+    "new": 22,
+    "original": 116,
+    "combined": 138,
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "repeat": 138,
+    "unique": 138,
+    "first_new_run": 18,
+    "explicit_residuals": [
+      "full restore with stale external pins indistinguishable",
+      "prefix snapshot payload tamper not detected by suffix path",
+      "prefix Witness signature tamper not detected by suffix path"
+    ],
+    "instrumentation": "3-generation anchor + 1 suffix: only snapshots 3 and 4 loaded; 7 witness decodes (checkpoint anchor + two observations of anchor and two suffix records); full _review_history and _latest forbidden by test mocks"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "os": "Linux x86_64",
+    "dependency_lock": "NOT_VERIFIED",
+    "scope": "disposable exact 34 baseline files + 2 new files, real SQLite and ephemeral Ed25519"
+  },
+  "parallel": {
+    "inventory": 225,
+    "heads": {
+      "D5F": "ab0886ca6ada2e099cbd46b0f04d1aa264e6328b",
+      "D5F_R1": "66bbc604cae37d86d278c28008273e266622ad1c",
+      "ORG10R2": "67e8b70075a121437c8ba7b4254ed28e6c9513eb",
+      "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "W5J2R4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "UnifiedU3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "EXT07R6": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+    },
+    "review": "8 complete trees including parent; no MEM04 namespace or checkpoint module in compared heads. D5-G owns cross-regression and IAM/T1 owner review; exact three MEM03 overlay blobs and 17/17 T1 historical cross-regression found, not rerun or counted. No global lock or merge."
+  },
+  "limits": {
+    "checkpoint_body": 8388608,
+    "snapshot_history": 512,
+    "snapshot_accounted_bytes": 67108864,
+    "witness_records": 4096
+  },
+  "acceptance": "D0 local only. No archive/prune, canonical runtime, independent custody, full checkout/lock, Windows or PostgreSQL acceptance."
+}

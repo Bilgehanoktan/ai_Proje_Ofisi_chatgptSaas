@@ -1,0 +1,53 @@
+{
+  "revision": "W5-MEM-04",
+  "inherits": "../W5-MEM-03/CATALOG.json",
+  "files": {
+    "product/ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py": {
+      "symbols": [
+        "CheckpointReview",
+        "_require",
+        "_separate",
+        "_encode",
+        "prepare_checkpoint",
+        "_decode",
+        "_prefix_count",
+        "_witness_suffix",
+        "_snapshot_suffix",
+        "inspect_checkpoint_suffix"
+      ],
+      "contracts": [
+        "PROFILE aicos-d0-memory-checkpoint-v1",
+        "MAX_CHECKPOINT_BYTES 8388608",
+        "CheckpointReview always HOLD and prefix_reaudited false"
+      ],
+      "dependencies": [
+        "existing memory_witness",
+        "existing snapshot_store",
+        "lifecycle",
+        "t1_review",
+        "cryptography Ed25519 existing pin",
+        "Python stdlib"
+      ],
+      "database": "existing snapshots and memory_witness read-only transactions; no schema change",
+      "http_api": [],
+      "effects": []
+    },
+    "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py": {
+      "symbols": [
+        "CheckpointTests"
+      ],
+      "tests": 22,
+      "dependencies": [
+        "MEM03 test fixture",
+        "ephemeral Ed25519",
+        "SQLite",
+        "unittest"
+      ]
+    }
+  },
+  "new_tables": 0,
+  "new_http_api": 0,
+  "new_dependencies": 0,
+  "modified_existing_product_sources": 0,
+  "maintenance": "ARCHITECTURE_AND_RUNBOOK.md"
+}

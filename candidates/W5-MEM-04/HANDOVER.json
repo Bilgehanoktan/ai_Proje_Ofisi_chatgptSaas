@@ -1,0 +1,25 @@
+{
+  "revision": "W5-MEM-04",
+  "parent": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
+  "branch": "planning/w5-mem-04-signed-checkpoint",
+  "architecture": "candidates/W5-MEM-04/ARCHITECTURE_AND_RUNBOOK.md",
+  "catalog": "candidates/W5-MEM-04/CATALOG.json",
+  "criteria": "candidates/W5-MEM-04/CRITERIA.json",
+  "progress": "candidates/W5-MEM-04/PROGRESS.json",
+  "evidence": "candidates/W5-MEM-04/EVIDENCE.json",
+  "source_pins": {
+    "product/ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py": {
+      "blob": "3a1a3d712c5474d7a90bc11b6d5a52cc31b00921",
+      "bytes": 9560,
+      "sha256": "9746b81ee3e71aa765b6885e98d6cdf979d614573d945c1a94850393e3dd7df3"
+    },
+    "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py": {
+      "blob": "15e6d92252a655704d3654d68361e8a03d550cc5",
+      "bytes": 12009,
+      "sha256": "82a59fd44f31e0f2e15a987ff4336b661bed8c424eb7a4e16b2e368c4febdda7"
+    }
+  },
+  "rollback": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
+  "next": "W5-MEM-05 canonical Runtime-Memory source promotion/owner alignment; preserve full audit and HOLD",
+  "remaining": "Actual archive/compaction and production retention policy, independent checkpoint key and monotonic pin custody, D5 IAM/ORG/T1, full locked Unified/Windows/PostgreSQL acceptance. No merge/CI/production."
+}
