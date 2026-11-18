@@ -1,0 +1,92 @@
+& {
+    $ErrorActionPreference = 'Stop'
+    $Downloads = Join-Path $env:USERPROFILE 'Downloads'
+    $Root = 'C:\AIOS\org10-runtime-clean-01'
+    $Base = Join-Path $Root 'python'
+    $Venv = Join-Path $Root 'venv'
+    $Site = Join-Path $Venv 'Lib\site-packages'
+    $Py = Join-Path $Venv 'Scripts\python.exe'
+    $Runner = Join-Path $Downloads 'launch_org10_common.py'
+    $Archive = Join-Path $Downloads 'ai_Proje_Ofisi_chatgptSaas-5c7eb6b148e6e96247682653ff70dccc4a7ba823.zip'
+    $Pg = 'C:\AIOS\core-0227-pg-retry2\server\pgsql\bin'
+    $Manifest = 'C:\AIOS\ORG10_RUNTIME_REVIEW_02.json'
+    $Recheck = 'C:\AIOS\ORG10_RUNTIME_RECHECK_03.json'
+    $FP = 'e801b5099936df1fb8d53b47539b10fad9ac1e049f1dec5ee3a9bd72360b3406'
+    $Principal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+    if ($Principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { throw 'NON_ADMIN_REQUIRED' }
+    foreach ($Path in @($Recheck,'C:\AIOS\org10-disposable-01','C:\AIOS\ORG10_EVIDENCE_01')) {
+        if (Test-Path -LiteralPath $Path) { throw ('FRESH_PATH_REQUIRED: ' + $Path) }
+    }
+    function Assert-Hash($File,$Pin) {
+        if (!(Test-Path -LiteralPath $File -PathType Leaf) -or ((Get-FileHash -LiteralPath $File -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Pin)) { throw ('HASH_HOLD: ' + (Split-Path $File -Leaf)) }
+    }
+    Assert-Hash $Runner 'abe425aacb89ee32edb1b89875302556ad25e37ce7b956b43e4503a22c16cbda'
+    Assert-Hash $Archive '0934fdc54f309e4ec3365b82ddad9a3be8421a10c861513f3cae34b1b1089baa'
+    Assert-Hash $Manifest $FP
+    Assert-Hash 'C:\AIOS\ORG10_CLEAN_RUNTIME_REPORT_01.json' 'fc22ed0022ef01819a9f88af8d11de919ab8984708047dfca799a214627c9702'
+    Assert-Hash $Py '97c3228a59dcc05a771ab4eeec8126ce3f36ebb53616b479adc9f2c8050a9e84'
+    $Search = @($Downloads,'C:\AIOS','C:\AIOS\core-0227-pg-retry2','C:\AIOS\core-0227-pg-retry2\wheels')
+    $Search += @(Get-ChildItem -LiteralPath $Downloads -Directory | Where-Object { $_.Name -match '^ORG10_(RUNTIME_DELIVERY|PYTHON_REVIEW)_' } | Select-Object -ExpandProperty FullName)
+    function Find-Pinned($Name,$Pin) {
+        foreach ($Dir in $Search) {
+            $File = Join-Path $Dir $Name
+            if ((Test-Path -LiteralPath $File -PathType Leaf) -and ((Get-FileHash -LiteralPath $File -Algorithm SHA256).Hash.ToLowerInvariant() -eq $Pin)) { return $File }
+        }
+        throw ('PINNED_FILE_MISSING: ' + $Name)
+    }
+    $PythonZip = Find-Pinned 'python-3.14.3-amd64.zip' 'ec781bb03f9638d136b24da7c83b4db1652ce767848aa856a30bb87cfdb1abe4'
+    $Wheels = @(
+        (Find-Pinned 'psycopg-3.3.9-py3-none-any.whl' 'd2d7d04a1ce6dab4f5b27316bea3b52585cafa2f2d631e5b09dd69823f5c26f6'),
+        (Find-Pinned 'psycopg_binary-3.3.9-cp314-cp314-win_amd64.whl' '109c5df5b0e5117e01a42d3b56a2f4ccd5431bd54d25efdfc89df095ac9f9605'),
+        (Find-Pinned 'tzdata-2026.6-py2.py3-none-any.whl' '0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec')
+    )
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    function Assert-Tree($Directory,$Expected) {
+        $RootItem = Get-Item -LiteralPath $Directory -Force
+        if (!$RootItem.PSIsContainer -or ($RootItem.Attributes -band [IO.FileAttributes]::ReparsePoint)) { throw 'ROOT_HOLD' }
+        $Items = @(Get-ChildItem -LiteralPath $Directory -Force -Recurse)
+        if (@($Items | Where-Object { $_.Attributes -band [IO.FileAttributes]::ReparsePoint }).Count -ne 0) { throw 'REPARSE_POINT_HOLD' }
+        if (@($Items | Where-Object { !$_.PSIsContainer }).Count -ne $Expected) { throw 'TREE_COUNT_HOLD' }
+    }
+    function Test-Zip($File,$Directory,$Expected) {
+        $Zip = [IO.Compression.ZipFile]::OpenRead($File)
+        $Count = 0
+        try {
+            foreach ($Entry in $Zip.Entries) {
+                if ([string]::IsNullOrEmpty($Entry.Name)) { continue }
+                $Stream = $Entry.Open()
+                $Sha = [Security.Cryptography.SHA256]::Create()
+                try { $Hash = [BitConverter]::ToString($Sha.ComputeHash($Stream)).Replace('-','').ToLowerInvariant() }
+                finally { $Stream.Dispose(); $Sha.Dispose() }
+                Assert-Hash (Join-Path $Directory ($Entry.FullName.Replace('/','\'))) $Hash
+                $Count++
+            }
+        } finally { $Zip.Dispose() }
+        if ($Count -ne $Expected) { throw 'ZIP_COUNT_HOLD' }
+        Write-Host "$(Split-Path $File -Leaf): $Count/$Expected PASS"
+    }
+    function Test-Runtime {
+        Assert-Tree $Base 3725
+        Assert-Tree $Site 738
+        Test-Zip $PythonZip $Base 3725
+        $Counts = @(90,15,633)
+        for ($i=0; $i -lt $Wheels.Count; $i++) { Test-Zip $Wheels[$i] $Site $Counts[$i] }
+        $Cfg = Join-Path $Venv 'pyvenv.cfg'
+        if (!(Select-String -LiteralPath $Cfg -Pattern '^include-system-site-packages\s*=\s*false\s*$' -Quiet)) { throw 'VENV_ISOLATION_HOLD' }
+        if (!(Select-String -LiteralPath $Cfg -Pattern ('^home\s*=\s*' + [regex]::Escape($Base) + '\s*$') -Quiet)) { throw 'VENV_HOME_HOLD' }
+        Assert-Hash $Py '97c3228a59dcc05a771ab4eeec8126ce3f36ebb53616b479adc9f2c8050a9e84'
+    }
+    Test-Runtime
+    if (@(Get-NetTCPConnection -ErrorAction Stop | Where-Object { $_.LocalPort -eq 55436 }).Count -ne 0) { throw 'PORT_55436_HOLD' }
+    Push-Location -LiteralPath $Root
+    try {
+        & $Py -I -B -X utf8 $Runner --archive $Archive --pg-bin $Pg --manifest $Recheck
+        if ($LASTEXITCODE -ne 0) { throw 'PREFLIGHT_HOLD' }
+    } finally { Pop-Location }
+    Assert-Hash $Recheck $FP
+    Assert-Hash $Manifest $FP
+    Test-Runtime
+    if (@(Get-NetTCPConnection -ErrorAction Stop | Where-Object { $_.LocalPort -eq 55436 }).Count -ne 0) { throw 'PORT_55436_HOLD' }
+    Get-FileHash -LiteralPath $Manifest,$Recheck -Algorithm SHA256
+    Write-Host 'R10 RECHECK PASS; PG NOT_RUN; NO LAUNCH RELEASE' -ForegroundColor Green
+}
