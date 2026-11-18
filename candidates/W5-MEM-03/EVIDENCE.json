@@ -35,10 +35,11 @@
       "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
       "W5J2R4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
       "UnifiedU3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "ORG10R2": "5410e56d9441e2ecda3eca309b942657c2621a00",
+      "ORG10R2": "b0bcf4848e2781ff8d1aeb26e807f6956c008f96",
       "EXT07R6": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
     },
-    "review": "10 untruncated trees including MEM02; 9 parallel heads hold same witness/joint blobs and original snapshot_store before MEM02; no MEM03 candidate namespace. Common ancestor for D5F/D4R6/W5J2R4/ORG10R2 b395d1944877128ab1bb7fa6477fc3188841fe57; Unified is ancestor. Shared manifest differs, no merge. No global lock or visibility into uncommitted work."
+    "review": "10 untruncated trees including MEM02; 9 parallel heads hold same witness/joint blobs and original snapshot_store before MEM02; no MEM03 candidate namespace. Common ancestor for D5F/D4R6/W5J2R4/ORG10R2 b395d1944877128ab1bb7fa6477fc3188841fe57; Unified is ancestor. Shared manifest differs, no merge. No global lock or visibility into uncommitted work.",
+    "org_recheck": "5410e56d -> b0bcf484; only proposed progress baseline added, no scoped path changed; full tree rechecked"
   },
   "baseline_manifest": "dd8f522b472e104f3bf5863b725a28f76ff8e2a7",
   "manifest_entries": 505,
@@ -48,6 +49,41 @@
     "run": "NOT_RUN",
     "reason": "Private repository full checkout cannot be retrieved via local DNS; connector can read text but does not execute Python. No product test claim."
   },
-  "source_integrity": "Original 3 source lengths and SHA256 match pinned parent manifest; new manifest derived from exact UTF-8 bytes. Final Git tree readback required.",
-  "acceptance": "HOLD"
+  "source_integrity": "3 parent source hashes verified; 4 changed/new source and test SHA-256 readback matches manifest; 505/505 path/size and 501 unchanged manifest entries preserved; whole checkout bytes not verified.",
+  "acceptance": "HOLD",
+  "readback": {
+    "source_commit": "569a0b69eccf58d0ee22fabd2d9ae745be8da2b2",
+    "source_tree": "2dc2b910ffaaa80314d6d49d8ea4fc0ee328cb45",
+    "source_sha256_verified": 4,
+    "pins": {
+      "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
+        "blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+        "bytes": 13027,
+        "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0"
+      },
+      "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py": {
+        "blob": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+        "bytes": 3851,
+        "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c"
+      },
+      "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
+        "blob": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+        "bytes": 11744,
+        "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0"
+      },
+      "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
+        "blob": "8c8683fc3e553231c9ba81222e4e0b2ccd97a72f",
+        "bytes": 6306,
+        "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e"
+      }
+    },
+    "retained_parent_blobs": 1813,
+    "parent_files": 1817,
+    "source_commit_files": 1823,
+    "removed": 0,
+    "product_files": 506,
+    "manifest_path_size_verified": "505/505",
+    "unchanged_manifest_entries": 501,
+    "full_local_archive": "BLOCKED"
+  }
 }
