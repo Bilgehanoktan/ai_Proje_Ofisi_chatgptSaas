@@ -1,0 +1,113 @@
+{
+  "revision": "ORG-10R2-PORT-ALLOCATION",
+  "date": "2026-11-18",
+  "parent": "67e8b70075a121437c8ba7b4254ed28e6c9513eb",
+  "classification": "EXPLICIT_USER_SCOPED_TEST_PORT_ALLOCATION",
+  "approval_text": "55436 portunu yalnızca ORG-10 izole, sentetik PostgreSQL test ortamına tahsis etmeyi onaylıyorum. Mevcut güvenlik şartlarını koruyarak devam et.",
+  "approval_scope": {
+    "port": 55436,
+    "host": "127.0.0.1",
+    "cluster": "aicos_org10_disposable",
+    "database": "aicos_org10_disposable",
+    "schema": "aicos_org10_fixture",
+    "data": "synthetic only",
+    "scope": [
+      "synthetic-tenant",
+      "synthetic-company",
+      "A0_SAMPLE_ONLY"
+    ],
+    "other_ports_or_clusters": "not authorized",
+    "production": false,
+    "real_iam": false,
+    "new_grants": false,
+    "main_merge": false,
+    "ci": false
+  },
+  "port_owner_allocation": "APPROVED_USER",
+  "actual_os_reservation": false,
+  "prior_port_observation": "NO_TCP_ROWS_REPORTED",
+  "recheck_at_launch": true,
+  "source_pins": {
+    "fixture": "5c7eb6b148e6e96247682653ff70dccc4a7ba823",
+    "profile_blob": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+    "d4_profile_blob": "1d88c65cee2c1a01a3d20595ace6bfca2a4fe011",
+    "launcher": "3eadb02d06dbb4fb967ba8f74a86a01238c540a3",
+    "launcher_sha256": "abe425aacb89ee32edb1b89875302556ad25e37ce7b956b43e4503a22c16cbda",
+    "manifest_sha256": "50870555adc6334556feefdd8323d42241229099e1cb3ccea5707de779cf6ef4",
+    "archive_review_sha256": "dc3be522a5b4be342d3f04955c11c119e1ad7d9e311647a33ee923beaebc04fb"
+  },
+  "runtime_review": {
+    "prior_publisher_transcript": [
+      3,
+      3
+    ],
+    "prior_archive_matches": [
+      1675,
+      1675
+    ],
+    "prior_signature_transcript": [
+      4,
+      4
+    ],
+    "manifest_launcher_and_reconstructed_review_rehashed": "MATCH",
+    "direct_raw_retrieval": "BLOCKED_DNS",
+    "original_distributions_in_assistant_container": false,
+    "base_python_full_provenance": "HOLD",
+    "external_runtime_review": "HOLD",
+    "reviewed_fingerprint_issued": false
+  },
+  "parallel": {
+    "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "D5G": {
+      "head": "ab0886ca6ada2e099cbd46b0f04d1aa264e6328b",
+      "cross_regression": "17/17 on three exact MEM03 overlay files, not full candidate, original tests not new unique IDs",
+      "weighted_D5F": 62.619,
+      "real_iam": "HOLD"
+    },
+    "D5FR1": "66bbc604cae37d86d278c28008273e266622ad1c",
+    "ORG07CR8": "41a9c412400df7c32accfe2bdd57811980f728a3",
+    "MEM03": "0bbcb5853eb7235dcbeefbd4fadae11383ddb715",
+    "Unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "org11_branch": "NOT_OBSERVED"
+  },
+  "progress": {
+    "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+    "proposed_baseline_blob": "5e40f9c48e86e3362cd09cc0c3a28d0a60a481d2",
+    "criterion": "I02 port allocation subcondition now met; external review subcondition remains HOLD; D02 joint role/scope profile review not inferred from port approval",
+    "execution_plan_previous": [
+      2,
+      8
+    ],
+    "execution_plan_current": [
+      3,
+      8
+    ],
+    "execution_plan_delta": 1,
+    "organization_plan_previous": [
+      5,
+      7
+    ],
+    "organization_plan_current": [
+      5,
+      7
+    ],
+    "illustrative_weighted_previous": 63.6666666667,
+    "illustrative_weighted_current": 63.6666666667,
+    "official_weighted": "NOT_CALCULABLE_PENDING_ADOPTION",
+    "pg": {
+      "passed": 0,
+      "total": 31,
+      "status": "NOT_RUN"
+    },
+    "maintain": {
+      "passed": 0,
+      "total": 48,
+      "status": "NOT_RUN"
+    },
+    "new_product_gates": 0
+  },
+  "execution": "HOLD",
+  "independent_security": "HOLD",
+  "next": "Obtain original pinned vendor ZIP and wheels for external byte-level comparison, plus independent Python-base provenance review and joint scoped runtime-review decision. Preserve all current source/launch gates; do not run based on observed fingerprint alone. No duplicate tests; no new prototype.",
+  "rollback": "Record owner revocation as a new evidence entry; do not rewrite prior approval or alter old clusters."
+}
