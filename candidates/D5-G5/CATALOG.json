@@ -13,7 +13,9 @@
       "depends": [
         "existing G4 identity_fence_review",
         "D4 identity_binding",
-        "exact R3 durable_ops, integration_guard, operations"
+        "exact R3 durable_ops, integration_guard, operations",
+        "existing company_coordination._member",
+        "existing operations.department"
       ],
       "db_reads": [
         "org_head",
@@ -31,7 +33,8 @@
       ],
       "writes": [],
       "api": [],
-      "events": []
+      "events": [],
+      "notes": "Retain both unit and parent department. Exact digest comparison rejects bool/int aliasing; no independent member provenance."
     },
     {
       "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",

@@ -37,8 +37,8 @@ class OrgSessionTests(unittest.TestCase):
         self.scope = Scope(*f.initial.scope)
         t,c,_ = self.scope.key()
         self.store = OperationsStore(self.db, self.scope)
-        self.staff = Staffing(Org(t,c,(Unit(c,'company',None),Unit('dept','department',c)),
-            (Seat('lead','dept','orchestrator'),Seat('worker','dept','research','lead'))),
+        self.staff = Staffing(Org(t,c,(Unit(c,'company',None),Unit('dept','department',c),Unit('team','team','dept')),
+            (Seat('lead','dept','orchestrator'),Seat('worker','team','research','lead'))),
             (Definition('dl','orchestrator'),Definition('dw','research')),
             (Instance('demo-lead','dl',t,c),Instance(req.agent,'dw',t,c)),
             (Binding('lead','demo-lead'),Binding('worker',req.agent)))
@@ -75,7 +75,8 @@ class OrgSessionTests(unittest.TestCase):
         self.assertEqual(len(self.org.join),17)
         self.assertEqual(self.org.join[3:6],(self.head,1,self.staff.revision()))
         self.assertEqual(self.org.join[-1],self.f.ref.request.intent_sha)
-        self.assertEqual(self.org.unit,'dept')
+        self.assertEqual(self.org.unit,'team')
+        self.assertEqual(self.org.department,'dept')
         result=self.review()
         self.assertTrue(result.structural_match)
         self.assertEqual(result.decision,'HOLD')
@@ -100,6 +101,9 @@ class OrgSessionTests(unittest.TestCase):
 
     def test_wrong_org_digest(self):
         self.denied(self.review(org_sha='f'*64))
+        # Python equality considers True == 1; exact digest must not.
+        forged=replace(self.org,join=self.org.join[:4]+(True,)+self.org.join[5:])
+        self.denied(self.review(org_reference=forged,org_sha=org_reference_digest(forged)))
 
     def test_role_revision_drift(self):
         f=self.f

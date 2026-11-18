@@ -7,7 +7,8 @@ from dataclasses import asdict, dataclass
 from hashlib import sha256
 import json
 
-from app.core.transaction.identity_binding import Review, digest, revision, token, valid_request
+from app.core.transaction.identity_binding import Review, digest, revision, token, valid_request, valid_binding
+from app.core.event_store.company_coordination import _member
 from app.core.transaction.identity_fence_review import (
     IdentityReadback, SessionReference, inspect_session_reference,
 )
@@ -23,6 +24,7 @@ class OrgReadback:
     join: tuple
     seat: str
     unit: str
+    department: str
     role: str
     history_count: int
     history_head: str
@@ -44,7 +46,7 @@ def read_current_org_reference(store, sample, session, *, org_head, seat, role, 
     """
     from durable_ops import OperationsStore, check_pin
     from integration_guard import ReviewPin, inspect_runtime
-    from operations import digest as org_digest
+    from operations import digest as org_digest, department
 
     if (type(store) is not OperationsStore or type(sample) is not IdentityReadback
             or type(session) is not SessionReference or not valid_request(session.request)
@@ -53,7 +55,10 @@ def read_current_org_reference(store, sample, session, *, org_head, seat, role, 
     req = session.request
     binding = sample.binding
     if (store._key != req.scope or sample.scope != req.scope
-            or sample.principal != req.principal or binding.request != req
+            or sample.principal != req.principal or not valid_binding(binding)
+            or binding.request != req or not _member(sample.member)
+            or sample.member.row()[:6] != (req.project, req.plan_revision, req.task,
+                req.run, req.agent, req.principal)
             or session.observation.principal_id != req.principal
             or session.observation.agent_instance_id != req.agent
             or not revision(binding.role_revision)):
@@ -72,6 +77,9 @@ def read_current_org_reference(store, sample, session, *, org_head, seat, role, 
             positions = [p for p in staffing.org.seats if p.id == seat]
             if len(positions) != 1 or positions[0].role != role:
                 raise ValueError('D5G5_ORG_POSITION_HOLD')
+            dept = department(staffing, seat)
+            if not token(dept):
+                raise ValueError('D5G5_ORG_DEPARTMENT_HOLD')
             sd = staffing.revision()
             pin = ReviewPin(*req.scope, sd, req.project, req.plan_revision,
                             req.task, req.run, req.agent, req.principal, role)
@@ -91,7 +99,7 @@ def read_current_org_reference(store, sample, session, *, org_head, seat, role, 
                     req.project, req.plan_revision, req.task, req.run, req.agent,
                     req.principal, req.policy_epoch, req.witness_epoch,
                     binding.role_revision, req.intent_sha)
-            return OrgReadback(join, seat, positions[0].unit, role,
+            return OrgReadback(join, seat, positions[0].unit, dept, role,
                                actual.count, actual.head, proposals[0]['digest'])
         finally:
             db.rollback()
@@ -111,7 +119,7 @@ def inspect_org_session_reference(resolver, credential, intent, initial, session
         def current(sample):
             value = read_current_org_reference(store, sample, session, org_head=org_head,
                         seat=seat, role=role, history_pin=history_pin)
-            if value != org_reference:
+            if org_reference_digest(value) != org_sha:
                 raise ValueError('D5G5_ORG_DRIFT_HOLD')
             return sample
         current(initial)
