@@ -1,0 +1,42 @@
+{
+  "revision": "D5-G3",
+  "classification": "source_recovery_and_handoff_only",
+  "files": {
+    "candidates/D5-G3/recover_and_run.py": {
+      "symbols": [
+        "require",
+        "blob",
+        "read",
+        "verify_delta",
+        "rebuild_manifest",
+        "stage_exact",
+        "main"
+      ],
+      "dependencies": [
+        "stdlib pathlib/hashlib/argparse/json/subprocess/tempfile/importlib.metadata",
+        "unchanged G2 runner",
+        "existing reviewed cryptography 46.0.4"
+      ],
+      "purpose": "exact source staging, calls existing 50-test runner; no product changes"
+    },
+    "candidates/D5-G3/test_recovery.py": {
+      "symbols": [
+        "RecoveryTests"
+      ],
+      "tests": 8,
+      "classification": "offline mechanics only"
+    },
+    "candidates/D5-G3/recovery_test.log": "actual 8-case raw output",
+    "candidates/D5-G3/blocked_preflight.json": "actual missing source report",
+    "candidates/D5-G3/exit_code.txt": "offline test exit code",
+    "candidates/D5-G3/REQUEST_BINDING_HANDOFF.md": "owner mapping no ratification",
+    "candidates/D5-G3/HANDOVER.md": "maintenance rollback and next",
+    "candidates/D5-G3/PROGRESS.json": "same fixed baseline"
+  },
+  "api": [],
+  "database": [],
+  "events": [],
+  "new_product_dependencies": [],
+  "product_changes": 0,
+  "activation": "HOLD"
+}
