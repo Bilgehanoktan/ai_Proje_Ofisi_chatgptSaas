@@ -1,0 +1,53 @@
+{
+  "revision": "W5-MEM-03",
+  "parent": "1bbcf88035ae0e59162cffa5a16cc30844f3cbec",
+  "baseline_blobs": {
+    "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": "140bce0a75aa740905721ba326e50049f0a9f7f6",
+    "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+    "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py": "a16409c0eb6a48b5c868767d6580574641ed05b8"
+  },
+  "changed_source_sha256": {
+    "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
+      "bytes": 13027,
+      "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py": {
+      "bytes": 3851,
+      "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c"
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
+      "bytes": 11744,
+      "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0"
+    },
+    "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
+      "bytes": 6306,
+      "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e"
+    }
+  },
+  "parallel": {
+    "inventory": 222,
+    "base_tree": "b392f067a9fbf2a1f8b0489b7c4cae069ba6acb4",
+    "heads": {
+      "D5C_R3": "dfd46e5b81388d067ae4598a3fdbae20246ff3f5",
+      "D5D": "dfda007bb51ea8d9069bae7d03f148872f32c934",
+      "D5E": "4b23df3a21846f2513e4b93e84aae10cd953124c",
+      "D5F": "59c2d8b9b1777c36f0cd95a761c3a791caa89a73",
+      "D4R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+      "W5J2R4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "UnifiedU3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "ORG10R2": "5410e56d9441e2ecda3eca309b942657c2621a00",
+      "EXT07R6": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+    },
+    "review": "10 untruncated trees including MEM02; 9 parallel heads hold same witness/joint blobs and original snapshot_store before MEM02; no MEM03 candidate namespace. Common ancestor for D5F/D4R6/W5J2R4/ORG10R2 b395d1944877128ab1bb7fa6477fc3188841fe57; Unified is ancestor. Shared manifest differs, no merge. No global lock or visibility into uncommitted work."
+  },
+  "baseline_manifest": "dd8f522b472e104f3bf5863b725a28f76ff8e2a7",
+  "manifest_entries": 505,
+  "tests": {
+    "previous_MEM02_reported": 107,
+    "new_candidates": 9,
+    "run": "NOT_RUN",
+    "reason": "Private repository full checkout cannot be retrieved via local DNS; connector can read text but does not execute Python. No product test claim."
+  },
+  "source_integrity": "Original 3 source lengths and SHA256 match pinned parent manifest; new manifest derived from exact UTF-8 bytes. Final Git tree readback required.",
+  "acceptance": "HOLD"
+}

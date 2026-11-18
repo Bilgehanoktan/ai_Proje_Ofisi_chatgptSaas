@@ -1,0 +1,55 @@
+{
+  "revision": "W5-MEM-03",
+  "scope": "D0 W5 Memory/Knowledge, existing 0196/0208/0209",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "symbols": {
+        "_review_history": "optional complete committed pin tuple, exact per-generation check in existing transaction",
+        "inspect_stored_memory_input": "thread expected_history into existing read"
+      },
+      "errors": [
+        "MEMORY_SNAPSHOT_WITNESS_HISTORY_HOLD",
+        "MEMORY_SNAPSHOT_READ_HOLD"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "symbols": {
+        "inspect_joint_context": "same expected_history passed to both reads; existing diagnostic result only"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "symbols": {
+        "_latest": "collect verified committed generation pins after signature check",
+        "MemoryWitnessReader.read_history": "external pin + contiguous immutable tuple in same witness transaction",
+        "MemoryWitnessReader.read_latest": "compatibility head-only wrapper",
+        "inspect_witnessed_context": "pass committed tuple, re-read same signed head and history"
+      },
+      "errors": [
+        "MEMORY_WITNESS_HISTORY_HOLD"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py",
+      "symbols": {
+        "HistoryCommitmentTests": "9 test candidates; positive, coherent rewrite, interleaving, recovery, pending, malformed, missing, signature tamper"
+      }
+    }
+  ],
+  "database": {
+    "existing": [
+      "snapshots",
+      "memory_witness"
+    ],
+    "schema_change": false,
+    "migration": false,
+    "query_change": false
+  },
+  "api": "No HTTP API or wire schema delta; optional internal function argument",
+  "events": "None",
+  "dependencies": "None; existing stdlib/cryptography",
+  "authority": "HOLD/DENY; no access/dispatch/spend/retry",
+  "maintenance": "candidates/W5-MEM-03/ARCHITECTURE_AND_RUNBOOK.md"
+}

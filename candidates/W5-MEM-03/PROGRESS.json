@@ -1,0 +1,137 @@
+{
+  "revision": "W5-MEM-03",
+  "date": "2026-11-18",
+  "standard": "planning/project-wide-progress-reporting:progress/REPORTING_STANDARD_20261118.md",
+  "parent": "1bbcf88035ae0e59162cffa5a16cc30844f3cbec",
+  "scope": "MEM-03 bounded signed-history diagnostic, new task baseline; not whole Memory Engine",
+  "criteria": {
+    "design": [
+      [
+        "D1",
+        "Pinned MEM-02/parallel inventory and threat analysis"
+      ],
+      [
+        "D2",
+        "Reuse existing signed chain and retain authority boundaries"
+      ]
+    ],
+    "source": [
+      [
+        "S1",
+        "Extract committed generation pins from verified externally pinned chain"
+      ],
+      [
+        "S2",
+        "Compare full committed history in each SQLite input transaction"
+      ],
+      [
+        "S3",
+        "Thread pins through existing joint reader; no authority expansion"
+      ]
+    ],
+    "functional": [
+      [
+        "F1",
+        "Positive multi-generation, recovery, read-only and pending tests run"
+      ],
+      [
+        "F2",
+        "Coherent earlier/middle rewrite tests run"
+      ],
+      [
+        "F3",
+        "Interleaving, malformed, missing and bad signature negatives run"
+      ],
+      [
+        "F4",
+        "107 MEM-02 regression cases rerun unchanged"
+      ]
+    ],
+    "integration": [
+      [
+        "I1",
+        "Unified product exact source promotion + locked regression"
+      ],
+      [
+        "I2",
+        "Canonical runtime/PostgreSQL/restore integration evidence"
+      ]
+    ],
+    "acceptance": [
+      [
+        "A1",
+        "Independent trust custody, security and product acceptance"
+      ]
+    ]
+  },
+  "previous": {
+    "design": [
+      0,
+      2
+    ],
+    "source": [
+      0,
+      3
+    ],
+    "functional": [
+      0,
+      4
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ],
+    "weighted": 0
+  },
+  "current": {
+    "design": [
+      2,
+      2
+    ],
+    "source": [
+      3,
+      3
+    ],
+    "functional": [
+      0,
+      4
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ],
+    "weighted": 50
+  },
+  "delta_points": 50,
+  "weights": [
+    15,
+    35,
+    20,
+    20,
+    10
+  ],
+  "historical_MEM02_tests": "107/107 reported, not rerun",
+  "product_acceptance": {
+    "core": "12/16 last pinned",
+    "premium_ui": "21/40 last pinned",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "memory_specific": "No canonical denominator; HESAPLANAMADI",
+    "new_gates": 0
+  },
+  "ordinal": {
+    "design_24": 71.875,
+    "source_24": 34.375,
+    "memory_source": 25,
+    "unchanged": true
+  },
+  "next": "Run exact full MEM-03 + MEM-02 suite; then MEM-04 trusted checkpoint/retention owner review; no merge"
+}

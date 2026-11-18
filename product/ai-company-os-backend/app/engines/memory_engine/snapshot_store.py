@@ -169,12 +169,19 @@ def _bind_revisions(revisions, snapshot):
             raise ValueError('MEMORY_SNAPSHOT_REVISION_IMMUTABLE_HOLD')
 
 
-def _review_history(db, head):
+def _review_history(db, head, expected_history=None):
     """Replay retained history within the caller's single SQLite transaction.
 
-    No independent anti-restore guarantee: a coherent rewrite of all records
-    and trust pins is outside this local diagnostic's authority.
+    Optional committed pins originate from the existing verified Witness chain.
+    Compare them in this same read transaction, not in a separate preflight.
+    A coherent rewrite including all external trust pins remains out of scope.
     """
+    if expected_history is not None and (
+            type(expected_history) is not tuple or head is None
+            or len(expected_history) != head.generation
+            or not 1 <= len(expected_history) <= HISTORY_LIMIT
+            or expected_history[-1] != head):
+        raise ValueError('MEMORY_SNAPSHOT_WITNESS_HISTORY_HOLD')
     if head is None:
         return None, {}, 0
     if head.generation > HISTORY_LIMIT:
@@ -188,6 +195,10 @@ def _review_history(db, head):
         pin = SnapshotPin(*row[:3])
         if not _pin_ok(pin) or pin.generation != generation:
             raise ValueError('MEMORY_SNAPSHOT_HISTORY_HOLD')
+        if expected_history is not None:
+            signed_pin = expected_history[generation - 1]
+            if not _pin_ok(signed_pin) or signed_pin != pin:
+                raise ValueError('MEMORY_SNAPSHOT_WITNESS_HISTORY_HOLD')
         if not all(uint(size) and size <= LIMIT for size in row[3:]):
             raise ValueError('MEMORY_SNAPSHOT_HISTORY_LIMIT_HOLD')
         retained_bytes += row[3] + row[4]
@@ -250,7 +261,7 @@ def inspect_stored_memory(path, expected, run, lease, lease_reference, clock):
         return MemoryAccessReview('MEMORY_SNAPSHOT_READ_HOLD')
 
 
-def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, raw):
+def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, raw, expected_history=None):
     """One consistent read-only snapshot; compare exact bytes without returning them."""
     if not _pin_ok(pin) or not _valid_run(run) or type(raw) is not bytes or len(raw) > LIMIT:
         return 'MEMORY_SNAPSHOT_PIN_HOLD'
@@ -259,7 +270,7 @@ def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, r
             db.execute('BEGIN')
             if _head(db) != pin:
                 return 'MEMORY_SNAPSHOT_CAS_HOLD'
-            s, _, _ = _review_history(db, pin)
+            s, _, _ = _review_history(db, pin, expected_history)
             review = inspect_run_memory_access(s.run, run, s.nodes, s.target,
                 s.tombstone, s.tombstone, s.acl, s.acl, lease, lease_reference, clock,
                 s.source, s.span, s.raw)
