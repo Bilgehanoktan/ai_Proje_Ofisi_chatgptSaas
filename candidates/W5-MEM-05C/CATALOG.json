@@ -1,0 +1,84 @@
+{
+  "id": "W5-MEM-05C",
+  "new_files": {
+    "test_memory_gateway.py": {
+      "class": "MemoryGatewayTests",
+      "functions": [
+        "setUp",
+        "build",
+        "memory",
+        "gateway"
+      ],
+      "purpose": "ten cross-source diagnostic cases; no authority"
+    },
+    "run_exact.py": {
+      "functions": [
+        "main"
+      ],
+      "purpose": "read pinned Git blobs, isolate stage, run only new test"
+    },
+    "SOURCE_PINS.json": {
+      "purpose": "exact app and fixture sources"
+    },
+    "OWNER_CONTRACT.json": {
+      "purpose": "existing symbol and ownership mapping"
+    },
+    "ARCHITECTURE_AND_RUNBOOK.md": {
+      "purpose": "architecture/maintenance/rollback"
+    },
+    "CRITERIA.json": {
+      "purpose": "fixed criterion baseline"
+    },
+    "PROGRESS.json": {
+      "purpose": "weighted delta"
+    },
+    "EVIDENCE.json": {
+      "purpose": "actual source inventory and NOT_RUN boundary"
+    },
+    "HANDOVER.json": {
+      "purpose": "owner handoff"
+    }
+  },
+  "api_changes": [],
+  "database_changes": [],
+  "dependency_changes": [],
+  "existing_dependency": [
+    "Python",
+    "Git",
+    "cryptography",
+    "SQLite"
+  ],
+  "existing_reused_symbols": [
+    [
+      "Memory",
+      "inspect_witnessed_context",
+      "full signed head and committed snapshot history; source span, ACL, tombstone, scope, run/lease/clock"
+    ],
+    [
+      "Runtime",
+      "joint_context_digest",
+      "memory snapshot pin and exact invocation envelope/registry; no route or owner receipt"
+    ],
+    [
+      "Gateway",
+      "inspect_invocation_route",
+      "same envelope digest, raw digest, route and profile pins, synthetic token count"
+    ],
+    [
+      "Gateway",
+      "inspect_provider_preflight",
+      "same invocation pin, route and separate owner receipt snapshot; SAMPLE only"
+    ],
+    [
+      "Budget/T1",
+      "inspect_owner_snapshot",
+      "reservation lookup, owner revision and budget source; supplied comparisons not custody"
+    ],
+    [
+      "D5",
+      "protected authority reader",
+      "owner-controlled IAM/ORG/policy and publication boundary; HOLD"
+    ]
+  ],
+  "product_source_changes": 0
+}

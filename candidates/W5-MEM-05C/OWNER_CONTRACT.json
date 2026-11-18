@@ -1,0 +1,57 @@
+{
+  "id": "MEM05C_READ_ONLY_ALIGNMENT",
+  "status": "PROPOSED_OWNER_REVIEW_HOLD",
+  "existing_symbols": [
+    [
+      "Memory",
+      "inspect_witnessed_context",
+      "full signed head and committed snapshot history; source span, ACL, tombstone, scope, run/lease/clock"
+    ],
+    [
+      "Runtime",
+      "joint_context_digest",
+      "memory snapshot pin and exact invocation envelope/registry; no route or owner receipt"
+    ],
+    [
+      "Gateway",
+      "inspect_invocation_route",
+      "same envelope digest, raw digest, route and profile pins, synthetic token count"
+    ],
+    [
+      "Gateway",
+      "inspect_provider_preflight",
+      "same invocation pin, route and separate owner receipt snapshot; SAMPLE only"
+    ],
+    [
+      "Budget/T1",
+      "inspect_owner_snapshot",
+      "reservation lookup, owner revision and budget source; supplied comparisons not custody"
+    ],
+    [
+      "D5",
+      "protected authority reader",
+      "owner-controlled IAM/ORG/policy and publication boundary; HOLD"
+    ]
+  ],
+  "required_join": [
+    "exact same Scope, RunObservation, LeaseObservation, clock/epochs and invocation digest",
+    "exact approved span bytes equal gateway raw; no prompt expansion by this review",
+    "route/profile/invocation/reservation/idempotency pins from existing owners",
+    "current owner snapshot + current budget revision/source; no synthesized admission receipt",
+    "repeat full signed memory check after preflight; still not atomic",
+    "D5/T1 owner protected publication and J2-R4 canonical operation contract before effect"
+  ],
+  "non_goals": [
+    "no new authority or provider API",
+    "no changes to J2 allocation/settlement, IAM, ORG, D4, T1",
+    "no tokenizer claim: 40 is supplied fixture count",
+    "no new aggregate digest accepted as authority"
+  ],
+  "open": [
+    "no jointly protected effect gate in inspected functions",
+    "no physical per-invocation durable owner adapter acceptance",
+    "no verified prompt composition outside approved span",
+    "memory witness is not invocation authorization",
+    "full restore custody and atomic revocation remain HOLD"
+  ]
+}
