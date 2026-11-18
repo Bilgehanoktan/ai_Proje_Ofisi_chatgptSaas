@@ -1,0 +1,62 @@
+{
+  "revision": "ORG-07C-R8-NPM-AUDIT",
+  "date": "2026-11-18",
+  "classification": "USER_EXECUTED_NPM_REGISTRY_ADVISORY_AUDIT_CONSOLE_EVIDENCE",
+  "source_commit": "9675d4e1c3238776d1e744e0d82d6df70cfcbcd9",
+  "lock_record_blob": "570e857e7b9c8aefbf07177708cb8d85c39e2005",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "environment": {
+    "node": "24.14.0 previously verified",
+    "npm": "11.9.0",
+    "os": "Windows PowerShell 5.1"
+  },
+  "command": "npm.cmd audit --package-lock-only --ignore-scripts --registry=https://registry.npmjs.org --json",
+  "reported": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 17,
+        "dev": 6,
+        "optional": 39,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 61
+      }
+    },
+    "exit_code": 0,
+    "lock_sha256_before": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "lock_sha256_after": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "raw_audit_file": "NOT_RECEIVED; transcribed user console, raw file to be retained in review stage"
+  },
+  "limits": "Registry advisory report is point-in-time only. No publisher metadata comparison, downloaded tarball validation, npm ci, full frontend build, browser, backend Python review or independent acceptance yet.",
+  "parallel": {
+    "observed_branches": 235,
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "ext": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "d5g2": "9ca667e816dac269084ef8f62051da5fe458eb12"
+  },
+  "scope_decision": "R8 frontend-only preparation for closed Studio I2/I3; do not take over Unified full stack or EXT lock review. Fresh review fingerprint required before npm ci. No backend, PG, auth/provider, CI, main, production, external effects.",
+  "next": "Prepare fresh separate frontend stage from 265 pinned files after 509-file source audit; exact original lock, raw npm audit, 61 registry metadata checks; review fingerprint before locked install. No lock regeneration. Unified owner retains full stack acceptance.",
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "completed": [
+      "I1",
+      "F4"
+    ],
+    "canonical_acceptance": "unchanged"
+  },
+  "catalog_delta": "Evidence record only; no product file/API/DB/dependency changes",
+  "architecture_delta": "None",
+  "rollback": "Preserve source and raw lock; discard separate unapproved stage if necessary."
+}
