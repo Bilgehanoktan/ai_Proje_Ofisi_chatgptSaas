@@ -1,0 +1,240 @@
+{
+  "revision": "ORG-07C-R8-WINDOWS-EVIDENCE",
+  "date": "2026-11-18",
+  "classification": "USER_EXECUTED_LOCAL_SELECTED_PRODUCT_REGRESSION_TRANSCRIBED_CONSOLE",
+  "source_commit": "9675d4e1c3238776d1e744e0d82d6df70cfcbcd9",
+  "manifest_blob": "58e8b050713675d0727a90915c05dea458620b58",
+  "environment": {
+    "os": "Windows PowerShell 5.1",
+    "python": "3.14.3",
+    "node": "24.14.0",
+    "typescript": "5.9.3"
+  },
+  "source_integrity": {
+    "verified_files": 509,
+    "product_files": 510,
+    "result": "MATCH",
+    "runtime": "NOT_RUN at source audit",
+    "authorization": "NOT_EVALUATED"
+  },
+  "compiler": {
+    "archive": "typescript-5.9.3.tgz",
+    "integrity_expected_sha512_base64": "jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+    "user_report": "TYPESCRIPT INTEGRITY: PASS; Version 5.9.3",
+    "strict_compile": "PASS",
+    "scope": "selected real product route and projectionRead plus imports; no TSX/full typecheck"
+  },
+  "test": {
+    "tests": 31,
+    "suites": 0,
+    "pass": 31,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 157.658,
+    "exit_code": 0,
+    "group_counts": {
+      "closed_reader": 3,
+      "owner_binding_product": 20,
+      "route": 8
+    },
+    "source_blobs": {
+      "closed_reader": "6b8c418fdba4c3fd0c7c924395e27a9f89f7e19c",
+      "owner_binding_product": "6f8e0046c773d330f446ab262c0fc8b4dc792bbf",
+      "route": "4a2199dd6cc60f452b0a053f763d2d7a638b0f36"
+    },
+    "cases": [
+      {
+        "group": "closed_reader",
+        "name": "patched central reader -> actual closed GET clears historical data on refresh",
+        "status": "PASS",
+        "duration_ms": 33.4598
+      },
+      {
+        "group": "closed_reader",
+        "name": "late historical response cannot overwrite later real closed GET",
+        "status": "PASS",
+        "duration_ms": 0.5029
+      },
+      {
+        "group": "closed_reader",
+        "name": "actual closed GET with fresh central reader never publishes historical data",
+        "status": "PASS",
+        "duration_ms": 0.3737
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "baseline original accepts structurally valid different tenant; bound consumer refuses",
+        "status": "PASS",
+        "duration_ms": 19.1219
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "matching historical projection stays HOLD, no owner metadata or credential returned",
+        "status": "PASS",
+        "duration_ms": 0.833
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "valid different tenant denied",
+        "status": "PASS",
+        "duration_ms": 0.7692
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "valid different company denied",
+        "status": "PASS",
+        "duration_ms": 0.7976
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "valid different environment denied",
+        "status": "PASS",
+        "duration_ms": 0.5639
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "valid different revision denied",
+        "status": "PASS",
+        "duration_ms": 0.4283
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "invalid owner reference missing scope denied without backend",
+        "status": "PASS",
+        "duration_ms": 0.8472
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "invalid owner reference scope extra denied without backend",
+        "status": "PASS",
+        "duration_ms": 0.2727
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "invalid owner reference non synthetic denied without backend",
+        "status": "PASS",
+        "duration_ms": 0.4911
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "invalid owner reference bad revision denied without backend",
+        "status": "PASS",
+        "duration_ms": 0.4639
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "invalid owner reference unexpected authority denied without backend",
+        "status": "PASS",
+        "duration_ms": 0.2304
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "invalid owner reference bad credential denied without backend",
+        "status": "PASS",
+        "duration_ms": 0.2486
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "no owner no backend",
+        "status": "PASS",
+        "duration_ms": 0.3371
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "null owner result no backend",
+        "status": "PASS",
+        "duration_ms": 0.2386
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "mutable owner reference cannot redirect response after capture",
+        "status": "PASS",
+        "duration_ms": 0.3891
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "caller query cannot select owner scope",
+        "status": "PASS",
+        "duration_ms": 0.2478
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "caller Authorization cannot select binding",
+        "status": "PASS",
+        "duration_ms": 0.2492
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "abort during downstream read fails closed",
+        "status": "PASS",
+        "duration_ms": 0.611
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "owner exception redacted",
+        "status": "PASS",
+        "duration_ms": 0.2411
+      },
+      {
+        "group": "owner_binding_product",
+        "name": "backend HOLD remains generic",
+        "status": "PASS",
+        "duration_ms": 0.2262
+      },
+      {
+        "group": "route",
+        "name": "default route is dynamic and closed without owner",
+        "status": "PASS",
+        "duration_ms": 31.8383
+      },
+      {
+        "group": "route",
+        "name": "valid configured port does not activate route",
+        "status": "PASS",
+        "duration_ms": 0.3697
+      },
+      {
+        "group": "route",
+        "name": "bad configured port stays closed",
+        "status": "PASS",
+        "duration_ms": 0.3575
+      },
+      {
+        "group": "route",
+        "name": "browser cookie cannot activate route",
+        "status": "PASS",
+        "duration_ms": 0.3424
+      },
+      {
+        "group": "route",
+        "name": "browser authorization cannot activate route",
+        "status": "PASS",
+        "duration_ms": 0.3472
+      },
+      {
+        "group": "route",
+        "name": "browser scope query cannot activate route",
+        "status": "PASS",
+        "duration_ms": 0.3165
+      },
+      {
+        "group": "route",
+        "name": "aborted request stays closed",
+        "status": "PASS",
+        "duration_ms": 0.3473
+      },
+      {
+        "group": "route",
+        "name": "untrusted forwarded headers cannot activate route",
+        "status": "PASS",
+        "duration_ms": 0.3046
+      }
+    ],
+    "reported_log_sha256": "70a1c892a7742409788b17cc1729eb7f080a8ee742f1d97e8b8a5a4014f04829",
+    "raw_log_bytes": "NOT_RECEIVED; hash reported by user, not independently recomputed; console mojibake retained in conversation, names normalized here",
+    "distinct_tests": "same 31 R7 identifiers, no additional unique tests; rerun on actual integrated product"
+  },
+  "limits": "Direct compiled GET and injected fetch; no actual HTTP server, Next build, TSX, browser, live IAM, PG, independent acceptance. No new test execution by assistant."
+}
