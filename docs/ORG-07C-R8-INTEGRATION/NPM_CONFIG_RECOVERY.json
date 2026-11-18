@@ -1,0 +1,51 @@
+{
+  "revision": "ORG-07C-R8-NPM-CONFIG-RECOVERY",
+  "date": "2026-11-18",
+  "source_commit": "9675d4e1c3238776d1e744e0d82d6df70cfcbcd9",
+  "review_sha256": "6561fbaded150cd32b2d1fe8c01f1d500bc8486ae3415b632464d18d2c7dbe4c",
+  "user_approval": "ONAY in submitted console",
+  "failure": {
+    "stage": "npm --version preflight; before npm ci",
+    "exit_code": 1,
+    "reason": "double-loading config empty.npmrc as global, previously loaded as user",
+    "source_preflight": "265/265 PASS",
+    "transcript_sha256": "f4e83cde963c3a2a1d4223fa9e21075eb48d983dcaaee8999f3592fd57d4c88d",
+    "npm_ci": "NOT_RUN",
+    "build": "NOT_RUN",
+    "typecheck": "NOT_RUN"
+  },
+  "repair": {
+    "path": "docs/ORG-07C-R8-INTEGRATION/R8_resume_frontend_build.py",
+    "sha256": "92a37af2f5a724a29ad17cacb56de5a31fbd30d6553f5cc365c4dac08e9ac5b0",
+    "git_blob": "d21819e09a890e41612ff90508ee34d160c829e2",
+    "changes": "Distinct empty user/global config, preserve previous config and logs; preflight guards, version check cwd frontend, source and lock pins unchanged",
+    "verification": "Python AST parse PASS; actual Windows npm/build NOT_RUN"
+  },
+  "parallel": {
+    "observed_branches": 235,
+    "related": [
+      {
+        "branch": "integration/unified-u3a-product-acceptance",
+        "head": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      },
+      {
+        "branch": "planning/w5-ext-07r6-source-preflight",
+        "head": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+      },
+      {
+        "branch": "workstream/0230-d5g2-durable-iam-authority",
+        "head": "9ca667e816dac269084ef8f62051da5fe458eb12"
+      }
+    ]
+  },
+  "progress": {
+    "previous_percent": 11.666666666666668,
+    "current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "canonical_acceptance": "unchanged"
+  },
+  "architecture_delta": "none",
+  "catalog_delta": "Recovery helper outside product; no API, DB or dependency changes",
+  "next": "Resume already approved isolated frontend attempt on same pinned stage; collect all actual logs, no bypass; Unified full-stack owner boundary retained.",
+  "rollback": "Preserve failed empty.npmrc and evidence; if new attempt fails, retain logs and stop. No cleanup of source, DB or other stages."
+}
