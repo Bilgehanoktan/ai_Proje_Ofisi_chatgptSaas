@@ -1,0 +1,22 @@
+# ORG-10R5 — D02 technical readback (not owner approval)
+Parent R4: 58bbac8b7955e218b515534fb9ee65cf05024612. Reporting standard blob 77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16. No source, DDL, API, DB, dependency, authority, port or product change. No PG execution.
+
+## Architecture and technical catalog delta
+Read exact versioned sources via GitHub, seven blobs:
+- ORG-10 5c7eb6b148e6e96247682653ff70dccc4a7ba823: COMMON_SCOPE_PROFILE.json e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe; PG_SCHEMA_ORG10.sql 19eebcf15e5a86401518d218b9e6fa47f0ddc6f7; bootstrap_roles.sql fa9047a1a71c222654cbd65c321d7d6de4aea27e; PG_ACCEPTANCE_MATRIX.json b2f1d81a84542d9af56ce0c773cb01c226d39d61.
+- D4-R6 c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a: COMMON_SCOPE_PROFILE.json 1d88c65cee2c1a01a3d20595ace6bfca2a4fe011.
+- ORG-08 663b7b1a60d8444c9b972f3fa30e8a4ecc83b352: IAM_RUNTIME_ALIGNMENT.json 044ad8d7a37e12e71f7f13ca222e28d5fdb6377e.
+- ORG-10R1 3eadb02d06dbb4fb967ba8f74a86a01238c540a3: launch_common.py 65e2203569f8167a5fe0314dbb1e61e8c4415152.
+
+23/23 actual static assertions on fetched text/JSON (not SQL evaluation): D4 scope equality; ORG08 scope equality; D4 ordered join equality; ORG08 ordered join equality; 17 unique fields; separate schema; separate port 55436; distinct negative scope; no shared credentials; no alias; no assumed cross-store join; 12 CREATE TABLE; 12 ENABLE RLS; 12 FORCE RLS; 25 policies; 5 CREATE ROLE; 5 restricted role flag sets; NOLOGIN owner; fixture database PUBLIC CONNECT/TEMP revocation; 31 ordered NOT_RUN IDs; 48 MAINTAIN expected zero; launcher SERVER_STOPPED marker; reviewed fingerprint equality. All true. Text check does not prove privilege semantics or server state.
+
+Common scope exactly synthetic-tenant / synthetic-company / A0_SAMPLE_ONLY. Required ordered join: tenant, company, environment, org_head, org_sequence, staffing_digest, team_digest, project, plan_revision, task, run, agent, principal, policy_epoch, witness_epoch, role_revision, full_intent_digest. Fixture does not implement real Core Research join, protected publication, or authentic IAM.
+
+Open review observation: bootstrap revokes PUBLIC CONNECT/TEMP on the fixture DB only. Neither pinned bootstrap nor launcher explicitly revokes PUBLIC CONNECT/TEMP on postgres/template1. Separate disposable cluster mitigates exposure to existing data, but cluster-wide database privilege hardening is not evidenced; request D4/ORG owner disposition before execution, do not modify pinned sources or assume a failed test. D4-R6 mentions other-DB CONNECT/TEMP revocation for its separate R2 scope; do not silently apply it to ORG10 or treat it as an ORG10 acceptance criterion already adopted.
+
+## Ownership and progress
+Observed D4-R6 head unchanged; D5-G-R1 13d061a6bd79c96825de4ff1da136d2e42beef4f and D5-G2 9ca667e816dac269084ef8f62051da5fe458eb12 separate IAM work; three open PRs are legacy recovery. No merge or changes to other lanes. Technical compatibility is not joint owner approval: D02 HOLD. External runtime review HOLD: R4 Windows fresh preparation reports absent in current turn. Port approval retained 55436 only; live ownership must be positively checked at launch.
+Proposed counts unchanged design 2/3, source 3/3, functional 3/5, integration 1/3, final 0/1. Proposed development 63.67% -> 63.67%, delta 0 pp; official weighted NOT_CALCULABLE_PENDING_ADOPTION. Execution plan 3/8, organization plan 5/7; Core 12/16, UI 21/40, MVP 0/11 unchanged per R4 handover, not refreshed product acceptance. Real PG 0/31 and supplementary MAINTAIN 0/48 NOT_RUN; PG31 includes 360 planned ACL checks separately. No test count uplift or independent acceptance.
+
+## Maintenance, rollback and next
+Run only R4 pinned ORG10_CLEAN_RUNTIME_PREP.txt (SHA256 61803d5def5b67e2adce835386046e5099b40acf969c41e082b80b699bf2b150) on ordinary Windows PowerShell; fresh paths only. Collect C:\AIOS\ORG10_RUNTIME_REVIEW_02.json and C:\AIOS\ORG10_CLEAN_RUNTIME_REPORT_01.json; no credentials, no repeated large archives. On failure retain stage, stop and inspect; no auto retry or deletion. External review compares exact new manifest to prior verified archives and clean runtime provenance; do not issue reviewed fingerprint on self-hash alone. Resolve joint owner D02 and other-DB privilege observation before launcher execution. Only then existing R1 launcher for PG31 + 48 separate MAINTAIN checks; verify stop and report; ORG-11 exact 17-field read-only join remains distinct. Rollback: omit this review record; previous source and evidence unchanged.
