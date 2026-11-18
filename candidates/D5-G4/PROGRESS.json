@@ -1,0 +1,117 @@
+{
+  "revision": "D5-G4",
+  "parent": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "criteria": "D5-G1-D0-session-v1",
+  "criteria_blob": "c81622b91a49cd0e39a4245147ca1427cabeb413",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "partial_criteria": {
+    "S02": "G2 durable local IAM revoke plus G4 exact D4/intent/session review source; joint publisher incomplete",
+    "F05": "14 new component review cases pass; no actual ORG/T1 race",
+    "F06": "G2 normal reopen/retained pin only; full restore remains residual",
+    "I02": "actual product source readback composition, not ORG/T1 writer composition"
+  },
+  "tests": {
+    "new_component_pass": 14,
+    "new_component_total": 14,
+    "fail": 0,
+    "skip": 0,
+    "exit_code": 0,
+    "source_pins": [
+      18,
+      18
+    ],
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "log_blob": "7760d1923eaebefcb3d73f589f71839de138f61a",
+    "log_sha256": "0616c45d02367604e0dc6252eed08317c56a458ca72c34496577a4dce15b4339",
+    "previous_G2_33": "historical PASS not rerun",
+    "original_combined_50": "NOT_RUN",
+    "actual_ORG": "NOT_RUN",
+    "full_checkout": "NOT_VERIFIED"
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "manifest_blob": "d1a75db889659876747332e951e796a6ca0464c9",
+  "blockers": [
+    "G2 50-case regression",
+    "actual current ORG owner readback and physical D4 role facts",
+    "shared protected publisher",
+    "original T1 claim/journal/commit wiring",
+    "trusted COMMIT clock",
+    "independent custody and account issuance"
+  ],
+  "activation": "HOLD"
+}

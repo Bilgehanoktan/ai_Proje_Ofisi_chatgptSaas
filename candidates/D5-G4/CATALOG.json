@@ -1,0 +1,104 @@
+{
+  "revision": "D5-G4",
+  "classification": "additive_isolated_product_review_source",
+  "files": {
+    "product/ai-company-os-backend/app/core/transaction/identity_binding.py": {
+      "source": "candidates/D4-R4/identity_binding.py",
+      "exact_blob": true,
+      "symbols": [
+        "Request",
+        "Binding",
+        "SessionFacts",
+        "Review",
+        "valid_request",
+        "valid_binding",
+        "binding_digest",
+        "review_binding",
+        "review_session",
+        "review_boundary",
+        "disposition",
+        "token",
+        "digest",
+        "revision"
+      ],
+      "dependencies": [
+        "stdlib"
+      ]
+    },
+    "product/ai-company-os-backend/app/core/transaction/intent_identity.py": {
+      "source": "candidates/D5-INTENT/intent_identity.py",
+      "change": "absolute product import only",
+      "symbols": [
+        "full_intent_digest",
+        "derive_request",
+        "review_bound_intent"
+      ],
+      "dependencies": [
+        "lifecycle.Scope",
+        "review.LogicalIntent",
+        "company_coordination.Member",
+        "identity_binding"
+      ]
+    },
+    "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py": {
+      "source": "candidates/D5-B/identity_fence_review.py",
+      "change": "absolute product imports + additive IAM review",
+      "existing_symbols": [
+        "IdentityReadback",
+        "_review",
+        "readback_digest",
+        "inspect_at_fence"
+      ],
+      "new_symbols": [
+        "SessionReference",
+        "session_reference_digest",
+        "_require_resolver",
+        "_sample_session",
+        "capture_session_reference",
+        "inspect_session_reference"
+      ],
+      "dependencies": [
+        "identity_binding",
+        "intent_identity",
+        "iam_session",
+        "intent_authority",
+        "stdlib"
+      ]
+    },
+    "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
+      "symbols": [
+        "SessionIdentityTests"
+      ],
+      "tests": 14
+    },
+    "candidates/D5-G4/run_exact.py": {
+      "symbols": [
+        "main"
+      ],
+      "dependencies": [
+        "stdlib"
+      ]
+    },
+    "candidates/D5-G4/SOURCE_PINS.json": {
+      "pins": 18
+    },
+    "candidates/D5-G4/test.log": "actual 14 selected test cases",
+    "candidates/D5-G4/exit_code.txt": "0",
+    "candidates/D5-G4/ARCHITECTURE_AND_RUNBOOK.md": "maintenance and rollback",
+    "candidates/D5-G4/HANDOVER.md": "devir",
+    "candidates/D5-G4/PROGRESS.json": "fixed criteria unchanged"
+  },
+  "apis": [],
+  "database": [],
+  "events": [],
+  "new_external_dependencies": [],
+  "existing_interfaces": [
+    "D0SessionResolver._read_durable",
+    "D0IntentAuthority._db",
+    "SessionClaimCheck.inspect",
+    "LogicalIntent",
+    "Member",
+    "RootPin"
+  ],
+  "activation": "HOLD"
+}

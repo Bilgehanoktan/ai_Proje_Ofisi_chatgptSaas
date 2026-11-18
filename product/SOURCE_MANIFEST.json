@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "D5-G2",
-  "status": "D0_ISOLATED_IAM_AUTHORITY_COMPONENT_TESTED_NOT_ACTIVATED",
+  "doc_revision": "D5-G4",
+  "status": "D0_IDENTITY_SESSION_REVIEW_COMPONENT_TESTED_NOT_ACTIVATED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "78da1ae5da98e40c256824b53558811dc412704c",
+  "parent_git_commit": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -414,9 +414,21 @@
       "bytes": 20298,
       "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
     },
+    "ai-company-os-backend/app/core/transaction/identity_binding.py": {
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
+    "ai-company-os-backend/app/core/transaction/identity_fence_review.py": {
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347"
+    },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
       "bytes": 9184,
       "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    },
+    "ai-company-os-backend/app/core/transaction/intent_identity.py": {
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
@@ -745,6 +757,10 @@
     "ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
       "bytes": 11216,
       "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
+    },
+    "ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331"
     },
     "ai-company-os-backend/tests/test_iam_session_d5g1.py": {
       "bytes": 4691,
@@ -1587,6 +1603,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "40136a75e9bda468a5661932e94cf276707a81f8",
-  "source_git_commit_note": "Current commit cannot self-reference; exact branch commit and readback. Three product entries changed; remaining entries retained."
+  "parent_source_manifest_blob": "15e446e4d14c95d81d1e152efa2e8cb11122b3e3",
+  "source_git_commit_note": "Current commit cannot self-reference; exact branch commit and readback. Four additive product files; all previous entries retained."
 }

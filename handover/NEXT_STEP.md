@@ -4,3 +4,7 @@ D3 scoped RLS/lock contention accepted through metadata-only transfer from 426a2
 
 ## D5-G2 — branch-local next
 [Run exact G2 regression](../candidates/D5-G2/run_regression.py), then joint D4 request/session/ORG owner binding and protected publication. Do not change canonical product acceptance or merge; owner/clock/custody HOLD.
+
+
+## D5-G4 — branch-local next
+Complete original G2 50-case regression on G2/G3 manifest. Then actual ORG owner reader and same-intent session reference through original authority/T1 under reviewed joint contract. See [handover](../candidates/D5-G4/HANDOVER.md). No activation or independent acceptance.

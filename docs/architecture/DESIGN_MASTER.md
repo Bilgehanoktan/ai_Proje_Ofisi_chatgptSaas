@@ -265,3 +265,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G2 — isolated durable IAM / Authority source branch
 [Architecture and runbook](../../candidates/D5-G2/ARCHITECTURE_AND_RUNBOOK.md). D0 component tests only; canonical acceptance and joint publisher remain HOLD; no live activation.
+
+
+## D5-G4 — D4/IAM session readback (branch-local)
+[Architecture & runbook](../../candidates/D5-G4/ARCHITECTURE_AND_RUNBOOK.md). Three source modules and one test transferred; actual 14 selected tests. No product activation; G2 50 regression and ORG/T1 joint publication HOLD.

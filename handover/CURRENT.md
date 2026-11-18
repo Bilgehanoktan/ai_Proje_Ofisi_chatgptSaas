@@ -257,3 +257,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G2 — branch-local continuation
 [Handover](../candidates/D5-G2/HANDOVER.md) · [Progress](../candidates/D5-G2/PROGRESS.json). 33 local IAM component assertions; updated original T1/ORG NOT_RUN, no gate promotion.
+
+
+## D5-G4 — branch-local continuation
+[Handover](../candidates/D5-G4/HANDOVER.md) · [Progress](../candidates/D5-G4/PROGRESS.json). 14/14 new review tests and 18/18 pins; no grant or gate promotion. G2 50 NOT_RUN.

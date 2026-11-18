@@ -95,3 +95,7 @@ Standalone `scripts/verify_source_zip.py` (git_blob, safe_path, verify_zip, main
 
 ## D5-G2 — branch-local source delta
 [Catalog](../candidates/D5-G2/CATALOG.json) · [runbook](../candidates/D5-G2/ARCHITECTURE_AND_RUNBOOK.md). No live API, canonical DB or grant; six local D0 tables.
+
+
+## D5-G4
+[Technical delta](../candidates/D5-G4/CATALOG.json) · [maintenance](../candidates/D5-G4/ARCHITECTURE_AND_RUNBOOK.md). Four additive product files; no new API, database migration, event or dependency.
