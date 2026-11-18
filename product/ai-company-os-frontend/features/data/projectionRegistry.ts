@@ -1,4 +1,5 @@
 /** Endpoint and parser pair are fixed, not caller-selected. */
+import {parseOrganization} from '../organization/organizationProjection';
 import {parseMvpDiagnostics} from '../mvp/mvpDiagnostics';
 import {parseAdmissionProjection} from '../mvp/admissionProjection';
 import {parseOutboxProjection} from '../mvp/outboxProjection';
@@ -8,7 +9,7 @@ import {parseLifecycleProjection} from '../mvp/lifecycleProjection';
 import {parseLifecyclePrefix} from '../mvp/lifecyclePrefix';
 import {parsePlanProjection} from '../core-review/planProjection';
 import {createProjectionReader,type Parser,type ProjectionKey,type ReadState} from './projectionRead';
-export const projectionParsers=Object.freeze({mvp:parseMvpDiagnostics,admission:parseAdmissionProjection,outbox:parseOutboxProjection,'office-workbench':parseOfficeWorkbench,'task-budget':parseTaskBudgetProjection,lifecycle:parseLifecycleProjection,'lifecycle-prefix':parseLifecyclePrefix,plan:parsePlanProjection} satisfies Record<ProjectionKey,Parser<unknown>>);
+export const projectionParsers=Object.freeze({mvp:parseMvpDiagnostics,admission:parseAdmissionProjection,outbox:parseOutboxProjection,'office-workbench':parseOfficeWorkbench,'task-budget':parseTaskBudgetProjection,lifecycle:parseLifecycleProjection,'lifecycle-prefix':parseLifecyclePrefix,plan:parsePlanProjection,organization:parseOrganization} satisfies Record<ProjectionKey,Parser<unknown>>);
 export type ProjectionValue<K extends ProjectionKey>=NonNullable<ReturnType<(typeof projectionParsers)[K]>>;
 export function registeredReader<K extends ProjectionKey>(key:K,publish:(state:ReadState<ProjectionValue<K>>)=>void,transport:typeof fetch=fetch,timeoutMs=4000){
  if(!Object.hasOwn(projectionParsers,key))throw Error('D0_REGISTRY_HOLD');

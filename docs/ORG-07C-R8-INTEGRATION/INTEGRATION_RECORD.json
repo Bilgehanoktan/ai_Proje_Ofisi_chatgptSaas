@@ -1,0 +1,138 @@
+{
+  "revision": "ORG-07C-R8-CLOSED-INTEGRATION",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source": "dd734bf31977c84fee85ab6d23d11cd9804804a0",
+  "standard": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "authorization": "CEO-0174/0179=B plus user explicit integrate; isolated source only; actual IAM/ORG/backend route approval HOLD",
+  "changes": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "before": "5456a3812117d4f4d9503e4875625e58bea0382b",
+      "after": "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "bytes": 3085,
+      "sha256": "a1147ebd4560c7322e974f91dce97c55fe8ddfa157e8c78adb51f3a4ac820a7f"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+      "before": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+      "after": "b8d4419253c201741a6f2f5aac31906a9a528110",
+      "bytes": 1633,
+      "sha256": "edd44f45b726cff95bae2067b4d5e80612b75dbfd31a62027a41354b3c2c5799"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "before": "bb3ad084dd62a094363a44e86805f9693400bb30",
+      "after": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+      "bytes": 4561,
+      "sha256": "db2e1aca824e334f749eb7078796916854d3a9c9ff818b085a51daf2f5d8219f"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+      "before": null,
+      "after": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+      "bytes": 3939,
+      "sha256": "254a188851fa2f0e63661f2dd6977d7446a7f5ae7d4dd0622ea4a40f578dd461"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+      "before": null,
+      "after": "f257f77ca5887b2477bdf3fc3f68e2b37c735eff",
+      "bytes": 2437,
+      "sha256": "bf604ecaaa9e179ba1048f9d9d5a7dee2846a164bc2f4bda163477d63f32eed3"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+      "before": null,
+      "after": "990b06ee2b5adc115547615719610ccc02a66061",
+      "bytes": 1732,
+      "sha256": "34bb77b59c989b1ecb0ec3b75d04be68923bba7c4d5d2eccf922eab78ccb741a"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+      "before": null,
+      "after": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+      "bytes": 527,
+      "sha256": "68586ac79f5111bcbe2b30cb09f3f6b35ef8fbee38ec59881d88bf00ea0a6f22"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+      "before": null,
+      "after": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51",
+      "bytes": 3192,
+      "sha256": "19c5163ad19c53118ed51e43844efc3d84a319c58a3ff311f0727aea2753a6cc"
+    }
+  ],
+  "unchanged": [
+    {
+      "p": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+      "sha": "73ef76f14855875aa50a7e619214a5311c1393f2"
+    },
+    {
+      "p": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+      "sha": "9231711d7efb18dd18b68e3322f62337a6477484"
+    }
+  ],
+  "manifest": {
+    "base": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "entries": 509,
+    "review_match": 509,
+    "remote_path_size_check": "pending postwrite",
+    "local_sha256": "NOT_RUN"
+  },
+  "tests": {
+    "transferred": [
+      {
+        "name": "owner_binding_product.test.cjs",
+        "blob": "6f8e0046c773d330f446ab262c0fc8b4dc792bbf"
+      },
+      {
+        "name": "route.test.cjs",
+        "blob": "4a2199dd6cc60f452b0a053f763d2d7a638b0f36"
+      },
+      {
+        "name": "closed_reader.test.cjs",
+        "blob": "6b8c418fdba4c3fd0c7c924395e27a9f89f7e19c"
+      },
+      {
+        "name": "process.d.ts",
+        "blob": "9fdb78617c28724b580bcf26e764d34981146cc5"
+      }
+    ],
+    "original_prior": 31,
+    "new": "NOT_RUN"
+  },
+  "owners": {
+    "d5": "13d061a6bd79c96825de4ff1da136d2e42beef4f",
+    "org10": "a63d718b2000a6d894f7c53d0048f0985d676708",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "progress": {
+    "previous_percent": 0,
+    "current_percent": 0,
+    "reason": "I1 pending final exact tree readback; F4 NOT_RUN; no S3 actual approved backend registration",
+    "canonical": {
+      "core": [
+        12,
+        16
+      ],
+      "ui": [
+        21,
+        40
+      ],
+      "org_plan": [
+        5,
+        7
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "independent": [
+        0,
+        7
+      ]
+    }
+  },
+  "security": "Frontend local GET is intentionally registered as closed 503 on isolated branch; no actual owner supplied, backend unchanged, no live provider registration; no prod/main/CI/spend/real data",
+  "rollback": "Discard isolated branch or checkout exact U3A base; no DB mutation; do not merge without owner review"
+}

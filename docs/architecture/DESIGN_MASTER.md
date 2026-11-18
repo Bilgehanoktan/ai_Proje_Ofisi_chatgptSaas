@@ -317,3 +317,6 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U3A — source-bound acceptance checkpoint
 [Runbook](../UNIFIED-U3A/ARCHITECTURE_AND_RUNBOOK.md). WorkflowDraft shared panel repaired; exact P24 history overlay and W8 rebind; 63 selected rerun +10 adapter mechanics, full product build blocked. Core D2 historical 11/16, JOIN_HOLD.
+
+## ORG-07C-R8 isolated closed Studio source integration
+[Architecture, catalog and handover](../ORG-07C-R8-INTEGRATION/HANDOVER.md) · [Exact source delta](../ORG-07C-R8-INTEGRATION/INTEGRATION_RECORD.json). D0 frontend closed 503; owner/provider, actual backend route, build/browser and independent acceptance HOLD.
