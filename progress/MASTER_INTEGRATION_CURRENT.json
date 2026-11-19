@@ -6696,7 +6696,8 @@
     "actual_current_ci": {
       "pr6_original_core_operationsstore": "10/10 PASS_D0 run 44620141705",
       "pr4_latest_three_jobs": "3/3 PASS run 44620987573",
-      "new_tests_this_coordination": 0
+      "new_tests_this_coordination": 0,
+      "pr11_org_package": "4/4 original smoke + 11/11 original SQL D0 SQLite, 552/552 actual SHA256, run 44628704044"
     },
     "blocked": [
       "source owner G9 durable_ops version selection",
@@ -6706,7 +6707,7 @@
       "strict PG COMMIT/restore",
       "W8 native browser/fullchain"
     ],
-    "next": "CTL-01 review exact additional 14 source files + manifest and original G9 durable_ops pin without editing owner branches; CTL-02 owners complete GATE02; resume source-promotion only with separate approval and evidence.",
+    "next": "CTL01 exact 539->553 source+552 manifest SHA256, 4/4 package smoke, 11/11 SQL CI complete. Await ORG/Core/G9 owner ratification and W8 full build, then independent IAM/PG/IV. No authorized product-dev promotion.",
     "previous_iam_org_development_percent": 42.5,
     "current_iam_org_development_percent": 42.5,
     "delta_pp": 0,
@@ -6725,7 +6726,8 @@
     "product_dev_source_changes": 0,
     "product_db_api_changes": 0,
     "permissions_change": false,
-    "rollback": "normal revert governance-only record; product-dev/main unchanged"
+    "rollback": "normal revert governance-only record; product-dev/main unchanged",
+    "ctl01_technical_source_status": "SOURCE_AND_ISOLATED_TEST_EVIDENCE_COMPLETE_OWNER_APPROVAL_PENDING"
   },
   "progress_display_20261120": {
     "revision": "MI01-W8-P0-OPERATIONAL-GATES-20261120-V1",
@@ -7304,5 +7306,98 @@
     "weighted_development_percent_current": null,
     "weighted_development_delta_pp": null,
     "next": "Owner G9/ORG and G2/Authority file choice; PR9 packaging smoke and exact W8, real PG/IV; product-dev promotion HOLD"
+  },
+  "ctl01_technical_ci_closeout_20261120": {
+    "revision": "CTL01-G9-MANIFEST-PIN-R2-ORIGINAL-CI-20261120",
+    "mode": "CENTRAL_EVIDENCE_CLOSEOUT_NO_OWNER_SIGNATURE_NO_PRODUCT_MUTATION",
+    "status": "CENTRAL_ANALYSIS_EVIDENCE_COMPLETE__OWNER_RATIFICATION_HOLD",
+    "source": {
+      "common_539": "59c0fc505ca286e681ed0965ee317eadf571a806",
+      "org_553": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+      "canonical_product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "product_dev_changed": false
+    },
+    "g9_pin": {
+      "historical": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "owner_additive": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "inserted_lines": 41,
+      "deleted_lines": 0,
+      "owner_approval": "PENDING"
+    },
+    "manifest": {
+      "common": [
+        538,
+        538
+      ],
+      "old_records_preserved": [
+        538,
+        538
+      ],
+      "new_records": [
+        14,
+        14
+      ],
+      "candidate": [
+        552,
+        552
+      ],
+      "actual_ci_sha256_all": [
+        552,
+        552
+      ]
+    },
+    "ci": {
+      "pr": 11,
+      "head": "69c530157f6e50db7515fadfe630d80c454983f6",
+      "run": 44628704044,
+      "job": 135929295468,
+      "conclusion": "success",
+      "actual_original_packaging": [
+        4,
+        4
+      ],
+      "actual_original_sqlite": [
+        11,
+        11
+      ],
+      "sql_unique_new_methods": 0,
+      "scoped": "D0_SQLITE_AND_SOURCE_INTEGRITY_ONLY"
+    },
+    "handover": {
+      "document": "docs/master-integration/MI-P0-CTL01-G9-MANIFEST-PIN-READBACK-20261120.md",
+      "machine": "progress/MI_P0_CTL01_G9_MANIFEST_PIN_READBACK_20261120.json",
+      "owner_pr": 9,
+      "ci_pr": 11
+    },
+    "blocked": [
+      "G9_ORG_CORE_SOURCE_OWNER_RATIFICATION",
+      "FULL_W8_ACCEPTANCE",
+      "REAL_ISSUER_A1_ROOT_SINK",
+      "G2_50_G9_7_MEMORYT1_10",
+      "STRICT_PROTECTED_PG_RESTORE",
+      "INDEPENDENT_IV"
+    ],
+    "next": "Existing PR9 ORG/Core/G9 source owner approve/reject additive durable_ops; MI01/W8 exact full build; security/PG/IV owners retain their separate gates. No new code or duplicate tests.",
+    "prior_iam_org_weighted_percent": 42.5,
+    "current_iam_org_weighted_percent": 42.5,
+    "development_delta_pp": 0,
+    "global_development_percent": null,
+    "core_acceptance": [
+      12,
+      16
+    ],
+    "mvp_acceptance": [
+      0,
+      11
+    ],
+    "iv_acceptance": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0,
+    "new_implementation_source_mutations": 0,
+    "new_permission_changes": 0,
+    "no_merge": true,
+    "rollback": "normal revert only this governance JSON delta; no claims or product-dev changes"
   }
 }
