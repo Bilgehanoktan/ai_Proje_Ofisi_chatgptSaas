@@ -1,5 +1,5 @@
 {
-  "revision": "MI-COMMON-09-LOCAL-344-WHEELS",
+  "revision": "MI-COMMON-09-WINDOWS-PATH-HOLD",
   "date": "2026-11-20",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -3242,7 +3242,7 @@
       "owner_role": "Model Gateway",
       "source_ref": "workstream/w5-j2-r4-shared-transaction-contract",
       "observed_sha": "12d5149ef891b69a909162f8eecfe5847858e8b4",
-      "next": "Joint owner review of history-aware Memory overrides and exact source candidate; run 344 selected tests once on complete isolated checkout, then Unified build/PG and separate security/IV gates. No provider, spend, protected entry or product-dev promotion. | 114/114 common remote pins match; original 344 NOT_RUN, exact local closure still missing. | Source-locked GitHub blob recovery helper published, 14/14 local synthetic controls PASS; 114 pins remote, 5/114 legacy local paths, original 344 NOT_RUN until complete exact stage. | User console shows 1953/1953 exact Git tree and 114/55 pinned local sources; raw TRANSFER_REPORT.json pending; original 344 and 29 NOT_RUN. | Windows source-only historical Core55/55 and Model114/114 PASS; selected 344 blocked before tests by missing cryptography metadata; exact isolated environment review required; no fake PASS. | Isolated Python 3.13.5 + SQLite3.46.1 Windows console PASS. Cryptography wheel bridge under exact PyPI hash review, candidate unexecuted; original 344 NOT_RUN.",
+      "next": "Joint owner review of history-aware Memory overrides and exact source candidate; run 344 selected tests once on complete isolated checkout, then Unified build/PG and separate security/IV gates. No provider, spend, protected entry or product-dev promotion. | 114/114 common remote pins match; original 344 NOT_RUN, exact local closure still missing. | Source-locked GitHub blob recovery helper published, 14/14 local synthetic controls PASS; 114 pins remote, 5/114 legacy local paths, original 344 NOT_RUN until complete exact stage. | User console shows 1953/1953 exact Git tree and 114/55 pinned local sources; raw TRANSFER_REPORT.json pending; original 344 and 29 NOT_RUN. | Windows source-only historical Core55/55 and Model114/114 PASS; selected 344 blocked before tests by missing cryptography metadata; exact isolated environment review required; no fake PASS. | Isolated Python 3.13.5 + SQLite3.46.1 Windows console PASS. Cryptography wheel bridge under exact PyPI hash review, candidate unexecuted; original 344 NOT_RUN. | 2026-11-20 Windows log: private 3/3 wheel SHA and pinned Python/SQLite/cryptography PASS; original MEM184 group ran but 157 MEMORY_SNAPSHOT_PATH_HOLD-family errors, no whole group PASS, other 160 NOT_RUN; canonical temp path fix local-only unexecuted; acceptance delta 0.",
       "priority": "P1",
       "status": "JOINT_SOURCE_CANDIDATE_READY_OWNER_REVIEW_REGRESSION_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -3624,7 +3624,7 @@
       "owner_role": "Memory",
       "source_ref": "integration/w5-mem-05e-r1-authority-source-alignment",
       "observed_sha": "e85cd16e19c8f32da948b9bba98115667c9e1573",
-      "next": "Joint owner review of history-aware Memory overrides and exact source candidate; run 344 selected tests once on complete isolated checkout, then Unified build/PG and separate security/IV gates. No provider, spend, protected entry or product-dev promotion. | 114/114 common remote pins match; original 344 NOT_RUN, exact local closure still missing. | Source-locked GitHub blob recovery helper published, 14/14 local synthetic controls PASS; 114 pins remote, 5/114 legacy local paths, original 344 NOT_RUN until complete exact stage. | User console shows 1953/1953 exact Git tree and 114/55 pinned local sources; raw TRANSFER_REPORT.json pending; original 344 and 29 NOT_RUN. | Windows source-only historical Core55/55 and Model114/114 PASS; selected 344 blocked before tests by missing cryptography metadata; exact isolated environment review required; no fake PASS. | Isolated Python 3.13.5 + SQLite3.46.1 Windows console PASS. Cryptography wheel bridge under exact PyPI hash review, candidate unexecuted; original 344 NOT_RUN.",
+      "next": "Joint owner review of history-aware Memory overrides and exact source candidate; run 344 selected tests once on complete isolated checkout, then Unified build/PG and separate security/IV gates. No provider, spend, protected entry or product-dev promotion. | 114/114 common remote pins match; original 344 NOT_RUN, exact local closure still missing. | Source-locked GitHub blob recovery helper published, 14/14 local synthetic controls PASS; 114 pins remote, 5/114 legacy local paths, original 344 NOT_RUN until complete exact stage. | User console shows 1953/1953 exact Git tree and 114/55 pinned local sources; raw TRANSFER_REPORT.json pending; original 344 and 29 NOT_RUN. | Windows source-only historical Core55/55 and Model114/114 PASS; selected 344 blocked before tests by missing cryptography metadata; exact isolated environment review required; no fake PASS. | Isolated Python 3.13.5 + SQLite3.46.1 Windows console PASS. Cryptography wheel bridge under exact PyPI hash review, candidate unexecuted; original 344 NOT_RUN. | 2026-11-20 Windows log: private 3/3 wheel SHA and pinned Python/SQLite/cryptography PASS; original MEM184 group ran but 157 MEMORY_SNAPSHOT_PATH_HOLD-family errors, no whole group PASS, other 160 NOT_RUN; canonical temp path fix local-only unexecuted; acceptance delta 0.",
       "priority": "P1",
       "status": "JOINT_SOURCE_CANDIDATE_READY_OWNER_REVIEW_REGRESSION_HOLD",
       "owner_assignment": "Memory workstream continues MI-08; shared MI-07/MI-03/04 owners and central review required before promotion",
@@ -7104,5 +7104,63 @@
     "next": "Owner review PR7/PR8 central JSON conflict; freeze source pin and W8 prerequisite gate; only afterward evaluate controlled product-dev transfer; no autonomous merge",
     "security": "OPTION_A_ARCHITECTURE_ONLY; NO_RUNTIME_OR_EXTRA_CI_OR_PROD_GRANT",
     "rollback": "normal revert on governance branch; source product-dev and main unchanged"
+  },
+  "mi_common_09_windows_replay_failure": {
+    "revision": "MI-COMMON-09-WINDOWS-PATH-HOLD",
+    "evidence_date": "2026-11-20",
+    "classification": "USER_SUPPLIED_WINDOWS_CONSOLE_NOT_INDEPENDENTLY_RERUN",
+    "log_attachment_sha256": "df3097e018707c7b9a08d9047243636c1ae5aca6a86cac52df43b5ec84aa9416",
+    "source_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "source_git_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+    "source_pin_count": "114/114",
+    "runtime": {
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "cryptography": "46.0.4",
+      "cffi": "2.0.0",
+      "pycparser": "2.23",
+      "wheel_hashes": "3/3_reported_PASS"
+    },
+    "test": {
+      "expected": 344,
+      "first_group": "MEM",
+      "first_group_tests_run": 184,
+      "first_group_errors": 157,
+      "first_group_complete_pass": false,
+      "remaining_groups_not_run": [
+        80,
+        16,
+        28,
+        36
+      ],
+      "complete_groups_pass": 0,
+      "runner_exit_code": 1,
+      "status": "HOLD"
+    },
+    "error": {
+      "exception": "ValueError",
+      "marker": "MEMORY_SNAPSHOT_PATH_HOLD",
+      "site": "snapshot_store.py::_path",
+      "hypothesis": "Windows 8.3 alias canonical comparison p.resolve()!=p; validate with private ASCII-only TEMP directory first",
+      "root_cause_confirmed": false
+    },
+    "retry": {
+      "script_name": "MI_COMMON_09_TEMP_PATH_RETRY.ps1",
+      "script_sha256": "c649752f1c1ca205bc4e1ecd58fe06b9e883a648f0875e1365fd3c9d4fb56170",
+      "execution": "NOT_RUN",
+      "changes": "process-only TEMP/TMP/TMPDIR, restore in finally; new evidence dir only",
+      "success_criteria": "exact 344/344 selected D0 regression, source 114/114 pre-and-post, exit 0, PRODUCT_ACCEPTANCE=HOLD"
+    },
+    "authority": {
+      "product_acceptance": "HOLD",
+      "independent_acceptance": "HOLD",
+      "protected_commit": "HOLD",
+      "main_ci_prod_external_changes": "NONE"
+    },
+    "paths": {
+      "architecture_test_evidence": "docs/master-integration/MI-COMMON-09-WINDOWS-PATH-RETRY-20261120/ARCHITECTURE_TEST_EVIDENCE.md",
+      "catalog": "catalog/revisions/MI_COMMON_09_WINDOWS_TEMP_PATH_HOLD.json",
+      "handover": "handover/MI-COMMON-09-WINDOWS-PATH-RETRY-20261120.md"
+    }
   }
 }
