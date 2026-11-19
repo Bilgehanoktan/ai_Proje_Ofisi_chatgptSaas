@@ -73,6 +73,20 @@ jobs:
           assert (root/'database/0192/candidate_event_outbox_fence.sql').is_file()
           print('EXACT_PINNED_SOURCE=PASS; ORIGINAL_CORE_READER=PASS; TEST_SHA256=PASS')
           PY
+      - name: Install exact declared D0 signature dependency
+        working-directory: candidate/product/ai-company-os-backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C ../.. rev-parse HEAD:product/ai-company-os-backend/requirements-history-signatures.txt)" = "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+          grep -qx "cryptography==46.0.4" requirements-history-signatures.txt
+          timeout 120s python -m pip install --disable-pip-version-check --no-deps --only-binary=:all: -r requirements-history-signatures.txt
+          python - <<'PY'
+          import cryptography
+          from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+          assert cryptography.__version__ == '46.0.4'
+          print('PINNED_D0_CRYPTOGRAPHY=46.0.4; NO_DEPENDENCY_EXPANSION')
+          PY
       - name: Execute only ten original-source Core / OperationsStore cases
         working-directory: candidate/product/ai-company-os-backend
         shell: bash
