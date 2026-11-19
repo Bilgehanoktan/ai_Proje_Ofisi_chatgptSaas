@@ -2206,9 +2206,9 @@
       "owner_role": "QA / IV / CI",
       "source_ref": "planning/project-wide-progress-reporting",
       "observed_sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
-      "next": "CI tasarımı ve izinli local test matrisi; CI etkinleştirme ve bağımsız kabul ayrı onay",
+      "next": "MI-01 Unified owner: exact 61bb06e source checkout, full manifest SHA256/lock review and adapted W8 audit/prepare/install/test/smoke in isolated environment. CI workflow remains forbidden pending separate explicit CI grant; do not use legacy npm lock regeneration. MI-10 may only plan matrix/readback now.",
       "priority": "P1",
-      "status": "HOLD",
+      "status": "REMOTE_STATIC_PREFLIGHT_PASS_CI_HOLD_FULL_BUILD_NOT_RUN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "branch head observed only; latest acceptance not reconciled",
       "security_dependency_handoff": {
@@ -2248,6 +2248,32 @@
         "product_changes": 0,
         "acceptance_delta": 0,
         "progress_delta": 0
+      },
+      "previous_status": "HOLD",
+      "pc_free_test_preflight": {
+        "revision": "MI-10-PC-FREE-TEST-PREFLIGHT-20261119",
+        "ref": "integration/mi-common-source-review-01",
+        "source_sha": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "product_dev_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "document": "docs/master-integration/MI-10-PC-FREE-TEST-PREFLIGHT-20261119/RESULT_AND_RUNBOOK.md",
+        "classification": "REMOTE_STATIC_READBACK_ONLY",
+        "static_checks_pass": 7,
+        "legacy_lock_regeneration_hazard_confirmed": true,
+        "original_lock_npm_metadata": [
+          61,
+          61
+        ],
+        "source_manifest_entries": 538,
+        "adaptation_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+        "new_actual_product_tests": 0,
+        "full_checkout": "BLOCKED_LOCAL_DNS",
+        "full_build": "NOT_RUN",
+        "browser": "NOT_RUN",
+        "ci": "NOT_AUTHORIZED",
+        "owner_review": "PENDING",
+        "product_changes": 0,
+        "progress_delta_pp": 0,
+        "acceptance_delta": 0
       }
     }
   ],
