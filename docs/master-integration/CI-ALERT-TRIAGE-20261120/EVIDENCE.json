@@ -1,0 +1,109 @@
+{
+  "revision": "CI-ALERT-TRIAGE-20261120",
+  "date": "2026-11-20",
+  "scope": "user screenshots of historical GitHub Actions failure emails for PR6 and PR4",
+  "classification": "EXACT_GITHUB_RUN_JOB_LOG_RECONCILIATION_NO_NEW_TESTS",
+  "triage": [
+    {
+      "workstream": "MI03_PR6",
+      "run": 44619326736,
+      "job": 135896448757,
+      "result": "FAIL",
+      "failed_step": "Set up reviewed Python runtime",
+      "classification": "ENV_BOOTSTRAP",
+      "confirmed_test_result": "NOT_EXECUTED"
+    },
+    {
+      "workstream": "MI03_PR6",
+      "run": 44619523838,
+      "job": 135897113232,
+      "result": "FAIL",
+      "failed_step": "Execute only ten original-source Core / OperationsStore cases",
+      "classification": "MISSING_CRYPTO_DEPENDENCY_IN_ENV",
+      "confirmed_test_result": "NOT_COMPLETE"
+    },
+    {
+      "workstream": "MI03_PR6",
+      "run": 44619843185,
+      "job": 135898235557,
+      "result": "FAIL",
+      "failed_step": "Install exact declared D0 signature dependency",
+      "classification": "CFFI_TRANSITIVE_BOOTSTRAP",
+      "confirmed_test_result": "NOT_EXECUTED"
+    },
+    {
+      "workstream": "MI03_PR6",
+      "run": 44620141705,
+      "job": 135899290063,
+      "result": "SUCCESS",
+      "actual_tests": "ORIGINAL_CORE_OPERATIONSSTORE_10/10_PASS_D0_SYNTHETIC",
+      "repeat": false
+    },
+    {
+      "workstream": "MI03_PR6",
+      "run": 44623379375,
+      "job": 135910957645,
+      "result": "SUCCESS",
+      "actual_tests": "ORIGINAL_CORE_OPERATIONSSTORE_10/10_PASS_D0_SYNTHETIC",
+      "repeat": true,
+      "head": "4c0f88e08450ba9ad0e51640737531a432afd383"
+    },
+    {
+      "workstream": "MI10_PR4",
+      "run": 44620487661,
+      "job": 135900730739,
+      "result": "FAIL",
+      "failed_step": "Exercise exact per-fetch SSE body freshness negative regression",
+      "classification": "QA_TEST_HARNESS_NODE_VM_ARRAY_REALM_MISMATCH",
+      "source_check": "PASS",
+      "t1_selected": "PASS",
+      "nextjs_before_failure": "PASS"
+    },
+    {
+      "workstream": "MI10_PR4",
+      "run": 44620987573,
+      "result": "SUCCESS",
+      "actual_jobs": [
+        3,
+        3
+      ],
+      "new_negative_qa_assertions": [
+        17,
+        17
+      ],
+      "diagnostic_browser": "SSE_PER_REQUEST_CLONE_PASS",
+      "native_byte_exact_U3": "KNOWN_CDP_BODY_FAILURE",
+      "head": "f98da5ab0cef72e87b15878499baceeb15909005"
+    }
+  ],
+  "original_product_sources_changed_by_this_triage": 0,
+  "CI_workflow_runs_started_by_this_triage": 0,
+  "authoritative_sources": [
+    "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44623379375",
+    "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620987573"
+  ],
+  "source_owner_isolation": "PR6 owned by MI03; PR4 owned by MI10; both draft, no merges or new permissions",
+  "remaining_blocks": [
+    "MI01 W8 prepare Python wheelhouse + python.lock + REVIEW.json sha evidence NOT_RUN",
+    "MI01 dependency provenance and hash security owner ratification HOLD",
+    "MI01 original W8 install/test/smoke NOT_RUN",
+    "MI01 original U3 CDP SSE body NOT_PASS",
+    "MI03 actual registry/member/role trusted issuer and protected PostgreSQL COMMIT HOLD",
+    "independent verifier security acceptance HOLD"
+  ],
+  "next_P0": "MI01 Unified owner carries W8 prepare-only workflow outside existing restricted PR4 CI scope; explicit authorization required to extend GitHub Actions; review Python wheelhouse provenance, hashes, cross-platform ABI and security before W8 install/test/smoke.",
+  "metrics": {
+    "previous_global_development_percent": null,
+    "current_global_development_percent": null,
+    "delta_pp": null,
+    "formal_product_acceptance_delta_pp": 0,
+    "MI01_operational_gates": [
+      3,
+      8
+    ],
+    "CI_alerts_counted_as_product_failures": 0,
+    "new_unique_methods_from_repeated_pr6": 0
+  },
+  "fallback": "If owner CI branch changes, re-check exact head/run before acting; do not treat email as latest branch status.",
+  "rollback": "Normal revert governance-only records; no product, config, workflow or production source changes."
+}

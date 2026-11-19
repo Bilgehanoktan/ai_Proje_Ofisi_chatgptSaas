@@ -1,1 +1,39 @@
-{"status":"HOLD","source":"docs/0158/R07_R08_D14_D16_INCELEME_0158.md","boundaries":["tenant/scope","policy/grant/lease","ToolGateway PEP","independent W-A","Independent Verifier","F3 zero external writes","skill quarantine","model egress disabled","tombstone retrieval and release hold"],"real_acceptance":false,"review_module":"product/ai-company-os-backend/app/core/policy/gateway_review.py","witness_module":"product/ai-company-os-backend/app/core/policy/witness_review.py","iv_candidate":"product/ai-company-os-backend/app/core/policy/iv_review.py","receipt_candidate":"product/ai-company-os-backend/app/core/policy/receipt_review.py"}
+{
+  "status": "HOLD",
+  "source": "docs/0158/R07_R08_D14_D16_INCELEME_0158.md",
+  "boundaries": [
+    "tenant/scope",
+    "policy/grant/lease",
+    "ToolGateway PEP",
+    "independent W-A",
+    "Independent Verifier",
+    "F3 zero external writes",
+    "skill quarantine",
+    "model egress disabled",
+    "tombstone retrieval and release hold"
+  ],
+  "real_acceptance": false,
+  "review_module": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+  "witness_module": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+  "iv_candidate": "product/ai-company-os-backend/app/core/policy/iv_review.py",
+  "receipt_candidate": "product/ai-company-os-backend/app/core/policy/receipt_review.py",
+  "selected_architecture_direction": {
+    "decision_id": "D03-D04-A-20261120",
+    "choice": "A",
+    "status": "DESIGN_DIRECTION_ONLY_RUNTIME_DENY",
+    "ADR": "decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+    "source": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+    "components": [
+      "independently administered consensus root+claim ledger",
+      "sink-enforced fresh epoch fencing and atomic effect idempotency"
+    ],
+    "readiness": "NOT_IMPLEMENTED",
+    "matrix_pass": [
+      0,
+      8
+    ],
+    "historical_D0_restore_residual": "REPRODUCED",
+    "independent_security_acceptance": "HOLD",
+    "permissions_change": 0
+  }
+}

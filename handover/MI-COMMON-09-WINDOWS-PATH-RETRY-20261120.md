@@ -1,0 +1,8 @@
+# MI-COMMON-09 / Windows PATH-HOLD — Handover, 2026-11-20
+
+- **What:** The user ran the exact source-pinned 344 test launcher on Windows. Three wheel downloads/hash checks and native imports passed, source pins 114/114; MEM group 184 tests produced 157 errors and zero fully completed groups. Four groups (160 tests) did not execute.
+- **Why blocked:** `snapshot_store._path` raised `MEMORY_SNAPSHOT_PATH_HOLD` on a temp path using a Windows 8.3 alias. Root cause is a canonical-path mismatch hypothesis; not yet proven.
+- **Where:** Unmodified `snapshot_store.py` path guard; unmodified `run_combined.py` original 344-test runner. See [architecture and evidence](../docs/master-integration/MI-COMMON-09-WINDOWS-PATH-RETRY-20261120/ARCHITECTURE_TEST_EVIDENCE.md), [catalog](../catalog/revisions/MI_COMMON_09_WINDOWS_TEMP_PATH_HOLD.json) and local PowerShell script SHA `c649752f1c1ca205bc4e1ecd58fe06b9e883a648f0875e1365fd3c9d4fb56170`.
+- **How to continue:** Run the delivered script locally without new package installs, after owner review. It first tests whether the new TEMP path resolves canonically. Verify source pin pre+post, 344 completed and exit 0. Otherwise inspect first error and preserve HOLD.
+- **Maintenance/rollback:** Preserve original failed stage/log; retry uses a new directory and restores TEMP/TMP/TMPDIR. Remove only the retry folder after archiving evidence. No repo/code revert is necessary for this documentation-only commit.
+- **Progress:** MI-08 recorded 45% remains 45% (+0pp); MI-07 no computed percentage; acceptance change 0. No production, main, CI, protected COMMIT or independent authorization.

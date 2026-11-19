@@ -1,0 +1,184 @@
+{
+  "revision": "MI03-A-PR9-SOURCE-STAGE-20261120",
+  "observed_utc": "2026-11-19T22:06:58Z",
+  "scope": "CONTROLLED_EXISTING_OWNER_SOURCE_INTEGRATION_REVIEW_NOT_MERGE",
+  "architecture_decision": "A selected 2026-11-20; no independent runtime or grant",
+  "pull_request": {
+    "number": 9,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/9",
+    "draft": true,
+    "merge": false,
+    "head": "integration/mi03-gate03-org-runtime-closure-01",
+    "head_sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+    "base": "integration/mi-common-source-review-01",
+    "base_sha": "59c0fc505ca286e681ed0965ee317eadf571a806"
+  },
+  "candidate_product": {
+    "before_files": 539,
+    "after_if_approved": 553,
+    "manifest_before": 538,
+    "manifest_candidate": 552,
+    "unchanged_existing_manifest_entries": 538,
+    "added_entries": 14,
+    "modified_existing": 0,
+    "removed_existing": 0,
+    "actual_product_dev_promotion": false
+  },
+  "source_readback": {
+    "sha256_algorithm": "SHA-256 over UTF-8 source from exact GitHub fetch_file",
+    "known_vector_abc_checked": true,
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "source_files": [
+      {
+        "path": "product/ai-company-os-backend/durable_ops.py",
+        "git_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+        "sha256": "8e0ea5e8f573339be13da88de4b982849dc44c9a67be6384795c51a45b8b10de",
+        "bytes": 11599,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/integration_guard.py",
+        "git_blob": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "sha256": "3fba6f345356725be61f8d7aa5460a95f0a376705fc8dfefe37d3c7686c55042",
+        "bytes": 4996,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/operations.py",
+        "git_blob": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "sha256": "ac57a06a9f0c6a9b6a9886f04456962582f8aa080478a95654a2e1032c66e82b",
+        "bytes": 3620,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/office_bridge.py",
+        "git_blob": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "sha256": "e8a2eb953313bc2342fa9c0264358ab6eda16eb6a40b0a36036d2a04991615a3",
+        "bytes": 9224,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/persistence.py",
+        "git_blob": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "sha256": "beffb280340c1c3da13f13248d5049d6d51d87ad05e5448a3373168919ecfd34",
+        "bytes": 8075,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/staffing.py",
+        "git_blob": "e0b9078284922d281996869daa15a455572c1785",
+        "sha256": "51131102e6c601c2efaf6ec18e430b87dd221edec9650d9c8391a3bcff131d32",
+        "bytes": 3179,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/org_model.py",
+        "git_blob": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "sha256": "a864d7bd6f1ca1fe17095c953529dc739f95ad2073e121bdb90014d1a16ea46e",
+        "bytes": 2342,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/assignment_lifecycle.py",
+        "git_blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+        "sha256": "b1f1b3efc935bcb95ad3616c8acfebf274a3246a91cb674fcfd554a2b7b5fc23",
+        "bytes": 10531,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/operations.sql",
+        "git_blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "sha256": "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77",
+        "bytes": 1725,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/schema.sql",
+        "git_blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "sha256": "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed",
+        "bytes": 2787,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/assignment_review.sql",
+        "git_blob": "3e887b10263f44b601f6a811a89687b2ee4d864e",
+        "sha256": "8983995430cbd87a1bca68c5dac0206e1051c9039659c4f0be9be0b79209ab21",
+        "bytes": 784,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/org_core_bridge.py",
+        "git_blob": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+        "sha256": "be0a90ab3a68639961d0cf392d01c07d353fdfc3066ea02bde751dcf2bdac614",
+        "bytes": 6701,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py",
+        "git_blob": "f396114ec2fd2f3ceeaf3893b98d1f5174cae34a",
+        "sha256": "e5e14dcd06b8db970e51c538a377ee46f03ee1a9bc49596d0166135cb1f07ac4",
+        "bytes": 2332,
+        "recalculated_sha256_match": true
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+        "git_blob": "6fa630b9765c12f944203631972c90b1a4901a0f",
+        "sha256": "d46408edae8f467a19b4bdda4647d8afc73f87508ac080ea34be015014268cb6",
+        "bytes": 7056,
+        "recalculated_sha256_match": true
+      }
+    ]
+  },
+  "collision_analysis": {
+    "durable_ops": {
+      "source_g9_blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "candidate_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "g9_lines": 162,
+      "candidate_lines": 203,
+      "retained_original_lines": 162,
+      "added_lines": 41,
+      "removed_lines": 0,
+      "added_symbols": [
+        "initialize_assignment_ops",
+        "OperationsStore.record_assignment_review",
+        "OperationsStore.assignment_review"
+      ],
+      "owner_decision": "PENDING_G9_ORG_CORE; no automatic repin"
+    },
+    "intent_authority": {
+      "common_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "g2_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "source_file_in_this_PR": false,
+      "existing_lines_unchanged": 145,
+      "signature_lines_replaced": 3,
+      "net_line_difference": 25,
+      "owner_decision": "PENDING_IAM_AUTHORITY"
+    }
+  },
+  "tests": {
+    "new_functional_run_this_action": 0,
+    "preexisting_sqlite_sql_regression": "11/11 PASS historical owner evidence",
+    "preexisting_coreops_ci": "10/10 PASS historical PR6 CI 44620141705",
+    "packaging_smoke": "0/4 NOT_RUN",
+    "g2_original": "0/50 NOT_RUN in this gate",
+    "g9_original": "0/7 NOT_RUN in this gate",
+    "memory_t1_0214": "0/10 NOT_RUN",
+    "strict_postgresql": "NOT_RUN",
+    "w8_full": "HOLD",
+    "independent_negative": "0/8 NOT_RUN",
+    "independent_security_acceptance": "HOLD"
+  },
+  "constraints": {
+    "no_CI_expansion": true,
+    "no_main_merge": true,
+    "no_product_dev_mutation": true,
+    "no_provider": true,
+    "no_external_effect": true,
+    "no_credential": true,
+    "no_consumed_claim_reset": true,
+    "no_authorization": true
+  },
+  "rollback": "Close PR9 or normal revert after approved merge. Until then common, product-dev, main untouched. No claim reset."
+}

@@ -1,0 +1,79 @@
+{
+  "revision": "MI03-A-PR9-SOURCE-STAGE-20261120",
+  "method": "15/35/20/20/10 EVIDENCED_CRITERIA; no new owner-ratified denominator",
+  "IAM_ORG": {
+    "previous_development_percent": 42.5,
+    "current_development_percent": 42.5,
+    "delta_percentage_points": 0
+  },
+  "global_development": {
+    "previous": null,
+    "current": null,
+    "delta": null,
+    "reason": "Unratified project-wide scope/criteria"
+  },
+  "source_integrity_only": {
+    "added_files_proposed": 14,
+    "verified_sha256": 14,
+    "verified_total": 14,
+    "is_functional_test": false
+  },
+  "product_acceptance": {
+    "core_previous": [
+      12,
+      16
+    ],
+    "core_current": [
+      12,
+      16
+    ],
+    "mvp_previous": [
+      0,
+      11
+    ],
+    "mvp_current": [
+      0,
+      11
+    ],
+    "IV_previous": [
+      0,
+      7
+    ],
+    "IV_current": [
+      0,
+      7
+    ],
+    "delta_percentage_points": 0
+  },
+  "independent_A_security_tests": {
+    "pass": 0,
+    "total": 8,
+    "gate": "HOLD"
+  },
+  "current_stage": "DRAFT_PR9_CREATED_SOURCE_VERIFIED_OWNER_REVIEW_REQUIRED",
+  "gate_queue_delta": [
+    {
+      "existing": "MI-03/MI-06",
+      "task": "ORG/Core transfer 539=>553 owner review",
+      "status": "PR9_DRAFT_OPEN",
+      "owner": "ORG/Core/G9/Unified",
+      "new_duplicate_task": false
+    },
+    {
+      "existing": "MI-03/MI-04",
+      "task": "G2 and G9 authority variant owner review",
+      "status": "HOLD",
+      "new_duplicate_task": false
+    },
+    {
+      "existing": "MI-01/MI-10",
+      "task": "Full W8 exact prepare/build and approved smoke",
+      "status": "NOT_RUN",
+      "new_duplicate_task": false
+    }
+  ],
+  "permissions_changed": false,
+  "source_product_dev_changed": false,
+  "new_test_execution": 0,
+  "rollback": "Keep existing common and owner branch; close PR9 or normal revert; no claim reset"
+}

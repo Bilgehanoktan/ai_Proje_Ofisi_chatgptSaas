@@ -1,0 +1,275 @@
+{
+  "revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
+  "date": "2026-11-20",
+  "gate": "MI03-GATE02_AND_MI04_G04",
+  "type": "USER_APPROVED_ARCHITECTURE_DIRECTION_ONLY",
+  "choice": "A",
+  "user_choice_verbatim": "D-03/D-04 güvenlik tasarımı için A seçeneğini tercih ediyorum. Bu tercihi mevcut izin sınırları içinde mimari karar olarak değerlendir; ürün aktivasyonu, bağımsız kabul veya gerçek yetki verme işlemi yapmadan GATE-02 entegrasyonunu ilerlet.",
+  "architecture_direction": "INDEPENDENTLY_ADMINISTERED_CONSENSUS_BACKED_LINEARIZABLE_ROOT_AND_CLAIM_LEDGER_PLUS_SEPARATELY_ADMINISTERED_SINK_SIDE_FENCED_IDEMPOTENT_ACCEPTANCE",
+  "effective_operational_default": "CURRENT_D0_DEFAULT_DENY_HOLD_NO_PRODUCTION_EXECUTION",
+  "implementation_technology": "NOT_SELECTED",
+  "provider": "NOT_SELECTED",
+  "quorum_configuration": "NOT_SELECTED",
+  "independent_administrative_domain": "NOT_PROVISIONED",
+  "root_ledger": "NOT_IMPLEMENTED",
+  "sink_acceptor": "NOT_IMPLEMENTED",
+  "issuer": "NOT_CONNECTED",
+  "owner_custody": "NOT_PROVEN",
+  "architecture_decision_status": "SELECTED_RATIFIED_DIRECTION_NOT_IMPLEMENTATION_OR_SECURITY_ACCEPTANCE",
+  "alternative_B": "NOT_SELECTED",
+  "alternative_C": "NOT_SELECTED_ARCHITECTURE_BUT_CONTINUES_EFFECTIVE_D0_HOLD_BEHAVIOR",
+  "baseline": {
+    "governance_commit": "5cee56db980d606daf027f0bf82ccaee02748299",
+    "product_dev_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common_commit": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+    "base_design_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+    "previous_security_matrix": "progress/MI_GATE02_T1_CORE_CLOSURE_20261120.json",
+    "previous_core_10_ci": 44620141705,
+    "prior_selected_79": "PASS_WITH_DELBERATE_RESTORE_REPRODUCTION",
+    "original_0214_10": "NOT_RUN",
+    "canonical_core_acceptance": [
+      12,
+      16
+    ],
+    "mvp_acceptance": [
+      0,
+      11
+    ],
+    "iv_acceptance": [
+      0,
+      7
+    ]
+  },
+  "approved_scope": [
+    "Design direction A only",
+    "Versioned ADR/contract/catalog/test matrix/owner handover",
+    "Update governance queue, security catalog and progress"
+  ],
+  "forbidden_scope": [
+    "No product code changes",
+    "No real credentials/issuer or effect-sink access",
+    "No independent security receipt or release acceptance",
+    "No PostgreSQL, real grants, CI change or deployment",
+    "No choice of provider/KMS/quorum parameters without owner review",
+    "No branch merge or alteration of product-dev or main"
+  ],
+  "architecture_roles": [
+    {
+      "role": "IndependentAuthority",
+      "trust_domain": "SEPARATE_ADMIN_AND_RESTORE_DOMAIN",
+      "functions": [
+        "linearizableRootRead",
+        "consumeClaimOnce",
+        "checkRevocationAndEpoch",
+        "independentMonotonicRecovery"
+      ],
+      "constraints": [
+        "Product identity cannot write/restore/replace ledger",
+        "Quorum and failure behavior must be proven before runtime",
+        "No local file/path or caller epoch as latest proof"
+      ],
+      "status": "SPEC_ONLY"
+    },
+    {
+      "role": "ProductCoreOrgIam",
+      "trust_domain": "PRODUCT_AND_IAM_OWNER",
+      "functions": [
+        "readActualOwnerAndRoleFacts",
+        "deriveOriginalBinding",
+        "callAuthorityAsUntrustedClient",
+        "submitToProtectedT1OnlyAfterProof"
+      ],
+      "constraints": [
+        "ApprovalObservation/ACCEPTED_D0 are never a grant",
+        "Authority admin cannot share product credentials"
+      ],
+      "status": "CURRENT_D0_HOLD"
+    },
+    {
+      "role": "ProtectedT1",
+      "trust_domain": "POSTGRESQL_ORIGINAL_OWNER",
+      "functions": [
+        "bindScopeAndExpectedVersion",
+        "atomicBusinessWriteSetAndOutbox",
+        "unknownOutcomeQuarantine"
+      ],
+      "constraints": [
+        "No commit before independently consumed claim",
+        "Actual PostgreSQL/RLS and COMMIT not proven"
+      ],
+      "status": "NOT_RUN"
+    },
+    {
+      "role": "EffectSink",
+      "trust_domain": "INDEPENDENT_ENFORCEMENT_AND_CREDENTIAL_DOMAIN",
+      "functions": [
+        "checkIndependentFreshEpoch",
+        "atomicCompareFenceAndDedupEffectId",
+        "returnSignedAcceptanceForReview"
+      ],
+      "constraints": [
+        "No direct caller bypass",
+        "Caller-supplied or previously signed historical receipt is insufficient",
+        "Failure/partition fail closed"
+      ],
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "role": "IndependentVerifier",
+      "trust_domain": "SECURITY_IV_SEPARATE_FROM_PRODUCT",
+      "functions": [
+        "quorumAndRestoreDrills",
+        "credentialIsolationTests",
+        "sourceAndReceiptTraceability",
+        "independentAcceptance"
+      ],
+      "constraints": [
+        "Cannot certify itself through local synthetic logs"
+      ],
+      "status": "NOT_RUN"
+    }
+  ],
+  "nonnegotiable_invariants": [
+    {
+      "id": "A-I01",
+      "rule": "Root and consumed-claim ledger must be in independently administered and restored domain; product/tenant/API identity cannot reset, restore or replace it."
+    },
+    {
+      "id": "A-I02",
+      "rule": "Authority claim-consume is linearizable durable CAS and bound to full tenant/company/environment/project/plan/task/run/principal/intent/transaction/request/version/issuer/policy_epoch/root_epoch and stable effect_id; retry cannot erase consumption."
+    },
+    {
+      "id": "A-I03",
+      "rule": "Claim consumption durably precedes any protected business T1 attempt; failure or lost reply after consumption is quarantined with no automatic replay."
+    },
+    {
+      "id": "A-I04",
+      "rule": "Separate effect sink validates independent current root/epoch and monotonically fenced fresh proof at acceptance time, and atomically deduplicates effect_id in its own domain."
+    },
+    {
+      "id": "A-I05",
+      "rule": "Revocation, key rotation, lease expiry, root regression and stale replicas deny acceptance; historical signed pins/receipts are never authority."
+    },
+    {
+      "id": "A-I06",
+      "rule": "Unknown COMMIT outcome uses exact authority/sink/outbox reconciliation, does not make new claim or retry blindly; no bypass on partition or timeouts."
+    },
+    {
+      "id": "A-I07",
+      "rule": "No direct effect endpoint without server-enforced full mediation and distinct effect credentials; all tenant/run scope mismatches reject."
+    },
+    {
+      "id": "A-I08",
+      "rule": "Root backup restore must prove monotonic continuity from independently held checkpoint; original D03-D04 eight independent acceptance cases must be independently executed."
+    }
+  ],
+  "proposed_interface_contracts": [
+    {
+      "interface": "IndependentRootSnapshotV1",
+      "source_type": "PROPOSED_NOT_EXISTING_API",
+      "fields": [
+        "root_id",
+        "epoch:uint64",
+        "sequence:uint64",
+        "root_digest:sha256",
+        "key_revision:uint64",
+        "quorum_proof_ref",
+        "issued_at_trusted_clock",
+        "independent_checkpoint_ref"
+      ],
+      "verifier": "independently trusted source, not caller envelope"
+    },
+    {
+      "interface": "ConsumedIntentClaimV1",
+      "source_type": "PROPOSED_NOT_EXISTING_API",
+      "fields": [
+        "claim_id",
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "project_id",
+        "plan_revision",
+        "task_id",
+        "run_id",
+        "principal_id",
+        "owner_issuer_proof_ref",
+        "role_binding_digest",
+        "intent_digest",
+        "request_digest",
+        "transaction_ref",
+        "expected_version",
+        "policy_epoch",
+        "root_epoch",
+        "effect_id",
+        "fence_counter"
+      ],
+      "uniqueness": "(full canonical intent scope, transaction_ref) and effect_id immutable; consumed forever, no reset"
+    },
+    {
+      "interface": "SinkFenceAcceptanceV1",
+      "source_type": "PROPOSED_NOT_EXISTING_API",
+      "fields": [
+        "effect_id",
+        "authority_root_id",
+        "claim_ref",
+        "epoch",
+        "fence_counter",
+        "scope_digest",
+        "request_digest",
+        "idempotency_key",
+        "sink_receipt_ref"
+      ],
+      "acceptance": "accept once only after independent latest-root proof; sink-side transaction/dedupe; no client assertion"
+    }
+  ],
+  "design_only_state_machine": [
+    {
+      "from": "OBSERVED_D0_HOLD",
+      "to": "SPECIFIED_A_NO_RUNTIME",
+      "predicate": "user architecture preference recorded",
+      "actual": true
+    },
+    {
+      "from": "SPECIFIED_A_NO_RUNTIME",
+      "to": "OWNER_APPROVED_CUSTODY_DESIGN",
+      "predicate": "independent root and sink security owners approve model, no real grant",
+      "actual": false
+    },
+    {
+      "from": "OWNER_APPROVED_CUSTODY_DESIGN",
+      "to": "ISOLATED_PROTOTYPE_APPROVED",
+      "predicate": "owner scoped source/CI permission and data fixture boundaries approved",
+      "actual": false
+    },
+    {
+      "from": "ISOLATED_PROTOTYPE_APPROVED",
+      "to": "INDEPENDENT_EVIDENCE_REVIEW",
+      "predicate": "8 independent failure tests and protected PostgreSQL with sink fence proof",
+      "actual": false
+    },
+    {
+      "from": "INDEPENDENT_EVIDENCE_REVIEW",
+      "to": "SEPARATE_PRODUCT_ACTIVATION",
+      "predicate": "separate human/security explicit grant, IV, release",
+      "actual": false
+    }
+  ],
+  "GATE02_status": "SECURITY_HOLD_RESTORE_BYPASS_REPRODUCED",
+  "acceptance_matrix": [
+    0,
+    8
+  ],
+  "security_accepted": false,
+  "new_tests_run": 0,
+  "product_source_files_changed": 0,
+  "APIs_changed": 0,
+  "DB_changed": 0,
+  "actual_permissions_changed": 0,
+  "prior_iam_org_development_percent": 42.5,
+  "current_iam_org_development_percent": 42.5,
+  "delta_pp": 0,
+  "global_development_previous": null,
+  "global_development_current": null,
+  "product_acceptance_delta": 0,
+  "owner_next": "Owner review of A boundary without provider selection; then strictly scoped interface-only source contract by existing owners, independent domain custody and 8 tests after separate permissions; preserve Core10 PASS and original G2/G9/0214/PG/W8 HOLD."
+}

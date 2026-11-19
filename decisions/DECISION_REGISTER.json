@@ -41,6 +41,25 @@
       "choice": "Continue 0218–0225 integration sequence",
       "status": "DIRECTION_RECORDED_NOT_GRANT",
       "record": "decisions/CEO/CEO_0218_INTEGRATION_SEQUENCE.md"
+    },
+    {
+      "id": "D03-D04-A-20261120",
+      "choice": "A",
+      "date": "2026-11-20",
+      "status": "USER_SELECTED_ARCHITECTURE_DIRECTION_ONLY",
+      "record": "decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+      "implementation": "NOT_APPROVED_OR_STARTED",
+      "independent_security_acceptance": "HOLD",
+      "real_execution": "DENY_DEFAULT",
+      "supersedes_option_selection_only": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+      "preserves": [
+        "CEO-0174",
+        "CEO-0179=B",
+        "ADR-T1",
+        "ADR-R1",
+        "ADR-IV",
+        "F3"
+      ]
     }
   ],
   "normative_acceptance": "HOLD"

@@ -1,0 +1,478 @@
+{
+  "revision": "MI-P0-SOURCE-PROOF-READBACK-20261120-R1",
+  "date": "2026-11-20",
+  "classification": "GITHUB_IMMUTABLE_MANIFEST_AND_COMPARE_STATIC_READBACK_NOT_RUNTIME_TEST",
+  "repository": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "refs": {
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "proofCandidate": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+    "common": "59c0fc505ca286e681ed0965ee317eadf571a806",
+    "org": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59"
+  },
+  "manifest_git_blobs": {
+    "base": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "proofCandidate": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "common": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "org": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "original_pr7_evidence_git_blob": "6ee8f343f5d4c4a7bff539939809a95e75bfd8dc",
+  "checks": {
+    "505_to_539_manifest": {
+      "base_entries": 504,
+      "candidate_entries": 538,
+      "unchanged": 490,
+      "modified": 13,
+      "added": 35,
+      "removed": 1
+    },
+    "505_to_539_git_product": {
+      "total": 49,
+      "types": {
+        "modified": 14,
+        "added": 34,
+        "renamed": 1
+      }
+    },
+    "pr7_exact_paths_and_manifest_records": {
+      "matched": 49,
+      "total": 49,
+      "errors": 0
+    },
+    "current_common_same_product": {
+      "matched": true,
+      "candidate_to_common_changed_product_files": 0,
+      "same_manifest_blob": true
+    },
+    "539_to_553_manifest": {
+      "base_entries": 538,
+      "candidate_entries": 552,
+      "unchanged": 538,
+      "added": 14,
+      "removed": 0,
+      "modified": 0
+    },
+    "539_to_553_git_product": {
+      "product_files": 15,
+      "source_added": 14,
+      "manifest_changed": 1,
+      "compare_status": "diverged",
+      "ahead_by": 2,
+      "behind_by": 5
+    },
+    "human_owner_ratification": "NOT_COMPLETED"
+  },
+  "owner_declared_counts": {
+    "CENTRAL_MANIFEST": 1,
+    "MI-07/08": 26,
+    "MI-03/04": 4,
+    "MI-05/06/09": 15,
+    "MI-01": 3
+  },
+  "pr7_path_proof": [
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "change": "modified",
+      "owner": "CENTRAL_MANIFEST",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "change": "modified",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "change": "modified",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "change": "added",
+      "owner": "MI-03/04",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "change": "added",
+      "owner": "MI-03/04",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "change": "modified",
+      "owner": "MI-03/04",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "change": "modified",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r1.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r2.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_recovery_w5_mem05e.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "change": "modified",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py",
+      "change": "added",
+      "owner": "MI-03/04",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_cost_review.py",
+      "change": "added",
+      "owner": "MI-07/08",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+      "change": "modified",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.module.css",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.tsx",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/skillData.json",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/ext06/skillStudioModel.ts",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "change": "modified",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+      "change": "modified",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "change": "modified",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+      "change": "added",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+      "change": "modified",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "change": "modified",
+      "owner": "MI-01",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+      "change": "renamed",
+      "owner": "MI-01",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/projection-registry.test.cjs",
+      "change": "modified",
+      "owner": "MI-05/06/09",
+      "original_record_match": true,
+      "candidate_record_match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+      "change": "modified",
+      "owner": "MI-01",
+      "original_record_match": true,
+      "candidate_record_match": true
+    }
+  ],
+  "org_added_paths": [
+    "product/ai-company-os-backend/durable_ops.py",
+    "product/ai-company-os-backend/integration_guard.py",
+    "product/ai-company-os-backend/operations.py",
+    "product/ai-company-os-backend/office_bridge.py",
+    "product/ai-company-os-backend/persistence.py",
+    "product/ai-company-os-backend/staffing.py",
+    "product/ai-company-os-backend/org_model.py",
+    "product/ai-company-os-backend/assignment_lifecycle.py",
+    "product/ai-company-os-backend/operations.sql",
+    "product/ai-company-os-backend/schema.sql",
+    "product/ai-company-os-backend/assignment_review.sql",
+    "product/ai-company-os-backend/org_core_bridge.py",
+    "product/ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py",
+    "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py"
+  ],
+  "source_owners": "PR7/PR9/CTL01 original owners; source transfer owner review required",
+  "security_constraints": [
+    "G9_durable_ops_owner_blob_collision",
+    "G2_intent_authority_owner_blob_collision",
+    "independent_issuer_and_custody_HOLD",
+    "original_W8_fullchain_NOT_RUN",
+    "Memory_T1_G2_G9_orig_NOT_RUN",
+    "protected_PostgreSQL_and_IV_HOLD"
+  ],
+  "tests_this_round": {
+    "functional": 0,
+    "build": 0,
+    "CI": 0,
+    "static_compare_validations": "PASS_NOT_FUNCTIONAL"
+  },
+  "change": {
+    "product": 0,
+    "api": 0,
+    "db": 0,
+    "source_manifest": 0,
+    "permissions": 0
+  },
+  "progress": {
+    "core_previous": [
+      12,
+      16
+    ],
+    "core_current": [
+      12,
+      16
+    ],
+    "mvp_previous": [
+      0,
+      11
+    ],
+    "mvp_current": [
+      0,
+      11
+    ],
+    "new_acceptance": 0,
+    "weighted_development_previous": null,
+    "weighted_development_current": null,
+    "weighted_development_delta_pp": null
+  },
+  "disposition": "STATIC_SOURCE_DIFF_PROOF_INDEXABLE; PRODUCT_PROMOTION_HOLD; PR7/PR9_STAY_DRAFT",
+  "rollback": "Normal revert on governance branch only; original PRs and product-dev stay untouched"
+}

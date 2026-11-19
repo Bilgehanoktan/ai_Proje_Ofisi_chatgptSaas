@@ -1,0 +1,57 @@
+{
+  "revision": "MI-COMMON-09-WINDOWS-PATH-HOLD",
+  "source_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+  "product_code_change": false,
+  "architecture_change": false,
+  "dependencies_change": false,
+  "symbols": [
+    {
+      "file": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "symbol": "_path(path)",
+      "type": "function",
+      "blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+      "role": "deny noncanonical and symlinked disposable SQLite paths; no code change",
+      "observed_error": "MEMORY_SNAPSHOT_PATH_HOLD"
+    },
+    {
+      "file": "docs/master-integration/MI-07-08-JOINT-TRANSFER/run_combined.py",
+      "symbol": "main() / CHILD",
+      "type": "test-runner",
+      "blob": "6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb",
+      "role": "114 pinned sources, 5 groups 184/80/16/28/36; no code change"
+    }
+  ],
+  "new_files": [
+    "docs/master-integration/MI-COMMON-09-WINDOWS-PATH-RETRY-20261120/ARCHITECTURE_TEST_EVIDENCE.md",
+    "handover/MI-COMMON-09-WINDOWS-PATH-RETRY-20261120.md",
+    "catalog/revisions/MI_COMMON_09_WINDOWS_TEMP_PATH_HOLD.json"
+  ],
+  "apis": [],
+  "database_changes": [],
+  "events": [],
+  "source_candidate_changes": [],
+  "test_status": {
+    "expected": 344,
+    "first_group": "MEM",
+    "first_group_tests_run": 184,
+    "first_group_errors": 157,
+    "first_group_complete_pass": false,
+    "remaining_groups_not_run": [
+      80,
+      16,
+      28,
+      36
+    ],
+    "complete_groups_pass": 0,
+    "runner_exit_code": 1,
+    "status": "HOLD"
+  },
+  "mitigation": {
+    "script_name": "MI_COMMON_09_TEMP_PATH_RETRY.ps1",
+    "script_sha256": "c649752f1c1ca205bc4e1ecd58fe06b9e883a648f0875e1365fd3c9d4fb56170",
+    "execution": "NOT_RUN",
+    "changes": "process-only TEMP/TMP/TMPDIR, restore in finally; new evidence dir only",
+    "success_criteria": "exact 344/344 selected D0 regression, source 114/114 pre-and-post, exit 0, PRODUCT_ACCEPTANCE=HOLD"
+  },
+  "verification_status": "NEEDS_USER_WINDOWS_RERUN"
+}

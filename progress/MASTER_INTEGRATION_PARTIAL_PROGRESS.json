@@ -1,5 +1,5 @@
 {
-  "revision": "MI-505-539-PROOF-RECONCILIATION-20261120",
+  "revision": "MI-COMMON-09-LOCAL-344-WHEELS",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -7,7 +7,7 @@
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "overall_percent": null,
-  "overall_reason": "GATE02 independent owner provenance and old-DB/old-pin restore vulnerability HOLD; original Core+OperationsStore PR6 10/10 PASS synthetic SQLite only, original T1 0214 0/10 NOT_RUN; 0/10 approved group denominators; weighted development HESAPLANAMADI.",
+  "overall_reason": "Architecture direction A chosen only; no new product/source tests, global 0/10 owner-approved group denominators, actual GATE02 independent safety 0/8. HESAPLANAMADI.",
   "global_acceptance": [
     {
       "id": "CORE",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen. | GATE02 new isolated 16/16, replayed 20/20; previous/current D5-G 42.5%, delta 0.",
   "new_product_tests": 0,
-  "previous_revision": "MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120",
+  "previous_revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1839,6 +1839,135 @@
     "weighted_delta_pp": 0,
     "product_acceptance_delta_pp": 0
   },
+  "gate02_d03d04_option_a_architecture": {
+    "revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
+    "choice": "A",
+    "decision_status": "ARCHITECTURE_DIRECTION_SELECTED_ONLY",
+    "operational_default": "D0_HOLD",
+    "adr": "decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+    "contract": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INTERFACE_AND_TRUST_CONTRACT.json",
+    "acceptance": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INDEPENDENT_ACCEPTANCE_MATRIX.json",
+    "catalog": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/TECHNICAL_CATALOG.json",
+    "handover": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "source": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+    "design_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+    "actual_new_tests": 0,
+    "independent_matrix": [
+      0,
+      8
+    ],
+    "known_restore_residual": "UNRESOLVED_REPRODUCED",
+    "prior_selected_core": [
+      10,
+      10
+    ],
+    "owner_approval": "REQUIRED",
+    "runtime_activation": "NOT_AUTHORIZED",
+    "production_acceptance": "HOLD",
+    "root_provider": "NOT_SELECTED",
+    "sink": "NOT_IMPLEMENTED",
+    "permissions_change": 0,
+    "product_code_change": 0,
+    "previous_iam_org_percent": 42.5,
+    "current_iam_org_percent": 42.5,
+    "delta_pp": 0,
+    "development_percent_previous": null,
+    "development_percent_current": null,
+    "product_acceptance_delta": 0
+  },
+  "mi_common_09_local_344_pinned_wheel_bridge": {
+    "revision": "MI-COMMON-09-LOCAL-344-WHEELS",
+    "source_candidate_commit": "59c0fc505ca286e681ed0965ee317eadf571a806",
+    "product_dev_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "windows_user_console": "ISO_PYTHON_3.13.5_SQLITE_3.46.1_CONFIRMED",
+    "raw_environment_precheck": "PENDING_USER_UPLOAD",
+    "source_git_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+    "original_model_memory_source_pins": [
+      114,
+      114
+    ],
+    "historical_core_source_pins": [
+      55,
+      55
+    ],
+    "cryptography_46_0_4_installed": "NOT_YET",
+    "wheel_script": "docs/master-integration/MI-COMMON-09-LOCAL-344-WHEELS/MI08_MODEL344_PINNED_WHEELS.ps1",
+    "source_recovery_1953": "USER_WINDOWS_TREE_MATCH",
+    "synthetic_cross_target_pip": [
+      1,
+      1
+    ],
+    "script_static_review": [
+      16,
+      16
+    ],
+    "windows_powershell_execution": "NOT_RUN",
+    "model_memory_344": "NOT_RUN",
+    "historical_core_29": "NOT_RUN",
+    "w8_full_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "protected_commit": "HOLD",
+    "independent_acceptance": "HOLD",
+    "permission_change": "NONE",
+    "weighted_progress_delta_pp": 0,
+    "product_acceptance_delta_pp": 0,
+    "dependency_versions": {
+      "cryptography": "46.0.4",
+      "cffi": "2.0.0",
+      "pycparser": "2.23"
+    },
+    "next": "User review and paste exact wheel bridge into PowerShell; require EVET before fetching, verified official PyPI SHA256 for three target wheels; run unchanged original 344 only after exact private runtime validation; upload MODEL_344_RESULT.json, MODEL_MEMORY_344.log, WHEEL_SHA256.json."
+  },
+  "mi_p0_505_539_553_static_source_readback_20261120": {
+    "revision": "MI-P0-SOURCE-PROOF-READBACK-20261120-R1",
+    "evidence": "docs/master-integration/MI-P0-SOURCE-PROOF-READBACK-20261120/SOURCE_RECONCILIATION.json",
+    "scope": "STATIC_SOURCE_PROOF_ONLY_OWNER_REVIEW_HOLD",
+    "source_baseline": [
+      "505",
+      "integration/product-dev@8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+    ],
+    "candidate_539_manifest_records": [
+      538,
+      538
+    ],
+    "pr7_git_manifest_paths": [
+      49,
+      49
+    ],
+    "pr9_added_manifest_paths": [
+      14,
+      14
+    ],
+    "preserved_existing_manifest_records": [
+      538,
+      538
+    ],
+    "new_product_tests": 0,
+    "new_product_changes": 0,
+    "development_progress_previous": null,
+    "development_progress_current": null,
+    "development_delta_pp": null,
+    "core_acceptance_previous": [
+      12,
+      16
+    ],
+    "core_acceptance_current": [
+      12,
+      16
+    ],
+    "mvp_acceptance_previous": [
+      0,
+      11
+    ],
+    "mvp_acceptance_current": [
+      0,
+      11
+    ],
+    "acceptance_delta_pp": 0,
+    "owner_review": "PENDING",
+    "product_dev_promotion": "HOLD",
+    "next": "OWNER G9 durable_ops and G2 intent_authority review; PR9 original smoke, full W8/PG/IV; no merge"
+  },
   "mi_505_539_proof_reconciliation": {
     "revision": "MI-505-539-PROOF-RECONCILIATION-20261120",
     "proof": "docs/master-integration/MI-505-539-PROOF-RECONCILIATION-20261120/SOURCE_DELTA_AND_PROOF.json",
@@ -1888,6 +2017,51 @@
     "development_previous": null,
     "development_current": null,
     "acceptance_delta_pp": 0,
-    "source_promotion": "HOLD_OWNER_REVIEW"
+    "source_promotion": "HOLD_OWNER_REVIEW",
+    "status": "REVIEW_ONLY_PENDING_OWNER",
+    "review_correction": {
+      "revision": "PR7-CATALOG-COUNTS-MANIFEST-SHA-MERGE-20261120",
+      "review_pr": 7,
+      "review_source_head": "1a8bb515486d907eab98d8a5a928c0c300158684",
+      "governance_reference_head": "e3f761043e8302a8686e9dcae2dde96fed3737b9",
+      "product_base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "product_candidate": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+      "git_compare": {
+        "old_total": 176,
+        "current_total": 172,
+        "product": 49,
+        "non_product": 123,
+        "excluded_later_files": 4
+      },
+      "exact_manifest_sha256": {
+        "base": "6b9b02e73b133e901fcee31713c31125cbd825020068e4f5e531ea5323b81792",
+        "candidate": "2ce5f642393184b04d7df1ea411e1fa13f627ba971fbc3010c2bce2b77d9c01a"
+      },
+      "governance_keys_preserved": [
+        "gate02_d03d04_option_a_architecture",
+        "mi03_gate02_issuer_provenance_source_review_20261120",
+        "ci_alert_reconciliation_20261120",
+        "mi_common_09_local_344_pinned_wheel_bridge"
+      ],
+      "owner_approval": "PENDING",
+      "product_mutations": 0,
+      "ci_mutations": 0,
+      "security_permissions_changed": false,
+      "independent_acceptance": "HOLD",
+      "mvp_acceptance": [
+        0,
+        11
+      ],
+      "rollback": "Close PR#7 or normal revert on review branch only; do not rewrite history or promote product-dev/main",
+      "weighted_development_previous": null,
+      "weighted_development_current": null,
+      "weighted_development_delta_pp": null,
+      "acceptance_delta_pp": 0,
+      "original_coreops_ci": [
+        10,
+        10
+      ],
+      "new_product_tests": 0
+    }
   }
 }
