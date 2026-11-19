@@ -73,3 +73,7 @@ Common candidate 87272b6aebd1ce4b26d3a789b2ea75e4310cf60a; source recovery helpe
 
 ## MI-COMMON-05-LOCAL-CHECKOUT
 User-approved local source transfer package; source bd57cc8235a13ba5bf10545a7879be98fd7b47f5, Git tree 187f652f1b1ff8604981833f634c4531a33f8a47, 1953 files. 12 local synthetic safety checks PASS. Await user TRANSFER_REPORT.json, original 344/29 and full W8/browser still NOT_RUN. Separate historical Core versions, original npm lock and all security gates retained. [Evidence](../docs/master-integration/MI-COMMON-05-LOCAL-CHECKOUT/EVIDENCE.json) · [Runbook](../docs/master-integration/MI-COMMON-05-LOCAL-CHECKOUT/ARCHITECTURE_RUNBOOK_HANDOVER.md).
+
+
+## MI-COMMON-06 — Windows source transfer console receipt
+User-provided PowerShell: `SOURCE_RECOVERED_TESTS_NOT_RUN`, tree `187f652f1b1ff8604981833f634c4531a33f8a47`, 1953 local files, 114 Model/Memory and 55 historic Core, 4 overlay paths, at `C:\AIOS\MI05_20261120_001126\verified_manual`. Original raw `TRANSFER_REPORT.json` **not uploaded** (console-based report only); do not claim independently inspected PC bytes. Original 344, 29, locked W8 and browser NOT_RUN; user next to execute source-only Core and exact original 344 with environment hold. No permission or percent changes. [Record](../docs/master-integration/MI-COMMON-06-USER-LOCAL-SOURCE-READBACK/CONSOLE_EVIDENCE.json).
