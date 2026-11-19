@@ -1,0 +1,168 @@
+{
+  "revision": "MI10-CLOUD-CI-20261119-SELECTED-D0-SUCCESS",
+  "date": "2026-11-19",
+  "classification": "REAL_GITHUB_HOSTED_CI_SELECTED_D0_NO_FULL_W8_OR_PG_SECURITY_ACCEPTANCE",
+  "authorization": "H01 narrow MI10 CI exception in WORKING_STANDARD.md; PR only contents:read",
+  "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "pr": {
+    "number": 4,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/4",
+    "state": "OPEN_DRAFT_UNMERGED",
+    "head_ref": "integration/mi10-limited-ci-20261119",
+    "base_ref": "integration/product-dev"
+  },
+  "canonical": {
+    "ref": "integration/product-dev",
+    "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "changed": false
+  },
+  "selected_candidate": {
+    "ref": "integration/mi-common-source-review-01",
+    "sha": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "product_files": 539,
+    "manifest_entries": 538,
+    "source_changes": 0
+  },
+  "source_workflow": {
+    "tested_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+    "postrun_doc_fix_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
+    "changed_paths": [
+      ".github/workflows/mi10-limited-ci.yml",
+      ".github/mi10/materialize_t1_selected.py",
+      ".github/mi10/run_sse_compatible_u3.py",
+      ".github/mi10/requirements-browser.txt",
+      "docs/master-integration/MI-10-LIMITED-CI-20261119/ARCHITECTURE_RUNBOOK_HANDOVER.md"
+    ],
+    "product_files_modified": 0
+  },
+  "successful_run": {
+    "id": 44613960595,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44613960595",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "job_id": 135878290222,
+        "name": "MI01_source_integrity",
+        "conclusion": "success",
+        "evidence": {
+          "product_sha256": [
+            538,
+            538
+          ],
+          "shared_file_pairs": [
+            17,
+            17
+          ],
+          "aux_git_blobs": [
+            33,
+            33
+          ],
+          "original_npm_lock_packages": [
+            61,
+            61
+          ],
+          "full_product_build": false
+        }
+      },
+      {
+        "job_id": 135878490150,
+        "name": "MI03_04_T1_original_selected_D0",
+        "conclusion": "success",
+        "evidence": {
+          "sha256_original_source_before_after": [
+            30,
+            30
+          ],
+          "selected_authority_t1": [
+            7,
+            7
+          ],
+          "mapping_scheduler": [
+            35,
+            35
+          ],
+          "total": [
+            42,
+            42
+          ],
+          "fail": 0,
+          "skip": 0,
+          "scope": "ACTUAL_DISPOSABLE_SQLITE_REPEAT_NOT_PROTECTED_POSTGRESQL_IAM_ORG_COMMIT"
+        }
+      },
+      {
+        "job_id": 135878490379,
+        "name": "MI01_diagnostic_nextjs_and_U3_browser",
+        "conclusion": "success",
+        "evidence": {
+          "npm_ci": "PASS",
+          "nextjs_build": "PASS",
+          "typescript_typecheck": "PASS",
+          "pip_check": "PASS",
+          "real_fastapi_loopback": "PASS",
+          "persisted_original_sqlite_D0_fixture": "PASS",
+          "same_source_sqlite_sha_before_after": "PASS",
+          "chromium_sse_compatible_u3": "PASS",
+          "original_u3_blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773",
+          "original_unmodified_cdp_response_text": "KNOWN_FAILURE_REMAINING",
+          "screenshots": 5,
+          "ttl_check": "PASS_IN_COMPAT_TEST",
+          "same_document": "PASS_IN_COMPAT_TEST",
+          "external_network_requests": "DENIED_IN_TEST",
+          "not_formal_w8_browser_acceptance": true
+        }
+      }
+    ],
+    "artifact": {
+      "id": 14573164214,
+      "name": "mi10-browser-44613960595",
+      "size_bytes": 1440083,
+      "retention_days": 7,
+      "includes": "synthetic Next/Backend logs and browser captures + U3_BROWSER_REPORT.json"
+    }
+  },
+  "prior_failures": [
+    {
+      "run": 44610698699,
+      "reason": "Next frontend only; shared-snapshot backend missing; original U3 returned HOLD/503",
+      "class": "CI_WIRING"
+    },
+    {
+      "run": 44612266079,
+      "reason": "FastAPI opentelemetry-api required dependency absent; pip check detected",
+      "class": "CI_EXACT_PINS"
+    },
+    {
+      "run": 44612869954,
+      "reason": "Original Chromium/CDP Response.text cannot retrieve SSE body despite persisted FastAPI 200",
+      "class": "BROWSER_CDP_SSE_TRANSPORT"
+    },
+    {
+      "run": 44613836033,
+      "reason": "Initial CI-only U3 compatibility helper had Python escape/pin issue; corrected in next commit",
+      "class": "CI_HELPER_MECHANIC"
+    }
+  ],
+  "remaining": {
+    "full_original_W8_audit_prepare_install_test_smoke": "NOT_RUN",
+    "approved_wheelhouse_fingerprint": "HOLD",
+    "native_unmodified_U3_CDP_body": "FAIL_KNOWN_SSE_CDP",
+    "actual_iam_org_t1_postgresql_protected_commit": "NOT_RUN",
+    "original_memory_t1_remaining_10": "NOT_RUN",
+    "gate02_assignment_owner_provenance": "HOLD",
+    "independent_security_and_IV": "HOLD",
+    "real_prod_spend_provider_or_customer": "DENIED"
+  },
+  "counts": {
+    "new_original_product_test_methods": 0,
+    "repeated_T1_tests": 42,
+    "new_security_acceptance_criteria": 0,
+    "product_acceptance_delta_pp": 0,
+    "overall_development_percent": null,
+    "reason_no_percent": "Unfrozen group scope and criteria denominators in MI-PROGRESS"
+  },
+  "rollback": "Close draft PR #4 or normal revert only; no canonical product branch or main moved.",
+  "next": "Owner review CI and exact lock; unblock full W8 wheelhouse/fingerprint/full smoke; retain native U3 SSE/CDP issue; owner resolve GATE02 packaging then PG/RLS and protected T1 runs, separate IV approval"
+}
