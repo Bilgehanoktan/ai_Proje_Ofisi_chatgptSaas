@@ -309,3 +309,7 @@ Exact source 61bb06efbba7544bfc68260ed8eb4d342cab9b8e, manifest 03af243e8683f92c
 
 ## MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01
 [Evidence](../master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). 16/16 new real local synthetic SQLite tests on source-exact assignment/Store extension; original 20/20 unit methods repeated. ORG Store dependencies and Core reader mocked, so original full Store/Core integration NOT_RUN and P02/G9/COMMIT remain HOLD. No new product paths, grants, acceptance or progress change; D5-G 42.50% retained.
+
+
+## MI-COMMON-05 — user-PC exact full-tree archive transfer
+[Runbook](../master-integration/MI-COMMON-05-LOCAL-CHECKOUT/ARCHITECTURE_RUNBOOK_HANDOVER.md). Full Git tree source 1953/1953, pinned 114 Model and 55 Core sources staged separately with unchanged original helper. 12/12 local synthetic archive safety tests PASS. User execution/report and original 344/29 full W8/browser NOT_RUN; no product, permission or acceptance change.

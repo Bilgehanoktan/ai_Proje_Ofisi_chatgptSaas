@@ -69,3 +69,7 @@ Common candidate 87272b6aebd1ce4b26d3a789b2ea75e4310cf60a; source recovery helpe
 
 ## MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01
 [Evidence](../master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). 16/16 new real local synthetic SQLite tests on source-exact assignment/Store extension; original 20/20 unit methods repeated. ORG Store dependencies and Core reader mocked, so original full Store/Core integration NOT_RUN and P02/G9/COMMIT remain HOLD. No new product paths, grants, acceptance or progress change; D5-G 42.50% retained.
+
+
+## MI-COMMON-05-LOCAL-CHECKOUT
+User-approved local source transfer package; source bd57cc8235a13ba5bf10545a7879be98fd7b47f5, Git tree 187f652f1b1ff8604981833f634c4531a33f8a47, 1953 files. 12 local synthetic safety checks PASS. Await user TRANSFER_REPORT.json, original 344/29 and full W8/browser still NOT_RUN. Separate historical Core versions, original npm lock and all security gates retained. [Evidence](../docs/master-integration/MI-COMMON-05-LOCAL-CHECKOUT/EVIDENCE.json) · [Runbook](../docs/master-integration/MI-COMMON-05-LOCAL-CHECKOUT/ARCHITECTURE_RUNBOOK_HANDOVER.md).
