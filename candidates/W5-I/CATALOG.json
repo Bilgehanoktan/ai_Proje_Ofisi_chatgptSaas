@@ -1,0 +1,82 @@
+{
+  "revision": "W5-I",
+  "status": "D0_FOUR_ENGINE_COMPOSITION_PASS_PRODUCT_HOLD",
+  "parent": "c394485bf514c94b01ffb65aacccf74b66b8c504",
+  "files": [
+    {
+      "path": "candidates/W5-I/capability_runtime_review.py",
+      "git_blob": "d698bbfd288a6024743d4605f3e34a2b2a29ac3b",
+      "symbols": [
+        "ToolReviewRequest",
+        "CapabilityRuntimeReview",
+        "capability_runtime_digest",
+        "_runtime_ok",
+        "inspect_capability_runtime",
+        "inspect_consumed_model_binding",
+        "inspect_consumed_model"
+      ]
+    },
+    {
+      "path": "candidates/W5-I/test_capability_runtime_review.py",
+      "git_blob": "c57968a8af4c8af886f188fa91ddbdd05bbe0ea2",
+      "symbols": [
+        "digest",
+        "CompositionTests"
+      ]
+    }
+  ],
+  "calls": [
+    "app.core.agent_runtime.joint_context.joint_context_digest",
+    "app.core.agent_runtime.joint_context.inspect_joint_context",
+    "app.engines.model_gateway.runtime_model_review.inspect_runtime_model",
+    "app.engines.model_gateway.durable_receipt_adapter.owner_snapshot_digest",
+    "app.engines.model_gateway.durable_receipt_adapter.inspect_owner_snapshot",
+    "app.engines.skill_engine.resolver.inspect_capabilities",
+    "app.core.policy.gateway_review.inspect_gateway",
+    "receipt_pep_review.receipt_effect_digest",
+    "receipt_pep_review.inspect_receipt_pep"
+  ],
+  "read_only_storage": [
+    "Existing Memory snapshots table via original reader"
+  ],
+  "test_storage": [
+    "Existing SQLite Memory snapshot fixture",
+    "Existing SQLite synthetic consumed fence fixture",
+    "Existing W5-G SQL fixture"
+  ],
+  "api": [],
+  "db_changes": [],
+  "dependency_changes": [],
+  "test_dependencies": [
+    "Python stdlib",
+    "existing cryptography Ed25519",
+    "44 parent-exact app Python modules",
+    "4 parent SQL DDLs",
+    "W5-G/H candidates and tests"
+  ],
+  "tests": {
+    "new_run": 36,
+    "new_pass": 36,
+    "w5_h_run": 28,
+    "w5_h_pass": 28,
+    "w5_g_run": 16,
+    "w5_g_pass": 16,
+    "previous_90": "HISTORICAL_NOT_RERUN",
+    "full_product": "NOT_RUN",
+    "postgresql": "NOT_RUN",
+    "iv": "HOLD"
+  },
+  "scores": {
+    "design": 50,
+    "source": 25
+  },
+  "blockers": [
+    "Physical invocation membership absent",
+    "Independent source/IV/PEP custody absent",
+    "Atomic replay/restore/revocation enforcement absent",
+    "No live Runtime entrypoint or approved product integration",
+    "Full checkout DNS blocked"
+  ],
+  "next": "W5-J owner-aware integration acceptance preparation and full historical W5 regression recovery; no live promotion",
+  "rollback": "Discard isolated candidate or revert additive W5-I files only."
+}

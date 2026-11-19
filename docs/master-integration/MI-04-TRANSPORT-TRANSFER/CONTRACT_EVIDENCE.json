@@ -1,0 +1,80 @@
+{
+  "revision": "MI-04-CONTRACT-REVIEW",
+  "refs": {
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "previous_candidate": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+    "mi03": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "g8": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+    "g9": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+    "r9": "253128a2236ee706486e70acc97e472ededac26b",
+    "d5d": "dfda007bb51ea8d9069bae7d03f148872f32c934",
+    "mi01": "23f9f63289d11ccbbdd360c8507556606d2b7bb6",
+    "mi07_08": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+    "governance": "58062476323b542302c944ac36d2a83c163c868a"
+  },
+  "classification": "ACTUAL_SELECTED_LOCAL_G6A_PLUS_R7_ON_COMMON_BASE_DEPENDENCIES; COMBINED_REVIEW_CANDIDATE_SOURCE_ONLY",
+  "local_pins": {
+    "product/ai-company-os-backend/app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "product/ai-company-os-backend/app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+    "product/ai-company-os-backend/app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "product/ai-company-os-backend/app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "product/ai-company-os-backend/app/core/transaction/port.py": "b0dde358be781b48e06b8901acc63ef31b013db0",
+    "product/ai-company-os-backend/app/core/transaction/postgres_session.py": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+    "product/ai-company-os-backend/app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py": "c7a03aaadd1660e723b21c789dfa0744ac3721cb",
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+    "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156"
+  },
+  "run": {
+    "pass": 11,
+    "total": 11,
+    "split": {
+      "G6A": 6,
+      "R7": 5
+    },
+    "exit": 0,
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "seconds": 0.032,
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "log_blob": "d1368ecfdd946abf96e09157ba3d5ea3265e4d0f",
+    "log_sha256": "b8f16970d998a8002a18c7619ac4b4a0827cea8f7ae3629476a401e8ca89098a",
+    "command": "python -I -S -B -c 'import sys,sqlite3,unittest; sys.path[:0]=sys.argv[1:]; print(\"Python\",sys.version.split()[0],\"SQLite\",sqlite3.sqlite_version,flush=True); l=unittest.TestLoader(); s=l.loadTestsFromNames([\"test_authority_preclaim_d5g6a\",\"test_postgres_preclaim_d5c_r7\"]); assert not l.errors and s.countTestCases()==11; r=unittest.TextTestRunner(verbosity=2).run(s); sys.exit(0 if r.wasSuccessful() and not r.skipped and r.testsRun==11 else 1)' <backend> <backend/tests>",
+    "scope": "11 exact source blobs staged, G6A authority and test are only diagnostic substitution, not in delivered product tree; non-IAM and partial IAM bootstrap SQLite, mock journal/clock/connect. No G7/MI03 readback exercised in this run. R7 and G6A original methods repeated, no new unique methods."
+  },
+  "source_comparison": {
+    "g6a_legacy_equals_g7": true,
+    "product_path_overlap_MI03_MI04_excluding_manifest": 0,
+    "MI01_MI07_08_direct_product_overlap_excluding_manifest": 0,
+    "transitive_owner_review": "MI08 memory_witness, snapshot_store, joint_context change underlying fenced transition contracts; no integration test inferred"
+  },
+  "candidate": {
+    "product_manifest_entries": 507,
+    "product_files": 508,
+    "base_product_authority_unchanged": true,
+    "base_port_unchanged": true,
+    "MI03_original_tests_transferred_as_auxiliary": true,
+    "MI03_selected_historical": [
+      41,
+      41
+    ],
+    "combined_checkout_full_build": "NOT_RUN",
+    "owner_review": "PENDING"
+  },
+  "not_run": {
+    "G9_7": 7,
+    "G2": 50,
+    "R8_remaining": 36,
+    "G6A_fullchain": 19,
+    "actual_PG": true,
+    "actual_joint_publisher": true,
+    "independent_acceptance": true
+  },
+  "activation": "HOLD"
+}

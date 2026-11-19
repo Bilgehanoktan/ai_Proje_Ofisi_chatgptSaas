@@ -1,0 +1,20 @@
+{
+  "revision": "W5-G",
+  "status": "D0_RUN_LEVEL_DIAGNOSTIC_PASS_PHYSICAL_INVOCATION_MAPPING_HOLD",
+  "parent": "01bc99b5fe30aa4f0f0be3dfdfcf64e8b0d2f836",
+  "core_reference": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+  "files": [
+    {"path":"candidates/W5-G/run_level_receipt_diagnostic.sql","symbols":["decision","provider_call_allowed","spend_allowed","receipt_available","reason"],"kind":"owner-side SELECT candidate","git_blob":"62e97424caf43e5a917c4428bb70eeaa34fae903"},
+    {"path":"candidates/W5-G/test_physical_mapping.py","symbols":["ddl_bytes","PhysicalMappingTests.setUp","PhysicalMappingTests.insert","PhysicalMappingTests.read","PhysicalMappingTests (16 test methods)"],"kind":"SQLite diagnostic tests","git_blob":"04120c74cb7ae6cb1d33bd981917beaede636ee9"}
+  ],
+  "read_tables": ["run_heads","run_admissions","sample_reservations","sample_budgets","sample_settlements"],
+  "inputs": ["tenant_id","company_id","environment_id","run_id","plan_revision","task_id","agent_instance_id","principal_id","attempt","budget_id","currency","policy_epoch","witness_epoch"],
+  "api": [], "db_changes": [], "external_dependencies": [],
+  "test_dependencies": ["stdlib hashlib","pathlib","re","sqlite3","unittest","four pinned owner DDL files"],
+  "test_evidence": {"local_pass":16,"local_run":16,"prior_90":"HISTORICAL_NOT_RERUN","postgresql":"NOT_RUN","rls":"NOT_RUN","provider":"NOT_RUN","product":"NOT_RUN","iv":"HOLD","log":"candidates/W5-G/test.log"},
+  "pins": {"database/0193/candidate_run_head.sql":"180924e97ee1f31fa27332941a41e37fdf73017e","database/0194/candidate_transition_roles.sql":"7b5d374bb7973b283e4fcfa0d796ed6128ef9d27","database/0195/candidate_admission_budget.sql":"d5dc6abc045da14ef42e88b4e85e50e9062a1b27","database/0196L/candidate_lease_settlement.sql":"e4c9a84ff705c39486579c393b1f3aaef9e34da9","product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py":"ba134d2e7d4ddecb41334071fc02236a35435dac","product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py":"4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49","product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py":"532e4594a01690fd0afa4d7e78021fa84784b30d","product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py":"8e6cedceceb01901e830e5eb80f700b9485e980e"},
+  "blockers": ["Owner-approved per-invocation identity and durable membership absent","Actual usage/reconciliation and independent custody absent","PEP and atomic enforcement not proven","No real PostgreSQL execution"],
+  "scores": {"design":50,"source":25},
+  "next":"W5-H design-only independent custody/PEP boundary; owner handoff remains open. W5-I/J wait for integration gates.",
+  "rollback":"Discard isolated branch or revert additive candidate files; no data changes."
+}

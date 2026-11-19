@@ -1,0 +1,561 @@
+{
+  "revision": "MI-04-CONTRACT-REVIEW",
+  "classification": "PROPOSED_OWNER_DISPOSITION_NOT_RATIFIED",
+  "refs": {
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "previous_candidate": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+    "mi03": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "g8": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+    "g9": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+    "r9": "253128a2236ee706486e70acc97e472ededac26b",
+    "d5d": "dfda007bb51ea8d9069bae7d03f148872f32c934",
+    "mi01": "23f9f63289d11ccbbdd360c8507556606d2b7bb6",
+    "mi07_08": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+    "governance": "58062476323b542302c944ac36d2a83c163c868a"
+  },
+  "original_G7_pin_blob": "cef9ce82a497522d2e4a9347b77453879e4790f3",
+  "original_G7_pin_inventory": {
+    "total": 56,
+    "BASE_EXACT": 26,
+    "BASE_DIVERGENT": 1,
+    "MISSING_FROM_BASE": 27,
+    "MI03_EXACT": 2,
+    "rows": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "base_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "sha": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "base_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "sha": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "base_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "sha": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "base_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "sha": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "base_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "sha": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "base_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+        "sha": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "base_blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "sha": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "base_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "sha": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "base_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "sha": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "base_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "disposition": "BASE_DIVERGENT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "sha": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+        "sha": "e1e977880324664bb359eee3286223a796878f44",
+        "base_blob": null,
+        "disposition": "MI03_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+        "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "base_blob": null,
+        "disposition": "MI03_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+        "sha": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+        "sha": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "candidates/D4-R4/identity_binding.py",
+        "sha": "e1e977880324664bb359eee3286223a796878f44",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/D5-INTENT/intent_identity.py",
+        "sha": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/D5-B/identity_fence_review.py",
+        "sha": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "sha": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "sha": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "sha": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "sha": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "sha": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "sha": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "sha": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "sha": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "sha": "e0b9078284922d281996869daa15a455572c1785",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "sha": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+        "sha": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+        "sha": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+        "sha": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/research_slice.py",
+        "sha": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "base_blob": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "sha": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "base_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "sha": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "base_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "sha": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "base_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+        "sha": "e121ee6275def01070397a942a8434ff37b611a6",
+        "base_blob": "e121ee6275def01070397a942a8434ff37b611a6",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "sha": "c30130313541ea9d857724de1bab98ad088374af",
+        "base_blob": "c30130313541ea9d857724de1bab98ad088374af",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+        "sha": "c35a2e497ce013409c1943f293799d83c7164e83",
+        "base_blob": "c35a2e497ce013409c1943f293799d83c7164e83",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+        "sha": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+        "base_blob": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "sha": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "base_blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+        "sha": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "base_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "disposition": "BASE_EXACT",
+        "category": "product"
+      },
+      {
+        "path": "database/0192/candidate_event_outbox_fence.sql",
+        "sha": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "base_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "database/0193/candidate_run_head.sql",
+        "sha": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "base_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "database/0194/candidate_transition_roles.sql",
+        "sha": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "base_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "database/0195/candidate_admission_budget.sql",
+        "sha": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "base_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "database/0196L/candidate_lease_settlement.sql",
+        "sha": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "base_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "database/0203T/terminal_command_anchors.sql",
+        "sha": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "base_blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "database/0204C/company_event_order.sql",
+        "sha": "edb2ef263204b89f88f172000ecb031428a027e4",
+        "base_blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+        "disposition": "BASE_EXACT",
+        "category": "fixture_ddl"
+      },
+      {
+        "path": "candidates/ORG-06/org_core_bridge.py",
+        "sha": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-06/test_org_core_checkout.py",
+        "sha": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/ORG-06/SOURCE_PINS.json",
+        "sha": "e45173de240af85882764dfc3033e188d049085d",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+        "sha": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "candidates/D5-G6B/test_checkout.py",
+        "sha": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+        "sha": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "product"
+      },
+      {
+        "path": "candidates/D5-G6B/test_protocol.py",
+        "sha": "defb33bc46fdf1c978164133b371f063ffffeb04",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      },
+      {
+        "path": "candidates/D5-G7/test_checkout.py",
+        "sha": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "base_blob": null,
+        "disposition": "MISSING_FROM_BASE",
+        "category": "owner_auxiliary"
+      }
+    ]
+  },
+  "new_transfer_exact": [
+    {
+      "path": "candidates/D4-R4/test_identity_binding.py",
+      "sha": "b98d86e46be32451479c3cbdc39ddf6ff1611c73",
+      "bytes": 3556
+    },
+    {
+      "path": "candidates/D5-INTENT/test_intent_identity.py",
+      "sha": "7bc6edca2f26e1970b5b63484ea8dd1d11758028",
+      "bytes": 6480
+    },
+    {
+      "path": "candidates/MI-03-R2/ARCHITECTURE_AND_RUNBOOK.md",
+      "sha": "65f515755b2c5ef26ada94aeb48ddca6c87561ef",
+      "bytes": 2472
+    },
+    {
+      "path": "candidates/MI-03-R2/CATALOG.json",
+      "sha": "42ab549d01176b2f39d584a7cc7d712da8644783",
+      "bytes": 2481
+    },
+    {
+      "path": "candidates/MI-03-R2/EVIDENCE.json",
+      "sha": "ced4ebca9565aa5b7aa12ba31ec62a8f4f3fe3dc",
+      "bytes": 4248
+    },
+    {
+      "path": "candidates/MI-03-R2/GITHUB_READBACK.json",
+      "sha": "3d7d403e852e2d87fc935270a0e94ea2395f7466",
+      "bytes": 1647
+    },
+    {
+      "path": "candidates/MI-03-R2/HANDOVER.md",
+      "sha": "6be45137b46aa71a4515941d2f7e5504ba3126a8",
+      "bytes": 582
+    },
+    {
+      "path": "candidates/MI-03-R2/PROGRESS.json",
+      "sha": "18c179b3b8616fc29d8cbabe3d0a8cf7b0cc7349",
+      "bytes": 1487
+    },
+    {
+      "path": "candidates/MI-03-R2/SOURCE_PINS.json",
+      "sha": "969eaa7641cb9464d28a76779dc1702a70301b4e",
+      "bytes": 2036
+    },
+    {
+      "path": "candidates/MI-03-R2/exit_code.txt",
+      "sha": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "bytes": 2
+    },
+    {
+      "path": "candidates/MI-03-R2/run_selected.py",
+      "sha": "a183df0732c40a50c3118c5974430553ba7de849",
+      "bytes": 4619
+    },
+    {
+      "path": "candidates/MI-03-R2/test.log",
+      "sha": "f0dde4182512303bdca48a9d1926a4fdd46c635f",
+      "bytes": 6733
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "sha": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393
+    }
+  ],
+  "contract_choices": {
+    "recommended_entry": {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "symbol": "execute_protected_authority_fenced_transition",
+      "reason": "G6A executable legacy authority identical to G7 except new separate always-denied entry and typing import; no optional protected_org mode",
+      "status": "OWNER_REVIEW_HOLD; selected local trial only"
+    },
+    "preserve_legacy_D0": {
+      "base_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "g7_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "r8_blob": "6810c8eea0d7323736f1e5ce68d9de85dcc2ca61",
+      "status": "base product authority unchanged in combined candidate; no user selection of legacy via missing input"
+    },
+    "port": {
+      "base_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "r8_blob": "12f40659e916d5722d60c41c27f3116d746545f0",
+      "status": "preserve base; optional protected factory needs owner review and original R6 tests, not silently transfer"
+    },
+    "review_only": {
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "paths": [
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "sha": "f3c37428acd475e09c228bce47d534d6584cd944"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "sha": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "sha": "675615e04059280ec6aa99e9679b4388cd018c2d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "sha": "83f8b81925025fe1dc8fdf5128455862be7bd2c2"
+        }
+      ],
+      "status": "HOLD actual source owner/packaging and IAM write semantics; G7 is historical review, not assignment/role grant"
+    },
+    "owner_auxiliary": "G7 original pin rows remain historical. R3 and ORG06 unqualified imports require reviewed packaging; no sys.path injection in product runtime; original G9 fixture uses exact auxiliary paths. 56 pins are selected inventory, NOT full dependency closure. Original G9 full backend 248 + 27 auxiliary; no repin of original runner."
+  },
+  "order": [
+    "strict capability preflight before all writes (currently always denies)",
+    "future server-owned exact owner read and publication recheck",
+    "original run claim (once)",
+    "same root fence/recheck",
+    "witness",
+    "memory",
+    "company stream",
+    "run",
+    "lease",
+    "budget",
+    "original T1 coordinator",
+    "verified outcome and close",
+    "release"
+  ],
+  "owner_gates": {
+    "MI03": "G7/G8/G9 active assignment, registry, membership and role provenance; packaging; seven exact tests",
+    "MI04": "G6A explicit entry disposition and fullchain19; R8 outstanding 36 on original pinned branch; original R6 port/transport tests only after factory review",
+    "D4": "physical role/DB/cluster/RLS and trusted clock",
+    "D5_D_E": "durable pending barrier and all publishers under same root fence",
+    "MI07_08": "W5 economic phase mapping and Memory witness/snapshot transitive contracts",
+    "Unified": "reviewed one manifest and W8 fingerprint, full build, no historical repin"
+  },
+  "P01_P10": "existing D5-D targets unchanged; no new acceptance",
+  "activation": "HOLD"
+}

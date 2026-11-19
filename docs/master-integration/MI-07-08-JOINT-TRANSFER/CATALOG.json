@@ -1,0 +1,228 @@
+{
+  "id": "MI-07-08-JOINT-TRANSFER-01",
+  "source_commit": "61d8c582e8e125f59d1ca542c9596c4a6421698f",
+  "previous_catalog": "docs/master-integration/MI-08_MEMORY_CATALOG.json",
+  "added_product": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
+      "blob": "9402a274356645daa4fd2c4d09297c506377314a",
+      "bytes": 6434,
+      "sha256": "7d495f3d845eec28a808838e17febd2cb2af065e2177bbd1a635ab545d25ed39",
+      "symbols": [
+        "ReservationObservation",
+        "EffectBudgetReview",
+        "inspect_effect_budget"
+      ],
+      "dependencies": [
+        "runtime_binding",
+        "transaction.review",
+        "postgres_admission_mapping",
+        "postgres_transition_mapping",
+        "lifecycle",
+        "reservation_review",
+        "policy.gateway_review"
+      ],
+      "decision": "D0 diagnostic HOLD only; no provider, spend, dispatch or receipt grant"
+    }
+  ],
+  "additional_owner_files": [
+    {
+      "path": "candidates/W5-G/CATALOG.json",
+      "blob": "249da6d39c3165e766fba00c5d6accd8233ec2c4",
+      "bytes": 2803
+    },
+    {
+      "path": "candidates/W5-G/HANDOVER.md",
+      "blob": "e5af07c7899c30276119e660dba3497f03158b63",
+      "bytes": 4155
+    },
+    {
+      "path": "candidates/W5-G/SOURCE_MANIFEST.json",
+      "blob": "b493ba613ccbd770246cae1fcfa2dabd209e0bea",
+      "bytes": 1725
+    },
+    {
+      "path": "candidates/W5-G/run_level_receipt_diagnostic.sql",
+      "blob": "62e97424caf43e5a917c4428bb70eeaa34fae903",
+      "bytes": 2437
+    },
+    {
+      "path": "candidates/W5-G/test.log",
+      "blob": "ca9dafbce221af174421a9e0e0250c0d5f1c294a",
+      "bytes": 1685
+    },
+    {
+      "path": "candidates/W5-G/test_physical_mapping.py",
+      "blob": "04120c74cb7ae6cb1d33bd981917beaede636ee9",
+      "bytes": 6637
+    },
+    {
+      "path": "candidates/W5-H/CATALOG.json",
+      "blob": "a1e599aa1f8e0d5fda3bfadbefa5fc3d96e54504",
+      "bytes": 3547
+    },
+    {
+      "path": "candidates/W5-H/HANDOVER.md",
+      "blob": "2f1b5917a696adca351b641f2df121a30085a90d",
+      "bytes": 4033
+    },
+    {
+      "path": "candidates/W5-H/SOURCE_MANIFEST.json",
+      "blob": "ed45b58226d10cab5c4cf1531601092935439620",
+      "bytes": 4569
+    },
+    {
+      "path": "candidates/W5-H/receipt_pep_review.py",
+      "blob": "8fd3c95e7c75b71ebadfbe5e11db100d473735c5",
+      "bytes": 8113
+    },
+    {
+      "path": "candidates/W5-H/test.log",
+      "blob": "5a532ea8d9ecbde5852ae215a55e36b32f690319",
+      "bytes": 2497
+    },
+    {
+      "path": "candidates/W5-H/test_receipt_pep_review.py",
+      "blob": "3e3fe3fff1d753676119097b984b23ccc4862fbf",
+      "bytes": 10660
+    },
+    {
+      "path": "candidates/W5-H/w5g_regression.log",
+      "blob": "ca9dafbce221af174421a9e0e0250c0d5f1c294a",
+      "bytes": 1685
+    },
+    {
+      "path": "candidates/W5-I/CATALOG.json",
+      "blob": "1d614a5a2982e5be572d9f6de110421780fdc974",
+      "bytes": 2655
+    },
+    {
+      "path": "candidates/W5-I/HANDOVER.md",
+      "blob": "1470743d413b55d20f1a070b92717c8c2763f7ef",
+      "bytes": 6614
+    },
+    {
+      "path": "candidates/W5-I/INTEGRATION_GATES.json",
+      "blob": "f890697b83c90dfcfadf9d4ea0f29c603f22ccae",
+      "bytes": 2206
+    },
+    {
+      "path": "candidates/W5-I/capability_runtime_review.py",
+      "blob": "d698bbfd288a6024743d4605f3e34a2b2a29ac3b",
+      "bytes": 13072
+    },
+    {
+      "path": "candidates/W5-I/test.log",
+      "blob": "78d7ddef4d1d9740a45e746410d89500edc6d004",
+      "bytes": 3513
+    },
+    {
+      "path": "candidates/W5-I/test_capability_runtime_review.py",
+      "blob": "c57968a8af4c8af886f188fa91ddbdd05bbe0ea2",
+      "bytes": 19437
+    },
+    {
+      "path": "candidates/W5-I/w5g_regression.log",
+      "blob": "72457c95fd1ab380be48c5d37d78ed1c8cb6b350",
+      "bytes": 1685
+    },
+    {
+      "path": "candidates/W5-I/w5h_regression.log",
+      "blob": "7c066aa0f08b72a62830f0cbfb971f2d25e36778",
+      "bytes": 2497
+    },
+    {
+      "path": "candidates/W5-I/SOURCE_MANIFEST.json",
+      "blob": "20396906516bb5479b4a4c762ac60cb58418e533",
+      "bytes": 14499
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
+      "blob": "9402a274356645daa4fd2c4d09297c506377314a",
+      "bytes": 6434
+    },
+    {
+      "path": "tests/w5/test_decision_accounting_review.py",
+      "blob": "fc458e97e011ed154bce2619dd236912ada1621f",
+      "bytes": 10566
+    },
+    {
+      "path": "tests/w5/test_durable_provider_runtime_review.py",
+      "blob": "a1b4736a07e8559e9ed1eb45c772948d0a79e0d2",
+      "bytes": 7250
+    },
+    {
+      "path": "tests/w5/test_effect_budget_review.py",
+      "blob": "05e44ee6ef859e13e3eeb5b06e02e872c86bf159",
+      "bytes": 5233
+    },
+    {
+      "path": "tests/w5/test_invocation_receipt_review.py",
+      "blob": "ba4edfe0b2fa93c3f3825a07a583cb0c289bd5a3",
+      "bytes": 10250
+    },
+    {
+      "path": "tests/w5/test_model_profile_review.py",
+      "blob": "b48e46c9128832fb20f49e9dd9aa33086aee2e08",
+      "bytes": 5583
+    },
+    {
+      "path": "tests/w5/test_router_cost_review.py",
+      "blob": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2",
+      "bytes": 7169
+    },
+    {
+      "path": "candidates/W5-J/SOURCE_PINS.json",
+      "blob": "79227577b8f6d1823f42c12bf9ee3a8ef5ce9958",
+      "bytes": 2894
+    },
+    {
+      "path": "candidates/W5-J/run_exact.py",
+      "blob": "5a71880a76256984e6a2b7fc4b438971e474af50",
+      "bytes": 3982
+    }
+  ],
+  "existing_source_unchanged": 525,
+  "source_dependencies": [
+    "runtime_binding",
+    "transaction.review",
+    "postgres_admission_mapping",
+    "postgres_transition_mapping",
+    "lifecycle",
+    "reservation_review",
+    "policy.gateway_review"
+  ],
+  "classes": [
+    "ReservationObservation",
+    "EffectBudgetReview"
+  ],
+  "functions": [
+    "inspect_effect_budget"
+  ],
+  "api": [],
+  "db_migrations": [],
+  "events": [],
+  "external_dependencies": [],
+  "test_runner": "docs/master-integration/MI-07-08-JOINT-TRANSFER/run_combined.py",
+  "original_test_sets": [
+    {
+      "source": "147502d831ab146b8825585fc7ac390f951beb84",
+      "paths": [
+        "tests/w5",
+        "candidates/W5-G",
+        "candidates/W5-H",
+        "candidates/W5-I"
+      ]
+    },
+    {
+      "source": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+      "path": "candidates/W5-MEM-05E/run_exact.py"
+    }
+  ],
+  "ownership": {
+    "MI07": "W5 source and owner transaction contract; no owner branch change",
+    "MI08": "Memory and full history behavior",
+    "MI03_04": "IAM/Authority/transport excluded; prior independent transport candidate not merged"
+  },
+  "scope": "read-only diagnostic product source + test/fixture evidence; no runtime wiring"
+}

@@ -1,0 +1,1016 @@
+{
+  "revision": "MI-COMMON-SOURCE-REVIEW-01",
+  "date": "2026-11-19",
+  "classification": "ISOLATED_CONTROLLED_SOURCE_REVIEW_NOT_PROMOTED",
+  "refs": {
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "mi01": "44d7f91f87965fcb08e0c44bacd630204e3684a2",
+    "mi34": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+    "mi78": "bd6882b0dd3b7117be859e147712e55f4c92c58a"
+  },
+  "owner_review": "PENDING_ALL",
+  "manifest": "b80e834fe081cb1b8917798a11793eb50dce9688",
+  "runner": "e7335eac1e4358ceef001a494f45f56ba9544fc0",
+  "product_files": 530,
+  "manifest_entries": 529,
+  "delta": {
+    "mi01": "previously transferred and preserved",
+    "mi34": 4,
+    "mi78": 26,
+    "nonmanifest_cross_owner_product_conflicts": 0,
+    "added_from_mi01": 25,
+    "modified_from_mi01": 5
+  },
+  "copied_exact_paths": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "owner": "mi34",
+      "old": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "new": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "bytes": 3677
+    },
+    {
+      "path": "candidates/D4-R4/test_identity_binding.py",
+      "owner": "mi34",
+      "old": null,
+      "new": "b98d86e46be32451479c3cbdc39ddf6ff1611c73",
+      "bytes": 3556
+    },
+    {
+      "path": "candidates/D5-INTENT/test_intent_identity.py",
+      "owner": "mi34",
+      "old": null,
+      "new": "7bc6edca2f26e1970b5b63484ea8dd1d11758028",
+      "bytes": 6480
+    },
+    {
+      "path": "candidates/MI-03-R2/ARCHITECTURE_AND_RUNBOOK.md",
+      "owner": "mi34",
+      "old": null,
+      "new": "65f515755b2c5ef26ada94aeb48ddca6c87561ef",
+      "bytes": 2472
+    },
+    {
+      "path": "candidates/MI-03-R2/CATALOG.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "42ab549d01176b2f39d584a7cc7d712da8644783",
+      "bytes": 2481
+    },
+    {
+      "path": "candidates/MI-03-R2/EVIDENCE.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "ced4ebca9565aa5b7aa12ba31ec62a8f4f3fe3dc",
+      "bytes": 4248
+    },
+    {
+      "path": "candidates/MI-03-R2/GITHUB_READBACK.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "3d7d403e852e2d87fc935270a0e94ea2395f7466",
+      "bytes": 1647
+    },
+    {
+      "path": "candidates/MI-03-R2/HANDOVER.md",
+      "owner": "mi34",
+      "old": null,
+      "new": "6be45137b46aa71a4515941d2f7e5504ba3126a8",
+      "bytes": 582
+    },
+    {
+      "path": "candidates/MI-03-R2/PROGRESS.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "18c179b3b8616fc29d8cbabe3d0a8cf7b0cc7349",
+      "bytes": 1487
+    },
+    {
+      "path": "candidates/MI-03-R2/SOURCE_PINS.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "969eaa7641cb9464d28a76779dc1702a70301b4e",
+      "bytes": 2036
+    },
+    {
+      "path": "candidates/MI-03-R2/exit_code.txt",
+      "owner": "mi34",
+      "old": null,
+      "new": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "bytes": 2
+    },
+    {
+      "path": "candidates/MI-03-R2/run_selected.py",
+      "owner": "mi34",
+      "old": null,
+      "new": "a183df0732c40a50c3118c5974430553ba7de849",
+      "bytes": 4619
+    },
+    {
+      "path": "candidates/MI-03-R2/test.log",
+      "owner": "mi34",
+      "old": null,
+      "new": "f0dde4182512303bdca48a9d1926a4fdd46c635f",
+      "bytes": 6733
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+      "owner": "mi34",
+      "old": null,
+      "new": "22cfd00c93ed4d011a5e1f13532b1aaf7845d814",
+      "bytes": 3943
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CATALOG.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "ce86f52ced8c3461de1051b6fd64dc6103776468",
+      "bytes": 1461
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_CATALOG.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "97435206eeedf16deb4f8e8602911bbf55cb4558",
+      "bytes": 5481
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_EVIDENCE.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "6cc2ad175544dfc5aae78f930b63ed5f682efc9a",
+      "bytes": 4304
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_PROGRESS.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "c3de19280c85f83b50c7391563c003c3d477ecd4",
+      "bytes": 1778
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_RUNBOOK.md",
+      "owner": "mi34",
+      "old": null,
+      "new": "3ca9e34d0c7c3c4fd28d49d3cb06f4c3233c6c0e",
+      "bytes": 3624
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_SOURCE_PLAN.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "d4778ae126edd73e53f07cfab6c57da20eaf1928",
+      "bytes": 21666
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/EVIDENCE.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "fe96f091b43f6aba4605aa98cf42ccd42ccf4e99",
+      "bytes": 4115
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/PROGRESS.json",
+      "owner": "mi34",
+      "old": null,
+      "new": "0ca40b29334a67c2ab5884bc6a4de018541d310f",
+      "bytes": 1362
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/contract-exit-code.txt",
+      "owner": "mi34",
+      "old": null,
+      "new": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "bytes": 2
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/contract-selected.log",
+      "owner": "mi34",
+      "old": null,
+      "new": "d1368ecfdd946abf96e09157ba3d5ea3265e4d0f",
+      "bytes": 1571
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/exit_code.txt",
+      "owner": "mi34",
+      "old": null,
+      "new": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+      "bytes": 2
+    },
+    {
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/transport-test.log",
+      "owner": "mi34",
+      "old": null,
+      "new": "1f92f2c104eb10dbeab522d71afb4a74bf1b6b26",
+      "bytes": 800
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "owner": "mi34",
+      "old": null,
+      "new": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "owner": "mi34",
+      "old": null,
+      "new": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py",
+      "owner": "mi34",
+      "old": null,
+      "new": "c7a03aaadd1660e723b21c789dfa0744ac3721cb",
+      "bytes": 2529
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "owner": "mi78",
+      "old": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+      "new": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+      "bytes": 3851
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "owner": "mi78",
+      "old": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+      "new": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+      "bytes": 11744
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "owner": "mi78",
+      "old": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+      "new": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+      "bytes": 13027
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "owner": "mi78",
+      "old": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+      "new": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+      "bytes": 8092
+    },
+    {
+      "path": "candidates/W5-G/CATALOG.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "249da6d39c3165e766fba00c5d6accd8233ec2c4",
+      "bytes": 2803
+    },
+    {
+      "path": "candidates/W5-G/HANDOVER.md",
+      "owner": "mi78",
+      "old": null,
+      "new": "e5af07c7899c30276119e660dba3497f03158b63",
+      "bytes": 4155
+    },
+    {
+      "path": "candidates/W5-G/SOURCE_MANIFEST.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "b493ba613ccbd770246cae1fcfa2dabd209e0bea",
+      "bytes": 1725
+    },
+    {
+      "path": "candidates/W5-G/run_level_receipt_diagnostic.sql",
+      "owner": "mi78",
+      "old": null,
+      "new": "62e97424caf43e5a917c4428bb70eeaa34fae903",
+      "bytes": 2437
+    },
+    {
+      "path": "candidates/W5-G/test.log",
+      "owner": "mi78",
+      "old": null,
+      "new": "ca9dafbce221af174421a9e0e0250c0d5f1c294a",
+      "bytes": 1685
+    },
+    {
+      "path": "candidates/W5-G/test_physical_mapping.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "04120c74cb7ae6cb1d33bd981917beaede636ee9",
+      "bytes": 6637
+    },
+    {
+      "path": "candidates/W5-H/CATALOG.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "a1e599aa1f8e0d5fda3bfadbefa5fc3d96e54504",
+      "bytes": 3547
+    },
+    {
+      "path": "candidates/W5-H/HANDOVER.md",
+      "owner": "mi78",
+      "old": null,
+      "new": "2f1b5917a696adca351b641f2df121a30085a90d",
+      "bytes": 4033
+    },
+    {
+      "path": "candidates/W5-H/SOURCE_MANIFEST.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "ed45b58226d10cab5c4cf1531601092935439620",
+      "bytes": 4569
+    },
+    {
+      "path": "candidates/W5-H/receipt_pep_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "8fd3c95e7c75b71ebadfbe5e11db100d473735c5",
+      "bytes": 8113
+    },
+    {
+      "path": "candidates/W5-H/test.log",
+      "owner": "mi78",
+      "old": null,
+      "new": "5a532ea8d9ecbde5852ae215a55e36b32f690319",
+      "bytes": 2497
+    },
+    {
+      "path": "candidates/W5-H/test_receipt_pep_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "3e3fe3fff1d753676119097b984b23ccc4862fbf",
+      "bytes": 10660
+    },
+    {
+      "path": "candidates/W5-H/w5g_regression.log",
+      "owner": "mi78",
+      "old": null,
+      "new": "ca9dafbce221af174421a9e0e0250c0d5f1c294a",
+      "bytes": 1685
+    },
+    {
+      "path": "candidates/W5-I/CATALOG.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "1d614a5a2982e5be572d9f6de110421780fdc974",
+      "bytes": 2655
+    },
+    {
+      "path": "candidates/W5-I/HANDOVER.md",
+      "owner": "mi78",
+      "old": null,
+      "new": "1470743d413b55d20f1a070b92717c8c2763f7ef",
+      "bytes": 6614
+    },
+    {
+      "path": "candidates/W5-I/INTEGRATION_GATES.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "f890697b83c90dfcfadf9d4ea0f29c603f22ccae",
+      "bytes": 2206
+    },
+    {
+      "path": "candidates/W5-I/SOURCE_MANIFEST.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "20396906516bb5479b4a4c762ac60cb58418e533",
+      "bytes": 14499
+    },
+    {
+      "path": "candidates/W5-I/capability_runtime_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "d698bbfd288a6024743d4605f3e34a2b2a29ac3b",
+      "bytes": 13072
+    },
+    {
+      "path": "candidates/W5-I/test.log",
+      "owner": "mi78",
+      "old": null,
+      "new": "78d7ddef4d1d9740a45e746410d89500edc6d004",
+      "bytes": 3513
+    },
+    {
+      "path": "candidates/W5-I/test_capability_runtime_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "c57968a8af4c8af886f188fa91ddbdd05bbe0ea2",
+      "bytes": 19437
+    },
+    {
+      "path": "candidates/W5-I/w5g_regression.log",
+      "owner": "mi78",
+      "old": null,
+      "new": "72457c95fd1ab380be48c5d37d78ed1c8cb6b350",
+      "bytes": 1685
+    },
+    {
+      "path": "candidates/W5-I/w5h_regression.log",
+      "owner": "mi78",
+      "old": null,
+      "new": "7c066aa0f08b72a62830f0cbfb971f2d25e36778",
+      "bytes": 2497
+    },
+    {
+      "path": "candidates/W5-J/SOURCE_PINS.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "79227577b8f6d1823f42c12bf9ee3a8ef5ce9958",
+      "bytes": 2894
+    },
+    {
+      "path": "candidates/W5-J/run_exact.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "5a71880a76256984e6a2b7fc4b438971e474af50",
+      "bytes": 3982
+    },
+    {
+      "path": "candidates/W5-MEM-05E/LOCAL_PINS.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "4657ce08e1c6153c02ed174573567d92fe4735d4",
+      "bytes": 10368
+    },
+    {
+      "path": "candidates/W5-MEM-05E/run_exact.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "5331e6e429d60cddc4e026e01ba17a3cf3aa9e3e",
+      "bytes": 2729
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+      "owner": "mi78",
+      "old": null,
+      "new": "f3c609b545fc81a0e30bb1e1b43880fec06453a2",
+      "bytes": 2538
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/CATALOG.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "870d25640a690855077b151c8428231457ff169d",
+      "bytes": 6731
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/COMBINED_PINS.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "fb1a73c86eda928409c371359056e79ef43665e4",
+      "bytes": 23490
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "d5db74ebcb327b69bcdaf637b242253d52304c20",
+      "bytes": 2165
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/HANDOVER.md",
+      "owner": "mi78",
+      "old": null,
+      "new": "ab2d90150b6defe2916c8d46da41936da101cd15",
+      "bytes": 2716
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "e7f0d0e1a058935dde1062b5f590d60b76d59a10",
+      "bytes": 1190
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/TRANSFER.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "d59012af88247791427bab84a2db2aa209ca2139",
+      "bytes": 7997
+    },
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/run_combined.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb",
+      "bytes": 4910
+    },
+    {
+      "path": "docs/master-integration/MI-08_MEMORY_TRANSFER.json",
+      "owner": "mi78",
+      "old": null,
+      "new": "dc3760fa7800cf4887e22253e3906152fc476eef",
+      "bytes": 14535
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "3a1a3d712c5474d7a90bc11b6d5a52cc31b00921",
+      "bytes": 9560
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "9674f346ae0a009afa86d2bf884762806c2d89f1",
+      "bytes": 8408
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "2ab7b9a18a15e5115f63ff6f659d605d3d1d897d",
+      "bytes": 7537
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "b90b0853ba466b89fd82bc38512517637afe1e02",
+      "bytes": 3576
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "b244e311574fd2fb31b7e30a7f4026095cbca8f2",
+      "bytes": 2475
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "532e4594a01690fd0afa4d7e78021fa84784b30d",
+      "bytes": 4718
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/effect_budget_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "9402a274356645daa4fd2c4d09297c506377314a",
+      "bytes": 6434
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "71b1bc0adc4787c50b26b6d8d137ef9e421eb410",
+      "bytes": 4610
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "ec16d064a0ac12fe46c72230399e41c2c56e2a83",
+      "bytes": 2589
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "4a6c7a9206cb28823b90f475a33eaf31e35b8ed9",
+      "bytes": 1972
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "8e6cedceceb01901e830e5eb80f700b9485e980e",
+      "bytes": 6865
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "fa0f058486cc9dfe263fa9562f1bd4387b91760b",
+      "bytes": 5872
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "031ec8f8e4cfc86d8e3a17f0d4e0d266ae1657f8",
+      "bytes": 5909
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1",
+      "bytes": 1865
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "5132f5270c25c27d5cff08efa916dee8495dae5d",
+      "bytes": 7663
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "15e6d92252a655704d3654d68361e8a03d550cc5",
+      "bytes": 12009
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r1.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "c0ded1c2f351a2a538cd3e710de0f2d7ff7e6616",
+      "bytes": 8930
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r2.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "d426df69851dc3b0ed04324a7de473d56a122188",
+      "bytes": 7852
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_recovery_w5_mem05e.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "7bc56f0010e6931c357010d2b34afe55223c2cb2",
+      "bytes": 6286
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "8c8683fc3e553231c9ba81222e4e0b2ccd97a72f",
+      "bytes": 6306
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "91001d383439f30c37462f4852714cf439cb8b22",
+      "bytes": 15375
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_cost_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2",
+      "bytes": 7169
+    },
+    {
+      "path": "tests/w5/test_decision_accounting_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "fc458e97e011ed154bce2619dd236912ada1621f",
+      "bytes": 10566
+    },
+    {
+      "path": "tests/w5/test_durable_provider_runtime_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "a1b4736a07e8559e9ed1eb45c772948d0a79e0d2",
+      "bytes": 7250
+    },
+    {
+      "path": "tests/w5/test_effect_budget_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "05e44ee6ef859e13e3eeb5b06e02e872c86bf159",
+      "bytes": 5233
+    },
+    {
+      "path": "tests/w5/test_invocation_receipt_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "ba4edfe0b2fa93c3f3825a07a583cb0c289bd5a3",
+      "bytes": 10250
+    },
+    {
+      "path": "tests/w5/test_model_profile_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "b48e46c9128832fb20f49e9dd9aa33086aee2e08",
+      "bytes": 5583
+    },
+    {
+      "path": "tests/w5/test_router_cost_review.py",
+      "owner": "mi78",
+      "old": null,
+      "new": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2",
+      "bytes": 7169
+    }
+  ],
+  "shared_records_excluded": [
+    "product/SOURCE_MANIFEST.json",
+    "docs/architecture/DESIGN_MASTER.md",
+    "handover/CURRENT.md",
+    "handover/NEXT_STEP.md"
+  ],
+  "history": {
+    "lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "matched": [
+      55,
+      55
+    ],
+    "overlay_count": 4,
+    "added_overlay": "tests/integration/historical_0207/app/core/transaction/postgres_session.py",
+    "original_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+    "checks": [
+      {
+        "original": "database/0192/candidate_event_outbox_fence.sql",
+        "actual": "database/0192/candidate_event_outbox_fence.sql",
+        "match": true
+      },
+      {
+        "original": "database/0193/candidate_run_head.sql",
+        "actual": "database/0193/candidate_run_head.sql",
+        "match": true
+      },
+      {
+        "original": "database/0194/candidate_transition_roles.sql",
+        "actual": "database/0194/candidate_transition_roles.sql",
+        "match": true
+      },
+      {
+        "original": "database/0195/candidate_admission_budget.sql",
+        "actual": "database/0195/candidate_admission_budget.sql",
+        "match": true
+      },
+      {
+        "original": "database/0196L/candidate_lease_settlement.sql",
+        "actual": "database/0196L/candidate_lease_settlement.sql",
+        "match": true
+      },
+      {
+        "original": "database/0203T/terminal_command_anchors.sql",
+        "actual": "database/0203T/terminal_command_anchors.sql",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/__init__.py",
+        "actual": "product/ai-company-os-backend/app/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/api/__init__.py",
+        "actual": "product/ai-company-os-backend/app/api/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+        "actual": "tests/integration/historical_0207/app/api/lifecycle_prefix_projection.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+        "actual": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "actual": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+        "actual": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "actual": "tests/integration/historical_0207/app/core/agent_runtime/scheduler_review.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+        "actual": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+        "actual": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+        "actual": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+        "actual": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+        "actual": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+        "actual": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "actual": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "actual": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "actual": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "actual": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "actual": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "actual": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+        "actual": "tests/integration/historical_0207/app/core/transaction/postgres_admission_mapping.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+        "actual": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+        "actual": "tests/integration/historical_0207/app/core/transaction/postgres_session.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+        "actual": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "actual": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+        "actual": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+        "actual": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "actual": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+        "actual": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+        "actual": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+        "actual": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+        "actual": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+        "actual": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+        "actual": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+        "actual": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+        "match": true
+      },
+      {
+        "original": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "actual": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "match": true
+      }
+    ]
+  },
+  "model_memory_pins": [
+    114,
+    114
+  ],
+  "identity_pins": [
+    13,
+    13
+  ],
+  "scope": "MI01 + MI03/04 pure identity/transport + MI07/08 existing source only. No protected entry selection, no live provider, no IAM grants, no new DB schema; no ORG or Skill activation. MI09 original lock deferred; MI05/06 live owner contracts HOLD.",
+  "tests": {
+    "new_product_tests": 0,
+    "full_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "previous": "MI01 16/16, MI03/04 46/46 selected, MI07/08 344 NOT_RUN; not summed or promoted"
+  },
+  "progress": {
+    "overall": null,
+    "acceptance_delta": 0,
+    "core": "12/16 standalone",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  },
+  "rollback": "44d7f91f87965fcb08e0c44bacd630204e3684a2",
+  "next": "Review source owners and exact W8 overlay rebind; full clean checkout, original 55 locked history and 344 joint owner regressions, approved W8 fingerprint/build/browser. Preserve previous candidates; no automatic merge."
+}

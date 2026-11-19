@@ -317,3 +317,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U3A — source-bound acceptance checkpoint
 [Runbook](../UNIFIED-U3A/ARCHITECTURE_AND_RUNBOOK.md). WorkflowDraft shared panel repaired; exact P24 history overlay and W8 rebind; 63 selected rerun +10 adapter mechanics, full product build blocked. Core D2 historical 11/16, JOIN_HOLD.
+
+
+## MI-COMMON-SOURCE-REVIEW-01 — isolated convergence candidate
+Existing MI-01 repair, MI-03/04 pure identity/transport and MI-07/08 Model/Memory source transfers coexist in one manifest. No protected entry or runtime authorization selected; all owner decisions and original candidate commits retained. [Evidence and scope](../master-integration/MI-COMMON-SOURCE-REVIEW-01/EVIDENCE.json) · [Runbook](../master-integration/MI-COMMON-SOURCE-REVIEW-01/RUNBOOK.md). Original 0207 regression uses four exact historical overlays; no lock repin. Full build, selected 344, owner review and browser remain HOLD.

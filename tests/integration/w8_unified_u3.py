@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-MANIFEST = '9001c2c634f84fc7280d7fd3f370192873366095'
+MANIFEST = 'b80e834fe081cb1b8917798a11793eb50dce9688'
 P24 = '0728ba08494bb8d67c7cec42fe27dd8606bdc7f3'
 P23 = '7a386554e51caed2db89ae94afc8215277f76c3c'
 U2 = 'tests/integration/run_unified_u2_session.py'
@@ -130,6 +130,8 @@ def load_candidate():
     p23 = load_exact(root/'w8_p10j23.py', P23)
     p23.CANDIDATE_MANIFEST = MANIFEST
     p24.CANDIDATE_MANIFEST = MANIFEST
+    # Preserve exact 0207 regression source outside the updated product transport.
+    p24.HISTORICAL = {**p24.HISTORICAL, p24.PREFIX+'app/core/transaction/postgres_session.py': '8e65e4575a77b11c38c2d2e62ec91fc89d75e23c'}
     return extend(p24.extend_candidate(p23.load_candidate()))
 
 

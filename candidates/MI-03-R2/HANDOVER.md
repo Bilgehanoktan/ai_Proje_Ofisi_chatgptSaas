@@ -1,0 +1,2 @@
+# MI-03-R2 handover
+Common base 8a3b05aadd32b214f3f8988fc9c793f853fbe3d0; exact two G7 nonauthorizing modules; 9 common dependency pins, 41/41 original selected replay PASS. D4/Unified owner disposition, W8 manifest rebind and full build pending; no product-dev movement. G7 actual 7, G2 50, G8 assignment/role provenance, MI-04 protected entry and shared publication/strict COMMIT HOLD. D5-G 42.50%, Core 12/16, MVP 0/11, independent 0/7 unchanged. No CI, main, PG, grant or activation. Rollback separate base checkout. Next central review, then approved transfer, not new engine.
