@@ -1,5 +1,5 @@
 {
-  "revision": "MI-01-R1",
+  "revision": "MI-02-04-R1",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -45,33 +45,33 @@
       "owner_role": "Core / DB",
       "source_ref": "integration/0227-local-environment-preflight",
       "observed_sha": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
-      "next": "Kanonik PG/RLS, pool ve transaction sınırı; Core sahibiyle uzlaştır",
+      "next": "Coordinate E2/E3/E4 Unified; no D3 SQL transfer; actual canonical RLS/pool/PG multi-project T1 remain owner tasks",
       "priority": "P0",
-      "status": "OPEN",
+      "status": "EVIDENCE_RECONCILED_CANONICAL_RLS_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "Core 12/16, D3 raw reviewed scoped fixture; 393/393 product bytes unchanged vs previous observed Core"
     },
     {
       "id": "MI-03",
       "owner_role": "T1 / IAM / ORG",
-      "source_ref": "workstream/0230-d5g6b-core-org-history-session-review",
-      "observed_sha": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
-      "next": "G6B sahiplik ve geçmiş incelemesi, G6A ve C-R8 ile pozitif protected preclaim/publisher/commit; 53 R8 kanıtını oku",
+      "source_ref": "workstream/0230-d5g7-core-org-readback-hardening",
+      "observed_sha": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "next": "Confirm pure read-only subset with IAM/D4 owner; exact original regression; G7 actual 7, active assignment/role; joint publisher/commit HOLD",
       "priority": "P0",
-      "status": "HOLD",
+      "status": "HOLD_OWNER_CONTRACT",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "G7 19/19 + 13/13; 42.5%; two pure review modules first candidate; eight common pins"
     },
     {
       "id": "MI-04",
       "owner_role": "T1 / R8",
-      "source_ref": "planning/0230-d5c-r8-g5-t1-protected-integration",
-      "observed_sha": "459c3eb16302375cd352140a0d6023fb1554d566",
-      "next": "Transport evidence dalı ve son regression readback; yeni test açmadan mevcut sonuçları uzlaştır",
+      "source_ref": "planning/0230-d5c-r9-claim-fullchain-evidence",
+      "observed_sha": "253128a2236ee706486e70acc97e472ededac26b",
+      "next": "Resolve G6A vs R8 one protected entry and exact R8 36 outstanding/G6A 19; no Windows now",
       "priority": "P0",
-      "status": "OPEN",
+      "status": "HOLD_FULLCHAIN_AND_CONTRACT",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "R8 17/53, R9 10/10 original authority, 19 fullchain not run"
     },
     {
       "id": "MI-05",
@@ -89,11 +89,11 @@
       "owner_role": "ORG / Office",
       "source_ref": "integration/org-07c-r8-closed-studio",
       "observed_sha": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
-      "next": "ORG-10 ailesi, üyelik/assignment sahibi ve office projection; mevcut sahipleri koru",
+      "next": "Owner review R1 exact source repairs and shared U3A paths; no activation",
       "priority": "P0",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "ORG-07C-R8 frontend build/typecheck reported PASS and 7 visual captures; weighted 11.6667%; full-stack NOT_RUN"
     },
     {
       "id": "MI-07",
@@ -115,7 +115,7 @@
       "priority": "P1",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "MEM-05E-R1 45%, 7/7 selected; earlier MEM-05D 58.3333%; owner boundaries remain HOLD"
     },
     {
       "id": "MI-09",
@@ -152,7 +152,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "4 direct dependency bytes verified; offline npm/pip preparation failed; product NOT_RUN",
-  "next": "MI-01 connected checkout/review; MI-02/03/04 and independent workstreams continue",
-  "previous_revision": "MI-BOOT-01"
+  "tests_this_round": "remote source/blob comparisons; local git DNS probe failed; no product tests",
+  "next": "MI-03 two review modules exact dependency/test closure and owner coordination; MI-04 protected entry decision; MI-01 remains blocked/deferred. Continue existing ORG source review in parallel.",
+  "previous_revision": "MI-01-R1",
+  "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
+  "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json"
 }

@@ -1,0 +1,316 @@
+{
+  "revision": "MI-02-04-R1",
+  "date": "2026-11-19",
+  "standard": {
+    "ref": "planning/project-wide-progress-reporting",
+    "sha": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "path": "progress/REPORTING_STANDARD_20261118.md"
+  },
+  "overall_percent": null,
+  "overall_reason": "24 areas assigned once in proposed crosswalk; domain/submodule allocation and exhaustive criterion denominators not frozen, no global percent",
+  "global_acceptance": [
+    {
+      "id": "CORE",
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ],
+      "source": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+      "path": "progress/INTEGRATION_GATES_0227.json",
+      "scope": "Core standalone; D3 scoped fixture, not canonical RLS"
+    },
+    {
+      "id": "UI",
+      "previous": [
+        21,
+        40
+      ],
+      "current": [
+        21,
+        40
+      ],
+      "source": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "path": "progress/INTEGRATION_MATRIX_UI_P10J24B.json"
+    },
+    {
+      "id": "ORG_PLAN",
+      "previous": [
+        5,
+        7
+      ],
+      "current": [
+        5,
+        7
+      ],
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "path": "candidates/D5-G7/PROGRESS.json",
+      "scope": "plan not product"
+    },
+    {
+      "id": "MVP",
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ],
+      "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "IV",
+      "previous": [
+        0,
+        7
+      ],
+      "current": [
+        0,
+        7
+      ],
+      "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "EXT",
+      "previous": [
+        2,
+        7
+      ],
+      "current": [
+        2,
+        7
+      ],
+      "source": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+      "path": "handover/W5_EXT07R6_CURRENT.json",
+      "scope": "EXT-specific gates"
+    }
+  ],
+  "packages": [
+    {
+      "id": "D5-F",
+      "prior": 62.619,
+      "current": 62.619,
+      "delta": 0,
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "path": "candidates/D5-G7/PROGRESS.json",
+      "scope": "referenced D5-F baseline; not independently rescored"
+    },
+    {
+      "id": "D5-G7",
+      "prior": 42.5,
+      "current": 42.5,
+      "delta": 0,
+      "criteria": {
+        "design": [
+          1,
+          2
+        ],
+        "source": [
+          1,
+          3
+        ],
+        "functional": [
+          4,
+          6
+        ],
+        "integration": [
+          1,
+          2
+        ],
+        "acceptance": [
+          0,
+          1
+        ]
+      },
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "path": "candidates/D5-G7/PROGRESS.json",
+      "blocker": "7 full checkout cases, active assignment/role provenance, protected publisher/commit"
+    },
+    {
+      "id": "D5-C-R8",
+      "prior": 50,
+      "current": 50,
+      "delta": 0,
+      "criteria": {
+        "design": [
+          2,
+          2
+        ],
+        "source": [
+          3,
+          3
+        ],
+        "functional": [
+          0,
+          3
+        ],
+        "integration": [
+          0,
+          2
+        ],
+        "acceptance": [
+          0,
+          1
+        ]
+      },
+      "source": "253128a2236ee706486e70acc97e472ededac26b",
+      "path": "candidates/D5-C-R9/PROGRESS.json",
+      "blocker": "36/53 not run; 17 passed, no full criterion"
+    },
+    {
+      "id": "D5-C-R9",
+      "prior": null,
+      "current": null,
+      "delta": null,
+      "source": "253128a2236ee706486e70acc97e472ededac26b",
+      "path": "candidates/D5-C-R9/PROGRESS.json",
+      "blocker": "19 fullchain cases not run; evidence only, no denominator"
+    },
+    {
+      "id": "MEM-05C-R2",
+      "prior": 46.6666666667,
+      "current": 58.3333333333,
+      "delta": 11.6666666666,
+      "criteria": {
+        "design": [
+          2,
+          2
+        ],
+        "source": [
+          2,
+          3
+        ],
+        "functional": [
+          4,
+          4
+        ],
+        "integration": [
+          0,
+          2
+        ],
+        "acceptance": [
+          0,
+          1
+        ]
+      },
+      "source": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+      "path": "candidates/W5-MEM-05C-R2/PROGRESS.json",
+      "scope": "owner historical transition, not new central gain"
+    },
+    {
+      "id": "MEM-05D",
+      "prior": 0,
+      "current": 58.3333333333,
+      "delta": 58.3333333333,
+      "criteria": {
+        "design": [
+          2,
+          2
+        ],
+        "source": [
+          2,
+          3
+        ],
+        "functional": [
+          4,
+          4
+        ],
+        "integration": [
+          0,
+          2
+        ],
+        "acceptance": [
+          0,
+          1
+        ]
+      },
+      "source": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47",
+      "path": "candidates/W5-MEM-05D/PROGRESS.json",
+      "scope": "new package initial baseline; historical owner gain; do not add to 05C"
+    },
+    {
+      "id": "MEM-05E-R1",
+      "prior": 45,
+      "current": 45,
+      "delta": 0,
+      "criteria": {
+        "design": [
+          2,
+          2
+        ],
+        "source": [
+          2,
+          3
+        ],
+        "functional": [
+          1,
+          3
+        ],
+        "integration": [
+          0,
+          2
+        ],
+        "acceptance": [
+          0,
+          1
+        ]
+      },
+      "source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "path": "candidates/W5-MEM-05E-R1/PROGRESS.json",
+      "blocker": "S03/F02/F03/I01/I02/A01"
+    },
+    {
+      "id": "ORG-07C-R8",
+      "prior": 11.6666666667,
+      "current": 11.6666666667,
+      "delta": 0,
+      "criteria": {
+        "design": [
+          0,
+          2
+        ],
+        "source": [
+          0,
+          3
+        ],
+        "functional": [
+          1,
+          4
+        ],
+        "integration": [
+          1,
+          3
+        ],
+        "acceptance": [
+          0,
+          2
+        ]
+      },
+      "source": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+      "path": "docs/ORG-07C-R8-INTEGRATION/BROWSER_VISUAL_EVIDENCE_20261119.json",
+      "scope": "counts reconstructed from I1,F4 and pinned denominators; frontend build and partial visual not full gate"
+    }
+  ],
+  "model": {
+    "source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "path": "candidates/W5-J2-R4/ACCEPTANCE_GATES.json",
+    "weighted": null,
+    "windows": "170 reported raw pending",
+    "pg": "0/22 executed"
+  },
+  "unified": {
+    "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "weighted": null,
+    "product_files": 505,
+    "full_build": "BLOCKED",
+    "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
+  },
+  "owner_delta_vs_central": "owner previous/current transitions retained; this central round newly certifies zero product gates and no weighted increase",
+  "new_product_tests": 0
+}

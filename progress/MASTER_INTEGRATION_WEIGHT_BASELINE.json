@@ -1,6 +1,6 @@
 {
-  "revision": "MI-BOOT-01",
-  "status": "PROPOSED_INITIAL_PLANNING_WEIGHTS; owner authorized starting program; scope crosswalk and criteria not frozen",
+  "revision": "MI-02-04-R1",
+  "status": "PROPOSED_24_AREA_CROSSWALK_COMPLETE; 21 domains / 63 submodules and evidence criteria not frozen",
   "total": 100,
   "groups": [
     {
@@ -10,7 +10,12 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        1,
+        2
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P02",
@@ -19,7 +24,11 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        3
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P03",
@@ -28,7 +37,12 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        4,
+        5
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P04",
@@ -37,7 +51,12 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        6,
+        7
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P05",
@@ -46,7 +65,11 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        8
+      ],
+      "scope_rule": "ORG owned here with Agent Runtime; security roles/grants P08"
     },
     {
       "id": "P06",
@@ -55,7 +78,14 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        9,
+        10,
+        13,
+        18
+      ],
+      "scope_rule": "external tool integration area 18 here; SaaS billing integrations P09 where owned by billing, no duplicate scoring"
     },
     {
       "id": "P07",
@@ -64,7 +94,12 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        11,
+        12
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P08",
@@ -73,7 +108,12 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        14,
+        15
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P09",
@@ -82,7 +122,13 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        16,
+        17,
+        19
+      ],
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
     },
     {
       "id": "P10",
@@ -91,7 +137,15 @@
       "criteria": null,
       "previous": null,
       "current": null,
-      "delta": null
+      "delta": null,
+      "tracker_area_ids": [
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "scope_rule": "shared tests, DevOps, observability, backup and catalog own infra criteria; domain-specific tests stay in owning group"
     }
   ],
   "stage_weights": {
@@ -102,5 +156,16 @@
     "acceptance": 10
   },
   "overall_percent": null,
-  "reason": "No frozen exhaustive non-overlapping criteria/24-area crosswalk; not estimated. Canonical product acceptances separate."
+  "reason": "24 areas assigned once in proposed crosswalk; domain/submodule allocation and exhaustive criterion denominators not frozen, no global percent",
+  "coverage": {
+    "tracker_areas": [
+      24,
+      24
+    ],
+    "criterion_baseline_groups": [
+      0,
+      10
+    ],
+    "overall_percent": null
+  }
 }

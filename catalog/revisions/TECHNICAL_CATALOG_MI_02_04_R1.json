@@ -1,0 +1,150 @@
+{
+  "revision": "MI-02-04-R1",
+  "product_delta": 0,
+  "api_delta": 0,
+  "db_delta": 0,
+  "symbol_delta": 0,
+  "dependency_delta": 0,
+  "reviewed_candidates": [
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "incoming": {
+        "sha": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "mode": "100644",
+        "size": 15424
+      },
+      "disposition": "HOLD_DEPENDENCY_OR_OWNER",
+      "reason": "Durable resolver uses D0IntentAuthority contract; authority variants differ"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "incoming": {
+        "sha": "e1e977880324664bb359eee3286223a796878f44",
+        "mode": "100644",
+        "size": 5178
+      },
+      "disposition": "FIRST_REVIEW_READ_ONLY_NO_GRANT",
+      "reason": "No direct authority import; current Core dependency pins match; full import and exact original test closure still required"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "incoming": {
+        "sha": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "mode": "100644",
+        "size": 8738
+      },
+      "disposition": "HOLD_DEPENDENCY_OR_OWNER",
+      "reason": "Imports RootPin and D0IntentAuthority, requires owner fence integration"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "incoming": {
+        "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "mode": "100644",
+        "size": 3393
+      },
+      "disposition": "FIRST_REVIEW_READ_ONLY_NO_GRANT",
+      "reason": "No direct authority import; current Core dependency pins match; full import and exact original test closure still required"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "incoming": {
+        "sha": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+        "mode": "100644",
+        "size": 11216
+      },
+      "disposition": "HOLD_DEPENDENCY_OR_OWNER",
+      "reason": "Requires actual exact dependencies and relevant original fixture"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "incoming": {
+        "sha": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "mode": "100644",
+        "size": 7172
+      },
+      "disposition": "HOLD_DEPENDENCY_OR_OWNER",
+      "reason": "Requires actual exact dependencies and relevant original fixture"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "incoming": {
+        "sha": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "mode": "100644",
+        "size": 6390
+      },
+      "disposition": "HOLD_DEPENDENCY_OR_OWNER",
+      "reason": "Requires disputed ORG membership adapter and original ORG fixture closure"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "incoming": {
+        "sha": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+        "mode": "100644",
+        "size": 4691
+      },
+      "disposition": "QUEUE_WITH_RESOLVER",
+      "reason": "Requires actual exact dependencies and relevant original fixture"
+    }
+  ],
+  "conflicts": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "refs": {
+        "base": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "g6a": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+        "g7": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "r8": "6810c8eea0d7323736f1e5ce68d9de85dcc2ca61",
+        "r9": "88fd68c563db7e620c5b06c1a9c6b68d304ae071"
+      },
+      "status": "HOLD_OWNER_CONTRACT"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "refs": {
+        "base": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+        "g6a": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "g7": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+        "r8": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "r9": "6c0995712bd368f72c239cb19cd3e85aa781c1b9"
+      },
+      "status": "HOLD_OWNER_CONTRACT"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "refs": {
+        "base": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "g6a": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "g7": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "r8": "12f40659e916d5722d60c41c27f3116d746545f0",
+        "r9": "b0dde358be781b48e06b8901acc63ef31b013db0"
+      },
+      "status": "HOLD_OWNER_CONTRACT"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "refs": {
+        "base": null,
+        "g6a": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "g7": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "r8": "14787a8c7e73e68f25d3ccc91b414e2c1b0d12ee",
+        "r9": "675615e04059280ec6aa99e9679b4388cd018c2d"
+      },
+      "status": "HOLD_OWNER_CONTRACT"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "refs": {
+        "base": null,
+        "g6a": null,
+        "g7": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+        "r8": null,
+        "r9": null
+      },
+      "status": "HOLD_OWNER_CONTRACT"
+    }
+  ],
+  "rollback": "279287bef67a0e543e8aff6d51417d33e3a6bdad",
+  "source_reconciliation": "docs/master-integration/MI-02-04-R1_SOURCE_RECONCILIATION.json",
+  "tests": "NOT_RUN; local DNS probe failed"
+}
