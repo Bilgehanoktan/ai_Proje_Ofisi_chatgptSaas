@@ -1,0 +1,92 @@
+{
+  "revision": "MI-COMMON-04-PINNED-RECOVERY",
+  "source_branch": "integration/mi-common-source-review-01",
+  "source_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+  "original_common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "model_memory_source_pins": [
+    114,
+    114
+  ],
+  "historical_core_source_pins": [
+    55,
+    55
+  ],
+  "historical_overlaps": 26,
+  "historical_changed": 2,
+  "model_optional_sha256": 28,
+  "core_optional_sha256": 6,
+  "local_original_cache_paths": {
+    "model": [
+      5,
+      114
+    ],
+    "core": [
+      5,
+      55
+    ]
+  },
+  "recovery_helper_tests": [
+    14,
+    14
+  ],
+  "offline_preflight": "EXPECTED_HOLD",
+  "w8_chain_static": [
+    24,
+    24
+  ],
+  "w8_parent_edges": [
+    23,
+    23
+  ],
+  "npm_lock_registry_metadata": [
+    61,
+    61
+  ],
+  "product_files": 539,
+  "manifest_entries": 538,
+  "all_product_blobs_retained": [
+    539,
+    539
+  ],
+  "model_memory_344": "NOT_RUN",
+  "historic_core_29": "NOT_RUN",
+  "full_w8_build": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "protected_commit": "HOLD",
+  "independent_acceptance": "HOLD",
+  "owner_review": "PENDING",
+  "full_local_checkout": "BLOCKED_DNS",
+  "source_paths": {
+    "code": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/pinned_source_recovery.py",
+    "test": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/test_pinned_source_recovery.py",
+    "evidence": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/EVIDENCE.json",
+    "catalog": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/CATALOG.json",
+    "w8_static": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/W8_STATIC_PREFLIGHT.json",
+    "runbook": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/RUNBOOK.md"
+  },
+  "rollback": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "acceptance_delta": 0,
+  "governance_parent": "ee4649ee4ca4ac6f9c55fae580930c744fe7b5ab",
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  },
+  "original_queue_unchanged": [
+    "MI-03",
+    "MI-04",
+    "MI-05",
+    "MI-06",
+    "MI-09"
+  ],
+  "weighted_development_delta_pp": 0,
+  "product_acceptance_delta": 0,
+  "recording": "source candidate actual commits read back; current central updated to this evidence; not a product test run"
+}

@@ -1,5 +1,5 @@
 {
-  "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+  "revision": "MI-COMMON-04-PINNED-RECOVERY",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen.",
   "new_product_tests": 0,
-  "previous_revision": "MI-PROGRESS-03-CLOSE",
+  "previous_revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1173,5 +1173,75 @@
         1
       ]
     }
+  },
+  "mi_common_04_pinned_recovery": {
+    "revision": "MI-COMMON-04-PINNED-RECOVERY",
+    "source_branch": "integration/mi-common-source-review-01",
+    "source_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "original_common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "model_memory_source_pins": [
+      114,
+      114
+    ],
+    "historical_core_source_pins": [
+      55,
+      55
+    ],
+    "historical_overlaps": 26,
+    "historical_changed": 2,
+    "model_optional_sha256": 28,
+    "core_optional_sha256": 6,
+    "local_original_cache_paths": {
+      "model": [
+        5,
+        114
+      ],
+      "core": [
+        5,
+        55
+      ]
+    },
+    "recovery_helper_tests": [
+      14,
+      14
+    ],
+    "offline_preflight": "EXPECTED_HOLD",
+    "w8_chain_static": [
+      24,
+      24
+    ],
+    "w8_parent_edges": [
+      23,
+      23
+    ],
+    "npm_lock_registry_metadata": [
+      61,
+      61
+    ],
+    "product_files": 539,
+    "manifest_entries": 538,
+    "all_product_blobs_retained": [
+      539,
+      539
+    ],
+    "model_memory_344": "NOT_RUN",
+    "historic_core_29": "NOT_RUN",
+    "full_w8_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "protected_commit": "HOLD",
+    "independent_acceptance": "HOLD",
+    "owner_review": "PENDING",
+    "full_local_checkout": "BLOCKED_DNS",
+    "source_paths": {
+      "code": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/pinned_source_recovery.py",
+      "test": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/test_pinned_source_recovery.py",
+      "evidence": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/EVIDENCE.json",
+      "catalog": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/CATALOG.json",
+      "w8_static": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/W8_STATIC_PREFLIGHT.json",
+      "runbook": "docs/master-integration/MI-COMMON-04-PINNED-RECOVERY/RUNBOOK.md"
+    },
+    "rollback": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "acceptance_delta": 0
   }
 }
