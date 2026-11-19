@@ -1,0 +1,81 @@
+{
+  "revision": "MI10-CLOUD-FULL-CHECKOUT-TECHNICAL-CATALOG-01",
+  "type": "CI_ONLY_SOURCE_QA_NO_PRODUCT_RUNTIME_CHANGE",
+  "owner": "MI-10 QA/CI; MI-01 Unified owner retains W8 build and product source",
+  "changed_files": [
+    {
+      "path": ".github/workflows/mi10-limited-ci.yml",
+      "branch": "integration/mi10-limited-ci-20261119",
+      "commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+      "change": "append two scoped GitHub-hosted steps to existing source-integrity job; no new job, no new trigger, no new permissions"
+    }
+  ],
+  "reused_sources": [
+    {
+      "path": "tests/integration/w8_mi_common_02.py",
+      "blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+      "entry": "main() audit",
+      "execution": "real GitHub-hosted Python source SHA256 check on both candidate and archive"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+      "role": "exact 538 product file SHA256 entries + manifest"
+    },
+    {
+      "path": "docs/master-integration/MI-COMMON-05-LOCAL-CHECKOUT/mi05_verified_local_checkout.py",
+      "blob": "59adddd37f7cc178278df194f2e945cd3dbd13e8",
+      "role": "existing owner local full archive recovery solution NOT modified or executed here"
+    }
+  ],
+  "new_script_modules": [],
+  "new_product_classes": [],
+  "new_product_functions": [],
+  "source_integrity_script": "inlined bash plus Python stdlib hashlib, os, pathlib, subprocess",
+  "checks": [
+    "immutable 87272b6e commit",
+    "root Git tree 187f652f SHA",
+    "all 1953 tracked files byte-level recomputed Git blob SHA1",
+    "all 1953 regular mode100644 with no symlink/submodule",
+    "22,342,956 source bytes",
+    "539 product files",
+    "identical Git product tree 617e1ca5 across 61bb and 872",
+    "538/538 product manifest SHA256",
+    "17/17 frontend/backend schema/fixture parity",
+    "33/33 extra helper Git blobs"
+  ],
+  "security": {
+    "token_permissions": "contents:read",
+    "triggers": "unchanged exact same-repo PR #4 only",
+    "archive": "public same repo immutable Git SHA, owner docs-only",
+    "api_changes": [],
+    "db_changes": [],
+    "db_tables": [],
+    "events_changes": [],
+    "model_provider_calls": 0,
+    "secrets": false,
+    "production": false
+  },
+  "dependencies": {
+    "new_runtime": [],
+    "new_ci": [],
+    "existing_checkout_action": "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+    "stdlib": [
+      "hashlib",
+      "os",
+      "pathlib",
+      "subprocess"
+    ],
+    "git_cli": true
+  },
+  "defects": {
+    "remaining": "reviewed Python transitive wheelhouse/fingerprint needed before full W8 prepare/install/test/smoke; original chromium SSE CDP body unresolved"
+  },
+  "revert": "normal revert of CI-only workflow commit in isolated PR; do not rewrite owner product/history",
+  "evidence": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/EVIDENCE.json",
+  "handover": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/ARCHITECTURE_AND_HANDOVER.md",
+  "acceptance": {
+    "product_delta_pp": 0,
+    "development_percent": "HESAPLANAMADI"
+  }
+}
