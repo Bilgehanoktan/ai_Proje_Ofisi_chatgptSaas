@@ -1,0 +1,170 @@
+{
+  "revision": "MI10-CLOUD-CI-TECHNICAL-CATALOG-20261119",
+  "scope": "DEVELOPMENT_CI_ONLY",
+  "source": "integration/mi10-limited-ci-20261119",
+  "canonical": "integration/product-dev@8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "common": "integration/mi-common-source-review-01@61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "catalogue": [
+    {
+      "path": ".github/workflows/mi10-limited-ci.yml",
+      "type": "GITHUB_ACTIONS_WORKFLOW",
+      "entrypoints": [
+        "pull_request"
+      ],
+      "conditions": "same repo exact branch and integration/product-dev target",
+      "jobs": [
+        "source-integrity",
+        "frontend-browser",
+        "mi03-t1-d0"
+      ],
+      "permissions": [
+        "contents:read"
+      ],
+      "restricted": [
+        "push",
+        "workflow_dispatch",
+        "pull_request_target",
+        "deployment",
+        "write_token",
+        "auto_merge"
+      ],
+      "modifies_product": false
+    },
+    {
+      "path": ".github/mi10/materialize_t1_selected.py",
+      "type": "PYTHON_CI_HELPER",
+      "functions": [
+        "assert_checkout(root,expected)",
+        "git_blob(raw)",
+        "run()"
+      ],
+      "dependencies": [
+        "stdlib hashlib,json,os,pathlib,subprocess,sys"
+      ],
+      "inputs": [
+        "exact common SHA",
+        "exact G6A owner SHA",
+        "exact GATE01 evidence SHA",
+        "T1_DIRECT_PINS.json 30 entries"
+      ],
+      "writes": "disposable temporary staging only",
+      "modifies_product": false
+    },
+    {
+      "path": ".github/mi10/run_sse_compatible_u3.py",
+      "type": "PYTHON_CI_COMPAT_TEST_HARNESS",
+      "functions": [
+        "blob(raw)",
+        "main()"
+      ],
+      "input_blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773",
+      "scope": "exact original browser source copied to temp, only same HTTP response Fetch.clone body replaces CDP response.text; all original assertions remain",
+      "classification": "NEW_SUPPLEMENTAL_DIAGNOSTIC_NOT_ORIGINAL_BYTE_EXACT_TEST",
+      "modifies_product": false
+    },
+    {
+      "path": ".github/mi10/requirements-browser.txt",
+      "type": "EXACT_VERSION_CI_DEPENDENCIES",
+      "direct_python_pins": [
+        "fastapi==0.163.0",
+        "starlette==1.10.0",
+        "uvicorn==0.34.2",
+        "playwright==1.57.0",
+        "cryptography==46.0.4",
+        "opentelemetry-api==1.45.2"
+      ],
+      "rules": [
+        "--no-deps",
+        "--only-binary=:all:",
+        "pip check"
+      ],
+      "note": "Not a formal reviewed SHA256 W8 wheelhouse",
+      "modifies_product": false
+    },
+    {
+      "path": "docs/master-integration/MI-10-LIMITED-CI-20261119/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+      "type": "CI_WORKSTREAM_HANDOVER",
+      "modifies_product": false
+    },
+    {
+      "path": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
+      "type": "CANONICAL_EVIDENCE_POINTER",
+      "modifies_product": false
+    }
+  ],
+  "reused_sources": [
+    {
+      "path": "tests/integration/w8_mi_common_02.py",
+      "symbol": "main()/audit",
+      "checks": "538 source SHA, 17 paired contracts, 33 auxiliary blob pins; original lock preserved"
+    },
+    {
+      "path": "tests/integration/browser_unified_u3.py",
+      "symbol": "main()/read(panel)",
+      "mode": "exact pinned original source; test-only compatibility runner by MI10"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "symbol": "shared_snapshot(request)",
+      "route": "GET /demo/v1/lifecycle/shared-snapshot",
+      "safety": "fixed persisted D0 SQLite; returns 200 SSE or HOLD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+      "symbol": "GET(request)",
+      "route": "GET /api/demo/shared-snapshot",
+      "safety": "127.0.0.1 backend only, cache no-store, no writes"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+      "symbol": "export_prefix_fixture(path,version=3)",
+      "safety": "ephemeral historical synthetic DB fixture, readback verified"
+    },
+    {
+      "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_t1_direct.py",
+      "symbol": "verify()/main()",
+      "tests": 42,
+      "source_pins": 30
+    },
+    {
+      "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/T1_DIRECT_PINS.json",
+      "role": "original source/byte hashes; G6A and common source not merged"
+    }
+  ],
+  "api_changes": [],
+  "database_schema_changes": [],
+  "product_file_changes": [],
+  "new_product_classes": [],
+  "new_product_functions": [],
+  "runtime_security_grants": [],
+  "ephemeral_datastores": [
+    "RUNNER_TEMP/lifecycle-prefix.d0.sqlite (actual synthetic sqlite, read-only during browser test)"
+  ],
+  "ephemeral_http": [
+    "127.0.0.1:17300 Next.js",
+    "127.0.0.1:17301 FastAPI"
+  ],
+  "negative_scope": [
+    "No live PostgreSQL guarded IAM/ORG/T1 commit",
+    "No independent IV/security acceptance",
+    "No full W8 run",
+    "No production data/provider/spend",
+    "No main/product-dev change"
+  ],
+  "diagnostic": {
+    "build": "PASS",
+    "browser_transport": "SSE_COMPATIBLE_PASS",
+    "native_CDP": "KNOWN_FAIL",
+    "source_integrity": "PASS",
+    "repeated_T1": "42/42_PASS"
+  },
+  "repair": {
+    "build": "npm lock exact and no re-generation; FastAPI exact pins need opentelemetry-api",
+    "browser": "CDP Network.getResponseBody cannot read SSE; test-only same-fetch clone; do not attribute native original browser PASS",
+    "security": "GATE02 durable_ops collision and owner issuance open; rerun exact P02/PG owner suite before protected commit",
+    "rollback": "close PR #4 or normal git revert on isolated MI10 branch; remove CI exception via governance review if revoked"
+  },
+  "acceptance_delta": 0,
+  "progress_delta": 0,
+  "percent": "HESAPLANAMADI (criteria denominators not frozen)"
+}
