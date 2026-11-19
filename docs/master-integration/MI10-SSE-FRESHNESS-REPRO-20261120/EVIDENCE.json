@@ -1,0 +1,90 @@
+{
+  "revision": "MI10-SSE-FRESHNESS-REPRO-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_OFFLINE_NODE_JS_NEGATIVE_TRANSPORT_HARNESS_REPRO_NOT_REAL_BROWSER_OR_PRODUCT_TEST",
+  "tested_source": {
+    "repo_git_commit": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
+    "path": ".github/mi10/run_sse_compatible_u3.py",
+    "blob": "84997c31334e4684b159b5dbd799e3abdd40d301",
+    "captured_original_U3_blob": "2a3f2b8e286c5d79847a6b00cdbd046d0429773"
+  },
+  "local_execution": {
+    "node": "v22.16.0",
+    "python": "3.13.5",
+    "environment": "isolated container, no HTTP, no browser, no production",
+    "actual_assertions": [
+      5,
+      5
+    ],
+    "stale_read_cases_reproduced": 2,
+    "exit_code": 0,
+    "report_sha256": "925a574437a173fe641ed4a9ab6c9afdc4a38b13e9e7800baecd1d31b60f0c89",
+    "report_name": "MI10_SSE_GLOBAL_PROMISE_REGRESSION_20261120.json",
+    "harness_path": "docs/master-integration/MI10-SSE-FRESHNESS-REPRO-20261120/test_sse_global_promise.js",
+    "note": "Committed source is an equivalent Node reproduction of the pinned JS interception; it is not the full original Python/Playwright browser test."
+  },
+  "observations": [
+    "After first resolved snapshot-A, interceptor stores one global lastBody promise.",
+    "Before second fetch resolves, wait predicate lastBody!==null is already true and lastBody yields snapshot-A rather than pending snapshot-B.",
+    "After second fetch resolves lastBody finally yields B; same stale-body mechanism reproduces for third request before C resolution.",
+    "The browser's fixed synthetic digest could mask a repeated-body false positive; no actual browser failure is proven by this isolated reproduction."
+  ],
+  "owner_boundary": {
+    "pr": 4,
+    "scope": "QA owner handoff; do not edit CI-only owner workflow, source, product-dev or main",
+    "current_ci_run": 44614849105,
+    "current_ci_result": "3/3 selected D0 PASS",
+    "browser_classification": "SSE_COMPAT_DIAGNOSTIC_ONLY",
+    "actual_unmodified_U3": "CDP_BODY_UNRESOLVED",
+    "w8": "NOT_RUN",
+    "memory_0214": "0/10_NOT_RUN",
+    "protected_pg": "NOT_RUN",
+    "IV": "HOLD"
+  },
+  "proposed_owner_freshness_contract": [
+    "For every read action record expected next request sequence, then associate cloned body with the same request URL/id (monotonic queue, or per-request key).",
+    "Wait for exact fresh response sequence and its fulfilled clone body before assertion; a globally non-null prior Promise must not satisfy a later read.",
+    "Verify 3 distinct response bodies are bound to 3 distinct browser fetches, preserve original request count, HTTP status/Cache-Control, digest, TTL, same-document and external-request-deny checks.",
+    "Do not mock API/fulfill routes or infer original U3 byte-exact PASS from compatible CI."
+  ],
+  "progress": {
+    "previous": {
+      "D5_G7": 42.5,
+      "D5_C_R8": 50,
+      "Core": [
+        12,
+        16
+      ],
+      "MVP": [
+        0,
+        11
+      ]
+    },
+    "current": {
+      "D5_G7": 42.5,
+      "D5_C_R8": 50,
+      "Core": [
+        12,
+        16
+      ],
+      "MVP": [
+        0,
+        11
+      ]
+    },
+    "development_delta_pp": 0,
+    "product_acceptance_delta": 0,
+    "overall_development": "HESAPLANAMADI",
+    "new_product_functional_tests": 0,
+    "qa_negative_harness_tests": 5
+  },
+  "changes": {
+    "product_paths": 0,
+    "existing_API": 0,
+    "DB": 0,
+    "permission": 0,
+    "CI": 0,
+    "branch_promotion": 0
+  },
+  "rollback": "This governance-only evidence may be reverted; PR#4 owner change requires independent review."
+}
