@@ -6483,5 +6483,85 @@
     "independent_acceptance": "HOLD",
     "weighted_delta_pp": 0,
     "product_acceptance_delta_pp": 0
+  },
+  "p0_central_coordination_20261120": {
+    "revision": "MI-P0-CENTRAL-COORDINATION-20261120",
+    "authorization": "user confirmed central integration/closure coordination; no product merge or new CI/production permissions",
+    "mode": "READ_ONLY_SOURCE_OWNER_RECONCILIATION_AND_QUEUE_CUSTODY",
+    "evidence_class": "ACTUAL_GITHUB_RECURSIVE_TREES_AND_MANIFEST_FILES_NOT_FUNCTIONAL_TEST",
+    "evidence_path": "docs/master-integration/MI-P0-CENTRAL-SOURCE-RECONCILIATION-20261120.md",
+    "branch_shas": {
+      "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "common": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+      "core_org_candidate": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+      "pr6_reviewed": "0f1dc66a84126c5e892d8d517ec23ed8f859a772"
+    },
+    "source_tree_complete": true,
+    "source_product_counts": {
+      "product_dev": 505,
+      "common": 539,
+      "core_org": 553,
+      "pr6": 554
+    },
+    "manifest_entries": {
+      "product_dev": 504,
+      "common": 538,
+      "core_org": 552
+    },
+    "deltas": {
+      "product_dev_to_common": {
+        "added": 35,
+        "removed": 1,
+        "changed_git_blobs": 14,
+        "classification": "OWNER_REVIEW_REQUIRED"
+      },
+      "common_to_core_org": {
+        "added": 14,
+        "removed": 0,
+        "changed_git_blobs": 1,
+        "modified_only": "product/SOURCE_MANIFEST.json",
+        "classification": "ADDITIVE_GIT_TREE_NO_OVERWRITE_BUT_G9_OWNER_COLLISION_AND_SEMANTIC_CONTRACT_HOLD"
+      }
+    },
+    "ownership": {
+      "GATE02": "MI-02/MI-03/MI-06/ORG D4 G8 owner; current active source workstream protected",
+      "GATE01": "MI-03/MI-04/Memory T1 owner",
+      "GATE04": "MI-02/MI-04/IV owner",
+      "GATE05": "MI-01/MI-10/Unified UI owner",
+      "central": "CTl-01 source/manifest/owner collision matrix and evidence/queue custody; no competing feature code"
+    },
+    "actual_current_ci": {
+      "pr6_original_core_operationsstore": "10/10 PASS_D0 run 44620141705",
+      "pr4_latest_three_jobs": "3/3 PASS run 44620987573",
+      "new_tests_this_coordination": 0
+    },
+    "blocked": [
+      "source owner G9 durable_ops version selection",
+      "GATE02 genuine owner issuer/role/assignment and P02",
+      "old SQLite+old pin restore vulnerability",
+      "G2 50/G9 7/Memory T1 10",
+      "strict PG COMMIT/restore",
+      "W8 native browser/fullchain"
+    ],
+    "next": "CTL-01 review exact additional 14 source files + manifest and original G9 durable_ops pin without editing owner branches; CTL-02 owners complete GATE02; resume source-promotion only with separate approval and evidence.",
+    "previous_iam_org_development_percent": 42.5,
+    "current_iam_org_development_percent": 42.5,
+    "delta_pp": 0,
+    "global_weighted_development_percent": null,
+    "acceptance": {
+      "core": [
+        12,
+        16
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "delta": 0
+    },
+    "product_dev_source_changes": 0,
+    "product_db_api_changes": 0,
+    "permissions_change": false,
+    "rollback": "normal revert governance-only record; product-dev/main unchanged"
   }
 }
