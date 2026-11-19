@@ -1,5 +1,5 @@
 {
-  "revision": "MI10-VM-REALM-AND-MI03-COREOPS-CI-20261120",
+  "revision": "MI-COMMON-08-WIN-ISOLATED-ENV",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen. | GATE02 new isolated 16/16, replayed 20/20; previous/current D5-G 42.5%, delta 0.",
   "new_product_tests": 0,
-  "previous_revision": "MI03-GATE02-ORIGINAL-CORE-GITHUB-SOURCE-READBACK-01",
+  "previous_revision": "MI10-VM-REALM-AND-MI03-COREOPS-CI-20261120",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1751,5 +1751,42 @@
     "product_acceptance_delta_pp": 0,
     "source_code_changes": 0,
     "preservation": "No owner branch, product-dev/main, CI, permissions or production changes."
+  },
+  "mi_common_08_windows_reference_runtime": {
+    "revision": "MI-COMMON-08-WIN-ISOLATED-ENV",
+    "source_commit": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "source_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+    "windows_source_pins": {
+      "model": [
+        114,
+        114
+      ],
+      "core": [
+        55,
+        55
+      ]
+    },
+    "user_windows_preflight": {
+      "python": "3.14.3",
+      "sqlite": "3.50.4",
+      "expected_python": "3.13.5",
+      "expected_sqlite": "3.46.1",
+      "model344": "HOLD_BEFORE_EXECUTION",
+      "cryptography": "NOT_INSTALLED"
+    },
+    "candidate": "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/AIOS_P0_IZOLE_PY3135_SQLITE3461.ps1",
+    "candidate_classification": "NOT_RUN_ON_WINDOWS",
+    "candidate_pinned_python_zip_sha256": "7D2650FD9D1B9D002D4A315D5F354247FD6A44F30517C7EF577B08F57A0FB6D9",
+    "candidate_pinned_sqlite_zip_sha256": "300CB2918946F42A1A2F7F31A8DD89EDC202570E4E49D21E13D33ECDF80A6B67",
+    "candidate_safety": "new private Python embed directory only; no pip/install/CI/registry/system overwrite; original zips retained",
+    "future": "User PC ENVIRONMENT_PRECHECK.json then separate reviewed cryptography 46.0.4 before real 344. Historical Core29 and W8 still deferred.",
+    "core29": "NOT_RUN",
+    "w8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "protected_commit": "HOLD",
+    "independent_acceptance": "HOLD",
+    "weighted_delta_pp": 0,
+    "product_acceptance_delta_pp": 0
   }
 }

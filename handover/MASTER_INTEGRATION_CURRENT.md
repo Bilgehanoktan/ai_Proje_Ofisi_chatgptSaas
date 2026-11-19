@@ -85,3 +85,7 @@ Existing original Core ResearchFixture/inspect_research_slice + G8 OperationsSto
 
 ## MI-COMMON-07-MODEL344-CRYPTO-ENV-HOLD
 [Evidence](../docs/master-integration/MI-COMMON-07-MODEL344-CRYPTO-ENV-HOLD/EVIDENCE.json): user-provided PowerShell log records Core 55/55 source-only PASS, Model 114/114 source-only PASS, 344 test HOLD before execution because Python package `cryptography` missing, 29 Core NOT_RUN. No weighted/acceptance change. Next: isolated environment exact 3.13.5/3.46.1/46.0.4 without global packages, then original Model 344; never bypass pin checks. Existing source tree unchanged; rollback only newly created venv.
+
+
+## MI-COMMON-08-WIN-ISOLATED-ENV
+Source candidate `4035d1a884362dae56a60d91358ea6e8e7dc0cdd`: official Python 3.13.5 x64 embed + SQLite 3.46.1 Windows ZIP isolated PowerShell preflight and recorded external SHA256. User Python is 3.14.3 / SQLite 3.50.4; preceding 344 never began, 55 Core source-only valid. Before actual cryptography install or selected original 344, require fresh user Windows `ENVIRONMENT_PRECHECK.json`. [Runbook](../docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/RUNBOOK.md) · [Evidence](../docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/EVIDENCE.json). No permissions, progress or acceptance delta.
