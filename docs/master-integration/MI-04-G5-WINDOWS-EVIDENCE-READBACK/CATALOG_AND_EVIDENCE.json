@@ -1,0 +1,638 @@
+{
+  "revision": "MI-04-G5-WINDOWS-EVIDENCE-READBACK",
+  "date": "2026-11-19",
+  "classification": "HISTORICAL_WINDOWS_CONSOLE_RECONSTRUCTED_EVIDENCE_AND_REMOTE_GIT_PIN_COMPARISON",
+  "refs": {
+    "governance_parent": "bdd7a22160117044f929fabe29865487840d83e8",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "g5": "1a9464966c1c5c67415e279b20bae3b19107554c",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "windows_evidence": "afba55652d4667d9027a0a7fd8f2dec47684480"
+  },
+  "evidence": {
+    "path": "candidates/D5-G5/WINDOWS_LOG_READBACK_20261119.json",
+    "blob": "51a05faf58ac693e5ebe4085b919b4cb814f893b",
+    "log_path": "candidates/D5-G5/G5-results-reconstructed.log",
+    "log_blob": "8e128739a84e4ce03bcae229cfa29c2f58458d4b",
+    "log_bytes": 3007,
+    "recorded_sha256": "ba5647dd5e65a5f8fb8c5587b73128ec6c1a456dcb944fb3b94f8e322170accb",
+    "raw_received": false,
+    "distinct_runs": 1,
+    "reported_pass": 26,
+    "source_pins": [
+      31,
+      31
+    ],
+    "suite_counts": [
+      12,
+      14
+    ],
+    "exit": 0,
+    "scope": "Windows Python 3.14.3 SQLite 3.50.4; no independent execution or new hash calculation in this review",
+    "original_pin_file": "004bf52990ab1fb24ae03d7ba267cc4f4d044d2f"
+  },
+  "counts": {
+    "bf87d5c48c7fee97fe12d0a28df3be80249f7306": {
+      "EXACT": 11,
+      "DIVERGENT": 1,
+      "ABSENT": 19
+    },
+    "6bab62305d2ea15f8608f7835270ae027ce01e83": {
+      "EXACT": 30,
+      "DIVERGENT": 1,
+      "ABSENT": 0
+    },
+    "a59a15a94b9eaa2bb7687297e9057e286f297ede": {
+      "EXACT": 31,
+      "DIVERGENT": 0,
+      "ABSENT": 0
+    }
+  },
+  "comparison": {
+    "bf87d5c48c7fee97fe12d0a28df3be80249f7306": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "expected": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "actual": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "expected": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "actual": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "expected": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "actual": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "expected": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "actual": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "expected": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "actual": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+        "expected": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "actual": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "expected": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "actual": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "actual": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "status": "DIVERGENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": "e1e977880324664bb359eee3286223a796878f44",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+        "expected": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "actual": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+        "expected": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+        "expected": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D4-R4/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-INTENT/intent_identity.py",
+        "expected": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-B/identity_fence_review.py",
+        "expected": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "expected": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "expected": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "expected": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "expected": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "expected": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "expected": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "expected": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "expected": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "expected": "e0b9078284922d281996869daa15a455572c1785",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "expected": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+        "expected": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+        "expected": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+        "expected": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "actual": null,
+        "status": "ABSENT"
+      }
+    ],
+    "6bab62305d2ea15f8608f7835270ae027ce01e83": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "expected": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "actual": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "expected": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "actual": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "expected": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "actual": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "expected": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "actual": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "expected": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "actual": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+        "expected": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "actual": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "expected": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "actual": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "actual": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+        "status": "DIVERGENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "actual": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": "e1e977880324664bb359eee3286223a796878f44",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+        "expected": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "actual": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+        "expected": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "actual": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+        "expected": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "actual": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D4-R4/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": "e1e977880324664bb359eee3286223a796878f44",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-INTENT/intent_identity.py",
+        "expected": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "actual": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-B/identity_fence_review.py",
+        "expected": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "actual": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "expected": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "actual": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "expected": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "actual": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "expected": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "actual": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "expected": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "actual": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "expected": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "actual": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "expected": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "actual": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "expected": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "actual": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "expected": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "actual": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "expected": "e0b9078284922d281996869daa15a455572c1785",
+        "actual": "e0b9078284922d281996869daa15a455572c1785",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "expected": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "actual": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+        "expected": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "actual": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+        "expected": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "actual": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+        "expected": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "actual": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "status": "EXACT"
+      }
+    ],
+    "a59a15a94b9eaa2bb7687297e9057e286f297ede": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "expected": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "actual": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "expected": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "actual": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "expected": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "actual": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "expected": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "actual": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "expected": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "actual": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+        "expected": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "actual": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "expected": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "actual": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "actual": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "actual": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": "e1e977880324664bb359eee3286223a796878f44",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+        "expected": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "actual": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+        "expected": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "actual": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+        "expected": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "actual": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D4-R4/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": "e1e977880324664bb359eee3286223a796878f44",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-INTENT/intent_identity.py",
+        "expected": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "actual": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-B/identity_fence_review.py",
+        "expected": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "actual": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "expected": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "actual": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "expected": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "actual": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "expected": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "actual": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "expected": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "actual": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "expected": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "actual": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "expected": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "actual": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "expected": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "actual": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "expected": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "actual": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "expected": "e0b9078284922d281996869daa15a455572c1785",
+        "actual": "e0b9078284922d281996869daa15a455572c1785",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "expected": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "actual": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+        "expected": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "actual": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+        "expected": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "actual": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+        "expected": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "actual": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "status": "EXACT"
+      }
+    ]
+  },
+  "common_product": {
+    "exact": 11,
+    "divergent": 1,
+    "absent": 5
+  },
+  "decision": "Reuse historical G5/G4 evidence on exact G7 closure; G6A Authority differs, common candidate incomplete; no automatic transfer or acceptance. Existing GATE-01/02/03/04/05 ownership preserved.",
+  "next": "T1/IAM/D4 owner concurrence on G6A explicit entry and G7 exact diagnostics; separate original G2 50, G9 7, G6A/R8 fullchain, mixed-writer raw recovery and strict COMMIT. PC deferred.",
+  "development": {
+    "iam_org": {
+      "previous": 42.5,
+      "current": 42.5,
+      "delta_pp": 0
+    },
+    "new_product_tests": 0,
+    "product_changes": 0,
+    "api_db_event_dependency_changes": 0,
+    "acceptance_delta": 0
+  },
+  "rollback": "Revert governance evidence-only changes after review; never downgrade authority writer on IAM-backed store."
+}
