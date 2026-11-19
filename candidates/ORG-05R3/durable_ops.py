@@ -22,6 +22,15 @@ def initialize_ops(path):
                 db.execute(f"CREATE TRIGGER {table}_{verb.lower()} BEFORE {verb} ON {table} BEGIN SELECT RAISE(ABORT,'IMMUTABLE'); END")
 
 
+
+def initialize_assignment_ops(path):
+    """Fresh disposable file only; never migrate/adopt an existing ORG database."""
+    from assignment_lifecycle import DDL as ASSIGNMENT_DDL
+    initialize_ops(path)
+    with closing(sqlite3.connect(path)) as db, db:
+        db.executescript(ASSIGNMENT_DDL.read_text(encoding='utf-8'))
+
+
 @dataclass(frozen=True)
 class TaskPin:
     scope: Scope
@@ -137,6 +146,38 @@ class OperationsStore(Store):
             require(all(p.seat in team.members for p in pairs),'OFFICE_TEAM_SCOPE')
             view=project(s,office,s.revision(),office_pin.revision,links,pairs,meetings)
             return {'schema':'org.combined.preview.v0-D0','scope':dict(zip(('tenant_id','company_id','environment_id'),self._key)),'org_revision':rev,'staffing_revision':s.revision(),'project':project_id,'history':asdict(actual),'proposals':entries,'office_revision':office_pin.revision,'office_pairs':len(view['pairs']),'meeting_proposed':bool(meetings),'geometry_join':'HOLD','runtime_binding':None,'decision':'HOLD','authoritative':False,'dispatch_allowed':False}
+
+
+    def record_assignment_review(self,pin,approval,now,expected_sha,*,core_cursor=None,core_args=None,intent=None,member=None,member_scope=None,principal=None,revoke=False):
+        """D0 isolated review only; no owner issuance, grants or dispatch."""
+        from assignment_lifecycle import AssignmentPin, SCOPE, append_decision, verify_core_reference
+        require(type(pin) is AssignmentPin and self._key==SCOPE and type(revoke) is bool,'ASSIGNMENT_SCOPE')
+        with closing(self._connect(True)) as db:
+            try:
+                db.execute('BEGIN IMMEDIATE')
+                if not revoke:
+                    s=self._current(db,pin.org_head); team=self._team(db,pin.org_head,pin.request.project,s)
+                    actual,_=self._history(db,pin.org_head,team,s)
+                    require(actual==HistoryPin(pin.history_count,pin.history_head),'ASSIGNMENT_HISTORY')
+                    verify_core_reference(pin,core_cursor,core_args,intent,member,member_scope,principal)
+                result=append_decision(db,pin,approval,now,expected_sha,revoke=revoke)
+                db.commit(); return result
+            except BaseException: db.rollback(); raise
+
+    def assignment_review(self,pin,expected_sha,now,*,core_cursor=None,core_args=None,intent=None,member=None,member_scope=None,principal=None):
+        """Exact retained record and historical readbacks; still HOLD."""
+        from assignment_lifecycle import AssignmentPin, AssignmentReview, SCOPE, inspect_assignment, verify_core_reference
+        try:
+            require(type(pin) is AssignmentPin and self._key==SCOPE,'ASSIGNMENT_SCOPE')
+            with closing(self._connect()) as db:
+                db.execute('BEGIN'); result=inspect_assignment(db,pin,expected_sha,now)
+                if result.structural_match and result.state=='ACCEPTED_D0':
+                    s=self._current(db,pin.org_head); team=self._team(db,pin.org_head,pin.request.project,s)
+                    actual,_=self._history(db,pin.org_head,team,s)
+                    require(actual==HistoryPin(pin.history_count,pin.history_head),'ASSIGNMENT_HISTORY')
+                    verify_core_reference(pin,core_cursor,core_args,intent,member,member_scope,principal)
+                return result
+        except Exception: return AssignmentReview('READ_UNAVAILABLE_HOLD')
 
 
 @dataclass(frozen=True)

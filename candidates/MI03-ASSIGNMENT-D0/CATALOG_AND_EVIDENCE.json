@@ -1,0 +1,107 @@
+{
+  "revision": "MI03-GATE02-ASSIGNMENT-LIFECYCLE-D0",
+  "classification": "ISOLATED_SOURCE_CANDIDATE_AND_ACTUAL_SQLITE_UNIT_TESTS",
+  "base": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+  "common_observed": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "original_durable_ops": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+  "modified_durable_ops": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+  "source_paths": [
+    {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "symbols": [
+        "initialize_assignment_ops",
+        "OperationsStore.record_assignment_review",
+        "OperationsStore.assignment_review"
+      ],
+      "status": "STATIC_COMPOSITION_NOT_RUN"
+    },
+    {
+      "path": "candidates/ORG-05R3/assignment_lifecycle.py",
+      "blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+      "symbols": [
+        "AssignmentPin",
+        "ApprovalObservation",
+        "AssignmentReview",
+        "validate",
+        "source_match",
+        "read_chain",
+        "append_decision",
+        "inspect_assignment",
+        "verify_core_reference"
+      ],
+      "status": "20/20 local SQL unit tests; Core adapter not run"
+    },
+    {
+      "path": "candidates/ORG-05R3/assignment_review.sql",
+      "blob": "3e887b10263f44b601f6a811a89687b2ee4d864e",
+      "tables": [
+        "op_assignment_review"
+      ],
+      "triggers": [
+        "op_assignment_review_no_update",
+        "op_assignment_review_no_delete"
+      ],
+      "scope": "fresh isolated SQLite only"
+    }
+  ],
+  "dependencies": {
+    "new": [],
+    "existing": [
+      "Python stdlib sqlite3/dataclasses/hashlib/json/pathlib",
+      "identity_binding.Request",
+      "intent_identity.derive_request",
+      "research_slice.inspect_research_slice",
+      "company_coordination.Member",
+      "plan_history_review.TaskHistory",
+      "existing OperationsStore._current/_team/_history"
+    ]
+  },
+  "api": "none",
+  "events": "no product publication; op_notice remains HOLD",
+  "test": {
+    "command": "python -I -B test_assignment_lifecycle.py",
+    "environment": "Python 3.13.5 SQLite 3.46.1",
+    "pass": 20,
+    "total": 20,
+    "exit": 0,
+    "source_pins": 3,
+    "log_blob": "a0139baabe9675bb09bd17592e2d1e0d28b759cd",
+    "test_blob": "a7eb89ea03ac29b9587d81a913188e40530202b4",
+    "limitations": [
+      "direct synthetic SQL seeds; not OperationsStore writer",
+      "Core historical reader adapter NOT_RUN",
+      "actual P02 owner-issued acceptance NOT_RUN",
+      "original G9/PG/owner tests NOT_RUN"
+    ]
+  },
+  "source_pins": [
+    {
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad"
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "blob": "e1e977880324664bb359eee3286223a796878f44"
+    }
+  ],
+  "decisions": [
+    "D0 state machine only: proposal HOLD, one acceptance revision 1 per scoped run, irrevocable revocation revision 2, no reassignment or automatic reacceptance",
+    "Expiry derives HOLD at read time; no new clock or IAM issuer",
+    "Separate digest chain and expected SHA CAS; immutable SQL rows",
+    "Revocation of exact retained record allowed even after expiry or source drift; no grant or effect",
+    "Owner approval is represented by synthetic observation only; actual owner issuance, physical role, cross-store freshness, publication and strict COMMIT still HOLD"
+  ],
+  "progress": {
+    "criteria": "unchanged D5-G rubric",
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "product_acceptance_delta": 0
+  },
+  "activation": "HOLD",
+  "rollback": "Do not adopt or migrate existing databases; discard disposable test DB or revert isolated candidate after review. No claim/reset, no product-dev/main/CI change."
+}
