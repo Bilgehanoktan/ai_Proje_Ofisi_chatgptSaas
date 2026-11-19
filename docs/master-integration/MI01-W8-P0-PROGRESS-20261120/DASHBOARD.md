@@ -15,7 +15,7 @@
 | MI01-W8-C07 | Özgün W8 test — full backend, Node, Next, TS | NOT_RUN |
 | MI01-W8-C08 | Özgün W8 smoke — loopback/52 capture/orijinal browser | NOT_RUN |
 
-Gerçek kanıt: [GitHub Actions #44617509366](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44617509366) — 1.953/1.953 tam kaynak, 539 ürün, 538/538 özgün W8 audit, npm kilidi 61/61. Önceki seçili 42/42 D0 T1 regresyonu özgün W8'in tam testi yerine geçmez. 2026-11-20 SSE per-fetch CI uyumluluk iyileştirmesi ayrıca izlenir; orijinal CDP yanıt okuması bağımsız HOLD.
+Gerçek kanıt: [GitHub Actions #44617509366](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44617509366) — 1.953/1.953 tam kaynak, 539 ürün, 538/538 özgün W8 audit, npm kilidi 61/61. Önceki seçili 42/42 D0 T1 regresyonu özgün W8'in tam testi yerine geçmez. SSE eski-yanıt riski ek olarak kapatıldı: [GitHub Actions 44620987573](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620987573), **17/17 ayrı Node olumsuz senaryo** ve gerçek Chromium per-fetch uyumluluk testi PASS. Byte-exact orijinal CDP/W8 kabulü hâlâ HOLD. Bu, sekiz W8 P0 kapısına ilave kapanış olarak sayılmaz.
 
 ## Genel geliştirme ilerlemesi — raporlama standardı
 
