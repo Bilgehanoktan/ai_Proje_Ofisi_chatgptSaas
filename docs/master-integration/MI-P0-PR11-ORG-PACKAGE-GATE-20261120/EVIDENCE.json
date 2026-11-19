@@ -1,0 +1,81 @@
+{
+  "revision": "MI-P0-PR11-ORG-PACKAGE-GATE-20261120-R1",
+  "evidence_type": "ACTUAL_GITHUB_HOSTED_D0_ORIGINAL_SOURCE_TESTS",
+  "source": "GitHub Actions CI original job logs and immutable workflow",
+  "observed_date": "2026-11-20",
+  "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "owner_existing_pr": 11,
+  "owner_pr_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/11",
+  "related_source_pr": 9,
+  "scope": "ONLY EXISTING H01_SCOPED_PR11_D0_WORKFLOW_NO_NEW_CI",
+  "source_exact_sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "workflow_exact_head": "69c530157f6e50db7515fadfe630d80c454983f6",
+  "workflow_path": ".github/workflows/mi03-pr9-owner-package.yml",
+  "workflow_blob": "51fc2a6daa2e4c4105b1f3741d00de6a4b9e5f9d",
+  "run_id": 44628704044,
+  "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44628704044",
+  "job_id": 135929295468,
+  "job_conclusion": "success",
+  "runner": "ubuntu-24.04",
+  "python": "3.13.5",
+  "sqlite": "3.45.1",
+  "dependency_install": "NO_ADDITIONAL_PROJECT_PIP_INSTALL",
+  "tests": {
+    "source_manifest": {
+      "stage": "real_sha256_and_bytes_check",
+      "passed": 552,
+      "total": 552,
+      "log": "SOURCE_MANIFEST_SHA256=552/552 PASS; PYTHON=3.13.5; SQLITE=3.45.1; D0_ONLY=TRUE"
+    },
+    "original_packaging": {
+      "stage": "ACTUAL_TEST",
+      "file": "product/ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py",
+      "passed": 4,
+      "total": 4,
+      "previous": "NOT_RUN",
+      "now": "PASS",
+      "summary": "Ran 4 tests in 1.469s; OK"
+    },
+    "original_sql": {
+      "stage": "ACTUAL_TEST",
+      "file": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+      "passed": 11,
+      "total": 11,
+      "previous": "11/11 HISTORICAL",
+      "now": "11/11 PASS fresh rerun",
+      "unique_new_tests": 0,
+      "summary": "Ran 11 tests in 0.203s; OK"
+    }
+  },
+  "original_packaging_method_names": [
+    "test_assignment_review_remains_non_authoritative",
+    "test_direct_imports_reuse_single_owner_classes",
+    "test_exact_colocated_schema_resources",
+    "test_fresh_disposable_owner_store_creates_assignment_table"
+  ],
+  "remaining": {
+    "g9_durable_ops_owner_ratification": "HOLD",
+    "g2_intent_authority_owner_ratification": "HOLD",
+    "authority_independent_root_issuer": "HOLD",
+    "g2_50": "NOT_RUN",
+    "g9_7": "NOT_RUN",
+    "memory_t1_10": "NOT_RUN",
+    "full_W8": "HOLD",
+    "strict_postgres": "NOT_RUN",
+    "independent_A_negative_tests": "0/8 NOT_RUN"
+  },
+  "ownership": "MI-03/MI-06/G9 owner; follow PR9 and PR11; do not duplicate CI",
+  "blocker_delta": {
+    "org_4_packaging_smoke": "NOT_RUN to PASS",
+    "source_manifest": "STATIC_REVIEW to FULL_ACTUAL_CI_SHA256_CHECK",
+    "sql_11": "HISTORICAL to FRESH_REPEAT_WITH_NO_NEW_UNIQUE_METHOD"
+  },
+  "functionality_scope": "SYNTHETIC_SQLITE_D0_NOT_LIVE_PERMISSIONS",
+  "product_files_changed": 0,
+  "workflow_changed_this_turn": 0,
+  "new_functional_tests_written": 0,
+  "canonical_acceptance_delta_pp": 0,
+  "overall_development_percent": null,
+  "design_master_change": 0,
+  "rollback": "normal revert governance documentation only; source owner PRs untouched"
+}
