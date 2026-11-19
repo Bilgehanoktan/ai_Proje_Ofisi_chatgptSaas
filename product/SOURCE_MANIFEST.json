@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UNIFIED-U3A",
-  "status": "D0_ACCEPTANCE_RUNNER_PREPARED_FULL_BUILD_BLOCKED",
+  "doc_revision": "MI-08-MEM-TRANSFER-01",
+  "status": "UNPROMOTED_SOURCE_CANDIDATE_OWNER_REVIEW_AND_REGRESSION_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e014868ae03cf73487aba156647eeac9442422cb",
+  "parent_git_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -91,16 +91,28 @@
       "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
     },
     "ai-company-os-backend/app/core/agent_runtime/joint_context.py": {
-      "bytes": 3694,
-      "sha256": "786928f7b0a12af8995e20886dbabfd9139e0ff8ffef7a049c994adf987ca6b6"
+      "bytes": 3851,
+      "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c"
     },
     "ai-company-os-backend/app/core/agent_runtime/lifecycle.py": {
       "bytes": 7251,
       "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
     },
+    "ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py": {
+      "bytes": 9560,
+      "sha256": "9746b81ee3e71aa765b6885e98d6cdf979d614573d945c1a94850393e3dd7df3"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py": {
+      "bytes": 8408,
+      "sha256": "db709c5a0744e22f1a14fa7c25fc33a666b61dd21a708f7101b9bafcb0f43646"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py": {
+      "bytes": 7537,
+      "sha256": "6e7f2a0aa2a5b748f58176f6875e3ea23f1300cbe511f62847a1b4ad2c193d9c"
+    },
     "ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
-      "bytes": 10752,
-      "sha256": "91b4268c410265be18b6248a3c1f652788200f08f81786914a796b6d8b39b1db"
+      "bytes": 11744,
+      "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0"
     },
     "ai-company-os-backend/app/core/agent_runtime/plan_binding.py": {
       "bytes": 3309,
@@ -495,12 +507,24 @@
       "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f"
     },
     "ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
-      "bytes": 9580,
-      "sha256": "ac03b3ab7ce63b851853f61d8b68f76c17bcf1e7a61518e6c42acfd378ebe169"
+      "bytes": 13027,
+      "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0"
     },
     "ai-company-os-backend/app/engines/model_gateway/__init__.py": {
       "bytes": 52,
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/capability_resolver.py": {
+      "bytes": 3576,
+      "sha256": "a336a1348f70b6ec7602af6b5dac2d5e4fe59ea7cc65c9ab139eb5c8af10be17"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/cost_estimator.py": {
+      "bytes": 2475,
+      "sha256": "efbeaae7e981d50225f9bfc7457335e5075dce6765a41c58fd278abb721f1f2d"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py": {
+      "bytes": 4718,
+      "sha256": "63c92d25f1a3fb8d004320c74d10bff96876abe3bfa29e42fda189d63c07f3ec"
     },
     "ai-company-os-backend/app/engines/model_gateway/fallback.py": {
       "bytes": 1391,
@@ -510,21 +534,53 @@
       "bytes": 242,
       "sha256": "7453cb37b258accc8d027fdfa85606d69b01907f1f067a2f61f7dc1073c4645d"
     },
+    "ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py": {
+      "bytes": 4610,
+      "sha256": "c4cf140935f89cf7d5e0b8b065bf15ab35ef52a07073e97d936991166e70bf14"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/profile_registry.py": {
+      "bytes": 2589,
+      "sha256": "29c108efc0c63035492caaa41672a8be973fae7d317bab2142191ec5a0184e15"
+    },
     "ai-company-os-backend/app/engines/model_gateway/provider_contract.py": {
       "bytes": 2986,
       "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/provider_preflight.py": {
+      "bytes": 1972,
+      "sha256": "a6e585285cafd1db50c47ab7aae9c1cda681f9f2c86ae5e385f51903622bc0cb"
     },
     "ai-company-os-backend/app/engines/model_gateway/registry.py": {
       "bytes": 1305,
       "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
     },
+    "ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py": {
+      "bytes": 6865,
+      "sha256": "fb18a61f3f0b59bcef44b346183ee955c7935d547c398e70991da5415a5de090"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/router.py": {
+      "bytes": 5872,
+      "sha256": "20b28e235259fe11ad16059ec75b7928d6f1b8aaed4041accb4081011fa1c1e4"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/routing_decision.py": {
+      "bytes": 5909,
+      "sha256": "749a955dca129d46ba8dff3bdb8ca4751b54b343c5ebd10767ca403092afdd92"
+    },
     "ai-company-os-backend/app/engines/model_gateway/runtime_binding.py": {
       "bytes": 3373,
       "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
     },
+    "ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py": {
+      "bytes": 1865,
+      "sha256": "8ac722750f0cf0c8d2bb77db3f1199ffee8edc3a2bb8f49d7396f55e342e0389"
+    },
     "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": {
       "bytes": 4783,
       "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/token_accounting.py": {
+      "bytes": 7663,
+      "sha256": "8048bb29f90e3d3e6023759785fd1d3b74bacc999e11106f0b1a5fc30c13a200"
     },
     "ai-company-os-backend/app/engines/office_engine/__init__.py": {
       "bytes": 49,
@@ -794,9 +850,33 @@
       "bytes": 7089,
       "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e"
     },
+    "ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py": {
+      "bytes": 12009,
+      "sha256": "82a59fd44f31e0f2e15a987ff4336b661bed8c424eb7a4e16b2e368c4febdda7"
+    },
+    "ai-company-os-backend/tests/test_memory_gateway_05c_r1.py": {
+      "bytes": 8930,
+      "sha256": "038282b7dda8ed471d6eb93d275a4ab12c0476290ce6fbb15de4d303ef5ad4fd"
+    },
+    "ai-company-os-backend/tests/test_memory_gateway_05c_r2.py": {
+      "bytes": 7852,
+      "sha256": "c7352f279ac7afb539dac88dabc39c2e63f5f7a0b72fdd6b5459f105ebd45e70"
+    },
+    "ai-company-os-backend/tests/test_memory_gateway_recovery_w5_mem05e.py": {
+      "bytes": 6286,
+      "sha256": "5218af3b931d1214b75849418d9a2da240c0e81176663d19974a08c36c6682ad"
+    },
+    "ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
+      "bytes": 6306,
+      "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e"
+    },
+    "ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py": {
+      "bytes": 15375,
+      "sha256": "bc1bd9280f4e64a599bed5f73e48846b0750fe0add277de5a15ee27a29994a5d"
+    },
     "ai-company-os-backend/tests/test_memory_store_0196.py": {
-      "bytes": 8077,
-      "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98"
+      "bytes": 8092,
+      "sha256": "a68353c3be40c64eaa0f91623305a3354d004180a1ffdfb73fa510f233bb6f8e"
     },
     "ai-company-os-backend/tests/test_memory_witness_0209.py": {
       "bytes": 10155,
@@ -897,6 +977,10 @@
     "ai-company-os-backend/tests/test_review_0161.py": {
       "bytes": 6307,
       "sha256": "fb4f1944f0d83dd48970298364f639244d15a6c93b1e59d466112b9c20c1aa7c"
+    },
+    "ai-company-os-backend/tests/test_router_cost_review.py": {
+      "bytes": 7169,
+      "sha256": "dc979a87eb60a32a3055002dea6baf49013ce9d5b1c5a7718dd49b3b5c32eed0"
     },
     "ai-company-os-backend/tests/test_runtime_binding_0157.py": {
       "bytes": 1353,
@@ -2023,8 +2107,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "940f8d44f49b848b377badee67f162603724c05f",
-  "source_git_commit_note": "Workflow draft shared readback panel only; no runtime, schema, dependencies or DB changes. U3 acceptance runner and historical auxiliary overlay outside product.",
+  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "source_git_commit_note": "Exact selected 50-pin closure: 25 existing base entries, 25 transferred exact blobs (21 additions, 4 replacements); no IAM/T1 authority or effect-budget source selected; detached candidate, not product-dev head.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

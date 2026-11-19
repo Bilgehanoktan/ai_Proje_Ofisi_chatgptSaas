@@ -48,12 +48,13 @@ def joint_context_digest(context, registry):
 
 
 def inspect_joint_context(context, registry, expected_digest, path, current_run,
-                          current_lease, clock, raw):
+                          current_lease, clock, raw, expected_history=None):
     """Fail closed on drift; two observations bracket the model inspection.
 
     The second read detects an intervening committed revocation. This is not
     atomic with a future provider effect; an independent effect gate is required.
-    No bytes, receipt, selected model, or authority are returned.
+    If supplied by the witnessed path, committed history pins are checked in
+    both memory read transactions. No bytes, receipt, model or authority are returned.
     """
     if not digest_ok(expected_digest) or type(raw) is not bytes or len(raw) > 1024*1024:
         return JointReview('JOINT_CONTEXT_SHAPE_HOLD')
@@ -65,14 +66,14 @@ def inspect_joint_context(context, registry, expected_digest, path, current_run,
     envelope = context.invocation
     if not valid_scope(getattr(current_run, 'scope', None)):
         return JointReview('JOINT_RUN_SCOPE_HOLD')
-    first = inspect_stored_memory_input(path, context.memory_pin, current_run, current_lease, envelope.lease, clock, raw)
+    first = inspect_stored_memory_input(path, context.memory_pin, current_run, current_lease, envelope.lease, clock, raw, expected_history)
     if first != 'D0_MEMORY_INPUT_MATCH_ONLY':
         return JointReview(first)
     model = inspect_invocation(envelope, registry, invocation_digest(envelope, registry),
                                current_run, current_lease, clock, raw)
     if not model.structural_match or model.reason != 'D0_MODEL_INVOCATION_MATCH_ONLY':
         return JointReview(model.reason)
-    second = inspect_stored_memory_input(path, context.memory_pin, current_run, current_lease, envelope.lease, clock, raw)
+    second = inspect_stored_memory_input(path, context.memory_pin, current_run, current_lease, envelope.lease, clock, raw, expected_history)
     if second != 'D0_MEMORY_INPUT_MATCH_ONLY':
         return JointReview(second)
     return JointReview('D0_JOINT_CONTEXT_MATCH_ONLY', True)
