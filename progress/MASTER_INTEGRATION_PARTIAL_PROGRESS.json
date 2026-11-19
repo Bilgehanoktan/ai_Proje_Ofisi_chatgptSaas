@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-03-CLOSE",
+  "revision": "MI03-GATE02-03-PACKAGED-REGRESSION-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged.",
   "new_product_tests": 0,
-  "previous_revision": "MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01",
+  "previous_revision": "MI-PROGRESS-03-CLOSE",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1086,5 +1086,58 @@
     "source_changes": 0,
     "tests_this_chat": "REPORTING_VALIDATION_ONLY",
     "next": "MI-PROGRESS-04 owner decision, original fullchain+ModelMemory+W8 real tests; no repeated report design."
+  },
+  "mi03_gate02_03_packaged_regression": {
+    "revision": "MI03-GATE02-03-PACKAGED-REGRESSION-01",
+    "evidence": "docs/master-integration/MI03-GATE02-03-PACKAGED-REGRESSION-01/EVIDENCE.json",
+    "catalog": "docs/master-integration/MI03-GATE02-03-PACKAGED-REGRESSION-01/CATALOG.json",
+    "runbook": "docs/master-integration/MI03-GATE02-03-PACKAGED-REGRESSION-01/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "pins": "docs/master-integration/MI03-GATE02-03-PACKAGED-REGRESSION-01/SOURCE_PINS.json",
+    "original_pinned_source": "65a0e978c20378041e98f70e6ed074151214a3bb",
+    "selected_actual": [
+      71,
+      71
+    ],
+    "exact_pins": [
+      32,
+      32
+    ],
+    "existing_replay": 59,
+    "new_supplemental_methods": 8,
+    "original_owner_smoke_replay": 4,
+    "actual_core_assignment": "NOT_RUN",
+    "original_memory_T1_10": "NOT_RUN",
+    "original_g2_50": "NOT_RUN",
+    "original_g9_7": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "owner_review": "HOLD",
+    "product_changes": 0,
+    "acceptance_delta": 0,
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "delivery_sha256": "955e76171b52997b0c3053de80e5cbb98bbb3eb17326abc55654022a91678646",
+    "weighted_criteria": {
+      "design": [
+        1,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional": [
+        4,
+        6
+      ],
+      "integration": [
+        1,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    }
   }
 }
