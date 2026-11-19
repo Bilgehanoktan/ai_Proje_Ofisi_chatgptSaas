@@ -1,0 +1,103 @@
+{
+  "revision": "MI03-GATE03-SQL-REGRESSION-R1",
+  "date": "2026-11-19",
+  "classification": "NEW_ACTUAL_LOCAL_EXACT_ORG_OWNER_SQLITE_REGRESSION_SYNTHETIC_D0_ONLY",
+  "candidate_branch": "integration/mi03-gate03-org-runtime-closure-01",
+  "source_parent": "65a0e978c20378041e98f70e6ed074151214a3bb",
+  "source_owner_assignment": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+  "sources": [
+    {
+      "path": "product/ai-company-os-backend/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "sha256": "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed",
+      "bytes": 2787
+    },
+    {
+      "path": "product/ai-company-os-backend/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "sha256": "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77",
+      "bytes": 1725
+    },
+    {
+      "path": "product/ai-company-os-backend/assignment_review.sql",
+      "blob": "3e887b10263f44b601f6a811a89687b2ee4d864e",
+      "sha256": "8983995430cbd87a1bca68c5dac0206e1051c9039659c4f0be9be0b79209ab21",
+      "bytes": 784
+    }
+  ],
+  "test": {
+    "path": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+    "blob": "6fa630b9765c12f944203631972c90b1a4901a0f",
+    "sha256": "d46408edae8f467a19b4bdda4647d8afc73f87508ac080ea34be015014268cb6",
+    "bytes": 7056
+  },
+  "log": {
+    "path": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/org-sql-11.log",
+    "blob": "e41d5fcc833ac564b035b209ef08f5424990a55a",
+    "sha256": "2c5f13a23c3e651769c756433f8867288b2c9a9a1b241189aeec98eb9b50a840",
+    "bytes": 1729
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "source_checkout": "3 original exact owner SQL blobs only + test, not complete candidate checkout",
+    "external_provider": "none"
+  },
+  "execution": {
+    "command": "python -B -m unittest discover -s tests -p test_org_sql_runtime_mi03.py -v",
+    "working_dir": "disposable isolated backend-shaped directory",
+    "selected": [
+      11,
+      11
+    ],
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "duration_s": 0.227,
+    "new_unique_methods": 11,
+    "actual_changes": "none except test source and manifests",
+    "test_cases": [
+      "exact_git_sha1_sha256_pins",
+      "creates_base_org_operations_assignment_schema",
+      "acceptance_d0_structural_state",
+      "revoke_revision_state",
+      "duplicate_run_revision_holds",
+      "invalid_revision_state_digest_holds",
+      "append_only_update_delete_holds",
+      "duplicate_scope_digest_holds",
+      "org_revision_seq_constraints",
+      "org_notice_hold_only",
+      "operations_requires_org_binding_foreign_key"
+    ]
+  },
+  "scope": {
+    "actual_test": "Real SQLite DDL, strict checks, triggers, foreign-key behavior and synthetic inserts",
+    "not_run": [
+      "Original full OperationsStore Python paths",
+      "Four previous Python packaging smoke methods",
+      "Core/ORG/IAM three-store readback and owner-issued assignment",
+      "Original G9 7, G2 50, Memory/T1 0214 10",
+      "PostgreSQL, W8 build, browser, independence"
+    ],
+    "owner_review": "HOLD",
+    "protected_entry": "HOLD",
+    "role_issuer": "HOLD",
+    "real_effects": "NONE"
+  },
+  "score": {
+    "previous_iam_org_development_percent": 42.5,
+    "current": 42.5,
+    "delta_pp": 0,
+    "core_acceptance": [
+      12,
+      16
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "reason": "Original core/acceptance rubric unchanged; 11 new SQL unit cases do not close cross-store or independent acceptance"
+  },
+  "rollback": "Revert this isolated branch commit to 65a0e978c20378041e98f70e6ed074151214a3bb, no DB migration, no claim resets or owner branch changes."
+}

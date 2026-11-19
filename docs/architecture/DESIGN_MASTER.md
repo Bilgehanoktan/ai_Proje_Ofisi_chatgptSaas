@@ -329,3 +329,6 @@ Existing MI-01 repair, MI-03/04 pure identity/transport and MI-07/08 Model/Memor
 
 ## MI03-GATE03 — ORG package source candidate (non-normative)
 Exact existing ORG/Assignment Python and SQL modules copied into an isolated backend root, preserving original import identities and SQL sibling paths. This is not an owner-approved runtime or product acceptance. [Catalog](../master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/ARCHITECTURE_RUNBOOK_HANDOVER.md).
+
+## MI03-GATE03 SQL regression — evidence-only addendum
+11/11 real D0 SQLite tests of pinned ORG/Assignment SQL (no OperationsStore or real owner issuance). Product acceptance and protected execution unchanged. [Evidence](../master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/SQL_REGRESSION_EVIDENCE.json).

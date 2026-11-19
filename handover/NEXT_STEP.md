@@ -7,3 +7,6 @@
 
 ## MI03-GATE03 current next
 Review exact source transfer on isolated branch only. Run four smoke methods (NOT_RUN), original Store+Core assignment fixture and G9 7, then owner concurrence, GATE01 IAM source review, PG/strict COMMIT/Unified build. No PC request, new grants, CI or main merge.
+
+## MI03-GATE03-SQL-R1 next
+Run four original product packaging Python smoke tests and actual OperationsStore/Core adapter on source-complete candidate; retain original G9 7/G2 50 and W8. Do not repin, activate authority or perform PC steps now.

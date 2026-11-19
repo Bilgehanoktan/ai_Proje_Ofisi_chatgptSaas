@@ -145,5 +145,18 @@
     "mvp": "0/11"
   },
   "activation": "HOLD",
-  "rollback": "Revert isolated product-source commit to 61bb06efbba7544bfc68260ed8eb4d342cab9b8e; do not roll back DB or downgrade IAM writer"
+  "rollback": "Revert isolated product-source commit to 61bb06efbba7544bfc68260ed8eb4d342cab9b8e; do not roll back DB or downgrade IAM writer",
+  "sql_regression": {
+    "status": "ACTUAL_LOCAL_SYNTHETIC_SQLITE_11_OF_11_PASS_EXACT_3_OWNER_SQL",
+    "evidence": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/SQL_REGRESSION_EVIDENCE.json",
+    "source_pins": [
+      3,
+      3
+    ],
+    "unique_new_methods": 11,
+    "full_candidate_smoke": "NOT_RUN",
+    "original_g9": "NOT_RUN",
+    "owner_contract": "HOLD",
+    "acceptance_delta": 0
+  }
 }
