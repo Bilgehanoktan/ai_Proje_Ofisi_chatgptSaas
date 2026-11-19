@@ -1,0 +1,653 @@
+{
+  "revision": "MI04-GATE01-04-EXACT-OVERLAY-REVIEW",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_SELECTED_0215_REGRESSION_PLUS_STATIC_OWNER_REVIEW_OVERLAY",
+  "refs": {
+    "governance_parent": "999ce93e88b803426627652583fd2a55eda245c0",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "g2": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "g9": "68ec99c673cceadffecf1d192371c10c328caa74"
+  },
+  "run": {
+    "classification": "ACTUAL_LOCAL_ORIGINAL_0215_TESTS_ON_EXACT_G6A_AUTHORITY_AND_COMMON_READER",
+    "command": "python -B -m unittest discover -s tests -p test_external_claim_review_0215.py -v",
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "pass": 15,
+    "total": 15,
+    "errors": 0,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "seconds": 0.081,
+    "source_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+        "bytes": 10028,
+        "sha256": "95a2070d437450198ed2e9738b8159ea53b4a877e7303b7ece75c0c01927ccaf",
+        "source": "6bab62305d2ea15f8608f7835270ae027ce01e83"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+        "blob": "f7616fca91825a63302e3fb2a41da8a0411eeed2",
+        "bytes": 5574,
+        "sha256": "9fc7e5de6af70271a11da25db6a68151385aaff82ba956f99d48a735793ba667",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_external_claim_review_0215.py",
+        "blob": "b31672e1f4b48364190c37ad2a33a311ae8e23e5",
+        "bytes": 4817,
+        "sha256": "70c7bafc78d32ab4afc9869109ef088ff47d0961aa16b1850ca6e2bc5fb14198",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      }
+    ],
+    "methods": [
+      "test_actual_authority_restore_detected",
+      "test_bad_observation_shape",
+      "test_binding_drift",
+      "test_claim_prior_root_remains_consumed",
+      "test_consumed_matching_no_replay",
+      "test_expiry_and_future_rejected",
+      "test_external_absent_local_consumed_divergence",
+      "test_missing_local_file_not_recreated",
+      "test_root_advanced_local_only",
+      "test_signature_rejected",
+      "test_stale_challenge_rejected",
+      "test_unclaimed_matching_never_grants",
+      "test_wrong_head_and_epoch_rejected",
+      "test_wrong_key_rejected",
+      "test_wrong_scope_rejected"
+    ],
+    "log": {
+      "path": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/replay.log",
+      "blob": "c4b67b03ce9352662bfb67eee4805f9394c4d5f4",
+      "bytes": 1959,
+      "sha256": "34ef948936c276390afe9b90a6a8c11c1301e86e8b13a512d1347594da7ecd1a"
+    },
+    "limitations": "Non-IAM disposable legacy fixture only; does not execute protected entry or actual IAM claim, positive T1, PG or independent custody. Original methods, no new unique product tests."
+  },
+  "static_callsite_review": {
+    "scope": "19 transaction .py + 16 agent_runtime/memory_engine/main .py (35 exact remote source reads); lexical search, not complete process or dynamic writer inventory",
+    "findings": [
+      {
+        "path": "app/core/transaction/external_claim_review.py",
+        "symbol": "_local",
+        "line": 73,
+        "scope": "read-only _head + claims; HOLD only, no writes"
+      },
+      {
+        "path": "app/core/transaction/intent_authority.py",
+        "symbol": "execute_authority_fenced_transition",
+        "line": 143,
+        "scope": "legacy wrapper claim call; G6A protected entry always HOLD"
+      }
+    ],
+    "retirement": "HOLD; no process inventory or IAM store migration verified"
+  },
+  "g2_g9_manifest_comparison": {
+    "9ca667e816dac269084ef8f62051da5fe458eb12": {
+      "count": 240,
+      "counts": {
+        "EXACT": 230,
+        "DIVERGENT": 7,
+        "ABSENT": 3
+      },
+      "differences": [
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+          "expected": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+          "actual": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+          "expected": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+          "actual": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+          "actual": "fa47acd32adb309896f762ec50e47bf26641adbb",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+          "expected": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+          "actual": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+          "expected": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+          "actual": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+          "expected": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+          "expected": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+          "expected": "3e16b9952af6886b6579729108a0278042ac4052",
+          "actual": "2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+          "expected": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+          "actual": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+          "status": "DIVERGENT"
+        }
+      ],
+      "manifest": "15e446e4d14c95d81d1e152efa2e8cb11122b3e3"
+    },
+    "68ec99c673cceadffecf1d192371c10c328caa74": {
+      "count": 248,
+      "counts": {
+        "EXACT": 232,
+        "DIVERGENT": 7,
+        "ABSENT": 9
+      },
+      "differences": [
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+          "expected": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+          "actual": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+          "expected": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+          "actual": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "expected": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "expected": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+          "actual": "fa47acd32adb309896f762ec50e47bf26641adbb",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "expected": "675615e04059280ec6aa99e9679b4388cd018c2d",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+          "expected": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+          "actual": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+          "expected": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+          "actual": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+          "expected": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+          "expected": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+          "expected": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+          "expected": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+          "expected": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+          "actual": null,
+          "status": "ABSENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+          "expected": "3e16b9952af6886b6579729108a0278042ac4052",
+          "actual": "2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d",
+          "status": "DIVERGENT"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+          "expected": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+          "actual": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+          "status": "DIVERGENT"
+        }
+      ],
+      "manifest": "0555852afa38b7317a53a63db26a79cf151488b9"
+    }
+  },
+  "g9_pins": {
+    "counts": {
+      "EXACT": 28,
+      "DIVERGENT": 1,
+      "ABSENT": 27
+    },
+    "rows": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "expected": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "actual": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "expected": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "actual": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "expected": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "actual": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "expected": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "actual": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "expected": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "actual": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+        "expected": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "actual": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "expected": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "actual": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "actual": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "status": "DIVERGENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": "e1e977880324664bb359eee3286223a796878f44",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+        "expected": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "actual": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+        "expected": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+        "expected": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D4-R4/identity_binding.py",
+        "expected": "e1e977880324664bb359eee3286223a796878f44",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-INTENT/intent_identity.py",
+        "expected": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-B/identity_fence_review.py",
+        "expected": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "expected": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "expected": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "expected": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "expected": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "expected": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "expected": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "expected": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "expected": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "expected": "e0b9078284922d281996869daa15a455572c1785",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "expected": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+        "expected": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+        "expected": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+        "expected": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/development_review/research_slice.py",
+        "expected": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "actual": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "actual": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "expected": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "actual": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "expected": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "actual": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+        "expected": "e121ee6275def01070397a942a8434ff37b611a6",
+        "actual": "e121ee6275def01070397a942a8434ff37b611a6",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "expected": "c30130313541ea9d857724de1bab98ad088374af",
+        "actual": "c30130313541ea9d857724de1bab98ad088374af",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+        "expected": "c35a2e497ce013409c1943f293799d83c7164e83",
+        "actual": "c35a2e497ce013409c1943f293799d83c7164e83",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+        "expected": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+        "actual": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "expected": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "actual": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "status": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+        "expected": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "actual": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0192/candidate_event_outbox_fence.sql",
+        "expected": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "actual": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0193/candidate_run_head.sql",
+        "expected": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "actual": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0194/candidate_transition_roles.sql",
+        "expected": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "actual": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0195/candidate_admission_budget.sql",
+        "expected": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "actual": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0196L/candidate_lease_settlement.sql",
+        "expected": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "actual": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0203T/terminal_command_anchors.sql",
+        "expected": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "actual": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "status": "EXACT"
+      },
+      {
+        "path": "database/0204C/company_event_order.sql",
+        "expected": "edb2ef263204b89f88f172000ecb031428a027e4",
+        "actual": "edb2ef263204b89f88f172000ecb031428a027e4",
+        "status": "EXACT"
+      },
+      {
+        "path": "candidates/ORG-06/org_core_bridge.py",
+        "expected": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-06/test_org_core_checkout.py",
+        "expected": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/ORG-06/SOURCE_PINS.json",
+        "expected": "e45173de240af85882764dfc3033e188d049085d",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+        "expected": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G6B/test_checkout.py",
+        "expected": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+        "expected": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G6B/test_protocol.py",
+        "expected": "defb33bc46fdf1c978164133b371f063ffffeb04",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/D5-G7/test_checkout.py",
+        "expected": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "actual": null,
+        "status": "ABSENT"
+      }
+    ]
+  },
+  "g2_g9_original_runs": "NOT_RUN; exact checkout DNS blocked in local environment; no user Windows request",
+  "memory_raw": "MEM05E-R1 tree has no raw test/log paths; prior three blob 404 and library exact-title search empty; owner recovery HOLD",
+  "proposal": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/PROPOSED_SOURCE_DELTA.json",
+  "scope": {
+    "source_changes": 0,
+    "new_unique_product_tests": 0,
+    "new_actual_selected_replays": 15,
+    "acceptance_delta": 0,
+    "previous_iam_org": 42.5,
+    "current_iam_org": 42.5,
+    "delta_pp": 0,
+    "activation": "HOLD"
+  },
+  "rollback": "Review-only governance inverse commit; no DB reset, writer downgrade, product branch ref move."
+}
