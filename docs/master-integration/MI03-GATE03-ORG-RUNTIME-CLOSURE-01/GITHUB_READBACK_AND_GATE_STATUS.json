@@ -1,0 +1,102 @@
+{
+  "revision": "MI03-GATE03-ORG-RUNTIME-CLOSURE-01",
+  "date": "2026-11-19",
+  "classification": "ISOLATED_PRODUCT_SOURCE_PACKAGING_READY_STATIC_READBACK_ONLY",
+  "refs": {
+    "governance_parent": "d84b3046fbe17e77011668920de3d420b0afd609",
+    "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "candidate": "65a0e978c20378041e98f70e6ed074151214a3bb",
+    "owner_org": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "owner_assignment": "6efc6714757ebd698d27efd7022afc2c92af70d0"
+  },
+  "candidate": {
+    "branch": "integration/mi03-gate03-org-runtime-closure-01",
+    "commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
+    "parent": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "original_product_files": 539,
+    "current_product_files": 552,
+    "original_manifest_entries": 538,
+    "current_manifest_entries": 551,
+    "manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
+    "owner_python": 9,
+    "owner_sql": 3,
+    "new_smoke_test": 1,
+    "source_blob_and_size": [
+      12,
+      12
+    ],
+    "manifest_paths_and_sizes": [
+      551,
+      551
+    ],
+    "old_product_paths_preserved": [
+      539,
+      539
+    ],
+    "casefold_collisions": 0,
+    "deleted_files": 0,
+    "modified_product_files": [
+      "product/SOURCE_MANIFEST.json"
+    ],
+    "new_source_owner_tokens": [
+      "ORIGINAL_ORG_R3",
+      "ORG06",
+      "ASSIGNMENT_D0"
+    ],
+    "source_changes_in_common": 0,
+    "source_changes_in_product_dev": 0
+  },
+  "scope": {
+    "functional_tests_executed": 0,
+    "smoke_methods_created": 4,
+    "smoke_status": "NOT_RUN",
+    "historical_assignment_owner_tests": [
+      20,
+      20
+    ],
+    "original_G9_seven": "NOT_RUN",
+    "original_G2_fifty": "NOT_RUN",
+    "actual_OperationsStore_Core_replay": "NOT_RUN",
+    "actual_Canonical_Registry_Member_Role_provenance": "HOLD",
+    "joint_publication": "HOLD",
+    "strict_commit": "HOLD",
+    "full_W8": "NOT_RUN",
+    "owner_review": "PENDING"
+  },
+  "interpretation": "ORG runtime packaging SOURCE subtask ready on isolated candidate only. GATE-02 actual issuer/role and GATE-03 actual 3-store testing not closed. No feature activation or promotion.",
+  "progress": {
+    "criterion": "D5-G1-D0-session-v1",
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "development_criterion_delta": 0,
+    "canonical_core": [
+      12,
+      16
+    ],
+    "mvp": [
+      0,
+      11
+    ]
+  },
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  },
+  "rollback": "Revert candidate commit to 61bb06efbba7544bfc68260ed8eb4d342cab9b8e without force or DB rollback. Preserve original G9 durable_ops and IAM store. No owner/source branch rewrites.",
+  "next": [
+    "ORG/Core/Unified owner review of exact top-level import namespace and 41-line durable_ops extension",
+    "Complete exact checkout + execute 4 smoke methods and original OperationsStore+Core adapter test",
+    "Retain original 7 G9 and 50 G2 exact runners pinned, no double count",
+    "Owner-issued assignment/independent role/registry/member provenance and strict COMMIT proof",
+    "W8 locked build and independent acceptance separately"
+  ]
+}
