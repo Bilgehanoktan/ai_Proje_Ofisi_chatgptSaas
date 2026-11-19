@@ -1,0 +1,527 @@
+{
+  "revision": "MI-PROGRESS-03-CLOSE",
+  "parent": "304cf47496a60d993a58ab864005010b3108d19b",
+  "classification": "CENTRAL_REPORTING_CATALOG_NO_PRODUCT_CHANGES",
+  "files": {
+    "new": [
+      "progress/MI_PROGRESS_03_ROUND_CLOSE.json",
+      "progress/MI_PROGRESS_03_OWNER_GATE_HANDOVER.json",
+      "docs/master-integration/MI-PROGRESS-03-CLOSE/CATALOG_AND_VALIDATION.json",
+      "docs/master-integration/MI-PROGRESS-03-CLOSE/ARCHITECTURE_RUNBOOK_HANDOVER.md"
+    ],
+    "updated": [
+      "progress/MASTER_INTEGRATION_CURRENT.json",
+      "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
+      "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json"
+    ]
+  },
+  "manifest": {
+    "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "product_files": 539,
+    "manifest_entries": 538,
+    "path_size_syntax": [
+      538,
+      538
+    ],
+    "whole_sha256": "NOT_RUN"
+  },
+  "areas": {
+    "domains": 21,
+    "modules": 63,
+    "technical_areas": 24,
+    "criteria": 315,
+    "proposed_group_weights": [
+      [
+        "P01",
+        12
+      ],
+      [
+        "P02",
+        8
+      ],
+      [
+        "P03",
+        10
+      ],
+      [
+        "P04",
+        12
+      ],
+      [
+        "P05",
+        12
+      ],
+      [
+        "P06",
+        12
+      ],
+      [
+        "P07",
+        8
+      ],
+      [
+        "P08",
+        10
+      ],
+      [
+        "P09",
+        6
+      ],
+      [
+        "P10",
+        10
+      ]
+    ]
+  },
+  "evidence": {
+    "pinned_exact_readback": [
+      28,
+      28
+    ],
+    "old_r2": [
+      23,
+      23
+    ],
+    "progress03_new": [
+      3,
+      3
+    ],
+    "additional": [
+      2,
+      2
+    ],
+    "records": [
+      {
+        "id": "CORE",
+        "ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+        "path": "progress/INTEGRATION_GATES_0227.json",
+        "blob": "50df93704c63a7fa12ff5f6b93183b243e5f8a63",
+        "scope": "CANONICAL_SCOPED_GATE_REGISTER",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "CORE-E1",
+        "ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+        "path": "tests/evidence/E1_RAW_EVIDENCE_REVIEW_0227.json",
+        "blob": "631deb7a76a4b44c29ac7eb28d3c4d9209e6e57f",
+        "scope": "HISTORICAL_RAW_REVIEW",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "CORE-D2",
+        "ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+        "path": "tests/evidence/D2_RAW_EVIDENCE_REVIEW_0227.json",
+        "blob": "fb8b71052b41c6142975c6c4d504ea639b3e0337",
+        "scope": "HISTORICAL_RAW_REVIEW",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "CORE-D3",
+        "ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+        "path": "tests/evidence/D3_EVIDENCE_TRANSFER_0227.json",
+        "blob": "a8dfa3bbe17a35ed67e5a00f08f20c90a50fc27e",
+        "scope": "HISTORICAL_SCOPED_FIXTURE",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "G7",
+        "ref": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+        "path": "candidates/D5-G7/PROGRESS.json",
+        "blob": "f0ee0cc9e4d81af178578cc3bcb23cdc20f6e28f",
+        "scope": "OWNER_PROGRESS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "R9",
+        "ref": "253128a2236ee706486e70acc97e472ededac26b",
+        "path": "candidates/D5-C-R9/PROGRESS.json",
+        "blob": "296e5e510c7c3e2012b0e092ecd9b598c4367a21",
+        "scope": "OWNER_PROGRESS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "GATE01",
+        "ref": "999ce93e88b803426627652583fd2a55eda245c0",
+        "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/IAM_SELECTED_EVIDENCE.json",
+        "blob": "e5e054a3d165e487acd4d4bdb3ac6e863d42c607",
+        "scope": "SELECTED_ORIGINAL_COMPONENT",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "GATE02",
+        "ref": "999ce93e88b803426627652583fd2a55eda245c0",
+        "path": "docs/master-integration/MI-03-GATE02-PROVENANCE-BOUNDARY/CATALOG_AND_EVIDENCE.json",
+        "blob": "2bf37151ca52fd200f8960273e92975744a8f7f2",
+        "scope": "LOCAL_DIAGNOSTIC",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "G5",
+        "ref": "999ce93e88b803426627652583fd2a55eda245c0",
+        "path": "docs/master-integration/MI-04-G5-WINDOWS-EVIDENCE-READBACK/CATALOG_AND_EVIDENCE.json",
+        "blob": "f1375e2b7c1539fd6aeefc1ae230bf34a0fea9d5",
+        "scope": "HISTORICAL_TRANSCRIPT",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "U3A",
+        "ref": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "path": "docs/UNIFIED-U3A/TEST_EVIDENCE.json",
+        "blob": "fa09d38ffe5f2c07b816a21b01e57de386f329d8",
+        "scope": "SELECTED_REPLAY",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "UI",
+        "ref": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+        "path": "progress/INTEGRATION_MATRIX_UI_P10J24B.json",
+        "blob": "90fb7612ef67ae28b72b90dbbba790993bdb9211",
+        "scope": "CANONICAL_SCOPED_GATE_REGISTER",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "EXT",
+        "ref": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+        "path": "handover/W5_EXT07R6_CURRENT.json",
+        "blob": "144dcacb33474f815eadd933989d79891fa45795",
+        "scope": "OWNER_HANDOVER",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "MEM-C",
+        "ref": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+        "path": "candidates/W5-MEM-05C-R2/PROGRESS.json",
+        "blob": "f325cdb00dc503e8198f108b0ea830a4dc7a2d00",
+        "scope": "OWNER_PROGRESS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "MEM-D",
+        "ref": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47",
+        "path": "candidates/W5-MEM-05D/PROGRESS.json",
+        "blob": "decb1bb0cdb988f2fbc2ac5f7d94fad611c2a7a5",
+        "scope": "OWNER_PROGRESS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "MEM-E",
+        "ref": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+        "path": "candidates/W5-MEM-05E-R1/PROGRESS.json",
+        "blob": "db7bbe0205319498c33f914a87fc552f00ad1025",
+        "scope": "OWNER_PROGRESS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "ORG",
+        "ref": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+        "path": "docs/ORG-07C-R8-INTEGRATION/BROWSER_VISUAL_EVIDENCE_20261119.json",
+        "blob": "40b0aa1f179568f713302ddf7c96c5a788e624d6",
+        "scope": "HISTORICAL_VISUAL_PARTIAL",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "MODEL-MEM",
+        "ref": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+        "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json",
+        "blob": "d5db74ebcb327b69bcdaf637b242253d52304c20",
+        "scope": "SOURCE_TRANSFER_ONLY",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "ORG-SKILL",
+        "ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "path": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+        "blob": "086fb46030fb61f2f979ea5d42e49dea02dcff8c",
+        "scope": "SOURCE_TRANSFER_ONLY",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "MI03-04",
+        "ref": "999ce93e88b803426627652583fd2a55eda245c0",
+        "path": "docs/master-integration/MI-03-04-UNION/EVIDENCE.json",
+        "blob": "207faf58cc5d66c94cf98cb15f7cdefaafb810f5",
+        "scope": "SELECTED_ORIGINAL_COMPONENT",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "PROJECTION",
+        "ref": "999ce93e88b803426627652583fd2a55eda245c0",
+        "path": "docs/master-integration/MI-05-06-PROJECTION-REPLAY-01/CATALOG_AND_EVIDENCE.json",
+        "blob": "8176a2c80dbcd7b39667f17245eb357174928c17",
+        "scope": "SELECTED_ORIGINAL_COMPONENT",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "MEM-T1",
+        "ref": "999ce93e88b803426627652583fd2a55eda245c0",
+        "path": "docs/master-integration/MI-04-MEMORY-T1-EVIDENCE-RECONCILIATION/CATALOG_AND_EVIDENCE.json",
+        "blob": "1c2970bed2f212695754bdabf96f646bc2da4be8",
+        "scope": "HISTORICAL_SOURCE_RECONCILIATION",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "RUNNER",
+        "ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "path": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+        "blob": "46e0c1d6831ef45955c09ee1d44bfbd6a23a1156",
+        "scope": "RUNNER_MECHANICS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "OVERLAY",
+        "ref": "698462862c86cd673abf73acf72ff6c6475f95a8",
+        "path": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/CATALOG_AND_EVIDENCE.json",
+        "blob": "395b7ac2ff17c62d61969bcf4b865e5f05801bb9",
+        "scope": "SELECTED_REPLAY_AND_PROPOSED_SOURCE_DELTA",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "COMMON03",
+        "ref": "3fd300fcf35134c9c86ae0ad85d9543249418727",
+        "path": "docs/master-integration/MI-COMMON-03-SELECTED-REGRESSION/EVIDENCE.json",
+        "blob": "2e9d2cd5f0ae97fe507a4fc64a52921535047374",
+        "scope": "ACTUAL_SELECTED_SAME_539_SOURCE_NO_FULL_BUILD",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "GATE01-CLAIM",
+        "ref": "3fd300fcf35134c9c86ae0ad85d9543249418727",
+        "path": "docs/master-integration/MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING/CATALOG_AND_EVIDENCE.json",
+        "blob": "d1556abe604ea9a09090affa66ac120abf64b3b1",
+        "scope": "ACTUAL_SYNTHETIC_IAM_CLAIM_NO_OWNER_ISSUER",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "GATE02-ASSIGNMENT",
+        "ref": "workstream/mi03-gate02-assignment-lifecycle-d0",
+        "path": "candidates/MI03-ASSIGNMENT-D0/CATALOG_AND_EVIDENCE.json",
+        "blob": "4586eccba99154a4f67cb998921582a391635f3f",
+        "scope": "ISOLATED_SQLITE_ASSIGNMENT_SOURCE_NO_COMMON_TRANSFER",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "GATE01-T1-42",
+        "ref": "304cf47496a60d993a58ab864005010b3108d19b",
+        "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/T1_DIRECT_EVIDENCE.json",
+        "blob": "841976ef647d6dc58f1021682017dff8c496496a",
+        "scope": "ACTUAL_EXACT_SELECTED_SQLITE_42_7_PLUS_35_NOT_NEW_METHODS",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      },
+      {
+        "id": "G6A-D4-ORG-59",
+        "ref": "304cf47496a60d993a58ab864005010b3108d19b",
+        "path": "docs/master-integration/MI03-G6A-D4-ORG-CROSS-REPLAY-01/EVIDENCE.json",
+        "blob": "d6299caec40bb5cf30fcaedeb5a7a6a4a1ab0d46",
+        "scope": "ACTUAL_EXACT_SELECTED_SQLITE_59_INCLUDES_33_REPEATED",
+        "readback": "EXACT_BLOB_VERIFIED_THIS_TURN"
+      }
+    ],
+    "method": "GitHub fetch_file refs/paths verified exact blob sha this turn, 23 old + 3 current + 2 new; does not independently execute tests or hash full product"
+  },
+  "tests": {
+    "static_positive": 1,
+    "static_positive_pass": true,
+    "static_checks": [
+      {
+        "name": "criteria_315",
+        "pass": true
+      },
+      {
+        "name": "unique_criterion_ids",
+        "pass": true
+      },
+      {
+        "name": "module_63",
+        "pass": true
+      },
+      {
+        "name": "domain_21",
+        "pass": true
+      },
+      {
+        "name": "tracker_24",
+        "pass": true
+      },
+      {
+        "name": "every_module_five",
+        "pass": true
+      },
+      {
+        "name": "stage_63_each",
+        "pass": true
+      },
+      {
+        "name": "source_56_R2",
+        "pass": true
+      },
+      {
+        "name": "source_7_gap",
+        "pass": true
+      },
+      {
+        "name": "functional_58_leads",
+        "pass": true
+      },
+      {
+        "name": "functional_5_gap",
+        "pass": true
+      },
+      {
+        "name": "integrations_63_hold",
+        "pass": true
+      },
+      {
+        "name": "acceptance_63_unratified",
+        "pass": true
+      },
+      {
+        "name": "group10",
+        "pass": true
+      },
+      {
+        "name": "weights100",
+        "pass": true
+      },
+      {
+        "name": "all_group_refs_known",
+        "pass": true
+      },
+      {
+        "name": "all_scores_null",
+        "pass": true
+      },
+      {
+        "name": "all_approvals_pending",
+        "pass": true
+      },
+      {
+        "name": "source_refs_exact",
+        "pass": true
+      },
+      {
+        "name": "manifest_539",
+        "pass": true
+      },
+      {
+        "name": "manifest_no_unlisted",
+        "pass": true
+      },
+      {
+        "name": "manifest_no_missing",
+        "pass": true
+      },
+      {
+        "name": "manifest_sizes",
+        "pass": true
+      },
+      {
+        "name": "manifest_sha_syntax",
+        "pass": true
+      },
+      {
+        "name": "evidence28_unique",
+        "pass": true
+      },
+      {
+        "name": "evidence_blob_syntax",
+        "pass": true
+      },
+      {
+        "name": "old_global_scope_preserved",
+        "pass": true
+      },
+      {
+        "name": "current_progress_03_unscored",
+        "pass": true
+      },
+      {
+        "name": "no_old_product_promotion",
+        "pass": true
+      },
+      {
+        "name": "reported_tests_old_not_rerun",
+        "pass": true
+      },
+      {
+        "name": "owner_gates_all_hold",
+        "pass": true
+      },
+      {
+        "name": "round_closed_but_not_accepted",
+        "pass": true
+      },
+      {
+        "name": "owner_task_map_complete",
+        "pass": true
+      }
+    ],
+    "static_checks_pass": 33,
+    "negative_controls": [
+      {
+        "id": "duplicate_criterion_id",
+        "pass": true
+      },
+      {
+        "id": "missing_criterion",
+        "pass": true
+      },
+      {
+        "id": "bad_stage",
+        "pass": true
+      },
+      {
+        "id": "unknown_group",
+        "pass": true
+      },
+      {
+        "id": "invented_criterion_success",
+        "pass": true
+      },
+      {
+        "id": "unapproved_criterion_credit",
+        "pass": true
+      },
+      {
+        "id": "one_module_double_stage",
+        "pass": true
+      },
+      {
+        "id": "no_owner_approval_but_percent",
+        "pass": true
+      },
+      {
+        "id": "no_owner_denominator_but_freeze",
+        "pass": true
+      },
+      {
+        "id": "evidence_blob_mismatch",
+        "pass": true
+      },
+      {
+        "id": "source_sha_mismatch",
+        "pass": true
+      },
+      {
+        "id": "canonical_acceptance_changed",
+        "pass": true
+      },
+      {
+        "id": "permission_escalation",
+        "pass": true
+      }
+    ],
+    "negative_pass": 13,
+    "scope": "Real JS reporting data integrity checks over fixed versioned GitHub JSON and remote Git tree, NOT product tests"
+  },
+  "source_inventory": {
+    "source_files_modified": 0,
+    "classes_modified": 0,
+    "functions_modified": 0,
+    "api_modified": 0,
+    "database_modified": 0,
+    "events_modified": 0,
+    "dependencies_modified": 0,
+    "security_permissions_modified": 0
+  },
+  "rollback": "Only latest closure reporting commit normal revert, keep all MI01–10 source evidence & earlier reports."
+}

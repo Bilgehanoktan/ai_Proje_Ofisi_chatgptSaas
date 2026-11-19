@@ -1,0 +1,181 @@
+{
+  "revision": "MI-PROGRESS-03-CLOSE",
+  "date": "2026-11-19",
+  "classification": "READONLY_OWNER_GATE_TASK_QUEUE_NO_REASSIGNMENTS",
+  "source_ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "starting_canonical": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "owner_tasks": [
+    {
+      "id": "G01",
+      "owner": "MI-01/Unified",
+      "priority": 1,
+      "current": "539 shared files, selected ORG31/Projection12/Skill41/Registry13=97/97 PASS; full chain NOT_RUN",
+      "blocking": "Exact complete checkout/locked install, full backend+Next build/browser and owner fingerprint",
+      "predecessors": [],
+      "evidence_ids": [
+        "COMMON03",
+        "RUNNER"
+      ],
+      "exit": "User-authorized isolated W8 audit→prepare→install→test→smoke with raw stdout/hash/exit and owner review; no regenerated npm lock",
+      "status": "HOLD"
+    },
+    {
+      "id": "G02",
+      "owner": "MI-03/ORG/Core",
+      "priority": 1,
+      "current": "GATE02 assignment 20/20 SQLite source candidate; same durable_ops path has original and modified blobs",
+      "blocking": "Original 43ed448c... vs modified 619fe224... class/resource and one-assignment semantics; 8 Python+2 SQL packaging missing",
+      "predecessors": [],
+      "evidence_ids": [
+        "GATE02-ASSIGNMENT",
+        "GATE01-CLAIM"
+      ],
+      "exit": "ORG/Core/D4/IAM owner disposition, exact Store+Core original replay and P02 A–E, no synthetic grant",
+      "status": "HOLD"
+    },
+    {
+      "id": "G03",
+      "owner": "MI-03/MI-04/T1",
+      "priority": 1,
+      "current": "T1 42/42 selected (7 Authority +35 mapping/scheduler) and 59/59 G6A/D4/ORG selected",
+      "blocking": "Original Memory–T1 fullchain 0/10 runner preflight blocked missing 265 exact backend/2 G6A/3 DDL; G2 50 and G9 7 not run; strict protected PG COMMIT HOLD",
+      "predecessors": [
+        "G02"
+      ],
+      "evidence_ids": [
+        "GATE01-T1-42",
+        "G6A-D4-ORG-59",
+        "GATE01"
+      ],
+      "exit": "Owner-approved entry/writer; exact original 10+G2+G9 with no unsafe overlay, strict COMMIT and UNKNOWN quarantine actual PG readback, no automatic retry",
+      "status": "HOLD"
+    },
+    {
+      "id": "G04",
+      "owner": "MI-02/PostgreSQL",
+      "priority": 1,
+      "current": "Core scoped 12/16; D2 13/13 PG D0 and D3 230 fixture probes historical",
+      "blocking": "Canonical product PG pool/RLS, T1 multi-project race, real outbox and isolation not proven",
+      "predecessors": [
+        "G02",
+        "G03"
+      ],
+      "evidence_ids": [
+        "CORE",
+        "CORE-D2",
+        "CORE-D3"
+      ],
+      "exit": "Pinned original product PG/RLS evidence with real non-owner pool, lock/rollback, outbox and readback; separate IV",
+      "status": "HOLD"
+    },
+    {
+      "id": "G05",
+      "owner": "MI-07/08/09 W5 owners",
+      "priority": 2,
+      "current": "Skill41 selected current common PASS, existing ModelMemory sources pinned",
+      "blocking": "Full original Model/Memory 344 NOT_RUN, old writer retirement and owner proof/raw MEM05E missing",
+      "predecessors": [],
+      "evidence_ids": [
+        "MODEL-MEM",
+        "MEM-E",
+        "MEM-T1",
+        "COMMON03"
+      ],
+      "exit": "Exactly one 344-suite run on locked same candidate, preserve PASS vs known expected boundary failures; writer retirement + receipts proven",
+      "status": "HOLD"
+    },
+    {
+      "id": "G06",
+      "owner": "MI-05/06/UI/Office",
+      "priority": 2,
+      "current": "Historical UI 21/40; ORG31 & Projection12 selected common PASS",
+      "blocking": "Office0/55 JOIN_HOLD; no canonical owner-provided real session/world/asset proof; full browser NOT_RUN",
+      "predecessors": [
+        "G01",
+        "G02"
+      ],
+      "evidence_ids": [
+        "ORG",
+        "PROJECTION",
+        "COMMON03"
+      ],
+      "exit": "Owner-bound real read-only projection + browser visual/functional assertions on same exact source; OfficeV0 55 separately",
+      "status": "HOLD"
+    },
+    {
+      "id": "G07",
+      "owner": "MI-10/Independent IV/QA",
+      "priority": 3,
+      "current": "IV 0/7; MI10 8 static checks, no CI authorization",
+      "blocking": "Independent custodian/receipt/policy and acceptance proof missing, CI/main/PROD/real effects not permitted",
+      "predecessors": [
+        "G01",
+        "G03",
+        "G04"
+      ],
+      "evidence_ids": [
+        "CORE",
+        "RUNNER"
+      ],
+      "exit": "Separate authorized IV acceptance, independent trust root and QA release gate; CI plan only until explicit permission",
+      "status": "HOLD"
+    },
+    {
+      "id": "G08",
+      "owner": "MI-PROGRESS-04 central coordinator",
+      "priority": 3,
+      "current": "315/315 criterion draft evidence triaged; weights proposed 100; owner denominator 0/10",
+      "blocking": "No exhaustive confirmed group/stage denominator and unique proof allocation, global percentage is null",
+      "predecessors": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "evidence_ids": [
+        "GATE01",
+        "CORE",
+        "UI",
+        "MEM-E"
+      ],
+      "exit": "Owner-approved unique criterion IDs, group weights, stage denominators, previous/new/delta and evidence refs; calculate only then",
+      "status": "HOLD"
+    }
+  ],
+  "execution_order": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08"
+  ],
+  "ownership_rule": "Other owner workstreams retain sole source write authority; this reporting branch changes only reports. No new prototype or parallel duplicate of 10 original fullchain tests.",
+  "permissions": {
+    "existing": {
+      "isolated_source_transfer": true,
+      "local_synthetic_test": true,
+      "ci": false,
+      "main_merge": false,
+      "production": false,
+      "independent_acceptance": false,
+      "external_effects": false,
+      "spend": false,
+      "real_customer_data": false
+    },
+    "unchanged": true
+  },
+  "rollback": "Revert only reporting commit after checking latest governance ref. Never reset IAM/claim/DB and no CI/merge.",
+  "source_artifacts": {
+    "org_assignment_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+    "assignment_original_blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+    "assignment_modified_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+    "t1_evidence": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/T1_DIRECT_EVIDENCE.json",
+    "cross_evidence": "docs/master-integration/MI03-G6A-D4-ORG-CROSS-REPLAY-01/EVIDENCE.json"
+  }
+}

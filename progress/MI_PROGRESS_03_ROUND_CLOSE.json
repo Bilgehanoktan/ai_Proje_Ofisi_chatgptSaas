@@ -1,0 +1,490 @@
+{
+  "revision": "MI-PROGRESS-03-CLOSE",
+  "date": "2026-11-19",
+  "parent": "304cf47496a60d993a58ab864005010b3108d19b",
+  "classification": "REPORTING_ROUND_CLOSED_PRODUCT_GATES_HOLD",
+  "source_pins": {
+    "governance_parent": "304cf47496a60d993a58ab864005010b3108d19b",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common_candidate": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "common_manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "progress_03_proof_blob": "6122c59fbd19c82d525d9e6b3fe73180b3ea2839",
+    "progress_03_decision_blob": "34cc52c407e0f187693b4a91c611f6b6d70d4d6c",
+    "progress_02_matrix_blob": "87531622930b2a5dd6d4e7355407410a18d1ec45"
+  },
+  "status": {
+    "turn": "MI-PROGRESS-03",
+    "scope": "REPORTING_AND_PROVENANCE_ONLY",
+    "reporting": "CLOSED",
+    "product_release": "HOLD",
+    "development_score": "HESAPLANAMADI",
+    "previous_development_percent": null,
+    "current_development_percent": null,
+    "delta_pp": null,
+    "reason": "Product owner weights/stage denominators not ratified, source/test leads cannot be mapped as proven criterion completion; exact same-commit build/fullchain/IV missing",
+    "owner_weights_approved": [
+      0,
+      10
+    ],
+    "frozen_denominators": [
+      0,
+      10
+    ],
+    "total_criterion_drafts": [
+      315,
+      315
+    ],
+    "scored_stage_criteria": 0,
+    "scored_stage_criteria_semantics": "No criterion adjudicated for new group score; do not treat as 0% product completion",
+    "acceptance_previous_current": [
+      {
+        "id": "CORE",
+        "previous": [
+          12,
+          16
+        ],
+        "current": [
+          12,
+          16
+        ],
+        "source": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+        "scope": "Core standalone; D3 scoped fixture, not canonical RLS",
+        "delta_pp": 0
+      },
+      {
+        "id": "UI",
+        "previous": [
+          21,
+          40
+        ],
+        "current": [
+          21,
+          40
+        ],
+        "source": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+        "scope": null,
+        "delta_pp": 0
+      },
+      {
+        "id": "ORG_PLAN",
+        "previous": [
+          5,
+          7
+        ],
+        "current": [
+          5,
+          7
+        ],
+        "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+        "scope": "plan not product",
+        "delta_pp": 0
+      },
+      {
+        "id": "MVP",
+        "previous": [
+          0,
+          11
+        ],
+        "current": [
+          0,
+          11
+        ],
+        "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "scope": null,
+        "delta_pp": 0
+      },
+      {
+        "id": "IV",
+        "previous": [
+          0,
+          7
+        ],
+        "current": [
+          0,
+          7
+        ],
+        "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "scope": null,
+        "delta_pp": 0
+      },
+      {
+        "id": "EXT",
+        "previous": [
+          2,
+          7
+        ],
+        "current": [
+          2,
+          7
+        ],
+        "source": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+        "scope": "EXT-specific gates",
+        "delta_pp": 0
+      }
+    ],
+    "acceptance_delta_pp": 0,
+    "partial_package_progress_unchanged": [
+      {
+        "id": "D5-F",
+        "previous": 62.619,
+        "current": 62.619,
+        "delta_pp": 0
+      },
+      {
+        "id": "D5-G7",
+        "previous": 42.5,
+        "current": 42.5,
+        "delta_pp": 0
+      },
+      {
+        "id": "D5-C-R8",
+        "previous": 50,
+        "current": 50,
+        "delta_pp": 0
+      },
+      {
+        "id": "D5-C-R9",
+        "previous": null,
+        "current": null,
+        "delta_pp": null
+      },
+      {
+        "id": "MEM-05C-R2",
+        "previous": 46.6666666667,
+        "current": 58.3333333333,
+        "delta_pp": 11.6666666666
+      },
+      {
+        "id": "MEM-05D",
+        "previous": 0,
+        "current": 58.3333333333,
+        "delta_pp": 58.3333333333
+      },
+      {
+        "id": "MEM-05E-R1",
+        "previous": 45,
+        "current": 45,
+        "delta_pp": 0
+      },
+      {
+        "id": "ORG-07C-R8",
+        "previous": 11.6666666667,
+        "current": 11.6666666667,
+        "delta_pp": 0
+      },
+      {
+        "id": "MI-04-TRANSPORT-TRANSFER",
+        "previous": null,
+        "current": null,
+        "delta_pp": null
+      }
+    ],
+    "selected_real_test_evidence": [
+      {
+        "id": "COMMON03-97",
+        "groups": {
+          "ORG": 31,
+          "ProjectionRead": 12,
+          "Skill": 41,
+          "Registry": 13
+        },
+        "pass": 97,
+        "total": 97,
+        "scope": "selected on 539 source, mocked/history, no full build"
+      },
+      {
+        "id": "GATE01-T1-42",
+        "groups": {
+          "Authority": 7,
+          "SQL_and_Scheduler": 35
+        },
+        "pass": 42,
+        "total": 42,
+        "scope": "exact mixed G6A/539 SQLite selected; original 0214 10 still NOT_RUN"
+      },
+      {
+        "id": "G6A-D4-ORG-59",
+        "groups": {
+          "G1": 14,
+          "G2": 19,
+          "G4": 14,
+          "G5": 12
+        },
+        "pass": 59,
+        "total": 59,
+        "scope": "33 G1/G2 old IAM repeated, 26 other prior methods on combined candidate"
+      },
+      {
+        "id": "GATE02-ASSIGNMENT-20",
+        "pass": 20,
+        "total": 20,
+        "scope": "isolated fresh SQLite unit; not owner issuance"
+      },
+      {
+        "id": "IAM-CLAIM-6",
+        "pass": 6,
+        "total": 6,
+        "scope": "new synthetic D0 claim tests; no protected authority"
+      }
+    ],
+    "test_addition_rule": "All source scopes differ/overlap; never present sum as unique count. Only 6 IAM-claim methods explicitly new, within synthetic scope. No new product tests executed in reporting chat.",
+    "missing_actual": [
+      "10 original Memory–T1",
+      "50 original G2",
+      "7 original G9",
+      "344 ModelMemory",
+      "full exact W8/Next/backend",
+      "canonical PG/RLS/T1",
+      "independent IV",
+      "complete common UI/Office browser"
+    ],
+    "upcoming": "MI-PROGRESS-04 owner decision and running-product integration gates",
+    "product_changed_files": 0,
+    "api_db_event_dep_changes": 0,
+    "security_permission_changes": 0
+  },
+  "group_tasks": [
+    {
+      "id": "PROGRESS-03A",
+      "title": "Orchestrator + Runtime kanıt incelemesi",
+      "groups": [
+        "P04",
+        "P05"
+      ],
+      "status": "CLOSED_REPORTING_REVIEW",
+      "product_gate": "OWNER_ASSIGNMENT_AND_DISPATCH_HOLD",
+      "next": "MI03/Core/ORG: accepted assignment/identity/role, Core history and dispatcher; original P02 then full T1"
+    },
+    {
+      "id": "PROGRESS-03B",
+      "title": "T1, DB, IAM ve güvenlik kanıt incelemesi",
+      "groups": [
+        "P07",
+        "P08"
+      ],
+      "status": "CLOSED_REPORTING_REVIEW",
+      "product_gate": "STRICT_COMMIT_AND_INDEPENDENT_CUSTODY_HOLD",
+      "next": "Owner: decide Authority/ORG import namespace and durable_ops collision; exact fullchain10/G2-50/G9-7 then canonical RLS/PG"
+    },
+    {
+      "id": "PROGRESS-03C",
+      "title": "UI, Office ve API kanıt uzlaştırması",
+      "groups": [
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "status": "CLOSED_REPORTING_REVIEW",
+      "product_gate": "W8_FULL_BUILD_AND_REAL_PROJECTION_HOLD",
+      "next": "MI01/05/06: immutable lock clean checkout, build, browser, owner-bound Office and 55 acceptance checks"
+    },
+    {
+      "id": "PROGRESS-03D",
+      "title": "Model, Skill ve Memory kanıt uzlaştırması",
+      "groups": [
+        "P06"
+      ],
+      "status": "CLOSED_REPORTING_REVIEW",
+      "product_gate": "MODEL_MEMORY_344_AND_WRITER_RETIREMENT_HOLD",
+      "next": "W5/MI07/08/09: 344 exact common regression once; reconcile old writer, receipt/PEP/provenance; 41 Skill selected PASS but no activation"
+    },
+    {
+      "id": "PROGRESS-03E",
+      "title": "SaaS, finans, QA ve altyapı kanıtları",
+      "groups": [
+        "P09",
+        "P10"
+      ],
+      "status": "CLOSED_REPORTING_REVIEW",
+      "product_gate": "TENANT_FINANCE_QA_IV_DEPENDENCY_HOLD",
+      "next": "W7/MI10: SaaS tenant/quota/consent and budget ledger, complete W8, restore drill, observability and authorized IV"
+    },
+    {
+      "id": "PROGRESS-03F",
+      "title": "Ağırlıklı genel ilerleme sonucu",
+      "groups": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "status": "CLOSED_WITH_BLOCKED_CALCULATION",
+      "product_gate": "GLOBAL_PERCENT_NOT_CALCULABLE",
+      "next": "Need 10 owner-approved exhaustive nonoverlapping stage denominators, group weights and criterion-level evidence before percentage"
+    }
+  ],
+  "group_criteria": {
+    "P01": {
+      "proposed_weight": 12,
+      "modules": 1,
+      "stage_slots": 5,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P02": {
+      "proposed_weight": 8,
+      "modules": 2,
+      "stage_slots": 10,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P03": {
+      "proposed_weight": 10,
+      "modules": 2,
+      "stage_slots": 10,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P04": {
+      "proposed_weight": 12,
+      "modules": 3,
+      "stage_slots": 15,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P05": {
+      "proposed_weight": 12,
+      "modules": 8,
+      "stage_slots": 40,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P06": {
+      "proposed_weight": 12,
+      "modules": 8,
+      "stage_slots": 40,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P07": {
+      "proposed_weight": 8,
+      "modules": 5,
+      "stage_slots": 25,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P08": {
+      "proposed_weight": 10,
+      "modules": 15,
+      "stage_slots": 75,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P09": {
+      "proposed_weight": 6,
+      "modules": 11,
+      "stage_slots": 55,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    },
+    "P10": {
+      "proposed_weight": 10,
+      "modules": 8,
+      "stage_slots": 40,
+      "owner_approved": false,
+      "development_previous": null,
+      "development_current": null,
+      "delta": null
+    }
+  },
+  "evidence_audit": {
+    "path": "docs/master-integration/MI-PROGRESS-03-CLOSE/CATALOG_AND_VALIDATION.json",
+    "exact_readback": [
+      28,
+      28
+    ]
+  },
+  "owner_gate_register": "progress/MI_PROGRESS_03_OWNER_GATE_HANDOVER.json",
+  "architecture_runbook": "docs/master-integration/MI-PROGRESS-03-CLOSE/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+  "progress_computation": {
+    "weights": [
+      15,
+      35,
+      20,
+      20,
+      10
+    ],
+    "group_weights": [
+      {
+        "id": "P01",
+        "weight": 12,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P02",
+        "weight": 8,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P03",
+        "weight": 10,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P04",
+        "weight": 12,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P05",
+        "weight": 12,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P06",
+        "weight": 12,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P07",
+        "weight": 8,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P08",
+        "weight": 10,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P09",
+        "weight": 6,
+        "status": "PROPOSED_NOT_APPROVED"
+      },
+      {
+        "id": "P10",
+        "weight": 10,
+        "status": "PROPOSED_NOT_APPROVED"
+      }
+    ],
+    "stage_denominators_approved": 0,
+    "development_percent_previous": null,
+    "development_percent_current": null,
+    "delta_pp": null,
+    "reason": "Product owner weights/stage denominators not ratified, source/test leads cannot be mapped as proven criterion completion; exact same-commit build/fullchain/IV missing"
+  },
+  "next": "MI-PROGRESS-04 must prioritize owner decisions + exact shared product build and required original tests; 03A-F reporting outputs closed with 03F HESAPLANAMADI."
+}
