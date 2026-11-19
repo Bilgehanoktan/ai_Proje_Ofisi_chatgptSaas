@@ -1,0 +1,68 @@
+{
+  "revision": "MI-01-U3B-REMOTE-PREFLIGHT",
+  "date": "2026-11-19",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source_commit": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
+  "previous_evidence": "23f9f63289d11ccbbdd360c8507556606d2b7bb6",
+  "tree": "d6bfdd08176f12e8ee855e00bfbb598e17bb8eb8",
+  "manifest": "9001c2c634f84fc7280d7fd3f370192873366095",
+  "runner": "28de47e952160b9ebae089816dd4bbebdbdd1d60",
+  "remote": {
+    "tree_entries": 2166,
+    "truncated": false,
+    "product_tree_blob_mode_size_match": [
+      505,
+      505
+    ],
+    "missing": 0,
+    "extra": 0,
+    "history_lock_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "historical_lock_blob_size_match": [
+      55,
+      55
+    ],
+    "historical_overlay_count": 3,
+    "contract_fixture_manifest_hash_pairs": [
+      17,
+      17
+    ],
+    "previous_selected_auxiliary_blob_matches": [
+      26,
+      26
+    ],
+    "runner_tree_entries": 25,
+    "scope": "GitHub tree metadata and recorded hashes only; not locally recomputed all byte SHA-256, not original audit execution"
+  },
+  "local": {
+    "git": "2.47.3",
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "npm": "10.9.2",
+    "git_ls_remote": "FAIL: Could not resolve host github.com",
+    "library_delta_recovery": "3 exact prior archive materialization attempts denied: no authorized raw-byte materialization path",
+    "previous_regression_log_sha256": "a570ac4a309c77843fec874820a62e3275be3d224c3e23d9b028bb3bfea9a210",
+    "previous_regression_log_bytes": 2768,
+    "previous_regression_log_verified": true,
+    "new_product_tests": 0,
+    "full_checkout": "BLOCKED",
+    "runner_mechanics": "NOT_RUN this round",
+    "w8_audit": "NOT_RUN",
+    "prepare": "NOT_RUN",
+    "review_fingerprint": "NOT_GENERATED",
+    "install": "NOT_RUN",
+    "build": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "next": "Unified owner review; clean exact checkout on connected Windows workstation, original U3 runner mechanics, audit and prepare only. Review file is stage/locks/REVIEW.json. No install/test/smoke until separate fingerprint review and approval. No canonical source promotion, provider, real grants, CI, production or external effects.",
+  "progress": {
+    "development_percent": null,
+    "reason": "frozen MI-01 criteria denominator absent",
+    "acceptance_delta": 0,
+    "core_standalone": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  },
+  "catalog_delta": "No code/API/DB/event/dependency changes; source pin/readback evidence only",
+  "rollback": "Existing base and isolated branch retained; no mutation of prior stages or DB."
+}
