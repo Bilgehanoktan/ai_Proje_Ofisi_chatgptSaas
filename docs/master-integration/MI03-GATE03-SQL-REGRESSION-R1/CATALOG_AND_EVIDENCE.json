@@ -1,0 +1,58 @@
+{
+  "revision": "MI03-GATE03-SQL-REGRESSION-R1",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_EXECUTED_NEW_ORG_OWNER_SQLITE_SCHEMA_REGRESSION_ON_ISOLATED_SOURCE_CANDIDATE",
+  "branch": "integration/mi03-gate03-org-runtime-closure-01",
+  "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "previous_candidate": "65a0e978c20378041e98f70e6ed074151214a3bb",
+  "base": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "source_pins": [
+    3,
+    3
+  ],
+  "source_owner_files": [
+    "schema.sql",
+    "operations.sql",
+    "assignment_review.sql"
+  ],
+  "manifest_entries": [
+    552,
+    552
+  ],
+  "product_files": 553,
+  "exact_test_path": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+  "test_git_blob": "6fa630b9765c12f944203631972c90b1a4901a0f",
+  "log_git_blob": "e41d5fcc833ac564b035b209ef08f5424990a55a",
+  "evidence": "MI03-GATE03-SQL-REGRESSION-R1",
+  "actual_local_test": [
+    11,
+    11
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "source_checkout": "3 original exact owner SQL blobs only + test, not complete candidate checkout",
+    "external_provider": "none"
+  },
+  "unique_new_methods": 11,
+  "existing_cross_owner_separate": {
+    "regression_71": "71/71 PASS from concurrent distinct selected stage",
+    "existing_historical": "59 repeats, 8 new supplemental, 4 previously NOT_RUN original smoke"
+  },
+  "do_not_sum_cross_stage": true,
+  "full_OperationsStore_Core": "NOT_RUN",
+  "original_G9_7": "NOT_RUN",
+  "original_G2_50": "NOT_RUN",
+  "original_0214_10": "NOT_RUN",
+  "full_W8_build": "NOT_RUN",
+  "owner_review": "HOLD",
+  "actual_assignment_issuer": "HOLD",
+  "grant": "NO",
+  "product_dev_change": 0,
+  "main_change": 0,
+  "acceptance_delta": 0,
+  "development_percent_previous": 42.5,
+  "development_percent_current": 42.5,
+  "percent_delta_pp": 0,
+  "rollback": "Reviewed revert candidate to 65a0e978c20378041e98f70e6ed074151214a3bb, preserve product-dev/main; no DB migration or claim reset."
+}

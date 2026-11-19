@@ -1,5 +1,5 @@
 {
-  "revision": "MI-COMMON-04-PINNED-RECOVERY",
+  "revision": "MI03-GATE03-SQL-REGRESSION-R1",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -395,7 +395,7 @@
       "owner_role": "Core / DB",
       "source_ref": "integration/0227-local-environment-preflight",
       "observed_sha": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
-      "next": "Coordinate E2/E3/E4 Unified; no D3 SQL transfer; actual canonical RLS/pool/PG multi-project T1 remain owner tasks | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | Original Core-0207 55/55 remote pins, 26 path overlap with Memory incl 2 historical variants; exact local checkout and FastAPI0.163/Starlette1.10/Uvicorn0.34.2 review required before 29 original tests. Current local versions differ.",
+      "next": "Coordinate E2/E3/E4 Unified; no D3 SQL transfer; actual canonical RLS/pool/PG multi-project T1 remain owner tasks | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | Original Core-0207 55/55 remote pins, 26 path overlap with Memory incl 2 historical variants; exact local checkout and FastAPI0.163/Starlette1.10/Uvicorn0.34.2 review required before 29 original tests. Current local versions differ. | GATE03 new 11/11 pinned source SQL SQLite regression integrated in own isolated candidate d6b82dc412b7; actual Core assignment/owner issuance and full build remain HOLD.",
       "priority": "P0",
       "status": "EVIDENCE_RECONCILED_CANONICAL_RLS_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -807,6 +807,33 @@
         },
         "rollback": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
         "acceptance_delta": 0
+      },
+      "mi03_gate03_sql_regression_r1": {
+        "branch": "integration/mi03-gate03-org-runtime-closure-01",
+        "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+        "evidence": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/CATALOG_AND_EVIDENCE.json",
+        "handover": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "test": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+        "log": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/org-sql-11.log",
+        "unique_new_methods": 11,
+        "actual": [
+          11,
+          11
+        ],
+        "source_pins": [
+          3,
+          3
+        ],
+        "manifest": [
+          552,
+          552
+        ],
+        "owner_approval": "HOLD",
+        "actual_core_assignment": "NOT_RUN",
+        "acceptance_delta": 0,
+        "development_percent_previous": 42.5,
+        "development_percent_current": 42.5,
+        "delta_pp": 0
       }
     },
     {
@@ -814,7 +841,7 @@
       "owner_role": "T1 / IAM / ORG",
       "source_ref": "workstream/0230-d5g7-core-org-readback-hardening",
       "observed_sha": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
-      "next": "Retain exact combined MI03/04 candidate; coordinate D4/T1/Unified owner review, shared build candidate and W8 fingerprint. For next IAM transfer use existing MI04 source plan; active assignment/role owner G8, explicit protected entry disposition, exact G9/G2 owner regressions remain separate. | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | GATE02/03 missing 8 ORG Python modules + 2 SQL resources; owner namespace/class/resource packaging decision, no live candidate sys.path. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN.",
+      "next": "Retain exact combined MI03/04 candidate; coordinate D4/T1/Unified owner review, shared build candidate and W8 fingerprint. For next IAM transfer use existing MI04 source plan; active assignment/role owner G8, explicit protected entry disposition, exact G9/G2 owner regressions remain separate. | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | GATE02/03 missing 8 ORG Python modules + 2 SQL resources; owner namespace/class/resource packaging decision, no live candidate sys.path. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | GATE03 new 11/11 pinned source SQL SQLite regression integrated in own isolated candidate d6b82dc412b7; actual Core assignment/owner issuance and full build remain HOLD.",
       "priority": "P0",
       "status": "READONLY_CANDIDATE_READY_OWNER_REVIEW_PENDING",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -1338,6 +1365,33 @@
         "new_product_tests_this_review": 0,
         "source_changes": 0,
         "acceptance_delta": 0
+      },
+      "mi03_gate03_sql_regression_r1": {
+        "branch": "integration/mi03-gate03-org-runtime-closure-01",
+        "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+        "evidence": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/CATALOG_AND_EVIDENCE.json",
+        "handover": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "test": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+        "log": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/org-sql-11.log",
+        "unique_new_methods": 11,
+        "actual": [
+          11,
+          11
+        ],
+        "source_pins": [
+          3,
+          3
+        ],
+        "manifest": [
+          552,
+          552
+        ],
+        "owner_approval": "HOLD",
+        "actual_core_assignment": "NOT_RUN",
+        "acceptance_delta": 0,
+        "development_percent_previous": 42.5,
+        "development_percent_current": 42.5,
+        "delta_pp": 0
       }
     },
     {
@@ -1951,7 +2005,7 @@
       "owner_role": "ORG / Office",
       "source_ref": "integration/org-07c-r8-closed-studio",
       "observed_sha": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
-      "next": "Nine exact closed ORG product paths transferred; run original 31 on common with new W8 adapter, preserve MI03-GATE02/03 and actual owner HOLD. | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | GATE02/03 missing 8 ORG Python modules + 2 SQL resources; owner namespace/class/resource packaging decision, no live candidate sys.path. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | Original closed Studio 31/31 replay now PASS on exact common source; real owner/assignment/PG gates remain HOLD. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending.",
+      "next": "Nine exact closed ORG product paths transferred; run original 31 on common with new W8 adapter, preserve MI03-GATE02/03 and actual owner HOLD. | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | GATE02/03 missing 8 ORG Python modules + 2 SQL resources; owner namespace/class/resource packaging decision, no live candidate sys.path. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | Original closed Studio 31/31 replay now PASS on exact common source; real owner/assignment/PG gates remain HOLD. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | GATE03 new 11/11 pinned source SQL SQLite regression integrated in own isolated candidate d6b82dc412b7; actual Core assignment/owner issuance and full build remain HOLD.",
       "priority": "P0",
       "status": "CLOSED_ORG_SOURCE_TRANSFERRED_OWNER_REVIEW_FULL_BUILD_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -2306,6 +2360,33 @@
         "current_percent": 42.5,
         "delta_pp": 0,
         "delivery_sha256": "955e76171b52997b0c3053de80e5cbb98bbb3eb17326abc55654022a91678646"
+      },
+      "mi03_gate03_sql_regression_r1": {
+        "branch": "integration/mi03-gate03-org-runtime-closure-01",
+        "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+        "evidence": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/CATALOG_AND_EVIDENCE.json",
+        "handover": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "test": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+        "log": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/org-sql-11.log",
+        "unique_new_methods": 11,
+        "actual": [
+          11,
+          11
+        ],
+        "source_pins": [
+          3,
+          3
+        ],
+        "manifest": [
+          552,
+          552
+        ],
+        "owner_approval": "HOLD",
+        "actual_core_assignment": "NOT_RUN",
+        "acceptance_delta": 0,
+        "development_percent_previous": 42.5,
+        "development_percent_current": 42.5,
+        "delta_pp": 0
       }
     },
     {
@@ -2966,7 +3047,7 @@
       "owner_role": "QA / IV / CI",
       "source_ref": "planning/project-wide-progress-reporting",
       "observed_sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
-      "next": "MI-01 Unified owner: exact 61bb06e source checkout, full manifest SHA256/lock review and adapted W8 audit/prepare/install/test/smoke in isolated environment. CI workflow remains forbidden pending separate explicit CI grant; do not use legacy npm lock regeneration. MI-10 may only plan matrix/readback now. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | Recovery helper and W8 static metadata not CI or IV; CI and independent acceptance remain HOLD.",
+      "next": "MI-01 Unified owner: exact 61bb06e source checkout, full manifest SHA256/lock review and adapted W8 audit/prepare/install/test/smoke in isolated environment. CI workflow remains forbidden pending separate explicit CI grant; do not use legacy npm lock regeneration. MI-10 may only plan matrix/readback now. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | Recovery helper and W8 static metadata not CI or IV; CI and independent acceptance remain HOLD. | GATE03 new 11/11 pinned source SQL SQLite regression integrated in own isolated candidate d6b82dc412b7; actual Core assignment/owner issuance and full build remain HOLD.",
       "priority": "P1",
       "status": "REMOTE_STATIC_PREFLIGHT_PASS_CI_HOLD_FULL_BUILD_NOT_RUN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -3172,6 +3253,33 @@
         },
         "rollback": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
         "acceptance_delta": 0
+      },
+      "mi03_gate03_sql_regression_r1": {
+        "branch": "integration/mi03-gate03-org-runtime-closure-01",
+        "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+        "evidence": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/CATALOG_AND_EVIDENCE.json",
+        "handover": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "test": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+        "log": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/org-sql-11.log",
+        "unique_new_methods": 11,
+        "actual": [
+          11,
+          11
+        ],
+        "source_pins": [
+          3,
+          3
+        ],
+        "manifest": [
+          552,
+          552
+        ],
+        "owner_approval": "HOLD",
+        "actual_core_assignment": "NOT_RUN",
+        "acceptance_delta": 0,
+        "development_percent_previous": 42.5,
+        "development_percent_current": 42.5,
+        "delta_pp": 0
       }
     }
   ],
@@ -3187,9 +3295,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes. | MI-03-GATE01-AUTHORITY-API-REVIEW-01: remote G2/G7 same two blobs; four exact legacy test files, two IAM tests absent; zero new tests or gates. | GATE01 supplemental G6A/R9/MEM exact 4-file convergence and common retained transport/fenced/port; no new test. | MI05/06/09 static exact source/lock readback only; 6/6 Skill raw pins, 5/5 manifest, 7/7 dependency records; no new tests or acceptance.; MI04 Memory/T1 historical evidence reconciled: 31/34 MEM03R1 exact (31 product), 234/237 old cross manifest records, mixed writer exact legacy pin; zero new product tests or gates. | MI05/06: 7 exact local pins, strict TS subset compile, 8/8 original closed route replay, no new methods or product changes. | G5/G4 historical Windows 26/26 (one distinct run); G7 31/31 exact, G6A 30/31, common 11/31; no new product tests or gates. | MI common ORG/Skill: 14 exact owner product sources, 17 exact auxiliary files, 1 explicit registry test adaptation; 7 actual fixture controls, 0 product tests, acceptance unchanged. | GATE02 3/3 new local diagnostic tests on 3/3 exact source blobs; no owner-issued assignment or new product acceptance test. | GATE01 exact G6A/IAM original selected replay 33/33 (14+19), 7/7 pins, zero new unique methods; no full G2 or acceptance. | Independent repeat of same G6A/G1/G2 33/33, 7/7 pins; not additional unique tests; no source/acceptance change. | MI04 G6A/common exact 0215 selected replay 15/15, 6/6 local source pins; no new unique methods or product gate. | MI03 GATE02 20 actual local SQLite D0 unit tests; no product tests, Store/Core replay NOT_RUN. | New supplemental IAM/0215 actual 6/6, 6/6 exact local product source pins; selected compile 7/7, not product acceptance. GATE05 environment 3/6 exact direct Python pins, full build NOT_RUN. | MI-COMMON-03: 97 selected tests executed PASS, 26 exact local files, 114/114 model/memory and 55/55 historical remote metadata; no new acceptance. | GATE01 G6A/common 7/7 direct T1 + 35/35 original mapping/scheduler = 42/42 exact selected; 30/30 local+remote source pins; 10 Memory fullchain NOT_RUN; no new unique methods or acceptance. | MI03: actual G6A/D4/ORG-R3 selected cross replay 59/59 (33 repeat +26 existing cross replay), 28/28 pre/post exact, no new unique methods or product changes. | ORG package source readback 12/12 exact and manifest 551/551; new 4 smoke methods NOT_RUN; historical owner 20/20 unchanged. | MI03-GATE02-03-PACKAGED-REGRESSION-01: actual 71 selected PASS (59 existing/8 NEW supplemental/4 owner smoke), 32/32 pins; owner full branch unapproved, positive Core assignment NOT_RUN; product gates unchanged. | MI-COMMON-04: 14/14 actual recovery helper synthetic tests PASS, offline cache-miss HOLD exit2; 344/29 and full W8/browser NOT_RUN; static W8 24/24 and npm61/61, no product tests or acceptance delta.",
-  "next": "Retain common readonly identity transfer; resolve MI03-GATE-01 and 02 in parallel with existing owner work, then gates 03/04 and shared build. PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout. | MI05/06/09: exact npm lock recovered, owner-coordinated closed source transfer and immutable W8 review next; no Windows now. MI04/MI08 recover original MEM05E-R1 raw evidence and owner-confirm writer retirement; retain existing GATE01/02 order and original 344 runner.  | MI05/06 original remaining 23 and U3 browser after owner review; no activation. | G5 historical evidence retained; GATE-01/02 owner HOLD unchanged; no Windows repeat now. | MI-PROGRESS-02: owner-review proposed 63 module mapping and 24-area coverage; no gate or product promotion. | New common 539 candidate: exact checkout audit and owner review, immutable lock prepare via w8_mi_common_02.py, original ORG31/Skill41/ModelMemory344, full build, browser. No product-dev promotion. | GATE02: owner decisions on assignment uniqueness/supersession and independent registry/member/role issuer; preserve original P02/G9 and separate strict COMMIT. No PC now. | GATE01 technical IAM evidence ready; T1/D4/Unified owner concurrence for exact two-source transfer still HOLD. Latest observed common 61bb06efbba7544bfc68260ed8eb4d342cab9b8e; retain parallel owner changes. | Exact 12-path proposed GATE01/02/03 overlay on common 539, not applied; T1/D4/IAM/ORG/Unified concurrence then reviewed manifest rebind; G2 50/G9 7 original remain separately pinned; PC deferred. | MI-PROGRESS-02-R1: all groups triaged, critical 31 modules refined; owner review and denominator freeze pending; no source or gate change. | MI-PROGRESS-02-R2: all 315 draft stage slots refined; 11 MVP dependency trace, owner freeze and proof review pending. | MI03 assignment D0 candidate: existing ORG/Core owners review lifecycle/supersession and replay exact Store+Core; IAM/D4 independent provenance, P02 actual and G9 remain open; no promotion. | GATE01 owner review retains exact two-source selection, GATE02/03 package closure and assignment provenance separate; GATE04 actual IAM readback 6/6, joint publication/strict COMMIT open; GATE05 pinned build environment blocked, PC deferred. | Concurrent GATE02 assignment candidate 20/20 reported unit tests preserved, durable_ops version collision (original vs +41 lines) requires owner packaging decision; no G9 repin or activation. | Common selected ORG31/Skill41/read12/registry13 PASS; next complete exact source checkout, run original Model/Memory 344, historical Core 29, then actual W8 audit/prepare with original lock and fresh approval, build/browser. Preserve owner/security work. | GATE01 remaining 10 original 0214: use exact common 265 backend + G6A two-source overlay; preflight blocked missing checkout. Preserve formal owner HOLD and GATE02 assignment packaging collision; no PC now. | MI-PROGRESS-03 A–E evidence reviewed, F global % HOLD; owner freeze and real build/PG/344 outstanding. | MI03-GATE03 isolated backend ORG source package candidate ready, owner review and real OperationsStore/Core/G9 7 + W8 build remain HOLD; no full gate close or PC requirement, do not repin G9 or mutate product-dev. | MI-PROGRESS-03 CLOSED (reporting evidence/handover only), 315 criteria/28 evidence checked, 03F % null pending owner freeze; 8 owner blockers G01–G08 moved to MI-PROGRESS-04. Product gates HOLD. | P0: on a permitted connected host retrieve 114+55 exact pinned bytes into separate immutable source roots using MI-COMMON-04; then original 344 and 29 runners with reviewed exact dependencies; original W8 full audit/lock fingerprint/install/build/U3 browser. Keep COMMIT/IV HOLD.",
-  "previous_revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes. | MI-03-GATE01-AUTHORITY-API-REVIEW-01: remote G2/G7 same two blobs; four exact legacy test files, two IAM tests absent; zero new tests or gates. | GATE01 supplemental G6A/R9/MEM exact 4-file convergence and common retained transport/fenced/port; no new test. | MI05/06/09 static exact source/lock readback only; 6/6 Skill raw pins, 5/5 manifest, 7/7 dependency records; no new tests or acceptance.; MI04 Memory/T1 historical evidence reconciled: 31/34 MEM03R1 exact (31 product), 234/237 old cross manifest records, mixed writer exact legacy pin; zero new product tests or gates. | MI05/06: 7 exact local pins, strict TS subset compile, 8/8 original closed route replay, no new methods or product changes. | G5/G4 historical Windows 26/26 (one distinct run); G7 31/31 exact, G6A 30/31, common 11/31; no new product tests or gates. | MI common ORG/Skill: 14 exact owner product sources, 17 exact auxiliary files, 1 explicit registry test adaptation; 7 actual fixture controls, 0 product tests, acceptance unchanged. | GATE02 3/3 new local diagnostic tests on 3/3 exact source blobs; no owner-issued assignment or new product acceptance test. | GATE01 exact G6A/IAM original selected replay 33/33 (14+19), 7/7 pins, zero new unique methods; no full G2 or acceptance. | Independent repeat of same G6A/G1/G2 33/33, 7/7 pins; not additional unique tests; no source/acceptance change. | MI04 G6A/common exact 0215 selected replay 15/15, 6/6 local source pins; no new unique methods or product gate. | MI03 GATE02 20 actual local SQLite D0 unit tests; no product tests, Store/Core replay NOT_RUN. | New supplemental IAM/0215 actual 6/6, 6/6 exact local product source pins; selected compile 7/7, not product acceptance. GATE05 environment 3/6 exact direct Python pins, full build NOT_RUN. | MI-COMMON-03: 97 selected tests executed PASS, 26 exact local files, 114/114 model/memory and 55/55 historical remote metadata; no new acceptance. | GATE01 G6A/common 7/7 direct T1 + 35/35 original mapping/scheduler = 42/42 exact selected; 30/30 local+remote source pins; 10 Memory fullchain NOT_RUN; no new unique methods or acceptance. | MI03: actual G6A/D4/ORG-R3 selected cross replay 59/59 (33 repeat +26 existing cross replay), 28/28 pre/post exact, no new unique methods or product changes. | ORG package source readback 12/12 exact and manifest 551/551; new 4 smoke methods NOT_RUN; historical owner 20/20 unchanged. | MI03-GATE02-03-PACKAGED-REGRESSION-01: actual 71 selected PASS (59 existing/8 NEW supplemental/4 owner smoke), 32/32 pins; owner full branch unapproved, positive Core assignment NOT_RUN; product gates unchanged. | MI-COMMON-04: 14/14 actual recovery helper synthetic tests PASS, offline cache-miss HOLD exit2; 344/29 and full W8/browser NOT_RUN; static W8 24/24 and npm61/61, no product tests or acceptance delta. | MI03-GATE03-SQL-R1 new 11/11 real SQLite exact owner SQL D0 regression, 3/3 local owner source blob+SHA256 pins, 0 new product acceptance; concurrent owner 71/71 selected replay preserved separately.",
+  "next": "Retain common readonly identity transfer; resolve MI03-GATE-01 and 02 in parallel with existing owner work, then gates 03/04 and shared build. PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout. | MI05/06/09: exact npm lock recovered, owner-coordinated closed source transfer and immutable W8 review next; no Windows now. MI04/MI08 recover original MEM05E-R1 raw evidence and owner-confirm writer retirement; retain existing GATE01/02 order and original 344 runner.  | MI05/06 original remaining 23 and U3 browser after owner review; no activation. | G5 historical evidence retained; GATE-01/02 owner HOLD unchanged; no Windows repeat now. | MI-PROGRESS-02: owner-review proposed 63 module mapping and 24-area coverage; no gate or product promotion. | New common 539 candidate: exact checkout audit and owner review, immutable lock prepare via w8_mi_common_02.py, original ORG31/Skill41/ModelMemory344, full build, browser. No product-dev promotion. | GATE02: owner decisions on assignment uniqueness/supersession and independent registry/member/role issuer; preserve original P02/G9 and separate strict COMMIT. No PC now. | GATE01 technical IAM evidence ready; T1/D4/Unified owner concurrence for exact two-source transfer still HOLD. Latest observed common 61bb06efbba7544bfc68260ed8eb4d342cab9b8e; retain parallel owner changes. | Exact 12-path proposed GATE01/02/03 overlay on common 539, not applied; T1/D4/IAM/ORG/Unified concurrence then reviewed manifest rebind; G2 50/G9 7 original remain separately pinned; PC deferred. | MI-PROGRESS-02-R1: all groups triaged, critical 31 modules refined; owner review and denominator freeze pending; no source or gate change. | MI-PROGRESS-02-R2: all 315 draft stage slots refined; 11 MVP dependency trace, owner freeze and proof review pending. | MI03 assignment D0 candidate: existing ORG/Core owners review lifecycle/supersession and replay exact Store+Core; IAM/D4 independent provenance, P02 actual and G9 remain open; no promotion. | GATE01 owner review retains exact two-source selection, GATE02/03 package closure and assignment provenance separate; GATE04 actual IAM readback 6/6, joint publication/strict COMMIT open; GATE05 pinned build environment blocked, PC deferred. | Concurrent GATE02 assignment candidate 20/20 reported unit tests preserved, durable_ops version collision (original vs +41 lines) requires owner packaging decision; no G9 repin or activation. | Common selected ORG31/Skill41/read12/registry13 PASS; next complete exact source checkout, run original Model/Memory 344, historical Core 29, then actual W8 audit/prepare with original lock and fresh approval, build/browser. Preserve owner/security work. | GATE01 remaining 10 original 0214: use exact common 265 backend + G6A two-source overlay; preflight blocked missing checkout. Preserve formal owner HOLD and GATE02 assignment packaging collision; no PC now. | MI-PROGRESS-03 A–E evidence reviewed, F global % HOLD; owner freeze and real build/PG/344 outstanding. | MI03-GATE03 isolated backend ORG source package candidate ready, owner review and real OperationsStore/Core/G9 7 + W8 build remain HOLD; no full gate close or PC requirement, do not repin G9 or mutate product-dev. | MI-PROGRESS-03 CLOSED (reporting evidence/handover only), 315 criteria/28 evidence checked, 03F % null pending owner freeze; 8 owner blockers G01–G08 moved to MI-PROGRESS-04. Product gates HOLD. | P0: on a permitted connected host retrieve 114+55 exact pinned bytes into separate immutable source roots using MI-COMMON-04; then original 344 and 29 runners with reviewed exact dependencies; original W8 full audit/lock fingerprint/install/build/U3 browser. Keep COMMIT/IV HOLD. | MI03 GATE03 isolated candidate 553 files/552 manifest, new original-owner SQL schema 11/11 PASS. Other owner 4/4 packaging smoke and 71 selected historical on prior candidate; positive Core/OperationsStore original source and owner-issued role/assignment NOT_RUN. Preserve G9/G2/0214/W8 separate and no stage promotion.",
+  "previous_revision": "MI-COMMON-04-PINNED-RECOVERY",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -4003,25 +4111,31 @@
   },
   "mi03_gate03_org_runtime_closure": {
     "branch": "integration/mi03-gate03-org-runtime-closure-01",
-    "commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
+    "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
     "catalog": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/GITHUB_READBACK_AND_GATE_STATUS.json",
     "runbook": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/ARCHITECTURE_RUNBOOK_HANDOVER.md",
     "candidate_catalog": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/CATALOG_AND_EVIDENCE.json",
-    "status": "SOURCE_PACKAGING_CANDIDATE_READY_FUNCTIONAL_HOLD",
+    "status": "SOURCE_PACKAGING_PLUS_SQL_SCHEMA_PASS_OWNER_CORE_FULL_BUILD_HOLD",
     "owner_pins": [
       12,
       12
     ],
     "manifest": [
-      551,
-      551
+      552,
+      552
     ],
     "new_smoke_methods": 4,
-    "new_smoke_tests": "NOT_RUN",
+    "new_smoke_tests": "4/4 CONCURRENT_OWNER_REPLAY PASS ON PREVIOUS CANDIDATE ONLY",
     "development_percent_previous": 42.5,
     "development_percent_current": 42.5,
     "acceptance_delta": 0,
-    "product_dev_changes": 0
+    "product_dev_changes": 0,
+    "previous_commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
+    "actual_sqlite_sql_regression": [
+      11,
+      11
+    ],
+    "new_sql_test_methods": 11
   },
   "review_history": [
     {
@@ -4175,5 +4289,32 @@
     },
     "rollback": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
     "acceptance_delta": 0
+  },
+  "mi03_gate03_sql_regression_r1": {
+    "branch": "integration/mi03-gate03-org-runtime-closure-01",
+    "commit": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+    "evidence": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/CATALOG_AND_EVIDENCE.json",
+    "handover": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "test": "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py",
+    "log": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/org-sql-11.log",
+    "unique_new_methods": 11,
+    "actual": [
+      11,
+      11
+    ],
+    "source_pins": [
+      3,
+      3
+    ],
+    "manifest": [
+      552,
+      552
+    ],
+    "owner_approval": "HOLD",
+    "actual_core_assignment": "NOT_RUN",
+    "acceptance_delta": 0,
+    "development_percent_previous": 42.5,
+    "development_percent_current": 42.5,
+    "delta_pp": 0
   }
 }
