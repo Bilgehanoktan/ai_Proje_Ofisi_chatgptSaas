@@ -128,29 +128,61 @@ jobs:
           npm run build
           npm run typecheck
           echo "MI01_DIAGNOSTIC_FRONTEND_BUILD=PASS"
-      - name: Install pinned synthetic-browser tooling
+      - name: Checkout CI-only exact Python dependency pins
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: ci
+          persist-credentials: false
+      - name: Install exact-version synthetic FastAPI and browser diagnostic packages
         shell: bash
         run: |
           set -euo pipefail
-          python -m pip install --disable-pip-version-check --no-deps             'playwright==1.57.0' 'pyee==13.0.0' 'greenlet==3.2.4' 'typing_extensions==4.15.0'
+          python -m pip install --disable-pip-version-check --no-deps --only-binary=:all: -r ci/.github/mi10/requirements-browser.txt
+          python -m pip check
           python -m playwright install chromium
-      - name: Start local-only Next.js and run existing U3 Playwright test
+      - name: Start real FastAPI with persisted D0 prefix and Next.js; run unchanged U3 browser test
         shell: bash
         run: |
           set -euo pipefail
+          BACKEND="$GITHUB_WORKSPACE/candidate/product/ai-company-os-backend"
           FRONTEND="$GITHUB_WORKSPACE/candidate/product/ai-company-os-frontend"
+          export AICOS_D0_LIFECYCLE_PREFIX_DB="$RUNNER_TEMP/lifecycle-prefix.d0.sqlite"
+          export AICOS_D0_BACKEND_PORT=17301
+          test ! -e "$AICOS_D0_LIFECYCLE_PREFIX_DB"
+          (
+            cd "$BACKEND"
+            PYTHONPATH="$BACKEND:$BACKEND/tests" python - <<'PY'
+          import os
+          from test_lifecycle_prefix_p03 import export_prefix_fixture
+          export_prefix_fixture(os.environ['AICOS_D0_LIFECYCLE_PREFIX_DB'], version=3)
+          print('REAL_SQLITE_PREFIX_FIXTURE=CREATED_AND_VERIFIED')
+          PY
+          )
+          PREFIX_BEFORE="$(sha256sum "$AICOS_D0_LIFECYCLE_PREFIX_DB" | awk '{print $1}')"
+          (
+            cd "$BACKEND"
+            python -m uvicorn app.main:app --host 127.0.0.1 --port 17301
+          ) > "$RUNNER_TEMP/mi10-backend.log" 2>&1 &
+          BACK_PID=$!
           (
             cd "$FRONTEND"
             node node_modules/next/dist/bin/next start -H 127.0.0.1 -p 17300
           ) > "$RUNNER_TEMP/mi10-next.log" 2>&1 &
-          SERVER_PID=$!
-          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
-          READY=0
+          FRONT_PID=$!
+          trap 'kill "$FRONT_PID" "$BACK_PID" 2>/dev/null || true' EXIT
+          BACK_READY=0
           for i in $(seq 1 90); do
-            if curl --silent --fail --max-time 2 http://127.0.0.1:17300/ >/dev/null; then READY=1; break; fi
+            if curl --silent --fail --max-time 2 http://127.0.0.1:17301/demo/v1/lifecycle/shared-snapshot >/dev/null; then BACK_READY=1; break; fi
             sleep 2
           done
-          test "$READY" = 1
+          test "$BACK_READY" = 1
+          FRONT_READY=0
+          for i in $(seq 1 90); do
+            if curl --silent --fail --max-time 2 http://127.0.0.1:17300/api/demo/shared-snapshot >/dev/null; then FRONT_READY=1; break; fi
+            sleep 2
+          done
+          test "$FRONT_READY" = 1
           CHROMIUM="$(python - <<'PY'
           from playwright.sync_api import sync_playwright
           with sync_playwright() as p:
@@ -158,7 +190,10 @@ jobs:
           PY
           )"
           test -f "$CHROMIUM"
-          python candidate/tests/integration/browser_unified_u3.py             --chromium "$CHROMIUM" --frontend-port 17300             --output "$RUNNER_TEMP/mi10-browser"
+          python candidate/tests/integration/browser_unified_u3.py --chromium "$CHROMIUM" --frontend-port 17300 --output "$RUNNER_TEMP/mi10-browser"
+          PREFIX_AFTER="$(sha256sum "$AICOS_D0_LIFECYCLE_PREFIX_DB" | awk '{print $1}')"
+          test "$PREFIX_BEFORE" = "$PREFIX_AFTER"
+          echo "MI01_REAL_D0_READER=PASS; SQLITE_PREFIX_UNCHANGED=PASS"
           echo "MI01_U3_BROWSER=PASS; FULL_W8_SMOKE=NOT_RUN"
       - name: Save synthetic browser evidence (no customer data)
         if: always()
@@ -167,6 +202,7 @@ jobs:
           name: mi10-browser-${{ github.run_id }}
           path: |
             ${{ runner.temp }}/mi10-next.log
+            ${{ runner.temp }}/mi10-backend.log
             ${{ runner.temp }}/mi10-browser
           if-no-files-found: ignore
           retention-days: 7
