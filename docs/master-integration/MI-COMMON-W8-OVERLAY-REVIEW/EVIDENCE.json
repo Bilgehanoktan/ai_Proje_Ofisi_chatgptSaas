@@ -1,0 +1,71 @@
+{
+  "revision": "MI-COMMON-W8-OVERLAY-REVIEW-01",
+  "date": "2026-11-19",
+  "candidate": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+  "source_pins": [
+    {
+      "local": "w8_unified_u3.py",
+      "path": "tests/integration/w8_unified_u3.py",
+      "blob": "e7335eac1e4358ceef001a494f45f56ba9544fc0",
+      "sha256": "a83bd616919db20890df4dcb2fb421790deadc980d099822b703282646fc4062"
+    },
+    {
+      "local": "test_unified_u3_runner.py",
+      "path": "tests/integration/test_unified_u3_runner.py",
+      "blob": "fdecf0bcd070111db21cf2928ba46f8a987952a1",
+      "sha256": "7322f96b56096216dad2cb68ac33fa93308a89c307769428bc88f4c895489e36"
+    },
+    {
+      "local": "w8_p10j24.py",
+      "path": "tests/integration/w8_p10j24.py",
+      "blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+      "sha256": "c61357e8dd5aaba9547eae5300a380c57a7943bc3f5691bcc52c22b6f5b64"
+    },
+    {
+      "local": "historical_postgres_session.py",
+      "path": "tests/integration/historical_0207/app/core/transaction/postgres_session.py",
+      "blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+    },
+    {
+      "local": "current_postgres_session.py",
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
+    }
+  ],
+  "environment": "Python 3.13.5, isolated temporary filesystem, no DB or provider",
+  "original_runner": {
+    "pass": 10,
+    "total": 10,
+    "log": "original.log",
+    "sha256": "a85a478ed84dd192e6762a3b2ebf14e879cdf011afe22435211ae8637af4b5a2",
+    "blob": "69770603cf62ad07bff6ccec3c0f1bc11e28d2fb"
+  },
+  "supplemental": {
+    "pass": 4,
+    "total": 4,
+    "log": "overlay.log",
+    "sha256": "9c9e8e4fc18571af1a49d46270ee58cc1b6eb8ea177b3e03641fcf4bd0cd7b09",
+    "blob": "ecc00b2193899193d6c673c7a3c1b9e13ce77c4b",
+    "test_blob": "8df23bcf0c9e70fa9edd12f4422fb5ff66d74b5c",
+    "test_sha256": "77fa8d4ea91792d33c1364454459f7414f1dfff08b7e62c857d252a1852b26a2"
+  },
+  "scope": [
+    "exact source blob validation",
+    "original W8 runner mechanics",
+    "isolated P24 materialize_locked on one exact historical entry",
+    "mocked parent loader/binding; actual P24 auxiliary validation"
+  ],
+  "not_run": [
+    "full 55-entry historical regression",
+    "344 W5/Memory tests",
+    "full build/browser",
+    "G9/G2/R8/G6A owner tests",
+    "actual strict PostgreSQL COMMIT"
+  ],
+  "product_source_changes": 0,
+  "acceptance_delta": 0,
+  "development_percent": null,
+  "promotion": "HOLD"
+}
