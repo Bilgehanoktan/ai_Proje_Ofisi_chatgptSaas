@@ -1,0 +1,63 @@
+{
+  "revision": "MI03-GATE02-20261120-INTEGRITY-HARNESS-16",
+  "status": "REVIEW_ONLY_PRECHECK_PASS_REAL_G2_FUNCTIONAL_NOT_RUN",
+  "source_branch": "review/mi03-gate02-core-positive-20261119",
+  "source_base": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "current_product_ref": "integration/product-dev@8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "ownership": [
+    "MI-02 Core",
+    "MI-03 IAM",
+    "MI-06 ORG",
+    "MI-10 W8/IV"
+  ],
+  "stage_criteria_weights": {
+    "design": 15,
+    "source": 35,
+    "functional": 20,
+    "integration": 20,
+    "final_acceptance": 10
+  },
+  "prior_iam_org_percent": 42.5,
+  "current_iam_org_percent": 42.5,
+  "development_delta_pp": 0,
+  "product_acceptance": {
+    "core_previous": "12/16",
+    "core_current": "12/16",
+    "mvp_previous": "0/11",
+    "mvp_current": "0/11",
+    "security_previous": "0/7",
+    "security_current": "0/7"
+  },
+  "actual_new_evidence": {
+    "type": "LOCAL_ONLY_TEST_HARNESS_REGRESSION",
+    "methods": [
+      16,
+      16
+    ],
+    "product_original_methods": [
+      0,
+      10
+    ],
+    "source_integrity": "BLOCKED_NO_PRODUCT_MANIFEST",
+    "candidate_test_sha256": "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d",
+    "runner_sha256": "4878031c9b70289c5b2f57fb3a4b1d15ef08aba3f44c4412273491566528ee4d",
+    "tests_sha256": "c61560f6f52cff2b9b7bd6158182a67abbd0c1e5727dde54546b2e36f903e757"
+  },
+  "security_remains": {
+    "trusted_issuer": "HOLD",
+    "commit_time_role_validity": "HOLD",
+    "postgresql_cross_store": "HOLD",
+    "full_W8_native_browser": "HOLD",
+    "independent_iv": "HOLD",
+    "ci_scope_expansion": false
+  },
+  "next_work": [
+    "Exact authenticated PR6 full checkout under existing allowed environment",
+    "Run original ten-method D0 functional suite and repair verified defects",
+    "Owner provenance plus original IAM/G9/G2 and Memory T1",
+    "PostgreSQL fenced commit/revocation races and W8/independent IV"
+  ],
+  "evidence_ref": "docs/master-integration/MI03-GATE02-CORE-POSITIVE-20261119/20261120_RUNNER_HARDENING_EVIDENCE.json",
+  "formal_promotion": "HOLD_DRAFT_PR_OWNER_REVIEW",
+  "rollback": "Revert docs/progress evidence from PR6; preserve source and existing grants"
+}

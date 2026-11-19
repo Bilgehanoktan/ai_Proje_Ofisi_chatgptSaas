@@ -1,0 +1,254 @@
+{
+  "revision": "MI03-GATE02-20261120-REAL-ISSUER-PROVENANCE-BLOCKER-RECONCILED",
+  "classification": "EXACT_GITHUB_SOURCE_STATIC_CONTRACT_AUDIT_NOT_FUNCTIONAL_AUTHENTICATED_AUTHORISATION_TEST",
+  "original_good_test": {
+    "run": 44620141705,
+    "methods": [
+      10,
+      10
+    ],
+    "class": "D0_ORIGINAL_SQLITE_ONLY"
+  },
+  "source_checks": {
+    "performed": 12,
+    "matched": 12,
+    "security_functional_pass": 0,
+    "checks": [
+      {
+        "id": "D4_BINDING_HOLD_ONLY",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "D4 identity binding only returns HOLD and does not authenticate/issue grants"
+      },
+      {
+        "id": "D4_SESSION_EXTERNAL",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "SessionFacts observation is caller-supplied and database role is review only"
+      },
+      {
+        "id": "D5_CORE_MEMBER_PROVENANCE_NOT_INFERRED",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "Core Member / derive_request never establishes principal provenance"
+      },
+      {
+        "id": "ORG_PIN_HASH_REV_ONLY",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "registry_sha, membership_sha, role_sha validate shape/alias; no independent signature/issuer readback"
+      },
+      {
+        "id": "ORG_APPROVAL_SYNTHETIC",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "ApprovalObservation.issuer and custody are explicit D0 synthetic strings"
+      },
+      {
+        "id": "ORG_RESULT_AUTHORITY_FALSE",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "AssignmentReview.authoritative/commit_allowed/dispatch_allowed hard-coded false"
+      },
+      {
+        "id": "G2_SESSION_SYNTHETIC_BOOTSTRAP",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "D0 SessionResolver bootstrap cannot establish live owner publication"
+      },
+      {
+        "id": "G2_CLAIM_SESSION_NOT_ORG",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "SessionClaimCheck checks agent session not D4/ORG role assignment"
+      },
+      {
+        "id": "G2_PROTECTED_WRAPPER_NO_CHECK",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "Original authority wrapper supplies no SessionClaimCheck; IAM-mode guard denies"
+      },
+      {
+        "id": "D4_NOLOGIN_DISPOSABLE_ONLY",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "D4 DB roles are NOLOGIN on disposable PostgreSQL test cluster"
+      },
+      {
+        "id": "HISTORICAL_DESIGN_OPTIONS_UNRATIFIED_AT_SOURCE",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "Original baseline D03/D04 design file described alternatives before subsequent architecture decision; canonical ADR now selects A as spec-only, not runtime acceptance"
+      },
+      {
+        "id": "OLD_DB_OLD_PIN_REPLAY_REQUIREMENT",
+        "status": "SOURCE_STATIC_MATCH",
+        "meaning": "Independent monotonic authority must reject simultaneous old DB + old pin restore"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "ref": "integration/mi03-gate03-org-runtime-closure-01",
+      "git_blob": "e1e977880324664bb359eee3286223a796878f44",
+      "owner": "D4"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "ref": "integration/mi03-gate03-org-runtime-closure-01",
+      "git_blob": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "owner": "Core→D4"
+    },
+    {
+      "path": "product/ai-company-os-backend/assignment_lifecycle.py",
+      "ref": "integration/mi03-gate03-org-runtime-closure-01",
+      "git_blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+      "owner": "ORG"
+    },
+    {
+      "path": "product/ai-company-os-backend/durable_ops.py",
+      "ref": "integration/mi03-gate03-org-runtime-closure-01",
+      "git_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "owner": "ORG Store"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "ref": "workstream/0230-d5g2-durable-iam-authority",
+      "git_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "owner": "G2 synthetic IAM"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "ref": "workstream/0230-d5g2-durable-iam-authority",
+      "git_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "owner": "G2 local authority"
+    },
+    {
+      "path": "candidates/D4-R2/00_roles.sql",
+      "ref": "planning/0229-d4-r6-org10r9-owner-disposition",
+      "git_blob": "d4a72de7428f5f149087f9e8fa982043e8f58840",
+      "owner": "D4 PG laboratory"
+    },
+    {
+      "path": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+      "ref": "integration/mi-common-source-review-01",
+      "git_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+      "owner": "Independent authority options"
+    }
+  ],
+  "source_package_collision": {
+    "original_auth_g9_path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+    "original_auth_g9_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "g2_modified_auth_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "g2_session_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+    "g2_session_absent_on_org_candidate": true,
+    "g2_test_absent_on_org_candidate": true,
+    "automatic_merge_forbidden": true
+  },
+  "required_gate_checks": [
+    {
+      "id": "P01",
+      "name": "Owner issuance",
+      "evidence": "Authenticated server-side issuer and custody, signed or independent administered proof—not ApprovalObservation",
+      "status": "HOLD",
+      "owner": "MI-03 IAM / H01 owner"
+    },
+    {
+      "id": "P02",
+      "name": "Registry",
+      "evidence": "Owner-issued registry current version and verified independent custody bound to tenant/principal",
+      "status": "HOLD",
+      "owner": "MI-03 IAM"
+    },
+    {
+      "id": "P03",
+      "name": "Membership",
+      "evidence": "Latest authorized member scope/project/run from protected owner source, no supplied Member alias",
+      "status": "HOLD",
+      "owner": "MI-02 Core / MI-06 ORG"
+    },
+    {
+      "id": "P04",
+      "name": "Role/assignment",
+      "evidence": "Latest role and assignment owner issuance, revocation and pin equality with ORG Store",
+      "status": "HOLD",
+      "owner": "MI-06 ORG / MI-03 IAM"
+    },
+    {
+      "id": "P05",
+      "name": "D4↔G2 exact session",
+      "evidence": "Existing signed SessionObservation agent/principal/session tied to original D4 Request and T1 scope, re-read before commit",
+      "status": "HOLD",
+      "owner": "MI-03 IAM / MI-04 T1"
+    },
+    {
+      "id": "P06",
+      "name": "Owner collision",
+      "evidence": "Compare original intent_authority.py fa47acd... vs G2 b28788...; preserve G9 before controlled merge",
+      "status": "HOLD",
+      "owner": "MI-03/MI-04 / G9 owner"
+    },
+    {
+      "id": "P07",
+      "name": "Protected COMMIT",
+      "evidence": "Independent authority monotonic root, commit-time principal+role+lease refresh and sink fence; no bypass paths",
+      "status": "HOLD",
+      "owner": "MI-04 T1 / Security"
+    },
+    {
+      "id": "P08",
+      "name": "Restore safety",
+      "evidence": "Old product+old journal+old local authority+old pin cannot reaccept; external checkpoint and destructive restore drill",
+      "status": "FAIL_EXISTING_D0_RESIDUAL",
+      "owner": "Independent Authority / IV"
+    },
+    {
+      "id": "P09",
+      "name": "Original security regression",
+      "evidence": "G2 50, G9 7, MemoryT1 0214 10, actual protected PostgreSQL role/RLS tests pass with pinned original sources",
+      "status": "NOT_RUN",
+      "owner": "MI-03/MI-04 / MI-02"
+    },
+    {
+      "id": "P10",
+      "name": "Independent acceptance",
+      "evidence": "Separate custodian signed IV evidence and W8/native browser build; no synthetic only acceptance",
+      "status": "HOLD",
+      "owner": "IV / MI-10"
+    }
+  ],
+  "independent_authority_options": {
+    "A": "SELECTED_ARCHITECTURE_DIRECTION_SPEC_ONLY by H01; canonical ADR decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md; no provider, root, sink, credentials or operational authorization",
+    "B": "NOT_SELECTED",
+    "C": "NOT_SELECTED_ARCHITECTURE; existing D0 HOLD remains operational default until independently approved activation"
+  },
+  "permissions": "no new CI, real IAM issuance, PostgreSQL, main/product-dev mutation, external provider, spending, independent acceptance",
+  "progress": {
+    "iam_org_development_previous": 42.5,
+    "iam_org_development_current": 42.5,
+    "delta_pp": 0,
+    "criterion_weights": {
+      "design": 15,
+      "source": 35,
+      "functional": 20,
+      "integration": 20,
+      "final_acceptance": 10
+    },
+    "global_weighted_percent": "HESAPLANAMADI",
+    "core_acceptance": "12/16",
+    "mvp": "0/11",
+    "independent_security": "0/7"
+  },
+  "next_owner_actions": [
+    "Execute already selected Option A architecture A1 owner/admin/restore/quorum and sink interface review; do not ask user to choose A/B/C again.",
+    "Source-owner review of original G9 vs G2 intent_authority (different blobs) and exact integration of G2 session into ORG scope",
+    "Define and test authenticated owner-issued registry/member/role/assignment proof and D4 Request ↔ G2 SessionClaimCheck ↔ ORG AssignmentPin equality",
+    "Run original G2 50, G9 7, Memory T1 10, P02 and protected PostgreSQL recovery, then independent IV / W8"
+  ],
+  "status": "OPTION_A_ARCHITECTURE_SELECTED_ONLY_OWNER_ISSUER_AND_SECURITY_GATE_HOLD",
+  "rollback": "Discard audit-only PR6 docs / normal revert. Preserve original PR6 10/10 CI, central canonical progress, original owner source and credentials.",
+  "ratification": {
+    "architecture_direction": "A_SELECTED_SPEC_ONLY",
+    "decision_ref": "planning/master-integration-governance@decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+    "adr_git_blob": "2e203bed2b7cdff27ba93b55ccf2ad37983cee2d",
+    "contract": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INTERFACE_AND_TRUST_CONTRACT.json",
+    "root_provider": "NOT_SELECTED",
+    "sink": "NOT_IMPLEMENTED",
+    "independent_evidence": [
+      0,
+      8
+    ],
+    "owner_approval": "HOLD",
+    "runtime_activation": "NOT_AUTHORIZED"
+  }
+}

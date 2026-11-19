@@ -1,0 +1,60 @@
+{
+  "revision": "MI03-GATE02-COMPLETION-PRECHECK-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_LOCAL_PRECHECK_RUN_PREVENTED_BY_MISSING_FULL_PRIVATE_CHECKOUT_NOT_PRODUCT_FUNCTIONAL_PASS",
+  "branch": "review/mi03-gate02-core-positive-20261119",
+  "base": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "product_dev_ref": "integration/product-dev@8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "private_repo_anonymous_archive": "UNAVAILABLE_HTTP_404",
+  "connected_github_exact_owner_sources": "READABLE_WITH_CONNECTOR",
+  "local_archive": "AI_Company_OS_MI03_GATE02_TEST_CANDIDATE_20261119.zip",
+  "local_package_test_file_sha256": "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d",
+  "local_runner": {
+    "filename": "verified_runner.py",
+    "sha256": "c3cf369207e31e817cfa33a7919f629c4855c8f800a4ed0e4762f2ccec673c65",
+    "purpose": "Check original 553 manifest paths & sha256, 8 owner Git blobs and mandatory tests before invoking isolated D0 10 unittest methods",
+    "python_compile": "PASS",
+    "actual_run_status": "BLOCKED_NO_PRODUCT_MANIFEST",
+    "exit_code": 2,
+    "manifest_rows_checked": 0,
+    "product_cases_run": 0,
+    "product_cases_pass": 0
+  },
+  "delivery": {
+    "filename": "AI_Company_OS_MI03_GATE02_COMPLETION_GATE_20261120.zip",
+    "sha256": "347109650e16bbc6a4a13342978c1a80fe587daaf4b9f9816b6b13eb5d7b80fc",
+    "contents": "candidate 10-case source, pure stdlib verified runner, readme, actual local preflight evidence; not complete private source checkout",
+    "availability": "ChatGPT file attachment only; no private owner source copied into external provider"
+  },
+  "owner_clash_reconciliation": {
+    "original_test_pr": 6,
+    "owner_candidate_unchanged": true,
+    "product_dev_changed": false,
+    "main_changed": false,
+    "existing_79_16_11_42_not_rerun": true
+  },
+  "remaining": [
+    "Authorized complete original source checkout with all transitive Core test fixtures",
+    "Run 10 test methods, correct verified failures and capture raw log",
+    "Trusted owner assignment and IAM role issuance provenance",
+    "Original G9/G2/Memory T1 tests and strict PostgreSQL COMMIT",
+    "Review, W8 and independent release acceptance"
+  ],
+  "acceptance": {
+    "iam_org_dev_previous": 42.5,
+    "iam_org_dev_current": 42.5,
+    "delta_pp": 0,
+    "core": "12/16",
+    "mvp": "0/11",
+    "independent_security": "0/7"
+  },
+  "permission": {
+    "product_dev": false,
+    "main": false,
+    "ci_expansion": false,
+    "real_credentials": false,
+    "external_effects": false,
+    "protected_commit": false
+  },
+  "rollback": "Revert review-only source/evidence and retain original owner G8/G9/core source and consumed IAM claims"
+}

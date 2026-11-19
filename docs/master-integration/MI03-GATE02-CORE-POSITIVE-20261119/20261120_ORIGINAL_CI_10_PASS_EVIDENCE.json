@@ -1,0 +1,140 @@
+{
+  "revision": "MI03-GATE02-ORIGINAL-CORE-OPERATIONS-CI-10-PASS-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_ORIGINAL_SOURCE_PERSISTED_D0_SQLITE_FUNCTIONAL_PASS_OWNER_REVIEW_ONLY",
+  "status": "GATE02_D0_POSITIVE_AND_NEGATIVE_TEST_EVIDENCE_PASS",
+  "source_branch": "review/mi03-gate02-core-positive-20261119",
+  "original_owner_branch_sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "workflow_owner_path": ".github/workflows/mi03-gate03-pr6-coreops.yml",
+  "workflow_blob": "d6b70d2a55c88a7689f6c2611351c099e66420f8",
+  "pinned_checkout_sha": "3b59f54eca5246a4989b203e89bee1f1f1d74e93",
+  "original_test_path": "product/ai-company-os-backend/tests/test_core_operations_assignment_mi03.py",
+  "original_test_blob": "23c2f019a27bc9e16d8de3f2af72c239eefac035",
+  "original_test_sha256": "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d",
+  "original_core_reader_blob": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+  "source_manifest_blob": "92cbdde64d350e28dd02526b655f90b404f267b2",
+  "python": "3.13.5",
+  "database": "Disposable synthetic D0 SQLite (no PostgreSQL)",
+  "cases": [
+    {
+      "name": "test_absent_core_cursor_fails_closed",
+      "status": "PASS"
+    },
+    {
+      "name": "test_cross_scope_no_write",
+      "status": "PASS"
+    },
+    {
+      "name": "test_member_principal_drift_no_write",
+      "status": "PASS"
+    },
+    {
+      "name": "test_original_core_reader_positive_before_write",
+      "status": "PASS"
+    },
+    {
+      "name": "test_persisted_core_drift_revokes_readback_match",
+      "status": "PASS"
+    },
+    {
+      "name": "test_real_core_and_operations_positive_commit_readback",
+      "status": "PASS"
+    },
+    {
+      "name": "test_revocation_holds_and_no_reaccept",
+      "status": "PASS"
+    },
+    {
+      "name": "test_role_mismatch_no_write",
+      "status": "PASS"
+    },
+    {
+      "name": "test_stale_core_version_no_write",
+      "status": "PASS"
+    },
+    {
+      "name": "test_wrong_principal_no_write",
+      "status": "PASS"
+    }
+  ],
+  "actual_execution": {
+    "unique_methods": 10,
+    "passed": 10,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 0.849
+  },
+  "ci_runs": [
+    {
+      "id": 44620141705,
+      "job_id": 135899290063,
+      "conclusion": "success",
+      "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620141705",
+      "raw_log_has": "Ran 10 tests in 0.849s; OK; MI03_ORIGINAL_COREOPS_10=PASS_D0_ONLY"
+    },
+    {
+      "id": 44620208913,
+      "job_id": 135899536363,
+      "conclusion": "success",
+      "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620208913",
+      "raw_log_has": "Ran 10 tests in 0.833s; OK; MI03_ORIGINAL_COREOPS_10=PASS_D0_ONLY",
+      "classification": "REPEAT_SAME_10_NOT_ADDITIONAL_CASES"
+    }
+  ],
+  "source_integrity": {
+    "exact_original_blobs": [
+      "test_core_operations_assignment_mi03.py",
+      "research_slice.py",
+      "SOURCE_MANIFEST.json"
+    ],
+    "pin_step": "PASS",
+    "status": "ORIGINAL_SOURCE_PINNED_EXECUTION"
+  },
+  "authorization_boundary": {
+    "ci_read_only": true,
+    "head_scope": "PR #6",
+    "persist_credentials": false,
+    "actual_grant_issuance": false,
+    "principal_provenance_authenticated": false,
+    "commit_time_recheck": false,
+    "real_postgresql": false,
+    "external_effects": false,
+    "production": false,
+    "independent_acceptance": false
+  },
+  "duplicate_ci": {
+    "owner_workflow_preserved": ".github/workflows/mi03-gate03-pr6-coreops.yml",
+    "new_duplicate_workflow_removed": ".github/workflows/mi03-gate02-limited-ci.yml"
+  },
+  "changes": {
+    "existing_product_python_files": 0,
+    "existing_databases": 0,
+    "existing_api": 0,
+    "existing_test_source": 0
+  },
+  "prior_evidence_not_rerun": {
+    "org_79": 79,
+    "store_core_sim_16": 16,
+    "schema_11": 11,
+    "t1_original_42": 42
+  },
+  "progress": {
+    "development_iam_org_before_pct": 42.5,
+    "development_iam_org_after_pct": 42.5,
+    "delta_pp": 0,
+    "reason": "Functional criterion closure requires owner ratification and frozen weighted denominator, not automatically derived from 10 PASS",
+    "core_acceptance_before": "12/16",
+    "core_acceptance_after": "12/16",
+    "mvp": "0/11",
+    "independent_security": "0/7"
+  },
+  "remaining": [
+    "Authenticated IAM owner-issued registry/member/role provenance and freshness",
+    "Commit-time principal/role/lease revocation recheck in protected PostgreSQL transaction",
+    "Original G9/G2/Memory T1 owner regressions and independent PG rollback/restore",
+    "Native full W8 build/browser and IV acceptance",
+    "Owner review of PR6 and central queue proposal before transfer"
+  ],
+  "rollback": "Close PR6 or normal revert for review-only CI/docs. Do not force-push, reset evidence, release claims or merge to product-dev/main."
+}

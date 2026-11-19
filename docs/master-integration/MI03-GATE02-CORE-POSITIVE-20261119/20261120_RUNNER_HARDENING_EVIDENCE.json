@@ -1,0 +1,87 @@
+{
+  "revision": "MI03-GATE02-EXACT-CHECKOUT-HARNESS-HARDENING-20261120",
+  "date": "2026-11-20",
+  "branch": "review/mi03-gate02-core-positive-20261119",
+  "base_sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "classification": "ACTUAL_STD_LIB_HARNESS_TESTS_16_PASS__ORIGINAL_CORE_OPERATIONS_TESTS_NOT_RUN",
+  "source_inventory": {
+    "project_old_zip_0145_0155": "HISTORICAL_ONLY_EXACT_0224_CORE_NOT_PRESENT",
+    "pr6_original_tree_selected_dependencies": "27/27 PREVIOUS_REMOTE_PATH_ONLY",
+    "complete_private_checkout_in_local_container": false,
+    "original_core_and_operations_runtime": "NOT_RUN",
+    "original_pr6_test_file_sha256": "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d",
+    "original_manifest_blob": "92cbdde64d350e28dd02526b655f90b404f267b2"
+  },
+  "correction": {
+    "affected": "prior user-delivered verified_runner.py (not product source)",
+    "issue": "Prior preflight verified enumerated hashes but did not enforce manifest's own pinned Git blob, unexpected/untracked product files, source symlinks or parent-path traversal; on functional failure it reported 0 tests executed even when output reported 10 failures.",
+    "applied": [
+      "Exact manifest Git blob pin",
+      "All listed paths safety",
+      "Unexpected file rejection",
+      "Symlinked tracked files rejection",
+      "Strict owner pins/manifest SHA256",
+      "Functional output count and failure/skipped reporting"
+    ],
+    "checker_python_stdlib": "3.11",
+    "tested_harness_methods": [
+      16,
+      16
+    ],
+    "test_log_sha256": "0de107eaa63892435cd307353de602e5272a6b12922480865674bc9c8c8485e1",
+    "runner_sha256": "4878031c9b70289c5b2f57fb3a4b1d15ef08aba3f44c4412273491566528ee4d",
+    "unit_test_sha256": "c61560f6f52cff2b9b7bd6158182a67abbd0c1e5727dde54546b2e36f903e757",
+    "on_local_candidate_only": {
+      "status": "BLOCKED_NO_PRODUCT_MANIFEST",
+      "exit_code": 2,
+      "functional_tests_executed": 0,
+      "functional_tests_passed": 0
+    }
+  },
+  "deliverable": {
+    "zip": "AI_Company_OS_GATE02_20261120_DOGRULAMA_VE_DEVIR.zip",
+    "sha256": "792591ad0b6aced8c7f55816272a71b1daeb675cf1cb511cbe34925d12436518",
+    "files": [
+      "verified_runner.py",
+      "test_verified_runner.py",
+      "RUN_G02_WINDOWS.cmd",
+      "ARCHITECTURE_CATALOG_AND_HANDOVER.md",
+      "original PR6 10-case test",
+      "evidence/RESULTS.json",
+      "evidence/harness_16.log",
+      "evidence/candidate_only/evidence.json"
+    ],
+    "classification": "CHAT_FILE_ARTIFACT_REVIEW_ONLY_NO_PRIVATE_553_FILE_CODE"
+  },
+  "permissions": {
+    "h01_narrow_ci_PR4_only": true,
+    "ci_expanded": false,
+    "source_owner_clobbered": false,
+    "grant_issued": false,
+    "protected_commit_ran": false,
+    "production": false
+  },
+  "previous_historical_tests_not_rerun": {
+    "selected_79": true,
+    "isolated_16": true,
+    "SQL_11": true,
+    "CI_T1_42": true
+  },
+  "acceptance": {
+    "iam_org_dev_prev": 42.5,
+    "iam_org_dev_now": 42.5,
+    "delta_pp": 0,
+    "core": "12/16",
+    "mvp": "0/11",
+    "independent_security": "0/7",
+    "overall_weighted_unfrozen": "NOT_COMPUTABLE"
+  },
+  "next_tasks": [
+    "Obtain owner-approved full exact GitHub PR6 checkout locally without replacing original sources",
+    "Execute ten real original-source D0 Core+OperationsStore methods and retain per-test raw logs",
+    "Fix real product failures under owner controlled candidate, rerun and verify immutable source manifest",
+    "Review authenticated owner-issued registry/member/role provenance; unknown original issuer still HOLD",
+    "Review PostgreSQL atomic COMMIT/role revocation and cross-store freshness; G9/G2/Memory and W8/IV independent ACCEPTANCE remain HOLD"
+  ],
+  "rollback": "Drop only runner review evidence/candidate pack, preserve PR6 original test, owner branch and canon product-dev SHA"
+}
