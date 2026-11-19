@@ -1,0 +1,44 @@
+{
+  "revision": "MI-COMMON-09-LOCAL-344-WHEELS",
+  "user_console": "2026-11-20 00:48:54 Windows Python=3.13.5 SQLite=3.46.1, SOURCE_REPORT_NOT_UPLOADED",
+  "classification": "STATIC_CANDIDATE_REVIEW_AND_ONE_SYNTHETIC_PIP_TARGET_TEST",
+  "script_static_checks": {
+    "pass": 16,
+    "total": 16,
+    "items": {
+      "immutable_full_tree_pin": true,
+      "model_pins_114": true,
+      "core_pins_55": true,
+      "portable_environment_exact": true,
+      "wheel_pins_exact": true,
+      "official_pypi_only": true,
+      "cross_target_wheels": true,
+      "offline_target_install": true,
+      "sha256_metadata_comparison": true,
+      "private_target_only": true,
+      "permission_prompt": true,
+      "python_verifier_file_not_inline_json": true,
+      "original_344_runner": true,
+      "real_run_markers": true,
+      "all_other_gates_held": true,
+      "no_execution_policy_changes": true
+    }
+  },
+  "synthetic_pip_cross_target": {
+    "pass": true,
+    "exit_code": 0,
+    "wheel": "synthetic CPython 3.13 Windows x64 only"
+  },
+  "windows_script_run": "NOT_RUN",
+  "real_PyPI_wheels_downloaded": "NOT_RUN",
+  "model_memory_344": "NOT_RUN",
+  "core_29": "NOT_RUN",
+  "w8_full_build": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "protected_commit": "HOLD",
+  "independent_acceptance": "HOLD",
+  "product_acceptance_delta_pp": 0,
+  "development_delta_pp": 0,
+  "rollback": "Remove only newly generated P0_MODEL_344_PINNED_* folder after reviewing logs; original portable runtime, system Python, source tree unchanged",
+  "script_sha256": "39d81033b82c8de0c72454dd7f53b90f419906e279b1ff4594fc146cf53241c1"
+}

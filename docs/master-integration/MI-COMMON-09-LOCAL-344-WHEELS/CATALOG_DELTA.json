@@ -1,0 +1,31 @@
+{
+  "revision": "MI-COMMON-09-LOCAL-344-WHEELS",
+  "source_track": "integration/mi-common-source-review-01",
+  "files": {
+    "MI08_MODEL344_PINNED_WHEELS.ps1": {
+      "runtime": "Windows PowerShell 5.1",
+      "type": "user-reviewed local-only test launcher candidate",
+      "functionality": [
+        "Reads immutable MI05 transfer and MI08 environment precheck evidence",
+        "Checks original Python 3.13.5 SQLite 3.46.1 before any install",
+        "Requires user interactive EVET",
+        "Downloads exactly three version-pinned CPython3.13 Windows x64 wheels via host pip without dependencies",
+        "Verifies official PyPI SHA256 for each wheel filename",
+        "Installs only to a new target folder under P0_MODEL_344_PINNED_* and copies embedded Python into that folder",
+        "Adds _modeldeps path to copied python313._pth only",
+        "Runs original, unchanged run_combined.py and records its exit and group marker results"
+      ],
+      "network_destinations": ["pypi.org", "files.pythonhosted.org via pip"],
+      "source_modules_modified": 0,
+      "api_changes": 0,
+      "database_changes": 0,
+      "event_changes": 0,
+      "new_permissions": 0,
+      "dependency_versions": {"cryptography": "46.0.4", "cffi": "2.0.0", "pycparser": "2.23"}
+    },
+    "EVIDENCE.json": {"type": "static review and synthetic pip cross-target result"},
+    "PIP_CROSS_TARGET_SYNTHETIC.log": {"type": "synthetic installation test; not real Windows 344 test"}
+  },
+  "rollback": "Preserve evidence then remove only new P0_MODEL_344_PINNED_* directory, no product source changes",
+  "handover": "Await user's Windows MODEL_344_RESULT.json, MODEL_MEMORY_344.log, WHEEL_SHA256.json and original precheck environment JSON; do not infer result before readback"
+}
