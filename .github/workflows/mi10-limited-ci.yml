@@ -180,6 +180,12 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           path: ci
           persist-credentials: false
+      - name: Exercise exact per-fetch SSE body freshness negative regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          node ci/.github/mi10/test_sse_freshness.cjs
+          echo "MI10_SSE_OLD_STALE_PROMISE=REGRESSED_FAIL_CLOSED"
       - name: Install exact-version synthetic FastAPI and browser diagnostic packages
         shell: bash
         run: |
@@ -240,7 +246,7 @@ jobs:
           PREFIX_AFTER="$(sha256sum "$AICOS_D0_LIFECYCLE_PREFIX_DB" | awk '{print $1}')"
           test "$PREFIX_BEFORE" = "$PREFIX_AFTER"
           echo "MI01_REAL_D0_READER=PASS; SQLITE_PREFIX_UNCHANGED=PASS"
-          echo "MI01_U3_SSE_COMPATIBLE_BROWSER=PASS; ORIGINAL_CDP_SSE_BODY=FAIL; FULL_W8_SMOKE=NOT_RUN"
+          echo "MI01_U3_SSE_FRESH_COMPATIBLE_BROWSER=PASS; ORIGINAL_CDP_SSE_BODY=FAIL; FULL_W8_SMOKE=NOT_RUN"
       - name: Save synthetic browser evidence (no customer data)
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
