@@ -317,3 +317,6 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U3A — source-bound acceptance checkpoint
 [Runbook](../UNIFIED-U3A/ARCHITECTURE_AND_RUNBOOK.md). WorkflowDraft shared panel repaired; exact P24 history overlay and W8 rebind; 63 selected rerun +10 adapter mechanics, full product build blocked. Core D2 historical 11/16, JOIN_HOLD.
+
+## MI-03-R2 — exact read-only identity transfer candidate
+[Architecture and runbook](../../candidates/MI-03-R2/ARCHITECTURE_AND_RUNBOOK.md). Two G7 nonauthorizing modules on product-dev base; 41/41 original selected tests PASS. D4/Unified review and W8/full build HOLD. No authority change.

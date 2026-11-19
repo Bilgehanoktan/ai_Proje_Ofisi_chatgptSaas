@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UNIFIED-U3A",
-  "status": "D0_ACCEPTANCE_RUNNER_PREPARED_FULL_BUILD_BLOCKED",
+  "doc_revision": "MI-03-R2",
+  "status": "D0_READONLY_IDENTITY_TRANSFER_CANDIDATE_OWNER_REVIEW_BUILD_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e014868ae03cf73487aba156647eeac9442422cb",
+  "parent_git_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -410,9 +410,17 @@
       "bytes": 20298,
       "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
     },
+    "ai-company-os-backend/app/core/transaction/identity_binding.py": {
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
       "bytes": 7835,
       "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+    },
+    "ai-company-os-backend/app/core/transaction/intent_identity.py": {
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
@@ -2023,8 +2031,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "940f8d44f49b848b377badee67f162603724c05f",
-  "source_git_commit_note": "Workflow draft shared readback panel only; no runtime, schema, dependencies or DB changes. U3 acceptance runner and historical auxiliary overlay outside product.",
+  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "source_git_commit_note": "Exact two nonauthorizing G7 modules. W8/U3A original manifest pins unchanged; owner review/rebind and full build required. No runtime registration or authority.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

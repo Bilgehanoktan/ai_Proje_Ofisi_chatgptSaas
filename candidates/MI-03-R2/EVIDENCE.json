@@ -1,0 +1,123 @@
+{
+  "revision": "MI-03-R2",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "owner_source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+  "owner_contract": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+  "latest_exact_checkout_attempt": "68ec99c673cceadffecf1d192371c10c328caa74",
+  "governance": "348af1bbf507e3ed978c0118df6641fcc076fdb8",
+  "reporting_standard_blob": "bffbe56c0801999c46107c1a9bceb3d33e262529",
+  "classification": "ACTUAL_ORIGINAL_UNIT_TESTS_ON_EXACT_SELECTED_PRODUCT_IMPORT_CLOSURE",
+  "environment": {
+    "python": "3.13.5",
+    "command": "python -I -B candidates/MI-03-R2/run_selected.py",
+    "network_checkout": "BLOCKED_DNS"
+  },
+  "pins": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "sha": "9d457472970b7f581687ba142d1bf99ba91c7388"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "sha": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "sha": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+      "sha": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "sha": "e3f94cab61a27c7d4c89d02516887146b2026eb3"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "sha": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "sha": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "sha": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "sha": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
+    },
+    {
+      "path": "candidates/D4-R4/test_identity_binding.py",
+      "sha": "b98d86e46be32451479c3cbdc39ddf6ff1611c73",
+      "bytes": 3556
+    },
+    {
+      "path": "candidates/D5-INTENT/test_intent_identity.py",
+      "sha": "7bc6edca2f26e1970b5b63484ea8dd1d11758028",
+      "bytes": 6480
+    }
+  ],
+  "pins_verified": [
+    13,
+    13
+  ],
+  "common_base_dependencies": [
+    9,
+    9
+  ],
+  "run": {
+    "D4_R4": [
+      22,
+      22
+    ],
+    "D5_INTENT": [
+      19,
+      19
+    ],
+    "total": [
+      41,
+      41
+    ],
+    "failure": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "runner": {
+      "path": "candidates/MI-03-R2/run_selected.py",
+      "sha": "a183df0732c40a50c3118c5974430553ba7de849",
+      "bytes": 4619,
+      "sha256": "b66b2a3fed33c1a31fa88d45e79024d4cf99f8115168668da60e24ad2ef28c35"
+    },
+    "log": {
+      "path": "candidates/MI-03-R2/test.log",
+      "sha": "f0dde4182512303bdca48a9d1926a4fdd46c635f",
+      "bytes": 6733,
+      "sha256": "fb0a1191b69597d70d3d0ddd6ab5527c96676a265e99d27f7c42c4fc73dd3709"
+    },
+    "exit_blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+  },
+  "limits": [
+    "Selected exact GitHub blobs manually materialized and locally verified, not full checkout.",
+    "Unchanged original tests use aliases to actual qualified product modules. No test doubles introduced by runner.",
+    "No authority imports in selected run; no SQL, session issuance, actual assignment, protected COMMIT, PG or independent acceptance.",
+    "Historical test identities not new unique tests or gates.",
+    "Full U3A/W8 build and reviewed adapter rebind NOT_RUN.",
+    "D4 and Unified owner concurrence pending; product-dev unchanged."
+  ],
+  "activation": "HOLD"
+}
