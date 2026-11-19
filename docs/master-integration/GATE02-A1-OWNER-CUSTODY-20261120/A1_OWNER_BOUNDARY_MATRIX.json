@@ -1,0 +1,221 @@
+{
+  "revision": "MI-GATE02-A1-OWNER-CUSTODY-REVIEW-20261120",
+  "date": "2026-11-20",
+  "status": "REVIEW_READY_ONLY__NO_OWNER_SIGNOFF__SECURITY_HOLD",
+  "architecture_choice": "A_ALREADY_SELECTED_NO_RESELECTION",
+  "authoritative_adr": "decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+  "base_governance_head": "86d196a9b4716da66395766e5914fbf45aa6b06b",
+  "product_dev": {
+    "branch": "integration/product-dev",
+    "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "mutated": false
+  },
+  "original_ci": {
+    "pr": 6,
+    "run_id": 44620141705,
+    "scope": "original Core+OperationsStore D0 SQLite",
+    "passed": 10,
+    "total": 10,
+    "not_reexecuted": true
+  },
+  "source_evidence": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "blob": "e1e977880324664bb359eee3286223a796878f44",
+      "role": "D4 typed review only"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "blob": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "role": "Core request derivation only"
+    },
+    {
+      "path": "product/ai-company-os-backend/assignment_lifecycle.py",
+      "blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+      "role": "ORG synthetic observation only"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "role": "G2 D0 session, no owner real issuance"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "role": "G9 local authority"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "role": "G2 modified local authority"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+      "role": "D0 local journal, not independent root"
+    }
+  ],
+  "review_requirements": [
+    {
+      "id": "A1-01",
+      "topic": "Independent root / consumed-claim custody",
+      "owner_role": "Security / IndependentAuthority",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Separate operator and restore administrator; product/IAM/tenant cannot write, reset, recover or impersonate root/claims",
+      "required_owner_evidence": "Custody and RBAC boundary signed by independent owner, restore authority proof",
+      "provisioned": false
+    },
+    {
+      "id": "A1-02",
+      "topic": "Consensus and quorum loss behavior",
+      "owner_role": "IndependentAuthority + Infra/SRE",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Linearizable latest-read, durable consume-once, split-brain/partition/timeout HOLD; no fallback to local D0",
+      "required_owner_evidence": "Owner-reviewed quorum/failure-zone decision and partition evidence plan; provider/counts NOT_SELECTED",
+      "provisioned": false
+    },
+    {
+      "id": "A1-03",
+      "topic": "Key and epoch lifecycle",
+      "owner_role": "Security/KMS + IndependentAuthority",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Independent key custody, trusted clock, key rotation, monotonic recovery epoch and protected checkpoint",
+      "required_owner_evidence": "Key ownership/rotation/revocation/restore runbook; no real KMS selected",
+      "provisioned": false
+    },
+    {
+      "id": "A1-04",
+      "topic": "Issuer and authorized registry/member/role provenance",
+      "owner_role": "MI-03 IAM + MI-02 Core + MI-06 ORG",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Owner-issued, current server-side principal/session/registry/membership/assignment/role proof; never synthetically trust ApprovalObservation",
+      "required_owner_evidence": "Signed or independently authenticated owner proof, freshness/readback and revoke criteria mapped to D4/ORG/G2",
+      "provisioned": false
+    },
+    {
+      "id": "A1-05",
+      "topic": "Claim consume before protected T1",
+      "owner_role": "MI-04 T1 + MI-02 DB + IndependentAuthority",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Canonical scope and stable effect_id; consume durably before first T1 attempt, no retry after UNKNOWN, recheck revocation/lease at commit",
+      "required_owner_evidence": "Sequence contract and transaction/claim/effect binding table, PG owner review",
+      "provisioned": false
+    },
+    {
+      "id": "A1-06",
+      "topic": "Independent effect sink enforcement",
+      "owner_role": "ToolGateway / EffectSink + Security",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Sink holds distinct effect credentials, independently checks latest epoch/fence, atomically dedups effect_id and rejects direct bypass",
+      "required_owner_evidence": "Sink owner interface, direct-access denial policy and accepted/rejected receipt semantics",
+      "provisioned": false
+    },
+    {
+      "id": "A1-07",
+      "topic": "Unknown outcome reconciliation",
+      "owner_role": "MI-04 T1 + EffectSink + IndependentAuthority",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Missing claim/commit/sink acknowledgment quarantined; reconcile by immutable transaction_ref, claim_ref, effect_id; no blind retry",
+      "required_owner_evidence": "Read-only recovery playbook and irrecoverable/unknown escalation owner",
+      "provisioned": false
+    },
+    {
+      "id": "A1-08",
+      "topic": "Restore and checkpoint monotonicity",
+      "owner_role": "IndependentAuthority + Backup/Recovery + IV",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Restore product/journal/local authority + stale pin never resurrects claim or sink effect; external checkpoint cannot roll back",
+      "required_owner_evidence": "Owner restore drill plan, custody of nonrollbackable checkpoint, A-AT02/03/08 traces",
+      "provisioned": false
+    },
+    {
+      "id": "A1-09",
+      "topic": "Independent negative security acceptance",
+      "owner_role": "IndependentVerifier + Security (different operator)",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "Execute and sign A-AT01..08 in independent domain; source pins/raw logs/receipt proof; no self-certification",
+      "required_owner_evidence": "Named independent reviewer and authority, test plan; real execution separately authorized",
+      "provisioned": false
+    },
+    {
+      "id": "A1-10",
+      "topic": "Exact source version and namespace collision",
+      "owner_role": "MI-03 IAM + MI-04 T1 + MI-06 ORG + G9 owner",
+      "review_status": "PENDING_OWNER",
+      "required_boundary": "G9 authority fa47acd... versus G2 b28788...; original durable_ops 43ed... versus ORG 619fe...; no overwrite, synthetic fallback or repin",
+      "required_owner_evidence": "Path-by-path owner dispositions, 50 G2/7 G9/10 0214/P02 regressions before promotion",
+      "provisioned": false
+    }
+  ],
+  "state_flow": {
+    "current": "OBSERVED_D0_HOLD",
+    "next_allowed_state": "A1_OWNER_REVIEWED_CUSTODY_DESIGN",
+    "transition_authority": "existing source owners AND independent Security/IV; no approval recorded",
+    "design_only_proposed_order": [
+      "current owner-authenticated issuer/session/role proof",
+      "independent fresh root/claim consumption CAS",
+      "T1 protected PG attempt with current revocation/lease recheck",
+      "separately administered sink latest epoch/fence and atomic effect_id dedup",
+      "outcome reconciliation or HOLD"
+    ],
+    "cross_domain_atomicity": "T1 and external sink are NOT one atomic transaction; no exactly-once claim until independent sink and reconciliation evidence"
+  },
+  "fixed_security_rules": [
+    "A-I01",
+    "A-I02",
+    "A-I03",
+    "A-I04",
+    "A-I05",
+    "A-I06",
+    "A-I07",
+    "A-I08"
+  ],
+  "independent_matrix": {
+    "run": 0,
+    "required": 8,
+    "source": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INDEPENDENT_ACCEPTANCE_MATRIX.json"
+  },
+  "open_risks": [
+    "Old product+local authority+pin restore reaccept reproduced",
+    "G9/G2 intent_authority source collision",
+    "ORG durable_ops source collision",
+    "Live role issuer not implemented/proven",
+    "No independent custody/quorum/provider/root KMS selected",
+    "No effect sink atomically enforcing fresh fence",
+    "No protected PG commit or independent IV"
+  ],
+  "results": {
+    "a1_owner_reviews_completed": 0,
+    "a1_owner_reviews_total": 10,
+    "actual_tests_this_turn": 0,
+    "actual_security_tests": 0,
+    "source_code_changes": 0,
+    "sql_changes": 0,
+    "api_changes": 0,
+    "ci_changes": 0,
+    "grants_issued": 0,
+    "production_activations": 0
+  },
+  "progress": {
+    "iam_org_development_before": 42.5,
+    "iam_org_development_after": 42.5,
+    "delta_percentage_points": 0,
+    "global_weighted_percent": null,
+    "core_acceptance": [
+      12,
+      16
+    ],
+    "mvp_acceptance": [
+      0,
+      11
+    ],
+    "independent_security_acceptance": [
+      0,
+      7
+    ]
+  },
+  "handoff": {
+    "owner_next": "Return ownership/custody and interface signoff for A1-01..10; resolve G2/G9 and ORG durable_ops conflict without merging; only then propose scoped A2 source adapter, PostgreSQL and independent 8-case test plan",
+    "rollback": "Revert review-only commits or close draft PR; never reset any future consumed claims or affect product-dev/main"
+  }
+}
