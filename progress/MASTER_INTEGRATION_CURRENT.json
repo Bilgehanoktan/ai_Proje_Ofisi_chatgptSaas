@@ -30,9 +30,9 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Common candidate W8 original 10/10 plus 4/4 supplemental isolated overlay mechanics passed; owner review, complete exact checkout, W8 audit/prepare/fresh fingerprint deferred; full build remains NOT_RUN. Exact original npm lock now independently byte-verified from ORG; Unified owner to use immutable staging, not legacy prepare regeneration; fresh source/lock review required. | Exact U3 adapter on new common 539 source, immutable npm lock hook 7/7 local fixture; owner review and full audit/prepare/build pending. | Common 97/97 selected frontend tests; full exact W8 chain/checkout/lock review remains NOT_RUN. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | MI-COMMON-04 verified 24/24 static original W8 chain, 23/23 parent pins, original npm 61/61 metadata; fresh locked install/build/browser NOT_RUN. | MI04-R2: owner CI PR4 exact SHA538/538, Next build/typecheck and U3 same-fetch SSE compatible PASS; native byte-exact original U3 and full W8 still HOLD. | MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119: GitHub run 44613960595 3/3 actual CI PASS (538 source SHA256, 42/42 selected original D0, Next build, real local FastAPI, SSE compatible U3 browser); byte-exact U3 CDP, W8/IV/PG/0214 ten HOLD. | MI10-SSE-FRESHNESS-REPRO-20261120: offline 5/5 targeted QA assertions, two stale-body cases reproduced for single global promise (not actual browser/product). Owner PR#4 informed; per-read fresh identity HOLD. Existing owner CI 3/3 PASS diagnostic, native U3 / full W8 / PG IV NOT_ACCEPTED. | User console shows 1953/1953 exact Git tree and 114/55 pinned local sources; raw TRANSFER_REPORT.json pending; original 344 and 29 NOT_RUN.",
+      "next": "Common candidate W8 original 10/10 plus 4/4 supplemental isolated overlay mechanics passed; owner review, complete exact checkout, W8 audit/prepare/fresh fingerprint deferred; full build remains NOT_RUN. Exact original npm lock now independently byte-verified from ORG; Unified owner to use immutable staging, not legacy prepare regeneration; fresh source/lock review required. | Exact U3 adapter on new common 539 source, immutable npm lock hook 7/7 local fixture; owner review and full audit/prepare/build pending. | Common 97/97 selected frontend tests; full exact W8 chain/checkout/lock review remains NOT_RUN. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN. | MI-COMMON-04 verified 24/24 static original W8 chain, 23/23 parent pins, original npm 61/61 metadata; fresh locked install/build/browser NOT_RUN. | MI04-R2: owner CI PR4 exact SHA538/538, Next build/typecheck and U3 same-fetch SSE compatible PASS; native byte-exact original U3 and full W8 still HOLD. | MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119: GitHub run 44613960595 3/3 actual CI PASS (538 source SHA256, 42/42 selected original D0, Next build, real local FastAPI, SSE compatible U3 browser); byte-exact U3 CDP, W8/IV/PG/0214 ten HOLD. | MI10-SSE-FRESHNESS-REPRO-20261120: offline 5/5 targeted QA assertions, two stale-body cases reproduced for single global promise (not actual browser/product). Owner PR#4 informed; per-read fresh identity HOLD. Existing owner CI 3/3 PASS diagnostic, native U3 / full W8 / PG IV NOT_ACCEPTED. | User console shows 1953/1953 exact Git tree and 114/55 pinned local sources; raw TRANSFER_REPORT.json pending; original 344 and 29 NOT_RUN. | MI10-CLOUD-FULL-CHECKOUT-01: exact 87272b6 archive 1953/1953 byte+Git blob + 539 product (same tree as 61bb06e), W8 source audit 538/538, hosted CI 44617509366 3/3 PASS; fresh reviewed wheelhouse/REVIEW SHA and original W8 prepare/install/test/smoke remain owner HOLD. MI-COMMON-06 local transfer separately reported; no duplicate tests.",
       "priority": "P0",
-      "status": "REMOTE_PREFLIGHT_PASS_LOCAL_CHECKOUT_AND_FULL_BUILD_BLOCKED",
+      "status": "REMOTE_FULL_EXACT_CHECKOUT_AUDIT_PASS_W8_PREPARE_INSTALL_TEST_SMOKE_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "3/3 exact owner repair pins, 505/505 manifest/pin-record consistency, zero casefold TS/JS module stem conflicts; 5/5 local exact source and 16/16 original regression (global TS 5.8.3, mocked JSX/CSS). Historical ORG build not new full-stack acceptance.",
       "previous_status": "BLOCKED_ENVIRONMENT",
@@ -518,7 +518,55 @@
         "weighted_development_delta_pp": 0,
         "product_acceptance_delta_pp": 0,
         "next": "Run source-only 55 Core verification and exact original 344 Model/Memory on user's local pinned stage. Preserve original scripts, log environment gate, keep Core29 and W8 owner gates separate."
-      }
+      },
+      "remote_exact_checkout": {
+        "revision": "MI10-CLOUD-FULL-CHECKOUT-01",
+        "hosted_run": 44617509366,
+        "source_job_id": 135890048240,
+        "workflow_commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+        "same_candidate_product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+        "candidate_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "exact_archive_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+        "root_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+        "file_bytes": [
+          22342956,
+          22342956
+        ],
+        "checkout_git_blobs": [
+          1953,
+          1953
+        ],
+        "product_files": [
+          539,
+          539
+        ],
+        "actual_W8_source_sha256": [
+          538,
+          538
+        ],
+        "source_pairs": [
+          17,
+          17
+        ],
+        "aux_blobs": [
+          33,
+          33
+        ],
+        "checkout_remote": "PASS_GITHUB_HOSTED",
+        "original_W8_prepare_install_test_smoke": "NOT_RUN_OWNER_REVIEW_HOLD",
+        "local_owner_source_recovery": "SEPARATE_MI_COMMON_06_USER_REPORT_RAW_PENDING",
+        "actual_original_344_29": "NOT_RUN",
+        "product_source_changes": 0,
+        "permissions_change": 0,
+        "acceptance_delta_pp": 0,
+        "weighted_development_percent": null,
+        "artifact_id": 14576785788,
+        "flow_run_status": "3_OF_3_SUCCESS",
+        "evidence": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/EVIDENCE.json",
+        "catalog": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/TECHNICAL_CATALOG.json",
+        "handover": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/ARCHITECTURE_AND_HANDOVER.md"
+      },
+      "previous_status_before_cloud_checkout": "REMOTE_PREFLIGHT_PASS_LOCAL_CHECKOUT_AND_FULL_BUILD_BLOCKED"
     },
     {
       "id": "MI-02",
@@ -3669,9 +3717,9 @@
       "owner_role": "QA / IV / CI",
       "source_ref": "planning/project-wide-progress-reporting",
       "observed_sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
-      "next": "MI-10 scoped CI PR #4 latest 44614849105 3/3 PASS on head 3b0730: source 538/538; Next build/typecheck; original 42/42 SQLite regression; same-response SSE-compatible Chromium U3 with actual FastAPI and 5 screenshots. Native Chromium CDP SSE body remains FAIL; full formal W8 pipeline NOT_RUN, real IAM/ORG/T1 protected PG/three DB and 10 Memory/T1 owner HOLD. Product-dev and main unchanged. Owner review of PR before any promotion; CI PR stays draft. | MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119: GitHub run 44613960595 3/3 actual CI PASS (538 source SHA256, 42/42 selected original D0, Next build, real local FastAPI, SSE compatible U3 browser); byte-exact U3 CDP, W8/IV/PG/0214 ten HOLD. | MI10-SSE-FRESHNESS-REPRO-20261120: offline 5/5 targeted QA assertions, two stale-body cases reproduced for single global promise (not actual browser/product). Owner PR#4 informed; per-read fresh identity HOLD. Existing owner CI 3/3 PASS diagnostic, native U3 / full W8 / PG IV NOT_ACCEPTED.",
+      "next": "MI-10 scoped CI PR #4 latest 44614849105 3/3 PASS on head 3b0730: source 538/538; Next build/typecheck; original 42/42 SQLite regression; same-response SSE-compatible Chromium U3 with actual FastAPI and 5 screenshots. Native Chromium CDP SSE body remains FAIL; full formal W8 pipeline NOT_RUN, real IAM/ORG/T1 protected PG/three DB and 10 Memory/T1 owner HOLD. Product-dev and main unchanged. Owner review of PR before any promotion; CI PR stays draft. | MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119: GitHub run 44613960595 3/3 actual CI PASS (538 source SHA256, 42/42 selected original D0, Next build, real local FastAPI, SSE compatible U3 browser); byte-exact U3 CDP, W8/IV/PG/0214 ten HOLD. | MI10-SSE-FRESHNESS-REPRO-20261120: offline 5/5 targeted QA assertions, two stale-body cases reproduced for single global promise (not actual browser/product). Owner PR#4 informed; per-read fresh identity HOLD. Existing owner CI 3/3 PASS diagnostic, native U3 / full W8 / PG IV NOT_ACCEPTED. | | MI10-CLOUD-FULL-CHECKOUT-01: exact 87272b6 archive 1953/1953 byte+Git blob + 539 product (same tree as 61bb06e), W8 source audit 538/538, hosted CI 44617509366 3/3 PASS; fresh reviewed wheelhouse/REVIEW SHA and original W8 prepare/install/test/smoke remain owner HOLD. MI-COMMON-06 local transfer separately reported; no duplicate tests.",
       "priority": "P1",
-      "status": "SCOPED_PR_CI_SELECTED_D0_PASS_NATIVE_SSE_AND_GUARDED_PG_HOLD",
+      "status": "SCOPED_CLOUD_CI_3_OF_3_PASS_FULL_EXACT_CHECKOUT_AUDIT_PASS_W8_OWNER_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "branch head observed only; latest acceptance not reconciled",
       "security_dependency_handoff": {
@@ -4061,7 +4109,56 @@
         "security_permission_changes": 0,
         "product_acceptance_delta_pp": 0,
         "development_delta_pp": 0
-      }
+      },
+      "latest_source_integrity": {
+        "revision": "MI10-CLOUD-FULL-CHECKOUT-01",
+        "hosted_run": 44617509366,
+        "source_job_id": 135890048240,
+        "workflow_commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+        "same_candidate_product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+        "candidate_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "exact_archive_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+        "root_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+        "file_bytes": [
+          22342956,
+          22342956
+        ],
+        "checkout_git_blobs": [
+          1953,
+          1953
+        ],
+        "product_files": [
+          539,
+          539
+        ],
+        "actual_W8_source_sha256": [
+          538,
+          538
+        ],
+        "source_pairs": [
+          17,
+          17
+        ],
+        "aux_blobs": [
+          33,
+          33
+        ],
+        "checkout_remote": "PASS_GITHUB_HOSTED",
+        "original_W8_prepare_install_test_smoke": "NOT_RUN_OWNER_REVIEW_HOLD",
+        "local_owner_source_recovery": "SEPARATE_MI_COMMON_06_USER_REPORT_RAW_PENDING",
+        "actual_original_344_29": "NOT_RUN",
+        "product_source_changes": 0,
+        "permissions_change": 0,
+        "acceptance_delta_pp": 0,
+        "weighted_development_percent": null,
+        "artifact_id": 14576785788,
+        "flow_run_status": "3_OF_3_SUCCESS",
+        "evidence": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/EVIDENCE.json",
+        "catalog": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/TECHNICAL_CATALOG.json",
+        "handover": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/ARCHITECTURE_AND_HANDOVER.md"
+      },
+      "latest_hosted_run": 44617509366,
+      "previous_ci_status": "SCOPED_PR_CI_SELECTED_D0_PASS_NATIVE_SSE_AND_GUARDED_PG_HOLD"
     }
   ],
   "permissions": {
@@ -5271,10 +5368,10 @@
     "branch": "integration/mi10-limited-ci-20261119",
     "draft": true,
     "do_not_merge": true,
-    "tested_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
+    "tested_sha": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
     "document_revision_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
     "pinned_product_sha": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
-    "run": 44614849105,
+    "run": 44617509366,
     "three_jobs": [
       3,
       3
@@ -5304,8 +5401,8 @@
     "browser": "SSE_COMPATIBLE_FLOW_PASS",
     "browser_original_native_cdp": "KNOWN_FAIL",
     "screenshots": 5,
-    "artifact_id": 14573758241,
-    "artifact_bytes": 1440083,
+    "artifact_id": 14576785788,
+    "artifact_bytes": 1440088,
     "formal_full_W8": "NOT_RUN",
     "guarded_iam_org_t1_postgresql": "NOT_RUN",
     "memory_t1_fullchain": "10_NOT_RUN",
@@ -5320,13 +5417,61 @@
     "previous_successful_run_id": 44613960595,
     "previous_tested_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
     "job_ids": [
-      135880650580,
-      135880869773,
-      135880869828
+      135890048240,
+      135890273079,
+      135890273113
     ],
     "log_replay_no_new_methods": true,
     "owner_review": "PENDING",
-    "rollback": "Close draft PR #4 or normal revert only; no product-dev merge"
+    "rollback": "Close draft PR #4 or normal revert only; no product-dev merge",
+    "previous_run": 44614849105,
+    "source_full_checkout": {
+      "revision": "MI10-CLOUD-FULL-CHECKOUT-01",
+      "hosted_run": 44617509366,
+      "source_job_id": 135890048240,
+      "workflow_commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+      "same_candidate_product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+      "candidate_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "exact_archive_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+      "root_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+      "file_bytes": [
+        22342956,
+        22342956
+      ],
+      "checkout_git_blobs": [
+        1953,
+        1953
+      ],
+      "product_files": [
+        539,
+        539
+      ],
+      "actual_W8_source_sha256": [
+        538,
+        538
+      ],
+      "source_pairs": [
+        17,
+        17
+      ],
+      "aux_blobs": [
+        33,
+        33
+      ],
+      "checkout_remote": "PASS_GITHUB_HOSTED",
+      "original_W8_prepare_install_test_smoke": "NOT_RUN_OWNER_REVIEW_HOLD",
+      "local_owner_source_recovery": "SEPARATE_MI_COMMON_06_USER_REPORT_RAW_PENDING",
+      "actual_original_344_29": "NOT_RUN",
+      "product_source_changes": 0,
+      "permissions_change": 0,
+      "acceptance_delta_pp": 0,
+      "weighted_development_percent": null,
+      "artifact_id": 14576785788,
+      "flow_run_status": "3_OF_3_SUCCESS",
+      "evidence": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/EVIDENCE.json",
+      "catalog": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/TECHNICAL_CATALOG.json",
+      "handover": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/ARCHITECTURE_AND_HANDOVER.md"
+    }
   },
   "mi_common_05_local_checkout": {
     "revision": "MI-COMMON-05-LOCAL-CHECKOUT",
@@ -5597,5 +5742,52 @@
     "development_previous": 42.5,
     "development_current": 42.5,
     "delta_pp": 0
+  },
+  "mi10_full_checkout_source_proof": {
+    "revision": "MI10-CLOUD-FULL-CHECKOUT-01",
+    "hosted_run": 44617509366,
+    "source_job_id": 135890048240,
+    "workflow_commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+    "same_candidate_product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+    "candidate_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "exact_archive_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "root_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+    "file_bytes": [
+      22342956,
+      22342956
+    ],
+    "checkout_git_blobs": [
+      1953,
+      1953
+    ],
+    "product_files": [
+      539,
+      539
+    ],
+    "actual_W8_source_sha256": [
+      538,
+      538
+    ],
+    "source_pairs": [
+      17,
+      17
+    ],
+    "aux_blobs": [
+      33,
+      33
+    ],
+    "checkout_remote": "PASS_GITHUB_HOSTED",
+    "original_W8_prepare_install_test_smoke": "NOT_RUN_OWNER_REVIEW_HOLD",
+    "local_owner_source_recovery": "SEPARATE_MI_COMMON_06_USER_REPORT_RAW_PENDING",
+    "actual_original_344_29": "NOT_RUN",
+    "product_source_changes": 0,
+    "permissions_change": 0,
+    "acceptance_delta_pp": 0,
+    "weighted_development_percent": null,
+    "artifact_id": 14576785788,
+    "flow_run_status": "3_OF_3_SUCCESS",
+    "evidence": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/EVIDENCE.json",
+    "catalog": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/TECHNICAL_CATALOG.json",
+    "handover": "docs/master-integration/MI10-CLOUD-FULL-CHECKOUT-20261120/ARCHITECTURE_AND_HANDOVER.md"
   }
 }
