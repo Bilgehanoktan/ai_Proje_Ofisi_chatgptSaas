@@ -2071,7 +2071,14 @@
           "FULL_W8",
           "STRICT_PG",
           "INDEPENDENT_IV"
-        ]
+        ],
+        "source_only_553_merge": {
+          "pr": 12,
+          "merged": true,
+          "commit": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+          "branch": "integration/mi-common-source-review-01",
+          "canonical_product_dev_changed": false
+        }
       }
     },
     {
@@ -3266,7 +3273,14 @@
           "FULL_W8",
           "STRICT_PG",
           "INDEPENDENT_IV"
-        ]
+        ],
+        "source_only_553_merge": {
+          "pr": 12,
+          "merged": true,
+          "commit": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+          "branch": "integration/mi-common-source-review-01",
+          "canonical_product_dev_changed": false
+        }
       }
     },
     {
@@ -7142,15 +7156,19 @@
       4,
       5,
       6,
-      9,
       10,
-      11
+      13
     ],
     "closed_review_prs": [
       7,
-      8
+      8,
+      9,
+      11
     ],
-    "closed_duplicate_pr7": "SOURCE_CUSTODY_PRESERVED_UNMERGED"
+    "closed_duplicate_pr7": "SOURCE_CUSTODY_PRESERVED_UNMERGED",
+    "merged_review_prs": [
+      12
+    ]
   },
   "mi_common_09_windows_replay_failure": {
     "revision": "MI-COMMON-09-WINDOWS-PATH-HOLD",
@@ -7306,8 +7324,20 @@
     "verified_readback": "docs/master-integration/MI-P0-SOURCE-PROOF-READBACK-20261120/SOURCE_RECONCILIATION.json",
     "review_pr_state": "CLOSED_UNMERGED",
     "document_blobs_verified": {
-      "SOURCE_DELTA_AND_PROOF_json": "6ee8f343f5d4c4a7bff539939809a95e75bfd8dc",
-      "ARCHITECTURE_CATALOG_HANDOVER_md": "f9792ed3cca570989be53dc52ae93a495ebf2b0f"
+      "SOURCE_DELTA_AND_PROOF_json": "d2c0d57b6012bea32aaa2080e0828146c3fdff91",
+      "ARCHITECTURE_CATALOG_HANDOVER_md": "02bf1f3c5079cb6348dd27b5d311674f25bf9713"
+    },
+    "static_compare_corrected_total_paths": 172,
+    "static_compare_corrected_non_product_paths": 123,
+    "manifest_full_file_sha256": {
+      "base": {
+        "bytes": 90448,
+        "sha256": "6b9b02e73b133e901fcee31713c31125cbd825020068e4f5e531ea5323b81792"
+      },
+      "candidate": {
+        "bytes": 96898,
+        "sha256": "2ce5f642393184b04d7df1ea411e1fa13f627ba971fbc3010c2bce2b77d9c01a"
+      }
     }
   },
   "mi_p0_505_539_553_static_source_readback_20261120": {
@@ -7340,7 +7370,7 @@
     },
     "pr8": "CLOSED_REPLACED_BY_PR10_CLEAN_DOC_ONLY",
     "pr7": "CLOSED_UNMERGED_SOURCE_PROOF_EXACTLY_RETAINED_GOVERNANCE",
-    "pr9": "DRAFT_CORE_ORG_OWNER_REVIEW_HOLD",
+    "pr9": "CLOSED_UNMERGED_SUPERSEDED_BY_PR12_MERGED_SOURCE_ONLY",
     "pr10": "DRAFT_A1_OWNER_REVIEW_HOLD",
     "same_file_previous_conflict": "PR7_STALE_CENTRAL_JSON; INGEST_ONLY_ADDITIVE_REVIEW_KEY_NOT_WHOLE_FILE",
     "known_source_collisions": [
@@ -7355,7 +7385,8 @@
     "weighted_development_percent_previous": null,
     "weighted_development_percent_current": null,
     "weighted_development_delta_pp": null,
-    "next": "PR7 duplicate writer closed; PR9 G9/ORG additive source owner decision, G2 Authority variant owner decision, full W8 & original G2/G9/Memory-T1, strict PG/IV HOLD"
+    "next": "PR7 duplicate writer closed; PR9 G9/ORG additive source owner decision, G2 Authority variant owner decision, full W8 & original G2/G9/Memory-T1, strict PG/IV HOLD",
+    "current_common_after_pr12": "a80932b6d5e99667889dfaa25b682feb267c6cba"
   },
   "ctl01_technical_ci_closeout_20261120": {
     "revision": "CTL01-G9-MANIFEST-PIN-R2-ORIGINAL-CI-20261120",
@@ -7575,7 +7606,8 @@
     "canonical_product_acceptance_delta_pp": 0,
     "weighted_global_percent": null,
     "no_new_ci_or_prod_permissions": true,
-    "remaining_source_variant_owner_approval": "HOLD"
+    "remaining_source_variant_owner_approval": "HOLD",
+    "latest_correction_proof": "172 paths =49 product +123 other, 4 post-candidate helper paths excluded; original owner two exact new doc blobs"
   },
   "mi03_a_source_merge_20261120": {
     "revision": "MI03-A-SOURCE-MERGE-20261120",
@@ -7725,5 +7757,43 @@
     "permission_changes": 0,
     "CI_scope_changes": 0,
     "next": "Owner review exact skipped case and two-run evidence; request raw local RESULT/LOG when practical; do not retry passed 160. Then owner-approved platform symlink test, full W8 build and controlled product-dev source promotion only after owner reviews."
+  },
+  "mi_p0_pr13_exact_path_and_sha256_correction_20261120": {
+    "revision": "MI-P0-PR13-172-PATH-SHA256-FIX-20261120-R1",
+    "prior_pinned_comparison_report": {
+      "all": 176,
+      "product": 49,
+      "non_product": 127
+    },
+    "corrected_pinned_comparison_report": {
+      "all": 172,
+      "product": 49,
+      "non_product": 123
+    },
+    "excluded_later_revision_helper_paths": 4,
+    "actual_compare_base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "actual_compare_head": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+    "old_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "old_manifest_sha256": "6b9b02e73b133e901fcee31713c31125cbd825020068e4f5e531ea5323b81792",
+    "old_manifest_bytes": 90448,
+    "new_manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "new_manifest_sha256": "2ce5f642393184b04d7df1ea411e1fa13f627ba971fbc3010c2bce2b77d9c01a",
+    "new_manifest_bytes": 96898,
+    "sha256_verified": "INDEPENDENT_SELFTESTED_SHA256_ABC_AND_FULL_UTF8_BYTES_EXACT",
+    "updated_review_files": 2,
+    "documentation_exact_git_blobs": [
+      "d2c0d57b6012bea32aaa2080e0828146c3fdff91",
+      "02bf1f3c5079cb6348dd27b5d311674f25bf9713"
+    ],
+    "static_source_result": "PASS_PINNED_COMMIT_GIT_COMPARE",
+    "original_product_delta_49": "UNCHANGED",
+    "source_only_553_pr12": "MERGED_COMMON_CANDIDATE_ONLY",
+    "canonical_product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "owner_security": "HOLD",
+    "weighted_development_previous": null,
+    "weighted_development_current": null,
+    "weighted_delta_pp": null,
+    "product_acceptance_delta_pp": 0,
+    "next": "Close superseded review PR13 unmerged; preserve latest original source owner PR12/PR10; full W8/G2/G9/MEM/PG/IV"
   }
 }
