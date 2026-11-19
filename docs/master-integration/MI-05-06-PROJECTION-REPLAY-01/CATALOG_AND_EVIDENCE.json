@@ -1,0 +1,102 @@
+{
+  "revision": "MI-05-06-PROJECTION-REPLAY-01",
+  "classification": "EXACT_OWNER_SUBSET_REGRESSION; NO PRODUCT TRANSFER",
+  "date": "2026-11-19",
+  "refs": {
+    "governance_parent": "be6bda2441ed79d4632b3f8d80a8ed625f8965c1",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "org": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "source_lock_review_blob": "8eee341c54da085628d5074de696f98f36b3d192"
+  },
+  "remote": {
+    "shared_exact": [
+      10,
+      10
+    ],
+    "org_delta_nonmanifest": 12,
+    "already_exact": 3,
+    "remaining": 9,
+    "additions": 5,
+    "replacements": 4,
+    "scope": "independently compared common/owner/base trees; existing source-lock review authoritative for detailed delta; shared Skill dependencies retained"
+  },
+  "actual_test": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "environment": "Linux isolated selected source; global compiler, no package install",
+    "source_pins": [
+      {
+        "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+        "blob": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+        "sha256": "68586ac79f5111bcbe2b30cb09f3f6b35ef8fbee38ec59881d88bf00ea0a6f22"
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+        "blob": "9231711d7efb18dd18b68e3322f62337a6477484",
+        "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71"
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+        "blob": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51",
+        "sha256": "19c5163ad19c53118ed51e43844efc3d84a319c58a3ff311f0727aea2753a6cc"
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+        "blob": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+        "sha256": "254a188851fa2f0e63661f2dd6977d7446a7f5ae7d4dd0622ea4a40f578dd461"
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+        "blob": "f257f77ca5887b2477bdf3fc3f68e2b37c735eff",
+        "sha256": "bf604ecaaa9e179ba1048f9d9d5a7dee2846a164bc2f4bda163477d63f32eed3"
+      },
+      {
+        "path": "tests/integration/org-07c-r8/tests/process.d.ts",
+        "blob": "9fdb78617c28724b580bcf26e764d34981146cc5",
+        "sha256": "040924214ba86adc2be74f9ce453176743e659adfede310de4473cb988d2d572"
+      },
+      {
+        "path": "tests/integration/org-07c-r8/tests/route.test.cjs",
+        "blob": "4a2199dd6cc60f452b0a053f763d2d7a638b0f36",
+        "sha256": "533b3e86df09d0214025467291f897b121acde564fcb79c2b45caf6dc2a44ebd"
+      }
+    ],
+    "strict_compile_exit": 0,
+    "pass": 8,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "new_unique_methods": 0,
+    "remaining_original_cases_not_rerun": 23,
+    "log_sha256": "6506eb37682d207598a3f2b75c555be1969b2893ea9d0bab39e916fbbec15246",
+    "log_bytes": 1331,
+    "log_location": "local raw delivery; not uploaded here",
+    "scope": "original compiled route, mocked fetch asserts zero calls; no actual backend HTTP or browser"
+  },
+  "catalog": [
+    {
+      "symbol": "build_shared_replay / parseSharedReplay / createSharedReplaySession",
+      "api": "GET /demo/v1/lifecycle/shared-snapshot via /api/demo/shared-snapshot",
+      "scope": "finite D0 historical replay, 30s display TTL, null project/world; not live"
+    },
+    {
+      "symbol": "readOwnerBoundOrganization / readOrganizationProxy / parseOrganization",
+      "api": "GET /api/demo/organization",
+      "scope": "missing server owner; 503 HOLD; no actual backend route activation"
+    },
+    {
+      "symbol": "createUnifiedOfficePreview",
+      "scope": "decorative, JOIN_HOLD; no placement"
+    },
+    {
+      "symbol": "review_project / join_historical",
+      "scope": "ORG-08 historical owner evidence only"
+    }
+  ],
+  "product_changes": 0,
+  "api_db_event_dependency_changes": 0,
+  "acceptance_delta": 0,
+  "rollback": "governance evidence only; revert this commit if needed; no source reset",
+  "next": "Keep current source-lock review and all Memory/T1 updates. ORG/Unified/Skill coordinate shared projection paths before transfer; remaining 23 owner cases and U3 browser remain separate; MI03-GATE-02/03 and A6 world/layout owner proof required."
+}

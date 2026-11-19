@@ -1,5 +1,5 @@
 {
-  "revision": "MI-04-MEMORY-T1-EVIDENCE-RECONCILIATION",
+  "revision": "MI-05-06-PROJECTION-REPLAY-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance.",
   "new_product_tests": 0,
-  "previous_revision": "MI-05-06-09-SOURCE-LOCK-REVIEW-01",
+  "previous_revision": "MI-04-MEMORY-T1-EVIDENCE-RECONCILIATION",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -571,5 +571,32 @@
     "acceptance_delta": 0,
     "raw_mem05e_artifact_recovery": "OWNER_REQUIRED_404",
     "previous_gate01": "PRESERVED"
+  },
+  "mi05_06_projection_replay": {
+    "path": "docs/master-integration/MI-05-06-PROJECTION-REPLAY-01/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-05-06-PROJECTION-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "source": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "original_replay": [
+      8,
+      8
+    ],
+    "exact_local": [
+      7,
+      7
+    ],
+    "shared_pins": [
+      10,
+      10
+    ],
+    "new_unique_methods": 0,
+    "product_changes": 0,
+    "acceptance_delta": 0,
+    "owner_review": "HOLD",
+    "mi05_development": null,
+    "mi06_development": null,
+    "org_r8_previous": 11.6666666667,
+    "org_r8_current": 11.6666666667,
+    "delta": 0
   }
 }
