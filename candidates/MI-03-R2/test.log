@@ -1,0 +1,57 @@
+MI03_EXACT_SELECTED_SOURCE_PINS: 13 / 13
+PYTHON: 3.13.5
+SELECTED_FILE_HASHES: {"candidates/D4-R4/test_identity_binding.py": {"blob": "b98d86e46be32451479c3cbdc39ddf6ff1611c73", "bytes": 3556, "sha256": "07375ca72170c66fbcaae497dfa3ba534dd9a1257b7ece25516cdc9942fdc828"}, "candidates/D5-INTENT/test_intent_identity.py": {"blob": "7bc6edca2f26e1970b5b63484ea8dd1d11758028", "bytes": 6480, "sha256": "73973e57109ba80f0d07330578e6e02b578dbf28ba67d900c61eec8bfc50d79b"}, "product/ai-company-os-backend/app/__init__.py": {"blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391", "bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}, "product/ai-company-os-backend/app/core/__init__.py": {"blob": "9d457472970b7f581687ba142d1bf99ba91c7388", "bytes": 59, "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"}, "product/ai-company-os-backend/app/core/agent_runtime/__init__.py": {"blob": "5b19819cd7070302e874ecee80170a3921ce8fb0", "bytes": 49, "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"}, "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": {"blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49", "bytes": 7251, "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"}, "product/ai-company-os-backend/app/core/event_store/__init__.py": {"blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78", "bytes": 287, "sha256": "30d5585648be281c058fee53678a44851b57576e28a48d721dc3465100e7a7db"}, "product/ai-company-os-backend/app/core/event_store/company_coordination.py": {"blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5", "bytes": 16755, "sha256": "2a903ae65205575d1c90cea07465aaa6cbe3ba881aa11529358f2d2b85a2fe99"}, "product/ai-company-os-backend/app/core/event_store/ledger.py": {"blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3", "bytes": 3093, "sha256": "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"}, "product/ai-company-os-backend/app/core/transaction/__init__.py": {"blob": "5b19819cd7070302e874ecee80170a3921ce8fb0", "bytes": 49, "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"}, "product/ai-company-os-backend/app/core/transaction/identity_binding.py": {"blob": "e1e977880324664bb359eee3286223a796878f44", "bytes": 5178, "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"}, "product/ai-company-os-backend/app/core/transaction/intent_identity.py": {"blob": "472b2a5fd935b59cec22a248853cd5b0f301a8e9", "bytes": 3393, "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"}, "product/ai-company-os-backend/app/core/transaction/review.py": {"blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4", "bytes": 5065, "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"}}
+test_clock (test_identity_binding.BindingTests.test_clock) ... ok
+test_close (test_identity_binding.BindingTests.test_close) ... ok
+test_delegation (test_identity_binding.BindingTests.test_delegation) ... ok
+test_digest_drift (test_identity_binding.BindingTests.test_digest_drift) ... ok
+test_digest_stable_and_bound (test_identity_binding.BindingTests.test_digest_stable_and_bound) ... ok
+test_expiry (test_identity_binding.BindingTests.test_expiry) ... ok
+test_grants (test_identity_binding.BindingTests.test_grants) ... ok
+test_malformed_revision (test_identity_binding.BindingTests.test_malformed_revision) ... ok
+test_match_never_authority (test_identity_binding.BindingTests.test_match_never_authority) ... ok
+test_memberships (test_identity_binding.BindingTests.test_memberships) ... ok
+test_missing (test_identity_binding.BindingTests.test_missing) ... ok
+test_owner (test_identity_binding.BindingTests.test_owner) ... ok
+test_pid (test_identity_binding.BindingTests.test_pid) ... ok
+test_project_plan_task_run_agent_principal_intent_epochs (test_identity_binding.BindingTests.test_project_plan_task_run_agent_principal_intent_epochs) ... ok
+test_revision_drift (test_identity_binding.BindingTests.test_revision_drift) ... ok
+test_revocation (test_identity_binding.BindingTests.test_revocation) ... ok
+test_rls (test_identity_binding.BindingTests.test_rls) ... ok
+test_schema_create (test_identity_binding.BindingTests.test_schema_create) ... ok
+test_scope_dimensions (test_identity_binding.BindingTests.test_scope_dimensions) ... ok
+test_session_identity (test_identity_binding.BindingTests.test_session_identity) ... ok
+test_unknown (test_identity_binding.BindingTests.test_unknown) ... ok
+test_unsafe_role (test_identity_binding.BindingTests.test_unsafe_role) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.003s
+
+OK
+RESULT: test_identity_binding 22/22 failures= 0 errors= 0 skipped= 0
+test_all_intent_fields_pin (test_intent_identity.IntentIdentityTests.test_all_intent_fields_pin) ... ok
+test_binding_principal (test_intent_identity.IntentIdentityTests.test_binding_principal) ... ok
+test_binding_revision_drift (test_intent_identity.IntentIdentityTests.test_binding_revision_drift) ... ok
+test_digest_stable (test_intent_identity.IntentIdentityTests.test_digest_stable) ... ok
+test_expired (test_intent_identity.IntentIdentityTests.test_expired) ... ok
+test_foreign_scope (test_intent_identity.IntentIdentityTests.test_foreign_scope) ... ok
+test_invalid_intent (test_intent_identity.IntentIdentityTests.test_invalid_intent) ... ok
+test_invalid_member (test_intent_identity.IntentIdentityTests.test_invalid_member) ... ok
+test_match (test_intent_identity.IntentIdentityTests.test_match) ... ok
+test_member_identity (test_intent_identity.IntentIdentityTests.test_member_identity) ... ok
+test_member_initial_version_drift (test_intent_identity.IntentIdentityTests.test_member_initial_version_drift) ... ok
+test_member_initial_version_future (test_intent_identity.IntentIdentityTests.test_member_initial_version_future) ... ok
+test_member_scope (test_intent_identity.IntentIdentityTests.test_member_scope) ... ok
+test_principal (test_intent_identity.IntentIdentityTests.test_principal) ... ok
+test_project_cannot_come_from_binding (test_intent_identity.IntentIdentityTests.test_project_cannot_come_from_binding) ... ok
+test_project_drift (test_intent_identity.IntentIdentityTests.test_project_drift) ... ok
+test_request_reuses_scope (test_intent_identity.IntentIdentityTests.test_request_reuses_scope) ... ok
+test_revoked (test_intent_identity.IntentIdentityTests.test_revoked) ... ok
+test_scope_fields (test_intent_identity.IntentIdentityTests.test_scope_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.006s
+
+OK
+RESULT: test_intent_identity 19/19 failures= 0 errors= 0 skipped= 0
+AUTHORITY_MODULES_NOT_IMPORTED: PASS

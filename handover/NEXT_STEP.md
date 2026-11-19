@@ -7,3 +7,7 @@
 
 ## MI-04 next (review candidate only)
 Owner review of exact shared transport and protected entry contract; Unified owner review/rebind W8 source fingerprint before any promotion. MI-03 pure review remains separate. [Runbook](../docs/master-integration/MI-04-TRANSPORT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md). No real execution or claim reset.
+
+
+## MI-04 contract review next
+G6A separate protected entry recommended, not ratified. Source plan enumerates G7 exact refs and owner holds. Central reconcile other candidate path deltas, reviewed W8 rebind and actual full build. MI03 G8 provenance and G9/G2 exact tests, MI04 R8/G6A original outstanding remain; no activation.

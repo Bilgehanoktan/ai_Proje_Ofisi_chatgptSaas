@@ -321,3 +321,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## MI-04 — shared strict T1 transport transfer (review candidate)
 [Runbook](../master-integration/MI-04-TRANSPORT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md). Exact R7 transport and original test, base port/authority unchanged; selected 5/5 on nine exact blobs, no new gates. Owner review, Unified rebind/full build and protected execution HOLD.
+
+
+## MI-03/04 — shared read-only identity + strict transport review candidate
+Exact MI03 identity_binding and intent_identity transferred onto MI04; source and historical auxiliary test pins preserved. No authority/port replacement, no runtime activation. [Contract runbook](../master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_RUNBOOK.md). G6A explicit entry recommended, local selected 11/11; owner review/full build pending.

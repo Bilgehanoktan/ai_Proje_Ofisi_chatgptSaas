@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI-04-TRANSPORT-TRANSFER",
-  "status": "D0_CONTROLLED_SOURCE_TRANSFER_REVIEW_ONLY",
+  "doc_revision": "MI-03-04-COMMON-READONLY-TRANSPORT",
+  "status": "D0_COMBINED_REVIEW_CANDIDATE_OWNER_REVIEW_AND_BUILD_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "parent_git_commit": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -410,9 +410,17 @@
       "bytes": 20298,
       "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
     },
+    "ai-company-os-backend/app/core/transaction/identity_binding.py": {
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
       "bytes": 7835,
       "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+    },
+    "ai-company-os-backend/app/core/transaction/intent_identity.py": {
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
@@ -2027,8 +2035,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
-  "source_git_commit_note": "Exact R7 shared transport and original 5-case test on product-dev base; no port/authority or runtime wiring; owner review and W8 fingerprint rebuild required before product-dev promotion.",
-  "additional_parent_git_commit": null,
-  "additional_parent_source_manifest_blob": null
+  "parent_source_manifest_blob": "3ca9356ccaaf95e463b8337dff877c05547189e3",
+  "source_git_commit_note": "Exact MI03 two pure review modules and historical auxiliary evidence copied by path onto MI04 candidate, not a merge. G6A authority remains local selected compatibility trial only; product authority/port unchanged. Owner concurrence, reviewed W8 rebind and full build before product-dev promotion.",
+  "additional_parent_git_commit": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+  "additional_parent_source_manifest_blob": "0d03ccf37c6e8a1996a4dad81b9176dc4698f15f"
 }

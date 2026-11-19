@@ -1,0 +1,84 @@
+{
+  "revision": "MI-03-R2",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "sha": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229",
+      "symbols": [
+        "Request",
+        "Binding",
+        "SessionFacts",
+        "Review",
+        "token",
+        "digest",
+        "revision",
+        "valid_request",
+        "valid_binding",
+        "binding_digest",
+        "review_binding",
+        "review_session",
+        "review_boundary",
+        "disposition"
+      ],
+      "dependencies": [
+        "stdlib"
+      ],
+      "kind": "EXACT_SOURCE_TRANSFER_NO_AUTHORITY"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326",
+      "symbols": [
+        "full_intent_digest",
+        "derive_request",
+        "review_bound_intent"
+      ],
+      "dependencies": [
+        "lifecycle.Scope",
+        "review.LogicalIntent",
+        "company_coordination.Member",
+        "identity_binding.Request/Review/review_binding"
+      ],
+      "kind": "EXACT_SOURCE_TRANSFER_NO_AUTHORITY"
+    },
+    {
+      "path": "candidates/D4-R4/test_identity_binding.py",
+      "sha": "b98d86e46be32451479c3cbdc39ddf6ff1611c73",
+      "bytes": 3556,
+      "kind": "ORIGINAL_TEST_OUTSIDE_PRODUCT"
+    },
+    {
+      "path": "candidates/D5-INTENT/test_intent_identity.py",
+      "sha": "7bc6edca2f26e1970b5b63484ea8dd1d11758028",
+      "bytes": 6480,
+      "kind": "ORIGINAL_TEST_OUTSIDE_PRODUCT"
+    },
+    {
+      "path": "candidates/MI-03-R2/run_selected.py",
+      "sha": "a183df0732c40a50c3118c5974430553ba7de849",
+      "bytes": 4619,
+      "sha256": "b66b2a3fed33c1a31fa88d45e79024d4cf99f8115168668da60e24ad2ef28c35",
+      "kind": "SELECTED_REPLAY_HARNESS"
+    }
+  ],
+  "database": [],
+  "api": [],
+  "events": [],
+  "new_dependencies": [],
+  "new_runtime_wiring": [],
+  "manifest": {
+    "previous": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "current": "0d03ccf37c6e8a1996a4dad81b9176dc4698f15f",
+    "entries": [
+      504,
+      506
+    ]
+  },
+  "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+}

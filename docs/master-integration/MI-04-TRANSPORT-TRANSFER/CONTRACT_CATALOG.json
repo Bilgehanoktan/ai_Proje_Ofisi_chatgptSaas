@@ -1,0 +1,146 @@
+{
+  "revision": "MI-04-CONTRACT-REVIEW",
+  "actual_product_changes": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "blob": "e1e977880324664bb359eee3286223a796878f44",
+      "source": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+      "action": "exact read-only transfer",
+      "symbols": [
+        "Request",
+        "Binding",
+        "SessionFacts",
+        "Review"
+      ],
+      "depends": [
+        "stdlib"
+      ],
+      "db_writes": [],
+      "api": [],
+      "events": []
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "blob": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "source": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+      "action": "exact read-only transfer",
+      "symbols": [
+        "derive_request",
+        "full_intent_digest",
+        "review_bound_intent"
+      ],
+      "depends": [
+        "identity_binding",
+        "company_coordination.Member",
+        "transaction.review"
+      ],
+      "db_writes": [],
+      "api": [],
+      "events": []
+    }
+  ],
+  "preserved": [
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+    "product/ai-company-os-backend/app/core/transaction/port.py",
+    "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+    "product/ai-company-os-backend/app/core/transaction/postgres_session.py"
+  ],
+  "proposed_not_transferred": {
+    "recommended_entry": {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "symbol": "execute_protected_authority_fenced_transition",
+      "reason": "G6A executable legacy authority identical to G7 except new separate always-denied entry and typing import; no optional protected_org mode",
+      "status": "OWNER_REVIEW_HOLD; selected local trial only"
+    },
+    "preserve_legacy_D0": {
+      "base_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "g7_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "r8_blob": "6810c8eea0d7323736f1e5ce68d9de85dcc2ca61",
+      "status": "base product authority unchanged in combined candidate; no user selection of legacy via missing input"
+    },
+    "port": {
+      "base_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "r8_blob": "12f40659e916d5722d60c41c27f3116d746545f0",
+      "status": "preserve base; optional protected factory needs owner review and original R6 tests, not silently transfer"
+    },
+    "review_only": {
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "paths": [
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "sha": "f3c37428acd475e09c228bce47d534d6584cd944"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "sha": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "sha": "675615e04059280ec6aa99e9679b4388cd018c2d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "sha": "83f8b81925025fe1dc8fdf5128455862be7bd2c2"
+        }
+      ],
+      "status": "HOLD actual source owner/packaging and IAM write semantics; G7 is historical review, not assignment/role grant"
+    },
+    "owner_auxiliary": "G7 original pin rows remain historical. R3 and ORG06 unqualified imports require reviewed packaging; no sys.path injection in product runtime; original G9 fixture uses exact auxiliary paths. 56 pins are selected inventory, NOT full dependency closure. Original G9 full backend 248 + 27 auxiliary; no repin of original runner."
+  },
+  "auxiliary": [
+    {
+      "path": "candidates/D4-R4/test_identity_binding.py",
+      "blob": "b98d86e46be32451479c3cbdc39ddf6ff1611c73"
+    },
+    {
+      "path": "candidates/D5-INTENT/test_intent_identity.py",
+      "blob": "7bc6edca2f26e1970b5b63484ea8dd1d11758028"
+    },
+    {
+      "path": "candidates/MI-03-R2/ARCHITECTURE_AND_RUNBOOK.md",
+      "blob": "65f515755b2c5ef26ada94aeb48ddca6c87561ef"
+    },
+    {
+      "path": "candidates/MI-03-R2/CATALOG.json",
+      "blob": "42ab549d01176b2f39d584a7cc7d712da8644783"
+    },
+    {
+      "path": "candidates/MI-03-R2/EVIDENCE.json",
+      "blob": "ced4ebca9565aa5b7aa12ba31ec62a8f4f3fe3dc"
+    },
+    {
+      "path": "candidates/MI-03-R2/GITHUB_READBACK.json",
+      "blob": "3d7d403e852e2d87fc935270a0e94ea2395f7466"
+    },
+    {
+      "path": "candidates/MI-03-R2/HANDOVER.md",
+      "blob": "6be45137b46aa71a4515941d2f7e5504ba3126a8"
+    },
+    {
+      "path": "candidates/MI-03-R2/PROGRESS.json",
+      "blob": "18c179b3b8616fc29d8cbabe3d0a8cf7b0cc7349"
+    },
+    {
+      "path": "candidates/MI-03-R2/SOURCE_PINS.json",
+      "blob": "969eaa7641cb9464d28a76779dc1702a70301b4e"
+    },
+    {
+      "path": "candidates/MI-03-R2/exit_code.txt",
+      "blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+    },
+    {
+      "path": "candidates/MI-03-R2/run_selected.py",
+      "blob": "a183df0732c40a50c3118c5974430553ba7de849"
+    },
+    {
+      "path": "candidates/MI-03-R2/test.log",
+      "blob": "f0dde4182512303bdca48a9d1926a4fdd46c635f"
+    }
+  ],
+  "new_engines": 0,
+  "new_api": [],
+  "new_db_tables": [],
+  "new_dependencies": [],
+  "rollback": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8"
+}
