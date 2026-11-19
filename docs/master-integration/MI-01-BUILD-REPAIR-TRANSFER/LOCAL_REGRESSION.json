@@ -1,0 +1,87 @@
+{
+  "revision": "MI-01-BUILD-REPAIR-TRANSFER-LOCAL-REGRESSION",
+  "date": "2026-11-19",
+  "source_commit": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "manifest_blob": "9001c2c634f84fc7280d7fd3f370192873366095",
+  "pins": [
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/draftGraph.ts",
+      "blob": "1ed12b2c77cd4f50264bfd2ddaec14c85c129954",
+      "sha256": "7a37730b3bcd2d5326061a41c8a8dedd3888540e64cc4ff3d216c03c694b5d0f",
+      "bytes": 1365,
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+      "blob": "d7cf426e00e5d55f83c382d176cf699e96ccae16",
+      "sha256": "f6755891d7cad4c5fa11aa667fcc4ff21ca45a12723b71a50391df8c219d7d50",
+      "bytes": 2097,
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/draftInspector.ts",
+      "blob": "e61abe72c4865f7e1b0b78cab9f277b04de6804c",
+      "sha256": "48894f00237520e63f631c3bda9d34722cc00c5b2616082d8f6d5a287f18e5bc",
+      "bytes": 1451,
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+      "blob": "b57e27761e60351e62224b569ad107cd54fd8daf",
+      "sha256": "349a4acb8b7144b1e168f54254d3b0fa1e27c0341e53157bc6906950c456c937",
+      "bytes": 3217,
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+      "blob": "de8b825af52e24e372f6ec9f71788c8ab08cd536",
+      "sha256": "aa77422f9d88642d75785355d2217960ff1868a3d5d874056df7c9cf05e9ea8e",
+      "bytes": 6474,
+      "match": true
+    }
+  ],
+  "source_readback": {
+    "changed_blob_pins": "5/5",
+    "manifest_pin_record_consistency": "505/505",
+    "retained_same_path_records": 501,
+    "casefold_ts_js_stem_collisions": 0,
+    "full_local_tree_audit": "NOT_RUN"
+  },
+  "local_execution": {
+    "classification": "ORIGINAL_EXISTING_16_CASES_RERUN_ON_EXACT_SOURCE_SUBSET",
+    "command": "NODE_PATH=$(npm root -g) node --test tests/ui-p10j20-inspector.test.cjs",
+    "node": "22.16.0",
+    "typescript": "5.8.3 globally installed; not pinned 5.9.3",
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "new_unique_tests": 0,
+    "log": {
+      "sha256": "a570ac4a309c77843fec874820a62e3275be3d224c3e23d9b028bb3bfea9a210",
+      "bytes": 2768,
+      "duration_ms": 417.217168,
+      "raw_local_only": true
+    },
+    "limitations": "Isolated transpile/model/JSX harness with mocked JSX and CSS, not React runtime, full Next, pinned compiler, browser, or backend. Not a new gate."
+  },
+  "environment": {
+    "git": "2.47.3",
+    "git_ls_remote": "BLOCKED Could not resolve host github.com",
+    "full_checkout": "BLOCKED",
+    "w8_prepare": "NOT_RUN",
+    "review": "NOT_GENERATED",
+    "full_build": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "progress": {
+    "development_percent": null,
+    "reason": "MI-01 frozen weighted criteria absent",
+    "acceptance_delta": 0,
+    "core": "12/16 standalone; 11/16 historical unified",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  },
+  "next": "Unified owner review source candidate, exact clean checkout, original W8 runner unit + audit + prepare only; fingerprint review before install/test/smoke. No permission expansion. MI-05/06 existing shared historical browser proof after build; true canonical identity and live stream remain HOLD."
+}
