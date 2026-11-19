@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI-COMMON-SOURCE-REVIEW-01",
-  "status": "ISOLATED_SOURCE_REVIEW_OWNER_AND_FULL_BUILD_HOLD",
+  "doc_revision": "MI-COMMON-ORG-SKILL-02",
+  "status": "ISOLATED_ORG_SKILL_SOURCE_CONVERGENCE_OWNER_BUILD_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "44d7f91f87965fcb08e0c44bacd630204e3684a2",
+  "parent_git_commit": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -1122,6 +1122,10 @@
       "bytes": 1213,
       "sha256": "afa5e6397a4cebc234417c61dabe6448c5d386fa556fb919e2a7eed0cf298460"
     },
+    "ai-company-os-frontend/app/api/demo/organization/route.ts": {
+      "bytes": 527,
+      "sha256": "68586ac79f5111bcbe2b30cb09f3f6b35ef8fbee38ec59881d88bf00ea0a6f22"
+    },
     "ai-company-os-frontend/app/api/demo/outbox/route.ts": {
       "bytes": 1205,
       "sha256": "2332570b374be81c01f05b5000b072a5fb7626c7d1ca07a3c4a03c1b0f64180d"
@@ -1307,8 +1311,24 @@
       "sha256": "65cdefc209e3942dd06f71a3d15157efe1034e1ce9e9582263fdf04d9aea1c9a"
     },
     "ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx": {
-      "bytes": 4781,
-      "sha256": "b30269dbb2aade62b97835b8ec3265f84d0832a63b3a4dad29a1cdea8b24d6f2"
+      "bytes": 4957,
+      "sha256": "0b0506ecdd9979d22e4634fda78946e111c0813143cbd58d9d1afb7f142e4950"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.module.css": {
+      "bytes": 1292,
+      "sha256": "c44d64a61ab0c99546f52db5c314f2ce4cb69c61c35648eec196ed7a2b62f568"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.tsx": {
+      "bytes": 5505,
+      "sha256": "9a71ba7c79649cf350941f0102bd4ab1bae8ddacc7702df2553d78f83160188c"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/skillData.json": {
+      "bytes": 8264,
+      "sha256": "b4e288b3dbac3b8febe7b5dbd35dee6f6f265416d78e31212df5e7eeda7873d8"
+    },
+    "ai-company-os-frontend/features/capabilities/ext06/skillStudioModel.ts": {
+      "bytes": 3792,
+      "sha256": "5b11cc465901de5da4f8723b4869d65da56ceb20211874d5929a4e1f5dd62a45"
     },
     "ai-company-os-frontend/features/capabilities/studioCatalog.ts": {
       "bytes": 3293,
@@ -1355,12 +1375,12 @@
       "sha256": "2fe6316918d262665054d05a034b5d1d1bc6200ac1b1dd0b21956de89a8d4c9c"
     },
     "ai-company-os-frontend/features/data/projectionRead.ts": {
-      "bytes": 2984,
-      "sha256": "ba40068ea9807347a547ddd82721bc0acf750f2a058c353561ac8ab3e32c650d"
+      "bytes": 3085,
+      "sha256": "a1147ebd4560c7322e974f91dce97c55fe8ddfa157e8c78adb51f3a4ac820a7f"
     },
     "ai-company-os-frontend/features/data/projectionRegistry.ts": {
-      "bytes": 1528,
-      "sha256": "c7fec9d9b6adde98f259c9fd662d56f68f4a5799ad25e215f0d570b7635756ce"
+      "bytes": 1633,
+      "sha256": "edd44f45b726cff95bae2067b4d5e80612b75dbfd31a62027a41354b3c2c5799"
     },
     "ai-company-os-frontend/features/data/projectionScope.ts": {
       "bytes": 1605,
@@ -1383,8 +1403,8 @@
       "sha256": "5cedc7d451cc1f6f2481dcc54ce442db00997fa92bd6ce1d96021f2a8ee30332"
     },
     "ai-company-os-frontend/features/evidence/AgentDirectory.tsx": {
-      "bytes": 4462,
-      "sha256": "f1586cc9a8a65df1f315e650e37f3b92dd4c35f9ac2202808dd8ef00a82bb249"
+      "bytes": 4561,
+      "sha256": "db2e1aca824e334f749eb7078796916854d3a9c9ff818b085a51daf2f5d8219f"
     },
     "ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css": {
       "bytes": 1450,
@@ -1554,6 +1574,22 @@
       "bytes": 2113,
       "sha256": "9c2dcdc394975c708c185e4c8fe002bfbd8d8d45c34fa5f9e4791408b9d9427d"
     },
+    "ai-company-os-frontend/features/organization/OrganizationReadback.tsx": {
+      "bytes": 1732,
+      "sha256": "34bb77b59c989b1ecb0ec3b75d04be68923bba7c4d5d2eccf922eab78ccb741a"
+    },
+    "ai-company-os-frontend/features/organization/organizationOwnerBinding.ts": {
+      "bytes": 3192,
+      "sha256": "19c5163ad19c53118ed51e43844efc3d84a319c58a3ff311f0727aea2753a6cc"
+    },
+    "ai-company-os-frontend/features/organization/organizationProjection.ts": {
+      "bytes": 3939,
+      "sha256": "254a188851fa2f0e63661f2dd6977d7446a7f5ae7d4dd0622ea4a40f578dd461"
+    },
+    "ai-company-os-frontend/features/organization/organizationProxy.ts": {
+      "bytes": 2437,
+      "sha256": "bf604ecaaa9e179ba1048f9d9d5a7dee2846a164bc2f4bda163477d63f32eed3"
+    },
     "ai-company-os-frontend/features/planProjection.ts": {
       "bytes": 76,
       "sha256": "f7aa4f158d7963d43bb55c5137790a0eec800c5a5f10dd687e2236b053354530"
@@ -1627,8 +1663,8 @@
       "sha256": "9f2e2c050d912b902cd999e8027b228b69a05ad7297a36417f848555d47ca0ff"
     },
     "ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx": {
-      "bytes": 3075,
-      "sha256": "cd349cfecba4ad097c9a79cd854a60b5be333c0862924a3b5bb0bd2e8127c1f3"
+      "bytes": 3071,
+      "sha256": "915012ceca4b0c5094e6c48890de3b87eaeab78bb200944f5b713eb08a34e478"
     },
     "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx": {
       "bytes": 5795,
@@ -1983,8 +2019,8 @@
       "sha256": "82f828adfcde67f3186f613d07d733495d78027b277d5fcd41c8bd789df46faf"
     },
     "ai-company-os-frontend/tests/projection-registry.test.cjs": {
-      "bytes": 1699,
-      "sha256": "8af4094142bf6166542d0681ea193f53384a84378fbf558d5e1846fad289edbf"
+      "bytes": 1728,
+      "sha256": "d69dd357b16ffb412effb3d4cce631030961b66f3c374619e556bb3ecbfe0ed3"
     },
     "ai-company-os-frontend/tests/projection-scope.test.cjs": {
       "bytes": 1754,
@@ -2123,8 +2159,12 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "9001c2c634f84fc7280d7fd3f370192873366095",
-  "source_git_commit_note": "Single-parent controlled exact source transfer; owner review required; previous manifests retained by commit.",
+  "parent_source_manifest_blob": "b80e834fe081cb1b8917798a11793eb50dce9688",
+  "source_git_commit_note": "See source transfer evidence and commit; self-reference excluded",
   "additional_parent_git_commit": null,
-  "additional_parent_source_manifest_blob": null
+  "additional_parent_source_manifest_blob": null,
+  "transfer_owner_commits": {
+    "ORG": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "SKILL": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+  }
 }
