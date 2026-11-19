@@ -1,0 +1,87 @@
+{
+  "revision": "W5-MEM-05E",
+  "status": "PROPOSED_OWNER_REVIEW_HOLD",
+  "parent": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47",
+  "refs": {
+    "d5g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "d5g6b": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
+    "w5j2r4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "org10r10": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "manifest_differences": {
+    "d5g6a": {
+      "changed": [
+        "agent_runtime/joint_context.py",
+        "agent_runtime/memory_witness.py",
+        "transaction/intent_authority.py",
+        "transaction/postgres_session.py",
+        "memory_engine/snapshot_store.py"
+      ],
+      "owner_only": [
+        "iam_session.py",
+        "transaction/identity_binding.py",
+        "transaction/identity_fence_review.py",
+        "transaction/intent_identity.py",
+        "transaction/org_membership_review.py"
+      ]
+    },
+    "d5g6b": {
+      "changed": [
+        "agent_runtime/joint_context.py",
+        "agent_runtime/memory_witness.py",
+        "transaction/intent_authority.py",
+        "memory_engine/snapshot_store.py"
+      ],
+      "owner_only": [
+        "iam_session.py",
+        "transaction/core_org_session_review.py",
+        "transaction/identity_binding.py",
+        "transaction/identity_fence_review.py",
+        "transaction/intent_identity.py",
+        "transaction/org_membership_review.py"
+      ]
+    },
+    "w5_org_unified_changed": [
+      "agent_runtime/joint_context.py",
+      "agent_runtime/memory_witness.py",
+      "memory_engine/snapshot_store.py"
+    ]
+  },
+  "boundaries": [
+    {
+      "owner": "Memory",
+      "exact": "memory_recovery_review.inspect_memory_recovery + memory_gateway_review.inspect_memory_gateway",
+      "new": "inspect_recovered_memory_gateway only; all HOLD",
+      "required": "Independent monotonic witness, verified latest snapshot and retention custody"
+    },
+    {
+      "owner": "D5-G6A",
+      "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "symbol": "execute_protected_authority_fenced_transition",
+      "required": "Existing root, current protected claim and external pin; strict commit path remains HOLD",
+      "postgres_session_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9"
+    },
+    {
+      "owner": "D5-G6B/ORG",
+      "blob": "d314d1fdec1220cd050f2d7276e5e340381644d1",
+      "symbol": "inspect_core_org_session_reference",
+      "required": "Historical match not current assignment; owner-acquired scoped membership and IAM provenance, not caller proposal"
+    },
+    {
+      "owner": "W5-J2-R4",
+      "blob": "3331464221f9c71d5659de9d47213d1a58ede463",
+      "symbol": "plan_operation / inspect_operation / inspect_aliases",
+      "required": "Canonical T1 phase mapping, receipt identity and UNKNOWN no replay; candidate only"
+    },
+    {
+      "owner": "T1/D4",
+      "required": "Exact operation journal and actual consistent commit/readback, all writers share owner-controlled locks/fence; no absence-based rollback"
+    },
+    {
+      "owner": "Unified",
+      "required": "Locked full checkout, Windows, PostgreSQL and independent acceptance"
+    }
+  ],
+  "rule": "No positive owner recovery or new publisher; no protected adapter until source divergence resolved by owners and current actual protected readback is available."
+}
