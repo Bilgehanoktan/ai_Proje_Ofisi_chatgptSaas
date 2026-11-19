@@ -1,0 +1,13 @@
+# MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING
+
+## What / why / where / how
+Six new supplemental IAM/0215 readback tests on six exact G6A/common source bytes; actual disposable SQLite and ephemeral Ed25519. Test source and raw log match locally calculated Git blob identities. This is not the original 50/7/fullchain or independent acceptance. Use only a fresh isolated test closure: place six pinned product files under backend app tree, place test under tests, verify Git blob and SHA-256, run Python 3.13.5 with cryptography 46.0.4: python -B -m unittest discover -s tests -p test_iam_external_claim_review.py -v. No real data/credential or provider. Never infer authorization from signed readback; all decisions remain HOLD. Test deliberately restores only disposable fixture with retained observation, not all-store rollback proof.
+
+## GATE01–03 source and packaging
+Existing exact 12-path delta retained for owner review, not applied; found missing 8 ORG Python modules and 2 SQL resources from ORG-05R3/ORG-06. Product has no such basename. G5/G7 use top-level imports and test harness candidate sys.path; canonical packaging and exact class identity/resource lookup must be agreed by ORG/Core/Unified owners. Do not introduce competing engine, candidate path injection into live service, or migrate SQLite schema as PostgreSQL. GATE02 actual assignment and role issuance still owner HOLD; GATE03 exact G9 seven and G2 50 remain NOT_RUN. Source owners must ratify G6A vs R8 contract before shared product replacement. Current user direction authorizes continued isolated development, not new actual grants or bypass of owner contract.
+
+## GATE04–05
+Readback compatibility passed, but joint publisher D5-E is a legacy-derived synthetic fixture, not production or approved IAM integration. P06/P07/P08 and mixed writer retirement remain HOLD. Common 539 files/538 manifest path-size matches; Python pinned environment matches 3/6 direct pins, global TypeScript 5.8.3 vs 5.9.3, DNS unavailable. Seven selected Python files compile only. Full checkout/install/build/browser not run. Keep original lock immutable and fresh W8 reviewed fingerprint. No source/API/DB/dependency change; no CI/main/production.
+
+## Next / rollback
+T1/D4/IAM/Unified owner review exact Authority/IAM source; ORG/Core package namespace, resources and owner-issued assignment separately. Run existing exact G2/G9/R9 and W8/344 when full checkout and reviewed environment available; no PC request now. Preserve previous evidence and prior decisions. Reviewed inverse governance commit only; no writer downgrade, claim reset, retry or data restore.

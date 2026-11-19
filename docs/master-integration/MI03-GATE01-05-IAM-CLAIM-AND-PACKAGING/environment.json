@@ -1,0 +1,89 @@
+{
+  "scope": "local environment preflight, not complete product checkout or build",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "direct_python_pins": [
+    {
+      "name": "fastapi",
+      "expected": "0.163.0",
+      "installed": "0.128.2",
+      "match": false
+    },
+    {
+      "name": "starlette",
+      "expected": "1.10.0",
+      "installed": "0.50.0",
+      "match": false
+    },
+    {
+      "name": "uvicorn",
+      "expected": "0.34.2",
+      "installed": "0.48.0",
+      "match": false
+    },
+    {
+      "name": "httpx",
+      "expected": "0.28.1",
+      "installed": "0.28.1",
+      "match": true
+    },
+    {
+      "name": "jsonschema",
+      "expected": "4.26.0",
+      "installed": "4.26.0",
+      "match": true
+    },
+    {
+      "name": "cryptography",
+      "expected": "46.0.4",
+      "installed": "46.0.4",
+      "match": true
+    }
+  ],
+  "match": [
+    3,
+    6
+  ],
+  "node": {
+    "command": [
+      "node",
+      "-v"
+    ],
+    "exit": 0,
+    "output": "v22.16.0"
+  },
+  "npm": {
+    "command": [
+      "npm",
+      "-v"
+    ],
+    "exit": 0,
+    "output": "10.9.2"
+  },
+  "typescript": {
+    "command": [
+      "tsc",
+      "-v"
+    ],
+    "exit": 0,
+    "output": "Version 5.8.3"
+  },
+  "required_typescript": "5.9.3",
+  "network_dns": {
+    "github.com": "gaierror: [Errno -3] Temporary failure in name resolution",
+    "api.github.com": "gaierror: [Errno -3] Temporary failure in name resolution",
+    "registry.npmjs.org": "gaierror: [Errno -3] Temporary failure in name resolution"
+  },
+  "compiled_selected_python_files": [
+    "app/__init__.py",
+    "app/core/__init__.py",
+    "app/core/iam_session.py",
+    "app/core/transaction/__init__.py",
+    "app/core/transaction/external_claim_review.py",
+    "app/core/transaction/intent_authority.py",
+    "tests/test_iam_external_claim_review.py"
+  ],
+  "full_build": "NOT_RUN",
+  "install": "NOT_RUN",
+  "activation": "HOLD"
+}

@@ -1,0 +1,299 @@
+{
+  "revision": "MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_NEW_SYNTHETIC_IAM_CLAIM_TESTS_PLUS_REMOTE_PACKAGING_AND_LOCAL_ENVIRONMENT_PREFLIGHT",
+  "refs": {
+    "governance_parent": "6a0f216b51be8ff867af71dabd6c512c94b1730a",
+    "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "g9": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "d5d": "dfda007bb51ea8d9069bae7d03f148872f32c934",
+    "d5e": "4b23df3a21846f2513e4b93e84aae10cd953124c",
+    "r9": "253128a2236ee706486e70acc97e472ededac26b"
+  },
+  "run": {
+    "command": "python -B -m unittest discover -s tests -p test_iam_external_claim_review.py -v",
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "source_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+        "bytes": 10028,
+        "sha256": "95a2070d437450198ed2e9738b8159ea53b4a877e7303b7ece75c0c01927ccaf",
+        "source": "6bab62305d2ea15f8608f7835270ae027ce01e83"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "bytes": 15424,
+        "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+        "source": "6bab62305d2ea15f8608f7835270ae027ce01e83"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+        "blob": "f7616fca91825a63302e3fb2a41da8a0411eeed2",
+        "bytes": 5574,
+        "sha256": "9fc7e5de6af70271a11da25db6a68151385aaff82ba956f99d48a735793ba667",
+        "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+      }
+    ],
+    "pass": 6,
+    "total": 6,
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "seconds": 0.09,
+    "new_unique_test_methods": 6,
+    "methods": [
+      "test_bound_iam_claim_is_readable_without_new_write",
+      "test_external_retained_consumed_observation_detects_restore",
+      "test_iam_root_publication_remains_hold",
+      "test_revocation_preserves_consumed_claim_and_no_replay",
+      "test_revoked_observation_cannot_consume_new_claim",
+      "test_unclaimed_iam_readback_never_grants"
+    ],
+    "test": {
+      "path": "docs/master-integration/MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING/test_iam_external_claim_review.py",
+      "blob": "558b166d10bf6959a622308dca11d9588ed13919",
+      "sha256": "b1cdcfc6587a56d8d5bb49a07e637379ecef1d2cd81bcaa8f0aa8d51d8812f64",
+      "bytes": 5614
+    },
+    "log": {
+      "path": "docs/master-integration/MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING/replay.log",
+      "blob": "25d27cad699f19117d55804ac386bdfe0ea024de",
+      "sha256": "da35ce77b58f8972b8aa2c7fe9ecc77bed52aa3308f97aa91ff5b25703abf264",
+      "bytes": 1062
+    },
+    "scope": "Actual disposable SQLite and ephemeral Ed25519 only. Retained observation not independent custody; claim reader does not verify IAM pin as permission, all decisions HOLD. No T1/PG, protected execution, independent acceptance or real issuer."
+  },
+  "packaging": {
+    "status": "MISSING_RUNTIME_IMPORT_CLOSURE_OWNER_HOLD",
+    "direct_imports": [
+      {
+        "module": "org_membership_review.py",
+        "lines": [
+          47,
+          48,
+          49
+        ],
+        "names": [
+          "durable_ops",
+          "integration_guard",
+          "operations"
+        ]
+      },
+      {
+        "module": "core_org_session_review.py",
+        "lines": [
+          29
+        ],
+        "names": [
+          "org_core_bridge"
+        ]
+      }
+    ],
+    "auxiliary_closure": [
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "bytes": 8942,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "blob": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "bytes": 4996,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "blob": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "bytes": 3620,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "blob": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "bytes": 9224,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "blob": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "bytes": 8075,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "blob": "e0b9078284922d281996869daa15a455572c1785",
+        "bytes": 3179,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "blob": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "bytes": 2342,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "bytes": 1725,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "bytes": 2787,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      },
+      {
+        "path": "candidates/ORG-06/org_core_bridge.py",
+        "blob": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+        "bytes": 6701,
+        "common_path_present": false,
+        "common_product_basename_matches": []
+      }
+    ],
+    "python_modules": 8,
+    "sql_resources": 2,
+    "rule": "Original G9 sys.path injects candidate dirs in disposable fixture; cannot use that as normal product packaging. ORG/Core/Unified owners must choose canonical namespace, preserve exact class identities and SQL resource paths; do not duplicate ORG engine or copy SQLite fixture as live PostgreSQL."
+  },
+  "gate02": {
+    "status": "OWNER_ISSUANCE_HOLD",
+    "existing": "G8 proposal and 3 diagnostic tests retained; P02 A-E NOT_RUN, actual scoped assignment uniqueness/supersession and independent registry/member/role issuance open"
+  },
+  "gate03": {
+    "status": "ORIGINAL_G9_SEVEN_NOT_RUN",
+    "source": "G9 pinned checkout 248 backend/56 pins; original tests require candidate fixtures, retain original runner and separate common replay. 221 unique text blobs recovered from older nested project archives, only 3 match examined 25 distinct G5 source pin blobs; not current full checkout."
+  },
+  "gate04": {
+    "status": "NEW_SELECTED_IAM_READBACK_PASS_STRICT_COMMIT_HOLD",
+    "publication": "D5-D 5 and D5-E 15 historical fixture tests, no duplicate count; D5-E derives from legacy Authority, not approved IAM publisher. P06/P07/P08 remain HOLD; full restore including retained pin and all writers not proven."
+  },
+  "gate05": {
+    "status": "ENVIRONMENT_BLOCKED_BUILD_NOT_RUN",
+    "manifest_path_size": [
+      538,
+      538
+    ],
+    "product_files": 539,
+    "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "dependency_refs": [
+      {
+        "path": "product/ai-company-os-backend/requirements.txt",
+        "blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+        "bytes": 128
+      },
+      {
+        "path": "product/ai-company-os-backend/requirements-test.txt",
+        "blob": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187",
+        "bytes": 92
+      },
+      {
+        "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+        "blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+        "bytes": 120
+      },
+      {
+        "path": "product/ai-company-os-frontend/package.json",
+        "blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+        "bytes": 619
+      },
+      {
+        "path": "tests/integration/w8_mi_common_02.py",
+        "blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+        "bytes": 6151
+      },
+      {
+        "path": "docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json",
+        "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+        "bytes": 33618
+      }
+    ],
+    "environment_path": "docs/master-integration/MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING/environment.json",
+    "environment_blob": "cc90cccf90cfce985566e8cd0e970f8b875683e3",
+    "environment_sha256": "c63a3f9a06c8f02b6066cd5cb9cf4a512a46ba9f4927bb355e630987e743ed23",
+    "python_direct_pins": [
+      3,
+      6
+    ],
+    "global_typescript": "5.8.3",
+    "required_typescript": "5.9.3",
+    "selected_python_compile": [
+      7,
+      7
+    ],
+    "lock_rule": "Original 33618-byte lock retained; no regen, fresh Unified fingerprint and exact approved wheelhouse required. No install or full build."
+  },
+  "source_transfer": {
+    "status": "HOLD_OWNER_CONCURRENCE",
+    "proposal": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/PROPOSED_SOURCE_DELTA.json",
+    "correction": "12-path proposal insufficient for product ORG execution; retain for reviewed exact GATE01 only; GATE02/03 require ORG packaging decision before application. 550 remains hypothetical pre-packaging count."
+  },
+  "progress": {
+    "criteria": "D5-G1-D0-session-v1",
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ],
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "new_supplemental_tests": 6,
+    "new_product_gate": 0,
+    "product_changes": 0
+  },
+  "rollback": "Evidence-only reviewed revert. No source downgrade on IAM DB, no claim reset, no DB migration, no force push."
+}
