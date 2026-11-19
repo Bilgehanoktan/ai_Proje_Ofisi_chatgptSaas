@@ -1,0 +1,36 @@
+{
+  "classification": "CONCURRENT_OWNER_WORKSTREAM_RECONCILIATION_STATIC_ONLY",
+  "source": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+  "owner_catalog_blob": "4586eccba99154a4f67cb998921582a391635f3f",
+  "base": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+  "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "previous_original_g9_durable_ops": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+  "new_assignment_candidate_pins": [
+    {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "bytes": 11599
+    },
+    {
+      "path": "candidates/ORG-05R3/assignment_lifecycle.py",
+      "blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+      "bytes": 10531
+    },
+    {
+      "path": "candidates/ORG-05R3/assignment_review.sql",
+      "blob": "3e887b10263f44b601f6a811a89687b2ee4d864e",
+      "bytes": 784
+    }
+  ],
+  "reported_original_owner_tests": [
+    20,
+    20
+  ],
+  "original_unchanged_g9_source": "68ec99c673cceadffecf1d192371c10c328caa74",
+  "original_g9_must_not_repin": true,
+  "actual_operations_store_core_adapter": "NOT_RUN",
+  "actual_P02": "NOT_RUN",
+  "scope": "Preserve existing 10 original ORG dependencies as historical G9 fixture only. If owner chooses assignment extension, package review must also consider changed durable_ops and new assignment_lifecycle + assignment_review.sql (9 Python, 3 SQL closure with extension, not approved transfer). Avoid copying old durable_ops to product before owner choice. No new tests or product changes in this supplemental record.",
+  "owner_review": "HOLD_ORG_CORE_UNIFIED",
+  "acceptance_delta": 0
+}
