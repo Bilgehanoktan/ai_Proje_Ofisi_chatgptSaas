@@ -1,0 +1,42 @@
+{
+  "revision": "MI-COMMON-05-LOCAL-CHECKOUT",
+  "date": "2026-11-19",
+  "source_commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+  "expected_git_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+  "scope": "Isolated exact source/archive verification and local checkout; no product/runtime/API/DB modifications",
+  "files": {
+    "mi05_verified_local_checkout.py": {
+      "kind": "isolated recovery utility",
+      "symbols": ["object_sha", "safe_name", "tree_sha", "read_archive", "archive_download", "_verified_asset", "seed_cache", "run", "main"],
+      "inputs": ["GitHub pinned commit ZIP", "original Model/Memory 114 pin JSON", "historical Core 55 lock JSON"],
+      "outputs": ["full_checkout/", "pinned_regression_stage/model/", "pinned_regression_stage/core/", "git_blob_cache/", "TRANSFER_REPORT.json"],
+      "dependencies": ["Python >= 3.10 standard library", "existing pinned_source_recovery.py from exact GitHub archive"],
+      "side_effects": "Only new explicitly chosen local destination directory; no install, test, network API call or live authority"
+    },
+    "test_mi05_verified_local_checkout.py": {
+      "kind": "independent fixture control tests",
+      "count": 12,
+      "external_git_compare": true,
+      "scope": "synthetic ZIP, path/mode/hash checks, 114/55 separate-stage fixture, fail-closed behavior"
+    },
+    "POWERSHELL_KOPYALA_YAPISTIR.txt": {
+      "kind": "Windows PowerShell 5.1 user entrypoint",
+      "execution_policy_change": false,
+      "administrator_required": false
+    }
+  },
+  "original_source_lock": {
+    "model_memory_rows": 114,
+    "historical_core_rows": 55,
+    "shared_paths": 26,
+    "different_shared_paths": 2,
+    "missing_sha256_optional_model": 28,
+    "missing_sha256_optional_core": 6,
+    "original_recovery_helper_blob": "70c9c0970632834a2c4ba9cd4e4d718bfc14c2b4",
+    "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f"
+  },
+  "architecture": "One immutable GitHub archive verified by exact full Git root tree; read all members safely and only then write new full_checkout and call original Model/Core pinned offline staging. Historical sources isolated. No proprietary transfer protocol, no new runtime module.",
+  "rollback": "Do not overwrite previous state; remove only new MI05_... folder after inspection. Do not rewrite branch histories.",
+  "tests": {"actual_local_helper_controls": 12, "failures": 0, "skipped": 0, "original_model_344": "NOT_RUN", "original_core_29": "NOT_RUN", "full_w8_build": "NOT_RUN", "browser": "NOT_RUN", "protected_commit": "HOLD"},
+  "planned_acceptance_change": 0
+}

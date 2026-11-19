@@ -1,0 +1,31 @@
+& {
+    $ErrorActionPreference = 'Stop'
+    $paket = Join-Path $env:USERPROFILE 'Downloads\AIOS_MI05_YEREL_AKTARIM.zip'
+    if (-not (Test-Path -LiteralPath $paket)) {
+        throw "Paket bulunamadi: $paket (ZIP dosyasini Downloads klasorune kaydedin.)"
+    }
+    $ana = 'C:\AIOS'  # Yeterli bos alan yoksa D:\AIOS gibi degistirin.
+    New-Item -Path $ana -ItemType Directory -Force | Out-Null
+    $calisma = Join-Path $ana ('MI05_' + (Get-Date -Format 'yyyyMMdd_HHmmss'))
+    New-Item -Path $calisma -ItemType Directory -ErrorAction Stop | Out-Null
+    $arac = Join-Path $calisma 'arac'
+    Expand-Archive -LiteralPath $paket -DestinationPath $arac -ErrorAction Stop
+    if (-not (Get-Command py -ErrorAction SilentlyContinue)) {
+        throw 'Python launcher (py) bulunamadi; Python 3.10+ kurulumunu kontrol edin.'
+    }
+    & py -3 -B (Join-Path $arac 'mi05_verified_local_checkout.py') --output (Join-Path $calisma 'verified')
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Aktarim HOLD: $calisma\verified.partial\TRANSFER_HOLD.json" -ForegroundColor Yellow
+        throw 'Kaynak dogrulamasi tamamlanamadi; otomatik test/kurulum calistirilmadi.'
+    }
+    $rapor = Join-Path $calisma 'verified\TRANSFER_REPORT.json'
+    $veri = Get-Content -LiteralPath $rapor -Raw -Encoding UTF8 | ConvertFrom-Json
+    if (($veri.status -ne 'SOURCE_RECOVERED_TESTS_NOT_RUN') -or
+        ($veri.checkout_files_verified -ne 1953) -or
+        ($veri.model_rows -ne 114) -or ($veri.core_rows -ne 55)) {
+        throw 'Bilinmeyen rapor durumu; test veya build calistirmayin.'
+    }
+    Write-Host 'KAYNAK AKTARIMI DOGRULANDI: 1953 dosya, Model 114, Core 55' -ForegroundColor Green
+    Write-Host "Rapor: $rapor"
+    Write-Host 'Sonraki asama: raporu ChatGPT sohbetine yukleyin; testler henuz calistirilmadi.'
+}

@@ -1,0 +1,11 @@
+MI-COMMON-05: verified local checkout helper validation
+Environment: Python 3.13.5 (isolated ChatGPT container), 2026-11-19
+Command: python -m unittest -v test_mi05_verified_local_checkout.py
+Result: 12 tests, 0 failures, 0 errors, 0 skipped; exit 0
+Scopes: Git tree SHA compared to independent git write-tree; ZIP duplicate,
+symlink, traversal, wrong tree, wrong root, oversize rejection; stage overwrite
+and disk guard; 114+55 synthetic separate-stage restoration; changed source
+rejected before stage commit.
+The actual 1,953-file GitHub ZIP was NOT downloaded in this environment.
+Original Model/Memory 344, historical Core 29, full W8 build, browser,
+protected COMMIT and independent acceptance remain NOT_RUN/HOLD.
