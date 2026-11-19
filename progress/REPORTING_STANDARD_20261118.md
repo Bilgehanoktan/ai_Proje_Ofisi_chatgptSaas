@@ -19,3 +19,7 @@ Kullanıcı talebi: önceki turda önerilen geliştirme/kabul ayrımını bütü
 
 ## Yayılım ve geri dönüş
 Bu dosya ve JSON, ayrı raporlama dalında ortak referanstır. Kullanıcı proje talimatlarına referansı eklediğinde mevcut ve yeni proje sohbetleri aynı standardı kullanabilir; diğer sohbetlere otomatik mesaj gönderilmedi. Ana dal veya ürün dalları birleştirilmedi. Geri dönüş: raporlama standardı referansını kaldır; eski kanonik dosyalar aynen korunur.
+
+
+## 2026-11-19 — Merkezi entegrasyon çalışma düzeni (MI-BOOT-01)
+Kullanıcı merkezi entegrasyon programını başlatmayı onayladı. Her geliştirme turunun başlangıcında `planning/master-integration-governance` dalındaki `docs/master-integration/WORKING_STANDARD.md` ve `progress/MASTER_INTEGRATION_CURRENT.json` dosyalarını **güncel head üzerinden** oku; bu standardın kriterleri ve önceki güvenlik kararları aynen geçerlidir. İlk kayıt: [MI-BOOT-01](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/commit/4df83b6e72a48d78d4a9df0ecad0483ef00241ba). Ortak geçici ürün tabanı `integration/product-dev` (U3A, tam build/kabul BLOCKED); yeni görevler açılmadan aktif sahiplik ve çakışma kontrolü, kaynak pinleri, entegrasyon kuyruğu ve rollback zorunlu. Mevcut hatları topluca birleştirme; CI/main/PROD/gerçek dış etkiler ve bağımsız kabul izinleri değişmez. Bu ek raporlama yöntemini veya kabul yüzdelerini değiştirmez. Genel ağırlıklar kapsam/kriter dondurulana kadar öneridir.
