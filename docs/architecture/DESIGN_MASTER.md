@@ -321,3 +321,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## MI-COMMON-SOURCE-REVIEW-01 — isolated convergence candidate
 Existing MI-01 repair, MI-03/04 pure identity/transport and MI-07/08 Model/Memory source transfers coexist in one manifest. No protected entry or runtime authorization selected; all owner decisions and original candidate commits retained. [Evidence and scope](../master-integration/MI-COMMON-SOURCE-REVIEW-01/EVIDENCE.json) · [Runbook](../master-integration/MI-COMMON-SOURCE-REVIEW-01/RUNBOOK.md). Original 0207 regression uses four exact historical overlays; no lock repin. Full build, selected 344, owner review and browser remain HOLD.
+
+
+## MI-COMMON-ORG-SKILL-02 — closed ORG/Skill convergence
+[Architecture and runbook](../master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md). 14 exact owner paths + one test adaptation. Original npm lock staged without regeneration via new U3 adapter; 7 fixture controls, full build and owner ratification HOLD.

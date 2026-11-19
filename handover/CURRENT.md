@@ -139,3 +139,7 @@ Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manif
 
 ## UI-P10D
 [Architecture and limits](CURRENT_UI.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.
+
+
+## MI-COMMON-ORG-SKILL-02
+Source 2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5; 539 product files, 538 manifest entries. 14 exact owner files, one test adjustment; 7 adapter controls only, full build/regressions NOT_RUN. [Runbook](../docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md). Existing owners and permissions retained. Rollback bf87d5c48c7fee97fe12d0a28df3be80249f7306.
