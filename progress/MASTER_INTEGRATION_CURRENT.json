@@ -1,0 +1,153 @@
+{
+  "revision": "MI-BOOT-01",
+  "date": "2026-11-19",
+  "mode": "CONTROLLED_INTEGRATION",
+  "product_dev": {
+    "ref": "integration/product-dev",
+    "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
+    "status": "PROVISIONAL_CANDIDATE_FULL_BUILD_BLOCKED",
+    "product_files": 505,
+    "manifest_entries": 504
+  },
+  "main": {
+    "sha": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+    "change": "none"
+  },
+  "staging": {
+    "ref": "integration/product-staging",
+    "status": "NOT_CREATED; after U3B clean build and candidate review"
+  },
+  "progress_standard": {
+    "ref": "planning/project-wide-progress-reporting",
+    "sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+    "path": "progress/REPORTING_STANDARD_20261118.md"
+  },
+  "branch_count": 257,
+  "queue": [
+    {
+      "id": "MI-01",
+      "owner_role": "Unified/U3B",
+      "source_ref": "integration/unified-u3a-product-acceptance",
+      "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "next": "Tam temiz checkout, manifest, kilitli bağımlılık build ve browser; mevcut U3B sahibinin kanıtını önce oku",
+      "priority": "P0",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-02",
+      "owner_role": "Core / DB",
+      "source_ref": "integration/0227-local-environment-preflight",
+      "observed_sha": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+      "next": "Kanonik PG/RLS, pool ve transaction sınırı; Core sahibiyle uzlaştır",
+      "priority": "P0",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-03",
+      "owner_role": "T1 / IAM / ORG",
+      "source_ref": "workstream/0230-d5g6b-core-org-history-session-review",
+      "observed_sha": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
+      "next": "G6B sahiplik ve geçmiş incelemesi, G6A ve C-R8 ile pozitif protected preclaim/publisher/commit; 53 R8 kanıtını oku",
+      "priority": "P0",
+      "status": "HOLD",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-04",
+      "owner_role": "T1 / R8",
+      "source_ref": "planning/0230-d5c-r8-g5-t1-protected-integration",
+      "observed_sha": "459c3eb16302375cd352140a0d6023fb1554d566",
+      "next": "Transport evidence dalı ve son regression readback; yeni test açmadan mevcut sonuçları uzlaştır",
+      "priority": "P0",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-05",
+      "owner_role": "Premium UI",
+      "source_ref": "integration/p10j24b-source-recovery",
+      "observed_sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "next": "U3B build sonrası aynı canlı projection, W8 ve UI kapıları",
+      "priority": "P1",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-06",
+      "owner_role": "ORG / Office",
+      "source_ref": "integration/org-07c-r8-closed-studio",
+      "observed_sha": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+      "next": "ORG-10 ailesi, üyelik/assignment sahibi ve office projection; mevcut sahipleri koru",
+      "priority": "P0",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-07",
+      "owner_role": "Model Gateway",
+      "source_ref": "workstream/w5-j2-r4-shared-transaction-contract",
+      "observed_sha": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "next": "Kanonik transaction checkpoint, W5-J Windows kanıtı; PG ve provider kapıları",
+      "priority": "P1",
+      "status": "HOLD",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-08",
+      "owner_role": "Memory",
+      "source_ref": "integration/w5-mem-05e-r1-authority-source-alignment",
+      "observed_sha": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "next": "MEM-05D/E ve R1 owner review, recovery ve authority; tekrar geliştirme yok",
+      "priority": "P1",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-09",
+      "owner_role": "Skill",
+      "source_ref": "planning/w5-ext-07r6-source-preflight",
+      "observed_sha": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+      "next": "EXT-07R6 tam kilitli build ve source closure; provider/araç çağrısı HOLD",
+      "priority": "P1",
+      "status": "OPEN",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    },
+    {
+      "id": "MI-10",
+      "owner_role": "QA / IV / CI",
+      "source_ref": "planning/project-wide-progress-reporting",
+      "observed_sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+      "next": "CI tasarımı ve izinli local test matrisi; CI etkinleştirme ve bağımsız kabul ayrı onay",
+      "priority": "P1",
+      "status": "HOLD",
+      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
+      "evidence": "branch head observed only; latest acceptance not reconciled"
+    }
+  ],
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  },
+  "acceptance_change": "none",
+  "tests_this_round": "NOT_RUN",
+  "next": "MI-01 U3B evidence and exact dependency closure; MI-02–04 owner coordination in parallel"
+}

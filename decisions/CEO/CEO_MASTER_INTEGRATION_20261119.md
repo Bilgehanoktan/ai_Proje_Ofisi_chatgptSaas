@@ -1,0 +1,2 @@
+# 2026-11-19 — Merkezi entegrasyon çalışma yönü
+Kullanıcı: “başlatalım önerini ve bu çalışma şeklini hafızana kaydet”. Önceki öneri: ortak product-dev tabanı, merkezi entegrasyon rolü, kaynak/test çakışma kontrolü, CI hazırlığı, sabit kapsam/ ağırlıklar, MVP önceliği. Bu kayıt genel çalışma yönü onayıdır; ayrı güvenlik/yürütme izinleri değişmez. U3A geçici taban seçimi ve staging'i erteleme bu turun teknik kararıdır. Ayrıntılı kapsam/kanıt kriterleri ve CI etkinleştirme bu kararla kabul edilmez.
