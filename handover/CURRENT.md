@@ -261,3 +261,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119 — CI readback
 Actual GitHub Actions run 44613960595: 3/3 PASS, source SHA256 538/538, 42/42 original selected D0 SQLite, Next build/typecheck PASS, real local SQLite/FastAPI and SSE-compatible browser diagnostic PASS (5 screenshots, 3 reads, same document; JOIN HOLD). Byte-exact original U3 CDP failure remains; compatibility adapter has a repeated-body freshness QA caveat. Full W8 and independent acceptance open. PR #4 remains draft and unmerged; main/product-dev preserved. [Evidence](../docs/master-integration/MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119/EVIDENCE_AND_CATALOG.json).
+
+
+## MI10-SSE-FRESHNESS-REPRO-20261120 — scoped MI-10 QA negative replay
+Existing PR #4 CI #44614849105 remains 3/3 selected D0 PASS. Independently executed **5/5 offline Node harness assertions**, confirming two states where the CI shim can read the preceding SSE body for a subsequent pending request. Browser/product failure **not** proven; source Git blob `84997c31334e4684b159b5dbd799e3abdd40d301` unchanged, owner notified at PR #4 comment 7022454005. Standalone QA evidence and test source: [MI10-SSE-FRESHNESS-REPRO-20261120](../docs/master-integration/MI10-SSE-FRESHNESS-REPRO-20261120/ARCHITECTURE_CATALOG_HANDOVER.md). Original U3, W8, PG/IV and Memory–T1 fullchain still HOLD; no product merge or percent change.
