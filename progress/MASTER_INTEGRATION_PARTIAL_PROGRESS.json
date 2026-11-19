@@ -1,5 +1,5 @@
 {
-  "revision": "MI-08-MEM-TRANSFER-01",
+  "revision": "MI-04-TRANSPORT-TRANSFER-REVIEW",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -297,6 +297,16 @@
       "source": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
       "path": "docs/ORG-07C-R8-INTEGRATION/BROWSER_VISUAL_EVIDENCE_20261119.json",
       "scope": "counts reconstructed from I1,F4 and pinned denominators; frontend build and partial visual not full gate"
+    },
+    {
+      "id": "MI-04-TRANSPORT-TRANSFER",
+      "prior": null,
+      "current": null,
+      "delta": null,
+      "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/PROGRESS.json",
+      "scope": "controlled source transfer review, no predefined standalone denominator; R8 50%, G7 42.5% unchanged",
+      "blocker": "owner review, W8 rebind/full build, protected contract and provenance"
     }
   ],
   "model": {
@@ -313,7 +323,19 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-08 exact 25 paths and 50/50 remote SHA256; zero new product gates, no weighted increase; other owners and acceptance rows preserved.",
+  "owner_delta_vs_central": "MI-08 exact 25 paths and 50/50 remote SHA256; zero new product gates, no weighted increase; other owners and acceptance rows preserved. MI-04: no new acceptance or weighted increase; five repeated R7 tests on common product-dev dependency base.",
   "new_product_tests": 0,
-  "previous_revision": "MI-02-04-R1"
+  "previous_revision": "MI-08-MEM-TRANSFER-01",
+  "mi04_common_base_selected_rerun": {
+    "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "pass": 5,
+    "total": 5,
+    "pins": [
+      9,
+      9
+    ],
+    "new_unique_methods": 0,
+    "scope": "R7 original mock-based transport controls, different common base port from R8; no actual G5/PG/full build or gate promotion"
+  }
 }
