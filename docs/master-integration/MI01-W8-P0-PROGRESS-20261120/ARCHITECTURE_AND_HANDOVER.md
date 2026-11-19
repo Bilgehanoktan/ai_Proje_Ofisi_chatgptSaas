@@ -26,3 +26,6 @@ MI-01/Unified sahibi temiz W8 `prepare` için bağımlılık kaynaklarını ve r
 - Geri dönüş: yalnız governance dalı belge/pointer normal revert; release, main, product-dev, PR#4 merge, gerçek güvenlik ayarı ve dış maliyet değiştirilmedi.
 
 **Yeni ürün kabul kriteri kapatma: 0, kabul değişimi: 0 yüzde puan, genel geliştirme: HESAPLANAMADI.**
+
+## Son QA düzeltmesi ve yeni kanıt
+MI10 tarafından yalnız PR #4 CI dosyalarında taze SSE yanıtının isteğe özgü sıra kaydıyla bağlanması sağlandı. GitHub-hosted `44620987573` 3/3 PASS; ayrı Node 17/17 negatif regresyon ve gerçek Chromium per-fetch uyumluluk akışı PASS. Düzeltme ürün koduna veya orijinal U3 kaynağına dokunmadı. Yerel QA ile ortaya çıkan global Promise stale-body problemi artık testte fail-closed; özgün CDP Response.text ve formal W8 smoke hâlâ HOLD. Kanıt: [MI10 taze-yanıt düzeltmesi](../MI10-SSE-FRESH-REQUEST-FIX-20261120/EVIDENCE.json). **MI-01 P0 3/8 sabit; ilerleme kapısı olarak iki kez sayılmadı.**
