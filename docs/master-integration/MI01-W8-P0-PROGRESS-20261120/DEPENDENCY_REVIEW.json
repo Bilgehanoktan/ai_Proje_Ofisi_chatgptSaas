@@ -113,5 +113,6 @@
     "ci": 0
   },
   "rollback": "report-only changes revert in governance branch; original npm lock and W8 runner unchanged",
-  "canonical_status": "PREPARE/INSTALL/TEST/SMOKE HOLD"
+  "canonical_status": "PREPARE/INSTALL/TEST/SMOKE HOLD",
+  "cross_owner_note": "Separate MI-COMMON-07 Model/Memory 344 runner is HOLD on local cryptography 46.0.4 package metadata. This owner problem is not inside MI01 W8 requirements.txt; do not conflate with W8 wheelhouse fingerprint or silently insert it into W8 lock."
 }
