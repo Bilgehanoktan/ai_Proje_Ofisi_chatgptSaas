@@ -1,0 +1,93 @@
+{
+  "revision": "MI-01-05-06-SHARED-BUILD-REUSE",
+  "date": "2026-11-19",
+  "classification": "READ_ONLY_CROSS_LANE_SOURCE_REVIEW_OWNER_TRANSFER_PENDING",
+  "user_priority": "MI-01, MI-05/06; existing UI-to-backend integration before new UI",
+  "base": {
+    "ref": "integration/product-dev",
+    "commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "manifest": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "entries": 504,
+    "head_compare": "identical"
+  },
+  "owner": {
+    "ref": "integration/org-07c-r8-closed-studio",
+    "head": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "build_source": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+    "manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+    "entries": 509
+  },
+  "review": {
+    "manifest_sha256_equal_common": 497,
+    "backend_manifest_matches": "240/240",
+    "unchanged_direct_dependencies": [
+      "draftInspector.ts",
+      "draftHistory.ts",
+      "draftGraph.ts",
+      "DraftInspector.module.css",
+      "StudioContextPanel.tsx",
+      "package.json",
+      "tsconfig.json"
+    ],
+    "direct_dependency_count": "7/7 manifest SHA-256 equality, not full local checkout",
+    "repair": [
+      {
+        "action": "rename exact blob",
+        "old": "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+        "new": "product/ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+        "blob": "b57e27761e60351e62224b569ad107cd54fd8daf"
+      },
+      {
+        "action": "replace exact import-only delta",
+        "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+        "before": "84aac4623c9829a4eb609996ba066ded5efd9128",
+        "after": "9ce6776fd2cda03f6f033cc47ad285d2b93e96cd",
+        "shared_context_preserved": true
+      },
+      {
+        "action": "replace exact test loader path-only delta",
+        "path": "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+        "before": "833d216cca83015894beddbdb5214c30ee140843",
+        "after": "de8b825af52e24e372f6ec9f71788c8ab08cd536"
+      }
+    ],
+    "checks": "3/3 exact source comparisons; known owner repair, not a new bug fix; no new product test",
+    "separate_org_scope": "Do not transfer OrganizationReadback, registry, proxy, or ReadbackKey fix as a generic build repair; route remains closed without OwnerReadProvider; existing org/identity owner retains authority.",
+    "dependencies": "Frontend package and three backend requirements files identical by manifest; existing R8 lock/review not reusable as U3A approval."
+  },
+  "evidence": {
+    "build": "docs/ORG-07C-R8-INTEGRATION/BUILD_R1_WINDOWS_EVIDENCE.json",
+    "build_blob": "f8b7288d3385b5943abaa88e205ea1ef2749b871",
+    "reported": "Next.js build exit 0, tsc exit 0, Workflow 16/16; original raw build logs not received",
+    "http": "docs/ORG-07C-R8-INTEGRATION/LOCAL_HTTP_VERIFICATION.json",
+    "http_blob": "45beb321ffb39886f7960f06e2779c512da90376",
+    "http_scope": "6 pages HTTP 200, 3 expected organization HTTP 503; backend absent",
+    "browser": "7 partial user screenshots; no full browser or backend acceptance"
+  },
+  "local": {
+    "git_ls_remote": "BLOCKED DNS",
+    "node": "22.16.0",
+    "python": "3.13.5",
+    "full_checkout": "BLOCKED",
+    "new_product_tests": 0
+  },
+  "queue_delta_proposal": {
+    "MI-01": "Unified owner review exact three repairs, update manifest + pinned W8 chain as one candidate; run existing U3B clean checkout audit/prepare/review only before install/test/smoke",
+    "MI-05": "Keep same shared snapshot, historical readback until actual full build; no second UI implementation",
+    "MI-06": "Existing ORG owner retains live assignment/owner binding; closed organization expected 503; no duplicate build or source edits"
+  },
+  "catalog_delta": "File/symbol rename only proposed; DraftInspector symbol remains. No new API/DB/event/dependency changes. Actual product changes zero.",
+  "architecture_delta": "None; preserve D0 historical-only shared projection and JOIN_HOLD.",
+  "progress": {
+    "weighted_MI01": null,
+    "weighted_ORG_R8_prior": 11.666666666666668,
+    "weighted_ORG_R8_current": 11.666666666666668,
+    "acceptance_delta": 0,
+    "core": "12/16 standalone unchanged",
+    "ui": "21/40 unchanged",
+    "mvp": "0/11 unchanged",
+    "independent": "0/7 unchanged"
+  },
+  "rollback": "No product changes. Retain pinned owner/base and prior failed stages; owner transfer candidate rollback by reverting isolated commit, never restore live DB.",
+  "coordination": "Append-only handover evidence for existing MI-01/05/06 owners; no edits to shared CURRENT or active product/feature files to avoid concurrent writer conflict."
+}
