@@ -65,9 +65,9 @@
         "meaning": "D4 DB roles are NOLOGIN on disposable PostgreSQL test cluster"
       },
       {
-        "id": "INDEPENDENT_AUTHORITY_OPTION_UNRATIFIED",
+        "id": "HISTORICAL_DESIGN_OPTIONS_UNRATIFIED_AT_SOURCE",
         "status": "SOURCE_STATIC_MATCH",
-        "meaning": "D03-D04 A/B/C authority designs remain unratified"
+        "meaning": "Original baseline D03/D04 design file described alternatives before subsequent architecture decision; canonical ADR now selects A as spec-only, not runtime acceptance"
       },
       {
         "id": "OLD_DB_OLD_PIN_REPLAY_REQUIREMENT",
@@ -208,9 +208,9 @@
     }
   ],
   "independent_authority_options": {
-    "A": "Independent admin consensus-backed authority and effect-sink fencing, design recommendation only; NOT_RATIFIED",
-    "B": "Independent append-only checkpoint plus serialization & freshness proof; NOT_RATIFIED",
-    "C": "Maintain source-only D0 HOLD, no executable authorization; CURRENT_STATUS_ONLY"
+    "A": "SELECTED_ARCHITECTURE_DIRECTION_SPEC_ONLY by H01; canonical ADR decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md; no provider, root, sink, credentials or operational authorization",
+    "B": "NOT_SELECTED",
+    "C": "NOT_SELECTED_ARCHITECTURE; existing D0 HOLD remains operational default until independently approved activation"
   },
   "permissions": "no new CI, real IAM issuance, PostgreSQL, main/product-dev mutation, external provider, spending, independent acceptance",
   "progress": {
@@ -230,11 +230,25 @@
     "independent_security": "0/7"
   },
   "next_owner_actions": [
-    "Resolve independent authority A/B/C through existing owner/CEO ratification; no arbitrary implementation",
+    "Execute already selected Option A architecture A1 owner/admin/restore/quorum and sink interface review; do not ask user to choose A/B/C again.",
     "Source-owner review of original G9 vs G2 intent_authority (different blobs) and exact integration of G2 session into ORG scope",
     "Define and test authenticated owner-issued registry/member/role/assignment proof and D4 Request ↔ G2 SessionClaimCheck ↔ ORG AssignmentPin equality",
     "Run original G2 50, G9 7, Memory T1 10, P02 and protected PostgreSQL recovery, then independent IV / W8"
   ],
-  "status": "OWNER_RATIFICATION_AND_REAL_ISSUER_GATES_HOLD",
-  "rollback": "Discard audit-only PR6 docs / normal revert. Preserve original PR6 10/10 CI, central canonical progress, original owner source and credentials."
+  "status": "OPTION_A_ARCHITECTURE_SELECTED_ONLY_OWNER_ISSUER_AND_SECURITY_GATE_HOLD",
+  "rollback": "Discard audit-only PR6 docs / normal revert. Preserve original PR6 10/10 CI, central canonical progress, original owner source and credentials.",
+  "ratification": {
+    "architecture_direction": "A_SELECTED_SPEC_ONLY",
+    "decision_ref": "planning/master-integration-governance@decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+    "adr_git_blob": "2e203bed2b7cdff27ba93b55ccf2ad37983cee2d",
+    "contract": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INTERFACE_AND_TRUST_CONTRACT.json",
+    "root_provider": "NOT_SELECTED",
+    "sink": "NOT_IMPLEMENTED",
+    "independent_evidence": [
+      0,
+      8
+    ],
+    "owner_approval": "HOLD",
+    "runtime_activation": "NOT_AUTHORIZED"
+  }
 }
