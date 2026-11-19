@@ -1,0 +1,730 @@
+{
+  "revision": "MI-PROGRESS-03",
+  "classification": "READ_ONLY_TECHNICAL_CATALOG",
+  "source_symbols": [
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "symbols": "canonical_plan, preview_plan",
+      "limitation": "No dispatch"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "blob": "04487bda631e9133f3904451a39fc8722e985997",
+      "symbols": "topological_waves",
+      "limitation": "No scheduling"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "symbols": "inspect_pinned_schedule",
+      "limitation": "HOLD observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "symbols": "Member, inspect_company",
+      "limitation": "Roster no accepted assignment"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "blob": "e1e977880324664bb359eee3286223a796878f44",
+      "symbols": "review_boundary",
+      "limitation": "No execution authority"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "symbols": "D0IntentAuthority",
+      "limitation": "Fixture, G6A mismatch"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "symbols": "protected_postgres_transaction",
+      "limitation": "Strict COMMIT HOLD"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "symbols": "append_event, insert_outbox",
+      "limitation": "T1 owned primitives"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+      "blob": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e",
+      "symbols": "DisabledToolGateway",
+      "limitation": "Egress DENY"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/gateway.py",
+      "blob": "d9ef74951acb8daa57e9b8339fb8f8152369d932",
+      "symbols": "DisabledModelGateway",
+      "limitation": "Egress disabled"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+      "blob": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+      "symbols": "inspect_capabilities",
+      "limitation": "Not a grant"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+      "symbols": "Snapshot",
+      "limitation": "Synthetic no release"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+      "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+      "symbols": "inspect_retrieval",
+      "limitation": "No retrieval IO"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py",
+      "blob": "2ab7b9a18a15e5115f63ff6f659d605d3d1d897d",
+      "symbols": "inspect_memory_recovery",
+      "limitation": "Read only"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/iv_review.py",
+      "blob": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb",
+      "symbols": "inspect_iv",
+      "limitation": "No independent receipt"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+      "blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+      "symbols": "inspect_witness",
+      "limitation": "No external root"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/budget_engine/reservation_review.py",
+      "blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+      "symbols": "inspect_reservation",
+      "limitation": "No ledger/spend"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/observability/finance_projection.py",
+      "blob": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc",
+      "symbols": "project_finance",
+      "limitation": "UNVERIFIED"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+      "blob": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51",
+      "symbols": "readOwnerBoundOrganization",
+      "limitation": "No trusted provider; 503 HOLD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/sharedReplaySession.ts",
+      "blob": "90dcd080c6ed53c4a8ff8e2aad1978509725515e",
+      "symbols": "createSharedReplaySession",
+      "limitation": "Historical in-memory"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "blob": "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "symbols": "readProjection",
+      "limitation": "Demo read only"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+      "blob": "b8d4419253c201741a6f2f5aac31906a9a528110",
+      "symbols": "registeredReader",
+      "limitation": "Typed registry, not runtime authority"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+      "blob": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+      "symbols": "GET",
+      "limitation": "No owner, 503 HOLD"
+    }
+  ],
+  "source_files_reviewed": 23,
+  "test_source_leads": [
+    {
+      "group": "P01",
+      "matched_test_sources": 33,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-frontend/tests/mvpDiagnostics.test.cjs",
+          "blob": "4e1cc389b9f1aafccdf63532ed3bd9b36cae8842"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/mvpProxy.test.cjs",
+          "blob": "e78ba803fc1b3ef85057d1315a32a38c0e9d4037"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/navigation-model.test.cjs",
+          "blob": "67395deef9e553beace053ab6019f1a4c5a519e4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/progress-model.test.cjs",
+          "blob": "76aaf58b78637f048932dc29d59926fc0778faee"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-read.test.cjs",
+          "blob": "226e0e9721677235184547b8d79e91b2e6c541fb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-registry.test.cjs",
+          "blob": "d825b51d33c205471be086384a2cea1c18cf2b2b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-scope.test.cjs",
+          "blob": "58054af5ed662627d23fa20fe370823beb718dbb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-session-join.test.cjs",
+          "blob": "00557f3a15bd27f422e212920302a02a1bf88f98"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+          "blob": "16b8070f809c590d0d4b2796adc6db186cd23f29"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+          "blob": "d0acdf19a4f102561e47de0b85cd8646a18b0d90"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P02",
+      "matched_test_sources": 19,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-frontend/tests/gallery-camera.test.cjs",
+          "blob": "647a5adedd2c86f5cb6ae78dcdb3b98f0bbb07a7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/office-artwork.test.cjs",
+          "blob": "15595a963845220d48f7ff34fa998c8424538c31"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/office-workbench.test.cjs",
+          "blob": "bbad34677abeb0f2fada6b68ad4805b09ee077c7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-actor-identity.test.cjs",
+          "blob": "9f3dd96520eb848dd65e912619647500d9335c76"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-camera.test.cjs",
+          "blob": "796feb476b8a1953f78518de528389def07bcdc5"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs",
+          "blob": "209789688fa45c3fc44bfc0293a8d77513cbefc9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-floor-render.test.cjs",
+          "blob": "85d1a58643d8be75041ec1ad66e6b16cb13dd792"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-floor-traffic.test.cjs",
+          "blob": "53145d8869c053ea8156c96fc8082b3cd7baf5d8"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-geometry.test.cjs",
+          "blob": "df0183b5dc8ffd12b9cf65a00abca863278b31e4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/premium-hybrid-layout.test.cjs",
+          "blob": "74854788ae143335ffc70ffc0bd445c6615b45d2"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P03",
+      "matched_test_sources": 18,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_bundle.py",
+          "blob": "37e11dfffb2b98bd451cb1de0d384b1533c294e1"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+          "blob": "c30130313541ea9d857724de1bab98ad088374af"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_sample.py",
+          "blob": "11f31bf090bd8f08826cb7fd3227a9a082bd53b8"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_db_http_0225.py",
+          "blob": "990f6637b0cdb5264b1d01f0e2abb792b67070b5"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+          "blob": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+          "blob": "7517cb4bdd2458684aa4540b127669ce1902521d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+          "blob": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+          "blob": "2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_read_snapshot_p04.py",
+          "blob": "ef0b536700ae1f8ef29229abba3713aa56c5377c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_snapshot_merge_p05.py",
+          "blob": "619d14e103207f840e82c96774ae773e38914b3e"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P04",
+      "matched_test_sources": 11,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+          "blob": "e121ee6275def01070397a942a8434ff37b611a6"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+          "blob": "ce4f8fb249787c9e18a03a63225dbcddf7445650"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+          "blob": "a190919f0719716fccebd6d6f15177633864d56a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pinned_research_t1_0225.py",
+          "blob": "5e57e7f49f4b8767aeeb4530ca6469b865849650"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+          "blob": "65716d57080ea94602a8d49da1682d0d14bb74dc"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+          "blob": "9db44143d1d5395e222d111a4e847930f019208e"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_plan_projection.py",
+          "blob": "ae2b1e90b367be591b8cc59b979419780115802a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_research_t1_integration_0225.py",
+          "blob": "0c0eb3b3d9b762f959bbec678af2832e65ba2553"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+          "blob": "3e01853c9fb3d184c3bd74fe2c5bbbb5904a36af"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_task_budget_integration.py",
+          "blob": "21f81967d9d908c8ffcbdafbda3ca75ec96c8e8f"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P05",
+      "matched_test_sources": 14,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_bundle.py",
+          "blob": "37e11dfffb2b98bd451cb1de0d384b1533c294e1"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+          "blob": "c30130313541ea9d857724de1bab98ad088374af"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_sample.py",
+          "blob": "11f31bf090bd8f08826cb7fd3227a9a082bd53b8"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+          "blob": "ce4f8fb249787c9e18a03a63225dbcddf7445650"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+          "blob": "12bebeac8b3d2b2d1bd4a04a540836489d90a1eb"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+          "blob": "a190919f0719716fccebd6d6f15177633864d56a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_recovery_0205.py",
+          "blob": "8db01a9227d71b51e28485d823c304c5c48ab67b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+          "blob": "c35a2e497ce013409c1943f293799d83c7164e83"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_joint_context_0208.py",
+          "blob": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_binding_0157.py",
+          "blob": "8e354f1f6daa858f58a0237283fdeb5e8f36e7d4"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P06",
+      "matched_test_sources": 14,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_engines_0159b.py",
+          "blob": "9d3c5385fa72565c3cd6d24fd91eec7e71c9c803"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_access_0194.py",
+          "blob": "a792abc90b7a09fb703982f6efd1cd4f648b073c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py",
+          "blob": "15e6d92252a655704d3654d68361e8a03d550cc5"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r1.py",
+          "blob": "c0ded1c2f351a2a538cd3e710de0f2d7ff7e6616"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r2.py",
+          "blob": "d426df69851dc3b0ed04324a7de473d56a122188"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_gateway_recovery_w5_mem05e.py",
+          "blob": "7bc56f0010e6931c357010d2b34afe55223c2cb2"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py",
+          "blob": "8c8683fc3e553231c9ba81222e4e0b2ccd97a72f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py",
+          "blob": "91001d383439f30c37462f4852714cf439cb8b22"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+          "blob": "02743dead991906a120e3f3ef627d0e60e8e09c3"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_witness_0209.py",
+          "blob": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P07",
+      "matched_test_sources": 18,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+          "blob": "ce4f8fb249787c9e18a03a63225dbcddf7445650"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+          "blob": "12bebeac8b3d2b2d1bd4a04a540836489d90a1eb"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+          "blob": "a190919f0719716fccebd6d6f15177633864d56a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_recovery_0205.py",
+          "blob": "8db01a9227d71b51e28485d823c304c5c48ab67b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+          "blob": "c35a2e497ce013409c1943f293799d83c7164e83"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_outbox_claim_sample.py",
+          "blob": "e772322572c1bd40b7965ad2062fe824a653b422"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_outbox_contract.py",
+          "blob": "e25923c06e25e5e9ba1900cd98e5f63c172a9960"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_outbox_projection.py",
+          "blob": "2790a7ee1f7d6567eb220c53876ae1715a687562"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py",
+          "blob": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+          "blob": "261e2484f111ffd9c0f124cc47c6837425d801a2"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P08",
+      "matched_test_sources": 15,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_boundary_p10g.py",
+          "blob": "e452f1c6422e975df5787de079949a164955fbe2"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+          "blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_sqlite_p10f.py",
+          "blob": "3f0f86a721ec15fbc12515e9719057b91f521d84"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+          "blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+          "blob": "149371b9d1c19d5c7f6872b4c356bad57da1d063"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+          "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_fenced_transition_0210.py",
+          "blob": "93d3a0ea046a1e83d94230f10cbbb5a767cea719"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_intent_authority_0211.py",
+          "blob": "0179b7f3b10d2dac1db07ffef68dae3d230244fd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+          "blob": "9296347d9253d74902ed1c6a89e273d8e516f2b5"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_security_review_0158.py",
+          "blob": "c56b52384b916e41ce1e8160232a4e5d3b354ebd"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P09",
+      "matched_test_sources": 6,
+      "pinned_test_leads": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_provider_contract.py",
+          "blob": "eb66254ca51fa18c0e59f3993ea04a8cad30f6b9"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_task_budget_integration.py",
+          "blob": "21f81967d9d908c8ffcbdafbda3ca75ec96c8e8f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_task_budget_snapshot.py",
+          "blob": "94172c3b46e3858dd952162addcc83192783d31b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/finance-model.test.cjs",
+          "blob": "101232f1bebdd5bee246f0252ab47398f8a11343"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/task-budget.test.cjs",
+          "blob": "4a0ec2845d467bfe4caabddefffde1f0da896cd1"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10j22-control-sources.test.cjs",
+          "blob": "1aa776e55f490a0fca3fcc12b9accc88fac29acf"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    },
+    {
+      "group": "P10",
+      "matched_test_sources": 42,
+      "pinned_test_leads": [
+        {
+          "path": "tests/integration/browser_0187_w1.py",
+          "blob": "99df17ec2a0be012ad2f3c463510c64fbd69c062"
+        },
+        {
+          "path": "tests/integration/browser_lifecycle_p02.py",
+          "blob": "e444e60d53914e78e77418fc1ac63e1dc0b7a4de"
+        },
+        {
+          "path": "tests/integration/browser_lifecycle_prefix_p03.py",
+          "blob": "15b6f9656f5768e942fd63810d0ca1eb438edab3"
+        },
+        {
+          "path": "tests/integration/browser_task_budget_0188.py",
+          "blob": "70714854ccf650862602d541420ccd7b985408d0"
+        },
+        {
+          "path": "tests/integration/browser_unified_u3.py",
+          "blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773"
+        },
+        {
+          "path": "tests/integration/org-07c-r8/tests/closed_reader.test.cjs",
+          "blob": "6b8c418fdba4c3fd0c7c924395e27a9f89f7e19c"
+        },
+        {
+          "path": "tests/integration/org-07c-r8/tests/owner_binding_product.test.cjs",
+          "blob": "6f8e0046c773d330f446ab262c0fc8b4dc792bbf"
+        },
+        {
+          "path": "tests/integration/org-07c-r8/tests/process.d.ts",
+          "blob": "9fdb78617c28724b580bcf26e764d34981146cc5"
+        },
+        {
+          "path": "tests/integration/org-07c-r8/tests/route.test.cjs",
+          "blob": "4a2199dd6cc60f452b0a053f763d2d7a638b0f36"
+        },
+        {
+          "path": "tests/integration/test_audit_source_archive.py",
+          "blob": "d361a22ee65f44fdbca8a81fffdb51b8f390e028"
+        }
+      ],
+      "classification": "SOURCE_FILE_ONLY_NOT_EXECUTED_OR_PASSED_PER_MODULE"
+    }
+  ],
+  "changes": {
+    "product_files": 0,
+    "classes": 0,
+    "functions": 0,
+    "api": 0,
+    "database": 0,
+    "events": 0,
+    "dependencies": 0,
+    "permissions": 0
+  },
+  "known_source_conflicts": [
+    {
+      "id": "CORE-ORG-ASSIGNMENT",
+      "ref": {
+        "id": "GATE02-ASSIGNMENT",
+        "ref": "workstream/mi03-gate02-assignment-lifecycle-d0",
+        "path": "candidates/MI03-ASSIGNMENT-D0/CATALOG_AND_EVIDENCE.json",
+        "expected": {
+          "unit": [
+            20,
+            20
+          ]
+        },
+        "meaning": "ISOLATED_SQLITE_ASSIGNMENT_SOURCE_NO_COMMON_TRANSFER",
+        "blob": "4586eccba99154a4f67cb998921582a391635f3f"
+      },
+      "issue": "New D0 assignment candidate changes durable_ops; original owner version collision, actual Core/OperationsStore NOT_RUN."
+    },
+    {
+      "id": "IAM-PACKAGING",
+      "ref": {
+        "id": "GATE01-CLAIM",
+        "ref": "3fd300fcf35134c9c86ae0ad85d9543249418727",
+        "path": "docs/master-integration/MI03-GATE01-05-IAM-CLAIM-AND-PACKAGING/CATALOG_AND_EVIDENCE.json",
+        "expected": {
+          "supplemental": [
+            6,
+            6
+          ]
+        },
+        "meaning": "ACTUAL_SYNTHETIC_IAM_CLAIM_NO_OWNER_ISSUER",
+        "blob": "d1556abe604ea9a09090affa66ac120abf64b3b1"
+      },
+      "issue": "Missing 8 ORG Python modules and 2 SQL resources in normal common packaging; original fixture sys.path not production."
+    },
+    {
+      "id": "MODEL-MEM",
+      "issue": "344 NOT_RUN, old Memory writer retirement and original raw evidence owner HOLD."
+    },
+    {
+      "id": "T1-STRICT-COMMIT",
+      "issue": "protected PostgresSession explicit PermissionError and no independent PG outcome proof."
+    },
+    {
+      "id": "W8",
+      "issue": "Full common 539 verified manifest but no full byte checkout/install/build/browser."
+    }
+  ],
+  "structural_checks": [
+    {
+      "id": "21_63_315",
+      "ok": true
+    },
+    {
+      "id": "ten_groups_unique",
+      "ok": true
+    },
+    {
+      "id": "sum_100",
+      "ok": true
+    },
+    {
+      "id": "315_zero_credit",
+      "ok": true
+    },
+    {
+      "id": "all_stages",
+      "ok": true
+    },
+    {
+      "id": "source_map_exact",
+      "ok": true
+    },
+    {
+      "id": "22_symbol_pins",
+      "ok": true
+    },
+    {
+      "id": "test_leads_exact",
+      "ok": true
+    },
+    {
+      "id": "manifest_538",
+      "ok": true
+    },
+    {
+      "id": "diff_accounting",
+      "ok": true
+    },
+    {
+      "id": "new_evidence_fetched",
+      "ok": true
+    },
+    {
+      "id": "no_approved_denominator",
+      "ok": true
+    },
+    {
+      "id": "24_tracking_crosswalk",
+      "ok": true
+    },
+    {
+      "id": "no_scope_package_mutation",
+      "ok": true
+    },
+    {
+      "id": "MVP_IV_zero",
+      "ok": true
+    },
+    {
+      "id": "no_current_full_test",
+      "ok": true
+    },
+    {
+      "id": "de_dup_not_score",
+      "ok": true
+    }
+  ],
+  "rollback": "Only reporting changes; revert with newer head awareness, no force or product/owner source deletion."
+}

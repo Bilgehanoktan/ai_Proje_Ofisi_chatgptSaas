@@ -1,5 +1,5 @@
 {
-  "revision": "MI03-G6A-D4-ORG-CROSS-REPLAY-01",
+  "revision": "MI-PROGRESS-03",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -7,7 +7,7 @@
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "overall_percent": null,
-  "overall_reason": "All 63/315 draft stage slots refined, 24 residual coverage rows and 11 MVP trace; no exhaustive owner-approved criterion denominator or group weights frozen.",
+  "overall_reason": "All 315 draft criteria individually assessed with leads; 0/10 frozen groups, weights proposed; 97 selected common pass but no complete product integration or authorized module acceptance. Overall HESAPLANAMADI.",
   "global_acceptance": [
     {
       "id": "CORE",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged.",
   "new_product_tests": 0,
-  "previous_revision": "MI03-GATE01-T1-DIRECT-REPLAY-01",
+  "previous_revision": "MI03-G6A-D4-ORG-CROSS-REPLAY-01",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -984,5 +984,35 @@
     "previous_percent": 42.5,
     "current_percent": 42.5,
     "delta_pp": 0
+  },
+  "mi_progress_03": {
+    "revision": "MI-PROGRESS-03",
+    "status": "PROGRESS_03_A_TO_E_PROOF_TRIAGE_COMPLETE_F_UNSCORABLE_PENDING_OWNER_FREEZE",
+    "proof": "progress/MI_PROGRESS_03_A_F_CRITERION_PROOF.json",
+    "decision": "progress/MI_PROGRESS_03_OWNER_FREEZE_DECISION.json",
+    "catalog": "docs/master-integration/MI-PROGRESS-03/TECHNICAL_CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-03/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "common_candidate": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "selected_common_tests": [
+      97,
+      97
+    ],
+    "criteria_reviewed": [
+      315,
+      315
+    ],
+    "groups_reviewed": [
+      10,
+      10
+    ],
+    "approved_groups": [
+      0,
+      10
+    ],
+    "global_development_percent": null,
+    "acceptance_delta": 0,
+    "source_changes": 0,
+    "product_tests_this_chat": 0,
+    "next": "MI-PROGRESS-03-R1: adjudicate with existing owners and approve non-overlapping denominators/weights, after exact raw tests/build proof then calculate first development percentage."
   }
 }
