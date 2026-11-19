@@ -1,0 +1,48 @@
+{
+  "status": "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE",
+  "original_test_blob": "c0ded1c2f351a2a538cd3e710de0f2d7ff7e6616",
+  "source_pins_remote": 149,
+  "source_pins_local": 41,
+  "original_test_local": 1,
+  "local_pre_and_post_blob_verified": 42,
+  "original": {
+    "run": 10,
+    "pass": 10,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "platform": "Linux",
+    "isolated_python": true
+  },
+  "source_refs": {
+    "memory": "56e3dde18d2f80f4f502cdbba3a8f47a91049168",
+    "gateway": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "mem05c": "31c07c5cd58458abfb4ed20a3b33c73cda57c1df",
+    "portable": "38a28d6d7d7d05cec9082fec2b1c9229e0952153"
+  },
+  "log": {
+    "path": "original_cross_test.log",
+    "sha256": "c6be00bd53958a20fc470259478fb6dea274cd42b4fb05d067c87064d5985871",
+    "git_blob": "fd25cf3d11aae01203755a88fa0a1ba6734d6d4f"
+  },
+  "local_pins": {
+    "path": "pins.tsv",
+    "sha256": "f1140384518a12981bdd8cedeca9f1a482bae04a51c0870bc105b70f26dcb477",
+    "git_blob": "b3aa247564539690e4b05e72e3d5bd415df89e15"
+  },
+  "limitations": [
+    "Direct local git DNS blocked; connector exact file recovery instead.",
+    "41/149 local source pins plus original test, not complete product checkout or manifest validation.",
+    "Synthetic SQLite and Ed25519 fixture; no Windows run claimed.",
+    "No observed original-test failures; no code or oracle changes.",
+    "Independent matching is not an atomic combined gate; signed memory not invocation authorization; owner receipt and token count synthetic.",
+    "No provider call, grant, spend, CI, production, main merge or independent acceptance."
+  ],
+  "product_mutations": 0
+}

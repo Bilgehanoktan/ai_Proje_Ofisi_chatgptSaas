@@ -1,0 +1,33 @@
+{
+  "revision": "W5-MEM-05C-R1-EVIDENCE",
+  "files": [
+    "original_cross_test.log",
+    "pins.tsv",
+    "EVIDENCE.json",
+    "CRITERIA.json",
+    "PROGRESS.json",
+    "ARCHITECTURE_AND_RUNBOOK.md",
+    "CATALOG.json",
+    "HANDOVER.json"
+  ],
+  "original_test": "candidates/W5-MEM-05C/test_memory_gateway.py",
+  "original_symbols": [
+    "MemoryGatewayTests",
+    "inspect_witnessed_context",
+    "inspect_provider_preflight",
+    "inspect_runtime_model",
+    "inspect_owner_snapshot",
+    "joint_context_digest"
+  ],
+  "source_classes_functions_api_db_dependencies_added": 0,
+  "dependency_versions": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "platform": "Linux",
+    "isolated_python": true
+  },
+  "test_scope": "10 original cross-boundary local synthetic tests",
+  "product_catalog_change": "none; evidence-only delta",
+  "future_owner_binding": "existing Memory/Gateway/Runtime readers, D5/T1 and W5 budget owners"
+}

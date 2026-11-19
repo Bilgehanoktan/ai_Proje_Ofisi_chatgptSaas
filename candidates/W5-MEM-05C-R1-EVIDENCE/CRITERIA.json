@@ -1,0 +1,76 @@
+{
+  "id": "W5-MEM-05C-R1-EVIDENCE",
+  "standard": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+  "criteria": {
+    "design": [
+      [
+        "D01",
+        "Source comparison and ownership",
+        "PASS"
+      ],
+      [
+        "D02",
+        "Cross-boundary mapping and test oracle",
+        "PASS"
+      ]
+    ],
+    "source": [
+      [
+        "S01",
+        "Pinned cross-source staging runner and diagnostic test source delivered",
+        "PASS_ON_READBACK"
+      ],
+      [
+        "S02",
+        "Owner-reviewed actual joint binding implementation",
+        "HOLD"
+      ],
+      [
+        "S03",
+        "Controlled product source integration and manifest",
+        "HOLD"
+      ]
+    ],
+    "functional": [
+      [
+        "F01",
+        "Exact positive and read-only case",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ],
+      [
+        "F02",
+        "Span and identity mismatch diagnostics",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ],
+      [
+        "F03",
+        "Route and owner receipt negatives",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ],
+      [
+        "F04",
+        "Revocation and runtime drift",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ]
+    ],
+    "integration": [
+      [
+        "I01",
+        "Shared protected owner-bound preflight and canonical transaction",
+        "HOLD"
+      ],
+      [
+        "I02",
+        "Unified locked regression and product acceptance",
+        "HOLD"
+      ]
+    ],
+    "acceptance": [
+      [
+        "A01",
+        "Independent approval and custody",
+        "HOLD"
+      ]
+    ]
+  }
+}
