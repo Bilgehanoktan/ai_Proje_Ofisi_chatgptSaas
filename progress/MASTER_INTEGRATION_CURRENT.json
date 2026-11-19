@@ -1,5 +1,5 @@
 {
-  "revision": "MI-07-08-JOINT-TRANSFER-01",
+  "revision": "MI-03-04-COMMON-REVIEW",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -23,7 +23,7 @@
     "sha": "b6983047430cecde80a02c6384a22fe80301ad93",
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
-  "branch_count": 259,
+  "branch_count": 261,
   "queue": [
     {
       "id": "MI-01",
@@ -131,20 +131,63 @@
         "Independent acceptance"
       ],
       "development_percent": 42.5,
-      "acceptance_delta": 0
+      "acceptance_delta": 0,
+      "combined_review_reference": {
+        "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+        "ref": "integration/mi-04-transport-source-transfer",
+        "scope": "two exact MI03 pure modules included, owner evidence retained, no owner ratification or product-dev promotion"
+      }
     },
     {
       "id": "MI-04",
       "owner_role": "T1 / R8",
       "source_ref": "planning/0230-d5c-r9-claim-fullchain-evidence",
       "observed_sha": "253128a2236ee706486e70acc97e472ededac26b",
-      "next": "T1/MI-03/D4 owner review exact common transport and one explicit server-owned protected entry (G6A shape recommended, not ratified); Unified owner reviews W8 manifest/fingerprint rebind and full build. R8 remaining 36, G6A 19, G2 50, G7 7 remain queued. No Windows now; no merge until reviewed.",
+      "next": "Central/T1/IAM/D4 owner concurrence on explicit G6A protected entry (recommended, not ratified) and G8 provenance. Central reconcile reviewed MI01/07/08 candidate deltas with this combined MI03/04 and W8 fingerprint/full build; G9 7, G2 50, R8 36, G6A 19 remain exact owner runs. No Windows now; do not select legacy or promote.",
       "priority": "P0",
-      "status": "TRANSPORT_CANDIDATE_READY_OWNER_REVIEW_PENDING_CONTRACT_HOLD",
+      "status": "COMBINED_REVIEW_CANDIDATE_READY_PROTECTED_CONTRACT_OWNER_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "R8 17/53; R9 10/10 authority; G6A 19 not run. New common-base compatibility rerun exact original R7 5/5 with 9/9 pins; no new unique methods or acceptance. Original tests not repinned.",
-      "previous_status": "HOLD_FULLCHAIN_AND_CONTRACT",
+      "evidence": "Exact MI03 two pure review modules added, historical auxiliary tests and evidence preserved; 507/507 manifest path/size. G6A/R7 exact local trial 11/11 (6+5) on 11 pins, G6A legacy equals G7 except appended separate gate and typing import. Authority NOT transferred; source plan 56 G7 refs (26 base, 2 transferred, 1 divergent, 27 absent). R8 17/53 and R9 10/10 prior unchanged.",
+      "previous_status": "TRANSPORT_CANDIDATE_READY_OWNER_REVIEW_PENDING_CONTRACT_HOLD",
       "transfer_candidate": {
+        "ref": "integration/mi-04-transport-source-transfer",
+        "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+        "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "parent": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+        "mi03_source": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+        "mode": "combined read-only/transport review candidate; no product-dev promotion",
+        "product_files": 508,
+        "manifest_entries": 507,
+        "product_unchanged_from_parent": 505,
+        "evidence_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_EVIDENCE.json",
+        "catalog_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_CATALOG.json",
+        "runbook_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_RUNBOOK.md",
+        "source_plan_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_SOURCE_PLAN.json",
+        "progress_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_PROGRESS.json",
+        "selected_local_trial": {
+          "pass": 11,
+          "total": 11,
+          "pins": [
+            11,
+            11
+          ],
+          "scope": "G6A authority local substitution + R7; not delivered product authority",
+          "new_unique_methods": 0
+        },
+        "owner_review": "PENDING",
+        "full_build": "NOT_RUN",
+        "rollback": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8"
+      },
+      "development_percent": null,
+      "acceptance_delta": 0,
+      "blockers": [
+        "G6A vs R8 owner contract ratification",
+        "G8 actual registry/member/assignment/role provenance, R3/ORG06 packaging",
+        "G9 7/G2 50/R8 36/G6A 19 original tests",
+        "P06/P07/P08 strict COMMIT, shared publication and independent custody",
+        "Unified/central W8 fingerprint rebind/full build and MI07/08 transitive contracts"
+      ],
+      "previous_transfer_candidate": {
         "ref": "integration/mi-04-transport-source-transfer",
         "sha": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
         "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -168,17 +211,7 @@
         "owner_review": "PENDING",
         "full_build": "NOT_RUN",
         "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
-      },
-      "development_percent": null,
-      "acceptance_delta": 0,
-      "blockers": [
-        "T1 owner review pending",
-        "R8/G6A divergent entry contract and port",
-        "actual IAM/ORG active assignment and role provenance (MI-03)",
-        "R8 36/G6A 19 outstanding",
-        "strict COMMIT and joint publication P06/P07/P08 HOLD",
-        "Unified full build and historical W8 fingerprint rebind"
-      ]
+      }
     },
     {
       "id": "MI-05",
@@ -336,9 +369,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN.",
-  "next": "MI-01 source candidate review and exact workstation W8 audit/prepare/fingerprint; MI-05/06 shared historical readback browser after build; MI-02/03/04/07/08/09/10 retain their existing owners and gates. MI-07/08 shared candidate ready; owner review and exact 344 run required; other priorities retained.",
-  "previous_revision": "MI-01-BUILD-REPAIR-TRANSFER",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.",
+  "next": "MI-01 source candidate review and exact workstation W8 audit/prepare/fingerprint; MI-05/06 shared historical readback browser after build; MI-02/03/04/07/08/09/10 retain their existing owners and gates. MI-07/08 shared candidate ready; owner review and exact 344 run required; other priorities retained. MI03/04 combined review candidate now available; central owner reviews it with MI01 and MI07/08, no activation.",
+  "previous_revision": "MI-07-08-JOINT-TRANSFER-01",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -352,9 +385,16 @@
     }
   ],
   "mi04_cross_owner_notes": {
-    "candidate": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
-    "contract": "G6A explicit server-owned protected entry recommended, not ratified; preserve R8/G6A legacy evidence; no automatic merge or runtime selection",
-    "parallel": "MI-03 IAM/ORG, MI-08 Memory and MI-01/05/06 existing records retained"
+    "candidate": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+    "contract": "G6A separate explicit protected entry recommended, G7 structural diagnostics kept separate; no actual assignment or role grant, no owner ratification",
+    "parallel": "MI03 original candidate retained, MI01 and MI07/08 direct product overlap only manifest; transitive Memory/T1 review required",
+    "g7_pin_inventory": {
+      "total": 56,
+      "base_exact": 26,
+      "mi03_exact": 2,
+      "authority_divergent": 1,
+      "missing": 27
+    }
   },
   "mi01_cross_owner_notes": {
     "candidate": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
