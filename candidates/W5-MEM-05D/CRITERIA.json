@@ -1,0 +1,107 @@
+{
+  "id": "W5-MEM-05D",
+  "standard": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+  "parent": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+  "weights": [
+    15,
+    35,
+    20,
+    20,
+    10
+  ],
+  "previous": {
+    "design": [
+      0,
+      2
+    ],
+    "source": [
+      0,
+      3
+    ],
+    "functional": [
+      0,
+      4
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "criteria": {
+    "design": [
+      [
+        "D01",
+        "Compare exact existing recovery sources and owner boundaries",
+        "PASS_DESIGN"
+      ],
+      [
+        "D02",
+        "Define read-only pending/restore/checkpoint/runtime oracle and residual risks",
+        "PASS_DESIGN"
+      ]
+    ],
+    "source": [
+      [
+        "S01",
+        "Implement existing-reader full-history recovery composition and tests",
+        "PASS_LOCAL_IMPLEMENTATION_TESTS"
+      ],
+      [
+        "S02",
+        "Owner-reviewed canonical recovery contract with protected D5/T1/W5 provenance",
+        "HOLD"
+      ],
+      [
+        "S03",
+        "Scoped product source integration and manifest readback",
+        "PASS_SCOPED_PRODUCT_SOURCE_MANIFEST"
+      ]
+    ],
+    "functional": [
+      [
+        "F01",
+        "Clean head, signed checkpoint membership and full prefix replay read-only",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ],
+      [
+        "F02",
+        "Pending base/target and divergent/unknown cases; no publish or retry",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ],
+      [
+        "F03",
+        "Restore, forged checkpoint and historical tampering rejected with current external references",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ],
+      [
+        "F04",
+        "Runtime/lease/epoch and interleaved changes; original MEM05C-R2 regression preserved",
+        "PASS_LOCAL_SYNTHETIC_EXACT_CLOSURE"
+      ]
+    ],
+    "integration": [
+      [
+        "I01",
+        "Canonical protected transaction/recovery owners and independent latest readback integration",
+        "HOLD"
+      ],
+      [
+        "I02",
+        "Unified locked product build and acceptance regression",
+        "HOLD"
+      ]
+    ],
+    "acceptance": [
+      [
+        "A01",
+        "Independent custody, recovery acceptance and production policy",
+        "HOLD"
+      ]
+    ]
+  },
+  "notes": "New work package baseline, not a reset or increase of MEM-05C. Source tests are not protected execution or independent acceptance."
+}

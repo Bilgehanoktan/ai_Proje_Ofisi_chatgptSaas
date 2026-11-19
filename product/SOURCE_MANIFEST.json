@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "W5-MEM-05C-R2",
-  "status": "D0_MEMORY_GATEWAY_READONLY_SOURCE_INTEGRATION_SELECTED_LOCAL_PASS_CANONICAL_HOLD",
+  "doc_revision": "W5-MEM-05D",
+  "status": "D0_FULL_HISTORY_MEMORY_RECOVERY_READONLY_SOURCE_INTEGRATION_SELECTED_LOCAL_PASS_CANONICAL_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "a837c5345213230b5e040793c5c5e6c725810818",
+  "parent_git_commit": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -105,6 +105,10 @@
     "ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py": {
       "bytes": 4647,
       "sha256": "52c7f8e847f389ada4bf94a433d6bd1aa49cee41c22d6b6acc8c10793431d778"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py": {
+      "bytes": 7537,
+      "sha256": "6e7f2a0aa2a5b748f58176f6875e3ea23f1300cbe511f62847a1b4ad2c193d9c"
     },
     "ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
       "bytes": 11744,
@@ -861,6 +865,10 @@
     "ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
       "bytes": 6306,
       "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e"
+    },
+    "ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py": {
+      "bytes": 15375,
+      "sha256": "bc1bd9280f4e64a599bed5f73e48846b0750fe0add277de5a15ee27a29994a5d"
     },
     "ai-company-os-backend/tests/test_memory_store_0196.py": {
       "bytes": 8092,
@@ -2099,8 +2107,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "ba3f43b11255b98d4b30590e281f6c9e8664131a",
-  "source_git_commit_note": "15 exact product additions; 13 owner/diagnostic transfers plus 2 new files. SHA-256 for 44 local closure files; all 508 inherited entries preserved. Gateway source ref 12d5149ef891b69a909162f8eecfe5847858e8b4; not a Git merge. Full checkout SHA256 not rerun.",
+  "parent_source_manifest_blob": "41a9a1d62192d54b5ce3fdca1e8ee60b01591598",
+  "source_git_commit_note": "Two additive product files, 49 local closure SHA-256 entries checked, all 523 inherited entries unchanged. Complete product checkout SHA256 not rerun. No merge or owner execution change.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

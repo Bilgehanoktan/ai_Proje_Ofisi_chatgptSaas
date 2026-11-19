@@ -1,0 +1,47 @@
+{
+  "status": "PROPOSED_OWNER_REVIEW_HOLD",
+  "existing": [
+    [
+      "Memory",
+      "inspect_memory_recovery",
+      "Memory-only evidence; no commit or finalization"
+    ],
+    [
+      "D5",
+      "protected authority publisher and claim",
+      "current external trust pin, monotonic independent custody and sticky quarantine; no reset"
+    ],
+    [
+      "T1",
+      "canonical operation journal/commit receipt",
+      "actual consistent exact transaction outcome, not mere snapshot existence"
+    ],
+    [
+      "W5",
+      "per-invocation allocation/receipt",
+      "separate economic UNKNOWN resolution, no retry or implicit refund"
+    ],
+    [
+      "ORG/IAM",
+      "current scope/assignment/role",
+      "owner-issued role and membership provenance; not historical proposal"
+    ],
+    [
+      "Unified",
+      "locked product regression",
+      "explicit accepted integrated source and real environment evidence"
+    ]
+  ],
+  "non_goals": [
+    "No new publisher, grant or economic writer",
+    "No absence-based rollback inference",
+    "No checkpoint-as-authority or post-read atomicity claim",
+    "No automatic transfer into protected dispatcher"
+  ],
+  "required_next": [
+    "Exact owner-issued current runtime and external pins",
+    "Actual transaction outcome and matching full history",
+    "Protected publication under owner-controlled transaction/fence",
+    "Independent acceptance of restore custody and retention policy"
+  ]
+}

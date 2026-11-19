@@ -1,0 +1,76 @@
+{
+  "revision": "W5-MEM-05D",
+  "parent": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+  "environment": {
+    "platform": "Linux",
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "command": "python -I -B run_selected.py (local stage only)",
+    "direct_git": "Could not resolve host: github.com; use authorized connector and recovered exact files"
+  },
+  "source": {
+    "prior_MEM05C_R2": 44,
+    "additional_original": 3,
+    "new": 2,
+    "local_exact": 49,
+    "prior_original_unchanged": 47
+  },
+  "initial_new_only": {
+    "run": 22,
+    "pass": 22,
+    "note": "Before fixed diagnostic reason refinement; final combined run reruns all 22. Not additive test count."
+  },
+  "final": {
+    "tests": {
+      "MEM05D": 22,
+      "MEM03": 9,
+      "MEM04": 22,
+      "MEM05C_R2": 121
+    },
+    "run": 174,
+    "pass": 174,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 2.931,
+    "exit_code": 0
+  },
+  "raw_log": {
+    "path": "regression.log",
+    "blob": "02ee5488ccc462021910f473ee0c625b68b1a9c9",
+    "sha256": "ed5a89802c35ac686fe12dcd65049ef4e1eee96156faa45ae61e5e217c883317"
+  },
+  "local_pins": {
+    "path": "LOCAL_PINS.json",
+    "blob": "b638d7768aa281e9d371b34f052bea1b4f29828a",
+    "sha256": "0222ec1e1b0dbd685d86d98a511cd0349e7467abbbfd5bee6589443ef08586d0"
+  },
+  "criteria_baseline": {
+    "path": "CRITERIA_BASELINE.json",
+    "blob": "75167cc79d900a96b6bcb8fabcc918383ee18b9e",
+    "sha256": "a75be16a6d3257237272d54c98d78adef4e9eb6d7ccc1fcfc5ba9cc5325532f5"
+  },
+  "local_harness": {
+    "path": "run_selected.py",
+    "blob": "dc9b9340aaf658060945fd70a619cf6bd6a4d1c8",
+    "sha256": "16d2606a4df5fcb36e303184d2999e66575dc1405d6044f3d840f9e8827d2d52"
+  },
+  "manifest": {
+    "before": 523,
+    "after": 525,
+    "local_original_plus_new": 49,
+    "full_checkout_sha256": "NOT_RUN",
+    "remote_verification": "complete path/size plus local closure blob/manifest exact hashes"
+  },
+  "limits": [
+    "Actual disposable SQLite and ephemeral Ed25519 keys; no independent custody.",
+    "No actual product DB, protected publication, strict PostgreSQL transaction, D5 claim, economic recovery, full T1 regression or owner current assignment readback.",
+    "No full dependency checkout, Windows or Unified build/acceptance.",
+    "The checkpoint is a caller-supplied signed reference, exact membership and content tested; no new key custody.",
+    "Both stores and all references rolled back together can still match; no local anti-rollback proof. All outputs remain HOLD.",
+    "Memory changes after last observation or ABA restore may evade detection. Repeated observations are not atomic fencing.",
+    "Multiple full replays bounded by existing 512 generations/64 MiB and 4096 Witness rows; no performance or production retention claim.",
+    "No grants, no main merge, CI, PROD, spend, provider, dispatch, replay, retry, pruning or pending clear."
+  ]
+}

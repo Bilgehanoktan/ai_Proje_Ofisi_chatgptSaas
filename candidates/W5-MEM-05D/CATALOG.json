@@ -1,0 +1,115 @@
+{
+  "revision": "W5-MEM-05D",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py",
+      "blob": "2ab7b9a18a15e5115f63ff6f659d605d3d1d897d",
+      "classes": [
+        "MemoryRecoveryReview",
+        "_RecoveryHold"
+      ],
+      "functions": [
+        "_anchor_in_chain",
+        "_checkpoint_prefix_matches",
+        "_observe_memory",
+        "_witness_unchanged",
+        "inspect_memory_recovery"
+      ],
+      "dependencies": [
+        "memory_checkpoint",
+        "memory_witness",
+        "lifecycle",
+        "snapshot_store",
+        "contextlib",
+        "dataclasses"
+      ],
+      "ownership": "Memory read-only reconciliation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py",
+      "blob": "91001d383439f30c37462f4852714cf439cb8b22",
+      "classes": [
+        "MemoryRecoveryTests"
+      ],
+      "test_methods": 22,
+      "dependencies": [
+        "test_memory_history_w5_mem03",
+        "test_memory_gateway_05c_r1",
+        "memory_recovery_review",
+        "memory_gateway_review",
+        "memory_checkpoint",
+        "memory_witness",
+        "snapshot_store",
+        "joint_context",
+        "lifecycle",
+        "durable_receipt_adapter",
+        "SQLite",
+        "fixture Ed25519"
+      ],
+      "ownership": "Memory tests"
+    }
+  ],
+  "python_api": {
+    "symbol": "inspect_memory_recovery",
+    "inputs": [
+      "path",
+      "reader",
+      "expected_witness",
+      "public_key",
+      "checkpoint_body",
+      "checkpoint_signature",
+      "checkpoint_sha",
+      "current_run",
+      "current_lease",
+      "lease_reference",
+      "clock"
+    ],
+    "output": "MemoryRecoveryReview",
+    "observations": [
+      "NONE_OBSERVED",
+      "BASE_ONLY",
+      "TARGET_OBSERVED",
+      "UNVERIFIED"
+    ],
+    "reason_codes": [
+      "D0_MEMORY_RECOVERY_HEAD_MATCH_ONLY",
+      "D0_MEMORY_RECOVERY_PENDING_BASE_ABSENCE_NOT_PROOF",
+      "D0_MEMORY_RECOVERY_PENDING_TARGET_MATCH_ONLY",
+      "MEMORY_RECOVERY_HEAD_MISMATCH_HOLD",
+      "MEMORY_RECOVERY_RUNTIME_HOLD",
+      "MEMORY_RECOVERY_CHECKPOINT_HOLD",
+      "MEMORY_RECOVERY_CHANGED_HOLD",
+      "MEMORY_RECOVERY_READ_HOLD"
+    ],
+    "always_hold": true,
+    "quarantine_required": true
+  },
+  "database": {
+    "read_only_existing_tables": [
+      "snapshots",
+      "memory_witness"
+    ],
+    "new_tables": [],
+    "migrations": [],
+    "write_operations": 0
+  },
+  "http_api": [],
+  "events": [],
+  "external_dependency_additions": [],
+  "existing_dependencies": [
+    "stdlib",
+    "SQLite",
+    "cryptography existing checkpoint dependency"
+  ],
+  "tracker_delta": {
+    "baseline": "TRACK-0210",
+    "areas": [
+      8,
+      13,
+      23
+    ],
+    "ordinal_scores_unchanged": true,
+    "source": "branch-local additive full-history diagnostic and 174 selected cases",
+    "acceptance": "HOLD"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "revision": "W5-MEM-05D",
+  "parent": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+  "branch": "integration/w5-mem-05d-recovery-reconciliation",
+  "refs": {
+    "parent": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+    "gateway": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "d5g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "d5g6b": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
+    "org": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "studio": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "b395d1944877128ab1bb7fa6477fc3188841fe57"
+  },
+  "architecture": "ARCHITECTURE_AND_RUNBOOK.md",
+  "catalog": "CATALOG.json",
+  "owner_contract": "OWNER_CONTRACT.json",
+  "criteria": "CRITERIA.json",
+  "criteria_baseline": "CRITERIA_BASELINE.json",
+  "progress": "PROGRESS.json",
+  "evidence": "EVIDENCE.json",
+  "transfer": "SOURCE_TRANSFER.json",
+  "local_pins": "LOCAL_PINS.json",
+  "rollback": "8064b42a2bc1aced5571a993e2e6d89c791613cc",
+  "parallel": "No exclusive cross-chat lock; revision-specific records, isolated source integration only; no shared global pointer or other branch update.",
+  "next": "MEM-05E owner-bound unified Memory/Runtime/Gateway recovery contract: reconcile actual D5/T1/W5/ORG provenance, compare source divergence, preserve exact pending/unknown quarantine; no second recovery publisher or automatic retry; full protected path remains HOLD.",
+  "open": [
+    "Actual disposable SQLite and ephemeral Ed25519 keys; no independent custody.",
+    "No actual product DB, protected publication, strict PostgreSQL transaction, D5 claim, economic recovery, full T1 regression or owner current assignment readback.",
+    "No full dependency checkout, Windows or Unified build/acceptance.",
+    "The checkpoint is a caller-supplied signed reference, exact membership and content tested; no new key custody.",
+    "Both stores and all references rolled back together can still match; no local anti-rollback proof. All outputs remain HOLD.",
+    "Memory changes after last observation or ABA restore may evade detection. Repeated observations are not atomic fencing.",
+    "Multiple full replays bounded by existing 512 generations/64 MiB and 4096 Witness rows; no performance or production retention claim.",
+    "No grants, no main merge, CI, PROD, spend, provider, dispatch, replay, retry, pruning or pending clear."
+  ]
+}
