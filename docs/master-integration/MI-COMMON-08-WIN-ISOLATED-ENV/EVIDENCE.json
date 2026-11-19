@@ -1,0 +1,36 @@
+{
+  "revision": "MI-COMMON-08-WIN-ISOLATED-ENV",
+  "status": "SOURCE_CANDIDATE_UNEXECUTED_WINDOWS",
+  "user_console": {
+    "python": "3.14.3",
+    "sqlite": "3.50.4",
+    "cryptography": "NOT_INSTALLED",
+    "original_model344": "HOLD_BEFORE_EXECUTION"
+  },
+  "expected": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4"
+  },
+  "official_url_python": "https://www.python.org/ftp/python/3.13.5/python-3.13.5-embed-amd64.zip",
+  "official_url_sqlite": "https://www.sqlite.org/2024/sqlite-dll-win-x64-3460100.zip",
+  "zip_sha256_python": "7D2650FD9D1B9D002D4A315D5F354247FD6A44F30517C7EF577B08F57A0FB6D9",
+  "zip_sha256_sqlite": "300CB2918946F42A1A2F7F31A8DD89EDC202570E4E49D21E13D33ECDF80A6B67",
+  "hash_reference_provenance": "Python SHA256 secondary independent published full file inventory matching official MD5; SQLite SHA256 Chocolatey 3.46.1 verification document; require local SHA256 match before unzip",
+  "zip_source_frozen": "2025-06-11 Python 3.13.5 / SQLite 2024 3.46.1",
+  "static_inspection": {
+    "brace_pair": true,
+    "paren_pair": true,
+    "no_pipeline_install": true,
+    "no_global_python_change": true,
+    "powershell_windows_runtime": "NOT_RUN"
+  },
+  "user_execution": "NOT_RUN",
+  "actual_344": "NOT_RUN",
+  "actual_core_29": "NOT_RUN",
+  "w8": "NOT_RUN",
+  "protected_commit": "HOLD",
+  "independent_acceptance": "HOLD",
+  "acceptance_delta_pp": 0,
+  "progress_delta_pp": 0
+}

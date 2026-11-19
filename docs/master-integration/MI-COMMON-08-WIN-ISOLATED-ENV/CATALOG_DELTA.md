@@ -1,0 +1,3 @@
+# Technical catalog delta — MI-COMMON-08
+
+New file: `AIOS_P0_IZOLE_PY3135_SQLITE3461.ps1` (PowerShell 5.1, local reference environment preparation only). Inputs: `TRANSFER_REPORT.json` with immutable `git_tree`, original Python embed 3.13.5 SHA256 `7D2650...`, original SQLite DLL ZIP 3.46.1 SHA256 `300CB...`. Output: private `P0_ENV_3135_3461_<timestamp>/python/python.exe`, `ENVIRONMENT_PRECHECK.json`. No source/package/API/class/function/DB/event changes. Caution: registry, main, product-dev, owner branches and installed Python 3.14.3 untouched. No calls to GitHub, pip, SQLite server, PostgreSQL, CI, provider, spend or production. Windows runtime NOT_RUN. Failure is HOLD. Version constraints independent of archived SQLite in official Python 3.13.5.
