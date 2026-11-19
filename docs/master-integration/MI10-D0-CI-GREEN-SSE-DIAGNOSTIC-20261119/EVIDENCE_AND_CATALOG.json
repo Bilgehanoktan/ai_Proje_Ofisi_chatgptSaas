@@ -1,0 +1,208 @@
+{
+  "revision": "MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_GITHUB_HOSTED_EPHEMERAL_CI_SELECTED_D0_PASS_WITH_SSE_COMPAT_DIAGNOSTIC_NOT_BYTE_EXACT_U3_OR_IV",
+  "run_id": 44613960595,
+  "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44613960595",
+  "run_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+  "run_started": "2026-11-19T20:57:56Z",
+  "run_completed": "2026-11-19T21:01:53Z",
+  "overall": {
+    "status": "completed",
+    "conclusion": "success",
+    "jobs_total": 3,
+    "jobs_succeeded": 3,
+    "jobs_failed": 0
+  },
+  "source_refs": {
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "main_at_review": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+    "common_exact": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "g6a_exact": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "t1_runner_exact": "878a0e4f2eb105353c7ce9b072797b17142517f2",
+    "ci_branch": "integration/mi10-limited-ci-20261119",
+    "ci_commit": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+    "pr": 4,
+    "pr_state_at_review": "OPEN_DRAFT_UNMERGED",
+    "governance_base": "eea7a0d7050e8b9246cfc7ae82a3e597e9920f71",
+    "governance_prior_revision": "MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01"
+  },
+  "gates": {
+    "MI01_source": {
+      "status": "PASS",
+      "original_W8_preflight": {
+        "sha256_files": [
+          538,
+          538
+        ],
+        "shared_pairs": [
+          17,
+          17
+        ],
+        "auxiliary_git_blob_pins": [
+          33,
+          33
+        ],
+        "npm_lock_direct": [
+          61,
+          61
+        ]
+      },
+      "full_W8_approved": "NOT_RUN"
+    },
+    "MI0304_T1": {
+      "status": "PASS",
+      "actual_original_selected": [
+        42,
+        42
+      ],
+      "group_0212": [
+        7,
+        7
+      ],
+      "group_0194": [
+        35,
+        35
+      ],
+      "exact_source_pins": [
+        30,
+        30
+      ],
+      "replay_scope": "DISPOSABLE_SQLITE_D0_ONLY",
+      "unique_new_methods": 0,
+      "original_0214_fullchain": [
+        0,
+        10
+      ],
+      "protected_postgresql_commit": "NOT_RUN"
+    },
+    "MI01_frontend": {
+      "status": "PASS_DIAGNOSTIC",
+      "node": "22.16.0",
+      "next": "15.5.29",
+      "build": "PASS",
+      "typecheck": "PASS",
+      "frozen_original_npm_lock": "PASS",
+      "full_W8_wheelhouse_fingerprint_prepare_install_test_smoke": "NOT_RUN"
+    },
+    "MI01_live_local_demo": {
+      "backend": "FastAPI on 127.0.0.1:17301",
+      "frontend": "Next.js on 127.0.0.1:17300",
+      "fixture": "D0 disposable SQLite prefix v3",
+      "backend_read": "ACTUAL_HTTP_200",
+      "readonly_sha256_before_after": "PASS",
+      "external_provider": "NOT_USED"
+    },
+    "MI01_browser_compatible": {
+      "classification": "CI_SSE_COMPAT_DIAGNOSTIC_ONLY",
+      "status": "PASS",
+      "original_test_blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773",
+      "shim_blob": "84997c31334e4684b159b5dbd799e3abdd40d301",
+      "mechanism": "in-page clone of existing fetch SSE response for Chromium CDP Network.getResponseBody limitation",
+      "artifact_report": {
+        "status": "PASS",
+        "shared_reads": 3,
+        "actual_browser": true,
+        "same_document": true,
+        "screenshots": 5,
+        "join": "HOLD"
+      },
+      "original_byte_exact_CDP_U3": "FAIL_UNRESOLVED",
+      "full_browser_acceptance": "HOLD",
+      "known_qa_risk": "single global __mi10LastStreamBody promise may permit stale read on repeated snapshot; requires monotonic per-request proof prior to acceptance"
+    }
+  },
+  "artifact": {
+    "id": 14573164214,
+    "name": "mi10-browser-44613960595",
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44613960595/artifacts/14573164214",
+    "zip_size_bytes": 1440083,
+    "zip_sha256": "756a1d57e7af775f1df17ce981a36eb6ed70b9c38dce983aa905201a8caaed51",
+    "inspected_zip_entries": 8,
+    "inspected_screenshots": 5,
+    "report_sha256": "3a987aa8012537622493",
+    "frontend_log_sha256": "b5cb47f31eaa5f4c61aa",
+    "backend_log_sha256": "53737df1ea6255ec1723",
+    "note": "entry SHA values displayed are short identification prefixes; zip SHA256 is full digest"
+  },
+  "historical_failures": [
+    {
+      "run": 44610698699,
+      "cause": "Missing real backend, 503 HOLD on browser snapshot"
+    },
+    {
+      "run": 44612266079,
+      "cause": "Unpinned transitive opentelemetry-api required by FastAPI; pip check failed"
+    },
+    {
+      "run": 44612869954,
+      "cause": "Chromium Playwright CDP Network.getResponseBody failed for real SSE, despite backend HTTP 200"
+    },
+    {
+      "run": 44613836033,
+      "cause": "CI-only shim computed git blob hash with escaped double-backslash-zero, raising MI10_ORIGINAL_U3_BLOB_HOLD"
+    }
+  ],
+  "qa_owner_handoff": {
+    "pr_comment_id": 7022113525,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/4#issuecomment-7022113525",
+    "required_next": "Review per-read fresh response binding in SSE-compatible shim; independent original U3/full W8 acceptance remains separate."
+  },
+  "security": {
+    "source_code_changed_in_this_governance_turn": 0,
+    "ci_workflow_changed_in_this_governance_turn": 0,
+    "main_merges": 0,
+    "product_dev_mutations": 0,
+    "production_deployments": 0,
+    "real_roles_or_grants": 0,
+    "secret_or_provider_access": 0,
+    "independent_acceptance": "HOLD",
+    "pr_merge": "HOLD",
+    "ci_permission": "NARROW_PR4_CONTENTS_READ_EXISTING_APPROVAL"
+  },
+  "progress": {
+    "D5_G7": {
+      "previous": 42.5,
+      "current": 42.5,
+      "delta_pp": 0
+    },
+    "D5_C_R8": {
+      "previous": 50,
+      "current": 50,
+      "delta_pp": 0
+    },
+    "Core_acceptance": {
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ],
+      "delta_pp": 0
+    },
+    "MVP_acceptance": {
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ],
+      "delta_pp": 0
+    },
+    "MI10_development": "HESAPLANAMADI_UNFROZEN_CRITERIA_DENOMINATOR",
+    "overall_development": "HESAPLANAMADI",
+    "new_unique_accepted_product_tests": 0
+  },
+  "next": [
+    "MI-10 owner: verify immutable original test and fresh per-read SSE body binding; do not hide/or disable CDP failure",
+    "MI-01 Unified owner: approved full W8 fingerprint, wheelhouse, prepare/install/test/smoke and original browser flow",
+    "MI-03/04: 265-source 10 original 0214 Memory-T1 tests, known full-restore residual independently open",
+    "MI-02/03: owner-issued ORG/Core real OperationsStore and P02",
+    "MI-04 PG strict COMMIT/witness/independent security and separate acceptance"
+  ],
+  "rollback": "Governance normal revert only; PR #4 may be closed by owner, no force push, no product-dev promotion."
+}
