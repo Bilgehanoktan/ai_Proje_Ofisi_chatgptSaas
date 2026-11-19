@@ -1,0 +1,84 @@
+{
+  "revision": "MI03-GATE02-CORE-POSITIVE-20261119",
+  "date": "2026-11-19",
+  "classification": "ISOLATED_ORIGINAL_SOURCE_FUNCTIONAL_TEST_CANDIDATE_IMPORT_BLOCKED_NOT_RUN",
+  "source_owner_branch": "integration/mi03-gate03-org-runtime-closure-01",
+  "source_base_sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "common_product_dev_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "candidate_branch": "review/mi03-gate02-core-positive-20261119",
+  "candidate_file": "product/ai-company-os-backend/tests/test_core_operations_assignment_mi03.py",
+  "candidate_git_blob": "23c2f019a27bc9e16d8de3f2af72c239eefac035",
+  "candidate_file_sha256": "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d",
+  "candidate_bytes": 10313,
+  "original_source_pins": {
+    "product/ai-company-os-backend/assignment_lifecycle.py": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+    "product/ai-company-os-backend/durable_ops.py": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+    "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+    "product/ai-company-os-backend/app/core/event_store/plan_history_review.py": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+    "product/ai-company-os-backend/app/core/transaction/intent_identity.py": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+    "product/ai-company-os-backend/org_core_bridge.py": "78443c1c2270a796dee234be67c8f4b0ab138a54"
+  },
+  "manifest_previous": 552,
+  "manifest_candidate": 553,
+  "product_previous": 553,
+  "product_candidate": 554,
+  "local_preflight": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "syntax_compile": "PASS",
+    "ast_unique_test_methods": [
+      10,
+      10
+    ],
+    "source_sha256_git_blob_local": "MATCH",
+    "product_import": "BLOCKED_MISSING_EXACT_CHECKOUT",
+    "failure": "ModuleNotFoundError: No module named 'test_canonical_research_0224'",
+    "attempt_exit_code": 1,
+    "functional_methods_run": 0,
+    "functional_pass": 0,
+    "source_testing_limited_by_environment": true
+  },
+  "planned_cases": [
+    "Original persisted Core inspect_research_slice positive structural readback",
+    "OperationsStore record_assignment_review + persisted Core + OperationsStore re-read",
+    "Wrong principal rejected without write",
+    "Stale Core version rejected without write",
+    "Wrong role rejected without write",
+    "Wrong Core member principal rejected without write",
+    "Cross-scope request rejected without write",
+    "Revocation and no re-accept for same run",
+    "Persisted Core drift blocks existing assignment readback",
+    "Missing original Core reader fails closed"
+  ],
+  "previous_evidence_not_rerun": {
+    "packaged_71": "71/71 PASS previously",
+    "schema_11": "11/11 PASS previously",
+    "ci_t1_42": "42/42 PASS previously",
+    "static_source_12": "12/12 source-only previously"
+  },
+  "grant": false,
+  "dispatch": false,
+  "protected_commit": false,
+  "real_issuer": false,
+  "production": false,
+  "ci_scope_expand": false,
+  "blockers": [
+    "Exact full checkout not mounted in this isolated runner",
+    "Original ResearchFixture transitive modules and SQL resources missing locally",
+    "No authenticated assignment, registry/member/role issuer",
+    "No atomic cross-store PostgreSQL transaction/witness acceptance",
+    "Separate original G9 7, G2 50 and Memory T1 10 not run within this candidate",
+    "Owner approval and W8 full build required"
+  ],
+  "development_pct_previous": 42.5,
+  "development_pct_current": 42.5,
+  "delta_pp": 0,
+  "acceptance": {
+    "Core": "12/16",
+    "MVP": "0/11",
+    "Independent_security": "0/7"
+  },
+  "product_dev_changes": 0,
+  "main_changes": 0,
+  "rollback": "Revert only new test+manifest on review branch to d6b82dc4; preserve all owner source, claims, environment and historical proof."
+}
