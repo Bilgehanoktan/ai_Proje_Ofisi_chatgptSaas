@@ -1,0 +1,227 @@
+name: "MI-10 | Pinned D0 checks (NO deploy)"
+
+on:
+  pull_request:
+    branches:
+      - integration/product-dev
+    types: [opened, reopened, synchronize]
+    paths:
+      - ".github/workflows/mi10-limited-ci.yml"
+      - ".github/mi10/**"
+      - "docs/master-integration/MI-10-LIMITED-CI-20261119/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mi10-d0-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+env:
+  CI: "true"
+  NEXT_TELEMETRY_DISABLED: "1"
+  GIT_TERMINAL_PROMPT: "0"
+  OPENAI_API_KEY: ""
+  DATABASE_URL: ""
+
+jobs:
+  source-integrity:
+    name: "MI-01 source SHA-256 and original W8 audit"
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'integration/mi10-limited-ci-20261119' &&
+      github.event.pull_request.base.ref == 'integration/product-dev'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout immutable common candidate (no persisted token)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 61bb06efbba7544bfc68260ed8eb4d342cab9b8e
+          path: candidate
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Setup exact Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.13.5"
+      - name: Validate exact commit and source manifest through original W8 audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C candidate rev-parse HEAD)" = "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+          python candidate/tests/integration/w8_mi_common_02.py audit --repo candidate
+          echo "MI01_REMOTE_SHA_CHECK=PASS"
+      - name: Verify immutable lock and dependency root
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,pathlib
+          r=pathlib.Path('candidate')
+          lock=r/'docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json'
+          raw=lock.read_bytes()
+          assert len(raw)==33618
+          assert hashlib.sha256(raw).hexdigest()=='036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88'
+          pkg=json.loads((r/'product/ai-company-os-frontend/package.json').read_text())
+          obj=json.loads(raw)
+          assert obj['lockfileVersion']==3
+          assert len(obj['packages'])==62
+          for kind in ('dependencies','devDependencies'):
+              assert obj['packages'][''].get(kind,{}) == pkg.get(kind,{})
+          print('MI01_LOCK=EXACT; ORIGINAL_NPM_PACKAGES=61/61')
+          PY
+      - name: Document limits
+        run: |
+          echo "MI01_W8_AUDIT=ATTEMPTED; BUILD_AND_BROWSER_SEPARATE_DIAGNOSTICS"
+          echo "MI03_04_PROTECTED_POSTGRESQL_COMMIT=NOT_RUN; INDEPENDENT_ACCEPTANCE=HOLD"
+
+  frontend-browser:
+    name: "MI-01 diagnostic Next.js build + synthetic U3 browser"
+    needs: source-integrity
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'integration/mi10-limited-ci-20261119'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Checkout exact common candidate
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 61bb06efbba7544bfc68260ed8eb4d342cab9b8e
+          path: candidate
+          persist-credentials: false
+      - name: Setup exact Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22.16.0"
+      - name: Setup exact Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.13.5"
+      - name: Validate manifest and preserve exact original npm lock
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C candidate rev-parse HEAD)" = "61bb06efbba7544bfc68260ed8eb4d342cab9b8e"
+          python candidate/tests/integration/w8_mi_common_02.py audit --repo candidate
+          python - <<'PY'
+          import hashlib,pathlib
+          root=pathlib.Path('candidate')
+          source=root/'docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json'
+          raw=source.read_bytes()
+          assert len(raw)==33618 and hashlib.sha256(raw).hexdigest()=='036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88'
+          dest=root/'product/ai-company-os-frontend/package-lock.json'
+          assert not dest.exists()
+          with dest.open('xb') as f: f.write(raw)
+          assert hashlib.sha256(dest.read_bytes()).hexdigest()==hashlib.sha256(raw).hexdigest()
+          print('FROZEN_NPM_LOCK=PASS; NO_LOCK_REGENERATION')
+          PY
+      - name: Install frozen npm and run Next.js build + typecheck
+        working-directory: candidate/product/ai-company-os-frontend
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm --version
+          npm ci --ignore-scripts --no-audit --no-fund --registry=https://registry.npmjs.org
+          npm run build
+          npm run typecheck
+          echo "MI01_DIAGNOSTIC_FRONTEND_BUILD=PASS"
+      - name: Install pinned synthetic-browser tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --no-deps             'playwright==1.57.0' 'pyee==13.0.0' 'greenlet==3.2.4' 'typing_extensions==4.15.0'
+          python -m playwright install chromium
+      - name: Start local-only Next.js and run existing U3 Playwright test
+        shell: bash
+        run: |
+          set -euo pipefail
+          FRONTEND="$GITHUB_WORKSPACE/candidate/product/ai-company-os-frontend"
+          (
+            cd "$FRONTEND"
+            node node_modules/next/dist/bin/next start -H 127.0.0.1 -p 17300
+          ) > "$RUNNER_TEMP/mi10-next.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          READY=0
+          for i in $(seq 1 90); do
+            if curl --silent --fail --max-time 2 http://127.0.0.1:17300/ >/dev/null; then READY=1; break; fi
+            sleep 2
+          done
+          test "$READY" = 1
+          CHROMIUM="$(python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as p:
+              print(p.chromium.executable_path)
+          PY
+          )"
+          test -f "$CHROMIUM"
+          python candidate/tests/integration/browser_unified_u3.py             --chromium "$CHROMIUM" --frontend-port 17300             --output "$RUNNER_TEMP/mi10-browser"
+          echo "MI01_U3_BROWSER=PASS; FULL_W8_SMOKE=NOT_RUN"
+      - name: Save synthetic browser evidence (no customer data)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: mi10-browser-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/mi10-next.log
+            ${{ runner.temp }}/mi10-browser
+          if-no-files-found: ignore
+          retention-days: 7
+
+  mi03-t1-d0:
+    name: "MI-03/04 original 42 D0 SQLite tests (NOT PG acceptance)"
+    needs: source-integrity
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'integration/mi10-limited-ci-20261119'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout original CI helper only
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: ci
+          persist-credentials: false
+      - name: Checkout pinned common source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 61bb06efbba7544bfc68260ed8eb4d342cab9b8e
+          path: candidate
+          persist-credentials: false
+      - name: Checkout pinned G6A owner sources
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 6bab62305d2ea15f8608f7835270ae027ce01e83
+          path: owner
+          persist-credentials: false
+      - name: Checkout pinned original T1 runner/pins
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 878a0e4f2eb105353c7ce9b072797b17142517f2
+          path: evidence
+          persist-credentials: false
+      - name: Setup original Python environment
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.13.5"
+      - name: Install exact synthetic crypto runtime dependencies
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --no-deps             'cryptography==46.0.4' 'cffi==2.0.0' 'pycparser==2.23'
+      - name: Materialize 30 exact pins and run unchanged 42 selected tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python ci/.github/mi10/materialize_t1_selected.py "$RUNNER_TEMP/mi10-t1-selected"
+      - name: Explicitly preserve actual security/PG gates
+        if: always()
+        run: |
+          echo "T1_SELECTED_D0_RESULT=SEE_LOGS"
+          echo "IAM_ORG_POSTGRESQL_THREE_DATABASE_COMMIT=NOT_RUN"
+          echo "GATE02_OWNER_ASSIGNMENT_AND_DURABLE_OPS_CONFLICT=HOLD"
+          echo "MEMORY_T1_REMAINING_10=NOT_RUN"
+          echo "INDEPENDENT_SECURITY_ACCEPTANCE=HOLD"
