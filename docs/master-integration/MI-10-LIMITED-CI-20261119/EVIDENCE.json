@@ -34,9 +34,139 @@
       ".github/mi10/requirements-browser.txt",
       "docs/master-integration/MI-10-LIMITED-CI-20261119/ARCHITECTURE_RUNBOOK_HANDOVER.md"
     ],
-    "product_files_modified": 0
+    "product_files_modified": 0,
+    "last_verified_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f"
   },
   "successful_run": {
+    "id": 44614849105,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44614849105",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "job_id": 135880650580,
+        "name": "MI01_source_integrity",
+        "conclusion": "success",
+        "evidence": {
+          "product_sha256": [
+            538,
+            538
+          ],
+          "shared_file_pairs": [
+            17,
+            17
+          ],
+          "aux_git_blobs": [
+            33,
+            33
+          ],
+          "original_npm_lock_packages": [
+            61,
+            61
+          ],
+          "full_product_build": false
+        }
+      },
+      {
+        "job_id": 135880869773,
+        "name": "MI03_04_T1_original_selected_D0",
+        "conclusion": "success",
+        "evidence": {
+          "sha256_original_source_before_after": [
+            30,
+            30
+          ],
+          "selected_authority_t1": [
+            7,
+            7
+          ],
+          "mapping_scheduler": [
+            35,
+            35
+          ],
+          "total": [
+            42,
+            42
+          ],
+          "fail": 0,
+          "skip": 0,
+          "scope": "ACTUAL_DISPOSABLE_SQLITE_REPEAT_NOT_PROTECTED_POSTGRESQL_IAM_ORG_COMMIT"
+        }
+      },
+      {
+        "job_id": 135880869828,
+        "name": "MI01_diagnostic_nextjs_and_U3_browser",
+        "conclusion": "success",
+        "evidence": {
+          "npm_ci": "PASS",
+          "nextjs_build": "PASS",
+          "typescript_typecheck": "PASS",
+          "pip_check": "PASS",
+          "real_fastapi_loopback": "PASS",
+          "persisted_original_sqlite_D0_fixture": "PASS",
+          "same_source_sqlite_sha_before_after": "PASS",
+          "chromium_sse_compatible_u3": "PASS",
+          "original_u3_blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773",
+          "original_unmodified_cdp_response_text": "KNOWN_FAILURE_REMAINING",
+          "screenshots": 5,
+          "ttl_check": "PASS_IN_COMPAT_TEST",
+          "same_document": "PASS_IN_COMPAT_TEST",
+          "external_network_requests": "DENIED_IN_TEST",
+          "not_formal_w8_browser_acceptance": true
+        }
+      }
+    ],
+    "artifact": {
+      "id": 14573758241,
+      "name": "mi10-browser-44614849105",
+      "size_bytes": 1440083,
+      "retention_days": 7,
+      "includes": "synthetic Next/Backend logs and 5 browser captures + U3_BROWSER_REPORT.json"
+    }
+  },
+  "prior_failures": [
+    {
+      "run": 44610698699,
+      "reason": "Next frontend only; shared-snapshot backend missing; original U3 returned HOLD/503",
+      "class": "CI_WIRING"
+    },
+    {
+      "run": 44612266079,
+      "reason": "FastAPI opentelemetry-api required dependency absent; pip check detected",
+      "class": "CI_EXACT_PINS"
+    },
+    {
+      "run": 44612869954,
+      "reason": "Original Chromium/CDP Response.text cannot retrieve SSE body despite persisted FastAPI 200",
+      "class": "BROWSER_CDP_SSE_TRANSPORT"
+    },
+    {
+      "run": 44613836033,
+      "reason": "Initial CI-only U3 compatibility helper had Python escape/pin issue; corrected in next commit",
+      "class": "CI_HELPER_MECHANIC"
+    }
+  ],
+  "remaining": {
+    "full_original_W8_audit_prepare_install_test_smoke": "NOT_RUN",
+    "approved_wheelhouse_fingerprint": "HOLD",
+    "native_unmodified_U3_CDP_body": "FAIL_KNOWN_SSE_CDP",
+    "actual_iam_org_t1_postgresql_protected_commit": "NOT_RUN",
+    "original_memory_t1_remaining_10": "NOT_RUN",
+    "gate02_assignment_owner_provenance": "HOLD",
+    "independent_security_and_IV": "HOLD",
+    "real_prod_spend_provider_or_customer": "DENIED"
+  },
+  "counts": {
+    "new_original_product_test_methods": 0,
+    "repeated_T1_tests": 42,
+    "new_security_acceptance_criteria": 0,
+    "product_acceptance_delta_pp": 0,
+    "overall_development_percent": null,
+    "reason_no_percent": "Unfrozen group scope and criteria denominators in MI-PROGRESS"
+  },
+  "rollback": "Close draft PR #4 or normal revert only; no canonical product branch or main moved.",
+  "next": "Owner review CI and exact lock; unblock full W8 wheelhouse/fingerprint/full smoke; retain native U3 SSE/CDP issue; owner resolve GATE02 packaging then PG/RLS and protected T1 runs, separate IV approval",
+  "successful_previous_run": {
     "id": 44613960595,
     "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44613960595",
     "status": "completed",
@@ -123,46 +253,5 @@
       "includes": "synthetic Next/Backend logs and browser captures + U3_BROWSER_REPORT.json"
     }
   },
-  "prior_failures": [
-    {
-      "run": 44610698699,
-      "reason": "Next frontend only; shared-snapshot backend missing; original U3 returned HOLD/503",
-      "class": "CI_WIRING"
-    },
-    {
-      "run": 44612266079,
-      "reason": "FastAPI opentelemetry-api required dependency absent; pip check detected",
-      "class": "CI_EXACT_PINS"
-    },
-    {
-      "run": 44612869954,
-      "reason": "Original Chromium/CDP Response.text cannot retrieve SSE body despite persisted FastAPI 200",
-      "class": "BROWSER_CDP_SSE_TRANSPORT"
-    },
-    {
-      "run": 44613836033,
-      "reason": "Initial CI-only U3 compatibility helper had Python escape/pin issue; corrected in next commit",
-      "class": "CI_HELPER_MECHANIC"
-    }
-  ],
-  "remaining": {
-    "full_original_W8_audit_prepare_install_test_smoke": "NOT_RUN",
-    "approved_wheelhouse_fingerprint": "HOLD",
-    "native_unmodified_U3_CDP_body": "FAIL_KNOWN_SSE_CDP",
-    "actual_iam_org_t1_postgresql_protected_commit": "NOT_RUN",
-    "original_memory_t1_remaining_10": "NOT_RUN",
-    "gate02_assignment_owner_provenance": "HOLD",
-    "independent_security_and_IV": "HOLD",
-    "real_prod_spend_provider_or_customer": "DENIED"
-  },
-  "counts": {
-    "new_original_product_test_methods": 0,
-    "repeated_T1_tests": 42,
-    "new_security_acceptance_criteria": 0,
-    "product_acceptance_delta_pp": 0,
-    "overall_development_percent": null,
-    "reason_no_percent": "Unfrozen group scope and criteria denominators in MI-PROGRESS"
-  },
-  "rollback": "Close draft PR #4 or normal revert only; no canonical product branch or main moved.",
-  "next": "Owner review CI and exact lock; unblock full W8 wheelhouse/fingerprint/full smoke; retain native U3 SSE/CDP issue; owner resolve GATE02 packaging then PG/RLS and protected T1 runs, separate IV approval"
+  "postrun": "Documentation SHA fix itself passed same 3 CI jobs, 538/538 source, original 42/42 T1, Next build, actual FastAPI and same-response SSE-compatible browser; product unchanged. Native original CDP body still FAILED."
 }
