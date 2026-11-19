@@ -34,7 +34,7 @@ INSTRUMENT = """        page.add_init_script(script=r\'''(() => {
 """
 
 def blob(raw: bytes) -> str:
-    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\\0" + raw).hexdigest()
+    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
 
 def main() -> None:
     p=argparse.ArgumentParser()
@@ -50,9 +50,9 @@ def main() -> None:
     original=raw.decode("utf-8")
     if original.count(MARKER)!=1 or original.count(LINE)!=1:
         raise ValueError("MI10_U3_PATCH_SCOPE_HOLD")
-    changed=original.replace(MARKER, MARKER+"\\n"+INSTRUMENT,1)
+    changed=original.replace(MARKER, MARKER+"\n"+INSTRUMENT,1)
     changed=changed.replace(LINE,
-        "            page.wait_for_function(\"window.__mi10LastStreamBody !== null\", timeout=4000)\\n"
+        "            page.wait_for_function(\"window.__mi10LastStreamBody !== null\", timeout=4000)\n"
         "            lines = page.evaluate(\"async () => await window.__mi10LastStreamBody\").splitlines()",1)
     compile(changed,"mi10-u3-sse-compat.py","exec")
     with tempfile.TemporaryDirectory(prefix="mi10-browser-sse-") as temp:
