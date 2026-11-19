@@ -1,0 +1,121 @@
+{
+  "revision": "MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_AUTHORIZED_GITHUB_D0_CI_SSE_FRESH_COMPATIBLE_BROWSER_PASS_NOT_FULL_W8_OR_IV",
+  "owner_commit": "f98da5ab0cef72e87b15878499baceeb15909005",
+  "owner_pr": 4,
+  "owner_pr_draft": true,
+  "owner_pr_merged": false,
+  "run_id": 44620987573,
+  "run_conclusion": "SUCCESS",
+  "run_jobs_passed": 3,
+  "run_jobs_total": 3,
+  "source_audit": {
+    "sha256": [
+      538,
+      538
+    ],
+    "shared_pairs": [
+      17,
+      17
+    ],
+    "auxiliary_git_blobs": [
+      33,
+      33
+    ]
+  },
+  "original_selected_D0_sqlite": [
+    42,
+    42
+  ],
+  "frontend": {
+    "next_build": "PASS",
+    "typescript": "PASS",
+    "frozen_npm_lock": "PASS"
+  },
+  "freshness_negative_test": {
+    "actual": [
+      17,
+      17
+    ],
+    "classification": "SOURCE_PINNED_OWNER_NODE_VM_NEGATIVE"
+  },
+  "real_browser": {
+    "status": "SSE_PER_FETCH_COMPATIBLE_PASS",
+    "status_original_unmodified_CDP": "UNRESOLVED",
+    "real_fastapi": true,
+    "persisted_synthetic_sqlite": true,
+    "read_count": 3,
+    "actual_browser": true,
+    "same_document": true,
+    "screenshots": 5,
+    "join": "HOLD"
+  },
+  "artifact": {
+    "id": 14577580762,
+    "name": "mi10-browser-44620987573",
+    "size_bytes": 1440088,
+    "sha256": "a8dec17d2bac0830296b97d6beced26d45beb47eb7910a0515f4d521422ba178",
+    "entries": 8,
+    "report": {
+      "status": "PASS",
+      "shared_reads": 3,
+      "actual_browser": true,
+      "same_document": true,
+      "screenshots": 5,
+      "join": "HOLD"
+    }
+  },
+  "resolved_owner_ci_fault": {
+    "failed_run": 44620487661,
+    "cause": "Cross-realm VM Array deepStrictEqual",
+    "fix": "Array.from(records, x => x.sequence)",
+    "fixed_commit": "f98da5ab0cef72e87b15878499baceeb15909005"
+  },
+  "parallel_gate02": {
+    "run": 44620505415,
+    "real_Core_OperationsStore_D0": [
+      10,
+      10
+    ],
+    "owner_issued_IAM": "HOLD",
+    "P02": "NOT_RUN",
+    "PG": "NOT_RUN"
+  },
+  "remaining": {
+    "original_Memory_T1_0214": [
+      0,
+      10
+    ],
+    "formal_W8": "NOT_RUN",
+    "native_original_U3_CDP": "UNRESOLVED",
+    "strict_postgresql_commit": "NOT_RUN",
+    "independent_security_IV": "HOLD"
+  },
+  "branch_ownership": {
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "product_changed": false,
+    "main_changed": false,
+    "CI_permission_expansion": false,
+    "release": false,
+    "grants": false
+  },
+  "progress": {
+    "D5_G7_before": 42.5,
+    "D5_G7_after": 42.5,
+    "D5_C_R8_before": 50,
+    "D5_C_R8_after": 50,
+    "Core": [
+      12,
+      16
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "delta_pp": 0,
+    "acceptance_delta": 0,
+    "overall_development": "HESAPLANAMADI"
+  },
+  "rollback": "Governance record normal revert; owner CI PR#4 remains draft and unmerged."
+}

@@ -1,0 +1,16 @@
+# MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120 — Owner CI green, exact SSE freshness
+
+## Genuine executed evidence
+[GitHub Actions 44620987573](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620987573) completed **3/3 PASS** on original source-locked owner CI commit `f98da5ab0cef72e87b15878499baceeb15909005`. Source SHA256 538/538, shared pairs 17/17, auxiliary Git blobs 33/33, original selected SQLite D0 tests 42/42, frozen npm lock, Next.js build and TypeScript PASS. New real owner per-fetch SSE freshness negative regression **17/17**. Real FastAPI/SQLite-backed Chromium **SSE-compatible** U3 read flow PASS, 3 reads, 5 screenshots, same-document, JOIN HOLD preserved.
+
+[GitHub artifact 14577580762](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620987573/artifacts/14577580762) independently opened: 8 ZIP entries, 5 PNG screenshots, two server logs, and U3_BROWSER_REPORT.json with PASS, shared_reads=3, actual_browser=true, same_document=true, screenshots=5, join=HOLD. Archive SHA256 `a8dec17d2bac0830296b97d6beced26d45beb47eb7910a0515f4d521422ba178`.
+
+## How the repair occurred and what it does not prove
+Owner per-request interceptor and original test-copy adapter are confined to PR#4. First run 44620487661 failed **before browser** on a cross-realm JS VM array assertion although [1,2,3] was correct; exact owner commit `f98da5a` only replaces test `records.map(...)` with host realm `Array.from(records, ...)`, preserving strict validation. It then passed 17/17 and the real compatibility browser. Reference governance QA candidate 27/27 remained **unmerged and independent**, not used to manufacture this CI result.
+
+**Not accepted:** unchanged native U3 `Response.text()` CDP SSE path; full W8 fresh wheelhouse/fingerprint `prepare-install-test-smoke`; original 265-source Memory–T1 0214 ten; real G8 P02/owner-issued IAM role; strict PostgreSQL multi-store COMMIT; independent security IV; production/release. The parallel GATE02 owner reported 10/10 actual original Core-reader-plus-OperationsStore D0 SQLite tests in [44620505415](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620505415), including positive write/readback but no PG, P02 or real grant acceptance.
+
+## Catalog, diagnosis, rollback and progress
+No product/API/database/class/event/migration/runtime dependency or permission changes in this governance record. Owner CI references `.github/mi10/sse_fresh_interceptor.js`, `.github/mi10/run_sse_compatible_u3.py`, `.github/mi10/test_sse_freshness.cjs`; unchanged user-facing frontend `/api/demo/shared-snapshot`, FastAPI `/demo/v1/lifecycle/shared-snapshot`.
+
+For regressions: compare exact CI commit, SHA manifests, package integrity, new per-fetch monotonic ID, clone body freshness, three network reads, 200/no-store/digest/TTL, screenshot and external-request denial; reject stale or mismatched body and stop, never weaken protection. Rollback only owner-controlled CI helper normal revert, preserve draft/no merge and H01 narrow read-only permission. D5-G7 42.5→42.5%, D5-C-R8 50→50%; Core 12/16, MVP 0/11. No project aggregate denominator or new acceptance. Next gates remain original Memory–T1 10, G8 P02, full W8 and protected PG/IV.
