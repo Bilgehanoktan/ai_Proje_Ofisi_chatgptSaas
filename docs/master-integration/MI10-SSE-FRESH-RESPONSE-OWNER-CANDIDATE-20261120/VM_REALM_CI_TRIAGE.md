@@ -1,0 +1,7 @@
+# MI-10 VM cross-realm test assertion triage · 2026-11-20
+
+Owner PR #4 CI [44620487661](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620487661) failed the newly introduced `test_sse_freshness.cjs` at `check(records.map(x => x.sequence), [1,2,3], 'monotonic request identity')`. Node v22.16.0 `vm.runInNewContext` creates a separate JS realm and its own Array prototype, so Node host-realm `assert.deepStrictEqual` rejects arrays from the VM even when the printed values are exactly `[1,2,3]`. The strict-safe owner fix is `Array.from(records, x => x.sequence)`, returning a host-realm array; it still rejects `[1,3,2]`.
+
+Actual local isolated Node test `node test_vm_array_realm.js` **4/4 PASS**, no real network/Chromium/product. Original run's full 538-source and selected 42 SQLite jobs passed; the third job failed before real browser. Owner notified in [PR #4 comment](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/4#issuecomment-7022963741). CI owner code, permissions, product-dev/main and actual release remain unchanged by this review. Next action is owner correction and rerun, not to count CI as successful.
+
+This triage is independent of the separate fresh SSE owner-reference candidate 27/27 isolated tests and of GATE-02's parallel [10/10 original Core reader + OperationsStore D0 tests](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620505415). No independent IAM principal issuing, P02, protected PG COMMIT, full W8 or IV acceptance is established.
