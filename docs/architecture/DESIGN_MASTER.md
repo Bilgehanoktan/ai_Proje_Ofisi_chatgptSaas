@@ -278,3 +278,6 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G7 — existing G6B Core/ORG readback hardening (branch-local)
 [Architecture/runbook](../../candidates/D5-G7/ARCHITECTURE_AND_RUNBOOK.md). Exact latest callback and membership checks hardened; selected 19/19 SQL-backed protocol and 13/13 G6B regression PASS, full actual 7 NOT_RUN. G6A and R8/R9 remain separate; no normative or runtime authority change.
+
+## D5-G8 — actual assignment/role provenance owner handoff (branch-local)
+[Architecture and runbook](../../candidates/D5-G8/ARCHITECTURE_AND_RUNBOOK.md). 7/7 exact R3 schema controls, ORG10 PG source-only review. Existing D4 Binding and G7 retained. Actual owner issuance, protected publication and COMMIT HOLD. No product code or normative policy change.

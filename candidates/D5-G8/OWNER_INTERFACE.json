@@ -1,0 +1,179 @@
+{
+  "revision": "D5-G8",
+  "classification": "PROPOSED_OWNER_INTERFACE_NOT_RATIFIED",
+  "scope": [
+    "synthetic-tenant",
+    "synthetic-company",
+    "A0_SAMPLE_ONLY"
+  ],
+  "parent": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+  "required_join_fields": [
+    "tenant",
+    "company",
+    "environment",
+    "org_head",
+    "org_sequence",
+    "staffing_digest",
+    "team_digest",
+    "project",
+    "plan_revision",
+    "task",
+    "run",
+    "agent",
+    "principal",
+    "policy_epoch",
+    "witness_epoch",
+    "role_revision",
+    "full_intent_digest"
+  ],
+  "binding_sources": [
+    {
+      "binding": "registry_revision / registry_sha",
+      "owner": "IAM registry owner",
+      "existing": "G2 durable session and D0 RegistrySnapshot are not actual registry issuance",
+      "missing": "Owner-issued principal registry, exact scope, revision/digest, active/revoked, custody",
+      "status": "HOLD"
+    },
+    {
+      "binding": "membership_revision / membership_sha",
+      "owner": "ORG + Core",
+      "existing": "org_binding/op_member and company_run_membership historical readback",
+      "missing": "Owner-issued scoped member version/digest for project/plan/task/run/seat/agent/principal; no org_sequence alias",
+      "status": "HOLD"
+    },
+    {
+      "binding": "assignment_revision / assignment_sha",
+      "owner": "ORG + Core / Orchestrator; approval owner",
+      "existing": "op_entry + op_notice HOLD only",
+      "missing": "Accepted/revoked assignment, exact run and recipient, proposal digest, task role, issuer/approval, revision/digest, time and epoch",
+      "status": "HOLD"
+    },
+    {
+      "binding": "role_revision / role_sha",
+      "owner": "D4/security + policy owner",
+      "existing": "Core task role and ORG staffing role; D4 external observation",
+      "missing": "Owner-issued permission for authenticated principal, assignment and scope, independently maintained physical role mapping",
+      "status": "HOLD"
+    },
+    {
+      "binding": "db_role / database / cluster / expires_tick / active",
+      "owner": "D4 transport + IAM clock",
+      "existing": "D4 review_session / G4/G5 observations",
+      "missing": "Trusted SessionFacts, physical role and active authorization at protected fence; no fixture alias",
+      "status": "HOLD"
+    },
+    {
+      "binding": "RootPin + publication version",
+      "owner": "D5-D/E plus every publishing owner",
+      "existing": "Existing D5-E synthetic pending/final fixture",
+      "missing": "Owner-approved durable pending barrier, actual publisher participation, independent custody and strict COMMIT",
+      "status": "HOLD"
+    }
+  ],
+  "proposed_assignment_observation": {
+    "note": "Conceptual owner contract, NOT a new writable record/class/API/schema; physical representation and canonical digest encoding open.",
+    "key": [
+      "tenant",
+      "company",
+      "environment",
+      "project",
+      "plan_revision",
+      "task",
+      "run"
+    ],
+    "references": [
+      "org_head",
+      "org_sequence",
+      "staffing_digest",
+      "team_digest",
+      "history_count",
+      "history_head",
+      "proposal_digest",
+      "recipient_seat",
+      "agent",
+      "principal",
+      "task_role",
+      "core_member",
+      "core_expected_version",
+      "registry_revision",
+      "registry_sha",
+      "membership_revision",
+      "membership_sha",
+      "assignment_revision",
+      "assignment_sha",
+      "role_revision",
+      "role_sha",
+      "policy_epoch",
+      "witness_epoch",
+      "full_intent_digest"
+    ],
+    "provenance": [
+      "issuer identity and custody",
+      "explicit owner decision/approval reference",
+      "active or revoked disposition",
+      "issued/expiry clock domain and ticks",
+      "current owner revision and exact digest",
+      "protected publication version"
+    ],
+    "constraints": [
+      "Proposal stays HOLD; no op_notice promotion or digest alias",
+      "Propose exactly one accepted current assignment for this scoped Research run; ORG/Core owner must ratify uniqueness and supersession",
+      "No implicit reassign of existing run/member or original claim/request hash mutation",
+      "Separate registry, membership, assignment and role revision/digest; no client provenance",
+      "No execution until actual D5-D/E publication and D5-C protected transport proof"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "P02-A",
+      "requirement": "Exact active owner-issued assignment, registry, member, role and 17-field join; historical match only until protection accepted",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-B",
+      "requirement": "Proposal only, missing/revoked/expired assignment or ambiguous proposals -> HOLD before claim",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-C",
+      "requirement": "Cross-scope or wrong project/plan/task/run/seat/agent/principal/proposal/Core version -> HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-D",
+      "requirement": "Forged/stale revisions or digests, role mismatch, physical DB role or clock/epoch mismatch -> HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-E",
+      "requirement": "Two current accepted assignments for same exact Research run -> HOLD; no implicit retargeting",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P03-A",
+      "requirement": "Finalized change before fence rejects stale binding; pending/missing/unknown/partial restore -> HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P04-A",
+      "requirement": "Publisher during protected commit serializes after verified outcome",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P05-A",
+      "requirement": "Crash before/after owner mutation retains pending; bypassing publisher blocks activation",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P06-A",
+      "requirement": "Expiry through actual durable COMMIT, not only precheck",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P07-A",
+      "requirement": "Lost ACK/restart retains consumed claim and UNKNOWN/PENDING; no retry",
+      "status": "NOT_RUN"
+    }
+  ],
+  "activation": "HOLD"
+}
