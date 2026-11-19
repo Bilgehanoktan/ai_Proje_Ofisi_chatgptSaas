@@ -1,0 +1,228 @@
+{
+  "revision": "MI03-GATE01-T1-DIRECT-REPLAY-01",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_EXACT_SELECTED_ORIGINAL_T1_SQLITE_REPLAY_AND_REMAINING_CHAIN_PREFLIGHT",
+  "governance_parent": "552be99628e6d2090ad857a03e0e50f982ac3ab8",
+  "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+  "common_manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+  "common_backend_entries": 265,
+  "common_product_files": 539,
+  "source_pins": {
+    "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/T1_DIRECT_PINS.json",
+    "blob": "ebe145bf4ba4afa4cd45eab411bd35305a158faa",
+    "local_pre_post": [
+      30,
+      30
+    ],
+    "remote_exact": [
+      30,
+      30
+    ],
+    "common_exact": [
+      28,
+      28
+    ],
+    "owner_exact": [
+      2,
+      2
+    ]
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "scope": "Original actual disposable SQLite mapping/shim; no real PostgreSQL, no protected IAM-backed transaction, no full checkout."
+  },
+  "run": {
+    "original_0212": [
+      7,
+      7
+    ],
+    "original_0194": [
+      35,
+      35
+    ],
+    "total": [
+      42,
+      42
+    ],
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit": 0,
+    "log": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/t1-direct.log",
+    "log_sha256": "ded041fded2dde9ae7f1e3bf11cca93d6d5c3bee85c7e07bb0b4077f7cb30898",
+    "runner": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_t1_direct.py",
+    "scope": "Only 7 of requested original 17; additional 35 original mapping/scheduler methods. Exact G6A authority replacement in local selected closure; IAM file present but no actual IAM-backed T1 claim. No Memory/Witness import. Original 33 IAM replay historical separate. No new unique test methods."
+  },
+  "remaining_fullchain": {
+    "original_0214": [
+      0,
+      10
+    ],
+    "status": "NOT_RUN",
+    "runner": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_t1_fullchain.py",
+    "runner_blob": "e60add70f9eee84f500279dddddb1bcbb4022dc7",
+    "runner_syntax": "PASS",
+    "preflight": "BLOCKED_MISSING_EXACT_COMMON_MANIFEST",
+    "exit": 2,
+    "log": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/fullchain-preflight.log",
+    "requires": "Exact common 265 backend entries plus exact G6A Authority/IAM overlay plus three original DDL; cryptography 46.0.4; no repin of original G2 runner.",
+    "known_residual": "Full joint restore reproduction must not be interpreted as security PASS."
+  },
+  "recovery_note": "One compressed transport attempt failed UTF-8/integrity check; discarded, exact raw files recovered and verified individually. DNS blocked full checkout. No product code modified.",
+  "parallel": {
+    "gate02_assignment": {
+      "revision": "MI03-GATE02-ASSIGNMENT-LIFECYCLE-D0",
+      "branch": "workstream/mi03-gate02-assignment-lifecycle-d0",
+      "commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "base": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+      "catalog": "candidates/MI03-ASSIGNMENT-D0/CATALOG_AND_EVIDENCE.json",
+      "runbook": "candidates/MI03-ASSIGNMENT-D0/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+      "classification": "ISOLATED_SOURCE_CANDIDATE_ACTUAL_SQLITE_UNIT_TESTS",
+      "status": "SOURCE_CANDIDATE_READY_OWNER_AND_CORE_REPLAY_HOLD",
+      "actual_local_unit_tests": [
+        20,
+        20
+      ],
+      "exact_test_source_pins": [
+        3,
+        3
+      ],
+      "remote_readback": [
+        13,
+        13
+      ],
+      "candidate_source_files": 3,
+      "new_db_tables": 1,
+      "actual_owner_issuance": false,
+      "actual_store_core_replay": "NOT_RUN",
+      "actual_P02": "NOT_RUN",
+      "product_changes": 0,
+      "acceptance_delta": 0,
+      "previous_percent": 42.5,
+      "current_percent": 42.5,
+      "delta_pp": 0,
+      "activation": "HOLD"
+    },
+    "assignment_packaging_status": "VERSION_COLLISION_OWNER_REVIEW_HOLD",
+    "common_selected_regression": {
+      "revision": "MI-COMMON-03-SELECTED-REGRESSION",
+      "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "evidence": "docs/master-integration/MI-COMMON-03-SELECTED-REGRESSION/EVIDENCE.json",
+      "catalog": "docs/master-integration/MI-COMMON-03-SELECTED-REGRESSION/LOCAL_SOURCE_PINS.json",
+      "runbook": "docs/master-integration/MI-COMMON-03-SELECTED-REGRESSION/RUNBOOK.md",
+      "selected_product_tests": [
+        97,
+        97
+      ],
+      "actual_groups": {
+        "ORG": [
+          31,
+          31
+        ],
+        "projectionRead": [
+          12,
+          12
+        ],
+        "Skill": [
+          41,
+          41
+        ],
+        "registry": [
+          13,
+          13
+        ]
+      },
+      "source_local": [
+        26,
+        26
+      ],
+      "model_memory_remote": [
+        114,
+        114
+      ],
+      "history_remote": [
+        55,
+        55
+      ],
+      "full_build": "NOT_RUN",
+      "owner_review": "PENDING",
+      "acceptance_delta": 0
+    },
+    "existing_overlay": {
+      "path": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/CATALOG_AND_EVIDENCE.json",
+      "runbook": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+      "proposal": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/PROPOSED_SOURCE_DELTA.json",
+      "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "actual_selected_replay": [
+        15,
+        15
+      ],
+      "local_pins": [
+        6,
+        6
+      ],
+      "g2_backend_exact": [
+        230,
+        240
+      ],
+      "g9_backend_exact": [
+        232,
+        248
+      ],
+      "g9_selected_exact": [
+        28,
+        56
+      ],
+      "proposed_paths": 12,
+      "proposed_product_files": 550,
+      "status": "ACTUAL_SELECTED_0215_PASS_EXACT_DELTA_READY_OWNER_HOLD_NOT_APPLIED",
+      "new_unique_methods": 0,
+      "product_changes": 0,
+      "acceptance_delta": 0
+    },
+    "scope": "Existing owner work preserved; no duplicate implementation or acceptance."
+  },
+  "criteria": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ],
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0
+  },
+  "source_changes": 0,
+  "new_unique_methods": 0,
+  "acceptance_delta": 0,
+  "activation": "HOLD",
+  "artifacts": {
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_t1_direct.py": "84a0e23747aabc0b3dbe45e6958ff887979efc95",
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/T1_DIRECT_PINS.json": "ebe145bf4ba4afa4cd45eab411bd35305a158faa",
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/t1-direct.log": "ae93f546f99064c9be52d5732d09b6f97a63c412",
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/t1-direct-exit.txt": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_t1_fullchain.py": "e60add70f9eee84f500279dddddb1bcbb4022dc7",
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/fullchain-preflight.log": "e6464defbdee08e8208d0e8f0884f022659500a7",
+    "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/fullchain-preflight-exit.txt": "0cfbf08886fca9a91cb753ec8734c84fcbe52c9f"
+  },
+  "rollback": "Governance review revert only; no DB restore, old writer access, or product ref movement."
+}
