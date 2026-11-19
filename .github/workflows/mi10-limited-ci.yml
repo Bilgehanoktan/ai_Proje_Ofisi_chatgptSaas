@@ -190,11 +190,11 @@ jobs:
           PY
           )"
           test -f "$CHROMIUM"
-          python candidate/tests/integration/browser_unified_u3.py --chromium "$CHROMIUM" --frontend-port 17300 --output "$RUNNER_TEMP/mi10-browser"
+          python ci/.github/mi10/run_sse_compatible_u3.py --original candidate/tests/integration/browser_unified_u3.py --chromium "$CHROMIUM" --frontend-port 17300 --output "$RUNNER_TEMP/mi10-browser"
           PREFIX_AFTER="$(sha256sum "$AICOS_D0_LIFECYCLE_PREFIX_DB" | awk '{print $1}')"
           test "$PREFIX_BEFORE" = "$PREFIX_AFTER"
           echo "MI01_REAL_D0_READER=PASS; SQLITE_PREFIX_UNCHANGED=PASS"
-          echo "MI01_U3_BROWSER=PASS; FULL_W8_SMOKE=NOT_RUN"
+          echo "MI01_U3_SSE_COMPATIBLE_BROWSER=PASS; ORIGINAL_CDP_SSE_BODY=FAIL; FULL_W8_SMOKE=NOT_RUN"
       - name: Save synthetic browser evidence (no customer data)
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
