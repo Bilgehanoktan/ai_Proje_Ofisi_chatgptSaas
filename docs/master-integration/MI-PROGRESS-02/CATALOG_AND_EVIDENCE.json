@@ -1,0 +1,306 @@
+{
+  "revision": "MI-PROGRESS-02",
+  "refs": {
+    "governance_parent": "382d769eccf30615957554668d84d7b9e8d96cd8",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "original_master": {
+      "archive": "Ai_Proje_Ofisi_Chatgpt(Saas).zip",
+      "path": "AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1.md",
+      "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": [
+        13596,
+        13804
+      ]
+    },
+    "doc_rev_0155": {
+      "archive": "AI_Company_OS_DOC_REV_0155_TAM_PROJE_PAKETI.zip",
+      "path": "AI_Company_OS_DESIGN_MASTER_DOC_REV_0155_RECOVERY_ADAY.md",
+      "sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+      "bytes": 12193137,
+      "matrix_lines": [
+        1389,
+        1413
+      ],
+      "v122_list_lines": [
+        15215,
+        15423
+      ]
+    },
+    "tracker": {
+      "path": "progress/DEVELOPMENT_TRACKER_24.json",
+      "blob": "574f14af7eed4ff38cce6724e5156801817b457d"
+    },
+    "weight_baseline": {
+      "path": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
+      "blob": "052f0592c903322778a68fc598b5cbc4fa992132"
+    },
+    "standard": {
+      "ref": "planning/project-wide-progress-reporting",
+      "sha": "b6983047430cecde80a02c6384a22fe80301ad93",
+      "path": "progress/REPORTING_STANDARD_20261118.md"
+    },
+    "working_standard": {
+      "path": "docs/master-integration/WORKING_STANDARD.md",
+      "blob": "9527837335ddd17a972a16698c05242de5643106"
+    }
+  },
+  "classification": "REPORTING_DATA_ONLY",
+  "coverage": {
+    "domains": [
+      21,
+      21
+    ],
+    "modules": [
+      63,
+      63
+    ],
+    "technical_areas": [
+      24,
+      24
+    ],
+    "proposed_groups": [
+      10,
+      10
+    ],
+    "proposed_stage_slots": 315,
+    "approved_group_denominators": [
+      0,
+      10
+    ],
+    "reviewed_scored_criteria": 0
+  },
+  "source_comparison": {
+    "original_pairs": [
+      63,
+      63
+    ],
+    "duplicate_pairs": 0
+  },
+  "structural_checks": [
+    {
+      "id": "valid_scope",
+      "pass": true
+    },
+    {
+      "id": "duplicate_module_rejected",
+      "pass": true
+    },
+    {
+      "id": "missing_module_rejected",
+      "pass": true
+    },
+    {
+      "id": "unknown_group_rejected",
+      "pass": true
+    },
+    {
+      "id": "wrong_weight_rejected",
+      "pass": true
+    },
+    {
+      "id": "duplicate_criterion_rejected",
+      "pass": true
+    },
+    {
+      "id": "duplicate_area_rejected",
+      "pass": true
+    },
+    {
+      "id": "unsupported_credit_rejected",
+      "pass": true
+    }
+  ],
+  "structural_check_count": [
+    8,
+    8
+  ],
+  "product_changes": 0,
+  "product_tests": 0,
+  "api_changes": 0,
+  "db_changes": 0,
+  "event_changes": 0,
+  "dependencies_changed": 0,
+  "acceptance_delta": 0,
+  "previous_acceptance": [
+    {
+      "id": "CORE",
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ],
+      "source": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+      "path": "progress/INTEGRATION_GATES_0227.json",
+      "scope": "Core standalone; D3 scoped fixture, not canonical RLS"
+    },
+    {
+      "id": "UI",
+      "previous": [
+        21,
+        40
+      ],
+      "current": [
+        21,
+        40
+      ],
+      "source": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "path": "progress/INTEGRATION_MATRIX_UI_P10J24B.json"
+    },
+    {
+      "id": "ORG_PLAN",
+      "previous": [
+        5,
+        7
+      ],
+      "current": [
+        5,
+        7
+      ],
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "path": "candidates/D5-G7/PROGRESS.json",
+      "scope": "plan not product"
+    },
+    {
+      "id": "MVP",
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ],
+      "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "IV",
+      "previous": [
+        0,
+        7
+      ],
+      "current": [
+        0,
+        7
+      ],
+      "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "EXT",
+      "previous": [
+        2,
+        7
+      ],
+      "current": [
+        2,
+        7
+      ],
+      "source": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+      "path": "handover/W5_EXT07R6_CURRENT.json",
+      "scope": "EXT-specific gates"
+    }
+  ],
+  "current_acceptance": [
+    {
+      "id": "CORE",
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ],
+      "source": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+      "path": "progress/INTEGRATION_GATES_0227.json",
+      "scope": "Core standalone; D3 scoped fixture, not canonical RLS"
+    },
+    {
+      "id": "UI",
+      "previous": [
+        21,
+        40
+      ],
+      "current": [
+        21,
+        40
+      ],
+      "source": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "path": "progress/INTEGRATION_MATRIX_UI_P10J24B.json"
+    },
+    {
+      "id": "ORG_PLAN",
+      "previous": [
+        5,
+        7
+      ],
+      "current": [
+        5,
+        7
+      ],
+      "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "path": "candidates/D5-G7/PROGRESS.json",
+      "scope": "plan not product"
+    },
+    {
+      "id": "MVP",
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ],
+      "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "IV",
+      "previous": [
+        0,
+        7
+      ],
+      "current": [
+        0,
+        7
+      ],
+      "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "EXT",
+      "previous": [
+        2,
+        7
+      ],
+      "current": [
+        2,
+        7
+      ],
+      "source": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+      "path": "handover/W5_EXT07R6_CURRENT.json",
+      "scope": "EXT-specific gates"
+    }
+  ],
+  "progress_percent": null,
+  "paths": {
+    "matrix": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "central_current": "progress/MASTER_INTEGRATION_CURRENT.json",
+    "partial": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
+    "weight": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json"
+  },
+  "blockers": [
+    "Owner-reviewed exhaustive criterion denominators and group weights not frozen",
+    "Current product full build and canonical gates still HOLD",
+    "Parallel owners retain their existing source and test tasks"
+  ],
+  "rollback": "Revert only MI-PROGRESS-02 reporting delta after current-head review; preserve concurrent owner records and all source history. Do not force push."
+}

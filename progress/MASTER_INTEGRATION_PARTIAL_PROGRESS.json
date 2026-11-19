@@ -1,5 +1,5 @@
 {
-  "revision": "MI-05-06-PROJECTION-REPLAY-01",
+  "revision": "MI-PROGRESS-02",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -7,7 +7,7 @@
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "overall_percent": null,
-  "overall_reason": "24 areas assigned once in proposed crosswalk; domain/submodule allocation and exhaustive criterion denominators not frozen, no global percent",
+  "overall_reason": "21 domains / 63 modules have a proposed unique reporting-group crosswalk; 315 proposed stage slots and 24 crosscut review rows, exhaustive criteria/weights not frozen, no global percent",
   "global_acceptance": [
     {
       "id": "CORE",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance.",
   "new_product_tests": 0,
-  "previous_revision": "MI-04-MEMORY-T1-EVIDENCE-RECONCILIATION",
+  "previous_revision": "MI-05-06-PROJECTION-REPLAY-01",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -598,5 +598,41 @@
     "org_r8_previous": 11.6666666667,
     "org_r8_current": 11.6666666667,
     "delta": 0
+  },
+  "mi_progress_02": {
+    "revision": "MI-PROGRESS-02",
+    "status": "PROPOSED_SCOPE_CROSSWALK_READY_OWNER_CRITERION_REVIEW_PENDING",
+    "matrix": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
+    "evidence": "docs/master-integration/MI-PROGRESS-02/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "coverage": {
+      "domains": [
+        21,
+        21
+      ],
+      "modules": [
+        63,
+        63
+      ],
+      "technical_areas": [
+        24,
+        24
+      ],
+      "proposed_groups": [
+        10,
+        10
+      ],
+      "proposed_stage_slots": 315,
+      "approved_group_denominators": [
+        0,
+        10
+      ],
+      "reviewed_scored_criteria": 0
+    },
+    "overall_percent": null,
+    "product_changes": 0,
+    "new_product_tests": 0,
+    "acceptance_delta": 0,
+    "next": "MI-PROGRESS-02-R1 owner coverage/criteria review, freeze and evidence mapping; do not alter existing MI01–10 work."
   }
 }

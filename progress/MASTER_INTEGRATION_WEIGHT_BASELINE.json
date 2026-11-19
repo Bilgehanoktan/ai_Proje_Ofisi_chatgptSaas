@@ -1,6 +1,6 @@
 {
-  "revision": "MI-02-04-R1",
-  "status": "PROPOSED_24_AREA_CROSSWALK_COMPLETE; 21 domains / 63 submodules and evidence criteria not frozen",
+  "revision": "MI-PROGRESS-02",
+  "status": "PROPOSED_24_AREA_AND_63_MODULE_CROSSWALK_COMPLETE; CRITERION_SLOTS_DRAFT_OWNER_REVIEW_NOT_FROZEN",
   "total": 100,
   "groups": [
     {
@@ -15,7 +15,12 @@
         1,
         2
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D13-M1"
+      ],
+      "proposed_module_count": 1,
+      "proposed_criterion_slots": 5
     },
     {
       "id": "P02",
@@ -28,7 +33,13 @@
       "tracker_area_ids": [
         3
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D13-M2",
+        "D13-M3"
+      ],
+      "proposed_module_count": 2,
+      "proposed_criterion_slots": 10
     },
     {
       "id": "P03",
@@ -42,7 +53,13 @@
         4,
         5
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D03-M3",
+        "D10-M1"
+      ],
+      "proposed_module_count": 2,
+      "proposed_criterion_slots": 10
     },
     {
       "id": "P04",
@@ -56,7 +73,14 @@
         6,
         7
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D01-M3",
+        "D10-M2",
+        "D19-M1"
+      ],
+      "proposed_module_count": 3,
+      "proposed_criterion_slots": 15
     },
     {
       "id": "P05",
@@ -69,7 +93,19 @@
       "tracker_area_ids": [
         8
       ],
-      "scope_rule": "ORG owned here with Agent Runtime; security roles/grants P08"
+      "scope_rule": "ORG owned here with Agent Runtime; security roles/grants P08",
+      "module_ids": [
+        "D04-M1",
+        "D04-M2",
+        "D04-M3",
+        "D05-M1",
+        "D05-M2",
+        "D05-M3",
+        "D07-M1",
+        "D07-M3"
+      ],
+      "proposed_module_count": 8,
+      "proposed_criterion_slots": 40
     },
     {
       "id": "P06",
@@ -85,7 +121,19 @@
         13,
         18
       ],
-      "scope_rule": "external tool integration area 18 here; SaaS billing integrations P09 where owned by billing, no duplicate scoring"
+      "scope_rule": "external tool integration area 18 here; SaaS billing integrations P09 where owned by billing, no duplicate scoring",
+      "module_ids": [
+        "D08-M1",
+        "D08-M2",
+        "D08-M3",
+        "D09-M1",
+        "D09-M2",
+        "D09-M3",
+        "D21-M1",
+        "D21-M2"
+      ],
+      "proposed_module_count": 8,
+      "proposed_criterion_slots": 40
     },
     {
       "id": "P07",
@@ -99,7 +147,16 @@
         11,
         12
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D07-M2",
+        "D15-M1",
+        "D15-M2",
+        "D15-M3",
+        "D21-M3"
+      ],
+      "proposed_module_count": 5,
+      "proposed_criterion_slots": 25
     },
     {
       "id": "P08",
@@ -113,7 +170,26 @@
         14,
         15
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D02-M3",
+        "D03-M2",
+        "D06-M1",
+        "D06-M2",
+        "D06-M3",
+        "D11-M2",
+        "D14-M1",
+        "D14-M2",
+        "D14-M3",
+        "D16-M1",
+        "D18-M2",
+        "D19-M3",
+        "D20-M1",
+        "D20-M2",
+        "D20-M3"
+      ],
+      "proposed_module_count": 15,
+      "proposed_criterion_slots": 75
     },
     {
       "id": "P09",
@@ -128,7 +204,22 @@
         17,
         19
       ],
-      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice"
+      "scope_rule": "own corresponding tracker scope; cross-group dependencies referenced not counted twice",
+      "module_ids": [
+        "D01-M1",
+        "D01-M2",
+        "D02-M1",
+        "D02-M2",
+        "D03-M1",
+        "D12-M1",
+        "D12-M2",
+        "D12-M3",
+        "D17-M1",
+        "D17-M2",
+        "D17-M3"
+      ],
+      "proposed_module_count": 11,
+      "proposed_criterion_slots": 55
     },
     {
       "id": "P10",
@@ -145,7 +236,19 @@
         23,
         24
       ],
-      "scope_rule": "shared tests, DevOps, observability, backup and catalog own infra criteria; domain-specific tests stay in owning group"
+      "scope_rule": "shared tests, DevOps, observability, backup and catalog own infra criteria; domain-specific tests stay in owning group",
+      "module_ids": [
+        "D10-M3",
+        "D11-M1",
+        "D11-M3",
+        "D16-M2",
+        "D16-M3",
+        "D18-M1",
+        "D18-M3",
+        "D19-M2"
+      ],
+      "proposed_module_count": 8,
+      "proposed_criterion_slots": 40
     }
   ],
   "stage_weights": {
@@ -156,7 +259,7 @@
     "acceptance": 10
   },
   "overall_percent": null,
-  "reason": "24 areas assigned once in proposed crosswalk; domain/submodule allocation and exhaustive criterion denominators not frozen, no global percent",
+  "reason": "21 domains / 63 modules have a proposed unique reporting-group crosswalk; 315 proposed stage slots and 24 crosscut review rows, exhaustive criteria/weights not frozen, no global percent",
   "coverage": {
     "tracker_areas": [
       24,
@@ -166,6 +269,17 @@
       0,
       10
     ],
-    "overall_percent": null
-  }
+    "overall_percent": null,
+    "domains": [
+      21,
+      21
+    ],
+    "modules": [
+      63,
+      63
+    ],
+    "proposed_stage_slots": 315
+  },
+  "previous_revision": "MI-02-04-R1",
+  "scope_and_criteria": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json"
 }
