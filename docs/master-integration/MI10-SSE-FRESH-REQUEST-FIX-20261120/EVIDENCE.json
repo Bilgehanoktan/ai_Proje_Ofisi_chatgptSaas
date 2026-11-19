@@ -1,0 +1,115 @@
+{
+  "revision": "MI10-SSE-FRESH-REQUEST-FIX-20261120-R1",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_GITHUB_HOSTED_CI_QA_FRESH_SSE_COMPAT_FIX_NOT_NATIVE_CDP_ACCEPTANCE",
+  "original_defect": {
+    "source_ref": "docs/master-integration/MI10-SSE-FRESHNESS-REPRO-20261120/EVIDENCE.json",
+    "classification": "QA negative Node reproduction of stale global lastBody promise",
+    "negative_cases_reproduced": 2,
+    "product_browser_error_unproven": true
+  },
+  "ownership": "MI10 scoped PR4 only; Unified original browser and W8 owner unchanged",
+  "CI": {
+    "pr": 4,
+    "branch": "integration/mi10-limited-ci-20261119",
+    "base": "integration/product-dev",
+    "head": "f98da5ab0cef72e87b15878499baceeb15909005",
+    "ref_source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "run_id": 44620987573,
+    "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44620987573",
+    "result": "SUCCESS",
+    "jobs_passed": 3,
+    "jobs_total": 3,
+    "jobs": [
+      {
+        "id": 135902263704,
+        "scope": "MI01 exact full 1953 checkout and original source audit",
+        "result": "PASS",
+        "repeated": true
+      },
+      {
+        "id": 135902475627,
+        "scope": "MI03/04 42 original selected synthetic SQLite tests",
+        "result": "PASS",
+        "test_methods": 42,
+        "repeated": true,
+        "real_PG": false
+      },
+      {
+        "id": 135902475629,
+        "scope": "MI01 npm-ci Next.js build typecheck, synthetic FastAPI+SQLite Chromium, per-request SSE compatibility",
+        "result": "PASS",
+        "negative_qa_checks": [
+          17,
+          17
+        ],
+        "next_build": "PASS",
+        "typescript": "PASS",
+        "browser": "PASS_PER_FETCH_SEQUENCED_COMPATIBILITY",
+        "native_CDP": "NOT_REPAIRED"
+      }
+    ],
+    "artifact": {
+      "id": 14577580762,
+      "name": "mi10-browser-44620987573",
+      "size_bytes": 1440088,
+      "retention_days": 7
+    }
+  },
+  "source_diff": [
+    {
+      "path": ".github/mi10/sse_fresh_interceptor.js",
+      "status": "ADDED",
+      "blob": "6431565e3ccdbdeb72fbebeb7bd5a7891aafc534",
+      "symbol": "window.fetch per-request identity tracking"
+    },
+    {
+      "path": ".github/mi10/test_sse_freshness.cjs",
+      "status": "ADDED",
+      "blob": "281c408c5914eca1ff9d4a032bc23c19b7e06642",
+      "result": "17/17 negative freshness assertions actually executed with Node"
+    },
+    {
+      "path": ".github/mi10/run_sse_compatible_u3.py",
+      "status": "MODIFIED",
+      "blob": "7c45c6a45314f61f59ca2dd09d648f738bcacde9",
+      "symbol": "main; exact original U3 source + JS blob pins; per-read body extraction"
+    },
+    {
+      "path": ".github/workflows/mi10-limited-ci.yml",
+      "status": "MODIFIED",
+      "blob": "157937f18797b35623fee2f0634a656340450894",
+      "symbol": "bounded Node negative test before same synthetic browser"
+    }
+  ],
+  "prior_ci_failure": {
+    "run": 44620487661,
+    "reason": "offline QA test VM arrays from different prototype realms fail deepStrictEqual; fixed by Array.from without weakening checks",
+    "classification": "CI_QA_HARNESS_ONLY_NOT_PRODUCT"
+  },
+  "testing": {
+    "negative_checks": 17,
+    "negative_pass": 17,
+    "fresh_association": "A/B/C each bound to own pending request record",
+    "corresponding_real_browser": "same-response per-fetch clone diagnostic PASS",
+    "original_byte_exact_browser": "KNOWN_CDP_SSE_BODY_FAIL",
+    "original_U3_git_blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773",
+    "full_W8": "NOT_RUN",
+    "security_approval": "HOLD",
+    "independent_IV": "HOLD"
+  },
+  "side_effects": {
+    "product_files_modified": 0,
+    "API_modified": 0,
+    "DB_modified": 0,
+    "permissions_modified": 0,
+    "main_or_productdev_modified": 0,
+    "secrets_used": 0,
+    "paid_api_calls": 0
+  },
+  "acceptance_delta_pp": 0,
+  "overall_development_percent": null,
+  "reason": "stage denominators not owner-ratified",
+  "rollback": "normal revert in MI10 isolated PR4 or close draft PR4, no force-push",
+  "next": "Keep SSE-compatible QA only; for native CDP original browser acceptance maintain HOLD. MI01 original W8 wheelhouse review required separately."
+}

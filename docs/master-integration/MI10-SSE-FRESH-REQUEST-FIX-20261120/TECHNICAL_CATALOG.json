@@ -1,0 +1,86 @@
+{
+  "revision": "MI10-SSE-FRESH-FIX-TECHNICAL-CATALOG-R1",
+  "root_project": "AI Company OS",
+  "branch": "integration/mi10-limited-ci-20261119",
+  "source_head": "f98da5ab0cef72e87b15878499baceeb15909005",
+  "changed_paths": [
+    {
+      "path": ".github/mi10/sse_fresh_interceptor.js",
+      "status": "ADDED",
+      "blob": "6431565e3ccdbdeb72fbebeb7bd5a7891aafc534",
+      "symbol": "window.fetch per-request identity tracking"
+    },
+    {
+      "path": ".github/mi10/test_sse_freshness.cjs",
+      "status": "ADDED",
+      "blob": "281c408c5914eca1ff9d4a032bc23c19b7e06642",
+      "result": "17/17 negative freshness assertions actually executed with Node"
+    },
+    {
+      "path": ".github/mi10/run_sse_compatible_u3.py",
+      "status": "MODIFIED",
+      "blob": "7c45c6a45314f61f59ca2dd09d648f738bcacde9",
+      "symbol": "main; exact original U3 source + JS blob pins; per-read body extraction"
+    },
+    {
+      "path": ".github/workflows/mi10-limited-ci.yml",
+      "status": "MODIFIED",
+      "blob": "157937f18797b35623fee2f0634a656340450894",
+      "symbol": "bounded Node negative test before same synthetic browser"
+    }
+  ],
+  "changed_product_api_db_contracts": [],
+  "added_product_modules": [],
+  "added_db_schema": [],
+  "new_code": {
+    "javascript": [
+      ".github/mi10/sse_fresh_interceptor.js: IIFE, wrapper window.fetch"
+    ],
+    "node_tests": [
+      ".github/mi10/test_sse_freshness.cjs: 17 assertions, vm.runInNewContext on exact JS source"
+    ],
+    "python": [
+      ".github/mi10/run_sse_compatible_u3.py: blob/read original U3, inject pinned JS, wait by exact sequence and response URL, retain asserts"
+    ],
+    "workflow": [
+      ".github/workflows/mi10-limited-ci.yml: targeted negative test, no new triggers or permissions"
+    ]
+  },
+  "network": "No additional HTTP requests. Only existing same-origin /api/demo/shared-snapshot is intercepted; unrelated requests forwarded unchanged.",
+  "event_contract": "A single request serial number allocated before fetch; record response URL and cloned body only for same request. No prior settled record can satisfy a new request's wait predicate.",
+  "error_control": "If clone body failed/non-string/wrong URL, wait times out and CI FAIL. Original HTTP status/no-store and all original U3 assertions preserved in temporary copied test.",
+  "non_goals": [
+    "not app/API change",
+    "not original native CDP SSE support",
+    "not full W8 smoke",
+    "not production",
+    "not protected PostgreSQL",
+    "not independent IV"
+  ],
+  "dependencies": {
+    "new_python": [],
+    "new_node": [],
+    "external": [],
+    "runtime_pins_unchanged": true
+  },
+  "test_proof": {
+    "node_negative": [
+      17,
+      17
+    ],
+    "CI_jobs": [
+      3,
+      3
+    ],
+    "run_id": 44620987573,
+    "selected_original_T1": [
+      42,
+      42
+    ],
+    "native_CDP": "HOLD"
+  },
+  "failure_reproduction": "Prior QA stored global lastBody promise; 2 stale cases reproduced; corrected sequenced fetch records pass 17 negatives",
+  "maintenance": "Modify only MI10 CI source with strict original U3 Git blob and pinned interceptor; test with no-net Node harness, then live D0 Playwright; no fixture bypass.",
+  "rollback": "normal revert the two MI10 CI commits e2bcac/f98da5 or close unmerged PR4; no shared source mutation",
+  "canonical_acceptance_delta_pp": 0
+}
