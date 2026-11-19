@@ -1,0 +1,99 @@
+{
+  "id": "W5-MEM-05E",
+  "baseline": "CRITERIA_BASELINE.json",
+  "baseline_commit": "33c0d9af240187d324bd1735691f5970d58e4d36",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "source_commit": "2c50c63c2a7388f04217f2ce7f89f37f175bbefa",
+  "weights": [
+    15,
+    35,
+    20,
+    20,
+    10
+  ],
+  "previous": {
+    "design": [
+      0,
+      2
+    ],
+    "source": [
+      0,
+      3
+    ],
+    "functional": [
+      0,
+      3
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      2,
+      2
+    ],
+    "source": [
+      2,
+      3
+    ],
+    "functional": [
+      1,
+      3
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 0,
+  "current_percent": 45,
+  "delta_percentage_points": 45,
+  "closed": [
+    "D01",
+    "D02",
+    "S01",
+    "S02",
+    "F01"
+  ],
+  "open": {
+    "S03": "HOLD",
+    "F02": "NOT_RUN",
+    "F03": "NOT_RUN",
+    "I01": "HOLD",
+    "I02": "HOLD",
+    "A01": "HOLD"
+  },
+  "evidence": {
+    "protocol": [
+      11,
+      11
+    ],
+    "actual_new_fixture": "0/10 NOT_RUN",
+    "prior_174": "HISTORICAL_ONLY",
+    "selected_source_readback": "50/50",
+    "canonical_product_gates_closed": 0
+  },
+  "product_acceptance_reference": {
+    "Core": "12/16",
+    "Premium_UI": "21/40",
+    "ORG_plan": "5/7",
+    "MVP": "0/11",
+    "Independent_security": "0/7"
+  },
+  "product_acceptance_change": 0,
+  "tracker_ordinal_change": 0,
+  "previous_MEM05D_percent": 58.3333333333,
+  "previous_MEM05D_unchanged": true,
+  "notes": "New package only; no project-wide aggregate. Prior acceptance references carried forward, not independently re-certified.",
+  "next": "Run 184 exact fixture tests, resolve owner source drift and canonical protected provenance, then unified locked tests."
+}
