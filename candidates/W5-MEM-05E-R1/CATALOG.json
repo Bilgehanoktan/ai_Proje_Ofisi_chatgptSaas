@@ -1,0 +1,106 @@
+{
+  "revision": "W5-MEM-05E-R1",
+  "owner_commit": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+  "transfers": [
+    {
+      "path": "ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "old": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "bytes": 10028,
+      "sha256": "95a2070d437450198ed2e9738b8159ea53b4a877e7303b7ece75c0c01927ccaf"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/iam_session.py",
+      "old": null,
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "old": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "bytes": 3677,
+      "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
+    }
+  ],
+  "classes_and_functions": {
+    "intent_authority.py": {
+      "classes": [
+        "RootPin",
+        "D0IntentAuthority"
+      ],
+      "methods": [
+        "RootPin.validate",
+        "D0IntentAuthority.create",
+        "D0IntentAuthority._db",
+        "D0IntentAuthority._head",
+        "D0IntentAuthority._iam_mode",
+        "D0IntentAuthority._check_iam",
+        "D0IntentAuthority.publish",
+        "D0IntentAuthority.claim_and_fence"
+      ],
+      "functions": [
+        "_digest",
+        "_path",
+        "execute_authority_fenced_transition",
+        "execute_protected_authority_fenced_transition"
+      ]
+    },
+    "iam_session.py": {
+      "classes": [
+        "SessionRecord",
+        "SessionObservation",
+        "D0SessionResolver",
+        "SessionClaimCheck"
+      ],
+      "methods": [
+        "D0SessionResolver.resolve",
+        "D0SessionResolver.revoke_local",
+        "D0SessionResolver.bootstrap_durable",
+        "D0SessionResolver.open_durable",
+        "D0SessionResolver.durable_pin",
+        "D0SessionResolver._durable_now",
+        "D0SessionResolver._read_durable",
+        "D0SessionResolver._resolve_durable",
+        "D0SessionResolver._revoke_durable",
+        "SessionClaimCheck.inspect"
+      ],
+      "functions": [
+        "credential_digest",
+        "_demo_id",
+        "_tick"
+      ]
+    },
+    "postgres_session.py": {
+      "classes": [
+        "CommitOutcomeUnknown",
+        "PostgresSession"
+      ],
+      "functions": [
+        "postgres_transaction",
+        "require_strict_postgres_commit",
+        "protected_postgres_transaction"
+      ]
+    }
+  },
+  "sqlite_tables": [
+    "roots",
+    "claims",
+    "iam_session_meta",
+    "iam_sessions",
+    "iam_revocations",
+    "iam_claim_pins"
+  ],
+  "note": "Table names in actual source take precedence; no live schema migration or new independent IAM engine. Existing owner source exact. No API/event/default wiring/external dependency change.",
+  "dependencies": [
+    "sqlite3",
+    "stdlib",
+    "app.core.transaction.port.CommitReceipt",
+    "existing owner authority/transition dependencies"
+  ],
+  "new_API": [],
+  "live_DB_migration": [],
+  "new_dependencies": [],
+  "rollback": "7f5fc80751159cf951489ef065d9aec3c95c7cde"
+}

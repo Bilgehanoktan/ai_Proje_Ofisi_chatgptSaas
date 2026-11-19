@@ -1,0 +1,21 @@
+{
+  "revision": "W5-MEM-05E-R1",
+  "parent": "7f5fc80751159cf951489ef065d9aec3c95c7cde",
+  "owner_source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+  "branch": "integration/w5-mem-05e-r1-authority-source-alignment",
+  "source_manifest_entries": 527,
+  "architecture": "ARCHITECTURE_AND_RUNBOOK.md",
+  "catalog": "CATALOG.json",
+  "evidence": "EVIDENCE.json",
+  "progress": "PROGRESS.json",
+  "source_transfer": "SOURCE_TRANSFER.json",
+  "rollback": "7f5fc80751159cf951489ef065d9aec3c95c7cde",
+  "open": [
+    "Original 184 selected fixture tests and locked full product tests NOT_RUN.",
+    "Owner approval S03 and current ORG/IAM role provenance HOLD; G7/G8 separate.",
+    "Mixed old/new deployment remains unsafe; old writer retirement not proven.",
+    "Strict PostgreSQL commit remains HOLD; no protected wiring or independent acceptance."
+  ],
+  "next": "Run original 184 selected tests plus locked full product and D5 owner regression on this exact candidate, establish old-writer retirement and independent owner/ORG/W5 provenance before protected integration.",
+  "decision": "Engineering selection of exact three G6A source blobs for isolated review, not owner approval or merge; no independent new engine."
+}

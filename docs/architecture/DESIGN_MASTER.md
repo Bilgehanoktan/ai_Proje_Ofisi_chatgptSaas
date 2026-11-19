@@ -317,3 +317,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## UNIFIED-U3A — source-bound acceptance checkpoint
 [Runbook](../UNIFIED-U3A/ARCHITECTURE_AND_RUNBOOK.md). WorkflowDraft shared panel repaired; exact P24 history overlay and W8 rebind; 63 selected rerun +10 adapter mechanics, full product build blocked. Core D2 historical 11/16, JOIN_HOLD.
+
+
+## W5-MEM-05E-R1 — Authority source alignment
+[Architecture and runbook](../../candidates/W5-MEM-05E-R1/ARCHITECTURE_AND_RUNBOOK.md). Exact G6A three-file source candidate; mixed old/new 4/7, aligned 7/7 selected SQLite tests; original 184 NOT_RUN, protected integration and acceptance HOLD. No shared branch or main merge.
