@@ -1,5 +1,5 @@
 {
-  "revision": "MI-08-MEM-TRANSFER-01",
+  "revision": "MI-04-TRANSPORT-TRANSFER-REVIEW",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -23,7 +23,7 @@
     "sha": "b6983047430cecde80a02c6384a22fe80301ad93",
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
-  "branch_count": 257,
+  "branch_count": 258,
   "queue": [
     {
       "id": "MI-01",
@@ -67,11 +67,47 @@
       "owner_role": "T1 / R8",
       "source_ref": "planning/0230-d5c-r9-claim-fullchain-evidence",
       "observed_sha": "253128a2236ee706486e70acc97e472ededac26b",
-      "next": "Resolve G6A vs R8 one protected entry and exact R8 36 outstanding/G6A 19; no Windows now",
+      "next": "T1/MI-03/D4 owner review exact common transport and one explicit server-owned protected entry (G6A shape recommended, not ratified); Unified owner reviews W8 manifest/fingerprint rebind and full build. R8 remaining 36, G6A 19, G2 50, G7 7 remain queued. No Windows now; no merge until reviewed.",
       "priority": "P0",
-      "status": "HOLD_FULLCHAIN_AND_CONTRACT",
+      "status": "TRANSPORT_CANDIDATE_READY_OWNER_REVIEW_PENDING_CONTRACT_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "R8 17/53, R9 10/10 original authority, 19 fullchain not run"
+      "evidence": "R8 17/53; R9 10/10 authority; G6A 19 not run. New common-base compatibility rerun exact original R7 5/5 with 9/9 pins; no new unique methods or acceptance. Original tests not repinned.",
+      "previous_status": "HOLD_FULLCHAIN_AND_CONTRACT",
+      "transfer_candidate": {
+        "ref": "integration/mi-04-transport-source-transfer",
+        "sha": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+        "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "mode": "controlled candidate only; no product-dev promotion",
+        "product_files": 506,
+        "manifest_entries": 505,
+        "product_unchanged": 503,
+        "evidence_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/EVIDENCE.json",
+        "catalog_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CATALOG.json",
+        "runbook_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+        "progress_path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/PROGRESS.json",
+        "local_pins": [
+          9,
+          9
+        ],
+        "actual_selected_pass": [
+          5,
+          5
+        ],
+        "new_unique_methods": 0,
+        "owner_review": "PENDING",
+        "full_build": "NOT_RUN",
+        "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      },
+      "development_percent": null,
+      "acceptance_delta": 0,
+      "blockers": [
+        "T1 owner review pending",
+        "R8/G6A divergent entry contract and port",
+        "actual IAM/ORG active assignment and role provenance (MI-03)",
+        "R8 36/G6A 19 outstanding",
+        "strict COMMIT and joint publication P06/P07/P08 HOLD",
+        "Unified full build and historical W8 fingerprint rebind"
+      ]
     },
     {
       "id": "MI-05",
@@ -158,9 +194,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "50/50 remote recomputed SHA256/byte/blob pins; 525/525 candidate manifest/tree sizes; 0 product tests; product-dev unchanged.",
-  "next": "MI-01/02/03/04 priorities remain; MI-08 exact source candidate ready for owner review and 184 regression; no additional prototype.",
-  "previous_revision": "MI-02-04-R1",
+  "tests_this_round": "50/50 remote recomputed SHA256/byte/blob pins; 525/525 candidate manifest/tree sizes; 0 product tests; product-dev unchanged. MI-04: actual selected 5/5 original R7 controls on 9 exact files, 505/505 manifest path/size; no new unique test or gate.",
+  "next": "MI-01/02/03/04 priorities remain; MI-08 exact source candidate ready for owner review and 184 regression; no additional prototype. MI-04 controlled transport candidate ready for owner review, no promotion; preserve MI-03 pure review and MI-01 build scope.",
+  "previous_revision": "MI-08-MEM-TRANSFER-01",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -172,5 +208,10 @@
       "id": "MI-03/04",
       "note": "R9 and MEM-R1 3 Authority/IAM/PG files identical; protected owner contract HOLD; excluded."
     }
-  ]
+  ],
+  "mi04_cross_owner_notes": {
+    "candidate": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+    "contract": "G6A explicit server-owned protected entry recommended, not ratified; preserve R8/G6A legacy evidence; no automatic merge or runtime selection",
+    "parallel": "MI-03 IAM/ORG, MI-08 Memory and MI-01/05/06 existing records retained"
+  }
 }
