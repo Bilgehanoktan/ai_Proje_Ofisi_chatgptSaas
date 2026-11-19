@@ -1,0 +1,55 @@
+{
+  "revision": "W5-MEM-05E",
+  "source_commit": "2c50c63c2a7388f04217f2ce7f89f37f175bbefa",
+  "local_actual": {
+    "classification": "ISOLATED_COMPOSITION_PROTOCOL_READER_DOUBLES",
+    "python": "3.13.5",
+    "command": "python -B test_composition_protocol.py (exact changed product module copied next to script in isolated stage)",
+    "run": 11,
+    "pass": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "elapsed_seconds": 0.003,
+    "log": {
+      "path": "protocol.log",
+      "bytes": 1269,
+      "sha256": "57fe664966a091d06dea74e181f358103dc7aa1dad1f68ab881b1075359b643b",
+      "blob": "2cebd68c35c72fb7b6683a8e72ecdc9b19db324b"
+    },
+    "harness": {
+      "path": "test_composition_protocol.py",
+      "bytes": 8499,
+      "sha256": "b30bab958764e398517e7972a7dea5b3bbb78b04ba389df8b50a274af198556f",
+      "blob": "dbeb7cb0aeee5f1ec00b365565dca53a47cbfbdd"
+    },
+    "source": {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py",
+      "sha256": "db709c5a0744e22f1a14fa7c25fc33a666b61dd21a708f7101b9bafcb0f43646",
+      "blob": "9674f346ae0a009afa86d2bf884762806c2d89f1"
+    },
+    "syntax_compiled": 2,
+    "scope": "Only composition control flow with doubles; no real SQLite or Ed25519, IAM/ORG, canonical transaction, locked dependencies or product gate."
+  },
+  "prior": {
+    "revision": "MEM-05D",
+    "selected": 174,
+    "reported_pass": 174,
+    "classification": "HISTORICAL_ON_PARENT_NOT_RERUN",
+    "ref": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47"
+  },
+  "prepared": {
+    "new_fixture_cases": 10,
+    "combined_expected": 184,
+    "status": "NOT_RUN",
+    "run": "run_exact.py",
+    "runner_blob": "5331e6e429d60cddc4e026e01ba17a3cf3aa9e3e",
+    "pin_file": "LOCAL_PINS.json",
+    "pin_blob": "4657ce08e1c6153c02ed174573567d92fe4735d4",
+    "selected_remote_blob_size_match": "50/50",
+    "blocker": "Direct git checkout in container failed: Could not resolve host github.com. Connector source readback worked; local closure unavailable."
+  },
+  "protected_integration": "HOLD",
+  "independent_acceptance": "HOLD"
+}
