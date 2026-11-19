@@ -80,12 +80,15 @@ jobs:
           set -euo pipefail
           test "$(git -C ../.. rev-parse HEAD:product/ai-company-os-backend/requirements-history-signatures.txt)" = "b704e3dfd92b43d966dd4c023dab1ab576f57141"
           grep -qx "cryptography==46.0.4" requirements-history-signatures.txt
-          timeout 120s python -m pip install --disable-pip-version-check --no-deps --only-binary=:all: -r requirements-history-signatures.txt
+          timeout 120s python -m pip install --disable-pip-version-check --no-deps --only-binary=:all: -r requirements-history-signatures.txt 'cffi==2.0.0' 'pycparser==3.0'
           python - <<'PY'
           import cryptography
           from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
+          import importlib.metadata as metadata
           assert cryptography.__version__ == '46.0.4'
-          print('PINNED_D0_CRYPTOGRAPHY=46.0.4; NO_DEPENDENCY_EXPANSION')
+          assert metadata.version('cffi') == '2.0.0'
+          assert metadata.version('pycparser') == '3.0'
+          print('PINNED_D0_CRYPTOGRAPHY=46.0.4; PINNED_TRANSITIVE_CFFI=2.0.0; PYCParser=3.0; NOT_PRODUCTION_LOCK')
           PY
       - name: Execute only ten original-source Core / OperationsStore cases
         working-directory: candidate/product/ai-company-os-backend
