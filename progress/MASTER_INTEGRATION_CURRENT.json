@@ -1,5 +1,5 @@
 {
-  "revision": "MI03-GATE02-03-PACKAGED-REGRESSION-01",
+  "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -30,7 +30,7 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Common candidate W8 original 10/10 plus 4/4 supplemental isolated overlay mechanics passed; owner review, complete exact checkout, W8 audit/prepare/fresh fingerprint deferred; full build remains NOT_RUN. Exact original npm lock now independently byte-verified from ORG; Unified owner to use immutable staging, not legacy prepare regeneration; fresh source/lock review required. | Exact U3 adapter on new common 539 source, immutable npm lock hook 7/7 local fixture; owner review and full audit/prepare/build pending. | Common 97/97 selected frontend tests; full exact W8 chain/checkout/lock review remains NOT_RUN. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending.",
+      "next": "Common candidate W8 original 10/10 plus 4/4 supplemental isolated overlay mechanics passed; owner review, complete exact checkout, W8 audit/prepare/fresh fingerprint deferred; full build remains NOT_RUN. Exact original npm lock now independently byte-verified from ORG; Unified owner to use immutable staging, not legacy prepare regeneration; fresh source/lock review required. | Exact U3 adapter on new common 539 source, immutable npm lock hook 7/7 local fixture; owner review and full audit/prepare/build pending. | Common 97/97 selected frontend tests; full exact W8 chain/checkout/lock review remains NOT_RUN. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN.",
       "priority": "P0",
       "status": "REMOTE_PREFLIGHT_PASS_LOCAL_CHECKOUT_AND_FULL_BUILD_BLOCKED",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -272,6 +272,52 @@
         "development_percent_current": 42.5,
         "acceptance_delta": 0,
         "product_dev_changes": 0
+      },
+      "gates_remote_source_preflight": {
+        "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+        "evidence": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/EVIDENCE_AND_SOURCE_MATRIX.json",
+        "runbook": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/ARCHITECTURE_CATALOG_HANDOVER.md",
+        "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY",
+        "gate01_remote_manifest": [
+          538,
+          538
+        ],
+        "gate01_backend": [
+          265,
+          265
+        ],
+        "gate01_exact_blobs": [
+          12,
+          12
+        ],
+        "original_memory_t1": [
+          0,
+          10
+        ],
+        "gate02_owner_selected_tests": [
+          71,
+          71
+        ],
+        "gate02_actual_core_positive": "NOT_RUN",
+        "gate04_delta": {
+          "add": [
+            11,
+            11
+          ],
+          "replace": [
+            1,
+            1
+          ],
+          "manifest_owner_conflict": true,
+          "projected_product_files": 563
+        },
+        "gate05": {
+          "full_build": "NOT_RUN",
+          "ci": "HOLD"
+        },
+        "new_product_tests_this_review": 0,
+        "source_changes": 0,
+        "acceptance_delta": 0
       }
     },
     {
@@ -279,7 +325,7 @@
       "owner_role": "Core / DB",
       "source_ref": "integration/0227-local-environment-preflight",
       "observed_sha": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
-      "next": "Coordinate E2/E3/E4 Unified; no D3 SQL transfer; actual canonical RLS/pool/PG multi-project T1 remain owner tasks | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD.",
+      "next": "Coordinate E2/E3/E4 Unified; no D3 SQL transfer; actual canonical RLS/pool/PG multi-project T1 remain owner tasks | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN.",
       "priority": "P0",
       "status": "EVIDENCE_RECONCILED_CANONICAL_RLS_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -575,6 +621,52 @@
         "current_percent": 42.5,
         "delta_pp": 0,
         "delivery_sha256": "955e76171b52997b0c3053de80e5cbb98bbb3eb17326abc55654022a91678646"
+      },
+      "gates_remote_source_preflight": {
+        "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+        "evidence": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/EVIDENCE_AND_SOURCE_MATRIX.json",
+        "runbook": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/ARCHITECTURE_CATALOG_HANDOVER.md",
+        "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY",
+        "gate01_remote_manifest": [
+          538,
+          538
+        ],
+        "gate01_backend": [
+          265,
+          265
+        ],
+        "gate01_exact_blobs": [
+          12,
+          12
+        ],
+        "original_memory_t1": [
+          0,
+          10
+        ],
+        "gate02_owner_selected_tests": [
+          71,
+          71
+        ],
+        "gate02_actual_core_positive": "NOT_RUN",
+        "gate04_delta": {
+          "add": [
+            11,
+            11
+          ],
+          "replace": [
+            1,
+            1
+          ],
+          "manifest_owner_conflict": true,
+          "projected_product_files": 563
+        },
+        "gate05": {
+          "full_build": "NOT_RUN",
+          "ci": "HOLD"
+        },
+        "new_product_tests_this_review": 0,
+        "source_changes": 0,
+        "acceptance_delta": 0
       }
     },
     {
@@ -582,7 +674,7 @@
       "owner_role": "T1 / IAM / ORG",
       "source_ref": "workstream/0230-d5g7-core-org-readback-hardening",
       "observed_sha": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
-      "next": "Retain exact combined MI03/04 candidate; coordinate D4/T1/Unified owner review, shared build candidate and W8 fingerprint. For next IAM transfer use existing MI04 source plan; active assignment/role owner G8, explicit protected entry disposition, exact G9/G2 owner regressions remain separate. | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | GATE02/03 missing 8 ORG Python modules + 2 SQL resources; owner namespace/class/resource packaging decision, no live candidate sys.path. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD.",
+      "next": "Retain exact combined MI03/04 candidate; coordinate D4/T1/Unified owner review, shared build candidate and W8 fingerprint. For next IAM transfer use existing MI04 source plan; active assignment/role owner G8, explicit protected entry disposition, exact G9/G2 owner regressions remain separate. | GATE02 diagnostic 3/3 confirms HOLD; owner-issued accepted assignment, registry/member/role provenance and P02 actual tests still required. | D0 assignment lifecycle source candidate ready (20/20 local SQLite unit); owner review and original Store+Core actual replay, P02-A–E, then G9/strict COMMIT. No execution authority. | GATE02/03 missing 8 ORG Python modules + 2 SQL resources; owner namespace/class/resource packaging decision, no live candidate sys.path. | Preserve original G9 fixture durable_ops and concurrent assignment lifecycle candidate separately; ORG/Core owner disposition on canonical packaging and extension; actual OperationsStore/Core adapter NOT_RUN. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN.",
       "priority": "P0",
       "status": "READONLY_CANDIDATE_READY_OWNER_REVIEW_PENDING",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -1060,6 +1152,52 @@
         "current_percent": 42.5,
         "delta_pp": 0,
         "delivery_sha256": "955e76171b52997b0c3053de80e5cbb98bbb3eb17326abc55654022a91678646"
+      },
+      "gates_remote_source_preflight": {
+        "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+        "evidence": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/EVIDENCE_AND_SOURCE_MATRIX.json",
+        "runbook": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/ARCHITECTURE_CATALOG_HANDOVER.md",
+        "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY",
+        "gate01_remote_manifest": [
+          538,
+          538
+        ],
+        "gate01_backend": [
+          265,
+          265
+        ],
+        "gate01_exact_blobs": [
+          12,
+          12
+        ],
+        "original_memory_t1": [
+          0,
+          10
+        ],
+        "gate02_owner_selected_tests": [
+          71,
+          71
+        ],
+        "gate02_actual_core_positive": "NOT_RUN",
+        "gate04_delta": {
+          "add": [
+            11,
+            11
+          ],
+          "replace": [
+            1,
+            1
+          ],
+          "manifest_owner_conflict": true,
+          "projected_product_files": 563
+        },
+        "gate05": {
+          "full_build": "NOT_RUN",
+          "ci": "HOLD"
+        },
+        "new_product_tests_this_review": 0,
+        "source_changes": 0,
+        "acceptance_delta": 0
       }
     },
     {
@@ -1067,7 +1205,7 @@
       "owner_role": "T1 / R8",
       "source_ref": "planning/0230-d5c-r9-claim-fullchain-evidence",
       "observed_sha": "253128a2236ee706486e70acc97e472ededac26b",
-      "next": "Common source union published; current transport and historical test copy isolated, 4/4 supplemental mechanics passed. Central/T1/IAM/D4 owner concurrence on G6A explicit protected entry, G8 provenance, G9/G2/R8/G6A original runs and strict COMMIT remain open. No promotion or Windows now. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD.",
+      "next": "Common source union published; current transport and historical test copy isolated, 4/4 supplemental mechanics passed. Central/T1/IAM/D4 owner concurrence on G6A explicit protected entry, G8 provenance, G9/G2/R8/G6A original runs and strict COMMIT remain open. No promotion or Windows now. | G6A/G4/G5 exact selected regression 59/59; preserve original R3 fixture and separate assignment lifecycle version; owner namespace and actual G9/P02/full G2 remain HOLD. | MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01: original 0214 10/10 static test identities, 0/10 run, GATE02 162 retained +41 additive lines; owner decision HOLD. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN.",
       "priority": "P0",
       "status": "COMBINED_REVIEW_CANDIDATE_READY_PROTECTED_CONTRACT_OWNER_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -1484,6 +1622,52 @@
         "current_percent": 42.5,
         "delta_pp": 0,
         "delivery_sha256": "955e76171b52997b0c3053de80e5cbb98bbb3eb17326abc55654022a91678646"
+      },
+      "gates_remote_source_preflight": {
+        "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+        "evidence": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/EVIDENCE_AND_SOURCE_MATRIX.json",
+        "runbook": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/ARCHITECTURE_CATALOG_HANDOVER.md",
+        "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY",
+        "gate01_remote_manifest": [
+          538,
+          538
+        ],
+        "gate01_backend": [
+          265,
+          265
+        ],
+        "gate01_exact_blobs": [
+          12,
+          12
+        ],
+        "original_memory_t1": [
+          0,
+          10
+        ],
+        "gate02_owner_selected_tests": [
+          71,
+          71
+        ],
+        "gate02_actual_core_positive": "NOT_RUN",
+        "gate04_delta": {
+          "add": [
+            11,
+            11
+          ],
+          "replace": [
+            1,
+            1
+          ],
+          "manifest_owner_conflict": true,
+          "projected_product_files": 563
+        },
+        "gate05": {
+          "full_build": "NOT_RUN",
+          "ci": "HOLD"
+        },
+        "new_product_tests_this_review": 0,
+        "source_changes": 0,
+        "acceptance_delta": 0
       }
     },
     {
@@ -2502,7 +2686,7 @@
       "owner_role": "QA / IV / CI",
       "source_ref": "planning/project-wide-progress-reporting",
       "observed_sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
-      "next": "MI-01 Unified owner: exact 61bb06e source checkout, full manifest SHA256/lock review and adapted W8 audit/prepare/install/test/smoke in isolated environment. CI workflow remains forbidden pending separate explicit CI grant; do not use legacy npm lock regeneration. MI-10 may only plan matrix/readback now. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending.",
+      "next": "MI-01 Unified owner: exact 61bb06e source checkout, full manifest SHA256/lock review and adapted W8 audit/prepare/install/test/smoke in isolated environment. CI workflow remains forbidden pending separate explicit CI grant; do not use legacy npm lock regeneration. MI-10 may only plan matrix/readback now. | ORG runtime source package candidate 65a0e978c203 (12 exact blobs, 551/551 manifest); 4 smoke tests NOT_RUN, owner + Core approval and W8 review pending. | MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119: 538/538 manifest, 265/265 backend path-size, 12/12 blob pins; original fullchain 0/10. GATE03/04 proposed overlay 11 add+1 replace, 0 direct source conflicts, manifest owner review HOLD. Concurrent owner selected 71/71, Core positive NOT_RUN.",
       "priority": "P1",
       "status": "REMOTE_STATIC_PREFLIGHT_PASS_CI_HOLD_FULL_BUILD_NOT_RUN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -2592,6 +2776,52 @@
         "development_percent_current": 42.5,
         "acceptance_delta": 0,
         "product_dev_changes": 0
+      },
+      "gates_remote_source_preflight": {
+        "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+        "evidence": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/EVIDENCE_AND_SOURCE_MATRIX.json",
+        "runbook": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/ARCHITECTURE_CATALOG_HANDOVER.md",
+        "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY",
+        "gate01_remote_manifest": [
+          538,
+          538
+        ],
+        "gate01_backend": [
+          265,
+          265
+        ],
+        "gate01_exact_blobs": [
+          12,
+          12
+        ],
+        "original_memory_t1": [
+          0,
+          10
+        ],
+        "gate02_owner_selected_tests": [
+          71,
+          71
+        ],
+        "gate02_actual_core_positive": "NOT_RUN",
+        "gate04_delta": {
+          "add": [
+            11,
+            11
+          ],
+          "replace": [
+            1,
+            1
+          ],
+          "manifest_owner_conflict": true,
+          "projected_product_files": 563
+        },
+        "gate05": {
+          "full_build": "NOT_RUN",
+          "ci": "HOLD"
+        },
+        "new_product_tests_this_review": 0,
+        "source_changes": 0,
+        "acceptance_delta": 0
       }
     }
   ],
@@ -3449,6 +3679,12 @@
       "previous_revision": "MI03-GATE03-ORG-RUNTIME-CLOSURE-01",
       "path": "docs/master-integration/MI03-GATE01-GATE02-SOURCE-RECONCILIATION-20261119/CATALOG_AND_EVIDENCE.json",
       "classification": "REMOTE_EXACT_GIT_BLOB_AND_STATIC_SOURCE_DIFF_REVIEW_ONLY_NOT_ACTUAL_PRODUCT_TEST"
+    },
+    {
+      "review": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+      "previous_revision": "MI03-GATE02-03-PACKAGED-REGRESSION-01",
+      "path": "docs/master-integration/MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119/EVIDENCE_AND_SOURCE_MATRIX.json",
+      "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY"
     }
   ],
   "mi_progress_03_close": {

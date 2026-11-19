@@ -1,0 +1,208 @@
+{
+  "revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_GITHUB_REMOTE_STATIC_SOURCE_TREE_MANIFEST_PREFLIGHT_ONLY",
+  "readback_approach": "Exact pinned GitHub recursive Git tree and product SOURCE_MANIFEST paths, sizes and blob identities; no local full checkout or Python tests.",
+  "base_reference": {
+    "governance": "e27eb4002411110cae8eecb69da2401919d74de5",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "org_runtime": "65a0e978c20378041e98f70e6ed074151214a3bb"
+  },
+  "gate01": {
+    "common_manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "remote_manifest_path_size": {
+      "pass": 538,
+      "total": 538
+    },
+    "remote_backend_path_size": {
+      "pass": 265,
+      "total": 265
+    },
+    "exact_git_blob_pins": {
+      "common_required": [
+        7,
+        7
+      ],
+      "g6a_owner": [
+        2,
+        2
+      ],
+      "ddl": [
+        3,
+        3
+      ],
+      "total": [
+        12,
+        12
+      ]
+    },
+    "tree_response_truncated": false,
+    "runner_path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_t1_fullchain.py",
+    "runner_blob": "e60add70f9eee84f500279dddddb1bcbb4022dc7",
+    "exact_original_test_blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+    "original_10": {
+      "run": [
+        0,
+        10
+      ],
+      "status": "NOT_RUN",
+      "reason": "No byte-complete local checkout; isolated process has github.com DNS failure. GitHub metadata checks cannot replace original unittest."
+    },
+    "known_negative": "The original full-restore residual intentionally reproduces a replay bug; future 10/10 PASS is not proof of security closure.",
+    "local_isolated_runtime": {
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "cryptography": "46.0.4",
+      "status": "VERSION_MATCH_NO_EXECUTION"
+    },
+    "previous_actual_direct_sqlite": {
+      "pass": 42,
+      "total": 42,
+      "source": "878a0e4f2eb105353c7ce9b072797b17142517f2",
+      "this_review_not_rerun": true
+    },
+    "missing_local_byte_hashes": 265
+  },
+  "gate02": {
+    "source_collision": {
+      "original_g9_blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "D0_assignment_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "old_lines_retained": 162,
+      "added_lines": 41,
+      "disposition": "OWNER_REVIEW_HOLD"
+    },
+    "G03_d0_org_runtime": {
+      "source_commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
+      "manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
+      "product_files": 552,
+      "manifest_entries": [
+        551,
+        551
+      ],
+      "new_paths_vs_common": 13,
+      "existing_changed_source_paths": 0,
+      "original_smoke_cases": "4_HISTORICAL_IN_SOURCE_CANDIDATE_NOW_RUN_ON_SELECTED_32_FILE_CLOSURE"
+    },
+    "operations_core_original_runtime": "NOT_RUN",
+    "owner_issuer_registry_member_role_provenance": "HOLD",
+    "P02": "NOT_RUN",
+    "prior_assignment_unit": {
+      "pass": 20,
+      "total": 20,
+      "not_rerun": true
+    },
+    "activated": false,
+    "concurrent_owner_regression": {
+      "revision": "MI03-GATE02-03-PACKAGED-REGRESSION-01",
+      "evidence_commit": "e27eb4002411110cae8eecb69da2401919d74de5",
+      "classification": "ACTUAL_SELECTED_DISPOSABLE_SQLITE_BACKEND_PACKAGING_REGRESSION_NOT_FULL_PRODUCT",
+      "selected_tests": [
+        71,
+        71
+      ],
+      "source_pins": [
+        32,
+        32
+      ],
+      "previous_methods_repeated": 59,
+      "new_supplemental_methods": 8,
+      "original_smoke_methods_now_passed": 4,
+      "Core_positive_OperationsStore_assignment": "NOT_RUN",
+      "Core_stage_dependency": "research_slice ModuleNotFoundError in selected 32-file closure",
+      "original_T1_0214": [
+        0,
+        10
+      ],
+      "acceptance_delta": 0,
+      "product_changes": 0,
+      "notes": "Other owner's recorded regression; not executed again in this source metadata review."
+    }
+  },
+  "gate04": {
+    "proposal": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/PROPOSED_SOURCE_DELTA.json",
+    "proposal_changes": 12,
+    "against_G03": {
+      "add_absent": [
+        11,
+        11
+      ],
+      "replace_old_blob": [
+        1,
+        1
+      ],
+      "unplanned_product_path_collisions": 0,
+      "manifest_collision": true
+    },
+    "post_owner_approval_only_projection": {
+      "product_files": 563,
+      "manifest_entries": 562,
+      "promotion": false,
+      "source_tree_created": false
+    },
+    "protected_entry_owner_concurrence": "PENDING",
+    "postgres_three_store_commit": "NOT_RUN",
+    "publication_custody_independent_IV": "HOLD"
+  },
+  "gate05": {
+    "common_W8_adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+    "original_npm_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "actual_full_fingerprint": "NOT_RUN",
+    "actual_complete_source_checkout": "BLOCKED_DNS",
+    "npm_install": "NOT_RUN",
+    "full_nextjs_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "ci": "HOLD_NO_NEW_PERMISSION",
+    "product_staging": "NOT_CREATED"
+  },
+  "code_changes": {
+    "product": 0,
+    "api": 0,
+    "schema": 0,
+    "dependencies": 0,
+    "grants": 0,
+    "CI": 0,
+    "main": 0,
+    "product_dev": 0
+  },
+  "new_actual_product_tests": 0,
+  "number_of_new_static_source_checks": 2,
+  "progress": {
+    "D5_G7": {
+      "previous": 42.5,
+      "current": 42.5,
+      "delta_pp": 0
+    },
+    "D5_C_R8": {
+      "previous": 50,
+      "current": 50,
+      "delta_pp": 0
+    },
+    "Core_acceptance": {
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ],
+      "delta_pp": 0
+    },
+    "MVP_acceptance": {
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ],
+      "delta_pp": 0
+    },
+    "overall_development": "HESAPLANAMADI"
+  },
+  "owner_bounded_next": "GATE01 exact byte-complete checkout and ten original unittests first; parallel GATE02 owner disposition and actual Store/Core readback; GATE04 protected PG publication strict commit; GATE05 original W8 complete build.",
+  "rollback": "Governance-only normal revert. Do not merge GATE03 or GATE04 sources, change refs, migrate SQL, reset claim, or alter grants."
+}
