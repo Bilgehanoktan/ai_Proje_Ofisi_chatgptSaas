@@ -59,7 +59,7 @@ async function deliverFetch(which, body) {
   third.completion.resolve("C");
   await Promise.resolve();
   check([records[2].finished, records[2].body], [true, "C"], "third clone is fresh C");
-  check(records.map(x => x.sequence), [1, 2, 3], "monotonic request identity");
+  check(Array.from(records, x => x.sequence), [1, 2, 3], "monotonic request identity");
   check(records.every(x => x.responseUrl === url), true, "exact response URLs");
 
   const other = window.fetch("http://127.0.0.1:17300/health");
