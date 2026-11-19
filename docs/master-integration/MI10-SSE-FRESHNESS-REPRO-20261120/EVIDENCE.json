@@ -21,7 +21,25 @@
     "report_sha256": "925a574437a173fe641ed4a9ab6c9afdc4a38b13e9e7800baecd1d31b60f0c89",
     "report_name": "MI10_SSE_GLOBAL_PROMISE_REGRESSION_20261120.json",
     "harness_path": "docs/master-integration/MI10-SSE-FRESHNESS-REPRO-20261120/test_sse_global_promise.js",
-    "note": "Committed source is an equivalent Node reproduction of the pinned JS interception; it is not the full original Python/Playwright browser test."
+    "note": "Committed source is an equivalent Node reproduction of the pinned JS interception; it is not the full original Python/Playwright browser test.",
+    "committed_source_runtime_verification": {
+      "actual_tested_source_git_blob": "9004b13249f63334dde52e4bf2e2d3b28bd6421e",
+      "git_blob_matches_published_repo": true,
+      "test_source_sha256": "5846ba9886317132cd4b5678b9f297d043b4126cfd826650f2664903803b1050",
+      "node_version": "v22.16.0",
+      "executed_original_repo_harness": [
+        5,
+        5
+      ],
+      "negative_cases": [
+        2,
+        2
+      ],
+      "exit_code": 0,
+      "output": "5 PASS lines and RESULT: 5/5 isolated assertions; two stale-body cases reproduced",
+      "network_or_real_browser": false,
+      "source_integrity_level": "EXACT_GIT_BLOB_TESTED"
+    }
   },
   "observations": [
     "After first resolved snapshot-A, interceptor stores one global lastBody promise.",
