@@ -1,0 +1,105 @@
+{
+  "revision": "MI10-CLOUD-FULL-CHECKOUT-01",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_GITHUB_HOSTED_EXACT_COMPLETE_SOURCE_CHECKOUT_AND_W8_AUDIT_ONLY",
+  "authorization": "H01 narrowed CI PR 4, unchanged contents:read and synthetic local-only source audit; no further CI rights",
+  "canonical_ref": "integration/product-dev",
+  "canonical_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "isolated_pr": {
+    "number": 4,
+    "ref": "integration/mi10-limited-ci-20261119",
+    "base": "integration/product-dev",
+    "draft": true,
+    "automerge": false
+  },
+  "source_ref": {
+    "candidate": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "archive": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "archive_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+    "same_product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+    "ahead_commits": 2,
+    "changed_paths": 7,
+    "changed_product_paths": 0
+  },
+  "job": {
+    "run_id": 44617509366,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44617509366",
+    "head_commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+    "job_id": 135890048240,
+    "job_name": "MI-01 source SHA-256 and original W8 audit",
+    "status": "COMPLETED",
+    "conclusion": "SUCCESS",
+    "host": "GITHUB_HOSTED_UBUNTU_24_04",
+    "tracked_files": {
+      "observed": 1953,
+      "expected": 1953
+    },
+    "checked_git_blobs": {
+      "observed": 1953,
+      "expected": 1953
+    },
+    "checkout_byte_count": {
+      "observed": 22342956,
+      "expected": 22342956
+    },
+    "file_mode": "100644_ONLY",
+    "symlinks": 0,
+    "submodules": 0,
+    "product_files": {
+      "observed": 539,
+      "expected": 539
+    },
+    "product_git_tree_same": true,
+    "archive_w8_original_source_audit": {
+      "sha256": [
+        538,
+        538
+      ],
+      "schema_fixture_pairs": [
+        17,
+        17
+      ],
+      "aux_git_blobs": [
+        33,
+        33
+      ]
+    },
+    "npm_lock_packages": [
+      61,
+      61
+    ],
+    "source_drift": false
+  },
+  "historical_comparison": {
+    "prior_ci_run": 44614849105,
+    "source_audit": [
+      538,
+      538
+    ],
+    "selected_T1": [
+      42,
+      42
+    ],
+    "nextjs_build": "PASS",
+    "browser": "SSE_COMPATIBLE_DIAGNOSTIC_PASS"
+  },
+  "gates": {
+    "full_remote_checkout": "PASS_GITHUB_HOSTED",
+    "local_windows_checkout": "NOT_RUN_USER_TRANSFER_SEPARATE",
+    "W8_prepare": "NOT_RUN",
+    "W8_fresh_dependency_fingerprint": "OWNER_REVIEW_HOLD",
+    "W8_install": "NOT_RUN",
+    "W8_test": "NOT_RUN",
+    "W8_smoke": "NOT_RUN",
+    "native_U3_CDP": "KNOWN_FAILURE",
+    "IAM_ORG_T1_protected_PG": "HOLD",
+    "independent_acceptance": "HOLD"
+  },
+  "permissions_changes": 0,
+  "product_code_changes": 0,
+  "database_api_changes": 0,
+  "product_acceptance_delta_pp": 0,
+  "development_percent": "HESAPLANAMADI_UNFROZEN_CRITERIA_DENOMINATORS",
+  "rollback": "close draft PR 4 or normal revert of CI-only commit, no owner or main modification",
+  "next": "MI01 owner approve reproducible reviewed Python wheelhouse/lock fingerprint; only then original W8 prepare/install/test/smoke. Preserve existing W8 runner and its protected gating; no automatic hash approval."
+}
