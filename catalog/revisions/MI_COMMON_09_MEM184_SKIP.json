@@ -1,0 +1,63 @@
+{
+  "revision": "MI-COMMON-09-MEM184-WINDOWS-SKIP",
+  "source_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+  "source_test": {
+    "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+    "blob": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+    "symbol": "SnapshotStoreTests.test_bad_path_and_pin",
+    "behavior": "OSError.winerror 1314 => SKIP",
+    "changed": false
+  },
+  "source_runner": {
+    "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/run_combined.py",
+    "blob": "6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb",
+    "symbols": [
+      "main",
+      "verify",
+      "CHILD"
+    ],
+    "changed": false
+  },
+  "original_status": {
+    "exit": 1,
+    "total_passed_complete_groups": 0,
+    "status": "HOLD"
+  },
+  "mem": {
+    "run": 184,
+    "passed": 183,
+    "skipped": 1,
+    "failed": 0,
+    "errors": 0,
+    "original_runner_accepted": false
+  },
+  "remaining": {
+    "group_sizes": [
+      80,
+      16,
+      28,
+      36
+    ],
+    "status": "NOT_RUN"
+  },
+  "supplement": {
+    "filename": "MI_COMMON_09_RUN_REMAINING_160.py",
+    "sha256": "9c834d8d7fea1259ee03d662191d93763b3e7cf4465b2625970a95f4180ed510",
+    "syntax": "COMPILED_ONLY",
+    "windows_execution": "NOT_RUN",
+    "outcome": "HOLD"
+  },
+  "changed_code": [],
+  "changed_api": [],
+  "changed_db": [],
+  "changed_events": [],
+  "changed_dependencies": [],
+  "rollback": "Revert governance docs only; retain logs",
+  "progress": {
+    "MI07": null,
+    "MI08_before": 45,
+    "MI08_after": 45,
+    "delta_pp": 0,
+    "product_acceptance_delta": 0
+  }
+}
