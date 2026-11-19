@@ -2026,5 +2026,66 @@
     "product_acceptance_delta_pp": 0,
     "product_code_files_changed": 0,
     "transfer_to_product_dev": "HOLD"
+  },
+  "mi_p0_conflict_close_20261120": {
+    "revision": "MI-P0-PR7-CLOSED-ORG-SMOKE-PASS-20261120-R1",
+    "conflict_previous": "PR7_DIRTY_STALE_2_CANONICAL_PROGRESS_JSONS",
+    "conflict_current": "PR7_CLOSED_UNMERGED_2_SOURCE_DOCS_EXACTLY_RETAINED",
+    "source_document_hash_proof": "SOURCE_DELTA_AND_PROOF.json@6ee8f343f5d4c4a7bff539939809a95e75bfd8dc",
+    "handover_document_hash_proof": "ARCHITECTURE_CATALOG_HANDOVER.md@f9792ed3cca570989be53dc52ae93a495ebf2b0f",
+    "original_owner_smoke": {
+      "previous": [
+        0,
+        4
+      ],
+      "current": [
+        4,
+        4
+      ],
+      "run": 44628704044
+    },
+    "sql_rerun": {
+      "original_unique": 11,
+      "rerun_passed": 11,
+      "new_unique_written": 0
+    },
+    "release_gate": "NO_PRODUCT_PROMOTION",
+    "MI03_development_previous": 42.5,
+    "MI03_development_current": 42.5,
+    "previous_product_core": [
+      12,
+      16
+    ],
+    "current_product_core": [
+      12,
+      16
+    ],
+    "previous_mvp": [
+      0,
+      11
+    ],
+    "current_mvp": [
+      0,
+      11
+    ],
+    "previous_global_weighted": null,
+    "current_global_weighted": null,
+    "weighted_delta_pp": null,
+    "product_acceptance_delta_pp": 0,
+    "evidence": [
+      "docs/master-integration/MI-P0-PR11-ORG-PACKAGE-GATE-20261120/EVIDENCE.json",
+      "docs/master-integration/MI-505-539-PROOF-RECONCILIATION-20261120/SOURCE_DELTA_AND_PROOF.json",
+      "docs/master-integration/MI-P0-PR11-ORG-PACKAGE-GATE-20261120/ARCHITECTURE_CATALOG_HANDOVER.md"
+    ],
+    "remaining": [
+      "G9_ORG_G2_OWNER_VARIANT_DECISION",
+      "FULL_W8",
+      "ORIGINAL_G2_G9_MEM_T1",
+      "PROTECTED_PG",
+      "INDEPENDENT_IV"
+    ],
+    "product_code_change": 0,
+    "CI_workflow_change_this_turn": 0,
+    "permissions_change": 0
   }
 }
