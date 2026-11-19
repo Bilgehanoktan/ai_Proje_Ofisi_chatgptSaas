@@ -1,0 +1,742 @@
+{
+  "revision": "MI-03-SECURITY-DEPENDENCY-HANDOFF-01",
+  "date": "2026-11-19",
+  "classification": "REMOTE_STATIC_READBACK_AND_OWNER_HANDOFF_ONLY",
+  "refs": {
+    "governance_parent": "9925f5a949d5c126a8ed777bbbf0f0230e7e61ee",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "g8": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+    "g9": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "report_standard_blob": "bffbe56c0801999c46107c1a9bceb3d33e262529",
+    "working_standard_blob": "9527837335ddd17a972a16698c05242de5643106"
+  },
+  "checks": {
+    "identity_pins": [
+      13,
+      13
+    ],
+    "manifest_path_size": [
+      529,
+      529
+    ],
+    "manifest_blob": "b80e834fe081cb1b8917798a11793eb50dce9688",
+    "product_files": 530,
+    "g7_pins": {
+      "total": 56,
+      "exact": 28,
+      "divergent": 1,
+      "absent": 27,
+      "product_absent": 7,
+      "auxiliary_absent": 20
+    },
+    "source_files_changed": 0,
+    "new_product_tests": 0
+  },
+  "identity_modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "sha": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
+    }
+  ],
+  "g7_pin_rows": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "expected": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "actual": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "expected": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "actual": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "expected": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "actual": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+      "expected": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+      "actual": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "expected": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "actual": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "expected": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "actual": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "expected": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "actual": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "expected": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "actual": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "actual": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "status": "DIVERGENT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "expected": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "expected": "e1e977880324664bb359eee3286223a796878f44",
+      "actual": "e1e977880324664bb359eee3286223a796878f44",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "expected": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "actual": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "expected": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "expected": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "candidates/D4-R4/identity_binding.py",
+      "expected": "e1e977880324664bb359eee3286223a796878f44",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/D5-INTENT/intent_identity.py",
+      "expected": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/D5-B/identity_fence_review.py",
+      "expected": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "expected": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/integration_guard.py",
+      "expected": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/office_bridge.py",
+      "expected": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.py",
+      "expected": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.sql",
+      "expected": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/org_model.py",
+      "expected": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/persistence.py",
+      "expected": "4124099a497f5bc7fd34756664c7e293055e949e",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/schema.sql",
+      "expected": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-05R3/staffing.py",
+      "expected": "e0b9078284922d281996869daa15a455572c1785",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "expected": "675615e04059280ec6aa99e9679b4388cd018c2d",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "expected": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+      "expected": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+      "expected": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/research_slice.py",
+      "expected": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+      "actual": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "actual": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "expected": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "actual": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "expected": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "actual": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+      "expected": "e121ee6275def01070397a942a8434ff37b611a6",
+      "actual": "e121ee6275def01070397a942a8434ff37b611a6",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+      "expected": "c30130313541ea9d857724de1bab98ad088374af",
+      "actual": "c30130313541ea9d857724de1bab98ad088374af",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+      "expected": "c35a2e497ce013409c1943f293799d83c7164e83",
+      "actual": "c35a2e497ce013409c1943f293799d83c7164e83",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+      "expected": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+      "actual": "1eb3d02fb18dd40af31c36c6ec84a09d53033640",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+      "expected": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "actual": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+      "expected": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+      "actual": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+      "status": "EXACT",
+      "scope": "product"
+    },
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "expected": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "actual": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "expected": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "actual": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "expected": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "actual": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "expected": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "actual": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "expected": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "actual": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "expected": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "actual": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "database/0204C/company_event_order.sql",
+      "expected": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "actual": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "status": "EXACT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-06/org_core_bridge.py",
+      "expected": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-06/test_org_core_checkout.py",
+      "expected": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/ORG-06/SOURCE_PINS.json",
+      "expected": "e45173de240af85882764dfc3033e188d049085d",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "expected": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "candidates/D5-G6B/test_checkout.py",
+      "expected": "6bd86d7972c8bca511b5702117be3542431e7493",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+      "expected": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "product"
+    },
+    {
+      "path": "candidates/D5-G6B/test_protocol.py",
+      "expected": "defb33bc46fdf1c978164133b371f063ffffeb04",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    },
+    {
+      "path": "candidates/D5-G7/test_checkout.py",
+      "expected": "6bd86d7972c8bca511b5702117be3542431e7493",
+      "actual": null,
+      "status": "ABSENT",
+      "scope": "owner_auxiliary"
+    }
+  ],
+  "owner_join_fields": [
+    "tenant",
+    "company",
+    "environment",
+    "org_head",
+    "org_sequence",
+    "staffing_digest",
+    "team_digest",
+    "project",
+    "plan_revision",
+    "task",
+    "run",
+    "agent",
+    "principal",
+    "policy_epoch",
+    "witness_epoch",
+    "role_revision",
+    "full_intent_digest"
+  ],
+  "owner_binding_sources": [
+    {
+      "binding": "registry_revision / registry_sha",
+      "owner": "IAM registry owner",
+      "existing": "G2 durable session and D0 RegistrySnapshot are not actual registry issuance",
+      "missing": "Owner-issued principal registry, exact scope, revision/digest, active/revoked, custody",
+      "status": "HOLD"
+    },
+    {
+      "binding": "membership_revision / membership_sha",
+      "owner": "ORG + Core",
+      "existing": "org_binding/op_member and company_run_membership historical readback",
+      "missing": "Owner-issued scoped member version/digest for project/plan/task/run/seat/agent/principal; no org_sequence alias",
+      "status": "HOLD"
+    },
+    {
+      "binding": "assignment_revision / assignment_sha",
+      "owner": "ORG + Core / Orchestrator; approval owner",
+      "existing": "op_entry + op_notice HOLD only",
+      "missing": "Accepted/revoked assignment, exact run and recipient, proposal digest, task role, issuer/approval, revision/digest, time and epoch",
+      "status": "HOLD"
+    },
+    {
+      "binding": "role_revision / role_sha",
+      "owner": "D4/security + policy owner",
+      "existing": "Core task role and ORG staffing role; D4 external observation",
+      "missing": "Owner-issued permission for authenticated principal, assignment and scope, independently maintained physical role mapping",
+      "status": "HOLD"
+    },
+    {
+      "binding": "db_role / database / cluster / expires_tick / active",
+      "owner": "D4 transport + IAM clock",
+      "existing": "D4 review_session / G4/G5 observations",
+      "missing": "Trusted SessionFacts, physical role and active authorization at protected fence; no fixture alias",
+      "status": "HOLD"
+    },
+    {
+      "binding": "RootPin + publication version",
+      "owner": "D5-D/E plus every publishing owner",
+      "existing": "Existing D5-E synthetic pending/final fixture",
+      "missing": "Owner-approved durable pending barrier, actual publisher participation, independent custody and strict COMMIT",
+      "status": "HOLD"
+    }
+  ],
+  "owner_scenarios": [
+    {
+      "id": "P02-A",
+      "requirement": "Exact active owner-issued assignment, registry, member, role and 17-field join; historical match only until protection accepted",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-B",
+      "requirement": "Proposal only, missing/revoked/expired assignment or ambiguous proposals -> HOLD before claim",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-C",
+      "requirement": "Cross-scope or wrong project/plan/task/run/seat/agent/principal/proposal/Core version -> HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-D",
+      "requirement": "Forged/stale revisions or digests, role mismatch, physical DB role or clock/epoch mismatch -> HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P02-E",
+      "requirement": "Two current accepted assignments for same exact Research run -> HOLD; no implicit retargeting",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P03-A",
+      "requirement": "Finalized change before fence rejects stale binding; pending/missing/unknown/partial restore -> HOLD",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P04-A",
+      "requirement": "Publisher during protected commit serializes after verified outcome",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P05-A",
+      "requirement": "Crash before/after owner mutation retains pending; bypassing publisher blocks activation",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P06-A",
+      "requirement": "Expiry through actual durable COMMIT, not only precheck",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "P07-A",
+      "requirement": "Lost ACK/restart retains consumed claim and UNKNOWN/PENDING; no retry",
+      "status": "NOT_RUN"
+    }
+  ],
+  "gates": [
+    {
+      "id": "MI03-GATE-01",
+      "queue": [
+        "MI-03",
+        "MI-04",
+        "MI-02"
+      ],
+      "owner": "T1 / IAM / D4 transport",
+      "requires": [],
+      "status": "HOLD_OWNER_REVIEW",
+      "source": [
+        "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+        "6bab62305d2ea15f8608f7835270ae027ce01e83",
+        "459c3eb16302375cd352140a0d6023fb1554d566"
+      ],
+      "paths": [
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "product/ai-company-os-backend/app/core/iam_session.py"
+      ],
+      "missing": "Common D0IntentAuthority.create lacks iam_bootstrap; claim_and_fence lacks session_check; _iam_mode/_check_iam absent. G6A explicit protected entry recommendation not ratified.",
+      "exit": "Owner ratifies canonical explicit protected entry and exact shared authority API; legacy fallback never authorizes protected call. G2 original 50 and R8/G6A original tests on pinned reviewed source."
+    },
+    {
+      "id": "MI03-GATE-02",
+      "queue": [
+        "MI-03",
+        "MI-06",
+        "MI-02"
+      ],
+      "owner": "ORG/Core/Orchestrator + IAM registry + D4 policy",
+      "requires": [],
+      "status": "HOLD_OWNER_CONTRACT",
+      "source": [
+        "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+        "bed005f91564f90fe322eb6b761b314392ec9d04",
+        "c3ee73f5430368f4c2c6ed3cbe71a3728d0c5c02"
+      ],
+      "paths": [
+        "candidates/D5-G8/OWNER_INTERFACE.json"
+      ],
+      "missing": "Actual owner-issued independent registry/member/assignment/role revisions and digests; accepted/revoked run assignment, scope, approval, expiry, physical role mapping. G8 proposal not ratified.",
+      "exit": "Owner contracts and original P02-A through P02-E with no HOLD proposal promotion or role/sequence alias. ORG10 PG 31 remains NOT_RUN."
+    },
+    {
+      "id": "MI03-GATE-03",
+      "queue": [
+        "MI-03",
+        "MI-06"
+      ],
+      "owner": "IAM/ORG/Core integration owners",
+      "requires": [
+        "MI03-GATE-01",
+        "MI03-GATE-02"
+      ],
+      "status": "HOLD_DEPENDENCY",
+      "source": [
+        "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+        "68ec99c673cceadffecf1d192371c10c328caa74"
+      ],
+      "paths": [
+        "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+        "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+        "candidates/ORG-05R3",
+        "candidates/ORG-06"
+      ],
+      "missing": "G4 uses D0IntentAuthority and IAM resolver, BEGIN IMMEDIATE; G5 uses G4 and R3 external modules; G7 uses G4/G5 and ORG06 bridge. All must remain diagnostic HOLD; no isolated stub or fabricated owner data.",
+      "exit": "Exact source packaging and unchanged G9 seven three-store tests; original G5/G7 evidence not counted again. Actual provenance and protected composition separately."
+    },
+    {
+      "id": "MI03-GATE-04",
+      "queue": [
+        "MI-04",
+        "MI-07",
+        "MI-08"
+      ],
+      "owner": "D5-D/E / T1 / Memory and Model owners",
+      "requires": [
+        "MI03-GATE-01",
+        "MI03-GATE-02"
+      ],
+      "status": "HOLD_PROTECTED_PUBLICATION",
+      "source": [
+        "4b23df3a21846f2513e4b93e84aae10cd953124c",
+        "253128a2236ee706486e70acc97e472ededac26b",
+        "bd6882b0dd3b7117be859e147712e55f4c92c58a"
+      ],
+      "paths": [
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+        "product/ai-company-os-backend/app/core/transaction/postgres_session.py"
+      ],
+      "missing": "Approved publisher participation, pending barrier, independent custody and strict COMMIT through expiry, lost ACK/UNKNOWN, no retry; shared Memory/T1 dependency review.",
+      "exit": "P03-P07 and R9 fullchain/strict COMMIT owner tests, actual PG/RLS and independently approved trust custody. No actual activation in this round."
+    },
+    {
+      "id": "MI03-GATE-05",
+      "queue": [
+        "MI-01",
+        "MI-03",
+        "MI-04",
+        "MI-10"
+      ],
+      "owner": "Unified / central / QA",
+      "requires": [
+        "MI03-GATE-01",
+        "MI03-GATE-02",
+        "MI03-GATE-03",
+        "MI03-GATE-04"
+      ],
+      "status": "HOLD_BUILD_AND_OWNER_REVIEW",
+      "source": [
+        "bf87d5c48c7fee97fe12d0a28df3be80249f7306"
+      ],
+      "paths": [
+        "product/SOURCE_MANIFEST.json"
+      ],
+      "missing": "Owner concurrence, exact connected checkout, original W8 fingerprint, full build/browser; Windows deferred by user.",
+      "exit": "Use existing common candidate and original tests once; review promotion separately. No CI, main, PROD or independent acceptance implied."
+    }
+  ],
+  "criteria": {
+    "previous": {
+      "design": [
+        1,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional": [
+        4,
+        6
+      ],
+      "integration": [
+        1,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    },
+    "current": {
+      "design": [
+        1,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional": [
+        4,
+        6
+      ],
+      "integration": [
+        1,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    },
+    "prior_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "acceptance_delta": 0
+  },
+  "prior_selected_evidence": {
+    "mi03_04": [
+      46,
+      46
+    ],
+    "type": "historical selected replay, not executed here"
+  },
+  "api_db_event_changes": [],
+  "rollback": "Revert this governance commit only; no product code/manifest/ref changes. No force push or DB restore.",
+  "activation": "HOLD"
+}

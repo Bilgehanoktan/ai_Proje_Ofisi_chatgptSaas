@@ -1,5 +1,5 @@
 {
-  "revision": "MI-COMMON-W8-OVERLAY-REVIEW-01",
+  "revision": "MI-03-SECURITY-DEPENDENCY-HANDOFF-01",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -23,7 +23,7 @@
     "sha": "b6983047430cecde80a02c6384a22fe80301ad93",
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
-  "branch_count": 261,
+  "branch_count": 262,
   "queue": [
     {
       "id": "MI-01",
@@ -103,6 +103,13 @@
         "ref": "integration/mi-common-source-review-01",
         "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
         "scope": "existing candidates retained; no acceptance delta"
+      },
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-05"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
       }
     },
     {
@@ -114,7 +121,15 @@
       "priority": "P0",
       "status": "EVIDENCE_RECONCILED_CANONICAL_RLS_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "Core 12/16, D3 raw reviewed scoped fixture; 393/393 product bytes unchanged vs previous observed Core"
+      "evidence": "Core 12/16, D3 raw reviewed scoped fixture; 393/393 product bytes unchanged vs previous observed Core",
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-01",
+          "MI03-GATE-02"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
+      }
     },
     {
       "id": "MI-03",
@@ -196,6 +211,16 @@
         "ref": "integration/mi-common-source-review-01",
         "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
         "scope": "existing candidates retained; no acceptance delta"
+      },
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-01",
+          "MI03-GATE-02",
+          "MI03-GATE-03",
+          "MI03-GATE-05"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
       }
     },
     {
@@ -304,6 +329,15 @@
         "ref": "integration/mi-common-source-review-01",
         "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
         "scope": "existing candidates retained; no acceptance delta"
+      },
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-01",
+          "MI03-GATE-04",
+          "MI03-GATE-05"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
       }
     },
     {
@@ -334,6 +368,14 @@
       "mi01_dependency": {
         "source": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
         "status": "only workflow repair transferred; ORG proxy/owner/assignment contracts remain separate and HOLD"
+      },
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-02",
+          "MI03-GATE-03"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
       }
     },
     {
@@ -384,6 +426,13 @@
         "ref": "integration/mi-common-source-review-01",
         "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
         "scope": "existing candidates retained; no acceptance delta"
+      },
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-04"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
       }
     },
     {
@@ -437,6 +486,13 @@
         "ref": "integration/mi-common-source-review-01",
         "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
         "scope": "existing candidates retained; no acceptance delta"
+      },
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-04"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
       }
     },
     {
@@ -464,7 +520,14 @@
       "priority": "P1",
       "status": "HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "branch head observed only; latest acceptance not reconciled",
+      "security_dependency_handoff": {
+        "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+        "gate_ids": [
+          "MI03-GATE-05"
+        ],
+        "scope": "existing workstream ownership preserved; not approval or task reassignment"
+      }
     }
   ],
   "permissions": {
@@ -479,9 +542,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta.",
-  "next": "PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout.",
-  "previous_revision": "MI-COMMON-SOURCE-REVIEW-01",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes.",
+  "next": "Retain common readonly identity transfer; resolve MI03-GATE-01 and 02 in parallel with existing owner work, then gates 03/04 and shared build. PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout.",
+  "previous_revision": "MI-COMMON-W8-OVERLAY-REVIEW-01",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -632,5 +695,31 @@
       "owner_review": "PENDING"
     }
   },
-  "user_workstation": "DEFERRED_BY_USER_20261119; no Windows commands required now"
+  "user_workstation": "DEFERRED_BY_USER_20261119; no Windows commands required now",
+  "mi03_security_dependency_handoff": {
+    "path": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-03-SECURITY-DEPENDENCY-HANDOFF/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "gate_ids": [
+      "MI03-GATE-01",
+      "MI03-GATE-02",
+      "MI03-GATE-03",
+      "MI03-GATE-04",
+      "MI03-GATE-05"
+    ],
+    "status": "EXACT_READONLY_TRANSFER_PRESENT; REMAINING_DEPENDENCIES_OWNER_HOLD",
+    "identity_pins": [
+      13,
+      13
+    ],
+    "g7_pins": {
+      "exact": 28,
+      "divergent": 1,
+      "absent": 27
+    },
+    "source_changes": 0,
+    "new_product_tests": 0,
+    "acceptance_delta": 0
+  }
 }
