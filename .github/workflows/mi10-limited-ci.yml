@@ -71,6 +71,52 @@ jobs:
               assert obj['packages'][''].get(kind,{}) == pkg.get(kind,{})
           print('MI01_LOCK=EXACT; ORIGINAL_NPM_PACKAGES=61/61')
           PY
+      - name: Checkout immutable complete Git tree (docs-only descendant)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: 87272b6aebd1ce4b26d3a789b2ea75e4310cf60a
+          path: archive
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Verify 1953 exact archive bytes + entire tree + no product changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,os,pathlib,subprocess
+          def git(root,*args):
+              return subprocess.check_output(['git','-C',root,*args]).strip()
+          archive='archive'
+          base='candidate'
+          expected_commit='87272b6aebd1ce4b26d3a789b2ea75e4310cf60a'
+          expected_tree='187f652f1b1ff8604981833f634c4531a33f8a47'
+          assert git(archive,'rev-parse','HEAD').decode()==expected_commit
+          assert git(archive,'rev-parse','HEAD^{tree}').decode()==expected_tree
+          assert git(archive,'rev-parse','HEAD:product')==git(base,'rev-parse','HEAD:product')
+          entries=subprocess.check_output(['git','-C',archive,'ls-files','-s','-z']).split(b'\x00')
+          count=0
+          total=0
+          product=0
+          for item in entries:
+              if not item: continue
+              meta,path=item.split(b'\t',1)
+              mode,blob,stage=meta.split(b' ')
+              assert mode==b'100644' and stage==b'0', ('BAD_MODE',item[:100])
+              file=pathlib.Path(archive)/os.fsdecode(path)
+              assert file.is_file() and not file.is_symlink(), ('SOURCE_FILE_HOLD',file)
+              raw=file.read_bytes()
+              actual=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\x00'+raw).hexdigest().encode()
+              assert actual==blob, ('SOURCE_BYTES_HOLD',file)
+              count+=1
+              total+=len(raw)
+              product+=int(path.startswith(b'product/'))
+          assert (count,total,product)==(1953,22342956,539), (count,total,product)
+          assert git(archive,'status','--porcelain','--untracked-files=no')==b''
+          print('MI01_EXACT_FULL_CHECKOUT=PASS; TRACKED=1953/1953; BYTES=22342956; PRODUCT=539/539')
+          print('MI01_ARCHIVE_TREE=187f652f1b1ff8604981833f634c4531a33f8a47; PRODUCT_TREE_MATCH=PASS')
+          PY
+          python archive/tests/integration/w8_mi_common_02.py audit --repo archive
+          echo "MI01_COMPLETE_TREE_AUDIT=PASS; FULL_W8_PREPARE_INSTALL_TEST_SMOKE=NOT_RUN"
       - name: Document limits
         run: |
           echo "MI01_W8_AUDIT=ATTEMPTED; BUILD_AND_BROWSER_SEPARATE_DIAGNOSTICS"
