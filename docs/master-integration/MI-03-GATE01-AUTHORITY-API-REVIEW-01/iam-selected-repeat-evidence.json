@@ -1,0 +1,60 @@
+{
+  "scope": "exact G6A component source closure, unchanged G1/G2 tests; no full G2 runner or shared product build",
+  "source_commit": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "source_pins": [
+    {
+      "path": "app/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "app/core/__init__.py",
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+      "bytes": 59
+    },
+    {
+      "path": "app/core/transaction/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+      "bytes": 49
+    },
+    {
+      "path": "app/core/iam_session.py",
+      "git_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+      "bytes": 15424
+    },
+    {
+      "path": "app/core/transaction/intent_authority.py",
+      "git_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "sha256": "95a2070d437450198ed2e9738b8159ea53b4a877e7303b7ece75c0c01927ccaf",
+      "bytes": 10028
+    },
+    {
+      "path": "tests/test_iam_session_d5g1.py",
+      "git_blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc",
+      "bytes": 4691
+    },
+    {
+      "path": "tests/test_iam_authority_d5g2.py",
+      "git_blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043",
+      "bytes": 11216
+    }
+  ],
+  "tests_run": 33,
+  "pass": 33,
+  "fail": 0,
+  "error": 0,
+  "skip": 0,
+  "exit_code": 0,
+  "log_sha256": "4e8f633956ed8509726887e2f470a899e236600d58546934e3d050c707d4e236",
+  "known_residual": "test_restore_old_db_rejected_with_retained_new_pin deliberately reproduces combined DB+pin rollback vulnerability",
+  "full_G2_50": "NOT_RUN",
+  "protected_T1": "HOLD"
+}

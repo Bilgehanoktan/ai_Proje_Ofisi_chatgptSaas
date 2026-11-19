@@ -1,5 +1,5 @@
 {
-  "revision": "MI03-GATE01-IAM-SELECTED-REPLAY-01",
+  "revision": "MI03-GATE01-IAM-REPLAY-READBACK-02",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure.",
   "new_product_tests": 0,
-  "previous_revision": "MI-03-GATE02-PROVENANCE-BOUNDARY",
+  "previous_revision": "MI03-GATE01-IAM-SELECTED-REPLAY-01",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -722,5 +722,27 @@
     "formal_owner_review": "PENDING",
     "product_changes": 0,
     "acceptance_delta": 0
+  },
+  "mi03_gate01_selected_iam_repeat": {
+    "classification": "INDEPENDENT_REPEAT_SAME_33_METHODS_NO_DOUBLE_COUNT",
+    "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "evidence": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/iam-selected-repeat-evidence.json",
+    "log": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/iam-selected-repeat.log",
+    "log_blob": "9ae55205cca3f1f07f05cb68fd3dec0e29d28a08",
+    "evidence_blob": "98f483a1cb53d2814580f79f74d06ec9d0adaa4c",
+    "pins": [
+      7,
+      7
+    ],
+    "pass": [
+      33,
+      33
+    ],
+    "new_unique_methods": 0,
+    "acceptance_delta": 0,
+    "progress_delta": 0,
+    "original_full_G2_50": "NOT_RUN",
+    "known_residual": "old authority DB + old pin restore remains unprotected",
+    "scope": "same G6A closure as existing selected replay; no shared product transfer, no owner ratification"
   }
 }

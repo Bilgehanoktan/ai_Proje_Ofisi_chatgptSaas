@@ -38,3 +38,7 @@ Common 61bb06efbba7544bfc68260ed8eb4d342cab9b8e, parent bf87d5c48c7fee97fe12d0a2
 
 ## MI-03-GATE02-PROVENANCE-BOUNDARY
 [Catalog](../docs/master-integration/MI-03-GATE02-PROVENANCE-BOUNDARY/CATALOG_AND_EVIDENCE.json) · [Runbook](../docs/master-integration/MI-03-GATE02-PROVENANCE-BOUNDARY/ARCHITECTURE_RUNBOOK_HANDOVER.md). 3/3 new diagnostic tests, exact source 3/3; no product criterion closure, source or permission change. Next existing owner decisions (GATE01/02), actual original P02/G9 and shared build. PC deferred.
+
+
+## MI03-GATE01-IAM-REPLAY-READBACK-02
+A parallel independent repeat of the same 33 original methods on the same seven exact G6A files passed. [Repeat evidence](../docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/iam-selected-repeat-evidence.json) · [Raw log](../docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/iam-selected-repeat.log). Retain primary selected replay and existing architecture/catalog; no double counting, no source promotion, no acceptance change. Original G2 50 and GATE01/02 owner approvals remain open.
