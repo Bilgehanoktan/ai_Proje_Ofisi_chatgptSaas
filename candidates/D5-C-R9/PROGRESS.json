@@ -1,0 +1,98 @@
+{
+  "revision": "D5-C-R9",
+  "classification": "EVIDENCE_ONLY",
+  "criteria_source": "D5-C-R8/CRITERIA.json (unchanged; no R9-specific predefined weighted denominator)",
+  "R9_weighted": "HESAPLANAMADI",
+  "R8": {
+    "previous": 50,
+    "current": 50,
+    "delta_pp": 0,
+    "criteria": {
+      "design": [
+        2,
+        2
+      ],
+      "source": [
+        3,
+        3
+      ],
+      "functional": [
+        0,
+        3
+      ],
+      "integration": [
+        0,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    },
+    "tests": {
+      "pass": 17,
+      "total": 53,
+      "not_run": 36
+    },
+    "reason": "0211 authority-only G6A regression not an R8 criterion"
+  },
+  "G5_G6A": {
+    "previous": 42.5,
+    "current": 42.5,
+    "delta_pp": 0,
+    "reason": "non-IAM original 0211 fixture doesn't establish actual publisher, assignment or protected race"
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "local_0211": {
+    "pass": 10,
+    "total": 10,
+    "restore_residual": 1
+  },
+  "G6A_fullchain": {
+    "pass": 0,
+    "total": 2,
+    "status": "NOT_RUN"
+  },
+  "original_T1_on_G6A": {
+    "pass": 0,
+    "total": 17,
+    "status": "NOT_RUN"
+  },
+  "P06": "HOLD",
+  "P07": "HOLD",
+  "P08": "HOLD",
+  "next": [
+    "Obtain exact complete G6A backend archive/checkout without requiring user PC now; retain fullchain as queued, no invented PASS.",
+    "Existing G6B owner: actual Core/ORG owner-issued assignment and role provenance, not duplicate here.",
+    "R8/G6A reconcile one reviewed server-owned protected entry contract without merging or default fallback.",
+    "Strict durable commit proof and independent custody remain HOLD."
+  ],
+  "user_pc": "DEFERRED_EXPLICITLY"
+}

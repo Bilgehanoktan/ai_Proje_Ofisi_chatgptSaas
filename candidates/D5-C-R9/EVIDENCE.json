@@ -1,0 +1,85 @@
+{
+  "revision": "D5-C-R9",
+  "classification": "ACTUAL_LOCAL_ORIGINAL_0211_AUTHORITY_REGRESSION_PLUS_FULLCHAIN_PREFLIGHT_BLOCKED",
+  "refs": {
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "r8_transport": "c818549bc143467798e9f508e1dc42e24be60bca",
+    "g6b": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
+    "original_r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+    "owner_contract": "dfda007bb51ea8d9069bae7d03f148872f32c934",
+    "owner_contract_blob": "27991b3c75402c9adce024dcf3888db1fbdc2479",
+    "progress_standard": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography_installed": "46.0.4",
+    "platform": "Linux"
+  },
+  "source_verification": {
+    "actual_local_pins": {
+      "product/ai-company-os-backend/app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "product/ai-company-os-backend/app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "product/ai-company-os-backend/app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "product/ai-company-os-backend/tests/test_intent_authority_0211.py": "0179b7f3b10d2dac1db07ffef68dae3d230244fd"
+    },
+    "local_verified": "5/5 exact Git blobs, no import stubs",
+    "remote_G6A_manifest_blob": "3b92a30f84e7262b4396fd75e7581c303b5d507c",
+    "remote_backend_path_size": [
+      248,
+      248
+    ],
+    "remote_product_path_size": [
+      403,
+      403
+    ],
+    "remote_DDL_pins": 3,
+    "full_backend_byte_audit": "NOT_RUN"
+  },
+  "authority": {
+    "suite": "test_intent_authority_0211",
+    "executed": 10,
+    "pass": 10,
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "seconds": 0.236,
+    "scope": "actual disposable non-IAM authority SQLite; test_joint_product_restore_no_second_attempt uses ordinary stand-in files not actual T1 or journal; test_root_restore_limitation reproduces residual not proof of security",
+    "repeat_runs": 2,
+    "distinct_cases": 10,
+    "log_blob": "a958cdbf38288b2955febf75637f4d7246001350",
+    "log_sha256": "b87be4997809172c4882bb0b68c84e7c6823567fa66e955b4d688019a41db07a"
+  },
+  "fullchain": {
+    "status": "BLOCKED_NOT_RUN",
+    "expected": 19,
+    "executed": 0,
+    "exit": 2,
+    "reason": "missing local product/SOURCE_MANIFEST.json; exact complete private GitHub archive not available in execution container; direct DNS blocked",
+    "suites": {
+      "test_authority_preclaim_fullchain_d5g6a": 2,
+      "test_intent_authority_t1_0212": 7,
+      "test_authority_fullchain_0214": 10
+    },
+    "preflight_log_blob": "8e154784ef4d76f1a24e31df0060fe9b9cad7a67",
+    "preflight_log_sha256": "122e0021a423c651e342ebf324bee36a0ce0a9fd9015fd29e46ffe78c5d6bafe"
+  },
+  "runner": {
+    "blob": "35e7af18eb1c1907fde382a970ad5e0d8382a87d",
+    "sha256": "b011650414ca067a0e17ba6a02ff721fce3bd758d9a46ec8d7c70d903bf7d404",
+    "authority_exit_blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+    "preflight_exit_blob": "0cfbf08886fca9a91cb753ec8734c84fcbe52c9f"
+  },
+  "not_run": {
+    "R8_remaining": 36,
+    "G2_original": 50,
+    "real_PG": true,
+    "actual_IAM_ORG_joint_publisher": true,
+    "independent_acceptance": true
+  },
+  "no_source_merge": true,
+  "new_product_gates": 0,
+  "activation": "HOLD"
+}

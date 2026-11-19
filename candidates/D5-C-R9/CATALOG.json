@@ -1,0 +1,56 @@
+{
+  "revision": "D5-C-R9",
+  "files": [
+    {
+      "path": "candidates/D5-C-R9/run_exact.py",
+      "symbols": [
+        "SOURCE_COMMIT",
+        "AUTHORITY_PINS",
+        "CRITICAL",
+        "DDL",
+        "SUITES",
+        "blob",
+        "read_exact",
+        "stage_sources",
+        "main"
+      ],
+      "depends": [
+        "Python stdlib",
+        "existing G6A source manifest",
+        "existing original 0211/0212/0214 and G6A fullchain tests",
+        "reviewed cryptography 46.0.4 for fullchain only"
+      ],
+      "writes": [
+        "temporary isolated source stage",
+        "stdout evidence"
+      ],
+      "source": "local tested authority scope; fullchain preflight blocked"
+    },
+    {
+      "path": "candidates/D5-C-R9/authority.log",
+      "status": "actual 10/10 original authority test repeat; no new tests"
+    },
+    {
+      "path": "candidates/D5-C-R9/fullchain-preflight.log",
+      "status": "actual blocked before collection"
+    },
+    {
+      "path": "candidates/D5-C-R9/EVIDENCE.json",
+      "status": "source and execution boundary"
+    },
+    {
+      "path": "candidates/D5-C-R9/PROGRESS.json",
+      "status": "no new acceptance"
+    }
+  ],
+  "product_files_changed": [],
+  "new_db_tables": [],
+  "new_api": [],
+  "new_dependencies": [],
+  "new_engine": 0,
+  "read_existing_db": [
+    "disposable D0 roots/claims via original 0211 tests"
+  ],
+  "rollback": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+  "maintenance": "ARCHITECTURE_AND_RUNBOOK.md"
+}

@@ -11,3 +11,7 @@ Complete original G2 50-case regression on G2/G3 manifest. Then actual ORG owner
 
 ## D5-G5 — next
 Run exact G5 26-test closure and original G2 50 on its own manifest. Actual current Core and ORG assignment/role evidence, protected publisher and original T1 wiring remain HOLD. [Runbook](../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md).
+
+
+## D5-C-R9 — branch-local next
+Fullchain 19 selected methods queued until complete exact G6A source available. User PC deferred; existing G6B owns assignment/role provenance. Reconcile R8/G6A before positive protected execution. [Runbook](../candidates/D5-C-R9/ARCHITECTURE_AND_RUNBOOK.md). No merge, retry or permission change.

@@ -272,3 +272,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G5 — branch-local ORG readback
 [Architecture & runbook](../../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md). Existing R3 readback with G4 session; tests NOT_RUN, all authority HOLD.
+
+
+## D5-C-R9 — G6A claim regression / evidence only
+[Runbook](../../candidates/D5-C-R9/ARCHITECTURE_AND_RUNBOOK.md). Original 0211 10/10 actual local SQLite on exact G6A; fullchain 19 NOT_RUN (local source closure missing). No new product source or merge; G6B owner separate. Strict expiry and independent custody HOLD.

@@ -264,3 +264,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G5 — branch-local source integration
 [Handover](../candidates/D5-G5/HANDOVER.md) · [Progress](../candidates/D5-G5/PROGRESS.json). 12+14 planned tests, no gate promotion.
+
+
+## D5-C-R9 — evidence only
+[Handover](../candidates/D5-C-R9/HANDOVER.md). Exact G6A 0211 10/10, 5/5 local pins; fullchain blocked, R8 remains separate and no product gate promoted.
