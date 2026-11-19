@@ -1,0 +1,47 @@
+{
+  "revision": "W5-MEM-05E",
+  "source_commit": "2c50c63c2a7388f04217f2ce7f89f37f175bbefa",
+  "modified": [
+    {
+      "file": "product/ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py",
+      "previous_blob": "0f30f508ab1f1b8d7f6caddad0a27997d7da88b2",
+      "blob": "9674f346ae0a009afa86d2bf884762806c2d89f1",
+      "symbols": [
+        [
+          "_clean_recovery",
+          "strict full-history and checkpoint, no pending, no authority flags"
+        ],
+        [
+          "inspect_recovered_memory_gateway",
+          "existing recovery → existing same-invocation gateway → recovery; same context/pins; returns MemoryGatewayReview HOLD"
+        ]
+      ],
+      "preserved": [
+        "MemoryGatewayReview",
+        "inspect_memory_gateway",
+        "_memory_match",
+        "_gateway_match"
+      ],
+      "dependencies": [
+        "app.core.agent_runtime.memory_recovery_review.MemoryRecoveryReview",
+        "app.core.agent_runtime.memory_recovery_review.inspect_memory_recovery",
+        "existing JointContext/InvocationRouteContext/digest_ok"
+      ]
+    }
+  ],
+  "new_test": {
+    "file": "product/ai-company-os-backend/tests/test_memory_gateway_recovery_w5_mem05e.py",
+    "blob": "7bc56f0010e6931c357010d2b34afe55223c2cb2",
+    "class": "RecoveredMemoryGatewayTests",
+    "count": 10,
+    "status": "NOT_RUN"
+  },
+  "new_api": [],
+  "new_db": [],
+  "new_event": [],
+  "new_external_dependencies": [],
+  "new_classes": [],
+  "runtime_wiring": "None; existing diagnostic entry retained, new read-only product function not registered as execution gate",
+  "run": "candidates/W5-MEM-05E/run_exact.py",
+  "rollback": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47"
+}
