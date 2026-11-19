@@ -1,0 +1,125 @@
+{
+  "revision": "MI-COMMON-03-SELECTED-REGRESSION",
+  "date": "2026-11-19",
+  "source": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+  "governance_parent": "9b80a06fd43cdd7d0fac0a830b7f3562622d385e",
+  "classification": "ACTUAL_EXACT_SELECTED_PRODUCT_REGRESSION_NOT_FULL_BUILD",
+  "actual": {
+    "total": 97,
+    "pass": 97,
+    "fail": 0,
+    "skip": 0,
+    "groups": [
+      {
+        "name": "org-regression.log",
+        "bytes": 5298,
+        "sha256": "97bd59afa4d051fc386ed7c972f7b5e2e5a71d5a69360d3dc410f7f4be2d9731",
+        "pass": 31,
+        "fail": 0,
+        "skip": 0
+      },
+      {
+        "name": "projection-read.log",
+        "bytes": 1623,
+        "sha256": "eec166437bb4ca9cc6d202a30fec953328cf2ab579a148fb8ccfe0afe664c5c9",
+        "pass": 12,
+        "fail": 0,
+        "skip": 0
+      },
+      {
+        "name": "skill-regression.log",
+        "bytes": 4569,
+        "sha256": "23dc848252d82cb95f30a949e9413c07b0120dd4434320027f2c6da56db1f768",
+        "pass": 41,
+        "fail": 0,
+        "skip": 0
+      },
+      {
+        "name": "registry-regression.log",
+        "bytes": 2089,
+        "sha256": "6291ba8b6a2a72760773ed2d8aa568fdc19d258e0543c52a80736ab62a955aea",
+        "pass": 13,
+        "fail": 0,
+        "skip": 0
+      }
+    ],
+    "compile_exit": [
+      0,
+      0,
+      0
+    ],
+    "source_pins": [
+      26,
+      26
+    ],
+    "environment": {
+      "node": "22.16.0",
+      "typescript": "5.8.3 global; product pin 5.9.3",
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "cryptography": "46.0.4"
+    },
+    "scope": "ORG31, projection read12, Skill41, registry13; mocked transports and historical fixtures; no dependency installation or live IAM/PG",
+    "new_acceptance_criteria": 0
+  },
+  "remote": {
+    "product_files": 539,
+    "manifest_path_mode_size": [
+      538,
+      538
+    ],
+    "model_memory_pins": [
+      114,
+      114
+    ],
+    "historical_core_pins": [
+      55,
+      55
+    ],
+    "historical_overlays": [
+      4,
+      4
+    ],
+    "shared_pairs": [
+      17,
+      17
+    ],
+    "w8_original": "162a2387e5cdea6828a0cbbf0dab247bc4678551",
+    "u3": "e7335eac1e4358ceef001a494f45f56ba9544fc0",
+    "adapter": "acd361f17331f512ce35a1611e8108d32e61680f",
+    "lock": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "scope": "metadata/static only, not full local SHA256 or actual W8 chain"
+  },
+  "delivery": {
+    "archive": "MI_COMMON_03_SELECTED_REGRESSION_EVIDENCE.zip",
+    "bytes": 39522,
+    "sha256": "75094e1c4b69045fd01b513bb592675ff2bd7dd4974fe59b591bad7a181e9767",
+    "raw_logs": "in separately delivered chat archive, not uploaded to GitHub in this round",
+    "local_pins": "LOCAL_SOURCE_PINS.json"
+  },
+  "blocked": {
+    "model_memory_344": "NOT_RUN; full 114-path exact local closure unavailable, 5 matching distinct blobs recovered from legacy uploaded archives; required three runtime versions match",
+    "historical_core_29": "NOT_RUN; full historical local closure and reviewed direct pins missing",
+    "full_checkout": "BLOCKED local DNS",
+    "w8_actual_chain": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "owner_review": "PENDING",
+    "protected_commit": "HOLD"
+  },
+  "product_changes": 0,
+  "acceptance_delta": 0,
+  "rollback": "normal revert governance-only record; common source unchanged",
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  }
+}
