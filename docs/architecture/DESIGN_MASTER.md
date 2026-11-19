@@ -313,3 +313,7 @@ Exact source 61bb06efbba7544bfc68260ed8eb4d342cab9b8e, manifest 03af243e8683f92c
 
 ## MI-COMMON-05 — user-PC exact full-tree archive transfer
 [Runbook](../master-integration/MI-COMMON-05-LOCAL-CHECKOUT/ARCHITECTURE_RUNBOOK_HANDOVER.md). Full Git tree source 1953/1953, pinned 114 Model and 55 Core sources staged separately with unchanged original helper. 12/12 local synthetic archive safety tests PASS. User execution/report and original 344/29 full W8/browser NOT_RUN; no product, permission or acceptance change.
+
+
+## MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119 — D0 CI / U3 SSE transport annex
+An authorized GitHub-hosted, read-only draft PR #4 CI run [44613960595](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44613960595) completed 3/3 jobs: 538 source SHA256, 17 shared pairs, 33 helper blobs, original npm 61/61, 42/42 original selected SQLite D0, Next build/typecheck and **SSE-compatible diagnostic U3 browser** with five screenshot artifacts. The unchanged original U3 CDP response-body mechanism remains unresolved; per-request body freshness in CI shim requires owner review. Formal full W8/fingerprint, 265-source original T1 10, strict PostgreSQL and independent IV are NOT_RUN/HOLD. This is a non-normative evidence addendum, not an architecture or permission change. [Evidence](../master-integration/MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119/EVIDENCE_AND_CATALOG.json) · [Catalog and handover](../master-integration/MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119/ARCHITECTURE_RUNBOOK_HANDOVER.md).
