@@ -1,0 +1,28 @@
+{
+  "revision": "W5-MEM-05E",
+  "parent": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47",
+  "branch": "integration/w5-mem-05e-recovery-gateway-binding",
+  "source_commit": "2c50c63c2a7388f04217f2ce7f89f37f175bbefa",
+  "criteria_baseline_commit": "33c0d9af240187d324bd1735691f5970d58e4d36",
+  "source_manifest_blob": "0f22aa7e08a10efd53cf8ed45471299d23602d0a",
+  "architecture": "ARCHITECTURE_AND_RUNBOOK.md",
+  "catalog": "CATALOG.json",
+  "owner_contract": "OWNER_CONTRACT.json",
+  "source_transfer": "SOURCE_TRANSFER.json",
+  "progress": "PROGRESS.json",
+  "evidence": "EVIDENCE.json",
+  "local_pins": "LOCAL_PINS.json",
+  "runner": "run_exact.py",
+  "rollback": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47",
+  "parallel": "Only new MEM-05E isolated branch changed; no cross-chat lock or shared current pointer mutation. Actual D5-G6A/G6B, W5-J2-R4, ORG-10R10 and Unified heads pinned in OWNER_CONTRACT.",
+  "next": "Run 184 exact selected tests with approved synthetic local checkout; no new prototype. Reconcile diverging owner source revisions and current protected D5/T1/W5/IAM/ORG references before actual protected commit/receipt integration. Preserve HOLD until independent acceptance.",
+  "open": [
+    "Existing old review remains diagnostic and unchanged; new entry not wired into execution/API.",
+    "10 new actual fixture and 174 original current regression NOT_RUN; 11 protocol double tests only.",
+    "No canonical protected owner implementation/strict commit/current IAM/ORG or W5 phase acceptance.",
+    "No full dependency checkout, locked Windows build, PostgreSQL, full product SHA256 or independent trust-root verification.",
+    "All references rolled back together can still match; repeated reads are not atomic fencing; multiple full-history scan performance not measured.",
+    "No main merge, CI, PROD, paid provider, grants, live data, clear pending, retry or replay."
+  ],
+  "decision": "Local engineering choice to extend existing Memory/Gateway review without owner code transplant, retaining separate branch and diagnostic backward compatibility; not a normative decision or new permission."
+}
