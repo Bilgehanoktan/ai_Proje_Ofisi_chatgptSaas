@@ -257,3 +257,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## MI-05-06-PROJECTION-REPLAY-01
 7/7 exact local ORG pins; 8/8 original closed route tests; common and canonical unchanged. [Handover](../docs/master-integration/MI-05-06-PROJECTION-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). No new acceptance; concurrent lock and Memory/T1 records retained.
+
+
+## MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119 — CI readback
+Actual GitHub Actions run 44613960595: 3/3 PASS, source SHA256 538/538, 42/42 original selected D0 SQLite, Next build/typecheck PASS, real local SQLite/FastAPI and SSE-compatible browser diagnostic PASS (5 screenshots, 3 reads, same document; JOIN HOLD). Byte-exact original U3 CDP failure remains; compatibility adapter has a repeated-body freshness QA caveat. Full W8 and independent acceptance open. PR #4 remains draft and unmerged; main/product-dev preserved. [Evidence](../docs/master-integration/MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119/EVIDENCE_AND_CATALOG.json).
