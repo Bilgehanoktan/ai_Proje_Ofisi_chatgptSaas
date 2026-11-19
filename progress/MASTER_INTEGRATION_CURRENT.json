@@ -1,5 +1,5 @@
 {
-  "revision": "MI-03-04-COMMON-REVIEW",
+  "revision": "MI-01-U3B-REMOTE-PREFLIGHT",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -30,9 +30,9 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Unified owner reviews exact ORG-R8 rename/import/test path and manifest-only W8 rebind; then clean candidate checkout, original runner test/audit/prepare only, fresh dependency review fingerprint. Actual full build/browser remain NOT_RUN; preserve MI-04/08 candidates separately.",
+      "next": "Owner review, exact clean checkout on connected workstation; original runner unit tests, audit, prepare only; stop at stage/locks/REVIEW.json fingerprint; approved install/test/smoke later. No promotion.",
       "priority": "P0",
-      "status": "BUILD_REPAIR_CANDIDATE_READY_OWNER_REVIEW_AND_FULL_BUILD_BLOCKED",
+      "status": "REMOTE_PREFLIGHT_PASS_LOCAL_CHECKOUT_AND_FULL_BUILD_BLOCKED",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "3/3 exact owner repair pins, 505/505 manifest/pin-record consistency, zero casefold TS/JS module stem conflicts; 5/5 local exact source and 16/16 original regression (global TS 5.8.3, mocked JSX/CSS). Historical ORG build not new full-stack acceptance.",
       "previous_status": "BLOCKED_ENVIRONMENT",
@@ -69,13 +69,34 @@
         "evidence_path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/LOCAL_REGRESSION.json",
         "catalog_path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/CATALOG.json",
         "runbook_path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/RUNBOOK.md",
-        "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+        "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "remote_preflight": {
+          "evidence_commit": "44d7f91f87965fcb08e0c44bacd630204e3684a2",
+          "path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/U3B_REMOTE_PREFLIGHT.json",
+          "tree_blob_mode_size": [
+            505,
+            505
+          ],
+          "history_blob_size": [
+            55,
+            55
+          ],
+          "shared_manifest_pairs": [
+            17,
+            17
+          ],
+          "selected_aux_pins": [
+            26,
+            26
+          ],
+          "scope": "remote metadata; local W8 audit NOT_RUN"
+        }
       },
       "blockers": [
-        "Unified owner review",
-        "local GitHub DNS; exact full checkout unavailable",
-        "reviewed dependency locks/fingerprint not generated",
-        "full backend/frontend/typecheck/browser/native NOT_RUN"
+        "Unified owner review pending",
+        "GitHub DNS local checkout blocked; prior Library archives cannot be materialized",
+        "reviewed dependency fingerprint not generated",
+        "full build and browser NOT_RUN"
       ]
     },
     {
@@ -369,9 +390,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.",
-  "next": "MI-01 source candidate review and exact workstation W8 audit/prepare/fingerprint; MI-05/06 shared historical readback browser after build; MI-02/03/04/07/08/09/10 retain their existing owners and gates. MI-07/08 shared candidate ready; owner review and exact 344 run required; other priorities retained. MI03/04 combined review candidate now available; central owner reviews it with MI01 and MI07/08, no activation.",
-  "previous_revision": "MI-07-08-JOINT-TRANSFER-01",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.",
+  "next": "MI-01 connected exact source checkout, W8 audit/prepare and fresh review fingerprint; no duplicate prototypes. Other MI tasks preserve prior queue/owners.",
+  "previous_revision": "MI-03-04-COMMON-REVIEW",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
