@@ -1,0 +1,152 @@
+{
+  "revision": "MI-03-GATE01-AUTHORITY-API-REVIEW-01",
+  "date": "2026-11-19",
+  "classification": "REMOTE_STATIC_OWNER_CONTRACT_REVIEW_ONLY",
+  "parent": "e7ea1c9251d3c0bb6f4bb8823213191f3f483a0f",
+  "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+  "branches_observed": 262,
+  "gate": "MI03-GATE-01",
+  "status": "HOLD_OWNER_REVIEW",
+  "sources": {
+    "G2": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "G3": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+    "G6A": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "G7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "R8": "459c3eb16302375cd352140a0d6023fb1554d566"
+  },
+  "authority": {
+    "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+    "common_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "G2_G7_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "G6A_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+    "R8_blob": "6810c8eea0d7323736f1e5ce68d9de85dcc2ca61",
+    "symbols": [
+      {
+        "name": "D0IntentAuthority.create",
+        "common_line": 47,
+        "G2_line": 47,
+        "delta": "iam_bootstrap keyword required for durable resolver bootstrap"
+      },
+      {
+        "name": "D0IntentAuthority._iam_mode / _check_iam",
+        "G2_lines": [
+          84,
+          97
+        ],
+        "delta": "partial schema detection; mandatory exact SessionClaimCheck on IAM stores; common absent"
+      },
+      {
+        "name": "D0IntentAuthority.publish",
+        "G2_lines": [
+          99,
+          112
+        ],
+        "delta": "IAM store publication HOLD, not independent publisher implementation"
+      },
+      {
+        "name": "D0IntentAuthority.claim_and_fence",
+        "common_line": 95,
+        "G2_lines": [
+          115,
+          145
+        ],
+        "delta": "session_check keyword and double check around durable consumed claim; local SQLite fence only"
+      },
+      {
+        "name": "execute_authority_fenced_transition",
+        "G2_lines": [
+          148,
+          172
+        ],
+        "G6A_lines": [
+          149,
+          173
+        ],
+        "R8_lines": [
+          148,
+          181
+        ],
+        "delta": "legacy wrapper invokes claim_and_fence without session_check; IAM-enabled store fails closed. R8 branches on optional protected_org; G6A explicit protected entry is distinct."
+      },
+      {
+        "name": "execute_protected_authority_fenced_transition",
+        "G6A_lines": [
+          176,
+          188
+        ],
+        "delta": "strict transport gate and unconditional HOLD; never calls legacy wrapper; no positive composition"
+      }
+    ]
+  },
+  "iam": {
+    "path": "product/ai-company-os-backend/app/core/iam_session.py",
+    "G2_G7_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+    "common": "ABSENT",
+    "symbols": [
+      "D0SessionResolver.bootstrap_durable",
+      "D0SessionResolver.open_durable",
+      "D0SessionResolver.resolve",
+      "D0SessionResolver.revoke_local",
+      "SessionClaimCheck.inspect"
+    ],
+    "dependency": "D0IntentAuthority.create(..., iam_bootstrap=True), shared SQLite authority. No real issuer or independent custody."
+  },
+  "test_pins": {
+    "exact_common": {
+      "test_authority_fullchain_0214.py": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+      "test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+      "test_intent_authority_0211.py": "0179b7f3b10d2dac1db07ffef68dae3d230244fd",
+      "test_intent_authority_t1_0212.py": "9296347d9253d74902ed1c6a89e273d8e516f2b5"
+    },
+    "absent_common": {
+      "test_iam_authority_d5g2.py": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+      "test_iam_session_d5g1.py": "6be21cfdcaf7408d7d17b5848966bb7f6772581e"
+    },
+    "G2_runner": "candidates/D5-G2/run_regression.py",
+    "G2_runner_blob": "f7df7e5cc0e6cd8f42e7320d76c55e3b06e8dec5",
+    "G2_log": "candidates/D5-G2/test.log",
+    "G2_log_blob": "9ee5446b31644697ffe21b88058bbec584e52926",
+    "G2_historical_pass": 33,
+    "G2_full_selected_not_run": 50,
+    "G6A_historical_selected_pass": 6,
+    "G6A_fullchain_not_run": 2,
+    "scope": "4 exact historical test files present; 2 absent, not six files constituting the 50-case selection. The 50 includes 17 original + 33 IAM; no duplicate counting. G3 recovery tool 8/8 historical; no original 50 completion."
+  },
+  "decision": "Recommend retaining prior G6A explicit-entry disposition, pending source-owner concurrence. Do not replace authority, add default route, or graft a caller-selected session parameter into a legacy wrapper; actual protected composition requires owner-approved provenance/publication/commit.",
+  "next": [
+    "T1/IAM/D4 source owners ratify exact authority and explicit entry, preserving existing G2 and R8/G6A tests.",
+    "Reuse original pinned G2 50 runner and G6A/R8 fullchain when authorized connected checkout is available; no user PC request now.",
+    "MI03-GATE-02 independent assignment/role provenance remains owner task; then G9 seven exact tests and protected commit."
+  ],
+  "criteria": {
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "new_product_tests": 0,
+  "product_changes": 0,
+  "api_db_event_dependency_changes": [],
+  "acceptance_delta": 0,
+  "rollback": "Revert this governance-only commit after review; retain all source branches; no claim reset, DB restore, force push or product ref move."
+}

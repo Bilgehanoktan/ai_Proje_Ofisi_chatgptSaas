@@ -1,5 +1,5 @@
 {
-  "revision": "MI-03-SECURITY-DEPENDENCY-HANDOFF-01",
+  "revision": "MI-03-GATE01-AUTHORITY-API-REVIEW-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed.",
   "new_product_tests": 0,
-  "previous_revision": "MI-03-04-UNION-REGRESSION-READBACK",
+  "previous_revision": "MI-03-SECURITY-DEPENDENCY-HANDOFF-01",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -457,5 +457,39 @@
     "delta": 0,
     "acceptance_delta": 0,
     "new_product_tests": 0
+  },
+  "mi03_gate01_authority_api_review": {
+    "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+    "status": "STATIC_API_CONFLICT_CONFIRMED_OWNER_REVIEW_HOLD",
+    "source": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "gate": "MI03-GATE-01",
+    "source_changes": 0,
+    "new_product_tests": 0,
+    "acceptance_delta": 0,
+    "criteria": {
+      "previous_percent": 42.5,
+      "current_percent": 42.5,
+      "delta_pp": 0,
+      "design": [
+        1,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional": [
+        4,
+        6
+      ],
+      "integration": [
+        1,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    }
   }
 }

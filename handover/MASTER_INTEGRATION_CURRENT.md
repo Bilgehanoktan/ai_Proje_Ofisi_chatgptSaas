@@ -22,3 +22,7 @@ Combined review candidate 3809061926b5a1ddbe8bda84af77e5545d5ecda2, parent 90d86
 
 ## MI-03/04 combined selected regression readback
 Published common candidate 3809061926b5a1ddbe8bda84af77e5545d5ecda2; no duplicate branch or product-dev update. 508 product files, one 507-entry manifest, 507/507 path-size, all 503 untouched prior manifest entries retained, selected 4/4 SHA256. Actual combined selected 46/46 (22 D4 +19 D5 +5 R7) on 16/16 exact source/test blobs, all matching published candidate; repeated original methods, not new unique tests or gates. [Central evidence](../docs/master-integration/MI-03-04-UNION/EVIDENCE.json) and [runbook](../docs/master-integration/MI-03-04-UNION/ARCHITECTURE_AND_RUNBOOK.md). Owner review, W8 rebind/full build and IAM/Authority active role assignment/strict COMMIT remain HOLD. Existing MI01/07/08 owners retain scope; exact source plan and owner G9/G2/R8/G6A suites preserved. No CI/main/PROD/PG/permissions change. D5-G 42.5% unchanged. Rollback source-only, no DB/claim reset.
+
+
+## MI-03-GATE01-AUTHORITY-API-REVIEW-01
+[Evidence](../docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). Gate01 owner review unchanged; G2 full 50 and G6A fullchain 2 NOT_RUN. Gate02 parallel owner task. Common source unchanged; no product tests, no acceptance delta, no workstation action.
