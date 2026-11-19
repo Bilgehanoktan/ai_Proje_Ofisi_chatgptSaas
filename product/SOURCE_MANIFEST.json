@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI-COMMON-ORG-SKILL-02",
-  "status": "ISOLATED_ORG_SKILL_SOURCE_CONVERGENCE_OWNER_BUILD_HOLD",
+  "doc_revision": "MI03-GATE03-ORG-RUNTIME-CLOSURE-01",
+  "status": "ISOLATED_ORG_OWNER_SOURCE_PACKAGE_OWNER_BUILD_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+  "parent_git_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -2157,14 +2157,68 @@
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 608,
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
+    },
+    "ai-company-os-backend/durable_ops.py": {
+      "bytes": 11599,
+      "sha256": "8e0ea5e8f573339be13da88de4b982849dc44c9a67be6384795c51a45b8b10de"
+    },
+    "ai-company-os-backend/integration_guard.py": {
+      "bytes": 4996,
+      "sha256": "3fba6f345356725be61f8d7aa5460a95f0a376705fc8dfefe37d3c7686c55042"
+    },
+    "ai-company-os-backend/operations.py": {
+      "bytes": 3620,
+      "sha256": "ac57a06a9f0c6a9b6a9886f04456962582f8aa080478a95654a2e1032c66e82b"
+    },
+    "ai-company-os-backend/office_bridge.py": {
+      "bytes": 9224,
+      "sha256": "e8a2eb953313bc2342fa9c0264358ab6eda16eb6a40b0a36036d2a04991615a3"
+    },
+    "ai-company-os-backend/persistence.py": {
+      "bytes": 8075,
+      "sha256": "beffb280340c1c3da13f13248d5049d6d51d87ad05e5448a3373168919ecfd34"
+    },
+    "ai-company-os-backend/staffing.py": {
+      "bytes": 3179,
+      "sha256": "51131102e6c601c2efaf6ec18e430b87dd221edec9650d9c8391a3bcff131d32"
+    },
+    "ai-company-os-backend/org_model.py": {
+      "bytes": 2342,
+      "sha256": "a864d7bd6f1ca1fe17095c953529dc739f95ad2073e121bdb90014d1a16ea46e"
+    },
+    "ai-company-os-backend/assignment_lifecycle.py": {
+      "bytes": 10531,
+      "sha256": "b1f1b3efc935bcb95ad3616c8acfebf274a3246a91cb674fcfd554a2b7b5fc23"
+    },
+    "ai-company-os-backend/operations.sql": {
+      "bytes": 1725,
+      "sha256": "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77"
+    },
+    "ai-company-os-backend/schema.sql": {
+      "bytes": 2787,
+      "sha256": "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed"
+    },
+    "ai-company-os-backend/assignment_review.sql": {
+      "bytes": 784,
+      "sha256": "8983995430cbd87a1bca68c5dac0206e1051c9039659c4f0be9be0b79209ab21"
+    },
+    "ai-company-os-backend/org_core_bridge.py": {
+      "bytes": 6701,
+      "sha256": "be0a90ab3a68639961d0cf392d01c07d353fdfc3066ea02bde751dcf2bdac614"
+    },
+    "ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py": {
+      "bytes": 2332,
+      "sha256": "e5e14dcd06b8db970e51c538a377ee46f03ee1a9bc49596d0166135cb1f07ac4"
     }
   },
-  "parent_source_manifest_blob": "b80e834fe081cb1b8917798a11793eb50dce9688",
-  "source_git_commit_note": "See source transfer evidence and commit; self-reference excluded",
+  "parent_source_manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+  "source_git_commit_note": "See exact owner source transfer catalog; no self-reference",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null,
   "transfer_owner_commits": {
     "ORG": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
-    "SKILL": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+    "SKILL": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "ORG_ASSIGNMENT_D0": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+    "ORG_ORG06": "a59a15a94b9eaa2bb7687297e9057e286f297ede"
   }
 }

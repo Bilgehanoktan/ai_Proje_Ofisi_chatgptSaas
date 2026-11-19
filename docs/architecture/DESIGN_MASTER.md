@@ -325,3 +325,7 @@ Existing MI-01 repair, MI-03/04 pure identity/transport and MI-07/08 Model/Memor
 
 ## MI-COMMON-ORG-SKILL-02 — closed ORG/Skill convergence
 [Architecture and runbook](../master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md). 14 exact owner paths + one test adaptation. Original npm lock staged without regeneration via new U3 adapter; 7 fixture controls, full build and owner ratification HOLD.
+
+
+## MI03-GATE03 — ORG package source candidate (non-normative)
+Exact existing ORG/Assignment Python and SQL modules copied into an isolated backend root, preserving original import identities and SQL sibling paths. This is not an owner-approved runtime or product acceptance. [Catalog](../master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/ARCHITECTURE_RUNBOOK_HANDOVER.md).

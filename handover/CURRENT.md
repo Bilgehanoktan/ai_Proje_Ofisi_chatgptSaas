@@ -143,3 +143,7 @@ Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manif
 
 ## MI-COMMON-ORG-SKILL-02
 Source 2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5; 539 product files, 538 manifest entries. 14 exact owner files, one test adjustment; 7 adapter controls only, full build/regressions NOT_RUN. [Runbook](../docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md). Existing owners and permissions retained. Rollback bf87d5c48c7fee97fe12d0a28df3be80249f7306.
+
+
+## MI03-GATE03 — ORG runtime packaging isolated review
+Source owner 6efc6714757ebd698d27efd7022afc2c92af70d0; base 61bb06efbba7544bfc68260ed8eb4d342cab9b8e; 12 exact owner paths into backend root, 1 new smoke test, manifest 551/552; no tests run, not promoted, security and owner review HOLD. [Catalog](../docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/CATALOG_AND_EVIDENCE.json).

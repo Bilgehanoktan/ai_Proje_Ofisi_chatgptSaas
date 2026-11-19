@@ -1,0 +1,149 @@
+{
+  "revision": "MI03-GATE03-ORG-RUNTIME-CLOSURE-01",
+  "date": "2026-11-19",
+  "classification": "ISOLATED_EXACT_OWNER_SOURCE_PACKAGING; FUNCTIONAL_TEST_NOT_RUN",
+  "common_base": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "owner_assignment": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+  "owner_core_org": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+  "product_changes_on_candidate": {
+    "adds": 13,
+    "product_files": 552,
+    "manifest_entries": 551
+  },
+  "source_pins": [
+    {
+      "destination": "product/ai-company-os-backend/durable_ops.py",
+      "source": "candidates/ORG-05R3/durable_ops.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "bytes": 11599,
+      "sha256": "8e0ea5e8f573339be13da88de4b982849dc44c9a67be6384795c51a45b8b10de"
+    },
+    {
+      "destination": "product/ai-company-os-backend/integration_guard.py",
+      "source": "candidates/ORG-05R3/integration_guard.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+      "bytes": 4996,
+      "sha256": "3fba6f345356725be61f8d7aa5460a95f0a376705fc8dfefe37d3c7686c55042"
+    },
+    {
+      "destination": "product/ai-company-os-backend/operations.py",
+      "source": "candidates/ORG-05R3/operations.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+      "bytes": 3620,
+      "sha256": "ac57a06a9f0c6a9b6a9886f04456962582f8aa080478a95654a2e1032c66e82b"
+    },
+    {
+      "destination": "product/ai-company-os-backend/office_bridge.py",
+      "source": "candidates/ORG-05R3/office_bridge.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+      "bytes": 9224,
+      "sha256": "e8a2eb953313bc2342fa9c0264358ab6eda16eb6a40b0a36036d2a04991615a3"
+    },
+    {
+      "destination": "product/ai-company-os-backend/persistence.py",
+      "source": "candidates/ORG-05R3/persistence.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "4124099a497f5bc7fd34756664c7e293055e949e",
+      "bytes": 8075,
+      "sha256": "beffb280340c1c3da13f13248d5049d6d51d87ad05e5448a3373168919ecfd34"
+    },
+    {
+      "destination": "product/ai-company-os-backend/staffing.py",
+      "source": "candidates/ORG-05R3/staffing.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "e0b9078284922d281996869daa15a455572c1785",
+      "bytes": 3179,
+      "sha256": "51131102e6c601c2efaf6ec18e430b87dd221edec9650d9c8391a3bcff131d32"
+    },
+    {
+      "destination": "product/ai-company-os-backend/org_model.py",
+      "source": "candidates/ORG-05R3/org_model.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+      "bytes": 2342,
+      "sha256": "a864d7bd6f1ca1fe17095c953529dc739f95ad2073e121bdb90014d1a16ea46e"
+    },
+    {
+      "destination": "product/ai-company-os-backend/assignment_lifecycle.py",
+      "source": "candidates/ORG-05R3/assignment_lifecycle.py",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+      "bytes": 10531,
+      "sha256": "b1f1b3efc935bcb95ad3616c8acfebf274a3246a91cb674fcfd554a2b7b5fc23"
+    },
+    {
+      "destination": "product/ai-company-os-backend/operations.sql",
+      "source": "candidates/ORG-05R3/operations.sql",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "bytes": 1725,
+      "sha256": "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77"
+    },
+    {
+      "destination": "product/ai-company-os-backend/schema.sql",
+      "source": "candidates/ORG-05R3/schema.sql",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "bytes": 2787,
+      "sha256": "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed"
+    },
+    {
+      "destination": "product/ai-company-os-backend/assignment_review.sql",
+      "source": "candidates/ORG-05R3/assignment_review.sql",
+      "source_commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "3e887b10263f44b601f6a811a89687b2ee4d864e",
+      "bytes": 784,
+      "sha256": "8983995430cbd87a1bca68c5dac0206e1051c9039659c4f0be9be0b79209ab21"
+    },
+    {
+      "destination": "product/ai-company-os-backend/org_core_bridge.py",
+      "source": "candidates/ORG-06/org_core_bridge.py",
+      "source_commit": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "blob": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+      "bytes": 6701,
+      "sha256": "be0a90ab3a68639961d0cf392d01c07d353fdfc3066ea02bde751dcf2bdac614"
+    }
+  ],
+  "original_owner_tests": "20/20 historical, not rerun",
+  "new_smoke_test": {
+    "path": "product/ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py",
+    "methods": 4,
+    "sha256": "e5e14dcd06b8db970e51c538a377ee46f03ee1a9bc49596d0166135cb1f07ac4",
+    "status": "NOT_RUN"
+  },
+  "static_checks": {
+    "exact_owner_blobs_and_sizes": [
+      12,
+      12
+    ],
+    "source_manifest_entries_before": 538,
+    "source_manifest_entries_after": 551,
+    "sibling_sql_resources": [
+      3,
+      3
+    ],
+    "runtime_imports": "NOT_RUN",
+    "original_g9_seven": "NOT_RUN",
+    "original_g2_fifty": "NOT_RUN",
+    "full_shared_build": "NOT_RUN"
+  },
+  "source_decision": {
+    "top_level_modules": "Keep existing exact absolute imports without app path shims or runtime sys.path injection; owner ratification pending",
+    "durable_ops": "select additive 619fe... over historical G9 43ed... only in isolated candidate; G9 original remains separate; approval HOLD",
+    "owner_issuer": "No actual authenticated accepted assignment, no role grant",
+    "strict_commit": "HOLD; no protected effect"
+  },
+  "criteria": {
+    "previous_iam_org_percent": 42.5,
+    "current_iam_org_percent": 42.5,
+    "delta_pp": 0,
+    "core_acceptance": "12/16",
+    "mvp": "0/11"
+  },
+  "activation": "HOLD",
+  "rollback": "Revert isolated product-source commit to 61bb06efbba7544bfc68260ed8eb4d342cab9b8e; do not roll back DB or downgrade IAM writer"
+}
