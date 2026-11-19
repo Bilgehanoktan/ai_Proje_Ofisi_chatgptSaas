@@ -1,0 +1,49 @@
+{
+  "revision": "ORG-07C-R8-CROSS-LANE-WINDOWS-20261119",
+  "date": "2026-11-19",
+  "classification": "CROSS_LANE_EVIDENCE_REFERENCE_AND_DIAGNOSIS_ONLY",
+  "source_transcript": {
+    "bytes": 58677,
+    "sha256": "f69364b281fa985bf24b919ba90398efd362fec8315bcee65019363c36c953bd",
+    "raw_transcript_not_copied": "contains local user paths"
+  },
+  "parallel": {
+    "observed_branches": 240,
+    "d5c_r5": "1be2cc1e37388ddfd3c9b6f4dc883c3042b4b0af",
+    "d5g5": "1a9464966c1c5c67415e279b20bae3b19107554c",
+    "d5g4": "ed638c4bc8d69cec267392251f6efe40f464fc9a",
+    "d5g2": "9ca667e816dac269084ef8f62051da5fe458eb12"
+  },
+  "d5c": {
+    "owner_review": "candidates/D5-C-R5/WINDOWS_ATTEMPT_02_REVIEW.md",
+    "owner_review_blob": "a90ce8eec0cfea77c8fb2980d9b36cda85b9ba20",
+    "diagnostic_pass": 4,
+    "late_commit": "PG03 reproduced; activation HOLD",
+    "no_duplicate_pg_execution": true
+  },
+  "g5": {
+    "source_pin_pass": 31,
+    "tests_reported": 26,
+    "errors": 26,
+    "pass": 0,
+    "classification": "All setUp errors before functional assertions",
+    "guard_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "runner_blob": "95f80c55bac7dfbf5eca6211eab89030cfad655c",
+    "fixture_blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+    "reason": "D0_AUTHORITY_PATH_HOLD; guard requires .authority.sqlite suffix, path.resolve()==absolute path and no symlink on file or ancestors; actual failed predicate unconfirmed; non-ASCII alone is not a guard criterion",
+    "next": "Retry same pinned runner with fresh canonical ASCII TEMP/TMP scoped to test process; first reproduce exact path predicates with original temp and new temp, no source or guard change. If preflight fails stop; owner G5 retains test evidence and any product fix. No IAM grant or activation."
+  },
+  "progress": {
+    "r8_previous_percent": 11.666666666666668,
+    "r8_current_percent": 11.666666666666668,
+    "delta_pp": 0,
+    "canonical_acceptance": "unchanged",
+    "g5": "no test credit; owner progress record unchanged",
+    "d5c_r5": "denominator not frozen; HESAPLANAMADI per owner"
+  },
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "architecture_delta": "none",
+  "catalog_delta": "cross-lane incident reference only; no code, API, DB, dependency changes",
+  "handover": "R8 remains closed until real authenticated owner/provider contract and actual ORG authority integrated; no cross-lane merge; existing local preview not affected.",
+  "rollback": "No product changes; retain prior evidence; environment override process-local only."
+}
