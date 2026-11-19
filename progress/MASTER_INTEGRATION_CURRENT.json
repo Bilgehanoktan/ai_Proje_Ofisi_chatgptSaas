@@ -1,5 +1,5 @@
 {
-  "revision": "MI-BOOT-01",
+  "revision": "MI-01-R1",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -20,7 +20,7 @@
   },
   "progress_standard": {
     "ref": "planning/project-wide-progress-reporting",
-    "sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
+    "sha": "b6983047430cecde80a02c6384a22fe80301ad93",
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "branch_count": 257,
@@ -30,11 +30,15 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Tam temiz checkout, manifest, kilitli bağımlılık build ve browser; mevcut U3B sahibinin kanıtını önce oku",
+      "next": "Connected exact clean checkout, original W8 audit then prepare only; stop for dependency review fingerprint.",
       "priority": "P0",
-      "status": "OPEN",
+      "status": "BLOCKED_ENVIRONMENT",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "docs/master-integration/MI-01-R1_EVIDENCE.json",
+      "previous_status": "OPEN",
+      "scope": "master readback/preflight only; Unified owner retains source changes",
+      "development_percent": null,
+      "acceptance_delta": 0
     },
     {
       "id": "MI-02",
@@ -148,6 +152,7 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "NOT_RUN",
-  "next": "MI-01 U3B evidence and exact dependency closure; MI-02–04 owner coordination in parallel"
+  "tests_this_round": "4 direct dependency bytes verified; offline npm/pip preparation failed; product NOT_RUN",
+  "next": "MI-01 connected checkout/review; MI-02/03/04 and independent workstreams continue",
+  "previous_revision": "MI-BOOT-01"
 }

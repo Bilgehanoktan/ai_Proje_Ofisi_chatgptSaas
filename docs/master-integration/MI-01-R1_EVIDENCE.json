@@ -1,0 +1,88 @@
+{
+  "revision": "MI-01-R1",
+  "date": "2026-11-19",
+  "base_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
+  "manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "remote_metadata": {
+    "tree_entries": 2159,
+    "product_pins": "505/505",
+    "manifest": "504/504",
+    "schema_fixture_pairs": "17/17",
+    "historical_paths": "55/55",
+    "runner_files": "23/23 source read and Git blob identity; no runner execution",
+    "selected_auxiliary_pins": {
+      "pass": 26,
+      "total": 26,
+      "pins": {
+        "tests/integration/run_combined_helpers.cjs": "5d830e090ad87e36c7b340cf9213b91d7682b136",
+        "tests/integration/office-workbench-merge.test.cjs": "c19cb85bd9f418c69ba47eb177b5151db20d43b7",
+        "tests/integration/browser_0187_w1.py": "99df17ec2a0be012ad2f3c463510c64fbd69c062",
+        "tests/integration/browser_task_budget_0188.py": "70714854ccf650862602d541420ccd7b985408d0",
+        "tests/integration/browser_lifecycle_p02.py": "e444e60d53914e78e77418fc1ac63e1dc0b7a4de",
+        "tests/integration/browser_lifecycle_prefix_p03.py": "15b6f9656f5768e942fd63810d0ca1eb438edab3",
+        "tests/integration/native_ux_a4r2.py": "d82d09d0ea39e213ae4db78e8181d2c9c90d06f7",
+        "database/0192/candidate_event_outbox_fence.sql": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "database/0193/candidate_run_head.sql": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "database/0194/candidate_transition_roles.sql": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "database/0195/candidate_admission_budget.sql": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "database/0196L/candidate_lease_settlement.sql": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+        "progress/W1_0198_MILESTONES.json": "1c35eae82c96dea1607b2f3b7c63702f458bee18",
+        "database/0203T/terminal_command_anchors.sql": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+        "database/0204C/company_event_order.sql": "edb2ef263204b89f88f172000ecb031428a027e4",
+        "database/migrations/0183_D0_PHYSICAL_CANDIDATE.sql": "8e6b4a4e886459be74ae575becd5917c5f070fab",
+        "tests/integration/core_0207_source_lock.json": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+        "tests/integration/run_core_0207.py": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+        "tests/integration/run_lifecycle_p05.py": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+        "tests/integration/audit_source_archive.py": "9a8a55b67360a8d55b4e647b29f745d4e8b6b378",
+        "tests/integration/test_audit_source_archive.py": "d361a22ee65f44fdbca8a81fffdb51b8f390e028",
+        "tests/integration/historical_0207/app/api/lifecycle_prefix_projection.py": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+        "tests/integration/historical_0207/app/core/agent_runtime/scheduler_review.py": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+        "tests/integration/historical_0207/app/core/transaction/postgres_admission_mapping.py": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+        "tests/integration/run_unified_u2_session.py": "c27eb541d4ad4c26f879dd5a45e98f20dd81de2f",
+        "tests/integration/browser_unified_u3.py": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773"
+      },
+      "scope": "static final pins including P10J11 browser rebind; runtime verify_aux NOT_RUN"
+    }
+  },
+  "local": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "npm": "10.9.2",
+    "git": "2.47.3",
+    "dependency_files": "4/4 exact UTF-8 bytes SHA256 and Git blob",
+    "git_ls_remote": "BLOCKED: Could not resolve host github.com",
+    "pip_offline": {
+      "exit": 1,
+      "error": "No matching distribution found for fastapi==0.163.0"
+    },
+    "npm_offline": {
+      "exit": 1,
+      "error": "ENOTCACHED @types/node"
+    },
+    "full_checkout": "BLOCKED",
+    "full_manifest_bytes": "NOT_RUN",
+    "review_fingerprint": "NOT_GENERATED"
+  },
+  "historical": {
+    "U3A_selected": "63/63 PASS",
+    "runner_mechanics": "10/10 fake parent",
+    "not_replayed_this_round": true
+  },
+  "acceptance": {
+    "full_backend": "NOT_RUN",
+    "full_frontend": "NOT_RUN",
+    "typecheck": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "native": "NOT_RUN",
+    "canonical_pg_rls": "separate owner; NOT_RUN here",
+    "MVP": "0/11 unchanged",
+    "independent": "0/7 unchanged",
+    "product_dev_promoted": false,
+    "staging_created": false
+  },
+  "development_percent": null,
+  "overall_percent": null,
+  "reason": "MI-01 weighted criterion baseline not frozen; no acceptance delta",
+  "next": "Connected exact clean checkout, original W8 audit then prepare only; stop for dependency review fingerprint."
+}
