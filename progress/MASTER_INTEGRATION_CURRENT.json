@@ -1,5 +1,5 @@
 {
-  "revision": "MI-03-04-UNION-REGRESSION-READBACK",
+  "revision": "MI-COMMON-SOURCE-REVIEW-01",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -30,7 +30,7 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Owner review, exact clean checkout on connected workstation; original runner unit tests, audit, prepare only; stop at stage/locks/REVIEW.json fingerprint; approved install/test/smoke later. No promotion.",
+      "next": "User workstation deferred. Preserve original MI01 candidate and new common review candidate; owner review, then exact W8 audit/prepare/fingerprint when workstation available.",
       "priority": "P0",
       "status": "REMOTE_PREFLIGHT_PASS_LOCAL_CHECKOUT_AND_FULL_BUILD_BLOCKED",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -97,7 +97,13 @@
         "GitHub DNS local checkout blocked; prior Library archives cannot be materialized",
         "reviewed dependency fingerprint not generated",
         "full build and browser NOT_RUN"
-      ]
+      ],
+      "common_source_review": {
+        "source_commit": "ec0537f737806c7698cf876cd1222336a5c9c19e",
+        "ref": "integration/mi-common-source-review-01",
+        "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
+        "scope": "existing candidates retained; no acceptance delta"
+      }
     },
     {
       "id": "MI-02",
@@ -184,6 +190,12 @@
           "product_dev_promotion": false,
           "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
         }
+      },
+      "common_source_review": {
+        "source_commit": "ec0537f737806c7698cf876cd1222336a5c9c19e",
+        "ref": "integration/mi-common-source-review-01",
+        "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
+        "scope": "existing candidates retained; no acceptance delta"
       }
     },
     {
@@ -286,6 +298,12 @@
         "owner_review": "PENDING",
         "full_build": "NOT_RUN",
         "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      },
+      "common_source_review": {
+        "source_commit": "ec0537f737806c7698cf876cd1222336a5c9c19e",
+        "ref": "integration/mi-common-source-review-01",
+        "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
+        "scope": "existing candidates retained; no acceptance delta"
       }
     },
     {
@@ -293,7 +311,7 @@
       "owner_role": "Premium UI",
       "source_ref": "integration/p10j24b-source-recovery",
       "observed_sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
-      "next": "U3B build sonrası aynı canlı projection, W8 ve UI kapıları",
+      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract.",
       "priority": "P1",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -308,7 +326,7 @@
       "owner_role": "ORG / Office",
       "source_ref": "integration/org-07c-r8-closed-studio",
       "observed_sha": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
-      "next": "Owner review R1 exact source repairs and shared U3A paths; no activation",
+      "next": "Existing ORG closed preview stays separate; reconcile actual assignment/identity/office join with MI03 owner; no activation.",
       "priority": "P0",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -360,7 +378,13 @@
         "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
       },
       "acceptance_delta": 0,
-      "development_percent": null
+      "development_percent": null,
+      "common_source_review": {
+        "source_commit": "ec0537f737806c7698cf876cd1222336a5c9c19e",
+        "ref": "integration/mi-common-source-review-01",
+        "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
+        "scope": "existing candidates retained; no acceptance delta"
+      }
     },
     {
       "id": "MI-08",
@@ -407,6 +431,12 @@
         "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
         "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
         "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      },
+      "common_source_review": {
+        "source_commit": "ec0537f737806c7698cf876cd1222336a5c9c19e",
+        "ref": "integration/mi-common-source-review-01",
+        "status": "ISOLATED_EXACT_SOURCE_CONVERGENCE_OWNER_REVIEW_HOLD",
+        "scope": "existing candidates retained; no acceptance delta"
       }
     },
     {
@@ -418,7 +448,12 @@
       "priority": "P1",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "branch head observed only; latest acceptance not reconciled",
+      "source_review": {
+        "nonmanifest_product_delta": 5,
+        "overlap_with_mi01_mi34_mi78": 0,
+        "status": "NOT_TRANSFERRED; preserve user decision to defer original lock recovery; no regeneration or provider activation"
+      }
     },
     {
       "id": "MI-10",
@@ -444,9 +479,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.",
-  "next": "MI-01 connected exact source checkout, W8 audit/prepare and fresh review fingerprint; no duplicate prototypes. Other MI tasks preserve prior queue/owners. MI03/04 single-manifest source union verified and 46 selected tests passed; no duplicate branch. Central owner next reviews existing MI01/MI07-08 with union, and D4/IAM/T1 owners close resolver/Authority source contract before any transfer.",
-  "previous_revision": "MI-01-U3B-REMOTE-PREFLIGHT",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.",
+  "next": "PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout.",
+  "previous_revision": "MI-03-04-UNION-REGRESSION-READBACK",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -534,5 +569,47 @@
     "full_build": "NOT_RUN",
     "product_dev_promotion": false,
     "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
-  }
+  },
+  "common_source_review": {
+    "ref": "integration/mi-common-source-review-01",
+    "source_commit": "ec0537f737806c7698cf876cd1222336a5c9c19e",
+    "readback_commit": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "parent": "44d7f91f87965fcb08e0c44bacd630204e3684a2",
+    "manifest": "b80e834fe081cb1b8917798a11793eb50dce9688",
+    "runner": "e7335eac1e4358ceef001a494f45f56ba9544fc0",
+    "product_files": 530,
+    "manifest_entries": 529,
+    "exact_transfers": [
+      96,
+      96
+    ],
+    "product_deltas_from_mi01": 30,
+    "nonmanifest_product_conflicts": 0,
+    "history": [
+      55,
+      55
+    ],
+    "history_overlays": 4,
+    "model_memory_pins": [
+      114,
+      114
+    ],
+    "identity_pins": [
+      13,
+      13
+    ],
+    "contract_pairs": [
+      17,
+      17
+    ],
+    "new_tests": 0,
+    "owner_review": "PENDING",
+    "full_build": "NOT_RUN",
+    "promotion": "HOLD",
+    "readback": "docs/master-integration/MI-COMMON-SOURCE-REVIEW-01/GITHUB_READBACK.json",
+    "runbook": "docs/master-integration/MI-COMMON-SOURCE-REVIEW-01/RUNBOOK.md",
+    "rollback": "44d7f91f87965fcb08e0c44bacd630204e3684a2"
+  },
+  "user_workstation": "DEFERRED_BY_USER_20261119; no Windows commands required now"
 }
