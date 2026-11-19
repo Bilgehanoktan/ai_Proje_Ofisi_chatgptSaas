@@ -264,3 +264,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G5 — branch-local source integration
 [Handover](../candidates/D5-G5/HANDOVER.md) · [Progress](../candidates/D5-G5/PROGRESS.json). 12+14 planned tests, no gate promotion.
+
+
+## D5-G9 — branch-local checkpoint
+[Runbook](../candidates/D5-G9/ARCHITECTURE_AND_RUNBOOK.md). Exact G7 seven-case runner, 8/8 synthetic mechanics; actual checkout BLOCKED, owner assignment/role HOLD. D5-G 42.50%, no gate changes.

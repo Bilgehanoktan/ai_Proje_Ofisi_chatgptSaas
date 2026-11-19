@@ -197,3 +197,7 @@ Source `a31040d8116a58521393040061abe0078c83800d` / `recovery/0181-mvp-diagnosti
 
 ## D5-G5
 [Architecture](candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md) · [Catalog](candidates/D5-G5/CATALOG.json) · [Progress](candidates/D5-G5/PROGRESS.json) · [Handover](candidates/D5-G5/HANDOVER.md)
+
+
+## D5-G9 — branch-local checkpoint
+[Runbook](candidates/D5-G9/ARCHITECTURE_AND_RUNBOOK.md). Exact G7 seven-case runner, 8/8 synthetic mechanics; actual checkout BLOCKED, owner assignment/role HOLD. D5-G 42.50%, no gate changes.

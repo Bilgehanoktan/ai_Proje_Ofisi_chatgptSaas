@@ -1,0 +1,116 @@
+{
+  "revision": "D5-G9",
+  "parent": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+  "criteria": "D5-G1-D0-session-v1",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "partial": {
+    "S03": "G8 owner provenance gap remains HOLD; exact G7 readback execution blocked by missing checkout",
+    "F05": "G7 selected controls retained; no protected race test",
+    "I02": "D5-E fixture exists separately; no actual composition"
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "tests": {
+    "owner_schema_diagnostics": [
+      7,
+      7
+    ],
+    "original_G7_actual_checkout": [
+      0,
+      7
+    ],
+    "original_G2": [
+      0,
+      50
+    ],
+    "ORG10_PG": [
+      0,
+      31
+    ],
+    "runner_mechanics": [
+      8,
+      8
+    ]
+  },
+  "blockers": [
+    "ORG/Core approved active assignment issuance/persistence/read port",
+    "IAM registry and D4 role authorization provenance",
+    "D5-D/E approved protected publication and D5-C strict COMMIT",
+    "G7 actual 7, G2 50 and independent acceptance"
+  ],
+  "next": "Execute unchanged seven G7 cases on reviewed exact G9 archive when available; ORG/Core and D4/IAM owner disposition on G8 interface; no product activation",
+  "activation": "HOLD"
+}

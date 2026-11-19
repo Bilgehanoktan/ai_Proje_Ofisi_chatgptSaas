@@ -11,3 +11,7 @@ Complete original G2 50-case regression on G2/G3 manifest. Then actual ORG owner
 
 ## D5-G5 — next
 Run exact G5 26-test closure and original G2 50 on its own manifest. Actual current Core and ORG assignment/role evidence, protected publisher and original T1 wiring remain HOLD. [Runbook](../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md).
+
+
+## D5-G9 — branch-local checkpoint
+[Runbook](../candidates/D5-G9/ARCHITECTURE_AND_RUNBOOK.md). Exact G7 seven-case runner, 8/8 synthetic mechanics; actual checkout BLOCKED, owner assignment/role HOLD. D5-G 42.50%, no gate changes.

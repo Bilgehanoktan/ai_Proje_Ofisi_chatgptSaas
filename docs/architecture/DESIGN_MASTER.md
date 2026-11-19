@@ -281,3 +281,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G8 — actual assignment/role provenance owner handoff (branch-local)
 [Architecture and runbook](../../candidates/D5-G8/ARCHITECTURE_AND_RUNBOOK.md). 7/7 exact R3 schema controls, ORG10 PG source-only review. Existing D4 Binding and G7 retained. Actual owner issuance, protected publication and COMMIT HOLD. No product code or normative policy change.
+
+
+## D5-G9 — exact three-store checkout execution path (branch-local)
+[Runbook](../../candidates/D5-G9/ARCHITECTURE_AND_RUNBOOK.md). Exact backend staging for existing seven G7 cases; 8/8 synthetic runner mechanics PASS, actual checkout BLOCKED exit 2 (missing source manifest). No product source, authority or acceptance change. G8 owner disposition and actual tests remain open.

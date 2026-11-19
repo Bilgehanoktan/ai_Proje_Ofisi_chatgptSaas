@@ -1,0 +1,42 @@
+{
+  "revision": "D5-G9",
+  "classification": "test infrastructure only",
+  "files": [
+    {
+      "path": "candidates/D5-G9/run_exact_checkout.py",
+      "symbols": [
+        "require",
+        "blob",
+        "read",
+        "stage_exact",
+        "result_ok",
+        "main",
+        "CHILD"
+      ],
+      "purpose": "Exact backend + selected pin staging and unchanged seven-case runner",
+      "dependencies": [
+        "Python stdlib",
+        "existing cryptography==46.0.4",
+        "G7 fixture",
+        "G8 manifest"
+      ],
+      "api": [],
+      "database": [],
+      "events": []
+    },
+    {
+      "path": "candidates/D5-G9/test_runner.py",
+      "symbols": [
+        "RunnerTests"
+      ],
+      "purpose": "Eight synthetic runner mechanics checks"
+    },
+    {
+      "path": "candidates/D5-G9/actual_attempt.json",
+      "purpose": "Actual BLOCKED preflight evidence"
+    }
+  ],
+  "product_changes": 0,
+  "rollback": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+  "activation": "HOLD"
+}
