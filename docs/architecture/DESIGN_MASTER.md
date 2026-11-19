@@ -265,3 +265,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## MI-03-GATE01-AUTHORITY-API-REVIEW-01 — static owner API review
 [Catalog/evidence](../master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). G2/G7 exact IAM and authority pins; legacy wrapper lacks session_check; explicit protected entry remains HOLD. No product or acceptance change.
+
+
+## MI-05-06-09-SOURCE-LOCK-REVIEW-01 — source and original lock readback
+[Architecture, maintenance and handover](../master-integration/MI-05-06-09-SOURCE-LOCK-REVIEW-01/ARCHITECTURE_RUNBOOK_HANDOVER.md) · [Catalog/evidence](../master-integration/MI-05-06-09-SOURCE-LOCK-REVIEW-01/CATALOG_AND_EVIDENCE.json). Common U3 preserved; MI06 nine and MI09 five owner paths reviewed; exact original npm lock recovered from ORG, no regeneration. No source change, full build or acceptance. Existing owners and permissions unchanged.

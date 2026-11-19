@@ -1,0 +1,289 @@
+{
+  "revision": "MI-05-06-09-SOURCE-LOCK-REVIEW-01",
+  "date": "2026-11-19",
+  "parent_governance": "07c64c090753e775eacb0272af8a79e0c27a5d3e",
+  "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "owner_refs": {
+    "ui": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "org": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "skill": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603"
+  },
+  "tree_counts": {
+    "base": 505,
+    "common": 530,
+    "ui": 492,
+    "org": 510,
+    "skill": 509
+  },
+  "comparison": "untruncated Git product subtree blob inventories; three-way base vs common vs owners; UI diverges from earlier merge base b7353a44 and has no product delta against actual merge base",
+  "ui": {
+    "status": "RETAIN_COMMON_U3",
+    "owner_tree_difference": "14 owner differing blobs incl manifest, 39 common-only paths; older workflow inspector and A5/U2 projection predecessors not transferred",
+    "shared_session": "existing historical replay controller; real live event owner contract and original same-document browser test remain HOLD"
+  },
+  "org": {
+    "status": "9 source paths pending owner review; existing closed Studio preserved separately",
+    "paths": [
+      {
+        "path": "product/ai-company-os-frontend/app/api/demo/organization/route.ts",
+        "owner": {
+          "bytes": 527,
+          "sha256": "68586ac79f5111bcbe2b30cb09f3f6b35ef8fbee38ec59881d88bf00ea0a6f22"
+        },
+        "common_before": null
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+        "owner": {
+          "bytes": 3085,
+          "sha256": "a1147ebd4560c7322e974f91dce97c55fe8ddfa157e8c78adb51f3a4ac820a7f"
+        },
+        "common_before": {
+          "bytes": 2984,
+          "sha256": "ba40068ea9807347a547ddd82721bc0acf750f2a058c353561ac8ab3e32c650d"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+        "owner": {
+          "bytes": 1633,
+          "sha256": "edd44f45b726cff95bae2067b4d5e80612b75dbfd31a62027a41354b3c2c5799"
+        },
+        "common_before": {
+          "bytes": 1528,
+          "sha256": "c7fec9d9b6adde98f259c9fd662d56f68f4a5799ad25e215f0d570b7635756ce"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+        "owner": {
+          "bytes": 4561,
+          "sha256": "db2e1aca824e334f749eb7078796916854d3a9c9ff818b085a51daf2f5d8219f"
+        },
+        "common_before": {
+          "bytes": 4462,
+          "sha256": "f1586cc9a8a65df1f315e650e37f3b92dd4c35f9ac2202808dd8ef00a82bb249"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+        "owner": {
+          "bytes": 1732,
+          "sha256": "34bb77b59c989b1ecb0ec3b75d04be68923bba7c4d5d2eccf922eab78ccb741a"
+        },
+        "common_before": null
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/organizationOwnerBinding.ts",
+        "owner": {
+          "bytes": 3192,
+          "sha256": "19c5163ad19c53118ed51e43844efc3d84a319c58a3ff311f0727aea2753a6cc"
+        },
+        "common_before": null
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+        "owner": {
+          "bytes": 3939,
+          "sha256": "254a188851fa2f0e63661f2dd6977d7446a7f5ae7d4dd0622ea4a40f578dd461"
+        },
+        "common_before": null
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/organization/organizationProxy.ts",
+        "owner": {
+          "bytes": 2437,
+          "sha256": "bf604ecaaa9e179ba1048f9d9d5a7dee2846a164bc2f4bda163477d63f32eed3"
+        },
+        "common_before": null
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+        "owner": {
+          "bytes": 3071,
+          "sha256": "915012ceca4b0c5094e6c48890de3b87eaeab78bb200944f5b713eb08a34e478"
+        },
+        "common_before": {
+          "bytes": 3075,
+          "sha256": "cd349cfecba4ad097c9a79cd854a60b5be333c0862924a3b5bb0bd2e8127c1f3"
+        }
+      }
+    ],
+    "exact_repair": [
+      "DraftInspector.tsx deletion",
+      "WorkflowDraftInspector.tsx addition",
+      "WorkflowDraft.tsx",
+      "ui-p10j20-inspector.test.cjs"
+    ],
+    "note": "rename counted as one logical change; four paths / three logical repair changes already present",
+    "route": "GET /api/demo/organization -> readOwnerBoundOrganization(request,localBackendPort()) with no owner; 503 HOLD; no backend registration or actual identity",
+    "symbols": [
+      "readOwnerBoundOrganization",
+      "readOrganizationProxy",
+      "parseOrganization",
+      "OrganizationReadback",
+      "OwnerReadProvider"
+    ],
+    "prior_evidence": "owner 7 partial visual captures; prior frontend build/typecheck PASS only; no full-stack or actual owner"
+  },
+  "skill": {
+    "status": "EXACT_SOURCE_REVIEW_READY; OWNER TRANSFER NOT PERFORMED",
+    "paths": [
+      {
+        "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+        "bytes": 4957,
+        "sha256": "0b0506ecdd9979d22e4634fda78946e111c0813143cbd58d9d1afb7f142e4950",
+        "git_blob": "52f2a7278f5a6eebde08bf5c27c12136131bd97c",
+        "sha256_readback": "MATCH",
+        "common_before": {
+          "bytes": 4781,
+          "sha256": "b30269dbb2aade62b97835b8ec3265f84d0832a63b3a4dad29a1cdea8b24d6f2"
+        },
+        "owner_manifest": {
+          "bytes": 4957,
+          "sha256": "0b0506ecdd9979d22e4634fda78946e111c0813143cbd58d9d1afb7f142e4950"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.module.css",
+        "bytes": 1292,
+        "sha256": "c44d64a61ab0c99546f52db5c314f2ce4cb69c61c35648eec196ed7a2b62f568",
+        "git_blob": "53d2ff896064617a3bebca0bbacd1f8a531799a2",
+        "sha256_readback": "MATCH",
+        "common_before": null,
+        "owner_manifest": {
+          "bytes": 1292,
+          "sha256": "c44d64a61ab0c99546f52db5c314f2ce4cb69c61c35648eec196ed7a2b62f568"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/capabilities/ext06/ExternalSkillCatalog.tsx",
+        "bytes": 5505,
+        "sha256": "9a71ba7c79649cf350941f0102bd4ab1bae8ddacc7702df2553d78f83160188c",
+        "git_blob": "9c46949b0b9777ad0695b2df52d73c9198123cfb",
+        "sha256_readback": "MATCH",
+        "common_before": null,
+        "owner_manifest": {
+          "bytes": 5505,
+          "sha256": "9a71ba7c79649cf350941f0102bd4ab1bae8ddacc7702df2553d78f83160188c"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/capabilities/ext06/skillData.json",
+        "bytes": 8264,
+        "sha256": "b4e288b3dbac3b8febe7b5dbd35dee6f6f265416d78e31212df5e7eeda7873d8",
+        "git_blob": "8bc02f5e04b9dd6acd49540cabfef8003dc3405b",
+        "sha256_readback": "MATCH",
+        "common_before": null,
+        "owner_manifest": {
+          "bytes": 8264,
+          "sha256": "b4e288b3dbac3b8febe7b5dbd35dee6f6f265416d78e31212df5e7eeda7873d8"
+        }
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/capabilities/ext06/skillStudioModel.ts",
+        "bytes": 3792,
+        "sha256": "5b11cc465901de5da4f8723b4869d65da56ceb20211874d5929a4e1f5dd62a45",
+        "git_blob": "98ddc8551be46ddd19372ade6ac4fab6fbbfcd66",
+        "sha256_readback": "MATCH",
+        "common_before": null,
+        "owner_manifest": {
+          "bytes": 3792,
+          "sha256": "5b11cc465901de5da4f8723b4869d65da56ceb20211874d5929a4e1f5dd62a45"
+        }
+      }
+    ],
+    "original_test": {
+      "path": "candidates/W5-EXT-06/tests/skillStudioModel.test.cjs",
+      "blob": "f54d6dd7d1f25be9c50e5c4e9c360ff47392f153",
+      "sha256": "08b796e15f1cdf31f0e4df91795a731f77bfbb8e9bd63489c4f7d7b5f4fd2b86",
+      "bytes": 4571,
+      "raw_readback": "MATCH",
+      "historical_pass": [
+        41,
+        41
+      ],
+      "this_round": "NOT_RUN"
+    },
+    "dependencies": [
+      {
+        "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+        "manifest_record_match": true,
+        "org_change": false
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+        "manifest_record_match": true,
+        "org_change": true
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+        "manifest_record_match": true,
+        "org_change": true
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/evidence/studioGovernance.ts",
+        "manifest_record_match": true,
+        "org_change": false
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/capabilities/studioCatalog.ts",
+        "manifest_record_match": true,
+        "org_change": false
+      },
+      {
+        "path": "product/ai-company-os-frontend/package.json",
+        "manifest_record_match": true,
+        "org_change": false
+      },
+      {
+        "path": "product/ai-company-os-frontend/tsconfig.json",
+        "manifest_record_match": true,
+        "org_change": false
+      }
+    ],
+    "symbols": [
+      "CapabilityReadback",
+      "ExternalSkillCatalog",
+      "readSkillCatalog",
+      "filterSkills",
+      "selectedSkill",
+      "emptyFilter",
+      "skillBoundary"
+    ],
+    "boundary": "historical static three candidates; 0 enabled/installed/effective tools, actual counts and assignments null; no new network/DB/dependency/grant"
+  },
+  "lock": {
+    "source_ref": "integration/org-07c-r8-closed-studio",
+    "source_commit": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "path": "docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json",
+    "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "bytes": 33618,
+    "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "verification": "raw base64 decoded; SHA-256 recalculated; abc known-vector selftest passed; exact expected EXT07R6 match",
+    "package_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+    "common_and_ext_package_same": true,
+    "lock_version": 3,
+    "non_root_packages": 61,
+    "prior_registry_and_build": "ORG owner reported 61/61 metadata, Next build and typecheck PASS on be42ba7b; not current common candidate",
+    "legacy_prepare": "tests/integration/w8_local.py:114 npm install --package-lock-only; do not invoke until exact-lock staging owner review",
+    "status": "ORIGINAL_LOCK_BYTES_AVAILABLE; FRESH_REVIEW_AND_FULL_BUILD_HOLD"
+  },
+  "local_checkout": "git ls-remote failed DNS; Node 22.16.0 / TS 5.8.3 available, no full checkout",
+  "new_product_tests": 0,
+  "new_product_paths": 0,
+  "acceptance_delta": 0,
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  },
+  "rollback": "No product changes; reverse additive governance record by normal revert, no force or owner branch mutation"
+}

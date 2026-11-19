@@ -1,5 +1,5 @@
 {
-  "revision": "MI-03-GATE01-AUTHORITY-API-REVIEW-01",
+  "revision": "MI-05-06-09-SOURCE-LOCK-REVIEW-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance.",
   "new_product_tests": 0,
-  "previous_revision": "MI-03-SECURITY-DEPENDENCY-HANDOFF-01",
+  "previous_revision": "MI-03-GATE01-AUTHORITY-API-REVIEW-01",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -506,5 +506,46 @@
     "previous_percent": 42.5,
     "current_percent": 42.5,
     "delta_pp": 0
+  },
+  "mi05_06_09_source_lock_review": {
+    "path": "docs/master-integration/MI-05-06-09-SOURCE-LOCK-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-05-06-09-SOURCE-LOCK-REVIEW-01/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "skill_owner": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+    "org_owner": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "ui_owner": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+    "skill_raw_pins": [
+      6,
+      6
+    ],
+    "skill_product_manifest": [
+      5,
+      5
+    ],
+    "skill_dependency_manifest": [
+      7,
+      7
+    ],
+    "org_pending_paths": 9,
+    "lock": {
+      "source_ref": "integration/org-07c-r8-closed-studio",
+      "source_commit": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+      "path": "docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json",
+      "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "bytes": 33618,
+      "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+      "verification": "raw base64 decoded; SHA-256 recalculated; abc known-vector selftest passed; exact expected EXT07R6 match",
+      "package_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+      "common_and_ext_package_same": true,
+      "lock_version": 3,
+      "non_root_packages": 61,
+      "prior_registry_and_build": "ORG owner reported 61/61 metadata, Next build and typecheck PASS on be42ba7b; not current common candidate",
+      "legacy_prepare": "tests/integration/w8_local.py:114 npm install --package-lock-only; do not invoke until exact-lock staging owner review",
+      "status": "ORIGINAL_LOCK_BYTES_AVAILABLE; FRESH_REVIEW_AND_FULL_BUILD_HOLD"
+    },
+    "source_changes": 0,
+    "new_product_tests": 0,
+    "acceptance_delta": 0
   }
 }
