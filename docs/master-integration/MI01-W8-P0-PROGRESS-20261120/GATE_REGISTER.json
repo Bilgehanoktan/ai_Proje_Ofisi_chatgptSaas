@@ -16,7 +16,8 @@
     "passed": 3,
     "total": 8,
     "percent": 37.5,
-    "open": 5
+    "open": 5,
+    "note": "Selected CI diagnostic freshness improved; no formal W8 P0 criterion closed, remains 3/8."
   },
   "delta_pp": null,
   "evidence_source": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44617509366",
@@ -142,11 +143,27 @@
       42
     ],
     "NEXT_BUILD": "PASS_DIAGNOSTIC",
-    "U3_browser": "SSE_COMPAT_ONLY; exact native CDP FAIL; fresh-read owner QA pending or separate",
+    "U3_browser": "PER_REQUEST_FRESH_SSE_COMPAT_DIAGNOSTIC_PASS_NODE17_AND_CHROMIUM; ORIGINAL_NATIVE_CDP_FAIL",
     "W8_full": "NOT_RUN",
     "protected_PostgreSQL": "HOLD",
     "full_model_memory_344": "NOT_RUN_OTHER_OWNER",
-    "historical_core_29": "NOT_RUN_OTHER_OWNER"
+    "historical_core_29": "NOT_RUN_OTHER_OWNER",
+    "quality_freshness": {
+      "ci_run": 44620987573,
+      "tested_commit": "f98da5ab0cef72e87b15878499baceeb15909005",
+      "jobs": [
+        3,
+        3
+      ],
+      "node_negative": [
+        17,
+        17
+      ],
+      "chromium": "PASS_PER_REQUEST_COMPAT",
+      "native_CDP": "KNOWN_FAIL",
+      "formal_W8": "NOT_RUN",
+      "evidence": "docs/master-integration/MI10-SSE-FRESH-REQUEST-FIX-20261120/EVIDENCE.json"
+    }
   },
   "formal_progress": {
     "weights": {
