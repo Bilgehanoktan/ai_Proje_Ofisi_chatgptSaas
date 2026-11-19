@@ -1,0 +1,8 @@
+# MI03-G6A-D4-ORG-CROSS-REPLAY-01
+
+
+
+## MI03-G6A-D4-ORG-CROSS-REPLAY-01
+59/59 actual selected original tests (G1 14, G2 19, G4 14, G5 12) on 28/28 exact local pins, verified pre/post. G6A plus common D4/Core and original ORG R3 auxiliary closure. 26 existing G4/G5 cases replayed on G6A, 33 repeat; do not count 47 preceding subset separately. No product transfer, actual owner issuance, strict COMMIT, full G2/G9, PG/W8 or acceptance. Preserve competing assignment candidate and original durable_ops independently. D5-G 42.5% unchanged. Evidence: docs/master-integration/MI03-G6A-D4-ORG-CROSS-REPLAY-01/EVIDENCE.json. Raw log SHA-256 bfafe7ccfeec14afe978a340dc14f32a44877891de08ee79ae43fa034583ca9b. ZIP 35 files SHA-256 d3477476aec41ef928cfb5f4c6f05ae7d061bd1dccaa2f438a5120211f0cd272.
+
+Run the delivered isolated ZIP with python -I -B run_selected.py. Runner verifies all 28 original Git blobs and SHA-256 pre/post; do not add candidate sys.path to product runtime. Temporary SQLite fixtures only; no production DB access. Full product checkout blocked by local GitHub DNS; initial malformed transfer discarded, all final source bytes validated. G2 combined DB+pin rollback residual remains; G5 proposal is not accepted assignment, no atomic freshness guarantee. Separate G8 assignment lifecycle candidate remains under its owner; no replacement of original G9 durable_ops. Review existing 12-path overlay and namespace packaging before transfer; G7 three-store and G9 seven original tests, full G2 50, strict T1/PG/W8 require own evidence. Remove isolated directory for rollback; no DB reset. No permission changes.

@@ -49,3 +49,7 @@ Isolated G8 descendant [6efc6714757e](https://github.com/Bilgehanoktan/ai_Proje_
 
 
 MI-COMMON-03-SELECTED-REGRESSION — 61bb06efbba7544bfc68260ed8eb4d342cab9b8e — actual 97 selected PASS; full build and protected acceptance HOLD. See docs/master-integration/MI-COMMON-03-SELECTED-REGRESSION/RUNBOOK.md.
+
+
+## MI03-G6A-D4-ORG-CROSS-REPLAY-01
+59/59 actual selected original tests (G1 14, G2 19, G4 14, G5 12) on 28/28 exact local pins, verified pre/post. G6A plus common D4/Core and original ORG R3 auxiliary closure. 26 existing G4/G5 cases replayed on G6A, 33 repeat; do not count 47 preceding subset separately. No product transfer, actual owner issuance, strict COMMIT, full G2/G9, PG/W8 or acceptance. Preserve competing assignment candidate and original durable_ops independently. D5-G 42.5% unchanged. Evidence: docs/master-integration/MI03-G6A-D4-ORG-CROSS-REPLAY-01/EVIDENCE.json. Raw log SHA-256 bfafe7ccfeec14afe978a340dc14f32a44877891de08ee79ae43fa034583ca9b. ZIP 35 files SHA-256 d3477476aec41ef928cfb5f4c6f05ae7d061bd1dccaa2f438a5120211f0cd272.
