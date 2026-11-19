@@ -1,0 +1,164 @@
+{
+  "revision": "MI-PROGRESS-02-R1",
+  "classification": "REPORTING_ONLY",
+  "coverage": {
+    "groups_triaged": [
+      10,
+      10
+    ],
+    "modules_triaged": [
+      63,
+      63
+    ],
+    "technical_areas_reviewed_draft": [
+      24,
+      24
+    ],
+    "critical_modules_refined": 31,
+    "critical_stage_slots_refined": 155,
+    "unique_related_product_paths": 85,
+    "source_header_symbol_inspected": 12,
+    "modules_related_paths": 56,
+    "modules_evidence_links": 58,
+    "evidence_records": 22,
+    "unlocated_path_leads": 1,
+    "approved_groups": [
+      0,
+      10
+    ],
+    "scoreable_criteria": 0
+  },
+  "source_compare": {
+    "added": 35,
+    "modified": 14,
+    "deleted": 1,
+    "unchanged": 490
+  },
+  "structural_checks": [
+    {
+      "id": "module_ids_exact",
+      "pass": true
+    },
+    {
+      "id": "group_ids_and_weights",
+      "pass": true
+    },
+    {
+      "id": "315_original_stage_ids_preserved",
+      "pass": true
+    },
+    {
+      "id": "critical_scope",
+      "pass": true
+    },
+    {
+      "id": "24_areas_exact",
+      "pass": true
+    },
+    {
+      "id": "evidence_registry_refs",
+      "pass": true
+    },
+    {
+      "id": "source_metadata_exact",
+      "pass": true
+    },
+    {
+      "id": "direct_source_blobs_exact",
+      "pass": true
+    },
+    {
+      "id": "no_unsupported_score",
+      "pass": true
+    },
+    {
+      "id": "product_tree_accounting",
+      "pass": true
+    },
+    {
+      "id": "no_missing_associations_promoted",
+      "pass": true
+    },
+    {
+      "id": "no_scope_or_weight_change",
+      "pass": true
+    }
+  ],
+  "direct_source_reviews": [
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "boundary": "Pure D0 plan compiler; no dispatch or writes"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "blob": "04487bda631e9133f3904451a39fc8722e985997",
+      "boundary": "Pure graph validation, deterministic waves; no scheduling"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "boundary": "Member and company replay; no scheduling authority"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "boundary": "inspect_pinned_schedule; HOLD observation only"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+      "boundary": "local cooperating SQLite fence; not independent custody"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "boundary": "D0IntentAuthority; separate local SQLite, not independent witness"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "boundary": "protected_postgres_transaction raises strict COMMIT HOLD"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "boundary": "append_event/insert_outbox/reserve_fence inside T1, no independent commit"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/outbox_review.py",
+      "blob": "40bb09dfd9023739c4d0ed730f745d6e8688140e",
+      "boundary": "read-only classification and disabled commit port"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+      "blob": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e",
+      "boundary": "diagnostic; DisabledToolGateway never calls a tool"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+      "blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+      "boundary": "pure witness reference check; no external witness"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/iv_review.py",
+      "blob": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb",
+      "boundary": "trust-plane shape checks, never issue receipt"
+    }
+  ],
+  "new_product_code": 0,
+  "new_product_tests": 0,
+  "api_db_event_dependency_changes": 0,
+  "acceptance_delta": 0,
+  "owner_scores_unchanged": true,
+  "old_source_matrix": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
+  "new_evidence_matrix": "progress/MI_PROGRESS_02_R1_EVIDENCE_AND_CRITERIA.json",
+  "architecture_runbook": "docs/master-integration/MI-PROGRESS-02-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+  "limits": [
+    "No independent owner ratification, no exhaustive frozen group criteria; related paths do not prove module implementation.",
+    "Full candidate byte SHA256, dependency install, build, actual 344+ORG+Skill regressions NOT_RUN.",
+    "Earlier artifact lookup at wrong ref returned 404; recovered ORG-SKILL/MI03-04 at correct pinned refs. Raw MEM05E logs remain owner 404.",
+    "Current product-dev generic CURRENT/NEXT_STEP references older 0210, use U3A-specific handover + governance for present work; no modification outside reporting."
+  ],
+  "rollback": "Review current head and revert only reporting delta; preserve all owner records and original MI-PROGRESS-02."
+}

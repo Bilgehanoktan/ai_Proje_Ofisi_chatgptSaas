@@ -1,5 +1,5 @@
 {
-  "revision": "MI03-GATE01-IAM-REPLAY-READBACK-02",
+  "revision": "MI-PROGRESS-02-R1",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -7,7 +7,7 @@
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "overall_percent": null,
-  "overall_reason": "21 domains / 63 modules have a proposed unique reporting-group crosswalk; 315 proposed stage slots and 24 crosscut review rows, exhaustive criteria/weights not frozen, no global percent",
+  "overall_reason": "All 63 modules and 24 technical areas triaged, 155 critical stage criteria refined, but owner-approved exhaustive denominators and weights not frozen.",
   "global_acceptance": [
     {
       "id": "CORE",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure.",
   "new_product_tests": 0,
-  "previous_revision": "MI03-GATE01-IAM-SELECTED-REPLAY-01",
+  "previous_revision": "MI03-GATE01-IAM-REPLAY-READBACK-02",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -744,5 +744,46 @@
     "original_full_G2_50": "NOT_RUN",
     "known_residual": "old authority DB + old pin restore remains unprotected",
     "scope": "same G6A closure as existing selected replay; no shared product transfer, no owner ratification"
+  },
+  "mi_progress_02_r1": {
+    "revision": "MI-PROGRESS-02-R1",
+    "status": "ALL_GROUPS_EVIDENCE_TRIAGED_CRITICAL_CRITERIA_REFINED_OWNER_FREEZE_HOLD",
+    "matrix": "progress/MI_PROGRESS_02_R1_EVIDENCE_AND_CRITERIA.json",
+    "evidence": "docs/master-integration/MI-PROGRESS-02-R1/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-02-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "coverage": {
+      "groups_triaged": [
+        10,
+        10
+      ],
+      "modules_triaged": [
+        63,
+        63
+      ],
+      "technical_areas_reviewed_draft": [
+        24,
+        24
+      ],
+      "critical_modules_refined": 31,
+      "critical_stage_slots_refined": 155,
+      "unique_related_product_paths": 85,
+      "source_header_symbol_inspected": 12,
+      "modules_related_paths": 56,
+      "modules_evidence_links": 58,
+      "evidence_records": 22,
+      "unlocated_path_leads": 1,
+      "approved_groups": [
+        0,
+        10
+      ],
+      "scoreable_criteria": 0
+    },
+    "common_candidate": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "previous_scope_matrix": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
+    "overall_percent": null,
+    "product_changes": 0,
+    "new_product_tests": 0,
+    "acceptance_delta": 0,
+    "next": "R2 freeze only with owner-confirmed complete criterion sets; obtain GATE01/02 authority+assignment dispositions, actual PG/RLS path, canonical source evidence; then map remaining noncritical refinements. Continue existing MI01–10 separately."
   }
 }
