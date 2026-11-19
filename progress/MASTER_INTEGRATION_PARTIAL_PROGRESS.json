@@ -1,5 +1,5 @@
 {
-  "revision": "MI03-GATE02-ASSIGNMENT-RECOVERY-79",
+  "revision": "MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen. | GATE02 new isolated 16/16, replayed 20/20; previous/current D5-G 42.5%, delta 0.",
   "new_product_tests": 0,
-  "previous_revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+  "previous_revision": "MI03-GATE02-ASSIGNMENT-RECOVERY-79",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1306,5 +1306,25 @@
     "weighted_progress_current": 42.5,
     "weighted_progress_delta_pp": 0,
     "deliverable_sha256": "6a486e66223c424108b85bfe43e912899935e9d34483f4c7d1d31a55917ea4e4"
+  },
+  "mi03_gate02_store_core_isolated_replay": {
+    "revision": "MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01",
+    "source": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+    "evidence": "docs/master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "new_isolated": [
+      16,
+      16
+    ],
+    "old_repeated": [
+      20,
+      20
+    ],
+    "original_store_core": "NOT_RUN",
+    "actual_p02": "NOT_RUN",
+    "new_product_tests": 0,
+    "development_delta_pp": 0,
+    "acceptance_delta": 0,
+    "status": "ISOLATED_PASS_OWNER_HOLD"
   }
 }

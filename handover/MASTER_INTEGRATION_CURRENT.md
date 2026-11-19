@@ -65,3 +65,7 @@ Common candidate 87272b6aebd1ce4b26d3a789b2ea75e4310cf60a; source recovery helpe
 
 ## MI03-GATE02-ASSIGNMENT-RECOVERY-79
 79/79 actual selected regression (71 historical/replayed + 8 new D0 SQLite diagnostics), original 32/32 exact Git source pins, 44/44 ZIP SHA files; joint old DB + old retained head reaccept residual deliberately reproduced — **not safety acceptance**. Core positive readback and 0214 10/10 original Memory–T1 remain NOT_RUN. [Evidence](../master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/EVIDENCE.json) · [Runbook](../master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/ARCHITECTURE_RUNBOOK_HANDOVER.md). Isolated 45-file package SHA-256 6a486e66223c424108b85bfe43e912899935e9d34483f4c7d1d31a55917ea4e4. G8 owner, GATE03 owner and common/product refs unchanged; weighted D5-G 42.5→42.5, Core12/16, MVP0/11. No live schema/API/event/grant/CI changes.
+
+
+## MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01
+[Evidence](../master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/CATALOG_AND_EVIDENCE.json) · [Runbook](../master-integration/MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). 16/16 new real local synthetic SQLite tests on source-exact assignment/Store extension; original 20/20 unit methods repeated. ORG Store dependencies and Core reader mocked, so original full Store/Core integration NOT_RUN and P02/G9/COMMIT remain HOLD. No new product paths, grants, acceptance or progress change; D5-G 42.50% retained.

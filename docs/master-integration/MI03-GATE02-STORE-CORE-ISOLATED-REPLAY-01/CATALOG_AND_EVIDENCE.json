@@ -1,0 +1,67 @@
+{
+  "revision": "MI03-GATE02-STORE-CORE-ISOLATED-REPLAY-01",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_LOCAL_SQLITE_STORE_EXTENSION_WITH_MOCKED_ORG_AND_CORE_READER",
+  "source_candidate": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+  "source_branch": "workstream/mi03-gate02-assignment-lifecycle-d0",
+  "common_observed": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+  "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "exact_pins": {
+    "assignment_lifecycle": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+    "store_method_fragment": "2765b12863a0fce9410dec1bafafee97a11db339",
+    "d4_request": "e1e977880324664bb359eee3286223a796878f44",
+    "org_schema": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+    "org_operations": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a"
+  },
+  "execution": {
+    "test_command": "python -I -B test_store_core_isolated.py",
+    "environment": "Python 3.13.5, SQLite 3.46.1",
+    "new_cases": [
+      16,
+      16
+    ],
+    "old_unit_replay": [
+      20,
+      20
+    ],
+    "new_fail": 0,
+    "new_skip": 0,
+    "exit": 0,
+    "script_sha256": "ef6d8d037afbab3d7a6178da5c3555e7cf481c93cfda6279e7743d8b81d83363",
+    "log_sha256": "16b364644f56cbec45a7752ec233b3cdae602da14205af2c214b32c8a6dd7e16",
+    "artifact_sha256": "303616f5164880cae8aaeeee24fb9282b705a3c47cd188a840e88c2813eb5598",
+    "artifact": "MI03_GATE02_STORE_CORE_REPLAY_01.zip",
+    "artifact_files": 16,
+    "artifact_zip_crc": "PASS"
+  },
+  "tested_interfaces": [
+    "source-exact record_assignment_review and assignment_review Store extension methods",
+    "real isolated SQLite D0 proposals+assignment journal",
+    "Core success/failure request/role/version drift through controlled doubles",
+    "accepted/revoked readback, CAS, rollback, duplicate and wrong pin safeguards"
+  ],
+  "mocked": [
+    "Store._current/_team/_history/_connect original implementation replaced with harness shell",
+    "Core inspect_research_slice, Member, TaskHistory, derive_request replaced with test doubles"
+  ],
+  "not_run": [
+    "original OperationsStore writer and dependencies",
+    "actual Core inspect_research_slice/derive_request with original modules",
+    "IAM/ORG owner-issued registry/assignment/role provenance",
+    "P02-A-E full acceptance",
+    "G9 original 7, PostgreSQL and strict COMMIT",
+    "full product build and independent IV"
+  ],
+  "source_changes": 0,
+  "product_changes": 0,
+  "additional_tables": 0,
+  "decision": "No promotion; owner collision of original durable_ops versus assignment extension remains HOLD; no new grant/CI permission.",
+  "progress": {
+    "rubric": "D5-G1-D0-session-v1",
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "acceptance_delta": 0
+  },
+  "maintenance": "Use tested candidate immutable pinned files. On mismatch halt and retain journal/claim state; rollback isolated harness or normal governance revert, never reset claims."
+}
