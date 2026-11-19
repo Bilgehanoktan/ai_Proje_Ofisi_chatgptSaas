@@ -1,0 +1,155 @@
+{
+  "revision": "MI-03-GATE02-PROVENANCE-BOUNDARY",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_LOCAL_SYNTHETIC_SQLITE_AND_D4_DIAGNOSTIC_NOT_OWNER_ISSUANCE",
+  "refs": {
+    "governance_parent": "7ab32c9314d99d670a69d34d1b1c98d3f77552d7",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "g7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "g8": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+    "g9": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "org10": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "d4": "c3ee73f5430368f4c2c6ed3cbe71a3728d0c5c02"
+  },
+  "source_pins": [
+    {
+      "path": "candidates/ORG-05R3/schema.sql",
+      "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+      "sha256": "76e71112695ade87fd55a63cbd156ca8eb14f96f0971a3883735aa0ecc21d3ed"
+    },
+    {
+      "path": "candidates/ORG-05R3/operations.sql",
+      "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "sha256": "97c595a2e11b1822bf5ca1bda70417915503fdb14f29866927979cf044fd6a77"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "blob": "e1e977880324664bb359eee3286223a796878f44",
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    }
+  ],
+  "run": {
+    "command": "python -I -B test_provenance_boundary.py",
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "pass": 3,
+    "total": 3,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0,
+    "source_pins": [
+      3,
+      3
+    ],
+    "test_blob": "a4c8cdf5cfad361a763cc115113d324e6f2dd5a3",
+    "test_sha256": "28353c89f2609cba82cfb41ab211886b1fed28b3bc7b853cc01d96b7d7346454",
+    "log_blob": "507482ef1a1e3b766dd675480813fb733d4c3906",
+    "log_sha256": "4ae563cdbacac9060e1b39d4860d2f3721ac146a13034343e223f76c708d32eb"
+  },
+  "findings": [
+    {
+      "id": "G02-1",
+      "source": "candidates/ORG-05R3/operations.sql + D4 review_binding",
+      "observation": "Two real SQLite proposal rows for same task and different agents can each be wrapped in a fabricated structurally matching observation, but both HOLD; no dispatch/commit/retry.",
+      "required": "Owner-issued accepted/revoked assignment and unique current assignment for scoped run; separate proposal from acceptance."
+    },
+    {
+      "id": "G02-2",
+      "source": "op_entry + identity_binding.py",
+      "observation": "Same proposal lacks principal/run provenance; fabricated self-consistent distinct principal/run requests match independently, cross-comparison rejects. No owner-issued authorization.",
+      "required": "Bind persisted Core Member, exact assignment run/principal and independent registry/member/assignment/role digests; no proposal digest alias."
+    },
+    {
+      "id": "G02-3",
+      "source": "review_boundary",
+      "observation": "Fabricated matching SessionFacts yields structural HOLD, expiry and mismatched current_user reject. No actual database session.",
+      "required": "D4 trusted server-side physical role/clock observation and actual authorization provenance at protected fence."
+    }
+  ],
+  "owner_source_map": [
+    {
+      "owner": "Core/Orchestrator",
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "symbol": "Member, inspect_company",
+      "existing": "scope/project/plan/task/run/agent/principal/initial_version persistent roster; no accepted assignment or role grant",
+      "required": "approved assignment lifecycle and exact member version readback"
+    },
+    {
+      "owner": "Core Scheduler",
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "symbol": "inspect_pinned_schedule",
+      "existing": "HOLD readiness only",
+      "required": "no dispatch or assignment inference"
+    },
+    {
+      "owner": "IAM registry",
+      "path": "product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "blob": "e1f52722e1d33841539b709036ed1a100216b9b6",
+      "symbol": "RegistrySnapshot/inspect_registry",
+      "existing": "D0 structural labels, independent issuer fields not authentication",
+      "required": "actual scoped registry issuer/custody, revision and digest"
+    },
+    {
+      "owner": "D4/security",
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "blob": "e1e977880324664bb359eee3286223a796878f44",
+      "symbol": "Binding/Review/review_boundary",
+      "existing": "external observation comparison",
+      "required": "trusted independent role issuer and physical mapping"
+    },
+    {
+      "owner": "MI03/06",
+      "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+      "symbol": "inspect_core_org_session_reference",
+      "existing": "G7 historical join only",
+      "required": "reuse readback after owner approvals; never authorization"
+    },
+    {
+      "owner": "Core DB",
+      "path": "database/0204C/company_event_order.sql",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "existing": "unique scope/project/plan/task membership, no assignment lifecycle",
+      "required": "owner chooses storage/uniqueness/supersession; no migration authorized"
+    }
+  ],
+  "limits": [
+    "Direct synthetic seeds and fabricated bindings deliberately used only in test; not OperationsStore, real Core transaction or actual IAM/PG session.",
+    "G8 7 historical schema controls not rerun or counted again; D4 22 historical methods not rerun.",
+    "P02-A through P02-E remain NOT_RUN as actual owner-issued acceptance scenarios. D4 ORG10 Option A is one disposable fixture only, not product role approval.",
+    "GATE-01/03/04/05 and original G2 50/G9 7/ORG10 PG31 remain open; no product code/API/DB/event/dependency modification."
+  ],
+  "progress": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ],
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "new_diagnostic_methods": 3,
+    "new_product_acceptance_tests": 0,
+    "acceptance_delta": 0
+  },
+  "activation": "HOLD",
+  "rollback": "Reviewed inverse of governance-only commit; no product branch, schema or claim reset."
+}
