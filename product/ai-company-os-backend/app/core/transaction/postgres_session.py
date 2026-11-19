@@ -35,6 +35,9 @@ class PostgresSession:
 def postgres_transaction(connect, mapping):
     """Dedicated psycopg-compatible connection; explicit trusted mapping required.
 
+    This legacy path is D0 diagnostic only; it does not enforce strict expiry.
+    Protected callers must use protected_postgres_transaction.
+
     Before COMMIT, errors rollback. COMMIT errors have unknown outcome: never
     imply rollback reversed them. Cleanup errors must not hide the original error.
     """
@@ -67,3 +70,13 @@ def postgres_transaction(connect, mapping):
                 # Commit completed but cleanup failed: preserve uncertainty semantics
                 # for callers; independent readback is required before any retry.
                 raise CommitOutcomeUnknown("T1_CLOSE_AFTER_COMMIT_RECONCILE") from exc
+
+
+def protected_postgres_transaction(connect, mapping):
+    """Strict-expiry boundary: no supported PostgreSQL commit guarantee yet.
+
+    Deliberately deny before connection acquisition, mapping access or writes.
+    No caller flag, timeout, trigger, clock sample or receipt can enable it.
+    Legacy D0 diagnostics are not a substitute for this entry point.
+    """
+    raise PermissionError("T1_STRICT_COMMIT_EXPIRY_UNPROVEN_HOLD")

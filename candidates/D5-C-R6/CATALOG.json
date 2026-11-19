@@ -1,0 +1,48 @@
+{
+  "revision": "D5-C-R6",
+  "parent": "1be2cc1e37388ddfd3c9b6f4dc883c3042b4b0af",
+  "inputs": {
+    "app/core/transaction/port.py": "b0dde358be781b48e06b8901acc63ef31b013db0",
+    "app/core/transaction/postgres_session.py": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+    "app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "app/core/agent_runtime/transition_command.py": "5680fa428be81645a43d7442ec161c0c10384986",
+    "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+  },
+  "outputs": {
+    "app/core/transaction/port.py": {
+      "blob": "12f40659e916d5722d60c41c27f3116d746545f0",
+      "bytes": 4606,
+      "sha256": "ab9efbeff5274a05704f5d385a45ba2a9a422263672f033eea00e5de3bc53e18"
+    },
+    "app/core/transaction/postgres_session.py": {
+      "blob": "9799323752623f15bf0d0dca93bba4678ac6bb10",
+      "bytes": 3072,
+      "sha256": "acf8ba6f07cfa48c7c4fef06c4fd7b019e254f83bc69aec616cfd16a3d1f3c3d"
+    },
+    "tests/test_postgres_strict_expiry_d5c_r6.py": {
+      "blob": "cde0ed2b841c6b48500a464979096aad55a635b1",
+      "bytes": 6387,
+      "sha256": "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33"
+    }
+  },
+  "files": {
+    "ARCHITECTURE_AND_RUNBOOK.md": "design, diagnostic boundaries, maintenance and rollback",
+    "HANDOVER.md": "branch-local evidence and next owner action",
+    "PROGRESS.json": "criterion/progress status",
+    "test.log": "actual local test log",
+    "exit_code.txt": "actual local exit"
+  },
+  "symbols": {
+    "LogicalT1Coordinator.for_protected_postgres": "class method selects protected transaction factory; no positive grant",
+    "protected_postgres_transaction": "unconditional PermissionError before connection acquisition; no writes",
+    "postgres_transaction": "unchanged legacy diagnostic execution, docstring only",
+    "StrictRoute": "6 methods; real coordinator, mock connection/mapping",
+    "LegacyTransport": "6 methods; actual SQLite disposable store with API shim",
+    "SQLiteShim": "test only, not product PG"
+  },
+  "new_http_api": [],
+  "new_database_objects": [],
+  "new_dependencies": [],
+  "legacy_behavior": "unchanged; NOT protected",
+  "activation": "HOLD"
+}

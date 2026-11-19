@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "D5-G1",
-  "status": "D0_ISOLATED_IAM_SESSION_SOURCE_LOCAL_TESTED_NOT_ACTIVATED",
+  "doc_revision": "D5-C-R6",
+  "status": "D0_STRICT_POSTGRES_ENTRY_DENIED_LOCAL_TESTED_NOT_ACTIVATED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "13d061a6bd79c96825de4ff1da136d2e42beef4f",
+  "parent_git_commit": "1be2cc1e37388ddfd3c9b6f4dc883c3042b4b0af",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -419,8 +419,8 @@
       "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
-      "bytes": 4286,
-      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+      "bytes": 4606,
+      "sha256": "ab9efbeff5274a05704f5d385a45ba2a9a422263672f033eea00e5de3bc53e18"
     },
     "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": {
       "bytes": 17868,
@@ -431,8 +431,8 @@
       "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1"
     },
     "ai-company-os-backend/app/core/transaction/postgres_session.py": {
-      "bytes": 2495,
-      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+      "bytes": 3072,
+      "sha256": "acf8ba6f07cfa48c7c4fef06c4fd7b019e254f83bc69aec616cfd16a3d1f3c3d"
     },
     "ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py": {
       "bytes": 8493,
@@ -857,6 +857,10 @@
     "ai-company-os-backend/tests/test_postgres_snapshot_0200.py": {
       "bytes": 4899,
       "sha256": "842a1feebcd9d68dddbcb3764c11be23b672dc4aabdd2b43ffc37a95003cfa5a"
+    },
+    "ai-company-os-backend/tests/test_postgres_strict_expiry_d5c_r6.py": {
+      "bytes": 6387,
+      "sha256": "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33"
     },
     "ai-company-os-backend/tests/test_prefix_wire_p03.py": {
       "bytes": 1765,
@@ -1583,6 +1587,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
-  "source_git_commit_note": "Current commit cannot self-reference; see immutable commit and branch readback. Original entries retained; new two entries locally hashed."
+  "parent_source_manifest_blob": "40136a75e9bda468a5661932e94cf276707a81f8",
+  "source_git_commit_note": "Self-reference unavailable; immutable R6 commit and readback. Two existing modules and one new test locally hashed, all other entries retained."
 }
