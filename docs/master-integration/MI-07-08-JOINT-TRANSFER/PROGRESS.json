@@ -1,0 +1,56 @@
+{
+  "id": "MI-07-08-JOINT-TRANSFER-01",
+  "standard": "15/35/20/20/10",
+  "memory": {
+    "id": "MEM-05E-R1",
+    "previous": 45,
+    "current": 45,
+    "delta": 0,
+    "criteria": {
+      "design": [
+        2,
+        2
+      ],
+      "source": [
+        2,
+        3
+      ],
+      "functional": [
+        1,
+        3
+      ],
+      "integration": [
+        0,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    },
+    "open": [
+      "S03",
+      "F02",
+      "F03",
+      "I01",
+      "I02",
+      "A01"
+    ]
+  },
+  "model": {
+    "weighted": null,
+    "reason": "No frozen exhaustive W5 weighted denominator; preserve historical W5-J 170 local, J2-J4/J6 HOLD, PG NOT_RUN"
+  },
+  "new_product_tests": 0,
+  "harness_only": 5,
+  "acceptance_delta": 0,
+  "planned": 344,
+  "blockers": [
+    "W5/Memory and Core/T1 owner review (two original W5 pin differences)",
+    "complete local checkout",
+    "344 selected tests",
+    "Unified full build and PG",
+    "protected IAM/ORG/strict COMMIT and IV"
+  ],
+  "next": "Run exact 344 once on approved source-complete environment; review owners, then promote source-only candidate under central standard if approved."
+}

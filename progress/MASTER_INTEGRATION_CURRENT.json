@@ -1,5 +1,5 @@
 {
-  "revision": "MI-01-BUILD-REPAIR-TRANSFER",
+  "revision": "MI-07-08-JOINT-TRANSFER-01",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -215,28 +215,91 @@
       "owner_role": "Model Gateway",
       "source_ref": "workstream/w5-j2-r4-shared-transaction-contract",
       "observed_sha": "12d5149ef891b69a909162f8eecfe5847858e8b4",
-      "next": "Kanonik transaction checkpoint, W5-J Windows kanıtı; PG ve provider kapıları",
+      "next": "Joint owner review of history-aware Memory overrides and exact source candidate; run 344 selected tests once on complete isolated checkout, then Unified build/PG and separate security/IV gates. No provider, spend, protected entry or product-dev promotion.",
       "priority": "P1",
-      "status": "HOLD",
+      "status": "JOINT_SOURCE_CANDIDATE_READY_OWNER_REVIEW_REGRESSION_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "12/12 W5 original source SHA256; 114/114 combined blob/size; 526/526 manifest sizes; 5/5 local runner mechanics, 344 actual product tests NOT_RUN. Original W5/MEM pins retained, two explicit Memory overrides.",
+      "previous_status": "HOLD",
+      "transfer_candidate": {
+        "ref": "integration/mi-07-08-model-memory-transfer",
+        "sha": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+        "source_commit": "61d8c582e8e125f59d1ca542c9596c4a6421698f",
+        "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "previous_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+        "manifest_entries": 526,
+        "product_files": 527,
+        "combined_pins": [
+          114,
+          114
+        ],
+        "w5_source_sha256": [
+          12,
+          12
+        ],
+        "planned_regression": 344,
+        "product_tests": 0,
+        "runner_controls": [
+          5,
+          5
+        ],
+        "owner_review": "PENDING",
+        "product_dev_promotion": "HOLD",
+        "evidence_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json",
+        "catalog_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/CATALOG.json",
+        "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+        "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
+        "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      },
+      "acceptance_delta": 0,
+      "development_percent": null
     },
     {
       "id": "MI-08",
       "owner_role": "Memory",
       "source_ref": "integration/w5-mem-05e-r1-authority-source-alignment",
       "observed_sha": "e85cd16e19c8f32da948b9bba98115667c9e1573",
-      "next": "Review exact 25 paths with W5 and Core/T1 owners; reconcile W5 12 unlisted files; run existing 184 once on exact checkout and broader Unified regression; IAM excluded.",
+      "next": "Joint owner review of history-aware Memory overrides and exact source candidate; run 344 selected tests once on complete isolated checkout, then Unified build/PG and separate security/IV gates. No provider, spend, protected entry or product-dev promotion.",
       "priority": "P1",
-      "status": "SOURCE_CANDIDATE_READY_OWNER_REVIEW_AND_REGRESSION_HOLD",
+      "status": "JOINT_SOURCE_CANDIDATE_READY_OWNER_REVIEW_REGRESSION_HOLD",
       "owner_assignment": "Memory workstream continues MI-08; shared MI-07/MI-03/04 owners and central review required before promotion",
-      "evidence": "docs/master-integration/MI-08_MEMORY_READBACK.json",
-      "previous_status": "OPEN",
-      "candidate_commit": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+      "evidence": "12/12 W5 original source SHA256; 114/114 combined blob/size; 526/526 manifest sizes; 5/5 local runner mechanics, 344 actual product tests NOT_RUN. Original W5/MEM pins retained, two explicit Memory overrides.",
+      "previous_status": "SOURCE_CANDIDATE_READY_OWNER_REVIEW_AND_REGRESSION_HOLD",
+      "candidate_commit": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
       "candidate_base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "candidate_tree": "3e03ed50208ee2782af93ff1ebb6a2256d0fa963",
+      "candidate_tree": "d8e0cae3940336846abd2c69167b207718463057",
       "development_percent": 45,
-      "acceptance_delta": 0
+      "acceptance_delta": 0,
+      "transfer_candidate": {
+        "ref": "integration/mi-07-08-model-memory-transfer",
+        "sha": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+        "source_commit": "61d8c582e8e125f59d1ca542c9596c4a6421698f",
+        "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "previous_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+        "manifest_entries": 526,
+        "product_files": 527,
+        "combined_pins": [
+          114,
+          114
+        ],
+        "w5_source_sha256": [
+          12,
+          12
+        ],
+        "planned_regression": 344,
+        "product_tests": 0,
+        "runner_controls": [
+          5,
+          5
+        ],
+        "owner_review": "PENDING",
+        "product_dev_promotion": "HOLD",
+        "evidence_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json",
+        "catalog_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/CATALOG.json",
+        "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+        "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
+        "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      }
     },
     {
       "id": "MI-09",
@@ -273,9 +336,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance.",
-  "next": "MI-01 source candidate review and exact workstation W8 audit/prepare/fingerprint; MI-05/06 shared historical readback browser after build; MI-02/03/04/07/08/09/10 retain their existing owners and gates.",
-  "previous_revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN.",
+  "next": "MI-01 source candidate review and exact workstation W8 audit/prepare/fingerprint; MI-05/06 shared historical readback browser after build; MI-02/03/04/07/08/09/10 retain their existing owners and gates. MI-07/08 shared candidate ready; owner review and exact 344 run required; other priorities retained.",
+  "previous_revision": "MI-01-BUILD-REPAIR-TRANSFER",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -299,5 +362,35 @@
     "scope": "Exact existing ORG-R8 filename repair and W8 manifest rebind, no ORG API or protected runtime transfer, owner review required",
     "parallel": "Prior MI-04/08 and all other queue records retained; no product-dev promotion",
     "tests": "16/16 existing cases rerun, 0 unique additions, no acceptance delta"
+  },
+  "mi07_08_joint_candidate": {
+    "ref": "integration/mi-07-08-model-memory-transfer",
+    "sha": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+    "source_commit": "61d8c582e8e125f59d1ca542c9596c4a6421698f",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "previous_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+    "manifest_entries": 526,
+    "product_files": 527,
+    "combined_pins": [
+      114,
+      114
+    ],
+    "w5_source_sha256": [
+      12,
+      12
+    ],
+    "planned_regression": 344,
+    "product_tests": 0,
+    "runner_controls": [
+      5,
+      5
+    ],
+    "owner_review": "PENDING",
+    "product_dev_promotion": "HOLD",
+    "evidence_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json",
+    "catalog_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/CATALOG.json",
+    "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+    "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
+    "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
   }
 }

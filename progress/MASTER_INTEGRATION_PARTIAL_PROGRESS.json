@@ -1,5 +1,5 @@
 {
-  "revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
+  "revision": "MI-07-08-JOINT-TRANSFER-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -263,9 +263,9 @@
       },
       "source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
       "path": "candidates/W5-MEM-05E-R1/PROGRESS.json",
-      "blocker": "S03/F02/F03/I01/I02/A01; common-base candidate 9171904b ready, exact 184 NOT_RUN",
-      "central_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
-      "central_evidence": "docs/master-integration/MI-08_MEMORY_READBACK.json"
+      "blocker": "S03/F02/F03/I01/I02/A01; joint candidate prepared; 344 NOT_RUN (184 Memory + 160 nonduplicate W5)",
+      "central_candidate": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+      "central_evidence": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json"
     },
     {
       "id": "ORG-07C-R8",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-03 original and product namespace replay verified; no new unique test count, weighted increase or product gate. All earlier owner transitions and MI-04/MI-08 records retained.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained.",
   "new_product_tests": 0,
-  "previous_revision": "MI-04-TRANSPORT-TRANSFER-REVIEW",
+  "previous_revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -363,5 +363,35 @@
     "current_percent": 42.5,
     "delta_pp": 0,
     "acceptance_delta": 0
+  },
+  "mi07_08_joint_candidate": {
+    "ref": "integration/mi-07-08-model-memory-transfer",
+    "sha": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+    "source_commit": "61d8c582e8e125f59d1ca542c9596c4a6421698f",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "previous_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+    "manifest_entries": 526,
+    "product_files": 527,
+    "combined_pins": [
+      114,
+      114
+    ],
+    "w5_source_sha256": [
+      12,
+      12
+    ],
+    "planned_regression": 344,
+    "product_tests": 0,
+    "runner_controls": [
+      5,
+      5
+    ],
+    "owner_review": "PENDING",
+    "product_dev_promotion": "HOLD",
+    "evidence_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/EVIDENCE.json",
+    "catalog_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/CATALOG.json",
+    "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
+    "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
+    "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
   }
 }
