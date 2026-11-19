@@ -1,0 +1,89 @@
+{
+  "revision": "MI-COMMON-10-553-PIN-CARRYFORWARD-20261120",
+  "date": "2026-11-20",
+  "type": "NEW_GITHUB_READONLY_TREE_AND_MANIFEST_CHECK_NO_PRODUCT_CODE_CHANGE",
+  "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "baseline": {
+    "commit": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "git_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+    "product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+    "product_count": 539,
+    "manifest_entries": 538,
+    "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f"
+  },
+  "current": {
+    "branch": "integration/mi-common-source-review-01",
+    "commit": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "git_tree": "943ff66789e7cd77206f050835a6e5c5c2ac3f03",
+    "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "product_count": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "original_owner_pr": 12
+  },
+  "compare": {
+    "old_product_git_blobs_unchanged": 538,
+    "old_manifest_blob_changed": 1,
+    "new_product_files": 14,
+    "removed_product_files": 0,
+    "overwritten_old_source_files": 0,
+    "original_114_pinned_files_verified_in_553": 114,
+    "original_114_expected": 114,
+    "original_114_blob_and_byte_mismatch": 0,
+    "manifest_old_538_retained_exact_sha256_and_bytes": 538,
+    "manifest_new_records": 14,
+    "manifest_entries_existing_in_git_tree": 552,
+    "manifest_byte_sizes_match_git_tree": 552,
+    "unmanifested_product_files_excluding_manifest": 0,
+    "tree_response_truncated": false
+  },
+  "carryforward": {
+    "prior_windows_user_183pass_1skip": "PREVIOUS_SEPARATE_RUN",
+    "prior_windows_user_supplemental_160pass": "PREVIOUS_SEPARATE_RUN",
+    "sum_across_runs_pass": 343,
+    "sum_skipped": 1,
+    "source_unchanged_check": "PASS_114_OF_114_AT_553",
+    "exact_553_full_regression": "NOT_RUN",
+    "original_344_single_runner": "HOLD",
+    "do_not_claim_new_553_344_success": true
+  },
+  "independent_owner_ci": {
+    "existing_run": 44628704044,
+    "origin": "prior owner MI03 PR11 at same product tree",
+    "source_manifest": "552/552 PASS",
+    "org_package": "4/4 PASS",
+    "org_sql": "11/11 PASS",
+    "test_total": "15/15 PASS",
+    "classification": "EXISTING_REAL_CI_SYNTHETIC_D0_NOT_REPEATED_THIS_TURN",
+    "sqlite_version": "3.45.1"
+  },
+  "target": {
+    "product_dev_branch": "integration/product-dev",
+    "product_dev_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "product_dev_product_files": 505,
+    "canonical_source_promotion": "HOLD_OWNER_AND_BUILD",
+    "source_candidate_full_build": "NOT_RUN",
+    "model_memory_owner_review": "HOLD",
+    "security": "HOLD",
+    "no_CI_change": true,
+    "no_prod_change": true
+  },
+  "progress": {
+    "MI07_before": null,
+    "MI07_after": null,
+    "MI08_before": 45,
+    "MI08_after": 45,
+    "MI08_delta_pp": 0,
+    "global_weighted_before": null,
+    "global_weighted_after": null,
+    "product_acceptance_delta_pp": 0
+  },
+  "risks": [
+    "New 14 ORG/Core modules are only source-pinned + separately CI-smoked; effects on full runtime not proven",
+    "Windows symlink test SKIP remains uncovered under prior Windows privileges",
+    "Raw local Windows RESULT/LOG files not uploaded; user console remains evidence level",
+    "New source 553 has not completed full original 344 on one runner or W8 full build/browser",
+    "Trusted authority root / real issuer / sink fencing / protected PostgreSQL / independent IV remain open"
+  ],
+  "next": "Route current 553 to existing MI-01 W8 owner for precise prepare/install/test/smoke, and MI-07/08 owners for 1 skipped native symlink test and 553 runtime-level cross tests. Preserve existing CI, no duplicate 160/15 replay. Owner-controlled source promotion only after gates."
+}
