@@ -1,0 +1,34 @@
+{
+  "revision": "MI-01-BUILD-REPAIR-TRANSFER",
+  "delta": [
+    {
+      "old": "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+      "new": "product/ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+      "blob": "b57e27761e60351e62224b569ad107cd54fd8daf"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "old": "84aac4623c9829a4eb609996ba066ded5efd9128",
+      "new": "9ce6776fd2cda03f6f033cc47ad285d2b93e96cd"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+      "old": "833d216cca83015894beddbdb5214c30ee140843",
+      "new": "de8b825af52e24e372f6ec9f71788c8ab08cd536"
+    }
+  ],
+  "runner": {
+    "path": "tests/integration/w8_unified_u3.py",
+    "old": "391d98ba6128551a2fcb00e4e83a46faba160f2d",
+    "new": "28de47e952160b9ebae089816dd4bbebdbdd1d60",
+    "delta": "manifest constant only; exact P24/P23, original history lock, browser and original runner test retained"
+  },
+  "symbols": "DraftInspector unchanged; WorkflowDraft import only; test loader path only",
+  "api": [],
+  "database": [],
+  "events": [],
+  "dependencies": [],
+  "architecture": "No runtime changes; shared historical projection retained",
+  "test": "Existing 16-case inspector + original W8 and U3 browser retained; no test edits except path",
+  "maintenance": "Check Windows casefolded TS/JS module stems; audit original manifest and aux, preserve failure logs; revert isolated transfer only."
+}

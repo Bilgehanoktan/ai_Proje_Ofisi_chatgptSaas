@@ -1,0 +1,59 @@
+{
+  "revision": "MI-01-BUILD-REPAIR-TRANSFER",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "base_manifest": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "owner": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+  "owner_build_commit": "be42ba7bf8f20c8e1032804b04bbdc07c90f8160",
+  "owner_manifest": "fcfab43ff8661dde24f5d5b1f797ed61a1fb9887",
+  "manifest": "9001c2c634f84fc7280d7fd3f370192873366095",
+  "runner": {
+    "path": "tests/integration/w8_unified_u3.py",
+    "old": "391d98ba6128551a2fcb00e4e83a46faba160f2d",
+    "new": "28de47e952160b9ebae089816dd4bbebdbdd1d60",
+    "delta": "manifest constant only; exact P24/P23, original history lock, browser and original runner test retained"
+  },
+  "repair": [
+    {
+      "old": "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx",
+      "new": "product/ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+      "blob": "b57e27761e60351e62224b569ad107cd54fd8daf"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "old": "84aac4623c9829a4eb609996ba066ded5efd9128",
+      "new": "9ce6776fd2cda03f6f033cc47ad285d2b93e96cd"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j20-inspector.test.cjs",
+      "old": "833d216cca83015894beddbdb5214c30ee140843",
+      "new": "de8b825af52e24e372f6ec9f71788c8ab08cd536"
+    }
+  ],
+  "product": {
+    "files": 505,
+    "entries": 504,
+    "retained_same_path_records": 501,
+    "backend_unchanged": 240,
+    "api_db_event_dependencies": "unchanged"
+  },
+  "status": "ISOLATED_TRANSFER_CANDIDATE_OWNER_REVIEW_PENDING",
+  "acceptance": {
+    "core_standalone": "12/16",
+    "core_in_unified": "11/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7",
+    "delta": 0,
+    "weighted": null
+  },
+  "test": {
+    "source": "exact owner source comparison and manifest delta; new local product tests NOT_RUN",
+    "historical": "ORG-R8 Windows frontend build/typecheck and 16/16 tests, not transferable acceptance",
+    "full_build": "BLOCKED",
+    "browser": "NOT_RUN",
+    "reason": "Git DNS unavailable in local runtime; full checkout and reviewed dependency lock unavailable"
+  },
+  "next": "Unified owner review then original W8 audit, prepare only, inspect REVIEW fingerprint before install/test/smoke. Existing browser shared digest CEO/Office/Agent/Project/Workflow; 30s expiry, JOIN HOLD. No live agent claim.",
+  "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "scope": "No active branch changes, no CI/main/PROD/provider/real grants; other MI candidates excluded."
+}

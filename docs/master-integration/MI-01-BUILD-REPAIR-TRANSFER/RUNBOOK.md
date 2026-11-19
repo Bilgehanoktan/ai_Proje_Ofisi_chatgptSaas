@@ -1,0 +1,5 @@
+# MI-01 build repair transfer
+
+Base 8a3b05aadd32b214f3f8988fc9c793f853fbe3d0; candidate manifest 9001c2c634f84fc7280d7fd3f370192873366095. Owner review pending. No full build yet. Original U3A history, runners, tests and independent gates retained.
+
+Exact checkout of the candidate commit, fresh stage outside checkout. Run original `py -3 -B -m unittest discover -s tests/integration -p test_unified_u3_runner.py -v`, then `py -3 -B tests/integration/w8_unified_u3.py audit --repo .`, then `py -3 -B tests/integration/w8_unified_u3.py prepare --repo . --stage C:\\AICOS\\mi01-fresh-stage`. Stop at REVIEW.json and send its SHA-256 and dependency/lock summary; do not install before separate fingerprint review. Existing W8 install/test/smoke commands after reviewed approval per U3A runbook. Existing browser verifies same shared snapshot digest, navigation, clear, actual TTL and JOIN HOLD; no live agents. No PG or authority transfer. Roll back by retaining base 8a3b05aadd32b214f3f8988fc9c793f853fbe3d0; no DB restore, no main/CI/PROD.
