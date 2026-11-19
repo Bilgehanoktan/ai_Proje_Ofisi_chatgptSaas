@@ -1,0 +1,114 @@
+{
+  "revision": "D5-C-R8-TRANSPORT-EVIDENCE",
+  "source_commit": "459c3eb16302375cd352140a0d6023fb1554d566",
+  "criteria_source": "candidates/D5-C-R8/CRITERIA.json",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "stages": {
+    "design": {
+      "weight": 15,
+      "previous": [
+        2,
+        2
+      ],
+      "current": [
+        2,
+        2
+      ]
+    },
+    "source": {
+      "weight": 35,
+      "previous": [
+        3,
+        3
+      ],
+      "current": [
+        3,
+        3
+      ]
+    },
+    "functional": {
+      "weight": 20,
+      "previous": [
+        0,
+        3
+      ],
+      "current": [
+        0,
+        3
+      ]
+    },
+    "integration": {
+      "weight": 20,
+      "previous": [
+        0,
+        2
+      ],
+      "current": [
+        0,
+        2
+      ]
+    },
+    "acceptance": {
+      "weight": 10,
+      "previous": [
+        0,
+        1
+      ],
+      "current": [
+        0,
+        1
+      ]
+    }
+  },
+  "previous_percent": 50,
+  "current_percent": 50,
+  "delta_pp": 0,
+  "partial_F03": "17/43 original regression methods pass on R8 subset; remaining 26 original G4/G5 and 10 R8-specific methods NOT_RUN",
+  "selected_total": {
+    "previous_pass": 0,
+    "current_pass": 17,
+    "total": 53,
+    "not_run": 36
+  },
+  "G5_development": {
+    "previous": 42.5,
+    "current": 42.5,
+    "delta_pp": 0
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_gates": 0,
+  "P06": "HOLD",
+  "P07": "HOLD",
+  "next": [
+    "R8 owner: complete exact 53-case regression (remaining 36), no repin.",
+    "D5-G6A and R8 owners: agree one protected authority contract; separate diagnostics from execution; no automatic merge.",
+    "D5-G2 owner: 50-case original suite when exact closure available; PC deferred.",
+    "Actual journal/claim/product readback and owner-issued role/assignment proof, strict durable commit and independent custody."
+  ]
+}
