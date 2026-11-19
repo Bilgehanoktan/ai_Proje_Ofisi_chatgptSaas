@@ -101,5 +101,59 @@
   "product_acceptance_delta_pp": 0,
   "development_percent": "HESAPLANAMADI_UNFROZEN_CRITERIA_DENOMINATORS",
   "rollback": "close draft PR 4 or normal revert of CI-only commit, no owner or main modification",
-  "next": "MI01 owner approve reproducible reviewed Python wheelhouse/lock fingerprint; only then original W8 prepare/install/test/smoke. Preserve existing W8 runner and its protected gating; no automatic hash approval."
+  "next": "MI01 owner approve reproducible reviewed Python wheelhouse/lock fingerprint; only then original W8 prepare/install/test/smoke. Preserve existing W8 runner and its protected gating; no automatic hash approval.",
+  "workflow_run": {
+    "id": 44617509366,
+    "status": "completed",
+    "conclusion": "success",
+    "job_count": 3,
+    "job_success": 3,
+    "head_sha": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44617509366"
+  },
+  "all_ci_jobs": [
+    {
+      "id": 135890048240,
+      "name": "MI01 exact complete tree source audit",
+      "result": "PASS",
+      "new_evidence": true,
+      "repo_files": 1953,
+      "product_files": 539
+    },
+    {
+      "id": 135890273079,
+      "name": "MI03/04 original D0 T1 repeat",
+      "result": "PASS",
+      "tests": [
+        42,
+        42
+      ],
+      "source_pins": [
+        30,
+        30
+      ],
+      "repeat": true,
+      "new_original_tests": 0
+    },
+    {
+      "id": 135890273113,
+      "name": "MI01 Next build and SSE-compatible browser repeat",
+      "result": "PASS",
+      "next_build": "PASS",
+      "typescript": "PASS",
+      "real_fastapi_sqlite": "PASS",
+      "sse_compatible_browser": "PASS",
+      "native_cdp": "KNOWN_FAIL",
+      "full_w8": "NOT_RUN",
+      "repeat": true
+    }
+  ],
+  "artifact": {
+    "id": 14576785788,
+    "name": "mi10-browser-44617509366",
+    "size_bytes": 1440088,
+    "created_from_run": 44617509366,
+    "retention_days": 7,
+    "data_type": "synthetic screenshots and loopback logs"
+  }
 }
