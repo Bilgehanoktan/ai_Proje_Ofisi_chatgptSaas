@@ -265,3 +265,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-C-R6 — branch-local strict COMMIT containment
 [Architecture and runbook](../../candidates/D5-C-R6/ARCHITECTURE_AND_RUNBOOK.md). R5 PG03 late commit reproduced; new explicit protected T1 factory denies before DB connection, legacy diagnostic unchanged. Local selected 12/12. Actual durable expiry, shared owner composition, independent acceptance HOLD; no new product gate.
+
+
+## D5-C-R7 — shared strict expiry pre-claim gate
+[Architecture and runbook](../../candidates/D5-C-R7/ARCHITECTURE_AND_RUNBOOK.md). Present PostgreSQL transport has no proven durable deadline; existing strict requirement unchanged. Shared no-arg HOLD preflight for future owner callers; transport retains independent denial. 17/17 selected local; actual G5 claim/stage integration, PG and independent acceptance HOLD. No new product gate.

@@ -257,3 +257,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-C-R6 — isolated protected-entry containment
 [Handover](../candidates/D5-C-R6/HANDOVER.md). Exact R5 diagnostic evidence retained; 12 local methods PASS, no new PG, no full T1 run. Strict expiry and G5 wiring HOLD. Product acceptance unchanged.
+
+
+## D5-C-R7 — pre-claim gate
+[Handover](../candidates/D5-C-R7/HANDOVER.md). 5 new and 12 R6 rerun local PASS; one transport module changed, G5 owner files untouched. Actual protected claim/stage, PG and P06/P07 HOLD. Acceptance unchanged.

@@ -1,0 +1,58 @@
+{
+  "revision": "D5-C-R7",
+  "parent": "bbf9d447da80e96117ea006b69b206ee29435fa9",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "change": "MODIFIED",
+      "reason": "Expose same strict expiry denial before claim; no authority semantics change",
+      "symbols": [
+        {
+          "name": "require_strict_postgres_commit",
+          "kind": "function",
+          "signature": "() -> NoReturn",
+          "behavior": "always raises PermissionError T1_STRICT_COMMIT_EXPIRY_UNPROVEN_HOLD, no side effects"
+        },
+        {
+          "name": "protected_postgres_transaction",
+          "kind": "function",
+          "signature": "(connect,mapping) -> NoReturn",
+          "behavior": "same gate; if it unexpectedly returns, independent transport HOLD"
+        }
+      ],
+      "dependencies": [
+        "typing.NoReturn",
+        "contextlib.contextmanager",
+        "existing app.core.transaction.port.CommitReceipt"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py",
+      "change": "ADDED",
+      "symbols": [
+        "PreclaimGate"
+      ],
+      "methods": 5,
+      "dependencies": [
+        "inspect",
+        "unittest",
+        "unittest.mock",
+        "existing postgres_session"
+      ]
+    }
+  ],
+  "unchanged": [
+    "LogicalT1Coordinator",
+    "D0IntentAuthority",
+    "D0IntentJournal",
+    "legacy postgres_transaction",
+    "IAM/ORG/D4/W5"
+  ],
+  "http_api": [],
+  "db": [],
+  "events": [],
+  "external_dependencies": [],
+  "maintenance": "ARCHITECTURE_AND_RUNBOOK.md",
+  "owner_wiring": "NOT_RUN_HOLD",
+  "rollback": "bbf9d447da80e96117ea006b69b206ee29435fa9"
+}
