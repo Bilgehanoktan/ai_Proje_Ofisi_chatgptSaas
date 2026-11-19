@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "W5-MEM-05A",
-  "status": "D0_RUNTIME_MEMORY_ORIGINAL_SQL_LOCAL_REGRESSION_PASS_CANONICAL_HOLD",
+  "doc_revision": "W5-MEM-05C-R2",
+  "status": "D0_MEMORY_GATEWAY_READONLY_SOURCE_INTEGRATION_SELECTED_LOCAL_PASS_CANONICAL_HOLD",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "c7aca5997c9fbaba9f39f40c5ce9c962d85d252e",
+  "parent_git_commit": "a837c5345213230b5e040793c5c5e6c725810818",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -101,6 +101,10 @@
     "ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py": {
       "bytes": 9560,
       "sha256": "9746b81ee3e71aa765b6885e98d6cdf979d614573d945c1a94850393e3dd7df3"
+    },
+    "ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py": {
+      "bytes": 4647,
+      "sha256": "52c7f8e847f389ada4bf94a433d6bd1aa49cee41c22d6b6acc8c10793431d778"
     },
     "ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
       "bytes": 11744,
@@ -506,6 +510,18 @@
       "bytes": 52,
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
+    "ai-company-os-backend/app/engines/model_gateway/capability_resolver.py": {
+      "bytes": 3576,
+      "sha256": "a336a1348f70b6ec7602af6b5dac2d5e4fe59ea7cc65c9ab139eb5c8af10be17"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/cost_estimator.py": {
+      "bytes": 2475,
+      "sha256": "efbeaae7e981d50225f9bfc7457335e5075dce6765a41c58fd278abb721f1f2d"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py": {
+      "bytes": 4718,
+      "sha256": "63c92d25f1a3fb8d004320c74d10bff96876abe3bfa29e42fda189d63c07f3ec"
+    },
     "ai-company-os-backend/app/engines/model_gateway/fallback.py": {
       "bytes": 1391,
       "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
@@ -514,21 +530,53 @@
       "bytes": 242,
       "sha256": "7453cb37b258accc8d027fdfa85606d69b01907f1f067a2f61f7dc1073c4645d"
     },
+    "ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py": {
+      "bytes": 4610,
+      "sha256": "c4cf140935f89cf7d5e0b8b065bf15ab35ef52a07073e97d936991166e70bf14"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/profile_registry.py": {
+      "bytes": 2589,
+      "sha256": "29c108efc0c63035492caaa41672a8be973fae7d317bab2142191ec5a0184e15"
+    },
     "ai-company-os-backend/app/engines/model_gateway/provider_contract.py": {
       "bytes": 2986,
       "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/provider_preflight.py": {
+      "bytes": 1972,
+      "sha256": "a6e585285cafd1db50c47ab7aae9c1cda681f9f2c86ae5e385f51903622bc0cb"
     },
     "ai-company-os-backend/app/engines/model_gateway/registry.py": {
       "bytes": 1305,
       "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
     },
+    "ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py": {
+      "bytes": 6865,
+      "sha256": "fb18a61f3f0b59bcef44b346183ee955c7935d547c398e70991da5415a5de090"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/router.py": {
+      "bytes": 5872,
+      "sha256": "20b28e235259fe11ad16059ec75b7928d6f1b8aaed4041accb4081011fa1c1e4"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/routing_decision.py": {
+      "bytes": 5909,
+      "sha256": "749a955dca129d46ba8dff3bdb8ca4751b54b343c5ebd10767ca403092afdd92"
+    },
     "ai-company-os-backend/app/engines/model_gateway/runtime_binding.py": {
       "bytes": 3373,
       "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
     },
+    "ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py": {
+      "bytes": 1865,
+      "sha256": "8ac722750f0cf0c8d2bb77db3f1199ffee8edc3a2bb8f49d7396f55e342e0389"
+    },
     "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": {
       "bytes": 4783,
       "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+    },
+    "ai-company-os-backend/app/engines/model_gateway/token_accounting.py": {
+      "bytes": 7663,
+      "sha256": "8048bb29f90e3d3e6023759785fd1d3b74bacc999e11106f0b1a5fc30c13a200"
     },
     "ai-company-os-backend/app/engines/office_engine/__init__.py": {
       "bytes": 49,
@@ -802,6 +850,14 @@
       "bytes": 12009,
       "sha256": "82a59fd44f31e0f2e15a987ff4336b661bed8c424eb7a4e16b2e368c4febdda7"
     },
+    "ai-company-os-backend/tests/test_memory_gateway_05c_r1.py": {
+      "bytes": 8930,
+      "sha256": "038282b7dda8ed471d6eb93d275a4ab12c0476290ce6fbb15de4d303ef5ad4fd"
+    },
+    "ai-company-os-backend/tests/test_memory_gateway_05c_r2.py": {
+      "bytes": 7852,
+      "sha256": "c7352f279ac7afb539dac88dabc39c2e63f5f7a0b72fdd6b5459f105ebd45e70"
+    },
     "ai-company-os-backend/tests/test_memory_history_w5_mem03.py": {
       "bytes": 6306,
       "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e"
@@ -909,6 +965,10 @@
     "ai-company-os-backend/tests/test_review_0161.py": {
       "bytes": 6307,
       "sha256": "fb4f1944f0d83dd48970298364f639244d15a6c93b1e59d466112b9c20c1aa7c"
+    },
+    "ai-company-os-backend/tests/test_router_cost_review.py": {
+      "bytes": 7169,
+      "sha256": "dc979a87eb60a32a3055002dea6baf49013ce9d5b1c5a7718dd49b3b5c32eed0"
     },
     "ai-company-os-backend/tests/test_runtime_binding_0157.py": {
       "bytes": 1353,
@@ -2039,8 +2099,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "9d5ccdbe382b3f13aca34a28878df3d71310a899",
-  "source_git_commit_note": "Exact new test and local 164-case evidence in MEM05A; full checkout not verified.",
+  "parent_source_manifest_blob": "ba3f43b11255b98d4b30590e281f6c9e8664131a",
+  "source_git_commit_note": "15 exact product additions; 13 owner/diagnostic transfers plus 2 new files. SHA-256 for 44 local closure files; all 508 inherited entries preserved. Gateway source ref 12d5149ef891b69a909162f8eecfe5847858e8b4; not a Git merge. Full checkout SHA256 not rerun.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

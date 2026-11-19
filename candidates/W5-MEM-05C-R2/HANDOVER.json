@@ -1,0 +1,35 @@
+{
+  "revision": "W5-MEM-05C-R2",
+  "parent": "a837c5345213230b5e040793c5c5e6c725810818",
+  "branch": "integration/w5-mem-05c-r2-memory-gateway",
+  "refs": {
+    "parent": "a837c5345213230b5e040793c5c5e6c725810818",
+    "gateway": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "d5g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "d5g5": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+    "org": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "studio": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
+    "unified": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common": "b395d1944877128ab1bb7fa6477fc3188841fe57"
+  },
+  "source_transfer": "SOURCE_TRANSFER.json",
+  "local_pins": "LOCAL_PINS.json",
+  "evidence": "EVIDENCE.json",
+  "progress": "PROGRESS.json",
+  "architecture": "ARCHITECTURE_AND_RUNBOOK.md",
+  "catalog": "CATALOG.json",
+  "criteria": "CRITERIA.json",
+  "previous_source_and_decisions_preserved": true,
+  "parallel": "Complete untruncated trees checked. No exclusive cross-chat lock. No product path conflicts for new bridge/test; identical Gateway source paths deliberately reused. Shared manifest changes branch-local. No global merge.",
+  "next": "MEM-05D recovery reconciliation using the existing signed pending/history and durable checkpoint owners; parallel D5-G6A/W5 owner review of R2 bridge; do not install a second authority, economic writer or recovery engine.",
+  "rollback": "a837c5345213230b5e040793c5c5e6c725810818",
+  "open": [
+    "Synthetic SQLite and fixture Ed25519 custody, not independent trust.",
+    "13 tests add to 108 prior-method executions; do not count repeat executions as new criteria.",
+    "No canonical D5/T1 or owner-controlled readback, live authorization, current IAM/ORG assignment, fresh commit clock or atomic effect fence.",
+    "No real tokenizer, real provider invocation, spend, dispatch, external effect, customer data, CI, main or PROD.",
+    "Caller can coherently re-pin a different invocation; diagnostic match still cannot authorize it.",
+    "A state change after the final read remains possible; fail-closed output is not atomicity.",
+    "Full checkout build/locked regression and Windows not run."
+  ]
+}

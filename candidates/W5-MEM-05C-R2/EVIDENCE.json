@@ -1,0 +1,62 @@
+{
+  "revision": "W5-MEM-05C-R2",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "platform": "Linux",
+    "isolated_mode": "-I -B",
+    "direct_git": "DNS failed; exact blob recovery through authorized GitHub connector"
+  },
+  "test_scope": {
+    "original_source_and_fixtures": 42,
+    "new_files": 2,
+    "local_hashes": 44,
+    "tests": {
+      "test_memory_gateway_05c_r2": 13,
+      "test_memory_gateway_05c_r1": 10,
+      "test_router_cost_review": 10,
+      "test_memory_access_0194": 17,
+      "test_memory_store_0196": 15,
+      "test_runtime_memory_model_0207": 7,
+      "test_joint_context_0208": 26,
+      "test_memory_witness_0209": 23
+    },
+    "run": 121,
+    "pass": 121,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "elapsed_seconds": 1.359
+  },
+  "raw_log": {
+    "path": "regression.log",
+    "sha256": "148c98d4b95eaaacb7509d767e6f322f423fa314326b11168851583913a38db0",
+    "blob": "01d975d8f8ee62397a9c9d998130980e96f21258"
+  },
+  "local_pins": {
+    "path": "LOCAL_PINS.json",
+    "sha256": "0683c56d764564a8b5ca66794839defec268d81905e6af41805f4d2c1017c9ea",
+    "blob": "4c08b1973267086b88597c84cbb1e45f3d232998"
+  },
+  "source_manifest": {
+    "old_entries": 508,
+    "new_entries": 523,
+    "new_local_sha256_verified": 15,
+    "unchanged_manifest_entries": 508,
+    "full_local_checkout_sha256": "NOT_RUN",
+    "verification": "remote complete tree path/size and 44 closure blob pins; source manifest delta derived from local exact bytes"
+  },
+  "new_binary_acceptance": 0,
+  "security_status": "HOLD",
+  "limitations": [
+    "Synthetic SQLite and fixture Ed25519 custody, not independent trust.",
+    "13 tests add to 108 prior-method executions; do not count repeat executions as new criteria.",
+    "No canonical D5/T1 or owner-controlled readback, live authorization, current IAM/ORG assignment, fresh commit clock or atomic effect fence.",
+    "No real tokenizer, real provider invocation, spend, dispatch, external effect, customer data, CI, main or PROD.",
+    "Caller can coherently re-pin a different invocation; diagnostic match still cannot authorize it.",
+    "A state change after the final read remains possible; fail-closed output is not atomicity.",
+    "Full checkout build/locked regression and Windows not run."
+  ]
+}

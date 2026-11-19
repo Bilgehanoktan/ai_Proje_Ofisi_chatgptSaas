@@ -1,0 +1,321 @@
+{
+  "revision": "W5-MEM-05C-R2",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "classes": [
+        "CapabilityQuery",
+        "CapabilityReview"
+      ],
+      "functions": [
+        "inspect_capabilities"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "registry",
+        "profile_registry"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "b90b0853ba466b89fd82bc38512517637afe1e02"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+      "classes": [
+        "CostProfile",
+        "CostEstimate"
+      ],
+      "functions": [
+        "valid_currency",
+        "cost_digest",
+        "estimate_cost"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "b244e311574fd2fb31b7e30a7f4026095cbca8f2"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+      "classes": [
+        "OwnerReceiptSnapshot",
+        "DurableReceiptOwnerPort",
+        "OwnerReceiptReview"
+      ],
+      "functions": [
+        "owner_snapshot_digest",
+        "inspect_owner_snapshot",
+        "DurableReceiptOwnerPort.read_snapshot"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "reservation_review",
+        "reservation_usage_receipt",
+        "token_accounting"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "532e4594a01690fd0afa4d7e78021fa84784b30d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+      "classes": [
+        "InvocationRouteContext",
+        "InvocationRouteReview"
+      ],
+      "functions": [
+        "inspect_invocation_route"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "runtime_binding",
+        "provider_contract",
+        "profile_registry",
+        "routing_decision",
+        "token_accounting"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "71b1bc0adc4787c50b26b6d8d137ef9e421eb410"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "classes": [
+        "ModelProfile"
+      ],
+      "functions": [
+        "valid_profile",
+        "profile_digest",
+        "catalog_digest"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "registry",
+        "provider_contract"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "ec16d064a0ac12fe46c72230399e41c2c56e2a83"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+      "classes": [
+        "ProviderPreflightReview"
+      ],
+      "functions": [
+        "inspect_provider_preflight"
+      ],
+      "dependencies": [
+        "provider_contract",
+        "invocation_route_binding",
+        "durable_receipt_adapter"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "4a6c7a9206cb28823b90f475a33eaf31e35b8ed9"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+      "classes": [
+        "ReceiptLookup",
+        "ReceiptReadback",
+        "ReservationUsageReceiptPort",
+        "ReceiptPortReview"
+      ],
+      "functions": [
+        "make_receipt_lookup",
+        "receipt_readback_digest",
+        "inspect_receipt_readback",
+        "ReservationUsageReceiptPort.read_receipts"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "reservation_review",
+        "invocation_route_binding",
+        "token_accounting"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "8e6cedceceb01901e830e5eb80f700b9485e980e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "classes": [
+        "RouteMetric",
+        "RoutePolicy",
+        "RouteCandidate",
+        "RoutingReview"
+      ],
+      "functions": [
+        "_digest",
+        "metrics_digest",
+        "policy_digest",
+        "inspect_route"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "provider_contract",
+        "profile_registry",
+        "capability_resolver",
+        "cost_estimator"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "fa0f058486cc9dfe263fa9562f1bd4387b91760b"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+      "classes": [
+        "RoutingDecisionRecord"
+      ],
+      "functions": [
+        "_valid_query",
+        "routing_decision_digest",
+        "make_routing_decision",
+        "verify_routing_decision"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "capability_resolver",
+        "cost_estimator",
+        "profile_registry",
+        "registry",
+        "router"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "031ec8f8e4cfc86d8e3a17f0d4e0d266ae1657f8"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "classes": [
+        "RuntimeModelReview"
+      ],
+      "functions": [
+        "inspect_runtime_model"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "invocation_route_binding",
+        "provider_preflight"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+      "classes": [
+        "UsageBinding",
+        "ReservationEvidence",
+        "UsageEvidence",
+        "ReconciliationEvidence",
+        "AccountingReview"
+      ],
+      "functions": [
+        "valid_usage_binding",
+        "accounting_evidence_digest",
+        "inspect_token_accounting"
+      ],
+      "dependencies": [
+        "lifecycle",
+        "transaction.review",
+        "cost_estimator",
+        "routing_decision"
+      ],
+      "ownership": "W5 exact read-only source transfer",
+      "blob": "5132f5270c25c27d5cff08efa916dee8495dae5d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py",
+      "classes": [
+        "MemoryGatewayReview"
+      ],
+      "functions": [
+        "_memory_match",
+        "_gateway_match",
+        "inspect_memory_gateway"
+      ],
+      "dependencies": [
+        "joint_context",
+        "memory_witness",
+        "transaction.review",
+        "invocation_route_binding",
+        "provider_preflight",
+        "runtime_binding"
+      ],
+      "ownership": "MEM cross-reader composition",
+      "blob": "0f30f508ab1f1b8d7f6caddad0a27997d7da88b2"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_cost_review.py",
+      "classes": [
+        "RouteTests"
+      ],
+      "methods": 10,
+      "dependencies": [
+        "Gateway route and cost modules"
+      ],
+      "ownership": "exact W5 fixture transfer"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r1.py",
+      "classes": [
+        "MemoryGatewayTests"
+      ],
+      "methods": 10,
+      "dependencies": [
+        "test_memory_witness_0209",
+        "test_router_cost_review",
+        "original Memory/Gateway readers"
+      ],
+      "ownership": "exact MEM05C diagnostic transfer"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r2.py",
+      "classes": [
+        "MemoryGatewayReviewTests"
+      ],
+      "methods": 13,
+      "dependencies": [
+        "test_memory_gateway_05c_r1",
+        "memory_gateway_review",
+        "real SQLite and fixture Ed25519"
+      ],
+      "ownership": "MEM new regression"
+    }
+  ],
+  "python_api": {
+    "symbol": "inspect_memory_gateway",
+    "result": "MemoryGatewayReview",
+    "positive_reason": "D0_MEMORY_GATEWAY_MATCH_ONLY",
+    "hold_reasons": [
+      "MEMORY_GATEWAY_INVOCATION_BINDING_HOLD",
+      "MEMORY_GATEWAY_MEMORY_HOLD",
+      "MEMORY_GATEWAY_PREFLIGHT_HOLD",
+      "MEMORY_GATEWAY_MEMORY_RECHECK_HOLD",
+      "MEMORY_GATEWAY_REVIEW_ERROR_HOLD"
+    ],
+    "all_effect_flags_false": true
+  },
+  "http_api": [],
+  "database_schema_changes": [],
+  "events": [],
+  "external_dependency_additions": [],
+  "existing_dependencies": [
+    "Python standard library",
+    "SQLite",
+    "cryptography 46.0.4 in selected test"
+  ],
+  "tracker_delta": {
+    "baseline": "TRACK-0210",
+    "areas": [
+      8,
+      9,
+      13
+    ],
+    "ordinal_scores_unchanged": true,
+    "source": "branch-local partial integrated and 121 selected cases",
+    "acceptance": "HOLD"
+  }
+}
