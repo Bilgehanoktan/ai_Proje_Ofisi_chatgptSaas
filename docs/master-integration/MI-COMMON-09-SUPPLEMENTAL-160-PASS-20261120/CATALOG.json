@@ -1,0 +1,105 @@
+{
+  "revision": "MI-COMMON-09-SUPPLEMENTAL-160-PASS-20261120",
+  "source_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+  "dependency_changes": [],
+  "new_product_code": [],
+  "modified_product_code": [],
+  "changed_symbols": [],
+  "modified_classes": [],
+  "modified_functions": [],
+  "modified_apis": [],
+  "modified_sql_tables": [],
+  "modified_events": [],
+  "source_scripts": [
+    {
+      "path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/run_combined.py",
+      "blob": "6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb",
+      "changed": false,
+      "role": "Original 344 runner strict no-skip contract"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "blob": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+      "changed": false,
+      "role": "Windows symlink privilege skip condition"
+    },
+    {
+      "path": "local-download/MI_COMMON_09_RUN_REMAINING_160.py",
+      "sha256": "9c834d8d7fea1259ee03d662191d93763b3e7cf4465b2625970a95f4180ed510",
+      "changed": false,
+      "role": "Supplementary local diagnostic using original CHILD"
+    }
+  ],
+  "test_evidence": {
+    "groups": [
+      {
+        "id": "W5-A-F-without-router",
+        "passed": 80,
+        "total": 80
+      },
+      {
+        "id": "W5-G",
+        "passed": 16,
+        "total": 16
+      },
+      {
+        "id": "W5-H",
+        "passed": 28,
+        "total": 28
+      },
+      {
+        "id": "W5-I",
+        "passed": 36,
+        "total": 36
+      }
+    ],
+    "passed": 160,
+    "total": 160,
+    "console_status": "PASS_160_OF_160_SUPPLEMENTAL_ONLY",
+    "status": "REPORTED_PASS_SEPARATE_RUN",
+    "result_file": "C:\\AIOS\\MI05_20261120_001126\\P0_MODEL_160_SUPPLEMENTAL_20261120_013520_354078\\MODEL_160_SUPPLEMENTAL_RESULT.json",
+    "log_file": "C:\\AIOS\\MI05_20261120_001126\\P0_MODEL_160_SUPPLEMENTAL_20261120_013520_354078\\MODEL_160_SUPPLEMENTAL.log",
+    "raw_file_uploaded": false,
+    "raw_file_hash_verified": false
+  },
+  "prior_mem": {
+    "passed": 183,
+    "skipped": 1,
+    "failed": 0,
+    "errors": 0,
+    "status": "REPORTED_PARTIAL_PASS_SEPARATE_RUN",
+    "reason": "Windows symlink privilege, test_bad_path_and_pin conditional winerror 1314"
+  },
+  "combined": {
+    "tests_selected": 344,
+    "passed": 343,
+    "skipped": 1,
+    "unique_id_intersection": "RUNNER_ASSERTIONS_ONLY_NOT_CROSS_RUN_INDEPENDENTLY_VERIFIED",
+    "status": "343_PASSED_ONE_SKIPPED_ACROSS_TWO_LOCAL_RUNS",
+    "original_344_strict_runner_status": "HOLD",
+    "canonical_344_pass": false
+  },
+  "owner": [
+    "MI-07",
+    "MI-08"
+  ],
+  "rollback": "Normal revert only governance/docs, preserve raw Windows local logs",
+  "acceptance": {
+    "symlink_negative_test": "UNTESTED_SKIP",
+    "full_W8": "HOLD",
+    "Core29": "NOT_RUN",
+    "protected_PostgreSQL": "HOLD",
+    "owner_review": "HOLD",
+    "independent_security_acceptance": "HOLD",
+    "SaaS_product_acceptance": "HOLD"
+  },
+  "progress": {
+    "MI07_before": null,
+    "MI07_after": null,
+    "MI08_before": 45,
+    "MI08_after": 45,
+    "delta_pp": 0,
+    "acceptance_delta_pp": 0,
+    "reason": "Existing F02/F03 and owner criteria cannot be closed by selected two-run tests alone"
+  }
+}
