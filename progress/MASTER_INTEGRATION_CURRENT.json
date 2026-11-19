@@ -1,5 +1,5 @@
 {
-  "revision": "MI-02-04-R1",
+  "revision": "MI-08-MEM-TRANSFER-01",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -111,11 +111,17 @@
       "owner_role": "Memory",
       "source_ref": "integration/w5-mem-05e-r1-authority-source-alignment",
       "observed_sha": "e85cd16e19c8f32da948b9bba98115667c9e1573",
-      "next": "MEM-05D/E ve R1 owner review, recovery ve authority; tekrar geliştirme yok",
+      "next": "Review exact 25 paths with W5 and Core/T1 owners; reconcile W5 12 unlisted files; run existing 184 once on exact checkout and broader Unified regression; IAM excluded.",
       "priority": "P1",
-      "status": "OPEN",
-      "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "MEM-05E-R1 45%, 7/7 selected; earlier MEM-05D 58.3333%; owner boundaries remain HOLD"
+      "status": "SOURCE_CANDIDATE_READY_OWNER_REVIEW_AND_REGRESSION_HOLD",
+      "owner_assignment": "Memory workstream continues MI-08; shared MI-07/MI-03/04 owners and central review required before promotion",
+      "evidence": "docs/master-integration/MI-08_MEMORY_READBACK.json",
+      "previous_status": "OPEN",
+      "candidate_commit": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+      "candidate_base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "candidate_tree": "3e03ed50208ee2782af93ff1ebb6a2256d0fa963",
+      "development_percent": 45,
+      "acceptance_delta": 0
     },
     {
       "id": "MI-09",
@@ -152,9 +158,19 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "remote source/blob comparisons; local git DNS probe failed; no product tests",
-  "next": "MI-03 two review modules exact dependency/test closure and owner coordination; MI-04 protected entry decision; MI-01 remains blocked/deferred. Continue existing ORG source review in parallel.",
-  "previous_revision": "MI-01-R1",
+  "tests_this_round": "50/50 remote recomputed SHA256/byte/blob pins; 525/525 candidate manifest/tree sizes; 0 product tests; product-dev unchanged.",
+  "next": "MI-01/02/03/04 priorities remain; MI-08 exact source candidate ready for owner review and 184 regression; no additional prototype.",
+  "previous_revision": "MI-02-04-R1",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
-  "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json"
+  "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
+  "mi08_cross_owner_notes": [
+    {
+      "id": "MI-07",
+      "note": "11 exact common W5 source; 12 W5 model product files missing from manifest; effect_budget_review excluded; MI-07 owner reconciles."
+    },
+    {
+      "id": "MI-03/04",
+      "note": "R9 and MEM-R1 3 Authority/IAM/PG files identical; protected owner contract HOLD; excluded."
+    }
+  ]
 }

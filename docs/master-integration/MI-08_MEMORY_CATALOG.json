@@ -1,0 +1,354 @@
+{
+  "id": "MI-08-MEM-TRANSFER-01",
+  "transfer_record": "MI-08_MEMORY_TRANSFER.json",
+  "source_count": 25,
+  "ownership": {
+    "Memory": 13,
+    "W5": 12
+  },
+  "source_symbols": {
+    "app/core/agent_runtime/joint_context.py": [
+      "JointContext",
+      "JointReview",
+      "joint_context_digest",
+      "inspect_joint_context"
+    ],
+    "app/core/agent_runtime/memory_witness.py": [
+      "MemoryWitness",
+      "LatestWitnessPin",
+      "MemoryWitnessReader.read_latest",
+      "MemoryWitnessReader.read_history",
+      "D0MemoryWitnessStore",
+      "WitnessedReview",
+      "inspect_witnessed_context"
+    ],
+    "app/engines/memory_engine/snapshot_store.py": [
+      "Snapshot",
+      "SnapshotPin",
+      "create_store",
+      "publish_snapshot",
+      "_review_history",
+      "_bind_revisions",
+      "inspect_stored_memory",
+      "inspect_stored_memory_input"
+    ],
+    "app/core/agent_runtime/memory_checkpoint.py": [
+      "CheckpointReview",
+      "prepare_checkpoint",
+      "inspect_checkpoint_suffix"
+    ],
+    "app/core/agent_runtime/memory_recovery_review.py": [
+      "MemoryRecoveryReview",
+      "inspect_memory_recovery"
+    ],
+    "app/core/agent_runtime/memory_gateway_review.py": [
+      "MemoryGatewayReview",
+      "inspect_memory_gateway",
+      "inspect_recovered_memory_gateway"
+    ]
+  },
+  "all_paths": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "prior_blob": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+      "blob": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd",
+      "bytes": 3851,
+      "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c",
+      "operation": "REPLACE",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_checkpoint.py",
+      "prior_blob": null,
+      "blob": "3a1a3d712c5474d7a90bc11b6d5a52cc31b00921",
+      "bytes": 9560,
+      "sha256": "9746b81ee3e71aa765b6885e98d6cdf979d614573d945c1a94850393e3dd7df3",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_gateway_review.py",
+      "prior_blob": null,
+      "blob": "9674f346ae0a009afa86d2bf884762806c2d89f1",
+      "bytes": 8408,
+      "sha256": "db709c5a0744e22f1a14fa7c25fc33a666b61dd21a708f7101b9bafcb0f43646",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_recovery_review.py",
+      "prior_blob": null,
+      "blob": "2ab7b9a18a15e5115f63ff6f659d605d3d1d897d",
+      "bytes": 7537,
+      "sha256": "6e7f2a0aa2a5b748f58176f6875e3ea23f1300cbe511f62847a1b4ad2c193d9c",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "prior_blob": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+      "blob": "d783f00f6b7521ce0d979b977b45a8e44410eb8e",
+      "bytes": 11744,
+      "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0",
+      "operation": "REPLACE",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "prior_blob": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+      "blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+      "bytes": 13027,
+      "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0",
+      "operation": "REPLACE",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+      "prior_blob": null,
+      "blob": "b90b0853ba466b89fd82bc38512517637afe1e02",
+      "bytes": 3576,
+      "sha256": "a336a1348f70b6ec7602af6b5dac2d5e4fe59ea7cc65c9ab139eb5c8af10be17",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+      "prior_blob": null,
+      "blob": "b244e311574fd2fb31b7e30a7f4026095cbca8f2",
+      "bytes": 2475,
+      "sha256": "efbeaae7e981d50225f9bfc7457335e5075dce6765a41c58fd278abb721f1f2d",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/durable_receipt_adapter.py",
+      "prior_blob": null,
+      "blob": "532e4594a01690fd0afa4d7e78021fa84784b30d",
+      "bytes": 4718,
+      "sha256": "63c92d25f1a3fb8d004320c74d10bff96876abe3bfa29e42fda189d63c07f3ec",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/invocation_route_binding.py",
+      "prior_blob": null,
+      "blob": "71b1bc0adc4787c50b26b6d8d137ef9e421eb410",
+      "bytes": 4610,
+      "sha256": "c4cf140935f89cf7d5e0b8b065bf15ab35ef52a07073e97d936991166e70bf14",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+      "prior_blob": null,
+      "blob": "ec16d064a0ac12fe46c72230399e41c2c56e2a83",
+      "bytes": 2589,
+      "sha256": "29c108efc0c63035492caaa41672a8be973fae7d317bab2142191ec5a0184e15",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_preflight.py",
+      "prior_blob": null,
+      "blob": "4a6c7a9206cb28823b90f475a33eaf31e35b8ed9",
+      "bytes": 1972,
+      "sha256": "a6e585285cafd1db50c47ab7aae9c1cda681f9f2c86ae5e385f51903622bc0cb",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py",
+      "prior_blob": null,
+      "blob": "8e6cedceceb01901e830e5eb80f700b9485e980e",
+      "bytes": 6865,
+      "sha256": "fb18a61f3f0b59bcef44b346183ee955c7935d547c398e70991da5415a5de090",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "prior_blob": null,
+      "blob": "fa0f058486cc9dfe263fa9562f1bd4387b91760b",
+      "bytes": 5872,
+      "sha256": "20b28e235259fe11ad16059ec75b7928d6f1b8aaed4041accb4081011fa1c1e4",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+      "prior_blob": null,
+      "blob": "031ec8f8e4cfc86d8e3a17f0d4e0d266ae1657f8",
+      "bytes": 5909,
+      "sha256": "749a955dca129d46ba8dff3bdb8ca4751b54b343c5ebd10767ca403092afdd92",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "prior_blob": null,
+      "blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1",
+      "bytes": 1865,
+      "sha256": "8ac722750f0cf0c8d2bb77db3f1199ffee8edc3a2bb8f49d7396f55e342e0389",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/token_accounting.py",
+      "prior_blob": null,
+      "blob": "5132f5270c25c27d5cff08efa916dee8495dae5d",
+      "bytes": 7663,
+      "sha256": "8048bb29f90e3d3e6023759785fd1d3b74bacc999e11106f0b1a5fc30c13a200",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_checkpoint_w5_mem04.py",
+      "prior_blob": null,
+      "blob": "15e6d92252a655704d3654d68361e8a03d550cc5",
+      "bytes": 12009,
+      "sha256": "82a59fd44f31e0f2e15a987ff4336b661bed8c424eb7a4e16b2e368c4febdda7",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r1.py",
+      "prior_blob": null,
+      "blob": "c0ded1c2f351a2a538cd3e710de0f2d7ff7e6616",
+      "bytes": 8930,
+      "sha256": "038282b7dda8ed471d6eb93d275a4ab12c0476290ce6fbb15de4d303ef5ad4fd",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_05c_r2.py",
+      "prior_blob": null,
+      "blob": "d426df69851dc3b0ed04324a7de473d56a122188",
+      "bytes": 7852,
+      "sha256": "c7352f279ac7afb539dac88dabc39c2e63f5f7a0b72fdd6b5459f105ebd45e70",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_gateway_recovery_w5_mem05e.py",
+      "prior_blob": null,
+      "blob": "7bc56f0010e6931c357010d2b34afe55223c2cb2",
+      "bytes": 6286,
+      "sha256": "5218af3b931d1214b75849418d9a2da240c0e81176663d19974a08c36c6682ad",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_history_w5_mem03.py",
+      "prior_blob": null,
+      "blob": "8c8683fc3e553231c9ba81222e4e0b2ccd97a72f",
+      "bytes": 6306,
+      "sha256": "403f2307ddce0c159cb353452e98e0be744703174fcb2b2eb43a77af8005e36e",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_recovery_w5_mem05d.py",
+      "prior_blob": null,
+      "blob": "91001d383439f30c37462f4852714cf439cb8b22",
+      "bytes": 15375,
+      "sha256": "bc1bd9280f4e64a599bed5f73e48846b0750fe0add277de5a15ee27a29994a5d",
+      "operation": "ADD",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "prior_blob": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+      "blob": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+      "bytes": 8092,
+      "sha256": "a68353c3be40c64eaa0f91623305a3354d004180a1ffdfb73fa510f233bb6f8e",
+      "operation": "REPLACE",
+      "owner": "MI-08_Memory",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_cost_review.py",
+      "prior_blob": null,
+      "blob": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2",
+      "bytes": 7169,
+      "sha256": "dc979a87eb60a32a3055002dea6baf49013ce9d5b1c5a7718dd49b3b5c32eed0",
+      "operation": "ADD",
+      "owner": "MI-07_W5",
+      "owner_source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "source_review": "REQUIRED"
+    }
+  ],
+  "owner_catalogs": [
+    {
+      "commit": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "path": "candidates/W5-MEM-05E/CATALOG.json"
+    },
+    {
+      "commit": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+      "path": "candidates/W5-MEM-05E-R1/CATALOG.json"
+    },
+    {
+      "commit": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+      "path": "candidates/W5-J2-R4/CATALOG.json"
+    }
+  ],
+  "dependencies": "50 exact selected pins; existing SQLite fixture history and cryptography Ed25519. No new external dependency, live schema migration or route registration. Core/T1 consumer compatibility and full imports/build NOT_RUN.",
+  "new_api": [],
+  "new_events": [],
+  "new_independent_engines": [],
+  "live_db_migrations": [],
+  "tests": {
+    "runner": "candidates/W5-MEM-05E/run_exact.py",
+    "pin_count": 50,
+    "count": 184,
+    "status": "NOT_RUN",
+    "excluded_05a_nine": "existing owner suite outside selected closure"
+  },
+  "maintenance": "PENDING/UNKNOWN HOLD; no replay, reset, new grant or old writer against IAM stores."
+}

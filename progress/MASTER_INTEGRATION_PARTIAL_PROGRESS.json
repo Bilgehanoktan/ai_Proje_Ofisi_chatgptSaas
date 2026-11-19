@@ -1,5 +1,5 @@
 {
-  "revision": "MI-02-04-R1",
+  "revision": "MI-08-MEM-TRANSFER-01",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -263,7 +263,9 @@
       },
       "source": "e85cd16e19c8f32da948b9bba98115667c9e1573",
       "path": "candidates/W5-MEM-05E-R1/PROGRESS.json",
-      "blocker": "S03/F02/F03/I01/I02/A01"
+      "blocker": "S03/F02/F03/I01/I02/A01; common-base candidate 9171904b ready, exact 184 NOT_RUN",
+      "central_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+      "central_evidence": "docs/master-integration/MI-08_MEMORY_READBACK.json"
     },
     {
       "id": "ORG-07C-R8",
@@ -311,6 +313,7 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "owner previous/current transitions retained; this central round newly certifies zero product gates and no weighted increase",
-  "new_product_tests": 0
+  "owner_delta_vs_central": "MI-08 exact 25 paths and 50/50 remote SHA256; zero new product gates, no weighted increase; other owners and acceptance rows preserved.",
+  "new_product_tests": 0,
+  "previous_revision": "MI-02-04-R1"
 }
