@@ -321,3 +321,7 @@ See docs/UI-P10J/P10J09_REAL_UI_REVIEW.md, tests/evidence/TEST_EVIDENCE_UI_P10J0
 
 ## MI-08-MEM-TRANSFER-01 — common-base selected source candidate
 [Exact transfer record](../master-integration/MI-08_MEMORY_TRANSFER.json). 25 source/test deltas from original MEM-05E on product-dev base, W5 11 exact owner modules, no authority/strict-commit transfer; 50/50 remote SHA256 and blob pins; 184 exact fixture tests and owner review NOT_RUN/HOLD. Review-only commit, no activation or promotion.
+
+
+## MI-07/08 — joint Model/Memory source transfer
+[Transfer and combined regression](../master-integration/MI-07-08-JOINT-TRANSFER/TRANSFER.json). All 12 exact W5 sources accounted for in candidate; 114 source pins; 344 planned unique tests, two explicit Memory version overrides. No activation, owner review and regression HOLD.

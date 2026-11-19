@@ -1,0 +1,31 @@
+{
+  "revision": "W5-I",
+  "status": "D0_SOURCE_REVIEW_PASS_PRODUCT_HOLD",
+  "design_score": 50,
+  "source_score": 25,
+  "local": {
+    "W5-I": {"run": 36, "pass": 36},
+    "W5-H": {"run": 28, "pass": 28},
+    "W5-G": {"run": 16, "pass": 16},
+    "W5-C": "HISTORICAL_90_PASS_NOT_RERUN"
+  },
+  "gates": [
+    {"id":"I1","owner":"W5/Core","criterion":"Reuse existing joint context, model preflight, skill resolver, ToolGateway review","status":"PASS_LOCAL"},
+    {"id":"I2","owner":"W5/Core","criterion":"Exact runtime and composed pin reference comparisons","status":"PASS_LOCAL"},
+    {"id":"I3","owner":"W5/Memory/Model","criterion":"Original snapshot + model preflight and final readback","status":"PASS_LOCAL"},
+    {"id":"I4","owner":"W5/Skill/PEP","criterion":"Separate prospective Tool effect and consumed Model review; all disabled","status":"PASS_LOCAL"},
+    {"id":"I5","owner":"W5/QA","criterion":"36 new + 44 G/H selected regression methods","status":"PASS_LOCAL"},
+    {"id":"I6","owner":"W5/Integration","criterion":"Owner-aware acceptance plan, maintenance and rollback","status":"DESIGN_READY"},
+    {"id":"J1","owner":"W5/QA","criterion":"Recover and rerun original 90 W5 tests, G/H/I; pin exact locked dependencies","status":"OPEN"},
+    {"id":"J2","owner":"T1/Budget","criterion":"Physical per-invocation membership, reservation and usage/reconciliation readbacks","status":"HOLD"},
+    {"id":"J3","owner":"Core/PEP/WA/IV","criterion":"Independent key/clock/head/ACL and grant custody; atomic replay and revocation enforcement","status":"HOLD"},
+    {"id":"J4","owner":"Runtime/Integration","criterion":"Approved canonical call sites and separate tool and model grants; no duplicate engines; owner-scoped integration","status":"HOLD"},
+    {"id":"J5","owner":"Core/QA","criterion":"Actual PostgreSQL/RLS and composed product acceptance, negative tests and rollback","status":"NOT_RUN"},
+    {"id":"J6","owner":"Human/IV","criterion":"Explicitly approved real provider/data/effect/budget security and acceptance gates","status":"HOLD"}
+  ],
+  "decision": "HOLD",
+  "live_provider_allowed": false,
+  "live_tool_allowed": false,
+  "live_spend_allowed": false,
+  "main_merge_allowed": false
+}

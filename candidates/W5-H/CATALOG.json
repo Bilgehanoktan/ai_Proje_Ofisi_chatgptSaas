@@ -1,0 +1,90 @@
+{
+  "revision": "W5-H",
+  "parent": "ab0dc8fa5668b4865e8cf450a0128131dcffa6ce",
+  "status": "D0_SIGNATURE_AND_PEP_DIAGNOSTIC_PASS_INDEPENDENT_CUSTODY_HOLD",
+  "core_reference": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+  "files": {
+    "candidates/W5-H/receipt_pep_review.py": {
+      "classes": [
+        "ReceiptEffectPin",
+        "ReceiptPEPReview"
+      ],
+      "functions": [
+        "receipt_effect_digest",
+        "consume_scope",
+        "replay_keys",
+        "inspect_replay",
+        "inspect_receipt_pep"
+      ],
+      "sha256": "c7813c9adc2f9b47127ae7615c4036c71d4ab792d02f53de461838a1a2ec520a",
+      "git_blob": "8fd3c95e7c75b71ebadfbe5e11db100d473735c5"
+    },
+    "candidates/W5-H/test_receipt_pep_review.py": {
+      "classes": [
+        "W5HTests"
+      ],
+      "test_methods": 28,
+      "sha256": "50aa695141b287b460000d101396c11df9a41570c187794679b5204fe4de351a",
+      "git_blob": "3e3fe3fff1d753676119097b984b23ccc4862fbf"
+    }
+  },
+  "core_pins": {
+    "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": {
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d",
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+    },
+    "product/ai-company-os-backend/app/core/policy/denial.py": {
+      "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4",
+      "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd"
+    },
+    "product/ai-company-os-backend/app/core/policy/gateway_review.py": {
+      "sha256": "c4b4e35699e6a829cba53fe21d87907eb77245e8f7bb134f1d94fc08df8f2e75",
+      "git_blob": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e"
+    },
+    "product/ai-company-os-backend/app/core/policy/witness_review.py": {
+      "sha256": "3c658e59711007436f797d34c248d3ab1546e404d9715bf17bd72395bc6d4ff0",
+      "git_blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6"
+    },
+    "product/ai-company-os-backend/app/core/transaction/effect_fence_reference.py": {
+      "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f",
+      "git_blob": "3730a404de13673a1cbcd36353ff75d1b3642004"
+    },
+    "product/ai-company-os-backend/app/core/transaction/review.py": {
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908",
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4"
+    },
+    "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py": {
+      "sha256": "7c3086ba3030a072fe2bba6a9a4925232228b746a83fffeb9a9bed416f16f86b",
+      "git_blob": "477bcde63418dd43f886df7b32c5acd006d64a79"
+    }
+  },
+  "api_changes": [],
+  "db_changes": [],
+  "dependencies_added": [],
+  "test_dependencies": [
+    "existing cryptography 46.0.4",
+    "stdlib dataclasses, hashlib, sqlite3, pathlib, tempfile, unittest"
+  ],
+  "tests": {
+    "new": 28,
+    "w5g_regression": 16,
+    "total": 44,
+    "prior_w5_90": "HISTORICAL_NOT_RERUN",
+    "postgresql": "NOT_RUN",
+    "full_product": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "blockers": [
+    "No physical invocation membership",
+    "No independently operated custody or IV receipt",
+    "Existing synthetic fence permits scope/binding/tx aliases for same reservation",
+    "No atomic uniqueness across reservation/idempotency/consume or live PEP enforcement",
+    "Unknown outcomes owner reconciliation not implemented"
+  ],
+  "scores": {
+    "design": 50,
+    "source": 25
+  },
+  "next": "W5-I read-only multi-engine composition; owner gates remain HOLD",
+  "rollback": "discard isolated candidate or revert additive delta"
+}
