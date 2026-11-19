@@ -1,0 +1,212 @@
+{
+  "revision": "MI-04-MEMORY-T1-EVIDENCE-RECONCILIATION",
+  "date": "2026-11-19",
+  "classification": "REMOTE_EXACT_SOURCE_COMPARISON_AND_HISTORICAL_EVIDENCE_RECONCILIATION_ONLY",
+  "refs": {
+    "governance_parent": "ed1570de30bff2ab524b6a38e39affd456a35443",
+    "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+    "mem05e_r1": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+    "mem03r1": "e281ff1273b06d0052794d2cafdb50b4bd81e0a2",
+    "old_cross_base": "4fb39a5b2a41866b10ba836d1a6974e258d8217f"
+  },
+  "existing_gate01": {
+    "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+    "blob": "ee9dca3199c0d074be74a669cb469a156f1fb8c8",
+    "status": "retain; no duplicate gate decision"
+  },
+  "checks": {
+    "common_source_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "sha": "fa47acd32adb309896f762ec50e47bf26641adbb"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "sha": "b0dde358be781b48e06b8901acc63ef31b013db0"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+        "sha": "6c0995712bd368f72c239cb19cd3e85aa781c1b9"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+        "sha": "b43a8d1129138b917c499ad1091ac61940af1846"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+        "sha": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+        "sha": "e6bb84ab19a730a7913ae4a7f545f480897e1dcd"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+        "sha": "d783f00f6b7521ce0d979b977b45a8e44410eb8e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+        "sha": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7"
+      }
+    ],
+    "root_pin_and_authority_class_g6a_r8": "exact source substring equality",
+    "g6a_legacy_wrapper_vs_common": "exact except trailing whitespace",
+    "r8_legacy_body_vs_g6a": "exact after protected entry guard",
+    "r8_port": "exact additive classmethod for_protected_postgres; removing method restores common blob text",
+    "strict_transport": "common exact R7; always HOLD, legacy fence still uses legacy transport"
+  },
+  "owner_source_proposal": {
+    "authority_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+    "iam_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+    "r8_port_blob": "12f40659e916d5722d60c41c27f3116d746545f0",
+    "r7_transport_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+    "status": "HOLD_OWNER_CONCURRENCE; not transfer authorization",
+    "rule": "G6A explicit denial entry recommended; R8 classmethod and actual G5 diagnostic controls retained for owner reconciliation; no optional legacy fallback or new grant"
+  },
+  "historical_mem03r1": {
+    "evidence_blob": "5f10213beed95bc3012c9bf395ec078fd9172892",
+    "raw_log_blob": "58a0fd6b745aedbcff45a42e526f0e7b933a44dc",
+    "reported_pass": 116,
+    "common_exact": [
+      31,
+      34
+    ],
+    "missing": [
+      {
+        "path": "candidates/W5-MEM-01/test_lineage_continuity.py",
+        "expected": "60608147f84cf74f9ac5849f66cd8eeb92c9c9ea",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/W5-MEM-02/test_revision_continuity.py",
+        "expected": "907dede712a5b5469978ddc855ecf9b17e526ba9",
+        "actual": null,
+        "status": "ABSENT"
+      },
+      {
+        "path": "candidates/W5-MEM-02/test_witness_continuity.py",
+        "expected": "f863db45dfdc10be9c4f4d34b34d4c452db11bcd",
+        "actual": null,
+        "status": "ABSENT"
+      }
+    ],
+    "status": "historical only, do not count twice; 344 current joint runner deliberately excludes earlier auxiliary MEM-01/02 suite"
+  },
+  "historical_t1_cross": {
+    "runner_blob": "4e59c9d4f33fed17a7eff264c3db5f4046a7a700",
+    "log_blob": "e4ffc7227a3d77347c1fb749c284d587b948deaa",
+    "reported_pass": 17,
+    "old_backend_manifest": "981a13fc226184dc3a911ae0d94e0042285ff302",
+    "common_manifest": "b80e834fe081cb1b8917798a11793eb50dce9688",
+    "three_overlay_entries": {
+      "ai-company-os-backend/app/core/agent_runtime/joint_context.py": {
+        "bytes": 3851,
+        "sha256": "d003cb73a1b36a9db28339fb6e9ab705de095c0c6019524f8da168135d7a289c"
+      },
+      "ai-company-os-backend/app/core/agent_runtime/memory_witness.py": {
+        "bytes": 11744,
+        "sha256": "81fa16a2bf8f78943b52763a36c961344965371d216b375e79ab40220bd875e0"
+      },
+      "ai-company-os-backend/app/engines/memory_engine/snapshot_store.py": {
+        "bytes": 13027,
+        "sha256": "2fba57be279f54e94dc3cd8689297d96493d7d0c34c2b0cf0380e1a54c2db2f0"
+      }
+    },
+    "expected_old_backend_entries": 237,
+    "exact_manifest_records": 234,
+    "differing": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/postgres_session.py",
+        "expected": {
+          "bytes": 2495,
+          "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+        },
+        "actual": {
+          "bytes": 3677,
+          "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
+        },
+        "status": "DIVERGENT"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+        "expected": {
+          "bytes": 5229,
+          "sha256": "808ede44c79324dea98af33315fde68d3255666c614d4a63968f21d33445234b"
+        },
+        "actual": {
+          "bytes": 5649,
+          "sha256": "2b9c7adc4ae9d4201bf8ec7ca2b9788ccf7f68a2efd9422b8a7b561d552171e9"
+        },
+        "status": "DIVERGENT"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_memory_store_0196.py",
+        "expected": {
+          "bytes": 8077,
+          "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98"
+        },
+        "actual": {
+          "bytes": 8092,
+          "sha256": "a68353c3be40c64eaa0f91623305a3354d004180a1ffdfb73fa510f233bb6f8e"
+        },
+        "status": "DIVERGENT"
+      }
+    ],
+    "additional_current_backend_entries": 28,
+    "current_backend_entries": 265,
+    "status": "historical 17/17 on old exact closure with three overlays; full-restore residual reproduced, not security pass; common replay NOT_RUN"
+  },
+  "mixed_writer": {
+    "owner_evidence_blob": "2fa2d9d9fc9b6d3620845e7a628a0d1af04528ad",
+    "legacy_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "aligned_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+    "baseline": {
+      "tests": 7,
+      "pass": 4,
+      "fail": 3,
+      "errors": 0,
+      "skipped": 0,
+      "exit": 1,
+      "sha256": "9e45ac17364c621da4c47faaa9869e1bdc0ebb0960f525974c6802a78ef7e7d5",
+      "git_blob": "3facf2a1f4681316ee7c62144f84f95e377444b5"
+    },
+    "aligned": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit": 0,
+      "sha256": "a86a7c47298fd616b278965084c5112b42160337d79dbe1f710bf5e5e71d7d43",
+      "git_blob": "841b0d37c53fbf9e15648031195caf5f3cd91a52"
+    },
+    "observations": [
+      "Mixed old/new: unbound claim persisted, IAM root published without joint publication, claim persisted after actual session revocation.",
+      "Aligned test loads exact G6A owner source for both writer instances: seven safety/compatibility assertions pass.",
+      "Actual temporary SQLite; no full product import, T1, provider, PostgreSQL, deployment or old-process retirement tested."
+    ],
+    "raw_test_and_logs": "Three referenced blob fetches returned 404 in current connector; evidence JSON readable, raw test and logs not independently retrieved. Do not reconstruct or claim rerun.",
+    "stop_condition": "Do not open an IAM-backed store with a legacy writer; source alignment alone cannot prove retirement of old processes. No store migration or activation without owner-reviewed single writer identity and pending publication.",
+    "owner_rollback": "isolated source rollback only; never use old writer on newer IAM store"
+  },
+  "remaining": {
+    "combined_344": "NOT_RUN",
+    "original_G2_50": "NOT_RUN",
+    "G9_7": "NOT_RUN",
+    "R8_36": "NOT_RUN",
+    "G6A_19": "NOT_RUN",
+    "strict_commit": "HOLD",
+    "assignment_provenance": "HOLD",
+    "publication": "HOLD",
+    "independent_custody": "HOLD"
+  },
+  "source_changes": 0,
+  "api_db_event_dependency_changes": 0,
+  "new_product_tests": 0,
+  "acceptance_delta": 0,
+  "activation": "HOLD"
+}
