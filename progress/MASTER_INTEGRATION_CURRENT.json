@@ -1,5 +1,5 @@
 {
-  "revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
+  "revision": "MI-01-BUILD-REPAIR-TRANSFER",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -30,15 +30,53 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Connected exact clean checkout, original W8 audit then prepare only; stop for dependency review fingerprint.",
+      "next": "Unified owner reviews exact ORG-R8 rename/import/test path and manifest-only W8 rebind; then clean candidate checkout, original runner test/audit/prepare only, fresh dependency review fingerprint. Actual full build/browser remain NOT_RUN; preserve MI-04/08 candidates separately.",
       "priority": "P0",
-      "status": "BLOCKED_ENVIRONMENT",
+      "status": "BUILD_REPAIR_CANDIDATE_READY_OWNER_REVIEW_AND_FULL_BUILD_BLOCKED",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "docs/master-integration/MI-01-R1_EVIDENCE.json",
-      "previous_status": "OPEN",
+      "evidence": "3/3 exact owner repair pins, 505/505 manifest/pin-record consistency, zero casefold TS/JS module stem conflicts; 5/5 local exact source and 16/16 original regression (global TS 5.8.3, mocked JSX/CSS). Historical ORG build not new full-stack acceptance.",
+      "previous_status": "BLOCKED_ENVIRONMENT",
       "scope": "master readback/preflight only; Unified owner retains source changes",
       "development_percent": null,
-      "acceptance_delta": 0
+      "acceptance_delta": 0,
+      "transfer_candidate": {
+        "ref": "integration/mi-01-build-repair-transfer",
+        "source_commit": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
+        "evidence_commit": "23f9f63289d11ccbbdd360c8507556606d2b7bb6",
+        "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "tree": "d6bfdd08176f12e8ee855e00bfbb598e17bb8eb8",
+        "manifest": "9001c2c634f84fc7280d7fd3f370192873366095",
+        "runner": "28de47e952160b9ebae089816dd4bbebdbdd1d60",
+        "product_files": 505,
+        "manifest_entries": 504,
+        "retained_same_path_records": 501,
+        "source_pin_record_consistency": [
+          505,
+          505
+        ],
+        "casefold_module_stem_collisions": 0,
+        "local_pins": [
+          5,
+          5
+        ],
+        "actual_selected_pass": [
+          16,
+          16
+        ],
+        "new_unique_methods": 0,
+        "owner_review": "PENDING",
+        "full_build": "BLOCKED_ENVIRONMENT",
+        "evidence_path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/LOCAL_REGRESSION.json",
+        "catalog_path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/CATALOG.json",
+        "runbook_path": "docs/master-integration/MI-01-BUILD-REPAIR-TRANSFER/RUNBOOK.md",
+        "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+      },
+      "blockers": [
+        "Unified owner review",
+        "local GitHub DNS; exact full checkout unavailable",
+        "reviewed dependency locks/fingerprint not generated",
+        "full backend/frontend/typecheck/browser/native NOT_RUN"
+      ]
     },
     {
       "id": "MI-02",
@@ -151,7 +189,11 @@
       "priority": "P1",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "branch head observed only; latest acceptance not reconciled"
+      "evidence": "branch head observed only; latest acceptance not reconciled",
+      "mi01_dependency": {
+        "source": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
+        "status": "await full build and existing U3 browser same-session proof; no new UI or live projection fabricated"
+      }
     },
     {
       "id": "MI-06",
@@ -162,7 +204,11 @@
       "priority": "P0",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "ORG-07C-R8 frontend build/typecheck reported PASS and 7 visual captures; weighted 11.6667%; full-stack NOT_RUN"
+      "evidence": "ORG-07C-R8 frontend build/typecheck reported PASS and 7 visual captures; weighted 11.6667%; full-stack NOT_RUN",
+      "mi01_dependency": {
+        "source": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
+        "status": "only workflow repair transferred; ORG proxy/owner/assignment contracts remain separate and HOLD"
+      }
     },
     {
       "id": "MI-07",
@@ -227,9 +273,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.",
-  "next": "MI-03 and MI-04 existing controlled candidates ready for owner-reviewed common source reconciliation and W8 build/rebind. MI-01 build remains blocked; MI-08 exact source review and regression continue separately; no new prototype.",
-  "previous_revision": "MI-04-TRANSPORT-TRANSFER-REVIEW",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance.",
+  "next": "MI-01 source candidate review and exact workstation W8 audit/prepare/fingerprint; MI-05/06 shared historical readback browser after build; MI-02/03/04/07/08/09/10 retain their existing owners and gates.",
+  "previous_revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -246,5 +292,12 @@
     "candidate": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "contract": "G6A explicit server-owned protected entry recommended, not ratified; preserve R8/G6A legacy evidence; no automatic merge or runtime selection",
     "parallel": "MI-03 IAM/ORG, MI-08 Memory and MI-01/05/06 existing records retained"
+  },
+  "mi01_cross_owner_notes": {
+    "candidate": "d91231cbb3a8b7f1e8f2610ca58ca2bfff2342ea",
+    "evidence": "23f9f63289d11ccbbdd360c8507556606d2b7bb6",
+    "scope": "Exact existing ORG-R8 filename repair and W8 manifest rebind, no ORG API or protected runtime transfer, owner review required",
+    "parallel": "Prior MI-04/08 and all other queue records retained; no product-dev promotion",
+    "tests": "16/16 existing cases rerun, 0 unique additions, no acceptance delta"
   }
 }
