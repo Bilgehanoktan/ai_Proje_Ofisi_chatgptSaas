@@ -64,7 +64,10 @@
         "D0SessionResolver._read_durable",
         "D0SessionResolver._resolve_durable",
         "D0SessionResolver._revoke_durable",
-        "SessionClaimCheck.inspect"
+        "SessionClaimCheck.inspect",
+        "D0SessionResolver._state",
+        "D0SessionResolver._now",
+        "D0SessionResolver.__init__"
       ],
       "functions": [
         "credential_digest",
@@ -81,16 +84,27 @@
         "postgres_transaction",
         "require_strict_postgres_commit",
         "protected_postgres_transaction"
+      ],
+      "methods": [
+        "PostgresSession.__init__",
+        "PostgresSession.lock_and_validate",
+        "PostgresSession.write_role",
+        "PostgresSession.verify_write_set",
+        "PostgresSession.lock_transition",
+        "PostgresSession.write_transition_role",
+        "PostgresSession.read_transition"
       ]
     }
   },
   "sqlite_tables": [
     "roots",
     "claims",
-    "iam_session_meta",
+    "iam_bootstrap",
+    "iam_meta",
     "iam_sessions",
     "iam_revocations",
-    "iam_claim_pins"
+    "iam_claim_pins",
+    "iam_clock"
   ],
   "note": "Table names in actual source take precedence; no live schema migration or new independent IAM engine. Existing owner source exact. No API/event/default wiring/external dependency change.",
   "dependencies": [
