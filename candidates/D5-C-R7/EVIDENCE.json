@@ -1,0 +1,75 @@
+{
+  "revision": "D5-C-R7",
+  "parent": "bbf9d447da80e96117ea006b69b206ee29435fa9",
+  "classification": "LOCAL_D0_PREFLIGHT_ONLY",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "direct_checkout": "BLOCKED_DNS",
+    "import_stubs": false
+  },
+  "original_blob_pins": {
+    "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "app/core/agent_runtime/transition_command.py": "5680fa428be81645a43d7442ec161c0c10384986",
+    "app/core/transaction/port.py": "12f40659e916d5722d60c41c27f3116d746545f0",
+    "app/core/transaction/postgres_session.py": "9799323752623f15bf0d0dca93bba4678ac6bb10",
+    "app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "tests/test_postgres_strict_expiry_d5c_r6.py": "cde0ed2b841c6b48500a464979096aad55a635b1"
+  },
+  "verified_original": [
+    6,
+    6
+  ],
+  "changed_source": {
+    "path": "app/core/transaction/postgres_session.py",
+    "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+    "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3",
+    "bytes": 3677
+  },
+  "new_test": {
+    "path": "tests/test_postgres_preclaim_d5c_r7.py",
+    "blob": "c7a03aaadd1660e723b21c789dfa0744ac3721cb",
+    "sha256": "dc7667d10e1836a9bac08a9212bf96ae608f6ac8ef3e38f42a5d60c46595445d",
+    "bytes": 2529
+  },
+  "execution": {
+    "command": "python -B -m unittest discover -s tests -p 'test_postgres_*d5c_r*.py' -v",
+    "new_control": [
+      5,
+      5
+    ],
+    "r6_strict": [
+      6,
+      6
+    ],
+    "r6_sqlite_transport": [
+      6,
+      6
+    ],
+    "total_unique": [
+      17,
+      17
+    ],
+    "exit": 0,
+    "failed": 0,
+    "skipped": 0,
+    "log": {
+      "bytes": 2185,
+      "blob": "cc4591e339b2d8e1b13c157396a798803a672468",
+      "sha256": "6f84665d274bddfb2a3fa09e874b51126141ffc459f744f0f91233130fef8128"
+    },
+    "actual_pg": "NOT_RUN",
+    "actual_g5": "NOT_RUN",
+    "original_t1_17": "NOT_RUN",
+    "full_build": "NOT_RUN"
+  },
+  "owner_pins": {
+    "g5": "21c11d3693aff84fa71e8e9b370cedee74efbc93",
+    "g5_authority": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "g5_port": "b0dde358be781b48e06b8901acc63ef31b013db0",
+    "r6_authority": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "r5_pg_report": "846d31387e7ebfd5a71f17d67096b5fc7cac44b7",
+    "d5d_contract": "27991b3c75402c9adce024dcf3888db1fbdc2479"
+  },
+  "activation": "HOLD"
+}

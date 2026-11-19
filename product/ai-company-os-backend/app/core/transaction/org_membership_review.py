@@ -3,7 +3,7 @@ D0 only. An ORG proposal is not an assignment or authority.
 The exact R3 owner modules must be supplied by the isolated checkout runner.
 """
 from contextlib import closing
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from hashlib import sha256
 import json
 
@@ -132,3 +132,59 @@ def inspect_org_session_reference(resolver, credential, intent, initial, session
         return Review('D5G5_ORG_PROPOSAL_SESSION_MATCH_ONLY', True, result.binding_sha)
     except Exception:
         return Review('D5G5_ORG_READBACK_HOLD')
+
+
+@dataclass(frozen=True)
+class ProtectedOrgTransition:
+    """Internal G5 reference bundle; not a capability or assignment."""
+    resolver: object
+    credential: str = field(repr=False, compare=False)
+    initial: IdentityReadback
+    session: SessionReference
+    session_sha: str
+    read_latest: object = field(repr=False, compare=False)
+    store: object
+    org_reference: OrgReadback
+    org_sha: str
+    org_head: str
+    seat: str
+    role: str
+    history_pin: object
+    root: object
+    owner_pin: str
+    domain: str
+
+
+def require_protected_org_commit(authority, intent, reference):
+    """G5 review then common R7 pre-claim HOLD; never grant or consume.
+
+    Server-owned reader only. Review locks are not a durable deadline or
+    a shared publication protocol. Even if the preflight later returns,
+    no execution is implemented here and legacy must not be selected.
+    """
+    from app.core.iam_session import D0SessionResolver
+    from app.core.transaction.intent_authority import D0IntentAuthority
+    from app.core.transaction.postgres_session import require_strict_postgres_commit
+
+    if (type(reference) is not ProtectedOrgTransition
+            or type(authority) is not D0IntentAuthority
+            or type(reference.resolver) is not D0SessionResolver
+            or reference.resolver._authority is not authority):
+        raise PermissionError('D5C_R8_PROTECTED_REFERENCE_HOLD')
+    result = inspect_org_session_reference(
+        reference.resolver, reference.credential, intent, reference.initial,
+        reference.session, reference.session_sha, reference.read_latest,
+        store=reference.store, org_reference=reference.org_reference,
+        org_sha=reference.org_sha, org_head=reference.org_head,
+        seat=reference.seat, role=reference.role, history_pin=reference.history_pin,
+        root=reference.root, owner_pin=reference.owner_pin, domain=reference.domain)
+    if (type(result) is not Review
+            or result.structural_match is not True
+            or result.reason != 'D5G5_ORG_PROPOSAL_SESSION_MATCH_ONLY'
+            or result.decision != 'HOLD' or not digest(result.binding_sha)
+            or result.commit_allowed is not False
+            or result.dispatch_allowed is not False
+            or result.retry_allowed is not False):
+        raise PermissionError('D5C_R8_ORG_SESSION_REVIEW_HOLD')
+    require_strict_postgres_commit()
+    raise PermissionError('D5C_R8_PROTECTED_EXECUTION_UNIMPLEMENTED_HOLD')

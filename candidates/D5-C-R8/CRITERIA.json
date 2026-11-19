@@ -1,0 +1,62 @@
+{
+  "revision": "D5-C-R8",
+  "scope": "Controlled containment source integration on G5, NOT durable COMMIT implementation",
+  "baseline": "new R8 work package, not retroactive R7 scoring",
+  "stages": {
+    "design": {
+      "weight": 15,
+      "criteria": {
+        "R8-D01": "Review D5-D owner contract, strict ordering and scope",
+        "R8-D02": "Verify exact G5/R7 source compatibility"
+      },
+      "previous": 0,
+      "current": 2,
+      "total": 2
+    },
+    "source": {
+      "weight": 35,
+      "criteria": {
+        "R8-S01": "Exact R7 transport/port and original test transfer",
+        "R8-S02": "Explicit actual authority entry invokes G5 review then R7 preclaim HOLD without fallback",
+        "R8-S03": "Pin selected source and test runner; remote readback"
+      },
+      "previous": 0,
+      "current": 3,
+      "total": 3
+    },
+    "functional": {
+      "weight": 20,
+      "criteria": {
+        "R8-F01": "Actual valid/rejected G5 request containment tests pass",
+        "R8-F02": "Actual no-claim/no-fallback tests pass",
+        "R8-F03": "Original G5+G4+R6+R7 selected regression passes in R8 closure"
+      },
+      "previous": 0,
+      "current": 0,
+      "total": 3
+    },
+    "integration": {
+      "weight": 20,
+      "criteria": {
+        "R8-I01": "Actual fixture authority and ORG before/after readback in R8",
+        "R8-I02": "Real journal and joint protected owner/PG boundary evidence"
+      },
+      "previous": 0,
+      "current": 0,
+      "total": 2
+    },
+    "acceptance": {
+      "weight": 10,
+      "criteria": {
+        "R8-A01": "Independent owner acceptance with P06/P07 proof"
+      },
+      "previous": 0,
+      "current": 0,
+      "total": 1
+    }
+  },
+  "weighted_previous": 0,
+  "weighted_current": 50,
+  "delta_pp": 50,
+  "not_product_acceptance": true
+}

@@ -1,0 +1,98 @@
+{
+  "revision": "D5-C-R6",
+  "parent": "1be2cc1e37388ddfd3c9b6f4dc883c3042b4b0af",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "classification": "LOCAL_D0_CONTAINMENT_ONLY",
+  "prior_diagnostic": {
+    "PG": [
+      4,
+      4
+    ],
+    "source": "R5 exact original transport",
+    "late_commit_gap": "REPRODUCED_PG03"
+  },
+  "new_tests": {
+    "strict_route": [
+      6,
+      6
+    ],
+    "sqlite_legacy": [
+      6,
+      6
+    ],
+    "unique_methods": 12,
+    "exit": 0,
+    "environment": "CPython 3.13.5 / SQLite 3.46.1",
+    "new_pg": "NOT_RUN",
+    "original_T1": "NOT_RUN",
+    "G3_G5": "NOT_RUN",
+    "full_build": "NOT_RUN"
+  },
+  "criteria": {
+    "R6_weighted": "HESAPLANAMADI_NO_FROZEN_DENOMINATOR",
+    "previous_R5": "HESAPLANAMADI",
+    "delta": "NOT_CALCULABLE",
+    "D5_G1_G5": {
+      "previous": 42.5,
+      "current": 42.5,
+      "delta_pp": 0
+    },
+    "D5_F": {
+      "previous": 62.619,
+      "current": 62.619,
+      "delta_pp": 0
+    },
+    "D5D_P06": "HOLD",
+    "D5D_P07": "HOLD"
+  },
+  "acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_gates": 0,
+  "product_changes": {
+    "modified_modules": 2,
+    "added_tests": 1,
+    "new_runtime_routes": 0,
+    "new_ddl": 0,
+    "new_dependencies": 0
+  },
+  "blockers": [
+    "strict durable COMMIT guarantee not implemented",
+    "legacy callers unchanged and bypass possible if wrong factory selected",
+    "actual G4/G5 protected composition not wired",
+    "owner clock/linearization and joint publisher review",
+    "independent custody"
+  ],
+  "parallel": {
+    "inventory": 240,
+    "D5_G3": "5cf937d8bfe3e206f1ba54e2d5919537634df6cd",
+    "D5_G4": "ed638c4bc8d69cec267392251f6efe40f464fc9a",
+    "D5_G5": "1a9464966c1c5c67415e279b20bae3b19107554c",
+    "ORG_10R2": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "D4_R6": "c42beeb9f8ed7e5fc0ec83c2fdaccf6563a8607a",
+    "D4_OWNER": "c3ee73f5430368f4c2c6ed3cbe71a3728d0c5c02",
+    "W5_J2_R4": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "MEM05A": "e373e45447e686364d665bf9e910ccd52dae47fd",
+    "Unified_U3A": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "activation": "HOLD"
+}

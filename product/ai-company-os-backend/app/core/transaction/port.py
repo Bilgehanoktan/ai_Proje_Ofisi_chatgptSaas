@@ -46,6 +46,12 @@ class LogicalT1Coordinator:
     def __init__(self, transaction: Callable[[], AbstractContextManager[TransactionSession]]):
         self._transaction = transaction
 
+    @classmethod
+    def for_protected_postgres(cls, connect, mapping):
+        """Explicit strict-expiry route; never fall back to the D0 transport."""
+        from app.core.transaction.postgres_session import protected_postgres_transaction
+        return cls(lambda: protected_postgres_transaction(connect, mapping))
+
     def commit(self, intent: LogicalIntent) -> CommitReceipt:
         return self._commit(intent)
 

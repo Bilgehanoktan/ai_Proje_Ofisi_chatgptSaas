@@ -11,3 +11,7 @@ Complete original G2 50-case regression on G2/G3 manifest. Then actual ORG owner
 
 ## D5-G5 — next
 Run exact G5 26-test closure and original G2 50 on its own manifest. Actual current Core and ORG assignment/role evidence, protected publisher and original T1 wiring remain HOLD. [Runbook](../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md).
+
+
+## D5-C-R8 — branch-local next
+Run exact 37-pin / 53-case selected regression from R8 checkout. Then R9 actual journal and owner publication/PG review, never use legacy fallback or relax strict deadline. G2 original 50 owner regression separate. [Runbook](../candidates/D5-C-R8/ARCHITECTURE_AND_RUNBOOK.md).

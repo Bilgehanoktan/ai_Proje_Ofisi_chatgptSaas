@@ -1,0 +1,127 @@
+{
+  "revision": "D5-C-R7",
+  "parent": "bbf9d447da80e96117ea006b69b206ee29435fa9",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "weighted": {
+    "previous": "HESAPLANAMADI_NO_FROZEN_DENOMINATOR",
+    "current": "HESAPLANAMADI_NO_FROZEN_DENOMINATOR",
+    "delta": "NOT_CALCULABLE",
+    "reason": "R6/R7 had no previously frozen weighted denominator. Do not retroactively score five local methods as a product gate."
+  },
+  "D5_G1_G5": {
+    "previous": 42.5,
+    "current": 42.5,
+    "delta_pp": 0
+  },
+  "D5_F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "P06": {
+    "previous": "HOLD",
+    "current": "HOLD"
+  },
+  "P07": {
+    "previous": "HOLD",
+    "current": "HOLD"
+  },
+  "acceptance": {
+    "core": {
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ]
+    },
+    "ui": {
+      "previous": [
+        21,
+        40
+      ],
+      "current": [
+        21,
+        40
+      ]
+    },
+    "org_plan": {
+      "previous": [
+        5,
+        7
+      ],
+      "current": [
+        5,
+        7
+      ]
+    },
+    "mvp": {
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ]
+    },
+    "independent": {
+      "previous": [
+        0,
+        7
+      ],
+      "current": [
+        0,
+        7
+      ]
+    }
+  },
+  "new_gates": 0,
+  "tests": {
+    "prior_r5_diagnostic": [
+      4,
+      4
+    ],
+    "new_r7": [
+      5,
+      5
+    ],
+    "r6_rerun": [
+      12,
+      12
+    ],
+    "current_selected": [
+      17,
+      17
+    ],
+    "g5": "NOT_RUN",
+    "new_pg": "NOT_RUN"
+  },
+  "source_changes": {
+    "modified_product_modules": 1,
+    "added_tests": 1,
+    "ddl": 0,
+    "api": 0,
+    "new_dependencies": 0
+  },
+  "parallel": {
+    "branches_initial": 241,
+    "g5_updated": "21c11d3693aff84fa71e8e9b370cedee74efbc93",
+    "g5_overlap": [
+      "port.py",
+      "intent_authority.py"
+    ],
+    "g5_overlap_action": "DO_NOT_EDIT_OR_MERGE",
+    "r7_search_before_transfer": "NO_MATCH"
+  },
+  "blockers": [
+    "absolute durable COMMIT deadline unproven",
+    "G5 actual pre-claim integration absent",
+    "owner-approved clock mapping and shared publication absent",
+    "independent custody"
+  ],
+  "next": "owner integration on separately reviewed G5/R7 branch; exact regression and real readback; preserve HOLD; if strict rule cannot be met request explicit decision",
+  "activation": "HOLD"
+}

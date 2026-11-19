@@ -147,8 +147,17 @@ class D0IntentAuthority:
 
 def execute_authority_fenced_transition(*, authority, intent, context, registry, witness,
         expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
-        company=None, expected_company_binding=None, result=None, result_reader=None):
-    """Opt-in wrapper around 0210; no caller-supplied latest callback or live grant."""
+        company=None, expected_company_binding=None, result=None, result_reader=None,
+        protected_org=None):
+    """D0 legacy fixture or explicitly protected G5 entry; no live grant.
+
+    Protected input must never reach the legacy claim, journal or transport.
+    The current strict COMMIT capability is unavailable. No fallback exists.
+    """
+    if protected_org is not None:
+        from app.core.transaction.org_membership_review import require_protected_org_commit
+        require_protected_org_commit(authority, intent, protected_org)
+        raise PermissionError('D5C_R8_PROTECTED_EXECUTION_UNIMPLEMENTED_HOLD')
     from app.core.transaction.fenced_transition import (execute_fenced_transition, intent_pin,
         resolve_fence_binding, resolve_result_binding, check_result_store_separation)
     from app.core.transaction.witnessed_mapping import binding_digest

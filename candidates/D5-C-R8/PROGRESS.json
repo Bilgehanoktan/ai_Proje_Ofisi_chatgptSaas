@@ -1,0 +1,88 @@
+{
+  "revision": "D5-C-R8",
+  "parent": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+  "r7": "2d5a1fc0450d957aafe78d655979787ca20fa61d",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "criteria": "CRITERIA.json",
+  "R8_development": {
+    "previous_percent": 0,
+    "current_percent": 50,
+    "delta_pp": 50,
+    "scope": "new branch-local containment work package; design + source only, no tests or integration credited"
+  },
+  "G5_development": {
+    "previous": 42.5,
+    "current": 42.5,
+    "delta_pp": 0,
+    "reason": "partial S02/S03/F05/I02; no new full criterion"
+  },
+  "D5_F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_gates": 0,
+  "P06": "HOLD",
+  "P07": "HOLD",
+  "historical": {
+    "g5_windows": [
+      26,
+      26
+    ],
+    "r7": [
+      17,
+      17
+    ],
+    "r5_pg_diagnostic": [
+      4,
+      4
+    ],
+    "not_additive": true
+  },
+  "new_tests": {
+    "planned": 10,
+    "executed": 0,
+    "selected_total": 53,
+    "selected_status": "NOT_RUN",
+    "pins": 37,
+    "actual_pg": "NOT_RUN",
+    "G2_original": "NOT_RUN_HERE",
+    "full_build": "NOT_RUN"
+  },
+  "parallel": {
+    "branches_initial": 243,
+    "g5_head": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+    "owner_files_edited_on_separate_branch_only": true
+  },
+  "blockers": [
+    "local direct GitHub DNS",
+    "R8 regression not executed",
+    "actual journal/claim/product readback and protected publisher",
+    "trusted clock and durable COMMIT",
+    "independent custody"
+  ],
+  "next": "exact 53-test closure first; R9 actual journal and joint owner integration only after evidence; G2 separate owner",
+  "activation": "HOLD"
+}

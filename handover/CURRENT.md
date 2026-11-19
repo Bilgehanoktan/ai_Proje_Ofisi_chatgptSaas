@@ -264,3 +264,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G5 — branch-local source integration
 [Handover](../candidates/D5-G5/HANDOVER.md) · [Progress](../candidates/D5-G5/PROGRESS.json). 12+14 planned tests, no gate promotion.
+
+
+## D5-C-R8 — controlled G5/T1 source integration
+[Handover](../candidates/D5-C-R8/HANDOVER.md). G5 latest evidence retained; explicit strict protected route, no legacy fallback. 37 pinned sources, 53 planned tests NOT_RUN, P06/P07 HOLD. Acceptance unchanged.

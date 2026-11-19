@@ -272,3 +272,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G5 — branch-local ORG readback
 [Architecture & runbook](../../candidates/D5-G5/ARCHITECTURE_AND_RUNBOOK.md). Existing R3 readback with G4 session; tests NOT_RUN, all authority HOLD.
+
+
+## D5-C-R8 — explicit protected G5/T1 containment
+[Architecture](../../candidates/D5-C-R8/ARCHITECTURE_AND_RUNBOOK.md). G5 parent with exact R7 port/transport; existing authority entry calls G5 review then common strict HOLD before claim/stage. No default activation or new authority. 53 selected tests NOT_RUN, actual durable expiry and publication remain HOLD. No new product gate.
