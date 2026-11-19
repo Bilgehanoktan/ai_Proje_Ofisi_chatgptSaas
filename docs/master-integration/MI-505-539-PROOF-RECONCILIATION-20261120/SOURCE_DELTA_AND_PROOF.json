@@ -1,7 +1,7 @@
 {
   "revision": "MI-505-539-PROOF-RECONCILIATION-20261120",
   "date": "2026-11-20",
-  "status": "REVIEW_ONLY_NO_PROMOTION",
+  "status": "REVIEW_CORRECTED_PENDING_OWNER_NO_PRODUCT_PROMOTION",
   "base": {
     "ref": "integration/product-dev",
     "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -18,9 +18,9 @@
     "product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad"
   },
   "diff": {
-    "all_paths": 176,
+    "all_paths": 172,
     "product_paths": 49,
-    "non_product_paths": 127,
+    "non_product_paths": 123,
     "added_manifest_paths": 35,
     "removed_manifest_paths": [
       "ai-company-os-frontend/features/workflow/DraftInspector.tsx"
@@ -43,8 +43,14 @@
         "kind": "modified",
         "previous_path": null,
         "owner": "CENTRAL_MANIFEST",
-        "old": null,
-        "candidate": null
+        "old": {
+          "bytes": 90448,
+          "sha256": "6b9b02e73b133e901fcee31713c31125cbd825020068e4f5e531ea5323b81792"
+        },
+        "candidate": {
+          "bytes": 96898,
+          "sha256": "2ce5f642393184b04d7df1ea411e1fa13f627ba971fbc3010c2bce2b77d9c01a"
+        }
       },
       {
         "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
@@ -996,22 +1002,6 @@
         "status": "added"
       },
       {
-        "path": "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/AIOS_P0_IZOLE_PY3135_SQLITE3461.ps1",
-        "status": "added"
-      },
-      {
-        "path": "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/CATALOG_DELTA.md",
-        "status": "added"
-      },
-      {
-        "path": "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/EVIDENCE.json",
-        "status": "added"
-      },
-      {
-        "path": "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/RUNBOOK.md",
-        "status": "added"
-      },
-      {
         "path": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
         "status": "added"
       },
@@ -1123,7 +1113,17 @@
         "path": "tests/w5/test_router_cost_review.py",
         "status": "added"
       }
-    ]
+    ],
+    "later_revision_exclusions": {
+      "reason": "Not present in pinned candidate bd57cc82; these four paths appear only in later MI-COMMON-08 tree",
+      "later_observed_commit": "59c0fc505ca286e681ed0965ee317eadf571a806",
+      "paths": [
+        "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/AIOS_P0_IZOLE_PY3135_SQLITE3461.ps1",
+        "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/CATALOG_DELTA.md",
+        "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/EVIDENCE.json",
+        "docs/master-integration/MI-COMMON-08-WIN-ISOLATED-ENV/RUNBOOK.md"
+      ]
+    }
   },
   "verification": {
     "same_product_diff_61bb_to_bd57": 0,
@@ -1144,7 +1144,34 @@
     "G9_7": "NOT_RUN",
     "strict_PostgreSQL_commit_restore": "HOLD",
     "independent_security": "HOLD",
-    "new_tests_this_review": 0
+    "new_tests_this_review": 0,
+    "manifest_file_sha256": {
+      "path": "product/SOURCE_MANIFEST.json",
+      "old": {
+        "bytes": 90448,
+        "sha256": "6b9b02e73b133e901fcee31713c31125cbd825020068e4f5e531ea5323b81792",
+        "git_blob_sha": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276"
+      },
+      "candidate": {
+        "bytes": 96898,
+        "sha256": "2ce5f642393184b04d7df1ea411e1fa13f627ba971fbc3010c2bce2b77d9c01a",
+        "git_blob_sha": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f"
+      },
+      "method": "SHA-256 of exact immutable GitHub file UTF-8 bytes; self-tested SHA-256 implementation"
+    },
+    "git_compare_total": {
+      "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "head": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+      "changed_paths": 172,
+      "product": 49,
+      "non_product": 123,
+      "renamed_product_path": "product/ai-company-os-frontend/features/workflow/WorkflowDraftInspector.tsx",
+      "recorded_counter_before": {
+        "changed_paths": 176,
+        "non_product": 127
+      },
+      "excluded_later_paths": 4
+    }
   },
   "owner_decisions": [
     {
