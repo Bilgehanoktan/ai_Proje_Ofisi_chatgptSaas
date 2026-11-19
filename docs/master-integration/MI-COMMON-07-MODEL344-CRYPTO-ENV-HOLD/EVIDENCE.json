@@ -1,0 +1,42 @@
+{
+  "revision": "MI-COMMON-07-MODEL344-CRYPTO-ENV-HOLD",
+  "date": "2026-11-20",
+  "classification": "USER_SUPPLIED_WINDOWS_CONSOLE_OUTPUT_NOT_RAW_UPLOADED_REPORT",
+  "source_git_tree": "187f652f1b1ff8604981833f634c4531a33f8a47",
+  "common_source_commit": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+  "product_dev_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "local_source_root": "C:\\AIOS\\MI05_20261120_001126\\verified_manual",
+  "model_memory_source_pins": {
+    "verified": 114,
+    "total": 114,
+    "status": "PASS_SOURCE_ONLY"
+  },
+  "core_historical_source_pins": {
+    "verified": 55,
+    "total": 55,
+    "status": "SOURCE_MATCH_TESTS_NOT_RUN",
+    "runner": "tests/integration/run_core_0207.py --check-only"
+  },
+  "model_memory_344": {
+    "status": "HOLD_BEFORE_EXECUTION",
+    "passed": null,
+    "reason": "No package metadata was found for cryptography",
+    "environment_requirements": {
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "cryptography": "46.0.4"
+    }
+  },
+  "core_historical_29": "NOT_RUN",
+  "full_W8_build": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "protected_commit": "HOLD",
+  "independent_acceptance": "HOLD",
+  "local_raw_reports": "PENDING_UPLOAD",
+  "local_log_path": "C:\\AIOS\\MI05_20261120_001126\\P0_TEST_20261120_002529\\MODEL_MEMORY_344.log",
+  "next": "Explicitly approve isolated local virtual environment only after Python/SQLite exact preflight; pin cryptography 46.0.4 from official PyPI binary distributions and rerun existing 344 original runner without bypass; Core29 stays separate.",
+  "development_delta_pp": 0,
+  "product_acceptance_delta_pp": 0,
+  "source_code_changes": 0,
+  "preservation": "No owner branch, product-dev/main, CI, permissions or production changes."
+}
