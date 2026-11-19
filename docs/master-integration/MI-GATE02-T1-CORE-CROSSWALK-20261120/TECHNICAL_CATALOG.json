@@ -1,0 +1,151 @@
+{
+  "revision": "MI-GATE02-T1-CORE-SOURCE-GATE-CROSSWALK-20261120",
+  "technical_catalog_type": "FILE_SYMBOL_API_DB_DEPENDENCY_SECURITY_GAP_INSPECTION",
+  "pinned_source_and_symbols": [
+    {
+      "file": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+      "git_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+      "ref": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+      "type": "existing unratified independent authority design",
+      "responsibility": "Root/claim/sink trust boundary, eight original acceptance scenarios"
+    },
+    {
+      "file": "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+      "git_blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+      "ref": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+      "symbols": [
+        "test_full_original_wrapper_commit",
+        "test_restore_journal_t1_but_not_authority_blocks_replay",
+        "test_lost_commit_reply_no_retry",
+        "test_revocation_before_claim_no_writes",
+        "test_root_publisher_waits_through_commit",
+        "test_revoked_memory_before_t1_quarantines",
+        "test_wrong_signature_key_no_commit",
+        "test_expired_lease_quarantine",
+        "test_concurrent_claim_one_original_commit",
+        "test_full_restore_residual_reproduced_not_security_pass"
+      ],
+      "actual_execution": "NOT_RUN"
+    },
+    {
+      "file": "product/ai-company-os-backend/tests/test_core_operations_assignment_mi03.py",
+      "git_blob": "23c2f019a27bc9e16d8de3f2af72c239eefac035",
+      "ref": "21de30d80528bff893ebbbf225354b44ae514917",
+      "symbols": [
+        "test_original_core_reader_positive_before_write",
+        "test_real_core_and_operations_positive_commit_readback",
+        "test_wrong_principal_no_write",
+        "test_stale_core_version_no_write",
+        "test_role_mismatch_no_write",
+        "test_member_principal_drift_no_write",
+        "test_cross_scope_no_write",
+        "test_revocation_holds_and_no_reaccept",
+        "test_persisted_core_drift_revokes_readback_match",
+        "test_absent_core_cursor_fails_closed"
+      ],
+      "actual_execution": "0_OF_10_NOT_RUN"
+    },
+    {
+      "file": "docs/master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/EVIDENCE.json",
+      "git_blob": "18569f44b979ab00c849a7fa5aef794d3cbd0f1f",
+      "ref": "5781c8992ebdaf97b8d5eec7622a105b58bcd1e8",
+      "type": "owner 79 actual selected tests 8 new 71 replay"
+    },
+    {
+      "file": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
+      "git_blob": "e25787e5fa6ffe29fa4241323907d9a255af4230",
+      "ref": "5781c8992ebdaf97b8d5eec7622a105b58bcd1e8",
+      "type": "owner actual narrow PR4 CI"
+    }
+  ],
+  "class_delta": 0,
+  "function_delta": 0,
+  "APIs_delta": 0,
+  "DB_migrations_delta": 0,
+  "event_delta": 0,
+  "dependency_delta": 0,
+  "authorized_CI_workflow_delta": 0,
+  "QA_boundary": "Static source exact blob check and authoritative owner log comparison only; not a new test execution",
+  "original_MVP_gate_count": 11,
+  "original_stage_weights": {
+    "design": 15,
+    "source": 35,
+    "functional_test": 20,
+    "integration": 20,
+    "final_acceptance": 10
+  },
+  "groups_total": 10,
+  "groups_ratified": 0,
+  "security_hard_stops": [
+    "DO_NOT_ENABLE_REAL_ASSIGNMENT_ISSUER",
+    "DO_NOT_PROMOTE_OLD_DB_PLUS_OLD_PIN",
+    "NO_SINK_EFFECT_WITHOUT_INDEPENDENT_FENCE",
+    "UNKNOWN_COMMIT_QUARANTINE",
+    "DO_NOT_APPLY_D0_SQLITE_TEST_SCHEMA_TO_PROD",
+    "NO_CI_EXTENSION_WITHOUT_EXPLICIT_PERMISSION"
+  ],
+  "diagnosis": "Run the exact existing 79-case and 0214 10 acceptance negative matrices in their own owner scope only after closure; inspect original G9 additivity and PR6 full import. Treat signed historical D0 snapshot as insufficient.",
+  "maintenance_and_rollback": "Always preserve original 539 common/product-dev refs and owner branch; revert central reporting only, no reset of spent claims and no force push.",
+  "proof_checks": [
+    {
+      "name": "exact_PR6_owner_head",
+      "pass": true
+    },
+    {
+      "name": "pr6_10_original_methods",
+      "pass": true
+    },
+    {
+      "name": "static_10_not_functional_pass",
+      "pass": true
+    },
+    {
+      "name": "0214_exact_source_10",
+      "pass": true
+    },
+    {
+      "name": "D03_D04_eight_existing_cases",
+      "pass": true
+    },
+    {
+      "name": "GATE02_owner_79",
+      "pass": true
+    },
+    {
+      "name": "GATE02_actual_security_negative",
+      "pass": true
+    },
+    {
+      "name": "MI10_existing_selected_pass",
+      "pass": true
+    },
+    {
+      "name": "owner_base_pins",
+      "pass": true
+    },
+    {
+      "name": "canonical_dev_pin",
+      "pass": true
+    },
+    {
+      "name": "no_approvals_fabricated",
+      "pass": true
+    },
+    {
+      "name": "acceptance_unchanged",
+      "pass": true
+    },
+    {
+      "name": "permissions_unchanged",
+      "pass": true
+    },
+    {
+      "name": "queue_unchanged",
+      "pass": true
+    },
+    {
+      "name": "groups_unchanged",
+      "pass": true
+    }
+  ]
+}

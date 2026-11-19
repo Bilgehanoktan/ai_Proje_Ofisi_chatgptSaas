@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-04-R2",
+  "revision": "MI-GATE02-T1-CORE-SOURCE-GATE-CROSSWALK-20261120",
   "status": "MI_PROGRESS_03_REPORTING_CLOSED_10_GROUP_DENOMINATORS_UNFROZEN",
   "total": 100,
   "groups": [
@@ -660,7 +660,7 @@
     "acceptance": 10
   },
   "overall_percent": null,
-  "reason": "Scoped CI 3/3 PASS on pinned source; native original U3/full W8/PG/IV still open, group owner-freeze 0/10. Weighted global HESAPLANAMADI.",
+  "reason": "GATE02 anti-rollback owner vulnerability demonstrated, original PR6 Core+ORG 0/10 NOT_RUN and T1 0214 0/10 NOT_RUN; 0/10 group approval; global weighted development HESAPLANAMADI.",
   "coverage": {
     "tracker_areas": [
       24,
@@ -730,7 +730,7 @@
       538
     ]
   },
-  "previous_revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+  "previous_revision": "MI-PROGRESS-04-R2",
   "scope_and_criteria": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
   "evidence_review": "progress/MI_PROGRESS_02_R2_COMPLETE_DRAFT_AND_MVP_TRACE.json",
   "proof_register": "progress/MI_PROGRESS_03_A_F_CRITERION_PROOF.json",
@@ -851,5 +851,41 @@
     "acceptance_delta": 0,
     "product_changes": 0,
     "permissions_changes": 0
+  },
+  "mi_gate02_t1_core_crosswalk": {
+    "revision": "MI-GATE02-T1-CORE-SOURCE-GATE-CROSSWALK-20261120",
+    "status": "SOURCE_CROSSWALK_VERIFIED_RUNTIME_GATES_HOLD",
+    "evidence": "progress/MI_GATE02_T1_CORE_CLOSURE_20261120.json",
+    "technical_catalog": "docs/master-integration/MI-GATE02-T1-CORE-CROSSWALK-20261120/TECHNICAL_CATALOG.json",
+    "runbook": "docs/master-integration/MI-GATE02-T1-CORE-CROSSWALK-20261120/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "security_matrix": "docs/master-integration/MI-GATE02-T1-CORE-CROSSWALK-20261120/D03_D04_GATE02_ACCEPTANCE_CROSSWALK.json",
+    "product_ref": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common_ref": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+    "pr6": 6,
+    "pr6_test": [
+      0,
+      10
+    ],
+    "gate02_isolated": [
+      79,
+      79
+    ],
+    "t1_0214": [
+      0,
+      10
+    ],
+    "original_t1_ci": [
+      42,
+      42
+    ],
+    "CI_scope": "PR4_ONLY",
+    "security_rollback_residual": "CONFIRMED_OWNER_NEGATIVE",
+    "ratified_root_option": "NONE",
+    "prior_global_percent": null,
+    "current_global_percent": null,
+    "delta_pp": null,
+    "product_acceptance_delta": 0,
+    "source_mutation": 0,
+    "permission_mutation": 0
   }
 }

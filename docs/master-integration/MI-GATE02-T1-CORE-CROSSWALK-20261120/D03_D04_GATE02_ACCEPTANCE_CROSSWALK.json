@@ -1,0 +1,71 @@
+{
+  "revision": "MI-GATE02-T1-CORE-SOURCE-GATE-CROSSWALK-20261120",
+  "source": {
+    "path": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+    "ref": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+    "git_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+    "status": "DESIGN_ONLY_OPTIONS_NOT_RATIFIED"
+  },
+  "securityRequirements": [
+    {
+      "id": "D03-D04-01",
+      "original": "1. Replace root file or redirect path during commit: independent authority must remain unaffected; stale epoch at effect sink denied.",
+      "gate02_evidence": "NO_G02_INDEPENDENT_AUTHORITY_REPLACEMENT_TEST",
+      "status": "HOLD",
+      "owner": "Security/Independent Authority + IAM"
+    },
+    {
+      "id": "D03-D04-02",
+      "original": "2. Restore product and journal: consumed claim remains, no replay.",
+      "gate02_evidence": "D0_79_OLD_DB_NEWER_PIN_HOLD_AND_OLDER_MISMATCH_ONLY",
+      "status": "HOLD",
+      "owner": "Security/T1 owner"
+    },
+    {
+      "id": "D03-D04-03",
+      "original": "3. Restore product, journal and local authority: independent monotonic checkpoint rejects regression; no effect.",
+      "gate02_evidence": "OLD_DB_PLUS_OLD_PIN_REACCEPTANCE_REPRODUCED_NOT_PREVENTED",
+      "status": "FAIL_SECURITY_GATE",
+      "owner": "Security/Independent Authority + ORG"
+    },
+    {
+      "id": "D03-D04-04",
+      "original": "4. Split brain/network partition/timeout: fail closed; no alternate authority or automatic retry.",
+      "gate02_evidence": "NO_INDEPENDENT_LINEARIZABLE_FAILOVER_OR_PARTITION_TEST",
+      "status": "NOT_RUN",
+      "owner": "Independent Authority owner"
+    },
+    {
+      "id": "D03-D04-05",
+      "original": "5. Commit response lost: quarantine, exact independent reconciliation; no second effect.",
+      "gate02_evidence": "0214_ORIGINAL_FULLCHAIN_10_NOT_RUN; SELECTED_42_SEPARATE",
+      "status": "NOT_RUN",
+      "owner": "T1/Authority owner"
+    },
+    {
+      "id": "D03-D04-06",
+      "original": "6. Root key rotation/lease expiration: stale proof rejected at sink; consumed claim not erased.",
+      "gate02_evidence": "D0_79_REVOCATION_NEGATIVE_ONLY_NO_INDEPENDENT_ROOT",
+      "status": "HOLD",
+      "owner": "IAM/Authority owner"
+    },
+    {
+      "id": "D03-D04-07",
+      "original": "7. Cross-tenant/run/intent binding or direct effect bypass: reject; prove complete mediation and separate credentials.",
+      "gate02_evidence": "79_SELECTED_SYNTHETIC_IDENTITY_SCOPE_NEGATIVES_NOT_OWNER_ISSUANCE",
+      "status": "HOLD",
+      "owner": "IAM/ORG and effect sink owners"
+    },
+    {
+      "id": "D03-D04-08",
+      "original": "8. Independent backup/restore drill: establish nonrollbackable checkpoint continuity, test from separately administered environment.",
+      "gate02_evidence": "NO_INDEPENDENT_BACKUP_RESTORE_DRILL",
+      "status": "NOT_RUN",
+      "owner": "Independent Security/IV"
+    }
+  ],
+  "original_8_cases_all_open": true,
+  "owner_decisions": "PENDING",
+  "security_vulnerability": "REPRODUCED",
+  "product_changes": 0
+}

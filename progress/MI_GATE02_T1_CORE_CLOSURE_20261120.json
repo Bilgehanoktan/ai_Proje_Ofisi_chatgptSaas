@@ -1,0 +1,384 @@
+{
+  "revision": "MI-GATE02-T1-CORE-SOURCE-GATE-CROSSWALK-20261120",
+  "date": "2026-11-20",
+  "classification": "REAL_REMOTE_EXACT_SOURCE_CONTRACT_AND_OWNER_EVIDENCE_RECONCILIATION_NOT_NEW_FUNCTIONAL_RUN",
+  "scope": "P0 GATE02 rollback/freshness & PR6 original Core-ORG positives, P1 0214/T1 protected, P2 ModelMemory/W8",
+  "anchors": {
+    "product_dev": {
+      "ref": "integration/product-dev",
+      "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+    },
+    "common_current": {
+      "ref": "integration/mi-common-source-review-01",
+      "sha": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+      "product_files": 539,
+      "manifest_entries": 538
+    },
+    "G8": {
+      "branch": "workstream/mi03-gate02-assignment-lifecycle-d0",
+      "sha": "6efc6714757ebd698d27efd7022afc2c92af70d0"
+    },
+    "GATE03": {
+      "branch": "integration/mi03-gate03-org-runtime-closure-01",
+      "sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59"
+    },
+    "GATE02_PR6": {
+      "number": 6,
+      "head": "21de30d80528bff893ebbbf225354b44ae514917",
+      "base": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+      "state": "OPEN_DRAFT_UNMERGED",
+      "test_git_blob": "23c2f019a27bc9e16d8de3f2af72c239eefac035",
+      "method_count": 10,
+      "methods": [
+        "test_original_core_reader_positive_before_write",
+        "test_real_core_and_operations_positive_commit_readback",
+        "test_wrong_principal_no_write",
+        "test_stale_core_version_no_write",
+        "test_role_mismatch_no_write",
+        "test_member_principal_drift_no_write",
+        "test_cross_scope_no_write",
+        "test_revocation_holds_and_no_reaccept",
+        "test_persisted_core_drift_revokes_readback_match",
+        "test_absent_core_cursor_fails_closed"
+      ]
+    },
+    "T1_0214": {
+      "git_blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+      "original_methods": 10,
+      "original_methods_status": "NOT_RUN_0_OF_10_IN_COMMON"
+    },
+    "D03_D04": {
+      "path": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+      "ref": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+      "git_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+      "status": "DESIGN_ONLY_OPTIONS_NOT_RATIFIED"
+    }
+  },
+  "existing_owner_evidence": {
+    "GATE02_79": {
+      "path": "docs/master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/EVIDENCE.json",
+      "sha": "18569f44b979ab00c849a7fa5aef794d3cbd0f1f",
+      "actual_selected": [
+        79,
+        79
+      ],
+      "new_methods": [
+        8,
+        8
+      ],
+      "unique_new_this_round": 0,
+      "vulnerability": "joint_old_db_and_old_pin_restore_residual_reproduced",
+      "classification": "ACTUAL_NEGATIVE_SECURITY_COUNTEREXAMPLE"
+    },
+    "PR6_10": {
+      "preflight_path": "docs/master-integration/MI03-GATE02-CORE-POSITIVE-20261119/20261120_COMPLETION_PRECHECK.json",
+      "preflight_sha": "b5f9f2062107ffb576f4ad25f546b502d04a355d",
+      "source_blob": "23c2f019a27bc9e16d8de3f2af72c239eefac035",
+      "static_method_count": [
+        10,
+        10
+      ],
+      "real_functional": [
+        0,
+        10
+      ],
+      "local_status": "BLOCKED_NO_PRODUCT_MANIFEST",
+      "exit_code": 2,
+      "owner": "MI03 GATE02 review PR #6",
+      "classification": "SOURCE_READY_EXECUTION_BLOCKED_BY_FULL_CHECKOUT"
+    },
+    "MI10": {
+      "path": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
+      "sha": "e25787e5fa6ffe29fa4241323907d9a255af4230",
+      "latest_verified_run": 44614849105,
+      "ci_jobs": [
+        3,
+        3
+      ],
+      "original_selected_T1": [
+        42,
+        42
+      ],
+      "w8_source_sha256": [
+        538,
+        538
+      ],
+      "sse_browser": "COMPATIBLE_VARIANT_PASS",
+      "original_unmodified_U3": "HOLD",
+      "full_W8": "NOT_RUN",
+      "classification": "ACTUAL_SCOPED_CI_NOT_INDEPENDENT_ACCEPTANCE"
+    },
+    "T1_0214": {
+      "path": "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+      "sha": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+      "static_methods": [
+        10,
+        10
+      ],
+      "actual_common": [
+        0,
+        10
+      ],
+      "final_method": "test_full_restore_residual_reproduced_not_security_pass",
+      "expected_final": "REPRODUCE_SIMULTANEOUS_RESTORE_RESIDUAL_NOT_SECURITY_PASS"
+    }
+  },
+  "existing_security_design": {
+    "path": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+    "ref": "bd57cc8235a13ba5bf10545a7879be98fd7b47f5",
+    "git_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+    "status": "DESIGN_ONLY_OPTIONS_NOT_RATIFIED",
+    "original_acceptance_cases": [
+      {
+        "id": "D03-D04-01",
+        "original": "1. Replace root file or redirect path during commit: independent authority must remain unaffected; stale epoch at effect sink denied.",
+        "gate02_evidence": "NO_G02_INDEPENDENT_AUTHORITY_REPLACEMENT_TEST",
+        "status": "HOLD",
+        "owner": "Security/Independent Authority + IAM"
+      },
+      {
+        "id": "D03-D04-02",
+        "original": "2. Restore product and journal: consumed claim remains, no replay.",
+        "gate02_evidence": "D0_79_OLD_DB_NEWER_PIN_HOLD_AND_OLDER_MISMATCH_ONLY",
+        "status": "HOLD",
+        "owner": "Security/T1 owner"
+      },
+      {
+        "id": "D03-D04-03",
+        "original": "3. Restore product, journal and local authority: independent monotonic checkpoint rejects regression; no effect.",
+        "gate02_evidence": "OLD_DB_PLUS_OLD_PIN_REACCEPTANCE_REPRODUCED_NOT_PREVENTED",
+        "status": "FAIL_SECURITY_GATE",
+        "owner": "Security/Independent Authority + ORG"
+      },
+      {
+        "id": "D03-D04-04",
+        "original": "4. Split brain/network partition/timeout: fail closed; no alternate authority or automatic retry.",
+        "gate02_evidence": "NO_INDEPENDENT_LINEARIZABLE_FAILOVER_OR_PARTITION_TEST",
+        "status": "NOT_RUN",
+        "owner": "Independent Authority owner"
+      },
+      {
+        "id": "D03-D04-05",
+        "original": "5. Commit response lost: quarantine, exact independent reconciliation; no second effect.",
+        "gate02_evidence": "0214_ORIGINAL_FULLCHAIN_10_NOT_RUN; SELECTED_42_SEPARATE",
+        "status": "NOT_RUN",
+        "owner": "T1/Authority owner"
+      },
+      {
+        "id": "D03-D04-06",
+        "original": "6. Root key rotation/lease expiration: stale proof rejected at sink; consumed claim not erased.",
+        "gate02_evidence": "D0_79_REVOCATION_NEGATIVE_ONLY_NO_INDEPENDENT_ROOT",
+        "status": "HOLD",
+        "owner": "IAM/Authority owner"
+      },
+      {
+        "id": "D03-D04-07",
+        "original": "7. Cross-tenant/run/intent binding or direct effect bypass: reject; prove complete mediation and separate credentials.",
+        "gate02_evidence": "79_SELECTED_SYNTHETIC_IDENTITY_SCOPE_NEGATIVES_NOT_OWNER_ISSUANCE",
+        "status": "HOLD",
+        "owner": "IAM/ORG and effect sink owners"
+      },
+      {
+        "id": "D03-D04-08",
+        "original": "8. Independent backup/restore drill: establish nonrollbackable checkpoint continuity, test from separately administered environment.",
+        "gate02_evidence": "NO_INDEPENDENT_BACKUP_RESTORE_DRILL",
+        "status": "NOT_RUN",
+        "owner": "Independent Security/IV"
+      }
+    ],
+    "alternative_options": [
+      {
+        "option": "A",
+        "meaning": "independently administered consensus-backed authority and fenced/idempotent effect sink",
+        "owner_decision": "UNRATIFIED"
+      },
+      {
+        "option": "B",
+        "meaning": "immutable external checkpoint + independently enforced serialization/freshness; append-only alone insufficient",
+        "owner_decision": "UNRATIFIED"
+      },
+      {
+        "option": "C",
+        "meaning": "retain D0 read-only HOLD and no live execution",
+        "owner_decision": "UNRATIFIED_AS_FORMAL_SELECTION",
+        "present_de_facto": "EXISTING_DEFAULT_DENY"
+      }
+    ]
+  },
+  "technical_findings": [
+    {
+      "id": "F01",
+      "kind": "ACTUAL_SECURITY_NEGATIVE",
+      "where": "assignment_lifecycle.py:append_decision/read_chain plus G8 79 selected",
+      "finding": "Retained ZERO pin + old ORG SQLite snapshot can be simultaneously restored, so local chain/digest equality cannot prove global freshness; no independent claim ledger enforced",
+      "closure": "Independent domain monotonic root/consumed claim and independent backup/restore proof needed"
+    },
+    {
+      "id": "F02",
+      "kind": "STATIC_ORIGINAL_SOURCE",
+      "where": "app/core/transaction/intent_authority.py",
+      "finding": "D0IntentAuthority stores a separate non-restored SQLite fixture, explicitly not independent custody or distributed fencing; last original 0214 test expects joint restore residual",
+      "closure": "Do not repurpose D0 SQLite fixture as live GATE02 security root"
+    },
+    {
+      "id": "F03",
+      "kind": "STATIC_ORIGINAL_SOURCE",
+      "where": "app/core/policy/witness_review.py",
+      "finding": "Pure review yields WA_INDEPENDENT_ROOT_UNPROVEN on structural match; not external witness writer or freshness proof",
+      "closure": "Approval from independent security owner and separate actual witness/effect sink enforcement"
+    },
+    {
+      "id": "F04",
+      "kind": "STATIC_ORIGINAL_SOURCE",
+      "where": "product/ai-company-os-backend/durable_ops.py & assignment_lifecycle.verify_core_reference",
+      "finding": "Core and ORG cursors separate; D0 reviewer takes synthetic ApprovalObservation and returns HOLD, cannot attest actual IAM issuer or cross-store atomicity",
+      "closure": "Exact PR6 10 real original methods, then signed server-side owner/role evidence and protected cross-store COMMIT separately"
+    },
+    {
+      "id": "F05",
+      "kind": "OWNER_COLLISION",
+      "where": "G9 durable_ops 43ed448c vs G8 assignment 619fe224",
+      "finding": "G8 extends owner Store by 41 lines, prior G9 historical test result does not automatically transfer",
+      "closure": "G9/ORG owner explicit additive source version decision and original regression in same pinned checkout"
+    },
+    {
+      "id": "F06",
+      "kind": "ENV_BLOCKER",
+      "where": "draft PR #6 verified_runner.py",
+      "finding": "Blocked with BLOCKED_NO_PRODUCT_MANIFEST exit 2 before 10 methods; actual sources present on PR tree but not full local checkout",
+      "closure": "Owner-approved complete immutable PR6 checkout; run original unittest command and retain logs, no CI scope escalation"
+    }
+  ],
+  "owner_closure_queue": [
+    {
+      "order": 1,
+      "owner": "Security / IAM / ORG / IV",
+      "task": "Ratify or keep HOLD on existing D-03/D-04 alternative A/B/C, define separately administered monotonic root + consumed claims and effect sink; no new engine unapproved",
+      "proof": "Actual independent restore of DB+journal+local authority+pin denies reaccept; lost reply, root key rotation, partitions, sink fencing",
+      "status": "OWNER_DECISION_AND_ACTUAL_TEST_HOLD"
+    },
+    {
+      "order": 2,
+      "owner": "MI03 GATE02 + Core/ORG",
+      "task": "Execute exact draft PR6 10 cases on full pinned 553-manifest product checkout, no mocked Core or Store; preserve separate original G9 version decision",
+      "proof": "10 real method logs + readback/negative no-write DB evidence; D0 HOLD must remain",
+      "status": "0_OF_10_NOT_RUN"
+    },
+    {
+      "order": 3,
+      "owner": "T1 / IAM / memory owner",
+      "task": "Run original 0214 fullchain 10; G2 50 and G9 7; verify protected real PostgreSQL COMMIT; do not interpret last restore reproduction as security PASS",
+      "proof": "Actual pinned tests/commit receipt/unknown outcome/restart readbacks, independent witness",
+      "status": "NOT_RUN_OR_HOLD"
+    },
+    {
+      "order": 4,
+      "owner": "MI-COMMON / MI01 / ModelMemory",
+      "task": "Use approved full immutable checkout to execute existing ModelMemory344, historical Core29, original W8 wheelhouse/build/browser and independent validation",
+      "proof": "Owner reviewed source manifests, exact environment logs and artifact hashes",
+      "status": "ORIGINAL_344_29_FULL_W8_NOT_RUN"
+    }
+  ],
+  "no_code_or_security_mutation": true,
+  "previous_global_development": null,
+  "current_global_development": null,
+  "delta_pp": null,
+  "previous_product_acceptance": [
+    {
+      "id": "CORE",
+      "current": [
+        12,
+        16
+      ]
+    },
+    {
+      "id": "UI",
+      "current": [
+        21,
+        40
+      ]
+    },
+    {
+      "id": "ORG_PLAN",
+      "current": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "MVP",
+      "current": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "IV",
+      "current": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "EXT",
+      "current": [
+        2,
+        7
+      ]
+    }
+  ],
+  "current_product_acceptance": [
+    {
+      "id": "CORE",
+      "current": [
+        12,
+        16
+      ]
+    },
+    {
+      "id": "UI",
+      "current": [
+        21,
+        40
+      ]
+    },
+    {
+      "id": "ORG_PLAN",
+      "current": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "MVP",
+      "current": [
+        0,
+        11
+      ]
+    },
+    {
+      "id": "IV",
+      "current": [
+        0,
+        7
+      ]
+    },
+    {
+      "id": "EXT",
+      "current": [
+        2,
+        7
+      ]
+    }
+  ],
+  "product_acceptance_delta": 0,
+  "workstream_iam_org_previous": 42.5,
+  "workstream_iam_org_current": 42.5,
+  "workstream_delta_pp": 0,
+  "new_functional_methods_executed_this_review": 0,
+  "new_product_code_files": 0,
+  "new_database_migrations": 0,
+  "owner_issue_requests_issued": 0,
+  "traceability_status": "OWNER_REVIEW_REQUIRED",
+  "rollback": "Normal revert of this governance-only documentation; prior branches/permissions/tests unchanged and consumed claims never reset"
+}
