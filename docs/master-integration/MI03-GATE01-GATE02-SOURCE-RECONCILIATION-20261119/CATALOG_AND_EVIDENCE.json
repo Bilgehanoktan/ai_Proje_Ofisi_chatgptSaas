@@ -1,0 +1,171 @@
+{
+  "revision": "MI03-GATE01-GATE02-SOURCE-RECONCILIATION-01",
+  "date": "2026-11-19",
+  "classification": "REMOTE_EXACT_GIT_BLOB_AND_STATIC_SOURCE_DIFF_REVIEW_ONLY_NOT_ACTUAL_PRODUCT_TEST",
+  "governance_base": "d84b3046fbe17e77011668920de3d420b0afd609",
+  "common_source_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "product_dev_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "gate01": {
+    "prior_evidence_commit": "878a0e4f2eb105353c7ce9b072797b17142517f2",
+    "prior_selected_actual_sqlite_replay": {
+      "original_0212": [
+        7,
+        7
+      ],
+      "mapping_scheduler": [
+        35,
+        35
+      ],
+      "total": [
+        42,
+        42
+      ],
+      "new_unique_tests_this_review": 0
+    },
+    "original_fullchain_test_blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+    "original_fullchain_methods": [
+      "test_full_original_wrapper_commit",
+      "test_restore_journal_t1_but_not_authority_blocks_replay",
+      "test_lost_commit_reply_no_retry",
+      "test_revocation_before_claim_no_writes",
+      "test_root_publisher_waits_through_commit",
+      "test_revoked_memory_before_t1_quarantines",
+      "test_wrong_signature_key_no_commit",
+      "test_expired_lease_quarantine",
+      "test_concurrent_claim_one_original_commit",
+      "test_full_restore_residual_reproduced_not_security_pass"
+    ],
+    "existing_exact_runner_blob": "e60add70f9eee84f500279dddddb1bcbb4022dc7",
+    "prerequisites": {
+      "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+      "backend_manifest_entries": 265,
+      "g6a_owner_overlay": 2,
+      "original_DDL": 3,
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "cryptography": "46.0.4"
+    },
+    "fullchain_run": {
+      "actual": [
+        0,
+        10
+      ],
+      "status": "NOT_RUN",
+      "recorded_preflight": "BLOCKED_MISSING_EXACT_COMMON_MANIFEST_EXIT_2",
+      "this_review": "STATIC_ONLY"
+    },
+    "known_residual": "Last original test deliberately reproduces full rollback/restore replay weakness; an eventual 10/10 method pass must NOT close security gate."
+  },
+  "gate02": {
+    "original_source": {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "commit": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+      "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "lines": 162
+    },
+    "candidate_source": {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "lines": 203
+    },
+    "comparison": {
+      "all_original_lines_retained_in_order": true,
+      "original_lines_retained": 162,
+      "original_lines_removed_or_rewritten": 0,
+      "additional_lines": 41,
+      "method_additions": [
+        "initialize_assignment_ops",
+        "OperationsStore.record_assignment_review",
+        "OperationsStore.assignment_review"
+      ],
+      "commit_compare": {
+        "ahead": 1,
+        "behind": 0,
+        "changed_files": 13
+      }
+    },
+    "new_support_files": [
+      {
+        "path": "candidates/ORG-05R3/assignment_lifecycle.py",
+        "blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+        "scope": "A0_SAMPLE_ONLY synthetic only"
+      },
+      {
+        "path": "candidates/ORG-05R3/assignment_review.sql",
+        "blob": "3e887b10263f44b601f6a811a89687b2ee4d864e",
+        "tables": [
+          "op_assignment_review"
+        ],
+        "triggers": [
+          "op_assignment_review_no_update",
+          "op_assignment_review_no_delete"
+        ]
+      }
+    ],
+    "original_g9_fixture": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+    "prior_owner_actual_sqlite_units": [
+      20,
+      20
+    ],
+    "current_round_actual_product_tests": 0,
+    "result": "ADDITIVE_SOURCE_COMPATIBILITY_STATIC_ONLY_NOT_OWNER_DISPOSITION",
+    "owner_review": "REQUIRED_ORG_CORE_IAM_T1",
+    "unresolved": [
+      "No actual original OperationsStore+Core adapter replay",
+      "A0_SAMPLE_ONLY hardcoded SCOPE; not real tenant behavior",
+      "No real owner-issued registry/member/assignment/role provenance",
+      "No G9 or PG strict COMMIT readback",
+      "Never silently overwrite G9 fixture with D0 extension"
+    ]
+  },
+  "scope": {
+    "files_changed_in_product": 0,
+    "db_migrations": 0,
+    "API_changes": 0,
+    "CI_changes": 0,
+    "grants": 0,
+    "external_effects": 0,
+    "owner_promotion": false,
+    "actual_new_tests": 0
+  },
+  "progress": {
+    "D5_G7_previous": 42.5,
+    "D5_G7_current": 42.5,
+    "D5_G7_delta_pp": 0,
+    "D5_C_R8_previous": 50,
+    "D5_C_R8_current": 50,
+    "D5_C_R8_delta_pp": 0,
+    "Core_acceptance_previous": [
+      12,
+      16
+    ],
+    "Core_acceptance_current": [
+      12,
+      16
+    ],
+    "MVP_acceptance_previous": [
+      0,
+      11
+    ],
+    "MVP_acceptance_current": [
+      0,
+      11
+    ],
+    "acceptance_delta": 0,
+    "overall_development": "HESAPLANAMADI"
+  },
+  "blockers": [
+    "Exact common full checkout unavailable in this isolated execution environment",
+    "GATE01 fullchain not run",
+    "GATE02 owner version resolution and Store/Core original replay pending",
+    "PostgreSQL strict COMMIT and independent witness/security acceptance HOLD",
+    "Full W8 build/browser and product-dev promotion HOLD"
+  ],
+  "rollback": "Revert this governance-only commit; prior candidate refs and source byte identities retained; do not restore production DB or move product-dev/main.",
+  "links": {
+    "owner_candidate": "candidates/MI03-ASSIGNMENT-D0/CATALOG_AND_EVIDENCE.json",
+    "direct_evidence": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/T1_DIRECT_EVIDENCE.json",
+    "working_standard": "docs/master-integration/WORKING_STANDARD.md"
+  }
+}
