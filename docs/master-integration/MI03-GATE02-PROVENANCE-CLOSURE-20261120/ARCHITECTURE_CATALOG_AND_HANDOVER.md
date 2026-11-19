@@ -13,7 +13,7 @@
 | `app/core/iam_session.py :: D0SessionResolver, SessionClaimCheck` (G2) | Sealed D0 session bootstrap, agent session/revocation and two claim checks in local SQLite | No live owner issuance, D4 Request binding, ORG role or independent external custody; full old-DB+pin restoration residual |
 | `app/core/transaction/intent_authority.py :: claim_and_fence` (G2) | Local authority claim consumed before fence, IAM-mode guard | Original execution wrapper does not provide SessionClaimCheck. Protected T1 real commit and external sink fencing are unproven |
 | D4 disposable `00_roles.sql` | NOLOGIN, NOBYPASSRLS test roles for dedicated PG test cluster | No authenticated production IAM account/role granting |
-| D-03/D-04 independent authority design | Correct negative test and trust boundary matrix | Options A/B/C not ratified; no separate real authority installed |
+| D-03/D-04 independent authority design | Correct negative test and trust boundary matrix | Original design file gave unratified A/B/C options. Subsequently H01 selected **A architecture direction only** in canonical `decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md`; no separate real authority installed |
 
 ## Confirmed source-version incompatibility
 
@@ -36,16 +36,12 @@ P08 is an existing demonstrated security failure, not merely `NOT_RUN`: restorin
 
 ## Approved development path vs decision still required
 
-Reuse existing D4, Core `Member`, G2 `SessionClaimCheck`, ORG `AssignmentPin`, and T1 fence. Do **not** add a parallel IAM issuer. Before live implementation, approve an independent authority architecture from the already recorded D03/D04 options:
-
-- **Option A (design recommendation, NOT RATIFIED):** independently administered consensus-backed monotonic authority plus sink-side fencing and dedupe.
-- **Option B (not ratified):** independently enforced serialization and immutable external checkpoint, with explicit freshness and failover proof.
-- **Option C (current):** D0 diagnostics remain permanently HOLD and cannot execute or issue grants.
+Reuse existing D4, Core `Member`, G2 `SessionClaimCheck`, ORG `AssignmentPin`, and T1 fence. Do **not** add a parallel IAM issuer. **Architecture decision already made: H01 selected Option A (specification/direction only)** as recorded in canonical [ADR D-03/D-04](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/planning/master-integration-governance/decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md). Do **not** repeat the A/B/C user decision. Option A requires an independently administered, consensus-backed root and consumed-claim ledger, plus separate effect-sink freshness/fencing/idempotency. It is **not implemented**: provider, KMS, quorum, issuer, owner custody and sink remain unselected/unproven; independent acceptance **0/8**. Other options are not chosen, but **D0 HOLD is still the only permitted operational behavior**. A1 independent security owner/admin/restore contract review is next; A2–A5 source, negative tests, PG and IV remain HOLD.
 
 Strict high-level requirements: independently issued principal/registry/member/role/assignment evidence; same tenant/company/project/plan/task/run/agent/principal and policy/witness epochs; immutable key/issuer/custody identity, nonrollbackable latest root; session revocation/expiry rechecked within protected commit; fail-close on unknown; no alternative effect path. Preserve ownership and existing CI permissions.
 
 ## What/why/where/how; tests and rollback
 
-This audit makes **no product code, API, SQL, credential, CI workflow or central queue edit**. All 12 checks were exact GitHub source-marker inspections on listed blob pins. They are STATIC source matches, **not** twelve product tests. The **10/10 real Core+ORG D0 tests** remain separate previous evidence, not rerun here. G2 50/G9 7/Memory 0214 10; actual PG, native W8 and independent IV remain **NOT_RUN/HOLD**. IAM/ORG weighted historical progress 42.50 → 42.50 (0 pp). Core 12/16, MVP 0/11, independent security 0/7; overall percentage remains uncomputable without approved denominators.
+This audit makes **no product code, API, SQL, credential or CI workflow edit**. An additive non-authoritative review note may be recorded in the central queue without modifying operational security. All 12 checks were exact GitHub source-marker inspections on listed blob pins. They are STATIC source matches, **not** twelve product tests. The **10/10 real Core+ORG D0 tests** remain separate previous evidence, not rerun here. G2 50/G9 7/Memory 0214 10; actual PG, native W8 and independent IV remain **NOT_RUN/HOLD**. IAM/ORG weighted historical progress 42.50 → 42.50 (0 pp). Core 12/16, MVP 0/11, independent security 0/7; overall percentage remains uncomputable without approved denominators.
 
 Next action: owner review of exact G9/G2 conflict and independent issuer/custody selection, then controlled source integration and real fail-closed/revocation/restore trials; preserve raw logs and source manifests, obtain IV sign-off before any authority activation. If rejected, revert only these review records or close draft PR #6. Do not reset persisted consumed claims, bypass revocation, repin stale data or alter `integration/product-dev` / `main`.
