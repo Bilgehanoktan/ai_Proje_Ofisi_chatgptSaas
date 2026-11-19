@@ -1,0 +1,91 @@
+{
+  "revision": "MI03-A-SOURCE-ONLY-PR11-CI-20261120",
+  "user_scope": "User authorizes all controlled integration steps on 2026-11-20; independent security acceptance and product activation still require objective evidence",
+  "common_base": {
+    "branch": "integration/mi-common-source-review-01",
+    "sha": "59c0fc505ca286e681ed0965ee317eadf571a806",
+    "tree": "cb8fa2eed6be8416a1485d43a3a05b0768450b6d",
+    "product_tree": "617e1ca5f5b657d9fe8ad09017a60ecd47ce6bad",
+    "product_files": 539,
+    "manifest_entries": 538
+  },
+  "source": {
+    "branch": "integration/mi03-gate03-org-runtime-closure-01",
+    "sha": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+    "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "product_files": 553,
+    "manifest_entries": 552
+  },
+  "delta": {
+    "product_files_added": 14,
+    "original_product_files_modified": 0,
+    "original_product_files_removed": 0,
+    "retained_manifest_entries": 538,
+    "manifest_entries_added": 14,
+    "manifest_entries_modified": 0,
+    "product_tree_is_byte_exact_owner": true
+  },
+  "execution": {
+    "ci_pr": 11,
+    "run_id": 44628704044,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44628704044",
+    "status": "completed",
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "python": "3.13.5",
+    "sqlite": "3.45.1",
+    "manifest_source_sha256": "552/552 PASS",
+    "original_package_smoke": "4/4 PASS",
+    "original_sql_regression": "11/11 PASS",
+    "selected_test_total": "15/15 PASS",
+    "failed": 0,
+    "skipped": 0,
+    "scope": "actual pinned D0 SQLite on original owner product Git tree; no trusted issuance"
+  },
+  "checks": {
+    "source_blob_sha256_and_bytes": 14,
+    "source_blob_expected": 14,
+    "g9_durable_extension": {
+      "original_lines": 162,
+      "preserved": 162,
+      "new_lines": 41,
+      "deleted": 0
+    },
+    "authority_g2_collision": "OPEN owner ratification",
+    "owner_confirmation": "H01 source-only authorization; independent Security/ORG/G2/G9 product security owner technical acceptance NOT ESTABLISHED"
+  },
+  "security": {
+    "decision": "D-03/D-04 A selected architecture",
+    "independent_authority_implemented": false,
+    "actual_owner_issuer": false,
+    "real_effect_sink_implemented": false,
+    "protected_pg_commit": "NOT_RUN",
+    "G2_original_50": "NOT_RUN",
+    "G9_original_7": "NOT_RUN",
+    "Memory_T1_original_10": "NOT_RUN",
+    "independent_negative_tests": [
+      0,
+      8
+    ],
+    "independent_security_acceptance": "HOLD",
+    "runtime_grants": false,
+    "external_effects": false
+  },
+  "product_dev": {
+    "branch": "integration/product-dev",
+    "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "changed": false
+  },
+  "main_untouched": true,
+  "ci_added_to_this_branch": false,
+  "no_deploy": true,
+  "normal_revert": true,
+  "refs": {
+    "ingress_pr": 9,
+    "source_only_promotion_pr": "PENDING",
+    "packaging_ci_pr": 11,
+    "report": "progress/MASTER_INTEGRATION_CURRENT.json",
+    "catalog": "docs/master-integration/MI03-A-SOURCE-ONLY-INTEGRATION-20261120/TECHNICAL_DELTA.json",
+    "handover": "docs/master-integration/MI03-A-SOURCE-ONLY-INTEGRATION-20261120/ARCHITECTURE_HANDOVER.md"
+  }
+}

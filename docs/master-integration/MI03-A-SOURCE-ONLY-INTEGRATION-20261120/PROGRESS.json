@@ -1,0 +1,40 @@
+{
+  "revision": "MI03-A-SOURCE-ONLY-PR11-CI-20261120",
+  "standard": "DESIGN 15 SOURCE 35 FUNCTIONAL 20 INTEGRATION 20 ACCEPTANCE 10",
+  "development_iam_org_percent_previous": 42.5,
+  "development_iam_org_percent_current": 42.5,
+  "delta_pp": 0,
+  "global_development_previous": null,
+  "global_development_current": null,
+  "reason": "Ratified global denominators missing",
+  "product_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ],
+    "delta_pp": 0
+  },
+  "evidence_update": {
+    "original_package_smoke": "0/4 NOT_RUN => 4/4 actual PASS",
+    "original_sql": "11/11 historical => 11/11 actual GitHub CI repeated",
+    "manifest": "552/552 source SHA/byte CI PASS",
+    "is_full_build": false
+  },
+  "source_status": "ISOLATED_SOURCE_TREE_TRANSFER_ONLY",
+  "owner_review": "G9/G2/Unified SECURITY HOLD",
+  "next": [
+    "verify exact candidate product git tree equals owner",
+    "source-only draft PR to common for controlled review",
+    "no unvalidated product-dev merge",
+    "perform original owner G9/G2/Memory-T1 and full W8 separately after actual owner/pinned dependency review"
+  ],
+  "rollback": "normal isolated commit revert; untouched main/product-dev"
+}
