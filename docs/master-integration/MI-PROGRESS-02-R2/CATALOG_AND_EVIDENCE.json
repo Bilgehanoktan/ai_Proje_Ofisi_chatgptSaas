@@ -1,0 +1,122 @@
+{
+  "revision": "MI-PROGRESS-02-R2",
+  "coverage": {
+    "groups_triaged": [
+      10,
+      10
+    ],
+    "modules_triaged": [
+      63,
+      63
+    ],
+    "technical_areas_reviewed_draft": [
+      24,
+      24
+    ],
+    "critical_modules_refined": 31,
+    "critical_stage_slots_refined": 155,
+    "unique_related_product_paths": 85,
+    "source_header_symbol_inspected": 12,
+    "modules_related_paths": 56,
+    "modules_evidence_links": 58,
+    "evidence_records": 23,
+    "unlocated_path_leads": 0,
+    "approved_groups": [
+      0,
+      10
+    ],
+    "scoreable_criteria": 0,
+    "noncritical_modules_refined": 32,
+    "noncritical_stage_slots_refined": 160,
+    "total_modules_refined": [
+      63,
+      63
+    ],
+    "total_stage_slots_refined": [
+      315,
+      315
+    ],
+    "prior_evidence_blob_readback": [
+      22,
+      22
+    ],
+    "mvp_criteria_crosswalk": [
+      11,
+      11
+    ]
+  },
+  "classification": "REPORTING_ONLY",
+  "structural_checks": [
+    {
+      "id": "all_63_and_315_ids_preserved",
+      "pass": true
+    },
+    {
+      "id": "all_315_draft_refined",
+      "pass": true
+    },
+    {
+      "id": "remaining_32_unique",
+      "pass": true
+    },
+    {
+      "id": "no_scores",
+      "pass": true
+    },
+    {
+      "id": "no_weight_change",
+      "pass": true
+    },
+    {
+      "id": "23_evidence_ids",
+      "pass": true
+    },
+    {
+      "id": "MVP_trace_only",
+      "pass": true
+    },
+    {
+      "id": "no_duplicate_crosscut",
+      "pass": true
+    },
+    {
+      "id": "featuregate_no_false_source",
+      "pass": true
+    },
+    {
+      "id": "overlay_not_applied",
+      "pass": true
+    }
+  ],
+  "evidence_readback": {
+    "R1": [
+      22,
+      22
+    ],
+    "added_overlay": {
+      "ref": "698462862c86cd673abf73acf72ff6c6475f95a8",
+      "path": "docs/master-integration/MI04-GATE01-04-EXACT-OVERLAY-REVIEW/CATALOG_AND_EVIDENCE.json",
+      "blob": "395b7ac2ff17c62d61969bcf4b865e5f05801bb9"
+    }
+  },
+  "source_correction": {
+    "path": "product/ai-company-os-backend/app/demo_policy.py",
+    "blob": "03db51b35e436b5cb4f194b2c3caec51b212ebef",
+    "reason": "Actual file is a synthetic authority projection, explicitly NOT enforcement/authorization; prior core/demo_policy.py candidate path typo corrected; not a featuregate implementation and not credited."
+  },
+  "product_changes": 0,
+  "new_product_tests": 0,
+  "api_db_event_dependency_changes": 0,
+  "acceptance_delta": 0,
+  "owner_scores_unchanged": true,
+  "prior_matrix": "progress/MI_PROGRESS_02_R1_EVIDENCE_AND_CRITERIA.json",
+  "current_matrix": "progress/MI_PROGRESS_02_R2_COMPLETE_DRAFT_AND_MVP_TRACE.json",
+  "runbook": "docs/master-integration/MI-PROGRESS-02-R2/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+  "limitations": [
+    "Draft criteria not owner approved or exhaustive; no completion percentage.",
+    "539 source candidate remains unbuilt; 550 only proposed; no actual product-source transfer in this reporting turn.",
+    "Seven modules have no dedicated mapped common product source; absence in selected mapping not proof of absence on every owner branch.",
+    "R1 source header review and 22 exact evidence readback; no full byte checkout or test rerun."
+  ],
+  "rollback": "Revert only R2 reporting delta after reviewing latest head; R1 and all previous evidence retained."
+}

@@ -1,6 +1,6 @@
 {
-  "revision": "MI-PROGRESS-02-R1",
-  "status": "ALL_10_GROUPS_EVIDENCE_TRIAGED_CRITICAL_CRITERIA_REFINED_NOT_FROZEN",
+  "revision": "MI-PROGRESS-02-R2",
+  "status": "ALL_315_DRAFT_CRITERIA_REFINED_OWNER_FREEZE_PENDING",
   "total": 100,
   "groups": [
     {
@@ -43,7 +43,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review triage and residual crosscut scope; then refine/freeze criteria"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 5
       }
     },
     {
@@ -85,7 +87,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review triage and residual crosscut scope; then refine/freeze criteria"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 10
       }
     },
     {
@@ -129,7 +133,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review triage and residual crosscut scope; then refine/freeze criteria"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 10
       }
     },
     {
@@ -175,7 +181,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review refined source/test/integration boundaries; owner confirm complete criteria and evidence scope"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 15
       }
     },
     {
@@ -220,6 +228,7 @@
           "MI03-04",
           "ORG",
           "ORG-SKILL",
+          "OVERLAY",
           "PROJECTION",
           "R9"
         ],
@@ -230,7 +239,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review refined source/test/integration boundaries; owner confirm complete criteria and evidence scope"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 40
       }
     },
     {
@@ -277,7 +288,8 @@
           "MEM-E",
           "MEM-T1",
           "MODEL-MEM",
-          "ORG-SKILL"
+          "ORG-SKILL",
+          "OVERLAY"
         ],
         "technical_area_ids": [
           9,
@@ -289,7 +301,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review triage and residual crosscut scope; then refine/freeze criteria"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 40
       }
     },
     {
@@ -332,6 +346,7 @@
           "MEM-T1",
           "MI03-04",
           "MODEL-MEM",
+          "OVERLAY",
           "R9"
         ],
         "technical_area_ids": [
@@ -342,7 +357,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review refined source/test/integration boundaries; owner confirm complete criteria and evidence scope"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 25
       }
     },
     {
@@ -397,6 +414,7 @@
           "MEM-T1",
           "MI03-04",
           "MODEL-MEM",
+          "OVERLAY",
           "R9",
           "U3A",
           "UI"
@@ -409,7 +427,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review refined source/test/integration boundaries; owner confirm complete criteria and evidence scope"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 75
       }
     },
     {
@@ -472,7 +492,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review triage and residual crosscut scope; then refine/freeze criteria"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 55
       }
     },
     {
@@ -534,7 +556,9 @@
         "current": null,
         "delta": null,
         "denominator_status": "OWNER_REVIEW_AND_FREEZE_PENDING",
-        "next": "Review triage and residual crosscut scope; then refine/freeze criteria"
+        "next": "Owner reviews complete scope, residual technical coverage and criterion denominators; confirm exact proof after freeze; no scoring until approved.",
+        "all_slots_refined": true,
+        "refined_slots": 40
       }
     }
   ],
@@ -546,7 +570,7 @@
     "acceptance": 10
   },
   "overall_percent": null,
-  "reason": "All 63 modules and 24 technical areas triaged, 155 critical stage criteria refined, but owner-approved exhaustive denominators and weights not frozen.",
+  "reason": "All 63/315 draft stage slots refined, 24 residual coverage rows and 11 MVP trace; no exhaustive owner-approved criterion denominator or group weights frozen.",
   "coverage": {
     "tracker_areas": [
       24,
@@ -574,9 +598,21 @@
       31,
       31
     ],
-    "critical_stage_slots_refined": 155
+    "critical_stage_slots_refined": 155,
+    "total_modules_refined": [
+      63,
+      63
+    ],
+    "total_stage_slots_refined": [
+      315,
+      315
+    ],
+    "mvp_criteria_crosswalk": [
+      11,
+      11
+    ]
   },
-  "previous_revision": "MI-PROGRESS-02",
+  "previous_revision": "MI-PROGRESS-02-R1",
   "scope_and_criteria": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
-  "evidence_review": "progress/MI_PROGRESS_02_R1_EVIDENCE_AND_CRITERIA.json"
+  "evidence_review": "progress/MI_PROGRESS_02_R2_COMPLETE_DRAFT_AND_MVP_TRACE.json"
 }
