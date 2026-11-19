@@ -1,0 +1,33 @@
+{
+  "revision": "MI03-GATE02-CORE-ORIGINAL-RUNNER-PREP-01",
+  "integrated_product_files_modified": 0,
+  "test_delivery": "7-file ZIP only: source code uploaded to this chat, not owner GitHub branch",
+  "source_sha256": "46d47a27b367e0d8b6ed9d59d1d832df4627af9594444e21faa64bb5df77d5b2",
+  "runner_sha256": "cf671fe10e4deb936fd4be99c960af756ba9545067486299ac64c4807a05670f",
+  "source_pin_sha256": "87e78229c8c52801447f65499adb3188b5e931514311e93c61d4025e4380b390",
+  "symbols": [
+    "ResearchFixture",
+    "ResearchSliceReview",
+    "inspect_research_slice",
+    "RunHistoryPin",
+    "OperationsStore.record_assignment_review",
+    "OperationsStore.assignment_review",
+    "SQLiteCursorShim",
+    "AssignmentPin"
+  ],
+  "new_tests": [
+    "original Core positive synthetic ACCEPTED_D0 remains HOLD",
+    "wrong Core project no-write",
+    "wrong Core intent version no-write",
+    "wrong Core membership no-write"
+  ],
+  "dependencies": [
+    "Original Core 0224 source + plan_history reader",
+    "ORG G8 41-line owner-only additive OperationsStore",
+    "7 original SQL DDL 0192–0204C",
+    "cryptography 46.0.4, Python3.13.5, SQLite3.46.1"
+  ],
+  "db_api_event_changes": 0,
+  "safety": "HOLD",
+  "actual_run": "NOT_RUN"
+}
