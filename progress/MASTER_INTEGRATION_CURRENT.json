@@ -3343,7 +3343,7 @@
       "owner_role": "QA / IV / CI",
       "source_ref": "planning/project-wide-progress-reporting",
       "observed_sha": "f10f8c70dea3804fc2dc48c5b8b4dcfd43d96788",
-      "next": "Draft PR #4 limited contents:read CI run 44613960595 3/3 jobs PASS: exact W8 source audit538 + lock61; real Next build/typecheck; original 42 D0 SQLite; U3 Playwright SSE-compatible browser on real D0 SQLite FastAPI with 5 screenshots. Native original Chromium SSE CDP response-text FAIL and formal full W8 audited chain NOT_RUN. Real IAM-ORG-T1 protected PG/3DB commit, remaining Memory/T1 10, GATE02 assignment owner and independent IV HOLD; product-dev/main untouched.",
+      "next": "MI-10 scoped CI PR #4 latest 44614849105 3/3 PASS on head 3b0730: source 538/538; Next build/typecheck; original 42/42 SQLite regression; same-response SSE-compatible Chromium U3 with actual FastAPI and 5 screenshots. Native Chromium CDP SSE body remains FAIL; full formal W8 pipeline NOT_RUN, real IAM/ORG/T1 protected PG/three DB and 10 Memory/T1 owner HOLD. Product-dev and main unchanged. Owner review of PR before any promotion; CI PR stays draft.",
       "priority": "P1",
       "status": "SCOPED_PR_CI_SELECTED_D0_PASS_NATIVE_SSE_AND_GUARDED_PG_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -3584,10 +3584,10 @@
         "branch": "integration/mi10-limited-ci-20261119",
         "draft": true,
         "do_not_merge": true,
-        "tested_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+        "tested_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
         "document_revision_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
         "pinned_product_sha": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
-        "run": 44613960595,
+        "run": 44614849105,
         "three_jobs": [
           3,
           3
@@ -3617,7 +3617,7 @@
         "browser": "SSE_COMPATIBLE_FLOW_PASS",
         "browser_original_native_cdp": "KNOWN_FAIL",
         "screenshots": 5,
-        "artifact_id": 14573164214,
+        "artifact_id": 14573758241,
         "artifact_bytes": 1440083,
         "formal_full_W8": "NOT_RUN",
         "guarded_iam_org_t1_postgresql": "NOT_RUN",
@@ -3629,7 +3629,15 @@
         "development_percent": null,
         "evidence": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
         "catalog": "docs/master-integration/MI-10-LIMITED-CI-20261119/TECHNICAL_CATALOG.json",
-        "handover": "docs/master-integration/MI-10-LIMITED-CI-20261119/ARCHITECTURE_AND_HANDOVER.md"
+        "handover": "docs/master-integration/MI-10-LIMITED-CI-20261119/ARCHITECTURE_AND_HANDOVER.md",
+        "previous_successful_run_id": 44613960595,
+        "previous_tested_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+        "job_ids": [
+          135880650580,
+          135880869773,
+          135880869828
+        ],
+        "log_replay_no_new_methods": true
       },
       "mi_common_05_local_checkout": {
         "revision": "MI-COMMON-05-LOCAL-CHECKOUT",
@@ -4860,10 +4868,10 @@
     "branch": "integration/mi10-limited-ci-20261119",
     "draft": true,
     "do_not_merge": true,
-    "tested_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+    "tested_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
     "document_revision_sha": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
     "pinned_product_sha": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
-    "run": 44613960595,
+    "run": 44614849105,
     "three_jobs": [
       3,
       3
@@ -4893,7 +4901,7 @@
     "browser": "SSE_COMPATIBLE_FLOW_PASS",
     "browser_original_native_cdp": "KNOWN_FAIL",
     "screenshots": 5,
-    "artifact_id": 14573164214,
+    "artifact_id": 14573758241,
     "artifact_bytes": 1440083,
     "formal_full_W8": "NOT_RUN",
     "guarded_iam_org_t1_postgresql": "NOT_RUN",
@@ -4906,8 +4914,16 @@
     "evidence": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
     "catalog": "docs/master-integration/MI-10-LIMITED-CI-20261119/TECHNICAL_CATALOG.json",
     "handover": "docs/master-integration/MI-10-LIMITED-CI-20261119/ARCHITECTURE_AND_HANDOVER.md",
+    "previous_successful_run_id": 44613960595,
+    "previous_tested_sha": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+    "job_ids": [
+      135880650580,
+      135880869773,
+      135880869828
+    ],
+    "log_replay_no_new_methods": true,
     "owner_review": "PENDING",
-    "rollback": "Close PR/revert, do not promote common candidate"
+    "rollback": "Close draft PR #4 or normal revert only; no product-dev merge"
   },
   "mi_common_05_local_checkout": {
     "revision": "MI-COMMON-05-LOCAL-CHECKOUT",
