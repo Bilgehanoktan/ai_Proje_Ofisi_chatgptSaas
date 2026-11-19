@@ -1,5 +1,5 @@
 {
-  "revision": "MI-01-U3B-REMOTE-PREFLIGHT",
+  "revision": "MI-03-04-UNION-REGRESSION-READBACK",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -115,11 +115,11 @@
       "owner_role": "T1 / IAM / ORG",
       "source_ref": "workstream/0230-d5g7-core-org-readback-hardening",
       "observed_sha": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
-      "next": "Master Integration with D4/T1/Unified: reconcile MI-03 and MI-04 existing source deltas (zero overlapping product code), one manifest + Design Master, reviewed W8 fingerprint and full build before promotion. Retain G9 actual seven, G2 50 and R8/G6A owner tests. Actual active assignment/role and joint publisher/commit HOLD.",
+      "next": "Retain exact combined MI03/04 candidate; coordinate D4/T1/Unified owner review, shared build candidate and W8 fingerprint. For next IAM transfer use existing MI04 source plan; active assignment/role owner G8, explicit protected entry disposition, exact G9/G2 owner regressions remain separate.",
       "priority": "P0",
       "status": "READONLY_CANDIDATE_READY_OWNER_REVIEW_PENDING",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "G7 19/19 + 13/13 historical; common-base two exact pure review modules, 9/9 common dependency pins, 15/15 local supplemental pins; original 41/41 + product replay 41/41 (same methods); 506/506 manifest path/size. G9 actual seven BLOCKED. D5-G 42.5% unchanged.",
+      "evidence": "G7 19/19 + 13/13 historical; common-base two exact pure review modules, 9/9 common dependency pins, 15/15 local supplemental pins; original 41/41 + product replay 41/41 (same methods); 506/506 manifest path/size. G9 actual seven BLOCKED. D5-G 42.5% unchanged.; published MI03/04 combined candidate independently read back: 16/16 selected exact pins, 46/46 original D4/D5/R7 together; single manifest 507/507, 508 files; no unique new methods or acceptance.",
       "previous_status": "HOLD_OWNER_CONTRACT",
       "transfer_candidate": {
         "ref": "integration/mi-03-r2-readonly-identity",
@@ -156,7 +156,34 @@
       "combined_review_reference": {
         "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
         "ref": "integration/mi-04-transport-source-transfer",
-        "scope": "two exact MI03 pure modules included, owner evidence retained, no owner ratification or product-dev promotion"
+        "scope": "two exact MI03 pure modules included, owner evidence retained, no owner ratification or product-dev promotion",
+        "selected_union_replay": {
+          "ref": "integration/mi-04-transport-source-transfer",
+          "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+          "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+          "source_parent": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+          "mi03_source": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+          "manifest_blob": "23e98d57fadcf8931ab54e5f04de1aa5894d77a1",
+          "manifest_entries": 507,
+          "product_files": 508,
+          "selected_regression": [
+            46,
+            46
+          ],
+          "pins": [
+            16,
+            16
+          ],
+          "new_unique_methods": 0,
+          "scope": "source-only union; selected exact closure PASS; not full build or protected chain",
+          "evidence": "docs/master-integration/MI-03-04-UNION/EVIDENCE.json",
+          "owner_catalog": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_CATALOG.json",
+          "owner_contract_plan": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_SOURCE_PLAN.json",
+          "owner_review": "PENDING",
+          "full_build": "NOT_RUN",
+          "product_dev_promotion": false,
+          "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+        }
       }
     },
     {
@@ -168,7 +195,7 @@
       "priority": "P0",
       "status": "COMBINED_REVIEW_CANDIDATE_READY_PROTECTED_CONTRACT_OWNER_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
-      "evidence": "Exact MI03 two pure review modules added, historical auxiliary tests and evidence preserved; 507/507 manifest path/size. G6A/R7 exact local trial 11/11 (6+5) on 11 pins, G6A legacy equals G7 except appended separate gate and typing import. Authority NOT transferred; source plan 56 G7 refs (26 base, 2 transferred, 1 divergent, 27 absent). R8 17/53 and R9 10/10 prior unchanged.",
+      "evidence": "Exact MI03 two pure review modules added, historical auxiliary tests and evidence preserved; 507/507 manifest path/size. G6A/R7 exact local trial 11/11 (6+5) on 11 pins, G6A legacy equals G7 except appended separate gate and typing import. Authority NOT transferred; source plan 56 G7 refs (26 base, 2 transferred, 1 divergent, 27 absent). R8 17/53 and R9 10/10 prior unchanged.; central supplemental actual combined D4/D5/R7 46/46, 16/16 published exact pins; no new unique tests/gates.",
       "previous_status": "TRANSPORT_CANDIDATE_READY_OWNER_REVIEW_PENDING_CONTRACT_HOLD",
       "transfer_candidate": {
         "ref": "integration/mi-04-transport-source-transfer",
@@ -197,7 +224,34 @@
         },
         "owner_review": "PENDING",
         "full_build": "NOT_RUN",
-        "rollback": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8"
+        "rollback": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+        "combined_selected_regression": {
+          "ref": "integration/mi-04-transport-source-transfer",
+          "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+          "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+          "source_parent": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+          "mi03_source": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+          "manifest_blob": "23e98d57fadcf8931ab54e5f04de1aa5894d77a1",
+          "manifest_entries": 507,
+          "product_files": 508,
+          "selected_regression": [
+            46,
+            46
+          ],
+          "pins": [
+            16,
+            16
+          ],
+          "new_unique_methods": 0,
+          "scope": "source-only union; selected exact closure PASS; not full build or protected chain",
+          "evidence": "docs/master-integration/MI-03-04-UNION/EVIDENCE.json",
+          "owner_catalog": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_CATALOG.json",
+          "owner_contract_plan": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_SOURCE_PLAN.json",
+          "owner_review": "PENDING",
+          "full_build": "NOT_RUN",
+          "product_dev_promotion": false,
+          "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+        }
       },
       "development_percent": null,
       "acceptance_delta": 0,
@@ -390,9 +444,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.",
-  "next": "MI-01 connected exact source checkout, W8 audit/prepare and fresh review fingerprint; no duplicate prototypes. Other MI tasks preserve prior queue/owners.",
-  "previous_revision": "MI-03-04-COMMON-REVIEW",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.",
+  "next": "MI-01 connected exact source checkout, W8 audit/prepare and fresh review fingerprint; no duplicate prototypes. Other MI tasks preserve prior queue/owners. MI03/04 single-manifest source union verified and 46 selected tests passed; no duplicate branch. Central owner next reviews existing MI01/MI07-08 with union, and D4/IAM/T1 owners close resolver/Authority source contract before any transfer.",
+  "previous_revision": "MI-01-U3B-REMOTE-PREFLIGHT",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -452,6 +506,33 @@
     "catalog_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/CATALOG.json",
     "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
     "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
+    "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "mi03_04_joint_readback": {
+    "ref": "integration/mi-04-transport-source-transfer",
+    "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "source_parent": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+    "mi03_source": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+    "manifest_blob": "23e98d57fadcf8931ab54e5f04de1aa5894d77a1",
+    "manifest_entries": 507,
+    "product_files": 508,
+    "selected_regression": [
+      46,
+      46
+    ],
+    "pins": [
+      16,
+      16
+    ],
+    "new_unique_methods": 0,
+    "scope": "source-only union; selected exact closure PASS; not full build or protected chain",
+    "evidence": "docs/master-integration/MI-03-04-UNION/EVIDENCE.json",
+    "owner_catalog": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_CATALOG.json",
+    "owner_contract_plan": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_SOURCE_PLAN.json",
+    "owner_review": "PENDING",
+    "full_build": "NOT_RUN",
+    "product_dev_promotion": false,
     "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
   }
 }

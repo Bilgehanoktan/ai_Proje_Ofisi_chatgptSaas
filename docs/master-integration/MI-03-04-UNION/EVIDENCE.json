@@ -1,0 +1,133 @@
+{
+  "revision": "MI-03-04-UNION-REGRESSION-READBACK",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_COMBINED_SELECTED_ORIGINAL_TEST_REPLAY_AND_PUBLISHED_UNION_READBACK",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source_siblings": {
+    "mi03": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+    "mi04_parent": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8"
+  },
+  "combined_candidate": {
+    "ref": "integration/mi-04-transport-source-transfer",
+    "sha": "3809061926b5a1ddbe8bda84af77e5545d5ecda2"
+  },
+  "governance_parent": "140ec428d609f9607382f6425f17432faf316e44",
+  "source_author": "Existing MI-04 owner published same union concurrently; no duplicate branch created in this review.",
+  "branch_count_observed": 261,
+  "selected_product": {
+    "product/ai-company-os-backend/app/core/transaction/identity_binding.py": {
+      "sha": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
+    "product/ai-company-os-backend/app/core/transaction/intent_identity.py": {
+      "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
+    },
+    "product/ai-company-os-backend/app/core/transaction/postgres_session.py": {
+      "sha": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "bytes": 3677,
+      "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
+    },
+    "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py": {
+      "sha": "c7a03aaadd1660e723b21c789dfa0744ac3721cb",
+      "bytes": 2529,
+      "sha256": "dc7667d10e1836a9bac08a9212bf96ae608f6ac8ef3e38f42a5d60c46595445d"
+    }
+  },
+  "manifest": {
+    "blob": "23e98d57fadcf8931ab54e5f04de1aa5894d77a1",
+    "previous_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+    "previous_entries": 504,
+    "current_entries": 507,
+    "product_files": 508,
+    "previous_product_files": 505,
+    "prior_nonmanifest_exact": 503,
+    "prior_manifest_entries_exact": 503,
+    "modified_source": 1,
+    "added_source_or_test": 3,
+    "all_path_size": [
+      507,
+      507
+    ],
+    "extra_unlisted_product": 0,
+    "deleted_base_paths": 0,
+    "missing_added_owner_evidence": 0,
+    "selected_local_sha256": [
+      4,
+      4
+    ],
+    "scope": "Entire remote tree path/size and Git blob comparison, four transferred local SHA256; not full product byte rehash or checkout."
+  },
+  "selected_regression": {
+    "command": "python -B docs/master-integration/MI-03-04-UNION/run_selected.py",
+    "python": "3.13.5",
+    "isolation": "fresh temporary 16-blob closure; single -I -S -B Python child",
+    "pins": [
+      16,
+      16
+    ],
+    "published_candidate_pin_match": [
+      16,
+      16
+    ],
+    "suites": {
+      "D4": [
+        22,
+        22
+      ],
+      "D5": [
+        19,
+        19
+      ],
+      "R7": [
+        5,
+        5
+      ]
+    },
+    "pass": 46,
+    "total": 46,
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "unique_new_methods": 0,
+    "runner_blob": "095c88df0d2059328c1b88b24f596205cf828e4a",
+    "runner_sha256": "d856ccd8c9130581f96bdf7f1be9ef1c28c29d61f713ee63a6e76c21d4ed4571",
+    "source_pins_blob": "40c1656066bb1752f513fadcabd76758f4f2b478",
+    "source_pins_sha256": "b7a4255980b765f689ecd87e7a6581079b773a4ca509e8f5cf8af573fa2a75c2",
+    "log_blob": "3796c4d17ac2a415344b729391c5296824e94a08",
+    "log_sha256": "306245d5f93c5c303ceec38636c89b690acd7ac961f0027579e372ad4e048e2c",
+    "scope": "Actual product-qualified identity, intent and strict transport modules imported together, original test modules unchanged, historical import aliases only in runner. R7 mock transport controls not real PostgreSQL or actual protected caller."
+  },
+  "other_evidence": {
+    "owner_11": "G6A+R7 local substitution on owner branch, not part of delivered combined authority and not counted as 11 additional unique tests",
+    "owner_contract_plan_blob": "d4778ae126edd73e53f07cfab6c57da20eaf1928",
+    "original_w8_u3a_changed_paths": 0
+  },
+  "scope_limits": [
+    "Full checkout/build/browser/W8 NOT_RUN; owner-reviewed fingerprint rebind pending",
+    "Existing Authority and port unchanged, IAM resolver/ORG readers not included",
+    "No active assignment, owner-issued role/registry proof, joint publisher, positive strict COMMIT, real PostgreSQL or independent acceptance",
+    "G9 seven, G2 50, R8 remaining 36, G6A 19 outstanding"
+  ],
+  "development": {
+    "D5G_previous": 42.5,
+    "D5G_current": 42.5,
+    "delta_pp": 0,
+    "new_gates": 0
+  },
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  },
+  "activation": "HOLD"
+}

@@ -1,0 +1,46 @@
+{
+  "revision": "MI-03-04-UNION-REGRESSION-READBACK",
+  "candidate": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+  "scope": "central exact source delta reference; no new product source in this governance commit",
+  "selected_files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "sha": "e1e977880324664bb359eee3286223a796878f44",
+      "bytes": 5178,
+      "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_identity.py",
+      "sha": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+      "bytes": 3393,
+      "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "sha": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "bytes": 3677,
+      "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py",
+      "sha": "c7a03aaadd1660e723b21c789dfa0744ac3721cb",
+      "bytes": 2529,
+      "sha256": "dc7667d10e1836a9bac08a9212bf96ae608f6ac8ef3e38f42a5d60c46595445d"
+    }
+  ],
+  "catalog_refs": [
+    {
+      "commit": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+      "path": "candidates/MI-03-R2/CATALOG.json"
+    },
+    {
+      "commit": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+      "path": "docs/master-integration/MI-04-TRANSPORT-TRANSFER/CONTRACT_CATALOG.json"
+    }
+  ],
+  "new_product_files_in_governance": 0,
+  "new_engine": 0,
+  "new_db_api_dependencies": 0,
+  "runner": "docs/master-integration/MI-03-04-UNION/run_selected.py",
+  "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+}
