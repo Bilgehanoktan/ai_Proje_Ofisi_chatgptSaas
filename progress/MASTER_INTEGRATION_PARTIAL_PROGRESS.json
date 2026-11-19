@@ -1,5 +1,5 @@
 {
-  "revision": "MI-07-08-JOINT-TRANSFER-01",
+  "revision": "MI-03-04-COMMON-REVIEW",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.",
   "new_product_tests": 0,
-  "previous_revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
+  "previous_revision": "MI-07-08-JOINT-TRANSFER-01",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -393,5 +393,29 @@
     "runbook_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md",
     "progress_path": "docs/master-integration/MI-07-08-JOINT-TRANSFER/PROGRESS.json",
     "rollback": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+  },
+  "mi04_contract_review": {
+    "source": "3809061926b5a1ddbe8bda84af77e5545d5ecda2",
+    "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "selected_trial": {
+      "pass": 11,
+      "total": 11,
+      "pins": [
+        11,
+        11
+      ],
+      "new_unique_methods": 0
+    },
+    "scope": "G6A authority and R7 repeated selected controls on exact shared-base dependencies; not delivered product authority; no actual IAM/ORG/fullchain/PG",
+    "combined_review": {
+      "manifest_entries": 507,
+      "product_files": 508,
+      "mi03_exact_modules": 2,
+      "owner_review": "PENDING",
+      "full_build": "NOT_RUN"
+    },
+    "previous_weighted": null,
+    "current_weighted": null,
+    "acceptance_delta": 0
   }
 }
