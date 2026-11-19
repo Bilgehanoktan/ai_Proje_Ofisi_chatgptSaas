@@ -1,0 +1,191 @@
+{
+  "revision": "MI-P0-CTL01-G9-MANIFEST-PIN-READBACK-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_GITHUB_IMMUTABLE_BLOB_AND_MANIFEST_COMPARISON_NO_TEST_OR_AUTHORIZATION",
+  "canonical": {
+    "product_dev": {
+      "branch": "integration/product-dev",
+      "head": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "changed": false,
+      "product_files": 505,
+      "manifest_entries": 504
+    },
+    "common": {
+      "head": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+      "product_files": 539,
+      "manifest_entries": 538,
+      "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f"
+    },
+    "org_candidate": {
+      "head": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+      "product_files": 553,
+      "manifest_entries": 552,
+      "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+    }
+  },
+  "source_compare": {
+    "historical": {
+      "ref": "planning/0230-d5g9-exact-three-store-checkout",
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "line_count_including_final_blank": 162
+    },
+    "owner_additive": {
+      "ref": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "line_count_including_final_blank": 203
+    },
+    "org_packaged": {
+      "ref": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+      "path": "product/ai-company-os-backend/durable_ops.py",
+      "blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e"
+    },
+    "change_class": "LCS_ADD_ONLY",
+    "inserted_lines": 41,
+    "deleted_or_replaced_lines": 0,
+    "blocks": [
+      {
+        "new_start": 25,
+        "new_end": 33,
+        "added_lines": 9,
+        "functions": [
+          "initialize_assignment_ops"
+        ]
+      },
+      {
+        "new_start": 151,
+        "new_end": 182,
+        "added_lines": 32,
+        "functions": [
+          "OperationsStore.record_assignment_review",
+          "OperationsStore.assignment_review"
+        ]
+      }
+    ],
+    "new_dependency": {
+      "path": "product/ai-company-os-backend/assignment_lifecycle.py",
+      "blob": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+      "symbols": [
+        "AssignmentPin",
+        "append_decision",
+        "inspect_assignment",
+        "verify_core_reference"
+      ]
+    },
+    "owner_decision": "HOLD_NOT_RATIFIED"
+  },
+  "manifest_compare": {
+    "existing_metadata_records_unchanged": 538,
+    "new_records": 14,
+    "deleted_records": 0,
+    "modified_existing_metadata_records": 0,
+    "actual_sha256_bytes_individually_recomputed_this_turn": false,
+    "existing_product_blob_changed_only": "product/SOURCE_MANIFEST.json",
+    "approved": false
+  },
+  "owner_queue": [
+    {
+      "id": "CTL-01.A",
+      "owner": "ORG/G9, MI-03, MI-04",
+      "subject": "historical vs additive durable_ops +41-line decision",
+      "status": "HOLD_OWNER_DECISION"
+    },
+    {
+      "id": "CTL-01.B",
+      "owner": "MI-01/W8, ORG/Core",
+      "subject": "552-entry manifest, 14-source transitive closure, build/lock",
+      "status": "HOLD_OWNER_RATIFICATION"
+    },
+    {
+      "id": "CTL-01.C",
+      "owner": "MI-02/03/06, D4/ORG/IAM",
+      "subject": "Option A admin/root/sink issuer and restore",
+      "status": "HOLD_REAL_AUTHORITY"
+    },
+    {
+      "id": "CTL-01.D",
+      "owner": "Master Integration and product owners",
+      "subject": "controlled source promotion with independent evidence and permission",
+      "status": "HOLD_NO_PROMOTION"
+    }
+  ],
+  "evidence_reuse": {
+    "original_core_ops_ci": {
+      "passed": 10,
+      "total": 10,
+      "run_id": 44620141705,
+      "classification": "PREVIOUS_D0_SQLITE_NOT_RERUN"
+    },
+    "original_t1_selected": {
+      "passed": 42,
+      "total": 42,
+      "classification": "PREVIOUS_D0_NOT_RERUN"
+    },
+    "fresh_tests_this_round": 0,
+    "full_w8": "HOLD",
+    "original_g9_seven": "NOT_RUN",
+    "g2_fifty": "NOT_RUN",
+    "memory_t1_ten": "NOT_RUN",
+    "protected_pg": "HOLD",
+    "independent_IV": "HOLD"
+  },
+  "progress": {
+    "weights": {
+      "design": 15,
+      "code": 35,
+      "functional": 20,
+      "integration": 20,
+      "acceptance": 10
+    },
+    "overall": {
+      "previous": null,
+      "current": null,
+      "delta_pp": null,
+      "reason": "PRODUCT_GROUP_CRITERIA_DENOMINATORS_UNRATIFIED"
+    },
+    "historical_iam_org": {
+      "previous_percent": 42.5,
+      "current_percent": 42.5,
+      "delta_pp": 0
+    },
+    "product_acceptance": {
+      "core_previous": [
+        12,
+        16
+      ],
+      "core_current": [
+        12,
+        16
+      ],
+      "mvp_previous": [
+        0,
+        11
+      ],
+      "mvp_current": [
+        0,
+        11
+      ],
+      "security_previous": [
+        0,
+        7
+      ],
+      "security_current": [
+        0,
+        7
+      ],
+      "delta_pp": 0
+    }
+  },
+  "delivery": {
+    "governance_md": "docs/master-integration/MI-P0-CTL01-G9-MANIFEST-PIN-READBACK-20261120.md",
+    "pr6_comment": 7023515247,
+    "product_mutations": 0,
+    "db_api_mutations": 0,
+    "permission_mutations": 0,
+    "code_tests": 0,
+    "auto_merges": 0,
+    "shared_master_json_not_updated_to_avoid_overlap_with_draft_pr7": true,
+    "rollback": "normal revert only this additive governance record; preserve existing candidates and product-dev"
+  }
+}
