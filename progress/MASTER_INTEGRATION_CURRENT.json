@@ -2013,6 +2013,14 @@
         "IV": "HOLD",
         "acceptance_delta": 0,
         "weighted_progress_delta_pp": 0
+      },
+      "a1_owner_custody_review_candidate": {
+        "review_branch": "review/gate02-a1-owner-custody-20261120",
+        "kind": "REVIEW_PROPOSAL_ONLY",
+        "matrix": "docs/master-integration/GATE02-A1-OWNER-CUSTODY-20261120/A1_OWNER_BOUNDARY_MATRIX.json",
+        "owner_approval": "PENDING",
+        "product_promotion": "HOLD",
+        "status": "A1_SPEC_OWNER_SIGNOFF_NOT_GIVEN"
       }
     },
     {
@@ -6884,5 +6892,34 @@
     "new_product_code_files": 0,
     "permission_changes": 0,
     "next": "MI01 W8 original prepare-only source owner and review of lock/wheelhouse fingerprint before any install/test/smoke; separately MI03 owner issuer/provenance+PG."
+  },
+  "gate02_a1_owner_custody_review_20261120": {
+    "revision": "MI-GATE02-A1-OWNER-CUSTODY-REVIEW-20261120",
+    "status": "DRAFT_GOVERNANCE_OWNER_REVIEW_NOT_EFFECTIVE_NO_SECURITY_APPROVAL",
+    "based_on": "gate02_d03d04_option_a_architecture",
+    "choice": "A_ALREADY_SELECTED_DESIGN_ONLY",
+    "matrix": "docs/master-integration/GATE02-A1-OWNER-CUSTODY-20261120/A1_OWNER_BOUNDARY_MATRIX.json",
+    "runbook": "docs/master-integration/GATE02-A1-OWNER-CUSTODY-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+    "progress_delta": "progress/MI_GATE02_A1_OWNER_CUSTODY_REVIEW_20261120.json",
+    "review_owner_roles": 10,
+    "owner_reviews_signed": 0,
+    "independent_security_cases": [
+      0,
+      8
+    ],
+    "original_coreops_d0_ci": [
+      10,
+      10
+    ],
+    "original_run_id": 44620141705,
+    "new_tests": 0,
+    "product_dev_changes": 0,
+    "main_changes": 0,
+    "security_permission_changes": 0,
+    "iam_org_development_prev": 42.5,
+    "iam_org_development_now": 42.5,
+    "delta_pp": 0,
+    "next": "A1-01..10 owner custody/admin/restore/quorum/KMS/issuer/T1/sink/recovery/source collision review; no activation or source mutation",
+    "promotion": "HOLD"
   }
 }
