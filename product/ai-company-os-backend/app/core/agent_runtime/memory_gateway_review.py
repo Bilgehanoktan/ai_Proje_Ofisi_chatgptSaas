@@ -76,3 +76,66 @@ def inspect_memory_gateway(context, expected_joint_pin, ctx, memory_path, reader
         # No exception text or caller bytes are exposed. Fail closed even on an
         # unexpected reader failure; no permission or retry can be returned.
         return MemoryGatewayReview('MEMORY_GATEWAY_REVIEW_ERROR_HOLD')
+
+
+# MEM-05E: reuse the full recovery review at the existing Gateway boundary.
+from app.core.agent_runtime.memory_recovery_review import (
+    MemoryRecoveryReview, inspect_memory_recovery,
+)
+
+
+def _clean_recovery(r):
+    return (type(r) is MemoryRecoveryReview
+            and r.reason == 'D0_MEMORY_RECOVERY_HEAD_MATCH_ONLY'
+            and r.history_match is True and r.checkpoint_match is True
+            and r.pending_observation == 'NONE_OBSERVED'
+            and r.decision == 'HOLD' and r.quarantine_required is True
+            and all(getattr(r, name) is False for name in (
+                'retrieval_allowed', 'release_allowed', 'provider_call_allowed',
+                'dispatch_allowed', 'spend_allowed', 'settlement_allowed',
+                'transition_allowed', 'retry_allowed', 'replay_allowed',
+                'publish_allowed', 'clear_pending_allowed', 'prune_allowed',
+                'independent_verified', 'atomicity_verified')))
+
+
+def inspect_recovered_memory_gateway(context, expected_joint_pin, ctx, memory_path, reader,
+                                     expected_witness, public_key, snapshot, reference,
+                                     budget_reference, expected_owner_pin, *, checkpoint_body,
+                                     checkpoint_signature, checkpoint_sha):
+    """Compose the existing full recovery and same-invocation reviews, read-only.
+
+    The recovery lease reference is the exact invocation envelope lease, never
+    a separate caller-chosen lease. Both observations reuse the same external
+    witness/checkpoint pins and Runtime context. PENDING (even a matching target)
+    cannot pass. The existing Gateway rejects economic UNKNOWN and used receipts.
+    Re-observation is not a protected fence; D5/T1 and current IAM/ORG ownership
+    are NOT established. Do not attach either review to execution or retry.
+    """
+    try:
+        if (type(context) is not JointContext or type(ctx) is not InvocationRouteContext
+                or context.invocation != ctx.envelope
+                or not digest_ok(checkpoint_sha)):
+            return MemoryGatewayReview('MEMORY_GATEWAY_RECOVERY_INPUT_HOLD')
+        args = (memory_path, reader, expected_witness, public_key, checkpoint_body,
+                checkpoint_signature, checkpoint_sha, ctx.current_run,
+                ctx.current_lease, ctx.envelope.lease, ctx.clock)
+        first = inspect_memory_recovery(*args)
+        if not _clean_recovery(first):
+            return MemoryGatewayReview('MEMORY_GATEWAY_RECOVERY_HOLD')
+        gateway = inspect_memory_gateway(context, expected_joint_pin, ctx, memory_path,
+                    reader, expected_witness, public_key, snapshot, reference,
+                    budget_reference, expected_owner_pin)
+        if (type(gateway) is not MemoryGatewayReview or gateway.structural_match is not True
+                or gateway.reason != 'D0_MEMORY_GATEWAY_MATCH_ONLY' or gateway.decision != 'HOLD'
+                or any(getattr(gateway, name) is not False for name in (
+                    'retrieval_allowed', 'release_allowed', 'provider_call_allowed',
+                    'dispatch_allowed', 'spend_allowed', 'settlement_allowed',
+                    'transition_allowed', 'retry_allowed', 'independent_verified',
+                    'atomicity_verified'))):
+            return MemoryGatewayReview('MEMORY_GATEWAY_RECOVERY_PREFLIGHT_HOLD')
+        second = inspect_memory_recovery(*args)
+        if not _clean_recovery(second) or first != second:
+            return MemoryGatewayReview('MEMORY_GATEWAY_RECOVERY_RECHECK_HOLD')
+        return MemoryGatewayReview('D0_RECOVERED_MEMORY_GATEWAY_MATCH_ONLY', True)
+    except Exception:
+        return MemoryGatewayReview('MEMORY_GATEWAY_RECOVERY_ERROR_HOLD')
