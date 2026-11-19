@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-02-R2",
+  "revision": "MI03-GATE02-ASSIGNMENT-LIFECYCLE-D0",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure.",
   "new_product_tests": 0,
-  "previous_revision": "MI-PROGRESS-02-R1",
+  "previous_revision": "MI-PROGRESS-02-R2",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -844,5 +844,38 @@
     "new_product_tests": 0,
     "acceptance_delta": 0,
     "next": "MI-PROGRESS-03: owner review and explicit freeze of complete non-overlapping group denominator and weights; verify actual evidence scope; start P04/P05/P07/P08 then others. Maintain central MI01–10; no PC request, promotion, new grants or CI."
+  },
+  "mi03_gate02_assignment_lifecycle_d0": {
+    "revision": "MI03-GATE02-ASSIGNMENT-LIFECYCLE-D0",
+    "branch": "workstream/mi03-gate02-assignment-lifecycle-d0",
+    "commit": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+    "base": "247813150153e4ad1f1c9eb574b9b991095a7c5c",
+    "catalog": "candidates/MI03-ASSIGNMENT-D0/CATALOG_AND_EVIDENCE.json",
+    "runbook": "candidates/MI03-ASSIGNMENT-D0/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "classification": "ISOLATED_SOURCE_CANDIDATE_ACTUAL_SQLITE_UNIT_TESTS",
+    "status": "SOURCE_CANDIDATE_READY_OWNER_AND_CORE_REPLAY_HOLD",
+    "actual_local_unit_tests": [
+      20,
+      20
+    ],
+    "exact_test_source_pins": [
+      3,
+      3
+    ],
+    "remote_readback": [
+      13,
+      13
+    ],
+    "candidate_source_files": 3,
+    "new_db_tables": 1,
+    "actual_owner_issuance": false,
+    "actual_store_core_replay": "NOT_RUN",
+    "actual_P02": "NOT_RUN",
+    "product_changes": 0,
+    "acceptance_delta": 0,
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "activation": "HOLD"
   }
 }
