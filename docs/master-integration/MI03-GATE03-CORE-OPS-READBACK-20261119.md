@@ -30,3 +30,12 @@ Tam pinned kaynak checkout/bağımlılık ve Core+Store birlikte koşulan ortam 
 
 ## İlerleme / devir
 MI03 IAM/ORG geliştirme önceki **%42,50**, güncel **%42,50**, delta **0,00 yüzde puan**. Core kanonik ürün kabulü **12/16 (%75)**; bütünleşik MVP **0/11 (%0)**, kabul değişimi **0**. Bu tur: ürün değişikliği 0, yeni işlevsel test 0, 12/12 yeni Git tree pin okuma; durum `SOURCE_READBACK_PASS_FUNCTIONAL_GATE03_HOLD`. Sonraki iş: sahip onayı ve orijinal Core+OperationsStore birlikte koşum, G9 sürüm uzlaştırması; kapı kapanmadan ortak ürün yükseltmesi yok.
+
+## 2026-11-20 — PR #6 tam GitHub adayında kaynak kapanışı (test koşumu değildir)
+
+- Açık taslak PR #6: `review/mi03-gate02-core-positive-20261119`, immutable incelenen head `0478d8003b0cbcc4b99f20f865c8173bbabf813e`.
+- Tüm recursive Git tree üzerinden 19 Python Core/ORG/test yolu, yedi kanonik SQL fixture yolu (`database/` kökünde) ve bir `fixtures/core.preview.json` yolu: **27/27 mevcut**, eksik yol 0. PR test blob `23c2f019a27bc9e16d8de3f2af72c239eefac035`; mevcut Core `research_slice.py` blob `720044a4e4954820b8d298f73b6b75f2189b4f94`.
+- Önceki `ModuleNotFoundError: test_canonical_research_0224`, eksik seçilmiş yerel dosya katmanından kaynaklanmıştır; tam PR dalındaki ilgili dosya mevcut. Bu kaynak varlığı, Python importunun ve bütün transitif bağımlılıkların çalışacağını kanıtlamaz.
+- PR #6 test adayı zaten **10 yöntem** içeriyor. Testin yeniden yazılmasına ihtiyaç yok; tam pinned checkout ile orijinal test koşulmalı. Bu tur **0/10 gerçek fonksiyonel test**, kod değişikliği 0, GATE-03 hâlâ HOLD.
+- İnceleme sonucu GitHub PR #6 yorumunda kayıtlı; bu yorum ürün sahibinin onayı değildir. MI-10 PR #4 kısıtlı CI kapsamı genişletilmedi. Kullanıcının bilgisayarında test beklenmiyor; izinli izole ortam sağlandığında tam test yürütmesi ayrı kanıtlanmalı.
+- Devir / bakım: Kaynak sürümlerini değiştirmeden tam checkout alın; `product/ai-company-os-backend` kökünden `python -B -m unittest discover -s tests -p test_core_operations_assignment_mi03.py -v`; öncesinde pinned modülleri ve Python bağımlılıklarını doğrula. Negatif ve pozitif test logu, exit kodu, Core ve ORG veritabanı kapsamı, bağımsız owner incelemesi ayrı kaydedilecek. Fail-closed / rollback eski `d6b82dc412b7bb0f048ece2fd43fe83f6627cc59` adayına incelemeli revert; product-dev/main değiştirilmez.
