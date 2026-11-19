@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-02",
+  "revision": "MI-COMMON-ORG-SKILL-02",
   "date": "2026-11-19",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -30,7 +30,7 @@
       "owner_role": "Unified/U3B",
       "source_ref": "integration/unified-u3a-product-acceptance",
       "observed_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "next": "Common candidate W8 original 10/10 plus 4/4 supplemental isolated overlay mechanics passed; owner review, complete exact checkout, W8 audit/prepare/fresh fingerprint deferred; full build remains NOT_RUN. Exact original npm lock now independently byte-verified from ORG; Unified owner to use immutable staging, not legacy prepare regeneration; fresh source/lock review required.",
+      "next": "Common candidate W8 original 10/10 plus 4/4 supplemental isolated overlay mechanics passed; owner review, complete exact checkout, W8 audit/prepare/fresh fingerprint deferred; full build remains NOT_RUN. Exact original npm lock now independently byte-verified from ORG; Unified owner to use immutable staging, not legacy prepare regeneration; fresh source/lock review required. | Exact U3 adapter on new common 539 source, immutable npm lock hook 7/7 local fixture; owner review and full audit/prepare/build pending.",
       "priority": "P0",
       "status": "REMOTE_PREFLIGHT_PASS_LOCAL_CHECKOUT_AND_FULL_BUILD_BLOCKED",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -126,6 +126,55 @@
         "prior_registry_and_build": "ORG owner reported 61/61 metadata, Next build and typecheck PASS on be42ba7b; not current common candidate",
         "legacy_prepare": "tests/integration/w8_local.py:114 npm install --package-lock-only; do not invoke until exact-lock staging owner review",
         "status": "ORIGINAL_LOCK_BYTES_AVAILABLE; FRESH_REVIEW_AND_FULL_BUILD_HOLD"
+      },
+      "common_org_skill_candidate": {
+        "revision": "MI-COMMON-ORG-SKILL-02",
+        "ref": "integration/mi-common-source-review-01",
+        "source_commit": "2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5",
+        "readback_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "parent": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+        "product_files": 539,
+        "manifest_entries": 538,
+        "manifest_remote_path_size": [
+          538,
+          538
+        ],
+        "product_tree_count": [
+          539,
+          539
+        ],
+        "original_owner_exact_paths": [
+          31,
+          31
+        ],
+        "exact_product_transfers": [
+          14,
+          14
+        ],
+        "retained_product_blobs": [
+          523,
+          523
+        ],
+        "nonmanifest_changes": 15,
+        "added": 9,
+        "modified": 6,
+        "deleted": 0,
+        "casefold_module_stem_collisions": 0,
+        "adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+        "adapter_fixture_controls": [
+          7,
+          7
+        ],
+        "actual_product_tests": 0,
+        "owner_review": "PENDING",
+        "full_build": "NOT_RUN",
+        "promotion": "HOLD",
+        "rollback": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "source_transfer": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+        "runner_evidence": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+        "runbook": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "readback_method": "untruncated recursive Git tree metadata; preserved owner manifest SHA256 records, not full local SHA256 audit"
       }
     },
     {
@@ -535,7 +584,7 @@
       "owner_role": "Premium UI",
       "source_ref": "integration/p10j24b-source-recovery",
       "observed_sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
-      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries.",
+      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending.",
       "priority": "P1",
       "status": "OPEN",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
@@ -570,16 +619,66 @@
         "product_changes": 0,
         "acceptance_delta": 0,
         "owner_review": "HOLD"
-      }
+      },
+      "common_org_skill_candidate": {
+        "revision": "MI-COMMON-ORG-SKILL-02",
+        "ref": "integration/mi-common-source-review-01",
+        "source_commit": "2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5",
+        "readback_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "parent": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+        "product_files": 539,
+        "manifest_entries": 538,
+        "manifest_remote_path_size": [
+          538,
+          538
+        ],
+        "product_tree_count": [
+          539,
+          539
+        ],
+        "original_owner_exact_paths": [
+          31,
+          31
+        ],
+        "exact_product_transfers": [
+          14,
+          14
+        ],
+        "retained_product_blobs": [
+          523,
+          523
+        ],
+        "nonmanifest_changes": 15,
+        "added": 9,
+        "modified": 6,
+        "deleted": 0,
+        "casefold_module_stem_collisions": 0,
+        "adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+        "adapter_fixture_controls": [
+          7,
+          7
+        ],
+        "actual_product_tests": 0,
+        "owner_review": "PENDING",
+        "full_build": "NOT_RUN",
+        "promotion": "HOLD",
+        "rollback": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "source_transfer": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+        "runner_evidence": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+        "runbook": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "readback_method": "untruncated recursive Git tree metadata; preserved owner manifest SHA256 records, not full local SHA256 audit"
+      },
+      "acceptance_delta": 0
     },
     {
       "id": "MI-06",
       "owner_role": "ORG / Office",
       "source_ref": "integration/org-07c-r8-closed-studio",
       "observed_sha": "2ab33c6a0f3bbde20c87593a9027990f08a87ff1",
-      "next": "Existing ORG closed preview stays separate; reconcile actual assignment/identity/office join with MI03 owner; no activation. Nine non-overlapping direct paths mapped; projectionRead/registry are shared Skill dependencies; coordinate review before transfer. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries.",
+      "next": "Nine exact closed ORG product paths transferred; run original 31 on common with new W8 adapter, preserve MI03-GATE02/03 and actual owner HOLD.",
       "priority": "P0",
-      "status": "OPEN",
+      "status": "CLOSED_ORG_SOURCE_TRANSFERRED_OWNER_REVIEW_FULL_BUILD_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "ORG-07C-R8 frontend build/typecheck reported PASS and 7 visual captures; weighted 11.6667%; full-stack NOT_RUN",
       "mi01_dependency": {
@@ -621,7 +720,57 @@
         "product_changes": 0,
         "acceptance_delta": 0,
         "owner_review": "HOLD"
-      }
+      },
+      "common_org_skill_candidate": {
+        "revision": "MI-COMMON-ORG-SKILL-02",
+        "ref": "integration/mi-common-source-review-01",
+        "source_commit": "2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5",
+        "readback_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "parent": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+        "product_files": 539,
+        "manifest_entries": 538,
+        "manifest_remote_path_size": [
+          538,
+          538
+        ],
+        "product_tree_count": [
+          539,
+          539
+        ],
+        "original_owner_exact_paths": [
+          31,
+          31
+        ],
+        "exact_product_transfers": [
+          14,
+          14
+        ],
+        "retained_product_blobs": [
+          523,
+          523
+        ],
+        "nonmanifest_changes": 15,
+        "added": 9,
+        "modified": 6,
+        "deleted": 0,
+        "casefold_module_stem_collisions": 0,
+        "adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+        "adapter_fixture_controls": [
+          7,
+          7
+        ],
+        "actual_product_tests": 0,
+        "owner_review": "PENDING",
+        "full_build": "NOT_RUN",
+        "promotion": "HOLD",
+        "rollback": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "source_transfer": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+        "runner_evidence": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+        "runbook": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "readback_method": "untruncated recursive Git tree metadata; preserved owner manifest SHA256 records, not full local SHA256 audit"
+      },
+      "acceptance_delta": 0
     },
     {
       "id": "MI-07",
@@ -805,9 +954,9 @@
       "owner_role": "Skill",
       "source_ref": "planning/w5-ext-07r6-source-preflight",
       "observed_sha": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
-      "next": "Existing Skill owner review: exact 5 product files + original 41 tests; coordinate shared projectionRead/registry with ORG; original lock recovered, fresh Unified/EXT source and dependency review, immutable staging before install/build; provider/tools HOLD.",
+      "next": "Five exact Skill source paths transferred; original 41 tests wired, run after fresh exact lock review. No active tool/provider or grant.",
       "priority": "P1",
-      "status": "OPEN",
+      "status": "SKILL_SOURCE_TRANSFERRED_OWNER_REVIEW_FULL_BUILD_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "branch head observed only; latest acceptance not reconciled",
       "source_review": {
@@ -843,7 +992,57 @@
           "legacy_prepare": "tests/integration/w8_local.py:114 npm install --package-lock-only; do not invoke until exact-lock staging owner review",
           "status": "ORIGINAL_LOCK_BYTES_AVAILABLE; FRESH_REVIEW_AND_FULL_BUILD_HOLD"
         }
-      }
+      },
+      "common_org_skill_candidate": {
+        "revision": "MI-COMMON-ORG-SKILL-02",
+        "ref": "integration/mi-common-source-review-01",
+        "source_commit": "2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5",
+        "readback_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+        "parent": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+        "product_files": 539,
+        "manifest_entries": 538,
+        "manifest_remote_path_size": [
+          538,
+          538
+        ],
+        "product_tree_count": [
+          539,
+          539
+        ],
+        "original_owner_exact_paths": [
+          31,
+          31
+        ],
+        "exact_product_transfers": [
+          14,
+          14
+        ],
+        "retained_product_blobs": [
+          523,
+          523
+        ],
+        "nonmanifest_changes": 15,
+        "added": 9,
+        "modified": 6,
+        "deleted": 0,
+        "casefold_module_stem_collisions": 0,
+        "adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+        "adapter_fixture_controls": [
+          7,
+          7
+        ],
+        "actual_product_tests": 0,
+        "owner_review": "PENDING",
+        "full_build": "NOT_RUN",
+        "promotion": "HOLD",
+        "rollback": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+        "source_transfer": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+        "runner_evidence": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+        "runbook": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+        "readback_method": "untruncated recursive Git tree metadata; preserved owner manifest SHA256 records, not full local SHA256 audit"
+      },
+      "acceptance_delta": 0
     },
     {
       "id": "MI-10",
@@ -876,9 +1075,9 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes. | MI-03-GATE01-AUTHORITY-API-REVIEW-01: remote G2/G7 same two blobs; four exact legacy test files, two IAM tests absent; zero new tests or gates. | GATE01 supplemental G6A/R9/MEM exact 4-file convergence and common retained transport/fenced/port; no new test. | MI05/06/09 static exact source/lock readback only; 6/6 Skill raw pins, 5/5 manifest, 7/7 dependency records; no new tests or acceptance.; MI04 Memory/T1 historical evidence reconciled: 31/34 MEM03R1 exact (31 product), 234/237 old cross manifest records, mixed writer exact legacy pin; zero new product tests or gates. | MI05/06: 7 exact local pins, strict TS subset compile, 8/8 original closed route replay, no new methods or product changes. | G5/G4 historical Windows 26/26 (one distinct run); G7 31/31 exact, G6A 30/31, common 11/31; no new product tests or gates.",
-  "next": "Retain common readonly identity transfer; resolve MI03-GATE-01 and 02 in parallel with existing owner work, then gates 03/04 and shared build. PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout. | MI05/06/09: exact npm lock recovered, owner-coordinated closed source transfer and immutable W8 review next; no Windows now. MI04/MI08 recover original MEM05E-R1 raw evidence and owner-confirm writer retirement; retain existing GATE01/02 order and original 344 runner.  | MI05/06 original remaining 23 and U3 browser after owner review; no activation. | G5 historical evidence retained; GATE-01/02 owner HOLD unchanged; no Windows repeat now. | MI-PROGRESS-02: owner-review proposed 63 module mapping and 24-area coverage; no gate or product promotion.",
-  "previous_revision": "MI-04-G5-WINDOWS-EVIDENCE-READBACK",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes. | MI-03-GATE01-AUTHORITY-API-REVIEW-01: remote G2/G7 same two blobs; four exact legacy test files, two IAM tests absent; zero new tests or gates. | GATE01 supplemental G6A/R9/MEM exact 4-file convergence and common retained transport/fenced/port; no new test. | MI05/06/09 static exact source/lock readback only; 6/6 Skill raw pins, 5/5 manifest, 7/7 dependency records; no new tests or acceptance.; MI04 Memory/T1 historical evidence reconciled: 31/34 MEM03R1 exact (31 product), 234/237 old cross manifest records, mixed writer exact legacy pin; zero new product tests or gates. | MI05/06: 7 exact local pins, strict TS subset compile, 8/8 original closed route replay, no new methods or product changes. | G5/G4 historical Windows 26/26 (one distinct run); G7 31/31 exact, G6A 30/31, common 11/31; no new product tests or gates. | MI common ORG/Skill: 14 exact owner product sources, 17 exact auxiliary files, 1 explicit registry test adaptation; 7 actual fixture controls, 0 product tests, acceptance unchanged.",
+  "next": "Retain common readonly identity transfer; resolve MI03-GATE-01 and 02 in parallel with existing owner work, then gates 03/04 and shared build. PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout. | MI05/06/09: exact npm lock recovered, owner-coordinated closed source transfer and immutable W8 review next; no Windows now. MI04/MI08 recover original MEM05E-R1 raw evidence and owner-confirm writer retirement; retain existing GATE01/02 order and original 344 runner.  | MI05/06 original remaining 23 and U3 browser after owner review; no activation. | G5 historical evidence retained; GATE-01/02 owner HOLD unchanged; no Windows repeat now. | MI-PROGRESS-02: owner-review proposed 63 module mapping and 24-area coverage; no gate or product promotion. | New common 539 candidate: exact checkout audit and owner review, immutable lock prepare via w8_mi_common_02.py, original ORG31/Skill41/ModelMemory344, full build, browser. No product-dev promotion.",
+  "previous_revision": "MI-PROGRESS-02",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
   "scope_crosswalk": "progress/MASTER_INTEGRATION_WEIGHT_BASELINE.json",
   "mi08_cross_owner_notes": [
@@ -1235,5 +1434,54 @@
     "new_product_tests": 0,
     "acceptance_delta": 0,
     "next": "MI-PROGRESS-02-R1 owner coverage/criteria review, freeze and evidence mapping; do not alter existing MI01–10 work."
+  },
+  "common_org_skill_candidate": {
+    "revision": "MI-COMMON-ORG-SKILL-02",
+    "ref": "integration/mi-common-source-review-01",
+    "source_commit": "2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5",
+    "readback_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "parent": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "product_files": 539,
+    "manifest_entries": 538,
+    "manifest_remote_path_size": [
+      538,
+      538
+    ],
+    "product_tree_count": [
+      539,
+      539
+    ],
+    "original_owner_exact_paths": [
+      31,
+      31
+    ],
+    "exact_product_transfers": [
+      14,
+      14
+    ],
+    "retained_product_blobs": [
+      523,
+      523
+    ],
+    "nonmanifest_changes": 15,
+    "added": 9,
+    "modified": 6,
+    "deleted": 0,
+    "casefold_module_stem_collisions": 0,
+    "adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+    "adapter_fixture_controls": [
+      7,
+      7
+    ],
+    "actual_product_tests": 0,
+    "owner_review": "PENDING",
+    "full_build": "NOT_RUN",
+    "promotion": "HOLD",
+    "rollback": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "source_transfer": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+    "runner_evidence": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "readback_method": "untruncated recursive Git tree metadata; preserved owner manifest SHA256 records, not full local SHA256 audit"
   }
 }

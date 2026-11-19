@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-02",
+  "revision": "MI-COMMON-ORG-SKILL-02",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -323,9 +323,9 @@
     "full_build": "BLOCKED",
     "previous_core_in_U3A": "11/16 historical; current standalone 12/16 not transferred to actual product"
   },
-  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance.",
+  "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance.",
   "new_product_tests": 0,
-  "previous_revision": "MI-05-06-PROJECTION-REPLAY-01",
+  "previous_revision": "MI-PROGRESS-02",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -634,5 +634,54 @@
     "new_product_tests": 0,
     "acceptance_delta": 0,
     "next": "MI-PROGRESS-02-R1 owner coverage/criteria review, freeze and evidence mapping; do not alter existing MI01–10 work."
+  },
+  "common_org_skill_candidate": {
+    "revision": "MI-COMMON-ORG-SKILL-02",
+    "ref": "integration/mi-common-source-review-01",
+    "source_commit": "2ba1753cd4e3a0b0c2fa54a5b5f0a2169729dfa5",
+    "readback_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "parent": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "manifest": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "product_files": 539,
+    "manifest_entries": 538,
+    "manifest_remote_path_size": [
+      538,
+      538
+    ],
+    "product_tree_count": [
+      539,
+      539
+    ],
+    "original_owner_exact_paths": [
+      31,
+      31
+    ],
+    "exact_product_transfers": [
+      14,
+      14
+    ],
+    "retained_product_blobs": [
+      523,
+      523
+    ],
+    "nonmanifest_changes": 15,
+    "added": 9,
+    "modified": 6,
+    "deleted": 0,
+    "casefold_module_stem_collisions": 0,
+    "adapter_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+    "adapter_fixture_controls": [
+      7,
+      7
+    ],
+    "actual_product_tests": 0,
+    "owner_review": "PENDING",
+    "full_build": "NOT_RUN",
+    "promotion": "HOLD",
+    "rollback": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "source_transfer": "docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json",
+    "runner_evidence": "docs/master-integration/MI-COMMON-ORG-SKILL-02/RUNNER_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "readback_method": "untruncated recursive Git tree metadata; preserved owner manifest SHA256 records, not full local SHA256 audit"
   }
 }

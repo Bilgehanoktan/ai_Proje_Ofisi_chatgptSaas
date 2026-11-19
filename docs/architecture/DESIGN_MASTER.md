@@ -273,3 +273,7 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## MI-05-06-PROJECTION-REPLAY-01
 [Architecture / evidence](../master-integration/MI-05-06-PROJECTION-REPLAY-01/ARCHITECTURE_RUNBOOK_HANDOVER.md). Original closed ORG route subset 8/8 replay; existing source-lock and owner gates retained.
+
+
+## MI-COMMON-ORG-SKILL-02 — exact closed ORG/Skill source convergence
+Common 61bb06efbba7544bfc68260ed8eb4d342cab9b8e, parent bf87d5c48c7fee97fe12d0a28df3be80249f7306, 539 product files / 538 manifest; 14 exact owner paths, one registry test adaptation, 31/31 exact transferred product+aux paths. 7/7 fixture runner controls, no product test or full build. New W8 adapter preserves original lock, U3 and historical overlays. Owner review and all actual authorization gates HOLD. [Source transfer](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/61bb06efbba7544bfc68260ed8eb4d342cab9b8e/docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json) · [Runbook](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/61bb06efbba7544bfc68260ed8eb4d342cab9b8e/docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md).

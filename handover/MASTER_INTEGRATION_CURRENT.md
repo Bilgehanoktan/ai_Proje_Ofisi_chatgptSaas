@@ -30,3 +30,7 @@ Published common candidate 3809061926b5a1ddbe8bda84af77e5545d5ecda2; no duplicat
 
 ## MI-05-06-09-SOURCE-LOCK-REVIEW-01
 Common bf87d5c48c7fee97fe12d0a28df3be80249f7306; original lock exact 33,618 bytes / 036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88. MI05 retain U3, MI06 nine paths and MI09 five exact sources ready for coordinated owner review; no source transfer or product test. [Runbook](../docs/master-integration/MI-05-06-09-SOURCE-LOCK-REVIEW-01/ARCHITECTURE_RUNBOOK_HANDOVER.md) · [Catalog](../docs/master-integration/MI-05-06-09-SOURCE-LOCK-REVIEW-01/CATALOG_AND_EVIDENCE.json). No Windows now; no product-dev promotion. Prior security handoffs preserved.
+
+
+## MI-COMMON-ORG-SKILL-02 — exact closed ORG/Skill source convergence
+Common 61bb06efbba7544bfc68260ed8eb4d342cab9b8e, parent bf87d5c48c7fee97fe12d0a28df3be80249f7306, 539 product files / 538 manifest; 14 exact owner paths, one registry test adaptation, 31/31 exact transferred product+aux paths. 7/7 fixture runner controls, no product test or full build. New W8 adapter preserves original lock, U3 and historical overlays. Owner review and all actual authorization gates HOLD. [Source transfer](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/61bb06efbba7544bfc68260ed8eb4d342cab9b8e/docs/master-integration/MI-COMMON-ORG-SKILL-02/SOURCE_TRANSFER.json) · [Runbook](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/61bb06efbba7544bfc68260ed8eb4d342cab9b8e/docs/master-integration/MI-COMMON-ORG-SKILL-02/ARCHITECTURE_RUNBOOK_HANDOVER.md).
