@@ -1,0 +1,98 @@
+{
+  "revision": "D5-G5-WINDOWS-LOG-READBACK",
+  "date": "2026-11-19",
+  "source_commit": "1a9464966c1c5c67415e279b20bae3b19107554c",
+  "prior_evidence_commit": "21c11d3693aff84fa71e8e9b370cedee74efbc93",
+  "classification": "CONSOLE_RECONSTRUCTED_HASH_MATCH_NOT_INDEPENDENT_EXECUTION",
+  "raw_file_received": false,
+  "reconstruction": "UTF-8 CRLF reconstructed from user-provided console; independently calculated SHA256 matches Windows reported SHA256",
+  "log_bytes": 3007,
+  "log_sha256": "ba5647dd5e65a5f8fb8c5587b73128ec6c1a456dcb944fb3b94f8e322170accb",
+  "log_git_blob": "8e128739a84e4ce03bcae229cfa29c2f58458d4b",
+  "uploaded_transcript_sha256": "799a10d976beb0132b95481b437ec043877ef52330c0a7f5a482d1c39575009e",
+  "duplicate_transcripts": 2,
+  "distinct_runs": 1,
+  "result": {
+    "source_pins": "31/31",
+    "pass": 26,
+    "errors": 0,
+    "fail": 0,
+    "exit": 0,
+    "duration_seconds": 1.883,
+    "suites": [
+      {
+        "suite": "test_iam_org_d5g5",
+        "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "names": [
+          "test_exact_current_readback",
+          "test_exact_session",
+          "test_missing_proposal",
+          "test_no_claim_or_org_writes",
+          "test_revoked_session",
+          "test_role_revision_drift",
+          "test_stale_head",
+          "test_team_tamper",
+          "test_wrong_org_digest",
+          "test_wrong_role",
+          "test_wrong_scope",
+          "test_wrong_seat"
+        ]
+      },
+      {
+        "suite": "test_iam_identity_d5g4",
+        "blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+        "names": [
+          "test_changed_intent_digest_and_fields",
+          "test_d4_expiry_and_clock_regression",
+          "test_exact_request_same_session_hold_only",
+          "test_forged_credential",
+          "test_iam_expiry_independent_of_d4_tick",
+          "test_project_alias_and_membership_drift",
+          "test_readback_failure_stays_hold",
+          "test_review_has_no_claim_or_publication_write",
+          "test_revoke_exact_session",
+          "test_role_revision_and_physical_role_drift",
+          "test_same_principal_different_session_rejected",
+          "test_unrelated_revocation_changes_owner_pin",
+          "test_wrong_agent_and_human_rejected",
+          "test_wrong_reference_hash_root_and_domain"
+        ]
+      }
+    ],
+    "reported_log_sha256": "ba5647dd5e65a5f8fb8c5587b73128ec6c1a456dcb944fb3b94f8e322170accb",
+    "raw_log": "NOT_RECEIVED",
+    "case_names": "26/26 matched source"
+  },
+  "progress": {
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "canonical_acceptance": {
+      "core": [
+        12,
+        16
+      ],
+      "ui": [
+        21,
+        40
+      ],
+      "org_plan": [
+        5,
+        7
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "independent": [
+        0,
+        7
+      ]
+    },
+    "F05": "partial; no actual protected race"
+  },
+  "architecture_delta": "none",
+  "catalog_delta": "evidence files only; no product source, API, DB or dependency change",
+  "next": "Original pinned G2 50-case regression; ORG10 PostgreSQL owner review separately; no new authorization",
+  "rollback": "Evidence-only commit; preserve earlier evidence and source, no DB rollback."
+}
