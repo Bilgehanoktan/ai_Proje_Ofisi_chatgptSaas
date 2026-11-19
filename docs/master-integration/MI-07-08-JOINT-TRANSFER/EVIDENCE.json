@@ -1,0 +1,76 @@
+{
+  "id": "MI-07-08-JOINT-TRANSFER-01",
+  "source_candidate": "61d8c582e8e125f59d1ca542c9596c4a6421698f",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "previous_candidate": "9171904bb8411420a123f115c15dbcc7e3d8ec57",
+  "source_tree": "9aac84e733b56efc5ec148d63ec86306b8cbe5d8",
+  "runner_blob": "6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb",
+  "pins_blob": "fb1a73c86eda928409c371359056e79ef43665e4",
+  "transfer_blob": "d59012af88247791427bab84a2db2aa209ca2139",
+  "source_manifest_blob": "157b17547576fc53558e03b0617f13c9a8e641ed",
+  "remote": {
+    "combined_git_blob_and_size": [
+      114,
+      114
+    ],
+    "sha256_pins_in_spec": 86,
+    "w5_12_sha256_recomputed": [
+      12,
+      12
+    ],
+    "w5_source_bytes": 54548,
+    "manifest_size": [
+      526,
+      526
+    ],
+    "prior_manifest_preserved": 525,
+    "product_files": 527,
+    "whole_product_sha256": "NOT_RUN"
+  },
+  "local": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "cryptography": "46.0.4",
+    "runner_exact_blob": "6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb",
+    "runner_bytes": 4910,
+    "compile": "PASS",
+    "child_compile": "PASS",
+    "harness_controls": [
+      [
+        "pass",
+        0
+      ],
+      [
+        "wrong_count",
+        2
+      ],
+      [
+        "duplicate",
+        2
+      ],
+      [
+        "skip",
+        1
+      ],
+      [
+        "failure",
+        1
+      ]
+    ],
+    "harness_status": "5/5 PASS, synthetic runner mechanics, not product tests",
+    "incomplete_checkout": "BLOCKED: missing local COMBINED_PINS.json; exit 2",
+    "product_tests_executed": 0,
+    "planned_product_tests": 344,
+    "product_status": "NOT_RUN"
+  },
+  "heads": {
+    "master": "58062476323b542302c944ac36d2a83c163c868a",
+    "product": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "w5": "12d5149ef891b69a909162f8eecfe5847858e8b4",
+    "j": "147502d831ab146b8825585fc7ac390f951beb84",
+    "mem": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+    "r9": "253128a2236ee706486e70acc97e472ededac26b",
+    "mi04": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8"
+  },
+  "protection": "No promotion, main, CI, grants, provider, spend, PG, independent acceptance."
+}
