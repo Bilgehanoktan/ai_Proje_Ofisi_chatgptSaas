@@ -1,0 +1,25 @@
+{
+  "revision": "MI-COMMON-04-PINNED-RECOVERY",
+  "classification": "isolated source recovery helper; no product/runtime integration",
+  "source_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "source_files": [
+    "pinned_source_recovery.py",
+    "test_pinned_source_recovery.py"
+  ],
+  "symbols": ["ExactCache.read", "NoRedirect.redirect_request", "git_blob", "safe_rel", "verify_blob", "model_rows", "core_rows", "normalize", "recover", "checked_write", "ensure_fresh", "main"],
+  "remote_refs": {
+    "model_memory_pins": {"path":"docs/master-integration/MI-07-08-JOINT-TRANSFER/COMBINED_PINS.json", "blob":"fb1a73c86eda928409c371359056e79ef43665e4", "files":114, "sha256_only_where_present":86},
+    "history_core_pins": {"path":"tests/integration/core_0207_source_lock.json", "blob":"223f6fbd28cf4c428c07eb60dda4a36f644fa58c", "files":55, "sha256_only_where_present":49},
+    "model_original_runner": {"path":"docs/master-integration/MI-07-08-JOINT-TRANSFER/run_combined.py", "blob":"6536c6571f5f9b3b3059bbd7e0ebc3089bc252bb"},
+    "historical_core_original_runner": {"path":"tests/integration/run_core_0207.py", "blob":"b019a5e60cfff4183b00e99f252ffe00bc164eda"},
+    "historical_core_original_helper": {"path":"tests/integration/run_lifecycle_p05.py", "blob":"befb9f429791a01b2fe37009e40f994a5924b2ff"}
+  },
+  "history_overlap": {"shared_paths":26, "identical":24, "different":2, "different_paths":["product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py", "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py"]},
+  "dependencies": ["Python 3.13 stdlib: argparse, base64, concurrent.futures, hashlib, json, os, pathlib, shutil, tempfile, urllib"],
+  "api": "GitHub REST GET /repos/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/git/blobs/{pinnedSHA}, HTTPS only, no redirects",
+  "database": "no database access/mutations",
+  "events": "none",
+  "security": "content addressed, isolated stage, fail closed, no token logging, no CI/install/execute, no runtime role/commit grant",
+  "testing": {"local_synthetic_controls_pass":14, "actual_model_memory_344":"NOT_RUN", "actual_historical_core_29":"NOT_RUN", "full_w8_build":"NOT_RUN", "browser":"NOT_RUN"},
+  "rollback": "revert helper and governance evidence by normal commit; original source and locks preserved"
+}

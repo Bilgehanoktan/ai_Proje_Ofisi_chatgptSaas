@@ -1,0 +1,25 @@
+{
+  "revision": "MI-COMMON-04-PINNED-RECOVERY",
+  "date": "2026-11-19",
+  "source_commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+  "classification": "LOCAL_SOURCE_RECOVERY_HELPER_TEST; ACTUAL_SELECTED_REGRESSIONS_NOT_RUN",
+  "local": {
+    "environment": {"python":"3.13.5","sqlite":"3.46.1","cryptography":"46.0.4","fastapi":"0.128.2","starlette":"0.50.0","uvicorn":"0.48.0"},
+    "helper_controls": {"passed":14,"total":14,"failures":0,"errors":0,"skipped":0,"exit_code":0},
+    "offline_preflight": {"exit_code":2,"classification":"EXPECTED_HOLD","reason":"CACHE_MISS_OFFLINE:fb1a73c86eda928409c371359056e79ef43665e4"},
+    "legacy_archive_recovered_distinct_blobs":5,
+    "legacy_archive_exact_model_paths":5,
+    "legacy_archive_exact_core_paths":5,
+    "network":"GitHub DNS failed; no full checkout or remote blob fetch from container"
+  },
+  "remote": {"model_memory_paths":[114,114],"historic_core_paths":[55,55],"shared_schema_fixture_pairs":[17,17],"npm_lock_git_blob":"4cd33f437df85d7e74c7946a0999f76adf2e31fe","npm_nonroot_packages":61,"npm_tarballs":"NOT_VERIFIED"},
+  "original_lock_gaps": {"model_missing_optional_sha256":28,"historic_core_missing_optional_sha256":6,"git_blob_present_on_all":true,"overlapping_paths":26,"different_overlapping_paths":2},
+  "tests": {"model_memory_actual":{"pass":null,"planned":344,"status":"NOT_RUN"},"core_historical_actual":{"pass":null,"planned":29,"status":"NOT_RUN"},"w8_full_build":"NOT_RUN","browser":"NOT_RUN"},
+  "owner_review":"PENDING",
+  "protected_commit":"HOLD",
+  "independent_acceptance":"HOLD",
+  "source_modifications":0,
+  "acceptance_delta":0,
+  "progress_delta_pp":0,
+  "rollback":"isolated candidate helper and governance-only normal revert; no product or permission change"
+}
