@@ -1,0 +1,18 @@
+PASS 1: initial state has no stale body
+PASS 2: request A issued but body not ready
+PASS 3: first clone body stored under sequence one
+PASS 4: consumed body A removed
+PASS 5: pending B cannot read already-consumed A
+PASS 6: already-consumed A cannot be read twice
+PASS 7: second clone consumed only as sequence two
+PASS 8: pending C cannot reuse B
+PASS 9: third clone consumed only as sequence three
+PASS 10: unrelated API fetch not counted as snapshot
+PASS 11: external origin not counted
+PASS 12: two concurrent requests receive distinct sequence IDs
+PASS 13: later response arrival never impersonates earlier sequence
+PASS 14: out-of-order responses map to original issue sequence
+PASS 15: unexpected response URL fails closed
+PASS 16: failed request cannot supply stale body
+PASS 17: no extra fetches beyond exact nine calls in harness
+RESULT 17/17 PASS: fresh body binding; 0 network; 0 browser; 0 product code.

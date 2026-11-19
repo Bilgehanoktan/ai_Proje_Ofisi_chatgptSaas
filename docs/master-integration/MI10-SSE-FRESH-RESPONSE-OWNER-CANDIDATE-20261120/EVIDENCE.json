@@ -1,0 +1,138 @@
+{
+  "revision": "MI10-SSE-FRESH-RESPONSE-OWNER-CANDIDATE-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_OFFLINE_TESTED_OWNER_REVIEW_CANDIDATE_NOT_PRODUCT_OR_REAL_BROWSER",
+  "owner_file_unchanged": ".github/mi10/run_sse_compatible_u3.py",
+  "owner_current_source": {
+    "branch": "integration/mi10-limited-ci-20261119",
+    "commit": "4dda0455340c7e6b6dbfef71a0018b2f00c90706",
+    "blob": "84997c31334e4684b159b5dbd799e3abdd40d301"
+  },
+  "original_u3_source": {
+    "commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "path": "tests/integration/browser_unified_u3.py",
+    "blob": "2a3f2b8e286c5d79847a6b00cdbd046d0429773",
+    "unique_patch_markers": [
+      1,
+      1,
+      1
+    ],
+    "remote_verification": true
+  },
+  "source_tree": {
+    "sse_capture_init.js": {
+      "git_blob": "68802da2ffb4231df6df7ffb199a541dc64f8c28",
+      "sha256": "f341331d37ec76c931fd877d3b0cab15ff86ddd849429dd3f2c581278267a6de",
+      "bytes": 1624
+    },
+    "test_sse_capture.js": {
+      "git_blob": "5eaa6b1384d8ba321558981de64abe9e472a4e22",
+      "sha256": "09c6082f6d3de78014a69c76349194b1d3d7476ab36a06644f8072a00c33d5ef",
+      "bytes": 4135
+    },
+    "prepare_original_u3_fresh.py": {
+      "git_blob": "d04940ff114ab5767d2786dd0459b1fb3196facf",
+      "sha256": "656bece726b874980c47d55510872f2041f286d9e418356255364ab7a7a33466",
+      "bytes": 2852
+    },
+    "test_prepare_original_u3_fresh.py": {
+      "git_blob": "71fef68871e65017949a01dc96351ce0aab19faa",
+      "sha256": "707be7d9434cb849710473d14e5f3131c79b54d21099a7022b1d982203378c52",
+      "bytes": 4738
+    }
+  },
+  "test_execution": {
+    "environment": {
+      "node": "v22.16.0",
+      "python": "3.13.5",
+      "local_network": "DISABLED"
+    },
+    "node": {
+      "passed": 17,
+      "total": 17,
+      "exit": 0,
+      "log_sha256": "63f6b31c32e2f3d8510dd0fa596aeaa8c63a99d6378e27f72b618b8f5b5d0262"
+    },
+    "python": {
+      "passed": 10,
+      "total": 10,
+      "exit": 0,
+      "log_sha256": "c6da10ba9007dc6b821f6298d308edf2a68b21e8c96695233c4b480c66a05c8a"
+    },
+    "total": {
+      "passed": 27,
+      "total": 27
+    },
+    "notes": "Real JS VM/fake fetch and pinned Python transform tested on synthetic original-shaped fixture. Actual original U3 browser not run; original was not locally materialized."
+  },
+  "fix_contract": [
+    "Count only exact same-origin same-path target fetch invocations",
+    "Assign monotonic per-request IDs before each fetch and capture its own response.clone().text() Promise in a Map",
+    "Before read click capture current count, then require exactly next sequence and await its own body; do not allow prior non-null body to satisfy future read",
+    "Consume each body once; unexpected URL and failed fetch produce no valid body",
+    "Do not introduce extra network calls, bypass original HTTP status/cache/SSE digest/TTL/UI assertions, or change product/backend",
+    "Keep separate original U3/CDP and formal W8 acceptance"
+  ],
+  "prior_ci": {
+    "run": 44617509366,
+    "conclusion": "3/3 PASS",
+    "source_tree": [
+      1953,
+      1953
+    ],
+    "product_files": [
+      539,
+      539
+    ],
+    "selected_sqlite": [
+      42,
+      42
+    ],
+    "browser": "SSE_COMPATIBLE_DIAGNOSTIC_ONLY",
+    "full_W8": "NOT_RUN"
+  },
+  "limits": {
+    "real_browser": "NOT_RUN",
+    "original_byte_exact_U3": "KNOWN_CDP_SSE_BODY_FAILURE",
+    "full_W8_fingerprint": "NOT_RUN",
+    "original_0214_memory_t1": "0/10_NOT_RUN",
+    "positive_Core_OperationsStore": "NOT_RUN",
+    "actual_P02": "NOT_RUN",
+    "postgresql_strict_commit": "NOT_RUN",
+    "independent_security_acceptance": "HOLD"
+  },
+  "owner_and_permissions": {
+    "owner_CI_modified": false,
+    "canonical_product_modified": false,
+    "main_modified": false,
+    "CI_scope_extended": false,
+    "production_real_effects": false,
+    "owner_review": "PENDING",
+    "pr_number": 4,
+    "pr_stays_draft": true,
+    "branch_promotion": false
+  },
+  "progress": {
+    "D5_G7": [
+      42.5,
+      42.5
+    ],
+    "D5_C_R8": [
+      50,
+      50
+    ],
+    "Core": [
+      12,
+      16
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "new_unique_original_product_methods": 0,
+    "development_delta_pp": 0,
+    "acceptance_delta": 0,
+    "overall_development": "HESAPLANAMADI"
+  },
+  "rollback": "Revert governance-only QA candidate by normal commit; transfer to owner CI requires owner review and independent test."
+}
