@@ -1,2 +1,6 @@
 # NEXT — 0227 post-D3
 D3 scoped RLS/lock contention accepted through metadata-only transfer from 426a2e69dd193a9ec8f61181cc809c28fc50733c; 12/16. E2/E3/E4 are remaining product gates; first coordinate existing Unified U3 acceptance branch and compare exact sources/locks/evidence, no duplicate execution. B3 independent custody/effect authority remains HOLD. Canonical product RLS, dynamic IAM/pool integration and full company-stream PG not accepted. Keep D1/D2 and D3 stopped; no merge or migration. tests/evidence/D3_EVIDENCE_TRANSFER_0227.json
+
+
+## MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119 — next owners / release gates
+MI-10 owner: resolve fresh per-request SSE clone identity, and separately prove byte-exact original U3 or explicitly preserve compatibility-only classification. MI-01 owner: reviewed W8 full wheelhouse/fingerprint prepare-install-test-smoke and browser. MI-03/04: original ten Memory–T1 tests in exact 265-source closure, known full restore replay residual, ORG/Core positive assignment, strict PostgreSQL COMMIT and independent witness. Do not auto-merge PR #4 or promote acceptance. [Runbook](../docs/master-integration/MI10-D0-CI-GREEN-SSE-DIAGNOSTIC-20261119/ARCHITECTURE_RUNBOOK_HANDOVER.md).
