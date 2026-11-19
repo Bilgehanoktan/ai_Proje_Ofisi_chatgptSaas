@@ -1,0 +1,62 @@
+{
+  "revision": "D5-G7",
+  "parent": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "change": "MODIFIED_EXISTING_G6B",
+      "symbols": [
+        "inspect_core_org_session_reference",
+        "latest_member nested callback"
+      ],
+      "dependencies": [
+        "existing derive_request",
+        "existing _member",
+        "existing historical_join",
+        "existing G5 review"
+      ],
+      "behavior": "exactly one verified latest read, no authority"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+      "change": "ADDED",
+      "symbols": [
+        "ResearchMembershipTests"
+      ],
+      "status": "19/19 selected PASS after 6 baseline failures"
+    },
+    {
+      "path": "candidates/D5-G7/test_checkout.py",
+      "change": "EXACT_G6B_RUNNER_COPY",
+      "blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+      "symbols": [
+        "ActualReadbackTests"
+      ],
+      "status": "7 NOT_RUN"
+    }
+  ],
+  "existing_db_reads": [
+    "company_run_membership",
+    "run_heads",
+    "company_stream_heads",
+    "company_event_order",
+    "events",
+    "sample_budgets",
+    "sample_reservations",
+    "sample_settlements",
+    "existing ORG/G5 readers"
+  ],
+  "new_db_tables": [],
+  "db_writes": [],
+  "api": [],
+  "events": [],
+  "new_dependencies": [],
+  "new_engines": 0,
+  "manifest": {
+    "parent": "04d6b10aa8e95d88b0efc53b838ceb89afac0096",
+    "current": "0555852afa38b7317a53a63db26a79cf151488b9",
+    "previous_entries": 402,
+    "current_entries": 403
+  },
+  "rollback": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394"
+}

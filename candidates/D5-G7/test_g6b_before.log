@@ -1,0 +1,96 @@
+test_d4_role_revision_drift (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_d4_role_revision_drift) ... ok
+test_duplicate_member (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_duplicate_member) ... ok
+test_intent_version_not_persisted_version (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_intent_version_not_persisted_version) ... ok
+test_invalid_result_digest (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_invalid_result_digest) ... ok
+test_latest_boolean_member_version (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_boolean_member_version) ... FAIL
+test_latest_member_changed (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_member_changed) ... ok
+test_latest_principal_changed (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_principal_changed) ... FAIL
+test_latest_scope_changed (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_scope_changed) ... FAIL
+test_persisted_head_version_drift (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_persisted_head_version_drift) ... ok
+test_persisted_member_principal_drift (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_persisted_member_principal_drift) ... ok
+test_project_alias (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_project_alias) ... ok
+test_real_core_membership_match_hold_only (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_real_core_membership_match_hold_only) ... ok
+test_real_seeded_admission_version (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_real_seeded_admission_version) ... ok
+test_role_changed_after_session (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_role_changed_after_session) ... ok
+test_role_mismatch (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_role_mismatch) ... ok
+test_session_port_denies (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_denies) ... ok
+test_session_port_does_not_read_latest (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_does_not_read_latest) ... FAIL
+test_session_port_masks_failed_read (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_masks_failed_read) ... FAIL
+test_session_port_reads_latest_twice (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_reads_latest_twice) ... FAIL
+
+======================================================================
+FAIL: test_latest_boolean_member_version (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_boolean_member_version)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 252, in test_latest_boolean_member_version
+    self.deny(latest=lambda:replace(self.initial,member=replace(self.member,initial_version=False)))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 204, in deny
+    def deny(self,**kw): self.assertFalse(self.call(**kw).structural_match)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_latest_principal_changed (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_principal_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 249, in test_latest_principal_changed
+    self.deny(latest=lambda:replace(self.initial,principal='demo-other'))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 204, in deny
+    def deny(self,**kw): self.assertFalse(self.call(**kw).structural_match)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_latest_scope_changed (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_latest_scope_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 246, in test_latest_scope_changed
+    self.deny(latest=lambda:replace(self.initial,scope=('other',*SCOPE[1:])))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 204, in deny
+    def deny(self,**kw): self.assertFalse(self.call(**kw).structural_match)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_session_port_does_not_read_latest (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_does_not_read_latest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 236, in test_session_port_does_not_read_latest
+    self.g5_mode='skip'; self.deny()
+                         ~~~~~~~~~^^
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 204, in deny
+    def deny(self,**kw): self.assertFalse(self.call(**kw).structural_match)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_session_port_masks_failed_read (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_masks_failed_read)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 243, in test_session_port_masks_failed_read
+    self.deny(latest=lambda:replace(self.initial,member=replace(self.member,initial_version=1)))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 204, in deny
+    def deny(self,**kw): self.assertFalse(self.call(**kw).structural_match)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_session_port_reads_latest_twice (test_core_org_session_sqlite_d5g7.ResearchMembershipTests.test_session_port_reads_latest_twice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 239, in test_session_port_reads_latest_twice
+    self.g5_mode='double'; self.deny()
+                           ~~~~~~~~~^^
+  File "/mnt/data/D5-G7/work/product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py", line 204, in deny
+    def deny(self,**kw): self.assertFalse(self.call(**kw).structural_match)
+                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.552s
+
+FAILED (failures=6)

@@ -275,3 +275,6 @@ D3-R4 review 426a2e69dd193a9ec8f61181cc809c28fc50733c verified 230/230 actual fi
 
 ## D5-G6B — branch-local historical Core/ORG/IAM composition
 [Architecture and runbook](../../candidates/D5-G6B/ARCHITECTURE_AND_RUNBOOK.md). Existing Core reader, exact ORG06 historical bridge and G5 session/proposal review composed without new engine or grant. 13/13 simulated owner-port protocol tests; seven actual SQLite fixture tests NOT_RUN. Actual assignment, role provenance, atomic publication and protected COMMIT HOLD. No product gate promotion or entry selection between R8 and G6A.
+
+## D5-G7 — existing G6B Core/ORG readback hardening (branch-local)
+[Architecture/runbook](../../candidates/D5-G7/ARCHITECTURE_AND_RUNBOOK.md). Exact latest callback and membership checks hardened; selected 19/19 SQL-backed protocol and 13/13 G6B regression PASS, full actual 7 NOT_RUN. G6A and R8/R9 remain separate; no normative or runtime authority change.

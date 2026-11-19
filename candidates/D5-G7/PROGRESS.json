@@ -1,0 +1,117 @@
+{
+  "revision": "D5-G7",
+  "parent": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
+  "criteria": "D5-G1-D0-session-v1",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "partial": {
+    "S03": "existing G6B historical membership/role adapter hardened; actual assignment and owner role provenance absent",
+    "F05": "19 selected real Core SQL plus simulated ports and 13 G6B protocol regression PASS; protected revocation race open",
+    "I02": "no actual protected commit/publication"
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "tests": {
+    "before": [
+      13,
+      19
+    ],
+    "after": [
+      19,
+      19
+    ],
+    "g6b_regression": [
+      13,
+      13
+    ],
+    "original_actual_checkout": [
+      0,
+      7
+    ],
+    "original_G2": [
+      0,
+      50
+    ]
+  },
+  "blockers": [
+    "Full three-store actual checkout",
+    "Active assignment and owner-issued role/registry provenance",
+    "joint publication and strict COMMIT",
+    "independent custody",
+    "G2 50 deferred by user"
+  ],
+  "next": "Actual 7 fixture cases on exact G7; owner-issued assignment and role contract without new independent engine; keep protected entry owners separate.",
+  "activation": "HOLD"
+}

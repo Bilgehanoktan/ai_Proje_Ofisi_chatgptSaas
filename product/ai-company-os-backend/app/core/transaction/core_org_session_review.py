@@ -71,16 +71,28 @@ def inspect_core_org_session_reference(cursor, resolver, credential, intent, ini
                         (org_head, req.plan_revision, req.project, req.task, seat, role))
         if not historical_join():
             return Review('D5G6_HISTORICAL_JOIN_HOLD')
+        latest_reads = 0
+        latest_verified = False
         def latest_member():
-            sample = read_latest()
-            if type(sample) is not IdentityReadback or sample.member != member or not historical_join():
+            nonlocal latest_reads, latest_verified
+            latest_reads += 1
+            if latest_reads != 1:
                 raise ValueError('D5G6_CORE_MEMBER_DRIFT_HOLD')
+            sample = read_latest()
+            if (type(sample) is not IdentityReadback or not _member(sample.member)
+                    or sample.member != member or sample.scope != initial.scope
+                    or sample.principal != initial.principal
+                    or derive_request(intent, sample.member, sample.scope, sample.principal) != req
+                    or not historical_join()):
+                raise ValueError('D5G6_CORE_MEMBER_DRIFT_HOLD')
+            latest_verified = True
             return sample
         result = inspect_org_session_reference(resolver, credential, intent, initial, session,
                     session_sha, latest_member, store=store, org_reference=org_reference,
                     org_sha=org_sha, org_head=org_head, seat=seat, role=role,
                     history_pin=history_pin, root=root, owner_pin=owner_pin, domain=domain)
-        if (type(result) is not Review or result.structural_match is not True
+        if (latest_reads != 1 or latest_verified is not True
+                or type(result) is not Review or result.structural_match is not True
                 or result.reason != 'D5G5_ORG_PROPOSAL_SESSION_MATCH_ONLY'
                 or result.decision != 'HOLD' or not digest(result.binding_sha)
                 or result.commit_allowed is not False or result.dispatch_allowed is not False

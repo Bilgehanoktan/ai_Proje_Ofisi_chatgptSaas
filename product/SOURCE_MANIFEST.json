@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "D5-G6B",
-  "status": "D0_HISTORICAL_CORE_ORG_IAM_COMPOSITION_PROTOCOL_TESTED_CHECKOUT_NOT_RUN",
+  "doc_revision": "D5-G7",
+  "status": "D0_CORE_ORG_READBACK_HARDENED_SELECTED_LOCAL_PASS",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+  "parent_git_commit": "8cb8d6e3651122f1c1dc0b01a57c41a66be94394",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -399,8 +399,8 @@
       "sha256": "91dcfea9b9f04aa39eab12702ca128677fa636ef839343d641de77b1a8e5c224"
     },
     "ai-company-os-backend/app/core/transaction/core_org_session_review.py": {
-      "bytes": 6141,
-      "sha256": "8dff9c081ce6986cd0462a294f1160cd2f01fabb66905939d87b32b99248d440"
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae"
     },
     "ai-company-os-backend/app/core/transaction/effect_fence_reference.py": {
       "bytes": 5572,
@@ -725,6 +725,10 @@
     "ai-company-os-backend/tests/test_company_terminal_0212.py": {
       "bytes": 10641,
       "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55"
+    },
+    "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py": {
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e"
     },
     "ai-company-os-backend/tests/test_d0_snapshot_p04.py": {
       "bytes": 4349,
@@ -1615,6 +1619,6 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "0fddce46ca68b39c4901fa18e0dcfb0d0f5dac1a",
-  "source_git_commit_note": "One additive product adapter; original entries preserved. Exact branch commit and readback separately."
+  "parent_source_manifest_blob": "04d6b10aa8e95d88b0efc53b838ceb89afac0096",
+  "source_git_commit_note": "Exact G7 branch commit and readback. One existing G6B module hardened, one additive SQL-backed protocol test; no second adapter, no protected entry merge."
 }
