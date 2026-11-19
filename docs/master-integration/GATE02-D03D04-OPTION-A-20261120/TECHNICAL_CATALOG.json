@@ -1,0 +1,231 @@
+{
+  "revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
+  "kind": "ARCHITECTURE_TO_PRODUCT_TRACEABILITY_SPEC_ONLY",
+  "current_architecture_source": {
+    "path": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+    "commit": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+    "git_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+  },
+  "selected_direction": "A",
+  "previous_owner_test_10": {
+    "run": 44620141705,
+    "scope": "original Core+OperationsStore D0 SQLite",
+    "result": "10/10 PASS previously, not rerun"
+  },
+  "existing_modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "symbols": [
+        "D0IntentAuthority",
+        "RootPin",
+        "execute_authority_fenced_transition"
+      ],
+      "status": "LOCAL_SQLITE_FIXTURE_NOT_ROOT",
+      "integration_delta": "DO_NOT_REPLACE_WITHOUT_OWNER"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+      "symbols": [
+        "inspect_witness",
+        "inspect_restore"
+      ],
+      "status": "PURE_STRUCTURAL_INSPECTOR_NO_INDEPENDENT_ROOT",
+      "integration_delta": "INDEPENDENT_ROOT_ADAPTER_OWNER_REVIEW"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "symbols": [
+        "Request",
+        "review_binding",
+        "review_boundary"
+      ],
+      "status": "D0_IDENTITY_INSPECTOR_NOT_OWNER_ISSUER",
+      "integration_delta": "OWNER_IAM_SOURCE_PROOF_REQUIRED"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "symbols": [
+        "D0IntentJournal",
+        "intent_pin"
+      ],
+      "status": "LOCAL_QUARANTINE_FIXTURE",
+      "integration_delta": "BIND_EXTERNAL_CONSUMED_CLAIM_ONLY_AFTER_APPROVAL"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+      "symbols": [
+        "WitnessedTransitionMapping",
+        "binding_digest"
+      ],
+      "status": "LOCAL_T1_DECRATOR",
+      "integration_delta": "ORIGINAL_T1_ATOMICITY_OWNER_GATE"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/receipt_review.py",
+      "symbols": [
+        "ReceiptPin",
+        "inspect_receipt"
+      ],
+      "status": "REFERENCE_ONLY_NOT_SIGNATURE_VERIFIER",
+      "integration_delta": "INDEPENDENT_IV_EVIDENCE_OWNER"
+    },
+    {
+      "path": "product/ai-company-os-backend/durable_ops.py",
+      "symbols": [
+        "OperationsStore.record_assignment_review",
+        "OperationsStore.assignment_review"
+      ],
+      "status": "OWNER_ADDITIVE_PR6_NOT_IN_COMMON",
+      "integration_delta": "GATE02_OWNER_ISSUANCE_AND_RUNTIME_PROVENANCE_HOLD"
+    }
+  ],
+  "proposed_symbols": [
+    "IndependentRootSnapshotV1",
+    "ConsumedIntentClaimV1",
+    "SinkFenceAcceptanceV1"
+  ],
+  "new_code_symbols": 0,
+  "database_ownership": {
+    "existing": [
+      "D0 product-local SQLite roots and claims",
+      "D0 ORG op_assignment_review"
+    ],
+    "proposed": [
+      "independently managed root/claim ledger separate restore domain",
+      "effect sink own dedup/fence transaction"
+    ],
+    "DDL_changes": 0,
+    "postgresql_protected_commit": "NOT_RUN"
+  },
+  "API": {
+    "proposed_contract_only": [
+      "rootRead",
+      "consumeClaimOnce",
+      "sinkAcceptEffectOnce"
+    ],
+    "actual_changes": 0
+  },
+  "event_contract": {
+    "proposed_events": [
+      "CLAIM_CONSUMED",
+      "EFFECT_ACCEPTED",
+      "OUTCOME_UNKNOWN_QUARANTINE"
+    ],
+    "actual_changes": 0
+  },
+  "dependencies": {
+    "added": 0,
+    "provider": "UNSELECTED",
+    "consensus_mechanism": "OWNER_DESIGN_REQUIRED",
+    "crypto_custody": "OWNER_REVIEW_REQUIRED"
+  },
+  "conflict_matrix": [
+    {
+      "file": "durable_ops.py",
+      "G9_blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "GATE02_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "owner": "ORG/Core",
+      "resolution": "HOLD existing owner decision; no auto merge"
+    },
+    {
+      "file": "T1 external authority adapter",
+      "owner": "MI-03/MI-04/MI-02/Security",
+      "resolution": "No implementation before independently owned root/sink contracts"
+    },
+    {
+      "file": "independent security receipt path",
+      "owner": "Independent IV",
+      "resolution": "No self-certified acceptance"
+    }
+  ],
+  "tests": {
+    "new_executed": 0,
+    "original_fullchain_0214": "0/10 NOT_RUN",
+    "G2_50": "NOT_RUN",
+    "G9_7": "NOT_RUN",
+    "core10": "PR6 PASS historical",
+    "acceptance_A": [
+      0,
+      8
+    ]
+  },
+  "source_edit_count": 0,
+  "ci_changes": 0,
+  "permission_changes": 0,
+  "maintenance": "Fail-closed absent root/freshness/epoch/issuer/sink proof. Never reset consumed claims on rollback. Use separate negative restore/partition tests when approved.",
+  "rollback": "Revert governance-only ADR/registry/status pointers; product-dev and owner branches unaffected; independent claim ledger not provisioned.",
+  "validations": [
+    {
+      "id": "D03_design_8",
+      "pass": true
+    },
+    {
+      "id": "matrix8_all_not_pass",
+      "pass": true
+    },
+    {
+      "id": "original_security_all_open",
+      "pass": true
+    },
+    {
+      "id": "no_prior_A",
+      "pass": true
+    },
+    {
+      "id": "product_dev_pinned",
+      "pass": true
+    },
+    {
+      "id": "permissions_unchanged",
+      "pass": true
+    },
+    {
+      "id": "canonical_acceptance_unchanged",
+      "pass": true
+    },
+    {
+      "id": "package_scores_unchanged",
+      "pass": true
+    },
+    {
+      "id": "groups_unchanged",
+      "pass": true
+    },
+    {
+      "id": "no_new_group_freeze",
+      "pass": true
+    },
+    {
+      "id": "scores_null",
+      "pass": true
+    },
+    {
+      "id": "no_runtime_product_changes",
+      "pass": true
+    },
+    {
+      "id": "historical_selected_core10",
+      "pass": true
+    },
+    {
+      "id": "D03_03_restore_vuln",
+      "pass": true
+    },
+    {
+      "id": "selected_status_design_only",
+      "pass": true
+    },
+    {
+      "id": "owner_gates_5",
+      "pass": true
+    },
+    {
+      "id": "no_real_authority",
+      "pass": true
+    },
+    {
+      "id": "security_catalog_hold",
+      "pass": true
+    }
+  ]
+}

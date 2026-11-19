@@ -1,0 +1,107 @@
+{
+  "revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
+  "source_design_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+  "independent_security_tests_passed": 0,
+  "independent_security_tests_required": 8,
+  "scenario_results": [
+    {
+      "id": "A-AT01",
+      "source_case": "1. Replace root file or redirect path during commit: independent authority must remain unaffected; stale epoch at effect sink denied.",
+      "related_original_gate": "D03-D04-01",
+      "security_owner": "Security/Independent Authority + IAM",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "root path replacement or symlink swap",
+      "expected_result": "independent root unaffected; sink stale epoch denies",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT02",
+      "source_case": "2. Restore product and journal: consumed claim remains, no replay.",
+      "related_original_gate": "D03-D04-02",
+      "security_owner": "Security/T1 owner",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "product+journal restore",
+      "expected_result": "consumed claim persists externally; no effect replay",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT03",
+      "source_case": "3. Restore product, journal and local authority: independent monotonic checkpoint rejects regression; no effect.",
+      "related_original_gate": "D03-D04-03",
+      "security_owner": "Security/Independent Authority + ORG",
+      "actual_status": "KNOWN_D0_VULNERABILITY_REPRODUCED_NO_A_FIX",
+      "scenario": "product+journal+local authority+old pin restore",
+      "expected_result": "independent monotonic checkpoint and consumed claim reject; original D0 reaccept no longer possible",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT04",
+      "source_case": "4. Split brain/network partition/timeout: fail closed; no alternate authority or automatic retry.",
+      "related_original_gate": "D03-D04-04",
+      "security_owner": "Independent Authority owner",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "split brain and network partition",
+      "expected_result": "quorum unavailable DENY/HOLD; no alternate authority or automatic retry",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT05",
+      "source_case": "5. Commit response lost: quarantine, exact independent reconciliation; no second effect.",
+      "related_original_gate": "D03-D04-05",
+      "security_owner": "T1/Authority owner",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "lost COMMIT response",
+      "expected_result": "quarantine and reconcile exact transaction/effect; no duplicate",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT06",
+      "source_case": "6. Root key rotation/lease expiration: stale proof rejected at sink; consumed claim not erased.",
+      "related_original_gate": "D03-D04-06",
+      "security_owner": "IAM/Authority owner",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "key rotation/lease expiry",
+      "expected_result": "stale credential/fence rejected at sink; claim remains consumed",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT07",
+      "source_case": "7. Cross-tenant/run/intent binding or direct effect bypass: reject; prove complete mediation and separate credentials.",
+      "related_original_gate": "D03-D04-07",
+      "security_owner": "IAM/ORG and effect sink owners",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "cross-tenant/run/intent or direct effect bypass",
+      "expected_result": "full binding and separate credentials enforced at sink; all bypass attempts blocked",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    },
+    {
+      "id": "A-AT08",
+      "source_case": "8. Independent backup/restore drill: establish nonrollbackable checkpoint continuity, test from separately administered environment.",
+      "related_original_gate": "D03-D04-08",
+      "security_owner": "Independent Security/IV",
+      "actual_status": "NOT_RUN_IN_INDEPENDENT_DOMAIN",
+      "scenario": "independent root backup/restore drill",
+      "expected_result": "monotonic root and claim continuity witnessed by independent custodian",
+      "evidence_required": "Independent runner raw log and signed external root/sink evidence, actual restore/failure drill, owner+IV signoff, exact hash/source pin",
+      "result": "NOT_RUN",
+      "gate": "SECURITY_HOLD"
+    }
+  ],
+  "existing_D0_counterexample": "REPRODUCED_OLD_DB_PLUS_OLD_PIN",
+  "acceptance_status": "HOLD",
+  "product_tests_this_round": 0
+}

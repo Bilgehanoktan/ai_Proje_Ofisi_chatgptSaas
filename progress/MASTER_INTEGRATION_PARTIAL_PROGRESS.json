@@ -1,5 +1,5 @@
 {
-  "revision": "MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120",
+  "revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -7,7 +7,7 @@
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "overall_percent": null,
-  "overall_reason": "GATE02 anti-rollback owner vulnerability demonstrated, original PR6 Core+ORG 0/10 NOT_RUN and T1 0214 0/10 NOT_RUN; 0/10 group approval; global weighted development HESAPLANAMADI.",
+  "overall_reason": "Architecture direction A chosen only; no new product/source tests, global 0/10 owner-approved group denominators, actual GATE02 independent safety 0/8. HESAPLANAMADI.",
   "global_acceptance": [
     {
       "id": "CORE",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen. | GATE02 new isolated 16/16, replayed 20/20; previous/current D5-G 42.5%, delta 0.",
   "new_product_tests": 0,
-  "previous_revision": "MI10-VM-REALM-AND-MI03-COREOPS-CI-20261120",
+  "previous_revision": "MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1838,5 +1838,41 @@
     "independent_acceptance": "HOLD",
     "weighted_delta_pp": 0,
     "product_acceptance_delta_pp": 0
+  },
+  "gate02_d03d04_option_a_architecture": {
+    "revision": "MI-GATE02-D03D04-OPTION-A-ARCH-DECISION-20261120",
+    "choice": "A",
+    "decision_status": "ARCHITECTURE_DIRECTION_SELECTED_ONLY",
+    "operational_default": "D0_HOLD",
+    "adr": "decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+    "contract": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INTERFACE_AND_TRUST_CONTRACT.json",
+    "acceptance": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/OPTION_A_INDEPENDENT_ACCEPTANCE_MATRIX.json",
+    "catalog": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/TECHNICAL_CATALOG.json",
+    "handover": "docs/master-integration/GATE02-D03D04-OPTION-A-20261120/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "source": "4035d1a884362dae56a60d91358ea6e8e7dc0cdd",
+    "design_blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24",
+    "actual_new_tests": 0,
+    "independent_matrix": [
+      0,
+      8
+    ],
+    "known_restore_residual": "UNRESOLVED_REPRODUCED",
+    "prior_selected_core": [
+      10,
+      10
+    ],
+    "owner_approval": "REQUIRED",
+    "runtime_activation": "NOT_AUTHORIZED",
+    "production_acceptance": "HOLD",
+    "root_provider": "NOT_SELECTED",
+    "sink": "NOT_IMPLEMENTED",
+    "permissions_change": 0,
+    "product_code_change": 0,
+    "previous_iam_org_percent": 42.5,
+    "current_iam_org_percent": 42.5,
+    "delta_pp": 0,
+    "development_percent_previous": null,
+    "development_percent_current": null,
+    "product_acceptance_delta": 0
   }
 }
