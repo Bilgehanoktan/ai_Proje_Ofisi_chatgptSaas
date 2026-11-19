@@ -1,0 +1,114 @@
+{
+  "revision": "MI-PROGRESS-04-R2",
+  "classification": "READ_ONLY_EXTERNAL_CI_LOG_RECONCILIATION_TECHNICAL_CATALOG",
+  "source_symbols": [
+    {
+      "path": ".github/mi10/run_sse_compatible_u3.py",
+      "owner_commit": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+      "blob": "84997c31334e4684b159b5dbd799e3abdd40d301",
+      "symbols": [
+        "ORIGINAL_BLOB",
+        "main"
+      ],
+      "contract": "Temporary U3 copy with same fetch Response clone, not original byte-exact browser"
+    },
+    {
+      "path": "tests/integration/browser_unified_u3.py",
+      "blob": "2a3f2b8e286c5d79847a6b00cdb6d046d0429773",
+      "symbols": [
+        "main",
+        "read"
+      ],
+      "contract": "Original U3 invariant and screenshots source retained; native CDP SSE body known fail"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "blob": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822",
+      "symbols": [
+        "shared_snapshot"
+      ],
+      "contract": "Actual local readonly FastAPI SSE from persisted D0 prefix"
+    }
+  ],
+  "api_changes": 0,
+  "db_product_changes": 0,
+  "classes_changed": 0,
+  "functions_changed": 0,
+  "events_changed": 0,
+  "dependency_changes_in_progress_branch": 0,
+  "permissions_changed": 0,
+  "owner_evidence": [
+    {
+      "path": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
+      "blob": "df3f8c6d0e058aabb10413c02f513a79ca875cbc",
+      "source": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+      "scope": "actual CI selected"
+    },
+    {
+      "path": "docs/master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/EVIDENCE.json",
+      "blob": "18569f44b979ab00c849a7fa5aef794d3cbd0f1f",
+      "scope": "actual isolated SQLite 79 selected plus vulnerability reproduction"
+    }
+  ],
+  "source_total_product_blobs_equal": [
+    539,
+    539
+  ],
+  "new_product_tests_in_this_reporting_chat": 0,
+  "maintenance": "If native CDP fails keep original test HOLD; never fake event-stream. CI-only compatible browser success distinct from full W8. Retain restored old DB + old pin security red gate; no downgrade or lost claim reset.",
+  "rollback": "Normal reporting-only governance revert, preserve MI10 owner PR4 CI success, MI03 owner test source and all prior percentages.",
+  "checks": [
+    {
+      "id": "owner_source_ci_exists",
+      "passed": true
+    },
+    {
+      "id": "actual_run_success",
+      "passed": true
+    },
+    {
+      "id": "accepted_ci_jobs",
+      "passed": true
+    },
+    {
+      "id": "selected_539_and_538",
+      "passed": true
+    },
+    {
+      "id": "owner79_scope",
+      "passed": true
+    },
+    {
+      "id": "restore_security_holds",
+      "passed": true
+    },
+    {
+      "id": "owner_gates_remain_eight",
+      "passed": true
+    },
+    {
+      "id": "group_count",
+      "passed": true
+    },
+    {
+      "id": "original_browser_not_claimed",
+      "passed": true
+    },
+    {
+      "id": "product_dev_unchanged",
+      "passed": true
+    },
+    {
+      "id": "PR4_draft",
+      "passed": true
+    },
+    {
+      "id": "score_null",
+      "passed": true
+    },
+    {
+      "id": "catalog_source_changes_zero",
+      "passed": true
+    }
+  ]
+}

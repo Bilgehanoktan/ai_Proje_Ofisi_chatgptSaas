@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+  "revision": "MI-PROGRESS-04-R2",
   "status": "MI_PROGRESS_03_REPORTING_CLOSED_10_GROUP_DENOMINATORS_UNFROZEN",
   "total": 100,
   "groups": [
@@ -660,7 +660,7 @@
     "acceptance": 10
   },
   "overall_percent": null,
-  "reason": "G01 source SHA256 and diagnostic Next build PASS, G03 T1 D0 42 PASS on scoped CI; other product gates and all 10 owner-approved denominators HOLD; overall HESAPLANAMADI.",
+  "reason": "Scoped CI 3/3 PASS on pinned source; native original U3/full W8/PG/IV still open, group owner-freeze 0/10. Weighted global HESAPLANAMADI.",
   "coverage": {
     "tracker_areas": [
       24,
@@ -720,9 +720,17 @@
     "actual_hosted_ci_source_sha256": [
       538,
       538
+    ],
+    "scoped_ci_jobs_pass": [
+      3,
+      3
+    ],
+    "scoped_ci_source_sha256": [
+      538,
+      538
     ]
   },
-  "previous_revision": "MI-PROGRESS-03-CLOSE",
+  "previous_revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
   "scope_and_criteria": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
   "evidence_review": "progress/MI_PROGRESS_02_R2_COMPLETE_DRAFT_AND_MVP_TRACE.json",
   "proof_register": "progress/MI_PROGRESS_03_A_F_CRITERION_PROOF.json",
@@ -800,5 +808,48 @@
     "acceptance_delta": 0,
     "product_changes": 0,
     "next": "MI-10 owner pin FastAPI opentelemetry-api and rerun CI PR4; MI03/04 keep original 10/50/7 and strict PG on separate gates."
+  },
+  "mi_progress_04_r2": {
+    "revision": "MI-PROGRESS-04-R2",
+    "status": "SCOPED_HOSTED_CI_3_OF_3_PASS_NATIVE_U3_AND_SECURITY_GATES_HOLD",
+    "owner_ci_evidence": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
+    "owner_assignment_evidence": "docs/master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/EVIDENCE.json",
+    "review": "progress/MI_PROGRESS_04_R2_EVIDENCE_RECONCILIATION.json",
+    "owner_gates": "progress/MI_PROGRESS_04_R2_OWNER_GATES.json",
+    "catalog": "docs/master-integration/MI-PROGRESS-04-R2/TECHNICAL_CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-04-R2/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "source_commit": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+    "run_id": 44613960595,
+    "selected_ci_jobs": [
+      3,
+      3
+    ],
+    "original_T1_selected": [
+      42,
+      42
+    ],
+    "source_sha256": [
+      538,
+      538
+    ],
+    "sse_compatible_U3": "PASS",
+    "native_original_U3": "HOLD",
+    "original_W8": "NOT_RUN",
+    "PG_protected_commit": "HOLD",
+    "restore_vulnerability": "REPRODUCED",
+    "mi03_selected_assignment": [
+      79,
+      79
+    ],
+    "group_owner_approved": [
+      0,
+      10
+    ],
+    "previous_development_percent": null,
+    "current_development_percent": null,
+    "delta_pp": null,
+    "acceptance_delta": 0,
+    "product_changes": 0,
+    "permissions_changes": 0
   }
 }

@@ -1,0 +1,198 @@
+{
+  "revision": "MI-PROGRESS-04-R2",
+  "date": "2026-11-19",
+  "classification": "OWNER_GATES_UPDATED_FROM_REAL_EVIDENCE_WITHOUT_OWNER_REASSIGNMENT",
+  "previous": "progress/MI_PROGRESS_04_R1_OWNER_GATES.json",
+  "active_owner_tasks": [
+    {
+      "id": "G01",
+      "owner": "MI-01/Unified",
+      "priority": 1,
+      "current": "539 shared files, selected ORG31/Projection12/Skill41/Registry13=97/97 PASS; full chain NOT_RUN",
+      "blocking": "Exact complete checkout/locked install, full backend+Next build/browser and owner fingerprint",
+      "predecessors": [],
+      "evidence_ids": [
+        "COMMON03",
+        "RUNNER"
+      ],
+      "exit": "User-authorized isolated W8 audit→prepare→install→test→smoke with raw stdout/hash/exit and owner review; no regenerated npm lock",
+      "status": "HOLD",
+      "diagnostic_ci_runs": [
+        44610698699,
+        44612266079
+      ],
+      "source_audit_sha256": [
+        538,
+        538
+      ],
+      "frontend_build": "PASS_EXACT_COMMON_SELECTED",
+      "browser": "BLOCKED_REQUIREMENTS_PIN",
+      "next_owner_action": "MI01 and MI10 owners preserve successful PR4 diagnostics; review native CDP-compatible original U3 semantics and full W8 approved wheelhouse; independent source acceptance remains separate",
+      "source_audit": "PASS_538_OF_538",
+      "U3_compatible": "PASS_CI_ONLY_RUN_44613960595",
+      "U3_original": "KNOWN_CDP_FAIL",
+      "full_W8": "NOT_RUN"
+    },
+    {
+      "id": "G02",
+      "owner": "MI-03/ORG/Core",
+      "priority": 1,
+      "current": "GATE02 assignment 20/20 SQLite source candidate; same durable_ops path has original and modified blobs",
+      "blocking": "Original 43ed448c... vs modified 619fe224... class/resource and one-assignment semantics; 8 Python+2 SQL packaging missing",
+      "predecessors": [],
+      "evidence_ids": [
+        "GATE02-ASSIGNMENT",
+        "GATE01-CLAIM"
+      ],
+      "exit": "ORG/Core/D4/IAM owner disposition, exact Store+Core original replay and P02 A–E, no synthetic grant",
+      "status": "HOLD",
+      "owner_sql_schema": [
+        11,
+        11
+      ],
+      "selected_packaging": [
+        71,
+        71
+      ],
+      "next_owner_action": "Require independent monotonic accepted-assignment custody and real OperationsStore/Core positive test, owner approval; original G9 remain HOLD",
+      "selected_79": "PASS_ON_ISOLATED_SQLITE",
+      "new_unique_methods": 8,
+      "known_restore_vulnerability": "OLD_DB_PLUS_OLD_PIN_REACCEPT_REPRODUCED"
+    },
+    {
+      "id": "G03",
+      "owner": "MI-03/MI-04/T1",
+      "priority": 1,
+      "current": "T1 42/42 selected (7 Authority +35 mapping/scheduler) and 59/59 G6A/D4/ORG selected",
+      "blocking": "Original Memory–T1 fullchain 0/10 runner preflight blocked missing 265 exact backend/2 G6A/3 DDL; G2 50 and G9 7 not run; strict protected PG COMMIT HOLD",
+      "predecessors": [
+        "G02"
+      ],
+      "evidence_ids": [
+        "GATE01-T1-42",
+        "G6A-D4-ORG-59",
+        "GATE01"
+      ],
+      "exit": "Owner-approved entry/writer; exact original 10+G2+G9 with no unsafe overlay, strict COMMIT and UNKNOWN quarantine actual PG readback, no automatic retry",
+      "status": "HOLD",
+      "github_hosted_selected_t1": [
+        42,
+        42
+      ],
+      "run_ids": [
+        44610698699,
+        44612266079
+      ],
+      "next_owner_action": "Run original 0214 ten, G2 fifty, G9 seven and actual canonical PostgreSQL protected COMMIT with independent owner provenance; preserve intentional restore residual HOLD",
+      "hosted_T1_42": "PASS_EXISTING_METHODS_REPEAT",
+      "owner_assignment_79": "SEPARATE_SELECTED_D0"
+    },
+    {
+      "id": "G04",
+      "owner": "MI-02/PostgreSQL",
+      "priority": 1,
+      "current": "Core scoped 12/16; D2 13/13 PG D0 and D3 230 fixture probes historical",
+      "blocking": "Canonical product PG pool/RLS, T1 multi-project race, real outbox and isolation not proven",
+      "predecessors": [
+        "G02",
+        "G03"
+      ],
+      "evidence_ids": [
+        "CORE",
+        "CORE-D2",
+        "CORE-D3"
+      ],
+      "exit": "Pinned original product PG/RLS evidence with real non-owner pool, lock/rollback, outbox and readback; separate IV",
+      "status": "HOLD"
+    },
+    {
+      "id": "G05",
+      "owner": "MI-07/08/09 W5 owners",
+      "priority": 2,
+      "current": "Skill41 selected current common PASS, existing ModelMemory sources pinned",
+      "blocking": "Full original Model/Memory 344 NOT_RUN, old writer retirement and owner proof/raw MEM05E missing",
+      "predecessors": [],
+      "evidence_ids": [
+        "MODEL-MEM",
+        "MEM-E",
+        "MEM-T1",
+        "COMMON03"
+      ],
+      "exit": "Exactly one 344-suite run on locked same candidate, preserve PASS vs known expected boundary failures; writer retirement + receipts proven",
+      "status": "HOLD"
+    },
+    {
+      "id": "G06",
+      "owner": "MI-05/06/UI/Office",
+      "priority": 2,
+      "current": "Historical UI 21/40; ORG31 & Projection12 selected common PASS",
+      "blocking": "Office0/55 JOIN_HOLD; no canonical owner-provided real session/world/asset proof; full browser NOT_RUN",
+      "predecessors": [
+        "G01",
+        "G02"
+      ],
+      "evidence_ids": [
+        "ORG",
+        "PROJECTION",
+        "COMMON03"
+      ],
+      "exit": "Owner-bound real read-only projection + browser visual/functional assertions on same exact source; OfficeV0 55 separately",
+      "status": "HOLD"
+    },
+    {
+      "id": "G07",
+      "owner": "MI-10/Independent IV/QA",
+      "priority": 3,
+      "current": "IV 0/7; MI10 8 static checks, no CI authorization",
+      "blocking": "Independent custodian/receipt/policy and acceptance proof missing, CI/main/PROD/real effects not permitted",
+      "predecessors": [
+        "G01",
+        "G03",
+        "G04"
+      ],
+      "evidence_ids": [
+        "CORE",
+        "RUNNER"
+      ],
+      "exit": "Separate authorized IV acceptance, independent trust root and QA release gate; CI plan only until explicit permission",
+      "status": "HOLD"
+    },
+    {
+      "id": "G08",
+      "owner": "MI-PROGRESS-04 central coordinator",
+      "priority": 3,
+      "current": "315/315 criterion draft evidence triaged; weights proposed 100; owner denominator 0/10",
+      "blocking": "No exhaustive confirmed group/stage denominator and unique proof allocation, global percentage is null",
+      "predecessors": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "evidence_ids": [
+        "GATE01",
+        "CORE",
+        "UI",
+        "MEM-E"
+      ],
+      "exit": "Owner-approved unique criterion IDs, group weights, stage denominators, previous/new/delta and evidence refs; calculate only then",
+      "status": "HOLD"
+    }
+  ],
+  "unchanged_owner_ids": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08"
+  ],
+  "changes_only": "G01 G02 G03 outcome/next/evidence, all statuses remain HOLD",
+  "development_percent": null,
+  "acceptance_delta": 0
+}

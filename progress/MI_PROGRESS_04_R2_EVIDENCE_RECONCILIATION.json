@@ -1,0 +1,225 @@
+{
+  "revision": "MI-PROGRESS-04-R2",
+  "date": "2026-11-19",
+  "classification": "OWNER_EVIDENCE_RECONCILED_REAL_SCOPED_CI_SUCCESS_AND_RESTORE_NEGATIVE",
+  "governance_parent": "dfe5d913ca341170b919ec169828b1a454c4ae11",
+  "source": {
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "original_common": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "current_common": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "product_files_equal": [
+      539,
+      539
+    ]
+  },
+  "ci": {
+    "owner_record": "docs/master-integration/MI-10-LIMITED-CI-20261119/EVIDENCE.json",
+    "owner_record_blob": "df3f8c6d0e058aabb10413c02f513a79ca875cbc",
+    "pr": 4,
+    "pr_draft": true,
+    "pr_base": "integration/product-dev",
+    "verified_success_run": {
+      "id": 44613960595,
+      "source_commit": "403d180fb6bf2cd739dc0d8880e3b1d3b37006e0",
+      "conclusion": "success",
+      "job_ids": [
+        135878290222,
+        135878490150,
+        135878490379
+      ],
+      "jobs_success": [
+        3,
+        3
+      ],
+      "original_source_sha256": [
+        538,
+        538
+      ],
+      "shared_pairs": [
+        17,
+        17
+      ],
+      "aux_git_blob": [
+        33,
+        33
+      ],
+      "npm_lock": "BYTE_EXACT_PASS",
+      "next_build": "PASS",
+      "typescript": "PASS",
+      "selected_original_T1_SQLite": [
+        42,
+        42
+      ],
+      "real_fastapi_loopback": "PASS",
+      "persisted_sqlite_prefix": "PASS",
+      "sqlite_unchanged": "PASS",
+      "U3_sse_compatible_browser": "PASS",
+      "original_unmodified_U3_cdp_body": "KNOWN_FAIL_NOT_RUN_AS_NATIVE",
+      "screenshots": 5,
+      "ttl": "PASS_IN_COMPAT",
+      "response_body": "SAME_REAL_FETCH_CLONE",
+      "full_original_W8": "NOT_RUN",
+      "pg_protected_commit": "NOT_RUN",
+      "independent_acceptance": "HOLD",
+      "artifact": {
+        "id": 14573164214,
+        "size_bytes": 1440083,
+        "digest": "sha256:756a1d57e7af775f1df17ce981a36eb6ed70b9c38dce983aa905201a8caaed51"
+      }
+    },
+    "prior_failed_runs": [
+      44610698699,
+      44612266079,
+      44612869954,
+      44613836033
+    ],
+    "later_documentation_only_run": {
+      "id": 44614849105,
+      "head": "3b073024d99665cd1cd2a242856f4e3f8b1e682f",
+      "status": "completed",
+      "conclusion": "success",
+      "interpretation": "DO_NOT_INFER_PASS_UNLESS_COMPLETE"
+    },
+    "new_unique_test_methods": 0,
+    "original_browser_byte_exact": "NOT_PASS",
+    "acceptance_delta": 0
+  },
+  "org": {
+    "owner_record": "docs/master-integration/MI03-GATE02-ASSIGNMENT-RECOVERY-79/EVIDENCE.json",
+    "owner_record_blob": "18569f44b979ab00c849a7fa5aef794d3cbd0f1f",
+    "selected": [
+      79,
+      79
+    ],
+    "repeated_prior": [
+      71,
+      71
+    ],
+    "new_methods": [
+      8,
+      8
+    ],
+    "source_pins": [
+      32,
+      32
+    ],
+    "known_restore_residual": "REPRODUCED: RESTORED_OLD_DB_PLUS_OLD_PIN_SYNTHETIC_ACCEPTED_D0_REACCEPTED",
+    "security_gate": "HOLD",
+    "opposite_control": "RESTORED_OLD_DB_PLUS_NEWER_PIN_RETURNS_MISSING_HOLD",
+    "actual_owner_positive": "NOT_RUN",
+    "G9": "NOT_RUN",
+    "G2": "NOT_RUN",
+    "memory_T1_10": "NOT_RUN",
+    "canonical_pg": "NOT_RUN",
+    "acceptance_delta": 0
+  },
+  "prior_progress": {
+    "development_previous_percent": null,
+    "development_current_percent": null,
+    "delta_pp": null,
+    "approved_groups": [
+      0,
+      10
+    ],
+    "criterion_drafts": [
+      315,
+      315
+    ],
+    "previous_acceptance": [
+      {
+        "id": "CORE",
+        "previous": [
+          12,
+          16
+        ],
+        "current": [
+          12,
+          16
+        ],
+        "source": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+        "scope": "Core standalone; D3 scoped fixture, not canonical RLS",
+        "delta_pp": 0
+      },
+      {
+        "id": "UI",
+        "previous": [
+          21,
+          40
+        ],
+        "current": [
+          21,
+          40
+        ],
+        "source": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+        "scope": null,
+        "delta_pp": 0
+      },
+      {
+        "id": "ORG_PLAN",
+        "previous": [
+          5,
+          7
+        ],
+        "current": [
+          5,
+          7
+        ],
+        "source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+        "scope": "plan not product",
+        "delta_pp": 0
+      },
+      {
+        "id": "MVP",
+        "previous": [
+          0,
+          11
+        ],
+        "current": [
+          0,
+          11
+        ],
+        "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "scope": null,
+        "delta_pp": 0
+      },
+      {
+        "id": "IV",
+        "previous": [
+          0,
+          7
+        ],
+        "current": [
+          0,
+          7
+        ],
+        "source": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+        "scope": null,
+        "delta_pp": 0
+      },
+      {
+        "id": "EXT",
+        "previous": [
+          2,
+          7
+        ],
+        "current": [
+          2,
+          7
+        ],
+        "source": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+        "scope": "EXT-specific gates",
+        "delta_pp": 0
+      }
+    ],
+    "acceptance_delta": 0
+  },
+  "task_closure": "MI-PROGRESS-04-R2_EVIDENCE_UPDATE_ONLY_PRODUCT_GATES_OPEN",
+  "action_priority": "Keep real scoped CI PASS and fix native U3 CDP independently; owner GATE02 retained monotonic custody security residual and protected T1/PG/IV; run full original W8 and ModelMemory344 on approved fixed sources.",
+  "prohibited_claims": [
+    "Five previous CI runs are not five unique successes",
+    "The compatible U3 browser is not byte-exact original test",
+    "GATE02 79 selected is not 79 product acceptance criteria",
+    "The deliberate old DB+old pin replay is security vulnerability reproduction, NOT security PASS",
+    "No weighted general project percentage"
+  ]
+}
