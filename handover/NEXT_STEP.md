@@ -16,3 +16,7 @@ MI-10 owner to review the [sequence-bound same-fetch SSE capture candidate](../d
 
 ## MI10-VM-REALM-AND-MI03-COREOPS-CI-20261120 — next controlled integration gates
 MI-10 owner: change only same-repo PR #4 Node harness to compare host-realm `Array.from(records, x => x.sequence)` and rerun existing narrow CI; verify **new** per-fetch SSE browser flow before PASS. Keep original U3 CDP and formal W8 HOLD. MI-03 owners: retain actual Core/OperationsStore 10-case D0 PASS as exact source-pinned evidence, next check true owner-issued role/provenance and G8 P02; strict PG/witness independent HOLD. MI-03/04 original 0214 Memory–T1 ten tests separate NOT_RUN. No release/prod change, percentage inflation or auto merge.
+
+
+## MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120 — next release gates (CI evidence reconciled)
+MI-10 per-fetch SSE compatibility CI is now genuinely **3/3 PASS** with 17/17 freshness cases; retain this as D0 diagnostic evidence, not unmodified CDP/U3 or W8 acceptance. MI-01 owner next: full W8 independently reviewed wheelhouse/fingerprint `prepare-install-test-smoke`, original native browser constraint and acceptance. MI-03/04: complete 265-source original 0214 Memory–T1 ten tests and full restore residual, real IAM owner-issued scope and P02, strict protected PostgreSQL COMMIT and independent witness/IV. Keep PR#4 DRAFT, product-dev/main unmodified and existing security grants unchanged. [Evidence](../docs/master-integration/MI10-SSE-FRESH-CI-ACTUAL-SUCCESS-20261120/EVIDENCE.json).
