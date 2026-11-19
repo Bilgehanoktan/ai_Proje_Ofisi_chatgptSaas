@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "D5-G5",
-  "status": "D0_ORG_REVIEW_SOURCE_INTEGRATED_TEST_NOT_RUN",
+  "doc_revision": "D5-G6B",
+  "status": "D0_HISTORICAL_CORE_ORG_IAM_COMPOSITION_PROTOCOL_TESTED_CHECKOUT_NOT_RUN",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "ed638c4bc8d69cec267392251f6efe40f464fc9a",
+  "parent_git_commit": "afba55652d4667d9027a0a7fd8f2dec47684480a",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -398,6 +398,10 @@
       "bytes": 3079,
       "sha256": "91dcfea9b9f04aa39eab12702ca128677fa636ef839343d641de77b1a8e5c224"
     },
+    "ai-company-os-backend/app/core/transaction/core_org_session_review.py": {
+      "bytes": 6141,
+      "sha256": "8dff9c081ce6986cd0462a294f1160cd2f01fabb66905939d87b32b99248d440"
+    },
     "ai-company-os-backend/app/core/transaction/effect_fence_reference.py": {
       "bytes": 5572,
       "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f"
@@ -429,6 +433,10 @@
     "ai-company-os-backend/app/core/transaction/intent_identity.py": {
       "bytes": 3393,
       "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
+    },
+    "ai-company-os-backend/app/core/transaction/org_membership_review.py": {
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
@@ -761,6 +769,10 @@
     "ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
       "bytes": 7172,
       "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331"
+    },
+    "ai-company-os-backend/tests/test_iam_org_d5g5.py": {
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
     },
     "ai-company-os-backend/tests/test_iam_session_d5g1.py": {
       "bytes": 4691,
@@ -1601,16 +1613,8 @@
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 608,
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
-    },
-    "ai-company-os-backend/app/core/transaction/org_membership_review.py": {
-      "bytes": 6742,
-      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
-    },
-    "ai-company-os-backend/tests/test_iam_org_d5g5.py": {
-      "bytes": 6390,
-      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
     }
   },
-  "parent_source_manifest_blob": "15e446e4d14c95d81d1e152efa2e8cb11122b3e3",
-  "source_git_commit_note": "Current commit cannot self-reference; exact branch commit and readback. Four additive product files; all previous entries retained."
+  "parent_source_manifest_blob": "0fddce46ca68b39c4901fa18e0dcfb0d0f5dac1a",
+  "source_git_commit_note": "One additive product adapter; original entries preserved. Exact branch commit and readback separately."
 }

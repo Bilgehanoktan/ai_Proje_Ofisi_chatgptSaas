@@ -1,0 +1,69 @@
+{
+  "revision": "D5-G6B",
+  "parent": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "change": "ADDED",
+      "symbols": [
+        {
+          "name": "inspect_core_org_session_reference",
+          "kind": "function",
+          "signature": "(cursor,resolver,credential,intent,initial,session,session_sha,read_latest,*,plan,pins,members,pool,events,anchor,store,org_reference,org_sha,org_head,seat,history_pin,root,owner_pin,domain,evidence=None) -> Review",
+          "behavior": "read-only D0 historical Core membership/version/role plus exact original ORG06/G5 reference; always HOLD"
+        }
+      ],
+      "depends": [
+        "inspect_research_slice",
+        "TaskHistory",
+        "Member",
+        "derive_request",
+        "review_research_binding",
+        "inspect_org_session_reference",
+        "Review"
+      ]
+    },
+    {
+      "path": "candidates/ORG-06/org_core_bridge.py",
+      "change": "EXACT_OWNER_TRANSFER",
+      "blob": "78443c1c2270a796dee234be67c8f4b0ab138a54"
+    },
+    {
+      "path": "candidates/ORG-06/test_org_core_checkout.py",
+      "change": "EXACT_OWNER_TRANSFER",
+      "blob": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87"
+    },
+    {
+      "path": "candidates/D5-G6B/test_protocol.py",
+      "change": "13 executed simulated owner-port tests",
+      "symbols": [
+        "ProtocolTests"
+      ]
+    },
+    {
+      "path": "candidates/D5-G6B/test_checkout.py",
+      "change": "7 actual SQLite scenario candidates NOT_RUN",
+      "symbols": [
+        "ActualReadbackTests"
+      ]
+    }
+  ],
+  "existing_db_reads": [
+    "t1_candidate.company_run_membership",
+    "t1_candidate.run_heads",
+    "existing Core history and budget tables",
+    "org_binding",
+    "op_member",
+    "op_entry",
+    "op_notice",
+    "existing IAM authority readback"
+  ],
+  "new_db_tables": [],
+  "db_writes": [],
+  "http_api": [],
+  "events": [],
+  "new_engines": 0,
+  "new_dependencies": [],
+  "runbook": "candidates/D5-G6B/ARCHITECTURE_AND_RUNBOOK.md",
+  "rollback": "afba55652d4667d9027a0a7fd8f2dec47684480a"
+}

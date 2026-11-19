@@ -1,0 +1,78 @@
+{
+  "revision": "D5-G6B",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_LOCAL_ADAPTER_PROTOCOL_SIMULATED_OWNER_PORTS",
+  "parent": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+  "org_owner": "bed005f91564f90fe322eb6b761b314392ec9d04",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "parallel": {
+    "initial_branches": 247,
+    "pre_transfer_branches": 247,
+    "r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+    "r8_transport_evidence": "c818549bc143467798e9f508e1dc42e24be60bca",
+    "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "org10": "bed005f91564f90fe322eb6b761b314392ec9d04",
+    "no_exclusive_cross_chat_lock": true
+  },
+  "original_org06_pin_match": [
+    21,
+    21
+  ],
+  "core_original_pin_match": [
+    12,
+    12
+  ],
+  "org_original_pin_match": [
+    9,
+    9
+  ],
+  "parent_selected_pins": [
+    48,
+    48
+  ],
+  "selected_checkout_pins": 53,
+  "manifest_entries_before": 401,
+  "manifest_entries_after": 402,
+  "source": {
+    "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+    "bytes": 6141,
+    "sha256": "8dff9c081ce6986cd0462a294f1160cd2f01fabb66905939d87b32b99248d440",
+    "blob": "d314d1fdec1220cd050f2d7276e5e340381644d1"
+  },
+  "tests": {
+    "protocol": {
+      "path": "candidates/D5-G6B/test_protocol.py",
+      "blob": "defb33bc46fdf1c978164133b371f063ffffeb04",
+      "sha256": "246cb5a59c523a0c8e0122c42bfd1ca70ab208e24bc7ff2c425e251b8fd62ccb",
+      "command": "python -I -S -B test_protocol.py",
+      "python": "3.13.5",
+      "pass": 13,
+      "fail": 0,
+      "errors": 0,
+      "skip": 0,
+      "exit": 0,
+      "seconds": 0.005,
+      "log_blob": "cb50c0b11ff9f21570bf37c01a4598b3813a8764",
+      "log_sha256": "6b4913989f933408acb84befe3e2f0b692d74e3b73ba8f9e8eefda5dfafd298a",
+      "classification": "REAL_EXECUTION_OF_NEW_ADAPTER_WITH_SIMULATED_OWNER_TYPES_AND_READ_PORTS"
+    },
+    "checkout": {
+      "path": "candidates/D5-G6B/test_checkout.py",
+      "blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+      "sha256": "7e6c35d2549daa7538f68c2eefa5645399b2302095ad00bc3feb992476caa1a9",
+      "planned": 7,
+      "executed": 0,
+      "status": "AST_PARSE_PASS_CHECKOUT_NOT_RUN",
+      "command": "python -B candidates/D5-G6B/test_checkout.py ActualReadbackTests -v"
+    },
+    "G2_original_50": "NOT_RUN",
+    "R8_remaining_36": "OTHER_OWNER_NOT_RUN_HERE",
+    "postgresql": "NOT_RUN"
+  },
+  "limitations": [
+    "New source composes existing readers; tests simulated owner types/ports, not actual database chain. Seven real-fixture cases authored, not run; direct complete checkout unavailable.",
+    "Historical Core snapshot caller-owned; separate ORG/IAM reads; no cross-store atomicity or independent authentication. No actual assignment, role map or positive execution proof.",
+    "No R8/G6A entry selection, no merge, no permission changes."
+  ],
+  "activation": "HOLD"
+}

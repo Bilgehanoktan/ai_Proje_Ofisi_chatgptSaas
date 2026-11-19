@@ -1,0 +1,114 @@
+{
+  "revision": "D5-G6B",
+  "parent": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+  "criteria": "D5-G1-D0-session-v1",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "partial": {
+    "S03": "Historical Core member and task role/version connected to existing ORG06 and G5 proposal/session; actual assignment and owner role provenance absent; real-fixture composition NOT_RUN.",
+    "F05": "13 local protocol tests, not actual revocation race.",
+    "I02": "Read-only source composition, no actual protected commit/publication."
+  },
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "R8": {
+    "previous": 50,
+    "current": 50,
+    "delta_pp": 0
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "tests": {
+    "protocol": [
+      13,
+      13
+    ],
+    "actual_checkout": [
+      0,
+      7
+    ],
+    "G2_original": [
+      0,
+      50
+    ],
+    "R8_selected": "17/53 historical separate scope"
+  },
+  "blockers": [
+    "Actual three-store fixture execution",
+    "Owner-issued active assignment and physical role provenance",
+    "One protected entry contract, joint protected publication, strict durable commit, independent custody",
+    "Full exact G2 and R8 regressions remain open"
+  ],
+  "next": "Run exact selected actual checkout 7; reconcile ORG owner assignment/role publication contract D5-D P02 without extending proposal semantics; then approved single protected entry.",
+  "activation": "HOLD"
+}
