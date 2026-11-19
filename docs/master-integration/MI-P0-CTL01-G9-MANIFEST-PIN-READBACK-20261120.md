@@ -48,3 +48,22 @@ G2 `intent_authority.py` sürüm çakışması da başka mevcut owner hattındad
 - Rollback: yalnız bu governance dokümanını normal `git revert` ile geri al; asla force push, yetki yükseltme, `product-dev` veya `main` değişikliği yapma.
 
 İlgili merkez referans: `docs/master-integration/MI-P0-CENTRAL-SOURCE-RECONCILIATION-20261120.md`; `progress/MASTER_INTEGRATION_CURRENT.json`; `progress/REPORTING_STANDARD_20261118.md`; `docs/master-integration/WORKING_STANDARD.md`.
+
+
+## R2 / 20.11.2026 — CTL-01 teknik doğrulama kapanışı (PR #11)
+
+**Yeni gerçek kanıt:** H01 tarafından mevcut ayrı PR #11 kapsamında izin verilmiş tek sentetik GitHub Actions workflow'u, [run #44628704044](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44628704044), **1/1 job SUCCESS**. Workflow `review/mi03-pr9-owner-package-ci-20261120@69c530157f6e50db7515fadfe630d80c454983f6`; checkout kaynak `d6b82dc412b7bb0f048ece2fd43fe83f6627cc59` olarak sabit; Ubuntu 24.04, Python 3.13.5, `contents:read`, install/provider/secret/deploy yok.
+
+GitHub Actions jobs API'sinde doğrudan gözlenen başarılı adımlar:
+- Manifestteki **552/552** kaynak için gerçek checkout üzerinde dosya baytı + SHA-256 kontrolü PASS (önceki yalnız iki manifest JSON kaydının eşleşmesi kanıtından daha güçlü);
+- özgün `test_org_runtime_packaging_mi03.py`: **4/4 PASS** (önceden NOT_RUN olan dört paketleme/import testi bu kez gerçekten koşuldu);
+- özgün `test_org_sql_runtime_mi03.py`: **11/11 PASS** yeni CI koşumu; *aynı 11 tarihsel metodun yeniden koşumudur*, benzersiz test artışı değildir;
+- tek işte test ve kaynak denetimi tamamlanıp sonuç `success` döndü. [Workflow tanımı](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/69c530157f6e50db7515fadfe630d80c454983f6/.github/workflows/mi03-pr9-owner-package.yml).
+
+**CTL-01 teknik kanıt kararı:** G9 eski sürüm korunumu, 41 ek satırın ayrışması, ek 14 dosyanın kaynak pinleri, 538 eski kayıt ve **552 dosyanın tamamının gerçek CI hash denetimi** bakımından `SOURCE_INTEGRITY_VERIFIED`. İzole ORG paketleme `4/4 PASS`, SQLite SQL `11/11 PASS`. Bu nedenle sırf bu üç kontrol için yeniden çalışma başlatılmayacak.
+
+**Sınır:** ORG/Core/G9 sahibi `43ed448...` vs `619fe224...` kaynak seçimi için henüz resmi review/ratification vermedi; aynı sembol ve sözleşmenin gerçek IAM/ORG authority kabulü hâlâ HOLD. PR #9 ve #11 ayrı taslak olarak korunur; otomatik merge yok. `integration/product-dev` değişmez. G2 `intent_authority.py` çakışması, Seçenek A bağımsız root/sink/issuer ve 8 negatif güvenlik senaryosu, özgün G2 50/G9 7/Memory T1 10, korumalı PostgreSQL/restore, W8 full build/native browser ve bağımsız IV ayrıca açık kalır.
+
+**Sonraki iş — yeni geliştirme değil, sahip kararı:** 1) ORG/Core/G9 sahibi ve MI-03/04 `durable_ops` sürümüne açık kabul/red verir; 2) Unified/MI-01 sahibi W8 ve paket entegrasyon kabulünü sonuçlandırır; 3) güvenlik sahipleri gerçek issuer/restore/PG/IV zincirini mevcut hatta bitirir. Bu kararlar olmadan CTL-01'i *kanonik ürün kabulü* veya *kaynak promotion* olarak kapatma. Önceki IAM/ORG **%42,50→%42,50 (Δ0 pp)**, Core **12/16**, MVP **0/11**, güvenlik **0/7**, global yüzde **HESAPLANAMADI**. Merkez analizi ve kanıt devir görevi tamamlandı; sahiplik/release kapıları bekliyor.
+
+Makine kaydı: `progress/MI_P0_CTL01_G9_MANIFEST_PIN_READBACK_20261120.json` (R2). Hata teşhisi: tam CI logu veya yeni head geldiğinde ilgili immutable SHA ve job ID ile yeniden kontrol et; CI başarısının içeriğini bağımsız grant olarak yorumlama. Geri dönüş yalnız ilgili governance ekini/commit'ini normal revert etmek; ürün ve claim geçmişi değişmez.
