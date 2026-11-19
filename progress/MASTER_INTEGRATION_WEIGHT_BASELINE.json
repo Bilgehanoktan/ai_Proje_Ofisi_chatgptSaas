@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRESS-03-CLOSE",
+  "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
   "status": "MI_PROGRESS_03_REPORTING_CLOSED_10_GROUP_DENOMINATORS_UNFROZEN",
   "total": 100,
   "groups": [
@@ -660,7 +660,7 @@
     "acceptance": 10
   },
   "overall_percent": null,
-  "reason": "MI-PROGRESS-03 reporting close: 315/315 criterion review, 28/28 evidence pinned; none of 10 proposed group weights/denominators ratified. Product overall development remains HESAPLANAMADI; owner acceptance unchanged.",
+  "reason": "G01 source SHA256 and diagnostic Next build PASS, G03 T1 D0 42 PASS on scoped CI; other product gates and all 10 owner-approved denominators HOLD; overall HESAPLANAMADI.",
   "coverage": {
     "tracker_areas": [
       24,
@@ -716,9 +716,13 @@
     "owner_approved_groups": [
       0,
       10
+    ],
+    "actual_hosted_ci_source_sha256": [
+      538,
+      538
     ]
   },
-  "previous_revision": "MI-PROGRESS-03",
+  "previous_revision": "MI-PROGRESS-03-CLOSE",
   "scope_and_criteria": "progress/MI_PROGRESS_02_SCOPE_AND_CRITERIA.json",
   "evidence_review": "progress/MI_PROGRESS_02_R2_COMPLETE_DRAFT_AND_MVP_TRACE.json",
   "proof_register": "progress/MI_PROGRESS_03_A_F_CRITERION_PROOF.json",
@@ -760,5 +764,41 @@
     "source_changes": 0,
     "tests_this_chat": "REPORTING_VALIDATION_ONLY",
     "next": "MI-PROGRESS-04 owner decision, original fullchain+ModelMemory+W8 real tests; no repeated report design."
+  },
+  "mi_progress_04_r1": {
+    "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+    "status": "ACTUAL_CI_AUDIT_BUILD_T1_PASS_BROWSER_BLOCKED_REQUIREMENTS_PIN",
+    "evidence": "progress/MI_PROGRESS_04_R1_CI_RUNTIME_TRIAGE.json",
+    "owner_handover": "progress/MI_PROGRESS_04_R1_OWNER_GATES.json",
+    "catalog": "docs/master-integration/MI-PROGRESS-04-R1/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-04-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "source_common_current": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "source_tree_equal": [
+      539,
+      539
+    ],
+    "ci_pr": 4,
+    "ci_run_ids": [
+      44610698699,
+      44612266079
+    ],
+    "selected_t1": [
+      42,
+      42
+    ],
+    "source_sha256": [
+      538,
+      538
+    ],
+    "frontend_diagnostic_build": "PASS",
+    "full_w8_chain": "NOT_RUN",
+    "browser": "HOLD",
+    "owner_review": "PENDING",
+    "development_previous_percent": null,
+    "development_current_percent": null,
+    "delta_pp": null,
+    "acceptance_delta": 0,
+    "product_changes": 0,
+    "next": "MI-10 owner pin FastAPI opentelemetry-api and rerun CI PR4; MI03/04 keep original 10/50/7 and strict PG on separate gates."
   }
 }

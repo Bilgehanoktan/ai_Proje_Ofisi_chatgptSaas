@@ -1,0 +1,160 @@
+{
+  "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+  "date": "2026-11-19",
+  "classification": "EXTERNAL_HOSTED_ACTIONS_REAL_EXECUTION_WITH_EXACT_IMMUTABLE_SOURCE_SCOPE",
+  "previous_governance_sha": "69eff7e8ed4ec2eec85a6c3b10d09ba96fc15d5b",
+  "branch_owner": "MI-10",
+  "ci_scope": "H01 exception ONLY draft PR4 .github/workflows/mi10-limited-ci.yml ; contents read, no main/product-dev mutation",
+  "pr": {
+    "number": 4,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/4",
+    "head": "bf4247696335379e0af6804fb0545590dc76c80a",
+    "base": "integration/product-dev",
+    "draft": true,
+    "decision": "OWNER_BRANCH_ONLY_EDIT",
+    "diagnostic_comment": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/4#issuecomment-7021871254"
+  },
+  "pinned_sources": {
+    "ci_original": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "current_common": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "product_tree_blob_equal": [
+      539,
+      539
+    ],
+    "canonical_product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "new_common_product_changes_from_original": 0
+  },
+  "runs": [
+    {
+      "run_id": 44610698699,
+      "sha": "8d1de87fae562237826b1050e46626071b0eb285",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "MI-01 source SHA-256 and original W8 audit",
+          "job_id": 135866186293,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": []
+        },
+        {
+          "name": "MI-03/04 original 42 D0 SQLite tests (NOT PG acceptance)",
+          "job_id": 135866421206,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": []
+        },
+        {
+          "name": "MI-01 diagnostic Next.js build + synthetic U3 browser",
+          "job_id": 135866421281,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            "Start local-only Next.js and run existing U3 Playwright test"
+          ]
+        }
+      ],
+      "root_cause_code": "U3_BROWSER_READ_ASSERTION_FAILURE_MISSING_BACKEND_DB",
+      "failed_step": "Start local-only Next.js and run existing U3 Playwright test",
+      "source_sha256": "PASS_538_OF_538",
+      "shared_contract_pairs": "PASS_17_OF_17",
+      "aux_blob_pins": "PASS_33_OF_33",
+      "npm_lock": "PASS_BYTE_HASH",
+      "frontend_nextjs_build": "PASS",
+      "frontend_typescript": "PASS",
+      "original_t1_d0_sqlite_selected": "PASS_42_OF_42",
+      "original_memory_t1_10": "NOT_RUN",
+      "actual_backend_fastapi_browser": "NOT_STARTED",
+      "chromium_u3": "FAIL_NO_READY_BACKEND",
+      "full_w8_chain": "NOT_RUN",
+      "product_approval": "HOLD",
+      "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44610698699"
+    },
+    {
+      "run_id": 44612266079,
+      "sha": "37a91800bd30f4fa1af240b2d92dbd58af393cb4",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "MI-01 source SHA-256 and original W8 audit",
+          "job_id": 135871684549,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": []
+        },
+        {
+          "name": "MI-01 diagnostic Next.js build + synthetic U3 browser",
+          "job_id": 135871907114,
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": [
+            "Install exact-version synthetic FastAPI and browser diagnostic packages"
+          ]
+        },
+        {
+          "name": "MI-03/04 original 42 D0 SQLite tests (NOT PG acceptance)",
+          "job_id": 135871907186,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": []
+        }
+      ],
+      "root_cause_code": "PIP_CHECK_MISSING_OPENTELEMETRY_API",
+      "failed_step": "Install exact-version synthetic FastAPI and browser diagnostic packages",
+      "source_sha256": "PASS_538_OF_538",
+      "shared_contract_pairs": "PASS_17_OF_17",
+      "aux_blob_pins": "PASS_33_OF_33",
+      "npm_lock": "PASS_BYTE_HASH",
+      "frontend_nextjs_build": "PASS",
+      "frontend_typescript": "PASS",
+      "original_t1_d0_sqlite_selected": "PASS_42_OF_42",
+      "original_memory_t1_10": "NOT_RUN",
+      "actual_backend_fastapi_browser": "NOT_RUN_BLOCKED_PIP_CHECK",
+      "chromium_u3": "NOT_RUN",
+      "full_w8_chain": "NOT_RUN",
+      "product_approval": "HOLD",
+      "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44612266079"
+    }
+  ],
+  "first_failure": {
+    "raw_log": "job 135866421281 Python AssertionError in tests/integration/browser_unified_u3.py:42 on GET /api/demo/shared-snapshot",
+    "source_boundary": "app/api/demo/shared-snapshot/route.ts -> 127.0.0.1 backend default port 8000; original workflow starts Next only; FastAPI route requires AICOS_D0_LIFECYCLE_PREFIX_DB",
+    "assertion": "status 200 and Cache-Control no-store",
+    "verified_status_code": "UNKNOWN_NOT_LOGGED",
+    "diagnosis": "MISSING_BACKEND_AND_PERSISTED_FIXTURE_CAUSES_FAIL_CLOSED_RESPONSE",
+    "reproduction_kind": "ACTUAL_CI_FAILURE_PLUS_STATIC_SOURCE_CAUSAL_ANALYSIS"
+  },
+  "second_failure": {
+    "raw_log": "job 135871907114 pip check fastapi 0.163.0 requires opentelemetry-api, which is not installed.",
+    "owner_fix_committed": "37a91800bd30f4fa1af240b2d92dbd58af393cb4",
+    "fix_boundary": "starts exact FastAPI app.main with export_prefix_fixture version3 and local Next after pins; cannot pass pip check without an explicitly pinned missing transitive",
+    "next": "MI-10 owner pin approved opentelemetry-api and any required transitives; preserve --no-deps and pip check; re-run scoped PR, then assess U3 browser actual outcome",
+    "do_not_do": [
+      "Do not remove pip check",
+      "Do not replace real backend route with mock/browser fulfill",
+      "Do not grant protected commit/IV from successful fixture CI"
+    ]
+  },
+  "workstream_evidence": {
+    "org_source_candidate": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+    "sql11": {
+      "status": "PASS",
+      "scope": "ISOLATED_OWNER_SQLITE_SCHEMA",
+      "source": "docs/master-integration/MI03-GATE03-SQL-REGRESSION-R1/CATALOG_AND_EVIDENCE.json"
+    },
+    "packaging71": {
+      "status": "PASS",
+      "scope": "SELECTED_32_PINNED_FILES_NOT_FULL_COMMON",
+      "source": "docs/master-integration/MI03-GATE02-03-PACKAGED-REGRESSION-01/EVIDENCE.json",
+      "origin_historical": 59,
+      "new_methods": 8,
+      "old_smoke": 4
+    },
+    "full_org_core_assignment": "NOT_RUN"
+  },
+  "method_dedup": "42 T1 methods repeated across runs; do NOT count 84 unique; source 538 SHA repeats; 71 and 11 are separate owner-scoped evidence, not additive 539 product tests.",
+  "tests_this_reporting_chat": "NO_NEW_PRODUCT_EXECUTION",
+  "permissions_delta": 0,
+  "acceptance_delta": 0,
+  "weighted_development_percent": null
+}

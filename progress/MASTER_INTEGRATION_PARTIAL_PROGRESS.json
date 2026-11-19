@@ -1,5 +1,5 @@
 {
-  "revision": "MI-COMMON-04-PINNED-RECOVERY",
+  "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
   "date": "2026-11-19",
   "standard": {
     "ref": "planning/project-wide-progress-reporting",
@@ -7,7 +7,7 @@
     "path": "progress/REPORTING_STANDARD_20261118.md"
   },
   "overall_percent": null,
-  "overall_reason": "MI-PROGRESS-03 reporting close: 315/315 criterion review, 28/28 evidence pinned; none of 10 proposed group weights/denominators ratified. Product overall development remains HESAPLANAMADI; owner acceptance unchanged.",
+  "overall_reason": "G01 source SHA256 and diagnostic Next build PASS, G03 T1 D0 42 PASS on scoped CI; other product gates and all 10 owner-approved denominators HOLD; overall HESAPLANAMADI.",
   "global_acceptance": [
     {
       "id": "CORE",
@@ -325,7 +325,7 @@
   },
   "owner_delta_vs_central": "MI-07/08 source reconciliation and runner mechanics only; no new product criterion; all prior acceptance and other owner entries retained. MI03/04 combined review: exact source convergence, 11 original selected methods repeated, no new weighted criterion or acceptance.; MI03/04 combined 46 repeated original tests, no unique-method or gate increment. | MI03 static dependency readback and owner handoff only; no criterion closed. | MI05/06/09 source and lock readback only, no new weighted criterion or product acceptance. | MI common ORG/Skill exact isolated transfer and 7 fixture controls; no new predefined full criterion or acceptance. | GATE02 three local diagnostic methods, no weighted criterion closure. | MI03 20/20 local D0 unit methods, no weighted criterion or product acceptance closure. | 97 actual common selected replay tests (not new methods/acceptance criteria); weighted percentages unchanged. | MI-COMMON-04 recovery helper 14/14 synthetic only; original Model/Memory344 and Core29 NOT_RUN; weighted and acceptance frozen.",
   "new_product_tests": 0,
-  "previous_revision": "MI03-GATES-01-02-04-05-REMOTE-PREFLIGHT-20261119",
+  "previous_revision": "MI-COMMON-04-PINNED-RECOVERY",
   "mi04_common_base_selected_rerun": {
     "source": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
     "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -1243,5 +1243,41 @@
     },
     "rollback": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
     "acceptance_delta": 0
+  },
+  "mi_progress_04_r1": {
+    "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+    "status": "ACTUAL_CI_AUDIT_BUILD_T1_PASS_BROWSER_BLOCKED_REQUIREMENTS_PIN",
+    "evidence": "progress/MI_PROGRESS_04_R1_CI_RUNTIME_TRIAGE.json",
+    "owner_handover": "progress/MI_PROGRESS_04_R1_OWNER_GATES.json",
+    "catalog": "docs/master-integration/MI-PROGRESS-04-R1/CATALOG_AND_EVIDENCE.json",
+    "runbook": "docs/master-integration/MI-PROGRESS-04-R1/ARCHITECTURE_RUNBOOK_HANDOVER.md",
+    "source_common_current": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "source_tree_equal": [
+      539,
+      539
+    ],
+    "ci_pr": 4,
+    "ci_run_ids": [
+      44610698699,
+      44612266079
+    ],
+    "selected_t1": [
+      42,
+      42
+    ],
+    "source_sha256": [
+      538,
+      538
+    ],
+    "frontend_diagnostic_build": "PASS",
+    "full_w8_chain": "NOT_RUN",
+    "browser": "HOLD",
+    "owner_review": "PENDING",
+    "development_previous_percent": null,
+    "development_current_percent": null,
+    "delta_pp": null,
+    "acceptance_delta": 0,
+    "product_changes": 0,
+    "next": "MI-10 owner pin FastAPI opentelemetry-api and rerun CI PR4; MI03/04 keep original 10/50/7 and strict PG on separate gates."
   }
 }

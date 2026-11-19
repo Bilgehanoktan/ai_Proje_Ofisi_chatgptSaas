@@ -1,0 +1,115 @@
+{
+  "revision": "MI-PROGRESS-04-R1-CI-REAL-RUN-TRIAGE",
+  "classification": "ACTUAL_CI_LOG_AND_SOURCE_CAUSAL_TRIAGE",
+  "known_source_paths": [
+    {
+      "path": ".github/workflows/mi10-limited-ci.yml",
+      "ref": "37a91800bd30f4fa1af240b2d92dbd58af393cb4",
+      "role": "Scoped CI workflow and FastAPI startup, read-only review",
+      "product_changed": false
+    },
+    {
+      "path": ".github/mi10/requirements-browser.txt",
+      "ref": "37a91800bd30f4fa1af240b2d92dbd58af393cb4",
+      "role": "Pinned exact 20-package CI requirements; missing opentelemetry-api",
+      "product_changed": false
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+      "ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "role": "Next proxy fail-closed 503 when backend 127.0.0.1 unavailable",
+      "product_changed": false
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "role": "Fixed historical SSE router; requires exact persisted fixture",
+      "product_changed": false
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+      "ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "role": "Original export_prefix_fixture() persists checked D0 SQLite",
+      "product_changed": false
+    },
+    {
+      "path": "tests/integration/browser_unified_u3.py",
+      "ref": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+      "role": "Real U3 browser test, asserts 200 no-store and real SSE, unchanged",
+      "product_changed": false
+    }
+  ],
+  "api_changes": 0,
+  "database_changes": 0,
+  "classes_or_functions_changed": 0,
+  "events_changed": 0,
+  "dependencies_changed_by_reporting_chat": 0,
+  "owner_ci_dependency_gap": "opentelemetry-api direct or transitive pin required by exact fastapi 0.163.0; don't guess version",
+  "new_tests_by_reporting_chat": 0,
+  "CI_env": "GitHub-hosted ubuntu-24.04 Python 3.13.5 Node 22.16.0, exact common immutable commit, no customer data",
+  "limitations": [
+    "GitHub first browser response status not logged",
+    "second browser scenario was NOT_RUN due pip check",
+    "new common 8727 product Git blob exact same as 61bb (539 paths)",
+    "No full W8/PG/IV acceptance"
+  ],
+  "rollback": "No source or workflow changes in this reporting commit. Revert only governance evidence if incorrect.",
+  "structural_checks": [
+    {
+      "id": "scoped_ci_pr4",
+      "passed": true
+    },
+    {
+      "id": "two_immutable_failing_runs",
+      "passed": true
+    },
+    {
+      "id": "ci_all_source_sha_pass",
+      "passed": true
+    },
+    {
+      "id": "ci_actual_backend_not_verified",
+      "passed": true
+    },
+    {
+      "id": "run1_exact_step",
+      "passed": true
+    },
+    {
+      "id": "run2_exact_step",
+      "passed": true
+    },
+    {
+      "id": "run1_original_t1_success",
+      "passed": true
+    },
+    {
+      "id": "run2_original_t1_success",
+      "passed": true
+    },
+    {
+      "id": "identical_common_product_blobs",
+      "passed": true
+    },
+    {
+      "id": "owners8_unchanged",
+      "passed": true
+    },
+    {
+      "id": "historical_acceptance_unmodified",
+      "passed": true
+    },
+    {
+      "id": "not_scored",
+      "passed": true
+    },
+    {
+      "id": "CI_h01_exception_present",
+      "passed": true
+    },
+    {
+      "id": "NO_PRODUCT_CHANGE",
+      "passed": true
+    }
+  ]
+}
