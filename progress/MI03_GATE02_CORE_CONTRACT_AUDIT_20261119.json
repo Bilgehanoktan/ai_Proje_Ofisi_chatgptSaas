@@ -1,0 +1,38 @@
+{
+  "revision": "MI03-GATE02-CORE-CONTRACT-AUDIT-20261119",
+  "source_candidate": "65a0e978c20378041e98f70e6ed074151214a3bb",
+  "evidence_path": "docs/master-integration/MI03-GATE02-CORE-CONTRACT-AUDIT-20261119/EVIDENCE.json",
+  "status": "STATIC_CONTRACT_PASS_POSITIVE_CORE_TEST_NOT_RUN",
+  "owner": "MI-02 Core/ORG and MI-03 IAM; joint owner review required",
+  "previous_development_percent": 42.5,
+  "current_development_percent": 42.5,
+  "delta_pp": 0,
+  "core_acceptance": {
+    "pass": 12,
+    "total": 16
+  },
+  "mvp_acceptance": {
+    "pass": 0,
+    "total": 11
+  },
+  "independent_security_acceptance": {
+    "pass": 0,
+    "total": 7
+  },
+  "source_audit_checks": {
+    "pass": 12,
+    "total": 12,
+    "kind": "nonfunctional"
+  },
+  "new_unique_product_tests": 0,
+  "blockers": [
+    "complete original Core source checkout/fixtures",
+    "positive OperationsStore+Core readback",
+    "trusted assignment/member/role issuer provenance",
+    "G9/G2/0214 original fullchain replay",
+    "strict COMMIT and build/browser owner gates"
+  ],
+  "next": "Owner-approved original positive Core/OperationsStore test on complete pinned source; do not repeat already proven synthetic tests",
+  "product_dev_changed": false,
+  "main_changed": false
+}

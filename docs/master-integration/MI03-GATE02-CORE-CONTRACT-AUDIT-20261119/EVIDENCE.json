@@ -1,0 +1,123 @@
+{
+  "revision": "MI03-GATE02-CORE-CONTRACT-AUDIT-20261119",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_READONLY_GITHUB_SOURCE_CONTRACT_INSPECTION_NOT_PYTHON_RUNTIME_TEST",
+  "source_candidate": "65a0e978c20378041e98f70e6ed074151214a3bb",
+  "governance_base": "e27eb4002411110cae8eecb69da2401919d74de5",
+  "product_dev_unchanged": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source_pins": {
+    "assignment_lifecycle.py": "9f259e89fd339804292eb6c7fa8e7fd177c71b70",
+    "durable_ops.py": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+    "app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+    "app/core/event_store/plan_history_review.py": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+    "app/core/transaction/intent_identity.py": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+    "app/core/transaction/identity_binding.py": "e1e977880324664bb359eee3286223a796878f44",
+    "app/core/event_store/company_coordination.py": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+    "org_core_bridge.py": "78443c1c2270a796dee234be67c8f4b0ab138a54"
+  },
+  "checks": [
+    {
+      "id": "S01",
+      "description": "Owner exact Git blob pins",
+      "status": "PASS"
+    },
+    {
+      "id": "S02",
+      "description": "Core readback symbol exists",
+      "status": "PASS"
+    },
+    {
+      "id": "S03",
+      "description": "Core TaskHistory and Member types exist",
+      "status": "PASS"
+    },
+    {
+      "id": "S04",
+      "description": "Synthetic tenant/company/environment scope identical",
+      "status": "PASS"
+    },
+    {
+      "id": "S05",
+      "description": "Core check occurs before D0 operations append/commit",
+      "status": "PASS"
+    },
+    {
+      "id": "S06",
+      "description": "Original Core reader imported and invoked (static call site)",
+      "status": "PASS"
+    },
+    {
+      "id": "S07",
+      "description": "Core Member is reused for Request derivation",
+      "status": "PASS"
+    },
+    {
+      "id": "S08",
+      "description": "Readback exception fails closed to HOLD",
+      "status": "PASS"
+    },
+    {
+      "id": "S09",
+      "description": "D0 AssignmentReview never grants dispatch/commit/retry",
+      "status": "PASS"
+    },
+    {
+      "id": "S10",
+      "description": "Accepted run cannot be accepted again after revocation",
+      "status": "PASS"
+    },
+    {
+      "id": "S11",
+      "description": "Source explicitly does not assert owner provenance or freshness",
+      "status": "PASS"
+    },
+    {
+      "id": "S12",
+      "description": "ORG Core historical bridge is not an authority",
+      "status": "PASS"
+    }
+  ],
+  "source_contract_checks": {
+    "executed": 12,
+    "pass": 12,
+    "fail": 0,
+    "kind": "REPOSITORY_SOURCE_TEXT_AND_GIT_BLOB_REVIEW",
+    "fixture_methods_added": 0,
+    "actual_Python_tests_this_review": 0
+  },
+  "previous_separate_evidence": {
+    "selected_backend_71": "71/71 PASS - separately recorded: 59 existing, 8 new supplemental, 4 owner smoke",
+    "ci_run": 44610698699,
+    "ci_T1_42": "42/42 PASS original selected",
+    "ci_Next_build": "PASS",
+    "ci_browser": "FAIL / AssertionError at browser_unified_u3.py line 42 (MI-01 owner); not misclassified as full successful CI"
+  },
+  "limits": [
+    "Original 32-file stage did not contain app.core.development_review.research_slice and transitive closure; actual positive Core–OperationsStore acceptance NOT_RUN.",
+    "All static source checks are nonfunctional; presence of a call does not establish runtime success.",
+    "No independent registry/membership/role issuer; ApprovalObservation uses synthetic identifiers, not authenticated grants.",
+    "Separate SQLite and Core snapshots do not establish atomic cross-store freshness or strict PostgreSQL commit.",
+    "Original G9 7/G2 50/0214 Memory T1 10, full build/browser and independent acceptance remain open.",
+    "Same-run single acceptance and no reaccept after revoke are provisional D0 rules, not product policy."
+  ],
+  "changes": {
+    "product_files": 0,
+    "api": 0,
+    "database": 0,
+    "grants": 0,
+    "security_policy": 0,
+    "main": 0,
+    "product_dev": 0,
+    "tests_written": 0
+  },
+  "acceptance": {
+    "iam_org_development_previous": 42.5,
+    "iam_org_development_current": 42.5,
+    "delta_pp": 0,
+    "core": "12/16 (75%)",
+    "mvp": "0/11 (0%)",
+    "independent_security": "0/7 (0%)"
+  },
+  "owner_review": "PENDING",
+  "promotion": "HOLD"
+}
