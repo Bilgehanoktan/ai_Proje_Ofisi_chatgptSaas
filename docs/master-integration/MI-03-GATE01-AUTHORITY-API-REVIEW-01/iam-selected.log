@@ -1,0 +1,51 @@
+SOURCE_PINS=7/7
+ENV=3.13.5/3.46.1
+SOURCE_HASHES={"app/__init__.py": {"blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391", "bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}, "app/core/__init__.py": {"blob": "9d457472970b7f581687ba142d1bf99ba91c7388", "bytes": 59, "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"}, "app/core/iam_session.py": {"blob": "f3c37428acd475e09c228bce47d534d6584cd944", "bytes": 15424, "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"}, "app/core/transaction/__init__.py": {"blob": "5b19819cd7070302e874ecee80170a3921ce8fb0", "bytes": 49, "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"}, "app/core/transaction/intent_authority.py": {"blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071", "bytes": 10028, "sha256": "95a2070d437450198ed2e9738b8159ea53b4a877e7303b7ece75c0c01927ccaf"}, "tests/test_iam_authority_d5g2.py": {"blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c", "bytes": 11216, "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"}, "tests/test_iam_session_d5g1.py": {"blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e", "bytes": 4691, "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc"}}
+test_agent_identity (test_iam_session_d5g1.SessionTests.test_agent_identity) ... ok
+test_clock_exception_latches (test_iam_session_d5g1.SessionTests.test_clock_exception_latches) ... ok
+test_clock_rollback_latches (test_iam_session_d5g1.SessionTests.test_clock_rollback_latches) ... ok
+test_duplicate_session_or_secret (test_iam_session_d5g1.SessionTests.test_duplicate_session_or_secret) ... ok
+test_exact_expiry (test_iam_session_d5g1.SessionTests.test_exact_expiry) ... ok
+test_future_issue (test_iam_session_d5g1.SessionTests.test_future_issue) ... ok
+test_invalid_bootstrap (test_iam_session_d5g1.SessionTests.test_invalid_bootstrap) ... ok
+test_kind_mismatch (test_iam_session_d5g1.SessionTests.test_kind_mismatch) ... ok
+test_malformed (test_iam_session_d5g1.SessionTests.test_malformed) ... ok
+test_other_session_survives (test_iam_session_d5g1.SessionTests.test_other_session_survives) ... ok
+test_revocation_cas (test_iam_session_d5g1.SessionTests.test_revocation_cas) ... ok
+test_scope_mismatch (test_iam_session_d5g1.SessionTests.test_scope_mismatch) ... ok
+test_valid_no_grant (test_iam_session_d5g1.SessionTests.test_valid_no_grant) ... ok
+test_wrong_secret (test_iam_session_d5g1.SessionTests.test_wrong_secret) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
+GROUP_COUNTS=test_iam_session_d5g1 [14, 0, 0, 0, 0, 0]
+test_agent_mismatch_rejected (test_iam_authority_d5g2.DurableTests.test_agent_mismatch_rejected) ... ok
+test_clock_rollback_survives_reopen (test_iam_authority_d5g2.DurableTests.test_clock_rollback_survives_reopen) ... ok
+test_exact_claim_pin_and_duplicate (test_iam_authority_d5g2.DurableTests.test_exact_claim_pin_and_duplicate) ... ok
+test_exclusive_bootstrap_and_domain (test_iam_authority_d5g2.DurableTests.test_exclusive_bootstrap_and_domain) ... ok
+test_expiry (test_iam_authority_d5g2.DurableTests.test_expiry) ... ok
+test_expiry_in_claim_fence_gap_consumes_claim (test_iam_authority_d5g2.DurableTests.test_expiry_in_claim_fence_gap_consumes_claim) ... ok
+test_forged_credential_and_scope (test_iam_authority_d5g2.DurableTests.test_forged_credential_and_scope) ... ok
+test_history_tamper_and_replace_rejected (test_iam_authority_d5g2.DurableTests.test_history_tamper_and_replace_rejected) ... ok
+test_human_to_agent_rejected (test_iam_authority_d5g2.DurableTests.test_human_to_agent_rejected) ... ok
+test_interrupted_bootstrap_cannot_be_used_as_legacy (test_iam_authority_d5g2.DurableTests.test_interrupted_bootstrap_cannot_be_used_as_legacy) ... ok
+test_legacy_claim_and_root_publish_blocked_on_iam_store (test_iam_authority_d5g2.DurableTests.test_legacy_claim_and_root_publish_blocked_on_iam_store) ... ok
+test_legacy_store_original_claim_unchanged (test_iam_authority_d5g2.DurableTests.test_legacy_store_original_claim_unchanged) ... ok
+test_other_session_substitution (test_iam_authority_d5g2.DurableTests.test_other_session_substitution) ... ok
+test_reopen_preserves_exact_session_and_revocation (test_iam_authority_d5g2.DurableTests.test_reopen_preserves_exact_session_and_revocation) ... ok
+test_restore_old_db_rejected_with_retained_new_pin (test_iam_authority_d5g2.DurableTests.test_restore_old_db_rejected_with_retained_new_pin) ... ok
+test_revoke_in_claim_fence_gap_consumes_claim (test_iam_authority_d5g2.DurableTests.test_revoke_in_claim_fence_gap_consumes_claim) ... ok
+test_revoke_serializes_behind_original_fence (test_iam_authority_d5g2.DurableTests.test_revoke_serializes_behind_original_fence) ... ok
+test_revoked_observation_rejected_before_claim (test_iam_authority_d5g2.DurableTests.test_revoked_observation_rejected_before_claim) ... ok
+test_stale_resolver_and_cas (test_iam_authority_d5g2.DurableTests.test_stale_resolver_and_cas) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.350s
+
+OK
+GROUP_COUNTS=test_iam_authority_d5g2 [19, 0, 0, 0, 0, 0]
+POSTCHECK=7/7
+TOTAL=33
+PRODUCT_ACCEPTANCE=HOLD

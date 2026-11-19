@@ -1,0 +1,187 @@
+{
+  "revision": "MI03-GATE01-IAM-SELECTED-REPLAY-01",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_SELECTED_ORIGINAL_COMPONENT_TESTS_ON_EXACT_G6A_IAM_SOURCE_NOT_FULL_CHECKOUT",
+  "governance_parent": "3c4b7aaffae61a07a3a623c6041d558c3d46afb5",
+  "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "common_reference": {
+    "previous": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+    "observed": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "manifest_entries": 538,
+    "product_files": 539,
+    "manifest_path_size": [
+      538,
+      538
+    ],
+    "scope": "Remote metadata only; no product tree change in this review."
+  },
+  "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+  "g2": "9ca667e816dac269084ef8f62051da5fe458eb12",
+  "source_pins": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "g2_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "bytes": 59,
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "g2_blob": "9d457472970b7f581687ba142d1bf99ba91c7388"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": null,
+      "g2_blob": "f3c37428acd475e09c228bce47d534d6584cd944"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "g2_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+      "bytes": 10028,
+      "sha256": "95a2070d437450198ed2e9738b8159ea53b4a877e7303b7ece75c0c01927ccaf",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "g2_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": null,
+      "g2_blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+      "bytes": 4691,
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc",
+      "source": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "common_blob": null,
+      "g2_blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e"
+    }
+  ],
+  "pins_pre_post": [
+    7,
+    7
+  ],
+  "common_exact_initializer_pins": [
+    3,
+    3
+  ],
+  "g2_original_pins": [
+    6,
+    7
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "stdlib_only": true,
+    "command": "python -I -B run_iam_selected.py",
+    "scope": "Seven individually reconstructed and exact Git blob/SHA256 verified files, real temporary SQLite, no T1 lazy imports or PostgreSQL executed."
+  },
+  "results": {
+    "g1": [
+      14,
+      14
+    ],
+    "g2_durable": [
+      19,
+      19
+    ],
+    "total": [
+      33,
+      33
+    ],
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "exit": 0,
+    "seconds": [
+      0.001,
+      0.35
+    ],
+    "runner": {
+      "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/run_iam_selected.py",
+      "blob": "aeaae12999b0f70bb8403d3753d2bc5ace71f425",
+      "bytes": 2809,
+      "sha256": "692fca328b719cc2f736dbbfd63beb05f435d6a7b750cb40cbeb735bfbc3420d"
+    },
+    "log": {
+      "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/iam-selected.log",
+      "blob": "5179d6b8fc6183db61aa0710b1781ad885e239d9",
+      "bytes": 5255,
+      "sha256": "3cc750b2311a96a93532e085d6319fd16081c4a250a9c3e1ea151a4b86ec3ad4"
+    },
+    "exit_blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56"
+  },
+  "scope_notes": [
+    "Original 14 G1 and 19 G2 tests unchanged. Historical cases, no new unique tests. G6A replaces G2 Authority in the isolated selected closure only; three package initializers match current common. No full common product execution.",
+    "Durable tests include positive synthetic local claim, revocation races, expiry gap and partial bootstrap denial. Restore old DB with old retained pin deliberately reproduces unresolved residual; PASS not proof of independent custody.",
+    "No new schema in product; original G2 fixture creates temporary tables in test only. No full 50-case runner, original 17 T1 cases not run here. G6A protected preclaim 6 and R7 5 prior evidence preserved, not rerun. No mixed old/new process retirement proof.",
+    "Three owner tracks agree on source bytes per prior catalog; no new formal owner disposition. GATE01 not closed. No source transfer or actual assignment/role changes."
+  ],
+  "owner_review": {
+    "iam_component_technical": "PASS_SELECTED",
+    "t1_d4_unified_formal_concurrence": "PENDING",
+    "source_choice": "Recommend existing G6A exact source + IAM, keep exact R7 and common port; no default route, owner ratification required.",
+    "remaining": [
+      "Original G2 50 exact runner NOT_RUN (33-case supplemental replay is separate)",
+      "G6A/R8 original fullchain and G9 seven",
+      "GATE02 actual owner assignment/role provenance",
+      "All writer versions aligned and old process retirement; shared publication/strict COMMIT",
+      "Unified fingerprint, complete checkout/build/browser, independent acceptance"
+    ]
+  },
+  "criteria": {
+    "previous_percent": 42.5,
+    "current_percent": 42.5,
+    "delta_pp": 0,
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "source_changes": 0,
+  "new_unique_tests": 0,
+  "acceptance_delta": 0,
+  "activation": "HOLD"
+}
