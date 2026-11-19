@@ -1,0 +1,71 @@
+{
+  "revision": "MI03-A-SOURCE-ONLY-PR11-CI-20261120",
+  "change_type": "EXACT_EXISTING_OWNER_PRODUCT_TREE_TRANSFER_NO_REWRITE_OF_COMMON_DOCS",
+  "source_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+  "owner_files_added": [
+    "product/ai-company-os-backend/durable_ops.py",
+    "product/ai-company-os-backend/integration_guard.py",
+    "product/ai-company-os-backend/operations.py",
+    "product/ai-company-os-backend/office_bridge.py",
+    "product/ai-company-os-backend/persistence.py",
+    "product/ai-company-os-backend/staffing.py",
+    "product/ai-company-os-backend/org_model.py",
+    "product/ai-company-os-backend/assignment_lifecycle.py",
+    "product/ai-company-os-backend/operations.sql",
+    "product/ai-company-os-backend/schema.sql",
+    "product/ai-company-os-backend/assignment_review.sql",
+    "product/ai-company-os-backend/org_core_bridge.py",
+    "product/ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py",
+    "product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py"
+  ],
+  "restored_source_pin_records": "552/552 SHA256 and size PASS in GitHub-hosted CI",
+  "contract_delta": {
+    "new_http_apis": 0,
+    "new_public_APIs": 0,
+    "new_external_effects": 0,
+    "new_actual_grants": 0,
+    "new_independent_A_contract_implementation": 0,
+    "org_d0_operationsstore_symbols": [
+      "initialize_assignment_ops",
+      "record_assignment_review",
+      "assignment_review"
+    ],
+    "database_sqlite_only": [
+      "org_revision",
+      "org_head",
+      "org_binding",
+      "op_team",
+      "op_member",
+      "op_entry",
+      "op_notice",
+      "op_assignment_review"
+    ],
+    "canonical_pg_migrations": 0,
+    "global_dependencies_added": 0
+  },
+  "known_issues": [
+    "G9 durable_ops additive 41 lines still subject to domain owner acceptance",
+    "G2 intent_authority variant not part of staged transfer",
+    "Real issuer credential/custody absent",
+    "D0 restore bypass unresolved",
+    "PostgreSQL and full W8 pending"
+  ],
+  "tests": {
+    "ci_pr": 11,
+    "run_id": 44628704044,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44628704044",
+    "status": "completed",
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "python": "3.13.5",
+    "sqlite": "3.45.1",
+    "manifest_source_sha256": "552/552 PASS",
+    "original_package_smoke": "4/4 PASS",
+    "original_sql_regression": "11/11 PASS",
+    "selected_test_total": "15/15 PASS",
+    "failed": 0,
+    "skipped": 0,
+    "scope": "actual pinned D0 SQLite on original owner product Git tree; no trusted issuance"
+  },
+  "rollback": "normal revert of one isolated source-only commit, not product-dev/main; never reset consumed claim"
+}
