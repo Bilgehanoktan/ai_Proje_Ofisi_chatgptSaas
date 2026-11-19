@@ -1,0 +1,90 @@
+# H01 2026-11-20: scoped approval for controlled integration review only.
+# No product mutation, customer data, external effects, provider calls, deployment or security acceptance.
+name: "MI03 | PR9 ORG owner package isolated smoke"
+
+on:
+  pull_request:
+    branches:
+      - integration/mi03-gate03-org-runtime-closure-01
+    types: [opened, reopened, synchronize]
+    paths:
+      - ".github/workflows/mi03-pr9-owner-package.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mi03-pr9-package-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+env:
+  CI: "true"
+  PYTHONDONTWRITEBYTECODE: "1"
+  GIT_TERMINAL_PROMPT: "0"
+  OPENAI_API_KEY: ""
+  DATABASE_URL: ""
+  PROVIDER_API_KEY: ""
+
+jobs:
+  original-owner-source:
+    name: "Exact 552-entry manifest, 4 ORG package smoke, 11 original SQL tests (D0)"
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'review/mi03-pr9-owner-package-ci-20261120' &&
+      github.event.pull_request.base.ref == 'integration/mi03-gate03-org-runtime-closure-01'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - name: Checkout immutable reviewed ORG source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: d6b82dc412b7bb0f048ece2fd43fe83f6627cc59
+          path: candidate
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Setup exact Python 3.13.5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.13.5"
+      - name: Verify exact source and 552 manifest file bytes (no mutation)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json, pathlib, subprocess, sqlite3, sys
+          repo=pathlib.Path('candidate')
+          want='d6b82dc412b7bb0f048ece2fd43fe83f6627cc59'
+          actual=subprocess.check_output(['git','-C',str(repo),'rev-parse','HEAD'], text=True).strip()
+          assert actual==want, (actual,want)
+          m=json.loads((repo/'product/SOURCE_MANIFEST.json').read_text(encoding='utf-8'))
+          assert len(m['files'])==552, ('MANIFEST_TOTAL',len(m['files']))
+          for rel,pin in m['files'].items():
+              path=repo/'product'/rel
+              assert path.is_file() and not path.is_symlink(), ('PATH',rel)
+              raw=path.read_bytes()
+              assert len(raw)==pin['bytes'], ('BYTES',rel)
+              assert hashlib.sha256(raw).hexdigest()==pin['sha256'], ('SHA256',rel)
+          assert sqlite3.sqlite_version_info >= (3,37), ('SQLITE_STRICT',sqlite3.sqlite_version)
+          print(f'SOURCE_MANIFEST_SHA256=552/552 PASS; PYTHON={sys.version.split()[0]}; SQLITE={sqlite3.sqlite_version}; D0_ONLY=TRUE')
+          PY
+      - name: Run four original packaging/import/source-colocation smoke tests
+        working-directory: candidate/product/ai-company-os-backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 240s python -B -m unittest discover -s tests -p test_org_runtime_packaging_mi03.py -v
+          echo "MI03_ORIGINAL_PACKAGING_SMOKE=4/4_PASS_D0_ONLY"
+      - name: Run eleven owner original SQL SQLite regressions (independent fresh run)
+        working-directory: candidate/product/ai-company-os-backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 240s python -B -m unittest discover -s tests -p test_org_sql_runtime_mi03.py -v
+          echo "MI03_ORIGINAL_SQL=11/11_PASS_D0_ONLY"
+      - name: Confirm no claim permission or real effect test implied
+        shell: bash
+        run: |
+          echo "G2_50=NOT_RUN; G9_7=NOT_RUN; MEMORY_T1_10=NOT_RUN"
+          echo "ACTUAL_ISSUER=HOLD; INDEPENDENT_ROOT_SINK=NOT_IMPLEMENTED"
+          echo "STRICT_POSTGRESQL=NOT_RUN; IV_EIGHT=0/8; SECURITY_ACCEPTANCE=HOLD"
+          echo "PRODUCT_DEV=UNCHANGED; NO_MERGE; NO_PROVIDER; NO_SECRET; NO_DEPLOY"
