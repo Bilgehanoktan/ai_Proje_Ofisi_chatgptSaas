@@ -1,0 +1,65 @@
+{
+  "id": "W5-MEM-05E",
+  "parent": "16dc6d39ef9d2121de989af1dfaa43ee15fe1e47",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "weights": {
+    "design": 15,
+    "source": 35,
+    "functional": 20,
+    "integration": 20,
+    "acceptance": 10
+  },
+  "criteria": {
+    "design": {
+      "D01": "Compare actual owner heads, manifests and boundary sources; record divergence and no merge",
+      "D02": "Specify same invocation, full recovery, PENDING/UNKNOWN quarantine and fail-closed ordering"
+    },
+    "source": {
+      "S01": "Extend existing Memory/Gateway read-only product module and prepare exact fixture regression",
+      "S02": "Readback updated product source, test and manifest with exact SHA256",
+      "S03": "Owner-approved current protected D5/T1/W5/ORG contract, not historical references"
+    },
+    "functional": {
+      "F01": "Isolated composition protocol tests on exact new function (not storage integration)",
+      "F02": "Actual SQLite/Ed25519 positive and negative joint fixture regression",
+      "F03": "Re-run exact 174 prior tests on same modified product tree"
+    },
+    "integration": {
+      "I01": "Actual owner-bound protected transaction integration, commit/readback and unknown recovery",
+      "I02": "Locked Unified full product regression including Windows and PostgreSQL"
+    },
+    "acceptance": {
+      "A01": "Independent custody/security and product acceptance"
+    }
+  },
+  "previous": {
+    "design": [
+      0,
+      2
+    ],
+    "source": [
+      0,
+      3
+    ],
+    "functional": [
+      0,
+      3
+    ],
+    "integration": [
+      0,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "product_acceptance_reference": {
+    "Core": "12/16",
+    "Premium_UI": "21/40",
+    "ORG_plan": "5/7",
+    "MVP": "0/11",
+    "Independent_security": "0/7"
+  },
+  "scope": "New work package; MEM-05D remains 58.3333%; no product gate closure from source-only work. No owner/independent permission, main merge, CI, provider calls, spend or production."
+}
