@@ -1,0 +1,117 @@
+{
+  "revision": "MI01-W8-DEPENDENCY-OWNER-REVIEW-CANDIDATE-20261120",
+  "date": "2026-11-20",
+  "scope": "SOURCED_DIRECT_PINS_AND_ORIGINAL_NPM_LOCK_ONLY_NO_WHEELHOUSE",
+  "decision_status": "NOT_APPROVED_SUPPLY_CHAIN_OWNER_REVIEW_REQUIRED",
+  "pinned_source": {
+    "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+    "commit": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "product_manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f"
+  },
+  "npm": {
+    "package_json_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+    "original_lock_path": "docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json",
+    "original_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "length_bytes": 33618,
+    "lockfile_version": 3,
+    "transitive_entries": 61,
+    "direct": {
+      "next": "15.5.29",
+      "react": "19.1.10",
+      "react-dom": "19.1.10",
+      "phaser": "3.90.0"
+    },
+    "dev": {
+      "typescript": "5.9.3",
+      "@types/node": "22.15.3",
+      "@types/react": "19.1.2",
+      "@types/react-dom": "19.1.2"
+    },
+    "overrides": {
+      "postcss": "8.5.32",
+      "sharp": "0.35.5"
+    },
+    "exact_root_match": false,
+    "metadata_verified_in_ci": true,
+    "tarball_actual_downloaded_hash_review": "NOT_APPROVED",
+    "legacy_prepare_must_not_regenerate_lock": true
+  },
+  "python": {
+    "runtime_path": "product/ai-company-os-backend/requirements.txt",
+    "runtime_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+    "exact_runtime_direct_pins": [
+      "fastapi==0.163.0",
+      "starlette==1.10.0",
+      "uvicorn==0.34.2"
+    ],
+    "test_path": "product/ai-company-os-backend/requirements-test.txt",
+    "test_blob": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187",
+    "exact_test_direct_pins": [
+      "httpx==0.28.1",
+      "jsonschema==4.26.0"
+    ],
+    "w8_test_tool_pin": "playwright==1.57.0",
+    "complete_transitive_wheelhouse": "NOT_PREPARED",
+    "review_json": "NOT_GENERATED",
+    "python_lock": "NOT_GENERATED",
+    "wheel_sha256_per_file": "NOT_VERIFIED",
+    "licensed_provider_index": "PyPI official only under owner-reviewed process",
+    "previous_mi10_diagnostic_requirements": "NOT A SUBSTITUTE FOR FORMAL W8 lock",
+    "risk": "runtime and test requirements specify only direct versions; W8 original prepare resolves transitive packages at run time, so an unreviewed timestamp-based fingerprint is not a ratified lock"
+  },
+  "review_checklist": [
+    {
+      "id": "S01",
+      "requirement": "Original npm lock byte SHA/root parity",
+      "status": "PASS_CI_METADATA",
+      "source_run": 44617509366
+    },
+    {
+      "id": "S02",
+      "requirement": "Exact Python direct pin/source review",
+      "status": "PASS_SOURCE_REVIEW",
+      "source": "same candidate commit"
+    },
+    {
+      "id": "S03",
+      "requirement": "Produce clean Python wheelhouse and normalized complete transitive pin lock",
+      "status": "NOT_RUN",
+      "owner": "Unified"
+    },
+    {
+      "id": "S04",
+      "requirement": "Verify individual wheel SHA256, METADATA, ABI/platform compatibility and provenance",
+      "status": "HOLD_OWNER",
+      "owner": "Unified/dependency"
+    },
+    {
+      "id": "S05",
+      "requirement": "Review vulnerabilities/licences, deny unexpected index/egress, check reproducibility",
+      "status": "HOLD_OWNER",
+      "owner": "Unified/security"
+    },
+    {
+      "id": "S06",
+      "requirement": "Ratify SHA256 REVIEW.json as owner acknowledgement, not IV/security sign-off",
+      "status": "HOLD_OWNER",
+      "owner": "Unified/dependency"
+    },
+    {
+      "id": "S07",
+      "requirement": "After S03-S06 only: original W8 install→test→smoke using same lock",
+      "status": "NOT_RUN",
+      "owner": "Unified"
+    }
+  ],
+  "next": "Owner MI01 review original W8 prepare in clean scope; return hashed REVIEW.json/python.lock/wheel list and signed decision. Do not approve hash on compute alone, do not run install on unreviewed wheelhouse.",
+  "changes": {
+    "product": 0,
+    "api": 0,
+    "database": 0,
+    "permissions": 0,
+    "ci": 0
+  },
+  "rollback": "report-only changes revert in governance branch; original npm lock and W8 runner unchanged",
+  "canonical_status": "PREPARE/INSTALL/TEST/SMOKE HOLD"
+}

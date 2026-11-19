@@ -1,0 +1,361 @@
+{
+  "revision": "MI01-W8-P0-OPERATIONAL-GATES-20261120-V1",
+  "date": "2026-11-20",
+  "canonical_progress": "progress/MASTER_INTEGRATION_CURRENT.json",
+  "scope": "MI-01 exact-source W8 P0 verification pipeline only; excludes entire product and independent acceptance",
+  "metric_type": "NONCANONICAL_SUPPLEMENTAL_OPERATIONAL_GATE_CLOSURE",
+  "warning": "3/8 is NOT overall product development, delivered features, CI acceptance or product acceptance",
+  "definition": "Eight observable existing W8 preparation and validation gates, one equal-weight unit each, defined as a new operational baseline; not adopted as global stage denominator",
+  "previous": {
+    "passed": null,
+    "total": null,
+    "percent": null,
+    "reason": "no corresponding frozen eight-gate register existed before this turn"
+  },
+  "current": {
+    "passed": 3,
+    "total": 8,
+    "percent": 37.5,
+    "open": 5
+  },
+  "delta_pp": null,
+  "evidence_source": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44617509366",
+  "source_commits": {
+    "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common_candidate": "61bb06efbba7544bfc68260ed8eb4d342cab9b8e",
+    "archive": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+    "tested_pr4_head": "4dda0455340c7e6b6dbfef71a0018b2f00c90706"
+  },
+  "gates": [
+    {
+      "id": "MI01-W8-C01",
+      "category": "source",
+      "name": "Tam ve değişmez kaynak checkout",
+      "status": "PASS",
+      "evidence": {
+        "type": "ACTUAL_GITHUB_HOSTED",
+        "run": 44617509366,
+        "scope": "1953/1953 Git blob, 539 product, full tree commit"
+      },
+      "owner": "MI10/Unified",
+      "dependency": []
+    },
+    {
+      "id": "MI01-W8-C02",
+      "category": "source",
+      "name": "Özgün W8 kaynak audit",
+      "status": "PASS",
+      "evidence": {
+        "type": "ACTUAL_ORIGINAL_W8_AUDIT",
+        "run": 44617509366,
+        "scope": "538/538 product SHA256, 17/17 parity, 33/33 aux"
+      },
+      "owner": "MI10/Unified",
+      "dependency": [
+        "MI01-W8-C01"
+      ]
+    },
+    {
+      "id": "MI01-W8-C03",
+      "category": "source",
+      "name": "Özgün npm kilidi byte/root doğrulama",
+      "status": "PASS",
+      "evidence": {
+        "type": "ACTUAL_CI_LOCK_METADATA_REVIEW",
+        "run": 44617509366,
+        "scope": "33,618 bytes, SHA256 exact, npm lock v3, 61/61 metadata; not independently validated tarball provenance"
+      },
+      "owner": "ORG/Unified",
+      "dependency": [
+        "MI01-W8-C01"
+      ]
+    },
+    {
+      "id": "MI01-W8-C04",
+      "category": "dependencies",
+      "name": "W8 prepare ile Python wheelhouse/python.lock ve REVIEW.json fingerprint üretimi",
+      "status": "NOT_RUN",
+      "evidence": null,
+      "owner": "MI01 Unified",
+      "dependency": [
+        "MI01-W8-C01",
+        "MI01-W8-C02",
+        "MI01-W8-C03"
+      ]
+    },
+    {
+      "id": "MI01-W8-C05",
+      "category": "governance",
+      "name": "Wheelhouse provenance/transitif/hash/güvenlik için kaynak sahibi onayı",
+      "status": "HOLD_OWNER",
+      "evidence": null,
+      "owner": "MI01 Unified + dependency owner",
+      "dependency": [
+        "MI01-W8-C04"
+      ]
+    },
+    {
+      "id": "MI01-W8-C06",
+      "category": "install",
+      "name": "Özgün W8 install — onaylı hash ve temiz stage",
+      "status": "NOT_RUN",
+      "evidence": null,
+      "owner": "MI01 Unified",
+      "dependency": [
+        "MI01-W8-C05"
+      ]
+    },
+    {
+      "id": "MI01-W8-C07",
+      "category": "tests",
+      "name": "Özgün W8 test — full backend, Node, Next, TS",
+      "status": "NOT_RUN",
+      "evidence": null,
+      "owner": "MI01 Unified",
+      "dependency": [
+        "MI01-W8-C06"
+      ]
+    },
+    {
+      "id": "MI01-W8-C08",
+      "category": "integration",
+      "name": "Özgün W8 smoke — loopback/52 capture/orijinal browser",
+      "status": "NOT_RUN",
+      "evidence": null,
+      "owner": "MI01 Unified",
+      "dependency": [
+        "MI01-W8-C07"
+      ]
+    }
+  ],
+  "separate_selected_evidence": {
+    "source_audit": [
+      538,
+      538
+    ],
+    "npm_metadata": [
+      61,
+      61
+    ],
+    "selected_original_T1_D0": [
+      42,
+      42
+    ],
+    "NEXT_BUILD": "PASS_DIAGNOSTIC",
+    "U3_browser": "SSE_COMPAT_ONLY; exact native CDP FAIL; fresh-read owner QA pending or separate",
+    "W8_full": "NOT_RUN",
+    "protected_PostgreSQL": "HOLD",
+    "full_model_memory_344": "NOT_RUN_OTHER_OWNER",
+    "historical_core_29": "NOT_RUN_OTHER_OWNER"
+  },
+  "formal_progress": {
+    "weights": {
+      "design": 15,
+      "source": 35,
+      "functional_tests": 20,
+      "integration": 20,
+      "final_acceptance": 10
+    },
+    "proposed_groups": 10,
+    "group_weights_total": 100,
+    "draft_stage_slots": 315,
+    "owner_approved_denominators": 0,
+    "overall_percent": null,
+    "previous_overall_percent": null,
+    "delta_pp": null,
+    "reason": "product owner 10 workstream criterion denominators not approved (0/10); independent gates and common source promotion pending"
+  },
+  "group_scopes": [
+    {
+      "id": "P01",
+      "name": "Frontend ve UI",
+      "proposed_weight": 12,
+      "proposed_stage_slots": 5,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P02",
+      "name": "Sanal ofis",
+      "proposed_weight": 8,
+      "proposed_stage_slots": 10,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P03",
+      "name": "Backend ve API",
+      "proposed_weight": 10,
+      "proposed_stage_slots": 10,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P04",
+      "name": "Orchestrator ve Task Engine",
+      "proposed_weight": 12,
+      "proposed_stage_slots": 15,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P05",
+      "name": "Agent Runtime ve Organizasyon",
+      "proposed_weight": 12,
+      "proposed_stage_slots": 40,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P06",
+      "name": "Model, Skill ve Memory",
+      "proposed_weight": 12,
+      "proposed_stage_slots": 40,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P07",
+      "name": "Database ve Event Store",
+      "proposed_weight": 8,
+      "proposed_stage_slots": 25,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P08",
+      "name": "Güvenlik ve Independent Verifier",
+      "proposed_weight": 10,
+      "proposed_stage_slots": 75,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P09",
+      "name": "SaaS ve finans",
+      "proposed_weight": 6,
+      "proposed_stage_slots": 55,
+      "owner_approved": false,
+      "development_percent": null
+    },
+    {
+      "id": "P10",
+      "name": "Test, DevOps ve entegrasyon",
+      "proposed_weight": 10,
+      "proposed_stage_slots": 40,
+      "owner_approved": false,
+      "development_percent": null
+    }
+  ],
+  "canonical_product_acceptance": [
+    {
+      "id": "CORE",
+      "scope": "Core standalone; D3 scoped fixture, not canonical RLS",
+      "previous": {
+        "passed": 12,
+        "total": 16,
+        "pct": 75
+      },
+      "current": {
+        "passed": 12,
+        "total": 16,
+        "pct": 75
+      },
+      "delta_pp": 0,
+      "source_ref": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+      "source_path": "progress/INTEGRATION_GATES_0227.json"
+    },
+    {
+      "id": "UI",
+      "scope": null,
+      "previous": {
+        "passed": 21,
+        "total": 40,
+        "pct": 52.5
+      },
+      "current": {
+        "passed": 21,
+        "total": 40,
+        "pct": 52.5
+      },
+      "delta_pp": 0,
+      "source_ref": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
+      "source_path": "progress/INTEGRATION_MATRIX_UI_P10J24B.json"
+    },
+    {
+      "id": "ORG_PLAN",
+      "scope": "plan not product",
+      "previous": {
+        "passed": 5,
+        "total": 7,
+        "pct": 71.43
+      },
+      "current": {
+        "passed": 5,
+        "total": 7,
+        "pct": 71.43
+      },
+      "delta_pp": 0,
+      "source_ref": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+      "source_path": "candidates/D5-G7/PROGRESS.json"
+    },
+    {
+      "id": "MVP",
+      "scope": null,
+      "previous": {
+        "passed": 0,
+        "total": 11,
+        "pct": 0
+      },
+      "current": {
+        "passed": 0,
+        "total": 11,
+        "pct": 0
+      },
+      "delta_pp": 0,
+      "source_ref": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "source_path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "IV",
+      "scope": null,
+      "previous": {
+        "passed": 0,
+        "total": 7,
+        "pct": 0
+      },
+      "current": {
+        "passed": 0,
+        "total": 7,
+        "pct": 0
+      },
+      "delta_pp": 0,
+      "source_ref": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "source_path": "handover/UNIFIED_U3A_CURRENT.json"
+    },
+    {
+      "id": "EXT",
+      "scope": "EXT-specific gates",
+      "previous": {
+        "passed": 2,
+        "total": 7,
+        "pct": 28.57
+      },
+      "current": {
+        "passed": 2,
+        "total": 7,
+        "pct": 28.57
+      },
+      "delta_pp": 0,
+      "source_ref": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+      "source_path": "handover/W5_EXT07R6_CURRENT.json"
+    }
+  ],
+  "supply_chain_review_path": "docs/master-integration/MI01-W8-P0-PROGRESS-20261120/DEPENDENCY_REVIEW.json",
+  "handover_path": "docs/master-integration/MI01-W8-P0-PROGRESS-20261120/ARCHITECTURE_AND_HANDOVER.md",
+  "source_changes": 0,
+  "api_changes": 0,
+  "database_changes": 0,
+  "acceptance_delta_pp": 0,
+  "next_action": "MI01 owner authorizes controlled original W8 prepare candidate (no install), provides REVIEW.json SHA and complete signed wheel provenance; owner reviews fingerprint before install/test/smoke; CI scope may not be expanded implicitly"
+}
