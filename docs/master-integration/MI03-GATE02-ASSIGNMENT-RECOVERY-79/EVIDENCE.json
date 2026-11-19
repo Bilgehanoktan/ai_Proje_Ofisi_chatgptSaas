@@ -1,0 +1,117 @@
+{
+  "revision": "MI03-GATE02-ASSIGNMENT-RECOVERY-79",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_NEW_DISPOSABLE_SQLITE_TESTS_WITH_DELIBERATE_RESTORED_PIN_RESIDUAL",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "scope": "exact original G6A/G7/G8 source selection; disposable local SQLite; NOT full 552-file product"
+  },
+  "product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "common_observed": "87272b6aebd1ce4b26d3a789b2ea75e4310cf60a",
+  "gate03_owner_observed": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+  "gate02_owner": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+  "selected_groups": {
+    "previous_original_replay": [
+      71,
+      71
+    ],
+    "new_unique_methods": [
+      8,
+      8
+    ],
+    "total_selected": [
+      79,
+      79
+    ]
+  },
+  "verified_exact_github_source_pins_pre_post": [
+    32,
+    32
+  ],
+  "zip_independent_extraction_sha256_checks": [
+    44,
+    44
+  ],
+  "result": {
+    "passed": 79,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit": 0
+  },
+  "methods": [
+    "test_approval_custody_alias_rejected_before_write",
+    "test_expired_direct_acceptance_is_not_authority",
+    "test_history_chain_corruption_denies_revoke",
+    "test_joint_old_db_and_old_pin_restore_residual_reproduced",
+    "test_old_database_with_new_retained_pin_stays_hold",
+    "test_owner_registry_alias_to_proposal_rejected",
+    "test_persisted_proposal_tamper_blocks_readback",
+    "test_revocation_invalidates_older_retained_pin"
+  ],
+  "test_source_sha256": "40b097ed644c0f244597f2b8f3420e48e04e07046704f7796419d27589d34fe7",
+  "runner_sha256": "f0be1de41dcfed0853accb67acecde179be9aa8fb1602fbfc7ea53aa5ac5acdd",
+  "raw_log_sha256": "4d6db851a80159dfd249ae009123230850b28d68bd0a95255f00b9bbb7666371",
+  "delivery": {
+    "file": "AI_Company_OS_MI03_G8_ASSIGNMENT_79_REGRESSION.zip",
+    "sha256": "6a486e66223c424108b85bfe43e912899935e9d34483f4c7d1d31a55917ea4e4",
+    "bytes": 88999,
+    "entries": 45
+  },
+  "security_residual": {
+    "case": "joint_old_db_and_old_pin_restore_residual_reproduced",
+    "classification": "EXPECTED_VULNERABILITY_REPRODUCTION_NOT_SECURITY_PASS",
+    "observation": "Restored old D0 SQLite + old ZERO retained pin reaccepts same synthetic ACCEPTED_D0 digest; independent monotonic custody missing. Replays never grant real authority; all Review decisions HOLD",
+    "countercase": "Old DB with newer retained digest returns MISSING_HOLD",
+    "gate": "HOLD"
+  },
+  "core_positive": "NOT_RUN; selected 32-file stage lacks original research_slice and plan_history plus exact transitive Core and fixture",
+  "memory_0214": {
+    "actual": [
+      0,
+      10
+    ],
+    "status": "NOT_RUN",
+    "original_test_blob": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+    "required": "Exact common 265 backend entries plus G6A authority/IAM + original 3 DDL; no local full checkout or authorized fullchain hosted CI"
+  },
+  "original_g9_7": "NOT_RUN",
+  "original_g2_50": "NOT_RUN",
+  "postgresql": "NOT_RUN",
+  "w8_full_build": "NOT_RUN",
+  "protected_commit": "HOLD",
+  "owner_ratification": "PENDING",
+  "source_changes": 0,
+  "db_product_changes": 0,
+  "api_or_event_changes": 0,
+  "acceptance_delta": 0,
+  "development": {
+    "previous": 42.5,
+    "current": 42.5,
+    "delta_pp": 0,
+    "criteria": {
+      "design": [
+        1,
+        2
+      ],
+      "source": [
+        1,
+        3
+      ],
+      "functional": [
+        4,
+        6
+      ],
+      "integration": [
+        1,
+        2
+      ],
+      "acceptance": [
+        0,
+        1
+      ]
+    }
+  },
+  "rollback": "Discard local ZIP stage; governance revert only, never downgrade IAM writer or reset used claims"
+}

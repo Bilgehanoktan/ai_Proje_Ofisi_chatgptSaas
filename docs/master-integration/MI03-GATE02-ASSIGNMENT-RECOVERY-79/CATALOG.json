@@ -1,0 +1,48 @@
+{
+  "revision": "MI03-GATE02-ASSIGNMENT-RECOVERY-79",
+  "original_pins": 32,
+  "unchanged_source_refs": {
+    "G6A": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+    "G7": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "G8": "6efc6714757ebd698d27efd7022afc2c92af70d0",
+    "GATE03": "65a0e978c20378041e98f70e6ed074151214a3bb"
+  },
+  "new_files": [
+    "tests/test_assignment_db_recovery_01.py (only in attached isolated ZIP)",
+    "run_integrated_79.py (only in attached isolated ZIP)"
+  ],
+  "new_methods": [
+    "test_approval_custody_alias_rejected_before_write",
+    "test_expired_direct_acceptance_is_not_authority",
+    "test_history_chain_corruption_denies_revoke",
+    "test_joint_old_db_and_old_pin_restore_residual_reproduced",
+    "test_old_database_with_new_retained_pin_stays_hold",
+    "test_owner_registry_alias_to_proposal_rejected",
+    "test_persisted_proposal_tamper_blocks_readback",
+    "test_revocation_invalidates_older_retained_pin"
+  ],
+  "existing_symbols": [
+    "OperationsStore.record_assignment_review",
+    "OperationsStore.assignment_review",
+    "append_decision",
+    "inspect_assignment",
+    "read_chain",
+    "source_match",
+    "AssignmentPin",
+    "ApprovalObservation",
+    "AssignmentReview"
+  ],
+  "dependency_catalog": [
+    "Python stdlib sqlite3/unittest/hashlib/json",
+    "source exact 32 pins in previous MI03-GATE02-03-PACKAGED-REGRESSION-01/SOURCE_PINS.json",
+    "Core positive needs original app/core/development_review/research_slice.py blob 720044a4e4954820b8d298f73b6b75f2189b4f94",
+    "plan history needs app/core/event_store/plan_history_review.py blob b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+    "original ten fullchain needs test_authority_fullchain_0214.py blob 4918027e828e8e72273ee4d6a508cac3aa6e9b59"
+  ],
+  "live_api_changes": 0,
+  "live_db_schema_changes": 0,
+  "live_events_changes": 0,
+  "d0_table": "op_assignment_review (disposable synthetic only)",
+  "old_git_sources_unchanged": true,
+  "no_approval_or_product_promotion": true
+}
