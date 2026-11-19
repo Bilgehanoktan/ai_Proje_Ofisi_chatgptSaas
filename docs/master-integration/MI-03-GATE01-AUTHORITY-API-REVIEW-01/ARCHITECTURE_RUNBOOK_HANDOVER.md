@@ -10,3 +10,6 @@ G2 log 33 PASS historical; original 50 remains NOT_RUN as a complete run. Four e
 
 ## Next / rollback
 Gate01 source-owner concurrence and Gate02 owner-issued assignment/role provenance in parallel. Retain G6A explicit entry recommendation (not ratification), then existing G9, publication, strict COMMIT and W8 gates. No product, API, DB, event, dependency or permission change. Revert governance-only commit if needed; no product branch or data rollback. D5-G 42.5% -> 42.5%, Core 12/16, MVP 0/11 unchanged.
+
+## Supplemental cross-owner readback
+G6A, R9 and MEM-R1 share exact Authority/IAM/PostgreSQL transport/fenced-transition blobs. Common already has the exact last two and G6A port. Only Authority replacement and IAM addition are proposed for owner review, with original tests and manifest handled separately; no default route, migration or activation. Original G2 runner is pinned to its own 240-entry backend manifest (3 DDL, 7 explicit pins, 50 cases); preserve original and separate any future common replay. R9 19 fullchain NOT_RUN overlaps G2 historical cases. See supplemental_cross_owner_alignment in catalog. Concurrent governance update was detected and existing review retained; no duplicate workstream or new report. No new test or acceptance.

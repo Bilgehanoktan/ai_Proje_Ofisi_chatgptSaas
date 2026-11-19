@@ -129,6 +129,18 @@
           "MI03-GATE-02"
         ],
         "scope": "existing workstream ownership preserved; not approval or task reassignment"
+      },
+      "gate01_cross_owner_alignment": {
+        "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+        "classification": "SUPPLEMENTAL_CROSS_OWNER_PIN_READBACK",
+        "exact_owner_tracks": 3,
+        "exact_shared_paths": 4,
+        "exact_common_retained_paths": 3,
+        "proposed_source_delta": 2,
+        "owner_review": "HOLD",
+        "new_product_tests": 0,
+        "product_changes": 0,
+        "acceptance_delta": 0
       }
     },
     {
@@ -229,6 +241,18 @@
         "gate": "MI03-GATE-01",
         "source_changes": 0,
         "new_product_tests": 0,
+        "acceptance_delta": 0
+      },
+      "gate01_cross_owner_alignment": {
+        "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+        "classification": "SUPPLEMENTAL_CROSS_OWNER_PIN_READBACK",
+        "exact_owner_tracks": 3,
+        "exact_shared_paths": 4,
+        "exact_common_retained_paths": 3,
+        "proposed_source_delta": 2,
+        "owner_review": "HOLD",
+        "new_product_tests": 0,
+        "product_changes": 0,
         "acceptance_delta": 0
       }
     },
@@ -355,6 +379,18 @@
         "gate": "MI03-GATE-01",
         "source_changes": 0,
         "new_product_tests": 0,
+        "acceptance_delta": 0
+      },
+      "gate01_cross_owner_alignment": {
+        "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+        "classification": "SUPPLEMENTAL_CROSS_OWNER_PIN_READBACK",
+        "exact_owner_tracks": 3,
+        "exact_shared_paths": 4,
+        "exact_common_retained_paths": 3,
+        "proposed_source_delta": 2,
+        "owner_review": "HOLD",
+        "new_product_tests": 0,
+        "product_changes": 0,
         "acceptance_delta": 0
       }
     },
@@ -511,6 +547,18 @@
           "MI03-GATE-04"
         ],
         "scope": "existing workstream ownership preserved; not approval or task reassignment"
+      },
+      "gate01_cross_owner_alignment": {
+        "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+        "classification": "SUPPLEMENTAL_CROSS_OWNER_PIN_READBACK",
+        "exact_owner_tracks": 3,
+        "exact_shared_paths": 4,
+        "exact_common_retained_paths": 3,
+        "proposed_source_delta": 2,
+        "owner_review": "HOLD",
+        "new_product_tests": 0,
+        "product_changes": 0,
+        "acceptance_delta": 0
       }
     },
     {
@@ -560,7 +608,7 @@
     "real_customer_data": false
   },
   "acceptance_change": "none",
-  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes. | MI-03-GATE01-AUTHORITY-API-REVIEW-01: remote G2/G7 same two blobs; four exact legacy test files, two IAM tests absent; zero new tests or gates.",
+  "tests_this_round": "MI-03 selected exact original 41/41 and product replay 41/41, same methods; no new unique tests or product gates. MI-04/MI-08 and other owner records retained.; MI-01: 5/5 local exact source pins, 16/16 existing Workflow cases, no full build/acceptance. | MI-07/08: 12/12 source SHA256, 114/114 combined pins, 526/526 manifest, 5/5 synthetic runner controls; 0 product tests, 344 NOT_RUN. MI-04 contract: 11/11 exact selected G6A/R7 local trial; 507/507 combined manifest paths/sizes; G6A authority not in candidate product; no additional acceptance or unique methods.; MI-01 remote tree 505/505, historical 55/55, pairs 17/17, aux 26/26. No new product tests or gates.; MI03/04 selected combined 46/46 original test replay; no new unique methods.; common review: 530/530 remote tree pins, 96 exact transferred paths, original historical 55/55 via fourth overlay, 114/114 Model/Memory and 13/13 identity pins, no new product tests.; Supplemental common candidate: 10/10 original W8 runner mechanics, 4/4 new overlay mechanics, 5/5 exact local pins; zero product tests; no acceptance delta. | MI-03 handoff: remote 13/13 identity pins, 529/529 manifest path/size, G7 28 exact/1 divergent/27 absent; zero product tests or source changes. | MI-03-GATE01-AUTHORITY-API-REVIEW-01: remote G2/G7 same two blobs; four exact legacy test files, two IAM tests absent; zero new tests or gates. | GATE01 supplemental G6A/R9/MEM exact 4-file convergence and common retained transport/fenced/port; no new test.",
   "next": "Retain common readonly identity transfer; resolve MI03-GATE-01 and 02 in parallel with existing owner work, then gates 03/04 and shared build. PC deferred. Review common source candidate and owner contracts; independently address MI05/06 read-only projection gaps and MI09 source review without Windows or lock regeneration; no product-dev promotion. Preserve original W8 and owner regressions for later connected checkout.",
   "previous_revision": "MI-03-SECURITY-DEPENDENCY-HANDOFF-01",
   "partial_progress": "progress/MASTER_INTEGRATION_PARTIAL_PROGRESS.json",
@@ -747,6 +795,18 @@
     "gate": "MI03-GATE-01",
     "source_changes": 0,
     "new_product_tests": 0,
-    "acceptance_delta": 0
+    "acceptance_delta": 0,
+    "supplemental_cross_owner_alignment": {
+      "path": "docs/master-integration/MI-03-GATE01-AUTHORITY-API-REVIEW-01/CATALOG_AND_EVIDENCE.json",
+      "classification": "SUPPLEMENTAL_CROSS_OWNER_PIN_READBACK",
+      "exact_owner_tracks": 3,
+      "exact_shared_paths": 4,
+      "exact_common_retained_paths": 3,
+      "proposed_source_delta": 2,
+      "owner_review": "HOLD",
+      "new_product_tests": 0,
+      "product_changes": 0,
+      "acceptance_delta": 0
+    }
   }
 }

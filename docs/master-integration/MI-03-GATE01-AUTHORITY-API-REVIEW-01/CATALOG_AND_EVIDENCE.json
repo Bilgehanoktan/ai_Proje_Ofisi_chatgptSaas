@@ -148,5 +148,75 @@
   "product_changes": 0,
   "api_db_event_dependency_changes": [],
   "acceptance_delta": 0,
-  "rollback": "Revert this governance-only commit after review; retain all source branches; no claim reset, DB restore, force push or product ref move."
+  "rollback": "Revert this governance-only commit after review; retain all source branches; no claim reset, DB restore, force push or product ref move.",
+  "supplemental_cross_owner_alignment": {
+    "classification": "SUPPLEMENTAL_REMOTE_STATIC_READBACK_ONLY",
+    "parent": "3d9d51a21af32736d765863f8538e62f5de20a40",
+    "refs": {
+      "common": "bf87d5c48c7fee97fe12d0a28df3be80249f7306",
+      "g6a": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+      "r9": "253128a2236ee706486e70acc97e472ededac26b",
+      "memory": "e85cd16e19c8f32da948b9bba98115667c9e1573"
+    },
+    "prefix": "product/ai-company-os-backend/",
+    "rows": [
+      {
+        "path": "app/core/transaction/intent_authority.py",
+        "three_owner_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+        "common_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "disposition": "PROPOSED_REPLACE_OWNER_HOLD"
+      },
+      {
+        "path": "app/core/iam_session.py",
+        "three_owner_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "common_blob": null,
+        "disposition": "PROPOSED_ADD_OWNER_HOLD"
+      },
+      {
+        "path": "app/core/transaction/postgres_session.py",
+        "three_owner_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "common_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "disposition": "KEEP"
+      },
+      {
+        "path": "app/core/transaction/fenced_transition.py",
+        "three_owner_blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+        "common_blob": "b43a8d1129138b917c499ad1091ac61940af1846",
+        "disposition": "KEEP"
+      }
+    ],
+    "additional_common_g6a_port": {
+      "path": "app/core/transaction/port.py",
+      "blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "disposition": "KEEP"
+    },
+    "g2_original_runner": {
+      "path": "candidates/D5-G2/run_regression.py",
+      "blob": "f7df7e5cc0e6cd8f42e7320d76c55e3b06e8dec5",
+      "manifest": "15e446e4d14c95d81d1e152efa2e8cb11122b3e3",
+      "backend_entries": 240,
+      "ddl": 3,
+      "source_test_pins": 7,
+      "cases": 50,
+      "status": "NOT_RUN_COMPLETE",
+      "note": "Original runner must stay bound to G2 manifest; reviewed common replay is separate evidence."
+    },
+    "r9_evidence": {
+      "path": "candidates/D5-C-R9/EVIDENCE.json",
+      "blob": "490ae9719997db1619e40f1c038a7e822480fdac",
+      "historical_authority": 10,
+      "fullchain_not_run": 19,
+      "fullchain_breakdown": [
+        2,
+        7,
+        10
+      ],
+      "note": "G6A two and 0212/0214 17 overlap other suites. No sum of test totals."
+    },
+    "owner_disposition": "Three owner tracks have exact same four files, not ratification. Proposed two path source delta only, plus separately reviewed tests/manifest; no transfer, migration, new protected route or activation.",
+    "progress_delta": 0,
+    "acceptance_delta": 0,
+    "new_product_tests": 0,
+    "product_changes": 0
+  }
 }
