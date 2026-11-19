@@ -1,0 +1,51 @@
+{
+  "revision": "MI-04-TRANSPORT-TRANSFER",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "action": "exact R7 blob replace",
+      "symbols": [
+        "require_strict_postgres_commit() -> NoReturn",
+        "protected_postgres_transaction(connect,mapping) -> NoReturn"
+      ],
+      "existing_symbols_preserved": [
+        "PostgresSession",
+        "CommitOutcomeUnknown",
+        "postgres_transaction"
+      ],
+      "imports": [
+        "contextlib.contextmanager",
+        "typing.NoReturn",
+        "app.core.transaction.port.CommitReceipt"
+      ],
+      "db_writes": "none on protected path; historical diagnostic unchanged"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py",
+      "action": "exact existing R7 test transfer",
+      "symbols": [
+        "PreclaimGate (five original methods)"
+      ],
+      "depends": [
+        "unittest",
+        "inspect",
+        "unittest.mock",
+        "postgres_session"
+      ]
+    }
+  ],
+  "unchanged": [
+    "intent_authority.py",
+    "fenced_transition.py",
+    "port.py",
+    "all IAM and ORG owner sources",
+    "all existing SQL/DB/API/FE/locks"
+  ],
+  "new_engines": 0,
+  "api": [],
+  "events": [],
+  "tables": [],
+  "new_dependencies": [],
+  "security_permission_change": false,
+  "rollback": "separate base checkout or reviewed revert; never restore authority database/clear claims"
+}

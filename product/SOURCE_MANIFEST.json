@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "UNIFIED-U3A",
-  "status": "D0_ACCEPTANCE_RUNNER_PREPARED_FULL_BUILD_BLOCKED",
+  "doc_revision": "MI-04-TRANSPORT-TRANSFER",
+  "status": "D0_CONTROLLED_SOURCE_TRANSFER_REVIEW_ONLY",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "e014868ae03cf73487aba156647eeac9442422cb",
+  "parent_git_commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -427,8 +427,8 @@
       "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1"
     },
     "ai-company-os-backend/app/core/transaction/postgres_session.py": {
-      "bytes": 2495,
-      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+      "bytes": 3677,
+      "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
     },
     "ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py": {
       "bytes": 8493,
@@ -857,6 +857,10 @@
     "ai-company-os-backend/tests/test_plan_projection.py": {
       "bytes": 2472,
       "sha256": "2f0e5ec8f52b49a4d8268a2977d34abec00c43d06d867020448f7a65f0c858fc"
+    },
+    "ai-company-os-backend/tests/test_postgres_preclaim_d5c_r7.py": {
+      "bytes": 2529,
+      "sha256": "dc7667d10e1836a9bac08a9212bf96ae608f6ac8ef3e38f42a5d60c46595445d"
     },
     "ai-company-os-backend/tests/test_postgres_snapshot_0200.py": {
       "bytes": 4899,
@@ -2023,8 +2027,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     }
   },
-  "parent_source_manifest_blob": "940f8d44f49b848b377badee67f162603724c05f",
-  "source_git_commit_note": "Workflow draft shared readback panel only; no runtime, schema, dependencies or DB changes. U3 acceptance runner and historical auxiliary overlay outside product.",
+  "parent_source_manifest_blob": "07f1fc919daa6dd3d7ffad7b67c3e9eebcd5d276",
+  "source_git_commit_note": "Exact R7 shared transport and original 5-case test on product-dev base; no port/authority or runtime wiring; owner review and W8 fingerprint rebuild required before product-dev promotion.",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null
 }

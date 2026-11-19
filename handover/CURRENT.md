@@ -139,3 +139,7 @@ Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manif
 
 ## UI-P10D
 [Architecture and limits](CURRENT_UI.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.
+
+
+## MI-04 controlled product-dev transfer candidate
+[Runbook](../docs/master-integration/MI-04-TRANSPORT-TRANSFER/ARCHITECTURE_AND_RUNBOOK.md). Exact common R7 transport + original five tests, 9/9 pins, selected PASS. No promotion or source selection of R8/G6A. No full build.
