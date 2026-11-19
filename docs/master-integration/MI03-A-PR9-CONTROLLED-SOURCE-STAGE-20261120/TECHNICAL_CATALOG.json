@@ -1,0 +1,133 @@
+{
+  "revision": "MI03-A-PR9-SOURCE-STAGE-20261120",
+  "status": "SOURCE_REVIEW_CATALOG_NOT_PROMOTED",
+  "source_root": "product/ai-company-os-backend/",
+  "files": {
+    "org_model.py": [
+      "Org",
+      "Unit",
+      "Seat",
+      "AssignmentProposal",
+      "propose"
+    ],
+    "staffing.py": [
+      "Definition",
+      "Instance",
+      "Binding",
+      "Staffing",
+      "DelegationProposal",
+      "delegate",
+      "verify_successor"
+    ],
+    "operations.py": [
+      "ProjectTeam",
+      "Proposal",
+      "Entry",
+      "verify_history",
+      "office_projection"
+    ],
+    "integration_guard.py": [
+      "ReviewPin",
+      "inspect_runtime",
+      "verify_retained_history",
+      "review_office_successor"
+    ],
+    "office_bridge.py": [
+      "OfficeView",
+      "Room",
+      "Station",
+      "Avatar",
+      "RoomLink",
+      "PairProposal",
+      "MeetingProposal",
+      "project"
+    ],
+    "persistence.py": [
+      "Scope",
+      "Store",
+      "initialize",
+      "revision_id",
+      "notice_id"
+    ],
+    "durable_ops.py": [
+      "OperationsStore",
+      "initialize_ops",
+      "initialize_assignment_ops",
+      "record_assignment_review",
+      "assignment_review",
+      "studio_read"
+    ],
+    "assignment_lifecycle.py": [
+      "AssignmentPin",
+      "ApprovalObservation",
+      "AssignmentReview",
+      "append_decision",
+      "inspect_assignment",
+      "verify_core_reference"
+    ],
+    "org_core_bridge.py": [
+      "BindingReview",
+      "review_research_binding"
+    ],
+    "schema.sql": [
+      "org_revision",
+      "org_head",
+      "org_unit",
+      "org_position",
+      "org_definition_ref",
+      "org_instance_ref",
+      "org_binding"
+    ],
+    "operations.sql": [
+      "op_team",
+      "op_member",
+      "op_entry",
+      "op_notice"
+    ],
+    "assignment_review.sql": [
+      "op_assignment_review",
+      "op_assignment_review_no_update",
+      "op_assignment_review_no_delete"
+    ],
+    "tests/test_org_runtime_packaging_mi03.py": [
+      "4 proposed smoke methods NOT_RUN"
+    ],
+    "tests/test_org_sql_runtime_mi03.py": [
+      "11 original SQLite DDL/regression tests; prior owner 11/11 PASS"
+    ]
+  },
+  "APIs": {
+    "new_http_routes": 0,
+    "new_external_effect_routes": 0,
+    "actual_rootRead": false,
+    "actual_consumeClaimOnce": false,
+    "actual_sinkAcceptEffectOnce": false
+  },
+  "DB": {
+    "new_sql_files_in_candidate": 3,
+    "canonical_migrations": 0,
+    "production_db_changes": 0,
+    "SQLITE_D0_only": true
+  },
+  "event": {
+    "existing_synthetic": "op_notice HOLD",
+    "canonical_published_events": 0
+  },
+  "dependency": {
+    "actual_new_external_packages": 0,
+    "backend_top_level_import_dependency": "9 owner Python and 3 SQL colocated in backend root; no production enablement",
+    "independent_root_provider": "UNSELECTED",
+    "sink": "NOT_IMPLEMENTED"
+  },
+  "gate": {
+    "owner_import_review": "HOLD",
+    "original_test_4": "NOT_RUN",
+    "strict_PG": "NOT_RUN",
+    "full_W8": "NOT_RUN",
+    "IV": "HOLD"
+  },
+  "references": {
+    "ADR": "decisions/ADR/ADR_D03_D04_OPTION_A_20261120.md",
+    "original": "docs/master-integration/MI03-GATE03-ORG-RUNTIME-CLOSURE-01/ARCHITECTURE_RUNBOOK_HANDOVER.md"
+  }
+}
