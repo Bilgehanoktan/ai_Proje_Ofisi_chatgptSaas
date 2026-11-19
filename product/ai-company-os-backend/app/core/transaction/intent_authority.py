@@ -8,6 +8,7 @@ from dataclasses import dataclass
 import os
 from pathlib import Path
 import sqlite3
+from typing import NoReturn
 
 
 def _digest(value):
@@ -170,3 +171,17 @@ def execute_authority_fenced_transition(*, authority, intent, context, registry,
             memory_path, reader, public_key, raw, journal, connect, clock, lambda: witness,
             company=company, expected_company_binding=expected_company_binding,
             result=result, result_reader=result_reader)
+
+
+def execute_protected_authority_fenced_transition(*, authority, intent, context, registry, witness,
+        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
+        company=None, expected_company_binding=None, result=None, result_reader=None) -> NoReturn:
+    """Protected D0 entry; deny before claim, journal stage, or connection access.
+
+    The R7 transport gate is shared, not a caller-selected mode or a grant.
+    No protected composition is implemented yet. Never fall back to the legacy
+    diagnostic wrapper, even if the capability gate unexpectedly returns.
+    """
+    from app.core.transaction.postgres_session import require_strict_postgres_commit
+    require_strict_postgres_commit()
+    raise PermissionError('T1_PROTECTED_AUTHORITY_COMPOSITION_UNIMPLEMENTED_HOLD')

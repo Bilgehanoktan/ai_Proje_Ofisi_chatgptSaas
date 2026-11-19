@@ -1,0 +1,115 @@
+{
+  "revision": "D5-G6A",
+  "criteria": "D5-G1-D0-session-v1",
+  "standard_blob": "77ffdb44fc4b6ff8419c80a47b5aa7a8be0d2a16",
+  "parent": "afba55652d4667d9027a0a7fd8f2dec47684480a",
+  "previous": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "current": {
+    "design": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      3
+    ],
+    "functional": [
+      4,
+      6
+    ],
+    "integration": [
+      1,
+      2
+    ],
+    "acceptance": [
+      0,
+      1
+    ]
+  },
+  "previous_percent": 42.5,
+  "current_percent": 42.5,
+  "delta_pp": 0,
+  "D5F": {
+    "previous": 62.619,
+    "current": 62.619,
+    "delta_pp": 0
+  },
+  "partial_criteria": {
+    "S02": "protected publisher not implemented",
+    "S03": "G5 R3 readback exists; actual membership and assignment owner provenance open",
+    "F05": "G5 historical fixture 12/12 + G4 14/14; six G6A preclaim tests pass; actual protected ORG/T1 revocation race open",
+    "I02": "explicit protected preclaim entry rejects; no positive protected T1 wiring"
+  },
+  "tests": {
+    "selected_G6A": [
+      6,
+      6
+    ],
+    "fullchain": [
+      0,
+      2
+    ],
+    "original_G2": [
+      0,
+      50
+    ],
+    "original_G5_historical": [
+      26,
+      26
+    ]
+  },
+  "canonical_acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "org_plan": [
+      5,
+      7
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "independent": [
+      0,
+      7
+    ]
+  },
+  "new_binary_gates": 0,
+  "activation": "HOLD",
+  "blockers": [
+    "G2 Windows regression deferred by user",
+    "fullchain 2 NOT_RUN",
+    "G6A full regression NOT_RUN",
+    "actual Core/ORG membership assignment and role provenance",
+    "protected publisher",
+    "strict commit capability",
+    "independent custody"
+  ]
+}

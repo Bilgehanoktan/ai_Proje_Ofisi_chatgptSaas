@@ -1,0 +1,79 @@
+{
+  "revision": "D5-G6A",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "change": "MODIFIED",
+      "symbols": [
+        {
+          "name": "execute_protected_authority_fenced_transition",
+          "signature": "same keyword-only legacy parameters -> NoReturn",
+          "behavior": "calls exact R7 gate then independently denies; no fallback or IO"
+        }
+      ],
+      "depends": [
+        "app.core.transaction.postgres_session.require_strict_postgres_commit",
+        "typing.NoReturn"
+      ],
+      "unchanged": [
+        "D0IntentAuthority",
+        "execute_authority_fenced_transition body and signature"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "change": "EXACT_R7_OWNER_TRANSFER",
+      "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "symbols": [
+        "require_strict_postgres_commit",
+        "protected_postgres_transaction"
+      ],
+      "unchanged": [
+        "legacy postgres_transaction behavior",
+        "PostgresSession"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py",
+      "change": "ADDED",
+      "symbols": [
+        "ProtectedAuthorityTests"
+      ],
+      "tests": "6/6 selected local PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_preclaim_fullchain_d5g6a.py",
+      "change": "ADDED",
+      "symbols": [
+        "ProtectedFullChainTests"
+      ],
+      "tests": "2 NOT_RUN; AST valid"
+    }
+  ],
+  "db": {
+    "new": [],
+    "selected_test_reads": [
+      "roots",
+      "claims",
+      "iam_bootstrap"
+    ],
+    "fullchain_planned_reads": [
+      "intents",
+      "outcomes",
+      "roots",
+      "claims",
+      "existing product row and file hashes"
+    ],
+    "product_writes": []
+  },
+  "api": [],
+  "events": [],
+  "external_dependencies": [],
+  "source_manifest": {
+    "parent": "0fddce46ca68b39c4901fa18e0dcfb0d0f5dac1a",
+    "current": "3b92a30f84e7262b4396fd75e7581c303b5d507c",
+    "previous_entries": 401,
+    "current_entries": 403
+  },
+  "rollback": "afba55652d4667d9027a0a7fd8f2dec47684480a"
+}
