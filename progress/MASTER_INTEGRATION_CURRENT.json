@@ -7189,8 +7189,8 @@
       162
     ],
     "owner_decision": "PENDING",
-    "packaging_smoke": "0/4 NOT_RUN",
-    "old_sql_tests": "11/11 HISTORICAL",
+    "packaging_smoke": "4/4 PASS (PR11 #44628704044; original D0 CI)",
+    "old_sql_tests": "11/11 PASS (PR11 repeat of original tests; no new methods)",
     "preexisting_coreops_ci": "10/10 HISTORICAL",
     "security_decision": "A_ARCHITECTURE_ONLY",
     "independent_acceptance": [
@@ -7212,7 +7212,7 @@
       "ORG/Core/G9 durable_ops owner version ratification",
       "IAM/G2 authority variant owner ratification",
       "A1 independent owner root/custody and true issuer",
-      "4 packaging smoke, G2/G9/0214 exact original tests, strict PG, native W8",
+      "G2/G9/0214 exact original tests, strict PG, native W8 (PR11 packaging 4/4 PASS)",
       "8 independent negative safety tests and IV"
     ],
     "next": "Existing MI-03/MI-06 owner review PR9; merge prohibited until evidence/owner confirmation; keep product-dev/main protected",
@@ -7399,5 +7399,53 @@
     "new_permission_changes": 0,
     "no_merge": true,
     "rollback": "normal revert only this governance JSON delta; no claims or product-dev changes"
+  },
+  "mi03_a_pr11_org_packaging_ci_20261120": {
+    "revision": "MI-P0-PR11-ORG-PACKAGE-GATE-20261120-R1",
+    "related_pr": 11,
+    "related_source_pr": 9,
+    "run": 44628704044,
+    "head": "69c530157f6e50db7515fadfe630d80c454983f6",
+    "exact_source": "d6b82dc412b7bb0f048ece2fd43fe83f6627cc59",
+    "manifest_sha256": [
+      552,
+      552
+    ],
+    "original_owner_packaging_smoke_previous": "0/4 NOT_RUN",
+    "original_owner_packaging_smoke_current": "4/4 ACTUAL_CI_PASS",
+    "owner_sql_previous": "11/11 HISTORICAL",
+    "owner_sql_current": "11/11 ACTUAL_CI_PASS_REPEAT_NO_NEW_METHODS",
+    "evidence": "docs/master-integration/MI-P0-PR11-ORG-PACKAGE-GATE-20261120/EVIDENCE.json",
+    "source_transfer": "HOLD_OWNER_RATIFICATION",
+    "gate01_g2_g9_memory": "HOLD",
+    "gate02_security_A_architecture_only": true,
+    "protected_pg": "NOT_RUN",
+    "full_W8": "HOLD",
+    "independent_IV": "HOLD",
+    "previous_development_percent": 42.5,
+    "current_development_percent": 42.5,
+    "overall_weighted_previous": null,
+    "overall_weighted_current": null,
+    "core_acceptance_previous": [
+      12,
+      16
+    ],
+    "core_acceptance_current": [
+      12,
+      16
+    ],
+    "mvp_previous": [
+      0,
+      11
+    ],
+    "mvp_current": [
+      0,
+      11
+    ],
+    "acceptance_delta_pp": 0,
+    "new_product_code": 0,
+    "new_workflow_this_turn": 0,
+    "next": "Close G9/ORG owner source decision and G2 distinct authority; full W8+native, original G2/G9/MEM, protected PG+IV; no promotion",
+    "rollback": "normal governance revert only"
   }
 }
