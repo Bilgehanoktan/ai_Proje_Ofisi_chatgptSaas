@@ -1,0 +1,101 @@
+EXACT_SOURCE_PINS: 15
+MODE original PYTHON 3.13.5
+COLLECTED test_identity_binding 22
+COLLECTED test_intent_identity 19
+test_clock (test_identity_binding.BindingTests.test_clock) ... ok
+test_close (test_identity_binding.BindingTests.test_close) ... ok
+test_delegation (test_identity_binding.BindingTests.test_delegation) ... ok
+test_digest_drift (test_identity_binding.BindingTests.test_digest_drift) ... ok
+test_digest_stable_and_bound (test_identity_binding.BindingTests.test_digest_stable_and_bound) ... ok
+test_expiry (test_identity_binding.BindingTests.test_expiry) ... ok
+test_grants (test_identity_binding.BindingTests.test_grants) ... ok
+test_malformed_revision (test_identity_binding.BindingTests.test_malformed_revision) ... ok
+test_match_never_authority (test_identity_binding.BindingTests.test_match_never_authority) ... ok
+test_memberships (test_identity_binding.BindingTests.test_memberships) ... ok
+test_missing (test_identity_binding.BindingTests.test_missing) ... ok
+test_owner (test_identity_binding.BindingTests.test_owner) ... ok
+test_pid (test_identity_binding.BindingTests.test_pid) ... ok
+test_project_plan_task_run_agent_principal_intent_epochs (test_identity_binding.BindingTests.test_project_plan_task_run_agent_principal_intent_epochs) ... ok
+test_revision_drift (test_identity_binding.BindingTests.test_revision_drift) ... ok
+test_revocation (test_identity_binding.BindingTests.test_revocation) ... ok
+test_rls (test_identity_binding.BindingTests.test_rls) ... ok
+test_schema_create (test_identity_binding.BindingTests.test_schema_create) ... ok
+test_scope_dimensions (test_identity_binding.BindingTests.test_scope_dimensions) ... ok
+test_session_identity (test_identity_binding.BindingTests.test_session_identity) ... ok
+test_unknown (test_identity_binding.BindingTests.test_unknown) ... ok
+test_unsafe_role (test_identity_binding.BindingTests.test_unsafe_role) ... ok
+test_all_intent_fields_pin (test_intent_identity.IntentIdentityTests.test_all_intent_fields_pin) ... ok
+test_binding_principal (test_intent_identity.IntentIdentityTests.test_binding_principal) ... ok
+test_binding_revision_drift (test_intent_identity.IntentIdentityTests.test_binding_revision_drift) ... ok
+test_digest_stable (test_intent_identity.IntentIdentityTests.test_digest_stable) ... ok
+test_expired (test_intent_identity.IntentIdentityTests.test_expired) ... ok
+test_foreign_scope (test_intent_identity.IntentIdentityTests.test_foreign_scope) ... ok
+test_invalid_intent (test_intent_identity.IntentIdentityTests.test_invalid_intent) ... ok
+test_invalid_member (test_intent_identity.IntentIdentityTests.test_invalid_member) ... ok
+test_match (test_intent_identity.IntentIdentityTests.test_match) ... ok
+test_member_identity (test_intent_identity.IntentIdentityTests.test_member_identity) ... ok
+test_member_initial_version_drift (test_intent_identity.IntentIdentityTests.test_member_initial_version_drift) ... ok
+test_member_initial_version_future (test_intent_identity.IntentIdentityTests.test_member_initial_version_future) ... ok
+test_member_scope (test_intent_identity.IntentIdentityTests.test_member_scope) ... ok
+test_principal (test_intent_identity.IntentIdentityTests.test_principal) ... ok
+test_project_cannot_come_from_binding (test_intent_identity.IntentIdentityTests.test_project_cannot_come_from_binding) ... ok
+test_project_drift (test_intent_identity.IntentIdentityTests.test_project_drift) ... ok
+test_request_reuses_scope (test_intent_identity.IntentIdentityTests.test_request_reuses_scope) ... ok
+test_revoked (test_intent_identity.IntentIdentityTests.test_revoked) ... ok
+test_scope_fields (test_intent_identity.IntentIdentityTests.test_scope_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.008s
+
+OK
+RESULT {"executed": 41, "failures": 0, "errors": 0, "skipped": 0, "expected_failures": 0, "unexpected_successes": 0}
+MODE product PYTHON 3.13.5
+COLLECTED test_identity_binding 22
+COLLECTED test_intent_identity 19
+test_clock (test_identity_binding.BindingTests.test_clock) ... ok
+test_close (test_identity_binding.BindingTests.test_close) ... ok
+test_delegation (test_identity_binding.BindingTests.test_delegation) ... ok
+test_digest_drift (test_identity_binding.BindingTests.test_digest_drift) ... ok
+test_digest_stable_and_bound (test_identity_binding.BindingTests.test_digest_stable_and_bound) ... ok
+test_expiry (test_identity_binding.BindingTests.test_expiry) ... ok
+test_grants (test_identity_binding.BindingTests.test_grants) ... ok
+test_malformed_revision (test_identity_binding.BindingTests.test_malformed_revision) ... ok
+test_match_never_authority (test_identity_binding.BindingTests.test_match_never_authority) ... ok
+test_memberships (test_identity_binding.BindingTests.test_memberships) ... ok
+test_missing (test_identity_binding.BindingTests.test_missing) ... ok
+test_owner (test_identity_binding.BindingTests.test_owner) ... ok
+test_pid (test_identity_binding.BindingTests.test_pid) ... ok
+test_project_plan_task_run_agent_principal_intent_epochs (test_identity_binding.BindingTests.test_project_plan_task_run_agent_principal_intent_epochs) ... ok
+test_revision_drift (test_identity_binding.BindingTests.test_revision_drift) ... ok
+test_revocation (test_identity_binding.BindingTests.test_revocation) ... ok
+test_rls (test_identity_binding.BindingTests.test_rls) ... ok
+test_schema_create (test_identity_binding.BindingTests.test_schema_create) ... ok
+test_scope_dimensions (test_identity_binding.BindingTests.test_scope_dimensions) ... ok
+test_session_identity (test_identity_binding.BindingTests.test_session_identity) ... ok
+test_unknown (test_identity_binding.BindingTests.test_unknown) ... ok
+test_unsafe_role (test_identity_binding.BindingTests.test_unsafe_role) ... ok
+test_all_intent_fields_pin (test_intent_identity.IntentIdentityTests.test_all_intent_fields_pin) ... ok
+test_binding_principal (test_intent_identity.IntentIdentityTests.test_binding_principal) ... ok
+test_binding_revision_drift (test_intent_identity.IntentIdentityTests.test_binding_revision_drift) ... ok
+test_digest_stable (test_intent_identity.IntentIdentityTests.test_digest_stable) ... ok
+test_expired (test_intent_identity.IntentIdentityTests.test_expired) ... ok
+test_foreign_scope (test_intent_identity.IntentIdentityTests.test_foreign_scope) ... ok
+test_invalid_intent (test_intent_identity.IntentIdentityTests.test_invalid_intent) ... ok
+test_invalid_member (test_intent_identity.IntentIdentityTests.test_invalid_member) ... ok
+test_match (test_intent_identity.IntentIdentityTests.test_match) ... ok
+test_member_identity (test_intent_identity.IntentIdentityTests.test_member_identity) ... ok
+test_member_initial_version_drift (test_intent_identity.IntentIdentityTests.test_member_initial_version_drift) ... ok
+test_member_initial_version_future (test_intent_identity.IntentIdentityTests.test_member_initial_version_future) ... ok
+test_member_scope (test_intent_identity.IntentIdentityTests.test_member_scope) ... ok
+test_principal (test_intent_identity.IntentIdentityTests.test_principal) ... ok
+test_project_cannot_come_from_binding (test_intent_identity.IntentIdentityTests.test_project_cannot_come_from_binding) ... ok
+test_project_drift (test_intent_identity.IntentIdentityTests.test_project_drift) ... ok
+test_request_reuses_scope (test_intent_identity.IntentIdentityTests.test_request_reuses_scope) ... ok
+test_revoked (test_intent_identity.IntentIdentityTests.test_revoked) ... ok
+test_scope_fields (test_intent_identity.IntentIdentityTests.test_scope_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.008s
+
+OK
+RESULT {"executed": 41, "failures": 0, "errors": 0, "skipped": 0, "expected_failures": 0, "unexpected_successes": 0}

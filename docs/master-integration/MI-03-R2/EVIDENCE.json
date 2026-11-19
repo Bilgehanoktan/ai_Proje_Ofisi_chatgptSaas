@@ -1,0 +1,141 @@
+{
+  "revision": "MI-03-R2-SOURCE-CONVERGENCE-REVIEW",
+  "date": "2026-11-19",
+  "classification": "ACTUAL_SELECTED_ORIGINAL_AND_PRODUCT_NAMESPACE_REPLAY_WITH_CROSS_SIBLING_SOURCE_REVIEW",
+  "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "owner_source": "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+  "candidate": "682d33543ad6bcc8c60a9f59e194ae3f1f8a5ad5",
+  "mi04": "90d86c70815dd4101e9f9e0a0381f45b13ad8fb8",
+  "governance_parent": "03dc289ddd1a7de90bce229d1165455e390abfa7",
+  "source_owner_candidate_retained": true,
+  "new_branch_created": false,
+  "source_pins": {
+    "verified_local": [
+      15,
+      15
+    ],
+    "common_base": [
+      9,
+      9
+    ],
+    "original_candidate_source_files": 2,
+    "product_source_files": 2,
+    "original_tests": 2,
+    "pin_manifest_blob": "f1f423a03e9847f8ed08b927fb7f874ccdad5adb"
+  },
+  "tests": {
+    "environment": "CPython 3.13.5; stdlib; disposable temporary directory; -I -S -B",
+    "original": {
+      "D4": [
+        22,
+        22
+      ],
+      "D5": [
+        19,
+        19
+      ],
+      "total": [
+        41,
+        41
+      ]
+    },
+    "product": {
+      "D4": [
+        22,
+        22
+      ],
+      "D5": [
+        19,
+        19
+      ],
+      "total": [
+        41,
+        41
+      ]
+    },
+    "unique_methods": 41,
+    "total_invocations": 82,
+    "additional_unique_methods": 0,
+    "errors": 0,
+    "failures": 0,
+    "skips": 0,
+    "exit": 0,
+    "runner_blob": "aa01d4284108194e87735f60c7359d01d6f4fd36",
+    "log_blob": "daac04d4c3cfd82506ee8d2e49e2f5260e2e2309",
+    "log_sha256": "795ece34251db6100aa2c572ba55705a5298690da2ae8545908f7d8c700c1e92",
+    "log_bytes": 7771,
+    "scope": "Both original and product test replay use exact original tests; historical imports mapped only in product test process. No stubs, DB or real authorization."
+  },
+  "candidate_readback": {
+    "product_files": [
+      505,
+      507
+    ],
+    "manifest_entries": [
+      504,
+      506
+    ],
+    "old_manifest_entries_unchanged": [
+      504,
+      504
+    ],
+    "old_nonmanifest_product_blobs_unchanged": [
+      504,
+      504
+    ],
+    "new_product_modules": [
+      "product/ai-company-os-backend/app/core/transaction/identity_binding.py",
+      "product/ai-company-os-backend/app/core/transaction/intent_identity.py"
+    ],
+    "manifest_blob": "0d03ccf37c6e8a1996a4dad81b9176dc4698f15f",
+    "path_size_match": [
+      506,
+      506
+    ],
+    "selected_candidate_pins": [
+      13,
+      13
+    ],
+    "owner_report": "candidates/MI-03-R2/EVIDENCE.json",
+    "owner_readback": "candidates/MI-03-R2/GITHUB_READBACK.json"
+  },
+  "cross_sibling": {
+    "overlap": [
+      "docs/architecture/DESIGN_MASTER.md",
+      "product/SOURCE_MANIFEST.json"
+    ],
+    "product_code_overlap": [],
+    "expected_combined_product_files": 508,
+    "expected_combined_manifest_entries": 507,
+    "actual_combined_tree_created": false,
+    "requires": "D4/T1/Unified owner concurrence; central recomposition of single manifest and architecture index; reviewed W8 rebind and full build"
+  },
+  "outstanding": {
+    "G9_actual_7": "BLOCKED",
+    "G2_50": "NOT_RUN",
+    "R8_remaining_36": "NOT_RUN",
+    "G6A_19": "NOT_RUN",
+    "real_assignment_and_role_provenance": "HOLD",
+    "joint_publisher_and_strict_commit": "HOLD",
+    "full_build_browser": "BLOCKED",
+    "independent_acceptance": "HOLD"
+  },
+  "development": {
+    "D5G_previous": 42.5,
+    "D5G_current": 42.5,
+    "delta_pp": 0,
+    "new_gates": 0
+  },
+  "permissions": {
+    "isolated_source_transfer": true,
+    "local_synthetic_test": true,
+    "ci": false,
+    "main_merge": false,
+    "production": false,
+    "independent_acceptance": false,
+    "external_effects": false,
+    "spend": false,
+    "real_customer_data": false
+  },
+  "activation": "HOLD"
+}
