@@ -8955,7 +8955,7 @@
     "rollback": "Keep isolated branch draft, never merge without owner review; normal revert or close draft, don't force push main/product-dev or reset claims"
   },
   "mi_p0_w8_g2_cross_pr_manifest_order_gate_20261120": {
-    "revision": "MI-P0-W8-G2-CROSS-PR-ORDER-GATE-20261120-R1",
+    "revision": "MI-P0-W8-G2-CROSS-PR-ORDER-GATE-20261120-R2",
     "classification": "REAL_GITHUB_BLOB_STATIC_SOURCE_DEPENDENCY_HOLD_NOT_PRODUCT_RUNTIME",
     "canonical": {
       "ref": "integration/product-dev",
@@ -8966,17 +8966,24 @@
     },
     "pr19": {
       "number": 19,
-      "head": "e241fb8f486bfbabbead55f5c5e12d47e76407f4",
+      "head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
       "status": "OPEN_DRAFT_HOLD",
-      "manifest_entries": 555,
-      "manifest_blob": "72944260c569ff35c4b7a4c2f7cd9d42e6db5486",
+      "manifest_entries": 561,
+      "manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
       "original_ci": 44699083111,
       "actual_combined_original_tests": [
         65,
         65
       ],
       "source_variant_owner_approval": "PENDING",
-      "source_promotion": false
+      "source_promotion": false,
+      "previous_head": "e241fb8f486bfbabbead55f5c5e12d47e76407f4",
+      "product_count": 562,
+      "original_ci_latest": 44700495037,
+      "g2_org_g9_original_suites_in_job": "G2 50 + ORG 15 + G9 G7 7 STEPS PASS",
+      "exact_reused_product_blobs": 551,
+      "new_product_paths": 9,
+      "modified_product_source_paths": 1
     },
     "pr20": {
       "number": 20,
@@ -8993,7 +9000,7 @@
       "original_full_W8": "NOT_RUN"
     },
     "deterministic_conflict": {
-      "source": "PR19_G2_VARIANT_MANIFEST_CHANGE",
+      "source": "PR19_G2_G9_562_SOURCE_MANIFEST_561_VS_PR20_553_MANIFEST_552",
       "type": "CROSS_PR_VERSION_PIN_MISMATCH",
       "result": "WOULD_FAIL_CLOSED_ON_W8_U3_MANIFEST_HOLD_IF_PR19_SOURCE_WITH_PR20_OLD_PIN",
       "pair_compatible_as_is": false,
@@ -9001,11 +9008,13 @@
       "root_package_blob_same": true,
       "root_package_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
       "confirmed_by": "GITHUB_FETCH_FILE_GIT_BLOBS_AND_EXACT_W8_RUNNER_CONSTANT",
-      "not_actual_merge_or_build": true
+      "not_actual_merge_or_build": true,
+      "new_pr19_manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
+      "message": "U3_MANIFEST_HOLD expected if latest PR19 562 source is paired with unreviewed PR20 553 W8 runner"
     },
     "owner_dispatch": {
-      "mi01": "Run actual full 553 W8 source/lock owner-approved C04-C08 on canonical baseline; if 556 accepted later, rerun exact W8 after reviewed re-pin",
-      "mi04": "G2 variant approval, issuer/custody and backend owner decision BEFORE 556 source promotion",
+      "mi01": "Existing PR20 W8 owner to finish original 553 W8 C04-C08; 562 transfer only with new immutable manifest pin and full W8 requalification.",
+      "mi04": "G2+G9 owner now integrated isolated 562 candidate and actual original G2/ORG/G9 D0 in run 44700495037; approval of authority variant and independent security still HOLD",
       "security": "PG protected COMMIT/restore, A root/issuer/sink and eight independent negative tests separate HOLD"
     },
     "owner_comments": {
@@ -9056,7 +9065,7 @@
       "product_acceptance_delta_pp": 0
     },
     "rollback": "Normal governance revert only. Owner PR19/20, product-dev, main, claims unchanged",
-    "next": "No new prototype. MI01 owner exact 553 C04/C05 wheelhouse review and full W8; G2 owner variant security decision before 556 transfer; reverify head at handover."
+    "next": "Owner MI01 exact 553 W8 C04-C08 and dependency review; owner MI04 562 G2/G9 authority, PG/replay security; if later combined, retest 562 W8. Do not duplicate existing 72-case owner CI."
   },
   "mi01_w8_553_npm_license_metadata_20261120": {
     "revision": "MI01-W8-553-NPM-LICENSE-METADATA-20261120",
