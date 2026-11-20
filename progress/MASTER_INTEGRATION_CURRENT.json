@@ -8953,5 +8953,109 @@
     "detailed_progress": "progress/MI04_G2_553_OWNER_COMPAT_20261120.json",
     "next": "G2/Authority and G9/ORG owners review PR19 source path variant and current contracts; MI01 separate exact original W8; independent Security/MI02 protected PG, root/sink and 8 IV negatives",
     "rollback": "Keep isolated branch draft, never merge without owner review; normal revert or close draft, don't force push main/product-dev or reset claims"
+  },
+  "mi_p0_w8_g2_cross_pr_manifest_order_gate_20261120": {
+    "revision": "MI-P0-W8-G2-CROSS-PR-ORDER-GATE-20261120-R1",
+    "classification": "REAL_GITHUB_BLOB_STATIC_SOURCE_DEPENDENCY_HOLD_NOT_PRODUCT_RUNTIME",
+    "canonical": {
+      "ref": "integration/product-dev",
+      "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_files": 553,
+      "manifest_entries": 552,
+      "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+    },
+    "pr19": {
+      "number": 19,
+      "head": "e241fb8f486bfbabbead55f5c5e12d47e76407f4",
+      "status": "OPEN_DRAFT_HOLD",
+      "manifest_entries": 555,
+      "manifest_blob": "72944260c569ff35c4b7a4c2f7cd9d42e6db5486",
+      "original_ci": 44699083111,
+      "actual_combined_original_tests": [
+        65,
+        65
+      ],
+      "source_variant_owner_approval": "PENDING",
+      "source_promotion": false
+    },
+    "pr20": {
+      "number": 20,
+      "head": "6678a7fd3aa50842b70b2b8a922c02b002884397",
+      "status": "OPEN_DRAFT_HOLD",
+      "adapter_path": "tests/integration/w8_unified_u3.py",
+      "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+      "required_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "frozen_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "helper_tests": [
+        15,
+        15
+      ],
+      "original_full_W8": "NOT_RUN"
+    },
+    "deterministic_conflict": {
+      "source": "PR19_G2_VARIANT_MANIFEST_CHANGE",
+      "type": "CROSS_PR_VERSION_PIN_MISMATCH",
+      "result": "WOULD_FAIL_CLOSED_ON_W8_U3_MANIFEST_HOLD_IF_PR19_SOURCE_WITH_PR20_OLD_PIN",
+      "pair_compatible_as_is": false,
+      "security_consequence": "NO_GRANT;FAIL_CLOSED",
+      "root_package_blob_same": true,
+      "root_package_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+      "confirmed_by": "GITHUB_FETCH_FILE_GIT_BLOBS_AND_EXACT_W8_RUNNER_CONSTANT",
+      "not_actual_merge_or_build": true
+    },
+    "owner_dispatch": {
+      "mi01": "Run actual full 553 W8 source/lock owner-approved C04-C08 on canonical baseline; if 556 accepted later, rerun exact W8 after reviewed re-pin",
+      "mi04": "G2 variant approval, issuer/custody and backend owner decision BEFORE 556 source promotion",
+      "security": "PG protected COMMIT/restore, A root/issuer/sink and eight independent negative tests separate HOLD"
+    },
+    "owner_comments": {
+      "pr19": 7034065059,
+      "pr20": 7034065801
+    },
+    "doc": "docs/master-integration/MI-P0-W8-G2-MANIFEST-ORDER-GATE-20261120.md",
+    "tests_this_round": 0,
+    "source_code_changes": 0,
+    "CI_changes": 0,
+    "permission_changes": false,
+    "progress": {
+      "MI01_operational_before": [
+        3,
+        8
+      ],
+      "MI01_operational_after": [
+        3,
+        8
+      ],
+      "IAM_ORG_development_previous": 42.5,
+      "IAM_ORG_development_current": 42.5,
+      "global_weighted_previous": null,
+      "global_weighted_current": null,
+      "global_reason": "UNRATIFIED_DENOMINATORS",
+      "acceptance": {
+        "CORE": [
+          12,
+          16
+        ],
+        "UI": [
+          21,
+          40
+        ],
+        "MVP": [
+          0,
+          11
+        ],
+        "IV": [
+          0,
+          7
+        ],
+        "A_negative": [
+          0,
+          8
+        ]
+      },
+      "product_acceptance_delta_pp": 0
+    },
+    "rollback": "Normal governance revert only. Owner PR19/20, product-dev, main, claims unchanged",
+    "next": "No new prototype. MI01 owner exact 553 C04/C05 wheelhouse review and full W8; G2 owner variant security decision before 556 transfer; reverify head at handover."
   }
 }
