@@ -1,0 +1,133 @@
+{
+  "revision": "MI05-OFFICE-ABSOLUTE-DEADLINE-R2-20261120",
+  "date": "2026-11-20",
+  "source_of_truth": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "files": 553,
+    "manifest_entries": 552
+  },
+  "review": {
+    "pr": 22,
+    "branch": "review/mi05-office-workbench-deadline-20261120",
+    "production_merge": false
+  },
+  "independent_QA": {
+    "pr": 23,
+    "unchanged_test_blob": "ff6d1a9c923f427a9f982aaaffd59a45fd9d7578",
+    "before": {
+      "pass": 0,
+      "fail": 3
+    },
+    "after": {
+      "pass": 3,
+      "fail": 0
+    },
+    "scope": "three exact PR23 test methods not amended"
+  },
+  "change": {
+    "route": {
+      "path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "old_git_blob": "dc18ef2ecaf5556e09bc6152578f8cadf247ef29",
+      "new_git_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+      "sha256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa",
+      "bytes": 2114,
+      "new_symbols": [
+        "boundToDeadline<T>",
+        "readOfficeWorkbench"
+      ],
+      "changed_symbols": [
+        "GET"
+      ]
+    },
+    "test": {
+      "path": "product/ai-company-os-frontend/tests/office-workbench-deadline.test.cjs",
+      "previous_git_blob": "8ae7b251f8ac86e3f03897442d3819d76256cbe9",
+      "new_git_blob": "aa7afc3a93265305df6ceb8acbb03d25b901beb3",
+      "sha256": "6d01c856ac4fc88d22a223f3b77f24b292ed7e4af8a5d3cc465ce5506c17dbf9",
+      "bytes": 4001,
+      "new_cases": 3
+    },
+    "other_paths_modified": 0,
+    "api_new": 0,
+    "db": 0,
+    "dependencies": 0,
+    "workflows": 0,
+    "security_permissions": 0
+  },
+  "execution": {
+    "environment": {
+      "node": "v22.16.0",
+      "typescript": "v5.8.3 installed global; repository target 5.9.3 NOT_RUN",
+      "python": "3.13.5",
+      "os": "Linux x86_64",
+      "network": "not required"
+    },
+    "original_office_frontend": {
+      "source_blob": "bbad34677abeb0f2fada6b68ad4805b09ee077c7",
+      "fixture_blob": "29aa823d16c2b7975c322b41b99f9db4ec2b2c4e",
+      "fixtures": "semantic reproduction of 20 original GitHub JSON fixture cases, not byte-exact fixture",
+      "passed": 25,
+      "failed": 0,
+      "raw_tap_sha256": "80695950e11eb1708081dd1f1c82a71ba94651b950c60140ce1f1e749ab48350"
+    },
+    "owner_deadline": {
+      "passed": 9,
+      "failed": 0,
+      "previous_passed": 6,
+      "new_unique_methods": 3,
+      "raw_tap_sha256": "0944bbd160699235d3e9a45abcdbec90b7c10f25b442c2572753c74386fc3154"
+    },
+    "independent_PR23": {
+      "passed": 3,
+      "failed": 0,
+      "old_failed": 3,
+      "raw_tap_sha256": "07810a25982d7db749719088a55b1495632992897a428addbb7dad0715d58129"
+    },
+    "selected_local_executions": {
+      "passed": 37,
+      "failed": 0,
+      "skipped": 0,
+      "warning": "some independent negative methods overlap in purpose; never count all as unique product acceptance"
+    },
+    "selected_strict_ts_compile": "PASS_GLOBAL_TSC_5_8_3",
+    "real_native_2500ms_hanging_fetch": {
+      "status": 503,
+      "elapsed_ms": 2536,
+      "assertion": "PASS",
+      "method": "Node native AbortSignal.timeout, unresolved mock fetch, bounded watchdog"
+    }
+  },
+  "security_boundary": {
+    "scope": "D0 synthetic office only",
+    "full_original_W8": "NOT_RUN",
+    "real_browser": "NOT_RUN",
+    "real_postgresql": "HOLD",
+    "independent_IV": "HOLD",
+    "owner_review": "HOLD",
+    "full_build": "NOT_RUN",
+    "no_live_grants": true
+  },
+  "progress": {
+    "weights": {
+      "design": 15,
+      "source": 35,
+      "functional": 20,
+      "integration": 20,
+      "acceptance": 10
+    },
+    "owner_ratified_denominators": 0,
+    "global_weighted_previous": null,
+    "global_weighted_current": null,
+    "global_delta_pp": null,
+    "product_acceptance": {
+      "Core": "12/16 -> 12/16",
+      "UI": "21/40 -> 21/40",
+      "MVP": "0/11 -> 0/11",
+      "IV": "0/7 -> 0/7",
+      "delta_pp": 0
+    }
+  },
+  "next": "MI05/Unified review source PR22; MI01 owner PR20 reviewed dependencies W8 C04-C08, then native U3 browser; MI04 PR19/owner ratify separately",
+  "rollback": "Close PR22 or revert route/test review commits by normal revert; canonical, main and prior evidence intact."
+}

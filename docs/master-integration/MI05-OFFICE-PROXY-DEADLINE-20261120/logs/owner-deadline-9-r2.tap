@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: normal fixed response remains accepted
+ok 1 - normal fixed response remains accepted
+  ---
+  duration_ms: 28.843371
+  type: 'test'
+  ...
+# Subtest: aborted signal before mock fetch completes must HOLD
+ok 2 - aborted signal before mock fetch completes must HOLD
+  ---
+  duration_ms: 0.54704
+  type: 'test'
+  ...
+# Subtest: transport abort while returning valid body must HOLD
+ok 3 - transport abort while returning valid body must HOLD
+  ---
+  duration_ms: 0.455634
+  type: 'test'
+  ...
+# Subtest: invalid scope must HOLD
+ok 4 - invalid scope must HOLD
+  ---
+  duration_ms: 0.867694
+  type: 'test'
+  ...
+# Subtest: oversize must HOLD
+ok 5 - oversize must HOLD
+  ---
+  duration_ms: 1.126758
+  type: 'test'
+  ...
+# Subtest: transport error must HOLD
+ok 6 - transport error must HOLD
+  ---
+  duration_ms: 0.442265
+  type: 'test'
+  ...
+# Subtest: abort while fetch promise is pending must HOLD without awaiting transport
+ok 7 - abort while fetch promise is pending must HOLD without awaiting transport
+  ---
+  duration_ms: 0.695279
+  type: 'test'
+  ...
+# Subtest: abort while response reader.read is stalled must HOLD promptly
+ok 8 - abort while response reader.read is stalled must HOLD promptly
+  ---
+  duration_ms: 0.942395
+  type: 'test'
+  ...
+# Subtest: abort during never-resolving reader.cancel must HOLD promptly
+ok 9 - abort during never-resolving reader.cancel must HOLD promptly
+  ---
+  duration_ms: 0.97978
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 48.211427

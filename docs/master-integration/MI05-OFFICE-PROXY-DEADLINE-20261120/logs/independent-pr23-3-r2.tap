@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: aborted transport with a stalled response stream must return 503
+ok 1 - aborted transport with a stalled response stream must return 503
+  ---
+  duration_ms: 17.216374
+  type: 'test'
+  ...
+# Subtest: aborted transport with cancel() that never resolves must return 503
+ok 2 - aborted transport with cancel() that never resolves must return 503
+  ---
+  duration_ms: 1.103704
+  type: 'test'
+  ...
+# Subtest: aborted signal with unresolved fetch() must return 503
+ok 3 - aborted signal with unresolved fetch() must return 503
+  ---
+  duration_ms: 0.298973
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 142.0611
