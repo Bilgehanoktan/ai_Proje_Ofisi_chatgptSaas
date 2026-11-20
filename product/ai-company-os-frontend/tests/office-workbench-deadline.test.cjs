@@ -18,3 +18,41 @@ test('transport abort while returning valid body must HOLD',()=>{const c=new Abo
 test('invalid scope must HOLD',()=>withMock(async()=>Response.json({...payload(),tenant:'evil'}),async()=>{assert.equal((await GET()).status,503)}));
 test('oversize must HOLD',()=>withMock(async()=>Response.json({x:'a'.repeat(5000)}),async()=>{assert.equal((await GET()).status,503)}));
 test('transport error must HOLD',()=>withMock(async()=>{throw Error('offline')},async()=>{assert.equal((await GET()).status,503)}));
+
+
+// Follow-up PR #23: abort must bound every await, not only a completed response.
+async function promptHold(fn){
+ let watchdog;
+ try{
+  const result=await Promise.race([fn(),new Promise((_,reject)=>{watchdog=setTimeout(()=>reject(Error('deadline did not settle')),200)})]);
+  assert.equal(result.status,503);
+ }finally{clearTimeout(watchdog)}
+}
+
+test('abort while fetch promise is pending must HOLD without awaiting transport',()=>{
+ const c=new AbortController();let called=0;
+ return withAbortSignal(()=>c.signal,()=>withMock(async()=>{
+  called++;queueMicrotask(()=>c.abort());return new Promise(()=>{});
+ },async()=>{
+  await promptHold(()=>GET());assert.equal(called,1);
+ }));
+});
+
+test('abort while response reader.read is stalled must HOLD promptly',()=>{
+ const c=new AbortController();let reads=0;
+ return withAbortSignal(()=>c.signal,()=>withMock(async()=>new Response(new ReadableStream({
+  pull(){reads++;queueMicrotask(()=>c.abort());return new Promise(()=>{});}
+ }),{headers:{'content-type':'application/json'}}),async()=>{
+  await promptHold(()=>GET());assert.ok(reads>=1);
+ }));
+});
+
+test('abort during never-resolving reader.cancel must HOLD promptly',()=>{
+ const c=new AbortController();let cancels=0;
+ return withAbortSignal(()=>c.signal,()=>withMock(async()=>new Response(new ReadableStream({
+  start(s){s.enqueue(new Uint8Array(5000));},
+  cancel(){cancels++;queueMicrotask(()=>c.abort());return new Promise(()=>{});}
+ }),{headers:{'content-type':'application/json'}}),async()=>{
+  await promptHold(()=>GET());assert.equal(cancels,1);
+ }));
+});
