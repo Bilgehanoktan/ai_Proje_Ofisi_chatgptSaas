@@ -1,0 +1,107 @@
+{
+  "revision": "MI05-OFFICE-WORKBENCH-DEADLINE-20261120-R1",
+  "date": "2026-11-20",
+  "source_of_truth": {
+    "branch": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369"
+  },
+  "review_branch": "review/mi05-office-workbench-deadline-20261120",
+  "source_paths": {
+    "route": {
+      "path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "original_git_blob": "749a289984049e0cec27ed93d656023ba4da1fff",
+      "new_git_blob": "dc18ef2ecaf5556e09bc6152578f8cadf247ef29",
+      "sha256": "ed556a5414c763714f3fb16ca2a3f406bb357be2383ce8eaa89fe3dd5d2dabf7"
+    },
+    "parser": {
+      "path": "product/ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts",
+      "git_blob": "d8d0cf4ce765651bd5490df1482a92ff0c668943"
+    },
+    "port": {
+      "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+      "git_blob": "9231711d7efb18dd18b68e3322f62337a6477484"
+    },
+    "test": {
+      "path": "product/ai-company-os-frontend/tests/office-workbench-deadline.test.cjs",
+      "git_blob": "8ae7b251f8ac86e3f03897442d3819d76256cbe9",
+      "sha256": "c78d2b8fc62778af977fdf2e31e0db957b5b6f3175a35167005a2c9ea97f3275"
+    }
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "typescript": "5.8.3 (system global; project target 5.9.3)",
+    "python": "3.13.5",
+    "network": "disabled",
+    "platform": "Linux x86_64"
+  },
+  "commands": [
+    "tsc --target ES2022 --lib ES2022,DOM --strict --module commonjs --moduleResolution node --outDir build source/node-process.d.ts source/features/mvp/*.ts source/app/api/demo/office-workbench/route.ts",
+    "node tests/office-workbench-deadline.test.cjs <absolute path to build/app/api/demo/office-workbench/route.js>"
+  ],
+  "test": {
+    "baseline": {
+      "actual_local": "EXECUTED",
+      "pass": 4,
+      "fail": 2,
+      "total": 6,
+      "reason": "mock transport ignores abort; previously returns HTTP 200 instead of 503 in two abort conditions",
+      "raw_log_sha256": "5cda68b6c8c88afe58d8dcc0f6215f13886adca5951fd7a2716170393328ea40"
+    },
+    "patched": {
+      "actual_local": "EXECUTED",
+      "pass": 6,
+      "fail": 0,
+      "total": 6,
+      "cancelled": 0,
+      "skipped": 0,
+      "raw_log_sha256": "c2dd4f7b0bb2feec6bf707c0e609b68c15a248f84dbe293aba29dbeda8b2db38"
+    },
+    "selected_tsc": "PASS_NO_DIAGNOSTICS",
+    "targeted_cases": [
+      "normal exact D0 body returned 200",
+      "aborted signal before fetch resolves must 503",
+      "abort while returning valid body must 503",
+      "invalid tenant scope must 503",
+      "oversize must 503",
+      "transport failure must 503"
+    ],
+    "new_unique_test_cases": 6,
+    "previous_original_projection_read_12": "UNMODIFIED_NOT_RERUN",
+    "backend_office_sql": "UNMODIFIED_NOT_RERUN"
+  },
+  "change": {
+    "modified_product_paths": 1,
+    "new_product_test_paths": 1,
+    "new_api_paths": 0,
+    "auth_db_dependency_changes": 0,
+    "new_workflow_or_CI": 0,
+    "live_grants": 0
+  },
+  "boundaries": {
+    "formal_W8": "NOT_RUN",
+    "native_browser": "NOT_RUN",
+    "integrated_runtime": "NOT_RUN",
+    "real_postgresql": "HOLD",
+    "GATE02_independent_authority": "HOLD",
+    "IV": "HOLD",
+    "release": "HOLD",
+    "owner_review": "PENDING",
+    "product_dev_unchanged": true
+  },
+  "progress": {
+    "global_weighted_previous": null,
+    "global_weighted_current": null,
+    "global_weighted_delta_pp": null,
+    "MI05_development_previous": null,
+    "MI05_development_current": null,
+    "UI_acceptance_previous": "21/40",
+    "UI_acceptance_current": "21/40",
+    "MVP_acceptance_previous": "0/11",
+    "MVP_acceptance_current": "0/11",
+    "acceptance_delta_pp": 0
+  },
+  "rollback": "Close draft PR; alternatively revert only scoped review branch commit(s). No force push, no main/product-dev mutation."
+}
