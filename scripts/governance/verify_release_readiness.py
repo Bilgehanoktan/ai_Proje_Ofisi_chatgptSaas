@@ -12,7 +12,7 @@ import json
 import sys
 from pathlib import Path
 
-MANDATORY_PRS = (10, 19, 20, 21, 22, 23, 24)
+MANDATORY_PRS = (10, 19, 20, 21, 22, 23, 24, 26)
 REQUIRED_GATES = (
     "w8_exact_prepare", "supply_chain_owner_review", "w8_full_install_build_browser",
     "g2_g9_current_org_regression", "authority_root_sink_custody",
@@ -37,6 +37,19 @@ def _sha(value: object, label: str) -> str:
     if not isinstance(value, str) or len(value) != 40 or any(c not in "0123456789abcdef" for c in value):
         raise EvidenceError(f"{label}: invalid full Git SHA")
     return value
+
+
+def _digest(value: object, label: str) -> str:
+    if not isinstance(value, str) or len(value) != 64 or any(c not in "0123456789abcdef" for c in value):
+        raise EvidenceError(f"{label}: invalid SHA-256")
+    return value
+
+
+def _source_receipt(value: object, label: str, source_head: str) -> None:
+    receipt = _object(value, label)
+    if _sha(receipt.get("tested_source_head"), f"{label}.tested_source_head") != source_head:
+        raise EvidenceError(f"{label}: tested source head mismatch")
+    _digest(receipt.get("raw_log_sha256"), f"{label}.raw_log_sha256")
 
 
 def _pairs(value: object, label: str) -> tuple[int, int]:
@@ -101,15 +114,20 @@ def audit(current: object, snapshot: object, evidence: object) -> dict:
     if missing:
         raise EvidenceError(f"missing live owner/QA observations: {sorted(missing)}")
     qa_head = _sha(e.get("office_qa_source_pr22_head"), "office QA tested PR22 head")
-    # A dashboard can be stale, but may not misrepresent the heads it lists.
+    # Stale dashboard is HOLD, not an exception: report every stale owner pin.
     snapshot_prs = s.get("owner_prs")
     if not isinstance(snapshot_prs, list):
         raise EvidenceError("snapshot.owner_prs missing")
+    snapshot_numbers = set()
+    stale_snapshot_heads = []
     for row in snapshot_prs:
         data = _object(row, "snapshot.owner_prs[]")
         n = data.get("number")
-        if n not in seen or _sha(data.get("head_sha"), f"snapshot PR #{n}") != seen[n]["head_sha"]:
-            raise EvidenceError(f"snapshot PR #{n}: stale head or missing live observation")
+        if type(n) is not int or n in snapshot_numbers or n not in seen:
+            raise EvidenceError(f"snapshot PR #{n}: duplicate or missing live observation")
+        snapshot_numbers.add(n)
+        if _sha(data.get("head_sha"), f"snapshot PR #{n}") != seen[n]["head_sha"]:
+            stale_snapshot_heads.append(n)
 
     gates = _object(e.get("gates"), "evidence.gates")
     if set(gates) != set(REQUIRED_GATES):
@@ -128,23 +146,50 @@ def audit(current: object, snapshot: object, evidence: object) -> dict:
     owner_office = _pairs(counts.get("office_owner_local"), "owner Office")
     independent_office = _pairs(counts.get("office_independent_stalled"), "independent Office")
     g7 = _pairs(counts.get("g7_current_org"), "current ORG G7")
-    if owner_office != (6, 6) or independent_office != (0, 3) or g7 != (0, 7):
+    if owner_office != (6, 6) or independent_office[1] != 3 or g7[1] != 7:
         raise EvidenceError("unreviewed change in test evidence baseline; rerun/repin actual evidence")
-    if gates["office_stalled_transport"]["status"] != "FAIL" or gates["g2_g9_current_org_regression"]["status"] != "NOT_RUN":
-        raise EvidenceError("independent FAIL / unexecuted current ORG G7 must be represented exactly")
-    if _pairs(e.get("mvp_acceptance"), "MVP") != (0, 11):
-        raise EvidenceError("MVP gate moved; owner-ratified acceptance re-evaluation required")
-    if _pairs(e.get("independent_iv_acceptance"), "IV") != (0, 7):
-        raise EvidenceError("IV gate moved; independent acceptance re-evaluation required")
+    office_status = gates["office_stalled_transport"]["status"]
+    office_fresh = qa_head == seen[22]["head_sha"]
+    if office_status == "PASS":
+        if independent_office != (3, 3) or not office_fresh:
+            raise EvidenceError("independent FAIL or stale head cannot become Office PASS")
+        _source_receipt(e.get("office_independent_receipt"), "office_independent_receipt", seen[22]["head_sha"])
+        receipt = e["office_independent_receipt"]
+        if _sha(receipt.get("qa_pr_head"), "office_independent_receipt.qa_pr_head") != seen[23]["head_sha"]:
+            raise EvidenceError("Office receipt QA PR23 head mismatch")
+    elif independent_office != (3, 3) and office_status not in ("FAIL", "HOLD", "NOT_RUN"):
+        raise EvidenceError("Office test evidence/status inconsistent")
+    g7_status = gates["g2_g9_current_org_regression"]["status"]
+    if g7_status == "PASS":
+        if g7 != (7, 7):
+            raise EvidenceError("unexecuted current ORG G7 cannot become PASS")
+        _source_receipt(e.get("g7_current_org_receipt"), "g7_current_org_receipt", seen[19]["head_sha"])
+    elif g7 != (0, 7) and g7_status not in ("FAIL", "HOLD", "NOT_RUN"):
+        raise EvidenceError("current ORG test evidence/status inconsistent")
+    mvp = _pairs(e.get("mvp_acceptance"), "MVP")
+    iv = _pairs(e.get("independent_iv_acceptance"), "IV")
+    if mvp[1] != 11 or iv[1] != 7:
+        raise EvidenceError("MVP/IV canonical acceptance denominator changed")
+    if mvp != (0, 11):
+        _source_receipt(e.get("mvp_acceptance_receipt"), "mvp_acceptance_receipt", p)
+    if iv != (0, 7):
+        _source_receipt(e.get("independent_iv_receipt"), "independent_iv_receipt", p)
+    if gates["eleven_mvp_criteria"]["status"] == "PASS" and mvp != (11, 11):
+        raise EvidenceError("MVP PASS without eleven accepted criteria")
+    if gates["independent_iv"]["status"] == "PASS" and iv != (7, 7):
+        raise EvidenceError("IV PASS without seven independently accepted criteria")
     if e.get("owner_final_approval") is not False:
         raise EvidenceError("owner approval cannot be inferred; separate signed acceptance required")
-    if qa_head != seen[22]["head_sha"]:
+    if not office_fresh:
         blockers.append({"gate": "office_qa_candidate_freshness", "status": "HOLD",
-                         "owner": "MI-05/QA", "reason": "Independent 0/3 FAIL belongs to earlier PR22 head; latest head is NOT_RETESTED"})
-    # A stale dashboard needs updating but must not be mistaken for a green gate.
-    stale_dashboard_prs = sorted(set(MANDATORY_PRS) - {row["number"] for row in snapshot_prs})
+                         "owner": "MI-05/QA", "reason": "Independent QA evidence covers previous PR22 head, current candidate NOT_RETESTED"})
+    if stale_snapshot_heads:
+        blockers.append({"gate": "dashboard_head_freshness", "status": "HOLD", "owner": "MI-P0",
+                         "reason": "Snapshot PR heads differ from live owners: " + str(sorted(stale_snapshot_heads))})
+    stale_dashboard_prs = sorted(set(MANDATORY_PRS) - snapshot_numbers)
     if stale_dashboard_prs:
-        blockers.append({"gate": "dashboard_pr_freshness", "status": "HOLD", "owner": "MI-P0", "reason": "Snapshot omits owner QA PRs: " + str(stale_dashboard_prs)})
+        blockers.append({"gate": "dashboard_pr_freshness", "status": "HOLD", "owner": "MI-P0",
+                         "reason": "Snapshot omits owner/QA PRs: " + str(stale_dashboard_prs)})
     return {
         "evidence_status": "VERIFIED_HOLD" if blockers else "ELIGIBLE_FOR_SEPARATE_OWNER_REVIEW_ONLY",
         "release_approved": False,
@@ -154,8 +199,8 @@ def audit(current: object, snapshot: object, evidence: object) -> dict:
         "owner_local_office": list(owner_office),
         "independent_stalled_office": list(independent_office),
         "current_org_g7": list(g7),
-        "mvp_acceptance": [0, 11],
-        "independent_iv_acceptance": [0, 7],
+        "mvp_acceptance": list(mvp),
+        "independent_iv_acceptance": list(iv),
         "note": "Read-only evidence evaluation, NOT an authorized CI, IV, security or product release verdict",
     }
 
