@@ -389,5 +389,36 @@
     "G8": "HOLD",
     "evidence": "docs/master-integration/MI01-W8-ORGREADBACK-HARNESS-20261120/SOURCE_ARCHITECTURE_TEST_ROLLBACK_AND_HANDOVER.md",
     "rollback": "Close PR35 and preserve PR34 prior pinned C04/C06 Windows stage; no rewrite canonical product-dev or main"
+  },
+  "PR35_private_repo_unauthed_zip_404_local_exact_git_archive_retry_20261120": {
+    "source_branch": "review/mi01-w8-orgreadback-harness-20261120",
+    "new_code_commit": "502ca9f8440d7f0aa259bff7c597c33f35032812",
+    "verified_GitHub_repository_private": true,
+    "actual_powerShell_error": "Invoke-WebRequest unauthenticated github archive URL HTTP404; no targeted or W8 tests started",
+    "runtimes_verified": "py3.13.17; node24.14.0; git2.54.0",
+    "original_local_source": "E:\\AIOS\\W8\\CRYPT50_SRC_20261120_224742",
+    "source_commit_expected": "388c8a9ed539aba4e645267f00035f6f2ef0ff3e",
+    "no_remote_source_fetch_solution": "git archive original local commit; reconstruct new test, manifest, W8 adapter; verify 3/3 exact Git blob SHA and targeted fixture SHA256; no Git credential needed",
+    "patched_files": {
+      "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+      "product/SOURCE_MANIFEST.json": "2d1d0bf94d464ffe79d8072453a2e19722485854",
+      "tests/integration/w8_unified_u3.py": "735f093106d1e774b58188917286b37ddd36e804"
+    },
+    "script": "AIOS_W8_AGENTFIX_OFFLINE_SOURCE_RETRY_20261120.ps1",
+    "script_sha256": "0c81167c594ff622c0e6a6af1e3b6c8eab6bbaf7348a0c9b12bfdc3f278c9e5e",
+    "script_bytes": 13120,
+    "script_lines": 223,
+    "source_changes_this_turn": 0,
+    "API_changes": 0,
+    "database_changes": 0,
+    "dependency_changes": 0,
+    "security_permission_changes": 0,
+    "GitHub_PR35_new_dev_tests": "NOT_RUN",
+    "old_original_C06": "PASS_PRESERVED",
+    "C05_independent": "HOLD",
+    "C08": "NOT_RUN",
+    "G8": "HOLD",
+    "rollback": "Keep previously successful original C04/C06 stage; discard only new timestamped local attempt after inspection if required",
+    "evidence": "docs/master-integration/MI01-W8-ORGREADBACK-HARNESS-20261120/WINDOWS_404_PRIVATE_REPO_LOCAL_ARCHIVE_RETRY_20261120.json"
   }
 }
