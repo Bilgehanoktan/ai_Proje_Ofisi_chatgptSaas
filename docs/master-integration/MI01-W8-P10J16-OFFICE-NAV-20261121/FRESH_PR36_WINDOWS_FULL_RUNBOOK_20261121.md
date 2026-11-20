@@ -53,3 +53,21 @@ py -3 $file --mode smoke --run-root 'E:\AIOS\W8\PR36_W8_FRESH_<timestamp>' --chr
 - Sonraki gerçek görev, kullanıcı Windows yeni `PR36_W8_FRESH` JSON/log kanıtını doğrulamak; başarı halinde ayrı sahip/IV kabulü ve kontrollü entegrasyon aday değerlendirmesi. Otomatik merge/CI/security activation yok.
 
 - Yürütme sona erdiğinde (başarılı/başarısız) JSON raporuna kanıt olarak `native_log_sha256`, `native_log_bytes` ve `original_PR35_source_hashes_preserved` eklenir; Python sürecinin geçici değişkenleri hata durumunda da geri alınır. Bu yardımcı değişikliğinin kendisi tam Windows test sonucu değildir.
+
+## 2026-11-21 — PR36 gerçek Windows bağımlılık farkı ve R2 okuma aracı
+
+**Kullanıcının gerçek Windows PowerShell 5.1 çıktısı:**
+- Disk ön kontrolü: C: **3.36 GiB** / E: **6.38 GiB** boş (çalışma *öncesi*).
+- Özgün PR35 552 kaynak SHA256 denetimi **PASS**; özgün W8 runner `E:\\AIOS\\W8\\W8_AGENTFIX_LOCAL_20261121_002919\\source\\tests\\integration` altında bulundu.
+- PR36 552 kaynak/manifest Git blob yeniden üretimi **PASS**.
+- Yeni çalışma: `E:\\AIOS\\W8\\PR36_W8_FRESH_20261121_010329`.
+- **G3:** özgün PR36 552 kaynak audit exit=0.
+- **C04 hazırlığı:** özgün yeni `prepare` exit=0, ancak `REVIEW.json` dosyaları karşılaştırıldığında `manifest_blob` dışındaki alanlar da farklı: **`REVIEW_DEPENDENCY_DRIFT_HOLD`**. Bu farkın kesin alanı/sürümü henüz okunmadı. C04 **prepare PASS**, fakat yeni bağımlılık onayı **HOLD**.
+- **C06:** yeni kurulum **NOT_RUN**; **C07 tam test/Next.js build NOT_RUN**, **C08 browser NOT_RUN**. PR36 hedef Windows 8/8 PASS önceki delil olarak korunuyor. **C05 bağımsız HOLD**, W8 kabulü **3/8 değişmedi**.
+- Kullanıcı Windows çıktı markerı `ORIGINAL_STAGE_SOURCE_HASHES_PRESERVED` gösteriyor; eski stage test ve manifest SHA256'ları doğrulanmış.
+- **Önemli uygulama hatası:** R1 yardımcısı `REVIEW_DEPENDENCY_DRIFT_HOLD` sonrasında `return` ile *sıfır* çıkış kodu dönebilir. Dolayısıyla PowerShell wrapper `PR36_VALIDATION_HOLD` üretmemiş olması **başarı değildir**. Kaynak/bağımlılık kilidi yine güvenli şekilde durmuştu. R2 bu yanlış yeşili giderir.
+- **R2 salt okunur teşhis dosyası:** `AIOS_W8_PR36_FRESH_WINDOWS_VALIDATION_R2_20261121.py`, SHA256 `9751b0068f10f16dbfa1a7de143d48debe926a4dfefdc847d89f3902e2856808`, **28,578 bayt**; oluşturulan conversation artifact, GitHub ürün kaynaklarının parçası değil. Yeni `--mode review-diff --run-root E:\\AIOS\\W8\\PR36_W8_FRESH_20261121_010329` salt okunur şekilde eski/yeni `REVIEW.json` alanlarını, Python wheel SHA'larını ve `python.lock` farklarını raporlar; hiçbir paketi kurmaz/silmez, izin değiştirmez. R2 ayrıca bir sonraki `--mode run` çağrısında dependency drift varsa **nonzero exit** döndürür. R2'nın Python AST, CLI --help, PR36 exact-source yeniden kurma statik kontrolleri PASS; **Windows R2 çalışması henüz NOT_RUN**.
+- R2 teşhis çalıştırılması için kullanıcı önce indirilen dosyanın SHA256'sını doğrulamalı, ardından `py -3 $file --mode review-diff --run-root 'E:\\AIOS\\W8\\PR36_W8_FRESH_20261121_010329'` çalıştırmalı. Eski R1 `--mode run` tekrar çağrılmamalı. Mevcut `stage` / `REVIEW.json` / `.log` / `.json` korunmalı.
+- Bir sonraki karar, **gerçek fark alanlarına** göre: sadece ortam metadatasıysa yeterli doğrulama ve yeni fingerprint; wheel/lock SHA veya paket sürümü farkıysa eski onaylı wheelhouse kilidini koruyan kaynakta yetkili ve kanıtlı re-review gerekir. Fark görülmeden onayı otomatik yeniden kullanma veya `REVIEW.json` elle düzeltme **YASAK/HOLD**.
+
+**Teknik katalog etkisi:** Backend/API/DB, runtime, ürün UI veya bağımlılık sürümü güncellenmedi. Yalnızca W8 dış test yardımcısının durum kodu/doğrulama aracına R2 bakım düzeltmesi, kanıt/handover ve hata teşhisi kaydedildi. Eski sürümler ve kararlar aynen korunur.
