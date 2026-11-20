@@ -1,0 +1,109 @@
+{
+  "revision": "MI01-W8-CRYPT50-G1-COMPATIBILITY-RESEARCH-20261120",
+  "date": "2026-11-20",
+  "evidence_class": "PUBLIC_VENDOR_METADATA_AND_EXACT_OWNER_SOURCE_READ_ONLY",
+  "owner_review": "HOLD",
+  "source_branch": "review/mi01-w8-cryptography-50-0-2-20261120",
+  "source_base": "9166afe299cd8f1ab9c52355ec21ec06c465d6ef",
+  "source_initial_commit": "3523a0b595799480a6ef03fa57de6dc2903f796e",
+  "source_requirements_blob": "921818de26b481ed94603d8e596a384abf04bfa9",
+  "candidate_manifest_blob": "589a77c2115bf255600d130087fc8973ecf2b7e5",
+  "candidate_adapter_blob": "c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04",
+  "code_usage": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "blob": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+      "symbols": [
+        "verify_checkpoint",
+        "review_signed_snapshot"
+      ],
+      "api": [
+        "Ed25519PublicKey.from_public_bytes",
+        "Ed25519PublicKey.verify"
+      ],
+      "authority": "D0_SIGNED_READBACK_ONLY"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+      "blob": "477bcde63418dd43f886df7b32c5acd006d64a79",
+      "symbols": [
+        "issue_fixture",
+        "review_observation"
+      ],
+      "api": [
+        "Ed25519PrivateKey.sign",
+        "Ed25519PublicKey.from_public_bytes",
+        "Ed25519PublicKey.verify",
+        "InvalidSignature"
+      ],
+      "authority": "D0_SYNTHETIC_ONLY"
+    },
+    {
+      "path": "tests/integration/w8_p10f.py",
+      "blob": "155a2179eb71bd554aa34dff36147be4658473e0",
+      "symbols": [
+        "load_original",
+        "run_candidate"
+      ],
+      "behavior": "inject pinned optional requirements-history-signatures.txt during original pip download"
+    },
+    {
+      "path": "tests/integration/w8_unified_u3.py",
+      "blob": "c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04",
+      "symbols": [
+        "load_candidate",
+        "extend"
+      ],
+      "behavior": "immutable manifest pointer; inherited original W8 audit/prepare/install/test/smoke"
+    }
+  ],
+  "impact": {
+    "files_changed_in_product": 1,
+    "manifest": 1,
+    "runner_adapter": 1,
+    "new_runtime_permissions": 0,
+    "api_changes": 0,
+    "db_changes": 0,
+    "new_ci": 0,
+    "main_or_canonical_changes": 0
+  },
+  "upstream": {
+    "candidate": "cryptography==50.0.2",
+    "released": "2026-09-30",
+    "python_min": "3.9",
+    "windows_wheel": "win_amd64 abi3 published; exact downloaded wheel unverified",
+    "upstream_open_ssl": "4.0.3 in Windows wheel according to official 50.0.2 changelog",
+    "licensed_metadata": "Apache-2.0 OR BSD-3-Clause",
+    "source_urls": [
+      "https://cryptography.io/en/50.0.2/changelog/",
+      "https://pypi.org/project/cryptography/50.0.2/"
+    ]
+  },
+  "evidence": {
+    "review_doc": "docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/G1_COMPATIBILITY_AND_G3_WINDOWS_RUNBOOK_20261120.md",
+    "windows_w8_new_execution": "NOT_RUN",
+    "osv_for_candidate": "NOT_RUN",
+    "new_wheel_SHA256": "UNKNOWN",
+    "new_pip_lock_and_review": "NOT_CREATED",
+    "independent_security_signoff": "HOLD",
+    "owner_source_approval": "HOLD"
+  },
+  "mandatory_order": [
+    "G1_OWNER_APPROVAL",
+    "G3_ACTUAL_WINDOWS_AUDIT_AND_PREPARE",
+    "G4_NEW_C05_OSV_WHEEL_LICENSE_OWNER_PASS",
+    "G5_C06_INSTALL",
+    "G6_C07_BUILD_REGRESSION",
+    "G7_C08_CHROMIUM",
+    "G8_OWNER_INTEGRATION_REVIEW"
+  ],
+  "progress": {
+    "W8_before": "3/8",
+    "W8_after": "3/8",
+    "delta_pp": 0,
+    "mvp": "0/11",
+    "independent_IV": "0/7",
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "rollback": "No product-dev/main mutation. Close draft PR34 or normal revert review branch. Retain original PR20/PR33 and Windows C04/C05."
+}
