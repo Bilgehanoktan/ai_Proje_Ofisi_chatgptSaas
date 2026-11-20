@@ -1,5 +1,5 @@
 {
-  "revision": "MI-P0-G7-ORG-READER-BOUNDARY-20261120",
+  "revision": "MI05-OFFICE-WORKBENCH-DEADLINE-20261120-R1",
   "date": "2026-11-20",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -2744,9 +2744,9 @@
       "owner_role": "Premium UI",
       "source_ref": "integration/p10j24b-source-recovery",
       "observed_sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
-      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending. | Common projection read 12/12 and registry 13/13 actual replay; browser still pending.",
+      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending. | Common projection read 12/12 and registry 13/13 actual replay; browser still pending. | MI05-OFFICE-WORKBENCH-DEADLINE-20261120: owner route original blob 749a2899, two isolated ignored-abort negatives reproduced 200≠503; minimal fail-closed patch and six targeted local Node tests 6/6 PASS, strict TS selected compile PASS; draft PR22 review only, 553 canonical unchanged. MI-05/Unified owner + W8 original browser approval HOLD. Do not double count original 12/12 projection or product acceptance.",
       "priority": "P1",
-      "status": "OPEN",
+      "status": "REVIEW_PR22_OFFICE_DEADLINE_LOCAL_6_PASS_OWNER_W8_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "branch head observed only; latest acceptance not reconciled",
       "mi01_dependency": {
@@ -9885,5 +9885,61 @@
     },
     "next": "MI01 W8 exact owner-reviewed 553 C04-C08; MI04 G2/G9 authority version owner ratification and current-ORG G7 import-root requalification; MI02 independent PG/issuer/sink/IV. Do not merge PR19 and PR20 as-is.",
     "rollback": "Revert governance-only commit and PR6 PR metadata update if needed, preserve owner sources/tests/claims."
+  },
+  "mi05_office_proxy_deadline_20261120": {
+    "revision": "MI05-OFFICE-WORKBENCH-DEADLINE-20261120-R1",
+    "source": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "review_pr": 22,
+    "review_ref": "review/mi05-office-workbench-deadline-20261120",
+    "review_head": "354c8e98fa5ef4bbad0a4af57892252624f41520",
+    "source_blob_original": "749a289984049e0cec27ed93d656023ba4da1fff",
+    "source_blob_review": "dc18ef2ecaf5556e09bc6152578f8cadf247ef29",
+    "test_blob": "8ae7b251f8ac86e3f03897442d3819d76256cbe9",
+    "baseline_actual": {
+      "pass": 4,
+      "fail": 2,
+      "total": 6
+    },
+    "fixed_actual": {
+      "pass": 6,
+      "fail": 0,
+      "total": 6,
+      "skipped": 0
+    },
+    "selected_tsc": "PASS",
+    "scope": "isolated local synthetic abort-ignore mock; 1 modified existing frontend route, 1 new test; no canonical merge, security or browser acceptance",
+    "owner_review": "PENDING",
+    "formal_W8": "NOT_RUN",
+    "UI_acceptance_previous": [
+      21,
+      40
+    ],
+    "UI_acceptance_current": [
+      21,
+      40
+    ],
+    "MVP_previous": [
+      0,
+      11
+    ],
+    "MVP_current": [
+      0,
+      11
+    ],
+    "Core_previous": [
+      12,
+      16
+    ],
+    "Core_current": [
+      12,
+      16
+    ],
+    "weighted_global_previous": null,
+    "weighted_global_current": null,
+    "weighted_delta_pp": null,
+    "product_acceptance_delta_pp": 0,
+    "evidence": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/EVIDENCE.json",
+    "catalog_handover": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+    "rollback": "close draft PR22; no product-dev or main rewrite"
   }
 }
