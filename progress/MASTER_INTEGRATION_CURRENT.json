@@ -4,7 +4,7 @@
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
     "ref": "integration/product-dev",
-    "sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
     "source_commit": "a80932b6d5e99667889dfaa25b682feb267c6cba",
     "status": "PROVISIONAL_553_OWNER_SOURCE_MERGE_DONE_W8_FULL_BUILD_SECURITY_HOLD",
     "product_files": 553,
@@ -16,7 +16,11 @@
     "previous_source_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
     "previous_source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
     "previous_product_files": 505,
-    "previous_manifest_entries": 504
+    "previous_manifest_entries": 504,
+    "documentation_sync_commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_transport_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "product_source_tree_unchanged": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "full_original_W8": "NOT_RUN"
   },
   "main": {
     "sha": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
@@ -781,7 +785,15 @@
       },
       "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
       "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
-      "mi_p0_553_next": "Run original exact 553 W8 lock fingerprint + prepare/install/test/smoke/native browser; pin adapter 27b4... corrected, not yet functional PASS"
+      "mi_p0_553_next": "Run original exact 553 W8 lock fingerprint + prepare/install/test/smoke/native browser; pin adapter 27b4... corrected, not yet functional PASS",
+      "w8_553_static_preflight": {
+        "source_paths": "552/552",
+        "runner_pins": "23/23",
+        "auxiliary_pins": "10/10",
+        "status": "PASS_STATIC_ONLY",
+        "original_W8_full": "NOT_RUN",
+        "evidence": "catalog/revisions/MI_P0_553_W8_STATIC_PREFLIGHT_20261120.json"
+      }
     },
     {
       "id": "MI-02",
@@ -8683,5 +8695,103 @@
     "new_code": 0,
     "CI_permissions_changed": false,
     "next": "MI01 dependency owner completes original C04 wheelhouse/python.lock/REVIEW, C05 owner approval, C06-C08 full install/build/native browser; G2/G9 owners resolve missing 7 + conflicting intent_authority and run original 50/7; independently administered root/sink/PG restore/IV gates separate."
+  },
+  "mi_p0_553_w8_static_preflight_and_handover_sync_20261120": {
+    "revision": "MI-P0-CANONICAL-553-W8-STATIC-PREFLIGHT-20261120-R1",
+    "prior_canonical_head": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "current_canonical_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "change_pr": 18,
+    "change_type": "DOCS_AND_CATALOG_ONLY",
+    "product_source_files_before": 553,
+    "product_source_files_after": 553,
+    "manifest_before": 552,
+    "manifest_after": 552,
+    "exact_product_tree_before": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "exact_product_tree_after": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "changed_paths": [
+      "catalog/revisions/MI_P0_553_W8_STATIC_PREFLIGHT_20261120.json",
+      "docs/architecture/MI_P0_553_CANONICAL_SOURCE_AND_W8_PREFLIGHT_20261120.md",
+      "handover/CURRENT.md",
+      "handover/NEXT_STEP.md"
+    ],
+    "verified": {
+      "source_manifest_paths": [
+        552,
+        552
+      ],
+      "source_missing": 0,
+      "source_extras": 0,
+      "manifest_byte_size_mismatch": 0,
+      "runner_ancestry_git_blob_matches": [
+        23,
+        23
+      ],
+      "auxiliary_git_blob_matches": [
+        10,
+        10
+      ],
+      "git_tree_truncated": false
+    },
+    "tests_run_this_chat": {
+      "W8_prepare": "NOT_RUN",
+      "W8_install": "NOT_RUN",
+      "W8_test": "NOT_RUN",
+      "W8_smoke": "NOT_RUN",
+      "native_browser": "NOT_RUN",
+      "CI_new": "NO"
+    },
+    "owner_g2_g9": "PR17 ORIGINAL D0 CI 50/50+7/7 PASS 44697437051; owner alternative version and canonical integrated trust HOLD",
+    "owner_memory_0214": "PR16 original 10/10 D0 PASS 44695937454, restore replay vulnerability still OPEN",
+    "constraints": {
+      "owner": "MI-01/Unified W8",
+      "MI10": "existing limited CI only",
+      "new_CI_approved": false,
+      "postgreSQL_protected": "HOLD",
+      "independent_security": "HOLD",
+      "production": "DENY",
+      "main_change": false
+    },
+    "evidence": "catalog/revisions/MI_P0_553_W8_STATIC_PREFLIGHT_20261120.json",
+    "architecture": "docs/architecture/MI_P0_553_CANONICAL_SOURCE_AND_W8_PREFLIGHT_20261120.md",
+    "handover": "handover/CURRENT.md",
+    "next": "handover/NEXT_STEP.md",
+    "development_previous_global": null,
+    "development_current_global": null,
+    "development_delta_pp": null,
+    "core_acceptance_previous": [
+      12,
+      16
+    ],
+    "core_acceptance_current": [
+      12,
+      16
+    ],
+    "UI_acceptance_previous": [
+      21,
+      40
+    ],
+    "UI_acceptance_current": [
+      21,
+      40
+    ],
+    "MVP_acceptance_previous": [
+      0,
+      11
+    ],
+    "MVP_acceptance_current": [
+      0,
+      11
+    ],
+    "IV_acceptance_previous": [
+      0,
+      7
+    ],
+    "IV_acceptance_current": [
+      0,
+      7
+    ],
+    "acceptance_delta_pp": 0,
+    "rollback": "normal revert of PR18 documentation-only merge; keep source Git tree and PR15 commit unaffected",
+    "next_owner_action": "Review exact 553 W8 lock/REVIEW.json/wheelhouse and execute actual full prepare/install/test/smoke/native U3 under existing authorized environment; no duplicate G2/G9 historical runs."
   }
 }
