@@ -1,5 +1,5 @@
 {
-  "revision": "MI-P0-D0-MULTI-PROXY-DEADLINE-20261120-R1",
+  "revision": "MI-P0-D0-MULTI-PROXY-DEADLINE-WALLCLOCK-20261120-R2",
   "date": "2026-11-20",
   "classification": "REAL_SELECTED_LOCAL_ORIGINAL_SOURCE_REGRESSION_NOT_FULL_BUILD_OR_SECURITY_ACCEPTANCE",
   "baseline": {
@@ -11,11 +11,11 @@
   },
   "candidate": {
     "branch": "review/mi-p0-d0-multi-proxy-deadline-20261120",
-    "product_files": 555,
-    "manifest_entries": 554,
-    "manifest_blob": "56086553c3946d16a728bfaea877b3908fe96232",
+    "product_files": 556,
+    "manifest_entries": 555,
+    "manifest_blob": "de7890587730452c0c7b22315b7d475fc666f0d7",
     "source_code_modified": 3,
-    "new_product_files": 2,
+    "new_product_files": 3,
     "old_paths_preserved": true,
     "promotion": "HOLD"
   },
@@ -59,6 +59,11 @@
       "bytes": 5998,
       "sha256": "7607d0371edff9512d2669a1b0f30dec55879bd77a4e87d2c06026d9ea8b5102",
       "git_blob": "528027639931c74b27b4d7f12813a57894cc529f"
+    },
+    "ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs": {
+      "bytes": 2510,
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140",
+      "git_blob": "bc714ec16a144cba403c214bd1497525e5114821"
     }
   },
   "unmodified_exact_original_git_blobs": {
@@ -117,11 +122,12 @@
       "combined_tap_sha256": "395f60cddb9d47f262253c8b21c6ace7d9420afed09a05fd6c86a2157dcb5630"
     },
     "selected_total": {
-      "methods": 60,
-      "passed": 60,
+      "methods": 65,
+      "passed": 65,
       "failed": 0,
       "skipped": 0,
-      "not_global_suite": true
+      "not_global_suite": true,
+      "composition": "27 focused existing + 33 original GitHub tests + 5 new native wallclock"
     },
     "negative_cases": "Across 3 routes: late 200 after abort, unresolved fetch, stalled reader.read, unresolved reader.cancel",
     "bound": "Test-only 150ms watchdog for mocked abort scenarios, NOT an actual 2500ms wall-clock SLA test",
@@ -129,7 +135,53 @@
     "full_W8": "NOT_RUN",
     "native_browser": "NOT_RUN",
     "real_security": "HOLD",
-    "real_PostgreSQL": "HOLD"
+    "real_PostgreSQL": "HOLD",
+    "wallclock_2500ms": {
+      "actual_executed": [
+        5,
+        5
+      ],
+      "methods": [
+        "Admission unresolved fetch, signal elapsed 2530ms, HTTP 503",
+        "Outbox unresolved fetch, signal elapsed 2502ms, HTTP 503",
+        "Task-Budget unresolved fetch, signal elapsed 2502ms, HTTP 503",
+        "Admission unresolved reader.read, signal elapsed 2505ms, HTTP 503",
+        "Admission unresolved reader.cancel, completion ~1ms, HTTP 503"
+      ],
+      "signal": "actual native AbortSignal.timeout(2500), not mocked",
+      "platform": "Node v22.16.0 Linux isolated exact compiled route",
+      "runner": "node tests/d0-proxy-wallclock.test.cjs <absolute build directory>",
+      "raw_TAP_path": "docs/master-integration/MI-P0-D0-MULTI-PROXY-DEADLINE-20261120/REAL_2500MS_WALLCLOCK_TAP.log",
+      "raw_TAP_git_blob": "aff733644dab4e03fa621ae7198f1525935bf635",
+      "raw_TAP_sha256": "ed2e399d704995ad9f571633c460b049eeeaa89ec55cf55aff0eae9c75b0b384",
+      "timeout_assert_window_ms": [
+        2300,
+        3550
+      ],
+      "scope": "isolated Node mocked non-responsive transport, native wall-clock AbortSignal.timeout; not a Next.js server/browser or production guarantee"
+    },
+    "replayed_20261120_again": {
+      "selected27": {
+        "pass": 27,
+        "total": 27,
+        "sha256": "ebfd1e8fa7429cd2d2d528af7dbd79d99d41829d40e1cc12a684056663770fd1"
+      },
+      "original_admission": {
+        "pass": 10,
+        "total": 10,
+        "sha256": "72c59e505c4d6dcc099cd0bae1033cf7ed286324b06edf0c332b73c11387dffa"
+      },
+      "original_outbox": {
+        "pass": 9,
+        "total": 9,
+        "sha256": "fba5a5486d45dc995a5fdc2b3332c3b62e7b024791885a9de6274422f2c5b768"
+      },
+      "original_budget": {
+        "pass": 14,
+        "total": 14,
+        "sha256": "63eee93f15e5eae112c6eb878345ff1757f319087d90d8245c92560d72e12523"
+      }
+    }
   },
   "contracts": {
     "API_paths_unchanged": true,
@@ -170,5 +222,20 @@
   },
   "owner_next": "MI-05/MI-01 owner reviews draft, independently ratifies new manifest and full exact W8 after existing 553 C04-C08. MI04 562 authority source separate. Do not auto-merge.",
   "rollback": "Close draft PR, normal revert on review branch; protected product-dev/main unchanged.",
-  "architecture_and_handover": "docs/master-integration/MI-P0-D0-MULTI-PROXY-DEADLINE-20261120/ARCHITECTURE_CATALOG_HANDOVER.md"
+  "architecture_and_handover": "docs/master-integration/MI-P0-D0-MULTI-PROXY-DEADLINE-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+  "technical_catalog_delta": {
+    "previous_files": 5,
+    "added_files_20261120": 1,
+    "added_test": "product/ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+    "added_symbols": [
+      "measure(GET, handler, maxMs)",
+      "5 native wall-clock node:test cases"
+    ],
+    "new_API": 0,
+    "new_DB": 0,
+    "new_event": 0,
+    "new_dependency": 0,
+    "new_CI": 0,
+    "new_security_grant": 0
+  }
 }
