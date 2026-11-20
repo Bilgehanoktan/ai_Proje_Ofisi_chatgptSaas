@@ -1,7 +1,7 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI-P0-D0-FOUR-PROXY-CROSS-OWNER-SOURCE-REVIEW-20261120",
-  "status": "ISOLATED_FOUR_D0_PROXY_SOURCE_REVIEW_OWNER_W8_FULL_BUILD_HOLD",
+  "doc_revision": "MI-P0-D0-FOUR-PROXY-CROSS-OWNER-SOURCE-REVIEW-20261120-R2",
+  "status": "ISOLATED_FOUR_D0_PROXY_SOURCE_LOCAL_CROSS_TEST_PASS_W8_OWNER_HOLD",
   "parent_candidate_sha256": null,
   "parent_git_commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
   "source_git_commit": null,
@@ -2225,6 +2225,10 @@
     "ai-company-os-frontend/tests/office-workbench-deadline.test.cjs": {
       "bytes": 4001,
       "sha256": "6d01c856ac4fc88d22a223f3b77f24b292ed7e4af8a5d3cc465ce5506c17dbf9"
+    },
+    "ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs": {
+      "bytes": 2510,
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2240,9 +2244,9 @@
   "d0_proxy_deadline_review": {
     "candidate_ref": "review/mi-p0-d0-multi-proxy-deadline-20261120",
     "product_changes": 3,
-    "added_product_files": 2,
+    "added_product_files": 3,
     "prior_entries": 552,
-    "current_entries": 554,
+    "current_entries": 555,
     "source_blob_pins": {
       "app/api/demo/admission/route.ts": "c46fa8f20e75370ce423f3ede63cd340926fe089",
       "app/api/demo/outbox/route.ts": "12895f7c606665e6605017486473b4d2ebd8deb5",
@@ -2261,12 +2265,23 @@
     "full_w8": "NOT_RUN",
     "security_acceptance": "HOLD",
     "owner_merge": "HOLD",
-    "no_change_to_canonical_product_dev": true
+    "no_change_to_canonical_product_dev": true,
+    "product_files": 556,
+    "wallclock_test": {
+      "git_blob": "bc714ec16a144cba403c214bd1497525e5114821",
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140",
+      "owner_local_selected": [
+        5,
+        5
+      ],
+      "scope": "original PR26 source; no local W8"
+    },
+    "owner_latest_head": "8d2bfca79ffa8561b07b007851567496c3052efd"
   },
   "mi_p0_four_proxy_combined_review": {
     "base_canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
     "parent_candidate_PR": 26,
-    "parent_candidate_head": "8af623d5a0b5ec1d8c34b65a0b7d6d235307ab6d",
+    "parent_candidate_head": "8d2bfca79ffa8561b07b007851567496c3052efd",
     "owner_office_PR": 22,
     "owner_office_head": "668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b",
     "owner_source_exact_Git_blob": {
@@ -2275,12 +2290,17 @@
     },
     "prior_manifest_blob": "56086553c3946d16a728bfaea877b3908fe96232",
     "prior_manifest_count": 554,
-    "review_manifest_count": 555,
-    "review_product_files": 556,
+    "review_manifest_count": 556,
+    "review_product_files": 557,
     "owner_reviews": "HOLD",
     "W8_full": "NOT_RUN",
     "native_browser": "NOT_RUN",
     "security": "HOLD",
-    "canonical_untouched": true
+    "canonical_untouched": true,
+    "parent_original_pre_wallclock_candidate_head": "8af623d5a0b5ec1d8c34b65a0b7d6d235307ab6d",
+    "updated_parent_manifest_blob": "de7890587730452c0c7b22315b7d475fc666f0d7",
+    "updated_owner_wallclock_test_blob": "bc714ec16a144cba403c214bd1497525e5114821",
+    "previous_combined_manifest_blob": "19c198b7e43c4b7f5bbffd4695986a13a4a8a5da",
+    "owner_review": "HOLD"
   }
 }
