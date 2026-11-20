@@ -1,0 +1,122 @@
+{
+  "revision": "MI-P0-OFFICE-INDEPENDENT-R2-RETEST-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_LOCAL_EXACT_ORIGINAL_OWNER_SOURCE_QA_AND_NATIVE_TIMER_NOT_FULL_W8_OR_PRODUCT_ACCEPTANCE",
+  "canonical_source": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+  "original_qa_pr": 23,
+  "owner_source_pr": 22,
+  "source_commit": "668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b",
+  "source_blobs": {
+    "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "ae42ecccdda987c00537696f2698f49c374ec927",
+    "product/ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "product/ai-company-os-frontend/tests/office-workbench-deadline.test.cjs": "aa7afc3a93265305df6ceb8acbb03d25b901beb3",
+    "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/test_stalled_body_pr22.cjs": "ff6d1a9c923f427a9f982aaaffd59a45fd9d7578",
+    "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/test_office_wallclock_native.cjs": "6a500c8d9ce6428142305c4b1b8a1f2ac4629c88"
+  },
+  "prior_failing_qa": {
+    "owner_route_revision": "R1",
+    "original_qa_selected": [
+      0,
+      3
+    ],
+    "classification": "historical baseline preserved, not overwritten"
+  },
+  "R2_actual_local": {
+    "node": "v22.16.0",
+    "os": "Linux x86_64",
+    "tsc": "5.8.3 selected --strict PASS (project pin 5.9.3 NOT_RUN)",
+    "independent_original_qa": {
+      "passed": 3,
+      "total": 3,
+      "raw_TAP": "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/PR23_R2_INDEPENDENT_3_TAP.log",
+      "raw_git_blob": "398de76430960d616fc2971215c4906db4bf4c91",
+      "raw_sha256": "5e17f8223dfedade4bd911e8546a2462fa8ad0f332658aad2a4e74abd7d82110"
+    },
+    "owner_original_selected": {
+      "passed": 9,
+      "total": 9,
+      "raw_TAP": "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/PR22_R2_OWNER_9_TAP.log",
+      "raw_git_blob": "d696563302aba84ce5646df1d976eb321617b870",
+      "raw_sha256": "1f786c2af4bbcc3d9809f4415fac53795f2e104eff7938ce442d073226d211d4"
+    },
+    "native_actual_wallclock": {
+      "passed": 3,
+      "total": 3,
+      "signal": "real AbortSignal.timeout(2500), not monkey-patched",
+      "measured_503_ms": [
+        2542,
+        2503,
+        2502
+      ],
+      "cases": [
+        "unresponsive fetch",
+        "stalled response reader.read",
+        "never-resolving reader.cancel"
+      ],
+      "raw_TAP": "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/PR22_R2_NATIVE_WALLCLOCK_3_TAP.log",
+      "raw_git_blob": "1759caede7e994f54175152706b4ae7e977ec96f",
+      "raw_sha256": "8050f3c3ba4b9f6575b9fcf12e7c6733c12d131c4200e0278820aa4ebeb5a7dc"
+    },
+    "selected_disjoint_methods": {
+      "passed": 15,
+      "total": 15,
+      "skipped": 0,
+      "failed": 0
+    },
+    "full_W8": "NOT_RUN",
+    "real_browser": "NOT_RUN",
+    "PG_restore": "HOLD",
+    "independent_IV": "HOLD",
+    "security_issuer": "HOLD"
+  },
+  "technical_catalog": {
+    "added_files": [
+      "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/test_office_wallclock_native.cjs",
+      "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/PR23_R2_INDEPENDENT_3_TAP.log",
+      "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/PR22_R2_OWNER_9_TAP.log",
+      "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/PR22_R2_NATIVE_WALLCLOCK_3_TAP.log",
+      "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/EVIDENCE_R2.json",
+      "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/HANDOVER_R2.md"
+    ],
+    "new_test_symbols": [
+      "probe(handler,cap)",
+      "3 native node:test scenario names"
+    ],
+    "product_code_files_changed": 0,
+    "API_changes": 0,
+    "DB_changes": 0,
+    "event_changes": 0,
+    "dependencies_changed": 0,
+    "CI_changes": 0,
+    "permissions_changed": 0
+  },
+  "progress": {
+    "overall_weighted_previous": null,
+    "overall_weighted_current": null,
+    "overall_weighted_delta_pp": null,
+    "group_denominators_approved": [
+      0,
+      10
+    ],
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "owner_sequence": "MI-05 R2 independently QA 3/3 now observed. W8 PR20 original 553 C04-C08 and owner license approval still next; exact 563+/combined manifest must later requalify after owner approval, separately from PR19 authority/PG/IV. No autonomous merge, main or product-dev mutation.",
+  "rollback": "Close/revert QA PR23 R2 evidence additions only; preserve historical failing R1 record and owner PR22 R2. No force push."
+}
