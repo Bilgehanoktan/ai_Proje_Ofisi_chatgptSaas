@@ -24,7 +24,8 @@ Bu belge ana `DESIGN_MASTER.md` mimarisini, 8 fazlı uygulama planını veya se�
 | W8 runner geçmişi/yardımcı pinleri | 23/23 ve 10/10 PASS — GitHub statik doğrulama |
 | W8 exact `prepare/install/test/smoke` + native U3 | **NOT_RUN** — kilit ve yürütme ortamı gerekir |
 | MI-04 özgün 0214 10 test | **10/10 PASS D0** ([CI](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44695937454)), old restore replay residual **OPEN** |
-| G2 50, G9 7, gerçek PG/RLS/restore, bağımsız A-AT 8 | **HOLD/NOT_RUN**, gerçek grants/COMMIT yok |
+| Özgün G2 50 + G9 7 (sabit owner kaynak) | **50/50 + 7/7 PASS D0** ([CI](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44697437051)); kanonik 553 owner varyant entegrasyonu HOLD |
+| Gerçek PG/RLS/restore, bağımsız A-AT 8 | **HOLD/NOT_RUN**, gerçek grants/COMMIT yok |
 
 Değişiklik kapsamı bu doküman ve `handover` / `catalog` göstergeleridir; **ürün kaynak dosyaları değişmez**. Arıza: W8 başarısızsa ilk önce frozen source SHA + manifest, W8 ancestor blob + AUX ve `locks/REVIEW.json` SHA/fingerprint karşılaştır; yanlış onay, silent pass veya eski run'a yeni kredi verme. Güvenlikte replay residual çözülmeden gerçek işlem açılmaz.
 
