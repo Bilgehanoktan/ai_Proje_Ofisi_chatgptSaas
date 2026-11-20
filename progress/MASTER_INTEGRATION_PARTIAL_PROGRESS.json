@@ -2243,5 +2243,82 @@
     "documentation": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
     "product_changes_on_canonical": 0,
     "extra_software_permission": 0
+  },
+  "mi_p0_553_canonical_source_merge_20261120": {
+    "revision": "MI-P0-553-CANONICAL-SOURCE-PROMOTION-20261120-R1",
+    "prior_canonical": {
+      "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "product_files": 505,
+      "manifest_entries": 504
+    },
+    "current_canonical": {
+      "sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "product_files": 553,
+      "manifest_entries": 552
+    },
+    "product_source_file_delta": 48,
+    "manifest_entry_delta": 48,
+    "actual_merge_pr": 15,
+    "merge_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "check": {
+      "product_git_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+      "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "product_git_changed_paths": 63,
+      "original_W8_adapter_changed_files": 1,
+      "other_files": 0,
+      "post_merge_readback": "PASS"
+    },
+    "owner_fullW8": "NOT_RUN",
+    "owner_G2_G9": "HOLD",
+    "protected_PG": "HOLD",
+    "A1_independent_IV": "HOLD",
+    "source_stage": "ACTUAL_SOURCE_MERGED_INTO_CANONICAL_DEVELOPMENT_BRANCH",
+    "product_acceptance_previous": {
+      "CORE": [
+        12,
+        16
+      ],
+      "UI": [
+        21,
+        40
+      ],
+      "MVP": [
+        0,
+        11
+      ],
+      "IV": [
+        0,
+        7
+      ]
+    },
+    "product_acceptance_current": {
+      "CORE": [
+        12,
+        16
+      ],
+      "UI": [
+        21,
+        40
+      ],
+      "MVP": [
+        0,
+        11
+      ],
+      "IV": [
+        0,
+        7
+      ]
+    },
+    "product_acceptance_delta_pp": 0,
+    "global_development_previous": null,
+    "global_development_current": null,
+    "global_development_delta_pp": null,
+    "MI03_development_previous": 42.5,
+    "MI03_development_current": 42.5,
+    "no_product_runtime_activation": true,
+    "no_new_permissions": true,
+    "no_prod_or_main_merge": true,
+    "evidence": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/POST_MERGE_VERIFICATION.json",
+    "next": "Actual 553 source original W8 and owner G2/G9/Memory-T1 regression, protected PG/restore, independent IV before acceptance"
   }
 }
