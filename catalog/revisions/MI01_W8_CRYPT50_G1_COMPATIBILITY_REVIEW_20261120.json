@@ -338,5 +338,56 @@
     "handoff": "docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/W8_DESIGN_MASTER_RECONCILIATION_AND_LOCAL_DEV_EXECUTION_20261120.md",
     "testing_limitations": "Shell script static checked for reference pins and balanced braces; not executed or syntax-parsed by real Windows PowerShell 5.1; actual results must come from user logs.",
     "rollback": "Preserve existing E: stage and old PR20/PR33 stages, stop if partial failure, no force push or main/product-dev merge"
+  },
+  "actual_C06_PASS_C07_fail_and_isolated_PR35_harness_fix_20261120": {
+    "old_source_C04_SHA": "388c8a9ed539aba4e645267f00035f6f2ef0ff3e",
+    "native_windows_C06": "PASS_28_PIP_HASH_PIN_AND_30_NPM_CI",
+    "native_runtime_cryptography_50_0_2_OpenSSL": "OpenSSL 4.0.3 29 Sep 2026",
+    "native_C07": "ATTEMPTED_FAIL_AFTER_122_PASS_AT_VM_MOCK_MISSING",
+    "root_cause": "Original tests/ui-p10j18-agent-profile.test.cjs mock whitelist lacks import ../organization/OrganizationReadback that was introduced into unchanged product AgentDirectory",
+    "old_test_blob": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+    "old_agent_directory_blob": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+    "unchanged_org_readback_blob": "990b06ee2b5adc115547615719610ccc02a66061",
+    "old_C08": "NOT_RUN",
+    "remediation_branch": "review/mi01-w8-orgreadback-harness-20261120",
+    "remediation_source_commit": "502ca9f8440d7f0aa259bff7c597c33f35032812",
+    "remediation_PR": 35,
+    "remediation_paths": [
+      {
+        "path": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+        "old_blob": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+        "new_blob": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+        "new_bytes": 6849,
+        "new_sha256": "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932",
+        "test_scope": "historical OrganizationReadback isolated stub; negative separation assertion"
+      },
+      {
+        "path": "product/SOURCE_MANIFEST.json",
+        "old_blob": "589a77c2115bf255600d130087fc8973ecf2b7e5",
+        "new_blob": "2d1d0bf94d464ffe79d8072453a2e19722485854",
+        "test_scope": "only affected test source hash/length changed; 552 entries retained"
+      },
+      {
+        "path": "tests/integration/w8_unified_u3.py",
+        "old_blob": "c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04",
+        "new_blob": "735f093106d1e774b58188917286b37ddd36e804",
+        "test_scope": "only top MANIFEST git blob pin changed"
+      }
+    ],
+    "unmodified_product_runtime": true,
+    "DB_changes": 0,
+    "API_changes": 0,
+    "policy_changes": 0,
+    "new_dependencies": 0,
+    "retired_old_stage": false,
+    "new_candidate_original_C06_C07_C08": "NOT_RUN",
+    "test_fix_targeted_native": "NOT_RUN",
+    "local_replay_script": "AIOS_W8_C07_AGENTFIX_RETRY_20261120.ps1",
+    "local_replay_script_sha256": "51eb36c430097e390ceec8e27377a80329bc4e5b144ffee572489894355e60dd",
+    "local_replay_script_size": 9192,
+    "G4_C05_independent": "HOLD",
+    "G8": "HOLD",
+    "evidence": "docs/master-integration/MI01-W8-ORGREADBACK-HARNESS-20261120/SOURCE_ARCHITECTURE_TEST_ROLLBACK_AND_HANDOVER.md",
+    "rollback": "Close PR35 and preserve PR34 prior pinned C04/C06 Windows stage; no rewrite canonical product-dev or main"
   }
 }
