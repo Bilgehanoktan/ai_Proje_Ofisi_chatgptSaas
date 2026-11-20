@@ -1,0 +1,131 @@
+# MI04 exact 553+G2 isolated owner source compatibility; no product-dev merge or security activation.
+# Trigger only this same-repository review PR; all product code checked out at one immutable commit.
+name: "MI04 | Exact 553 plus G2 source cross-suite 65 D0"
+
+on:
+  pull_request:
+    branches: [integration/product-dev]
+    types: [opened, reopened, synchronize]
+    paths: [".github/workflows/mi04-g2-553-isolated-cross-suite.yml"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mi04-g2-553-exact-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+env:
+  CI: "true"
+  PYTHONDONTWRITEBYTECODE: "1"
+  GIT_TERMINAL_PROMPT: "0"
+  OPENAI_API_KEY: ""
+  DATABASE_URL: ""
+  PROVIDER_API_KEY: ""
+  AWS_ACCESS_KEY_ID: ""
+  AWS_SECRET_ACCESS_KEY: ""
+
+jobs:
+  exact-553-g2-org:
+    name: "Run 50 original G2 + 15 original ORG against one isolated 556-file source tree"
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'review/mi04-g2-on-553-isolated-compat-20261120' &&
+      github.event.pull_request.base.ref == 'integration/product-dev'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - name: Checkout exact immutable G2-on-553 review source, no persisted credentials
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: aac205efec6ffdc8a682dc4c9c9059af16842956
+          path: candidate
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up exact Python 3.13.5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.13.5"
+      - name: Verify exact owner blobs and all 555 manifest files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,pathlib,subprocess,sqlite3,sys
+          root=pathlib.Path('candidate')
+          want='aac205efec6ffdc8a682dc4c9c9059af16842956'
+          sha=subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD'],text=True).strip()
+          assert sha==want, ('CANDIDATE_SHA_HOLD',sha)
+          pins={
+            'product/ai-company-os-backend/app/core/iam_session.py':'f3c37428acd475e09c228bce47d534d6584cd944',
+            'product/ai-company-os-backend/app/core/transaction/intent_authority.py':'b28788f46a39c282d79d29c4abd817ed5fc9de99',
+            'product/ai-company-os-backend/tests/test_iam_session_d5g1.py':'6be21cfdcaf7408d7d17b5848966bb7f6772581e',
+            'product/ai-company-os-backend/tests/test_iam_authority_d5g2.py':'16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c',
+            'product/ai-company-os-backend/tests/test_authority_fullchain_0214.py':'4918027e828e8e72273ee4d6a508cac3aa6e9b59',
+            'product/ai-company-os-backend/tests/test_transition_mapping_0194.py':'a4a3827ec4267ce275efe52fe5488e1868502c3f',
+            'product/ai-company-os-backend/tests/test_org_runtime_packaging_mi03.py':'f396114ec2fd2f3ceeaf3893b98d1f5174cae34a',
+            'product/ai-company-os-backend/tests/test_org_sql_runtime_mi03.py':'6fa630b9765c12f944203631972c90b1a4901a0f',
+          }
+          for path,expected in pins.items():
+            actual=subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD:'+path],text=True).strip()
+            assert actual==expected, ('OWNER_PIN_MISMATCH',path,actual)
+          m=json.loads((root/'product/SOURCE_MANIFEST.json').read_text(encoding='utf-8'))
+          assert len(m['files'])==555, ('MANIFEST_COUNT',len(m['files']))
+          for path,meta in m['files'].items():
+            f=root/'product'/path
+            assert f.is_file() and not f.is_symlink(), ('MISSING_OR_SYMLINK',path)
+            raw=f.read_bytes()
+            assert len(raw)==meta['bytes'] and hashlib.sha256(raw).hexdigest()==meta['sha256'], ('SHA_OR_SIZE_MISMATCH',path)
+          files=[f for f in (root/'product').rglob('*') if f.is_file()]
+          assert len(files)==556, ('PRODUCT_FILE_TOTAL',len(files))
+          assert sqlite3.sqlite_version_info >= (3,37)
+          print('MI04_553_G2_SOURCE_SHA256=555/555 PASS')
+          print('MI04_553_G2_GIT_OWNER_BLOBS=8/8 PASS')
+          print(f'PYTHON={sys.version.split()[0]}, SQLITE={sqlite3.sqlite_version}')
+          PY
+      - name: Install only pinned temporary Ed25519 D0 dependency
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 150s python -m pip install --disable-pip-version-check --no-deps --only-binary=:all: 'cryptography==46.0.4' 'cffi==2.0.0' 'pycparser==3.0'
+          python - <<'PY'
+          import cryptography,importlib.metadata as m
+          assert cryptography.__version__=='46.0.4'
+          assert m.version('cffi')=='2.0.0'
+          assert m.version('pycparser')=='3.0'
+          print('MI04_G2_553_CRYPTO_PIN=PASS')
+          PY
+      - name: Run actual original owner G2 and ORG source tests together (65 expected)
+        working-directory: candidate/product/ai-company-os-backend
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 600s python -B - <<'PY'
+          import sys,unittest
+          from pathlib import Path
+          root=Path('.').resolve()
+          sys.path[:0]=[str(root),str(root/'tests')]
+          names=[
+            'test_intent_authority_t1_0212',
+            'test_authority_fullchain_0214',
+            'test_iam_session_d5g1',
+            'test_iam_authority_d5g2',
+            'test_org_runtime_packaging_mi03',
+            'test_org_sql_runtime_mi03',
+          ]
+          s=unittest.TestLoader().loadTestsFromNames(names)
+          assert s.countTestCases()==65, ('EXPECTED_65_ORIGINAL_METHODS',s.countTestCases())
+          res=unittest.TextTestRunner(verbosity=2).run(s)
+          print(f'MI04_G2_553_CROSS_SUITE_RESULT={res.testsRun} executed, failures={len(res.failures)}, errors={len(res.errors)}, skipped={len(res.skipped)}',flush=True)
+          if not res.wasSuccessful() or res.testsRun!=65 or res.skipped or res.expectedFailures or res.unexpectedSuccesses:
+              sys.exit(1)
+          print('MI04_G2_553_CROSS_SUITE=65/65 PASS D0 ONLY',flush=True)
+          PY
+      - name: Preserve fail-closed scope and intentional replay vulnerability
+        shell: bash
+        run: |
+          echo 'G2_553_ISOLATED_SOURCE_VARIANT=REVIEW_ONLY'
+          echo 'DB_AND_JOURNAL_AND_LOCAL_AUTHORITY_RESTORE_REPLAY=KNOWN_REPRODUCED_SECURITY_VULNERABILITY'
+          echo 'SOURCE_OWNER_RATIFICATION=HOLD; INDEPENDENT_ROOT_SINK=NOT_IMPLEMENTED'
+          echo 'PROTECTED_PG=NOT_RUN; A_NEGATIVE_SECURITY_TESTS=0/8; FULL_W8=OWNED_BY_MI01'
+          echo 'CANONICAL_PRODUCT_DEV=UNCHANGED; MAIN=UNCHANGED; PROD=DENY; NO_PROVIDER'
