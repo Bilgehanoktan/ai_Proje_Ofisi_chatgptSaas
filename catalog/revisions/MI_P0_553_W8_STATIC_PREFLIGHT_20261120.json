@@ -1,0 +1,125 @@
+{
+  "revision": "MI-P0-CANONICAL-553-W8-STATIC-PREFLIGHT-20261120-R1",
+  "source": "GITHUB_IMMUTABLE_READBACK_EXACT_CANONICAL_SOURCE",
+  "source_branch": "integration/product-dev",
+  "source_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+  "source_tree": "521c90d963158d0e888da09c234f504e98bd5d18",
+  "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+  "source_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "preflight": {
+    "source_manifest_vs_git_tree": {
+      "manifest_records": 552,
+      "product_git_blobs": 553,
+      "exact_paths_found": 552,
+      "extra_files": 0,
+      "missing_files": 0,
+      "byte_size_mismatches": 0,
+      "git_tree_truncated": false,
+      "result": "PASS_STATIC"
+    },
+    "W8_runner_ancestry_pins": {
+      "edges": 23,
+      "matched": 23,
+      "mismatched": 0,
+      "result": "PASS_STATIC_GIT_BLOB_CHAIN"
+    },
+    "W8_aux_external_pins": {
+      "pins": 10,
+      "matched": 10,
+      "mismatched": 0,
+      "includes": "U2 runner, U3 browser, 8 SQL auxiliary pins",
+      "result": "PASS_STATIC_GIT_BLOB_PINS"
+    },
+    "W8_adapter": {
+      "file": "tests/integration/w8_unified_u3.py",
+      "file_blob": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+      "manifest_literal": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "pin_matches_manifest": true,
+      "source_owner": "MI01/Unified",
+      "status": "STATIC_PASS"
+    },
+    "frontend": {
+      "package_json_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+      "lock_file_in_canonical_product_tree": false,
+      "lock_review": "EXTERNAL_STAGE_LOCK_REVIEW_REQUIRED",
+      "package_lock_verified": false
+    }
+  },
+  "original_W8_full_chain": {
+    "prepare": "NOT_RUN",
+    "install": "NOT_RUN",
+    "test": "NOT_RUN",
+    "smoke": "NOT_RUN",
+    "native_browser": "NOT_RUN"
+  },
+  "runtime_observation": {
+    "full_exact_553_checkout_in_current_execution_environment": false,
+    "github_repository_network_from_execution_container": false,
+    "reviewed_dependency_wheels_and_lock_available": false,
+    "CI_expansion_authorized": false
+  },
+  "owner_duplicate_check": {
+    "owner": "MI-01 / Unified W8; MI-10 selected diagnostics",
+    "existing_pr4": "DRAFT historical limited CI, no new 553 fullchain run",
+    "new_553_fullchain_pr_found": false,
+    "not_observable": "Uncommitted activity inside other chats"
+  },
+  "constraints": {
+    "product_security_permissions_unchanged": true,
+    "no_new_CI": true,
+    "no_external_provider": true,
+    "no_production": true,
+    "independent_security_acceptance": false
+  },
+  "other_workstreams": {
+    "MI04_0214": "10/10 exact 553 source D0 CI PASS 44695937454; known replay vulnerability reproduced",
+    "ORG": "4/4 packaging + 11/11 SQL prior D0 CI PASS 44628704044",
+    "G2_50": "50/50 PASS exact original G2 owner SHA 9ca667e816dac269084ef8f62051da5fe458eb12; CI #44697437051 D0 ONLY; canonical G2 variant NOT integrated",
+    "G9_7": "7/7 PASS exact original G9 owner SHA 68ec99c673cceadffecf1d192371c10c328caa74; CI #44697437051 D0 ONLY; 553 owner compatibility HOLD",
+    "ModelMemory_strict_344": "HOLD",
+    "protected_PG": "HOLD",
+    "Option_A_IV": "0/8 NOT_RUN"
+  },
+  "global_development_previous": null,
+  "global_development_current": null,
+  "global_development_delta_pp": null,
+  "product_acceptance_previous": {
+    "CORE": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ]
+  },
+  "product_acceptance_current": {
+    "CORE": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ]
+  },
+  "product_acceptance_delta_pp": 0,
+  "next_owner_task": "MI01 W8 full 553 reviewed dependency lock and native test; MI02/03/04 review canonical integration of historical G2 50/50 and G9 7/7; protected PG/issuer/IV HOLD.",
+  "rollback": "Documentation-only normal revert to canonical product commit; no runtime change"
+}

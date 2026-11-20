@@ -139,3 +139,16 @@ Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manif
 
 ## UI-P10D
 [Architecture and limits](CURRENT_UI.md) · 21/40 gates, isolated 5/7, full product 0/7. Core 0211 separate.
+
+## MASTER INTEGRATION / CANONICAL 553 — 20.11.2026
+**This is the current source-transfer checkpoint; prior dated sections above remain historical and are not the current checkout target.**
+
+- **Kanonik geliştirme dalı:** `integration/product-dev@9a3571d6a06537ba718bafc45398c309bf3dc9b1`, 553 ürün dosyası / 552 manifest; kaynak tree `f4cdcf68115917ab69ba6441414539fe32a59369`, manifest blob `27b4eb5816265d4e6e6d2458acb6220db7dd0c76`. Aktarım [PR #15](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/15) MERGED; `main` ve üretim değişmedi.
+- **Güncel W8 source preflight:** 552/552 dosya yolu ve byte uzunluğu doğru, 23/23 ancestor Git blob pini, 10/10 yardımcı test/SQL blob pini, manifest adaptör pini tam eş. **Tam W8 prepare/install/test/smoke/native browser NOT_RUN**. Kaynak içinde frontend `package-lock.json` yok; W8'in reviewed offline lock+wheelhouse ve `locks/REVIEW.json` aşaması kurulmadan test kabulü yok.
+- **Diğer gerçek eski/ayrı kanıtlar:** ORG paketleme 4/4, SQL 11/11 D0 CI [#44628704044](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44628704044); özgün Memory–Authority–T1 0214 10/10 D0 CI [#44695937454](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44695937454) ve full restore replay residual OPEN. Core–ORG 10/10 eski D0 CI ayrı.
+- **G2/G9 özgün sahip testi:** CI [#44697437051](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44697437051) özgün G2 50/50 + G9 7/7 sentetik D0 **PASS**; farklı kaynak revizyonlarındadır, kanonik 553 IAM/ORG entegrasyon veya güvenlik kabulü **HOLD**.
+- **Kabul:** Core 12/16=%75; UI 21/40=%52,5; MVP 0/11=%0; IV 0/7. Genel 15/35/20/20/10 geliştirme yüzdesi halen **HESAPLANAMADI**; source+statik testler ürüne/güvenliğe kabul vermez.
+- **Yetkiler:** CEO-0174/0179=B izole CODE/REPO/yerel TEST; yeni CI, bağımsız owner/root/issuer/effect-sink, gerçek PostgreSQL COMMIT, provider, PROD, main merge **verilmedi**. Option A güvenlik mimarisi seçilmiş ama gerçek kabul yapılmadı.
+- **Görev çakışması:** MI-01 tam W8 sahibi, MI-10 mevcut sınırlı eski PR4 CI; MI-04 0214 fullchain already 10/10 D0, bu test tekrar edilmez. Ürün kaynakları yeniden geliştirilmez, PR #14 kaynak geniş taşıması CLOSED/UNMERGED.
+- **Güncel bağlantılar:** [Mimari eki](../docs/architecture/MI_P0_553_CANONICAL_SOURCE_AND_W8_PREFLIGHT_20261120.md) · [Teknik katalog ve statik kanıt](../catalog/revisions/MI_P0_553_W8_STATIC_PREFLIGHT_20261120.json) · [Güncel sonraki adım](NEXT_STEP.md) · [Merkezi devir](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/planning/master-integration-governance/docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/POST_MERGE_ARCHITECTURE_HANDOVER.md).
+- **Bakım ve geri dönüş:** source pin farkı veya lock fingerprint bozulursa HOLD; belge kaydı normal revert. Ürün merge geri dönüş referansı eski `8a3b05a...`, normal `git revert -m 1 9a3571d...` ancak yetkili değerlendirme ile, force push yok.
