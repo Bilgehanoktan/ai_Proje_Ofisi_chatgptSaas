@@ -1,0 +1,134 @@
+{
+  "revision": "MI04-G2-G9-562-CROSS-SOURCE-20261120",
+  "type": "ACTUAL_GITHUB_CI_ORIGINAL_D0_ON_ISOLATED_OWNER_SOURCE_UNION",
+  "overlap": {
+    "MI01": "W8 PR20 active, untouched",
+    "MI07_08": "Memory 344/symlink active, untouched",
+    "MI02": "independent PG/issuer security owner, untouched",
+    "MI04": "Existing PR19 expanded, no new prototype PR"
+  },
+  "source": {
+    "canonical_branch": "integration/product-dev",
+    "canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "canonical_product_files": 553,
+    "canonical_manifest": 552,
+    "G2_owner": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "G9_owner": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "review_branch": "review/mi04-g2-on-553-isolated-compat-20261120",
+    "test_source_sha": "93e6c84db1a061ee914aa2c1d543620404515c0b",
+    "review_head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "PR": 19,
+    "status": "OPEN_DRAFT_UNMERGED",
+    "review_product_files": 562,
+    "review_manifest": 561
+  },
+  "diff": {
+    "new_owner_product_paths": 9,
+    "owner_G2_added": 3,
+    "owner_G9_added": 6,
+    "old_product_code_replaced_in_review": 1,
+    "authority_path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+    "original_authority_git_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "G2_alternative_git_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "G9_historical_fixture_pins_added": 20,
+    "G9_SOURCE_PINS_json_added": 1,
+    "canonical_source_changed": false
+  },
+  "actual_ci": {
+    "run_id": 44700495037,
+    "job_id": 136167533591,
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "python": "3.13.5",
+    "sqlite": "3.45.1",
+    "cryptography": "46.0.4",
+    "source_sha256_and_bytes": [
+      561,
+      561
+    ],
+    "original_G2_blob_pins": [
+      8,
+      8
+    ],
+    "original_G9_blob_pins": [
+      56,
+      56
+    ],
+    "G2_original_tests": [
+      50,
+      50
+    ],
+    "ORG_original_tests": [
+      15,
+      15
+    ],
+    "G9_original_readback_tests": [
+      7,
+      7
+    ],
+    "total_original_executions": [
+      72,
+      72
+    ],
+    "errors": 0,
+    "skips": 0,
+    "failures": 0,
+    "execution_mode": "G2 50 and ORG 15 same Python process; G9 original 7 separate process, identical checkout"
+  },
+  "historical_G9_fixture": "Loads original ORG-05R3 and ORG-06 modules; not actual canonical ORG production runtime",
+  "failed_diagnostic": {
+    "run": 44700458573,
+    "reason": "CI harness Git blob NUL delimiter escaping; product source unchanged",
+    "corrected_workflow_sha": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "followup_green": 44700495037
+  },
+  "risk": {
+    "DB_journal_authority_whole_restore_replay": "KNOWN_OPEN_REPRODUCED_IN_0214",
+    "owner_decision": "HOLD",
+    "W8_fresh_full": "OWNED_MI01_NOT_RUN_ON_562",
+    "actual_PG": "NOT_RUN",
+    "independent_custody_root_sink_issuer": "NOT_VERIFIED",
+    "A_negative_tests": [
+      0,
+      8
+    ],
+    "IV": "HOLD",
+    "production": "DENY"
+  },
+  "progress": {
+    "G2_ORG_isolated_prior": [
+      65,
+      65
+    ],
+    "G2_ORG_G9_isolated_now": [
+      72,
+      72
+    ],
+    "test_methods_written": 0,
+    "replayed_old_methods_not_new_acceptance": true,
+    "IAM_ORG_historical_dev_previous": 42.5,
+    "IAM_ORG_historical_dev_current": 42.5,
+    "delta_pp": 0,
+    "global_weighted_development_previous": null,
+    "global_weighted_development_current": null,
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "next": "G2/Authority and G9/ORG owner choose one canonical source contract; MI01 runs W8 fresh, independent MI02 verifies PostgreSQL/issuer/root/sink/IV",
+  "rollback": "Keep PR19 draft unmerged; review normal revert or close, no force push/claim resets or main production activity"
+}
