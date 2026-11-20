@@ -1,0 +1,139 @@
+{
+  "revision": "MI-P0-553-CANONICAL-SOURCE-PROMOTION-20261120-R1",
+  "authority": "User H01 explicit development source transport: engelleri kaldır ve aktar; not runtime/PROD/security authorization",
+  "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "baseline": {
+    "branch": "integration/product-dev",
+    "commit": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "product_files": 505,
+    "manifest_entries": 504
+  },
+  "actual": {
+    "branch": "integration/product-dev",
+    "commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "root_tree": "521c90d963158d0e888da09c234f504e98bd5d18"
+  },
+  "source": {
+    "branch": "integration/mi-common-source-review-01",
+    "commit": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "exact_same_product_tree": true
+  },
+  "transfer": {
+    "pr": 15,
+    "merged": true,
+    "method": "manual merge",
+    "merge_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "parents": [
+      "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "98808d280dda13088a2561ecc7323f4a910c380d"
+    ],
+    "candidate_commit": "98808d280dda13088a2561ecc7323f4a910c380d",
+    "changed_paths": 64,
+    "product_paths": 63,
+    "other_paths": [
+      "tests/integration/w8_unified_u3.py"
+    ],
+    "developer_source_only_with_one_W8_pin": true
+  },
+  "W8_pin": {
+    "path": "tests/integration/w8_unified_u3.py",
+    "blob": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+    "manifest_literal": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "matches_current_manifest": true,
+    "full_original_build_test_smoke": "NOT_RUN"
+  },
+  "duplicate_pr14": {
+    "status": "CLOSED_UNMERGED_SUPERSEDED_BY_PR15",
+    "source_nonproduct_preserved_at": "a80932b6d5e99667889dfaa25b682feb267c6cba"
+  },
+  "static_readback": "PASS exact GitHub blob/tree and 505-to-553 diff; not functional runtime",
+  "prior_CI_not_rerun_this_turn": [
+    {
+      "run": 44628704044,
+      "source": "ORG 553 common exact product tree",
+      "manifest": "552/552 PASS",
+      "owner_package": "4/4 PASS",
+      "SQL": "11/11 PASS D0"
+    },
+    {
+      "run": 44620141705,
+      "source": "historical CoreOps source",
+      "core_ops": "10/10 D0 SQLite PASS"
+    },
+    {
+      "run": 44620987573,
+      "source": "limited diagnostics old W8",
+      "scope": "3/3 CI PASS NOT 553 full W8"
+    }
+  ],
+  "gate_status": {
+    "owner_G9_durable_ops": "HOLD",
+    "owner_G2_intent_authority": "HOLD",
+    "original_G2_50": "NOT_RUN",
+    "original_G9_7": "NOT_RUN",
+    "original_memory_t1_10": "NOT_RUN",
+    "full_W8_553": "NOT_RUN",
+    "actual_postgresql_protected_commit": "NOT_RUN",
+    "A_independent_negative_tests": "0/8 NOT_RUN",
+    "actual_root_and_effect_sink": "NOT_IMPLEMENTED",
+    "independent_IV": "HOLD",
+    "real_prod_or_runtime_activation": "DENY"
+  },
+  "security_guarantees": {
+    "changed_main": false,
+    "new_CI_workflow": false,
+    "privilege_change": false,
+    "external_effect": false,
+    "new_secret": false,
+    "production_deploy": false,
+    "owner_execution_authority": false
+  },
+  "acceptance": {
+    "core_before": [
+      12,
+      16
+    ],
+    "core_now": [
+      12,
+      16
+    ],
+    "ui_before": [
+      21,
+      40
+    ],
+    "ui_now": [
+      21,
+      40
+    ],
+    "mvp_before": [
+      0,
+      11
+    ],
+    "mvp_now": [
+      0,
+      11
+    ],
+    "IV_before": [
+      0,
+      7
+    ],
+    "IV_now": [
+      0,
+      7
+    ],
+    "product_delta_pp": 0,
+    "global_development_before": null,
+    "global_development_now": null,
+    "global_development_delta_pp": null
+  },
+  "revert": {
+    "strategy": "normal Git revert of merge commit using first-parent mainline; or owner-reviewed targeted revert; no reset/force push",
+    "mainline_parent": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "merge_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1"
+  },
+  "next": "Current canonical 553 source: perform owner-ratified original fresh W8 clean lock/prepare/install/test/smoke and G2/G9/MEM exact regressions, protected PG/IV; maintain runtime HOLD until independent authority"
+}
