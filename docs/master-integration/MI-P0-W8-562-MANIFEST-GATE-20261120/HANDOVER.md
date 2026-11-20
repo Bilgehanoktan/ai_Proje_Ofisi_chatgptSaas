@@ -33,3 +33,13 @@ MI-01 owner PR20: complete exact 553 W8 dependency fingerprint, C04 prepare, C05
 ## Progress (15/35/20/20/10)
 
 W8 old 3/8 -> current 3/8, Δ0. Core 12/16, UI 21/40, MVP 0/11, independent security 0/7. Overall weighted development HESAPLANAMADI (no frozen cross-stream denominator). Product acceptance delta 0. This review closes only diagnostic implementation; central queue owner must ratify any status promotion.
+
+## Follow-up — verified evidence closure, no acceptance promotion
+
+After checking live active owners (PR19 MI-04, PR20 MI-01, PR22 MI-05, PR10 security), no duplicate source/workflow change was started.
+
+Original GitHub content was read again from immutable refs and compared: old 552 → new 561 manifest entries; +9 additions, -0 deletions, one changed `intent_authority.py`; exact Git blobs and W8 guard check match. Pair still fails closed with U3_MANIFEST_HOLD. Full original Python 3-input CLI NOT_RUN because the three complete original files are not available in local runtime; source readback is not falsely called W8 run.
+
+Actual local replay: `python -m unittest -v test_mi_p0_w8_manifest_gate.py`, 16/16 PASS (exit 0). Preserved raw 2,135-byte stdout: `docs/master-integration/MI-P0-W8-562-MANIFEST-GATE-20261120/ACTUAL_LOCAL_TEST_RUN.log` Git blob `a9d994b3a8b6dc7952a57bbd135bfd6d70436bce`, SHA256 `35432227446f2d2c05c10bd70f9e5370d77acbf86c68e37e2500913431772e70`. Original W8 C04-C08/PG/IV still NOT_RUN/HOLD.
+
+No product/API/DB/event/dependency/CI/security grants/branch policy change; only evidence and handover changes on review branch. Canonical source remains SHA `254e0188998d0d245bd8ee4eb901aead02951a66`, W8 3/8, Core 12/16, UI 21/40, MVP 0/11, IV 0/7. Global weighted HESAPLANAMADI; product acceptance Δ0. Rollback PR21 close/revert; original owner PR19/20 unaffected. Next step for owner MI-01: exact 553 dependency-reviewed W8 C04–C08.
