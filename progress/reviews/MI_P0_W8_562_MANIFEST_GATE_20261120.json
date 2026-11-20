@@ -118,12 +118,16 @@
       "skip": 0,
       "exit_code": 0,
       "log_path": "docs/master-integration/MI-P0-W8-562-MANIFEST-GATE-20261120/ACTUAL_LOCAL_TEST_RUN.log",
-      "log_sha256": "35432227446f2d2c05c10bd70f9e5370d77acbf86c68e37e2500913431772e70",
-      "log_git_blob": "a9d994b3a8b6dc7952a57bbd135bfd6d70436bce",
+      "log_sha256": "45e7a4c942c215529b1c27ec5285b19a30f589d50864d3d8b2b37a6bf1c1e12c",
+      "log_git_blob": "9528e29ae90a305a49e61f642a6e2814c7cc5595",
       "log_readback": true,
       "source_git_blob": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
       "test_source_git_blob": "ab16361322417d9ef23c245a83565fc899b9d424",
-      "runtime": "local synthetic fixture, not original 553/562 full CLI"
+      "runtime": "local synthetic fixture, not original 553/562 full CLI",
+      "actual_runtime_seconds": 0.002,
+      "evidence_source": "ACTUALLY_EXECUTED_FROM_ZIP_RECONSTRUCTED_BYTE_IDENTICAL_GITHUB_SOURCE_AND_TEST_BLOBS",
+      "actual_git_blob_source_precheck": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+      "actual_git_blob_tests_precheck": "ab16361322417d9ef23c245a83565fc899b9d424"
     },
     "status": "SCOPED_DIAGNOSTIC_READBACK_COMPLETE_OWNER_ORIGINAL_W8_HOLD",
     "unrun": [
@@ -143,6 +147,18 @@
     "product_dev_change": false,
     "ci_workflow_change": false,
     "security_permission_change": false,
-    "next_owner": "MI-01 owner PR20 original full 553 W8; MI-04 owner PR19 security source variant; no automatic merge/re-pin"
+    "next_owner": "MI-01 owner PR20 original full 553 W8; MI-04 owner PR19 security source variant; no automatic merge/re-pin",
+    "audit_correction": {
+      "reason": "Previous GitHub log was reconstructed from test case names with hard-coded 0.003 s, not actual stderr. It was initially presented as run output; corrected transparently.",
+      "old_log_git_blob": "a9d994b3a8b6dc7952a57bbd135bfd6d70436bce",
+      "old_log_sha256": "35432227446f2d2c05c10bd70f9e5370d77acbf86c68e37e2500913431772e70",
+      "new_log_git_blob": "9528e29ae90a305a49e61f642a6e2814c7cc5595",
+      "new_log_sha256": "45e7a4c942c215529b1c27ec5285b19a30f589d50864d3d8b2b37a6bf1c1e12c",
+      "source_pins_executed": "2/2 EXACT_GIT_BLOBS",
+      "original_manifest_cli": "NOT_RUN",
+      "actual_local_unit_test": "16/16 PASS EXIT_0",
+      "why": "Evidence integrity; do not count previous synthetic reconstructed log as independent test execution",
+      "no_product_acceptance_change": true
+    }
   }
 }
