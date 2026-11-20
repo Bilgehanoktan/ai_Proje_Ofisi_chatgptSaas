@@ -1,0 +1,158 @@
+{
+  "revision": "MI-P0-FOUR-D0-PROXY-CROSS-OWNER-20261120-R1",
+  "date": "2026-11-20",
+  "scope": "REVIEW_ONLY_EXACT_OWNER_SOURCE_CROSS_INTEGRATION_AND_SELECTED_LOCAL_TEST",
+  "canonical": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "unchanged": true
+  },
+  "owners": {
+    "three_proxy": {
+      "PR": 26,
+      "branch": "review/mi-p0-d0-multi-proxy-deadline-20261120",
+      "head": "8af623d5a0b5ec1d8c34b65a0b7d6d235307ab6d",
+      "source_tests_selected": "60/60 PASS historical owner-local, NOT re-executed in this integration run"
+    },
+    "office": {
+      "PR": 22,
+      "branch": "review/mi05-office-workbench-deadline-20261120",
+      "head": "668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b",
+      "source_tests_selected": "37/37 PASS historical owner-local, NOT re-executed in this integration run"
+    },
+    "W8": {
+      "PR": 20,
+      "status": "OWNER_C04_C08_HOLD"
+    },
+    "security": {
+      "PR": 19,
+      "status": "OWNER_G2_G9_PG_IV_HOLD"
+    }
+  },
+  "cross_review": {
+    "branch": "review/mi-p0-office-multiproxy-combined-20261120",
+    "derived_from": "PR26 exact head",
+    "product_files": 556,
+    "manifest_entries": 555,
+    "manifest_blob": "19c198b7e43c4b7f5bbffd4695986a13a4a8a5da",
+    "no_canonical_mutation": true,
+    "no_owner_source_branch_mutation": true
+  },
+  "source_integrity": {
+    "git_tree_full_untruncated": true,
+    "product_tree_blobs": 556,
+    "manifest_entries": 555,
+    "manifest_path_bytes_verified": 555,
+    "manifest_path_bytes_fail": 0,
+    "unlisted_product_files": 0,
+    "cross_owner_source_git_blobs_verified": {
+      "ai-company-os-frontend/app/api/demo/admission/route.ts": "c46fa8f20e75370ce423f3ede63cd340926fe089",
+      "ai-company-os-frontend/app/api/demo/outbox/route.ts": "12895f7c606665e6605017486473b4d2ebd8deb5",
+      "ai-company-os-frontend/app/api/demo/task-budget/route.ts": "b8c6a4e6021b05d126c027d17fc358cc2a7d2816",
+      "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": "a1ff4a1690a0b113aa882de633e063c02f9535a4",
+      "ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs": "528027639931c74b27b4d7f12813a57894cc529f",
+      "ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "ae42ecccdda987c00537696f2698f49c374ec927",
+      "ai-company-os-frontend/tests/office-workbench-deadline.test.cjs": "aa7afc3a93265305df6ceb8acbb03d25b901beb3"
+    },
+    "all_original_TS_local_git_blobs_verified": 10,
+    "old_unchanged_entries_of_PR26_manifest": 553,
+    "combined_git_manifest_blob": "19c198b7e43c4b7f5bbffd4695986a13a4a8a5da"
+  },
+  "test": {
+    "environment": {
+      "Node": "v22.16.0",
+      "TypeScript": "5.8.3 system; project 5.9.3 NOT_RUN",
+      "OS": "Linux x86_64"
+    },
+    "selected_strict_TypeScript_compile": "PASS with 10 Git blob-exact TS source files, target ES2022, DOM, module commonjs",
+    "new_cross_owner_local": {
+      "executed": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "summary": [
+        "4 valid D0 fixed loopback reads, no cross-talk",
+        "invalid tenant affects only outbox 503",
+        "outbox unresolved fetch is bounded; remaining three 200",
+        "pre-aborted signals all 503",
+        "invalid port all 503 without calling fetch",
+        "Office body cannot substitute for other three D0 contracts",
+        "native 2.5s timeout for stalled Office fetch returns 503"
+      ],
+      "raw_tap_git_blob": "ce104adda0e26a73a381b055e4082669b451b73b",
+      "raw_tap_sha256": "7ec905b926a7445040c6804354ad04035a8cd71a3e93db79697e0030cded9666",
+      "test_source_git_blob": "b912120f8ddf375d50d2caa4ff77de94e321edb1",
+      "test_source_sha256": "13402e5440a600a265ed83ed82212cb57076b6db821e715bab690f4f4204c8eb",
+      "run_command": "node docs/master-integration/MI-P0-FOUR-PROXY-REVIEW-20261120/test_four_proxy_cross_owner.cjs <absolute local build path>",
+      "first_invocation_error": "node --test argument usage created harness-only error; corrected plain node invocation and recorded PASS; no underlying source test failure",
+      "test_only_mock_transport": true
+    },
+    "owner_prior_selected_counts_not_added_as_new": [
+      60,
+      37
+    ],
+    "full_original_W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "production_postgresql": "NOT_RUN",
+    "actual_remote_traffic": 0,
+    "independent_IV": "HOLD"
+  },
+  "catalog": {
+    "modified_existing_product_source_count": 4,
+    "added_product_files_count": 3,
+    "API_new": 0,
+    "DB": 0,
+    "schema": 0,
+    "CI_workflows": 0,
+    "dependency_locks": 0,
+    "grant_or_security_policy": 0,
+    "known_external_provider_calls": 0,
+    "existing_GET_routes": [
+      "/api/demo/admission",
+      "/api/demo/outbox",
+      "/api/demo/task-budget",
+      "/api/demo/office-workbench"
+    ],
+    "new_helper": [
+      "features/mvp/readBoundedD0Json.ts::beforeDeadline",
+      "features/mvp/readBoundedD0Json.ts::readBoundedD0Json"
+    ],
+    "office_internal_helpers": [
+      "app/api/demo/office-workbench/route.ts::boundToDeadline",
+      "app/api/demo/office-workbench/route.ts::readOfficeWorkbench"
+    ],
+    "original_parsers_unchanged": true
+  },
+  "progress": {
+    "weights": {
+      "design": 15,
+      "source": 35,
+      "functional_test": 20,
+      "integration": 20,
+      "final_acceptance": 10
+    },
+    "global_before": null,
+    "global_after": null,
+    "delta_pp": null,
+    "ratified_group_denominators": 0,
+    "Core_before": "12/16",
+    "Core_after": "12/16",
+    "UI_before": "21/40",
+    "UI_after": "21/40",
+    "MVP_before": "0/11",
+    "MVP_after": "0/11",
+    "IV_before": "0/7",
+    "IV_after": "0/7",
+    "product_acceptance_delta_pp": 0
+  },
+  "blockers": [
+    "source owner and Unified approval PR22 and PR26",
+    "MI01 PR20 exact dependency lock fingerprint C04-C05 review and original W8 C06-C08 build/browser",
+    "manifest owner ratification for 555-entry proposed combined review; PR19 authority overlay separate",
+    "real PG/RLS/issuer/sink independent security IV",
+    "no main/PROD/CI scope expansion authorized"
+  ],
+  "rollback": "Close review draft PR or normal revert isolated source/manifest transfer commits. No owner/canonical branch history rewrite."
+}
