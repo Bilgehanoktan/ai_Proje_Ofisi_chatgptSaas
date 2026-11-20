@@ -25,3 +25,19 @@
 - **Real C04 prepare was executed and finished on PR33 review source**; this is a new factual milestone. Formal C04 completion as a ratified product acceptance criterion remains **HOLD_OWNER**. Operational W8 previous/current 3/8→3/8; C05 HOLD; C06/C07/C08 NOT_RUN; MVP 0/11; IV 0/7; global weighted development HESAPLANAMADI (no ratified denominators). No percentage fabricated or double-counted.
 - Changed source code/DB/API/CI/permissions/PROD this reporting turn: 0. No new live test, only the user-attested local result. Do not re-run C04 on a different Git SHA and claim equivalence; freeze PR33 source and review fingerprint.
 - Recovery: never delete original PR20 checkout or previous PR33 worktree automatically; if C05 rejects a dependency, recreate a **new** prepared stage with reviewed source lock and rerun audit/C04, preserving prior logs. Roll back a faulty documentary assertion via normal governance revert; keep owners and historical evidence intact.
+
+## Follow-up: actual local C05 hash comparison (Windows PowerShell 5.1)
+The user supplied a **new** PowerShell comparison after real C04 preparation. It read the existing stage `locks/REVIEW.json`, `locks/python.lock`, staged `package-lock.json`, and enumerated wheel files. Output:
+
+```
+Review_SHA256    : 92279e79b65ac14693779ec6d225d5b0a24c8f9522df495b491bab81c4bc3c80
+Wheel_Dosyasi    : 28
+Wheel_Hash_PASS  : 28
+NPM_Paket        : 61
+Kaynak_Dogrulama : HOLD
+C05_Onay         : HOLD_OWNER
+```
+
+These real user-console results **confirm** expected REVIEW fingerprint equality, **all 28 on-disk wheel SHA-256 values match the REVIEW wheel map**, and `npm_packages = 61` in REVIEW metadata. The combined `$ok` was **false** despite those facts. The original command also included separate checks of `python.lock` SHA256, staged npm `package-lock.json` SHA256, and `$wheels.Count -eq $data.wheels.PSObject.Properties.Count`, **but did not print those subcheck outputs**. Therefore at least one of these remaining subchecks must be diagnosed; do **not** infer or assert a specific file mismatch without the actual values. The candidate source PR33 and owner PR20 remain unchanged, and this negative composite result is **not evidence of a failed 28/28 wheel verification** nor evidence of independent C05 signoff. No install/test/browser permitted.
+
+Next diagnostic (read-only, zero package operations): print separately `REVIEW SHA match`, `python.lock expected and actual SHA`, `package-lock.json expected and actual SHA`, `wheel inventory count versus REVIEW declared property count`, `npm_packages`, and whether the original Win/Node/Python REVIEW metadata matches the actual stage. Request and preserve those readings with no full wheel redownload, lock regeneration or premature C05 clearance. The fingerprint remains bound to original PR33 checkout and `C04_stage_historical_20261120_213142`.
