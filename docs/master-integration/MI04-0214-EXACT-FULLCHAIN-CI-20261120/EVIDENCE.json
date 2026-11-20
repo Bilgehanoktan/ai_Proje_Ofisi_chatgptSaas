@@ -1,0 +1,116 @@
+{
+  "revision": "MI04-0214-EXACT-553-REAL-CI-20261120",
+  "date": "2026-11-20",
+  "class": "ACTUAL_GITHUB_CI_PINNED_ORIGINAL_D0_TEST_EXECUTION_NOT_SECURITY_ACCEPTANCE",
+  "workstream": "MI-04/T1",
+  "overlap_review": {
+    "open_pr14": "Integration/product-dev target already owned by central team; not modified",
+    "MI01_MI10_W8": "Other workstreams own full build/browser; not repeated",
+    "MI07_MI08_ModelMemory": "Separate 343 PASS/1 SKIP Windows reported; not rerun",
+    "ORG_CI15": "PR11 4+11 earlier real CI; not rerun",
+    "missing_slice": "original 0214 ten D0 tests on exact 553 common source"
+  },
+  "exact_source": {
+    "branch": "integration/mi-common-source-review-01",
+    "commit": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "product_files": 553,
+    "manifest_records": 552,
+    "manifest_validation": "552/552 SHA256 and bytes PASS"
+  },
+  "source_blobs": {
+    "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py": "4918027e828e8e72273ee4d6a508cac3aa6e9b59",
+    "product/ai-company-os-backend/tests/test_transition_mapping_0194.py": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "product/ai-company-os-backend/requirements-history-signatures.txt": "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+  },
+  "runner": {
+    "pr": 16,
+    "pr_status": "CLOSED_UNMERGED_EVIDENCE_RETAINED",
+    "ci_run_id": 44695937454,
+    "job_id": 136152572204,
+    "run_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44695937454",
+    "github_conclusion": "success",
+    "status": "completed",
+    "os": "ubuntu-24.04",
+    "python": "3.13.5",
+    "sqlite": "3.45.1",
+    "cryptography": "46.0.4",
+    "cffi": "2.0.0",
+    "pycparser": "3.0"
+  },
+  "actual_test": {
+    "command": "python -B -m unittest discover -s tests -p test_authority_fullchain_0214.py -v",
+    "passed": 10,
+    "total": 10,
+    "failed": 0,
+    "skipped": 0,
+    "runtime_seconds": 0.71,
+    "methods": [
+      "test_concurrent_claim_one_original_commit",
+      "test_expired_lease_quarantine",
+      "test_full_original_wrapper_commit",
+      "test_full_restore_residual_reproduced_not_security_pass",
+      "test_lost_commit_reply_no_retry",
+      "test_restore_journal_t1_but_not_authority_blocks_replay",
+      "test_revocation_before_claim_no_writes",
+      "test_revoked_memory_before_t1_quarantines",
+      "test_root_publisher_waits_through_commit",
+      "test_wrong_signature_key_no_commit"
+    ]
+  },
+  "key_security_result": {
+    "scenario": "old product DB + D0 intent journal + local D0IntentAuthority restored together",
+    "test": "test_full_restore_residual_reproduced_not_security_pass",
+    "observed": "old local root/claim checkpoint permits replay; test PASS deliberately reproduces risk",
+    "independent_antirollback_test_pass": false,
+    "residual": "KNOWN_REPLAY_SECURITY_FAILURE_OPEN",
+    "operational_decision": "D0_HOLD",
+    "option_A_architecture_only": true
+  },
+  "remaining": {
+    "G2_original_50": "NOT_RUN_ON_553",
+    "G9_original_7": "NOT_RUN_ON_553",
+    "full_W8": "NOT_RUN_ON_553",
+    "protected_PostgreSQL_COMMIT": "NOT_RUN",
+    "real_issuer": "HOLD",
+    "independent_root_and_effect_sink": "NOT_IMPLEMENTED",
+    "independent_negative_tests": [
+      0,
+      8
+    ],
+    "independent_IV": "HOLD",
+    "MVP": "HOLD"
+  },
+  "changes": {
+    "product_source_files": 0,
+    "public_APIs": 0,
+    "db_migrations": 0,
+    "events": 0,
+    "deps_in_repository": 0,
+    "open_ci_workflows_in_product": 0,
+    "main": 0,
+    "product_dev": 0,
+    "independent_security_permissions": 0
+  },
+  "progress": {
+    "previous_IAM_ORG_development_percent": 42.5,
+    "current_IAM_ORG_development_percent": 42.5,
+    "delta_pp": 0,
+    "global_weighted_development": null,
+    "Core_acceptance": [
+      12,
+      16
+    ],
+    "MVP_acceptance": [
+      0,
+      11
+    ],
+    "IV_acceptance": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "next": "G2/G9 owner-pinned source variant and original regression, Unified W8 exact 553, PG/real authority; independently administered A root/sink and 8 security cases",
+  "rollback": "Close PR16 without merge (done); original common/source and product-dev/main untouched; no consumed claim reset"
+}
