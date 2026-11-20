@@ -1,0 +1,124 @@
+{
+  "revision": "MI-P0-OFFICE-POSTFETCH-NEGATIVES-20261120-R2",
+  "date": "2026-11-20",
+  "type": "ACTUAL_EXECUTED_SOURCE_PINNED_LOCAL_ISOLATED_QA",
+  "supersedes_scope": "Previous R1 4/4; now R2 adds one real Node 2500ms AbortSignal.timeout test on same exact original PR22 R2 source",
+  "owner": {
+    "PR": 22,
+    "head": "668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b",
+    "source": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+    "blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+    "sha256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa",
+    "bytes": 2114
+  },
+  "runtime": {
+    "Node": "v22.16.0",
+    "TypeScript": "5.8.3",
+    "tsc_strict": "PASS",
+    "environment": "Linux isolated",
+    "parser_port": "test doubles",
+    "fetch": "no external network; deterministic negative stubs"
+  },
+  "tests": {
+    "executed": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "id": "POSTFETCH_READ_STALL",
+        "status": 503,
+        "read_entered": true
+      },
+      {
+        "id": "POSTFETCH_CANCEL_STALL",
+        "status": 503,
+        "read_entered": true,
+        "cancel_entered": true
+      },
+      {
+        "id": "FETCH_INFLIGHT_STALL",
+        "status": 503,
+        "live_signal_at_start": true
+      },
+      {
+        "id": "POSITIVE_VALID_STUB",
+        "status": 200,
+        "parser": "STUB"
+      },
+      {
+        "id": "REAL_TIMEOUT_2500MS",
+        "status": 503,
+        "measured_test_duration_ms": 2509.826048,
+        "valid_wallclock_evidence": "ISOLATED_NODE_ONLY_NOT_NATIVE_NEXT_SERVER_OR_NETWORK"
+      }
+    ]
+  },
+  "source_hashes": {
+    "test_sha256": "f2d0856c3cbad979c94b6048cb51c6a70ca6e011358a2085490683b2d895f17a",
+    "test_git_blob": "0f245680e16c3ae401eb2627489618109f56131a",
+    "runner_sha256": "6f0b85b67953e4d643e0a99518b56a48f5e441a954dfff342aac19b9b4d41dc2",
+    "runner_git_blob": "b6a0b625662369295d2e6813161e565ff918ea7c",
+    "raw_tap_sha256": "9227e2dd5c39e3af1e569aaf1ae1f835b9b71dbffdbb191f108fe9acf1e72261",
+    "raw_tap_blob": "d9dd694954c23cd148f7fa9e0a3002343f73c6ee",
+    "raw_tap_path": "docs/master-integration/MI-P0-OFFICE-POSTFETCH-NEGATIVES-20261120/exact-5-including-real-2500ms.tap"
+  },
+  "evidence_limits": {
+    "full_original_W8": "NOT_RUN",
+    "Next_build": "NOT_RUN",
+    "native_chromium": "NOT_RUN",
+    "real_backend_parser": "STUBBED",
+    "project_pinned_TS_5_9_3": "NOT_RUN",
+    "PROD_SLA": "NOT_RUN",
+    "independent_security": "HOLD",
+    "issuer_root_sink": "HOLD",
+    "postgresql_restore": "HOLD",
+    "product_acceptance": "HOLD"
+  },
+  "progress": {
+    "weights": [
+      15,
+      35,
+      20,
+      20,
+      10
+    ],
+    "approved_global_denominators": [
+      0,
+      10
+    ],
+    "global_development_previous": null,
+    "global_development_current": null,
+    "global_delta_pp": null,
+    "Core_before_after": [
+      12,
+      16
+    ],
+    "UI_before_after": [
+      21,
+      40
+    ],
+    "MVP_before_after": [
+      0,
+      11
+    ],
+    "IV_before_after": [
+      0,
+      7
+    ],
+    "acceptance_delta_pp": 0
+  },
+  "source_delta": {
+    "owner_PR22": 0,
+    "canonical_product": 0,
+    "API": 0,
+    "DB": 0,
+    "CI": 0,
+    "dependencies": 0,
+    "permissions": 0,
+    "main": 0,
+    "PROD": 0
+  },
+  "handover": "PR22 MI05 owner should review R2 actual 5 cases; PR20 MI01 owner runs full W8. Preserve existing draft/HOLD; exact owner source SHA must be re-verified on any future change.",
+  "rollback": "close draft PR28 or revert isolated QA files; previous R1 evidence remains revisioned."
+}
