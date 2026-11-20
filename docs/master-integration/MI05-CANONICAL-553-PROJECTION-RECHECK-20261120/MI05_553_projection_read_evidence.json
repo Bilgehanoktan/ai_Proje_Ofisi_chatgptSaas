@@ -1,0 +1,114 @@
+{
+  "revision": "MI05-553-ORIGINAL-PROJECTION-READ-LOCAL-R1",
+  "date": "2026-11-20",
+  "evidence_type": "ACTUAL_LOCAL_NODE_TEST_UNDER_RECONSTRUCTED_EXACT_GIT_BLOBS",
+  "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "canonical_product_branch": "integration/product-dev",
+  "canonical_product_sha_at_test": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "source_product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+  "file_pins": [
+    {
+      "role": "frontend_source",
+      "path": "features/data/projectionRead.ts",
+      "git_blob_sha1": "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "sha256": "a1147ebd4560c7322e974f91dce97c55fe8ddfa157e8c78adb51f3a4ac820a7f",
+      "bytes": 3085
+    },
+    {
+      "role": "organization_dependency",
+      "path": "features/organization/organizationProjection.ts",
+      "git_blob_sha1": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+      "sha256": "254a188851fa2f0e63661f2dd6977d7446a7f5ae7d4dd0622ea4a40f578dd461",
+      "bytes": 3939
+    },
+    {
+      "role": "original_test",
+      "path": "tests/projection-read.test.cjs",
+      "git_blob_sha1": "226e0e9721677235184547b8d79e91b2e6c541fb",
+      "sha256": "82f828adfcde67f3186f613d07d733495d78027b277d5fcd41c8bd789df46faf",
+      "bytes": 3023
+    }
+  ],
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "node": "v22.16.0",
+  "tsc_version": "Version 5.8.3",
+  "tsc_version_pinned_project": "5.9.3 (NOT USED; local globally available TypeScript 5.8.3)",
+  "build_command": "tsc --target ES2022 --lib ESNext,DOM --strict --module commonjs --outDir build features/data/projectionRead.ts features/organization/organizationProjection.ts",
+  "build_result": "PASS_NO_DIAGNOSTICS",
+  "test_command": "node tests/projection-read.test.cjs <absolute path to build/data/projectionRead.js>",
+  "test_result": {
+    "total": 12,
+    "pass": 12,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "duration_ms": 73.132468
+  },
+  "tap_log_sha256": "48983e93c970df32fd5b59aab3cfb4f0ad7635b2df14220fc6a8059180f1042d",
+  "coverage": [
+    "fixed D0 endpoint GET/no cache/no redirect",
+    "unknown endpoint reject",
+    "HTTP error",
+    "content-type reject",
+    "bad JSON",
+    "authority spoof fail closed",
+    "response size limit",
+    "invalid UTF8",
+    "success then error clear",
+    "superseded read cancel",
+    "unmount cancel",
+    "timeout fails closed"
+  ],
+  "limitation": [
+    "Three Git blob-identical source/test files, not full 553 checkout",
+    "TypeScript 5.8.3 vs source pinned TypeScript 5.9.3",
+    "D0 synthetic request/Response; no frontend Next install/build",
+    "no backend interaction, native browser, PostgreSQL, independent root, grant or production",
+    "Original test file ran locally fresh; do not double-count tests as newly authored"
+  ],
+  "permission_changes": 0,
+  "product_file_changes": 0,
+  "source_owner": "MI-05 projection; no parallel PR identified at start of turn",
+  "global_development_percent_previous": null,
+  "global_development_percent_current": null,
+  "global_development_delta_pp": null,
+  "product_acceptance_previous": {
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ]
+  },
+  "product_acceptance_current": {
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ]
+  },
+  "product_acceptance_delta_pp": 0,
+  "next": "MI05/MI06 frontend+backend identical snapshot contract integration, then W8 owner full build/browser; do not change issuer/sink/PG holds"
+}
