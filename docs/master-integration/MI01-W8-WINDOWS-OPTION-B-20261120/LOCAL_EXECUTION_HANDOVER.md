@@ -57,3 +57,23 @@ Invocation from PowerShell 5.1 after saving in Downloads:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\Downloads\AIOS_W8_C04_EXISTING_SOURCE_20261120.ps1"
 ```
 Outputs `C04_RUN_RESULT.json`, `C04_PREPARE.log`, and if successful `C04_stage\locks\REVIEW.json` plus its SHA256. Any invalid precondition leads to `HOLD`. No Windows execution of this new artifact has occurred yet; no user or owner approval is presumed. The old source remains untouched; rollback is manual inspection then delete only a newly created, failed isolated `C04_stage`, never credentials or previously validated source. Original PR20 owner retains C04/C05 and C06–C08 acceptance responsibilities.
+
+## PR33 P10J24 exact historical recovery — actual Windows C04 HOLD
+H01 executed original pinned PR20 W8 `prepare` using the already-verified authenticated E: checkout:
+```
+SOURCE E:\AIOS\W8\W8_PR20_20261120_211752\source
+STAGE E:\AIOS\W8\W8_PR20_20261120_211752\C04_stage
+HOLD: P10J24_HISTORICAL_AUX_HOLD: tests/integration/historical_0207/app/core/transaction/postgres_session.py
+STATUS HOLD
+```
+The assistant reopened exact `w8_p10j24.py`, `w8_unified_u3.py`, `core_0207_source_lock.json` and PR20 GitHub tree. The original W8 U3 adapter expects original `postgres_session.py` Git blob `8e65e4575a77b11c38c2d2e62ec91fc89d75e23c` but PR20 **omits** its historical fixture. The same named file inside `product/` is later-version blob `6c0995712bd368f72c239cb19cd3e85aa781c1b9` and must never replace the original.
+
+An isolated source-only review [PR #33](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/33) anchored on exact PR20 commit `99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542` restores **only** that historical fixture from original 55-file lock (Git blob `8e65e457...`, SHA256 `99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb`, 2,495 bytes). Exact byte readback and full Git-tree diff confirm **one added non-product source file**, all 4/4 historical original lock pins now present, product tree unchanged `f4cdcf68115917ab69ba6441414539fe32a59369`. PR20 and canonical product-dev remain unchanged; owner review pending.
+
+**Windows next artifact (conversation download, not repo source):** `AIOS_W8_C04_HISTORICAL_RECOVERY_R3_20261120.ps1` SHA256 `208395e27580408e1125c336c48235534a61b8958c5052edc1c78a18dca20653`, 13,376 bytes. This is the exact proposed script, not yet executed on Windows. It reuses existing E: authenticated PR20 checkout's Git object store, fetches pinned isolated PR33 commit `9166afe299cd8f1ab9c52355ec21ec06c465d6ef`, creates a **separate Git worktree** leaving the verified original `source` intact, checks original 552/552 product hashes, six W8 owner blobs and four historical locks, and executes the **original W8 `audit` first**. Only after actual audit PASS and >=5GiB on E: does it run original `prepare` in a new, timestamped stage, with temporary caches redirected to E:. It logs both steps and `REVIEW.json` SHA if generated. No new Python/npm code, no guard patching, no install/test/browser, and C05 still requires independent owner/supply-chain/license approval.
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\Downloads\AIOS_W8_C04_HISTORICAL_RECOVERY_R3_20261120.ps1"
+```
+
+Preserve previous `C04_RUN_RESULT.json` and prior `C04_stage` even if empty. This turn's source/candidate verification is GitHub exact static **4/4**, not Windows `audit`/C04 PASS. Operational W8 remains **3/8**, C04 HOLD/NOT_ACCEPTED (attempt failed before wheelhouse), C05 HOLD, C06-08 NOT_RUN, MVP 0/11, IV 0/7 and overall development HESAPLANAMADI. Next: user runs R3 and returns raw log + JSON; MI01 owner reviews PR33 exact fixture and C04 provenance. Rollback: normal revert/close draft PR33; Git worktrees are separate, do not `git clean -fdx` the original source or erase evidence.
