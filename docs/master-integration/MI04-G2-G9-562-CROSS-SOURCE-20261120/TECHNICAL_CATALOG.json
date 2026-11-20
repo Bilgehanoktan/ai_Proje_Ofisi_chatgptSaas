@@ -1,0 +1,108 @@
+{
+  "revision": "MI04-G2-G9-562-CROSS-SOURCE-20261120",
+  "G2_existing_sources": [
+    "app/core/iam_session.py",
+    "tests/test_iam_session_d5g1.py",
+    "tests/test_iam_authority_d5g2.py",
+    "app/core/transaction/intent_authority.py (alternate only)"
+  ],
+  "G9_existing_sources": [
+    "app/core/transaction/identity_fence_review.py",
+    "app/core/transaction/org_membership_review.py",
+    "app/core/transaction/core_org_session_review.py",
+    "tests/test_iam_identity_d5g4.py",
+    "tests/test_iam_org_d5g5.py",
+    "tests/test_core_org_session_sqlite_d5g7.py"
+  ],
+  "G9_historical_fixtures": "20 exact owner candidate blob paths plus original candidates/D5-G7/SOURCE_PINS.json; 56/56 original pin matches",
+  "symbols_G2": [
+    "D0SessionResolver",
+    "SessionRecord",
+    "SessionClaimCheck",
+    "D0IntentAuthority",
+    "RootPin",
+    "claim_and_fence"
+  ],
+  "symbols_G9": [
+    "IdentityReadback",
+    "capture_session_reference",
+    "read_current_org_reference",
+    "inspect_core_org_session_reference",
+    "ActualReadbackTests"
+  ],
+  "orig_test_classes": {
+    "G2_0212": 7,
+    "G2_0214": 10,
+    "G1_session": 14,
+    "G2_durable": 19,
+    "ORG_packaging": 4,
+    "ORG_SQL": 11,
+    "G7_readback": 7
+  },
+  "new_api": 0,
+  "new_production_DB_migrations": 0,
+  "new_external_events": 0,
+  "new_runtime_grants": 0,
+  "product_lock_changed": false,
+  "temporary_test_dependencies": {
+    "python": "3.13.5",
+    "cryptography": "46.0.4",
+    "cffi": "2.0.0",
+    "pycparser": "3.0"
+  },
+  "testing": {
+    "run_id": 44700495037,
+    "job_id": 136167533591,
+    "conclusion": "success",
+    "runner": "ubuntu-24.04",
+    "python": "3.13.5",
+    "sqlite": "3.45.1",
+    "cryptography": "46.0.4",
+    "source_sha256_and_bytes": [
+      561,
+      561
+    ],
+    "original_G2_blob_pins": [
+      8,
+      8
+    ],
+    "original_G9_blob_pins": [
+      56,
+      56
+    ],
+    "G2_original_tests": [
+      50,
+      50
+    ],
+    "ORG_original_tests": [
+      15,
+      15
+    ],
+    "G9_original_readback_tests": [
+      7,
+      7
+    ],
+    "total_original_executions": [
+      72,
+      72
+    ],
+    "errors": 0,
+    "skips": 0,
+    "failures": 0,
+    "execution_mode": "G2 50 and ORG 15 same Python process; G9 original 7 separate process, identical checkout"
+  },
+  "known_issues": {
+    "DB_journal_authority_whole_restore_replay": "KNOWN_OPEN_REPRODUCED_IN_0214",
+    "owner_decision": "HOLD",
+    "W8_fresh_full": "OWNED_MI01_NOT_RUN_ON_562",
+    "actual_PG": "NOT_RUN",
+    "independent_custody_root_sink_issuer": "NOT_VERIFIED",
+    "A_negative_tests": [
+      0,
+      8
+    ],
+    "IV": "HOLD",
+    "production": "DENY"
+  },
+  "rollback": "Keep PR19 draft unmerged; review normal revert or close, no force push/claim resets or main production activity"
+}
