@@ -2320,5 +2320,79 @@
     "no_prod_or_main_merge": true,
     "evidence": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/POST_MERGE_VERIFICATION.json",
     "next": "Actual 553 source original W8 and owner G2/G9/Memory-T1 regression, protected PG/restore, independent IV before acceptance"
+  },
+  "mi_p0_553_w8_static_preflight_and_handover_sync_20261120": {
+    "revision": "MI-P0-CANONICAL-553-W8-STATIC-PREFLIGHT-20261120-R1",
+    "previous_canonical_head": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "current_canonical_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_tree_unchanged": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "source_counts": {
+      "files": 553,
+      "manifest_entries": 552,
+      "static_matched_paths": 552
+    },
+    "original_w8_static_runner_ref_check": [
+      23,
+      23
+    ],
+    "original_w8_aux_ref_check": [
+      10,
+      10
+    ],
+    "full_w8_original": "NOT_RUN",
+    "original_g2_owner_run": {
+      "run_id": 44697437051,
+      "result": "50/50 PASS D0 on separate pinned owner source; canonical integration HOLD"
+    },
+    "original_g9_owner_run": {
+      "run_id": 44697437051,
+      "result": "7/7 PASS D0 on separate pinned owner source; canonical integration HOLD"
+    },
+    "acceptance_before": {
+      "CORE": [
+        12,
+        16
+      ],
+      "UI": [
+        21,
+        40
+      ],
+      "MVP": [
+        0,
+        11
+      ],
+      "IV": [
+        0,
+        7
+      ]
+    },
+    "acceptance_current": {
+      "CORE": [
+        12,
+        16
+      ],
+      "UI": [
+        21,
+        40
+      ],
+      "MVP": [
+        0,
+        11
+      ],
+      "IV": [
+        0,
+        7
+      ]
+    },
+    "acceptance_delta_pp": 0,
+    "global_development_before": null,
+    "global_development_current": null,
+    "global_development_delta_pp": null,
+    "file_changes": 4,
+    "product_source_changes": 0,
+    "CI_scope_changes": 0,
+    "permission_changes": 0,
+    "evidence": "catalog/revisions/MI_P0_553_W8_STATIC_PREFLIGHT_20261120.json",
+    "next": "Run full exact 553 W8 in approved environment; owner G2/G9 canonical contract/PG/IV; do not repeat owner original D0 suites."
   }
 }
