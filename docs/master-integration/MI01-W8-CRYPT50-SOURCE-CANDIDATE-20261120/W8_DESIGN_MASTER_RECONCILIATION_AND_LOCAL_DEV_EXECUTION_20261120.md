@@ -19,7 +19,7 @@ Date: 2026-11-20. Scope: `review/mi01-w8-cryptography-50-0-2-20261120` only, exa
 - No source, API, DB, class, function, runtime permission or canonical product source changes in this architecture readback.
 
 ## Dev-only Windows execution package (provided to user, not executed by agent)
-Prepared attached `AIOS_W8_C06_C08_LOCAL_DEV_20261120.ps1` (and byte-identical `.txt`) with SHA256 `f13fc30888066792128654a1b815d4c78e08eacdb4ad680259a54033925000ff`, size 10,257 bytes, 186 lines.
+Prepared attached `AIOS_W8_C06_C08_LOCAL_DEV_20261120.ps1` (and byte-identical `.txt`) with SHA256 `8ec97be03d6c9a219a496e64360f0e8a371f87e47677001490b8a3b8afa12a13`, size 10,507 bytes, 191 lines.
 - User manually executes in Windows PowerShell 5.1. It checks exact old source commit `388c8a9ed539aba4e645267f00035f6f2ef0ff3e`, exact manifest/dependency/U3 blobs, Python 3.13.17, exact `REVIEW.json`, python/npm lock SHA256, and 28 wheel count. Source and staged files preserved. No Git fetch or source download, no new source overlay, no destructive cleanup.
 - Proceeds through **original** `w8_unified_u3.py install`, `test`, and `smoke` only in user's local synthetic DEV environment with W8 unchanged review fingerprint. It cannot be used as normative C05 approval. It prints `PASS_ACTUAL_LOCAL_DEV` only after required original runner review-hash markers; otherwise records `NOT_RUN/HOLD`. It will not automatically remove partial `.venv`, node_modules, compiled outputs or historical stage.
 - C06 may contact only pinned npm registry and use previously downloaded wheelhouse; `npm ci --ignore-scripts` avoids lifecycle scripts. No external AI provider or production data.
