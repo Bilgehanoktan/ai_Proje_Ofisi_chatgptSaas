@@ -1,0 +1,22 @@
+test_checkout_rejects_existing_untrusted_directory (test_aios_pc_runner.PCToolSafetyGuards.test_checkout_rejects_existing_untrusted_directory) ... ok
+test_existing_owner_source_readonly_does_not_mutate (test_aios_pc_runner.PCToolSafetyGuards.test_existing_owner_source_readonly_does_not_mutate) ... ok
+test_existing_owner_source_sha_mismatch_holds (test_aios_pc_runner.PCToolSafetyGuards.test_existing_owner_source_sha_mismatch_holds) ... ok
+test_git_blob_empty_bytes (test_aios_pc_runner.PCToolSafetyGuards.test_git_blob_empty_bytes) ... ok
+test_initial_statuses_are_hold_and_not_run (test_aios_pc_runner.PCToolSafetyGuards.test_initial_statuses_are_hold_and_not_run) ... ok
+test_missing_source_fail_closed (test_aios_pc_runner.PCToolSafetyGuards.test_missing_source_fail_closed) ... ok
+test_no_live_pg_or_issuer_gate_upgrades_on_report (test_aios_pc_runner.PCToolSafetyGuards.test_no_live_pg_or_issuer_gate_upgrades_on_report) ... ok
+test_pg_probe_is_readonly_when_binary_absent (test_aios_pc_runner.PCToolSafetyGuards.test_pg_probe_is_readonly_when_binary_absent) ... ok
+test_run_failure_stays_failure_and_writes_raw_logs (test_aios_pc_runner.PCToolSafetyGuards.test_run_failure_stays_failure_and_writes_raw_logs) ... W8 reused exact clean source without fetching/checking out: 99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542
+Results: /tmp/tmpwaqloa6c/s/PC_TEST_RESULTS.json
+RUN FAIL: /opt/pyvenv/bin/python -c import sys;sys.exit(3)
+ok
+test_sha256_pin_accepts_exact_data (test_aios_pc_runner.PCToolSafetyGuards.test_sha256_pin_accepts_exact_data) ... ok
+test_sha256_pin_rejects_wrong_source (test_aios_pc_runner.PCToolSafetyGuards.test_sha256_pin_rejects_wrong_source) ... ok
+test_symlink_never_accepted (test_aios_pc_runner.PCToolSafetyGuards.test_symlink_never_accepted) ... ok
+test_w8full_does_not_install_with_wrong_review_hash (test_aios_pc_runner.PCToolSafetyGuards.test_w8full_does_not_install_with_wrong_review_hash) ... ok
+test_w8full_does_not_install_without_owner_review (test_aios_pc_runner.PCToolSafetyGuards.test_w8full_does_not_install_without_owner_review) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.909s
+
+OK
