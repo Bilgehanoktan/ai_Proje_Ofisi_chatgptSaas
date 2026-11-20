@@ -1,0 +1,71 @@
+{
+  "revision": "MI04-G2-G9-OWNER-EXACT-CI-20261120",
+  "standard": "design15 source35 functional20 integration20 acceptance10",
+  "owner_G2_before": [
+    0,
+    50
+  ],
+  "owner_G2_after": [
+    50,
+    50
+  ],
+  "owner_G9_before": [
+    0,
+    7
+  ],
+  "owner_G9_after": [
+    7,
+    7
+  ],
+  "actual_two_job_ci": 44697437051,
+  "orig_0214_already_ran_10_within_G2_50": true,
+  "new_test_methods_written": 0,
+  "canonical_G2G9_57_source_version_acceptance": false,
+  "iam_org_dev_percent_before": 42.5,
+  "iam_org_dev_percent_after": 42.5,
+  "delta_pp": 0,
+  "global_dev_percent_before": null,
+  "global_dev_percent_after": null,
+  "Core": [
+    12,
+    16
+  ],
+  "MVP": [
+    0,
+    11
+  ],
+  "IV": [
+    0,
+    7
+  ],
+  "A_independent": [
+    0,
+    8
+  ],
+  "product_acceptance_delta_pp": 0,
+  "risks": {
+    "original_owner_G2_50": "PASS_ON_G2_OWNER_PIN",
+    "original_owner_G9_7": "PASS_ON_G9_OWNER_PIN",
+    "canonical_G2_50": "NOT_RUN_CANONICAL_SOURCE_VARIANT_MISSING",
+    "canonical_G9_7": "NOT_RUN_CANONICAL_ORIGINAL_FIXTURE_VARIANT",
+    "source_version_owner_approval": "HOLD",
+    "cross_branch_integration": "HOLD",
+    "actual_issuer": false,
+    "actual_authoritative_root": false,
+    "effect_sink_fencing": false,
+    "strict_pg": "NOT_RUN",
+    "A_independent_negative": [
+      0,
+      8
+    ],
+    "IV": "HOLD",
+    "production": "HOLD",
+    "old_db_journal_authority_restore_replay": "KNOWN_OPEN"
+  },
+  "next": [
+    "G2/IAM owner decide authority variant and review missing session source + tests for controlled canonical integration",
+    "ORG/Core G9 owner choose tested readback version vs current durable_ops and ORG source with exact API/DB contract",
+    "MI01/Unified owns 553 full W8 build; do not duplicate",
+    "MI02/Security independently prove root/custody/sink, PostgreSQL and 8 IV negatives"
+  ]
+}
