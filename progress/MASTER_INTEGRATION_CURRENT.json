@@ -8955,7 +8955,7 @@
     "rollback": "Keep isolated branch draft, never merge without owner review; normal revert or close draft, don't force push main/product-dev or reset claims"
   },
   "mi_p0_w8_g2_cross_pr_manifest_order_gate_20261120": {
-    "revision": "MI-P0-W8-G2-CROSS-PR-ORDER-GATE-20261120-R2",
+    "revision": "MI-P0-W8-G2-CROSS-PR-ORDER-GATE-20261120-R3",
     "classification": "REAL_GITHUB_BLOB_STATIC_SOURCE_DEPENDENCY_HOLD_NOT_PRODUCT_RUNTIME",
     "canonical": {
       "ref": "integration/product-dev",
@@ -8987,7 +8987,7 @@
     },
     "pr20": {
       "number": 20,
-      "head": "6678a7fd3aa50842b70b2b8a922c02b002884397",
+      "head": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
       "status": "OPEN_DRAFT_HOLD",
       "adapter_path": "tests/integration/w8_unified_u3.py",
       "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
@@ -8997,7 +8997,10 @@
         15,
         15
       ],
-      "original_full_W8": "NOT_RUN"
+      "original_full_W8": "NOT_RUN",
+      "previous_head": "6678a7fd3aa50842b70b2b8a922c02b002884397",
+      "additional_owner_test_source": "tests/integration/test_w8_frozen_npm_integration.py",
+      "full_original_W8": "NOT_RUN"
     },
     "deterministic_conflict": {
       "source": "PR19_G2_G9_562_SOURCE_MANIFEST_561_VS_PR20_553_MANIFEST_552",
@@ -9065,7 +9068,7 @@
       "product_acceptance_delta_pp": 0
     },
     "rollback": "Normal governance revert only. Owner PR19/20, product-dev, main, claims unchanged",
-    "next": "Owner MI01 exact 553 W8 C04-C08 and dependency review; owner MI04 562 G2/G9 authority, PG/replay security; if later combined, retest 562 W8. Do not duplicate existing 72-case owner CI."
+    "next": "Owner MI01 PR20 553 baseline immutable lock reviewed 19 focused tests, full C04-C08 requires source/dependency/network owner approval; PR19 concurrent 562 561 manifest G2/G9 isolated D0 success; do not combine without W8 manifest pin+full-chain requalification; PG/IV HOLD."
   },
   "mi01_w8_553_npm_license_metadata_20261120": {
     "revision": "MI01-W8-553-NPM-LICENSE-METADATA-20261120",
