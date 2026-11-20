@@ -1,0 +1,148 @@
+{
+  "revision": "MI04-G2-G9-OWNER-EXACT-CI-20261120",
+  "verified_execution": {
+    "run": 44697437051,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44697437051",
+    "conclusion": "success",
+    "jobs": 2,
+    "passed_original_source_test_executions": 57,
+    "failed": 0,
+    "skipped": 0
+  },
+  "g2": {
+    "owner_commit": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "owner_branch": "workstream/0230-d5g2-durable-iam-authority",
+    "manifest_git_blob": "15e446e4d14c95d81d1e152efa2e8cb11122b3e3",
+    "manifest_records": 395,
+    "backend_files_verified": 240,
+    "ddl_pins": 3,
+    "source_test_pins": 7,
+    "original_runner_git_blob": "f7df7e5cc0e6cd8f42e7320d76c55e3b06e8dec5",
+    "job_id": 136157455011,
+    "result": "50/50 actual original unittest PASS",
+    "modules": [
+      "test_intent_authority_t1_0212",
+      "test_authority_fullchain_0214",
+      "test_iam_session_d5g1",
+      "test_iam_authority_d5g2"
+    ],
+    "includes_previous_0214_methods": 10,
+    "source_scope": "OWNER PIN ONLY NOT CANONICAL"
+  },
+  "g9": {
+    "owner_commit": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "owner_branch": "planning/0230-d5g9-exact-three-store-checkout",
+    "manifest_git_blob": "0555852afa38b7317a53a63db26a79cf151488b9",
+    "manifest_records": 403,
+    "backend_files_verified": 248,
+    "external_plus_backend_pins": 56,
+    "original_runner_git_blob": "3e1752ac86e80e23fd646324465dd166d42a5a40",
+    "original_g7_fixture_git_blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+    "job_id": 136157455407,
+    "result": "7/7 actual original G7 checkout unittest PASS",
+    "result_json": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "expected_failures": 0,
+      "unexpected_successes": 0
+    },
+    "source_scope": "OWNER HISTORIC G9/G7 SOURCE PIN ONLY NOT CANONICAL"
+  },
+  "canonical": {
+    "branch": "integration/product-dev",
+    "commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "current_intent_authority_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+    "g2_intent_authority_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "g2_iam_session_file_present": false,
+    "owner_g2_iam_session_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+    "canonical_durable_ops_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+    "owner_g9_root_durable_ops_present": false,
+    "code_merged_in_this_turn": false
+  },
+  "claims": {
+    "original_owner_G2_50": "PASS_ON_G2_OWNER_PIN",
+    "original_owner_G9_7": "PASS_ON_G9_OWNER_PIN",
+    "canonical_G2_50": "NOT_RUN_CANONICAL_SOURCE_VARIANT_MISSING",
+    "canonical_G9_7": "NOT_RUN_CANONICAL_ORIGINAL_FIXTURE_VARIANT",
+    "source_version_owner_approval": "HOLD",
+    "cross_branch_integration": "HOLD",
+    "actual_issuer": false,
+    "actual_authoritative_root": false,
+    "effect_sink_fencing": false,
+    "strict_pg": "NOT_RUN",
+    "A_independent_negative": [
+      0,
+      8
+    ],
+    "IV": "HOLD",
+    "production": "HOLD",
+    "old_db_journal_authority_restore_replay": "KNOWN_OPEN"
+  },
+  "permissions": {
+    "new_permanent_ci_workflow": false,
+    "pr": 17,
+    "pr_status": "CLOSED_UNMERGED",
+    "new_product_code": 0,
+    "main_changed": false,
+    "product_dev_changed_by_this_task": false,
+    "external_effects": false
+  },
+  "progress": {
+    "owner_original_G2_previous": [
+      0,
+      50
+    ],
+    "owner_original_G2_current": [
+      50,
+      50
+    ],
+    "owner_original_G9_previous": [
+      0,
+      7
+    ],
+    "owner_original_G9_current": [
+      7,
+      7
+    ],
+    "new_test_methods_written": 0,
+    "unique_integrated_acceptance_additions": 0,
+    "IAM_ORG_dev_previous": 42.5,
+    "IAM_ORG_dev_current": 42.5,
+    "delta_pp": 0,
+    "global_dev_previous": null,
+    "global_dev_current": null,
+    "Core_acceptance": [
+      12,
+      16
+    ],
+    "MVP_acceptance": [
+      0,
+      11
+    ],
+    "IV_acceptance": [
+      0,
+      7
+    ],
+    "A_independent": [
+      0,
+      8
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "prior_test_non_double_credit": [
+    "MI04 0214 10/10 CI 44695937454 is included in G2 50; method count must not be added as unique acceptance",
+    "G2 source owner reported 33 selected historical cases; no new written test",
+    "G9 original G7 7 now run; earlier 8 runner-mechanics tests are not product tests"
+  ],
+  "next": [
+    "G2/IAM owner decide authority variant and review missing session source + tests for controlled canonical integration",
+    "ORG/Core G9 owner choose tested readback version vs current durable_ops and ORG source with exact API/DB contract",
+    "MI01/Unified owns 553 full W8 build; do not duplicate",
+    "MI02/Security independently prove root/custody/sink, PostgreSQL and 8 IV negatives"
+  ],
+  "rollback": "PR17 closed unmerged; no owner or canonical mutations; governance notes normal revert only"
+}
