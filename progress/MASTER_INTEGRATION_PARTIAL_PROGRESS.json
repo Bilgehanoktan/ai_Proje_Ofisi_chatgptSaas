@@ -2156,5 +2156,92 @@
       "docs/master-integration/MI-P0-PR11-ORG-PACKAGE-GATE-20261120/EVIDENCE.json",
       "docs/master-integration/MI03-A-SOURCE-MERGE-20261120/ARCHITECTURE_CATALOG_PROGRESS_HANDOVER.md"
     ]
+  },
+  "mi_p0_553_transfer_pr15_20261120": {
+    "revision": "MI-P0-553-SOURCE-TRANSFER-20261120-R1",
+    "type": "ACTUAL_ISOLATED_GIT_SOURCE_BRANCH_NOT_CANONICAL_PRODUCT_PROMOTION",
+    "pr": 15,
+    "baseline_product_dev": {
+      "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "files": 505
+    },
+    "source_common": {
+      "sha": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+      "files": 553
+    },
+    "isolated_transfer": {
+      "sha": "98808d280dda13088a2561ecc7323f4a910c380d",
+      "files": 553,
+      "manifest": 552,
+      "changed_paths": 64
+    },
+    "W8_pin_static_before": "MISMATCH",
+    "W8_pin_static_now": "ALIGNED_TO_EXACT_MANIFEST_BLOB",
+    "W8_fresh_tests": "NOT_RUN",
+    "source_contract_owner_signoff": "NOT_YET",
+    "source_merge_product_dev": "NO",
+    "actual_ci_prior": {
+      "run": 44628704044,
+      "manifest": [
+        552,
+        552
+      ],
+      "org_packaging": [
+        4,
+        4
+      ],
+      "org_sql": [
+        11,
+        11
+      ],
+      "same_source_tree": true
+    },
+    "development_global_previous": null,
+    "development_global_current": null,
+    "development_global_delta_pp": null,
+    "canonical_core_previous": [
+      12,
+      16
+    ],
+    "canonical_core_current": [
+      12,
+      16
+    ],
+    "canonical_ui_previous": [
+      21,
+      40
+    ],
+    "canonical_ui_current": [
+      21,
+      40
+    ],
+    "canonical_mvp_previous": [
+      0,
+      11
+    ],
+    "canonical_mvp_current": [
+      0,
+      11
+    ],
+    "independent_security_previous": [
+      0,
+      7
+    ],
+    "independent_security_current": [
+      0,
+      7
+    ],
+    "acceptance_delta_pp": 0,
+    "blockers_remaining": [
+      "W8 full 553 original lock/build/test/browser",
+      "G9 source owner ratification",
+      "G2 authority variant owner ratification",
+      "G2/G9/MEM T1 original tests",
+      "protected PostgreSQL/restore",
+      "independent A root/claim/sink/IV"
+    ],
+    "documentation": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+    "product_changes_on_canonical": 0,
+    "extra_software_permission": 0
   }
 }
