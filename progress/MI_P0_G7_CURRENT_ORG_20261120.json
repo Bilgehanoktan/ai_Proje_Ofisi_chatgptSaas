@@ -1,0 +1,104 @@
+{
+  "revision": "MI_P0_G7_CURRENT_ORG_20261120",
+  "date": "2026-11-20",
+  "base": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+  "task": "ACTUAL_CURRENT_PRODUCT_ORG_STORE_G7_REQUALIFICATION",
+  "status": "RUNNER_AND_HELPER_TESTS_DONE_ORIGINAL_G7_RUNTIME_BLOCKED_BY_NO_EXACT_SOURCE_LOCAL",
+  "ownership": {
+    "MI01": "PR20 ACTIVE no overlap",
+    "MI04": "PR19 ACTIVE no source edit",
+    "central": "new read-only G7 guard utility only",
+    "MI05": "PR22 ACTIVE separate",
+    "MI_P0_manifest": "PR21 ACTIVE separate",
+    "security": "PR10 ACTIVE separate"
+  },
+  "progress": {
+    "weights": {
+      "design": 15,
+      "source": 35,
+      "functional": 20,
+      "integration": 20,
+      "acceptance": 10
+    },
+    "global_development_previous": null,
+    "global_development_current": null,
+    "global_delta_pp": null,
+    "approved_denominator_groups": 0,
+    "planned_denominator_groups": 10,
+    "acceptance": {
+      "core": {
+        "before": [
+          12,
+          16
+        ],
+        "after": [
+          12,
+          16
+        ]
+      },
+      "ui": {
+        "before": [
+          21,
+          40
+        ],
+        "after": [
+          21,
+          40
+        ]
+      },
+      "MVP": {
+        "before": [
+          0,
+          11
+        ],
+        "after": [
+          0,
+          11
+        ]
+      },
+      "IV": {
+        "before": [
+          0,
+          7
+        ],
+        "after": [
+          0,
+          7
+        ]
+      }
+    },
+    "acceptance_delta_pp": 0
+  },
+  "evidence": {
+    "actual_helper_tests": [
+      16,
+      16
+    ],
+    "real_G7_current_product": [
+      0,
+      7
+    ],
+    "historical_G7_on_historical_ORG": [
+      7,
+      7
+    ],
+    "new_original_test_methods": 0,
+    "previous_G2_ORG_G7_run": 44700495037,
+    "changed_product_files": 0
+  },
+  "blockers": [
+    "Exact PR19 immutable 562-file source not locally materialized",
+    "Owner-approved pinned dependency environment still required",
+    "Actual original G7 readback against current product class NOT_RUN",
+    "MI01 W8 C04-C08, G2/G9 source ratification, PG issuer/restore/IV all HOLD"
+  ],
+  "next": "Owner run unchanged 7 G7 cases against current product OperationsStore using this isolated, exact-source-pinned runner in authorized environment, then attach raw G7 logs and review by MI04/MI03 owner",
+  "files": [
+    "scripts/ci/verify_current_org_g7.py",
+    "scripts/ci/test_verify_current_org_g7.py",
+    "docs/master-integration/MI-P0-G7-CURRENT-ORG-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+    "docs/master-integration/MI-P0-G7-CURRENT-ORG-20261120/EVIDENCE.json",
+    "docs/master-integration/MI-P0-G7-CURRENT-ORG-20261120/TECHNICAL_CATALOG.json"
+  ],
+  "rollback": "close draft or normal revert; source owners unchanged"
+}

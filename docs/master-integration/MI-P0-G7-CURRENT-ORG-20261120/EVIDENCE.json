@@ -1,0 +1,148 @@
+{
+  "revision": "MI-P0-G7-CURRENT-ORG-REQUAL-20261120",
+  "date": "2026-11-20",
+  "evidence_class": "ACTUAL_LOCAL_STDLIB_HELPER_TESTS_PLUS_GITHUB_SOURCE_BLOB_READBACK_NOT_PRODUCT_TEST",
+  "source": {
+    "canonical": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "target_immutable_checkout": "93e6c84db1a061ee914aa2c1d543620404515c0b",
+    "review_PR": 19,
+    "review_head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "source_tree_materialized_locally": false
+  },
+  "files": [
+    {
+      "path": "scripts/ci/verify_current_org_g7.py",
+      "git_blob": "48bc0a7c6582defac61a5e346fd923af200d1d88",
+      "bytes": 9961,
+      "sha256": "da4a644f3d6f189ac6a94fc8a645acde40df6489199f6a702aedf7f87a29a691",
+      "github_readback": "EXACT"
+    },
+    {
+      "path": "scripts/ci/test_verify_current_org_g7.py",
+      "git_blob": "7313cf0160c006eaa5eb7ebc2381712daa26a14a",
+      "bytes": 6061,
+      "sha256": "b5bc7017e86c03070316bd49a628b8df73c04a5d24ac520348d2b9fbccc02bfc",
+      "github_readback": "EXACT"
+    }
+  ],
+  "runtime": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "platform": "Linux local isolated",
+    "helper_unittest": {
+      "executed": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit": 0
+    },
+    "py_compile": "PASS",
+    "raw_local_log": {
+      "name": "helper-test.log",
+      "bytes": 2292,
+      "sha256": "2a9d4fbf4682f9d64d86d06e087eb13bec1444b95500fca6a0be648ee2808944"
+    }
+  },
+  "previous_actual_G2_ORG_G7_CI": {
+    "run_id": 44700495037,
+    "original_D0": [
+      72,
+      72
+    ],
+    "same_original_methods_not_new": true
+  },
+  "target_current_org_D0": {
+    "original_cases_expected": 7,
+    "executed": 0,
+    "status": "NOT_RUN_NO_562_LOCAL_CHECKOUT",
+    "reason": "GitHub raw checkout inaccessible from this container; cannot use older uploaded ZIPs as replacement"
+  },
+  "untrusted_security": {
+    "issuer": "HOLD",
+    "protected_postgresql": "NOT_RUN",
+    "restore_replay": "OPEN",
+    "IV": "HOLD",
+    "release": "DENY"
+  },
+  "source_changed": {
+    "product": 0,
+    "API": 0,
+    "DB": 0,
+    "external_dependency": 0,
+    "CI_workflows": 0,
+    "permissions": 0,
+    "shared_product_dev": 0
+  },
+  "acceptance": {
+    "core_previous": [
+      12,
+      16
+    ],
+    "core_current": [
+      12,
+      16
+    ],
+    "UI_previous": [
+      21,
+      40
+    ],
+    "UI_current": [
+      21,
+      40
+    ],
+    "MVP_previous": [
+      0,
+      11
+    ],
+    "MVP_current": [
+      0,
+      11
+    ],
+    "IV_previous": [
+      0,
+      7
+    ],
+    "IV_current": [
+      0,
+      7
+    ],
+    "delta_pp": 0
+  },
+  "weighted_development": {
+    "previous": null,
+    "current": null,
+    "delta_pp": null,
+    "group_denominators_owner_approved": [
+      0,
+      10
+    ]
+  },
+  "next": "Authorized exact immutable 562 checkout + owner-reviewed dependency set + unchanged G7 seven original tests executed against current product OperationsStore; preserve raw exit/code/log; do not promote without owner/W8/PG/IV gates",
+  "rollback": "Close draft PR, or normal revert only isolated helper/doc paths; do not alter owner PRs/product-dev/main/security claims",
+  "local_zip_verbatim_readback_20261120": {
+    "original_zip": "AI_Company_OS_MI_P0_G7_CURRENT_ORG_RUNNER_20261120.zip",
+    "raw_log": {
+      "repo_path": "docs/master-integration/MI-P0-G7-CURRENT-ORG-20261120/LOCAL_HELPER_TEST_RAW_16_PASS.log",
+      "git_blob": "96e596144b1a97043872634265bfece99ee13b96",
+      "bytes": 2292,
+      "sha256": "2a9d4fbf4682f9d64d86d06e087eb13bec1444b95500fca6a0be648ee2808944",
+      "github_matches_local_zip": true
+    },
+    "handover": {
+      "repo_path": "docs/master-integration/MI-P0-G7-CURRENT-ORG-20261120/LOCAL_HANDOVER.md",
+      "git_blob": "ef22c2625343647a03a6a453476e12ba8e134571",
+      "bytes": 2129,
+      "sha256": "5cf6d9291ae1e396cb49f56b0d0dd679acab7adba82991d70dd302a85889aa9b",
+      "github_matches_local_zip": true
+    },
+    "manifest": {
+      "repo_path": "docs/master-integration/MI-P0-G7-CURRENT-ORG-20261120/LOCAL_DELIVERY_MANIFEST.json",
+      "git_blob": "80f13b4236186ab074d4f7dd5f21c41ef5df4e56",
+      "bytes": 814,
+      "github_matches_local_zip": true
+    },
+    "scope": "raw evidence and handover delivery only, not 7 original G7 tests",
+    "source_changes": 0
+  }
+}
