@@ -79,7 +79,7 @@ jobs:
           files=[f for f in (root/'product').rglob('*') if f.is_file()]
           assert len(files)==562, ('PRODUCT_FILE_TOTAL',len(files))
           assert sqlite3.sqlite_version_info >= (3,37)
-          print('MI04_553_G2_SOURCE_SHA256=561/561 PASS')
+          print('MI04_G2_G9_553_SOURCE_SHA256=561/561 PASS')
           print('MI04_553_G2_GIT_OWNER_BLOBS=8/8 PASS')
           print(f'PYTHON={sys.version.split()[0]}, SQLITE={sqlite3.sqlite_version}')
           PY
@@ -139,7 +139,7 @@ jobs:
               p=root/rel
               assert p.is_file() and not p.is_symlink(), ('MISSING_OR_SYMLINK',rel)
               raw=p.read_bytes()
-              actual=sha1(b'blob '+str(len(raw)).encode('ascii')+b'\\0'+raw).hexdigest()
+              actual=sha1(b'blob '+str(len(raw)).encode('ascii')+b'\0'+raw).hexdigest()
               assert actual==expected,('G9_SOURCE_PIN_MISMATCH',rel,actual)
           print('MI04_G9_ALL_ORIGINAL_56_GIT_PINS=56/56 PASS',flush=True)
           namespace=runpy.run_path(str(root/'candidates/D5-G7/test_checkout.py'))
