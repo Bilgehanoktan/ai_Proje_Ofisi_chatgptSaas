@@ -1,0 +1,144 @@
+{
+  "revision": "MI05-CANONICAL-553-ORIGINAL-PROJECTION-READ-RERUN-20261120-R1",
+  "date": "2026-11-20",
+  "source_of_truth": {
+    "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+    "branch": "integration/product-dev",
+    "head_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_tree_sha": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "product_files": 553,
+    "manifest_entries": 552
+  },
+  "methodology": "Reconstructed three exact Git blob files in isolated local container; verified git hash-object for each; compiled with local TypeScript; executed unchanged original Node test source. No GitHub CI or checkout of full repo.",
+  "source_pins": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "git_blob": "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "sha256": "a1147ebd4560c7322e974f91dce97c55fe8ddfa157e8c78adb51f3a4ac820a7f",
+      "bytes": 3085
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/organizationProjection.ts",
+      "git_blob": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+      "sha256": "254a188851fa2f0e63661f2dd6977d7446a7f5ae7d4dd0622ea4a40f578dd461",
+      "bytes": 3939
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/projection-read.test.cjs",
+      "git_blob": "226e0e9721677235184547b8d79e91b2e6c541fb",
+      "sha256": "82f828adfcde67f3186f613d07d733495d78027b277d5fcd41c8bd789df46faf",
+      "bytes": 3023
+    }
+  ],
+  "environment": {
+    "container_platform": "Linux x86_64",
+    "node": "v22.16.0",
+    "typescript_version": "5.8.3 local globally installed (project specifies 5.9.3; no lock installed)",
+    "python": "3.13.5",
+    "network": "disabled"
+  },
+  "commands": [
+    "git hash-object <each of 3 original local sources> == GitHub blob",
+    "tsc --target ES2022 --lib ESNext,DOM --strict --module commonjs --outDir build features/data/projectionRead.ts features/organization/organizationProjection.ts",
+    "node tests/projection-read.test.cjs <absolute path to build/data/projectionRead.js>"
+  ],
+  "local_run": {
+    "type": "ACTUAL_LOCAL_UNCHANGED_ORIGINAL_TEST_ON_CURRENT_PINNED_FILES",
+    "result": "PASS",
+    "original_methods": [
+      12,
+      12
+    ],
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "tap_duration_ms": 73.132468,
+    "tap_log_sha256": "48983e93c970df32fd5b59aab3cfb4f0ad7635b2df14220fc6a8059180f1042d",
+    "typescript_compilation": "PASS_NO_DIAGNOSTICS"
+  },
+  "test_topics": [
+    "GET/no cache/no redirect and exact parser",
+    "invalid endpoint",
+    "non-2xx",
+    "content type",
+    "malformed JSON",
+    "authority spoof",
+    "size limit",
+    "invalid UTF8",
+    "failed read clears prior data",
+    "generation-guard old response rejection",
+    "unmount cancellation",
+    "timeout HOLD"
+  ],
+  "previous_evidence": {
+    "source": "MI-COMMON-03-SELECTED-REGRESSION",
+    "original_projection_read_methods": [
+      12,
+      12
+    ],
+    "previous_group_97_included_projection_read": true,
+    "original_methods_newly_added": 0,
+    "description": "Fresh run on exact canonical 553 code pins, not 12 new unique test methods or product acceptance"
+  },
+  "parallel": {
+    "W8": "PR20 active, no edits",
+    "G2_553": "PR19 active, no edits",
+    "GATE02": "PR10 active, no edits",
+    "other_MI05_review_PR": "NONE_FOUND_AT_FROZEN_GITHUB_SNAPSHOT"
+  },
+  "owner_scope": "MI-05 Premium UI projection read-only D0",
+  "boundaries": {
+    "exact_full_checkout": false,
+    "installed_project_typescript_5_9_3": false,
+    "next_full_build": false,
+    "native_browser": false,
+    "backend_runtime": false,
+    "real_IAM": false,
+    "protected_Postgres": false,
+    "independent_security": false,
+    "new_CI": false,
+    "product_files_changed": 0,
+    "permissions_changed": 0
+  },
+  "remaining": "MI05+MI06 same-session U3 native browser and actual owner/live Office projection contract, W8 owner PR20 frozen npm lock/real fullchain, G2 variant PR19 owner decision, PG+IV HOLD",
+  "progress": {
+    "global_development_previous": null,
+    "global_development_current": null,
+    "global_delta_pp": null,
+    "UI_product_acceptance_previous": [
+      21,
+      40
+    ],
+    "UI_product_acceptance_current": [
+      21,
+      40
+    ],
+    "core_before": [
+      12,
+      16
+    ],
+    "core_after": [
+      12,
+      16
+    ],
+    "MVP_before": [
+      0,
+      11
+    ],
+    "MVP_after": [
+      0,
+      11
+    ],
+    "independent_IV_before": [
+      0,
+      7
+    ],
+    "independent_IV_after": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "rollback": "Governance docs-only normal revert. No source/API/DB/CI/permission mutation."
+}
