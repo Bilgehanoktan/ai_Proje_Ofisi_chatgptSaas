@@ -117,7 +117,7 @@ def _connect(path, mode):
         raise
 
 
-def _latest(db, public_key):
+def _latest(db, public_key, committed=None):
     from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
     if type(public_key) is not bytes or len(public_key) != 32:
         raise ValueError('MEMORY_WITNESS_KEY_HOLD')
@@ -133,6 +133,10 @@ def _latest(db, public_key):
         if seq != i or w.sequence != seq or witness_sha(w) != digest:
             raise ValueError('MEMORY_WITNESS_CHAIN_HOLD')
         key.verify(sig, body)
+        # Only genesis or finalized pending transitions add a generation.
+        # Recovery epochs and staged pending records do not duplicate pins.
+        if committed is not None and (old is None or w.snapshot.generation != old.snapshot.generation):
+            committed.append(w.snapshot)
         old = w
     return old
 
@@ -143,16 +147,28 @@ class MemoryWitnessReader:
         self.path = _path(path)
 
     def read_latest(self, expected, public_key):
+        return self.read_history(expected, public_key)[0]
+
+    def read_history(self, expected, public_key):
+        """Return the externally pinned signed head and committed generation pins.
+
+        The unchanged v1 chain already commits to every finalized generation.
+        This is D0 evidence only; it is not a write or independent trust grant.
+        """
         if (type(expected) is not LatestWitnessPin or not digest_ok(expected.record_sha)
                 or not digest_ok(expected.key_sha) or not uint(expected.recovery_epoch)
                 or type(public_key) is not bytes or sha256(public_key).hexdigest() != expected.key_sha):
             raise ValueError('MEMORY_WITNESS_EXTERNAL_PIN_HOLD')
+        committed = []
         with closing(_connect(self.path, 'ro')) as db:
             db.execute('BEGIN')
-            head = _latest(db, public_key)
+            head = _latest(db, public_key, committed)
         if head is None or witness_sha(head) != expected.record_sha or head.recovery_epoch != expected.recovery_epoch:
             raise ValueError('MEMORY_WITNESS_EXTERNAL_PIN_HOLD')
-        return head
+        if (len(committed) != head.snapshot.generation or committed[-1] != head.snapshot
+                or any(p.generation != i for i, p in enumerate(committed, 1))):
+            raise ValueError('MEMORY_WITNESS_HISTORY_HOLD')
+        return head, tuple(committed)
 
 
 class D0MemoryWitnessStore(MemoryWitnessReader):
@@ -208,7 +224,7 @@ def inspect_witnessed_context(context, registry, expected_digest, memory_path, c
     try:
         if type(reader) not in (MemoryWitnessReader, D0MemoryWitnessStore) or os.path.samefile(memory_path, reader.path):
             return WitnessedReview('MEMORY_WITNESS_SEPARATION_HOLD')
-        w = reader.read_latest(expected_witness, public_key)
+        w, committed = reader.read_history(expected_witness, public_key)
         if not _valid(w) or witness_sha(w) != expected_witness.record_sha:
             return WitnessedReview('MEMORY_WITNESS_EXTERNAL_PIN_HOLD')
         if w.pending is not None:
@@ -220,10 +236,10 @@ def inspect_witnessed_context(context, registry, expected_digest, memory_path, c
                 or not w.issued_tick <= clock.now_tick < w.expires_tick):
             return WitnessedReview('MEMORY_WITNESS_CONTEXT_HOLD')
         r = inspect_joint_context(context, registry, expected_digest, memory_path,
-                                  current_run, current_lease, clock, raw)
+                                  current_run, current_lease, clock, raw, committed)
         if not r.structural_match or r.reason != 'D0_JOINT_CONTEXT_MATCH_ONLY':
             return WitnessedReview(r.reason)
-        if reader.read_latest(expected_witness, public_key) != w:
+        if reader.read_history(expected_witness, public_key) != (w, committed):
             return WitnessedReview('MEMORY_WITNESS_CHANGED_HOLD')
         return WitnessedReview('D0_WITNESSED_CONTEXT_MATCH_ONLY', True)
     except (OSError, sqlite3.Error, ValueError, TypeError, KeyError, AttributeError,
