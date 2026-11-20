@@ -90,5 +90,59 @@
     "weighted_global": "HESAPLANAMADI",
     "product_acceptance_delta": 0
   },
-  "handover": "Original 553 W8 owner C04-C08, then MI04 security owner ratification of G2/G9; only then exact 562 W8 repin/fullchain. No merge, no CI, no PROD. Normal review PR close/revert."
+  "handover": "Original 553 W8 owner C04-C08, then MI04 security owner ratification of G2/G9; only then exact 562 W8 repin/fullchain. No merge, no CI, no PROD. Normal review PR close/revert.",
+  "followup_20261120": {
+    "classification": "EXACT_GITHUB_SOURCE_READBACK_PLUS_ACTUAL_LOCAL_SYNTHETIC_TEST_REPLAY",
+    "manifest_readback": {
+      "canonical_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "candidate_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
+      "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+      "exact_expected_pins": true,
+      "guard_pattern_matched": true,
+      "actual_entry_diff": {
+        "old": 552,
+        "new": 561,
+        "added": 9,
+        "removed": 0,
+        "changed": 1
+      },
+      "expected_gate": "U3_MANIFEST_HOLD",
+      "test_type": "read-only remote-source deterministic comparison, not W8 CLI"
+    },
+    "local_tests": {
+      "command": "python -m unittest -v test_mi_p0_w8_manifest_gate.py",
+      "method_count": 16,
+      "pass": 16,
+      "fail": 0,
+      "error": 0,
+      "skip": 0,
+      "exit_code": 0,
+      "log_path": "docs/master-integration/MI-P0-W8-562-MANIFEST-GATE-20261120/ACTUAL_LOCAL_TEST_RUN.log",
+      "log_sha256": "35432227446f2d2c05c10bd70f9e5370d77acbf86c68e37e2500913431772e70",
+      "log_git_blob": "a9d994b3a8b6dc7952a57bbd135bfd6d70436bce",
+      "log_readback": true,
+      "source_git_blob": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+      "test_source_git_blob": "ab16361322417d9ef23c245a83565fc899b9d424",
+      "runtime": "local synthetic fixture, not original 553/562 full CLI"
+    },
+    "status": "SCOPED_DIAGNOSTIC_READBACK_COMPLETE_OWNER_ORIGINAL_W8_HOLD",
+    "unrun": [
+      "Original 553 W8 C04–C08",
+      "Exact 3-file original Python CLI against GitHub originals",
+      "Native browser",
+      "Strict PG",
+      "Independent root/issuer/sink/IV"
+    ],
+    "progress": {
+      "mi01_previous": "3/8",
+      "mi01_current": "3/8",
+      "delta_pp": 0,
+      "global_development": "HESAPLANAMADI",
+      "acceptance_delta_pp": 0
+    },
+    "product_dev_change": false,
+    "ci_workflow_change": false,
+    "security_permission_change": false,
+    "next_owner": "MI-01 owner PR20 original full 553 W8; MI-04 owner PR19 security source variant; no automatic merge/re-pin"
+  }
 }
