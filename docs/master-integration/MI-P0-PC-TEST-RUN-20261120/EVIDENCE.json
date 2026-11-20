@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-20",
+  "classification": "SOURCE_PINNED_WINDOWS_TEST_KIT_NOT_EXECUTED_ON_USER_PC",
+  "target": "Windows PowerShell/CPython3, git, node, npm, optional pg_isready",
+  "source_product_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "w8_owner_sha": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
+  "g7_source_sha": "93e6c84db1a061ee914aa2c1d543620404515c0b",
+  "local_guards": "12/12 PASS Python stdlib",
+  "windows_real_W8": "NOT_RUN",
+  "windows_real_G7": "NOT_RUN",
+  "protected_postgresql_security": "HOLD",
+  "local_postgres_check": "pg_isready absent in this Linux container; PC optional check not yet executed",
+  "approval": "C05 and independent security still HOLD",
+  "product_code_changes": 0,
+  "file_inventory": {
+    "aios_pc_runner.py": {
+      "bytes": 11420,
+      "sha256": "e3a62aabe0c2153cf0f606efad6e3c8f4fae3f1a353d5a4b0bc30593461ad254"
+    },
+    "verify_current_org_g7.py": {
+      "bytes": 9961,
+      "sha256": "da4a644f3d6f189ac6a94fc8a645acde40df6489199f6a702aedf7f87a29a691"
+    },
+    "test_aios_pc_runner.py": {
+      "bytes": 4300,
+      "sha256": "a5e8ccabd28651c7dbadaa6c71479ec3a88580d8a92dcd5a2540c692851956e3"
+    },
+    "run_example.ps1": {
+      "bytes": 390,
+      "sha256": "f87063a0d8879fde2ef7f5305ef04c6de497961f6f60a87204877006a29700cd"
+    },
+    "README_TR.md": {
+      "bytes": 4761,
+      "sha256": "5c6dd4afd95a11cbb49ce5bc38331a86015a7e899671a2151729dbc3f4e755d5"
+    },
+    "test_guard_12_PASS.log": {
+      "bytes": 1783,
+      "sha256": "b55c591bb4ab3c78905a0c9036b6b2a27623a0f0c47cc89bd7f15c86c225bdc1"
+    }
+  },
+  "rollback": "delete isolated kit/test dirs after preserving logs; no owner PR modified"
+}
