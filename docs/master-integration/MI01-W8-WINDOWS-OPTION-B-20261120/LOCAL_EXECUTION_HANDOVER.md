@@ -46,3 +46,14 @@ Connected GitHub `get_repo` verified this repository is **private** and PR20 hea
 - Earlier script `AIOS_W8_WINDOWS_STAGE1_20261120.ps1` (SHA256 `9c16222b6673b41ba04cb2b2e120dd10eef5bf7fb0162bd423c3186c106ade06`) is historical/OBSOLETE for private repository checkout; preserve for audit, do not rerun.
 - This current environment validated script source/text SHA and GitHub metadata only, **NOT Windows runtime execution**. W8 C04 NOT_RUN/C05 HOLD/C06–08 NOT_RUN; W8 **3/8 → 3/8**, product acceptance unchanged; weighted global development HESAPLANAMADI.
 - Recovery: each run creates a unique directory. Previous HOLD receipts are retained. Manual deletion only of individually identified failed run folder after user inspection; do not delete existing worktrees or alter Git credentials.
+
+## Windows C04 reuse of verified checkout — H01 source PASS 21:17, 2026-11-20
+The user pasted the **actual** R2 Windows terminal result for exact PR20 head: `PASS: 552/552 product files, 6/6 source Git blobs, exact npm lock SHA256`, `STATUS: PASS_SOURCE_PREFLIGHT_ONLY`. User report path: `E:\AIOS\W8\W8_PR20_20261120_211752\PRECHECK_RESULT.json`; source `...\source`. The JSON bytes themselves have not been uploaded, so this is **user-console-attested**, not independently fetched PC evidence. C04 `NOT_RUN`, C05 `HOLD`, C06–C08 `NOT_RUN`, W8 3/8 unchanged.
+
+For scarce E-drive capacity, DO NOT re-clone with the older R2 `-RunPrepare` option. User-facing local-only file `AIOS_W8_C04_EXISTING_SOURCE_20261120.ps1` is a new conversation artifact **SHA256 `4106d767d05fe845aa571b6c3dad741d7cff671437a3bf2c73cc151d55996c9e`, 6517 bytes**. It loads the previous PASS report, validates exact Git commit 99571c2e and unmodified Git working tree, rechecks npm lock SHA256, Python 3.13/Node/npm availability and >=5GiB available in the same drive, then runs only original owner `tests/integration/w8_unified_u3.py prepare --repo <verified-source> --stage <fresh-C04_stage>`. TEMP/TMP/appdata/pip/npm caches are temporarily redirected to a dedicated E: directory and restored. Existing source and earlier logs retained; no install/test/smoke or implied C05 signoff.
+
+Invocation from PowerShell 5.1 after saving in Downloads:
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\Downloads\AIOS_W8_C04_EXISTING_SOURCE_20261120.ps1"
+```
+Outputs `C04_RUN_RESULT.json`, `C04_PREPARE.log`, and if successful `C04_stage\locks\REVIEW.json` plus its SHA256. Any invalid precondition leads to `HOLD`. No Windows execution of this new artifact has occurred yet; no user or owner approval is presumed. The old source remains untouched; rollback is manual inspection then delete only a newly created, failed isolated `C04_stage`, never credentials or previously validated source. Original PR20 owner retains C04/C05 and C06–C08 acceptance responsibilities.
