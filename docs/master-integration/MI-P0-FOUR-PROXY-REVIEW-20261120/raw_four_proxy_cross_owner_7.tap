@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: all four pinned proxy GET routes share the exact loopback contract without response cross-talk
+ok 1 - all four pinned proxy GET routes share the exact loopback contract without response cross-talk
+  ---
+  duration_ms: 30.050593
+  type: 'test'
+  ...
+# Subtest: one invalid tenant is rejected while other three independent projections remain valid
+ok 2 - one invalid tenant is rejected while other three independent projections remain valid
+  ---
+  duration_ms: 2.6088
+  type: 'test'
+  ...
+# Subtest: one indefinitely stalled outbox transport is canceled logically without blocking three concurrent GETs
+ok 3 - one indefinitely stalled outbox transport is canceled logically without blocking three concurrent GETs
+  ---
+  duration_ms: 2.660477
+  type: 'test'
+  ...
+# Subtest: pre-aborted signals fail closed on every route independently
+ok 4 - pre-aborted signals fail closed on every route independently
+  ---
+  duration_ms: 1.20238
+  type: 'test'
+  ...
+# Subtest: invalid backend port fails closed across all four routes with zero calls to fetch
+ok 5 - invalid backend port fails closed across all four routes with zero calls to fetch
+  ---
+  duration_ms: 1.154428
+  type: 'test'
+  ...
+# Subtest: Office body cannot be substituted for the other three D0 read models
+ok 6 - Office body cannot be substituted for the other three D0 read models
+  ---
+  duration_ms: 1.548251
+  type: 'test'
+  ...
+# Subtest: real native AbortSignal.timeout closes stalled office pipeline by deadline, without a live backend
+ok 7 - real native AbortSignal.timeout closes stalled office pipeline by deadline, without a live backend
+  ---
+  duration_ms: 2503.096887
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3546.834277
