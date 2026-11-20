@@ -78,3 +78,27 @@ test('valid JSON without abort still returns 200 with isolated stub parser', asy
   assert.deepEqual({result,fetch:observed.fetch,read:observed.read,signal:observed.passedSameSignal},
     {result:200,fetch:true,read:true,signal:true});
 });
+
+test('actual 2500ms AbortSignal.timeout returns 503 for pending fetch', async () => {
+  const previousFetch = global.fetch;
+  let fetchEntered = false;
+  try {
+    global.fetch = async () => {
+      fetchEntered = true;
+      return new Promise(() => {});
+    };
+    const start = performance.now();
+    let watchdog;
+    const status = await Promise.race([
+      GET().then(response => response.status, err => 'REJECTED:' + err.message),
+      new Promise(resolve => {watchdog = setTimeout(() => resolve('WALLCLOCK_EXPIRED'), 8500);}),
+    ]);
+    clearTimeout(watchdog);
+    const elapsedMs = performance.now() - start;
+    assert.equal(fetchEntered, true);
+    assert.equal(status, 503);
+    assert.ok(elapsedMs >= 2350 && elapsedMs < 8000, `unexpected timer: ${elapsedMs}ms`);
+  } finally {
+    global.fetch = previousFetch;
+  }
+});
