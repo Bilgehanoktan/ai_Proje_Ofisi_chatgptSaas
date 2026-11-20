@@ -1,0 +1,60 @@
+{
+  "revision": "MI01-W8-CRYPT50-G1-G2-SOURCE-CANDIDATE-20261120",
+  "date": "2026-11-20",
+  "scope": "ISOLATED_SOURCE_REVIEW_ONLY_NOT_OWNER_APPROVED",
+  "base": {
+    "branch": "review/mi01-w8-p10j24-historical-session-recovery-20261120",
+    "sha": "9166afe299cd8f1ab9c52355ec21ec06c465d6ef",
+    "product_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "required_dependency_blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+    "w8_upper_adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677"
+  },
+  "candidate": {
+    "name": "cryptography",
+    "from": "46.0.4",
+    "to": "50.0.2",
+    "requirements_sha256": "14f7abb23f8fa599eec9103ef59f26ead5650b0075c7d93b1da5c2494473bcd2",
+    "requirements_bytes": 120,
+    "manifest_entries": 552,
+    "manifest_blob": "589a77c2115bf255600d130087fc8973ecf2b7e5",
+    "w8_parent_runner_blobs_unmodified": true,
+    "original_npm_lock_unmodified": true,
+    "original_historical_0207_unmodified": true
+  },
+  "gates": {
+    "G1": "PUBLIC_METADATA_REVIEW_DONE_OWNER_SECURITY_SIGNOFF_HOLD",
+    "G2": "SOURCE_CANDIDATE_PREPARED_AWAITING_FULL_GITHUB_TREE_VALIDATION_AND_OWNER_REVIEW",
+    "G3": "ORIGINAL_W8_AUDIT_AND_NEW_WINDOWS_PREPARE_NOT_RUN",
+    "G4": "NEW_C05_OSV_LICENSE_WHEEL_OPENSSL_OWNER_HOLD",
+    "G5": "C06_NOT_RUN",
+    "G6": "C07_NOT_RUN",
+    "G7": "C08_NOT_RUN",
+    "G8": "PRODUCT_DEV_MERGE_HOLD"
+  },
+  "security": {
+    "previous": "7_CANONICAL_GHSA_FOR_46_0_4_ON_ACTUAL_OWNER_WINDOWS_SCAN",
+    "candidate_osv": "NOT_YET_RERUN",
+    "compatibility": "ABI3_WIN_AMD64_PUBLISHED_PYTHON>=3.9",
+    "licenses": "Apache-2.0 OR BSD-3-Clause; legal distribution review HOLD",
+    "openssl_runtime": "BUNDLED_VERSION_MUST_BE_INSPECTED_FROM_EXACT_NEW_WHEEL",
+    "owner_approval": "PENDING",
+    "product_acceptance_delta_pp": 0
+  },
+  "source_diff": [
+    "product/ai-company-os-backend/requirements-history-signatures.txt",
+    "product/SOURCE_MANIFEST.json",
+    "tests/integration/w8_unified_u3.py"
+  ],
+  "preserved": [
+    "PR20",
+    "PR33",
+    "integration/product-dev",
+    "main",
+    "frozen npm lock",
+    "historical 55-source lock",
+    "other W8 parent runners",
+    "Windows 46.0.4 C04/C05 original evidence"
+  ],
+  "rollback": "Close draft PR or normal revert on isolated branch; no force push or canonical mutation",
+  "follow_up": "MI-01 source owner G1 approval; readback static tree/manifest, original W8 audit; then fresh Windows C04, new C05 OSV/license approval, gated C06–C08 and source owner integration"
+}

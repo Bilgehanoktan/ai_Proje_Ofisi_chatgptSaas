@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-MANIFEST = '27b4eb5816265d4e6e6d2458acb6220db7dd0c76'
+MANIFEST = '589a77c2115bf255600d130087fc8973ecf2b7e5'
 P24 = '0728ba08494bb8d67c7cec42fe27dd8606bdc7f3'
 P23 = '7a386554e51caed2db89ae94afc8215277f76c3c'
 U2 = 'tests/integration/run_unified_u2_session.py'

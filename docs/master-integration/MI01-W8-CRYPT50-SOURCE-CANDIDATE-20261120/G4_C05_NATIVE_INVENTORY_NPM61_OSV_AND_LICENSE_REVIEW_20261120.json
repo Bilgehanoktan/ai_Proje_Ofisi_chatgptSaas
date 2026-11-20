@@ -1,0 +1,134 @@
+{
+  "id": "MI01-W8-CRYPT50-G4-C05-NATIVE-INVENTORY-PUBLIC-SCA-LICENSE-20261120",
+  "date": "2026-11-20",
+  "evidence_class": "ACTUAL_USER_NATIVE_INVENTORY_STDOUT_PLUS_FROZEN_GITHUB_LOCK_REVIEW_PLUS_LIVE_OSV_PYPI_METADATA",
+  "candidate": {
+    "pr": 34,
+    "source": "review/mi01-w8-cryptography-50-0-2-20261120",
+    "source_commit_for_original_C04": "388c8a9ed539aba4e645267f00035f6f2ef0ff3e"
+  },
+  "native": {
+    "source_filename": "Yapıştırılan metin(20261120-195616).txt",
+    "os": "Windows PowerShell 5.1",
+    "python": "3.13.17",
+    "failed_attempt": {
+      "cause": "PowerShell 5.1 mangled multiline python -c string quoting; SyntaxError at RuntimeError(MISSING",
+      "status": "FAILED_BEFORE_INVENTORY"
+    },
+    "corrected_attempt": {
+      "method": "PowerShell writes UTF-8 .py file, invokes py -3.13 -B directly",
+      "status": "PASS",
+      "review_sha256": "7335e1dd2525aa5639d276344c617b68fc323387e584b8c1c2c8ef81272d20aa",
+      "python_lock_sha256": "PASS_AGAINST_REVIEW",
+      "npm_lock_sha256": "PASS_AGAINST_REVIEW",
+      "wheel_hashes": "28/28_PASS",
+      "cryptography_publisher_sha256": "PASS",
+      "npm_package_count": 61,
+      "stage": "E:\\AIOS\\W8\\CRYPT50_STAGE_20261120_224742",
+      "local_report": "E:\\AIOS\\W8\\CRYPT50_C05_INVENTORY_20261120_224742.json",
+      "json_report_uploaded": false
+    }
+  },
+  "frozen_npm_source": {
+    "path": "tests/integration/locks/mi01-frozen-npm/package-lock.json",
+    "git_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "source_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "lockfile_version": 3,
+    "package_count": 61,
+    "all_registry_urls": "registry.npmjs.org HTTPS",
+    "all_integrities": "sha512_or_sha256",
+    "bad_url_or_integrity_count": 0,
+    "license_counts": {
+      "MIT": 26,
+      "Apache-2.0": 16,
+      "LGPL-3.0-or-later": 10,
+      "Apache-2.0 AND LGPL-3.0-or-later AND MIT": 1,
+      "Apache-2.0 AND LGPL-3.0-or-later": 3,
+      "CC-BY-4.0": 1,
+      "ISC": 2,
+      "BSD-3-Clause": 1,
+      "0BSD": 1
+    },
+    "highlighted_licensing": [
+      "@img/sharp-libvips-* : LGPL-3.0-or-later platform binaries (10 lock packages)",
+      "@img/sharp-win32-x64 : Apache-2.0 AND LGPL-3.0-or-later (Windows-targeted variant)",
+      "@img/sharp-wasm32 : Apache-2.0 AND LGPL-3.0-or-later AND MIT",
+      "caniuse-lite 1.0.30001826 : CC-BY-4.0"
+    ],
+    "note": "Frozen lock contains platform-optional packages, not evidence all 61 were installed. Local inventory JSON not yet uploaded; actual stage npm SHA printed as PASS against native REVIEW only."
+  },
+  "live_osv": {
+    "api": "https://api.osv.dev/v1/querybatch",
+    "actual_http_code": 200,
+    "python_prior_sweep": {
+      "ecosystem": "PyPI",
+      "exact_versions": 28,
+      "returned_records": 28,
+      "matched_vulns": 0
+    },
+    "npm_this_sweep": {
+      "ecosystem": "npm",
+      "exact_packages": 61,
+      "returned_records": 61,
+      "matched_vulns": 0
+    },
+    "total_exact_version_queries": 89,
+    "total_recorded_vulns": 0,
+    "disclaimer": "No currently returned OSV records does not prove global absence of vulnerabilities nor full authorization."
+  },
+  "public_pypi_license_metadata": {
+    "api": "https://pypi.org/pypi/<name>/<version>/json",
+    "http_ok_versions": 28,
+    "licenses_with_SPDX_expression": 23,
+    "missing_expression": 5,
+    "missing_expression_names": [
+      "httpx==0.28.1",
+      "playwright==1.57.0",
+      "pyee==13.0.1",
+      "h11==0.16.0",
+      "certifi==2026.10.23"
+    ],
+    "classifier_fallback_present_for": [
+      "httpx==0.28.1",
+      "pyee==13.0.1",
+      "h11==0.16.0",
+      "certifi==2026.10.23"
+    ],
+    "license_unknown_according_to_public_release_metadata": [
+      "playwright==1.57.0"
+    ],
+    "unusual_expression_examples": [
+      "cryptography 50.0.2 Apache-2.0 OR BSD-3-Clause",
+      "greenlet 3.5.6 MIT AND PSF-2.0",
+      "cffi 2.1.1 MIT-0",
+      "certifi 2026.10.23 classifier MPL-2.0"
+    ],
+    "verdict": "PUBLIC_METADATA_ONLY_NOT_LOCAL_WHEEL_LICENSE_FILE_APPROVAL"
+  },
+  "g4_remaining": [
+    "Upload and inspect actual Windows C05 JSON; bind source wheel METADATA license and hashes to published source metadata",
+    "Assess copyright notices and redistribution obligations for LGPL-3.0-or-later platform libraries, CC-BY-4.0, MPL-2.0 and dual/composite licenses",
+    "Independently inspect bundled OpenSSL 4.0.3 evidence and PyPI/npm signed release/provenance as applicable",
+    "Owner security/legal approval for exact immutable REVIEW SHA only"
+  ],
+  "gates": {
+    "G3": "PASS_NATIVE_AUDIT_AND_C04",
+    "G4_C05": "PUBLIC_SECURITY_AND_INVENTORY_SUBCHECKS_PASS_OWNER_APPROVAL_HOLD",
+    "G5_C06": "NOT_RUN",
+    "G6_C07": "NOT_RUN",
+    "G7_C08": "NOT_RUN",
+    "G8": "MERGE_HOLD"
+  },
+  "progress": {
+    "W8_prev": "3/8",
+    "W8_now": "3/8",
+    "delta_pp": 0,
+    "weighted_dev": "HESAPLANAMADI"
+  },
+  "constraints": [
+    "No new runtime package installation",
+    "No C06 C07 C08 and no auto-approve with REVIEW SHA",
+    "No main, product-dev, auth or production grants changed"
+  ],
+  "next": "User uploads existing native C05 JSON; verify exact stage wheel metadata and run independent license/provenance/packaged OpenSSL owner decision; then original W8 C06-C08 only if C05 accepted"
+}

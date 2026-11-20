@@ -1,0 +1,69 @@
+{
+  "id": "MI01-W8-CRYPT50-G1-LIVE-PUBLIC-SCA-20261120",
+  "date": "2026-11-20",
+  "result_class": "ACTUAL_PUBLIC_NETWORK_QUERY_NOT_INSTALLED_PRODUCT_OR_INDEPENDENT_SECURITY_ACCEPTANCE",
+  "package": {
+    "name": "cryptography",
+    "version": "50.0.2",
+    "ecosystem": "PyPI"
+  },
+  "osv": {
+    "endpoint": "https://api.osv.dev/v1/query",
+    "method": "POST",
+    "body": {
+      "version": "50.0.2",
+      "package": {
+        "ecosystem": "PyPI",
+        "name": "cryptography"
+      }
+    },
+    "http_status": 200,
+    "actual_body": {},
+    "interpretation": "NO_MATCHES_RETURNED_FOR_THIS_EXACT_PACKAGE_VERSION_AT_QUERY_TIME",
+    "checked_entire_new_lock": false,
+    "zero_findings_is_not_owner_approval": true
+  },
+  "pypi": {
+    "endpoint": "https://pypi.org/pypi/cryptography/50.0.2/json",
+    "http_status": 200,
+    "wheel": {
+      "filename": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+      "size_bytes": 3824692,
+      "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+      "yanked": false,
+      "source": "PYPI_PUBLISHER_JSON_METADATA_NOT_DOWNLOADED_BINARY"
+    }
+  },
+  "source": {
+    "pr": 34,
+    "branch": "review/mi01-w8-cryptography-50-0-2-20261120",
+    "original_source_commit": "3523a0b595799480a6ef03fa57de6dc2903f796e",
+    "requirements_blob": "921818de26b481ed94603d8e596a384abf04bfa9",
+    "manifest_blob": "589a77c2115bf255600d130087fc8973ecf2b7e5"
+  },
+  "gates": {
+    "G1": "LIVE_EXACT_PACKAGE_PUBLIC_OSV_AND_PYPI_METADATA_PASS_ONLY_OWNER_APPROVAL_HOLD",
+    "G2": "SOURCE_CANDIDATE_PREPARED_OWNER_HOLD",
+    "G3": "NATIVE_WINDOWS_AUDIT_PREPARE_NOT_RUN",
+    "G4": "FULL_NEW_LOCK_OSV_LICENSE_WHEEL_BINARY_OPENSSL_INDEPENDENT_ACCEPTANCE_HOLD",
+    "G5": "C06_NOT_RUN",
+    "G6": "C07_NOT_RUN",
+    "G7": "C08_NOT_RUN",
+    "G8": "MERGE_HOLD"
+  },
+  "security_constraints": [
+    "OSV public query covers one package version, not newly resolved transitive Python/npm wheelhouse",
+    "PyPI JSON wheel digest is vendor publication claim, not a local file hash",
+    "No actual native Windows wheel downloaded or OpenSSL binary inspected",
+    "Independent owner source/security/legal signoff not given",
+    "No source change or canonical permission widening"
+  ],
+  "next": "Run exact native W8 audit and fresh C04; compare downloaded exact wheel sha256 against published hash, review OpenSSL/other dependencies/licensing and record C05 independent owner decision before install/test/browser",
+  "impact": {
+    "product_dev_changed": false,
+    "canonical_w8_before": "3/8",
+    "canonical_w8_after": "3/8",
+    "acceptance_delta_pp": 0,
+    "global_weighted_development": "HESAPLANAMADI"
+  }
+}
