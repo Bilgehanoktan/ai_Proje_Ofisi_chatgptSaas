@@ -52,3 +52,12 @@ Doğrudan işaretçiler: [PR #14 kapandı](https://github.com/Bilgehanoktan/ai_P
 - Önceki `product-dev` W8 adapter blob `391d98ba6128551a2fcb00e4e83a46faba160f2d`; güncel sahibin blobu farklı. Dolayısıyla bu `tests/` yolu **sahip incelemesi olmadan otomatik birleştirilemez**. Manifest pin düzeltmesi **W8 tam `prepare/install/test/smoke` koşumunun veya native browser kabulünün kanıtı değildir**.
 
 **Sonuç:** Paralel sohbetin **gerçekten ilerlemekte olduğu**, yalnız görev listesiyle değil yeni PR commit'i ve tek-dosya owner değişikliğiyle doğrulandı. PR #14 CLOSED_UNMERGED kalacak; PR #15 hâlâ tek kaynak/adapter review adayı. MI-01 W8, başka hat üzerinden yürütüldüğü için burada tekrar başlatılmayacak. W8 ve G2/G9/PG/IV güvenlik HOLD değişmedi. Önceki kabul ve geliştirme yüzdeleri Δ0. İlk kayda dokunmadan bu R2 ekiyle doğru devir sağlanır.
+
+
+## 7. R3 — Paralel MI-04 görev kanıtı; tekrar test kaldırıldı
+
+Başka geliştirme hattı aynı zaman penceresinde [MI-04 gerçek GitHub Actions #44695937454](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44695937454) koşumunu tamamladı. Jobs API geri okumasında **original Memory–Authority–T1 `0214` 10/10 PASS**, tek job SUCCESS; sabit ortak 553 source `a80932b6d5e99667889dfaa25b682feb267c6cba` ve Python 3.13.5. Tam commit SHA/manifest ve özgün 10 test blob doğrulama, izinli D0 kurulum ve orijinal test adımlarının her biri başarılı; PR #16 **CLOSED_UNMERGED** ve kanıt merkezi dosyalarda saklı.
+
+**Düzeltme:** Önceki R1/R2 bölümündeki `0214 10 NOT_RUN` ifadesi *önceki snapshot* idi; **artık 0214 özgün 10/10 D0 CI PASS**. Bu test burada tekrar koşulmadı; MI-04 sahibi ve kanıtı korunuyor. Korumalı PostgreSQL COMMIT ve restore antirollback, eski DB+local authority+old pin replay, gerçek issuer, bağımsız A güvenliği ve IV **HOLD** kalır; testin geçmesi gerçek güvenlik/ürün kabulü değildir.
+
+Sahiplik: PR #15 kaynak+W8 adapter değişimi ayrı diğer sohbetinde, 0214 MI-04 ayrı sohbetinde tamamlandı. Merkez yalnız mükerrer PR #14'ü kapatıp kanıt/sahiplik devrini güncelledi. Global ağırlıklı ilerleme **HESAPLANAMADI**, ürün kabulü değişmedi. Kullanılan kaynak ve test kapanış kanıtları R2 üzerine eklenmiştir; asıl tarihi kayıt değiştirilmedi.
