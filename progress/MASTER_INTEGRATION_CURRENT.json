@@ -1,5 +1,5 @@
 {
-  "revision": "MI-PROGRAM-LIVE-553-DASHBOARD-20261120-R1",
+  "revision": "MI05-OFFICE-ORIGINAL-REGRESSION-31-20261120-R2",
   "date": "2026-11-20",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -2744,9 +2744,9 @@
       "owner_role": "Premium UI",
       "source_ref": "integration/p10j24b-source-recovery",
       "observed_sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
-      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending. | Common projection read 12/12 and registry 13/13 actual replay; browser still pending. | MI05-OFFICE-WORKBENCH-DEADLINE-20261120: owner route original blob 749a2899, two isolated ignored-abort negatives reproduced 200≠503; minimal fail-closed patch and six targeted local Node tests 6/6 PASS, strict TS selected compile PASS; draft PR22 review only, 553 canonical unchanged. MI-05/Unified owner + W8 original browser approval HOLD. Do not double count original 12/12 projection or product acceptance.",
+      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending. | Common projection read 12/12 and registry 13/13 actual replay; browser still pending. | MI05-OFFICE-WORKBENCH-DEADLINE-20261120: owner route original blob 749a2899, two isolated ignored-abort negatives reproduced 200≠503; minimal fail-closed patch and six targeted local Node tests 6/6 PASS, strict TS selected compile PASS; draft PR22 review only, 553 canonical unchanged. MI-05/Unified owner + W8 original browser approval HOLD. Do not double count original 12/12 projection or product acceptance. | MI05 Office review PR22 followup: exact original frontend test Git blob bbad3467 on canonical 553 source; original 25/25 plus PR22 deadline 6/6 SELECTED local PASS, fixture 20 vectors semantic reconstruction, NOT byte identical; full W8/owner/native browser remain HOLD. GitHub docs ORIGINAL_OFFICE_REGRESSION_25.md and EVIDENCE.json.",
       "priority": "P1",
-      "status": "REVIEW_PR22_OFFICE_DEADLINE_LOCAL_6_PASS_OWNER_W8_HOLD",
+      "status": "REVIEW_PR22_OFFICE_31_SELECTED_PASS_OWNER_W8_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "branch head observed only; latest acceptance not reconciled",
       "mi01_dependency": {
@@ -9977,5 +9977,78 @@
     "acceptance_delta_pp": 0,
     "next": "Existing owner PR20 C04/C05/C06-C08; PR19 authority review and 562 gate; PR10 custody and protected PG/IV; PR22 native browser; no duplicated source work",
     "rollback": "Revert governance-only pointer and dashboard docs; maintain historical owner evidence and canonical product"
+  },
+  "mi05_office_original_regression_31_20261120": {
+    "revision": "MI05-OFFICE-ORIGINAL-REGRESSION-31-20261120-R2",
+    "date": "2026-11-20",
+    "source": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "review_pr": 22,
+    "review_ref": "review/mi05-office-workbench-deadline-20261120",
+    "original_test_blob": "bbad34677abeb0f2fada6b68ad4805b09ee077c7",
+    "original_fixture_blob": "29aa823d16c2b7975c322b41b99f9db4ec2b2c4e",
+    "fixture_boundary": "Semantic reconstruction of 20 original source cases, NOT byte-exact fixture",
+    "actual_local_original": {
+      "pass": 25,
+      "fail": 0,
+      "skip": 0
+    },
+    "actual_local_deadline": {
+      "pass": 6,
+      "fail": 0,
+      "skip": 0
+    },
+    "selected_total": {
+      "pass": 31,
+      "unique_executions": 31,
+      "fail": 0,
+      "skip": 0
+    },
+    "new_product_changes_this_round": 0,
+    "full_original_W8": "NOT_RUN",
+    "native_browser": "NOT_RUN",
+    "independent_security": "HOLD",
+    "owner_review": "HOLD",
+    "UI_before": [
+      21,
+      40
+    ],
+    "UI_after": [
+      21,
+      40
+    ],
+    "Core_before": [
+      12,
+      16
+    ],
+    "Core_after": [
+      12,
+      16
+    ],
+    "MVP_before": [
+      0,
+      11
+    ],
+    "MVP_after": [
+      0,
+      11
+    ],
+    "IV_before": [
+      0,
+      7
+    ],
+    "IV_after": [
+      0,
+      7
+    ],
+    "general_development_before": null,
+    "general_development_after": null,
+    "general_delta_pp": null,
+    "acceptance_delta_pp": 0,
+    "source_tree_unchanged": true,
+    "evidence_path": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/EVIDENCE.json",
+    "architecture_catalog_handover": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/ORIGINAL_OFFICE_REGRESSION_25.md",
+    "log_sha256": "25443dbf5f6437c5056d6e1c0cf5f78b043df01882f6ee02aba8050d228f6e63",
+    "next_owner": "MI-05/Unified owner review PR22 and run formal W8/browser after MI-01 C04-C05",
+    "rollback": "close/revert PR22; governance docs revert only, main/product-dev untouched"
   }
 }
