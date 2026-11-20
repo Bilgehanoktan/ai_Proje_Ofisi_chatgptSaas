@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "project": "AI Company OS",
+  "date": "2026-11-20",
+  "review_pr": 21,
+  "scope": "ACTUAL_ISOLATED_16_CASE_GITHUB_BLOB_EXACT_UNITTEST_NOT_FULL_ORIGINAL_W8",
+  "artifact": {
+    "name": "AI_Company_OS_PR21_GERCEK_TEST_KANITI_20261120.zip",
+    "sha256": "3da721ed5a0fa92d3fd0d730491f72cddb121686b645ca0b2f4e8531dacf3840",
+    "bytes": 5769,
+    "delivery": "Local user-download artifact; not published as a GitHub binary"
+  },
+  "checks": [
+    {
+      "path": "scripts/ci/mi_p0_w8_manifest_gate.py",
+      "sha256": "5a26a808f41a3b10d24524717911585bc520341fe5f6a999494c51250b06e9af",
+      "git_blob": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+      "bytes": 6533
+    },
+    {
+      "path": "scripts/ci/test_mi_p0_w8_manifest_gate.py",
+      "sha256": "4a152c874cbbd77ff0aec46bb4e1937a6c3c031b6eb63293c1031969196d06a5",
+      "git_blob": "ab16361322417d9ef23c245a83565fc899b9d424",
+      "bytes": 4949
+    },
+    {
+      "path": "evidence/ACTUAL_LOCAL_TEST_RUN.log",
+      "sha256": "45e7a4c942c215529b1c27ec5285b19a30f589d50864d3d8b2b37a6bf1c1e12c",
+      "git_blob": "9528e29ae90a305a49e61f642a6e2814c7cc5595",
+      "bytes": 2135
+    }
+  ],
+  "verify": {
+    "zip_integrity": "PASS",
+    "embedded_hashes": "3/3_SHA256_PASS",
+    "original_git_blob_compare": "2/2_PASS",
+    "actual_local_python_tests": "16/16_PASS_EXIT_0",
+    "original_w8": "NOT_RUN",
+    "product_acceptance_delta_pp": 0
+  },
+  "correction": "Previously reconstructed log is superseded; old 0.003s log Git blob a9d994b3a8b6dc7952a57bbd135bfd6d70436bce kept in Git history",
+  "security": "No production, CI, IAM grants, main, product-dev modifications",
+  "next": "Owner PR20 exact 553 W8 C04–C08 + PR19 owner G2/G9 source ratification"
+}
