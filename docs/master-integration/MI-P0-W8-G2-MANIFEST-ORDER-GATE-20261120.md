@@ -30,3 +30,25 @@
 - İlgili görevde **çakışma/bağımlılık kararı** iki PR sahibine iletildi; önceden raporlanmayan potansiyel entegrasyon STOP tespit edildi. Test/build/ürün kabul **Δ0**.
 - W8 operasyonel **3/8→3/8**, IAM/ORG geliştirme %42,5→%42,5 (kriterlerin aynı kapsamı), kanonik Core **12/16**, UI **21/40**, MVP **0/11**, IV **0/7**. Bağımsız A negatifleri **0/8**. Genel ağırlıklı geliştirme 15/35/20/20/10 **HESAPLANAMADI**, sabit genel denominator yok.
 - Sonraki merkez görevi yeni prototip değil, W8 bağımlılık sahibinin 553 özgün tam chain kanıtı ve G2 korumalı kaynak sahibi kararı sonrası **tek writer** transfer/readback.
+
+
+## R2 — Eşzamanlı PR #19 G2+G9 562 dosyaya ilerledi; aynı W8 kapısı devam ediyor
+
+**20 Kasım 2026 GitHub canlı yeniden okuma:** İlk bölümdeki PR19 `e241fb8...` / 556 dosya / 555 manifest verileri **tarihsel anlık durumdur**. Paralel MI-04 sahibi PR19'u şimdi `0a8907f177bb3e9b458aefb3ea3441b15537f542` sürümüne ilerletti. Bağımsız tam `?recursive=1` Git tree taraması **562 `product/` dosyası, 561 manifest kaydı, manifest Git blob `566b7210b6edb95a21b999dc1d881a12284d9011`** buldu; `truncated=false`. Kanonik `product-dev@254e018...` ile kıyas: **551 mevcut ürün blobu aynı**, ürün tarafında 9 yeni dosya, `intent_authority.py` 1 kaynak sürüm farkı ve manifest 1 değişiklik (toplam 11 dosya farkı).
+
+Yeni kaynakların 9 tam yolu:
+- `app/core/iam_session.py`
+- `app/core/transaction/core_org_session_review.py`
+- `app/core/transaction/identity_fence_review.py`
+- `app/core/transaction/org_membership_review.py`
+- `tests/test_core_org_session_sqlite_d5g7.py`
+- `tests/test_iam_authority_d5g2.py`
+- `tests/test_iam_identity_d5g4.py`
+- `tests/test_iam_org_d5g5.py`
+- `tests/test_iam_session_d5g1.py`
+
+Bu önceki G9 raporundaki 7 eksik yoldan (ve G2 eklerinden) doğan farkları **yalnız PR19 izole adayında** tamamlar; `product-dev` kanonik değildir. [CI #44700495037](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44700495037) gerçek GitHub Actions tek job SUCCESS; adımlarında **561 manifest doğrulaması + özgün G2 50 / ORG 15 suite ve özgün G9 G7 7 readback suite** PASS. Bu iki adım nominal 65+7=72 test yürütmesini kapsar; tarihi G2/G9/ORG metotları yeniden yazılmadı, önceki D0 sonuçları tekil kabul gibi tekrar sayılmadı. Restore replay güvenlik açığı ve P02 gerçek yetki kanıtı HOLD.
+
+**Önceki W8 çatışması çözülmedi, manifest SHA daha da değişti:** PR20 `w8_unified_u3.MANIFEST` halen `27b4eb5816265d4e6e6d2458acb6220db7dd0c76` / **552 manifest**, oysa yeni PR19 `566b7210b6edb95a21b999dc1d881a12284d9011` / **561 manifest**. Kaynak sürümleri doğrudan beraber çalıştırılırsa W8 `U3_MANIFEST_HOLD` verecek. G2/G9/MI-01/IV owner koordinasyonunu tamamlamadan **ne PR19 ne PR20 otomatik birleştirilebilir**. Önce mevcut 553 kanonik W8 C04-C08 kanıtı, sonra G2+G9 owner güvenlik kararıyla 562 transferi ve 562 sürüme ait W8'de yeniden SHA-locked tam zincir çalışması. Eski manifest yorumları **PR #19 ve PR #20** üzerinde R2 ile düzeltilir; tarihsel rapor güncelliğini bu R2 eki sağlar.
+
+İlerleme: MI-04 yeni **izole** source+sentetik owner D0 uyumluluğu kanıtı var; tam W8, gerçek issuer/PG/restore, IV/PROD değişmedi. Kanonik ürün kabulü ve global weighted gelişim **değişmedi/HESAPLANAMADI**.
