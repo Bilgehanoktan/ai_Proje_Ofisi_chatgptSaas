@@ -8479,5 +8479,60 @@
       "external": false
     },
     "rollback": "Normal revert of this documentation update, not of owner product source; owner PR15 source revert only with owner decision"
+  },
+  "mi_p0_g9_553_exact_source_preflight_20261120": {
+    "revision": "MI-P0-G9-553-EXACT-SOURCE-PREFLIGHT-20261120",
+    "phase": "ORIGINAL_G9_7_SOURCE_PIN_GAP_REAL_GITHUB_TREE_CHECK_NO_NEW_TEST",
+    "canonical_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "original_pin_git_blob": "cef9ce82a497522d2e4a9347b77453879e4790f3",
+    "historical_g9_runner": "candidates/D5-G9/run_exact_checkout.py",
+    "historical_test": "candidates/D5-G7/test_checkout.py",
+    "historical_manifest_entries": 403,
+    "canonical_manifest_entries": 552,
+    "total_pins": 56,
+    "historical_product_pins": 29,
+    "exact_match_product_blobs": 21,
+    "missing_product_paths": 7,
+    "conflicting_product_blobs": 1,
+    "conflict": {
+      "file": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "historical": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "canonical": "fa47acd32adb309896f762ec50e47bf26641adbb"
+    },
+    "original_g9_7": "NOT_RUN",
+    "original_g2_50": "NOT_RUN",
+    "original_memory_t1_0214": "10/10 PASS real D0 CI 44695937454 existing owner",
+    "actual_this_round_tests": 0,
+    "next": "G2/Authority + ORG/G9 owners decide 7 missing modules and one intent_authority collision; historical 403 original G9 7 fixture run separately on exact pinned source; DO NOT simply repin to 553. MI01 full W8 and protected PG/IV stay separate.",
+    "owner_review": "PENDING",
+    "target_repo_changes": 0,
+    "source_dev_status": "553_SOURCE_MERGED_PROVISIONAL_W8_AND_SECURITY_HOLD",
+    "report": "docs/master-integration/MI-P0-G9-553-SOURCE-CLOSURE-20261120.md",
+    "progress": {
+      "iam_org_prev": 42.5,
+      "iam_org_current": 42.5,
+      "delta_pp": 0,
+      "global_weighted_prev": null,
+      "global_weighted_current": null,
+      "core": [
+        12,
+        16
+      ],
+      "ui": [
+        21,
+        40
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "security": [
+        0,
+        7
+      ],
+      "product_acceptance_delta": 0
+    },
+    "permission_changes": false,
+    "rollback": "normal governance revert; no product code/test re-pin, no PR merge"
   }
 }
