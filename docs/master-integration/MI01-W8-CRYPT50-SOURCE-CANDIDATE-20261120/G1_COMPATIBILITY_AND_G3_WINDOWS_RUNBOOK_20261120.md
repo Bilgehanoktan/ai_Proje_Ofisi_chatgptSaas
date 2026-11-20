@@ -2,7 +2,7 @@
 Date: 2026-11-20. This is a source and public-metadata review, **NOT** a source-owner approval, native Windows test, C05 security clearance or permission to skip G4.
 
 ## Pinned source baseline
-- Isolated candidate: draft PR #34, branch `review/mi01-w8-cryptography-50-0-2-20261120`, initial exact source commit `3523a0b595799480a6ef03fa57de6dc2903f796e`; based on PR33 `9166afe299cd8f1ab9c52355ec21ec06c465d6ef`. Future documentation commits may change branch head, not the 553-file product source tree.
+- Isolated candidate: draft PR #34, branch `review/mi01-w8-cryptography-50-0-2-20261120`, initial exact **product source** commit `3523a0b595799480a6ef03fa57de6dc2903f796e` (documents on branch may advance head); based on PR33 `9166afe299cd8f1ab9c52355ec21ec06c465d6ef`. Future documentation commits may change branch head, not the 553-file product source tree.
 - Candidate source pin: `product/ai-company-os-backend/requirements-history-signatures.txt`, blob `921818de26b481ed94603d8e596a384abf04bfa9`, SHA256 `14f7abb23f8fa599eec9103ef59f26ead5650b0075c7d93b1da5c2494473bcd2`. Product manifest Git blob `589a77c2115bf255600d130087fc8973ecf2b7e5`; 552 entries. Original `tests/integration/w8_unified_u3.py` candidate blob `c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04`.
 - `integration/product-dev` baseline `254e0188998d0d245bd8ee4eb901aead02951a66`, unchanged until controlled owner decision. Original 46.0.4 evidence and PR20/PR33 remain authoritative for historical tests only.
 
@@ -33,7 +33,16 @@ if ($LASTEXITCODE -ne 0 -or $inside.Trim() -ne 'true') { throw 'NOT_A_GIT_WORKTR
 & git -C $repo fetch origin "refs/heads/$reviewBranch"
 if ($LASTEXITCODE -ne 0) { throw 'GITHUB_FETCH_HOLD' }
 $head = (& git -C $repo rev-parse FETCH_HEAD).Trim()
-if ($head -ne $sourcePin) { throw "EXACT_SOURCE_HEAD_CHANGED_HOLD: $head" }
+& git -C $repo merge-base --is-ancestor $sourcePin $head
+if ($LASTEXITCODE -ne 0) { throw "SOURCE_CANDIDATE_ANCESTRY_HOLD: $head" }
+$manifestBlob = (& git -C $repo rev-parse "${head}:product/SOURCE_MANIFEST.json").Trim()
+$requirementsBlob = (& git -C $repo rev-parse "${head}:product/ai-company-os-backend/requirements-history-signatures.txt").Trim()
+$adapterBlob = (& git -C $repo rev-parse "${head}:tests/integration/w8_unified_u3.py").Trim()
+if ($manifestBlob -ne '589a77c2115bf255600d130087fc8973ecf2b7e5' -or
+    $requirementsBlob -ne '921818de26b481ed94603d8e596a384abf04bfa9' -or
+    $adapterBlob -ne 'c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04') {
+    throw 'EXACT_SOURCE_BLOB_PIN_HOLD'
+}
 $stamp = Get-Date -Format 'yyyyMMdd_HHmmss'
 $src = "E:\AIOS\W8\CRYPT50_SRC_$stamp"
 $stage = "E:\AIOS\W8\CRYPT50_STAGE_$stamp"
