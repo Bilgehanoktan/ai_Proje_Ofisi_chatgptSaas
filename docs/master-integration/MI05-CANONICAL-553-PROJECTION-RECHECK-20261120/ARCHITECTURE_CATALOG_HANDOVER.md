@@ -19,3 +19,9 @@ Proje frontend'inin pinli TypeScript'i `5.9.3`; yereldeki `5.8.3` onun yerine ta
 **Sonraki görev (MI-05/06 sahibi):** MI-01'in mevcut W8 kilit/kurulum hazırlığı tamamlandığında aynı pinned 553 source üzerinde tam frontend+backend+native U3 browser/snapshot kontrolü. MI-02 strict PostgreSQL, GATE-02 bağımsız issuer/root/sink/IV ayrıca HOLD. Yeni prototip açma ve eski testleri yeniden yazma.
 
 **İlerleme:** Geliştirme %15/35/20/20/10 için onaylı global kriter paydaları yok → önceki/güncel **HESAPLANAMADI**. Core 12/16=%75, UI 21/40=%52,5, MVP 0/11=%0, IV 0/7; önceki/güncel aynı, delta **0**. Geri dönüş yalnız governance belge revert'idir; `product-dev`, `main` ve diğer sahip dalları korunur.
+
+## Ek — özgün ham test dosyaları GitHub'a aktarıldı
+
+- [TAP test logu](MI05_553_projection_read_tap.log) — **1624 byte**, Git blob `10e2ba5ef2ba7cbb40c3890419ad42aae10146a2`, SHA-256 `48983e93c970df32fd5b59aab3cfb4f0ad7635b2df14220fc6a8059180f1042d`.
+- [JSON özgün test raporu](MI05_553_projection_read_evidence.json) — **3648 byte**, Git blob `f6b9537c83df0bfa66f556e7f3af1917f38e6fee`, SHA-256 `37ad0f1deba8367af3866c2b7ec6d3779a85f146474666fdea408cba27e6a906`.
+- Ham dosyalar yerel kaynaklarıyla **Git blob düzeyinde birebir** geri doğrulandı. Bu aktarım yeni test koşumu veya kabul artışı değildir; önceden kanıtlanan **12/12 gerçek yerel D0 regresyonu** destekler. **Tam 553 frontend Next build, U3 browser, bağımsız PG/security kabulü HOLD**.
