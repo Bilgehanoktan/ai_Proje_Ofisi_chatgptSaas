@@ -1,7 +1,7 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI04-G2-OWNER-OVERLAY-ISOLATED-REVIEW-20261120",
-  "status": "ISOLATED_G2_OWNER_SOURCE_COMPATIBILITY_PROPOSAL_HOLD_NO_PRODUCT_DEV_INTEGRATION",
+  "doc_revision": "MI04-G2-G9-OWNER-EXACT-CROSS-SOURCE-HOLD-20261120",
+  "status": "ISOLATED_G2_G9_SELECTED_ORIGINAL_SOURCE_COMPATIBILITY_ONLY_NO_RELEASE",
   "parent_candidate_sha256": null,
   "parent_git_commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
   "source_git_commit": null,
@@ -2225,6 +2225,30 @@
     "ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
       "bytes": 11216,
       "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
+    },
+    "ai-company-os-backend/app/core/transaction/identity_fence_review.py": {
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347"
+    },
+    "ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331"
+    },
+    "ai-company-os-backend/app/core/transaction/org_membership_review.py": {
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
+    },
+    "ai-company-os-backend/tests/test_iam_org_d5g5.py": {
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
+    },
+    "ai-company-os-backend/app/core/transaction/core_org_session_review.py": {
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae"
+    },
+    "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py": {
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2249,5 +2273,17 @@
     "proposed_merged_manifest_entries": 555,
     "old_552_keys_unchanged_except_authority": true,
     "no_independent_authority_grant": true
+  },
+  "owner_variant_review": {
+    "base_product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "G2_owner": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "G9_owner": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "prior_staged_manifest_blob": "72944260c569ff35c4b7a4c2f7cd9d42e6db5486",
+    "original_G9_pins_verified": 56,
+    "transferred_G9_exact_missing_product_files": 6,
+    "transferred_G9_external_fixture_and_evidence_blobs": 20,
+    "authority_variant": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "source_owner_acceptance": "HOLD",
+    "protected_authority": "HOLD"
   }
 }
