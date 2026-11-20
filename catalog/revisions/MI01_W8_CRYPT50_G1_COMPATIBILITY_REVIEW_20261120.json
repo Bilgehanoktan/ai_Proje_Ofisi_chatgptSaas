@@ -142,5 +142,41 @@
     "next": "W8 stage frozen existing lock read-only metadata/hashes for all wheel + npm lock; independent owner C05 PASS; then gated original C06-C08, do not mutate canonical source",
     "status": "G3_PASS_G4_PARTIAL_HOLD",
     "evidence_link": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/review/mi01-w8-cryptography-50-0-2-20261120/docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/G3_WINDOWS_C04_AND_C05_OSV_EVIDENCE_20261120.json"
+  },
+  "native_C05_inventory_and_public_licensing_OSV_20261120": {
+    "actual_windows_report": "E:\\AIOS\\W8\\CRYPT50_C05_INVENTORY_20261120_224742.json",
+    "report_uploaded_for_independent_read": false,
+    "local_real_evidence": {
+      "REVIEW_SHA256": "PASS",
+      "python_lock_SHA256": "PASS",
+      "npm_lock_SHA256": "PASS",
+      "wheels": "28/28_SHA256_PASS",
+      "cryptography_wheel": "PUBLIC_PYPI_SHA256_MATCHED_PASS",
+      "npm_inventory": 61
+    },
+    "frozen_npm_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "frozen_npm_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "npm_locked_packages": 61,
+    "npm_https_registry_and_SRI": 61,
+    "npm_OSV_live": "HTTP_200_61_QUERIES_ZERO_MATCHES",
+    "PyPI_OSV_live": "HTTP_200_28_QUERIES_ZERO_MATCHES",
+    "public_pypi_license_releases": 28,
+    "pypi_release_license_expressions": 23,
+    "pypi_missing_expression": [
+      "httpx==0.28.1",
+      "playwright==1.57.0",
+      "pyee==13.0.1",
+      "h11==0.16.0",
+      "certifi==2026.10.23"
+    ],
+    "notable_npm_licenses": [
+      "@img/sharp-libvips LGPL-3.0-or-later",
+      "@img/sharp-win32-x64 LGPL-3.0-or-later AND Apache-2.0",
+      "caniuse-lite CC-BY-4.0"
+    ],
+    "C05_independent_security_legal_owner": "HOLD",
+    "C06_C07_C08": "NOT_RUN",
+    "evidence_path": "docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/G4_C05_NATIVE_INVENTORY_NPM61_OSV_AND_LICENSE_REVIEW_20261120.json",
+    "next": "Review real local JSON wheel METADATA against distribution obligations and published SHA; OpenSSL embedded binary verification, source/security/legal owner approval to exact REVIEW hash before C06"
   }
 }
