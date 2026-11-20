@@ -2883,7 +2883,12 @@
         "hash_provenance": "3/3_GIT_BLOBS_MATCH",
         "full_UI_browser": "NOT_RUN",
         "acceptance_change": "NONE",
-        "evidence": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/EVIDENCE.json"
+        "evidence": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/EVIDENCE.json",
+        "raw_original_evidence": {
+          "tap_blob": "10e2ba5ef2ba7cbb40c3890419ad42aae10146a2",
+          "json_blob": "f6b9537c83df0bfa66f556e7f3af1917f38e6fee",
+          "location": "governance MI05 source proof folder"
+        }
       }
     },
     {
@@ -9481,7 +9486,21 @@
     ],
     "acceptance_delta_pp": 0,
     "blocker": "MI-05 live same-session Office/browser and W8 owner reviewed full 553 dependency/fullchain HOLD; IAM/PG/IV remain independent",
-    "rollback": "revert only governance added records"
+    "rollback": "revert only governance added records",
+    "original_raw_artifacts": {
+      "tap": {
+        "path": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/MI05_553_projection_read_tap.log",
+        "git_blob": "10e2ba5ef2ba7cbb40c3890419ad42aae10146a2",
+        "sha256": "48983e93c970df32fd5b59aab3cfb4f0ad7635b2df14220fc6a8059180f1042d",
+        "bytes": 1624
+      },
+      "json": {
+        "path": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/MI05_553_projection_read_evidence.json",
+        "git_blob": "f6b9537c83df0bfa66f556e7f3af1917f38e6fee",
+        "sha256": "37ad0f1deba8367af3866c2b7ec6d3779a85f146474666fdea408cba27e6a906",
+        "bytes": 3648
+      }
+    }
   },
   "current_execution_snapshot_20261120": {
     "kind": "LIVE_GITHUB_READBACK_AND_EXISTING_EVIDENCE_RECONCILIATION_NO_NEW_TESTS",
@@ -9716,5 +9735,46 @@
     "old_revision": "MI-P0-CURRENT-553-OWNER-AND-PROGRESS-CLOSURE-20261120",
     "old_previous_revision": "MI01-W8-553-NPM-LICENSE-METADATA-20261120",
     "rollback": "Normal revert of the governance documentation commit plus this JSON delta, no product-dev/main/owner PR changes"
+  },
+  "mi05_original_raw_evidence_git_delivery_20261120": {
+    "revision": "MI05-553-ORIGINAL-LOCAL-RAW-ARTIFACT-GIT-20261120-R1",
+    "archive_paths": [
+      "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/MI05_553_projection_read_tap.log",
+      "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/MI05_553_projection_read_evidence.json"
+    ],
+    "status": "GITHUB_UPLOADED_ORIGINAL_BLOB_EXACT_MATCH",
+    "original_tests_previous": [
+      12,
+      12
+    ],
+    "original_tests_current": [
+      12,
+      12
+    ],
+    "new_tests": 0,
+    "product_code_change": 0,
+    "CI_change": 0,
+    "permissions_change": 0,
+    "global_weighted_previous": null,
+    "global_weighted_current": null,
+    "global_delta_pp": null,
+    "core_acceptance": [
+      12,
+      16
+    ],
+    "ui_acceptance": [
+      21,
+      40
+    ],
+    "mvp_acceptance": [
+      0,
+      11
+    ],
+    "iv_acceptance": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0,
+    "rollback": "Revert only governance documentation commits; no canonical source/runtime change."
   }
 }
