@@ -41,3 +41,24 @@ C05_Onay         : HOLD_OWNER
 These real user-console results **confirm** expected REVIEW fingerprint equality, **all 28 on-disk wheel SHA-256 values match the REVIEW wheel map**, and `npm_packages = 61` in REVIEW metadata. The combined `$ok` was **false** despite those facts. The original command also included separate checks of `python.lock` SHA256, staged npm `package-lock.json` SHA256, and `$wheels.Count -eq $data.wheels.PSObject.Properties.Count`, **but did not print those subcheck outputs**. Therefore at least one of these remaining subchecks must be diagnosed; do **not** infer or assert a specific file mismatch without the actual values. The candidate source PR33 and owner PR20 remain unchanged, and this negative composite result is **not evidence of a failed 28/28 wheel verification** nor evidence of independent C05 signoff. No install/test/browser permitted.
 
 Next diagnostic (read-only, zero package operations): print separately `REVIEW SHA match`, `python.lock expected and actual SHA`, `package-lock.json expected and actual SHA`, `wheel inventory count versus REVIEW declared property count`, `npm_packages`, and whether the original Win/Node/Python REVIEW metadata matches the actual stage. Request and preserve those readings with no full wheel redownload, lock regeneration or premature C05 clearance. The fingerprint remains bound to original PR33 checkout and `C04_stage_historical_20261120_213142`.
+
+## C05 local lock diagnostic R2 — all independent hash comparisons PASS
+H01 supplied the next actual native PowerShell 5.1 output, collected **read-only** from the same PR33 immutable prepared stage. The original composite report `Kaynak_Dogrulama: HOLD` remains a historical uncorrelated observation, not evidence of byte corruption. This follow-up decomposed the previously opaque checks and returned:
+
+```
+Review_SHA_PASS      : True
+Python_Lock_PASS     : True
+NPM_Lock_PASS        : True
+NPM_GitHub_Pin_PASS  : True
+Wheel_Sayi_PASS      : True
+Wheel_Dosya_Sayisi   : 28
+Wheel_Kayit_Sayisi   : 28
+Python_Lock_Gercek   : EA82BA6A6823A6E04B619F12D0B7F443C540DAAE9768F0CA349594058AFFC411
+Python_Lock_Beklenen : ea82ba6a6823a6e04b619f12d0b7f443c540daae9768f0ca349594058affc411
+NPM_Lock_Gercek      : 036FD649DAF67874646018C12DE91B6E27BB38ACC3A0AEF2989F7B67AAD06C88
+NPM_Lock_Beklenen    : 036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88
+```
+
+Together with the previous native output `Review_SHA256 = 92279e79b65ac14693779ec6d225d5b0a24c8f9522df495b491bab81c4bc3c80`, `Wheel_Hash_PASS = 28/28`, `npm_packages = 61`, this establishes that **all explicitly inspected local file/hash/count subcriteria now PASS**. The earlier composite HOLD's cause is **not proven**, since its per-subcheck outputs were not captured. Do not claim a corrected code bug, nor edit `REVIEW.json` to force a status.
+
+**Remaining C05 gate:** The actual `REVIEW.json`, `python.lock`, and on-disk wheel/license provenance (plus npm licensing, platform coverage, vulnerability check) have not yet been transferred for independent inspection and owner signoff. Owner PR20 + exact historical-source PR33 must still be reviewed. Use a **small read-only evidence ZIP** of original `REVIEW.json`, `python.lock`, npm lock and requirement texts, plus stage C04 user-run result; avoid packaging bulk wheel binaries, tokens, credential caches, `.git`, `node_modules`, secrets. Original W8 full `install/test/smoke` **NOT_RUN**. Operational W8 3/8→3/8, C05 HOLD_OWNER, product acceptance delta 0, weighted development HESAPLANAMADI.
