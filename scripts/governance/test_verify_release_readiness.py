@@ -14,7 +14,7 @@ spec.loader.exec_module(gate)
 SHA = "a" * 40
 MAN = "b" * 40
 TREE = "c" * 40
-PRLIST = [10, 19, 20, 21, 22, 23, 24]
+PRLIST = [10, 19, 20, 21, 22, 23, 24, 26]
 
 
 def samples():
@@ -93,7 +93,8 @@ class ReleaseGateTests(unittest.TestCase):
 
     def test_owner_pr_head_changed_fail(self):
         self.evidence["observed_prs"][1]["head_sha"] = "d"*40
-        self.invalid("stale head")
+        report = gate.audit(self.current,self.snapshot,self.evidence)
+        self.assertIn("dashboard_head_freshness", {q["gate"] for q in report["blockers"]})
 
     def test_owner_green_does_not_override_independent_fail(self):
         self.evidence["gates"]["office_stalled_transport"]["status"] = "PASS"
@@ -122,6 +123,83 @@ class ReleaseGateTests(unittest.TestCase):
     def test_duplicate_pr_rejected(self):
         self.evidence["observed_prs"].append(copy.deepcopy(self.evidence["observed_prs"][0]))
         self.invalid("duplicate PR")
+
+    def test_missing_pr26_rejected(self):
+        self.evidence["observed_prs"] = [p for p in self.evidence["observed_prs"] if p["number"] != 26]
+        self.invalid("missing live")
+
+    def test_partial_qa_no_false_positive(self):
+        self.evidence["test_counters"]["office_independent_stalled"] = [2,3]
+        self.evidence["gates"]["office_stalled_transport"]["status"] = "PASS"
+        self.invalid("independent FAIL")
+
+    def test_fresh_three_pass_requires_independent_receipt(self):
+        self.evidence["test_counters"]["office_independent_stalled"] = [3,3]
+        self.evidence["gates"]["office_stalled_transport"]["status"] = "PASS"
+        self.invalid("office_independent_receipt")
+
+    def test_owner_green_with_fresh_independent_receipt_is_scoped(self):
+        self.evidence["test_counters"]["office_independent_stalled"] = [3,3]
+        self.evidence["gates"]["office_stalled_transport"]["status"] = "PASS"
+        self.evidence["office_independent_receipt"] = {"tested_source_head": SHA,
+            "raw_log_sha256":"d"*64, "qa_pr_head": SHA}
+        result=gate.audit(self.current,self.snapshot,self.evidence)
+        self.assertFalse(result["release_approved"])
+        self.assertIn("w8_exact_prepare", {q["gate"] for q in result["blockers"]})
+
+    def test_office_receipt_cannot_use_other_qa_pr(self):
+        self.evidence["test_counters"]["office_independent_stalled"]=[3,3]
+        self.evidence["gates"]["office_stalled_transport"]["status"]="PASS"
+        self.evidence["office_independent_receipt"] = {"tested_source_head": SHA,
+            "raw_log_sha256":"d"*64, "qa_pr_head":"c"*40}
+        self.invalid("QA PR23 head mismatch")
+
+    def test_g7_seven_pass_requires_source_receipt(self):
+        self.evidence["test_counters"]["g7_current_org"]=[7,7]
+        self.evidence["gates"]["g2_g9_current_org_regression"]["status"]="PASS"
+        self.invalid("g7_current_org_receipt")
+
+    def test_g7_seven_pass_scoped_receipt_does_not_enable_release(self):
+        self.evidence["test_counters"]["g7_current_org"]=[7,7]
+        self.evidence["gates"]["g2_g9_current_org_regression"]["status"]="PASS"
+        self.evidence["g7_current_org_receipt"]={"tested_source_head":SHA,"raw_log_sha256":"e"*64}
+        result=gate.audit(self.current,self.snapshot,self.evidence)
+        self.assertFalse(result["release_approved"])
+        self.assertIn("authority_root_sink_custody", {q["gate"] for q in result["blockers"]})
+
+    def test_unaccepted_mvp_cannot_green(self):
+        self.evidence["gates"]["eleven_mvp_criteria"]["status"]="PASS"
+        self.invalid("MVP PASS")
+
+    def test_unaccepted_iv_cannot_green(self):
+        self.evidence["gates"]["independent_iv"]["status"]="PASS"
+        self.invalid("IV PASS")
+
+    def test_nonzero_mvp_requires_source_receipt(self):
+        self.evidence["mvp_acceptance"]=[1,11]
+        self.invalid("mvp_acceptance_receipt")
+
+    def test_qa_head_stale_but_green_must_fail(self):
+        self.evidence["observed_prs"][4]["head_sha"]="c"*40
+        self.evidence["test_counters"]["office_independent_stalled"]=[3,3]
+        self.evidence["gates"]["office_stalled_transport"]["status"]="PASS"
+        self.invalid("stale head")
+
+    def test_full_green_still_never_grants_release(self):
+        # This synthetic case demonstrates the gate's review-only authority ceiling.
+        self.snapshot["owner_prs"] = [{"number": n,"head_sha": SHA} for n in PRLIST]
+        self.evidence["test_counters"]["office_independent_stalled"]=[3,3]
+        self.evidence["office_independent_receipt"]={"tested_source_head":SHA,"raw_log_sha256":"e"*64,"qa_pr_head":SHA}
+        self.evidence["test_counters"]["g7_current_org"]=[7,7]
+        self.evidence["g7_current_org_receipt"]={"tested_source_head":SHA,"raw_log_sha256":"e"*64}
+        self.evidence["mvp_acceptance"]=[11,11]
+        self.evidence["mvp_acceptance_receipt"]={"tested_source_head":SHA,"raw_log_sha256":"e"*64}
+        self.evidence["independent_iv_acceptance"]=[7,7]
+        self.evidence["independent_iv_receipt"]={"tested_source_head":SHA,"raw_log_sha256":"e"*64}
+        for entry in self.evidence["gates"].values(): entry["status"]="PASS"
+        result=gate.audit(self.current,self.snapshot,self.evidence)
+        self.assertEqual(result["evidence_status"], "ELIGIBLE_FOR_SEPARATE_OWNER_REVIEW_ONLY")
+        self.assertFalse(result["release_approved"])
 
     def test_not_ready_returns_two(self):
         with tempfile.TemporaryDirectory() as d:
