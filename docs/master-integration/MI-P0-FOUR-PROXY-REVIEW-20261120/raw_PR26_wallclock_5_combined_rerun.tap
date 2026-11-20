@@ -1,0 +1,45 @@
+TAP version 13
+WALLCLOCK admission unresolved-fetch 2536ms status=503
+# Subtest: admission: actual AbortSignal.timeout(2500) bounds ignored fetch
+ok 1 - admission: actual AbortSignal.timeout(2500) bounds ignored fetch
+  ---
+  duration_ms: 2538.158381
+  type: 'test'
+  ...
+WALLCLOCK outbox unresolved-fetch 2503ms status=503
+# Subtest: outbox: actual AbortSignal.timeout(2500) bounds ignored fetch
+ok 2 - outbox: actual AbortSignal.timeout(2500) bounds ignored fetch
+  ---
+  duration_ms: 2503.413096
+  type: 'test'
+  ...
+WALLCLOCK task-budget unresolved-fetch 2502ms status=503
+# Subtest: task-budget: actual AbortSignal.timeout(2500) bounds ignored fetch
+ok 3 - task-budget: actual AbortSignal.timeout(2500) bounds ignored fetch
+  ---
+  duration_ms: 2502.32773
+  type: 'test'
+  ...
+WALLCLOCK admission stalled-reader 2504ms status=503
+WALLCLOCK admission stalled-cancel 1ms status=503
+# Subtest: admission: actual 2500ms timer bounds unread stalled stream
+ok 4 - admission: actual 2500ms timer bounds unread stalled stream
+  ---
+  duration_ms: 2504.021979
+  type: 'test'
+  ...
+# Subtest: admission: cancel cleanup never settling cannot hang 503
+ok 5 - admission: cancel cleanup never settling cannot hang 503
+  ---
+  duration_ms: 1.41924
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13610.164992
