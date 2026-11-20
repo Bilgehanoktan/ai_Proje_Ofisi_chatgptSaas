@@ -1,0 +1,61 @@
+{
+  "revision": "MI08-LINUX-SYMLINK-GUARD-NEGATIVE-20261120",
+  "date": "2026-11-20",
+  "source_ref": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "source_blob": "bc8cd58a5e58a9043d5bf188af11521b1641b9c7",
+  "source_path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+  "source_symbol": "_path(path)",
+  "original_test_blob": "02743dead991906a120e3f3ef627d0e60e8e09c3",
+  "original_test_symbol": "SnapshotStoreTests.test_bad_path_and_pin",
+  "test_type": "ACTUAL_LINUX_RUNTIME_EXTRACTED_EXACT_SOURCE_FUNCTION_NOT_FULL_ORIGINAL_TEST",
+  "script_name": "MI_MEMORY_SYMLINK_GUARD_LINUX_CHECK.py",
+  "script_sha256": "50309a5934888b2af738d24474af74b84efc0744b2bb26126a62efe09846575c",
+  "local_report_sha256": "cbad75bcb2df39873c0185ffb87c2ce5ed829e59a51d4f34c026b1cd6af13c76",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "tests": {
+    "real_symlink_file_rejected": "PASS",
+    "real_symlink_parent_rejected": "PASS",
+    "invalid_suffix_rejected": "PASS",
+    "clean_canonical_file_accepted": "PASS",
+    "clean_canonical_uncreated_path_accepted": "PASS",
+    "total": 5,
+    "passed": 5,
+    "skipped": 0,
+    "failed": 0,
+    "errors": 0
+  },
+  "verified_exact_source_snippet": true,
+  "boundaries": {
+    "full_snapshot_store_module_imported": false,
+    "whole_original_test_rerun": false,
+    "canonical_344_runner_pass": false,
+    "windows_skipped_case_rerun": false,
+    "independent_security_acceptance": false,
+    "changes_to_product": 0,
+    "changes_to_permissions": 0,
+    "changes_to_ci": 0
+  },
+  "reference": {
+    "previous_user_windows_mem184": "183_PASS_1_SKIP",
+    "previous_user_windows_others": "160_PASS",
+    "model_memory_cross_run_total": "343_PASS_1_SKIP",
+    "original_security_symlink_negative_on_Windows": "HOLD",
+    "new_linux_source_guard": "5_PASS_SCOPED"
+  },
+  "parallel": {
+    "MI01_W8": "OWNER_W8_C04_C08_HOLD",
+    "MI04_G2_G9": "EXISTING_57_ORIGINAL_TESTS_PASS_HISTORICAL_SOURCE_CI_44697437051_NOT_CANONICAL_INTEGRATION",
+    "PG_IV": "HOLD"
+  },
+  "progress": {
+    "MI08_before": 45,
+    "MI08_now": 45,
+    "MI08_delta_pp": 0,
+    "MI03_before": 42.5,
+    "MI03_now": 42.5,
+    "global_development": null,
+    "product_acceptance_delta_pp": 0
+  },
+  "next": "Preserve Linux symlink guard source-level negative as supplementary evidence only; owner may run full original test under authorized Unix environment on exact 553 source to close original SKIP; W8 full chain remains first owner execution gate."
+}
