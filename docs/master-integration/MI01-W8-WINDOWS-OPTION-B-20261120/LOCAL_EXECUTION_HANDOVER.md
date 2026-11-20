@@ -29,3 +29,20 @@ Do not execute `install`, `test` or `smoke` before C05 independent dependency/le
 
 ## Current evidence / catalog / rollback
 New design or product source: 0. New system API/DB/events/dependencies/CI: 0. Actual Windows execution: **NOT_RUN**. W8 operational previous/current **3/8 → 3/8**; C04 NOT_RUN, C05 HOLD, C06-C08 NOT_RUN; MVP 0/11, IV 0/7; global weighted 15/35/20/20/10 development **HESAPLANAMADI**. Next: user executes source preflight, submits `PRECHECK_RESULT.json`; MI-01 verifies exact pins and owner scope; optionally run C04 and seek C05. Recovery: delete only freshly created `W8_PR20_...` directory if failed, preserving repository branches and previous evidence. If script bytes differ from pinned SHA, do not execute pending review.
+
+## R2 — private GitHub archive 404 / authenticated Git for Windows transport
+The user executed the original Option B script on Windows PowerShell 5.1 and supplied two **actual** output receipts:
+1. Default C: preparation stopped before source download: `HOLD: less than 5 GiB free`.
+2. Re-executed with `-WorkRoot "E:\AIOS\W8"`; source ZIP URL `https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/archive/99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542.zip` returned HTTP **404**, `SOURCE_DIR:` blank, `STATUS: HOLD`. No W8 prepare executed.
+
+Connected GitHub `get_repo` verified this repository is **private** and PR20 head still exactly `99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542`. The original script's unauthenticated `Invoke-WebRequest` was wrong for a private archive; 404 is an authentication/transport issue, **not a missing commit or failing product test**.
+
+### Corrected Windows local script (conversation artifact R2)
+- Filename: `AIOS_W8_WINDOWS_STAGE1_PRIVATE_GIT_R2_20261120.ps1`
+- SHA256: `27f3600c83312b02cc22c4769b81b213787386f0217e49421167a5b46a283fe4`, 11,344 UTF-8 bytes.
+- Transport: uses pre-installed Git for Windows and its existing Windows credential manager for a **shallow, exact PR20 branch checkout**. It does not request, log, print or persist a GitHub personal access token. It verifies the exact immutable HEAD SHA, all 552 product path/size/SHA256 manifest entries, Git blobs of six W8 pins and frozen npm lock SHA256.
+- `-RunPrepare` is **not** the first step after an authentication error: first run source-only with `-WorkRoot "E:\AIOS\W8"`; review `PRECHECK_RESULT.json` and proceed only after source PASS. Running `-RunPrepare` then sets TEMP/TMP, Python and npm cache roots to the same isolated E: run directory, mitigating low C: storage; it runs **only C04**, never install/build/browser.
+- If Git is not installed, script stops `HOLD`; Git for Windows installation and Git Credential Manager browser sign-in are **user-controlled** actions. Do not expose any tokens in chat or log files.
+- Earlier script `AIOS_W8_WINDOWS_STAGE1_20261120.ps1` (SHA256 `9c16222b6673b41ba04cb2b2e120dd10eef5bf7fb0162bd423c3186c106ade06`) is historical/OBSOLETE for private repository checkout; preserve for audit, do not rerun.
+- This current environment validated script source/text SHA and GitHub metadata only, **NOT Windows runtime execution**. W8 C04 NOT_RUN/C05 HOLD/C06–08 NOT_RUN; W8 **3/8 → 3/8**, product acceptance unchanged; weighted global development HESAPLANAMADI.
+- Recovery: each run creates a unique directory. Previous HOLD receipts are retained. Manual deletion only of individually identified failed run folder after user inspection; do not delete existing worktrees or alter Git credentials.
