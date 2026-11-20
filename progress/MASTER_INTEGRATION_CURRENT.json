@@ -12894,8 +12894,8 @@
     "dev_diagnostic_runner": {
       "file": "AIOS_W8_C06_C08_LOCAL_DEV_20261120.ps1",
       "user_attachment_available_in_conversation": true,
-      "sha256": "f13fc30888066792128654a1b815d4c78e08eacdb4ad680259a54033925000ff",
-      "bytes": 10257,
+      "sha256": "8ec97be03d6c9a219a496e64360f0e8a371f87e47677001490b8a3b8afa12a13",
+      "bytes": 10507,
       "mode": "USER_EXPLICIT_WINDOWS_MANUAL_EXECUTION_OFFLINE_LOCAL_SYNTHETIC_DEV_ONLY",
       "controls": [
         "exact Git head+manifest+dependency+adapter pin",
@@ -12904,7 +12904,8 @@
         "stop on any nonzero exit, fail closed, no stage cleanup",
         "only 127.0.0.1 local test, user-supplied Chrome/Chromium if installed, no browser auto download",
         "log and status JSON outside stage, no auto GitHub commit"
-      ]
+      ],
+      "static_fixes": "PowerShell 5.1 explicit PSCustomObject lock tuples + explicit throw after saved HOLD JSON"
     },
     "actual_execution_done_here": false,
     "actual_native_C06": "NOT_RUN",
