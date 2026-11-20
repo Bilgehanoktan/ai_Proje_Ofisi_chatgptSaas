@@ -44,18 +44,21 @@ def must_equal(file: Path, expected: str, algorithm="git") -> None:
 
 
 class Session:
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, w8_reuse: Path | None = None):
         self.root = root.expanduser().resolve()
         self.root.mkdir(parents=True, exist_ok=True)
         self.logs = self.root / "logs"
         self.logs.mkdir(exist_ok=True)
-        self.w8_dir = self.root / "checkout_w8_owner_553"
+        self.w8_dir = w8_reuse.expanduser().resolve() if w8_reuse else self.root / "checkout_w8_owner_553"
+        self.w8_reused = w8_reuse is not None
         self.g7_dir = self.root / "checkout_g7_original_562"
         self.w8_stage = self.root / "stage_w8_553"
         self.status = {
             "date": datetime.now(timezone.utc).isoformat(),
             "classification": "LOCAL_DISPOSABLE_TESTS_NOT_RELEASE_OR_SECURITY_ACCEPTANCE",
             "canonical_sha": CANON,
+            "w8_existing_source_readonly": self.w8_reused,
+            "w8_source_path": str(self.w8_dir),
             "W8_AUDIT": "NOT_RUN", "W8_C04": "NOT_RUN", "W8_C05": "HOLD_OWNER_REVIEW",
             "W8_C06": "NOT_RUN", "W8_C07": "NOT_RUN", "W8_C08": "NOT_RUN",
             "G7_CURRENT_ORG_7": "NOT_RUN", "POSTGRES_LOOPBACK": "NOT_RUN",
@@ -64,13 +67,23 @@ class Session:
             "logs": [], "errors": [],
         }
 
-    def run(self, name: str, args: list[str], cwd: Path | None = None, timeout=None) -> str:
+    def run(self, name: str, args: list[str], cwd: Path | None = None, timeout=None, stage_env=False) -> str:
         args = [str(x) for x in args]
         p_out = self.logs / (name + ".stdout.log")
         p_err = self.logs / (name + ".stderr.log")
         print(f"RUN {name}: " + " ".join(args[:3]), flush=True)
+        env = None
+        if stage_env:
+            env = os.environ.copy()
+            private = self.root / "isolated_tool_caches"
+            for subdir in ("temp", "localappdata", "appdata", "home"):
+                (private / subdir).mkdir(parents=True, exist_ok=True)
+            env.update(TEMP=str(private / "temp"), TMP=str(private / "temp"),
+                       TMPDIR=str(private / "temp"), LOCALAPPDATA=str(private / "localappdata"),
+                       APPDATA=str(private / "appdata"), HOME=str(private / "home"),
+                       XDG_CACHE_HOME=str(private / "localappdata"))
         with p_out.open("wb") as out, p_err.open("wb") as err:
-            completed = subprocess.run(args, cwd=cwd, stdout=out, stderr=err, timeout=timeout, check=False)
+            completed = subprocess.run(args, cwd=cwd, stdout=out, stderr=err, timeout=timeout, check=False, env=env)
         self.status["logs"].append({"name": name, "stdout": str(p_out), "stderr": str(p_err), "exit": completed.returncode})
         for path in (p_out, p_err):
             if path.stat().st_size:
@@ -97,6 +110,18 @@ class Session:
             raise RuntimeError(f"DIRTY_CHECKOUT_HOLD: {target}: {dirty[:200]}")
         print(f"{name} exact clean SHA OK: {head}")
 
+    def verify_existing_checkout(self, target: Path, commit: str, name: str):
+        """Zero source mutation: reuse source already checked by another Windows owner."""
+        if not target.is_dir() or target.is_symlink():
+            raise RuntimeError(f"EXISTING_SOURCE_PATH_INVALID_HOLD: {target}")
+        head = self.run(name + "_read_head", ["git", "-C", str(target), "rev-parse", "HEAD"]).strip()
+        if head != commit:
+            raise RuntimeError(f"EXISTING_HEAD_MISMATCH_HOLD: {head}, expected {commit}")
+        dirty = self.run(name + "_read_status", ["git", "-C", str(target), "status", "--porcelain", "--untracked-files=all"])
+        if dirty.strip():
+            raise RuntimeError(f"EXISTING_CHECKOUT_DIRTY_HOLD: {target}")
+        print(f"{name} reused exact clean source without fetching/checking out: {head}")
+
     def g7(self):
         self.checkout(self.g7_dir, G7, "G7")
         runner = Path(__file__).with_name("verify_current_org_g7.py")
@@ -108,7 +133,10 @@ class Session:
         self.status["G7_CURRENT_ORG_7"] = "PASS_7_OF_7_SYNTHETIC_D0_CURRENT_PRODUCT_ORG"
 
     def w8_audit(self) -> Path:
-        self.checkout(self.w8_dir, W8, "W8")
+        if self.w8_reused:
+            self.verify_existing_checkout(self.w8_dir, W8, "W8")
+        else:
+            self.checkout(self.w8_dir, W8, "W8")
         for name, expected in PIN.items():
             must_equal(self.w8_dir / name, expected)
         runner = self.w8_dir / "tests/integration/w8_unified_u3.py"
@@ -119,7 +147,11 @@ class Session:
     def w8_prepare(self, runner: Path):
         if self.w8_stage.exists():
             raise RuntimeError(f"C04_STAGE_ALREADY_EXISTS_HOLD: {self.w8_stage}; do not overwrite prior data")
-        self.run("W8_C04_PREPARE", [sys.executable, "-B", str(runner), "prepare", "--repo", str(self.w8_dir), "--stage", str(self.w8_stage)])
+        disk = shutil.disk_usage(self.root)
+        if disk.free < 5 * 1024 ** 3:
+            raise RuntimeError(f"W8_C04_LOW_FREE_SPACE_HOLD: {disk.free} bytes, require at least 5 GiB")
+        self.status["w8_private_cache_root"] = str(self.root / "isolated_tool_caches")
+        self.run("W8_C04_PREPARE", [sys.executable, "-B", str(runner), "prepare", "--repo", str(self.w8_dir), "--stage", str(self.w8_stage)], stage_env=True)
         review = self.w8_stage / "locks/REVIEW.json"
         if not review.is_file():
             raise RuntimeError("W8_REVIEW_JSON_MISSING_HOLD")
@@ -135,13 +167,13 @@ class Session:
             raise RuntimeError("C05_OWNER_APPROVED_REVIEW_SHA256_REQUIRED_NO_SELF_APPROVAL")
         must_equal(self.w8_stage / "locks/REVIEW.json", approved.lower(), "sha256")
         self.status["W8_C05"] = "REVIEW_HASH_MATCH_ONLY_OWNER_APPROVAL_MUST_BE_INDEPENDENT"
-        self.run("W8_C06_INSTALL", [sys.executable, "-B", str(runner), "install", "--stage", str(self.w8_stage), "--approve", approved])
+        self.run("W8_C06_INSTALL", [sys.executable, "-B", str(runner), "install", "--stage", str(self.w8_stage), "--approve", approved], stage_env=True)
         self.status["W8_C06"] = "PASS_LOCAL_ONLY"
-        self.run("W8_C07_TEST_BUILD", [sys.executable, "-B", str(runner), "test", "--stage", str(self.w8_stage), "--approve", approved])
+        self.run("W8_C07_TEST_BUILD", [sys.executable, "-B", str(runner), "test", "--stage", str(self.w8_stage), "--approve", approved], stage_env=True)
         self.status["W8_C07"] = "PASS_LOCAL_ONLY"
         if not chromium.is_file():
             raise RuntimeError("REVIEWED_CHROMIUM_EXECUTABLE_MISSING_HOLD")
-        self.run("W8_C08_CHROMIUM", [sys.executable, "-B", str(runner), "smoke", "--stage", str(self.w8_stage), "--approve", approved, "--chromium", str(chromium)])
+        self.run("W8_C08_CHROMIUM", [sys.executable, "-B", str(runner), "smoke", "--stage", str(self.w8_stage), "--approve", approved, "--chromium", str(chromium)], stage_env=True)
         self.status["W8_C08"] = "PASS_LOCAL_ONLY_PENDING_OWNER_ACCEPTANCE"
 
     def pg_probe(self):
@@ -167,10 +199,11 @@ def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--mode", choices=("allsafe", "g7", "w8audit", "w8prepare", "w8full", "pgprobe"), default="allsafe")
     p.add_argument("--root", type=Path, default=Path.home() / "AIOS_VERIFY_20261120")
+    p.add_argument("--w8-reuse", type=Path, default=None, help="Existing immutable/clean PR20 source checkout; read-only, never fetch/checkout")
     p.add_argument("--approved-review-sha", default="", help="C05 owner-reviewed SHA256; do not auto-approve")
     p.add_argument("--chromium", type=Path, default=Path("REVIEWED_CHROME_PATH_REQUIRED"))
     a = p.parse_args(argv)
-    s = Session(a.root)
+    s = Session(a.root, w8_reuse=a.w8_reuse)
     issues = []
     def attempt(label, fn):
         try:
