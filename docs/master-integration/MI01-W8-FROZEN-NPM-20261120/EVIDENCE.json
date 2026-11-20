@@ -1,0 +1,128 @@
+{
+  "revision": "MI01-W8-553-FROZEN-NPM-LOCK-CANDIDATE-20261120-R2",
+  "type": "ISOLATED_W8_PREPARE_ADAPTER_SOURCE_CANDIDATE",
+  "date": "2026-11-20",
+  "baseline": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369"
+  },
+  "source_lock": {
+    "from": "integration/mi-common-source-review-01",
+    "original_path": "docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json",
+    "carried_path": "tests/integration/locks/mi01-frozen-npm/package-lock.json",
+    "git_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "bytes": 33618,
+    "entries": 61,
+    "version": 3,
+    "frontend_package_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3"
+  },
+  "changes": {
+    "tests/integration/w8_unified_u3.py": {
+      "old": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+      "new": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+      "intent": "load SHA-pinned immutable npm prepare adapter, preserve W8 parent pins"
+    },
+    "tests/integration/w8_frozen_npm.py": {
+      "git_blob": "257ba8f110508ff30ad03212111cfe8e2299d801",
+      "intent": "exact npm lock verification and one-shot no-resolve stage copy"
+    },
+    "tests/integration/locks/mi01-frozen-npm/package-lock.json": {
+      "git_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "intent": "byte-exact preexisting dependency lock"
+    },
+    "tests/integration/test_w8_frozen_npm.py": {
+      "git_blob": "efa2e0aa0d6dcdcead9c090248c2f0e659e0c148",
+      "intent": "offline positive/negative helper checks"
+    },
+    "tests/integration/test_w8_frozen_npm_integration.py": {
+      "git_blob": "7a3baa89862e69e057285ff2f37b0220e71628e2",
+      "intent": "4 additional integration-shaped synthetic prepare/lock failure and cleanup test methods, exact original helper bytes used"
+    },
+    "docs/master-integration/MI01-W8-FROZEN-NPM-20261120/TEST_RESULT_ACTUAL_19.txt": {
+      "git_blob": "1df01ccd1a719c190d0ef550bacc9e6b86e181c6",
+      "intent": "actual 19/19 Python unittest stdout/stderr, Git blob and SHA-256 retained"
+    }
+  },
+  "local_execution": {
+    "host": "isolated container",
+    "python": "3.13.5",
+    "tests_total": 19,
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0,
+    "coverage": "new helper and frozen npm interception mechanics, synthetic fixture",
+    "new_immutable_original_w8_tests": 0,
+    "new_actual_w8_prepare": 0,
+    "tests_previous": 15,
+    "delta_tests": 4,
+    "command": "python -m unittest -v test_w8_frozen_npm.py test_w8_frozen_npm_integration.py",
+    "run_environment": "current-turn isolated local Linux Python, synthetic fixtures, no network",
+    "committed_source_hashes": {
+      "helper_git_blob": "257ba8f110508ff30ad03212111cfe8e2299d801",
+      "original_test_git_blob": "efa2e0aa0d6dcdcead9c090248c2f0e659e0c148",
+      "new_integration_test_git_blob": "7a3baa89862e69e057285ff2f37b0220e71628e2"
+    },
+    "actual_local_log": {
+      "path": "docs/master-integration/MI01-W8-FROZEN-NPM-20261120/TEST_RESULT_ACTUAL_19.txt",
+      "git_blob": "1df01ccd1a719c190d0ef550bacc9e6b86e181c6",
+      "sha256": "985f6cbed8fa47ac3edb90b40ca142bc52150767423793cc624f0d7703e4086e"
+    }
+  },
+  "source_static": {
+    "git_api_real_lock_parsed": true,
+    "root_package_equal": true,
+    "root_dev_equal": true,
+    "override_postcss": "8.5.32",
+    "override_sharp": "0.35.5",
+    "package_entries": 61,
+    "registry_and_integrity_entries": 61,
+    "noncanonical_registry_entries": 0
+  },
+  "gates": {
+    "C01_C03": "HISTORICAL_ALREADY_PASS_NOT_CREDITED",
+    "C04": "NOT_RUN_REQUIRES_NETWORK_WHEELHOUSE",
+    "C05": "HOLD_OWNER",
+    "C06": "NOT_RUN",
+    "C07": "NOT_RUN",
+    "C08": "NOT_RUN"
+  },
+  "safety": {
+    "no_product_changes": true,
+    "no_workflow_changes": true,
+    "no_ci_permission": true,
+    "no_automatic_merge": true,
+    "no_security_activation": true,
+    "no_external_provider": true,
+    "no_production": true,
+    "no_main_changes": true
+  },
+  "progress": {
+    "w8_operational_previous": [
+      3,
+      8
+    ],
+    "w8_operational_current": [
+      3,
+      8
+    ],
+    "development_previous_global": null,
+    "development_current_global": null,
+    "development_delta_pp": null,
+    "mvp_previous": [
+      0,
+      11
+    ],
+    "mvp_current": [
+      0,
+      11
+    ],
+    "acceptance_delta_pp": 0
+  },
+  "review": "MI-01/Unified owner review pending. These 19/19 are actual local synthetic tests, NOT original 553 W8 fullchain; do not merge without authorized owner review.",
+  "rollback": "close draft or normal revert only feature review branch, do not rewrite history",
+  "next": "Owner replays original W8 full 553 source with C04 wheelhouse generated in networked authorized environment, verifies C05 supply chain, then original C06–C08; preserve A architecture security HOLD"
+}
