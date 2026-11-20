@@ -1,5 +1,5 @@
 {
-  "revision": "MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120",
+  "revision": "MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120-R2",
   "type": "CENTRAL_COORDINATION_GIT_READBACK_NO_RUNTIME_TEST",
   "source": {
     "canonical_product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -16,14 +16,16 @@
     },
     "preferred_narrow": {
       "number": 15,
-      "state": "OPEN_DRAFT_HOLD",
+      "state": "OPEN_DRAFT_HOLD_ACTIVE_OWNER_W8_ADAPTER",
       "source_owner": "existing parallel integration owner",
-      "git_commits": 1,
+      "git_commits": 2,
       "git_mergeable_only": true,
       "product_changes": 63,
-      "non_product_changes": 0,
+      "non_product_changes": 1,
       "owner_reviews": 0,
-      "not_promoted": true
+      "not_promoted": true,
+      "previous_first_head": "f0c583ebf6e382f0bc7f0a2a253e99968938b384",
+      "current_head": "98808d280dda13088a2561ecc7323f4a910c380d"
     }
   },
   "git_trees": {
@@ -37,6 +39,14 @@
       "handover": "71ecad364db0ebc045faf9f78ff273b791447071",
       "progress": "738e0fc7738045d248b944cf283e014738bd5f5a",
       "tests": "71471d47ade475e36e0d41533e5d5ce44bab56eb"
+    },
+    "latest_pr15": {
+      "commit": "98808d280dda13088a2561ecc7323f4a910c380d",
+      "product": "f4cdcf68115917ab69ba6441414539fe32a59369",
+      "docs": "407019d033a770c2d486edafeb50511ca1b2d5c8",
+      "handover": "71ecad364db0ebc045faf9f78ff273b791447071",
+      "tests": "8a45a33da7873dda4a0f31db475974afba6f2096",
+      "tests_tree_equal_base": false
     }
   },
   "source_integrity": {
@@ -57,7 +67,15 @@
     "new_ci_authority": "NONE",
     "duplicate_development_performed": false,
     "tool_local_checkout": "GITHUB_ARCHIVE_DNS_UNAVAILABLE",
-    "head": "f0c583ebf6e382f0bc7f0a2a253e99968938b384"
+    "head": "f0c583ebf6e382f0bc7f0a2a253e99968938b384",
+    "active_owner_pr15_adapter_commit": "98808d280dda13088a2561ecc7323f4a910c380d",
+    "adapter_path": "tests/integration/w8_unified_u3.py",
+    "original_owner_adapter_blob": "e7335eac1e4358ceef001a494f45f56ba9544fc0",
+    "latest_adapter_blob": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+    "one_line_manifest_only_change": true,
+    "new_manifest_git_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "runner_after_change": "NOT_RUN",
+    "concurrent_other_chat_activity": "CONFIRMED_LIVE_GITHUB_NEW_COMMIT_NOT_BACKGROUND_EXECUTION_CLAIM"
   },
   "open_gates": [
     "W8_ORIGINAL_LOCK_FINGERPRINT_FULL_CHAIN",
@@ -103,6 +121,6 @@
     }
   },
   "handover": "docs/master-integration/MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120.md",
-  "next": "MI-01 existing owner W8 553 exact immutable dependency and full prepare/install/test/smoke, then PR15 owner/security/IV review. No duplicate PR or unpermitted merge.",
+  "next": "PR15 active MI01 W8 owner adapter now updated in second commit. Await original full 553 W8 prepare/install/test/smoke and native browser + owner G2/G9/PG/IV. No duplicate source changes.",
   "rollback": "Normal governance revert only; original PR14 already closed unmerged, PR15 open and source unaffected"
 }
