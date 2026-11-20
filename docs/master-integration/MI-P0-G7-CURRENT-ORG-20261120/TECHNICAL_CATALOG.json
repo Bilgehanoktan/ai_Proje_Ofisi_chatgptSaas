@@ -1,0 +1,83 @@
+{
+  "revision": "CATALOG_MI_P0_G7_CURRENT_ORG_20261120",
+  "date": "2026-11-20",
+  "architecture_parent": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+  "scope": "isolated_review_only_no_product_source_changed",
+  "files": [
+    {
+      "path": "scripts/ci/verify_current_org_g7.py",
+      "kind": "test-runner",
+      "symbols": [
+        "git_blob",
+        "safe_file",
+        "pinned_bytes",
+        "check_commit",
+        "verify_manifest",
+        "verify_original_pins",
+        "product_import_first",
+        "assert_fixture_uses_product",
+        "run_g7",
+        "main",
+        "GateError"
+      ],
+      "dependency": [
+        "python>=3.9 stdlib",
+        "external immutable checkout with original declared dependencies"
+      ],
+      "API": "CLI --root --json-out",
+      "DB": "no new DB; tests use disposable SQLite from original fixture",
+      "event": "none",
+      "security": "failclosed, not new authority"
+    },
+    {
+      "path": "scripts/ci/test_verify_current_org_g7.py",
+      "kind": "test-fixture",
+      "symbols": [
+        "IsolatedRunnerGuards",
+        "16 test_*"
+      ],
+      "dependency": [
+        "python>=3.9 unittest",
+        "git executable for 2 tests"
+      ],
+      "API": "python -B -m unittest discover",
+      "DB": "none",
+      "event": "none",
+      "security": "source/import gate behavior"
+    }
+  ],
+  "owner_originals": [
+    {
+      "path": "candidates/D5-G7/test_checkout.py",
+      "git_blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+      "status": "unchanged; target 7 test methods"
+    },
+    {
+      "path": "candidates/ORG-05R3/durable_ops.py",
+      "git_blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+      "status": "historical fixture retained"
+    },
+    {
+      "path": "product/ai-company-os-backend/durable_ops.py",
+      "git_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "status": "target current ORG class, not edited"
+    }
+  ],
+  "tests": {
+    "actual_helper_unittest": [
+      16,
+      16
+    ],
+    "original_G7_current_ORG": [
+      0,
+      7
+    ],
+    "original_G7_historical_CI": [
+      7,
+      7
+    ],
+    "CI_new": 0,
+    "product_acceptance_pp": 0
+  },
+  "rollback": "close review PR or normal revert scoped new paths"
+}
