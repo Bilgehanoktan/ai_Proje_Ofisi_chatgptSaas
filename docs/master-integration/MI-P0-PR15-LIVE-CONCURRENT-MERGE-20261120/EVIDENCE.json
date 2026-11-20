@@ -1,0 +1,67 @@
+{
+  "revision": "MI-P0-PR15-MERGED-CONCURRENT-OWNER-20261120",
+  "date": "2026-11-20",
+  "type": "LIVE_OWNER_PARALLEL_WORK_RECONCILIATION",
+  "verified_pr15": "MERGED",
+  "source_merge_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+  "parent": [
+    "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "98808d280dda13088a2561ecc7323f4a910c380d"
+  ],
+  "product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+  "candidate_same_product_tree": true,
+  "product_files": 553,
+  "manifest_entries": 552,
+  "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "owner_w8_patch": {
+    "commit": "98808d280dda13088a2561ecc7323f4a910c380d",
+    "path": "tests/integration/w8_unified_u3.py",
+    "git_blob": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+    "pinned_manifest": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "cross_chat": {
+    "mi01_owner_actively_worked": true,
+    "pr15_merged": true,
+    "original_w8_full_build_execution": false,
+    "review_branch_created_in_this_chat": "review/mi01-w8-553-manifest-bridge-20261120",
+    "review_branch_status": "SUPERSEDED_NOT_FOR_MERGE",
+    "review_branch_synthetic_tests": [
+      6,
+      6
+    ]
+  },
+  "CI": {
+    "original_MI04_0214_D0_run": 44695937454,
+    "result": "PASS_10_OF_10_OTHER_OWNER_NOT_REEXECUTED",
+    "MI01_full_W8_CI": "NOT_RUN"
+  },
+  "p0": {
+    "MI01_operational_previous": [
+      3,
+      8
+    ],
+    "MI01_operational_current": [
+      3,
+      8
+    ],
+    "weighted_MI01": null,
+    "weighted_project": null,
+    "canonical_product_acceptance_delta_pp": 0
+  },
+  "outstanding": [
+    "MI01_W8_C04_WHEELHOUSE_PREPARE_NOT_RUN",
+    "MI01_W8_C05_OWNER_DEPENDENCY_HOLD",
+    "MI01_W8_C06_INSTALL_NOT_RUN",
+    "MI01_W8_C07_FULL_BUILD_TEST_NOT_RUN",
+    "MI01_W8_C08_ORIGINAL_NATIVE_BROWSER_NOT_RUN",
+    "G2_G9_OWNER_SECURITY",
+    "PG_RESTORE_AND_IV"
+  ],
+  "permissions": {
+    "main": false,
+    "prod": false,
+    "new_ci": false,
+    "external": false
+  },
+  "rollback": "Normal revert of this documentation update, not of owner product source; owner PR15 source revert only with owner decision"
+}
