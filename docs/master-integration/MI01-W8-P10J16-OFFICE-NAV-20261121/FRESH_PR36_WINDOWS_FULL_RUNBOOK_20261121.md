@@ -8,14 +8,14 @@
 
 ## Kullanıcıya teslim edilen doğrudan Python çalıştırıcısı
 - Konuşma eki: `AIOS_W8_PR36_FRESH_WINDOWS_VALIDATION_20261121.py` (script source bu GitHub dalına otomatik aktarılmış değildir; yerel teslimat).
-- **SHA256:** `333bfad34eab4a958b1cff29dc11feba33147ed6fd4aeb372b6d6e4ff686b590`, **24,772 bytes** (Python 3.11+).
+- **SHA256:** `035b8000ab0f84d3b8602fa3a90954ff3a7a7cdf0748d143e513775e30c4e576`, **25,478 bytes** (Python 3.11+).
 - Hazırlık: statik Python `py_compile` PASS, AST kontrolünde dosya silme, policy bypass veya `eval/exec` yok; **önceki gerçek 3972-byte PR35 P10J16 testi üzerinden üç değişiklikle birebir PR36 4029-byte SHA256/Git blob üretimi PASS**. Bu hazırlık kanıtıdır, Windows'ta tam test yapılmış değildir.
 
 Windows PowerShell 5.1'de indirilen yardımcıyı içeriğini inceleyip SHA-256 ile doğrulayarak yürütmek (imzasız `.ps1` betiği yürütülmez; `ExecutionPolicy` değişmez):
 
 ```powershell
 $file = Join-Path $env:USERPROFILE 'Downloads\AIOS_W8_PR36_FRESH_WINDOWS_VALIDATION_20261121.py'
-$expected = '333bfad34eab4a958b1cff29dc11feba33147ed6fd4aeb372b6d6e4ff686b590'
+$expected = '035b8000ab0f84d3b8602fa3a90954ff3a7a7cdf0748d143e513775e30c4e576'
 if (!(Test-Path -LiteralPath $file)) { throw 'PR36_PY_HELPER_NOT_FOUND' }
 if ((Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expected) { throw 'PR36_PY_HELPER_SHA_MISMATCH' }
 py -3 $file --mode preflight
@@ -51,3 +51,5 @@ py -3 $file --mode smoke --run-root 'E:\AIOS\W8\PR36_W8_FRESH_<timestamp>' --chr
 - PR36 hedef Windows regresyonu **8/8 PASS_ACTUAL_LOCAL**; **yeni tam original C04/C06/C07/C08 henüz kullanıcı tarafından koşturulmadı**.
 - Bağımsız C05/owner güvenlik **HOLD**; kanonik W8 kabulü **3/8 → 3/8 (değişim 0)**; ağırlıklı geliştirme **HESAPLANAMADI**. Genel proje yüzdesi üretilmez.
 - Sonraki gerçek görev, kullanıcı Windows yeni `PR36_W8_FRESH` JSON/log kanıtını doğrulamak; başarı halinde ayrı sahip/IV kabulü ve kontrollü entegrasyon aday değerlendirmesi. Otomatik merge/CI/security activation yok.
+
+- Yürütme sona erdiğinde (başarılı/başarısız) JSON raporuna kanıt olarak `native_log_sha256`, `native_log_bytes` ve `original_PR35_source_hashes_preserved` eklenir; Python sürecinin geçici değişkenleri hata durumunda da geri alınır. Bu yardımcı değişikliğinin kendisi tam Windows test sonucu değildir.
