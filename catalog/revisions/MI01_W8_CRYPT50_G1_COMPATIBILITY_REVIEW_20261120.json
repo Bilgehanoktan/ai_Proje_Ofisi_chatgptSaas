@@ -71,7 +71,7 @@
     "candidate": "cryptography==50.0.2",
     "released": "2026-09-30",
     "python_min": "3.9",
-    "windows_wheel": "win_amd64 abi3 published; exact downloaded wheel unverified",
+    "windows_wheel": "Windows x64 abi3 wheel downloaded on user's actual Windows, exact SHA256 matches public PyPI publisher digest; full provenance/OpenSSL independent review pending",
     "upstream_open_ssl": "4.0.3 in Windows wheel according to official 50.0.2 changelog",
     "licensed_metadata": "Apache-2.0 OR BSD-3-Clause",
     "source_urls": [
@@ -116,5 +116,31 @@
     "confidence": "LIVE_PUBLIC_REGISTRY_METADATA_NOT_BINARY_CONTENT_NOT_INSTALLED",
     "security_approval": "HOLD",
     "source_record": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/review/mi01-w8-cryptography-50-0-2-20261120/docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/G1_CANDIDATE_LIVE_OSV_PYPI_20261120.json"
+  },
+  "native_windows_G3_C04_actual_20261120": {
+    "evidence_class": "ACTUAL_USER_LOCAL_WINDOWS_5_1_PYTHON31317",
+    "source_git_commit": "388c8a9ed539aba4e645267f00035f6f2ef0ff3e",
+    "source_audit": {
+      "status": "PASS",
+      "source_SHA256_pins": 552,
+      "shared_file_pairs": 17,
+      "auxiliary_git_blob_pins": 29
+    },
+    "C04_prepare": {
+      "status": "PASS",
+      "python_wheels": 28,
+      "review_sha256": "7335e1dd2525aa5639d276344c617b68fc323387e584b8c1c2c8ef81272d20aa",
+      "cryptography_downloaded_wheel_SHA256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+      "crypto_sha256_verified": "PASS"
+    },
+    "C05_OSV_public_batch_28": {
+      "http": 200,
+      "PyPI_packages": 28,
+      "OSV_matches": 0,
+      "license_full_provenance_OpenSSL_NPM_independent_approval": "HOLD"
+    },
+    "next": "W8 stage frozen existing lock read-only metadata/hashes for all wheel + npm lock; independent owner C05 PASS; then gated original C06-C08, do not mutate canonical source",
+    "status": "G3_PASS_G4_PARTIAL_HOLD",
+    "evidence_link": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/blob/review/mi01-w8-cryptography-50-0-2-20261120/docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/G3_WINDOWS_C04_AND_C05_OSV_EVIDENCE_20261120.json"
   }
 }
