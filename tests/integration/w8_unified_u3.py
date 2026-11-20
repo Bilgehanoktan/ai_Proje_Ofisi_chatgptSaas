@@ -15,6 +15,8 @@ LAST_SMOKE = 'tests/integration/browser_task_budget_0188.py'
 EXTRA = {
     U2: 'c27eb541d4ad4c26f879dd5a45e98f20dd81de2f',
     BROWSER: '2a3f2b8e286c5d79847a6b00cdb6d046d0429773',
+    'tests/integration/w8_frozen_npm.py': '257ba8f110508ff30ad03212111cfe8e2299d801',
+    'tests/integration/locks/mi01-frozen-npm/package-lock.json': '4cd33f437df85d7e74c7946a0999f76adf2e31fe',
     'database/0192/candidate_event_outbox_fence.sql': '6e4780bf9f267c0926b40d582d5afdbd6faa543c',
     'database/0193/candidate_run_head.sql': '180924e97ee1f31fa27332941a41e37fdf73017e',
     'database/0194/candidate_transition_roles.sql': '7b5d374bb7973b283e4fcfa0d796ed6128ef9d27',
@@ -121,7 +123,8 @@ def extend(w):
         finally:
             w.run = run
     w.verify_aux, w.test, w.smoke = aux, test, smoke
-    return w
+    helper = load_exact(Path(__file__).resolve().parent/'w8_frozen_npm.py', '257ba8f110508ff30ad03212111cfe8e2299d801')
+    return helper.install_into_w8(w)
 
 
 def load_candidate():
