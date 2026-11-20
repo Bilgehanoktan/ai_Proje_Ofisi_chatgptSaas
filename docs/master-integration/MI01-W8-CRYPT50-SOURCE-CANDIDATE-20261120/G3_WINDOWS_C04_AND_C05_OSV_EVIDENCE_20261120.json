@@ -1,0 +1,208 @@
+{
+  "id": "MI01-W8-G3-C04-WINDOWS-REAL-PASS-C05-OSV-BATCH-20261120",
+  "timestamp": "2026-11-20",
+  "native": {
+    "evidence_class": "ACTUAL_USER_WINDOWS_POWERSHELL_5_1_STDOUT",
+    "source_filename": "Yapıştırılan metin(20261120-194812).txt",
+    "interpreter": "Python 3.13.17 (Win64)",
+    "installer": "winget Python.Python.3.13 3.13.17 official SHA validated and installed",
+    "PR": 34,
+    "commit": "388c8a9ed539aba4e645267f00035f6f2ef0ff3e",
+    "stage": "E:\\AIOS\\W8\\CRYPT50_STAGE_20261120_224742",
+    "log": "E:\\AIOS\\W8\\CRYPT50_C04_20261120_224742.log",
+    "source_pins": "PASS",
+    "w8_audit": {
+      "status": "PASS",
+      "source_sha256": 552,
+      "shared_file_pairs": 17,
+      "auxiliary_git_blobs": 29
+    },
+    "c04_prepare": {
+      "status": "PASS",
+      "python_wheels": 28,
+      "review_sha256": "7335e1dd2525aa5639d276344c617b68fc323387e584b8c1c2c8ef81272d20aa",
+      "expected_cryptography": "50.0.2",
+      "downloaded_cryptography_wheel_sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+      "sha256_status": "PASS"
+    },
+    "install_C06": "NOT_RUN",
+    "test_C07": "NOT_RUN",
+    "chromium_C08": "NOT_RUN"
+  },
+  "osv_batch": {
+    "evidence_class": "ACTUAL_PUBLIC_API_NETWORK_CALL_MATCHED_TO_RESOLVED_28_PIP_WHEEL_VERSIONS_IN_USER_CONSOLE",
+    "endpoint": "https://api.osv.dev/v1/querybatch",
+    "method": "POST",
+    "http_status": 200,
+    "results": 28,
+    "osv_matches_total": 0,
+    "resolved_python_packages": [
+      {
+        "name": "fastapi",
+        "version": "0.163.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "starlette",
+        "version": "1.10.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "uvicorn",
+        "version": "0.34.2",
+        "osv_matches": 0
+      },
+      {
+        "name": "httpx",
+        "version": "0.28.1",
+        "osv_matches": 0
+      },
+      {
+        "name": "jsonschema",
+        "version": "4.26.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "playwright",
+        "version": "1.57.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "cryptography",
+        "version": "50.0.2",
+        "osv_matches": 0
+      },
+      {
+        "name": "anyio",
+        "version": "4.16.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "greenlet",
+        "version": "3.5.6",
+        "osv_matches": 0
+      },
+      {
+        "name": "httpcore",
+        "version": "1.0.9",
+        "osv_matches": 0
+      },
+      {
+        "name": "pyee",
+        "version": "13.0.1",
+        "osv_matches": 0
+      },
+      {
+        "name": "annotated-doc",
+        "version": "0.0.7",
+        "osv_matches": 0
+      },
+      {
+        "name": "attrs",
+        "version": "26.1.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "cffi",
+        "version": "2.1.1",
+        "osv_matches": 0
+      },
+      {
+        "name": "click",
+        "version": "8.5.1",
+        "osv_matches": 0
+      },
+      {
+        "name": "h11",
+        "version": "0.16.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "idna",
+        "version": "3.20",
+        "osv_matches": 0
+      },
+      {
+        "name": "jsonschema-specifications",
+        "version": "2025.9.1",
+        "osv_matches": 0
+      },
+      {
+        "name": "opentelemetry-api",
+        "version": "1.45.2",
+        "osv_matches": 0
+      },
+      {
+        "name": "pydantic",
+        "version": "2.14.4",
+        "osv_matches": 0
+      },
+      {
+        "name": "pydantic-core",
+        "version": "2.50.5",
+        "osv_matches": 0
+      },
+      {
+        "name": "annotated-types",
+        "version": "0.8.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "referencing",
+        "version": "0.37.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "rpds-py",
+        "version": "2026.9.1",
+        "osv_matches": 0
+      },
+      {
+        "name": "typing-extensions",
+        "version": "4.16.0",
+        "osv_matches": 0
+      },
+      {
+        "name": "typing-inspection",
+        "version": "0.4.5",
+        "osv_matches": 0
+      },
+      {
+        "name": "certifi",
+        "version": "2026.10.23",
+        "osv_matches": 0
+      },
+      {
+        "name": "pycparser",
+        "version": "3.12",
+        "osv_matches": 0
+      }
+    ],
+    "note": "Zero OSV recorded matches at query time is not general security approval; transitive npm lock not scanned, provenance/license/OpenSSL owner review open."
+  },
+  "scope": {
+    "independent_C05_approval": "HOLD",
+    "G1_owner_review": "HOLD",
+    "G2_source_owner_review": "HOLD",
+    "G3": "AUDIT_AND_C04_PASS",
+    "G4": "OSV_28_PYPI_CHECK_PASS_ONLY_INDEPENDENT_APPROVAL_HOLD",
+    "G5": "NOT_RUN",
+    "G6": "NOT_RUN",
+    "G7": "NOT_RUN",
+    "G8": "MERGE_HOLD"
+  },
+  "delivery": {
+    "canonical_product_dev_mutated": false,
+    "new_ci": false,
+    "new_permission": false,
+    "source_or_runtime_code_changes": 0,
+    "rollback": "Preserve old PR20/PR33 stage, new stage and log; no auto-merge; do not use --approve before independent C05"
+  },
+  "progress": {
+    "W8_prev": "3/8",
+    "W8_now": "3/8",
+    "delta_pp": 0,
+    "global_development_weighted": "HESAPLANAMADI"
+  },
+  "next": "Native read-only C05 full REVIEW.json SHA, every wheel digest and METADATA license/provenance, npm lock dependencies and publisher/provenance; independent owner C05 decision; then gated existing original C06/C07/C08; G8 owner-only"
+}
