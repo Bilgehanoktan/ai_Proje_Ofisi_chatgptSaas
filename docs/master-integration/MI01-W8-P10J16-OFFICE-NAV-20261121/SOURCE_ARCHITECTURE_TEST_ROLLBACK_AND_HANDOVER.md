@@ -42,3 +42,9 @@
 
 ## Handover / next
 Owner MI-01/W8. Target stage **P10J16 navigation isolated test -> fresh C07 full -> C08 smoke -> independent C05 HOLD until separate authorized review**. Do not promote acceptance without actual native evidence and owner review.
+
+## User-executable scoped Windows replay helper (artifact, not test result)
+- A SHA256-pinned helper was prepared in ChatGPT as `AIOS_W8_P10J16_NAV_SCOPED_TEST_20261121.ps1`, SHA256 `2d2b4cdab636c7275441cab48f09271477c0709d3fd8c993106beb8e9e82009d` (not published to this repository).
+- It verifies immutable PR35-stage original P10J16 test SHA256 `8bb0a81933001c64558df9e630af93390b1549714370750e8cb43bea2cef2bee` and `OfficePanel.tsx` SHA256 `7d75044a6b8083467b9acf77d996e3adf35c2debdde74d5a88c3157bc4c30dcc`.
+- It creates **new** `E:\\AIOS\\W8\\P10J16_NAV_SCOPED_<timestamp>` and copies only the isolated test and panel; performs the three exact string changes used in this candidate; checks candidate SHA256 + Git blob; executes `node --test` using existing stage's TypeScript dependency through local process-only NODE_PATH; restores NODE_PATH and verifies originals unchanged.
+- Its **actual Windows execution is NOT_RUN** until the user supplies its log. It is **not** a replacement for new PR36 original G3/C04/C06/C07/C08 evidence and must not be conflated with PR35 C04/C06 PASS.
