@@ -1,0 +1,174 @@
+{
+  "revision": "MI-P0-D0-MULTI-PROXY-DEADLINE-20261120-R1",
+  "date": "2026-11-20",
+  "classification": "REAL_SELECTED_LOCAL_ORIGINAL_SOURCE_REGRESSION_NOT_FULL_BUILD_OR_SECURITY_ACCEPTANCE",
+  "baseline": {
+    "branch": "integration/product-dev",
+    "commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "candidate": {
+    "branch": "review/mi-p0-d0-multi-proxy-deadline-20261120",
+    "product_files": 555,
+    "manifest_entries": 554,
+    "manifest_blob": "56086553c3946d16a728bfaea877b3908fe96232",
+    "source_code_modified": 3,
+    "new_product_files": 2,
+    "old_paths_preserved": true,
+    "promotion": "HOLD"
+  },
+  "ownership": {
+    "active_prs_checked": [
+      19,
+      20,
+      22,
+      24
+    ],
+    "changed_path_overlaps": 0,
+    "office_pr22_owner_respected": true
+  },
+  "old_route_blobs": {
+    "admission": "c0a867a669993738d8b06a08fa7089f836a911b3",
+    "outbox": "7dc1c9eb20feaf70358ba6137f35a3cbbec8a4ce",
+    "task-budget": "91256098c2a61001e7305bf3658c8178219591ed"
+  },
+  "source_files": {
+    "ai-company-os-frontend/app/api/demo/admission/route.ts": {
+      "bytes": 658,
+      "sha256": "6a8820675e37d41eb8765df6e3ef880ae9bec646080ccba2c2b57c3cd8213457",
+      "git_blob": "c46fa8f20e75370ce423f3ede63cd340926fe089"
+    },
+    "ai-company-os-frontend/app/api/demo/outbox/route.ts": {
+      "bytes": 643,
+      "sha256": "ec3f1b8599c3017b5cd8d7e70857e22a83edfbb791cbd5985437f1e3c351ff94",
+      "git_blob": "12895f7c606665e6605017486473b4d2ebd8deb5"
+    },
+    "ai-company-os-frontend/app/api/demo/task-budget/route.ts": {
+      "bytes": 656,
+      "sha256": "66f34ac01200a067e9ada506c61248aa12b610d620495b6a8ab75a0a2f945dc4",
+      "git_blob": "b8c6a4e6021b05d126c027d17fc358cc2a7d2816"
+    },
+    "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": {
+      "bytes": 1827,
+      "sha256": "22ad73c2b74d400e251e779fe1d66e25be54031ca7890af9524a6b66deeaeb5a",
+      "git_blob": "a1ff4a1690a0b113aa882de633e063c02f9535a4"
+    },
+    "ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs": {
+      "bytes": 5998,
+      "sha256": "7607d0371edff9512d2669a1b0f30dec55879bd77a4e87d2c06026d9ea8b5102",
+      "git_blob": "528027639931c74b27b4d7f12813a57894cc529f"
+    }
+  },
+  "unmodified_exact_original_git_blobs": {
+    "features/mvp/admissionProjection.ts": "5af643c596185be4d8a30cd75f6c56e77de33c57",
+    "features/mvp/outboxProjection.ts": "4a10084ac38bb9f6de70c581c2936feca9094f5a",
+    "features/mvp/taskBudgetProjection.ts": "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9",
+    "features/mvp/officeWorkbenchProjection.ts": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+    "features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "tests/admission-projection.test.cjs": "166572d2a0c6859dc4d39561264422ed2732c4fe",
+    "tests/outbox-projection.test.cjs": "29c03bd93fbb6d20e480979ac0df0f23f1108a13",
+    "tests/task-budget.test.cjs": "4a0ec2845d467bfe4caabddefffde1f0da896cd1"
+  },
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 (global, project pin 5.9.3 not available)",
+    "python": "3.13.5",
+    "os": "Linux x86_64",
+    "network": "not available",
+    "sources": "exact local copy Git SHA verified against real source and GitHub readback"
+  },
+  "tests": {
+    "new_methods": 27,
+    "baseline": {
+      "executed": 27,
+      "passed": 15,
+      "failed": 12,
+      "skipped": 0,
+      "tap_sha256": "84cb4e7679efde640c3a8fece02343fd87d710e816c69fa21a2dbb799808ea10"
+    },
+    "fixed": {
+      "executed": 27,
+      "passed": 27,
+      "failed": 0,
+      "skipped": 0,
+      "tap_sha256": "f8fdb15a8ec166fc23c518155287d322788ba4ae911299ffcfb0f7f53eded214"
+    },
+    "original": {
+      "executed": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "breakdown": {
+        "admission": [
+          10,
+          10
+        ],
+        "outbox": [
+          9,
+          9
+        ],
+        "task-budget": [
+          14,
+          14
+        ]
+      },
+      "combined_tap_sha256": "395f60cddb9d47f262253c8b21c6ace7d9420afed09a05fd6c86a2157dcb5630"
+    },
+    "selected_total": {
+      "methods": 60,
+      "passed": 60,
+      "failed": 0,
+      "skipped": 0,
+      "not_global_suite": true
+    },
+    "negative_cases": "Across 3 routes: late 200 after abort, unresolved fetch, stalled reader.read, unresolved reader.cancel",
+    "bound": "Test-only 150ms watchdog for mocked abort scenarios, NOT an actual 2500ms wall-clock SLA test",
+    "selected_typecheck": "PASS tsc 5.8.3 --strict --target ES2022 --lib ES2022,DOM --module commonjs --moduleResolution node",
+    "full_W8": "NOT_RUN",
+    "native_browser": "NOT_RUN",
+    "real_security": "HOLD",
+    "real_PostgreSQL": "HOLD"
+  },
+  "contracts": {
+    "API_paths_unchanged": true,
+    "semantic_response": "D0 200 for valid fixed sample; original D0 503 HOLD for invalid/expired",
+    "max_bytes": {
+      "admission": 4096,
+      "outbox": 4096,
+      "task-budget": 8192
+    },
+    "backend_DB_event_changes": 0,
+    "dependencies_changes": 0,
+    "new_CI": 0,
+    "permission_changes": 0,
+    "production_activation": false
+  },
+  "progress": {
+    "global_weighted_previous": null,
+    "global_weighted_current": null,
+    "delta_pp": null,
+    "reason": "0/10 owner-ratified group denominators",
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "owner_next": "MI-05/MI-01 owner reviews draft, independently ratifies new manifest and full exact W8 after existing 553 C04-C08. MI04 562 authority source separate. Do not auto-merge.",
+  "rollback": "Close draft PR, normal revert on review branch; protected product-dev/main unchanged.",
+  "architecture_and_handover": "docs/master-integration/MI-P0-D0-MULTI-PROXY-DEADLINE-20261120/ARCHITECTURE_CATALOG_HANDOVER.md"
+}
