@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI03-GATE03-SQL-REGRESSION-R1",
-  "status": "ISOLATED_ORG_OWNER_SOURCE_PACKAGE_SQLITE_11_PASS_OWNER_REVIEW_HOLD",
+  "doc_revision": "MI04-G2-G9-OWNER-EXACT-CROSS-SOURCE-HOLD-20261120",
+  "status": "ISOLATED_G2_G9_SELECTED_ORIGINAL_SOURCE_COMPATIBILITY_ONLY_NO_RELEASE",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
+  "parent_git_commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -427,8 +427,8 @@
       "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
     },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
-      "bytes": 7835,
-      "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+      "bytes": 9184,
+      "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
     },
     "ai-company-os-backend/app/core/transaction/intent_identity.py": {
       "bytes": 3393,
@@ -2213,6 +2213,42 @@
     "ai-company-os-backend/tests/test_org_sql_runtime_mi03.py": {
       "bytes": 7056,
       "sha256": "d46408edae8f467a19b4bdda4647d8afc73f87508ac080ea34be015014268cb6"
+    },
+    "ai-company-os-backend/app/core/iam_session.py": {
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
+    },
+    "ai-company-os-backend/tests/test_iam_session_d5g1.py": {
+      "bytes": 4691,
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc"
+    },
+    "ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
+    },
+    "ai-company-os-backend/app/core/transaction/identity_fence_review.py": {
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347"
+    },
+    "ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331"
+    },
+    "ai-company-os-backend/app/core/transaction/org_membership_review.py": {
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
+    },
+    "ai-company-os-backend/tests/test_iam_org_d5g5.py": {
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
+    },
+    "ai-company-os-backend/app/core/transaction/core_org_session_review.py": {
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae"
+    },
+    "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py": {
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2224,5 +2260,30 @@
     "SKILL": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
     "ORG_ASSIGNMENT_D0": "6efc6714757ebd698d27efd7022afc2c92af70d0",
     "ORG_ORG06": "a59a15a94b9eaa2bb7687297e9057e286f297ede"
+  },
+  "g2_owner_overlay_review": {
+    "source_ref": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "source_blob_refs": {
+      "ai-company-os-backend/app/core/iam_session.py": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "ai-company-os-backend/app/core/transaction/intent_authority.py": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "ai-company-os-backend/tests/test_iam_session_d5g1.py": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+      "ai-company-os-backend/tests/test_iam_authority_d5g2.py": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+    },
+    "original_553_source_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "proposed_merged_manifest_entries": 555,
+    "old_552_keys_unchanged_except_authority": true,
+    "no_independent_authority_grant": true
+  },
+  "owner_variant_review": {
+    "base_product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "G2_owner": "9ca667e816dac269084ef8f62051da5fe458eb12",
+    "G9_owner": "68ec99c673cceadffecf1d192371c10c328caa74",
+    "prior_staged_manifest_blob": "72944260c569ff35c4b7a4c2f7cd9d42e6db5486",
+    "original_G9_pins_verified": 56,
+    "transferred_G9_exact_missing_product_files": 6,
+    "transferred_G9_external_fixture_and_evidence_blobs": 20,
+    "authority_variant": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+    "source_owner_acceptance": "HOLD",
+    "protected_authority": "HOLD"
   }
 }
