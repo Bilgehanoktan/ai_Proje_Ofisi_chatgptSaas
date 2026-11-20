@@ -1,0 +1,81 @@
+{
+  "revision": "MI-P0-553-SOURCE-TRANSFER-20261120-R1",
+  "status": "STAGED_PR15_DRAFT_SOURCE_AND_W8_PIN_NO_CANONICAL_PROMOTION",
+  "repository": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "baseline": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+  "source": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+  "candidate": "98808d280dda13088a2561ecc7323f4a910c380d",
+  "pr": 15,
+  "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/15",
+  "source_product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+  "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "manifest_entries": 552,
+  "product_files": 553,
+  "scope": {
+    "changed": 64,
+    "product": 63,
+    "owner_w8_adapter": 1,
+    "other": 0,
+    "owner_mapped": 64,
+    "unmapped": 0,
+    "git_status": "ahead",
+    "ahead_by": 2,
+    "behind_by": 0
+  },
+  "w8_adapter": {
+    "blob": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+    "manifest_literal": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "derived_from": "existing current common owner adapter plus one pinned manifest literal",
+    "full_build_status": "NOT_RUN"
+  },
+  "prior_verified_CI": {
+    "original_org_manifest": [
+      552,
+      552
+    ],
+    "org_packaging": [
+      4,
+      4
+    ],
+    "org_sql": [
+      11,
+      11
+    ],
+    "run": 44628704044,
+    "source": "D0 SQLite, not 553 exact full W8"
+  },
+  "remaining_gates": {
+    "W8_full": "NOT_RUN",
+    "G9_owner": "HOLD",
+    "G2_owner": "HOLD",
+    "G2_50": "NOT_RUN",
+    "G9_7": "NOT_RUN",
+    "Memory_T1_10": "NOT_RUN",
+    "protected_postgres": "NOT_RUN",
+    "independent_A_negative": "0/8 NOT_RUN",
+    "production": "DENY"
+  },
+  "progress": {
+    "core_acceptance": [
+      12,
+      16
+    ],
+    "ui_acceptance": [
+      21,
+      40
+    ],
+    "mvp_acceptance": [
+      0,
+      11
+    ],
+    "independent_security": [
+      0,
+      7
+    ],
+    "global_weighted_prev": null,
+    "global_weighted_current": null,
+    "acceptance_delta_pp": 0
+  },
+  "rollback": "close PR15; if later merged, normal revert, no force push",
+  "claim": "This is source-only DEVELOPMENT STAGING, NOT ACCEPTANCE"
+}
