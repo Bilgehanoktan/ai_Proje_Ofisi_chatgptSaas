@@ -4,11 +4,19 @@
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
     "ref": "integration/product-dev",
-    "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-    "source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
-    "status": "PROVISIONAL_CANDIDATE_FULL_BUILD_BLOCKED",
-    "product_files": 505,
-    "manifest_entries": 504
+    "sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "source_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "status": "PROVISIONAL_553_SOURCE_PROMOTED_W8_AND_SECURITY_ACCEPTANCE_HOLD",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "source_product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "source_transfer_pr": 15,
+    "source_promotion_scope": "DEVELOPMENT_SOURCE_ONLY_NOT_ACCEPTANCE",
+    "previous_source_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "previous_source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
+    "previous_product_files": 505,
+    "previous_manifest_entries": 504
   },
   "main": {
     "sha": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
@@ -770,7 +778,10 @@
         "full_w8_test": "NOT_RUN",
         "source_promotion": "HOLD_OWNER_REVIEW",
         "original_owner_test_CI": "PR11 4/4 package, 11/11 SQL D0"
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
+      "mi_p0_553_next": "Run original exact 553 W8 lock fingerprint + prepare/install/test/smoke/native browser; pin adapter 27b4... corrected, not yet functional PASS"
     },
     {
       "id": "MI-02",
@@ -1371,7 +1382,10 @@
         "IV": "HOLD",
         "acceptance_delta": 0,
         "weighted_progress_delta_pp": 0
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
+      "mi_p0_553_next": "Check G2 original 50, PostgreSQL strict owner/RLS/restore; Option A real authority and IV; currently HOLD"
     },
     {
       "id": "MI-03",
@@ -2099,7 +2113,10 @@
         "full_w8_test": "NOT_RUN",
         "source_promotion": "HOLD_OWNER_REVIEW",
         "original_owner_test_CI": "PR11 4/4 package, 11/11 SQL D0"
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
+      "mi_p0_553_next": "Review ORG/G9 41 D0-only lines and original G9 7, G2 owner pin, Memory T1 10; source already on canonical dev, independent issuer absent"
     },
     {
       "id": "MI-04",
@@ -2706,7 +2723,9 @@
         "IV": "HOLD",
         "acceptance_delta": 0,
         "weighted_progress_delta_pp": 0
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD"
     },
     {
       "id": "MI-05",
@@ -2842,7 +2861,9 @@
         "full_build": "NOT_RUN",
         "owner_review": "PENDING",
         "acceptance_delta": 0
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD"
     },
     {
       "id": "MI-06",
@@ -3311,7 +3332,10 @@
         "full_w8_test": "NOT_RUN",
         "source_promotion": "HOLD_OWNER_REVIEW",
         "original_owner_test_CI": "PR11 4/4 package, 11/11 SQL D0"
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
+      "mi_p0_553_next": "Review ORG/G9 41 D0-only lines and original G9 7, G2 owner pin, Memory T1 10; source already on canonical dev, independent issuer absent"
     },
     {
       "id": "MI-07",
@@ -3693,7 +3717,9 @@
           "pycparser": "2.23"
         },
         "next": "User review and paste exact wheel bridge into PowerShell; require EVET before fetching, verified official PyPI SHA256 for three target wheels; run unchanged original 344 only after exact private runtime validation; upload MODEL_344_RESULT.json, MODEL_MEMORY_344.log, WHEEL_SHA256.json."
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD"
     },
     {
       "id": "MI-08",
@@ -4199,7 +4225,10 @@
           "pycparser": "2.23"
         },
         "next": "User review and paste exact wheel bridge into PowerShell; require EVET before fetching, verified official PyPI SHA256 for three target wheels; run unchanged original 344 only after exact private runtime validation; upload MODEL_344_RESULT.json, MODEL_MEMORY_344.log, WHEEL_SHA256.json."
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
+      "mi_p0_553_next": "Original Memory/Model 344 acceptance on canonical 553 source; 160 supplement not substitute"
     },
     {
       "id": "MI-09",
@@ -4338,7 +4367,9 @@
         "full_build": "NOT_RUN",
         "owner_review": "PENDING",
         "acceptance_delta": 0
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD"
     },
     {
       "id": "MI-10",
@@ -4899,7 +4930,9 @@
         ],
         "native_U3": "HOLD",
         "evidence": "docs/master-integration/MI10-SSE-FRESH-REQUEST-FIX-20261120/EVIDENCE.json"
-      }
+      },
+      "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD"
     }
   ],
   "permissions": {
@@ -7186,22 +7219,23 @@
       4,
       5,
       6,
-      10,
-      14,
-      15
+      10
     ],
     "closed_review_prs": [
       7,
       8,
       9,
       11,
-      13
+      13,
+      14
     ],
     "closed_duplicate_pr7": "SOURCE_CUSTODY_PRESERVED_UNMERGED",
     "merged_review_prs": [
-      12
+      12,
+      15
     ],
-    "canonical_transfer_pr": 15
+    "canonical_transfer_pr": 15,
+    "actual_canonical_source_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1"
   },
   "mi_common_09_windows_replay_failure": {
     "revision": "MI-COMMON-09-WINDOWS-PATH-HOLD",
@@ -8113,8 +8147,8 @@
       "source_owners_G9_G2": "HOLD"
     },
     "prior_553_actual_ci": "552/552 plus ORG package 4/4 plus SQL 11/11 at #44628704044",
-    "product_dev_canonical_sha_unchanged": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-    "source_transfer_status": "STAGED_NOT_MERGED",
+    "product_dev_canonical_sha_unchanged": null,
+    "source_transfer_status": "MERGED_DEV_SOURCE_PROVISIONAL_ACCEPTANCE_HOLD",
     "permission_expansion": false,
     "protected_PG_COMMIT": "HOLD",
     "independent_security": "0/8 NOT_RUN",
@@ -8164,7 +8198,8 @@
     "technical_catalog": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/TECHNICAL_CATALOG.json",
     "handover": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
     "rollback": "normal revert on isolated branch, close PR15; protected main/product-dev unchanged",
-    "next": "MI01 original 553 W8 full clean lock build/test/browser and G9/G2 owner source variants, then controlled canonical promotion; protected PG/IV remain separate"
+    "next": "MI01 original 553 W8 full clean lock build/test/browser and G9/G2 owner source variants, then controlled canonical promotion; protected PG/IV remain separate",
+    "final_product_dev_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1"
   },
   "mi01_w8_553_bridge_20261120": {
     "revision": "MI01-W8-553-BRIDGE-OWNER-GATE-20261120",
@@ -8259,5 +8294,107 @@
     },
     "product_acceptance_delta_pp": 0,
     "owner_next": "MI01 dependency owner to ratify clean 553 checkout and exact wheelhouse/hash/REVIEW.json; then original W8 prepare/install/test/smoke via reviewed bridge and independent U3 browser. Do not run CI outside existing explicit PR4/#6 scopes, do not merge."
+  },
+  "mi_p0_553_canonical_source_promotion_20261120": {
+    "revision": "MI-P0-553-CANONICAL-SOURCE-PROMOTION-20261120-R1",
+    "prior": {
+      "ref": "integration/product-dev",
+      "sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
+      "status": "PROVISIONAL_CANDIDATE_FULL_BUILD_BLOCKED",
+      "product_files": 505,
+      "manifest_entries": 504
+    },
+    "current": {
+      "ref": "integration/product-dev",
+      "sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "source_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "status": "PROVISIONAL_553_SOURCE_PROMOTED_W8_AND_SECURITY_ACCEPTANCE_HOLD",
+      "product_files": 553,
+      "manifest_entries": 552,
+      "source_product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+      "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "source_transfer_pr": 15,
+      "source_promotion_scope": "DEVELOPMENT_SOURCE_ONLY_NOT_ACCEPTANCE",
+      "previous_source_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+      "previous_source_commit": "977b8e07b8125f79d8c043925eed40393b6fd7fb",
+      "previous_product_files": 505,
+      "previous_manifest_entries": 504
+    },
+    "user_permission": "H01 explicit request engelleri kaldır ve aktar; only dev-source promotion, not production/security activation",
+    "pr15": "MERGED_MANUAL_SOURCE",
+    "pr15_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/15",
+    "merge_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+    "pr14": "CLOSED_UNMERGED_SAME_SOURCE_SUPERSEDED",
+    "previous_505_to_553_product_file_delta": 48,
+    "changed_git_paths": {
+      "product": 63,
+      "w8_adapter": 1,
+      "nonproduct_other": 0
+    },
+    "actual_readback": "PASS_GITHUB_PRODUCT_TREE_AND_MANIFEST_AND_W8_PIN",
+    "original_W8_full": "NOT_RUN",
+    "owner_ratification": {
+      "G2": "HOLD",
+      "G9": "HOLD"
+    },
+    "original_g2_50": "NOT_RUN",
+    "original_g9_7": "NOT_RUN",
+    "memory_t1_10": "NOT_RUN",
+    "protected_postgresql_commit": "NOT_RUN",
+    "independent_A_security_negative_tests": "0/8 NOT_RUN",
+    "independent_root_issuer_sink": "NOT_IMPLEMENTED",
+    "previous_full_product_acceptance": {
+      "CORE": [
+        12,
+        16
+      ],
+      "UI": [
+        21,
+        40
+      ],
+      "MVP": [
+        0,
+        11
+      ],
+      "IV": [
+        0,
+        7
+      ]
+    },
+    "current_full_product_acceptance": {
+      "CORE": [
+        12,
+        16
+      ],
+      "UI": [
+        21,
+        40
+      ],
+      "MVP": [
+        0,
+        11
+      ],
+      "IV": [
+        0,
+        7
+      ]
+    },
+    "product_acceptance_delta_pp": 0,
+    "global_development_before": null,
+    "global_development_now": null,
+    "delta_pp": null,
+    "no_new_workflows": true,
+    "no_new_runtime_permissions": true,
+    "no_production_effects": true,
+    "evidence": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/POST_MERGE_VERIFICATION.json",
+    "architecture_handover": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/POST_MERGE_ARCHITECTURE_HANDOVER.md",
+    "technical_catalog": "docs/master-integration/MI-P0-553-SOURCE-TRANSFER-20261120/TECHNICAL_CATALOG_CURRENT.json",
+    "rollback": {
+      "mode": "normal merge revert with mainline parent 1, owner review",
+      "merge_commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "premerge_sha": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0"
+    },
+    "next": "On actual canonical 553 source: full original W8 clean prepare/install/test/smoke, owner G2/G9 and 0214 MemoryT1 original regressions; protected PG/replay and independent A1 negative tests; no PROD until accepted"
   }
 }
