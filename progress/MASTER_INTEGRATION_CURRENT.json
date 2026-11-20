@@ -7923,8 +7923,8 @@
     "next": "Route current 553 to existing MI-01 W8 owner for precise prepare/install/test/smoke, and MI-07/08 owners for 1 skipped native symlink test and 553 runtime-level cross tests. Preserve existing CI, no duplicate 160/15 replay. Owner-controlled source promotion only after gates."
   },
   "mi_p0_pr14_pr15_single_writer_closeout_20261120": {
-    "revision": "MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120",
-    "status": "PR14_CLOSED_UNMERGED__PR15_ONLY_505_TO_553_SOURCE_TRANSFER_DRAFT",
+    "revision": "MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120-R2",
+    "status": "PR14_CLOSED_UNMERGED__PR15_ACTIVE_OWNER_W8_ADAPTER_IN_PROGRESS_DRAFT",
     "duplicate_source_work_avoided": true,
     "control_pr": {
       "n": 14,
@@ -7934,16 +7934,24 @@
     "preferred_owner_pr": {
       "n": 15,
       "status": "OPEN_DRAFT_HOLD",
-      "head": "f0c583ebf6e382f0bc7f0a2a253e99968938b384",
+      "head": "98808d280dda13088a2561ecc7323f4a910c380d",
       "base": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
-      "product_only": true,
+      "product_only": false,
       "full_product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
-      "nonproduct_root_trees_unchanged": true,
+      "nonproduct_root_trees_unchanged": false,
       "owner_review": "PENDING",
-      "merge": "NOT_AUTHORIZED"
+      "merge": "NOT_AUTHORIZED",
+      "previous_head": "f0c583ebf6e382f0bc7f0a2a253e99968938b384",
+      "product_plus_one_owner_w8_adapter": true,
+      "changed_paths": 64,
+      "current_test_root_tree": "8a45a33da7873dda4a0f31db475974afba6f2096",
+      "adapter_path": "tests/integration/w8_unified_u3.py",
+      "owner_adapter_from": "e7335eac1e4358ceef001a494f45f56ba9544fc0",
+      "owner_adapter_to": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+      "adapter_exact_change": "ONE_MANIFEST_LITERAL_LINE_CHANGED_TO_553_PIN"
     },
     "owner_separation": {
-      "w8": "MI-01/Unified existing owner",
+      "w8": "MI-01/Unified actively updated PR15 owner adapter (1 manifest-pin line); do not duplicate",
       "g9": "ORG/Core existing owner",
       "g2": "IAM/Authority existing owner",
       "pg_iv": "MI-02/06 independent owner",
@@ -7987,7 +7995,7 @@
     },
     "handover": "docs/master-integration/MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120.md",
     "evidence": "progress/MI_P0_PR14_PR15_SINGLE_WRITER_CLOSEOUT_20261120.json",
-    "next": "Only existing MI01 owner exact fresh W8 553 source and lock. PR15 promotion remains DRAFT/HOLD pending owner/security gates.",
+    "next": "Owner actively updating PR15, now two commits; original 553 W8 fresh lock/prepare/install/test/smoke + native browser NOT_RUN. Independent G2/G9/PG/IV HOLD. No PR14 re-open.",
     "rollback": "Normal governance revert; PR14 closed unmerged, PR15 and product-dev unaffected"
   },
   "mi04_0214_exact_regression_20261120": {
