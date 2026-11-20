@@ -1,0 +1,101 @@
+{
+  "revision": "MI04-G2-G9-OWNER-EXACT-CI-20261120",
+  "owner_sources": {
+    "G2": {
+      "branch": "workstream/0230-d5g2-durable-iam-authority",
+      "commit": "9ca667e816dac269084ef8f62051da5fe458eb12",
+      "paths": [
+        "candidates/D5-G2/run_regression.py",
+        "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+        "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+        "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+        "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+        "product/ai-company-os-backend/app/core/iam_session.py",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+      ]
+    },
+    "G9": {
+      "branch": "planning/0230-d5g9-exact-three-store-checkout",
+      "commit": "68ec99c673cceadffecf1d192371c10c328caa74",
+      "paths": [
+        "candidates/D5-G9/run_exact_checkout.py",
+        "candidates/D5-G7/SOURCE_PINS.json",
+        "candidates/D5-G7/test_checkout.py"
+      ]
+    },
+    "canonical": {
+      "branch": "integration/product-dev",
+      "commit": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
+      "product_files": 553,
+      "manifest_entries": 552,
+      "current_intent_authority_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "g2_intent_authority_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "g2_iam_session_file_present": false,
+      "owner_g2_iam_session_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "canonical_durable_ops_blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "owner_g9_root_durable_ops_present": false,
+      "code_merged_in_this_turn": false
+    }
+  },
+  "classes_symbols": {
+    "G2": [
+      "D0SessionResolver",
+      "SessionRecord",
+      "SessionClaimCheck",
+      "credential_digest",
+      "D0IntentAuthority",
+      "RootPin",
+      "claim_and_fence"
+    ],
+    "G9": [
+      "ActualReadbackTests",
+      "inspect_core_org_session_reference",
+      "read_current_org_reference",
+      "org_reference_digest",
+      "Binding",
+      "derive_request",
+      "TaskPin"
+    ],
+    "canonical_0214": [
+      "FullChainTests",
+      "D0IntentJournal",
+      "MemoryWitnessReader",
+      "execute_authority_fenced_transition"
+    ]
+  },
+  "APIs": {
+    "new_HTTP": 0,
+    "real_grants": 0
+  },
+  "database": {
+    "SQLite_D0_fixture_only": true,
+    "real_PostgreSQL_COMMIT": false,
+    "new_migrations": 0
+  },
+  "events": {
+    "new_publisher": 0,
+    "external_effect_sink": 0
+  },
+  "deps": {
+    "runtime_python": "3.13.5",
+    "test_only_cryptography": "46.0.4",
+    "test_only_cffi": "2.0.0",
+    "test_only_pycparser": "3.0",
+    "product_lock_changed": false
+  },
+  "diff_risks": [
+    "Current canonical intent_authority.py differs from G2 original by exact Git blobs",
+    "G2 app/core/iam_session.py does not exist on canonical 553",
+    "G9 root durable_ops.py not present on owner branch tested; canonical ORG durable_ops is different scope; do not equate owner G7 checkout 7/7 with canonical G9 code acceptance",
+    "D0 rollback/anti-replay residual persists even if all these tests pass"
+  ],
+  "test_evidence": {
+    "run": 44697437051,
+    "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/actions/runs/44697437051",
+    "conclusion": "success",
+    "jobs": 2,
+    "passed_original_source_test_executions": 57,
+    "failed": 0,
+    "skipped": 0
+  }
+}
