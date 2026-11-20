@@ -25,7 +25,7 @@ Bu aday, eski özgün npm lock'u **yeni bir kilit üretmeden** kaynak ağacına 
 
 ## Gerçek test ayrımı
 
-Container Python 3.13.5 üzerinde yeni `w8_frozen_npm.py` mekanikleri için **15/15 sentetik unittest PASS** (0 hata, 0 skip). Sınamalar: geçerli kilit, SHA/byte bozulması, package.json değişimi, direct/development pins, overrides, kötü registry, eksik integrity, symlink, paket sayısı, tek kullanımlık kopya, ikinci çağrı, yanlış cwd/registry, üzerine yazma, diğer komutlar, hata halinde sahte REVIEW temizliği.
+Container Python 3.13.5 üzerinde yeni `w8_frozen_npm.py` mekanikleri için **15/15 mevcut sentetik unittest PASS** (0 hata, 0 skip). Sınamalar: geçerli kilit, SHA/byte bozulması, package.json değişimi, direct/development pins, overrides, kötü registry, eksik integrity, symlink, paket sayısı, tek kullanımlık kopya, ikinci çağrı, yanlış cwd/registry, üzerine yazma, diğer komutlar, hata halinde sahte REVIEW temizliği.
 
 **Özgün W8 C04 `prepare` hâlâ NOT_RUN:** bu konteyner GitHub/PyPI/npm DNS'e erişemiyor, tam 553 checkout ve wheelhouse/REVIEW hazır değil. Bu 15 test eski C01–C03 veya yeni C04-C08 PASS değildir; Next/TS/native U3 browser, PostgreSQL ve A bağımsız güvenlik kabulü **HOLD**.
 
@@ -38,3 +38,13 @@ Bu dalda ürün kaynakları `product/`, `SOURCE_MANIFEST.json`, API/DB/sınıf/�
 **İlerleme:** MI01 W8 operasyonel **3/8 → 3/8**, Core 12/16, UI 21/40, MVP **0/11**, IV **0/7**, güvenlik A-AT **0/8**. 15/35/20/20/10 ağırlıklı global geliştirme onaylı kriter paydası olmadığından **HESAPLANAMADI** (önceki = güncel; delta yok). Bu PR yeni kabul kriteri kapatmaz.
 
 **Rollback:** taslak PR'ı kapat veya yalnız bu inceleme dalının commit'ini normal revert et. W8 root pinli ata modüller ve ürün kaynak ağacı değişmediğinden önceki çalışan test kapsamı etkilenmez.
+
+## R2 — Bağımsız gerçek test tekrar koşumu ve 4 yeni bütünleşik simülasyon (20.11.2026)
+
+- Gerçek konteyner Python **3.13.5** içinde, kaynakları Git blob pinleriyle birebir karşılaştırılmış `w8_frozen_npm.py` **257ba8f1**, önceden commit'li `test_w8_frozen_npm.py` **efa2e0aa** ve yeni `tests/integration/test_w8_frozen_npm_integration.py` **7a3baa89** beraber koşuldu.
+- Komut: `python -m unittest -v test_w8_frozen_npm.py test_w8_frozen_npm_integration.py`. Ham sonuç: **Ran 19 tests in 0.015s, OK**; önceki 15/15 → güncel **19/19**, delta +4 sentetik yöntem; mevcut testler yeni kriter olarak ikinci kez sayılmaz.
+- Yeni 4 kontrol: değişmez npm kilidinin Python bağımlılığı çağrısından önce stage'e yazılması ve npm çözümleyici çağrısının hiç yürütülmemesi; bozuk package pininin stage oluşturulmadan engellenmesi; aynı kilidin ikinci kez oluşturulmasının engellenmesi ve sahte `REVIEW.json` izinin temizlenmesi; pip başarısızlığında W8 yürütücüsünün ilk durumuna dönmesi.
+- İndirilebilir/reprodüksiyon için ham günlük: `docs/master-integration/MI01-W8-FROZEN-NPM-20261120/TEST_RESULT_ACTUAL_19.txt` — SHA-256 `985f6cbed8fa47ac3edb90b40ca142bc52150767423793cc624f0d7703e4086e`; Git blob `1df01ccd1a719c190d0ef550bacc9e6b86e181c6`. İkinci test dosyası da aynı PR içinde. `docs/` kanıtı sahibi onayı değildir.
+- **W8 C04-C08 hâlâ açık:** Tam 553 kaynakla özgün wheelhouse/prepare, gerçek Next.js/backend build ve Chromium smoke **NOT_RUN**, C05 supply-chain **HOLD_OWNER**. 15/35/20/20/10 genel gelişme paydaları ratifiye değil (**HESAPLANAMADI**); MVP 0/11, bağımsız IV 0/8, ürün kabul değişimi 0.
+
+**R2 bakım/rollback:** Aynı PR'daki ek 4 test + kanıt ve bu ek normal commit revert ile geri dönebilir. Mevcut `product/`, W8 ata modülleri, `integration/product-dev`, `.github`, `main` veya güvenlik izinlerine yazılmadı.

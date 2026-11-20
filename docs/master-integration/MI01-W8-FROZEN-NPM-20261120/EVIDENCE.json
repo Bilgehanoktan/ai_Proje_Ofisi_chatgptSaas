@@ -1,5 +1,5 @@
 {
-  "revision": "MI01-W8-553-FROZEN-NPM-LOCK-CANDIDATE-20261120-R1",
+  "revision": "MI01-W8-553-FROZEN-NPM-LOCK-CANDIDATE-20261120-R2",
   "type": "ISOLATED_W8_PREPARE_ADAPTER_SOURCE_CANDIDATE",
   "date": "2026-11-20",
   "baseline": {
@@ -37,18 +37,40 @@
     "tests/integration/test_w8_frozen_npm.py": {
       "git_blob": "efa2e0aa0d6dcdcead9c090248c2f0e659e0c148",
       "intent": "offline positive/negative helper checks"
+    },
+    "tests/integration/test_w8_frozen_npm_integration.py": {
+      "git_blob": "7a3baa89862e69e057285ff2f37b0220e71628e2",
+      "intent": "4 additional integration-shaped synthetic prepare/lock failure and cleanup test methods, exact original helper bytes used"
+    },
+    "docs/master-integration/MI01-W8-FROZEN-NPM-20261120/TEST_RESULT_ACTUAL_19.txt": {
+      "git_blob": "1df01ccd1a719c190d0ef550bacc9e6b86e181c6",
+      "intent": "actual 19/19 Python unittest stdout/stderr, Git blob and SHA-256 retained"
     }
   },
   "local_execution": {
     "host": "isolated container",
     "python": "3.13.5",
-    "tests_total": 15,
-    "passed": 15,
+    "tests_total": 19,
+    "passed": 19,
     "failed": 0,
     "skipped": 0,
     "coverage": "new helper and frozen npm interception mechanics, synthetic fixture",
     "new_immutable_original_w8_tests": 0,
-    "new_actual_w8_prepare": 0
+    "new_actual_w8_prepare": 0,
+    "tests_previous": 15,
+    "delta_tests": 4,
+    "command": "python -m unittest -v test_w8_frozen_npm.py test_w8_frozen_npm_integration.py",
+    "run_environment": "current-turn isolated local Linux Python, synthetic fixtures, no network",
+    "committed_source_hashes": {
+      "helper_git_blob": "257ba8f110508ff30ad03212111cfe8e2299d801",
+      "original_test_git_blob": "efa2e0aa0d6dcdcead9c090248c2f0e659e0c148",
+      "new_integration_test_git_blob": "7a3baa89862e69e057285ff2f37b0220e71628e2"
+    },
+    "actual_local_log": {
+      "path": "docs/master-integration/MI01-W8-FROZEN-NPM-20261120/TEST_RESULT_ACTUAL_19.txt",
+      "git_blob": "1df01ccd1a719c190d0ef550bacc9e6b86e181c6",
+      "sha256": "985f6cbed8fa47ac3edb90b40ca142bc52150767423793cc624f0d7703e4086e"
+    }
   },
   "source_static": {
     "git_api_real_lock_parsed": true,
@@ -100,7 +122,7 @@
     ],
     "acceptance_delta_pp": 0
   },
-  "review": "MI-01/Unified owner to approve after exact source/lock/supply chain and fresh W8 wheelhouse provenance checks; this branch not approved to merge",
+  "review": "MI-01/Unified owner review pending. These 19/19 are actual local synthetic tests, NOT original 553 W8 fullchain; do not merge without authorized owner review.",
   "rollback": "close draft or normal revert only feature review branch, do not rewrite history",
   "next": "Owner replays original W8 full 553 source with C04 wheelhouse generated in networked authorized environment, verifies C05 supply chain, then original C06–C08; preserve A architecture security HOLD"
 }
