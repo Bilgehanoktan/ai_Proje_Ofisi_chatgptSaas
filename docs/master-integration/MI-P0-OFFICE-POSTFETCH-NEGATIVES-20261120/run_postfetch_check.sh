@@ -9,7 +9,7 @@ ROUTE=$(realpath "$1")
 BASE=$(cd -- "$(dirname -- "$0")" && pwd)
 TEST="$BASE/test_postfetch_stall.cjs"
 EXPECTED_ROUTE_SHA256='bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa'
-EXPECTED_TEST_SHA256='e35138725f9bde296bc2c2d469ed8de0a4ca4c9861c2cf648bd00097d96683c5'
+EXPECTED_TEST_SHA256='f2d0856c3cbad979c94b6048cb51c6a70ca6e011358a2085490683b2d895f17a'
 [[ $(sha256sum "$ROUTE" | awk '{print $1}') == "$EXPECTED_ROUTE_SHA256" ]] || { echo 'ROUTE_SOURCE_BLOB_MISMATCH_HOLD' >&2; exit 2; }
 [[ $(sha256sum "$TEST" | awk '{print $1}') == "$EXPECTED_TEST_SHA256" ]] || { echo 'QA_TEST_BLOB_MISMATCH_HOLD' >&2; exit 2; }
 [[ $(node --version) == 'v22.16.0' ]] || { echo 'NODE_VERSION_HOLD' >&2; exit 2; }
