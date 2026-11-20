@@ -1,0 +1,93 @@
+{
+  "revision": "MI01_W8_CRYPT50_PR34_20261120",
+  "mode": "ISOLATED_REVIEW_ONLY_NOT_RELEASED",
+  "source_branch": "review/mi01-w8-cryptography-50-0-2-20261120",
+  "commit": "3523a0b595799480a6ef03fa57de6dc2903f796e",
+  "base_commit": "9166afe299cd8f1ab9c52355ec21ec06c465d6ef",
+  "pr": 34,
+  "source_files": [
+    {
+      "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+      "change": "cryptography 46.0.4 -> 50.0.2",
+      "bytes": 120,
+      "sha256": "14f7abb23f8fa599eec9103ef59f26ead5650b0075c7d93b1da5c2494473bcd2",
+      "git_blob": "921818de26b481ed94603d8e596a384abf04bfa9",
+      "purpose": "Replace known GHSA-affected optional D0 history-signature dependency without modifying code consumers"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "change": "one sha256 entry at ai-company-os-backend/requirements-history-signatures.txt",
+      "git_blob": "589a77c2115bf255600d130087fc8973ecf2b7e5",
+      "purpose": "Maintain 552-record SHA source integrity"
+    },
+    {
+      "path": "tests/integration/w8_unified_u3.py",
+      "change": "MANIFEST Git blob constant only",
+      "git_blob": "c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04",
+      "purpose": "Fail-closed W8 upper adapter against newly reviewed exact manifest"
+    }
+  ],
+  "unchanged_code_modules": [
+    "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+    "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py"
+  ],
+  "unchanged_symbols": [
+    "w8_unified_u3.load_candidate",
+    "w8_unified_u3.extend",
+    "w8_unified_u3.load_exact",
+    "w8_unified_u3.blob",
+    "Ed25519PrivateKey",
+    "Ed25519PublicKey",
+    "InvalidSignature"
+  ],
+  "api_changes": 0,
+  "database_schema_changes": 0,
+  "event_schema_changes": 0,
+  "class_function_body_changes": 0,
+  "binary_install_actions": 0,
+  "test_change_count": 0,
+  "dependency_delta": [
+    {
+      "package": "cryptography",
+      "from": "46.0.4",
+      "candidate": "50.0.2",
+      "scope": "optional D0 signed-history verification",
+      "source_owner": "MI-01",
+      "license_metadata": "Apache-2.0 OR BSD-3-Clause",
+      "license_approval": "HOLD",
+      "Windows_x64_abi3_published": true,
+      "Python_313_runtime": "NOT_RUN",
+      "OpenSSL_exact_new_wheel": "NOT_INSPECTED",
+      "OSV_new_version": "NOT_RUN",
+      "wheel_sha256": "NOT_VERIFIED"
+    }
+  ],
+  "tests": {
+    "git_static_delta_paths": 5,
+    "source_scope_expected": 5,
+    "manifest_paths": 552,
+    "manifest_missing": 0,
+    "manifest_orphans": 0,
+    "code_runtime_tests": "NOT_RUN",
+    "Windows_original_W8_audit": "NOT_RUN",
+    "C04": "NOT_RUN",
+    "C05": "HOLD",
+    "C06": "NOT_RUN",
+    "C07": "NOT_RUN",
+    "C08": "NOT_RUN"
+  },
+  "progress": {
+    "W8_previous": "3/8",
+    "W8_current": "3/8",
+    "W8_delta_pp": 0,
+    "weighted_global": "HESAPLANAMADI",
+    "MVP": "0/11",
+    "IV": "0/7"
+  },
+  "risk_and_rollback": {
+    "known_old_GHSA": 7,
+    "risk": "New version, bundled OpenSSL and old source compatibility require independent review",
+    "rollback": "Close draft PR34 or normal isolated revert; preserve canonical product-dev/main and original PR20/33"
+  },
+  "reference": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/34"
+}
