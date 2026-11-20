@@ -40,3 +40,15 @@
 - Kaynak ürün entegrasyonu PR15 DRAFT; gerçekten çalışan W8 ve güvenlik/IV ACCEPTANCE **HOLD**.
 
 Doğrudan işaretçiler: [PR #14 kapandı](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/14), [PR #15 açık](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/15). Raporlama standardı `progress/REPORTING_STANDARD_20261118.md`, mimari `docs/master-integration/WORKING_STANDARD.md`.
+
+
+## 6. R2 — PR #15 canlı owner çalışması tespit edildi, kapsam düzeltildi
+
+**Geri okuma zamanı:** 20.11.2026; PR #15'in başı ilk incelemede `f0c583ebf6e382f0bc7f0a2a253e99968938b384` iken **eşzamanlı bir başka çalışma hattında** `98808d280dda13088a2561ecc7323f4a910c380d` commit'ine ilerledi. Bu bilgi, yukarıdaki ilk commit için geçerli `0 non-product` ve `1 commit/63 paths` bilgisini **güncel PR başlığı için geçersiz** kılar; ilk değerlendirme tarihsel snapshot olarak korunur.
+
+- Güncel PR #15: **2 commit / 64 yol**; eski 63 yolun tamamı `product/` + **1 mevcut W8 adapter** yolu: `tests/integration/w8_unified_u3.py`. Yeni ürün veya başka non-product yol değiştirilmedi. GitHub `mergeable_state=clean`, PR hâlâ DRAFT/HOLD.
+- Ürün `product/` Git tree **değişmedi**: `f4cdcf68115917ab69ba6441414539fe32a59369`, özgün common 553 ile birebir. `.github/`, `docs/`, `handover/`, `progress/` kanonik tabanla aynı; **`tests/` artık kanonik ile aynı değil**: yeni SHA `8a45a33da7873dda4a0f31db475974afba6f2096`.
+- **Adapter tek-yazıcı kanıtı:** common owner kaynak `a80932b6:tests/integration/w8_unified_u3.py` blob `e7335eac1e4358ceef001a494f45f56ba9544fc0` ile PR #15 yeni blob `e1330a7c33f6c5d5c353a19b0be1ae1281fd0700` karşılaştırıldı: **144/144 satır, sadece 9. satırdaki literal manifest Git blob pini değişmiş** (`b80e834fe081cb1b8917798a11793eb50dce9688` → `27b4eb5816265d4e6e6d2458acb6220db7dd0c76`). Özgün W8 owner kodu ve `p24.HISTORICAL` override korunmuştur. Kapsamın bu tek mevcut yardımcı kaynakla genişlemesi owner hattında yürütülüyor; merkez tekrar düzenlemeyecek.
+- Önceki `product-dev` W8 adapter blob `391d98ba6128551a2fcb00e4e83a46faba160f2d`; güncel sahibin blobu farklı. Dolayısıyla bu `tests/` yolu **sahip incelemesi olmadan otomatik birleştirilemez**. Manifest pin düzeltmesi **W8 tam `prepare/install/test/smoke` koşumunun veya native browser kabulünün kanıtı değildir**.
+
+**Sonuç:** Paralel sohbetin **gerçekten ilerlemekte olduğu**, yalnız görev listesiyle değil yeni PR commit'i ve tek-dosya owner değişikliğiyle doğrulandı. PR #14 CLOSED_UNMERGED kalacak; PR #15 hâlâ tek kaynak/adapter review adayı. MI-01 W8, başka hat üzerinden yürütüldüğü için burada tekrar başlatılmayacak. W8 ve G2/G9/PG/IV güvenlik HOLD değişmedi. Önceki kabul ve geliştirme yüzdeleri Δ0. İlk kayda dokunmadan bu R2 ekiyle doğru devir sağlanır.
