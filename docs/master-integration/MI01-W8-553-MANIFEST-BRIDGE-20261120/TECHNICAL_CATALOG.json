@@ -1,0 +1,72 @@
+{
+  "revision": "MI01-W8-553-BRIDGE-OWNER-GATE-20261120",
+  "symbols": [
+    {
+      "path": "tests/integration/w8_mi_common_553.py",
+      "git_blob": "e6e2d570f7fe935b3b00f514c6e8452a08eff261",
+      "functions": [
+        "git_blob(bytes)",
+        "load_pinned_parent(path)",
+        "load_candidate()"
+      ],
+      "status": "ISOLATED_REVIEW_ONLY"
+    },
+    {
+      "path": "tests/integration/test_w8_mi_common_553.py",
+      "git_blob": "f0fae186b350e7b20f618cfaa07a1a2070922579",
+      "class": "AdapterIntegrityTests",
+      "tests": 6,
+      "status": "ACTUAL_SYNTHETIC_HELPER_PASS"
+    }
+  ],
+  "parent": {
+    "path": "tests/integration/w8_mi_common_02.py",
+    "blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+    "modified": false
+  },
+  "manifest_old": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+  "manifest_new": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "source_candidate": {
+    "ref": "review/mi01-w8-553-manifest-bridge-20261120",
+    "base": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "commit": "ebee7053f55e9c3dd1c70053a2c3244929723906",
+    "files": {
+      "tests/integration/w8_mi_common_553.py": "e6e2d570f7fe935b3b00f514c6e8452a08eff261",
+      "tests/integration/test_w8_mi_common_553.py": "f0fae186b350e7b20f618cfaa07a1a2070922579"
+    },
+    "source_file_count": 2,
+    "overlap_with_existing_files": 0,
+    "original_W8_source_modified": false,
+    "product_files_modified": 0
+  },
+  "tests": {
+    "framework": "Python 3.13.5 unittest",
+    "count": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "status": "PASS_HELPER_ONLY",
+    "source_sha256": "01983bfe84645ad393caa62302aa62b0c2c651c59228a3e6cc5bef233f20f83b",
+    "test_sha256": "54d79af083c7763e662b75427bf1960312695a6a4bdd3cdf7e135eb1e1528aa1",
+    "zip_sha256": "6bdca1ce6fe7fe23f87761a45dbca1506a18f877f83ff00a7a8961677a1dcb63"
+  },
+  "original_W8_status": {
+    "source_checkout_current_553": "NOT_MOUNTED_IN_LOCAL_CONTAINER",
+    "git_dns": "UNAVAILABLE_FROM_ISOLATED_TEST_CONTAINER",
+    "prepare": "NOT_RUN",
+    "wheelhouse": "NOT_PREPARED",
+    "python_lock": "NOT_GENERATED",
+    "review_json": "NOT_GENERATED",
+    "dependency_owner_ratification": "HOLD",
+    "install": "NOT_RUN",
+    "test_and_next_build": "NOT_RUN",
+    "browser_smoke": "NOT_RUN",
+    "independent_security": "HOLD"
+  },
+  "new_dependencies": [],
+  "changed_api": [],
+  "changed_database": [],
+  "changed_events": [],
+  "changed_security_permissions": [],
+  "rollback": "delete isolated review branch or normal revert; product-dev and main unchanged"
+}

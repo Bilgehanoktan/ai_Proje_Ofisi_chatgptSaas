@@ -1,0 +1,94 @@
+{
+  "revision": "MI01-W8-553-BRIDGE-OWNER-GATE-20261120",
+  "date": "2026-11-20",
+  "evidence_type": "ACTUAL_LOCAL_SYNTHETIC_HELPER_TESTS_PLUS_GITHUB_EXACT_BLOB_READBACK",
+  "cross_chat_overlap_check": {
+    "owner": "MI-01 Unified / MI-10 owns existing source+CI",
+    "active_live_other_chat": "NOT_DIRECTLY_OBSERVABLE",
+    "github_full_553_original_W8_completed": false,
+    "PR14": "DRAFT_OPEN_FOR_SOURCE_PROMOTION_NOT_FULL_W8",
+    "latest_mi03_ci": "44628704044_OWNER_ORG_SQL_NOT_W8",
+    "mi01_operational_before": [
+      3,
+      8
+    ],
+    "mi01_operational_after": [
+      3,
+      8
+    ]
+  },
+  "candidate": {
+    "ref": "review/mi01-w8-553-manifest-bridge-20261120",
+    "base": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "commit": "ebee7053f55e9c3dd1c70053a2c3244929723906",
+    "files": {
+      "tests/integration/w8_mi_common_553.py": "e6e2d570f7fe935b3b00f514c6e8452a08eff261",
+      "tests/integration/test_w8_mi_common_553.py": "f0fae186b350e7b20f618cfaa07a1a2070922579"
+    },
+    "source_file_count": 2,
+    "overlap_with_existing_files": 0,
+    "original_W8_source_modified": false,
+    "product_files_modified": 0
+  },
+  "manifest_cause": {
+    "old_harness_path": "tests/integration/w8_mi_common_02.py",
+    "old_harness_blob": "acd361f17331f512ce35a1611e8108d32e61680f",
+    "old_manifest_blob": "03af243e8683f92c5d9c0b24e90b70d2bd6af29f",
+    "new_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "new_manifest_records": 552,
+    "raw_harness_without_bridge": "MI02_MANIFEST_HOLD_BEFORE_BUILD_EXPECTED"
+  },
+  "local_tests": {
+    "framework": "Python 3.13.5 unittest",
+    "count": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "status": "PASS_HELPER_ONLY",
+    "source_sha256": "01983bfe84645ad393caa62302aa62b0c2c651c59228a3e6cc5bef233f20f83b",
+    "test_sha256": "54d79af083c7763e662b75427bf1960312695a6a4bdd3cdf7e135eb1e1528aa1",
+    "zip_sha256": "6bdca1ce6fe7fe23f87761a45dbca1506a18f877f83ff00a7a8961677a1dcb63"
+  },
+  "original_W8": {
+    "source_checkout_current_553": "NOT_MOUNTED_IN_LOCAL_CONTAINER",
+    "git_dns": "UNAVAILABLE_FROM_ISOLATED_TEST_CONTAINER",
+    "prepare": "NOT_RUN",
+    "wheelhouse": "NOT_PREPARED",
+    "python_lock": "NOT_GENERATED",
+    "review_json": "NOT_GENERATED",
+    "dependency_owner_ratification": "HOLD",
+    "install": "NOT_RUN",
+    "test_and_next_build": "NOT_RUN",
+    "browser_smoke": "NOT_RUN",
+    "independent_security": "HOLD"
+  },
+  "integration": {
+    "product_dev_before": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "product_dev_after": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
+    "common_553_unchanged": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "CI_modified": false,
+    "PR_created": false,
+    "release_modified": false,
+    "external_effects": false,
+    "permissions_modified": false
+  },
+  "weighted_progress": {
+    "MI01_before": null,
+    "MI01_after": null,
+    "global_before": null,
+    "global_after": null
+  },
+  "operational_progress": {
+    "before": [
+      3,
+      8
+    ],
+    "after": [
+      3,
+      8
+    ],
+    "delta_pp": 0
+  },
+  "product_acceptance_delta_pp": 0,
+  "owner_next": "MI01 dependency owner to ratify clean 553 checkout and exact wheelhouse/hash/REVIEW.json; then original W8 prepare/install/test/smoke via reviewed bridge and independent U3 browser. Do not run CI outside existing explicit PR4/#6 scopes, do not merge."
+}
