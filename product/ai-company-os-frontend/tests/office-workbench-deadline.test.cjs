@@ -19,7 +19,6 @@ test('invalid scope must HOLD',()=>withMock(async()=>Response.json({...payload()
 test('oversize must HOLD',()=>withMock(async()=>Response.json({x:'a'.repeat(5000)}),async()=>{assert.equal((await GET()).status,503)}));
 test('transport error must HOLD',()=>withMock(async()=>{throw Error('offline')},async()=>{assert.equal((await GET()).status,503)}));
 
-
 // Follow-up PR #23: abort must bound every await, not only a completed response.
 async function promptHold(fn){
  let watchdog;
