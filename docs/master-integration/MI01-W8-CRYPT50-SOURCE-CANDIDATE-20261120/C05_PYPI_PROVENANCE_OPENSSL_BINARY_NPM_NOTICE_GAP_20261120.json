@@ -1,0 +1,134 @@
+{
+  "id": "MI01_W8_C05_PUBLISHER_ATTESTATION_STATIC_OPENSSL_403_AND_LICENSE_NOTICE_ANALYSIS_20261120",
+  "date": "2026-11-20",
+  "class": "REAL_PUBLIC_REMOTE_READ_ONLY_SUPPLIER_ARTIFACT_DOWNLOAD_AND_STATIC_BLOB_INSPECTION",
+  "dependencies_to_test": "ORIGINAL_CANDIDATE_REVIEW_SHA256=7335e1dd2525aa5639d276344c617b68fc323387e584b8c1c2c8ef81272d20aa",
+  "source_candidate": {
+    "pr": 34,
+    "source": "review/mi01-w8-cryptography-50-0-2-20261120",
+    "source_commit_original_native_C04": "388c8a9ed539aba4e645267f00035f6f2ef0ff3e",
+    "canonical_product_dev_sha": "254e0188998d0d245bd8ee4eb901aead02951a66"
+  },
+  "verified_native_C04_reference": {
+    "user_stage": "E:\\AIOS\\W8\\CRYPT50_STAGE_20261120_224742",
+    "cryptography_windows_wheel": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+    "expected_sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+    "user_native_wheel_sha256": "MATCH_PYPI"
+  },
+  "public_pypi_integrity_provenance": {
+    "api": "https://pypi.org/integrity/cryptography/50.0.2/cryptography-50.0.2-cp311-abi3-win_amd64.whl/provenance",
+    "actual_http_status": 200,
+    "version": 1,
+    "bundle_count": 1,
+    "attestation_count": 1,
+    "publisher": {
+      "kind": "GitHub",
+      "repository": "pyca/cryptography",
+      "workflow": "pypi-publish.yml",
+      "environment": null
+    },
+    "statement": {
+      "type": "https://in-toto.io/Statement/v1",
+      "subject": [
+        {
+          "name": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+          "digest": {
+            "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c"
+          }
+        }
+      ],
+      "predicate_type": "https://docs.pypi.org/attestations/publish/v1"
+    },
+    "signature_present": true,
+    "certificate_present": true,
+    "transparency_entries": 1,
+    "issuer_subject_digest_matches_locked_user_wheel": true,
+    "cryptographic_attestation_signature_trust_chain_verification": "NOT_RUN",
+    "note": "Read-only JSON downloaded and decoded locally inside tool JS, not equivalent to verifying signature, cert chain and Rekor inclusion"
+  },
+  "supplier_wheel_binary_static_analysis": {
+    "publisher_wheel_url": "https://files.pythonhosted.org/packages/9a/4f/adfc442765721292fff86d314ce385d3249d22db42295c0dd057727b60f3/cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+    "downloaded_bytes": 3824692,
+    "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+    "sha256_match": true,
+    "binary_members": [
+      "cryptography/hazmat/bindings/_rust.pyd"
+    ],
+    "binary_bytes": 9897472,
+    "exact_static_ascii_version_marker": "OpenSSL 4.0.3 29 Sep 2026",
+    "marker_found": true,
+    "upstream_changelog": "https://cryptography.io/en/stable/changelog/",
+    "upstream_50_0_2_windows_wheel_claim": "OpenSSL 4.0.3",
+    "scope": "STATIC_BINARY_STRING_ONLY_NOT_ACTUAL_WINDOWS_IMPORTED_OPENSSL_VERSION_NOT_RUNTIME_LOADED"
+  },
+  "public_frozen_npm_tarball_static_analysis": [
+    {
+      "name": "@img/sharp-win32-x64",
+      "version": "0.35.5",
+      "url": "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.35.5.tgz",
+      "downloaded_bytes": 8575353,
+      "expected_lock_sri": "sha512-x76eH0vEiHlcMQu8Y8IenntaACtddpT6W0wmXtWrnKcnKI7ME5DdgqhAD6SEWOEl1v2zDvkZDhFA9KnURwpfqg==",
+      "actual_sri_matches": true,
+      "package_archive_file_count": 8,
+      "license_from_package_json": "Apache-2.0 AND LGPL-3.0-or-later",
+      "only_license_notice_file_in_archive": "package/LICENSE",
+      "license_file_starts_with": "Apache License Version 2.0 January 2004",
+      "bundled_native_modules": [
+        "package/lib/libvips-42.dll",
+        "package/lib/libvips-cpp-8.18.7.dll",
+        "package/lib/sharp-win32-x64-0.35.5.node"
+      ],
+      "separate_third_party_notices_embedded_in_archive": "NOT_PRESENT_AS_SEPARATE_NOTICE_OR_LICENSE_FILENAME",
+      "finding": "Window package includes libvips DLL and claims composite LGPL licence while archive's only LICENSE text starts Apache; product redistribution notice and LGPL obligations require owner disposition; not an assertion of unlawful distribution."
+    },
+    {
+      "name": "caniuse-lite",
+      "version": "1.0.30001826",
+      "url": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001826.tgz",
+      "downloaded_bytes": 362480,
+      "expected_lock_sri": "sha512-wTB+9tIbLro/BCXwLuNV1meHE4L9dS6dArMDwgYfNBPMYScqClHyGunhkCSDtHhe/69Xl0sHlKgBVZ+fNsYtWA==",
+      "actual_sri_matches": true,
+      "package_archive_file_count": 842,
+      "license_from_package_json": "CC-BY-4.0",
+      "license_file": "package/LICENSE",
+      "license_file_header": "Attribution 4.0 International",
+      "binary_modules": 0,
+      "finding": "License text present in exact published tarball; whether project redistributes data/attribution still needs owner classification."
+    }
+  ],
+  "third_party_license_reference": {
+    "upstream": "https://github.com/lovell/sharp-libvips/blob/main/THIRD-PARTY-NOTICES.md",
+    "scope": "UPSTREAM_LIVE_MAIN_NOT_VERSION_PINNED; requires matching release packaging/notice audit"
+  },
+  "security_scope": {
+    "C05_earlier_exact_name_version_osv": "28 PyPI plus 61 npm, 0 matching records at query time",
+    "no_automatic_security_acceptance": true
+  },
+  "gates": {
+    "G3_C04": "PASS_ACTUAL_USER_WINDOWS",
+    "C05_integrity_license_metadata": "PASS_IN_SCOPE",
+    "C05_supplier_provenance": "EXACT_SUBJECT_AND_PUBLISHER_VISIBLE_SIGNATURE_UNVERIFIED",
+    "C05_native_crypto_static": "STATIC_OPENSSL_4_0_3_MARKER_PASS",
+    "C05_LGPL_AND_THIRD_PARTY_NOTICES": "HOLD",
+    "C05_independent_source_security_legal": "HOLD",
+    "C06_C07_C08": "NOT_RUN",
+    "G8": "HOLD"
+  },
+  "operational_and_rollback": {
+    "source_changes": 0,
+    "dependency_changes": 0,
+    "DB_changes": 0,
+    "API_changes": 0,
+    "security_permission_changes": 0,
+    "installer_executed": false,
+    "merge_performed": false,
+    "preserve_existing_windows_stage": true
+  },
+  "progress": {
+    "W8_previous": "3/8",
+    "W8_current": "3/8",
+    "delta_percentage_points": 0,
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "next": "Independent owner reviews exact C05 chain and distribution notices/rights for sharp Windows native libvips and caniuse-lite; optionally verify PyPI provenance signature/trust with official pypi-attestations and actual Windows OpenSSL load; do not advance C06/C07/C08 without authorized gate."
+}
