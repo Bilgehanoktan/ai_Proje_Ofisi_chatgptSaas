@@ -1,5 +1,5 @@
 {
-  "revision": "MI-P0-PR21-EVIDENCE-INTEGRITY-20261120-R1",
+  "revision": "MI05-OFFICE-ABSOLUTE-DEADLINE-R2-20261120",
   "date": "2026-11-20",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -2744,9 +2744,9 @@
       "owner_role": "Premium UI",
       "source_ref": "integration/p10j24b-source-recovery",
       "observed_sha": "6941a73e5b1b63b1ada7b912d375efb07a7599b1",
-      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending. | Common projection read 12/12 and registry 13/13 actual replay; browser still pending. | MI05-OFFICE-WORKBENCH-DEADLINE-20261120: owner route original blob 749a2899, two isolated ignored-abort negatives reproduced 200≠503; minimal fail-closed patch and six targeted local Node tests 6/6 PASS, strict TS selected compile PASS; draft PR22 review only, 553 canonical unchanged. MI-05/Unified owner + W8 original browser approval HOLD. Do not double count original 12/12 projection or product acceptance. | MI05 Office review PR22 followup: exact original frontend test Git blob bbad3467 on canonical 553 source; original 25/25 plus PR22 deadline 6/6 SELECTED local PASS, fixture 20 vectors semantic reconstruction, NOT byte identical; full W8/owner/native browser remain HOLD. GitHub docs ORIGINAL_OFFICE_REGRESSION_25.md and EVIDENCE.json. | 2026-11-20 independent PR23 exact owner source 3/3 new deadline-stall negatives FAILED (PENDING_AFTER_ABORT), original six 6/6 PASS; fix bounded fetch/read/cancel before owner W8 acceptance; see comment #7037332650. No duplicate product patch.",
+      "next": "Existing shared snapshot source unchanged; after common source review/full build run original U3 shared-session browser test; live event source still needs owner contract. Do not overwrite common A5/U2 Office/Workflow changes from older UI branch. | MI05/06 exact original closed route 8/8 replay; preserve source-lock review and owner boundaries. | Common U3 and Office unchanged; original browser proof pending. | Common projection read 12/12 and registry 13/13 actual replay; browser still pending. | MI05-OFFICE-WORKBENCH-DEADLINE-20261120: owner route original blob 749a2899, two isolated ignored-abort negatives reproduced 200≠503; minimal fail-closed patch and six targeted local Node tests 6/6 PASS, strict TS selected compile PASS; draft PR22 review only, 553 canonical unchanged. MI-05/Unified owner + W8 original browser approval HOLD. Do not double count original 12/12 projection or product acceptance. | MI05 Office review PR22 followup: exact original frontend test Git blob bbad3467 on canonical 553 source; original 25/25 plus PR22 deadline 6/6 SELECTED local PASS, fixture 20 vectors semantic reconstruction, NOT byte identical; full W8/owner/native browser remain HOLD. GitHub docs ORIGINAL_OFFICE_REGRESSION_25.md and EVIDENCE.json. | 2026-11-20 independent PR23 exact owner source 3/3 new deadline-stall negatives FAILED (PENDING_AFTER_ABORT), original six 6/6 PASS; fix bounded fetch/read/cancel before owner W8 acceptance; see comment #7037332650. No duplicate product patch. | MI05 PR22 R2: exact immutable PR23 independent three previously failing stalled fetch/read/cancel negatives now 3/3 actual local PASS; owner 9/9, original Office 25/25 (20-case semantically reconstructed source fixture), total selected 37/37 executed, 0 fail; real native 2.5 s stalled fetch 503 in 2536ms. Route/test Git blobs ae42eccc/aa7afc3a and all 3 raw TAP Git blobs verified. Review-only manifest rebind proposal, no canonical source write; owner W8/real browser/PG/independent security HOLD. See PR22 docs EVIDENCE_R2.json and ARCHITECTURE_CATALOG_HANDOVER_R2.md.",
       "priority": "P1",
-      "status": "REVIEW_PR22_SELECTED_31_PASS_NEW_3_TIMEOUT_NEGATIVE_FAIL_OWNER_HOLD",
+      "status": "REVIEW_PR22_R2_37_SELECTED_PASS_PR23_3_NEGATIVE_FIXED_OWNER_W8_HOLD",
       "owner_assignment": "existing workstream; exact active task owner to confirm before editing",
       "evidence": "branch head observed only; latest acceptance not reconciled",
       "mi01_dependency": {
@@ -10376,5 +10376,100 @@
     "no_parallel_owner_overlap": true,
     "next": "Existing MI01 PR20 owner for source/dependency reviewed original W8 C04-C08; PR19/PR22/PR24 other owners unaffected; do not count diagnostic fixtures as W8 acceptance",
     "rollback": "Normal revert this documentation-only governance commit; PR21 evidence correction separately reversible"
+  },
+  "mi05_absolute_deadline_r2_20261120": {
+    "revision": "MI05-OFFICE-ABSOLUTE-DEADLINE-R2-20261120",
+    "date": "2026-11-20",
+    "phase": "MI05 Premium UI",
+    "canonical": {
+      "branch": "integration/product-dev",
+      "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_files": 553,
+      "manifest_entries": 552,
+      "unchanged": true
+    },
+    "work": {
+      "pr": 22,
+      "branch": "review/mi05-office-workbench-deadline-20261120",
+      "scope": "1 existing D0 GET route and 1 existing PR22 focused test; additional docs/manifests/logs; no other source owners",
+      "source_route_git_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+      "source_test_git_blob": "aa7afc3a93265305df6ceb8acbb03d25b901beb3",
+      "absolute_deadline_ms": 2500
+    },
+    "PR23_independent_QA": {
+      "pr": 23,
+      "source_git_blob": "ff6d1a9c923f427a9f982aaaffd59a45fd9d7578",
+      "before": {
+        "pass": 0,
+        "fail": 3
+      },
+      "after": {
+        "pass": 3,
+        "fail": 0
+      },
+      "unchanged": true
+    },
+    "actual_local": {
+      "original": {
+        "pass": 25,
+        "fail": 0,
+        "fixture": "semantically reconstructed 20 original GitHub JSON cases; not byte-exact JSON"
+      },
+      "owner": {
+        "pass": 9,
+        "fail": 0,
+        "added_methods": 3
+      },
+      "independent_PR23": {
+        "pass": 3,
+        "fail": 0
+      },
+      "selected_total": {
+        "pass": 37,
+        "fail": 0,
+        "skip": 0,
+        "duplicate_semantics_possible": true,
+        "not_acceptance": true
+      },
+      "real_native_abort": {
+        "HTTP": 503,
+        "elapsed_ms": 2536,
+        "expected_timeout_ms": 2500
+      },
+      "selected_ts_compile": "PASS_TSC_5_8_3_NOT_PROJECT_5_9_3"
+    },
+    "raw_logs_git_blobs": {
+      "original": "1851d0177481420a91810b499a276b99e232741f",
+      "owner": "ca2454697ff130a95a168710082731bf91940265",
+      "independent": "0be39a3d53ba71e98170295d0fa618b067fe8dfe"
+    },
+    "documentation": {
+      "evidence": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/EVIDENCE_R2.json",
+      "catalog_handover": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/ARCHITECTURE_CATALOG_HANDOVER_R2.md",
+      "source_manifest_proposal": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/SOURCE_MANIFEST_REBIND_R2.json"
+    },
+    "progress": {
+      "global_development_before": null,
+      "global_development_after": null,
+      "global_delta_pp": null,
+      "ratified_group_weights": 0,
+      "core_previous": "12/16",
+      "core_current": "12/16",
+      "ui_previous": "21/40",
+      "ui_current": "21/40",
+      "mvp_previous": "0/11",
+      "mvp_current": "0/11",
+      "independent_IV_previous": "0/7",
+      "independent_IV_current": "0/7",
+      "product_acceptance_delta_pp": 0
+    },
+    "blockers": [
+      "Owner/Unified review PR22",
+      "W8 original 553 C04-C08 source/dependency/build/native browser",
+      "PR22 review branch manifest rebind before canonical promotion",
+      "Independent GATE02 owner issuer/root/sink and PG/IV separate HOLD"
+    ],
+    "next": "MI01 owner PR20 reviewed exact dependencies and native W8; then MI05/Unified owner PR22 code/manifest/browser review; no unattended auto-merge",
+    "rollback": "Close/revert only PR22 review branch patch; if governance record changed normal revert; retain PR23 diagnostic, product-dev/main unmodified."
   }
 }
