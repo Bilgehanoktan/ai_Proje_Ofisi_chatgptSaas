@@ -6,7 +6,7 @@ import {draftOverview} from './draftOverview';
 import PlanGraph from '../graph/PlanGraph';
 import {editDraft,emptyDraftHistory,type DraftAction} from './draftHistory';
 import styles from './ParallelStudio.module.css';
-import DraftInspector from './DraftInspector';
+import DraftInspector from './WorkflowDraftInspector';
 import StudioContextPanel from '../mvp/StudioContextPanel';
 export default function WorkflowDraft(){
  const [draft,setDraft]=useState(emptyDraftHistory),[from,setFrom]=useState(''),[to,setTo]=useState('');

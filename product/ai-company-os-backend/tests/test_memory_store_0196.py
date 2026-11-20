@@ -72,7 +72,7 @@ class SnapshotStoreTests(unittest.TestCase):
 
     def test_graph_edge_changes_digest(self):
         pin = publish_snapshot(self.path, self.snapshot, None)
-        nodes = (self.snapshot.nodes[0], replace(self.snapshot.nodes[1], parents=()), self.snapshot.nodes[2])
+        nodes = (self.snapshot.nodes[0], replace(self.snapshot.nodes[1], revision='v3', parents=()), self.snapshot.nodes[2])
         newer = publish_snapshot(self.path, self.next(nodes=nodes), pin)
         self.assertNotEqual(pin.graph_digest, newer.graph_digest)
         self.assertEqual(self.inspect(newer).reason, 'MEMORY_ACL_COVERAGE_HOLD')

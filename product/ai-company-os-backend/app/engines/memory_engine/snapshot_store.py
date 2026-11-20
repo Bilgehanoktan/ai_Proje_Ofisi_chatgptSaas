@@ -15,6 +15,9 @@ from .runtime_binding import (MemoryAclEntry, MemoryAclView, MemoryAccessReview,
                               _valid_acl, _valid_run, inspect_run_memory_access)
 
 LIMIT = 1024 * 1024
+# Bounded D0 replay, not a production retention or migration policy.
+HISTORY_LIMIT = 512
+HISTORY_BYTES = 64 * LIMIT
 
 
 @dataclass(frozen=True)
@@ -139,6 +142,76 @@ def _load(db, pin):
     return snapshot
 
 
+def _check_successor(old, snapshot):
+    a, b = old.tombstone, snapshot.tombstone
+    if (old.run != snapshot.run or old.target != snapshot.target or a.epoch != b.epoch
+            or b.sequence < a.sequence or not set(a.keys) <= set(b.keys)
+            or (set(a.keys) != set(b.keys) and b.sequence == a.sequence)
+            or snapshot.acl.acl_revision <= old.acl.acl_revision
+            or snapshot.acl.policy_epoch < old.acl.policy_epoch
+            or snapshot.acl.witness_epoch < old.acl.witness_epoch):
+        raise ValueError('MEMORY_SNAPSHOT_MONOTONIC_HOLD')
+
+
+def _bind_revisions(revisions, snapshot):
+    """A node revision is immutable, including the exact parent revisions.
+
+    The graph is already validated by _encode/_load. Direct parent pins plus
+    the same invariant for every node bind the transitive lineage. ACL and
+    tombstone state may advance without changing the content revision.
+    """
+    by_id = {n.node_id: n for n in snapshot.nodes}
+    for n in snapshot.nodes:
+        key = (n.node_id, n.revision)
+        parents = tuple(sorted((p, by_id[p].revision, by_id[p].digest) for p in n.parents))
+        value = (n.digest, parents)
+        if revisions.setdefault(key, value) != value:
+            raise ValueError('MEMORY_SNAPSHOT_REVISION_IMMUTABLE_HOLD')
+
+
+def _review_history(db, head, expected_history=None):
+    """Replay retained history within the caller's single SQLite transaction.
+
+    Optional committed pins originate from the existing verified Witness chain.
+    Compare them in this same read transaction, not in a separate preflight.
+    A coherent rewrite including all external trust pins remains out of scope.
+    """
+    if expected_history is not None and (
+            type(expected_history) is not tuple or head is None
+            or len(expected_history) != head.generation
+            or not 1 <= len(expected_history) <= HISTORY_LIMIT
+            or expected_history[-1] != head):
+        raise ValueError('MEMORY_SNAPSHOT_WITNESS_HISTORY_HOLD')
+    if head is None:
+        return None, {}, 0
+    if head.generation > HISTORY_LIMIT:
+        raise ValueError('MEMORY_SNAPSHOT_HISTORY_LIMIT_HOLD')
+    rows = db.execute('SELECT generation,digest,graph,length(metadata),length(raw) '
+                      'FROM snapshots ORDER BY generation LIMIT ?', (HISTORY_LIMIT + 1,)).fetchall()
+    if len(rows) != head.generation or rows[-1][:3] != (head.generation, head.digest, head.graph_digest):
+        raise ValueError('MEMORY_SNAPSHOT_HISTORY_HOLD')
+    revisions, previous, retained_bytes = {}, None, 0
+    for generation, row in enumerate(rows, 1):
+        pin = SnapshotPin(*row[:3])
+        if not _pin_ok(pin) or pin.generation != generation:
+            raise ValueError('MEMORY_SNAPSHOT_HISTORY_HOLD')
+        if expected_history is not None:
+            signed_pin = expected_history[generation - 1]
+            if not _pin_ok(signed_pin) or signed_pin != pin:
+                raise ValueError('MEMORY_SNAPSHOT_WITNESS_HISTORY_HOLD')
+        if not all(uint(size) and size <= LIMIT for size in row[3:]):
+            raise ValueError('MEMORY_SNAPSHOT_HISTORY_LIMIT_HOLD')
+        retained_bytes += row[3] + row[4]
+        if retained_bytes > HISTORY_BYTES:
+            raise ValueError('MEMORY_SNAPSHOT_HISTORY_LIMIT_HOLD')
+        current = _load(db, pin)
+        if previous is not None:
+            _check_successor(previous, current)
+        _bind_revisions(revisions, current)
+        previous = current
+    return previous, revisions, retained_bytes
+
+
 def publish_snapshot(path, snapshot, expected):
     """Append a synthetic observation with exact head CAS; no real memory write grant."""
     metadata, graph = _encode(snapshot)
@@ -150,16 +223,13 @@ def publish_snapshot(path, snapshot, expected):
             head = _head(db)
             if head != expected:
                 raise ValueError('MEMORY_SNAPSHOT_CAS_HOLD')
-            if head is not None:
-                old = _load(db, head)
-                a, b = old.tombstone, snapshot.tombstone
-                if (old.run != snapshot.run or old.target != snapshot.target or a.epoch != b.epoch
-                        or b.sequence < a.sequence or not set(a.keys) <= set(b.keys)
-                        or (set(a.keys) != set(b.keys) and b.sequence == a.sequence)
-                        or snapshot.acl.acl_revision <= old.acl.acl_revision
-                        or snapshot.acl.policy_epoch < old.acl.policy_epoch
-                        or snapshot.acl.witness_epoch < old.acl.witness_epoch):
-                    raise ValueError('MEMORY_SNAPSHOT_MONOTONIC_HOLD')
+            old, revisions, retained_bytes = _review_history(db, head)
+            if old is not None:
+                _check_successor(old, snapshot)
+            if ((head is not None and head.generation >= HISTORY_LIMIT)
+                    or retained_bytes + len(metadata) + len(snapshot.raw) > HISTORY_BYTES):
+                raise ValueError('MEMORY_SNAPSHOT_HISTORY_LIMIT_HOLD')
+            _bind_revisions(revisions, snapshot)
             generation = 1 if head is None else head.generation + 1
             if not uint(generation):
                 raise ValueError('MEMORY_SNAPSHOT_GENERATION_HOLD')
@@ -183,7 +253,7 @@ def inspect_stored_memory(path, expected, run, lease, lease_reference, clock):
             db.execute('BEGIN')
             if _head(db) != expected:
                 return MemoryAccessReview('MEMORY_SNAPSHOT_CAS_HOLD')
-            s = _load(db, expected)
+            s, _, _ = _review_history(db, expected)
             result = inspect_run_memory_access(s.run, run, s.nodes, s.target, s.tombstone, s.tombstone,
                                                s.acl, s.acl, lease, lease_reference, clock, s.source, s.span, s.raw)
             return result
@@ -191,7 +261,7 @@ def inspect_stored_memory(path, expected, run, lease, lease_reference, clock):
         return MemoryAccessReview('MEMORY_SNAPSHOT_READ_HOLD')
 
 
-def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, raw):
+def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, raw, expected_history=None):
     """One consistent read-only snapshot; compare exact bytes without returning them."""
     if not _pin_ok(pin) or not _valid_run(run) or type(raw) is not bytes or len(raw) > LIMIT:
         return 'MEMORY_SNAPSHOT_PIN_HOLD'
@@ -200,7 +270,7 @@ def inspect_stored_memory_input(path, pin, run, lease, lease_reference, clock, r
             db.execute('BEGIN')
             if _head(db) != pin:
                 return 'MEMORY_SNAPSHOT_CAS_HOLD'
-            s = _load(db, pin)
+            s, _, _ = _review_history(db, pin, expected_history)
             review = inspect_run_memory_access(s.run, run, s.nodes, s.target,
                 s.tombstone, s.tombstone, s.acl, s.acl, lease, lease_reference, clock,
                 s.source, s.span, s.raw)
