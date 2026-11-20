@@ -69,6 +69,24 @@ class PCToolSafetyGuards(unittest.TestCase):
                 s.w8_full("a"*64,self.root/"chromium.exe")
             execute.assert_not_called()
 
+    def test_existing_owner_source_readonly_does_not_mutate(self):
+        s=target.Session(self.root/"s", w8_reuse=self.root/"existing_pr20")
+        s.w8_dir.mkdir(parents=True)
+        with patch.object(s,"run",side_effect=[target.W8+"\n", ""] ) as run:
+            s.verify_existing_checkout(s.w8_dir,target.W8,"W8")
+            self.assertEqual(run.call_count,2)
+            calls=" ".join(str(c) for c in run.call_args_list)
+            self.assertNotIn("fetch",calls)
+            self.assertNotIn("checkout",calls)
+            self.assertNotIn("config",calls)
+
+    def test_existing_owner_source_sha_mismatch_holds(self):
+        s=target.Session(self.root/"s",w8_reuse=self.root/"existing_pr20")
+        s.w8_dir.mkdir(parents=True)
+        with patch.object(s,"run",return_value="wrong\n"):
+            with self.assertRaisesRegex(RuntimeError,"EXISTING_HEAD_MISMATCH_HOLD"):
+                s.verify_existing_checkout(s.w8_dir,target.W8,"W8")
+
     def test_pg_probe_is_readonly_when_binary_absent(self):
         s=target.Session(self.root/"s")
         with patch.object(target.shutil,"which",return_value=None),patch.object(s,"run") as execute:
