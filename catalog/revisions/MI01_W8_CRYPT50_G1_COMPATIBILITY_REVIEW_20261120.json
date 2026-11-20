@@ -237,5 +237,64 @@
     "owner_reviewer_username_collection": "NOT_REQUIRED_FOR_NEXT_TECHNICAL_STEP",
     "effect_on_development_weighted": "HESAPLANAMADI",
     "effect_on_W8_acceptance": "3/8"
+  },
+  "actual_public_C05_publisher_attestation_and_windows_native_binary_review_20261120": {
+    "source_evidence": "docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/C05_PYPI_PROVENANCE_OPENSSL_BINARY_NPM_NOTICE_GAP_20261120.json",
+    "C05_PyPI_attestation": {
+      "status": "FETCHED_AND_SUBJECT_MATCH_NOT_SIGNATURE_VERIFIED",
+      "publisher": "pyca/cryptography via GitHub pypi-publish.yml",
+      "subject_sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+      "signed_envelope_present": true,
+      "cert_present": true,
+      "rekor_entry_present": true
+    },
+    "C05_cryptography_static_binary": {
+      "original_publisher_wheel_bytes": 3824692,
+      "original_publisher_wheel_sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+      "rust_native_member": "cryptography/hazmat/bindings/_rust.pyd",
+      "native_member_bytes": 9897472,
+      "static_OpenSSL_marker": "OpenSSL 4.0.3 29 Sep 2026",
+      "runtime_OpenSSL_loaded_version": "NOT_RUN"
+    },
+    "C05_npm_windows_native_archives": {
+      "sharp_win32_x64": {
+        "package_version": "0.35.5",
+        "tarball_download_bytes": 8575353,
+        "exact_lock_sha512_SRI": "PASS",
+        "license_expression": "Apache-2.0 AND LGPL-3.0-or-later",
+        "native_bindings": [
+          "libvips-42.dll",
+          "libvips-cpp-8.18.7.dll",
+          "sharp-win32-x64-0.35.5.node"
+        ],
+        "separate_notice_or_LGPL_text": "NOT_SEEN_IN_PACKAGE_ARCHIVE_FILENAME_SCAN",
+        "license_file": "package/LICENSE (starts with Apache 2.0)",
+        "legal_review": "HOLD"
+      },
+      "caniuse_lite": {
+        "version": "1.0.30001826",
+        "tarball_download_bytes": 362480,
+        "exact_lock_sha512_SRI": "PASS",
+        "license": "CC-BY-4.0",
+        "license_file": "package/LICENSE present",
+        "legal_review": "HOLD_IF_REDISTRIBUTED"
+      }
+    },
+    "no_change": {
+      "product": 0,
+      "classes": 0,
+      "functions": 0,
+      "API": 0,
+      "DB": 0,
+      "dependencies": 0,
+      "source_hashes": 0,
+      "security_grants": 0
+    },
+    "G4_C05_independent_owner_signoff": "HOLD",
+    "G5_C06": "NOT_RUN",
+    "G6_C07": "NOT_RUN",
+    "G7_C08": "NOT_RUN",
+    "G8": "HOLD",
+    "next": "Independent signed provenance and native loaded version check (when authorized), and license notices for Windows bundled libvips; no auto-approve"
   }
 }
