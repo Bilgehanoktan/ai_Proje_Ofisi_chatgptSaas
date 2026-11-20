@@ -1,5 +1,5 @@
 {
-  "revision": "MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120-R2",
+  "revision": "MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120-R3",
   "type": "CENTRAL_COORDINATION_GIT_READBACK_NO_RUNTIME_TEST",
   "source": {
     "canonical_product_dev": "8a3b05aadd32b214f3f8988fc9c793f853fbe3d0",
@@ -81,10 +81,11 @@
     "W8_ORIGINAL_LOCK_FINGERPRINT_FULL_CHAIN",
     "G9_DURABLE_OPS_OWNER_RATIFICATION",
     "G2_INTENT_AUTHORITY_OWNER_VARIANT",
-    "G2_50_G9_7_MEMORYT1_10",
     "REAL_ISSUER_ROOT_SINK_FENCING_RESTORE",
     "STRICT_PROTECTED_PG_COMMIT",
-    "INDEPENDENT_SECURITY_AND_IV"
+    "INDEPENDENT_SECURITY_AND_IV",
+    "G2_50_G9_7_ORIGINAL_OWNER_TESTS",
+    "MEMORY_T1_0214_D0_PASS_BUT_REAL_RESTORE_SECURITY_OPEN"
   ],
   "product_changes_this_turn": 0,
   "runtime_tests_this_turn": 0,
@@ -122,5 +123,20 @@
   },
   "handover": "docs/master-integration/MI-P0-PR14-PR15-SINGLE-WRITER-CLOSEOUT-20261120.md",
   "next": "PR15 active MI01 W8 owner adapter now updated in second commit. Await original full 553 W8 prepare/install/test/smoke and native browser + owner G2/G9/PG/IV. No duplicate source changes.",
-  "rollback": "Normal governance revert only; original PR14 already closed unmerged, PR15 open and source unaffected"
+  "rollback": "Normal governance revert only; original PR14 already closed unmerged, PR15 open and source unaffected",
+  "parallel_mi04_0214": {
+    "status": "ACTUAL_ORIGINAL_0214_10_OF_10_PASS_D0",
+    "run": 44695937454,
+    "job": 136152572204,
+    "source": "a80932b6d5e99667889dfaa25b682feb267c6cba",
+    "owner": "MI-04 independent concurrent workstream",
+    "pr16": "CLOSED_UNMERGED",
+    "new_unique_original_methods_passed": [
+      10,
+      10
+    ],
+    "independent_security_acceptance": false,
+    "known_restore_replay_open": true,
+    "rerun_here": false
+  }
 }
