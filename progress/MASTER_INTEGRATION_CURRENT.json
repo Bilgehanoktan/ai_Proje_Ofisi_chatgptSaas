@@ -12400,5 +12400,68 @@
     ],
     "parallel": "Existing PR32 current G7 Windows runner preserved, no duplicate code",
     "rollback": "Only isolated planned candidate PR normal revert/close; historical evidence and owner PRs preserved."
+  },
+  "mi01_w8_crypt50_G1_G2_isolated_source_PR34_20261120": {
+    "date": "2026-11-20",
+    "classification": "ACTUAL_ISOLATED_SOURCE_DELTA_AND_GITHUB_STATIC_READBACK_NOT_OWNER_APPROVED",
+    "branch": "review/mi01-w8-cryptography-50-0-2-20261120",
+    "pr": 34,
+    "head": "3523a0b595799480a6ef03fa57de6dc2903f796e",
+    "base": "9166afe299cd8f1ab9c52355ec21ec06c465d6ef",
+    "base_pr": 33,
+    "original_owner_pr": 20,
+    "canonical_product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "scope": {
+      "source_and_manifest_paths": 3,
+      "evidence_paths": 2,
+      "total_changed_paths": 5,
+      "unexpected_changes": 0,
+      "product_files": 553,
+      "manifest_entries": 552,
+      "manifest_path_missing": 0,
+      "manifest_orphan": 0,
+      "base_compare_ahead": 1,
+      "base_compare_behind": 0
+    },
+    "source_pins": {
+      "original_dependency": "cryptography==46.0.4",
+      "candidate_dependency": "cryptography==50.0.2",
+      "new_requirement_blob": "921818de26b481ed94603d8e596a384abf04bfa9",
+      "new_requirement_sha256": "14f7abb23f8fa599eec9103ef59f26ead5650b0075c7d93b1da5c2494473bcd2",
+      "bytes": 120,
+      "new_manifest_blob": "589a77c2115bf255600d130087fc8973ecf2b7e5",
+      "new_w8_upper_adapter_blob": "c67b6d0f3234cedbb7d1dc22ebc2511829b2ff04",
+      "original_history_and_frozen_npm_unchanged": true
+    },
+    "gates": {
+      "G1": "PUBLIC_PYPI_LICENSE_PYTHON_WHEEL_METADATA_VERIFIED_SOURCE_OWNER_AND_REAL_OSV_DECISION_HOLD",
+      "G2": "ISOLATED_SOURCE_CANDIDATE_GIT_STATIC_READBACK_PASS_OWNER_REVIEW_HOLD",
+      "G3": "NEW_W8_AUDIT_AND_REAL_WINDOWS_C04_NOT_RUN",
+      "G4": "NEW_VERSION_C05_FULL_OSV_PYPI_NPM_LICENSE_WHEEL_OPENSSL_AND_INDEPENDENT_OWNER_HOLD",
+      "G5": "C06_NOT_RUN",
+      "G6": "C07_NOT_RUN",
+      "G7": "C08_NOT_RUN",
+      "G8": "CONTROLLED_CANONICAL_INTEGRATION_NOT_RUN_HOLD"
+    },
+    "original_windows_security_evidence": "46.0.4 had seven distinct GHSA, six PYSEC aliases; original C04/old C05 preserved, not superseded",
+    "new_actual_tests": 0,
+    "actual_static_git_checks": "PASS_SCOPE_PATH_MANIFEST_COUNT_GIT_BLOB_W8_MANIFEST_LINK",
+    "acceptance": {
+      "W8_previous": "3/8",
+      "W8_current": "3/8",
+      "delta_pp": 0,
+      "Core": "12/16",
+      "UI": "21/40",
+      "MVP": "0/11",
+      "independent_IV": "0/7"
+    },
+    "weighted_global_development_previous": null,
+    "weighted_global_development_current": null,
+    "weighted_global_development_reason": "No approved cross-workstream criterion denominator; do not invent percentages",
+    "owner": "MI-01/W8 source owner with independent C05 supply-chain/license review",
+    "next": "MI-01 owner review PR34 G1; execute original W8 audit on exact review head, Windows fresh C04, independent new C05; C06-C08 only after C05 approval; central product-dev G8 only following owner acceptance",
+    "evidence": "docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/EVIDENCE.json",
+    "handover": "docs/master-integration/MI01-W8-CRYPT50-SOURCE-CANDIDATE-20261120/G1_G2_ARCHITECTURE_CATALOG_HANDOVER.md",
+    "rollback": "Close draft PR34 or normal revert; previous PR20, PR33, canonical, old Windows C04/C05 unchanged"
   }
 }
