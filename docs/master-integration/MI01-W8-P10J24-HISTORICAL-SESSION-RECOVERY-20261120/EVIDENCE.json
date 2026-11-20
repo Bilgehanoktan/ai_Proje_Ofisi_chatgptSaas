@@ -1,0 +1,49 @@
+{
+  "revision": "MI01-W8-P10J24-HISTORICAL-SOURCE-RECOVERY-20261120-R1",
+  "date": "2026-11-20",
+  "scope": "BYTE_EXACT_HISTORICAL_SOURCE_FIXTURE_RECOVERY_NOT_W8_GATE",
+  "observed": {
+    "source": "user PowerShell 5.1 pasted stdout, not raw JSON",
+    "error": "P10J24_HISTORICAL_AUX_HOLD",
+    "phase": "C04 prepare original runner, before package download",
+    "preflight": "552/552 product + 6/6 W8 pins PASS"
+  },
+  "baseline": {
+    "ownerPR": 20,
+    "sha": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
+    "canonical": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "ownerAndCanonicalUnchanged": true
+  },
+  "change": {
+    "branch": "review/mi01-w8-p10j24-historical-session-recovery-20261120",
+    "fixCommit": "78331f0cc5cee78896b0f10c585fb02646e9320d",
+    "addedPath": "tests/integration/historical_0207/app/core/transaction/postgres_session.py",
+    "GitBlob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+    "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb",
+    "bytes": 2495,
+    "origLockBlob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "orig55SourceCommit": "614aa63efbd0a95d0fa5fe47390df043d773370f"
+  },
+  "verification": {
+    "originalSourceBlobGitHubReadback": true,
+    "untruncatedFullGitTree": true,
+    "oneAddedNonProductSource": true,
+    "allFourHistoricalSourceGitBlobsAnd55LockMatches": "4/4",
+    "productTree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "productTreeUnchanged": true,
+    "originalW8AuditCandidate": "NOT_RUN",
+    "actualW8C04Candidate": "NOT_RUN"
+  },
+  "security": {
+    "C04": "NOT_RUN_ACCEPTANCE",
+    "C05": "HOLD",
+    "C06": "NOT_RUN",
+    "C07": "NOT_RUN",
+    "C08": "NOT_RUN",
+    "MVP": "0/11",
+    "IV": "0/7",
+    "weightedGlobal": null
+  },
+  "next": "Owner MI01/Unified reviews isolated source, Windows existing authenticated checkout fetches owner branch and validates full W8 audit before C04. Do not auto-merge.",
+  "rollback": "Close isolated review PR or normal revert; preserve canonical, owner PR20, and local HOLD receipts."
+}
