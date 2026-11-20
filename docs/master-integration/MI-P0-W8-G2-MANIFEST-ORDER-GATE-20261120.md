@@ -52,3 +52,8 @@ Bu önceki G9 raporundaki 7 eksik yoldan (ve G2 eklerinden) doğan farkları **y
 **Önceki W8 çatışması çözülmedi, manifest SHA daha da değişti:** PR20 `w8_unified_u3.MANIFEST` halen `27b4eb5816265d4e6e6d2458acb6220db7dd0c76` / **552 manifest**, oysa yeni PR19 `566b7210b6edb95a21b999dc1d881a12284d9011` / **561 manifest**. Kaynak sürümleri doğrudan beraber çalıştırılırsa W8 `U3_MANIFEST_HOLD` verecek. G2/G9/MI-01/IV owner koordinasyonunu tamamlamadan **ne PR19 ne PR20 otomatik birleştirilebilir**. Önce mevcut 553 kanonik W8 C04-C08 kanıtı, sonra G2+G9 owner güvenlik kararıyla 562 transferi ve 562 sürüme ait W8'de yeniden SHA-locked tam zincir çalışması. Eski manifest yorumları **PR #19 ve PR #20** üzerinde R2 ile düzeltilir; tarihsel rapor güncelliğini bu R2 eki sağlar.
 
 İlerleme: MI-04 yeni **izole** source+sentetik owner D0 uyumluluğu kanıtı var; tam W8, gerçek issuer/PG/restore, IV/PROD değişmedi. Kanonik ürün kabulü ve global weighted gelişim **değişmedi/HESAPLANAMADI**.
+
+
+## R3 — MI-01 sahibi PR #20 kendi izole testini genişletti
+
+Geri okuma: PR20 head **`99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542`**; önceki `6678a7fd...` üzerine yeni `tests/integration/test_w8_frozen_npm_integration.py`, `TEST_RESULT_ACTUAL_19.txt` ve kanıt dokümanı değişiklikleri eklendi. **W8 üst adaptör Git blobu hâlâ `b4043035e75c5a18b7b19a9f18eecfef8e8fe677`**, `MANIFEST=27b4eb...`; dolayısıyla yeni PR19 562 / 561 manifest karşısındaki **W8 sürüm sırası engeli geçerliliğini koruyor**. Yeni testler başka MI01 owner hattında çalışmıştır; merkez tekrar koşmadı. Kapsamın gerçek W8 C04-C08 tam zinciriyle aynı olduğu iddia edilmez. PR19 ve PR20 **OPEN DRAFT/HOLD**; kanonik `product-dev` `254e0188998d0d245bd8ee4eb901aead02951a66` aynı kaldı.
