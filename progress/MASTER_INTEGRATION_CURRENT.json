@@ -2875,7 +2875,16 @@
         "acceptance_delta": 0
       },
       "current_canonical_product_sha": "9a3571d6a06537ba718bafc45398c309bf3dc9b1",
-      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD"
+      "source_transport_status": "553_SOURCE_CODE_ON_PRODUCT_DEV; OWNER_FUNCTIONAL_W8_SECURITY_ACCEPTANCE_HOLD",
+      "canonical_553_projection_recheck": {
+        "status": "ACTUAL_LOCAL_12_OF_12_D0_PASS",
+        "new_unique_methods": 0,
+        "source_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+        "hash_provenance": "3/3_GIT_BLOBS_MATCH",
+        "full_UI_browser": "NOT_RUN",
+        "acceptance_change": "NONE",
+        "evidence": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/EVIDENCE.json"
+      }
     },
     {
       "id": "MI-06",
@@ -9407,5 +9416,71 @@
     },
     "next": "G2/Authority and G9/ORG owner ratify one current canonical authority/reader contract, MI01 W8 owner executes exact approved build, MI02 independent PG/root/sink/IV acceptance",
     "rollback": "Keep draft PR19 unmerged, normal revert or close with evidence retained; never force push/claim reset"
+  },
+  "mi05_canonical_553_projection_read_rerun_20261120": {
+    "revision": "MI05-553-ORIGINAL-PROJECTION-READ-RERUN-20261120-R1",
+    "source": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "source_git_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+    "exact_source_git_blobs": [
+      "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+      "226e0e9721677235184547b8d79e91b2e6c541fb"
+    ],
+    "build_local": "tsc 5.8.3 strict selected 2 originals PASS, project pin 5.9.3 not installed",
+    "actual_local_original_node_tests": "12/12 PASS, zero failure/skip/cancel",
+    "original_methods_new": 0,
+    "old_12_of_12": "MI-COMMON-03 prior 12/12; rerun not double credited",
+    "evidence": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/EVIDENCE.json",
+    "catalog_handover": "docs/master-integration/MI05-CANONICAL-553-PROJECTION-RECHECK-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+    "TAP_SHA256": "48983e93c970df32fd5b59aab3cfb4f0ad7635b2df14220fc6a8059180f1042d",
+    "owner": "MI-05 Premium UI original projection, no source ownership mutation",
+    "parallels": {
+      "MI01": "PR20 active W8 immutable npm review, no changes",
+      "MI04": "PR19 existing 65/65 separate combined source CI, no changes",
+      "GATE02": "PR10 A1 owner custody HOLD"
+    },
+    "full_frontend_next_browser": "NOT_RUN",
+    "combined_frontend_backend_org_execution": "NOT_RUN",
+    "changed_product_files": 0,
+    "changed_CI": 0,
+    "changed_permissions": 0,
+    "weighted_global_previous": null,
+    "weighted_global_current": null,
+    "weighted_delta_pp": null,
+    "UI_acceptance_previous": [
+      21,
+      40
+    ],
+    "UI_acceptance_current": [
+      21,
+      40
+    ],
+    "MVP_previous": [
+      0,
+      11
+    ],
+    "MVP_current": [
+      0,
+      11
+    ],
+    "Core_previous": [
+      12,
+      16
+    ],
+    "Core_current": [
+      12,
+      16
+    ],
+    "IV_previous": [
+      0,
+      7
+    ],
+    "IV_current": [
+      0,
+      7
+    ],
+    "acceptance_delta_pp": 0,
+    "blocker": "MI-05 live same-session Office/browser and W8 owner reviewed full 553 dependency/fullchain HOLD; IAM/PG/IV remain independent",
+    "rollback": "revert only governance added records"
   }
 }
