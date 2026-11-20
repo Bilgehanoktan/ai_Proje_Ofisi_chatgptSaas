@@ -103,5 +103,45 @@
     "MVP_acceptance_current": "0/11",
     "acceptance_delta_pp": 0
   },
-  "rollback": "Close draft PR; alternatively revert only scoped review branch commit(s). No force push, no main/product-dev mutation."
+  "rollback": "Close draft PR; alternatively revert only scoped review branch commit(s). No force push, no main/product-dev mutation.",
+  "original_frontend_office_regression_20261120": {
+    "original_test_source": "product/ai-company-os-frontend/tests/office-workbench.test.cjs",
+    "original_test_git_blob": "bbad34677abeb0f2fada6b68ad4805b09ee077c7",
+    "original_fixture_git_blob": "29aa823d16c2b7975c322b41b99f9db4ec2b2c4e",
+    "fixture_method": "20 test vectors reconstructed with semantically identical JSON values from direct original GitHub source; local JSON not byte-identical to GitHub fixture",
+    "fixture_semantic_test_count": 20,
+    "original_test_local_execution": {
+      "pass": 25,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "status": "ACTUAL_LOCAL_UNCHANGED_ORIGINAL_TEST_SOURCE"
+    },
+    "new_deadline_test_local_execution": {
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "status": "ACTUAL_LOCAL_EXISTING_PR22_TEST_SOURCE"
+    },
+    "selected_aggregate": {
+      "pass": 31,
+      "fail": 0,
+      "skipped": 0,
+      "unique_executions": 31,
+      "product_acceptance_gain": 0,
+      "full_w8_credit": 0
+    },
+    "source_route_review_git_blob": "dc18ef2ecaf5556e09bc6152578f8cadf247ef29",
+    "source_parser_exact_git_blob": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+    "source_local_port_exact_git_blob": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "combined_log_sha256": "25443dbf5f6437c5056d6e1c0cf5f78b043df01882f6ee02aba8050d228f6e63",
+    "reconstructed_json_sha256": "9727cfe43bf7ac203c276b5bd4e5b1496500c39b8343576c4138df1ae1c7d81f",
+    "review_handover": "docs/master-integration/MI05-OFFICE-PROXY-DEADLINE-20261120/ORIGINAL_OFFICE_REGRESSION_25.md",
+    "full_original_W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "backend_python": "NOT_RUN",
+    "source_change_this_followup": 0,
+    "security_or_CI_permissions_change": 0
+  }
 }
