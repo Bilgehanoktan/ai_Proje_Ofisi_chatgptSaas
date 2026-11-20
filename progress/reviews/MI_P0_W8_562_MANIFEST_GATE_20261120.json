@@ -1,0 +1,94 @@
+{
+  "id": "MI-P0-W8-562-MANIFEST-COMPAT-20261120",
+  "date": "2026-11-20",
+  "base": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "candidate": {
+    "pr": 19,
+    "sha": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "product_files": 562,
+    "manifest_entries": 561,
+    "manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011"
+  },
+  "w8": {
+    "pr": 20,
+    "sha": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
+    "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+    "adapter_manifest_pin": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "actual_readonly_manifest_diff": {
+    "added": [
+      "ai-company-os-backend/app/core/iam_session.py",
+      "ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py"
+    ],
+    "removed": [],
+    "changed": [
+      "ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "changed_sha256": {
+      "previous": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392",
+      "candidate": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    },
+    "status": "U3_MANIFEST_HOLD"
+  },
+  "new_diagnostic": {
+    "source": "scripts/ci/mi_p0_w8_manifest_gate.py",
+    "source_blob": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+    "tests": "scripts/ci/test_mi_p0_w8_manifest_gate.py",
+    "tests_blob": "ab16361322417d9ef23c245a83565fc899b9d424",
+    "test_scope": "synthetic local Python unittest, not original W8",
+    "executed": 16,
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "original_W8": "NOT_RUN",
+    "build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "security": "HOLD"
+  },
+  "technical_catalog": {
+    "added_files": 2,
+    "changed_product_files": 0,
+    "classes": [
+      "GateHold",
+      "ManifestGateTests"
+    ],
+    "functions": [
+      "git_blob",
+      "_unique_object",
+      "_files",
+      "_w8_pin_and_guard",
+      "assess",
+      "main"
+    ],
+    "cli": "--canonical --candidate --adapter --canonical-blob --candidate-blob --adapter-blob",
+    "database_changes": 0,
+    "events_changes": 0,
+    "dependencies_new": 0,
+    "github_workflow_changes": 0
+  },
+  "progress": {
+    "w8_previous": "3/8",
+    "w8_current": "3/8",
+    "delta": 0,
+    "core_acceptance": "12/16",
+    "ui_acceptance": "21/40",
+    "mvp_acceptance": "0/11",
+    "independent_acceptance": "0/7",
+    "weighted_global": "HESAPLANAMADI",
+    "product_acceptance_delta": 0
+  },
+  "handover": "Original 553 W8 owner C04-C08, then MI04 security owner ratification of G2/G9; only then exact 562 W8 repin/fullchain. No merge, no CI, no PROD. Normal review PR close/revert."
+}
