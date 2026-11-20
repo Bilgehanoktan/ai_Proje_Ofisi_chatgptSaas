@@ -1,0 +1,30 @@
+{
+  "revision": "MI05-OFFICE-ABSOLUTE-DEADLINE-R2-20261120",
+  "base_source_ref": "integration/product-dev",
+  "base_source_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "base_product_manifest_git_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "base_product_count": 553,
+  "base_manifest_entries": 552,
+  "review_pr": 22,
+  "review_source_changed": 1,
+  "review_new_product_test": 1,
+  "proposed_product_count": 554,
+  "manifest_entries_on_review_unmodified": 552,
+  "review_only_manifest_rebind_requires_owner": true,
+  "delta": {
+    "ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
+      "bytes": 2114,
+      "sha256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa",
+      "git_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+      "operation": "replace_existing_manifest_entry"
+    },
+    "ai-company-os-frontend/tests/office-workbench-deadline.test.cjs": {
+      "bytes": 4001,
+      "sha256": "6d01c856ac4fc88d22a223f3b77f24b292ed7e4af8a5d3cc465ce5506c17dbf9",
+      "git_blob": "aa7afc3a93265305df6ceb8acbb03d25b901beb3",
+      "operation": "add_new_manifest_entry"
+    }
+  },
+  "instructions": "Do not update shared product/SOURCE_MANIFEST.json in this draft; MI01 PR20/MI04 PR19/manifest gate PR21 have separate owners. Require owner-approved rebind to actual target commit, source path/byte/hash audit and W8 before canonical transfer.",
+  "rollback": "No manifest mutation in canonical or review branch; remove proposal normally if rejected."
+}
