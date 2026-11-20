@@ -1,0 +1,75 @@
+{
+  "id": "MI01_W8_ACTUAL_WINDOWS_C06_PASS_C07_AGENT_DIRECTORY_HARNESS_MOCK_MISMATCH_20261120",
+  "date": "2026-11-20",
+  "evidence_class": "ACTUAL_USER_WINDOWS_POWERSHELL_5_1_NODE_24_14_0_PYTHON_3_13_17",
+  "raw_user_uploaded_log": {
+    "filename": "Yapıştırılan metin(20261120-203450).txt",
+    "bytes": 41645,
+    "sha256": "b885d11f5f81d115bb0c80a51fbb2b979e077ac1b83455f9d1489eeb841e4ca7",
+    "lines": 934
+  },
+  "stage": "E:\\AIOS\\W8\\CRYPT50_STAGE_20261120_224742",
+  "stage_review_sha256": "7335e1dd2525aa5639d276344c617b68fc323387e584b8c1c2c8ef81272d20aa",
+  "runtime": {
+    "python": "3.13.17",
+    "node": "v24.14.0",
+    "cryptography": "50.0.2",
+    "loaded_OpenSSL": "OpenSSL 4.0.3 29 Sep 2026"
+  },
+  "preflight": {
+    "source_and_three_lock_pins": "PASS",
+    "wheel_count": 28,
+    "powershell_script_sha256": "220c4ada1c4fdbd311bf9196293c16cc0dd4e97b776860bb2d02803528020157"
+  },
+  "C06": {
+    "status": "PASS_ACTUAL_LOCAL_DEV",
+    "python_install": "28 packages SUCCESS from locked offline wheelhouse",
+    "npm_install": "npm ci --ignore-scripts, added 30 packages",
+    "pip_check": "No broken requirements found",
+    "stage_marker": "INSTALL_OK_written_by_unmodified_original_W8",
+    "security_status": "NOT_INDEPENDENT_C05_ACCEPTANCE"
+  },
+  "C07": {
+    "status": "FAILED_ACTUAL_LOCAL_DEV_AFTER_PARTIAL_REGRESSIONS",
+    "summary_marker_in_shell": "NOT_RUN_IS_MISLEADING_FOR_ATTEMPTED_FAILED_STAGE",
+    "completed_earlier_node_subtests": 122,
+    "completed_node_test_groups": 10,
+    "completed_groups_all_pass": true,
+    "python_full_backend_unittest": "NOT_REACHED",
+    "nextjs_build": "NOT_REACHED",
+    "typecheck": "NOT_REACHED",
+    "failure": "AssertionError [ERR_ASSERTION]: ../organization/OrganizationReadback",
+    "original_test": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+    "original_test_blob": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+    "importing_component": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+    "importing_component_blob": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+    "organization_child": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+    "organization_child_blob": "990b06ee2b5adc115547615719610ccc02a66061",
+    "root_cause": "Old isolated vm test's dirModules stub whitelist lacks '../organization/OrganizationReadback'; production component imports read-only child correctly. Import loader throws at test line 34 before compositional assertions. This is an exact existing test/fixture compatibility defect, not evidence that production import is missing.",
+    "status_proof": "Node exit code 1, original W8 HOLD and BUILD_TEST_OK absent"
+  },
+  "C08": {
+    "status": "NOT_RUN",
+    "cause": "C07 failed and original W8 protects smoke behind BUILD_TEST_OK"
+  },
+  "C05": {
+    "technical": "PYPI_28_HASH_AND_LICENSE_OSV_89_NATIVE_OPENSSL_LOADED_PASS_SCOPE",
+    "independent_acceptance": "HOLD"
+  },
+  "G8": "HOLD_NOT_MERGED",
+  "product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "proposed_repair_scope": "Update isolated test module stub table for OrganizationReadback without touching product role/authority code. Existing W8 manifest SHA and runner pins must be revised coherently in a NEW clean candidate/stage; original immutable C04 remains frozen, no in-place hash bypass.",
+  "remediation_execution": "NOT_YET_RUN",
+  "progress": {
+    "canonical_W8_before": "3/8",
+    "canonical_W8_after": "3/8",
+    "delta_pp": 0,
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "limitations": [
+    "User's local JSON/LOG paths printed but raw separate files not uploaded; pasted console is evidence of command output",
+    "No claim product owner/security/independent IV approval",
+    "No clear of original failed C07 based on targeted mock fix alone",
+    "No C08 or full build evidence"
+  ]
+}
