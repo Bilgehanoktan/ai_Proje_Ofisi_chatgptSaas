@@ -1,0 +1,154 @@
+{
+  "revision": "MI-P0-OFFICE-POSTFETCH-NEGATIVES-20261120",
+  "date": "2026-11-20",
+  "classification": "ACTUAL_LOCAL_ORIGINAL_PR22_ROUTE_COMPILED_WITH_ISOLATED_PORT_PARSER_STUBS_NOT_NATIVE_W8",
+  "task": "CLOSE_QA_COVERAGE_GAP_AFTER_FETCH_RETURNS_IN_PR23_STALL_NEGATIVES",
+  "canonical_product": {
+    "branch": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "source_mutated": false
+  },
+  "target_owner": {
+    "PR": 22,
+    "head": "668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b",
+    "source_path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+    "original_git_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+    "raw_bytes": 2114,
+    "raw_sha256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa"
+  },
+  "test_environment": {
+    "node": "v22.16.0",
+    "typescript": "5.8.3 global (project pinned 5.9.3 unavailable)",
+    "python": "not used",
+    "network": "disabled; fetch stubbed",
+    "parser_and_port": "isolated typed test doubles; not original dependencies",
+    "tsc_selected": "PASS"
+  },
+  "previous_QA_PR23": {
+    "PR": 23,
+    "source_git_blob": "ff6d1a9c923f427a9f982aaaffd59a45fd9d7578",
+    "coverage_note": "First two old tests call controller.abort() within mocked fetch, before returning Response, so cannot themselves verify reader.read()/reader.cancel() entered on the latest source. Original previous head was red, current owner PR22 R2 source is green under new distinct direct-read tests."
+  },
+  "actual_tests": {
+    "executed": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "test_cases": [
+      {
+        "id": "POSTFETCH-READ",
+        "observed": "fetch returned; read=true; abort while read unresolved; 503",
+        "result": "PASS"
+      },
+      {
+        "id": "POSTFETCH-CANCEL",
+        "observed": "read=true; cancel=true; abort while cancel unresolved; 503",
+        "result": "PASS"
+      },
+      {
+        "id": "FETCH-INFLIGHT",
+        "observed": "live signal; fetch invoked; promise unresolved; abort; 503",
+        "result": "PASS"
+      },
+      {
+        "id": "VALID-STUB-200",
+        "observed": "valid JSON in isolated parser stub and no abort; 200",
+        "result": "PASS"
+      }
+    ],
+    "raw_tap_sha256": "70aed7e77755f24d86e485c2102ca9ca18e8360d91eceff9a24c4d63dc899cac",
+    "raw_tap_git_blob": "c494648a1a5d36fee83ac6a413fd0a8f5a6b670e"
+  },
+  "files": {
+    "tests": {
+      "path": "docs/master-integration/MI-P0-OFFICE-POSTFETCH-NEGATIVES-20261120/test_postfetch_stall.cjs",
+      "sha256": "e35138725f9bde296bc2c2d469ed8de0a4ca4c9861c2cf648bd00097d96683c5",
+      "git_blob": "17a8bc564dfc0eceba7c15d899267e7244f88ef7"
+    },
+    "runner": {
+      "path": "docs/master-integration/MI-P0-OFFICE-POSTFETCH-NEGATIVES-20261120/run_postfetch_check.sh",
+      "sha256": "c95e2874b858a537d2f84f2814ce8a20d5dce1ea265fa28d1e128fa039cc6203",
+      "git_blob": "f0ca14943bd397befa2835b36ffc53142998fd66"
+    },
+    "log": {
+      "path": "docs/master-integration/MI-P0-OFFICE-POSTFETCH-NEGATIVES-20261120/exact-4-after-fetch.tap",
+      "git_blob": "c494648a1a5d36fee83ac6a413fd0a8f5a6b670e"
+    }
+  },
+  "limits": {
+    "original_Owner_PR22_code_modified": 0,
+    "other_PRs_code_modified": 0,
+    "canonical_product_modified": 0,
+    "CI_workflows_added": 0,
+    "network_or_providers": 0,
+    "source_dependency_changes": 0,
+    "native_browser": "NOT_RUN",
+    "full_W8": "NOT_RUN",
+    "project_pinned_TypeScript": "NOT_RUN",
+    "real_2500ms_SLA": "NOT_RUN",
+    "PG_root_sink_IV": "HOLD",
+    "MVP": "0/11"
+  },
+  "acceptance": {
+    "Core": {
+      "previous": [
+        12,
+        16
+      ],
+      "current": [
+        12,
+        16
+      ]
+    },
+    "UI": {
+      "previous": [
+        21,
+        40
+      ],
+      "current": [
+        21,
+        40
+      ]
+    },
+    "MVP": {
+      "previous": [
+        0,
+        11
+      ],
+      "current": [
+        0,
+        11
+      ]
+    },
+    "IV": {
+      "previous": [
+        0,
+        7
+      ],
+      "current": [
+        0,
+        7
+      ]
+    },
+    "delta_pp": 0
+  },
+  "global_development": {
+    "weights": [
+      15,
+      35,
+      20,
+      20,
+      10
+    ],
+    "owner_approved_denominator_groups": [
+      0,
+      10
+    ],
+    "previous": null,
+    "current": null,
+    "delta_pp": null
+  },
+  "next": "Owner PR22/MI05 may adopt distinct 4-case post-fetch negative evidence into its original full suite; MI01 owner PR20 performs full 553 W8 C04-C08 and browser; no auto merge or release.",
+  "rollback": "close the isolated review PR or revert its test/doc files; no product runtime touched"
+}
