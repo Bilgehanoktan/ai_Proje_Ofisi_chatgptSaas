@@ -1,0 +1,144 @@
+{
+  "revision": "MI04-G2-553-OWNER-COMPAT-CI-20261120",
+  "scope": "OWNER_ORIGINAL_G2_SOURCE_COMPATIBILITY_ISOLATED_D0",
+  "inputs": {
+    "added_exact_owner": [
+      {
+        "path": "product/ai-company-os-backend/app/core/iam_session.py",
+        "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+        "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+        "blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+        "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+        "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+        "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
+      }
+    ],
+    "replaced_review_only": {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "old_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "g2_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "old_bytes": 7835,
+      "new_bytes": 9184
+    },
+    "modified_manifest_only": true,
+    "no_accepted_product_dev_changes": true
+  },
+  "modules": {
+    "app/core/iam_session.py": {
+      "owner": "G2",
+      "classes": [
+        "D0SessionResolver",
+        "SessionRecord",
+        "SessionObservation",
+        "SessionClaimCheck"
+      ],
+      "functions": [
+        "credential_digest",
+        "resolve",
+        "revoke_local",
+        "bootstrap_durable",
+        "open_durable",
+        "inspect"
+      ],
+      "authz": "D0 HOLD only, no issuer"
+    },
+    "app/core/transaction/intent_authority.py": {
+      "owner": "G2 alternate in review only",
+      "classes": [
+        "D0IntentAuthority",
+        "RootPin"
+      ],
+      "functions": [
+        "create(iam_bootstrap=False)",
+        "_iam_mode",
+        "_check_iam",
+        "claim_and_fence(session_check=None)",
+        "execute_authority_fenced_transition"
+      ],
+      "live_root": false
+    },
+    "tests/test_iam_session_d5g1.py": {
+      "owner": "G1",
+      "original_methods": 14
+    },
+    "tests/test_iam_authority_d5g2.py": {
+      "owner": "G2",
+      "original_methods": 19
+    },
+    "tests/test_intent_authority_t1_0212.py": {
+      "owner": "historical same blob",
+      "original_methods": 7
+    },
+    "tests/test_authority_fullchain_0214.py": {
+      "owner": "historical same blob",
+      "original_methods": 10
+    },
+    "tests/test_org_runtime_packaging_mi03.py": {
+      "owner": "ORG existing",
+      "original_methods": 4
+    },
+    "tests/test_org_sql_runtime_mi03.py": {
+      "owner": "ORG existing",
+      "original_methods": 11
+    }
+  },
+  "APIs": {
+    "HTTP_added": 0,
+    "real_grants_added": 0,
+    "internal_D0_signatures_additive": true
+  },
+  "DB": {
+    "G2_iam_tables": "SQLite fixture in existing separate D0IntentAuthority root DB",
+    "new_production_postgresql_migrations": 0,
+    "nonowner_RLS_tested": false
+  },
+  "events": {
+    "new_external_effect_events": 0,
+    "sink_side_fence": false
+  },
+  "dependencies": {
+    "product_lock_unchanged": true,
+    "test_only": {
+      "Python": "3.13.5",
+      "cryptography": "46.0.4",
+      "cffi": "2.0.0",
+      "pycparser": "3.0"
+    }
+  },
+  "verification": {
+    "original_source_blob_pins": [
+      8,
+      8
+    ],
+    "source_sha256_entries": [
+      555,
+      555
+    ],
+    "G2": [
+      50,
+      50
+    ],
+    "ORG": [
+      15,
+      15
+    ],
+    "same_source": true,
+    "prior_source_only_separate_test_not_recoded": true
+  },
+  "open_ownership": [
+    "G2 authority variant owner signoff pending",
+    "W8 exact full regression on combined candidate missing",
+    "security independently custodied roots/membership issuance missing"
+  ],
+  "safety": {
+    "D0_restore_replay": "KNOWN_OPEN",
+    "production": "DENY"
+  },
+  "rollback": "Keep isolated review branch/PR as draft, never auto-merge; close PR and normal revert candidate if owners reject; preserve canonical/main and prior source history; no consumed-claim resets"
+}
