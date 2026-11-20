@@ -1,0 +1,133 @@
+{
+  "schema": "aios.execution_evidence.v1",
+  "date": "2026-11-20",
+  "classification": "REAL_LOCAL_PRECONDITION_AND_SOURCE_ACQUISITION_ATTEMPT_NOT_ORIGINAL_W8_EXECUTION",
+  "requested_actions": [
+    "original_W8_dependency_prepare_install_build_browser",
+    "owner_approved_merged_G2_G9_Office_proxy",
+    "independent_authority_protected_PostgreSQL_restore_negative",
+    "MVP_11_on_actual_integrated_product"
+  ],
+  "immutable_source": {
+    "repository": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+    "product_ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "owner_W8_PR": 20,
+    "owner_W8_head": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542"
+  },
+  "actual_local": {
+    "environment": {
+      "node": "22.16.0",
+      "npm": "10.9.2",
+      "python": "3.13.5",
+      "chromium": "144.0.7559.96",
+      "postgresql_binaries": "psql/postgres/pg_ctl ABSENT"
+    },
+    "remote_source_fetch": {
+      "command": "git ls-remote https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas.git 254e0188998d0d245bd8ee4eb901aead02951a66",
+      "exit_code": 128,
+      "stderr": "fatal: unable to access 'https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas.git/': Could not resolve host: github.com"
+    },
+    "npm_cache_probes": [
+      "next@15.5.29",
+      "react@19.1.10",
+      "typescript@5.9.3"
+    ],
+    "npm_cache_probe_results": "No matching cache keys printed; NOT proof of reviewed npm or Python wheelhouse",
+    "archives": {
+      "old_transfer_zip_entries": 29,
+      "old_doc_0155_zip_entries": 107,
+      "exact_553_root_W8_or_manifest": false
+    },
+    "local_evidence_name": "REAL_W8_ENVIRONMENT_PREFLIGHT.json",
+    "local_evidence_sha256": "4109f233223bbd4c67af9170297c2bb60e660e0a8058a4a139f8ef4b4af3679e",
+    "local_evidence_bytes": 3167,
+    "note": "Evidence file exists as local downloadable conversation artifact; this GitHub JSON is source readback summary, not a byte-level copy of the local file"
+  },
+  "confirmed_external_owner_tests": {
+    "PR19": "72/72 historic G2+G9 D0 GitHub CI; not strict PG",
+    "PR20": "19/19 local synthetic; original full W8 NOT_RUN",
+    "PR22": "37/37 local selected Office; native full W8 NOT_RUN",
+    "PR29": "557/556 staged four-proxy candidate; integration owner HOLD"
+  },
+  "not_executed": {
+    "original_W8_C04": "NOT_RUN_SOURCE_UNAVAILABLE",
+    "C05": "HOLD_REVIEW_REQUIRED",
+    "C06": "NOT_RUN",
+    "C07": "NOT_RUN",
+    "C08": "NOT_RUN",
+    "native_browser": "NOT_RUN",
+    "single_verified_integrated_tree": "NOT_MATERIALIZED",
+    "strict_PG": "NOT_RUN_NO_BINARY_AUTH",
+    "independent_security": "HOLD",
+    "MVP_acceptance": "0/11"
+  },
+  "permission_boundary": "User requests actual work, not blanket override of specific CI/security/PG/main/production grants; preserve existing policy",
+  "progress": {
+    "weighted_global_development_previous": null,
+    "weighted_global_development_current": null,
+    "weighted_delta_pp": null,
+    "denominators_approved": "0/10",
+    "W8_previous": [
+      3,
+      8
+    ],
+    "W8_current": [
+      3,
+      8
+    ],
+    "Core_previous": [
+      12,
+      16
+    ],
+    "Core_current": [
+      12,
+      16
+    ],
+    "UI_previous": [
+      21,
+      40
+    ],
+    "UI_current": [
+      21,
+      40
+    ],
+    "MVP_previous": [
+      0,
+      11
+    ],
+    "MVP_current": [
+      0,
+      11
+    ],
+    "independent_IV_previous": [
+      0,
+      7
+    ],
+    "independent_IV_current": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "scope_changes": {
+    "canonical_product": 0,
+    "owner_code": 0,
+    "api": 0,
+    "database": 0,
+    "dependencies": 0,
+    "CI_workflow": 0,
+    "security_permission": 0,
+    "main": 0
+  },
+  "owner_critical_path": [
+    "MI01 PR20 on approved networked isolated host get exact 553 clean checkout and immutable npm/python wheelhouse, review C05, run original W8 C04-C08",
+    "Only owner reviewed MI04 PR19 + MI05 PR22/PR29 + proxy PR26 sources may be integrated in one manifest-and-build after 553 W8",
+    "Independent Option A root/issuer/sink custody, protected PG replay/RLS and negative IV on approved isolated host",
+    "Apply 11 MVP criteria to actually integrated and secured source, retain zero acceptance before that"
+  ],
+  "rollback": "Normal revert this governance-only evidence document and central pointer; no product code or security state affected"
+}
