@@ -20,8 +20,8 @@ function nodes(x,type){return flatten(x).filter(n=>n.type===type);}
 function words(x){if(Array.isArray(x))return x.map(words).join(' ');if(x&&typeof x==='object')return words(x.props?.children);return typeof x==='string'?x:'';}
 function links(x){return nodes(x,'Link').map(n=>n.props.href);}
 test('TSX has no transpilation diagnostics',()=>assert.equal(compiled.diagnostics.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0));
-test('embedded office keeps shared snapshot and both routes',()=>{const x=render();assert.deepEqual(links(x),['/office','/office/premium']);assert.equal(nodes(x,'SharedSnapshotPanel').length,1);assert.equal(nodes(x,'SharedSnapshotPanel')[0].props.office,true);});
-test('fullscreen retains premium navigation but not redundant fullscreen link',()=>assert.deepEqual(links(render({officeOnly:true})),['/office/premium']));
+test('embedded office keeps shared snapshot and all three routes',()=>{const x=render();assert.deepEqual(links(x),['/office','/office/premium','/office/premium/unified']);assert.equal(nodes(x,'SharedSnapshotPanel').length,1);assert.equal(nodes(x,'SharedSnapshotPanel')[0].props.office,true);});
+test('fullscreen retains premium navigation but not redundant fullscreen link',()=>assert.deepEqual(links(render({officeOnly:true})),['/office/premium','/office/premium/unified']));
 test('all three displays retain shared history and explicit non-authority',()=>{for(const display of ['scene','list','engine']){const x=render({display});assert.equal(nodes(x,'SharedSnapshotPanel').length,1);assert.match(words(x),/JOIN_HOLD/);assert.match(words(x),/STATIC_ONLY/);assert.match(words(x),/dekoratif bir D0/);}});
 test('scene and engine retain separate render paths',()=>{assert.equal(nodes(render(),'OfficeIllustration').length,1);assert.equal(nodes(render({display:'engine'}),'OfficeScene').length,1);assert.equal(nodes(render({display:'list'}),'OfficeScene').length,0);});
 test('mismatched revisions never grant geometry join',()=>assert.match(words(render({snapshotRevision:'other'})),/Yerleşim revizyonları farklı: other \/ layout-1.*canlı hareket ve konum birleştirmesi yok/s));
