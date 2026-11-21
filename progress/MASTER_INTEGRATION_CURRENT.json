@@ -14756,5 +14756,68 @@
     "next": "MI01 owner to provide exact dependency disposition (retain/repin verified old certifi vs accept new publisher SHA with independent licensing review) in a versioned successor, then approved fresh staged C06 and actual full development suite; formal C07 and browser C08 separate gates. Do not rerun 11/11 without source/runner/condition change.",
     "no_product_or_code_changes": true,
     "rollback": "No product or historical stage changes. A governance-only record can be reverted. Preserve PR37 and existing logs."
+  },
+  "mi01_w8_H01_select_certifi_20261120_new_dependency_graph_20261121": {
+    "date": "2026-11-21",
+    "decision_id": "MI01-W8-H01-NEW-CERTIFI-GRAPH-SELECTED-20261121",
+    "decision_source": "H01 explicit user instruction in conversation: proceed with option 2 / certifi 2026.11.20 new graph",
+    "scope": "EXACT_DEPENDENCY_CHOICE_FOR_PINNED_PR37_ISOLATED_DEV_ONLY_NOT_RELEASE_OR_INDEPENDENT_C05",
+    "owner": "H01, MI01 W8 source/dependency development direction",
+    "github_pr37_comment_id": 7063029573,
+    "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+    "pr37_head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+    "pr36_parent": "683a26171ac54544260456ce84e19c38614aa5e2",
+    "canonical_product_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "decision": "SELECT_NEW_GRAPH_certifi_2026_11_20_do_not_repin_2026_10_23",
+    "external_release_evidence": {
+      "official_pypi": "https://pypi.org/project/certifi/2026.11.20/",
+      "version": "2026.11.20",
+      "date": "2026-11-20",
+      "filename": "certifi-2026.11.20-py3-none-any.whl",
+      "publisher_sha256": "7422df25243767b9877031a2248cb14d09ddac9beee846f4cef3d5c9191d488f",
+      "windows_review_sha256": "7422df25243767b9877031a2248cb14d09ddac9beee846f4cef3d5c9191d488f",
+      "sha256_match": "PASS",
+      "verified_by_pypi_publishing_origin": "certifi/python-certifi@bf6a4859116b0cba96673893e394298bbe529b1f",
+      "pypi_trusted_publishing": "YES",
+      "independent_sigstore_verification": "NOT_RUN",
+      "license_metadata": "MPL-2.0",
+      "advisory": "https://github.com/advisories/GHSA-6q48-6c7w-9gw2",
+      "advisory_affected_versions": ">=2019.03.09,<2026.10.19",
+      "advisory_fixed": "2026.10.19",
+      "current_selected_version_in_affected_range": false,
+      "advisory_scope": "ONLY_THIS_IDENTIFIED_ADVISORY_NOT_A_COMPLETE_SCOPED_SECURITY_SCAN"
+    },
+    "unchanged_27_wheels": true,
+    "review_versions": {
+      "old_pr36_review_sha256": "341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+      "new_pr37_review_sha256": "a5d5751047206186fad92098341c1f351648a8b012adc24df7dd83869a388009",
+      "new_python_lock_changed": true,
+      "npm_lock_equal": true,
+      "product_manifest_equal": true
+    },
+    "native_dev_evidence": "PR37_WIN_DEV_BRIDGE_11_OF_11_PASS_NO_FULL_PRODUCT_C07",
+    "risks_and_holds": [
+      "Certifi CA bundle update may change TLS trust compatibility; no external provider/customer TLS checks run",
+      "MPL-2.0 redistribution attribution/notice treatment must be independently reviewed",
+      "Other LGPL/CC-BY/native OpenSSL signed provenance C05 gaps remain independently held",
+      "Old PR37 R1 runner and DEV adapter hardpin PR36 review SHA, so cannot execute full DEV chain with new SHA without versioned R2 contract",
+      "Formal C07 release adapter/owner review and C08 native Chromium not completed"
+    ],
+    "gates": {
+      "dependency_source_option": "H01_SELECTED_NEW_GRAPH_FOR_ISOLATED_DEV",
+      "C05_certifi_preliminary": "PUBLIC_SHA_LICENSE_GHSA_RANGE_CHECK_PASS_NOT_INDEPENDENT",
+      "new_stage_C06": "NOT_RUN",
+      "dev_full_W8_C07": "NOT_RUN",
+      "official_W8_C07": "HOLD",
+      "actual_Chromium_C08": "NOT_RUN",
+      "independent_C05": "HOLD",
+      "W8_before": "3/8 (37.5%)",
+      "W8_after": "3/8 (37.5%)",
+      "delta_pp": 0,
+      "weighted_dev": "HESAPLANAMADI"
+    },
+    "next": "Exact source and stage local C06 test under new REVIEW hash in isolation, then separately versioned R2 source-bound Core0207 runner and acceptance-gated full C07, actual Chromium C08, independent C05 verification and H01 release decision; no unauthorized merge or approval.",
+    "rollback": "Preserve old PR36 lock and stage; if new dependency denied, scope-limited normal revert/new review decision, no history rewrite.",
+    "user_explanation": "Earlier C04, 29/29 isolated, 11/11 synthetic and OpenSSL runtime are separate technical evidence. They do not satisfy full W8 integration acceptance or independent security; delay arises from old 46-to-50 cryptography historical lock, late certifi release, and release-gated adapter not from lack of local D0 passing tests."
   }
 }
