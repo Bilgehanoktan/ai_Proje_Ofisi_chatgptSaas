@@ -112,3 +112,20 @@ User PowerShell 5.1 direct commands (not an unsigned PS1, no execution policy ad
 **Expected stages and measurement:** new `E:\AIOS\W8\PR36_W8_FRESH_<new_timestamp>`, fresh real G3/C04; if identical lock/wheels/3.13 interpreter, R2 reports `C04_REVIEW_MATCH_EXCEPT_PR36_MANIFEST_PASS`, followed by C06 offline installation and C07 full original Next.js build; C08 real browser only if explicitly supplied Chrome path exists. New raw `PR36_W8_STATUS.json` and `PR36_W8_NATIVE_FULL.log` must be reviewed *before* any state is changed to PASS. **As of this document no new 3.13.17 run has occurred**; C06/C07/C08 remain NOT_RUN, independent C05 HOLD. W8 acceptance 3/8 unchanged; weighted dev HESAPLANAMADI.
 
 **Source catalogue and rollback:** No product/module/API/DB/event/dependency source changed; only W8 execution selection is corrected by a version guard. Old PR35/Python3.13 stage and aborted PR36/Python3.14 stage retained untouched for evidence. Existing R2 verified SHA256 `9751b0068f10f16dbfa1a7de143d48debe926a4dfefdc847d89f3902e2856808`. Future failure means stop at the exact stage, inspect the new native log/status rather than trying to suppress a pin error.
+
+
+## 2026-11-21 — Exact Python 3.13.17 fresh PR36 attempt: dependency HOLD remains
+
+**New authentic user PowerShell 5.1 evidence**: user big-paste `Yapıştırılan metin(20261121-101941).txt`, 16,896 bytes, SHA256 `d42f5819d0a03c4e3e9c5e78f3118845721b405cc8f0b45390d167c69dbb0988` (uploaded conversation file; native log/JSON not independently read back).
+- Python command `py -3.13 -c ...` reported **3.13.17**, exact version guard **PASS**.
+- Before full run: C free **2.81 GiB**, E free **6.33 GiB**, capacity preflight PASS. These figures are *pre-run*, not post-prep.
+- Same R2 helper with SHA256 `9751b0068f10f16dbfa1a7de143d48debe926a4dfefdc847d89f3902e2856808` was successfully verified and executed as `py -3.13 ... --mode run`.
+- Fresh isolated stage `E:\AIOS\W8\PR36_W8_FRESH_20261121_131906`; prior PR35 original source 552 SHA256 **PASS**, exact original W8 runner **FOUND**, PR36 reconstructed Git blob pins **PASS**.
+- Real `G3_PR36_552_SOURCE_AUDIT exit=0` and `C04_PR36_FRESH_PREPARE exit=0`.
+- **`REVIEW_DEPENDENCY_DRIFT_HOLD` still occurred despite exact Python 3.13.17.** Old/new review path printed; **the precise remaining field(s) have not yet been inspected**. Do **not** infer why the new 3.13.17 wheel/PyPI set still differs; this is separate from the already confirmed earlier Python-3.14 ABI mismatch.
+- Corrected R2 fail-closed status was proven: `W8_PR36_HOLD: RuntimeError REVIEW_DEPENDENCY_DRIFT_HOLD`, outer PowerShell `PR36_FULL_RUN_HOLD_CHECK_LOG`. The old R1 zero-exit defect did **not** recur.
+- **C06 PR36 NOT_RUN; full C07/Next build NOT_RUN; C08 browser NOT_RUN.** Old PR35 C04/C06 PASS remain historical for old pinned stage, PR36 scoped Windows P10J16 **8/8 PASS**, independent C05 security **HOLD**. W8 canonical product acceptance **3/8 → 3/8**, weighted development **HESAPLANAMADI**. No product code, source branch, CI, security policy or authority change.
+
+**Next required diagnostic (READ ONLY):** reuse original exact R2 helper, select `--mode review-diff --run-root 'E:\AIOS\W8\PR36_W8_FRESH_20261121_131906'` with SHA pin; prints *this* stage's field-by-field old/new `REVIEW.json` and Python lock/wheel hashes. Never rerun `--mode run` or mutate `REVIEW.json`/wheelhouse until the actual remaining difference is observed, classified and owner-reviewed. If it is resolution drift (new releases), plan an independent isolated **exact prior approved 3.13 wheelhouse** replay with integrity check and new manifest approval, not a bypass. If only metadata differs, examine R2 comparator before any mutation. Preserve both prior stages and native evidence. Update central record and PR #36 handover with the actual diff; no user decision repeated.
+
+**Current log locations:** `E:\AIOS\W8\PR36_W8_FRESH_20261121_131906\PR36_W8_STATUS.json` and `PR36_W8_NATIVE_FULL.log`. No independent hash of those files received yet. Rollback is retaining all previous source and stage directories; no deletion performed.
