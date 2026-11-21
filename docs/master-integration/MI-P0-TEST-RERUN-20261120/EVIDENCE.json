@@ -1,0 +1,147 @@
+{
+  "id": "MI-P0-LOCAL-ISOLATED-RETEST-20261120",
+  "date": "2026-11-20",
+  "classification": "NEW_ACTUAL_LOCAL_SELECTED_EXECUTION_NOT_FULL_PRODUCT_ACCEPTANCE",
+  "canonical_baseline": {
+    "branch": "integration/product-dev",
+    "commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "full_exact_checkout_present": false
+  },
+  "inputs": [
+    {
+      "bundle": "AI_Company_OS_MI_P0_Office_R2_PostFetch_5PASS_20261120.zip",
+      "source": "PR28/PR22",
+      "unzip_test": "PASS",
+      "SHA256_manifest": "5/5 PASS",
+      "source_path": "reference/owner-route.ts",
+      "source_git_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+      "source_SHA256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa"
+    },
+    {
+      "bundle": "AI_Company_OS_MI_P0_G7_CURRENT_ORG_RUNNER_20261120.zip",
+      "source": "PR24",
+      "runner_SHA256": "da4a644f3d6f189ac6a94fc8a645acde40df6489199f6a702aedf7f87a29a691",
+      "test_SHA256": "b5bc7017e86c03070316bd49a628b8df73c04a5d24ac520348d2b9fbccc02bfc"
+    }
+  ],
+  "environment": {
+    "Python": "3.13.5",
+    "Node": "22.16.0",
+    "TypeScript": "5.8.3 global, NOT project-pinned 5.9.3",
+    "Git": "2.47.3",
+    "repo_network": "github.com DNS unavailable in container"
+  },
+  "executed": [
+    {
+      "scope": "Office original PR22 route compiled with mocked parser/local port",
+      "type": "isolated source-pinned test",
+      "executed": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "real_2500ms_timeout_test_duration_ms": 2508.055562,
+      "expected_HTTP": 503,
+      "raw_TAP_git_blob": "cb20ec50e169fb4dfc1fbf81a9a233941d960066",
+      "raw_TAP_SHA256": "62da0bb1728c922236806fd143a7eade10befe7f651b071d62ae10f45fa360c1",
+      "raw_path": "docs/master-integration/MI-P0-TEST-RERUN-20261120/office-new-run.tap"
+    },
+    {
+      "scope": "G7 helper/guard; not original G7 product methods",
+      "type": "isolated stdlib unittest",
+      "executed": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "raw_git_blob": "07d7497dd1617841fe4bfd15b1d019b5beb09dae",
+      "raw_SHA256": "5ed5bc42a35920800303061bb92d2e379312bf4863559c7a3c45df736233414f",
+      "raw_path": "docs/master-integration/MI-P0-TEST-RERUN-20261120/g7-new-run.log"
+    }
+  ],
+  "totals": {
+    "executed": 21,
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "unique_new_product_acceptance_cases": 0
+  },
+  "not_executed": [
+    {
+      "scope": "G7 original 7 methods on current product OperationsStore",
+      "status": "NOT_RUN",
+      "reason": "full immutable PR19 562 source checkout absent"
+    },
+    {
+      "scope": "W8 C04 prepare/C05 supply-chain/C06-C08 install-build-browser",
+      "status": "NOT_RUN/HOLD",
+      "reason": "full exact 553 source checkout and owner-reviewed lock/wheelhouse absent; GitHub DNS inaccessible"
+    },
+    {
+      "scope": "protected PostgreSQL, root/issuer/sink custody, IV",
+      "status": "HOLD",
+      "reason": "independent owners and trust/PG gates not passed"
+    }
+  ],
+  "previous_acceptance": {
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ]
+  },
+  "current_acceptance": {
+    "Core": [
+      12,
+      16
+    ],
+    "UI": [
+      21,
+      40
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ]
+  },
+  "delta_pp": 0,
+  "general_weighted_development": {
+    "previous": null,
+    "current": null,
+    "delta_pp": null,
+    "approved_group_denominators": 0,
+    "planned": 10
+  },
+  "source_changes": {
+    "product": 0,
+    "API": 0,
+    "DB": 0,
+    "events": 0,
+    "dependencies": 0,
+    "CI_permissions": 0,
+    "main": 0
+  },
+  "local_delivery": {
+    "file": "AI_Company_OS_TEST_RUN_REPORT_20261120.zip",
+    "sha256": "5b6a946a957c0947886b296cc2770f5dd1969aab84fa5491cb4515f649b36582"
+  },
+  "next_owner": "MI01 owner source/dependency W8; MI03/MI04 owner G7 current-ORG original 7 on immutable checkout; MI02/IV PG/root/sink/independent security. No duplicate owner changes.",
+  "rollback": "Close isolated QA review PR or revert new doc/log files and central delta; preserve source, previous versions and owner approval boundaries."
+}
