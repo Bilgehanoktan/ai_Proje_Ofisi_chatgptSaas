@@ -24,7 +24,7 @@ Date: 2026-11-21. Status: REVIEW-ONLY candidate, NOT historical C07 PASS, NOT in
 The new runner NEVER passes diagnostic-unpinned. It loads the immutable historical 55-file source lock, verifies original runner, helper and P24 Git blobs, validates C06 stage lock review digest and INSTALL_OK, exact approved PR36 product manifest blob, Python 3.13.17 under the original stage venv, exact current four direct dependency versions, materializes the same 55 original file bytes into a temporary isolated directory, and calls the ORIGINAL hashed P05 helper with the same four test modules and counts. It checks 29 PASS without skips, rechecks 55 files and original stage guards, and writes its report outside the stage. It never writes C07 acceptance markers.
 
 Unchanged originals:
-- Historical 55-file lock Git blob 223f6fbd28cf4c428c07cec42fe27dd8606bdc7f3.
+- Historical 55-file lock Git blob 223f6fbd28cf4c428c07eb60dda4a36f644fa58c.
 - Historical Core29 runner Git blob b019a5e60cfff4183b00e99f252ffe00bc164eda.
 - Historical P05 helper Git blob befb9f429791a01b2fe37009e40f994a5924b2ff.
 - Historical P24 helper Git blob 0728ba08494bb8d67c7cec42fe27dd8606bdc7f3.
@@ -35,7 +35,6 @@ Unchanged originals:
 - PR36 product manifest blob 9660da1104617b4764d5f1e32009e4e3405b47f8.
 - PR36 C04/C06 REVIEW SHA256 341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3.
 
-NOTE: the historical lock blob in the bullets above must match the exact value in CONTRACT.json and GitHub; the authoritative lock is 223f6fbd28cf4c428c07ec42fe27dd8606bdc7f3? Do not use a handwritten shortcut. Always fetch and compare the full exact GitHub blob before tests.
 
 ## Current validation levels
 - Actual GitHub new-file readback: exact blobs recorded above.
