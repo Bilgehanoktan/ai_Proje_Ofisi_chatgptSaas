@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: after fetch resolved, reader.read that ignores abort returns HOLD 503
+ok 1 - after fetch resolved, reader.read that ignores abort returns HOLD 503
+  ---
+  duration_ms: 18.958861
+  type: 'test'
+  ...
+# Subtest: after body read, reader.cancel that never resolves returns HOLD 503
+ok 2 - after body read, reader.cancel that never resolves returns HOLD 503
+  ---
+  duration_ms: 1.266743
+  type: 'test'
+  ...
+# Subtest: in-flight never resolving fetch after live signal returns HOLD 503
+ok 3 - in-flight never resolving fetch after live signal returns HOLD 503
+  ---
+  duration_ms: 0.330939
+  type: 'test'
+  ...
+# Subtest: valid JSON without abort still returns 200 with isolated stub parser
+ok 4 - valid JSON without abort still returns 200 with isolated stub parser
+  ---
+  duration_ms: 0.750183
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 321.330185
