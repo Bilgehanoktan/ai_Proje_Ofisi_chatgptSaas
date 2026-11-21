@@ -14365,5 +14365,53 @@
     },
     "next": "Read-only C: disk audit then user-approved cleanup or verified move to restore C >=2GiB (E>=4GiB) without touching evidence; inspect PR37 source owner constraints; only then new exact-source full C07/Chromium C08 in isolated stage when respective gates satisfied",
     "rollback": "Documentation-only record; no changes to user Windows files, PR36/37 stages, product-dev/main, CI or security"
+  },
+  "mi01_w8_user_disk_space_breakdown_20261121_115110": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-READONLY-WINDOWS-DISK-AUDIT-C07-CAPACITY-HOLD-20261121",
+    "evidence": "USER_WINDOWS_POWERSHELL_OUTPUT",
+    "transcript": "Yapıştırılan metin(20261121-115110).txt",
+    "transcript_sha256": "f8bb0829d41453423735015f21879746e94b30ead8309fb71808f8ad0e8aec05",
+    "evidence_bound_to_previous_20261121_114638_preflight": true,
+    "observed_differences_no_new_tests": true,
+    "capacities_GiB": {
+      "C_free": 0.7,
+      "E_free": 4.81,
+      "user_TEMP_files": 3.39,
+      "npm_cache_files": 2.67,
+      "pip_cache_files": 0.07,
+      "user_Downloads_files": 14.53
+    },
+    "threshold_GiB": {
+      "C_min": 2,
+      "E_min": 4
+    },
+    "deficiency_C_GiB": 1.3,
+    "freeze": {
+      "existing_PR36_C06": "PASS_PRESERVE",
+      "PR37_D0": "29/29_PASS_PRESERVE",
+      "PR37_DEV": "11/11_SYNTHETIC_PASS_PRESERVE"
+    },
+    "gates": {
+      "W8_C07": "HOLD_C_STORAGE_AND_OWNER_REVIEW_FULL_RUN_NOT_EXECUTED",
+      "W8_C08": "NOT_RUN",
+      "C05_independent": "HOLD",
+      "W8_release": "HOLD"
+    },
+    "next": "Operator selectively clears Windows-approved disposable temporary files (not Downloads, npm cache, PR36/PR37 test evidence). Recheck C>=2 GiB and E>=4 GiB; continue on approved exact source runner.",
+    "cautions": "Do not blindly delete Downloads, Temp subtree or npm cache; offline npm lock/cached packages may be necessary and tests/evidence may reside under TEMP.",
+    "progress": {
+      "W8_acceptance_before": "3/8 (37.5%)",
+      "W8_acceptance_after": "3/8 (37.5%)",
+      "delta_pp": 0,
+      "weighted_development": "HESAPLANAMADI"
+    },
+    "changes": {
+      "source": 0,
+      "tests_executed": 0,
+      "merge": 0,
+      "permission": 0
+    },
+    "rollback": "Append-only progress report; no local user file or product code mutation."
   }
 }
