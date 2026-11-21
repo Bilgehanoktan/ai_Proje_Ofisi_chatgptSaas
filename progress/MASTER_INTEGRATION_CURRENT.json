@@ -1,5 +1,5 @@
 {
-  "revision": "MI01-W8-PR37-NATIVE-29OF29-VERIFIED-C07-HOLD-20261121",
+  "revision": "MI01-W8-PR37-SYNTHETIC11-DEV-BRIDGE-NATIVE29-C07-HOLD-20261121",
   "date": "2026-11-20",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -14060,5 +14060,80 @@
       "INDEPENDENT_C05_REVIEW_HOLD"
     ],
     "rollback": "Close review PR37 or normal revert only its new files; retain all original C04/C06 Windows stage, PR34/35/36, source history. No force push, product-dev/main/CI/prod effects."
+  },
+  "mi01_w8_pr37_dev_core29_c50_bridge_synthetic11_20261121": {
+    "revision": "MI01-W8-PR37-C50-DEV-BINDER-11-OF-11-SYNTHETIC-C07-HOLD-20261121",
+    "date": "2026-11-21",
+    "owner": "MI-01/W8",
+    "source_ref": "review/mi01-w8-core0207-c50-r1-contract-20261121",
+    "source_pr": 37,
+    "source_parent_pr": 36,
+    "source_commit": "63fa94f5c73924940311b120e485c3ae34b87df6",
+    "canonical_ref": "integration/product-dev",
+    "canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "canonical_changed": false,
+    "previous_real_native_PR37_core29_29_of_29": "PASS_PRESERVED_NO_RETEST",
+    "new_review_only_files": {
+      "tests/integration/w8_unified_u3_c50_r1_dev.py": "83623336d56c860f15b888cf2b1e11bdc4f7fceb",
+      "tests/integration/test_w8_u3_c50_dev.py": "ab432568b802eef723f8d959d0f8e9151fa9cd39"
+    },
+    "new_core_binding": {
+      "original_W8_adapter_blob": "1609d857b46ea973180c45271d87fcc92083f0a6",
+      "historical_P24_blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+      "historical_lock_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+      "new_R1_runner_blob": "cc467843bf11857fbbd9df19e513626fb7de85bf",
+      "binding": "CALL_EXACT_LEGACY_W8_ONE_TIME_WITH_PR37_VERSIONED_C50_R1_LOCAL_D0_INHERITED_FULL_TESTS",
+      "stage": "MUST_BE_NEW_OWNER_REVIEWED",
+      "historical_report_forged": false,
+      "formal_W8_marker_published": false,
+      "smoke_enabled": false,
+      "production_source_modified": false
+    },
+    "tested": {
+      "source_blob_readback": "2/2 exact GitHub PASS",
+      "isolated_python_synthetic": "11/11 PASS",
+      "test_kind": "ACTUAL_ISOLATED_FAKE_W8_NESTED_HOOK_AND_VERSIONED_REPORT",
+      "skipped": 0,
+      "failed": 0,
+      "source_python_compile": "PASS",
+      "new_bridge_full_native_windows_W8": "NOT_RUN",
+      "original_C07": "HOLD",
+      "C08_chromium": "NOT_RUN",
+      "independent_C05": "HOLD",
+      "source_owner_acceptance": "HOLD"
+    },
+    "deliverable": {
+      "zip": "AIOS_W8_PR37_C50_R1_DEV_BRIDGE_REVIEW_20261121.zip",
+      "zip_sha256": "66fd8d48bd0884d20b90a869a77e0f316f39f7a266b63e7ad80c17eab21d756c",
+      "zip_bytes": 11566,
+      "git_exact_source_files": 4,
+      "documentation": "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md",
+      "catalog": "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json"
+    },
+    "progress": {
+      "weights": {
+        "design": 15,
+        "source": 35,
+        "functional_tests": 20,
+        "integration": 20,
+        "acceptance": 10
+      },
+      "development_before": "HESAPLANAMADI",
+      "development_after": "HESAPLANAMADI",
+      "delta_pp": null,
+      "product_acceptance_previous": "3/8 (37.5%)",
+      "product_acceptance_current": "3/8 (37.5%)",
+      "delta_pp_acceptance": 0
+    },
+    "blocker": "NEW_BRIDGE_OWNER_AND_DEPENDENCY_REVIEW; FRESH_FULL_W8_C07; ACTUAL_CHROMIUM_C08; INDEPENDENT_C05",
+    "next_tasks": [
+      "MI01_OWNER_APPROVES_VERSIONED_W8_SOURCE_SUBSTITUTION_OR_REJECTS_IT",
+      "SECURITY_DEPENDENCY_OWNER_APPROVES_CURRENT_C50_BINARIES_WHEEL_PROVENANCE_LICENCES",
+      "FRESH_EXACT_C04_C06_W8_C50_DEV_ONLY_FULLCHAIN_TEST_ON_WINDOWS",
+      "OWNER_REVIEWED_FINAL_C07_FULL_TEST_WITH_EXPLICIT_VERSIONED_CONTRACT",
+      "ACTUAL_CHROMIUM_C08_SAME_DOCUMENT_5_SCREENSHOTS",
+      "INDEPENDENT_C05_AND_FINAL_RELEASE_DECISION"
+    ],
+    "rollback": "Close draft PR37 or normal revert only its new files; never rewrite historical runner, existing PR36 stage, product-dev or main. No CI/PROD/authority change."
   }
 }
