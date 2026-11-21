@@ -106,6 +106,8 @@ class BridgeTest(unittest.TestCase):
         self.assertEqual(info['W8_C07'],'HOLD_PENDING_OWNER_SECURITY_REVIEW')
         self.assertEqual(len(w.subprocesses),1)
         self.assertIn('--runner-root',w.subprocesses[0])
+        root_index=w.subprocesses[0].index('--runner-root')
+        self.assertEqual(w.subprocesses[0][root_index+1],str(APP.resolve().parent))
         self.assertEqual(w.run,w.base_run)
     def test_original_smoke_is_rejected(self):
         w=self.wrapped()

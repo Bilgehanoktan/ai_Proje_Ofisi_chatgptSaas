@@ -96,7 +96,7 @@ def extend(w):
                 verify_aux(stage)
                 cmd = [w.python(stage), '-B', stage / VERSIONED_RUNNER,
                        '--stage', stage,
-                       '--runner-root', stage/'tests/integration',
+                       '--runner-root', Path(__file__).resolve().parent,
                        '--source', historical, '--report', witness]
                 old_run(cmd, stage, env)
                 demand(witness.is_file() and not witness.is_symlink(),
