@@ -38,8 +38,10 @@ Unchanged originals:
 
 ## Current validation levels
 - Actual GitHub new-file readback: exact blobs recorded above.
-- Source/design guard checks: 12/12 static string/contract checks PASS. This is NOT Python compile and NOT runtime test.
-- Versioned successor runner Python execution: NOT_RUN.
+- Source/design guard checks: 12/12 static string/contract checks PASS.
+- Exact new runner Git blob cc467843bf11857fbbd9df19e513626fb7de85bf recovered byte-for-byte in isolated Linux container (8,464 bytes); Python 3.13.5 AST syntax PASS, bytecode py_compile PASS and CLI --help exit 0. These are source/tooling checks, NOT the 29 functional cases or Windows runtime acceptance.
+- Synthetic fail-closed CLI checks 4/4 PASS: missing CONTRACT emits HOLD report, report path inside stage rejected, pre-existing report rejected, missing historical source rejected. Stage mock remained unmodified. Tests ran on Linux Python 3.13.5, NOT the approved Windows stage.
+- Versioned successor runner actual Core29 under approved Windows stage: NOT_RUN.
 - Original complete W8 C07: HOLD, C08: NOT_RUN, independent C05: HOLD.
 - This contract is a review candidate only; even if its new isolated 29 tests PASS, original C07 remains blocked until an owner-approved versioned W8 adapter and complete fresh W8 run.
 
