@@ -14466,5 +14466,49 @@
     "remaining_owner_actions": "Source owner to technically review PR34-37 cryptography50 / Core0207/runner contract and C05 prerequisite license/provenance issues; prepare approved exact-source release-capable full W8 C07 runner; only then operator full C07, real Chromium C08, independent C05 and release acceptance.",
     "rollback": "No product/repo source modification to undo; deleted TEMP .bsdiff update deltas are not backed up and would require Docker updater redownload if ever needed.",
     "scope_note": "Pass is evidence from user's console, not independently executed by the assistant."
+  },
+  "mi01_w8_user_native_openssl_runtime_403_crypto5002_PASS_20261121": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-PR36-STAGE-PINNED-C05-NATIVE-WINDOWS-OPENSSL-RUNTIME-CHECK-20261121",
+    "operator": "H01_LOCAL_WINDOWS_POWERSHELL_5_1",
+    "provenance": "USER_PASTED_LOCAL_TERMINAL_OUTPUT_NOT_ASSISTANT_EXECUTED",
+    "canonical_product_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "pr37_head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+    "pr36_head": "683a26171ac54544260456ce84e19c38614aa5e2",
+    "stage": "E:\\AIOS\\W8\\PR36_W8_CERTIFI_LOCKED_20261121_132808\\stage",
+    "C06_review_sha256": "341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+    "prior_source_pin_checks": {
+      "C06_SOURCE_LOCK": "PASS",
+      "U3_SOURCE_PIN": "PASS",
+      "P24_SOURCE_PIN": "PASS"
+    },
+    "first_attempt": "TEST_INVOCATION_ERROR_POWERSHELL5_QUOTING_IN_PYTHON_C_PARAMETER_SYNTAX_ERROR_NOT_PRODUCT_FAIL",
+    "corrected_attempt": {
+      "invocation": "PowerShell here-string piped into pinned stage venv python.exe -B -",
+      "PYTHON": "3.13.17",
+      "CRYPTOGRAPHY": "50.0.2",
+      "ACTUAL_OPENSSL": "OpenSSL 4.0.3 29 Sep 2026",
+      "C05_OPENSSL_RUNTIME": "PASS",
+      "PYTHON_EXIT_CODE": 0,
+      "SOURCE_FILES_CHANGED": "NO",
+      "new_tests": "One native runtime subcheck (not new acceptance criterion, not duplicate full C07)"
+    },
+    "classification": "ACTUAL_USER_WINDOWS_OPENSSL_IMPORT_AND_RUNTIME_VERSION_PASS_SUPPLIER_SUBCHECK_NOT_INDEPENDENT_C05_APPROVAL",
+    "remaining_review": {
+      "W8_C07": "HOLD_FULL_FRESH_OFFICIAL_CHAIN_REQUIRES_OWNER_APPROVED_C50_RUNNER",
+      "W8_C08": "NOT_RUN",
+      "independent_C05": "HOLD_ATTESTATION_SIGNATURE_TRUST_AND_SHARP_LIBVIPS_LGPL_CC_BY_NOTICES_AND_OWNER_REVIEW",
+      "PR37": "DRAFT_ONLY_COMMENTED_NOT_OWNER_APPROVED"
+    },
+    "progress": {
+      "W8_acceptance_before": "3/8 (37.5%)",
+      "W8_acceptance_after": "3/8 (37.5%)",
+      "delta_percentage_points": 0,
+      "weighted_development_before": "HESAPLANAMADI",
+      "weighted_development_after": "HESAPLANAMADI"
+    },
+    "change_scope": "GitHub central progress only; no product, CI, dependency or PR updates. User local test read-only.",
+    "next": "Source owner must disposition PR34-37 exact crypto50 chain/approved full C07 runner and C05 safety prerequisites; then fresh formal C07 only with approval, followed by Chromium C08 and independent C05.",
+    "rollback": "No source modification; historical stage and source preserved."
   }
 }
