@@ -1,0 +1,75 @@
+{
+  "task_id": "P10J25-PLAN-GRAPH-ZOOM-20261121",
+  "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "branch": "integration/p10j25-graph-zoom-isolated-20261121",
+  "scope": "UI_PRESENTATION_ONLY",
+  "changes": [
+    {
+      "path": "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+      "before_blob": "2aa37596ca8c0f2098b8d2c4bf47d48be46540af",
+      "after_blob": "4816132235bf0c13df694f7df0e55696f2002781",
+      "bytes": 3687,
+      "sha256": "32e2749800f7c1cdc80ad3ba24494db05377555d7ee30f418e11b601d0655d73",
+      "symbols": [
+        "GRAPH_ZOOM_STEPS",
+        "stepGraphZoom",
+        "PlanGraph"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+      "before_blob": "a1d773853bbd703ac03fbbee3f9f1935d71234b8",
+      "after_blob": "ea163dd9818e595804d5b85d7dd38564daba40fd",
+      "bytes": 1986,
+      "sha256": "20c690f3d4166ea23c6a91e7c12aa5793c64e77ce5ad6a5c16713d71a650a384",
+      "symbols": [
+        "zoomControls",
+        "viewport"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-plan-graph-zoom.test.cjs",
+      "before_blob": null,
+      "after_blob": "7836a3602efe162a5bac6e4f63fbe52870a1d1df",
+      "bytes": 5576,
+      "sha256": "5a77f2bc70fd070a97069ce83cd6e62e234c1304d43b80edec4f79adf659ec12"
+    }
+  ],
+  "tests": {
+    "type": "ISOLATED_SYNTHETIC_ACTUAL",
+    "command": "NODE_PATH=$(npm root -g) node --test tests/ui-plan-graph-zoom.test.cjs",
+    "environment": {
+      "node": "22.16.0",
+      "typescript": "5.8.3"
+    },
+    "pass": 11,
+    "total": 11,
+    "fail": 0,
+    "skip": 0,
+    "raw_tap_sha256": "407e423c4c7362a5177d5b1e8e7c977b53cf811d0a4b8c9adf902e9f2aa56413"
+  },
+  "invariants": {
+    "graphData": "UNCHANGED",
+    "sourceManifestEntriesBefore": 552,
+    "sourceManifestEntriesAfter": 553,
+    "scope": [
+      "no API",
+      "no DB",
+      "no IAM",
+      "no security authority",
+      "no CI"
+    ]
+  },
+  "next": "UI owner source review + W8 original integration review",
+  "acceptance": {
+    "premium_ui": {
+      "previous": "21/40",
+      "current": "21/40"
+    },
+    "w8": {
+      "previous": "3/8",
+      "current": "3/8"
+    }
+  },
+  "rollback": "Normal isolated revert; never force push or alter product-dev/main"
+}
