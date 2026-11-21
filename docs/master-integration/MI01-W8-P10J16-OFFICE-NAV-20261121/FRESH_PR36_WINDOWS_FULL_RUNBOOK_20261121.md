@@ -71,3 +71,44 @@ py -3 $file --mode smoke --run-root 'E:\AIOS\W8\PR36_W8_FRESH_<timestamp>' --chr
 - Bir sonraki karar, **gerçek fark alanlarına** göre: sadece ortam metadatasıysa yeterli doğrulama ve yeni fingerprint; wheel/lock SHA veya paket sürümü farkıysa eski onaylı wheelhouse kilidini koruyan kaynakta yetkili ve kanıtlı re-review gerekir. Fark görülmeden onayı otomatik yeniden kullanma veya `REVIEW.json` elle düzeltme **YASAK/HOLD**.
 
 **Teknik katalog etkisi:** Backend/API/DB, runtime, ürün UI veya bağımlılık sürümü güncellenmedi. Yalnızca W8 dış test yardımcısının durum kodu/doğrulama aracına R2 bakım düzeltmesi, kanıt/handover ve hata teşhisi kaydedildi. Eski sürümler ve kararlar aynen korunur.
+
+## 2026-11-21 — R2 dependency-review root-cause: Python ABI cp313 vs cp314
+
+**Genuine native user output** from `Yapıştırılan metin(20261121-101607).txt` SHA256 `0af80d2c80d324fe5eccc5631c1134f5edd16465e4b1a4e9cf3f08ec887c00bc` (R2 `review-diff` **READ_ONLY_COMPLETE**); inputs are the old PR35 and new PR36 `REVIEW.json` plus Python locks in their recorded E: stage paths.
+
+- `manifest_blob` changes exactly as intended: PR35 `2d1d0bf94d464ffe79d8072453a2e19722485854` -> PR36 `9660da1104617b4764d5f1e32009e4e3405b47f8`. **This is NOT a dependency change.**
+- `node`, `npm_lock_sha256`, `npm_packages`, `platform` all **SAME**; `test-tools.txt` SHA **SAME**.
+- `python`: **3.13.17 -> 3.14.3** because R2/R1 were invoked with `py -3`, which selected the machine's *newer default Python 3.14.3*. The W8 adapter uses its Python process's `sys.executable` for fresh C04 package download and all subsequent subprocess stages; PR36 product code/requirements did not change.
+- Wheels are **ABI-specific**. Four packages changed from `cp313` -> `cp314` despite identical *package versions*: `cffi 2.1.1`, `greenlet 3.5.6`, `pydantic_core 2.50.5`, `rpds_py 2026.9.1`; 8 filenames differ (old+new for each).
+- Python lock SHA changed as a **consequence** of the four ABI wheel hash changes: PR35 `dfc5da1b553c71ae209d31e70209de699503973dbc8146ba611e35703f5367a5`; PR36/Python3.14 `a74aacd1df83144811d19f7ccc04517905325764cc4d994738f373f5044b428f`. All package version strings in the displayed lock diff were unchanged.
+- `REVIEW_DIFFERENT_FIELD_COUNT 4` = `manifest_blob`, `python`, `python_lock_sha256`, `wheels`. R2 diagnostic did not install packages, modify sources or permissions.
+
+**Minimal controlled remediation:** DO NOT alter product requirements, Python packages, manifests, REVIEW files, checksum gates or the existing two Windows stages. Reuse the already SHA-pinned **R2 helper unchanged** with *explicit Python **3.13.17*** using `py -3.13` in a **new** fresh PR36 stage. First read-only assert `sys.version_info[:3] == (3,13,17)` (not just 3.13), and C>=2GiB/E>=4GiB. If py launcher lacks exact 3.13.17, **HOLD** and report `py -0p`; do not silently fall back to 3.14. If the 3.13-run C04 regenerated wheel inventory differs for any other reason, original R2 fail-closed compares all old/new `REVIEW.json` fields other than intended manifest and **HOLD** without installing. No manual writing to `python.lock` or `REVIEW.json`.
+
+User PowerShell 5.1 direct commands (not an unsigned PS1, no execution policy adjustment):
+
+```powershell
+& {
+  $ErrorActionPreference='Stop'
+  $file=Join-Path $env:USERPROFILE 'Downloads\AIOS_W8_PR36_FRESH_WINDOWS_VALIDATION_R2_20261121.py'
+  $expected='9751b0068f10f16dbfa1a7de143d48debe926a4dfefdc847d89f3902e2856808'
+  if (!(Test-Path -LiteralPath $file) -or
+      (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expected) {
+      throw 'PR36_R2_HELPER_INTEGRITY_HOLD'
+  }
+  & py -3.13 -c 'import sys; print(sys.version); assert sys.version_info[:3] == (3,13,17), "PYTHON_3_13_17_REQUIRED"'
+  if ($LASTEXITCODE -ne 0) { throw 'PYTHON_3_13_17_NOT_AVAILABLE_HOLD' }
+  if ((Get-PSDrive C).Free -lt 2GB -or (Get-PSDrive E).Free -lt 4GB) { throw 'DISK_PREFLIGHT_HOLD' }
+  $chrome='C:\Program Files\Google\Chrome\Application\chrome.exe'
+  if (Test-Path -LiteralPath $chrome) {
+      & py -3.13 $file --mode run --chromium $chrome
+  } else {
+      & py -3.13 $file --mode run
+  }
+  if ($LASTEXITCODE -ne 0) { throw 'PR36_FULL_RUN_HOLD_CHECK_NEW_STATUS_AND_LOG' }
+}
+```
+
+**Expected stages and measurement:** new `E:\AIOS\W8\PR36_W8_FRESH_<new_timestamp>`, fresh real G3/C04; if identical lock/wheels/3.13 interpreter, R2 reports `C04_REVIEW_MATCH_EXCEPT_PR36_MANIFEST_PASS`, followed by C06 offline installation and C07 full original Next.js build; C08 real browser only if explicitly supplied Chrome path exists. New raw `PR36_W8_STATUS.json` and `PR36_W8_NATIVE_FULL.log` must be reviewed *before* any state is changed to PASS. **As of this document no new 3.13.17 run has occurred**; C06/C07/C08 remain NOT_RUN, independent C05 HOLD. W8 acceptance 3/8 unchanged; weighted dev HESAPLANAMADI.
+
+**Source catalogue and rollback:** No product/module/API/DB/event/dependency source changed; only W8 execution selection is corrected by a version guard. Old PR35/Python3.13 stage and aborted PR36/Python3.14 stage retained untouched for evidence. Existing R2 verified SHA256 `9751b0068f10f16dbfa1a7de143d48debe926a4dfefdc847d89f3902e2856808`. Future failure means stop at the exact stage, inspect the new native log/status rather than trying to suppress a pin error.
