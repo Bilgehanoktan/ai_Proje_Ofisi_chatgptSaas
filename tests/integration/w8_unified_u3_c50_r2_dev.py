@@ -129,7 +129,7 @@ def extend(w):
             digest = hashlib.sha256(witness.read_bytes()).hexdigest()
             summary.write_text(json.dumps({
                 'classification':'W8_DEVELOPMENT_COMPATIBILITY_ONLY_NOT_C07_ACCEPTANCE',
-                'test_chain':'COMPLETE_INHERITED_W8_TEST_WITH_CORE0207_C50_R1',
+                'test_chain':'COMPLETE_INHERITED_W8_TEST_WITH_CORE0207_C50_R2_CERTIFI_20261120',
                 'versioned_core29':'PASS_29_OF_29', 'core_report_sha256':digest,
                 'historical_core0207_46_0_4':'HOLD_UNCHANGED',
                 'W8_C07':'HOLD_PENDING_OWNER_SECURITY_REVIEW',
