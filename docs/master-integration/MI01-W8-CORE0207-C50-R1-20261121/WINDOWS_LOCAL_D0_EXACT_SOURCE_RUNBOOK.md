@@ -26,14 +26,13 @@
     Expand-Archive -LiteralPath $zip -DestinationPath $work -ErrorAction Stop
     $contract = Join-Path $work 'CONTRACT.json'
     $runner = Join-Path $work 'run_core0207_c50_r1.py'
-    $pins = @{
-        $contract = '3a3b6a2cbb6f9d5762950d65873fd56533d0e377e17864f97bcfe5c1ed079b8b'
-        $runner = '0902f736487273a7bc873934d0eef3ca0c87fd20d57f34698572e2fe329406cc'
-    }
-    foreach ($p in $pins.Keys) {
+    foreach ($p in @($contract, $runner)) {
         if (!(Test-Path -LiteralPath $p -PathType Leaf)) { throw "PR37_BUNDLE_MEMBER_MISSING: $p" }
-        if ((Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash.ToLowerInvariant() -ne $pins[$p]) { throw "PR37_FILE_SHA256_HOLD: $p" }
     }
+    $contractSha = (Get-FileHash -LiteralPath $contract -Algorithm SHA256).Hash.ToLowerInvariant()
+    $runnerSha = (Get-FileHash -LiteralPath $runner -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($contractSha -ne '3a3b6a2cbb6f9d5762950d65873fd56533d0e377e17864f97bcfe5c1ed079b8b') { throw 'PR37_CONTRACT_SHA256_HOLD' }
+    if ($runnerSha -ne '0902f736487273a7bc873934d0eef3ca0c87fd20d57f34698572e2fe329406cc') { throw 'PR37_RUNNER_SHA256_HOLD' }
     $stage = 'E:\AIOS\W8\PR36_W8_CERTIFI_LOCKED_20261121_132808\stage'
     $runnerRoot = 'E:\AIOS\W8\PR36_W8_CERTIFI_LOCKED_20261121_132808\source\tests\integration'
     $history = 'E:\AIOS\W8\PR36_DIAGNOSTIC_ONLY_20261121_134455\historical_source_55'
