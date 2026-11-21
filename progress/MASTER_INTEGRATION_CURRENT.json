@@ -14566,5 +14566,68 @@
     "owner": "MI01_W8_SOURCE_OWNER_AND_INDEPENDENT_SECURITY_OWNER",
     "next": "Use a one-shot fail-closed source/lock preflight and optional permitted dev tests. Before new C06, owner must review exact certifi drift or produce source-bound unchanged dependency review; formal C07 needs a separate reviewed runner, C08 after C07, independent C05 own approval.",
     "rollback": "Preserve PR36 approved stage, PR37 source/stage and downloaded lock as evidence; no code/lock deletion or automatic merge."
+  },
+  "mi01_w8_user_windows_r2_disk_diag_20261121_1555": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-PR37-CONSO-R1-R2-C-STORAGE-HOLD-AND-TEMP_NPM_DIAGNOSTIC",
+    "provenance": "USER_UPLOADED_NATIVE_WINDOWS_POWERSHELL5_1_TRANSCRIPT",
+    "user_local_environment": {
+      "work": "E:\\AIOS\\W8\\PR37_INTEGRATED_DEV_20261121_151800",
+      "PR37": "63fa94f5c73924940311b120e485c3ae34b87df6",
+      "R1": {
+        "free_C_GiB": 2.76,
+        "free_E_GiB": 4.7,
+        "source_head_adapter": "PASS",
+        "test_stop": "NEW_WHEEL_COUNT_HOLD",
+        "classification": "POWER_SHELL_5_1_JSON_WHEEL_PROPERTY_COUNT_SCRIPT_ISSUE_NOT_PRODUCT"
+      },
+      "R2": {
+        "free_C_GiB": 1.81,
+        "stop": "C_STORAGE_HOLD",
+        "new_C06": "NOT_RUN",
+        "win11_bridge": "NOT_RUN",
+        "C07": "HOLD",
+        "C08": "NOT_RUN"
+      },
+      "diagnostic": {
+        "free_C_GiB": 1.02,
+        "free_E_GiB": 4.69,
+        "TEMP": {
+          "file_count": 5668,
+          "size_GiB_at_least": 1.2,
+          "read_errors": 39,
+          "scan_incomplete": true
+        },
+        "NPM_CACHE": {
+          "file_count": 48233,
+          "size_GiB": 2.67
+        },
+        "DOCKER_TEMP": {
+          "file_count": 10,
+          "size_GiB_rounded": 0
+        },
+        "PIP_CACHE": {
+          "reported_path": "pip output encoding path issue",
+          "status": "NOT_FOUND_IN_REPORTED_PATH_NOT_PROVEN_MISSING"
+        },
+        "deleted": "NO",
+        "product_changes": "NO"
+      },
+      "dependency_drift_already_confirmed": "certifi 2026.10.23 => 2026.11.20; python lock SHA changed, npm lock and manifest match; no C06 approval granted"
+    },
+    "source_boundary": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66 unchanged; PR37 draft owner acceptance absent",
+    "gates": {
+      "C04": "PASS_PREPARE_PREVIOUS",
+      "C06_new": "HOLD",
+      "C07_formal": "HOLD",
+      "C08": "NOT_RUN",
+      "independent_C05": "HOLD",
+      "W8_acceptance_before": "3/8 (37.5%)",
+      "W8_acceptance_after": "3/8 (37.5%)",
+      "delta_pp": 0,
+      "weighted_development": "HESAPLANAMADI"
+    },
+    "action": "Recover C disk >=2GiB via narrow non-source/non-evidence cleanup after candidate list and explicit user action; preserve npm cache as potential build source and E capacity. Then check exact SHA and dependency drift, no bypass.",
+    "rollback": "No deletes or branch/CI change in this assistant round; source/stage evidence preserved."
   }
 }
