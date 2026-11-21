@@ -1,0 +1,272 @@
+{
+  "id": "MI01-W8-CORE0207-C50-R1-20261121",
+  "date": "2026-11-21",
+  "state": "REVIEW_ONLY_NO_ACCEPTANCE",
+  "owner": "MI-01/W8",
+  "depends_on": [
+    "MI01-W8 PR36",
+    "PR34 secure cryptography 50.0.2",
+    "independent dependency/security owner review"
+  ],
+  "base": {
+    "ref": "review/mi01-w8-p10j16-unified-office-links-20261121",
+    "sha": "683a26171ac54544260456ce84e19c38614aa5e2"
+  },
+  "current_canonical_product": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "modified": false
+  },
+  "changed_paths": [
+    "tests/integration/core0207_crypto50_r1/CONTRACT.json",
+    "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md",
+    "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json",
+    "tests/integration/w8_unified_u3_c50_r1_dev.py",
+    "tests/integration/test_w8_u3_c50_dev.py"
+  ],
+  "review_files": {
+    "tests/integration/core0207_crypto50_r1/CONTRACT.json": "537e0c35592ca7366a52ab87c08db7e419f18b71",
+    "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py": "cc467843bf11857fbbd9df19e513626fb7de85bf",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "5ec257e85112c83b0a71e4f80827546c4259c939",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md": "d5c47e1485420517229211090eac6223b5591b8d",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json": "69144f1bc414fe044c91458253e030f2e2c54527",
+    "tests/integration/w8_unified_u3_c50_r1_dev.py": "83623336d56c860f15b888cf2b1e11bdc4f7fceb",
+    "tests/integration/test_w8_u3_c50_dev.py": "ab432568b802eef723f8d959d0f8e9151fa9cd39"
+  },
+  "immutable_original_blobs": {
+    "historical_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "historical_runner": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+    "historical_p05_helper": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+    "historical_p24": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3"
+  },
+  "new_contract_direct_pins": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "50.0.2",
+    "uvicorn": "0.34.2"
+  },
+  "source_scope": {
+    "historical_files": 55,
+    "original_tests": 29,
+    "module_counts": [
+      5,
+      7,
+      8,
+      9
+    ]
+  },
+  "technical_catalog": {
+    "classes_added": [],
+    "functions_added": [
+      "git_blob(data)",
+      "require(condition,reason)",
+      "exact_file(path,expected_blob,expected_sha)",
+      "import_pinned(path,name)",
+      "validate(stage,runner_root,contract)",
+      "main()",
+      "w8_unified_u3_c50_r1_dev.git_blob",
+      "demand",
+      "load_original",
+      "extend",
+      "extend.verify_aux",
+      "extend.test",
+      "extend.test.bridge",
+      "extend.smoke",
+      "load_candidate"
+    ],
+    "APIs_added": [],
+    "DB_tables_added": [],
+    "DB_migrations_added": [],
+    "events_added": [],
+    "production_dependencies_changed": [],
+    "CI_workflows_changed": [],
+    "nonproduct_dependency_requirement": [
+      "Python 3.13.17",
+      "approved immutable PR36 C06 venv",
+      "approved PR36 review/INSTALL_OK fingerprint",
+      "original pinned run_lifecycle_p05.py"
+    ]
+  },
+  "evidence": {
+    "previous_native_windows": {
+      "PR36_G3": "PASS_552_SOURCE",
+      "PR36_C04": "PASS_REVIEW_SHA256_341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+      "PR36_C06": "PASS_28_WHEEL_30_NPM_LOCAL_DEV",
+      "historical_core29": "HOLD_DIRECT_DEPENDENCY_PIN_MISMATCH",
+      "diagnostic_R2_core29": "PASS_29_29_DIAGNOSTIC_UNPINNED_NOT_C07",
+      "diagnostic_R2_next_build": "PASS_ISOLATED_NOT_C07",
+      "diagnostic_R2_typescript": "PASS_ISOLATED_NOT_C07",
+      "original_stage_preserved": true,
+      "underlying_R2_JSON_and_full_log": "NOT_READ_BACK"
+    },
+    "new_candidate": {
+      "github_exact_blob_readback": "PASS_2_2_SOURCE_FILES",
+      "contract_static_checks": {
+        "passed": 12,
+        "total": 12,
+        "classification": "STATIC_SOURCE_REVIEW_NOT_PYTHON_TEST"
+      },
+      "Python_compile": "PASS_ACTUAL_ISOLATED_LINUX_PYTHON_3_13_5_EXACT_GIT_BLOB_AST_AND_PY_COMPILE",
+      "user_Windows_execution": "PASS_ACTUAL_NATIVE_WINDOWS_VERSIONED_LOCAL_D0_29_OF_29",
+      "complete_C07": "HOLD",
+      "C08_browser": "NOT_RUN",
+      "independent_C05": "HOLD",
+      "CLI_help": "PASS_ACTUAL_ISOLATED_LINUX_PYTHON_3_13_5",
+      "synthetic_fail_closed_preflight": {
+        "passed": 4,
+        "total": 4,
+        "platform": "Linux Python 3.13.5",
+        "classification": "ACTUAL_SYNTHETIC_CLI_NEGATIVE_GUARDS_NOT_W8",
+        "details": [
+          "missing CONTRACT => HOLD report",
+          "report in stage => rejected",
+          "existing report => rejected",
+          "missing history => rejected"
+        ],
+        "original_stage": "UNTOUCHED_IN_SYNTHETIC_MOCK"
+      },
+      "native_case_count": 29,
+      "native_case_groups": {
+        "test_retained_snapshot_0201": "5/5 PASS",
+        "test_terminal_anchor_lifecycle_0203": "7/7 PASS",
+        "test_lifecycle_projection_p02": "8/8 PASS",
+        "test_lifecycle_prefix_p03": "9/9 PASS"
+      },
+      "native_source_files_verified": 55,
+      "original_stage_immutability_guard": true,
+      "native_report_sha256": "3a2713e3d0c37f6f017ff590589b727cc939d6a56823095337d92a786059d125",
+      "console_transcript_sha256": "8cc87ae5923a314d002f39850f0e7ad74e5479ba7c5550ece66b067105381a2f",
+      "report_reconstruction": "CONSOLE_JSON_4549_BYTE_RECONSTRUCTION_INDEPENDENT_SHA256_MATCH",
+      "native_stage": "E:\\AIOS\\W8\\PR36_W8_CERTIFI_LOCKED_20261121_132808\\stage",
+      "native_report_not_directly_uploaded": true,
+      "full_W8_dev_adapter": {
+        "source_verification": "PASS_EXACT_GIT_BLOB",
+        "synthetic_cases": "11/11 PASS",
+        "original_full_W8": "NOT_RUN",
+        "status": "DEVELOPMENT_ONLY_PENDING_OWNER"
+      }
+    }
+  },
+  "progress": {
+    "development_weights_percent": {
+      "design": 15,
+      "source": 35,
+      "functional_tests": 20,
+      "integration": 20,
+      "final_acceptance": 10
+    },
+    "development_before": "HESAPLANAMADI",
+    "development_after": "HESAPLANAMADI",
+    "development_delta_pp": null,
+    "W8_product_acceptance_before": {
+      "completed": 3,
+      "total": 8,
+      "percent": 37.5
+    },
+    "W8_product_acceptance_after": {
+      "completed": 3,
+      "total": 8,
+      "percent": 37.5
+    },
+    "W8_product_acceptance_delta_pp": 0
+  },
+  "gates": [
+    "OWNER_REVIEW_SUCCESSOR_TEST_IDENTITIES",
+    "DEPENDENCY_OWNER_REVIEW_PINNED_CURRENT_WHEEL_GRAPH",
+    "NEW_VERSIONED_SUITE_ACTUAL_29_29",
+    "OWNER_APPROVED_UPDATED_W8_ADAPTER",
+    "FRESH_FULL_C07",
+    "CHROMIUM_C08",
+    "INDEPENDENT_SECURITY_C05",
+    "LOCAL_PR37_NEW_VERSIONED_SUITE_29_CASE_PASS_PRESERVE_IDS"
+  ],
+  "no_merge_to": [
+    "integration/product-dev",
+    "main"
+  ],
+  "rollback": "Close draft candidate PR or normal revert of candidate-only files; preserve all PR34/35/36 stages and historical 46.0.4 lock.",
+  "operator_deliverable": {
+    "scope": "LOCAL_REVIEW_D0_ONLY_NOT_C07_OR_C05_ACCEPTANCE",
+    "bundle": "AIOS_CORE0207_C50_R1_PR37_EXACT_SOURCE_20261121.zip",
+    "zip_bytes": 4506,
+    "zip_sha256": "48f194ab76182c11cfd9bed5864b3992236702b790c01ab2341c04166b675aad",
+    "members": [
+      {
+        "name": "CONTRACT.json",
+        "blob_sha": "537e0c35592ca7366a52ab87c08db7e419f18b71",
+        "sha256": "3a3b6a2cbb6f9d5762950d65873fd56533d0e377e17864f97bcfe5c1ed079b8b"
+      },
+      {
+        "name": "run_core0207_c50_r1.py",
+        "blob_sha": "cc467843bf11857fbbd9df19e513626fb7de85bf",
+        "sha256": "0902f736487273a7bc873934d0eef3ca0c87fd20d57f34698572e2fe329406cc"
+      }
+    ],
+    "actual_static_verification": "PASS_ARCHIVE_MEMBERS_GIT_BLOB_2_2_SYNTAX_PY_COMPILE_CLI_HELP",
+    "native_windows_candidate_execution": "NOT_RUN",
+    "Windows_operator_runbook": "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md",
+    "old_stage_mutation": "NONE",
+    "prereq_failure_semantics": "INPUT_LOCATION_HOLD_NOT_TEST_FAIL"
+  },
+  "integration_blocker": {
+    "current_w8_adapter_blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+    "original_runner_blob": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+    "historical_crypto_pin": "46.0.4",
+    "current_staged_crypto": "50.0.2",
+    "new_versioned_29_29": "PASS_D0_NOT_C07",
+    "next": "MI01_OWNER_REVIEW_AND_APPROVED_FRESH_FULLCHAIN_WITH_DEV_ADAPTER_THEN_INDEPENDENT_ACCEPTANCE_C07_C08_C05",
+    "status": "HOLD_OWNER_REVIEW"
+  },
+  "development_adapter": {
+    "status": "EXACT_GITHUB_BLOB_READBACK_MATCH_AND_LOCAL_SYNTHETIC_GUARDS_PASS_ONLY",
+    "entrypoint": "tests/integration/w8_unified_u3_c50_r1_dev.py",
+    "original_U3_locked_blob": "1609d857b46ea973180c45271d87fcc92083f0a6",
+    "pinned_new_aux": [
+      "tests/integration/core0207_crypto50_r1/CONTRACT.json",
+      "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py"
+    ],
+    "original_P24_pinned": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+    "original_historical_core_lock_pinned": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "checks": {
+      "synthetic_python_unittest": {
+        "passed": 11,
+        "total": 11,
+        "skipped": 0,
+        "failures": 0,
+        "scope": "FAKE_W8_HARNESS_AND_SYNTHETIC_C50_REPORT_NOT_ORIGINAL_W8",
+        "platform": "Linux local Python",
+        "status": "PASS"
+      },
+      "python_compile": "PASS",
+      "source_bytes_pinned": "2/2 exact GitHub blobs",
+      "new_adapter_real_Windows_full_W8": "NOT_RUN",
+      "old_C07": "HOLD",
+      "C08": "NOT_RUN",
+      "independent_C05": "HOLD"
+    },
+    "invariant": "Never write historic report core29-p10f.json; remove all inherited full W8 acceptance markers even on dev-only PASS; prohibit smoke until owner approved",
+    "changed_symbols": [
+      "w8_unified_u3_c50_r1_dev.git_blob",
+      "demand",
+      "load_original",
+      "extend",
+      "extend.verify_aux",
+      "extend.test",
+      "extend.test.bridge",
+      "extend.smoke",
+      "load_candidate"
+    ],
+    "additional_product_source_files": 0,
+    "new_dependency_versions": 0,
+    "new_APIs": 0,
+    "new_database_objects": 0,
+    "required_owner": "MI-01/W8",
+    "required_independent_security": "C05 HOLD",
+    "rollback": "Discard development adapter branch or normal revert; original stages unchanged"
+  }
+}

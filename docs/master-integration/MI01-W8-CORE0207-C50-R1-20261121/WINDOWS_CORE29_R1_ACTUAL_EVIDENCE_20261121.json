@@ -1,0 +1,244 @@
+{
+  "evidence_id": "MI01_W8_PR37_CORE0207_C50_R1_ACTUAL_WINDOWS_20261121_140140",
+  "date": "2026-11-21",
+  "origin": "USER_SUPPLIED_NATIVE_WINDOWS_POWERSHELL5_1_CONSOLE_TRANSCRIPT",
+  "transcript_name": "Yapıştırılan metin(20261121-110239).txt",
+  "transcript_sha256": "8cc87ae5923a314d002f39850f0e7ad74e5479ba7c5550ece66b067105381a2f",
+  "transcript_bytes": 13179,
+  "classification": "REAL_NATIVE_WINDOWS_LOCAL_D0_VERSIONED_REVIEW_SUITE_NOT_W8_C07_ACCEPTANCE",
+  "parent_pr": 36,
+  "review_pr": 37,
+  "PR36_source_head": "683a26171ac54544260456ce84e19c38614aa5e2",
+  "candidate_source_git_blob": "cc467843bf11857fbbd9df19e513626fb7de85bf",
+  "candidate_contract_git_blob": "537e0c35592ca7366a52ab87c08db7e419f18b71",
+  "ZIP_sha256": "48f194ab76182c11cfd9bed5864b3992236702b790c01ab2341c04166b675aad",
+  "Windows_work_dir": "E:\\AIOS\\W8\\PR37_C50_R1_D0_20261121_140140",
+  "Windows_report": "E:\\AIOS\\W8\\PR37_C50_R1_D0_20261121_140140\\CORE0207_C50_R1_REVIEW_ONLY.json",
+  "reported_report_sha256": "3a2713e3d0c37f6f017ff590589b727cc939d6a56823095337d92a786059d125",
+  "report_raw_file_retrieved": false,
+  "report_json_in_pasted_console": true,
+  "stage": "E:\\AIOS\\W8\\PR36_W8_CERTIFI_LOCKED_20261121_132808\\stage",
+  "Python": "3.13.17",
+  "SQLite": "3.50.4",
+  "direct_dependencies": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "50.0.2",
+    "uvicorn": "0.34.2"
+  },
+  "approved_C04_C06_review_sha256": "341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+  "historical_core_source_lock_git_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+  "preconditions": {
+    "ZIP_SHA256": "PASS_BY_CONTROL_FLOW_AND_NATIVE_EXIT",
+    "contract_SHA256": "PASS_BY_CONTROL_FLOW_AND_NATIVE_EXIT",
+    "runner_SHA256": "PASS_BY_CONTROL_FLOW_AND_NATIVE_EXIT"
+  },
+  "summary": {
+    "exit_code": 0,
+    "reported_status": "PASS",
+    "passed": 29,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "historical_source_files_verified": 55,
+    "immutable_stage_guards_preserved": true,
+    "case_ID_count": 29,
+    "all_case_IDs_unique": true,
+    "case_accepted_groups": 4
+  },
+  "groups": [
+    {
+      "module": "test_retained_snapshot_0201",
+      "expected": 5,
+      "ran": 5,
+      "skipped": 0,
+      "failed": 0,
+      "errors": 0,
+      "accepted": true,
+      "cases": [
+        {
+          "id": "test_retained_snapshot_0201.RetainedSnapshotTests.test_changed_plan_before_db",
+          "status": "PASS"
+        },
+        {
+          "id": "test_retained_snapshot_0201.RetainedSnapshotTests.test_failure_needs_separate_terminal_pin",
+          "status": "PASS"
+        },
+        {
+          "id": "test_retained_snapshot_0201.RetainedSnapshotTests.test_missing_reference_before_db",
+          "status": "PASS"
+        },
+        {
+          "id": "test_retained_snapshot_0201.RetainedSnapshotTests.test_real_admission_readback",
+          "status": "PASS"
+        },
+        {
+          "id": "test_retained_snapshot_0201.RetainedSnapshotTests.test_tampered_ledger",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "module": "test_terminal_anchor_lifecycle_0203",
+      "expected": 7,
+      "ran": 7,
+      "skipped": 0,
+      "failed": 0,
+      "errors": 0,
+      "accepted": true,
+      "cases": [
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_actual_writer_and_signed_readback",
+          "status": "PASS"
+        },
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_anchor_deleted",
+          "status": "PASS"
+        },
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_anchor_failure_rolls_back_all_roles",
+          "status": "PASS"
+        },
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_anchor_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_legacy_terminal_not_strict",
+          "status": "PASS"
+        },
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_missing_archive_no_terminal",
+          "status": "PASS"
+        },
+        {
+          "id": "test_terminal_anchor_lifecycle_0203.AnchorLifecycleTests.test_unknown_commit_read_only",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "module": "test_lifecycle_projection_p02",
+      "expected": 8,
+      "ran": 8,
+      "skipped": 0,
+      "failed": 0,
+      "errors": 0,
+      "accepted": true,
+      "cases": [
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_api_exact",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_exact_terminal_readback_unchanged",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_missing_api_hold",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_ordinary_history_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_renewal_history_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_terminal_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_wrong_file_hold",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_projection_p02.LifecycleProjectionTests.test_wrong_head",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "module": "test_lifecycle_prefix_p03",
+      "expected": 9,
+      "ran": 9,
+      "skipped": 0,
+      "failed": 0,
+      "errors": 0,
+      "accepted": true,
+      "cases": [
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_all_four",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_api",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_audit_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_budget_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_lease_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_missing",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_scope_tamper",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_terminal_not_prefix",
+          "status": "PASS"
+        },
+        {
+          "id": "test_lifecycle_prefix_p03.PrefixProjectionTests.test_vectors",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "User supplied console and printed JSON; exact JSON/log files not uploaded for independent byte readback",
+    "Versioned successor runner does not replace unchanged original P10J24 W8 historical adapter and hence not C07 acceptance",
+    "Independent C05 security/provenance/owner decision not asserted"
+  ],
+  "acceptance": {
+    "PR36_C06": "PASS_PRIOR_ACTUAL_WINDOWS",
+    "original_C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05_independent": "HOLD",
+    "W8_product_acceptance_before": "3/8",
+    "W8_product_acceptance_after": "3/8",
+    "delta_percentage_points": 0,
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "next": [
+    "MI01_owner_review_versioned_contract_caseIDs_and_55_file_scope",
+    "dependency_owner_review_50_0_2_transitive_wheel_binary_and_licenses",
+    "reviewed_W8_versioned_adapter_candidate_full_fresh_C07",
+    "actual_Chromium_C08",
+    "independent_C05_separate"
+  ],
+  "report_reconstruction": {
+    "source": "Extracted JSON printed by PowerShell Get-Content -Raw in user-uploaded 13,179-byte console transcript",
+    "encoding": "UTF-8",
+    "newline_format": "CRLF",
+    "trailing_newline": "CRLF",
+    "reconstructed_report_bytes": 4549,
+    "reconstructed_report_sha256": "3a2713e3d0c37f6f017ff590589b727cc939d6a56823095337d92a786059d125",
+    "matches_native_Get_FileHash_SHA256": true,
+    "raw_on_disk_report_file_opened_from_user_PC": false,
+    "verification_class": "INDEPENDENT_CONTENT_HASH_RECONSTRUCTION_FROM_USER_CONSOLE"
+  }
+}
