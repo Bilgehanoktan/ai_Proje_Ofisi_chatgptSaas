@@ -171,3 +171,44 @@ User direct PowerShell 5.1 invocation:
 
 ### Rollback, acceptance, catalog and next
 No existing project file is overwritten; only new temporary workspace is created and on failure **retained** for review/rollback (manual owner decision). Entire previous stages, architecture/decisions/security permissions stay unchanged. A success in G3/C06/C07/C08 would provide original **local test evidence**, still **not** independent C05, owner acceptance, main/product-dev merge or production approval. **W8 canonical product acceptance = 3/8 → 3/8 pending original fresh output; weighted development % = HESAPLANAMADI (no frozen denominators).** Product symbol/API/DB/event/contract/dependency catalogs unchanged; external testing tool and its provenance have been added to the W8 maintenance and handover runbook. If there is a remaining original test failure, investigate its exact `PR36_CERTIFI_REPLAY_NATIVE.log` instead of rerunning old successes. Do not count a hypothetical PASS.
+
+
+## 2026-11-21 — Actual C06 PASS, C07 blocked at exact historical Core 0207
+
+### Latest actual Windows evidence (user pasted PowerShell 5.1)
+- Runner `AIOS_W8_PR36_CERTIFI_PIN_REPLAY_20261121.py` was SHA256 checked as `9b69846def5ebd9be6bd75b0945c65b63c3ca4f13d9bb4cc032de1908bb86b4a`, Python **3.13.17**, disk preflight C **2.12 GiB**, E **6.28 GiB**. The previously approved 28-wheel SHA256 inventory and exact certifi-only delta **PASS**. Old source `552/552` **PASS**.
+- Fresh isolated stage `E:\AIOS\W8\PR36_W8_CERTIFI_LOCKED_20261121_132808` (previous old/failed stages preserved); new manifest-bound original W8 REVIEW fingerprint `341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3` **PASS** for original PR35-approved graph and intended PR36 source change only.
+- `G3_PR36_EXACT_SOURCE_AUDIT exit=0` **PASS**. `C06_PR36_OFFLINE_LOCKED_INSTALL exit=0` **PASS ACTUAL WINDOWS** (hash-locked pip and npm original).
+- `C07_PR36_ORIGINAL_FULL_TEST_AND_NEXT_BUILD exit=1`. Latest test suite TAP summary printed **43/43 PASS**, but the original W8 runner subsequently invokes the exact 0207 source-bound historical validator: `stage/.venv/Scripts/python.exe stage/tests/integration/run_core_0207.py --source <separate temp history> --report stage/core29-p10f.json` which **exited 1**. It is the first identified terminal failure at this point; full original C07 and Next.js build **not passed/reached**, C08 **NOT_RUN**.
+- The core 0207 original `run_core_0207.py` Git blob `b019a5e60cfff4183b00e99f252ffe00bc164eda` always writes a JSON report (unless abnormal failure), with `status`, `reason`, and sometimes `dependency_versions`. **Report contents have not yet been supplied; do not mark direct dependency mismatch proven.**
+- GitHub **source-level concrete incompatibility**: historical `tests/integration/core_0207_source_lock.json` Git blob `223f6fbd28cf4c428c07eb60dda4a36f644fa58c` requires `fastapi==0.163.0`, `starlette==1.10.0`, **`cryptography==46.0.4`**, `uvicorn==0.34.2`. Current PR36 `requirements-history-signatures.txt`/wheel lock is intentionally pinned to **`cryptography==50.0.2`** by PR34 security patch. This **may cause** `DIRECT_DEPENDENCY_PIN_MISMATCH` but requires exact `core29-p10f.json` `reason` before deciding how to fix. **Do not downgrade cryptography 50.0.2, tamper with historical 0207 lock/source, enable `--diagnostic-unpinned` as an acceptance shortcut, or reuse the failed C07 stage to claim fresh build PASS.**
+- Native evidence paths: `E:\AIOS\W8\PR36_W8_CERTIFI_LOCKED_20261121_132808\PR36_CERTIFI_REPLAY_STATUS.json`, `PR36_CERTIFI_REPLAY_NATIVE.log`, `stage\core29-p10f.json`. The PowerShell excerpt and existing original stage are the only evidence presently read; JSON/log file byte SHA not independently received.
+- Important preservation: `ORIGINAL_PR35_AND_FAILED_PR36_STAGES_PRESERVED` printed. R3 exits nonzero as intended, error `C07_PR36_ORIGINAL_FULL_TEST_AND_NEXT_BUILD_FAILED_EXIT_1`. Owner PR36 Windows P10J16 prior targeted 8/8 PASS remains valid, not a full C07 pass.
+
+### Safe and minimal diagnostic — read only (no rerun)
+```powershell
+& {
+    $ErrorActionPreference='Stop'
+    $root='E:\AIOS\W8\PR36_W8_CERTIFI_LOCKED_20261121_132808'
+    $report=Join-Path $root 'stage\core29-p10f.json'
+    $venv=Join-Path $root 'stage\.venv\Scripts\python.exe'
+    if (!(Test-Path -LiteralPath $report)) { throw 'CORE29_REPORT_NOT_FOUND' }
+    Write-Output '=== ORIGINAL CORE 0207 RESULT ==='
+    Get-Content -LiteralPath $report -Raw -Encoding UTF8 |
+        ConvertFrom-Json | ConvertTo-Json -Depth 12
+    Write-Output '=== STAGE DIRECT DEPENDENCY VERSIONS ==='
+    & $venv -c 'import importlib.metadata as m,json; keys=("fastapi","starlette","cryptography","uvicorn"); print(json.dumps({k:m.version(k) for k in keys},indent=2))'
+    if ($LASTEXITCODE -ne 0) { throw 'VENVDIRECT_PACKAGE_READ_FAILED' }
+    Write-Output '=== NATIVE EVIDENCE HASHES ==='
+    Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $root 'PR36_CERTIFI_REPLAY_NATIVE.log'),(Join-Path $root 'PR36_CERTIFI_REPLAY_STATUS.json'),$report |
+        Select-Object Path,Hash
+}
+```
+
+### Next correction boundary / QA rules
+- If the report says `DIRECT_DEPENDENCY_PIN_MISMATCH`, classify as a **historical test runner/runtime environment contract collision**, not a real product test failure. Historical 0207 test needs an explicitly source-pinned, **isolated** compatible environment or an owner-reviewed **new** compatibility contract for current cryptography; the existing historical lock cannot be weakened to fit current crypto silently. Do not introduce vulnerable cryptography 46.0.4 into the current product runtime or shared 28-wheelhouse.
+- If the report identifies another reason, analyze it before patching. Preserve current fresh stage (including C06 result) as immutable evidence. A follow-up original C07 build needs its own clean candidate/test construction; a failure does not create `BUILD_TEST_OK`.
+- **Current W8 canonical product acceptance 3/8 → 3/8 (delta 0)**, weighted development **HESAPLANAMADI**, C05 independent security **HOLD**, C08 **NOT_RUN**. No product code/API/DB/schema or dependency changes in this turn; documentation/evidence and prospective bounded test-tool fix only.
+
+### Rollback/handover
+Original PR35 and both earlier PR36 failed runs, as well as newly generated R3 stage/locks/logs, remain available. No automatic deletion, force-push, CI workflows, privilege change or production action. Stage root and SHA pins are above for future independent replay. Next task is to classify actual `core29-p10f.json` and then open a scoped MI-01 owner candidate for historical source/environment bridge if required.
