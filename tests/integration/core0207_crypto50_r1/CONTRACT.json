@@ -1,0 +1,63 @@
+{
+  "contract_id": "MI01-W8-CORE0207-C50-R1",
+  "state": "OWNER_REVIEW_CANDIDATE_NOT_C07_NOT_C05",
+  "source_branch": "review/mi01-w8-p10j16-unified-office-links-20261121",
+  "source_head": "683a26171ac54544260456ce84e19c38614aa5e2",
+  "historical_source_commit": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "historical_source_manifest_blob": "756bb6bd4717d363a9af4edd9d20ae558afdf71e",
+  "historical_source_lock_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+  "historical_test_runner_blob": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+  "historical_test_helper_blob": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+  "historical_p24_blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+  "historical_file_count": 55,
+  "module_test_counts": {
+    "test_retained_snapshot_0201": 5,
+    "test_terminal_anchor_lifecycle_0203": 7,
+    "test_lifecycle_projection_p02": 8,
+    "test_lifecycle_prefix_p03": 9
+  },
+  "historical_direct_dependency_pins": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "46.0.4",
+    "uvicorn": "0.34.2"
+  },
+  "successor_direct_dependency_pins": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "50.0.2",
+    "uvicorn": "0.34.2"
+  },
+  "pr36_stage_manifest_blob": "9660da1104617b4764d5f1e32009e4e3405b47f8",
+  "pr36_c04_c06_review_sha256": "341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+  "required_python": "3.13.17",
+  "actual_native_windows_evidence": {
+    "diagnostic_r2_sha256": "3ef7db69f9a134b8b23683a71690273b494fea7088051b1532170921c8fc2663",
+    "diagnostic_core29_passed": 29,
+    "next_build_exit": 0,
+    "typescript_exit": 0,
+    "pr36_original_stage_integrity_preserved": true,
+    "scope": "DIAGNOSTIC_UNPINNED_NOT_ACCEPTANCE",
+    "report_json_and_full_log_readback": "PENDING"
+  },
+  "constraints": {
+    "historical_lock_unchanged": true,
+    "historical_runner_unchanged": true,
+    "no_dependency_downgrade": true,
+    "no_diagnostic_unpinned_as_acceptance": true,
+    "exact_55_source_and_29_case_ids_required": true,
+    "pr36_full_c07": "HOLD",
+    "pr36_c08": "NOT_RUN",
+    "independent_c05": "HOLD",
+    "no_current_product_merge": true,
+    "weighted_development": "HESAPLANAMADI",
+    "w8_product_acceptance": "3/8"
+  },
+  "required_review": [
+    "MI01_W8_OWNER_ASSERT_IDENTICAL_55_BYTE_SOURCES_AND_29_TEST_IDS",
+    "SECURITY_DEPENDENCY_OWNER_APPROVES_UPDATED_DIRECT_AND_TRANSITIVE_PIN_GRAPH",
+    "REVIEWED_VERSIONED_W8_ORCHESTRATOR_INTEGRATION_NO_HISTORICAL_PIN_REWRITE",
+    "FRESH_ISOLATED_WINDOWS_FULL_C07_AND_NEXTJS_BUILD_PASS",
+    "FRESH_ACTUAL_CHROMIUM_C08_AND_INDEPENDENT_C05_AS_SEPARATE_GATES"
+  ]
+}
