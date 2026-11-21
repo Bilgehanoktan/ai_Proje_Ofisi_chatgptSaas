@@ -14510,5 +14510,61 @@
     "change_scope": "GitHub central progress only; no product, CI, dependency or PR updates. User local test read-only.",
     "next": "Source owner must disposition PR34-37 exact crypto50 chain/approved full C07 runner and C05 safety prerequisites; then fresh formal C07 only with approval, followed by Chromium C08 and independent C05.",
     "rollback": "No source modification; historical stage and source preserved."
+  },
+  "mi01_w8_pr37_native_c04_fresh_prepare_certifi_drift_20261121": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-PR37-C04-FRESH-PREPARE-AND-CERTIFI-TRANSITIVE-PIN-DRIFT-20261121",
+    "provenance": "USER_SUPPLIED_NATIVE_WINDOWS_POWERSHELL_5_1_CONSOLE_LOG",
+    "scope": "PR37 isolated source checkout and new C04 stage only; no product merge or new C06/C07/C08",
+    "sources": {
+      "canonical_product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "pr37_head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+      "pr37_dev_adapter_blob": "83623336d56c860f15b888cf2b1e11bdc4f7fceb",
+      "pr36_parent": "683a26171ac54544260456ce84e19c38614aa5e2"
+    },
+    "user_native_results": {
+      "source_checkout": "E:\\AIOS\\W8\\PR37_INTEGRATED_DEV_20261121_151800\\source",
+      "source_remote_and_local_SHA": "PASS_63fa94f5c73924940311b120e485c3ae34b87df6",
+      "product_source_manifest": "552_OF_552_PASS",
+      "shared_pairs": "17_OF_17_PASS",
+      "auxiliary_pins": "31_OF_31_PASS",
+      "stage": "E:\\AIOS\\W8\\PR37_INTEGRATED_DEV_20261121_151800\\stage",
+      "C04_prepare_exit": 0,
+      "wheel_count": 28,
+      "old_review_sha256": "341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+      "new_review_sha256": "a5d5751047206186fad92098341c1f351648a8b012adc24df7dd83869a388009",
+      "field_changes": [
+        "python_lock_sha256"
+      ],
+      "old_python_lock_sha256": "dfc5da1b553c71ae209d31e70209de699503973dbc8146ba611e35703f5367a5",
+      "new_python_lock_sha256": "523b06d49b2069d072801a095f9f77d6a27aa65e7e3b95e7360de5ed16bad461",
+      "removed_wheel": "certifi-2026.10.23-py3-none-any.whl",
+      "removed_wheel_sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1",
+      "added_wheel": "certifi-2026.11.20-py3-none-any.whl",
+      "added_wheel_sha256": "7422df25243767b9877031a2248cb14d09ddac9beee846f4cef3d5c9191d488f",
+      "unchanged_review_fields": [
+        "manifest_blob",
+        "npm_lock_sha256",
+        "npm_packages",
+        "platform",
+        "python",
+        "node"
+      ],
+      "new_C06_install": "NOT_RUN",
+      "user_confirmation": "NO_INSTALL_PERFORMED"
+    },
+    "risk": "Do not coerce old review fingerprint, replace frozen python lock, or reinterpret transitive dependency upgrade as approved. New exact SHA requires dependency-owner/supply-chain review; current dev adapter itself hardpins old review and blocks formal C07/C08.",
+    "gates": {
+      "W8_C04_new": "PASS_PREPARE_REVIEW_DIFFERENT",
+      "new_C06": "HOLD_REVIEW_DRIFT",
+      "official_C07": "HOLD_OWNER_AND_DEPENDENCY_REVIEW",
+      "actual_Chromium_C08": "NOT_RUN",
+      "independent_C05": "HOLD_LICENSE_AND_SIGNED_PROVENANCE",
+      "W8_acceptance": "3/8 (37.5%)",
+      "weighted_development": "HESAPLANAMADI"
+    },
+    "owner": "MI01_W8_SOURCE_OWNER_AND_INDEPENDENT_SECURITY_OWNER",
+    "next": "Use a one-shot fail-closed source/lock preflight and optional permitted dev tests. Before new C06, owner must review exact certifi drift or produce source-bound unchanged dependency review; formal C07 needs a separate reviewed runner, C08 after C07, independent C05 own approval.",
+    "rollback": "Preserve PR36 approved stage, PR37 source/stage and downloaded lock as evidence; no code/lock deletion or automatic merge."
   }
 }
