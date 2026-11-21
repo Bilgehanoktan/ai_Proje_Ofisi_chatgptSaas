@@ -1,0 +1,121 @@
+{
+  "task_id": "MI05-UI01B-EDS-GRAPH-INTEGRATION-20261121",
+  "revision": "UI01B-COMBINED-20261121",
+  "state": "ISOLATED_SOURCE_CANDIDATE_MI05_OWNER_REVIEW_HOLD",
+  "owner": "MI-05 / Premium UI",
+  "canonical": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "entries": 552,
+    "product_files": 553
+  },
+  "sources": [
+    {
+      "branch": "integration/ui01-eds-theme-nav-focus-20261121",
+      "sha": "2f07c12daf2f0b7745de203dd38a0c6f532a8960"
+    },
+    {
+      "branch": "integration/p10j25-graph-zoom-isolated-20261121",
+      "sha": "69579e38ea06bee76154cc105b95bbe204544140"
+    }
+  ],
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/design-system/ThemeFrame.tsx",
+      "git_blob": "b24fbf9a3a341bb0160f143618f62c35e2332e03",
+      "bytes": 1238,
+      "sha256": "951829574206e7b98dad48cd8e1eca89983cf8b6bf0f06d91614619333548765"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+      "git_blob": "3399dd5bbdc805e9d6793fb0d693db1c1a197aa7",
+      "bytes": 4927,
+      "sha256": "f92ca35c45bcd9faa339f4bb604d28b0ce0dd7a320e7fc81da533e9ac543a192"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui01-shell-navigation.test.cjs",
+      "git_blob": "4f77df4ef57d064b4c938137bd479f8d5d8d509a",
+      "bytes": 7064,
+      "sha256": "573d9e190bde138562384f3aaae67a6ba2c43d5242d600123fc72c0edcc9271c"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+      "git_blob": "4816132235bf0c13df694f7df0e55696f2002781",
+      "bytes": 3687,
+      "sha256": "32e2749800f7c1cdc80ad3ba24494db05377555d7ee30f418e11b601d0655d73"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+      "git_blob": "ea163dd9818e595804d5b85d7dd38564daba40fd",
+      "bytes": 1986,
+      "sha256": "20c690f3d4166ea23c6a91e7c12aa5793c64e77ce5ad6a5c16713d71a650a384"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-plan-graph-zoom.test.cjs",
+      "git_blob": "7836a3602efe162a5bac6e4f63fbe52870a1d1df",
+      "bytes": 5576,
+      "sha256": "5a77f2bc70fd070a97069ce83cd6e62e234c1304d43b80edec4f79adf659ec12"
+    }
+  ],
+  "manifest": {
+    "previous": 552,
+    "candidate": 554,
+    "two_new_tests": 2,
+    "shared_concurrent_promotion_requires_reconciliation": true
+  },
+  "status": {
+    "owner_review": "HOLD",
+    "product_dev_transfer": "HOLD",
+    "build": "BLOCKED",
+    "chromium": "NOT_RUN",
+    "w8_c07": "HOLD",
+    "w8_c08": "NOT_RUN",
+    "independent_c05": "HOLD"
+  },
+  "actual_local_tests": {
+    "environment": {
+      "node": "22.16.0",
+      "typescript": "5.8.3",
+      "locked_ts_target": "5.9.3"
+    },
+    "total_pass": 33,
+    "total_fail": 0,
+    "test_groups": [
+      {
+        "kind": "targeted_UI01_and_P10J25",
+        "pass": 21,
+        "fail": 0,
+        "tap_sha256": "df3fb02890b89087d7075b2b339dc93c9067fe12b5f5f801867ebb187824ec94"
+      },
+      {
+        "kind": "original_navigation_model",
+        "pass": 8,
+        "fail": 0,
+        "tap_sha256": "d6cb40c1d6690d6eb218143aa7f65466d30a556060c33a88ea763e9d86befd4a"
+      },
+      {
+        "kind": "original_sections_model",
+        "pass": 4,
+        "fail": 0,
+        "tap_sha256": "176288188c199c5cd92b7656cb22d27cc7a8f695672548967817f5e1d4fc84ad"
+      }
+    ]
+  },
+  "acceptance": {
+    "ui_before": "21/40",
+    "ui_after": "21/40",
+    "w8_before": "3/8",
+    "w8_after": "3/8",
+    "delta": "0",
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "risk": [
+    "initial_theme_flash_unverified",
+    "mobile_collapsed_live_region_announcement_unverified",
+    "zoom_visual_alignment_unverified",
+    "owner_review_required",
+    "pinned_full_checkout_missing"
+  ],
+  "rollback": "Revert this isolated commit; preserve all historical branches and refs."
+}

@@ -1,0 +1,70 @@
+{
+  "revision": "UI01-EDS-THEME-NAV-FOCUS-20261121",
+  "status": "ISOLATED_SOURCE_OWNER_REVIEW_HOLD",
+  "source": {
+    "base_branch": "integration/product-dev",
+    "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "base_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "branch": "integration/ui01-eds-theme-nav-focus-20261121"
+  },
+  "ownership": {
+    "workstream": "MI-05 / UI-01",
+    "review_required": true,
+    "collision_scan": [
+      "PR22",
+      "PR23",
+      "PR26",
+      "PR29",
+      "PR31",
+      "PR33-38"
+    ],
+    "overlapping_open_pr_files": 0
+  },
+  "changes": [
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+      "old_git_blob": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+      "git_blob": "3399dd5bbdc805e9d6793fb0d693db1c1a197aa7",
+      "sha256": "f92ca35c45bcd9faa339f4bb604d28b0ce0dd7a320e7fc81da533e9ac543a192",
+      "bytes": 4927,
+      "impact": "local navigation focus and accessible status"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/ThemeFrame.tsx",
+      "old_git_blob": "c36adf84d5eb2a86e1741391331117c72886d701",
+      "git_blob": "b24fbf9a3a341bb0160f143618f62c35e2332e03",
+      "sha256": "951829574206e7b98dad48cd8e1eca89983cf8b6bf0f06d91614619333548765",
+      "bytes": 1238,
+      "impact": "cosmetic browser theme choice only"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui01-shell-navigation.test.cjs",
+      "old_git_blob": null,
+      "git_blob": "4f77df4ef57d064b4c938137bd479f8d5d8d509a",
+      "sha256": "573d9e190bde138562384f3aaae67a6ba2c43d5242d600123fc72c0edcc9271c",
+      "bytes": 7064,
+      "impact": "10 scoped tests"
+    }
+  ],
+  "manifest_entries_previous": 552,
+  "manifest_entries_candidate": 553,
+  "testing": {
+    "node": "22.16.0",
+    "typescript_global": "5.8.3",
+    "mocked_ui": "PASS_10_OF_10",
+    "tap_sha256": "e31e69eaa3f8a18cc2b0ffa2d2819f4163e8411af04ea936cd69da972731e6b8",
+    "full_next_build": "BLOCKED_MISSING_EXACT_CHECKOUT_AND_LOCKED_DEPENDENCIES",
+    "chromium": "NOT_RUN",
+    "w8_c07": "HOLD",
+    "independent_c05": "HOLD"
+  },
+  "acceptance": {
+    "ui_previous": "21/40",
+    "ui_candidate": "21/40",
+    "w8_previous": "3/8",
+    "w8_candidate": "3/8",
+    "weighted_development": "HESAPLANAMADI",
+    "new_product_acceptance_delta": 0
+  },
+  "rollback": "Revert isolated commit, abandon branch; no main/product-dev mutation"
+}
