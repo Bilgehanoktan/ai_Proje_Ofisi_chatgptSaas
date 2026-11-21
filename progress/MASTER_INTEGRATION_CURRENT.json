@@ -14201,5 +14201,59 @@
     },
     "handover": "docs/master-integration/MI01-CROSS-CHAT-DEDUPE-20261121/OWNER_PROGRESS_CONFLICT_CHECK.md",
     "rollback": "normal revert only governance doc/record; owner branches untouched"
+  },
+  "mi01_w8_single_verified_delivery_priority_20261121": {
+    "date": "2026-11-21",
+    "directive": "USER_CONFIRMED_FOCUS_ON_SINGLE_VERIFIED_W8_DELIVERY_NOT_TEST_COUNT",
+    "priority": "ACTIVE_MI01_INTEGRATION_AND_ACCEPTANCE_BLOCKERS",
+    "owners": "MI-01/W8 plus independent dependency/security C05 reviewer and existing PR31 source owners",
+    "source_PR34_crypto": "EXISTING_NO_REBUILD",
+    "source_PR35_fixture": "EXISTING_NO_REBUILD",
+    "source_PR36": "C06_NATIVE_WINDOWS_PASS; HISTORICAL_C07_HOLD",
+    "source_PR37": "CORE29_NATIVE_WINDOWS_29_29_PASS; SYNTHETIC_DEV_BINDER_11_11_PASS; FULLCHAIN_NOT_RUN",
+    "main_rule": "NO_NEW_PROTO_NO_TEST_COUNT_METRIC_NO_DUPLICATE_WORK; SINGLE_RELEASE_CANDIDATE_WITH_EXACT_MANIFEST_AND_LOCK_HASHES; OWNER_SCOPE_AND_FRESH_FULLCHAIN_EVIDENCE",
+    "gates": {
+      "C06": "PASS_PRESERVE",
+      "C07": "HOLD_OWNER_REVIEW_VERSIONED_BRIDGE_AND_FRESH_FULL_TEST_BUILD",
+      "C08": "NOT_RUN_ACTUAL_CHROMIUM_AFTER_C07",
+      "C05": "HOLD_INDEPENDENT_DEPENDENCY_AND_SECURITY_OWNER_REVIEW",
+      "product_transfer": "HOLD_AFTER_OWNER_RECONCILIATION_AND_ACTUAL_GATE_PROOF"
+    },
+    "execution_order": [
+      "REVIEW_EXISTING_PR37_BRIDGE_AND_PR34_DEPENDENCY_GRAPH_IN_PARALLEL",
+      "FRESH_APPROVED_ISOLATED_W8_FULL_C07_ONLY",
+      "ACTUAL_CHROMIUM_C08_WITH_FIVE_SCREENSHOTS_AND_SAME_DOCUMENT",
+      "INDEPENDENT_C05_VERDICT_AND_CONTROLLED_ONE_W8_DELIVERY",
+      "OWNER_APPROVED_CANONICAL_TRANSFER_WITH_PRECISE_ROLLBACK_ONLY_AFTER_ALL_GATES"
+    ],
+    "not_assumed": [
+      "NO_NEW_SECURITY_OR_CI_AUTHORITY",
+      "NO_UNREVIEWED_MERGE",
+      "NO_REAL_PROD",
+      "NO_RECOUNT_OF_PRIOR_29_OR_11",
+      "NO_REWRITE_HISTORICAL_46_0_4_LOCK",
+      "NO_PR31_SOURCE_COLLISION"
+    ],
+    "product_acceptance": {
+      "before": "3/8=37.5%",
+      "after": "3/8=37.5%",
+      "delta_pp": 0
+    },
+    "development": {
+      "weights": {
+        "design": 15,
+        "source": 35,
+        "functional_tests": 20,
+        "integration": 20,
+        "final_acceptance": 10
+      },
+      "before": "HESAPLANAMADI",
+      "after": "HESAPLANAMADI",
+      "delta_pp": null
+    },
+    "canonical_ref": "integration/product-dev",
+    "canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "canonical_changed": false,
+    "rollback": "Preserve PR34-37 and prior approved Windows stages; normal reviewed revert only; main/product-dev unchanged"
   }
 }
