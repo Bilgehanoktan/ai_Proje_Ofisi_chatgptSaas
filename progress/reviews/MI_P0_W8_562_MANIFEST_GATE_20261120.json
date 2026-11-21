@@ -1,0 +1,164 @@
+{
+  "id": "MI-P0-W8-562-MANIFEST-COMPAT-20261120",
+  "date": "2026-11-20",
+  "base": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "candidate": {
+    "pr": 19,
+    "sha": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "product_files": 562,
+    "manifest_entries": 561,
+    "manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011"
+  },
+  "w8": {
+    "pr": 20,
+    "sha": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
+    "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+    "adapter_manifest_pin": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "actual_readonly_manifest_diff": {
+    "added": [
+      "ai-company-os-backend/app/core/iam_session.py",
+      "ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py"
+    ],
+    "removed": [],
+    "changed": [
+      "ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "changed_sha256": {
+      "previous": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392",
+      "candidate": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    },
+    "status": "U3_MANIFEST_HOLD"
+  },
+  "new_diagnostic": {
+    "source": "scripts/ci/mi_p0_w8_manifest_gate.py",
+    "source_blob": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+    "tests": "scripts/ci/test_mi_p0_w8_manifest_gate.py",
+    "tests_blob": "ab16361322417d9ef23c245a83565fc899b9d424",
+    "test_scope": "synthetic local Python unittest, not original W8",
+    "executed": 16,
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "original_W8": "NOT_RUN",
+    "build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "security": "HOLD"
+  },
+  "technical_catalog": {
+    "added_files": 2,
+    "changed_product_files": 0,
+    "classes": [
+      "GateHold",
+      "ManifestGateTests"
+    ],
+    "functions": [
+      "git_blob",
+      "_unique_object",
+      "_files",
+      "_w8_pin_and_guard",
+      "assess",
+      "main"
+    ],
+    "cli": "--canonical --candidate --adapter --canonical-blob --candidate-blob --adapter-blob",
+    "database_changes": 0,
+    "events_changes": 0,
+    "dependencies_new": 0,
+    "github_workflow_changes": 0
+  },
+  "progress": {
+    "w8_previous": "3/8",
+    "w8_current": "3/8",
+    "delta": 0,
+    "core_acceptance": "12/16",
+    "ui_acceptance": "21/40",
+    "mvp_acceptance": "0/11",
+    "independent_acceptance": "0/7",
+    "weighted_global": "HESAPLANAMADI",
+    "product_acceptance_delta": 0
+  },
+  "handover": "Original 553 W8 owner C04-C08, then MI04 security owner ratification of G2/G9; only then exact 562 W8 repin/fullchain. No merge, no CI, no PROD. Normal review PR close/revert.",
+  "followup_20261120": {
+    "classification": "EXACT_GITHUB_SOURCE_READBACK_PLUS_ACTUAL_LOCAL_SYNTHETIC_TEST_REPLAY",
+    "manifest_readback": {
+      "canonical_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "candidate_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
+      "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+      "exact_expected_pins": true,
+      "guard_pattern_matched": true,
+      "actual_entry_diff": {
+        "old": 552,
+        "new": 561,
+        "added": 9,
+        "removed": 0,
+        "changed": 1
+      },
+      "expected_gate": "U3_MANIFEST_HOLD",
+      "test_type": "read-only remote-source deterministic comparison, not W8 CLI"
+    },
+    "local_tests": {
+      "command": "python -m unittest -v test_mi_p0_w8_manifest_gate.py",
+      "method_count": 16,
+      "pass": 16,
+      "fail": 0,
+      "error": 0,
+      "skip": 0,
+      "exit_code": 0,
+      "log_path": "docs/master-integration/MI-P0-W8-562-MANIFEST-GATE-20261120/ACTUAL_LOCAL_TEST_RUN.log",
+      "log_sha256": "45e7a4c942c215529b1c27ec5285b19a30f589d50864d3d8b2b37a6bf1c1e12c",
+      "log_git_blob": "9528e29ae90a305a49e61f642a6e2814c7cc5595",
+      "log_readback": true,
+      "source_git_blob": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+      "test_source_git_blob": "ab16361322417d9ef23c245a83565fc899b9d424",
+      "runtime": "local synthetic fixture, not original 553/562 full CLI",
+      "actual_runtime_seconds": 0.002,
+      "evidence_source": "ACTUALLY_EXECUTED_FROM_ZIP_RECONSTRUCTED_BYTE_IDENTICAL_GITHUB_SOURCE_AND_TEST_BLOBS",
+      "actual_git_blob_source_precheck": "abd1306246f38dc4f612cbb94e92d8de448f7d3a",
+      "actual_git_blob_tests_precheck": "ab16361322417d9ef23c245a83565fc899b9d424"
+    },
+    "status": "SCOPED_DIAGNOSTIC_READBACK_COMPLETE_OWNER_ORIGINAL_W8_HOLD",
+    "unrun": [
+      "Original 553 W8 C04–C08",
+      "Exact 3-file original Python CLI against GitHub originals",
+      "Native browser",
+      "Strict PG",
+      "Independent root/issuer/sink/IV"
+    ],
+    "progress": {
+      "mi01_previous": "3/8",
+      "mi01_current": "3/8",
+      "delta_pp": 0,
+      "global_development": "HESAPLANAMADI",
+      "acceptance_delta_pp": 0
+    },
+    "product_dev_change": false,
+    "ci_workflow_change": false,
+    "security_permission_change": false,
+    "next_owner": "MI-01 owner PR20 original full 553 W8; MI-04 owner PR19 security source variant; no automatic merge/re-pin",
+    "audit_correction": {
+      "reason": "Previous GitHub log was reconstructed from test case names with hard-coded 0.003 s, not actual stderr. It was initially presented as run output; corrected transparently.",
+      "old_log_git_blob": "a9d994b3a8b6dc7952a57bbd135bfd6d70436bce",
+      "old_log_sha256": "35432227446f2d2c05c10bd70f9e5370d77acbf86c68e37e2500913431772e70",
+      "new_log_git_blob": "9528e29ae90a305a49e61f642a6e2814c7cc5595",
+      "new_log_sha256": "45e7a4c942c215529b1c27ec5285b19a30f589d50864d3d8b2b37a6bf1c1e12c",
+      "source_pins_executed": "2/2 EXACT_GIT_BLOBS",
+      "original_manifest_cli": "NOT_RUN",
+      "actual_local_unit_test": "16/16 PASS EXIT_0",
+      "why": "Evidence integrity; do not count previous synthetic reconstructed log as independent test execution",
+      "no_product_acceptance_change": true
+    }
+  }
+}
