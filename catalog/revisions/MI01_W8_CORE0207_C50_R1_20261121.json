@@ -25,14 +25,18 @@
     "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md",
     "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json",
     "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json"
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json",
+    "tests/integration/w8_unified_u3_c50_r1_dev.py",
+    "tests/integration/test_w8_u3_c50_dev.py"
   ],
   "review_files": {
     "tests/integration/core0207_crypto50_r1/CONTRACT.json": "537e0c35592ca7366a52ab87c08db7e419f18b71",
     "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py": "cc467843bf11857fbbd9df19e513626fb7de85bf",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "8ea5ebd64205274671b0a35c05da852400b407e7",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "5ec257e85112c83b0a71e4f80827546c4259c939",
     "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md": "d5c47e1485420517229211090eac6223b5591b8d",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json": "69144f1bc414fe044c91458253e030f2e2c54527"
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json": "69144f1bc414fe044c91458253e030f2e2c54527",
+    "tests/integration/w8_unified_u3_c50_r1_dev.py": "83623336d56c860f15b888cf2b1e11bdc4f7fceb",
+    "tests/integration/test_w8_u3_c50_dev.py": "ab432568b802eef723f8d959d0f8e9151fa9cd39"
   },
   "immutable_original_blobs": {
     "historical_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
@@ -64,7 +68,16 @@
       "exact_file(path,expected_blob,expected_sha)",
       "import_pinned(path,name)",
       "validate(stage,runner_root,contract)",
-      "main()"
+      "main()",
+      "w8_unified_u3_c50_r1_dev.git_blob",
+      "demand",
+      "load_original",
+      "extend",
+      "extend.verify_aux",
+      "extend.test",
+      "extend.test.bridge",
+      "extend.smoke",
+      "load_candidate"
     ],
     "APIs_added": [],
     "DB_tables_added": [],
@@ -130,7 +143,13 @@
       "console_transcript_sha256": "8cc87ae5923a314d002f39850f0e7ad74e5479ba7c5550ece66b067105381a2f",
       "report_reconstruction": "CONSOLE_JSON_4549_BYTE_RECONSTRUCTION_INDEPENDENT_SHA256_MATCH",
       "native_stage": "E:\\AIOS\\W8\\PR36_W8_CERTIFI_LOCKED_20261121_132808\\stage",
-      "native_report_not_directly_uploaded": true
+      "native_report_not_directly_uploaded": true,
+      "full_W8_dev_adapter": {
+        "source_verification": "PASS_EXACT_GIT_BLOB",
+        "synthetic_cases": "11/11 PASS",
+        "original_full_W8": "NOT_RUN",
+        "status": "DEVELOPMENT_ONLY_PENDING_OWNER"
+      }
     }
   },
   "progress": {
@@ -200,7 +219,54 @@
     "historical_crypto_pin": "46.0.4",
     "current_staged_crypto": "50.0.2",
     "new_versioned_29_29": "PASS_D0_NOT_C07",
-    "next": "MI01_DEPENDENCY_OWNER_REVIEW_VERSIONED_W8_ADAPTER_THEN_FRESH_FULL_C07_AND_C08",
+    "next": "MI01_OWNER_REVIEW_AND_APPROVED_FRESH_FULLCHAIN_WITH_DEV_ADAPTER_THEN_INDEPENDENT_ACCEPTANCE_C07_C08_C05",
     "status": "HOLD_OWNER_REVIEW"
+  },
+  "development_adapter": {
+    "status": "EXACT_GITHUB_BLOB_READBACK_MATCH_AND_LOCAL_SYNTHETIC_GUARDS_PASS_ONLY",
+    "entrypoint": "tests/integration/w8_unified_u3_c50_r1_dev.py",
+    "original_U3_locked_blob": "1609d857b46ea973180c45271d87fcc92083f0a6",
+    "pinned_new_aux": [
+      "tests/integration/core0207_crypto50_r1/CONTRACT.json",
+      "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py"
+    ],
+    "original_P24_pinned": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+    "original_historical_core_lock_pinned": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "checks": {
+      "synthetic_python_unittest": {
+        "passed": 11,
+        "total": 11,
+        "skipped": 0,
+        "failures": 0,
+        "scope": "FAKE_W8_HARNESS_AND_SYNTHETIC_C50_REPORT_NOT_ORIGINAL_W8",
+        "platform": "Linux local Python",
+        "status": "PASS"
+      },
+      "python_compile": "PASS",
+      "source_bytes_pinned": "2/2 exact GitHub blobs",
+      "new_adapter_real_Windows_full_W8": "NOT_RUN",
+      "old_C07": "HOLD",
+      "C08": "NOT_RUN",
+      "independent_C05": "HOLD"
+    },
+    "invariant": "Never write historic report core29-p10f.json; remove all inherited full W8 acceptance markers even on dev-only PASS; prohibit smoke until owner approved",
+    "changed_symbols": [
+      "w8_unified_u3_c50_r1_dev.git_blob",
+      "demand",
+      "load_original",
+      "extend",
+      "extend.verify_aux",
+      "extend.test",
+      "extend.test.bridge",
+      "extend.smoke",
+      "load_candidate"
+    ],
+    "additional_product_source_files": 0,
+    "new_dependency_versions": 0,
+    "new_APIs": 0,
+    "new_database_objects": 0,
+    "required_owner": "MI-01/W8",
+    "required_independent_security": "C05 HOLD",
+    "rollback": "Discard development adapter branch or normal revert; original stages unchanged"
   }
 }
