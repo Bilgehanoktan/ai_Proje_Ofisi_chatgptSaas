@@ -28,7 +28,7 @@
   "review_files": {
     "tests/integration/core0207_crypto50_r1/CONTRACT.json": "537e0c35592ca7366a52ab87c08db7e419f18b71",
     "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py": "cc467843bf11857fbbd9df19e513626fb7de85bf",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "feda26c37961e9cee307f2aa580caa626cb52ef0"
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "d60b742de1f6459a09b82df66e06ea9e28a4fa30"
   },
   "immutable_original_blobs": {
     "historical_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
@@ -94,11 +94,25 @@
         "total": 12,
         "classification": "STATIC_SOURCE_REVIEW_NOT_PYTHON_TEST"
       },
-      "Python_compile": "NOT_RUN",
+      "Python_compile": "PASS_ACTUAL_ISOLATED_LINUX_PYTHON_3_13_5_EXACT_GIT_BLOB_AST_AND_PY_COMPILE",
       "user_Windows_execution": "NOT_RUN",
       "complete_C07": "HOLD",
       "C08_browser": "NOT_RUN",
-      "independent_C05": "HOLD"
+      "independent_C05": "HOLD",
+      "CLI_help": "PASS_ACTUAL_ISOLATED_LINUX_PYTHON_3_13_5",
+      "synthetic_fail_closed_preflight": {
+        "passed": 4,
+        "total": 4,
+        "platform": "Linux Python 3.13.5",
+        "classification": "ACTUAL_SYNTHETIC_CLI_NEGATIVE_GUARDS_NOT_W8",
+        "details": [
+          "missing CONTRACT => HOLD report",
+          "report in stage => rejected",
+          "existing report => rejected",
+          "missing history => rejected"
+        ],
+        "original_stage": "UNTOUCHED_IN_SYNTHETIC_MOCK"
+      }
     }
   },
   "progress": {
