@@ -14826,7 +14826,7 @@
     "H01_decision_ref": "mi01_w8_H01_select_certifi_20261120_new_dependency_graph_20261121",
     "source_pr": 38,
     "source_branch": "review/mi01-w8-certifi-20261120-c50-r2-20261121",
-    "head_sha": "5c300ad2b42de7095ce5c6792e4e27bc01df8959",
+    "head_sha": "25cd72bca43d02b4f847054cb1eefd5777b9f887",
     "base_pr37_sha": "63fa94f5c73924940311b120e485c3ae34b87df6",
     "canonical_product_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
     "source_changes": {
@@ -14841,7 +14841,7 @@
     "new_blobs": {
       "tests/integration/core0207_crypto50_r2/CONTRACT.json": "e48c5855d70860cbc35442e1898780839c79b214",
       "tests/integration/core0207_crypto50_r2/run_core0207_c50_r2.py": "83e2111d4e155b8fd7487bfbde2301aefad80e42",
-      "tests/integration/w8_unified_u3_c50_r2_dev.py": "8456b53eed3d71039e9841593a220ebb5b40dba5",
+      "tests/integration/w8_unified_u3_c50_r2_dev.py": "46b29ce572c7ee0fe3718b1821730c163febcc7f",
       "tests/integration/test_w8_u3_c50_r2_dev.py": "f09e12603ac11d9d34a94b30d7494806239b63c0"
     },
     "technical_checks": {
@@ -14868,6 +14868,7 @@
     "reason": "H01 approved new certifi graph but R1 exact historical predecessor stage review SHA prevented full inherited test; R2 preserves immutable R1 and 55/29 test evidence while recognizing newly selected wheel graph in isolated DEV only.",
     "owner": "MI01_W8_SOURCE_OWNER",
     "next": "PR38 exact source owner review, fresh Windows checkout, audit/prepare, verified new C04 SHA only then C06 isolated DEV and 13 native tests + full inherited W8 DEV; official C07 requires separately approved release runner and independent C05 safety preflight; C08 after C07.",
-    "rollback": "Close draft PR38 or normal revert its six isolated new files. Preserve PR34-37, PR36 original stage and users' local evidence."
+    "rollback": "Close draft PR38 or normal revert its six isolated new files. Preserve PR34-37, PR36 original stage and users' local evidence.",
+    "source_readback_after_label_fix": "R2 adapter report label corrected to R2, catalog updated; native tests still NOT_RUN"
   }
 }
