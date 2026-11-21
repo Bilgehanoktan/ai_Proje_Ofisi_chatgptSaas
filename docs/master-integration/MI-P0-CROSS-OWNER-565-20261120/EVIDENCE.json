@@ -1,0 +1,221 @@
+{
+  "schema": "aios.mi_p0.cross_owner_static_v1",
+  "date": "2026-11-20",
+  "classification": "EXACT_GITHUB_SOURCE_MANIFEST_AND_W8_GUARD_READBACK_STATIC_ONLY",
+  "canonical": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "owners": {
+    "g2_g9": {
+      "pr": 19,
+      "head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "product_files": 562,
+      "manifest_entries": 561,
+      "manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
+      "adds": 9,
+      "modifies": 1,
+      "deletes": 0,
+      "actual_ci_reused": [
+        72,
+        72
+      ],
+      "promotion": "HOLD_OWNER_SECURITY"
+    },
+    "d0_proxy": {
+      "pr": 26,
+      "head": "8af623d5a0b5ec1d8c34b65a0b7d6d235307ab6d",
+      "product_files": 555,
+      "manifest_entries": 554,
+      "manifest_blob": "56086553c3946d16a728bfaea877b3908fe96232",
+      "adds": 2,
+      "modifies": 3,
+      "deletes": 0,
+      "actual_selected_source_tests": [
+        60,
+        60
+      ],
+      "promotion": "HOLD_W8_OWNER"
+    },
+    "office": {
+      "pr": 22,
+      "head": "668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b",
+      "proposed_product_files": 554,
+      "manifest_rebind_proposal_blob": "3674a309f2975c5edaebf30308a97269dc879220",
+      "original_manifest_unchanged": true,
+      "adds": 1,
+      "modifies": 1,
+      "deletes": 0,
+      "actual_selected_local_tests": [
+        37,
+        37
+      ],
+      "promotion": "HOLD_W8_OWNER"
+    },
+    "w8": {
+      "pr": 20,
+      "head": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
+      "adapter_blob": "b4043035e75c5a18b7b19a9f18eecfef8e8fe677",
+      "hardcoded_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "original_full_w8": "NOT_RUN",
+      "promotion": "HOLD_C04_C08"
+    }
+  },
+  "readback": {
+    "manifest_file_count_diff": {
+      "g2_g9": {
+        "add9": [
+          "ai-company-os-backend/app/core/iam_session.py",
+          "ai-company-os-backend/tests/test_iam_session_d5g1.py",
+          "ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+          "ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+          "ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "ai-company-os-backend/tests/test_iam_org_d5g5.py",
+          "ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py"
+        ],
+        "modified": [
+          "ai-company-os-backend/app/core/transaction/intent_authority.py"
+        ]
+      },
+      "d0_proxy": {
+        "added": [
+          "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+          "ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs"
+        ],
+        "modified": [
+          "ai-company-os-frontend/app/api/demo/admission/route.ts",
+          "ai-company-os-frontend/app/api/demo/outbox/route.ts",
+          "ai-company-os-frontend/app/api/demo/task-budget/route.ts"
+        ]
+      },
+      "office": {
+        "added": [
+          "ai-company-os-frontend/tests/office-workbench-deadline.test.cjs"
+        ],
+        "modified": [
+          "ai-company-os-frontend/app/api/demo/office-workbench/route.ts"
+        ]
+      }
+    },
+    "checks": {
+      "executed": 11,
+      "passed": 11,
+      "failed": 0,
+      "type": "remote actual source-map and W8 pin invariants, not original product regression",
+      "items": [
+        "three live Git blob manifests loaded",
+        "canonical entries=552",
+        "G2/G9 entries=561",
+        "D0 proxy entries=554",
+        "G2/G9 added=9",
+        "D0 added=2",
+        "no removals",
+        "G2/G9 vs D0 changed paths disjoint",
+        "Office vs both owner deltas disjoint",
+        "Office proposal base manifest pin matches 553",
+        "PR20 W8 adapter manifest pin matches 553"
+      ]
+    },
+    "collisions": {
+      "owner_production_paths": [],
+      "shared_manifest_rebind_required": true,
+      "old_w8_adapter_would_fail_on_candidate_manifests": true
+    }
+  },
+  "hypothetical_combined": {
+    "classification": "PROPOSED_PATH_COUNT_ONLY_NO_CHECKOUT_NO_MANIFEST_EMITTED",
+    "product_files": 565,
+    "manifest_entries": 564,
+    "delta_new_files": 12,
+    "delta_modified_existing": 5,
+    "delta_deleted": 0,
+    "owner_approved": false,
+    "source_tree_materialized": false,
+    "source_hash_composite_not_computed": true,
+    "full_build": "NOT_RUN",
+    "original_test_replay": "NOT_RUN",
+    "native_browser": "NOT_RUN",
+    "manifest_sha": "NOT_COMPUTED_NOT_PINNED",
+    "w8_pin_status": "HOLD_U3_MANIFEST_HOLD_UNTIL_OWNER_REVIEWED_REBIND"
+  },
+  "progress": {
+    "weights": {
+      "design": 15,
+      "source": 35,
+      "functional": 20,
+      "integration": 20,
+      "acceptance": 10
+    },
+    "global_development_previous": null,
+    "global_development_current": null,
+    "global_delta_pp": null,
+    "criteria_approved": "0/10",
+    "w8_previous": [
+      3,
+      8
+    ],
+    "w8_current": [
+      3,
+      8
+    ],
+    "core_previous": [
+      12,
+      16
+    ],
+    "core_current": [
+      12,
+      16
+    ],
+    "ui_previous": [
+      21,
+      40
+    ],
+    "ui_current": [
+      21,
+      40
+    ],
+    "mvp_previous": [
+      0,
+      11
+    ],
+    "mvp_current": [
+      0,
+      11
+    ],
+    "iv_previous": [
+      0,
+      7
+    ],
+    "iv_current": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0
+  },
+  "changes": {
+    "product_code": 0,
+    "api": 0,
+    "db": 0,
+    "events": 0,
+    "dependencies": 0,
+    "workflow_ci": 0,
+    "permissions": 0,
+    "security_authority": 0,
+    "main": 0,
+    "product_dev": 0
+  },
+  "blocking_owner_actions": [
+    "PR20 MI-01 complete C04 exact 553 wheelhouse review C05 approval C06-C08 original build/browser",
+    "PR19 MI-04 owner+security contract ratification; G7 current reader exact source test in PR24",
+    "PR22 MI-05 owner approve revised Office route source and rebind in target integration",
+    "PR26 D0 proxy owner approve exact 3 routes + two new sources and manifest",
+    "MI02 Option A independent issuer/consensus custody/sink and protected PostgreSQL restore/IV verified",
+    "After owner ratification rebuild target 565 manifest and W8 adapter pin from actual immutable materialized tree, rerun full original tests"
+  ],
+  "rollback": "Close isolated draft or normal revert of review-only files; no source checkout combined or product promotion"
+}
