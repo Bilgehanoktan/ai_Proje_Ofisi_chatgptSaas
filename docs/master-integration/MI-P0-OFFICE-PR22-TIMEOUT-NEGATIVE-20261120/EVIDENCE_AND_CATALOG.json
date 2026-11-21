@@ -1,0 +1,107 @@
+{
+  "revision": "MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120-R1",
+  "date": "2026-11-20",
+  "kind": "ACTUAL_ISOLATED_OWNER_SOURCE_NEGATIVE_REGRESSION_NOT_FULL_W8",
+  "canonical_product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "owner_pr": {
+    "number": 22,
+    "head": "354c8e98fa5ef4bbad0a4af57892252624f41520",
+    "state": "OPEN_DRAFT",
+    "owner": "MI-05 Premium UI",
+    "no_write_to_owner_source": true
+  },
+  "exact_owner_git_blobs": {
+    "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "dc18ef2ecaf5556e09bc6152578f8cadf247ef29",
+    "product/ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "product/ai-company-os-frontend/tests/office-workbench-deadline.test.cjs": "8ae7b251f8ac86e3f03897442d3819d76256cbe9"
+  },
+  "independent_test_source": {
+    "path": "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/test_stalled_body_pr22.cjs",
+    "git_blob": "ff6d1a9c923f427a9f982aaaffd59a45fd9d7578",
+    "sha256": "327341b162f230da9fe93633bf0dffe1696b4b39fd764521618e2e2a448adb0e"
+  },
+  "local_environment": {
+    "node": "v22.16.0",
+    "tsc": "v5.8.3; pinned project 5.9.3 unavailable",
+    "os": "Linux x86_64",
+    "network": "unavailable",
+    "test_scope": "actual owner four Git blobs, synthetic ignored-abort transport, local-only; no network calls"
+  },
+  "execution": {
+    "original_owner_test": {
+      "methods": 6,
+      "passed": 6,
+      "failed": 0,
+      "run": "node tests/office-workbench-deadline.test.cjs <absolute compiled route.js>",
+      "log_sha256": "2fbf2d3c9126f7ba2e1f73aec5d57a98ae174064b31451d05557c5a87c5d659c"
+    },
+    "independent_negative": {
+      "methods": 3,
+      "passed": 0,
+      "failed": 3,
+      "run": "node test_stalled_body_pr22.cjs <absolute compiled route.js>",
+      "log_sha256": "3dcf1ee8ee847b6bfd86b34b2f2015b1000ca88181cc116cd5aecd65a453efaa",
+      "assertion_expected": "503",
+      "actual": "PENDING_AFTER_ABORT",
+      "watchdog_ms": 120,
+      "watchdog_scope": "test-only artificial guard, not production deadline",
+      "cases": [
+        {
+          "id": "N1",
+          "path": "reader.read()",
+          "situation": "transport ignores aborted signal and never yields or finishes the stream",
+          "result": "PENDING_AFTER_ABORT"
+        },
+        {
+          "id": "N2",
+          "path": "reader.cancel()",
+          "situation": "oversize chunk triggers finally; cancellation Promise does not settle",
+          "result": "PENDING_AFTER_ABORT"
+        },
+        {
+          "id": "N3",
+          "path": "fetch()",
+          "situation": "transport Promise never settles after signal already aborted",
+          "result": "PENDING_AFTER_ABORT"
+        }
+      ]
+    },
+    "selected_typecheck": "PASS_GLOBAL_TSC_5_8_3"
+  },
+  "impact": "Post-parse signal.aborted check cannot execute if an upstream await never settles. Does not demonstrate exploit/production traffic; proves control contract not bounded under adversarial synthetic transport.",
+  "owner_handoff": {
+    "request": "Keep PR22 review only; enforce absolute async request deadline without relying solely on transport honoring signal. Include pre-read, stalled-read, cancellation and unresolved fetch negative cases, then original 6+3 suites and W8 owner-controlled validation.",
+    "solution_constraints": "No on-behalf owner code patch. Do not alter strict parser, backend port, API, product-dev, GATE02, CI scope or actual security permissions. Confirm timeout is bounded under stream cancel and ignored fetch abort; independently test with exact owner source.",
+    "next": "MI05 owner PR22 fix and requalify; MI01 PR20 W8 owner C04-C08; MI04 PR19 G2/G9 owner approvals; MI02 protected PG/IV separate",
+    "status": "OWNER_HOLD_NEW_DEADLINE_CASES_FAIL"
+  },
+  "technical_catalog": {
+    "new_file": "docs/master-integration/MI-P0-OFFICE-PR22-TIMEOUT-NEGATIVE-20261120/test_stalled_body_pr22.cjs",
+    "symbols": [
+      "guardedRun",
+      "3 node:test cases"
+    ],
+    "product_code_changes": 0,
+    "API_changes": 0,
+    "DB_changes": 0,
+    "dependency_changes": 0,
+    "CI_changes": 0,
+    "permissions_changes": 0
+  },
+  "progress": {
+    "global_weighted_previous": null,
+    "global_weighted_current": null,
+    "delta_pp": null,
+    "reason": "approved criteria denominators 0/10",
+    "UI_acceptance_previous": "21/40",
+    "UI_acceptance_current": "21/40",
+    "MVP": "0/11",
+    "Core": "12/16",
+    "IV": "0/7",
+    "product_acceptance_delta_pp": 0,
+    "new_negative_scenarios": 3,
+    "negative_cases_pass": 0
+  },
+  "rollback": "Close isolated draft review PR or normal revert of 2 support files; owner PR22, product-dev, main, permissions and historical sources remain unchanged"
+}

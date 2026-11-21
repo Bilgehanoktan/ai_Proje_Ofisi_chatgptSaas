@@ -1,0 +1,19 @@
+# MI-P0 QA / Office PR22 R2 — independent closed-loop timeout replay (2026-11-20)
+
+## Source and actual reproducibility
+- Original canonical source remains `integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66`. Owner Office change is an **isolated draft** PR #22, pinned `668dcb08f2e9d77ea17dad0b07ff29ebbd775c0b`; not merged.
+- Original owner R2 route Git blob **`ae42ecccdda987c00537696f2698f49c374ec927`**, strict parser **`d8d0cf4ce765651bd5490df1482a92ff0c668943`**, localBackend port **`9231711d7efb18dd18b68e3322f62337a6477484`**; original owner 9-case regression source **`aa7afc3a93265305df6ceb8acbb03d25b901beb3`**. All 4 Git blob IDs verified against downloaded source bytes *before local execution*.
+- Original independent PR23 three-test source Git blob **`ff6d1a9c923f427a9f982aaaffd59a45fd9d7578`** was replayed UNCHANGED. Prior R1 **0/3 FAIL** remains historical baseline. Against new pinned R2 exactly: **3/3 PASS**.
+- R2 owner selected original tests **9/9 PASS**; independently new real native `AbortSignal.timeout(2500)` tests **3/3 PASS**, measured `HTTP 503` at ~2542ms (fetch), ~2503ms (reader), ~2502ms (cancel), no shortened test-only signal. Selected total `3+9+3 = 15/15`, no failures or skips.
+- Local build: strict targeted TypeScript **5.8.3** PASS, Node **22.16.0**, Linux x86_64; project-pinned TypeScript **5.9.3**, full Next.js build, original W8 C04-C08, Chromium, live provider, IAM/PG restore and IV **NOT_RUN/HOLD**. Isolated mocked nonresponsive transports are not proof of production SLA.
+
+## Technical catalog delta / code and API boundaries
+- **No product code edit**, API change, database/event modification, dependency, lock, security, grant, CI or branch promotion. New review-only source: `test_office_wallclock_native.cjs`, symbol `probe()` and 3 Node test methods.
+- Raw test logs committed with exact Git blobs and SHA-256 in `EVIDENCE_R2.json`: `PR23_R2_INDEPENDENT_3_TAP.log`, `PR22_R2_OWNER_9_TAP.log`, `PR22_R2_NATIVE_WALLCLOCK_3_TAP.log`. Do not conflate the independent 3 with owner R2's prior 3 (overlapping behavioral scenarios; 15 counts test methods executed in this independent run, not additional product acceptance).
+- Architecture: Office D0 GET still uses local loopback, strict synthetic scope parser, complete-response abort deadline, no dispatch, grant, cost or release. `boundToDeadline` races all asynchronous fetch/read/cancel pipeline stages; overall control is fail-closed (D0 HOLD HTTP 503). This is a diagnostic review, not a trusted security root.
+
+## Maintenance, rollback, handover and progress
+- Diagnose future issues by exact route/parser/port/test Git blob comparison, `tsc` version, original raw TAP, native timeout timing and HTTP 503; never evaluate QA through mock-only 120ms signal without native timer.
+- To reproduce locally after a reviewed exact source checkout, compile only route + parser + `localBackend.ts`, run `node test_stalled_body_pr22.cjs /absolute/compiled/route.js`, `node office-workbench-deadline.test.cjs /absolute/compiled/route.js`, `node test_office_wallclock_native.cjs /absolute/compiled/route.js`.
+- PR22 R2 owner and MI-01 W8 owner retain code and build responsibilities. Existing PR19 authority/G9, PR24 current-ORG seven, PR26 other proxy routes and PR27 projected manifest stay independent. PR23 QA can be reviewed/closed after owner decides, no automatic merge to product-dev. Rollback: normal revert/close QA PR23 R2-only doc/test/log files; historical R1 failing evidence remains intact.
+- Global development previous/current: **HESAPLANAMADI**, group denominators 0/10. Product acceptance no change: Core 12/16, UI 21/40, MVP 0/11, IV 0/7. **0 percentage-point acceptance delta**. Next product gate remains W8 full original 553 and vetted dependency lock then separately reviewed candidate manifest integration; protected PostgreSQL and IV separately HOLD.
