@@ -1,0 +1,122 @@
+{
+  "revision": "MI01_W8_CORE0207_C50_R2_CERTIFI_20261121",
+  "date": "2026-11-21",
+  "architecture_target": "v11.6.135-rc1 plus validated later revisions; normative architecture unchanged",
+  "parent_pr37_sha": "63fa94f5c73924940311b120e485c3ae34b87df6",
+  "parent_pr36_sha": "683a26171ac54544260456ce84e19c38614aa5e2",
+  "canonical_product_dev_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "h01_decision": "SELECT_NEW_CERTIFI_2026_11_20_GRAPH_FOR_ISOLATED_DEV_ONLY",
+  "files": [
+    {
+      "path": "tests/integration/core0207_crypto50_r2/CONTRACT.json",
+      "git_blob": "e48c5855d70860cbc35442e1898780839c79b214",
+      "kind": "TEST_VERSIONED_CONTRACT",
+      "relations": [
+        "historical 55 files / 29 tests",
+        "PR37 C04 REVIEW SHA256",
+        "cryptography 50.0.2",
+        "certifi 2026.11.20"
+      ]
+    },
+    {
+      "path": "tests/integration/core0207_crypto50_r2/run_core0207_c50_r2.py",
+      "git_blob": "83e2111d4e155b8fd7487bfbde2301aefad80e42",
+      "kind": "TEST_RUNNER_NOT_RELEASE",
+      "symbols": [
+        "git_blob",
+        "require",
+        "exact_file",
+        "import_pinned",
+        "validate",
+        "main"
+      ],
+      "calls": [
+        "unchanged historical P05 helper",
+        "read original Core0207 locked files"
+      ],
+      "depends_on": [
+        "python 3.13.17",
+        "SQLite >=3.37",
+        "fastapi 0.163.0",
+        "starlette 1.10.0",
+        "cryptography 50.0.2",
+        "uvicorn 0.34.2",
+        "certifi 2026.11.20"
+      ],
+      "fail_closed": [
+        "28-wheel lock",
+        "certifi wheel SHA",
+        "C06 marker",
+        "55/29 invariant",
+        "historical helper original Git blob"
+      ]
+    },
+    {
+      "path": "tests/integration/w8_unified_u3_c50_r2_dev.py",
+      "git_blob": "8456b53eed3d71039e9841593a220ebb5b40dba5",
+      "kind": "W8_DEV_ADAPTER_NOT_RELEASE",
+      "symbols": [
+        "git_blob",
+        "demand",
+        "load_original",
+        "extend",
+        "load_candidate"
+      ],
+      "depends_on": [
+        "original U3 blob 1609d857b46ea973180c45271d87fcc92083f0a6",
+        "unchanged P10J24 exact call",
+        "R2 contract/runner exact blobs"
+      ],
+      "fail_closed": [
+        "old review SHA",
+        "missing report",
+        "marker spoofing",
+        "duplicate runner call",
+        "Chromium smoke denied"
+      ]
+    },
+    {
+      "path": "tests/integration/test_w8_u3_c50_r2_dev.py",
+      "git_blob": "f09e12603ac11d9d34a94b30d7494806239b63c0",
+      "kind": "SYNTHETIC_UNIT_TESTS",
+      "symbols": [
+        "FakeW",
+        "BridgeTest",
+        "make_fixture"
+      ],
+      "cases": 13,
+      "status": "NOT_RUN"
+    }
+  ],
+  "scope": {
+    "product_files_changed": 0,
+    "db_files_changed": 0,
+    "api_files_changed": 0,
+    "ci_files_changed": 0,
+    "source_manifest_changed": false,
+    "third_party_runtime_version_changed_by_this_pr": false,
+    "license_decisions_changed": false
+  },
+  "test_evidence": {
+    "git_blob_readback": "4_OF_4_PASS",
+    "static_invariant_checks": "19_OF_19_PASS",
+    "Python_syntax": "NOT_RUN",
+    "Windows_R2_13": "NOT_RUN",
+    "R2_29": "NOT_RUN",
+    "R2_full_W8_DEV": "NOT_RUN",
+    "release_C07": "HOLD",
+    "Chromium_C08": "NOT_RUN",
+    "independent_C05": "HOLD"
+  },
+  "progress": {
+    "W8_before": "3/8",
+    "W8_now": "3/8",
+    "delta_pp": 0,
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "maintenance": {
+    "failure_diagnosis": "report fails with explicit HOLD on mismatched new graph, old SHA, nonoriginal test source, missing 55, wrong direct pins or C08 invocation",
+    "rollback": "normal revert or close review PR only; preserve source history and PR34-37, no product-dev or main merge"
+  },
+  "next": "source owner review, exact PR38 checkout/audit/prepare with new graph pin and C06 isolated DEV, Windows 13 synthetic and full DEV chain; official C07 requires separately versioned release-capable runner and independent conditions"
+}
