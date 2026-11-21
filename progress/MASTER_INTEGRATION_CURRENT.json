@@ -1,5 +1,5 @@
 {
-  "revision": "MI01-W8-PR36-C06PASS-CORE0207-CRYPTO-PIN-CONFIRMED-BUILD-DIAG-PENDING-20261121",
+  "revision": "MI01-W8-PR37-NATIVE-29OF29-VERIFIED-C07-HOLD-20261121",
   "date": "2026-11-20",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -13973,5 +13973,92 @@
     "handover_commit": "683a26171ac54544260456ce84e19c38614aa5e2",
     "next": "User run verified local diagnostic helper if C>=2GiB E>=4GiB; upload JSON/log. If core29 under crypto50 29/29 then prepare separate owner-reviewed versioned current-crypto test contract, preserve old 46 historic lock; if failing investigate actual cases. Independent Next build in copied PR36 frontend gives diagnostic build evidence; C07 full remains HOLD until proper contract and complete actual W8 run, C08 NOT_RUN, C05 independent HOLD.",
     "rollback": "New diagnostic-only E folder retained; original C06 staged source and previous Windows stages preserved. No safety-policy changes."
+  },
+  "mi01_w8_pr37_native_core0207_c50_r1_29of29_20261121": {
+    "revision": "MI01-W8-PR37-C50-R1-NATIVE-29-OF-29-PASS-D0-C07-HOLD-20261121",
+    "date": "2026-11-21",
+    "owner": "MI-01/W8",
+    "review_pr": 37,
+    "parent_pr": 36,
+    "review_pr_source_sha": "88be5f9eab29b9c40038bed7f47a235d2e3439a7",
+    "evidence_kind": "ACTUAL_USER_WINDOWS_POWERSHELL_5_1_VERSIONED_REVIEW_SUITE_JSON_FULL_CASE_IDS",
+    "evidence_github_path": "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json",
+    "evidence_github_branch": "review/mi01-w8-core0207-c50-r1-contract-20261121",
+    "transcript_sha256": "8cc87ae5923a314d002f39850f0e7ad74e5479ba7c5550ece66b067105381a2f",
+    "console_json_reconstructed_sha256_matches_windows": "3a2713e3d0c37f6f017ff590589b727cc939d6a56823095337d92a786059d125",
+    "report_bytes": 4549,
+    "original_PC_raw_report_direct_upload": false,
+    "native_result": {
+      "classification": "VERSIONED_LOCAL_D0_REVIEW_ONLY_NOT_W8_C07_ACCEPTANCE",
+      "result": "PASS",
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0,
+      "groups": {
+        "retained_snapshot": "5/5",
+        "terminal_anchor": "7/7",
+        "projection_P02": "8/8",
+        "prefix_P03": "9/9"
+      },
+      "case_identity_unique": 29,
+      "source_files_verified": 55,
+      "python": "3.13.17",
+      "sqlite": "3.50.4",
+      "cryptography": "50.0.2",
+      "original_stage_immutability_preserved": true,
+      "output_folder": "E:\\AIOS\\W8\\PR37_C50_R1_D0_20261121_140140",
+      "approved_C04_C06_REVIEW_sha256": "341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3"
+    },
+    "source_and_owner_collision": {
+      "product_dev_ref": "integration/product-dev",
+      "product_dev_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_dev_changed": false,
+      "PR34_crypto_dependency_owner_reuse": true,
+      "PR36_original_runner_unchanged": true,
+      "historical_crypto_lock": "46.0.4",
+      "C50_review_runner_in_PR37": true,
+      "W8_versioned_adapter": "OWNER_REVIEW_PENDING",
+      "automatic_merge": false
+    },
+    "gates": {
+      "prior_PR36_C06": "PASS",
+      "PR37_versioned_D0_29": "PASS_NATIVE_WINDOWS",
+      "original_full_C07": "HOLD",
+      "C08_browser": "NOT_RUN",
+      "independent_C05_security": "HOLD",
+      "owner_approval": "HOLD"
+    },
+    "progress": {
+      "weights": {
+        "design": 15,
+        "source": 35,
+        "functional": 20,
+        "integration": 20,
+        "final_acceptance": 10
+      },
+      "development_previous": "HESAPLANAMADI",
+      "development_current": "HESAPLANAMADI",
+      "development_delta_pp": null,
+      "W8_acceptance_previous": {
+        "completed": 3,
+        "total": 8,
+        "percent": 37.5
+      },
+      "W8_acceptance_current": {
+        "completed": 3,
+        "total": 8,
+        "percent": 37.5
+      },
+      "W8_delta_pp": 0
+    },
+    "next_tasks": [
+      "MI01_OWNER_REVIEW_VERSIONED_29_CASE_IDS_AND_55_HISTORICAL_SOURCE_BYTES",
+      "SECURITY_DEPENDENCY_OWNER_REVIEW_C50_WHEEL_OPENSSL_TRANSITIVE_AND_LICENSE",
+      "NEW_VERSIONED_W8_ADAPTER_CANDIDATE_PRESERVING_P24_HISTORICAL_GUARDS",
+      "FRESH_FULL_ORIGINAL_C07_TESTS_NEXT_BUILD",
+      "ACTUAL_CHROMIUM_C08_SAME_DOCUMENT_FIVE_SCREENSHOTS",
+      "INDEPENDENT_C05_REVIEW_HOLD"
+    ],
+    "rollback": "Close review PR37 or normal revert only its new files; retain all original C04/C06 Windows stage, PR34/35/36, source history. No force push, product-dev/main/CI/prod effects."
   }
 }
