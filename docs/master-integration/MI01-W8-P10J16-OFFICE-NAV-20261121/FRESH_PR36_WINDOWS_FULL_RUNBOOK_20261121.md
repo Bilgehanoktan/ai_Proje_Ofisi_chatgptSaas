@@ -129,3 +129,45 @@ User PowerShell 5.1 direct commands (not an unsigned PS1, no execution policy ad
 **Next required diagnostic (READ ONLY):** reuse original exact R2 helper, select `--mode review-diff --run-root 'E:\AIOS\W8\PR36_W8_FRESH_20261121_131906'` with SHA pin; prints *this* stage's field-by-field old/new `REVIEW.json` and Python lock/wheel hashes. Never rerun `--mode run` or mutate `REVIEW.json`/wheelhouse until the actual remaining difference is observed, classified and owner-reviewed. If it is resolution drift (new releases), plan an independent isolated **exact prior approved 3.13 wheelhouse** replay with integrity check and new manifest approval, not a bypass. If only metadata differs, examine R2 comparator before any mutation. Preserve both prior stages and native evidence. Update central record and PR #36 handover with the actual diff; no user decision repeated.
 
 **Current log locations:** `E:\AIOS\W8\PR36_W8_FRESH_20261121_131906\PR36_W8_STATUS.json` and `PR36_W8_NATIVE_FULL.log`. No independent hash of those files received yet. Rollback is retaining all previous source and stage directories; no deletion performed.
+
+
+## 2026-11-21 — Certifi-only wheel resolution drift; pinned PR35 graph reuse R3
+
+### Confirmed evidence, not inferred
+Actual native Windows PowerShell 5.1 `R2 --mode review-diff` output on **exact** 3.13.17 PR36 source run `E:\AIOS\W8\PR36_W8_FRESH_20261121_131906`:
+- PR36 intended source-only `manifest_blob` change `2d1d0bf94d464ffe79d8072453a2e19722485854` → `9660da1104617b4764d5f1e32009e4e3405b47f8`.
+- **SAME** `node`, `npm_lock_sha256`, `npm_packages`, `platform`, `python` (3.13.17), `test-tools.txt`; no differences in other 27 Python wheel versions/hashes in output.
+- **Only dependency resolution drift:** old approved `certifi==2026.10.23` wheel `certifi-2026.10.23-py3-none-any.whl` SHA256 `e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1` vs new downloaded `certifi==2026.11.20`, wheel `certifi-2026.11.20-py3-none-any.whl` SHA256 `7422df25243767b9877031a2248cb14d09ddac9beee846f4cef3d5c9191d488f`. No other locked-package line differs.
+- Old PR35 `python.lock` SHA256 `dfc5da1b553c71ae209d31e70209de699503973dbc8146ba611e35703f5367a5`; newer PR36 C04 Python3.13 `python.lock` SHA256 `523b06d49b2069d072801a095f9f77d6a27aa65e7e3b95e7360de5ed16bad461`. Three `REVIEW.json` fields differ: **manifest_blob** (intended), **wheels** (only certifi), and **python_lock_sha256** (only certifi).
+- `REVIEW_DIFFERENT_FIELD_COUNT 3`, `READ_ONLY_REVIEW_DIFF_COMPLETE_NO_INSTALL_NO_SOURCE_MUTATION`. Therefore **the 3.13.17 fix is confirmed** and repeated PyPI dependency resolution remains non-deterministic; no API, product code, or package specification change is required.
+
+### Existing dependency graph reuse, not an upgrade/waiver
+New separate **local/dev helper artifact**, `AIOS_W8_PR36_CERTIFI_PIN_REPLAY_20261121.py`: **17,000 bytes; SHA256 `9b69846def5ebd9be6bd75b0945c65b63c3ca4f13d9bb4cc032de1908bb86b4a`**. This artifact is delivered in the conversation and is *not* an automatically deployed GitHub source file.
+
+- Uses already approved original PR35 `REVIEW.json` SHA256 `bac9b49d277f7bf8509d928f2b4ed06aab4cbfd82ea0f450349db9998d08f403`, old `python.lock` and exact SHA-pinned 28-wheel inventory, **without taking any new package versions**. Also checks the PR36 prepared source's 552 product/manifest pins, original P10J24 and U3 adapter blob pins, and exact R2 SHA256 `9751b0068f10f16dbfa1a7de143d48debe926a4dfefdc847d89f3902e2856808`.
+- **Fail closed** if source/input folders are symlinks, Python ≠ 3.13.17, C free less than 2 GiB or E less than 4 GiB, REVIEW fields differ beyond intended source manifest + certifi, any of the previously approved wheel SHA256 mismatch, or any `python.lock` line differs beyond certifi.
+- Does **not mutate** PR35 successful stage, prior failed PR36 Python3.14 stage, or prior failed PR36 Python3.13 stage; copies already materialized PR36 source/prepare data to an **independent new folder** `E:\AIOS\W8\PR36_W8_CERTIFI_LOCKED_<timestamp>`. The copied stage omits *only* the newly resolved certifi wheel, generated `python.lock`, and generated `REVIEW.json`; inserts **byte-for-byte original approved `certifi` wheel and `python.lock`**. The changed source manifest remains PR36.
+- Import **exact Git-pinned original PR36 W8 adapter** and call its native `lock_inventory(stage)`, `write_json`, `reviewed(stage, fingerprint)` for a **new** PR36 manifest-bound review record. Compare every other field except intended `manifest_blob` against the previously approved PR35 graph. The tool does **not** bypass original W8 review/approval checks or forge success markers.
+- Runs original fresh G3 on this new copy, then original C06 **offline hash-locked install**, C07 full source regression/Next.js build; original C08 browser only if explicit local signed-off Chrome/Chromium executable exists. Independent C05 remains HOLD. No script execution policy change, main/product-dev merge, secret, PROD, CI edit, dependency upgrade or destructive cleanup.
+- Original and aborted input stage integrity is checked again in the `finally` block. Output `PR36_CERTIFI_REPLAY_STATUS.json` and `PR36_CERTIFI_REPLAY_NATIVE.log` hold stage-specific real evidence including final SHA256/log size. The helper is **prepared, syntax/static + CLI + positive/negative certifi-delta fixture PASS**; **ACTUAL WINDOWS R3 C06/C07/C08 NOT_RUN until user executes and returns logs**.
+
+User direct PowerShell 5.1 invocation:
+
+```powershell
+& {
+  $ErrorActionPreference = 'Stop'
+  $file=Join-Path $env:USERPROFILE 'Downloads\AIOS_W8_PR36_CERTIFI_PIN_REPLAY_20261121.py'
+  $sha='9b69846def5ebd9be6bd75b0945c65b63c3ca4f13d9bb4cc032de1908bb86b4a'
+  if (!(Test-Path -LiteralPath $file) -or (Get-FileHash -LiteralPath $file -Algorithm SHA256).Hash.ToLowerInvariant() -ne $sha) { throw 'PR36_R3_FILE_SHA_HOLD' }
+  $chrome='C:\Program Files\Google\Chrome\Application\chrome.exe'
+  if (Test-Path -LiteralPath $chrome) {
+      & py -3.13 $file --mode run --chromium $chrome
+  } else {
+      & py -3.13 $file --mode run
+  }
+  if ($LASTEXITCODE -ne 0) { throw 'PR36_R3_HOLD_READ_NEW_NATIVE_STATUS' }
+}
+```
+
+### Rollback, acceptance, catalog and next
+No existing project file is overwritten; only new temporary workspace is created and on failure **retained** for review/rollback (manual owner decision). Entire previous stages, architecture/decisions/security permissions stay unchanged. A success in G3/C06/C07/C08 would provide original **local test evidence**, still **not** independent C05, owner acceptance, main/product-dev merge or production approval. **W8 canonical product acceptance = 3/8 → 3/8 pending original fresh output; weighted development % = HESAPLANAMADI (no frozen denominators).** Product symbol/API/DB/event/contract/dependency catalogs unchanged; external testing tool and its provenance have been added to the W8 maintenance and handover runbook. If there is a remaining original test failure, investigate its exact `PR36_CERTIFI_REPLAY_NATIVE.log` instead of rerunning old successes. Do not count a hypothetical PASS.
