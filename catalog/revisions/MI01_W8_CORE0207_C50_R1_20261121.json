@@ -1,0 +1,141 @@
+{
+  "id": "MI01-W8-CORE0207-C50-R1-20261121",
+  "date": "2026-11-21",
+  "state": "REVIEW_ONLY_NO_ACCEPTANCE",
+  "owner": "MI-01/W8",
+  "depends_on": [
+    "MI01-W8 PR36",
+    "PR34 secure cryptography 50.0.2",
+    "independent dependency/security owner review"
+  ],
+  "base": {
+    "ref": "review/mi01-w8-p10j16-unified-office-links-20261121",
+    "sha": "683a26171ac54544260456ce84e19c38614aa5e2"
+  },
+  "current_canonical_product": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "modified": false
+  },
+  "changed_paths": [
+    "tests/integration/core0207_crypto50_r1/CONTRACT.json",
+    "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md",
+    "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json"
+  ],
+  "review_files": {
+    "tests/integration/core0207_crypto50_r1/CONTRACT.json": "537e0c35592ca7366a52ab87c08db7e419f18b71",
+    "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py": "cc467843bf11857fbbd9df19e513626fb7de85bf",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "feda26c37961e9cee307f2aa580caa626cb52ef0"
+  },
+  "immutable_original_blobs": {
+    "historical_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "historical_runner": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+    "historical_p05_helper": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+    "historical_p24": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3"
+  },
+  "new_contract_direct_pins": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "50.0.2",
+    "uvicorn": "0.34.2"
+  },
+  "source_scope": {
+    "historical_files": 55,
+    "original_tests": 29,
+    "module_counts": [
+      5,
+      7,
+      8,
+      9
+    ]
+  },
+  "technical_catalog": {
+    "classes_added": [],
+    "functions_added": [
+      "git_blob(data)",
+      "require(condition,reason)",
+      "exact_file(path,expected_blob,expected_sha)",
+      "import_pinned(path,name)",
+      "validate(stage,runner_root,contract)",
+      "main()"
+    ],
+    "APIs_added": [],
+    "DB_tables_added": [],
+    "DB_migrations_added": [],
+    "events_added": [],
+    "production_dependencies_changed": [],
+    "CI_workflows_changed": [],
+    "nonproduct_dependency_requirement": [
+      "Python 3.13.17",
+      "approved immutable PR36 C06 venv",
+      "approved PR36 review/INSTALL_OK fingerprint",
+      "original pinned run_lifecycle_p05.py"
+    ]
+  },
+  "evidence": {
+    "previous_native_windows": {
+      "PR36_G3": "PASS_552_SOURCE",
+      "PR36_C04": "PASS_REVIEW_SHA256_341e179afda3e344ac32b3f4643860e44c7dd350cfb66ac59ac5edc98c79a1b3",
+      "PR36_C06": "PASS_28_WHEEL_30_NPM_LOCAL_DEV",
+      "historical_core29": "HOLD_DIRECT_DEPENDENCY_PIN_MISMATCH",
+      "diagnostic_R2_core29": "PASS_29_29_DIAGNOSTIC_UNPINNED_NOT_C07",
+      "diagnostic_R2_next_build": "PASS_ISOLATED_NOT_C07",
+      "diagnostic_R2_typescript": "PASS_ISOLATED_NOT_C07",
+      "original_stage_preserved": true,
+      "underlying_R2_JSON_and_full_log": "NOT_READ_BACK"
+    },
+    "new_candidate": {
+      "github_exact_blob_readback": "PASS_2_2_SOURCE_FILES",
+      "contract_static_checks": {
+        "passed": 12,
+        "total": 12,
+        "classification": "STATIC_SOURCE_REVIEW_NOT_PYTHON_TEST"
+      },
+      "Python_compile": "NOT_RUN",
+      "user_Windows_execution": "NOT_RUN",
+      "complete_C07": "HOLD",
+      "C08_browser": "NOT_RUN",
+      "independent_C05": "HOLD"
+    }
+  },
+  "progress": {
+    "development_weights_percent": {
+      "design": 15,
+      "source": 35,
+      "functional_tests": 20,
+      "integration": 20,
+      "final_acceptance": 10
+    },
+    "development_before": "HESAPLANAMADI",
+    "development_after": "HESAPLANAMADI",
+    "development_delta_pp": null,
+    "W8_product_acceptance_before": {
+      "completed": 3,
+      "total": 8,
+      "percent": 37.5
+    },
+    "W8_product_acceptance_after": {
+      "completed": 3,
+      "total": 8,
+      "percent": 37.5
+    },
+    "W8_product_acceptance_delta_pp": 0
+  },
+  "gates": [
+    "OWNER_REVIEW_SUCCESSOR_TEST_IDENTITIES",
+    "DEPENDENCY_OWNER_REVIEW_PINNED_CURRENT_WHEEL_GRAPH",
+    "NEW_VERSIONED_SUITE_ACTUAL_29_29",
+    "OWNER_APPROVED_UPDATED_W8_ADAPTER",
+    "FRESH_FULL_C07",
+    "CHROMIUM_C08",
+    "INDEPENDENT_SECURITY_C05"
+  ],
+  "no_merge_to": [
+    "integration/product-dev",
+    "main"
+  ],
+  "rollback": "Close draft candidate PR or normal revert of candidate-only files; preserve all PR34/35/36 stages and historical 46.0.4 lock."
+}
