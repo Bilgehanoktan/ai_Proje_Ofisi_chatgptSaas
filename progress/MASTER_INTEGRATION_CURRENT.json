@@ -14255,5 +14255,57 @@
     "canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
     "canonical_changed": false,
     "rollback": "Preserve PR34-37 and prior approved Windows stages; normal reviewed revert only; main/product-dev unchanged"
+  },
+  "mi01_w8_h01_all_approvals_operational_authorization_20261121": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-H01-OPERATIONAL-AUTHORIZATION-NOT-INDEPENDENT-ACCEPTANCE-20261121",
+    "user_instruction_original": "ben tüm onayları veriyorum",
+    "interpretation": "H01_AUTHORIZE_PROCEED_EXISTING_CONTROLLED_W8_REVIEW_LOCAL_DEV_TEST_AND_EVIDENCE_COLLECTION",
+    "source": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/37#issuecomment-7062075038",
+    "review_head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+    "canonical": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "user_consent_scope": [
+      "No repeat requests for ordinary controlled W8 review/DEV test execution consent",
+      "Proceed with existing PR37 source-owner review and prepare a release-capable versioned C50 W8 runner only after reviewing original exact-source constraints",
+      "Use prior PR36 C06 and PR37 29/29 native evidence without duplicate rerun",
+      "Run actual C07 and Chromium C08 if an authorized matching local runner and prerequisites become accessible",
+      "Collect evidence and request distinct independent C05 verdict"
+    ],
+    "not_auto_approved": [
+      "Source owner technical acceptance of release-capable (non-dev-only) W8 adapter",
+      "Formal C07 actual full-run PASS and markers",
+      "C08 actual Chromium screenshots and same-document PASS",
+      "Independent C05 security/dependency/license sign-off",
+      "Product acceptance, main/product-dev merge, production or external effects",
+      "New GitHub CI workflow/permission expansion absent a specifically scoped authorized decision"
+    ],
+    "source_review_status": "TECHNICAL_COMMENT_RECORDED_OWNER_GATE_HOLD",
+    "observed_code_boundary": "w8_unified_u3_c50_r1_dev.py explicitly clears BUILD_TEST_OK/SMOKE_OK/HYBRID_NATIVE_OK, smoke forbidden; not suitable to stand in for full C07/C08",
+    "existing_evidence": {
+      "PR36_C06": "NATIVE_WINDOWS_PASS",
+      "PR37_VERSIONED_LOCAL_D0": "29/29_PASS_PRESERVE",
+      "PR37_SYNTHETIC_DEV_BRIDGE": "11/11_PASS_PRESERVE"
+    },
+    "gate_status": {
+      "source_owner": "HOLD",
+      "C07": "HOLD",
+      "C08": "NOT_RUN",
+      "C05_independent": "HOLD",
+      "W8_release": "HOLD"
+    },
+    "progress": {
+      "development_before": "HESAPLANAMADI",
+      "development_after": "HESAPLANAMADI",
+      "development_delta_pp": null,
+      "W8_acceptance_before": "3/8 (37.5%)",
+      "W8_acceptance_after": "3/8 (37.5%)",
+      "W8_acceptance_delta_pp": 0
+    },
+    "tests_new_this_round": 0,
+    "code_changes": 0,
+    "permission_changes": 0,
+    "branch_or_merge_changes": 0,
+    "next": "MI01 owner reviews release-capable versioned W8 full C07 semantics and C05 prerequisites; execute C07/C08 on authorized matching runner; independent C05 verdict; final acceptance only on evidence",
+    "rollback": "Normal revert only this appended progress record or PR comment; leave previous PRs, exact code, product-dev, main, CI, security permissions and Windows stages unchanged"
   }
 }
