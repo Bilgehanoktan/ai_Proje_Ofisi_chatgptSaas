@@ -1,0 +1,190 @@
+{
+  "revision": "MI-P0-RELEASE-OWNER-EVIDENCE-20261120-R1",
+  "classification": "READ_ONLY_SOURCE_PINNED_OWNER_AND_INDEPENDENT_QA_EVIDENCE_NOT_RELEASE_AUTHORITY",
+  "canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "canonical_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "canonical_product_tree": "f4cdcf68115917ab69ba6441414539fe32a59369",
+  "observed_prs": [
+    {
+      "number": 10,
+      "head_sha": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+      "base_sha": "524b30b9ef301e1455c52ae953c5b9b3c779da2f",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/10",
+      "title": "[GATE-02/A1] Independent authority owner/custody matrix — review only (no runtime)",
+      "updated_at": "2026-11-20T07:47:27Z"
+    },
+    {
+      "number": 19,
+      "head_sha": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/19",
+      "title": "[MI04/G2+G9][DRAFT/HOLD] 553→562 exact owner source; 72/72 D0 combined-source CI",
+      "updated_at": "2026-11-20T10:37:07Z"
+    },
+    {
+      "number": 20,
+      "head_sha": "99571c2e4341d4abd9c9e7b6a6b713ebf7fd9542",
+      "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/20",
+      "title": "MI-01 W8 553: immutable npm lock reuse during prepare (15 focused tests; owner HOLD)",
+      "updated_at": "2026-11-20T10:25:42Z"
+    },
+    {
+      "number": 21,
+      "head_sha": "0f0b9ed670a401231ddc94b95ccf92a1ee1a694b",
+      "base_sha": "331e48d2e99706378f055f46003f5afb7f33f2d6",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/21",
+      "title": "[MI-P0 / REVIEW] Deterministic W8 553→562 manifest gate; 16/16 synthetic tests, source HOLD",
+      "updated_at": "2026-11-20T17:21:26Z"
+    },
+    {
+      "number": 22,
+      "head_sha": "1348578fb5e165db85ce7402c4fa7c27124018ee",
+      "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/22",
+      "title": "[MI-05][DRAFT/HOLD] Office deadline fail-closed — original 25/25 + new 6/6 local",
+      "updated_at": "2026-11-20T17:20:53Z"
+    },
+    {
+      "number": 23,
+      "head_sha": "4ce4af61326bc01d3a95ec8150f7cb8e59e1474d",
+      "base_sha": "37578c452ae25889446769160031b48a073879a8",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/23",
+      "title": "[MI-P0/QA][DRAFT/HOLD] PR22 deadline stalled transport: original 6/6, new 0/3 negative",
+      "updated_at": "2026-11-20T10:34:28Z"
+    },
+    {
+      "number": 24,
+      "head_sha": "c73478c479a808bb5a522361aa483b6ab7716226",
+      "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "state": "open",
+      "draft": true,
+      "url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/24",
+      "title": "[CTL-01][DRAFT/HOLD] G7 current ORG runner + 16/16 helper; raw ZIP evidence 3/3 GitHub",
+      "updated_at": "2026-11-20T17:20:34Z"
+    }
+  ],
+  "office_qa_source_pr22_head": "354c8e98fa5ef4bbad0a4af57892252624f41520",
+  "office_owner_current_pr22_head": "1348578fb5e165db85ce7402c4fa7c27124018ee",
+  "current_progress_git_blob": "e1e1cc4988fb952321713ce530d71c630629d9d3",
+  "previous_program_snapshot_git_blob": "0c95316c5d7e520c0415220a46659fee7d8a947c",
+  "gates": {
+    "w8_exact_prepare": {
+      "status": "NOT_RUN",
+      "owner": "MI-01/PR20",
+      "reason": "C04 original W8 prepare/wheelhouse not executed"
+    },
+    "supply_chain_owner_review": {
+      "status": "HOLD",
+      "owner": "MI-01/dependency owner",
+      "reason": "C05 legal/hash/transitive provenance review not ratified"
+    },
+    "w8_full_install_build_browser": {
+      "status": "NOT_RUN",
+      "owner": "MI-01/PR20",
+      "reason": "C06-C08 exact install/build/native browser unexecuted"
+    },
+    "g2_g9_current_org_regression": {
+      "status": "NOT_RUN",
+      "owner": "MI-03/04/PR19+24",
+      "reason": "PR19 72/72 historical ORG G7, PR24 actual current 0/7 NOT_RUN"
+    },
+    "authority_root_sink_custody": {
+      "status": "HOLD",
+      "owner": "MI-02/PR10",
+      "reason": "Option A design only; independently owned issuer/root/sink not ratified"
+    },
+    "protected_postgres_restore": {
+      "status": "HOLD",
+      "owner": "MI-02/04",
+      "reason": "Protected PG COMMIT/RLS/restore replay unresolved"
+    },
+    "independent_iv": {
+      "status": "HOLD",
+      "owner": "MI-10/IV",
+      "reason": "0/7 independent IV acceptance; eight A negatives not executed"
+    },
+    "office_stalled_transport": {
+      "status": "FAIL",
+      "owner": "MI-05/PR22+23",
+      "reason": "PR23 0/3 negative on PR22 older 354c8e...; latest owner head not retested"
+    },
+    "eleven_mvp_criteria": {
+      "status": "NOT_RUN",
+      "owner": "Unified/IV",
+      "reason": "0/11 end-to-end MVP product acceptance"
+    }
+  },
+  "test_counters": {
+    "office_owner_local": [
+      6,
+      6
+    ],
+    "office_independent_stalled": [
+      0,
+      3
+    ],
+    "g7_current_org": [
+      0,
+      7
+    ],
+    "PR19_historical_selected_D0": [
+      72,
+      72
+    ],
+    "PR24_guard_fixture": [
+      16,
+      16
+    ],
+    "this_turn_new_actual_product_tests": [
+      0,
+      1
+    ]
+  },
+  "mvp_acceptance": [
+    0,
+    11
+  ],
+  "independent_iv_acceptance": [
+    0,
+    7
+  ],
+  "owner_final_approval": false,
+  "evidence": {
+    "office_owner": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/22",
+    "independent_qa": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/23",
+    "original_G7": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/24",
+    "integrated_G2G9": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/19",
+    "W8": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/20",
+    "custody": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/10"
+  },
+  "critical_notices": [
+    "PR22 current head differs from independent QA tested head; no claim latest head fails or passes until retested",
+    "G7 72/72 historical run does not prove current ORG binding; actual current G7 0/7",
+    "C05, protected PG, independent IV remain HOLD",
+    "General weighted development HESAPLANAMADI 0/10 ratified denominator groups"
+  ],
+  "changes": {
+    "product_code": 0,
+    "DB": 0,
+    "API": 0,
+    "CI": 0,
+    "grants": 0,
+    "main": 0,
+    "permissions": 0,
+    "acceptance_delta_pp": 0
+  },
+  "rollback": "Close isolated draft PR only, preserve historical central and owner evidence"
+}

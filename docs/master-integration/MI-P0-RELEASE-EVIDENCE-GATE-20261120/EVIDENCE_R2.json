@@ -1,0 +1,99 @@
+{
+  "revision": "MI-P0-RELEASE-EVIDENCE-GATE-R2-20261120",
+  "date": "2026-11-20",
+  "classification": "LOCAL_PYTHON_GUARD_TESTS_ONLY_NOT_PRODUCT_ACCEPTANCE",
+  "canonical": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+  "owner_branch": "review/mi-p0-global-release-evidence-gate-20261120",
+  "owner_pr": 25,
+  "source": {
+    "path": "scripts/governance/verify_release_readiness.py",
+    "sha256": "7752484757fd70db6b2fab4b59c3bb313f2fda184eff4f2deb38ce32409c5853",
+    "git_blob": "2e8f086f848c2829b342583734b62c1a2f3ce938"
+  },
+  "tests": {
+    "path": "scripts/governance/test_verify_release_readiness.py",
+    "sha256": "63a590d87293df6dca936642e1da8aecaf27891f3d2f18c581cd499f9f2df58e",
+    "git_blob": "683045dfdce7aeb13bb3ab34d34ab5f2eb1264ca",
+    "previous": [
+      20,
+      20
+    ],
+    "current": [
+      32,
+      32
+    ],
+    "delta_new_methods": 12,
+    "type": "ACTUAL_LOCAL_SYNTHETIC_STDLIB_UNITTEST",
+    "skips": 0,
+    "errors": 0,
+    "failures": 0
+  },
+  "raw_log": {
+    "path": "docs/master-integration/MI-P0-RELEASE-EVIDENCE-GATE-20261120/LOCAL_UNITTEST_R2.log",
+    "sha256": "3017b5dbad67b34de06bba835deaf52d5c1840a4c0bd935cdf6cc843ca3f0f2f",
+    "git_blob": "5034d072d883c42faad2dac77992f841b397f3ec"
+  },
+  "python_compile": "PASS_LOCAL",
+  "github_byte_exact": {
+    "script": true,
+    "tests": true,
+    "raw_log": true
+  },
+  "new_snapshot": "progress/PROGRAM_GLOBAL_SNAPSHOT_20261120_R3.json",
+  "new_blockers": "progress/MI_P0_RELEASE_BLOCKERS_20261120_R2.json",
+  "code_change": {
+    "new_functions": [
+      "_digest",
+      "_source_receipt"
+    ],
+    "modified": [
+      "audit",
+      "MANDATORY_PRS"
+    ],
+    "product_files": 0,
+    "API": 0,
+    "DB": 0,
+    "dependencies": 0,
+    "workflow": 0,
+    "permissions": 0,
+    "main": 0
+  },
+  "security": {
+    "release_authority": false,
+    "independent_verification": false,
+    "owner_approval": false,
+    "provenance_metadata_is_not_independent_attestation": true
+  },
+  "acceptance": {
+    "MVP_previous": [
+      0,
+      11
+    ],
+    "MVP_current": [
+      0,
+      11
+    ],
+    "IV_previous": [
+      0,
+      7
+    ],
+    "IV_current": [
+      0,
+      7
+    ],
+    "delta_pp": 0
+  },
+  "global_development": {
+    "previous": null,
+    "current": null,
+    "delta_pp": null,
+    "reason": "0/10 formal group denominators owner ratified"
+  },
+  "limits": {
+    "exact_live_full_GitHub_JSON_Python_CLI": "NOT_RUN",
+    "W8_original": "NOT_RUN",
+    "protected_PG": "HOLD",
+    "source_promotion": false
+  },
+  "rollback": "Revert only R2 edits within PR25 or close its draft, preserve canonical and parallel owners"
+}

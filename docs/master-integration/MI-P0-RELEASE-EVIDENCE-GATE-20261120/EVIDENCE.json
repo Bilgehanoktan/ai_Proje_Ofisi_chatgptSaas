@@ -1,0 +1,91 @@
+{
+  "revision": "MI-P0-RELEASE-EVIDENCE-GATE-20261120-R1",
+  "scope": "ISOLATED_READONLY_GOVERNANCE_GUARD",
+  "source": {
+    "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552
+  },
+  "changed_paths": [
+    "scripts/governance/verify_release_readiness.py",
+    "scripts/governance/test_verify_release_readiness.py",
+    "progress/MI_P0_RELEASE_BLOCKERS_20261120.json",
+    "progress/PROGRAM_GLOBAL_SNAPSHOT_20261120_R2.json",
+    "docs/master-integration/MI-P0-RELEASE-EVIDENCE-GATE-20261120/LOCAL_UNITTEST.log",
+    "docs/master-integration/MI-P0-RELEASE-EVIDENCE-GATE-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+    "docs/master-integration/MI-P0-RELEASE-EVIDENCE-GATE-20261120/EVIDENCE.json"
+  ],
+  "code_git_blob": "7607846daa12f164e59ba09b8f32304e9a0e281d",
+  "test_git_blob": "d27965c3fb1563c57b7d5da90e1c3572802c161c",
+  "log_git_blob": "e56c415e566bb50370329fd238a53fb586bc3ccc",
+  "code_sha256": "0753c8cbf6f8baf55cc08f924847f91904110f233ab2d6e8294627db3b1dcb8e",
+  "test_sha256": "f4a13c6daf5c1944b2e14f93c8ac9b04644b68f9005411c81801a1b81d107f05",
+  "log_sha256": "7467de59beb905d3201f8271c8dc7210eb62c7aebb6e256b8d34e32ff6530c63",
+  "tests": {
+    "local_unittest": {
+      "passed": 20,
+      "total": 20,
+      "status": "ACTUAL_LOCAL_SYNTHETIC_GUARDS",
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "python_compile": "PASS_LOCAL",
+    "remote_code_exact_git_blob": "PASS_READBACK",
+    "actual_original_W8": "NOT_RUN",
+    "protected_PG": "HOLD",
+    "independent_IV": "HOLD",
+    "original_current_G7": [
+      0,
+      7
+    ],
+    "independent_office_old_pr22_head": [
+      0,
+      3
+    ],
+    "latest_owner_office_retest": "NOT_RUN"
+  },
+  "development": {
+    "previous_percent": null,
+    "current_percent": null,
+    "delta_pp": null,
+    "approved_group_denominators": [
+      0,
+      10
+    ],
+    "draft_slots": 315
+  },
+  "acceptance": {
+    "previous_MVP": [
+      0,
+      11
+    ],
+    "current_MVP": [
+      0,
+      11
+    ],
+    "previous_IV": [
+      0,
+      7
+    ],
+    "current_IV": [
+      0,
+      7
+    ],
+    "delta_pp": 0
+  },
+  "changes": {
+    "product": 0,
+    "api": 0,
+    "db": 0,
+    "events": 0,
+    "dependencies": 0,
+    "security_policy": 0,
+    "ci": 0,
+    "grants": 0,
+    "permissions": 0,
+    "main": 0
+  },
+  "rollback": "Close review PR only or normally revert isolated review paths",
+  "limitations": "Release gate is diagnostic evidence readiness, never owner, independent security or production authority"
+}
