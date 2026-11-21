@@ -14629,5 +14629,40 @@
     },
     "action": "Recover C disk >=2GiB via narrow non-source/non-evidence cleanup after candidate list and explicit user action; preserve npm cache as potential build source and E capacity. Then check exact SHA and dependency drift, no bypass.",
     "rollback": "No deletes or branch/CI change in this assistant round; source/stage evidence preserved."
+  },
+  "mi01_w8_user_temp_recovery_r3_20261121": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-C-STORAGE-RECOVERY-R3-TEMP-NONLINKED-20261121",
+    "provenance": "USER_PASTED_NATIVE_WINDOWS_POWERSHELL_5_1_OUTPUT",
+    "scope": "C: user TEMP old ordinary files; 14-day cutoff; linked directories skipped, E:\\AIOS\\W8 repository and stages not targeted",
+    "results": {
+      "root": "C:\\Users\\BİLGEHAN\\AppData\\Local\\Temp",
+      "links_skipped": 67,
+      "scan_errors_skipped": 0,
+      "candidate_files": 6607,
+      "candidate_GiB_rounded": 0.16,
+      "explicit_user_confirmation": "SIL",
+      "files_deleted": 6607,
+      "failed_deletes": 0,
+      "removed_GiB_rounded": 0.16,
+      "free_C_GiB_after": 2.89,
+      "free_E_GiB_after": 4.67
+    },
+    "caveat": "Disk free delta larger than 0.16 GiB removed; cannot attribute other disk changes to cleanup. Candidate list included temporary extracted AI_Company_OS_v135.md copies, not canonical GitHub product; user confirmed deletion. No whole repo/source/stage files targeted.",
+    "gates": {
+      "C_storage": "PASS_THRESHOLD_2GiB_AS_OF_USER_REPORT",
+      "PR37_C04": "PASS_PREPARE_PRIOR",
+      "new_C06": "HOLD_DEPENDENCY_OWNER_REVIEW_CERTIFI_DRIFT",
+      "formal_C07": "HOLD",
+      "C08": "NOT_RUN",
+      "independent_C05": "HOLD",
+      "W8_acceptance_before": "3/8",
+      "W8_acceptance_after": "3/8",
+      "delta_pp": 0,
+      "weighted_development": "HESAPLANAMADI"
+    },
+    "owner": "MI01_W8",
+    "next": "Targeted native Windows synthetic bridge test in exact PR37 checkout, guarded by commit+test blob; preserve new C04 review hash and wheel graph. No install/official C07 before certified dependency owner review and release runner.",
+    "rollback": "Deleted TEMP files cannot be automatically restored; canonical GitHub repo and prior E: evidence remain unchanged; no code/branch/CI modifications."
   }
 }
