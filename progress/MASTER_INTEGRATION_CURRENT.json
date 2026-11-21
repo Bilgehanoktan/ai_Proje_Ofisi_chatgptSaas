@@ -14413,5 +14413,58 @@
       "permission": 0
     },
     "rollback": "Append-only progress report; no local user file or product code mutation."
+  },
+  "mi01_w8_user_windows_disk_capacity_restored_20261121": {
+    "revision": "MI01-W8-WINDOWS-LOCAL-CAPACITY-PREFLIGHT-UNBLOCKED-20261121",
+    "date": "2026-11-21",
+    "owner": "H01_LOCAL_WINDOWS_OPERATOR",
+    "source": "USER_PROVIDED_WINDOWS_POWERSHELL_5_1_CONSOLE_OUTPUT",
+    "current_source_refs": {
+      "canonical_product_dev_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "pr37_head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+      "pr36_head": "683a26171ac54544260456ce84e19c38614aa5e2"
+    },
+    "verified_locally_by_user": {
+      "elevation": "ADMIN=True",
+      "target": "C:\\Users\\BİLGEHAN\\AppData\\Local\\Temp\\DockerDesktop",
+      "file_filter": "Only .bsdiff older than 30 days under old DockerDesktop TEMP, checked no Docker running",
+      "user_confirmed_action": "SIL",
+      "candidate_files": 936,
+      "deleted_files": 936,
+      "failed_files": 0,
+      "deleted_GiB": 2.17,
+      "C_free_GiB_before": 0.7,
+      "C_free_GiB_after": 2.87,
+      "E_free_GiB_after": 4.8
+    },
+    "gate_changes": {
+      "W8_local_capacity_preflight": "PASS_C_GE_2_GiB_E_GE_4_GiB_AS_REPORTED_BY_USER",
+      "C06": "PASS_PRIOR_EVIDENCE_UNCHANGED",
+      "C07": "HOLD_SOURCE_OWNER_AND_FULL_RUN_REQUIRED_NOT_EXECUTED",
+      "C08": "NOT_RUN_REQUIRES_ACCEPTED_C07",
+      "independent_C05": "HOLD_INDEPENDENT_LICENSE_PROVENANCE_SECURITY",
+      "overall_W8": "HOLD"
+    },
+    "review_state": {
+      "PR37": "DRAFT_SOURCE_OWNER_TECHNICAL_APPROVAL_NOT_RECORDED",
+      "PR37_review": "COMMENTED_NOT_APPROVED",
+      "PR34": "DRAFT_C05_NOTICE_AND_ATTESTATION_GAPS"
+    },
+    "release_candidate": "PR37 adapter remains DEV-only and explicitly suppresses C07/C08 markers; neither original nor dev-only runner should be represented as a formally accepted crypto50 C07/C08 runner",
+    "progress": {
+      "W8_acceptance_before": "3/8 (37.5%)",
+      "W8_acceptance_after": "3/8 (37.5%)",
+      "delta_pp": 0,
+      "weighted_development_before": "HESAPLANAMADI",
+      "weighted_development_after": "HESAPLANAMADI"
+    },
+    "changed_scope": {
+      "github": "central progress record only; no W8 product source, PR or CI changes",
+      "local": "user selected and deleted 936 legacy DockerDesktop update diff files under TEMP; no W8 repository staging or evidence deletion reported",
+      "new_tests": 0
+    },
+    "remaining_owner_actions": "Source owner to technically review PR34-37 cryptography50 / Core0207/runner contract and C05 prerequisite license/provenance issues; prepare approved exact-source release-capable full W8 C07 runner; only then operator full C07, real Chromium C08, independent C05 and release acceptance.",
+    "rollback": "No product/repo source modification to undo; deleted TEMP .bsdiff update deltas are not backed up and would require Docker updater redownload if ever needed.",
+    "scope_note": "Pass is evidence from user's console, not independently executed by the assistant."
   }
 }
