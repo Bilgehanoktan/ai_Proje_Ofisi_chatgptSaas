@@ -14664,5 +14664,30 @@
     "owner": "MI01_W8",
     "next": "Targeted native Windows synthetic bridge test in exact PR37 checkout, guarded by commit+test blob; preserve new C04 review hash and wheel graph. No install/official C07 before certified dependency owner review and release runner.",
     "rollback": "Deleted TEMP files cannot be automatically restored; canonical GitHub repo and prior E: evidence remain unchanged; no code/branch/CI modifications."
+  },
+  "mi01_w8_certifi_2026_11_20_pypi_publisher_sha_check_20261121": {
+    "date": "2026-11-21",
+    "revision": "MI01-W8-CERTIFI-2026-11-20-PUBLIC-PYPI-WHEEL-SHA-ATTESTATION-STATIC",
+    "source_url": "https://pypi.org/project/certifi/2026.11.20/",
+    "provider": "Public PyPI project/release page (first-party displayed release identity), not independent package owner's signoff",
+    "published": "2026-11-20",
+    "filename": "certifi-2026.11.20-py3-none-any.whl",
+    "published_sha256": "7422df25243767b9877031a2248cb14d09ddac9beee846f4cef3d5c9191d488f",
+    "user_PR37_review_wheel_sha256": "7422df25243767b9877031a2248cb14d09ddac9beee846f4cef3d5c9191d488f",
+    "publisher_checksum_comparison": "PASS_PUBLIC_PYPI_WHEEL_SHA_EQUAL",
+    "provenance_statement": "PyPI displays Trusted Publishing and a GitHub Actions signed publication attestation, PyPI verified on 2026-11-20; independent attestation verification NOT_RUN.",
+    "github_publisher_commit": "bf6a4859116b0cba96673893e394298bbe529b1f",
+    "predecessor": "certifi 2026.10.23 wheel SHA256 e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1",
+    "observation": "PR37 new prepare produced one known transitive certifi update, previous Python lock SHA differs; this publisher identity check narrows the review, does not approve altered dependency graph or C05.",
+    "gates": {
+      "C04": "PASS_PREPARE_PRIOR",
+      "C06": "HOLD_NEW_REVIEW_FINGERPRINT",
+      "formal_C07": "HOLD",
+      "C08": "NOT_RUN",
+      "C05_independent": "HOLD",
+      "W8_acceptance": "3/8",
+      "weighted_development": "HESAPLANAMADI"
+    },
+    "next": "Source/dependency owner to decide exact certifi upgrade vs reproducible old graph with versioned review; independent C05 license and provenance remain. Windows native 11 dev tests can be run without installing dependencies."
   }
 }
