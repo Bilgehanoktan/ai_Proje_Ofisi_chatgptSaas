@@ -23,12 +23,14 @@
     "tests/integration/core0207_crypto50_r1/CONTRACT.json",
     "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py",
     "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md",
-    "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json"
+    "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md"
   ],
   "review_files": {
     "tests/integration/core0207_crypto50_r1/CONTRACT.json": "537e0c35592ca7366a52ab87c08db7e419f18b71",
     "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py": "cc467843bf11857fbbd9df19e513626fb7de85bf",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "d60b742de1f6459a09b82df66e06ea9e28a4fa30"
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "d60b742de1f6459a09b82df66e06ea9e28a4fa30",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md": "d5c47e1485420517229211090eac6223b5591b8d"
   },
   "immutable_original_blobs": {
     "historical_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
@@ -95,7 +97,7 @@
         "classification": "STATIC_SOURCE_REVIEW_NOT_PYTHON_TEST"
       },
       "Python_compile": "PASS_ACTUAL_ISOLATED_LINUX_PYTHON_3_13_5_EXACT_GIT_BLOB_AST_AND_PY_COMPILE",
-      "user_Windows_execution": "NOT_RUN",
+      "user_Windows_execution": "NOT_RUN_WAITING_LOCAL_D0_OUTPUT",
       "complete_C07": "HOLD",
       "C08_browser": "NOT_RUN",
       "independent_C05": "HOLD",
@@ -145,11 +147,35 @@
     "OWNER_APPROVED_UPDATED_W8_ADAPTER",
     "FRESH_FULL_C07",
     "CHROMIUM_C08",
-    "INDEPENDENT_SECURITY_C05"
+    "INDEPENDENT_SECURITY_C05",
+    "LOCAL_PR37_NEW_VERSIONED_SUITE_29_CASE_PASS_PRESERVE_IDS"
   ],
   "no_merge_to": [
     "integration/product-dev",
     "main"
   ],
-  "rollback": "Close draft candidate PR or normal revert of candidate-only files; preserve all PR34/35/36 stages and historical 46.0.4 lock."
+  "rollback": "Close draft candidate PR or normal revert of candidate-only files; preserve all PR34/35/36 stages and historical 46.0.4 lock.",
+  "operator_deliverable": {
+    "scope": "LOCAL_REVIEW_D0_ONLY_NOT_C07_OR_C05_ACCEPTANCE",
+    "bundle": "AIOS_CORE0207_C50_R1_PR37_EXACT_SOURCE_20261121.zip",
+    "zip_bytes": 4506,
+    "zip_sha256": "48f194ab76182c11cfd9bed5864b3992236702b790c01ab2341c04166b675aad",
+    "members": [
+      {
+        "name": "CONTRACT.json",
+        "blob_sha": "537e0c35592ca7366a52ab87c08db7e419f18b71",
+        "sha256": "3a3b6a2cbb6f9d5762950d65873fd56533d0e377e17864f97bcfe5c1ed079b8b"
+      },
+      {
+        "name": "run_core0207_c50_r1.py",
+        "blob_sha": "cc467843bf11857fbbd9df19e513626fb7de85bf",
+        "sha256": "0902f736487273a7bc873934d0eef3ca0c87fd20d57f34698572e2fe329406cc"
+      }
+    ],
+    "actual_static_verification": "PASS_ARCHIVE_MEMBERS_GIT_BLOB_2_2_SYNTAX_PY_COMPILE_CLI_HELP",
+    "native_windows_candidate_execution": "NOT_RUN",
+    "Windows_operator_runbook": "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md",
+    "old_stage_mutation": "NONE",
+    "prereq_failure_semantics": "INPUT_LOCATION_HOLD_NOT_TEST_FAIL"
+  }
 }
