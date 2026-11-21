@@ -14307,5 +14307,63 @@
     "branch_or_merge_changes": 0,
     "next": "MI01 owner reviews release-capable versioned W8 full C07 semantics and C05 prerequisites; execute C07/C08 on authorized matching runner; independent C05 verdict; final acceptance only on evidence",
     "rollback": "Normal revert only this appended progress record or PR comment; leave previous PRs, exact code, product-dev, main, CI, security permissions and Windows stages unchanged"
+  },
+  "mi01_w8_user_windows_preflight_confirmed_20261121_114638": {
+    "revision": "MI01-W8-USER-PC-PREFLIGHT-C06-READBACK-C_DISK_HOLD-20261121",
+    "date": "2026-11-21",
+    "evidence_kind": "ACTUAL_USER_WINDOWS_POWERSHELL5_1_READ_ONLY_CONSOLE_TRANSCRIPT",
+    "transcript_filename": "Yapıştırılan metin(20261121-114638).txt",
+    "transcript_bytes": 16713,
+    "transcript_sha256": "4c4e0b5438b1f0c512d0f3b06338cf9e2c25e5256c571633ad675b06927449f4",
+    "source_ref": "review/mi01-w8-core0207-c50-r1-contract-20261121",
+    "review_pr": 37,
+    "pr37_head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+    "canonical": "integration/product-dev@254e0188998d0d245bd8ee4eb901aead02951a66",
+    "actual_observations": {
+      "stage": true,
+      "source": true,
+      "w8_runner": true,
+      "core_runner": true,
+      "reviewed_C04_C06_REVIEW_SHA256_match": true,
+      "C06_INSTALL_OK_marker_match": true,
+      "Python": "3.13.17",
+      "cryptography": "50.0.2",
+      "node": "v24.14.0",
+      "chrome_exe_found": true,
+      "C_free_GiB": 0.7,
+      "E_free_GiB": 4.81,
+      "previous_preflight_threshold_C_GiB": 2,
+      "previous_preflight_threshold_E_GiB": 4
+    },
+    "verified_previous_tests_not_repeated": {
+      "PR37_local_versioned_Core0207": "29/29_PASS_USER_WINDOWS_PREVIOUS",
+      "PR36_C06": "PASS_USER_WINDOWS_PREVIOUS_AND_CURRENT_MARKER_READBACK",
+      "PR37_synthetic_binder": "11/11_PASS_PREVIOUS"
+    },
+    "gates": {
+      "C06": "PASS_PRIOR_PRESERVED",
+      "C07": "HOLD_FRESH_FULL_NOT_RUN_OWNER_REVIEW_AND_C_DISK",
+      "C08": "NOT_RUN_CHROMIUM_BROWSER_DISCOVERED_ONLY",
+      "independent_C05": "HOLD_OWNER_SECURITY_LICENSE",
+      "W8_release": "HOLD"
+    },
+    "this_turn": {
+      "new_test_executions": 0,
+      "new_code": 0,
+      "full_C07_executed": false,
+      "C08_executed": false,
+      "branch_or_merge": false,
+      "security_policy_changes": false
+    },
+    "progress": {
+      "W8_acceptance_before": "3/8 (37.5%)",
+      "W8_acceptance_after": "3/8 (37.5%)",
+      "W8_acceptance_delta_pp": 0,
+      "development_before": "HESAPLANAMADI",
+      "development_after": "HESAPLANAMADI",
+      "development_delta_pp": null
+    },
+    "next": "Read-only C: disk audit then user-approved cleanup or verified move to restore C >=2GiB (E>=4GiB) without touching evidence; inspect PR37 source owner constraints; only then new exact-source full C07/Chromium C08 in isolated stage when respective gates satisfied",
+    "rollback": "Documentation-only record; no changes to user Windows files, PR36/37 stages, product-dev/main, CI or security"
   }
 }
