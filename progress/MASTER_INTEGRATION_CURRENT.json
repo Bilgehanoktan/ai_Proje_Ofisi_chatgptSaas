@@ -14870,5 +14870,44 @@
     "next": "PR38 exact source owner review, fresh Windows checkout, audit/prepare, verified new C04 SHA only then C06 isolated DEV and 13 native tests + full inherited W8 DEV; official C07 requires separately approved release runner and independent C05 safety preflight; C08 after C07.",
     "rollback": "Close draft PR38 or normal revert its six isolated new files. Preserve PR34-37, PR36 original stage and users' local evidence.",
     "source_readback_after_label_fix": "R2 adapter report label corrected to R2, catalog updated; native tests still NOT_RUN"
+  },
+  "mi01_w8_pr38_native_windows_audit_PASS_wrapper_expected33_instead31_HOLD_20261121": {
+    "date": "2026-11-21",
+    "evidence_type": "USER_PASTED_NATIVE_WINDOWS_POWERSHELL_5_1_TRANSCRIPT",
+    "pr": 38,
+    "source": "review/mi01-w8-certifi-20261120-c50-r2-20261121",
+    "source_head": "25cd72bca43d02b4f847054cb1eefd5777b9f887",
+    "status": "G3_SOURCE_AUDIT_PASS_EXTERNAL_WRAPPER_ASSERTION_HOLD",
+    "clone": "E:\\AIOS\\W8\\PR38_CERTIFI_R2_20261121_161719\\source",
+    "report": "E:\\AIOS\\W8\\PR38_CERTIFI_R2_20261121_161719\\logs\\W8_PR38_ALL_GATE_STATUS.json",
+    "SHA_and_four_new_blobs": "PASS",
+    "actual_G3_exit": 0,
+    "actual_G3_audit": {
+      "manifest_sha": "552/552",
+      "pairs": "17/17",
+      "aux_pins": 31,
+      "status": "PASS"
+    },
+    "wrapper_incorrect_expected_aux_count": 33,
+    "wrapper_stop": "G3_AUDIT_COUNT_HOLD",
+    "code_issue": "External PowerShell expectation 33 was never verified. Direct suite printed 31 and exited 0. Need direct R2 aux verification and staged R2 files after C04. No bypass.",
+    "owner": "MI01_W8_SOURCE_OWNER",
+    "remainder": {
+      "R2_13": "NOT_RUN",
+      "C04": "NOT_RUN",
+      "C06": "NOT_RUN",
+      "full_dev": "NOT_RUN",
+      "formal_C07": "HOLD",
+      "actual_C08": "NOT_RUN",
+      "independent_C05": "HOLD"
+    },
+    "progress": {
+      "W8_previous": "3/8",
+      "W8_current": "3/8",
+      "delta_pp": 0,
+      "weighted_development": "HESAPLANAMADI"
+    },
+    "next": "Re-use exact PR38 clone; check source via direct R2 verify_aux before versioned 13 tests and C04; only install after verifying new stage contains both R2 auxiliary files, 28 reviewed wheels and exact certifi wheel + Python/npm locks; official C07 and independent security remain gated.",
+    "rollback": "No product or prior stage changes; isolated stage not created during stopped run; wrapper can be corrected without touching pinned R2 source."
   }
 }
