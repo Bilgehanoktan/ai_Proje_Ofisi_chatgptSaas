@@ -1,0 +1,55 @@
+{
+  "task_id": "MI05-UI01D-FULL-BUILD-CHROMIUM-GATE-20261122",
+  "status": "EXACT_LOCK_COLOCATED_SOURCE_ONLY_OWNER_REVIEW_HOLD",
+  "owner": "MI-05",
+  "dependency_owner": "MI-01",
+  "source_parent": {
+    "branch": "integration/mi05-ui01b-eds-graph-review-20261121",
+    "sha": "8e614ec744b59bb1c3cb6c1166f59c3a6eb4941e",
+    "manifest_blob": "e0f4ff504c63325a51829492ac2fe031de3fee9f",
+    "manifest_entries": 554
+  },
+  "lock_source": {
+    "branch": "integration/mi-common-source-review-01",
+    "path": "docs/ORG-07C-R8-INTEGRATION/original-lock/package-lock.json",
+    "git_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "bytes": 33618,
+    "packages": 62
+  },
+  "staged_path": "product/ai-company-os-frontend/package-lock.json",
+  "expected_manifest_entries": 555,
+  "static_checks": {
+    "owner_exact_lock_blob": true,
+    "root_name": true,
+    "root_version": true,
+    "direct_dependencies": true,
+    "development_dependencies": true,
+    "next": true,
+    "react": true,
+    "typescript": true,
+    "postcss": true,
+    "sharp": true
+  },
+  "execution": {
+    "owner_reviews": "HOLD",
+    "full_checkout": "BLOCKED",
+    "npm_ci": "NOT_RUN",
+    "typescript": "NOT_RUN",
+    "next_build": "NOT_RUN",
+    "chromium": "NOT_RUN",
+    "product_promotion": "HOLD",
+    "w8_c07": "HOLD",
+    "w8_c08": "NOT_RUN",
+    "c05": "HOLD"
+  },
+  "acceptance": {
+    "ui_previous": "21/40",
+    "ui_current": "21/40",
+    "w8_previous": "3/8",
+    "w8_current": "3/8",
+    "delta": 0,
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "rollback": "Revert isolated child or close draft PR; PR39/product-dev/main unchanged"
+}
