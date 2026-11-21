@@ -24,13 +24,15 @@
     "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py",
     "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md",
     "catalog/revisions/MI01_W8_CORE0207_C50_R1_20261121.json",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md"
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json"
   ],
   "review_files": {
     "tests/integration/core0207_crypto50_r1/CONTRACT.json": "537e0c35592ca7366a52ab87c08db7e419f18b71",
     "tests/integration/core0207_crypto50_r1/run_core0207_c50_r1.py": "cc467843bf11857fbbd9df19e513626fb7de85bf",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "d60b742de1f6459a09b82df66e06ea9e28a4fa30",
-    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md": "d5c47e1485420517229211090eac6223b5591b8d"
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/CONTRACT_REVIEW_AND_EXECUTION_HANDOVER.md": "8ea5ebd64205274671b0a35c05da852400b407e7",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md": "d5c47e1485420517229211090eac6223b5591b8d",
+    "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_CORE29_R1_ACTUAL_EVIDENCE_20261121.json": "69144f1bc414fe044c91458253e030f2e2c54527"
   },
   "immutable_original_blobs": {
     "historical_lock": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
@@ -97,7 +99,7 @@
         "classification": "STATIC_SOURCE_REVIEW_NOT_PYTHON_TEST"
       },
       "Python_compile": "PASS_ACTUAL_ISOLATED_LINUX_PYTHON_3_13_5_EXACT_GIT_BLOB_AST_AND_PY_COMPILE",
-      "user_Windows_execution": "NOT_RUN_WAITING_LOCAL_D0_OUTPUT",
+      "user_Windows_execution": "PASS_ACTUAL_NATIVE_WINDOWS_VERSIONED_LOCAL_D0_29_OF_29",
       "complete_C07": "HOLD",
       "C08_browser": "NOT_RUN",
       "independent_C05": "HOLD",
@@ -114,7 +116,21 @@
           "missing history => rejected"
         ],
         "original_stage": "UNTOUCHED_IN_SYNTHETIC_MOCK"
-      }
+      },
+      "native_case_count": 29,
+      "native_case_groups": {
+        "test_retained_snapshot_0201": "5/5 PASS",
+        "test_terminal_anchor_lifecycle_0203": "7/7 PASS",
+        "test_lifecycle_projection_p02": "8/8 PASS",
+        "test_lifecycle_prefix_p03": "9/9 PASS"
+      },
+      "native_source_files_verified": 55,
+      "original_stage_immutability_guard": true,
+      "native_report_sha256": "3a2713e3d0c37f6f017ff590589b727cc939d6a56823095337d92a786059d125",
+      "console_transcript_sha256": "8cc87ae5923a314d002f39850f0e7ad74e5479ba7c5550ece66b067105381a2f",
+      "report_reconstruction": "CONSOLE_JSON_4549_BYTE_RECONSTRUCTION_INDEPENDENT_SHA256_MATCH",
+      "native_stage": "E:\\AIOS\\W8\\PR36_W8_CERTIFI_LOCKED_20261121_132808\\stage",
+      "native_report_not_directly_uploaded": true
     }
   },
   "progress": {
@@ -177,5 +193,14 @@
     "Windows_operator_runbook": "docs/master-integration/MI01-W8-CORE0207-C50-R1-20261121/WINDOWS_LOCAL_D0_EXACT_SOURCE_RUNBOOK.md",
     "old_stage_mutation": "NONE",
     "prereq_failure_semantics": "INPUT_LOCATION_HOLD_NOT_TEST_FAIL"
+  },
+  "integration_blocker": {
+    "current_w8_adapter_blob": "0728ba08494bb8d67c7cec42fe27dd8606bdc7f3",
+    "original_runner_blob": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+    "historical_crypto_pin": "46.0.4",
+    "current_staged_crypto": "50.0.2",
+    "new_versioned_29_29": "PASS_D0_NOT_C07",
+    "next": "MI01_DEPENDENCY_OWNER_REVIEW_VERSIONED_W8_ADAPTER_THEN_FRESH_FULL_C07_AND_C08",
+    "status": "HOLD_OWNER_REVIEW"
   }
 }
