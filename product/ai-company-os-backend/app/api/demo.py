@@ -59,6 +59,12 @@ def _pinned_plan_json(name):
     return json.loads(raw.decode("utf-8"))
 
 
+def _canonical_plan_wire(value):
+    """Type-sensitive JSON comparison; Python dict equality conflates bool and int."""
+    return json.dumps(value, sort_keys=True, separators=(",", ":"),
+                      ensure_ascii=False, allow_nan=False)
+
+
 @app.get("/demo/v1/core/plan-projection")
 def plan_projection():
     """Read the existing fixed compiler output, never synthesize real authority."""
@@ -68,7 +74,7 @@ def plan_projection():
         sample = _pinned_plan_json("core.preview.json")
         result = canonical_plan(sample["plan"])
         expected = _pinned_plan_json("core.plan.projection.json")
-        if result != expected:
+        if _canonical_plan_wire(result) != _canonical_plan_wire(expected):
             raise ValueError("D0_PLAN_RESPONSE_DRIFT_HOLD")
         return JSONResponse(result, headers=headers)
     except GraphError as exc:
