@@ -1,5 +1,6 @@
 """D0 synthetic source candidate. No runtime, external calls, or mutating routes."""
 from pathlib import Path
+from hashlib import sha256
 import json
 from fastapi import FastAPI, HTTPException
 
@@ -41,14 +42,44 @@ def core_preview():
             "event_preview": replay_preview(sample["events"], sample["layout"])}
 
 
+# These exact D0 file pins match the canonical product SOURCE_MANIFEST.
+# A content digest is not a signature, IAM grant, runtime receipt or release proof.
+_CORE_PLAN_FILES = {
+    "core.preview.json": (8418, "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"),
+    "core.plan.projection.json": (2462, "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"),
+}
+
+
+def _pinned_plan_json(name):
+    expected_size, expected_digest = _CORE_PLAN_FILES[name]
+    with (FIXTURE.parent / name).open("rb") as file:
+        raw = file.read(expected_size + 1)
+    if len(raw) != expected_size or sha256(raw).hexdigest() != expected_digest:
+        raise ValueError("D0_PLAN_SOURCE_PIN_HOLD")
+    return json.loads(raw.decode("utf-8"))
+
+
 @app.get("/demo/v1/core/plan-projection")
 def plan_projection():
-    # Fixed synthetic fixture only; no user input or writes.
-    sample = json.loads((FIXTURE.parent / "core.preview.json").read_text(encoding="utf-8"))
+    """Read the existing fixed compiler output, never synthesize real authority."""
+    headers = {"Cache-Control": "no-store"}
+    from fastapi.responses import JSONResponse
     try:
-        return canonical_plan(sample["plan"])
+        sample = _pinned_plan_json("core.preview.json")
+        result = canonical_plan(sample["plan"])
+        expected = _pinned_plan_json("core.plan.projection.json")
+        if result != expected:
+            raise ValueError("D0_PLAN_RESPONSE_DRIFT_HOLD")
+        return JSONResponse(result, headers=headers)
     except GraphError as exc:
-        raise HTTPException(status_code=409, detail={"mode": "D0_PLAN_HOLD", "reason": str(exc), "dispatch_allowed": False}) from exc
+        return JSONResponse(
+            {"detail": {"mode": "D0_PLAN_HOLD", "reason": str(exc), "dispatch_allowed": False}},
+            status_code=409, headers=headers,
+        )
+    except (OSError, ValueError, TypeError, KeyError, UnicodeError):
+        return JSONResponse(
+            {"mode": "D0_PLAN_READBACK_HOLD"}, status_code=503, headers=headers,
+        )
 
 
 from fastapi.responses import JSONResponse
