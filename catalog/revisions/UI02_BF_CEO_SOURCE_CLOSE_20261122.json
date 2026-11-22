@@ -1,0 +1,61 @@
+{
+  "task_id": "MI05-UI02B-F-CEO-COMMAND-SOURCE-CLOSE-20261122",
+  "owner": "MI-05",
+  "status": "ISOLATED_CODE_READY_OWNER_HOLD",
+  "parent": {
+    "ref": "integration/mi05-ui012-ceo-combined-review-20261122",
+    "sha": "5b6b5456a7a40e13bddc524f6476ab2d2339977e",
+    "manifest_blob": "097d4bb1e9a4a5b1acad50ccdd176e7caf7ade76",
+    "manifest_entries": 556
+  },
+  "source_pins": [
+    {
+      "path": "product/ai-company-os-frontend/design-system/MetricCards.tsx",
+      "blob": "20ba4e7a32d03dac612bb3ff293d64dfabcff4b0",
+      "bytes": 1024,
+      "sha256": "fefa8e7ad28bc935f7a7ab376761f1e521704b633db0964f623edbb3811b69e5"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "blob": "4a35c712a92a609e8ed07e5ea28d24a15eb67576",
+      "bytes": 5475,
+      "sha256": "7f8746fbb8f5fc26d8de369af229042fe53ebc485eae3d0c5d1717ef35d19b67"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+      "blob": "c8a333c82c3706f3b8e4ee191034bdf30bec1187",
+      "bytes": 7235,
+      "sha256": "e8981dce5fbef9006194688c40f6f8959afb573b7b4cafc1e6860d9b2c6dd503"
+    }
+  ],
+  "manifest_expected_entries": 557,
+  "scoped_tests": {
+    "total": 63,
+    "pass": 63,
+    "fail": 0,
+    "node": "22.16.0",
+    "ts": "5.8.3",
+    "mocked": true,
+    "tap_sha256": [
+      "56df2a5e61d749e98795f88547c390151271fd3a75642e64a16e2a2da45396d4",
+      "6c2190dad6ab2bf490a86dfc3b8772418c593a497ba022b2da931f2ffe90301e",
+      "fe248458ead5a1cda733754cf621aebe168bac40193383685a2967b203c3c733"
+    ]
+  },
+  "gates": {
+    "owner_review": "HOLD",
+    "full_typecheck": "NOT_RUN",
+    "next_build": "NOT_RUN",
+    "chromium": "NOT_RUN",
+    "independent_c05": "HOLD",
+    "product_promotion": "HOLD"
+  },
+  "acceptance": {
+    "ui_before": "21/40",
+    "ui_after": "21/40",
+    "w8_before": "3/8",
+    "w8_after": "3/8",
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "rollback": "Revert isolated child commit only; no API DB or security authority changes."
+}
