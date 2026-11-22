@@ -42,6 +42,44 @@ class CorePlanReadBoundaryTests(TestCase):
                     self.assertEqual(response.headers["cache-control"], "no-store")
                     path.write_bytes(original)
 
+    def test_actually_missing_fixture_fails_closed(self):
+        for missing_name in demo._CORE_PLAN_FILES:
+            with self.subTest(missing_name=missing_name), TemporaryDirectory() as temporary:
+                directory = Path(temporary)
+                for name in demo._CORE_PLAN_FILES:
+                    if name != missing_name:
+                        (directory / name).write_bytes((demo.FIXTURE.parent / name).read_bytes())
+                with patch.object(demo, "FIXTURE", directory / "office.snapshot.json"):
+                    response = self.client.get(ROUTE)
+                self.assertEqual(response.status_code, 503)
+                self.assertEqual(response.json(), {"mode": "D0_PLAN_READBACK_HOLD"})
+                self.assertEqual(response.headers["cache-control"], "no-store")
+
+    def test_equal_size_tampered_fixture_fails_closed(self):
+        for changed_name in demo._CORE_PLAN_FILES:
+            with self.subTest(changed_name=changed_name), TemporaryDirectory() as temporary:
+                directory = Path(temporary)
+                for name in demo._CORE_PLAN_FILES:
+                    (directory / name).write_bytes((demo.FIXTURE.parent / name).read_bytes())
+                source = directory / changed_name
+                raw = source.read_bytes()
+                source.write_bytes(bytes([raw[0] ^ 1]) + raw[1:])
+                self.assertEqual(source.stat().st_size, len(raw))
+                with patch.object(demo, "FIXTURE", directory / "office.snapshot.json"):
+                    response = self.client.get(ROUTE)
+                self.assertEqual(response.status_code, 503)
+                self.assertEqual(response.json(), {"mode": "D0_PLAN_READBACK_HOLD"})
+
+    def test_boolean_integer_wire_drift_fails_closed(self):
+        expected = json.loads((demo.FIXTURE.parent / "core.plan.projection.json").read_text(encoding="utf-8"))
+        drifted = {**expected, "dispatch_allowed": 0}
+        self.assertEqual(drifted, expected)  # Python dict equality misses the type mismatch.
+        with patch.object(demo, "canonical_plan", return_value=drifted):
+            response = self.client.get(ROUTE)
+        self.assertEqual(response.status_code, 503)
+        self.assertEqual(response.json(), {"mode": "D0_PLAN_READBACK_HOLD"})
+        self.assertEqual(response.headers["cache-control"], "no-store")
+
     def test_unavailable_source_fails_closed(self):
         with patch.object(demo, "_pinned_plan_json", side_effect=OSError("missing")):
             response = self.client.get(ROUTE)
