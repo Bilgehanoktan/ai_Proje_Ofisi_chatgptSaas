@@ -1,0 +1,78 @@
+{
+  "task_id": "MI05-UI012-COMBINED-PREWINDOWS-20261122",
+  "status": "ISOLATED_COMBINED_SOURCE_ONLY_MI05_MI01_REVIEW_HOLD",
+  "base": {
+    "branch": "integration/mi05-ui01d-pinned-lock-stage-20261122",
+    "sha": "1a75ea2cd287f8fbeab01f4ce5fd89c4197ba2c9",
+    "manifest_blob": "aa36b436f3c41cb896cbb63dd385952989836105",
+    "entries": 555
+  },
+  "upstream_ui02": {
+    "branch": "integration/mi05-ui02a-ceo-provenance-isolated-20261122",
+    "sha": "659fa93ca60364395095a0efe74ab3ed37051303",
+    "manifest_blob": "a0fef0821e19fed773405a9cef111895b1bbeac2",
+    "entries": 553
+  },
+  "source_file_updates": [
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+      "bytes": 3743,
+      "sha256": "1b99e9449d2cbedb8a918c5acf99d001a3b101a24d3fb461eaa1686482d6c6d2"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+      "bytes": 1773,
+      "sha256": "fa5d97834198166111dd96b9267b0927b2f46c03c1fed7dda7c902204c6f0007"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui02-ceo-provenance.test.cjs",
+      "bytes": 5283,
+      "sha256": "cb40e1ca8789a2c7d8d9c5f698a223ee1f7a9fe929bac100ca2e704fc83af57a"
+    }
+  ],
+  "intersection": [
+    "product/SOURCE_MANIFEST.json"
+  ],
+  "expected_manifest_entries": 556,
+  "actual_targeted_tests": {
+    "total": 52,
+    "passed": 52,
+    "failed": 0,
+    "environment": "Node 22.16.0 / TS5.8.3 global / local exact test blobs / mocked React",
+    "results": [
+      {
+        "tests": 40,
+        "pass": 40,
+        "tap_sha256": "c828ae6ee33298bc45817d52dfa9935eedc0c187b32c6530690ab623916cf809"
+      },
+      {
+        "tests": 8,
+        "pass": 8,
+        "tap_sha256": "f6bec71af693f075e268f69cd93af2f1f2ec067773b8baec1bb48acc9255f987"
+      },
+      {
+        "tests": 4,
+        "pass": 4,
+        "tap_sha256": "afbe97bb099c2ba3b1d34fa073998df33788a4bbbd21769fed673a7fe27612ca"
+      }
+    ]
+  },
+  "gates": {
+    "owner_review": "HOLD",
+    "full_next_build": "NOT_RUN",
+    "locked_typecheck": "NOT_RUN",
+    "chromium": "NOT_RUN",
+    "w8_c07": "HOLD",
+    "w8_c08": "NOT_RUN",
+    "independent_c05": "HOLD",
+    "product_dev_promotion": "HOLD"
+  },
+  "acceptance": {
+    "ui_before": "21/40",
+    "ui_after": "21/40",
+    "w8_before": "3/8",
+    "w8_after": "3/8",
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "rollback": "Normal revert of isolated child commit; PR40 and PR42 remain unaffected."
+}
