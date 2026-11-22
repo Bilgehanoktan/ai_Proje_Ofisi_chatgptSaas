@@ -1,6 +1,6 @@
 {
-  "revision": "MI01-W8-OTHER-CHATS-PR34-37-COLLISION-AUDIT-20261121",
-  "date": "2026-11-20",
+  "revision": "MI-P0-NEXT-OWNER-INTEGRATION-20261123",
+  "date": "2026-11-23",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
     "ref": "integration/product-dev",
@@ -14909,5 +14909,195 @@
     },
     "next": "Re-use exact PR38 clone; check source via direct R2 verify_aux before versioned 13 tests and C04; only install after verifying new stage contains both R2 auxiliary files, 28 reviewed wheels and exact certifi wheel + Python/npm locks; official C07 and independent security remain gated.",
     "rollback": "No product or prior stage changes; isolated stage not created during stopped run; wrapper can be corrected without touching pinned R2 source."
+  },
+  "mi_p0_next_owner_integration_20261123": {
+    "task_id": "MI-P0-NEXT-OWNER-INTEGRATION-20261123",
+    "date": "2026-11-23",
+    "classification": "READ_ONLY_GITHUB_RECONCILIATION_AND_SIX_OWNER_QUEUE_NO_PRODUCT_PROMOTION",
+    "previous_root_revision": "MI01-W8-OTHER-CHATS-PR34-37-COLLISION-AUDIT-20261121",
+    "previous_root_date": "2026-11-20",
+    "repository": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+    "pinned_heads": {
+      "governance": "3ad51e295b88fb32f525c5aa1e7eb053fd26bb96",
+      "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+      "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "PR19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "PR31": "98998942ad5cec0cbc9629ab7839501dd22f05d3",
+      "PR38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+      "PR41": "ebd307fecc081a523fec1cefcb5070cc3e38a977",
+      "PR44": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+      "PR45": "17911f73003e6ac303579d40d4a9aac8a3e2fe98",
+      "PR46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "PR47": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "PR48": "59400debd73bf3b5e2df1e0d2fe008fd4e633917"
+    },
+    "pr_review_status": "ALL_NINE_OPEN_DRAFT_UNMERGED_ZERO_SUBMITTED_GITHUB_REVIEWS",
+    "completed_scoped_evidence_not_owner_acceptance": [
+      "PR19 exact prior immutable D0 CI 72/72 on own source; not candidate PR31",
+      "PR31 combined 566 product/565 manifest static paths+sizes and 18 owner original blob matches; no complete runtime/independent SHA audit",
+      "PR38 source audit 552/552 + 17 pairs +31 auxiliary PASS via operator attestation, raw logs independently unverified; 13/13 local synthetic separately attested",
+      "PR44 exact one-line runner SHA retarget and guard retention; original current OperationsStore 7 NOT_RUN",
+      "PR45 scoped UI Node/TS 63/63 local PASS; not complete Next/Chromium",
+      "PR48 original reader 12/12 + new freshness 9/9 scoped local PASS; not source freshness/real office",
+      "PR47 R2 2/2 exact GitHub source blobs and 5/5 static inherited pins; 9 new TestClient methods NOT_RUN"
+    ],
+    "open_and_hold": {
+      "NW01": "PARTIAL_STATIC_SOURCE_PASS_OWNER_AND_MANIFEST_COMPOSITION_HOLD",
+      "NW02": "PR31_authority_b28788f46a39c282d79d29c4abd817ed5fc9de99_vs_PR46_d492c6d3ea99214e28c0fa4e772139169bd39a17_OWNER_SECURITY_HOLD_6_NEW_TESTS_NOT_RUN",
+      "NW03": "PR44_RUNNER_SOURCE_PIN_PASS_ORIGINAL_7_CURRENT_OPERATIONSSTORE_NOT_RUN_BLOCKED_CHECKOUT",
+      "NW04": "TRUSTED_ISSUER_CUSTODY_REVOCATION_PG_PROTECTED_COMMIT_RESTORE_AND_SINK_FENCE_HOLD",
+      "NW05": "PR31_4GET_STATIC_ONLY_PR45_48_UI_HISTORY_ONLY_NO_AUTHENTICATED_SHARED_PROJECTION",
+      "NW08": "MANDATORY_SUPPLY_CHAIN_LICENSE_TRUST_PREFLIGHT_INDEPENDENT_HOLD",
+      "NW09": "EVIDENCE_MATRIX_DEDUP_AND_APPROVED_GROUP_DENOMINATORS_PENDING",
+      "W8": "OFFICIAL_C07_HOLD_CHROMIUM_C08_NOT_RUN_INDEPENDENT_C05_HOLD_3_OF_8",
+      "API": "PR47_STALE_MANIFEST_9_NEW_TESTS_NOT_RUN_LEGACY_PR2_3_OWNER_LINEAGE_HOLD"
+    },
+    "manifest_reconciliation": {
+      "canonical_entries": 552,
+      "PR31_entries": 565,
+      "PR45_entries": 557,
+      "PR46_entries": 561,
+      "PR48_entries": 558,
+      "PR47_manifest": "UNCHANGED_CANONICAL_MISSING_1_NEW_TEST_AND_1_MODIFIED_API_METADATA",
+      "projected_selected_all_unique_entries": 572,
+      "projected_selected_all_product_files_including_manifest": 573,
+      "status": "PROJECTION_ONLY_NO_COMPOSED_TREE_NO_OWNER_APPROVAL_NO_WRITE",
+      "shared_writer": "CENTRAL_ONLY_AFTER_SOURCE_OWNER_EXPLICIT_APPROVAL",
+      "no_double_add": "PR46_CHILD_OF_PR19_ALREADY_IN_PR31;PR48_CHILD_OF_PR45_FULL_UI_ANCESTRY_ONCE"
+    },
+    "six_active_owner_next": [
+      {
+        "workstream": "01-CENTRAL",
+        "task": "NW01_OWNER_MANIFEST_GATE",
+        "responsible_role": "central integration single-writer",
+        "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+        "head_sha": "98998942ad5cec0cbc9629ab7839501dd22f05d3",
+        "allowed_paths": [
+          "progress/MASTER_INTEGRATION_CURRENT.json",
+          "read-only product/SOURCE_MANIFEST.json",
+          "isolated approved composition after owner signoff"
+        ],
+        "acceptance": "explicit MI03/04, MI05/06, API owners; exact per-file Git blob SHA256 bytes mode; no duplicate keys; full checked-out tree; before any source promotion",
+        "dependency": "NW02 authority owner selection, PR48 UI ancestry, PR47 manifest metadata, W8 lock",
+        "rollback": "preserve canonical; abandon isolated composition or normal limited revert"
+      },
+      {
+        "workstream": "05-CORE-IAM-DB",
+        "task": "NW02_PR31_VS_PR46_AUTHORITY_OWNER_REVIEW",
+        "responsible_role": "MI03/04 Core and security reviewers",
+        "base_sha": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+        "head_sha": "098486f272047a4fef8ba07b90738f2baeb5351e",
+        "allowed_paths": [
+          "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py"
+        ],
+        "acceptance": "one owner-reviewed D0 variant, six new methods plus scope mismatch negative and original locked regressions executed on exact source; independent issuer and PG still HOLD",
+        "dependency": "PR19 base, complete authorized clean checkout and locks; NW03 current ORG seven queued not credited",
+        "rollback": "close PR46 or normal child revert; preserve PR19/31 original blob"
+      },
+      {
+        "workstream": "03-API-W2",
+        "task": "API_R2_PR47_EXACT_SOURCE_REGRESSION",
+        "responsible_role": "03API/W2",
+        "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+        "head_sha": "a647095f57c319210596a3552dfacf40a37baf2d",
+        "allowed_paths": [
+          "product/ai-company-os-backend/app/api/demo.py",
+          "product/ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py"
+        ],
+        "acceptance": "9 focused exact-lock TestClient methods and impacted originals, 200/409/503/no-store/typed JSON; historic PR2/3 lineage and central manifest handoff",
+        "dependency": "full clean checkout and locked dependencies; no 03API manifest ownership",
+        "rollback": "close PR47 or scoped revert to canonical demo.py blob 4d80172bc467953039ff57296055f68d740a3ff2"
+      },
+      {
+        "workstream": "02-UI-OFFICE",
+        "task": "UI_R2_PR48_PROJECTION_OWNER_CONTRACT",
+        "responsible_role": "MI05/MI06 and W8 dependency owner",
+        "base_sha": "17911f73003e6ac303579d40d4a9aac8a3e2fe98",
+        "head_sha": "59400debd73bf3b5e2df1e0d2fe008fd4e633917",
+        "allowed_paths": [
+          "product/ai-company-os-frontend/features/data/projectionRead.ts",
+          "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+          "product/ai-company-os-frontend/tests/ui03-projection-freshness.test.cjs"
+        ],
+        "acceptance": "approve historical-only display TTL/HOLD, 9 GET keys and PR31 4GET static contract; preserve entire UI ancestry once; full browser remains NOT_RUN",
+        "dependency": "PR39-40-43-45 ancestry, MI05/06 owners, central manifest and W8 exact dependency",
+        "rollback": "close PR48 or normal child revert; no new DB/event"
+      },
+      {
+        "workstream": "09-W8-QA",
+        "task": "NW08_W8_LOCK_LICENSE_PREFLIGHT",
+        "responsible_role": "MI01/W8 and supplier/license owner",
+        "base_sha": "63fa94f5c73924940311b120e485c3ae34b87df6",
+        "head_sha": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+        "allowed_paths": [
+          "read-only PR38 test contract and lock/wheel review",
+          "existing signed/hashed operator evidence; no old stage deletion"
+        ],
+        "acceptance": "existing 552/552 source audit reused, 28 wheel and npm 61 supply-chain provenance/license reviewed, C07 release adapter separate; no unapproved CI",
+        "dependency": "independent preflight review, full source lock and disk resources; Windows C07/C08 intentionally deferred",
+        "rollback": "preserve PR34-38 and stages, no auto dependency upgrade"
+      },
+      {
+        "workstream": "10-INDEPENDENT-SECURITY-IV",
+        "task": "NW08_09_INDEPENDENT_PRECHECK_AND_EVIDENCE_MATRIX",
+        "responsible_role": "independent security and IV custodian, not central operational manager",
+        "base_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+        "head_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+        "allowed_paths": [
+          "read-only security policy/ADR and A-AT01..08 evidence matrix",
+          "read-only original signed/test logs; no security authority edits"
+        ],
+        "acceptance": "separate issuer/monotonic witness/full-restore/receiver fence gap register and mandatory package/license preflight; no self-signed IV or C05 approval",
+        "dependency": "D03/D04 Option A normative review, MI03/04 owners, exact W8 graph, independent authorized custodian",
+        "rollback": "no product writes; retain old test/evidence ledger"
+      }
+    ],
+    "architecture_mapping": {
+      "target": "v11.6.135-rc1 plus effective approved ADR/CEO decisions",
+      "architectural_domains": 21,
+      "submodules": 63,
+      "technical_areas": 24,
+      "worktypes": [
+        "RESEARCH",
+        "EXCEL_W1",
+        "OBLIGATION"
+      ],
+      "product_phases": 8,
+      "disposition": "SOURCE_ONLY_CONTRACT_ALIGNMENT_NO_NORMATIVE_CHANGE_NO_FULL_CLAUSE_BY_CLAUSE_ATTESTATION"
+    },
+    "progress": {
+      "weights": {
+        "design": 15,
+        "source": 35,
+        "functional_tests": 20,
+        "integration": 20,
+        "final_acceptance": 10
+      },
+      "weighted_previous": "HESAPLANAMADI",
+      "weighted_current": "HESAPLANAMADI",
+      "weighted_delta": "HESAPLANAMADI",
+      "approved_group_denominators": "0/10",
+      "acceptance_previous_and_current": {
+        "Core": "12/16",
+        "UI": "21/40",
+        "W8_operational": "3/8",
+        "MVP": "0/11",
+        "Independent_IV": "0/7"
+      },
+      "acceptance_delta_pp": 0,
+      "ordinal_24": "TRACK-0227 retained 24 rows unchanged; source = progress/PROGRAM_GLOBAL_SNAPSHOT_20261120.json",
+      "ordinal_delta": 0,
+      "product_files_previous": 553,
+      "product_files_current": 553,
+      "product_files_delta": 0,
+      "tests_new_this_round": 0,
+      "product_code_changes": 0,
+      "PR_merges": 0,
+      "independent_approvals": 0
+    },
+    "next_gate": "OWNER NW02 authority decision and NW03 7-case current OperationsStore; then NW04/NW05, independent NW08/NW09; C07/C08/C05 after preflight",
+    "rollback": "revert this single governance-only append on planning branch; do not force push or alter source history",
+    "ceo_decision": "NO_NEW_CEO_DECISION_FOR_REVIEW_OR_QUEUE; independent trust/root/PROD/CI expansion if later required remain separate authorization"
   }
 }
