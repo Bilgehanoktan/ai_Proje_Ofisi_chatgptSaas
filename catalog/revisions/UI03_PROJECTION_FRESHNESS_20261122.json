@@ -1,0 +1,43 @@
+{
+  "task": "MI05-UI03-D0-PROJECTION-FRESHNESS-20261122",
+  "parent_sha": "17911f73003e6ac303579d40d4a9aac8a3e2fe98",
+  "canonical_sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "classification": "ISOLATED_SOURCE_REVIEW_OWNER_HOLD",
+  "paths": [
+    "ai-company-os-frontend/features/data/projectionRead.ts",
+    "ai-company-os-frontend/features/data/useProjectionRead.ts",
+    "ai-company-os-frontend/tests/ui03-projection-freshness.test.cjs"
+  ],
+  "symbols": [
+    "createProjectionReader",
+    "readStatus",
+    "useProjectionRead"
+  ],
+  "backend_api": "UNCHANGED_GET_D0_ONLY",
+  "database": "NONE",
+  "events": "NONE",
+  "security": "NO_IAM_OR_IV_AUTHORITY",
+  "tests": {
+    "original": {
+      "passed": 12,
+      "total": 12,
+      "tap_sha256": "d29b454ff6ee772366a7e39bd82f044f738d48847df2bec05ef48f12df6757a5"
+    },
+    "new": {
+      "passed": 9,
+      "total": 9,
+      "tap_sha256": "7b3259f7363acd6454e0734ab31b36ea95dcbbfd37976dc30657a749c8978e74"
+    },
+    "scoped_tsc": "PASS_STUB_ONLY",
+    "full_next_build": "NOT_RUN",
+    "chromium": "NOT_RUN"
+  },
+  "acceptance": {
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7"
+  },
+  "owner_review": "HOLD",
+  "rollback": "REVERT_CHILD_COMMIT_OR_ABANDON_DRAFT"
+}
