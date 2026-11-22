@@ -1,0 +1,67 @@
+{
+  "task_id": "MI05-UI02A-CEO-D0-EVIDENCE-PROVENANCE-20261122",
+  "status": "ISOLATED_DEV_SOURCE_OWNER_REVIEW_HOLD",
+  "owner": "MI-05 / Premium UI",
+  "base": {
+    "branch": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "manifest_entries": 552
+  },
+  "scope": "existing CEO OperationalReadback only, read-only presentation",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+      "bytes": 3743,
+      "sha256": "1b99e9449d2cbedb8a918c5acf99d001a3b101a24d3fb461eaa1686482d6c6d2",
+      "kind": "modified_existing_product"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+      "bytes": 1773,
+      "sha256": "fa5d97834198166111dd96b9267b0927b2f46c03c1fed7dda7c902204c6f0007",
+      "kind": "modified_existing_product"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui02-ceo-provenance.test.cjs",
+      "bytes": 5283,
+      "sha256": "cb40e1ca8789a2c7d8d9c5f698a223ee1f7a9fe929bac100ca2e704fc83af57a",
+      "kind": "new_original_regression_extension"
+    }
+  ],
+  "reused_original_test": {
+    "path": "product/ai-company-os-frontend/tests/ui-p10j17-ceo.test.cjs",
+    "git_blob": "27167d887f7cd228f8ea6f83887b444f74b2b1e1",
+    "unchanged": true
+  },
+  "tests": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "mode": "transpiled_original_react_mock_no_browser",
+    "original": 9,
+    "new": 10,
+    "total": 19,
+    "failed_final": 0,
+    "original_first_attempt_fail": 2,
+    "diagnosis": "new dd tags inflated prior budget-only dom count; replaced new dl with ul without changing original test",
+    "tap_sha256": "6adb0568d3b0e6db63e7d11b5b138cf4c14d6224d0bf7a7f925133c73096aa3f"
+  },
+  "gates": {
+    "original_scoped_regression": "PASS",
+    "new_targeted": "PASS",
+    "full_typecheck": "NOT_RUN",
+    "next_build": "NOT_RUN",
+    "chromium": "NOT_RUN",
+    "owner_review": "HOLD",
+    "product_dev_transfer": "HOLD",
+    "independent_IV": "HOLD"
+  },
+  "acceptance": {
+    "ui_before": "21/40",
+    "ui_after": "21/40",
+    "w8_before": "3/8",
+    "w8_after": "3/8",
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "rollback": "Revert isolated commit; no API, DB, event, IAM, authorization or runtime changes."
+}
