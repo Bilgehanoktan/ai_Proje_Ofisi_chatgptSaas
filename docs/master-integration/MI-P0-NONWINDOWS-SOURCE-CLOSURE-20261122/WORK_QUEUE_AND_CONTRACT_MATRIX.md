@@ -60,3 +60,43 @@
 - Kanonik ürün kabulü: W8 **3/8 (%37.5)**; Core **12/16 (%75)**; UI **21/40 (%52.5)**; MVP **0/11**; IV **0/7**. Tümü önceki/güncel aynı; Δ0.
 - Bu planın durumunu `DESIGN_WORK_QUEUE_DRAFT` say; **ürün kodu geliştirildi, birleşti, testten geçti veya kabul edildi** denemez.
 - İzole teslimat dalı tabanı: `3ad51e295b88fb32f525c5aa1e7eb053fd26bb96`; sadece bu doküman. Yeni mimari karar, manifest/code/CI değiştirilmez. Sonraki yetkili hamle **NW02 authority variant owner review + NW03 current ORG G7 original tests planı**, sonra NW04–07 owner-specific kaynak ilerlemesi. Önceki/historik SHA ve her testi koru.
+
+
+
+## 2026-11-22 NW02–NW05 uygulama ve entegrasyon R1 (git readback, source-only; Windows ertelendi)
+
+**Kaynak doğrulaması:** HEAD'ler gözlem anında sabit: PR19 \`0a8907f177bb3e9b458aefb3ea3441b15537f542\`, PR29 \`59c098b0ec3387ef1318e4957248e843e1526d81\`, PR31 \`98998942ad5cec0cbc9629ab7839501dd22f05d3\`, PR32 parent \`d48b6fea8021db0d470d6e1eadfd4a539fc9e748\`. Canonical \`254e0188998d0d245bd8ee4eb901aead02951a66\` değişmedi. PR31 mevcut 10 G2 +8 Office source blob'u sahip PR'ına birebir eşleşir; entegrasyon bu **izole kaynak-adayı seviyesinde yapılmış**, otomatik kabul değildir.
+
+### NW03 — Gerçek dar kaynak kodu düzeltmesi: PR44
+- **Değişiklik:** mevcut PR32 \`scripts/pc-tests/20261120/verify_current_org_g7.py\` içinde \`EXACT_CHECKOUT\` eski \`93e6c84db1a061ee914aa2c1d543620404515c0b\` → PR19 yetkili güncel \`0a8907f177bb3e9b458aefb3ea3441b15537f542\`. Diğer 227 satır aynı.
+- **İzole kod dalı / PR:** \`review/mi-p0-nw03-g7-current-owner-head-20261122\`, draft child **PR44**, commit \`098afa1c0122d9d2b278898fece94b0adc1fab07\`, parent PR32 head \`d48b6fea...\`. PR32 asıl dalında sıfır değişiklik. **Sahip incelemesi zorunlu**, otomatik merge yok.
+- **Geri okuma:** önceki runner blob \`48bc0a7c6582defac61a5e346fd923af200d1d88\`, sonrası \`fd76499ab82f4b8d01b8c27008311e254d34158d\`. Exact single-string-only byte replacement PASS; existing 7 original method IDs, \`G7_CURRENT_PRODUCT_ORG_RUNTIME_NOT_PASS\`, kaynak temizliği, import-origin ve false historical \`OpsStore\` guard'ları korundu.
+- **Canlı PR19 yol eşlemesi:** 5/5 original hard-pin Git blobs hâlâ tam eş: manifest \`566b7210b6edb95a21b999dc1d881a12284d9011\`, güncel \`durable_ops.py\` \`619fe224c05d7f7f7efe998583e4730cb2cb4d3e\`, tarihsel R3 \`43ed448c02904ab44b3cf8665f4aeafb0a38f10a\`, özgün G7 test \`6bd86d7972c8bca511b5702117be3542431e7493\`, G7 pin JSON \`cef9ce82a497522d2e4a9347b77453879e4790f3\`. Eski → yeni PR19 commit karşılaştırmasında tek değişiklik \`.github/workflows/mi04-g2-553-isolated-cross-suite.yml\`; yeni test veya CI çalıştırılmadı. \`7/7\` **NOT_RUN**.
+- **Rollback:** PR44 kapat; gerekirse yalnız bu commit'i normal revert et; PR32/19/31 ve kanıtlar korunur.
+
+### NW02 — API/DB entegrasyon sınırı (HOLD; güvenlik bypass yok)
+- Mevcut \`intent_authority.py\` G2 owner blob \`b28788f46a39c282d79d29c4abd817ed5fc9de99\` \`D0IntentAuthority.create(...,iam_bootstrap=True)\` ve \`claim_and_fence(...,session_check=SessionClaimCheck)\` ile yeni D0 IAM-in-DB yolu sağlıyor. \`iam_session.py\` blob \`f3c37428acd475e09c228bce47d534d6584cd944\` \`bootstrap_durable\` bu modu etkinleştiriyor.
+- **Tam saptanmış çağrı sınırı:** aynı authority modülündeki \`execute_authority_fenced_transition\` satır 168 \`authority.claim_and_fence(root,pin.scope_sha,pin.binding,pin.transaction_ref,pin.request_digest)\` çağrısına **session_check geçirmiyor**. Active \`iam_*\` tablo durumunda \`_check_iam(None)\` açıkça \`D0_IAM_CHECK_REQUIRED_HOLD\` yükseltiyor. Bu fail-closed davranış release-ready değil; **casus bir yerel grant kapısı açılmamalı**. Yalnız MI-03/04/Core owner kararından sonra, doğru issuer provenance/trust boundary ve test kapsamıyla bu eksik API bağı değerlendirilmeli.
+- İlgili mevcut D0 testi \`tests/test_iam_authority_d5g2.py\` blob \`16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c\`: source'da legacy claim blocked ve explicit SessionClaimCheck case'leri var; bunları 7/7 G7 ve gerçek IAM grant olarak sayma.
+- **Minimum owner kriterleri:** açık yetki kaynağı, session/revocation, duplicate scope/tx, partial \`iam_*\` schema, claim/publisher interleaving, stale root, forged role/scope; güvenlik sahibi gerçek T1 backend yürütme yetkisini ayrı imzalamadan D0 HOLD kalır.
+
+### NW04 — Core/ORG/T1/DB sınırları
+- \`app/core/transaction/fenced_transition.py\` blob \`b43a8d1129138b917c499ad1091ac61940af1846\`: \`D0IntentJournal.stage\` **PENDING before T1**, \`local_revocation_fence\`, \`execute_fenced_transition\` ve \`CommitReceipt\` kontrolü. \`intent_authority.py\` atomik T1-öncesi claim tüketimini local \`BEGIN IMMEDIATE/COMMIT\` ile yapar, T1 sonrası ayrı SQLite/journal etkileri vardır. **Bu, bağımsız issuer/sink ile ortak durably atomic PG COMMIT değildir.**
+- \`durable_ops.py::OperationsStore\` blob \`619fe224c05d7f7f7efe998583e4730cb2cb4d3e\`: \`create_team/append_proposal\` \`BEGIN IMMEDIATE/commit\`, \`record_assignment_review\` D0 read/review + SQL. \`initialize_assignment_ops\` **yalnız boş, disposable sqlite** içindir, mevcut canlı ORG DB migrate edilmez. Mevcut \`core_org_session_review.py\` (\`83f8b81925025fe1dc8fdf5128455862be7bd2c2\`) kendi başlığında \`no commit authority\` ilan eder; test \`ed8963a87d69d62ae8a827a2d5c681c6cd1eb463\` simüle \`OpsStore\` kullanır.
+- **HOLD/NW04 gerçek geliştirme:** Sahibin gerçek PostgreSQL şema/row lock/RLS/nonowner grant, transaction boundary, independent monotonic root+receiver-side fencing, full restore replay ve audit proof tasarımı. Gerçek DB/runtime test **NOT_RUN**. Synthetic SQLite doğrulaması PG kabulü değildir. Rollback planı SQL migration rehearsal + independently adjudicated UNKNOWN queue; otomatik yeniden deneme yok.
+
+### NW05 — Mevcut birleşik Office/frontend ↔ backend salt okunur API kaynağı statik kontrat
+PR31 exact tree üzerinde 4 frontend GET \`app/api/demo/*/route.ts\` ve 4 backend \`app/api/*_projection.py\` dosyası **4/4 endpoint eşleşmesi**, her rota için 7 kaynak-temelli kontrol (**28/28 statik kontrol PASS**): \`@router.get\`, frontend \`GET\`, exact endpoint, 127.0.0.1 loopback, no-store/no frontend POST, 2500-ms / bounded JSON, backend+frontend 503 HOLD. **Çalışma zamanı veya browser testi değil**.
+| Frontend GET → Backend GET | Max body | FE Git blob | BE Git blob |
+| --- | ---: | --- | --- |
+| \`admission\` → \`/demo/v1/admission/sample-projection\` | 4096 | \`c46fa8f20e75370ce423f3ede63cd340926fe089\` | \`c8b1a36371ddacd2dbbc564970a5e04c413ba59b\` |
+| \`outbox\` → \`/demo/v1/outbox/review-projection\` | 4096 | \`12895f7c606665e6605017486473b4d2ebd8deb5\` | \`3dc3a9407ee626284c9388124843cb34ab132a6d\` |
+| \`task-budget\` → \`/demo/v1/task-budget/sample-projection\` | 8192 | \`b8c6a4e6021b05d126c027d17fc358cc2a7d2816\` | \`1787cf75ef8c1a0c5f120402d92e4db6fea83d6b\` |
+| \`office-workbench\` → \`/demo/v1/office/workbench-projection\` | 4096 | \`ae42ecccdda987c00537696f2698f49c374ec927\` | \`735f1aa950285b55278cc369ae08620c972f3f66\` |
+- İlk üç frontend route paylaşılan \`readBoundedD0Json.ts\` blob \`a1ff4a1690a0b113aa882de633e063c02f9535a4\` kullanır; \`office-workbench\` kendi \`boundToDeadline\` ve okuyucusunu kullanır. Dört backend router mevcut \`app/api/demo.py\` (\`4d80172bc467953039ff57296055f68d740a3ff2\`) üzerinden \`app.include_router\` ile eklenmiştir; \`app/main.py\` yalnız facade.
+- İçerik/tip kontrolü ve 503 fail-closed kaynak düzeyinde var. Kaynaklar D0 local demo projection; tenant-auth ve gerçek dış etki izni yoktur. **NW05 aktif onaylı kaynak adayı PR31**, ayrıca kopyalanacak yeni route yok. Gerçek combined source Node/Next, backend, browser ve tenant/projection testleri **NOT_RUN/HOLD**; 28/28 statik hiçbir kabulü değiştirmez.
+
+### R1 teslimat/istatistik/kapılar
+- **Kod:** yalnız NW03 PR44 bir satır, parent PR32 + kanonik ürün + PR19/29/31 değiştirilmedi. NW02/NW04 gerçek yetki kodu bağımsız onay öncesi yazılmadı; NW05 zaten PR31'de entegre kod adayını değiştirmeden eşleştirdi.
+- **Test:** yeni unit/runtime/PG/Windows/CI = 0; özgün test/CI geçmiş sonuçları korunur. Static contract NW03 5/5 source-pins, NW05 28/28; bunlar yeni ürün regresyonu değildir.
+- **Kabul:** W8 3/8; Core 12/16; UI 21/40; MVP 0/11; IV 0/7, her delta 0. Weighted geliştirme **HESAPLANAMADI**. H01 yeni CEO kararı şu aşamada gerekmez; root/issuer/PG & independent security owner signoff ayrıca gerekli.
