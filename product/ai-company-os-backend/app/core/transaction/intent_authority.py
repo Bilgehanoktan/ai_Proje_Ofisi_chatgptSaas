@@ -147,7 +147,8 @@ class D0IntentAuthority:
 
 def execute_authority_fenced_transition(*, authority, intent, context, registry, witness,
         expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
-        company=None, expected_company_binding=None, result=None, result_reader=None):
+        company=None, expected_company_binding=None, result=None, result_reader=None,
+        session_check=None):
     """Opt-in wrapper around 0210; no caller-supplied latest callback or live grant."""
     from app.core.transaction.fenced_transition import (execute_fenced_transition, intent_pin,
         resolve_fence_binding, resolve_result_binding, check_result_store_separation)
@@ -164,8 +165,21 @@ def execute_authority_fenced_transition(*, authority, intent, context, registry,
     fence_binding = resolve_result_binding(intent,context,registry,witness,expected_binding,company,
                                           company_pin,result,result_reader,clock() if result is not None else None,raw)
     pin = intent_pin(intent, fence_binding)
+    # D0 only: bind the server-owned session identity to the exact T1 intent.
+    # This is not an ORG grant, independent issuer, or production authorization.
+    if session_check is not None:
+        from app.core.iam_session import SessionClaimCheck, D0_SCOPE
+        from app.core.agent_runtime.lifecycle import Scope
+        scope = getattr(intent, 'scope', None)
+        if (type(session_check) is not SessionClaimCheck or type(scope) is not Scope
+                or session_check.scope != D0_SCOPE
+                or (scope.tenant_id, scope.company_id, scope.environment_id) != D0_SCOPE
+                or scope.principal_id != session_check.principal
+                or scope.agent_instance_id != session_check.agent):
+            raise ValueError('D0_AUTHORITY_SESSION_SCOPE_HOLD')
     root = RootPin(witness.record_sha, witness.key_sha, witness.recovery_epoch)
-    with authority.claim_and_fence(root, pin.scope_sha, pin.binding, pin.transaction_ref, pin.request_digest):
+    with authority.claim_and_fence(root, pin.scope_sha, pin.binding, pin.transaction_ref,
+                                   pin.request_digest, session_check=session_check):
         return execute_fenced_transition(intent, context, registry, witness, expected_binding,
             memory_path, reader, public_key, raw, journal, connect, clock, lambda: witness,
             company=company, expected_company_binding=expected_company_binding,
