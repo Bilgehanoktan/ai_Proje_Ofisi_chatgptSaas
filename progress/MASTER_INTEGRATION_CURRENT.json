@@ -1,5 +1,5 @@
 {
-  "revision": "MI-P0-NEXT-OWNER-INTEGRATION-20261123",
+  "revision": "MI-P0-NW01-OWNER-MANIFEST-CLOSURE-R4-20261123",
   "date": "2026-11-23",
   "mode": "CONTROLLED_INTEGRATION",
   "product_dev": {
@@ -15099,5 +15099,130 @@
     "next_gate": "OWNER NW02 authority decision and NW03 7-case current OperationsStore; then NW04/NW05, independent NW08/NW09; C07/C08/C05 after preflight",
     "rollback": "revert this single governance-only append on planning branch; do not force push or alter source history",
     "ceo_decision": "NO_NEW_CEO_DECISION_FOR_REVIEW_OR_QUEUE; independent trust/root/PROD/CI expansion if later required remain separate authorization"
+  },
+  "mi_p0_nw01_owner_manifest_closure_r4_20261123": {
+    "task_id": "MI-P0-NW01-OWNER-MANIFEST-CLOSURE-R4-20261123",
+    "date": "2026-11-23",
+    "status": "OWNER_HOLD_DELIVERED_TEST_TARGET_DECIDED_D0_ONLY_MANIFEST_PROJECTION_VERIFIED_NO_PRODUCT_PROMOTION",
+    "source_governance_base_head": "26dbca360c21cd2a4c7ec4064d21e807a5b7797a",
+    "canonical_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "reporting_head": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "candidate_heads": {
+      "PR31": "98998942ad5cec0cbc9629ab7839501dd22f05d3",
+      "PR44": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+      "PR46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "PR47": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "PR48": "59400debd73bf3b5e2df1e0d2fe008fd4e633917",
+      "PR49": "8b3c4e3dd7a0292d2ffabd23430fd24920e3c9ac"
+    },
+    "decisions": {
+      "NW02": {
+        "classification": "D0_REGRESSION_TARGET_CHOSEN_ONLY",
+        "owner": "MI03/04+Core",
+        "original_pr31_authority_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "selected_test_target_pr46_authority_blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+        "owner_signoff": "HOLD",
+        "independent_security": "HOLD",
+        "wrapper_existing_new": "6+6=12",
+        "original_12_runtime": "0/12 NOT_RUN",
+        "additional_negatives": "D0 scope 3-component and pre-T1 expiry/revocation pending existing suite owner",
+        "dependency": "direct requirements pinned; no reviewed transitive wheel/lock"
+      },
+      "NW03": {
+        "classification": "EXACT_RUNNER_SOURCE_GUARD_RETAINED",
+        "owner": "MI03/04+ORG",
+        "runner_pr44_head": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+        "target_pr19_head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+        "manifest_target_entries": 561,
+        "source_pins": 56,
+        "original_cases": "0/7 NOT_RUN_BLOCKED_EXACT_CHECKOUT",
+        "import_guard": "durable_ops.OperationsStore current product not historical fixture"
+      },
+      "API": {
+        "owner": "03API/W2",
+        "source_head": "a647095f57c319210596a3552dfacf40a37baf2d",
+        "head_demo_blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+        "head_test_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+        "missing_manifest": [
+          "ai-company-os-backend/app/api/demo.py (rebind old)",
+          "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py (new)"
+        ],
+        "nine_tests": "0/9 NOT_RUN_BLOCKED_LOCK",
+        "legacy_pr2_pr3_demo_blob": "679694d58f289d0cb763080467c16fb0e470e38c",
+        "owner_lineage": "HOLD_NO_AUTOMERGE"
+      },
+      "UI": {
+        "owner": "MI05/06",
+        "head": "8b3c4e3dd7a0292d2ffabd23430fd24920e3c9ac",
+        "ancestry": "PR39->PR40->PR43(includes PR42)->PR45->PR48->PR49 ONCE",
+        "panel_blob": "687443fdf73ef53bd39017b6581b7ce05e0f497a",
+        "new_test_blob": "9376c029905b82c8eaace11bde76d5211ccd5449",
+        "targeted_local_tap": "8/8 historical artifact checked in PR49",
+        "tap_blob": "f89c7cc6571b8db67dd61b66eb9ba055bdcf38f5",
+        "other_tests": "PR48 scoped 12/12+9/9 historical not rerun",
+        "manifest": "PR49 inherits PR48 blob c576cd213a9359328517f168aba2fc63ad2d0218; old SharedSnapshotPanel metadata plus missing R3 test",
+        "full_next_chromium": "NOT_RUN",
+        "source_owner_signoff": "HOLD"
+      },
+      "PR31": {
+        "owner": "MI-P0 central & MI03/04 & MI05/06",
+        "source": "566 product files 565 manifest entries static only",
+        "test": "full combined runtime NOT_RUN",
+        "source_approval": "HOLD"
+      },
+      "PG_IV": "protected_postgres_transaction T1_STRICT_COMMIT_EXPIRY_UNPROVEN_HOLD and independent issuer/root/PG RLS/sink-side fencing/restore replay HOLD"
+    },
+    "manifest_read_only_proposed": {
+      "base_entries": 552,
+      "PR31_entries": 565,
+      "PR46_entries": 561,
+      "PR49_actual_entries": 558,
+      "PR49_inherited_manifest_blob": "c576cd213a9359328517f168aba2fc63ad2d0218",
+      "PR47_actual_manifest_entries": 552,
+      "PR47_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+      "new_pr31": 13,
+      "new_pr49_inherited": 6,
+      "new_pr47_test": 1,
+      "new_pr49_test": 1,
+      "projected_unique_entries": 573,
+      "projected_files_including_manifest": 574,
+      "net_added_paths": 21,
+      "net_modified_existing_paths": 17,
+      "net_changed_nonmanifest_paths": 38,
+      "shared_code_variant_collision": "product/ai-company-os-backend/app/core/transaction/intent_authority.py PR31 vs PR46",
+      "selection": "PR31 Office routes preserved, PR46 authority test-target only, PR49 full inherited UI ancestry once, PR47 two-path proposal",
+      "status": "MATHEMATICAL_PROJECTION_ONLY_NO_TREE_NO_MANIFEST_WRITE_NO_OWNER_APPROVAL",
+      "single_writer": "MI-P0 central manifest writer only after exact authorizations NW02/NW03"
+    },
+    "owner_handoff_comments": [
+      "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/31#issuecomment-7111246588",
+      "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/49#issuecomment-7111247489"
+    ],
+    "actual_changes": {
+      "github_pr_comments": 2,
+      "product_code": 0,
+      "manifest_file": 0,
+      "merge": 0,
+      "ci": 0,
+      "new_tests_run": 0,
+      "independent_security_approvals": 0,
+      "canonical_product_head_unchanged": true
+    },
+    "progress": {
+      "weighted_previous": "HESAPLANAMADI",
+      "weighted_current": "HESAPLANAMADI",
+      "weighted_delta": "HESAPLANAMADI",
+      "group_denominators": "NOT_RATIFIED",
+      "scoped_acceptance_previous_current": {
+        "Core": "12/16",
+        "UI": "21/40",
+        "W8_operational": "3/8",
+        "MVP": "0/11",
+        "Independent_IV": "0/7"
+      },
+      "acceptance_delta_pp": 0,
+      "ordinal_24_delta": 0
+    },
+    "rollback": "No product promotion: preserve canonical; revert this single governance commit normally if disproven; preserve prior historical status and PRs."
   }
 }
