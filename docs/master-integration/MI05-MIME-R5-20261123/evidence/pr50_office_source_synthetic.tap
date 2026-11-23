@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: valid office D0 fixture returns 200, no-store
+ok 1 - valid office D0 fixture returns 200, no-store
+  ---
+  duration_ms: 36.718828
+  type: 'test'
+  ...
+# Subtest: valid upper-case media type and charset returns 200
+ok 2 - valid upper-case media type and charset returns 200
+  ---
+  duration_ms: 0.752297
+  type: 'test'
+  ...
+# Subtest: invalid application/jsonp returns fail-closed 503
+ok 3 - invalid application/jsonp returns fail-closed 503
+  ---
+  duration_ms: 0.755312
+  type: 'test'
+  ...
+# Subtest: invalid application/json-malformed returns fail-closed 503
+ok 4 - invalid application/json-malformed returns fail-closed 503
+  ---
+  duration_ms: 0.558183
+  type: 'test'
+  ...
+# Subtest: text/plain returns fail-closed 503
+ok 5 - text/plain returns fail-closed 503
+  ---
+  duration_ms: 1.163144
+  type: 'test'
+  ...
+# Subtest: missing media type returns fail-closed 503
+ok 6 - missing media type returns fail-closed 503
+  ---
+  duration_ms: 0.509286
+  type: 'test'
+  ...
+# Subtest: upstream HTTP 503 returns fail-closed 503
+ok 7 - upstream HTTP 503 returns fail-closed 503
+  ---
+  duration_ms: 0.465538
+  type: 'test'
+  ...
+# Subtest: malformed JSON returns fail-closed 503
+ok 8 - malformed JSON returns fail-closed 503
+  ---
+  duration_ms: 1.026502
+  type: 'test'
+  ...
+# Subtest: oversized JSON returns fail-closed 503
+ok 9 - oversized JSON returns fail-closed 503
+  ---
+  duration_ms: 1.165256
+  type: 'test'
+  ...
+# Subtest: wrong D0 contract returns fail-closed 503
+ok 10 - wrong D0 contract returns fail-closed 503
+  ---
+  duration_ms: 1.680891
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 140.611283
