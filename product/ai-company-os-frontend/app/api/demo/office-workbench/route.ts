@@ -22,7 +22,7 @@ async function readOfficeWorkbench(signal:AbortSignal):Promise<Response>{
  if(signal.aborted)throw Error('deadline');
  const r=await fetch(endpoint,{method:'GET',cache:'no-store',redirect:'error',signal,headers:{Accept:'application/json'}});
  if(signal.aborted)throw Error('deadline');
- if(!r.ok||!r.headers.get('content-type')?.startsWith('application/json')||!r.body)throw Error('response');
+ if(!r.ok||r.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='application/json'||!r.body)throw Error('response');
  const reader=r.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true});let size=0,text='';
  try{for(;;){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>4096)throw Error('size');text+=decoder.decode(value,{stream:true});}text+=decoder.decode();}
  finally{await reader.cancel().catch(()=>{});reader.releaseLock();}
