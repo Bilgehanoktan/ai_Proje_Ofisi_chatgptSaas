@@ -1,0 +1,82 @@
+{
+  "task": "MI05-NW05-MIME-OWNER-SOURCE-CANDIDATES-R5-20261123",
+  "date": "2026-11-23",
+  "canonical_product_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "status": "TWO_CHILD_DRAFTS_COMMITTED_SOURCE_MATCH_LOCAL_TARGETED_PASS_OWNER_HOLD",
+  "commits": {
+    "PR50": "a92ac8a8e4d1303b66edc724d4f85c2abc52d456",
+    "PR51": "e17c80a6552a8088372242e48abbb160fc24535a"
+  },
+  "files": [
+    {
+      "label": "PR50 Office route",
+      "pr": 50,
+      "original_owner_pr": 22,
+      "git_path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "old_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+      "new_blob": "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079",
+      "new_sha256": "32c9327ba59167ef55421b65c75322030aa522caa2c83cec0326d8849742b882",
+      "changed_lines": 1,
+      "source_on_child_branch_only": true,
+      "owner_approved": false,
+      "manifest_updated": false
+    },
+    {
+      "label": "PR51 shared proxy helper",
+      "pr": 51,
+      "original_owner_pr": 26,
+      "git_path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+      "old_blob": "a1ff4a1690a0b113aa882de633e063c02f9535a4",
+      "new_blob": "f3fe889b41ad3d8445025458225aa34d3d63a5e9",
+      "new_sha256": "922b3084803032a5fb8a4e2f5d2c52397db74c071f71c1e1d06d53b3f33c9d08",
+      "changed_lines": 1,
+      "source_on_child_branch_only": true,
+      "owner_approved": false,
+      "manifest_updated": false
+    }
+  ],
+  "test_env": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "python": "3.13.5",
+    "platform": "Linux container",
+    "network": "NONE",
+    "npm_install": "NOT_RUN",
+    "next_build": "NOT_RUN"
+  },
+  "evidence": {
+    "PR50": {
+      "result": "10/10 PASS",
+      "kind": "IN_MEMORY_SYNTHETIC_MOCK_FETCH_EXACT_SOURCE_WITH_EXACT_PARSER_BACKENDPORT",
+      "tsc": "PASS",
+      "original_office_suite": "NOT_RUN"
+    },
+    "PR51": {
+      "result": "11/11 PASS",
+      "kind": "IN_MEMORY_SYNTHETIC_MOCK_FETCH_EXACT_HELPER_SOURCE",
+      "tsc": "PASS",
+      "original_three_proxy_suites": "NOT_RUN"
+    },
+    "logs_sha256": {
+      "pr50_office_source_synthetic.tap": "5a4e920670b280d96160864ed7ed72ccd7434c3946d75c52a3c2a8041147c124",
+      "pr51_mime_source_synthetic.tap": "c9ebc938f2f66a53c9e46f16380034cd0be11d91efdbf9835a7ffc0d30fe8bda",
+      "pr50_office_source_synthetic.test.cjs": "c90748825fb64e4c0460ed8fd9b2197241a8d184f2d7c824913a54d3a5184be3",
+      "pr51_mime_source_synthetic.test.cjs": "c88a4c24d783ef149c62202a7a79738ffcd187ee0fd9271442a936dcaefcd4e9"
+    }
+  },
+  "limits": {
+    "original_prs_22_26_modified": false,
+    "shared_manifest_modified": false,
+    "canonical_branch_modified": false,
+    "PR31_modified": false,
+    "full_25second_timeout": "NOT_RUN_THIS_TURN",
+    "w8_c07": "HOLD",
+    "chromium_c08": "NOT_RUN",
+    "independent_c05": "HOLD",
+    "real_iam": "HOLD",
+    "product_acceptance_delta": 0,
+    "owner_review": "HOLD"
+  },
+  "owner_followup": "PR22 and PR26 original writer ACCEPT/REJECT; then on exact approved changes run existing original suites and manifest recalculation through central single writer; merge/release separately gated",
+  "rollback": "Close separate child draft PR50 and PR51 or normal isolated revert; never force push or alter original owner/canonical source."
+}
