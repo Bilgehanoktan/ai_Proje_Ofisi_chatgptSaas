@@ -1,0 +1,77 @@
+{
+  "scope": "new candidate source, not product acceptance",
+  "previous": {
+    "archived_candidate_source_files": 0,
+    "archived_new_test_sources": 0,
+    "raw_group_logs": 0
+  },
+  "current": {
+    "archived_candidate_source_files": 3,
+    "archived_new_test_sources": 3,
+    "raw_group_logs": 3
+  },
+  "delta": {
+    "candidate_source_files": 3,
+    "test_sources": 3,
+    "raw_logs": 3,
+    "canonical_product_files": 0,
+    "acceptance_pp": 0
+  },
+  "canonical": {
+    "head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552
+  },
+  "central_pr31": {
+    "head": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "product_files": 566,
+    "manifest_entries": 565,
+    "status": "DRAFT/HOLD"
+  },
+  "acceptance": {
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "w8": [
+      3,
+      8
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "iv": [
+      0,
+      7
+    ]
+  },
+  "weighted": "HESAPLANAMADI",
+  "ordinal_change": "none; current authoritative aggregate not re-scored",
+  "prior_test_groups": [
+    {
+      "new": 7,
+      "pass": 7,
+      "kind": "unit doubles"
+    },
+    {
+      "new": 12,
+      "pass": 12,
+      "kind": "unit doubles with actual invocation/Skill/policy"
+    },
+    {
+      "new": 9,
+      "regression": 18,
+      "pass": 27,
+      "kind": "isolated Skill"
+    }
+  ],
+  "new_tests_this_round": 0,
+  "dependency": "C50, signed chain, exact full checkout and owner approval HOLD",
+  "archives": "Original ZIP binary contents remain local; exact changed source/test/log files archived; original runners and full package not yet transferred.",
+  "next": "Owner reviews and signed actual Runtime/MEM05E chain; then existing Core/T1 result consumer"
+}
