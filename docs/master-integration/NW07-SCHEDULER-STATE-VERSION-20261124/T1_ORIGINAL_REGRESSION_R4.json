@@ -1,0 +1,318 @@
+{
+  "revision": "NW07-T1-ORIGINAL-REGRESSION-R4-20261124",
+  "classification": "ACTUAL_ORIGINAL_D0_SQLITE_REGRESSION_ON_EXACT_R3_SOURCE_SUBSET",
+  "tested_commit": "4fa01760008d66adbe1b7a24fd1ee58f5d84535f",
+  "canonical_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner_core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "architecture": {
+    "target": "v11.6.135-rc1",
+    "master_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "reviewed_sections": "R03 lines 363–385, 621–647; BE-03, D07/D14/D15/D16/D17; logical write-set, head CAS, admission/lease/budget, fencing, outbox and UNKNOWN reconciliation. No change to normative physical mapping.",
+    "current_full_master_review": "INCOMPLETE; prior exact 0158 master blob reference retained"
+  },
+  "manifest": {
+    "blob": "22e5016772488efeff62239436966fe17a698145",
+    "entries": 553,
+    "product_files": 554,
+    "product_tree": "be5bd3616ab33b87c44a5ebbf6dc1d96fd914df9",
+    "unchanged": true
+  },
+  "source_recovery": {
+    "total": 36,
+    "product_manifest_match": 32,
+    "sql_outside_manifest_exact_git_blob": 4,
+    "local_gitsize_sha256_match": 36,
+    "pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "git_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+        "bytes": 3864,
+        "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/dag.py",
+        "git_blob": "acf97a2216e0c089056ffbba30db3eb8fe1484a7",
+        "bytes": 355,
+        "sha256": "5884ae7fce504bbb6c573bbe61023843793d1d9a24de05a567ff5e8cd923ca92"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+        "git_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+        "bytes": 287,
+        "sha256": "30d5585648be281c058fee53678a44851b57576e28a48d721dc3465100e7a7db"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "git_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "bytes": 3093,
+        "sha256": "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+        "git_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+        "bytes": 1548,
+        "sha256": "4730949fe2af90c58b70a92d2462881e20deccde535882e8785e9eaaf76bae71"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "bytes": 259,
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "bytes": 3082,
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "bytes": 692,
+        "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "bytes": 1335,
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "git_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "bytes": 3542,
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "bytes": 5065,
+        "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+        "git_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "bytes": 3677,
+        "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+        "git_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+        "bytes": 8493,
+        "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "git_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "bytes": 4286,
+        "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+        "git_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+        "bytes": 2994,
+        "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+        "git_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+        "bytes": 1698,
+        "sha256": "35cb245bce423a4edebae97099fb578cf8ab9ce3a4a0bf7b495b9565cc247e24"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+        "git_blob": "b011ae715b424a185963af552f524586115a23ec",
+        "bytes": 1105,
+        "sha256": "ae7f27db7c8ccd62ea09be950a94178ed436b9cac1afe05daa61298f5236638e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+        "git_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+        "bytes": 17868,
+        "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e"
+      },
+      {
+        "path": "product/ai-company-os-backend/fixtures/core.plan.projection.json",
+        "git_blob": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+        "bytes": 2462,
+        "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+      },
+      {
+        "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+        "git_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "bytes": 8418,
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "git_blob": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+        "bytes": 5933,
+        "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_projection.py",
+        "git_blob": "ae2b1e90b367be591b8cc59b979419780115802a",
+        "bytes": 2472,
+        "sha256": "2f0e5ec8f52b49a4d8268a2977d34abec00c43d06d867020448f7a65f0c858fc"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+        "git_blob": "143cf34da870125e367947181854e1a0af9c2b30",
+        "bytes": 2508,
+        "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+        "git_blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+        "bytes": 14108,
+        "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+        "git_blob": "c30130313541ea9d857724de1bab98ad088374af",
+        "bytes": 10496,
+        "sha256": "d78954c237f7aa26838c4987665108c243e5646fa6e3b8e44ac77fb321df6dc4"
+      },
+      {
+        "path": "database/0192/candidate_event_outbox_fence.sql",
+        "git_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+        "bytes": 1346,
+        "sha256": "02c15b573b2056c841854a6ca3b2a08b9ee2c2076a8388ff4d0118c974115003",
+        "sha256_origin": "local bytes verified against remote Git blob; outside product manifest"
+      },
+      {
+        "path": "database/0193/candidate_run_head.sql",
+        "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+        "bytes": 878,
+        "sha256": "c8317eceef963dfeafb2452dd53e25074dc7926868fc96dfef5be14176396be6",
+        "sha256_origin": "local bytes verified against remote Git blob; outside product manifest"
+      },
+      {
+        "path": "database/0194/candidate_transition_roles.sql",
+        "git_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+        "bytes": 2437,
+        "sha256": "64c7ae1b4c89eef2d0011ce3bf035b4c782dcfbc7a1fe0ce70d6ce007f0bf917",
+        "sha256_origin": "local bytes verified against remote Git blob; outside product manifest"
+      },
+      {
+        "path": "database/0195/candidate_admission_budget.sql",
+        "git_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+        "bytes": 2134,
+        "sha256": "91d1baf23faf319efca7120b291e5303e67cd3768073e5d8aa26443bef3f48b8",
+        "sha256_origin": "local bytes verified against remote Git blob; outside product manifest"
+      }
+    ]
+  },
+  "test": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "environment": "Linux isolated temporary SQLite, original SQL dialect shim, -B -S; no third-party installation, no PG network or real data",
+    "working_dir": "product/ai-company-os-backend",
+    "commands": [
+      "python -B -S -m unittest discover -s tests -p test_transition_mapping_0194.py -v",
+      "python -B -S -m unittest discover -s tests -p test_admission_mapping_0195.py -v"
+    ],
+    "new_original_0194": {
+      "pass": 35,
+      "total": 35,
+      "exit": 0,
+      "mapping_methods": 25,
+      "schedule_methods": 10,
+      "log": "docs/master-integration/NW07-SCHEDULER-STATE-VERSION-20261124/transition-0194.log",
+      "log_blob": "d145d37c63c07f538a378a24295321f085202e01",
+      "log_sha256": "202a57b43a8c28b66f6375843418b93781821a25c14bd19cdb98a52a83006466"
+    },
+    "new_original_0195": {
+      "pass": 19,
+      "total": 19,
+      "exit": 0,
+      "log": "docs/master-integration/NW07-SCHEDULER-STATE-VERSION-20261124/admission-0195.log",
+      "log_blob": "2111870389202b65df3149775882be84e9863447",
+      "log_sha256": "2aa56797268c91293de73be99717dad644fece7ecbc21fe75df1064d3f305084"
+    },
+    "prior_r2_r3": {
+      "pass": 28,
+      "total": 28,
+      "rerun": false
+    },
+    "distinct_methods_across_runs": [
+      82,
+      82
+    ],
+    "not_one_full_run": true,
+    "limits": "0195 tests exercise legacy D0 inspect_schedule, NOT pinned company history commit_scheduled_admission; cannot substitute for original SQL6."
+  },
+  "changes": {
+    "product_code": 0,
+    "manifest": 0,
+    "api": 0,
+    "db_schema": 0,
+    "events": 0,
+    "dependencies": 0,
+    "closed": "Original 0194/0195 regression source subset and actual 54 methods on current PR54; no new product function or canonical transfer."
+  },
+  "blockers": {
+    "scheduled_sql6": "NOT_RUN; test_company_terminal_0212 requires cryptography Ed25519 and wider fixture closure",
+    "iam_g7_api_28": "NOT_RUN; PR52 C50 candidate review HOLD, G7 exact full checkout gate",
+    "full_checkout": "local DNS unavailable; 36-source subset only",
+    "source_owner": "HOLD; no PR53/54/55 approval",
+    "w8": "C07/C08/C05 HOLD",
+    "independent_iv": "HOLD"
+  },
+  "acceptance": {
+    "Core": "12/16",
+    "UI": "21/40",
+    "W8": "3/8",
+    "MVP": "0/11",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  },
+  "next": "Core owner review R1–R4; original 0220 SQL6 after full verified dependencies; MI-01 dependency/security review and exact backend 28; central approved source reconciliation only.",
+  "rollback": "Normal revert evidence-only R4, preserve R3 product tree; no database rollback or runtime authority."
+}
