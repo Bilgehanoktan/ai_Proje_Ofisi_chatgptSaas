@@ -1,0 +1,77 @@
+{
+  "record": "R7_PATCH_WHEEL_REVIEW_PREPARATION",
+  "date": "2026-11-24",
+  "parent": "da64b828520c028a8bf1d193b44442089a412dfa",
+  "canonical_product": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "ffcbfe79b1b3eb131dbb952741722995284126e2",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner_reviews": "No new recorded approvals on PR19/38/41/46/47/50/51/52; no approval inferred",
+  "r6_proposed_lock_blob": "525efd4b002f3dfea9c476d22c791837bed9dd2f",
+  "r4_archive_sha256": "13ac8400add38b3834c7ca33d10579b23780e2f2c6f276c6b262b15241c3d9aa",
+  "helper": {
+    "filename": "AIOS_PR47_F1632_REVIEW_R7.py",
+    "sha256": "08ddc46fbee2504591f3d5ea7ff99138f4f874a7d92d28684e8b6ca41c527da1",
+    "bytes": 10806,
+    "storage": "conversation artifact; source bytes not committed",
+    "mode": "review only; verifies original archive SHA and 20 wheel bytes + RECORD; retrieves exact pinned FastAPI wheel via PyPI JSON, no redirects/proxy, compares metadata, refreshes public registry for 20 package names and versions, outputs JSON and new wheel; no private repo content sent, no install or product execution",
+    "local_checks": {
+      "python": "3.13.5",
+      "actual_old_wheels": "20/20 PASS",
+      "actual_record_rows": "584/584 PASS",
+      "tampered_hash_rejection": "PASS",
+      "patch_pin": "PASS"
+    },
+    "network": "Container DNS failed for pypi.org, files.pythonhosted.org, github.com; live Windows download NOT_RUN",
+    "windows": "NOT_RUN"
+  },
+  "fastapi": {
+    "filename": "fastapi-0.163.2-py3-none-any.whl",
+    "sha256": "825a8fdd18d7bfcb1b86735e9805c59b7400d55c4060d3df5331b62ae452f004",
+    "registry": "https://pypi.org/project/fastapi/0.163.2/",
+    "trusted_publishing": true,
+    "attestations": "not provided",
+    "actual_new_bytes": "NOT_RUN",
+    "new_metadata_graph": "NOT_RUN",
+    "owner": "03API/dependency owner HOLD"
+  },
+  "runtime": {
+    "observed": "3.13.17",
+    "security_release": "3.13.18",
+    "source": "https://www.python.org/downloads/release/python-31318/",
+    "note": "Vendor explicitly describes compromised intermediate CA keys and Expat; hash-pinned download only, no package execution, no TLS bypass. Patched runtime selection/requalification HOLD."
+  },
+  "crypto_reachability": {
+    "advisory": "CVE-2026-95692",
+    "source": "https://www.openssl-library.org/news/vulnerabilities-4.0/index.html",
+    "condition": "AES-GCM-SIV IV length handling",
+    "observed": "Specific pinned G7 signed-history and company-terminal sources use Ed25519 sign/verify; IAM memory_witness uses Ed25519 verify. These observations do not prove complete runtime unreachability or resolve other vulnerabilities.",
+    "pins": [
+      {
+        "pr": 19,
+        "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+        "blob": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1"
+      },
+      {
+        "pr": 19,
+        "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+        "blob": "c35a2e497ce013409c1943f293799d83c7164e83"
+      },
+      {
+        "pr": 46,
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+        "blob": "d783f00f6b7521ce0d979b977b45a8e44410eb8e"
+      }
+    ],
+    "disposition": "Independent Security/IV review HOLD; no bypass or acceptance"
+  },
+  "tests": {
+    "API": "0/9 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "IAM": "0/12 NOT_RUN",
+    "install": "NOT_RUN",
+    "W8": "3/8 -> 3/8; delta 0 pp",
+    "weighted": "HESAPLANAMADI"
+  },
+  "next": "Run R7 on existing Windows Downloads archive; upload report + new wheel. Verify candidate graph, fresh advisory results and native provenance; request exact owner/runtime disposition. Existing PR47 manifest delta unchanged. No source/CI/merge.",
+  "rollback": "Normal revert this review record only; preserve all earlier evidence and source."
+}
