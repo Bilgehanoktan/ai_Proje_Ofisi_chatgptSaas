@@ -1,0 +1,105 @@
+{
+  "revision": "NW07-SCHEDULER-STATE-VERSION-20261124",
+  "status": "ISOLATED_DEV_SOURCE_OWNER_REVIEW_HOLD",
+  "base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "owner_ref": "integration/0227-local-environment-preflight@4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "governance": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "architecture": {
+    "original": "v11.6.135-rc1",
+    "master_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+    "rev0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "owner_addendum_blob": "555a2f497f89726417a871da68de9281b7b26bbf",
+    "owner_catalog_blob": "97c3618d575aaca9d6dd5b14e7180641e7846c6d",
+    "trace": [
+      "v135 BE-04",
+      "v135 UI-12",
+      "v130 C01/C02/C03",
+      "MVP-01–05"
+    ],
+    "normative_change": false,
+    "scope": "existing 0220 pinned read-only D0 scheduler; state change with identical initial version rejected; success-proof precedence preserved; no dispatch or grants"
+  },
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "old": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "sha": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "bytes": 3864,
+      "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "old": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+      "sha": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+      "bytes": 5933,
+      "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62"
+    }
+  ],
+  "manifest": {
+    "before": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "after": "4556de5b7ae3ba8dd274b2510463ac17bb91746d",
+    "entries": 552,
+    "changed_entries": 2
+  },
+  "symbols": [
+    "app.core.agent_runtime.scheduler_review.inspect_pinned_schedule"
+  ],
+  "new_error": "D0_SCHEDULE_STATE_VERSION_HOLD",
+  "consumer": "D0PostgresAdmissionMapping.lock_and_validate with history_pins; SQL consumer regression NOT_RUN",
+  "api_changes": [],
+  "db_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "test": {
+    "environment": "Linux Python 3.13.5; stdlib only; 13/13 exact original Git blob and manifest byte/sha256 values matched; reconstructed source slice, no stubs",
+    "command": "python -B -S -m unittest discover -s tests -p test_pinned_schedule_0220.py -v",
+    "original": {
+      "methods": 12,
+      "pass": 12,
+      "exit": 0,
+      "log_sha256": "49f5a062199fcc10643781b34c6d1b9ead305a328a23eef187b921ebf25b3cc6"
+    },
+    "baseline_augmented": {
+      "methods": 17,
+      "failed_methods": 3,
+      "failed_subtests_and_cases": 6,
+      "exit": 1,
+      "log_sha256": "012f819889b66f088864f013ea92d6b8ee2f91043355a92bb57e73ba237334c3"
+    },
+    "after": {
+      "methods": 17,
+      "pass": 17,
+      "exit": 0,
+      "new_methods": 5,
+      "log_sha256": "b132b51c4da9163c086bb198cdf53ac3985ea7ca6b969953e065d8bd239cff4a"
+    },
+    "raw_logs": "local partial evidence archive; no full checkout"
+  },
+  "ownership": {
+    "open_prs_checked": 42,
+    "overlapping_target_paths": 0,
+    "explicit_owner_acceptance": "HOLD",
+    "canonical_promotion": "HOLD",
+    "historical_0207_pins_untouched": true
+  },
+  "acceptance": {
+    "core": "12/16 unchanged",
+    "ui": "21/40 unchanged",
+    "w8": "3/8 unchanged",
+    "mvp": "0/11 unchanged",
+    "iv": "0/7 unchanged",
+    "weighted_development": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  },
+  "blockers": [
+    "full current checkout / reviewed dependencies",
+    "SQL consumer regression",
+    "W8 manifest runner owner rebind",
+    "core owner review",
+    "independent security and IV"
+  ],
+  "next": "Core/W3 owner review exact delta and scheduled_admission 0220 SQL regression in verified environment; central manifest reconcile only after owner acceptance; preserve old W8/0207 pins. Independently continue existing Skill/Memory tasks.",
+  "rollback": "Normal revert of isolated commit or leave draft unmerged; no rewriting history. Preserve original test and code blobs.",
+  "limits": "No CI, live provider, spend, customer data, real grant, PostgreSQL protected commit, deployment, canonical merge or independent acceptance."
+}
