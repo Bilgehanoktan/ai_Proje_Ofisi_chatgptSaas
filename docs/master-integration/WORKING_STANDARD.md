@@ -1,3 +1,61 @@
+# AI COMPANY OS — KANONİK ÇALIŞMA STANDARDI | 24.11.2026
+
+**Yürürlük:** H01'in 24.11.2026 proje talimatlarını güncelleme isteği ve [çalışma temposu kararı](https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/41#issuecomment-7140786318). Bu metin çalışma ve koordinasyon standardıdır; yeni yürütme yetkisi, normatif mimari revizyonu, kaynak sahibi onayı veya bağımsız kabul değildir. Aşağıdaki güncel kurallar eski operasyonel ifadeleri kapsamları dahilinde netleştirir; tarihsel kararlar ve dar CI istisnaları korunur. Güncel kapsamı açık CEO/ADR kararı ve güvenlik politikası üstündür; çelişki halinde ilgili işi HOLD bırak, bağımsız işleri sürdür.
+
+## 0. Aktif geliştirme ve tempo
+- Birincil hedef: mevcut AI Company OS ürününün tamamlanması. Yeni prototip, mükerrer motor ve gereksiz alternatif altyapı yok. Gerçek kod, hata düzeltme, özgün test, entegrasyon ve kapanış kanıtı üret.
+- Yaklaşık efor hedefi %60 kod/geliştirme, %30 test/entegrasyon, %10 denetim/raporlama. Ölçülen ilerleme veya kabul oranı değildir; zorunlu güvenlik ve doğrulama gereklilikleri önceliklidir.
+- Her geliştirme turunda mevcut izin, araç ve süre dahilinde mümkün olan en fazla anlamlı işi tamamla. İlk küçük teslimatta durma; sıradaki uygulanabilir bağımsız işi seç. Analiz/danışmanlık isteklerini izinsiz kod değişikliğine dönüştürme.
+- HOLD/BLOCKED yalnız etkilediği kapsam ve gerçek bağımlılıklarına uygulanır. W8, Windows, cryptography, PostgreSQL, owner veya IV engeli bağımsız hatlara genel durdurma getirmez. Test ortamı eksikse uygun izinli kaynak geliştirmesi ve kapsamı doğru etiketlenmiş yerel testler sürdürülebilir. Güvenlik kapısı dolanılmaz.
+- Aynı kanıtı gerekçesiz yeniden üretme; zorunlu güncel HEAD/SHA ve görev/sahiplik kontrolü yapılır. Değişen kaynak, yeni risk veya kabul kriteri ilgili ayrıntılı incelemeyi tetikler. Önceki eksiksiz, sürüme bağlı ve geçerliliği doğrulanmış inceleme yeniden kullanılabilir; eksik veya erişilemeyen kanıt tamamlanmış sayılmaz.
+- Raporlama teslimatı izler; durum raporu, yorum, plan veya diagnostik tek başına ürün ilerlemesi değildir. İmkân varsa çalışan kod, düzeltilmiş hata, özgün test veya kapatılmış engel ile bitir. İmkân yoksa açıkça belirt; yapılmayan işi yapılmış gösterme.
+
+## 1. Amaç, mimari, sınıflandırma
+H01 denetimli çok kiracılı SaaS: Orchestrator/Agent Runtime, Core–T1, görev/DAG, IAM/ORG, Model Gateway, Skills, Memory/Knowledge, bağımsız Security/IV, CEO paneli ve gerçek kayıtları yansıtan 2.5D sanal ofis. Codex/Antigravity geliştirme aracı, ürün çalışanı değildir. Ana hedef v11.6.135-rc1 ve doğrulanmış sonraki revizyonlar; güncel tam Design Master, onaylı ADR/CEO kararları. 21 mimari alan, 63 alt modül, 24 teknik alan, 3 WorkType, 8 faz; özgün 8 hat, A–G yol haritası ve MI-01–MI-10 ayrı sınıflandırmadır. Görev eşlemesi güncel merkezi katalogdan alınır; rol veya hat adları tahminen yeniden atanmaz. Tasarım, aday, aktarılan kod, çalışan entegrasyon, test ve kabul ayrıdır. Normatif mimari ve bağımsız güvenlik otoritesi onaysız değişmez.
+
+## 2. Zorunlu GitHub başlangıcı ve kaynak otoritesi
+Repo: Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas. Her yeni sohbet ve teknik geliştirme turunda güncel devir, mimari ve aşağıdaki dal HEAD'leri kontrol edilir; kaynaklar exact SHA'ya bağlanır.
+- planning/master-integration-governance: bu WORKING_STANDARD.md, progress/MASTER_INTEGRATION_CURRENT.json (güncel kayıt ve ilgili görev; eski girdiler tarihçedir).
+- planning/project-wide-progress-reporting: progress/REPORTING_STANDARD_20261118.md.
+- integration/product-dev: HEAD, AGENTS.md, PROJECT_INDEX.md, tam Design Master ve ilgili ekler, yürürlükteki SOURCE_MANIFEST, mimari/teknik katalog, CEO/ADR ve güvenlik politikaları, docs/implementation_plan/PRODUCT_ROADMAP_8_PHASES.md, handover/CURRENT.md, ilgili NEXT_STEP ve test kanıtları.
+Özgün AI_Company_OS_YENI_PROJE_TALIMATLARI.txt ve repo kuralları geçerlidir. Design Master indeksi tam master değildir. İlk kapsamlı teknik inceleme tamamlanmalı; sonraki turlarda geçerli exact-SHA inceleme referansı + değişen/etkilenen kısımlar ve görev bağlamı kullanılır. Önceki incelemenin eksikliği giderilir. GitHub teknik gerçekliktir; hafıza çalışma tercihi içindir. Eski sabit SHA veya tarihsel dosya sayısı güncel değer yerine kullanılmaz. GitHub erişilemiyorsa bunu bildir, mevcut doğrulanmış kaynağın sınırını belirt; güncel kaynak gerektiren yazma/entegrasyon/kabul işlemi HOLD. Yetki belirsizliği fail-closed.
+
+## 3. Sahiplik, paralel görevler ve çakışma
+Diğer sohbetlerin erişilebilir devirleri, merkezi kuyruk, açık PR/dal ve sahipler denetlenir. Görev ID/sahip, kanonik base, aktif head, path/sınıf/fonksiyon/API/DB/event, bağımlılık ve kanıt eşleştirilir. Aynı path için tek yetkili yazıcı; çakışmada ilgili kapsam HOLD ve sahip incelemesi. Bağımsız MI-01–MI-10 işleri gerçek bağımlılıklarına göre paralel ilerleyebilir; sohbetler otomatik haberleşmez, başlatılmaz veya arka planda çalışmaz. Başka hattın onayı taklit edilmez. Aynı iş/test/kod tekrarlanmaz. İzinsiz toplu merge/rebase, force push, dal silme, otomatik kabul ve main transferi yok. Önceki sürümler, kararlar, testler ve alternatif dallar korunur.
+
+## 4. Öncelik ve kapanış sırası
+Merkezi kuyruktaki en kritik uygulanabilir gerçek engel: kaynak/manifest/bağımlılık bütünlüğü → build/regresyon → Core/IAM/ORG/T1/PostgreSQL gerçek entegrasyonu → UI/Office salt-okunur gerçek projection → Model/Skill/Memory → bağımsız güvenlik, IV ve ürün kabulü → onaylı yeni özellik. Bu öncelik gerçek bağımlılık sırasıdır, bağımsız işler için küresel seri kuyruk değildir. Merkezi sahiplik önceliklidir.
+24.11.2026 koordinasyon kapsamı (durumlar bu listeye sabitlenmez, güncel kuyruktan okunur): R9 bağımsız runtime/güvenlik; 9 API+11 MVP özgün regresyonu; cryptography; 12 IAM+7 G7 özgün regresyonu; PR50/51 MIME owner incelemesi; merkezi manifest/kontrollü entegrasyon; C07; C08; C05/nihai kabul. Mevcut dokuz kapanış işi önceliklidir; bağımsız ürün açıkları durmaz.
+W8: mevcut PR ve kaynak sahibi incelemesi → tam resmî C07 → gerçek Chromium C08 → bağımsız C05 → kabul. C05 zorunlu güvenlik/bağımlılık/lisans ön incelemeleri C07 öncesinde fail-closed. D0, sentetik bağlayıcı ve SHA denetimi tam W8 değildir. Eski test yalnız kaynak/ortam değişimi, yeni risk veya kabul şartıyla tekrar edilir; aynı kanıt iki kez sayılmaz.
+
+## 5. Geliştirme ve teslimat döngüsü
+A. Mimari/plan, görev, exact SHA, sahiplik, çakışma ve izin doğrula.
+B. Mevcut kaynak ve eksiklik; alternatif, hata senaryosu, risk, bağımlılık, test, rollback incele.
+C. İzinli mevcut kodu geliştir. Mükerrer motor/prototip yok.
+D. İzole dalda kontrollü entegrasyon: base/head, diff, manifest, bütünlük, sahiplik, kapılar; onaysız ürün transferi yok.
+E. İzinli test/build/regresyon: komut, ortam, kaynak/lock SHA, ham kanıt ve exit. PASS/FAIL/NOT_RUN/BLOCKED/HOLD; sentetik, tarihsel, aktarılan, gerçek ve bağımsız kabul ayrımı.
+F. Gerçek değişiklik için ne/neden/nerede/nasıl, önceki/güncel sürüm, mimari etki, teşhis/bakım/genişletme/rollback. Etkilenen path/sınıf/fonksiyon/API/şema/DB/event, dependency/test/karar katalogları ve mimari ek, manifest, kanıt, handover yetkili kapsamda güncellenir. MD/JSON tutarlı; merkezi ortak sahiplerle uzlaş. Gereksiz belge/commit yok. Repo AGENTS.md ve paketleme/teslim kuralları geçerli.
+G. Teslimat bütünlüğü ve sürümlü devir; ana plana göre sıradaki uygulanabilir bağımsız göreve geç. Salt analiz ise bunu belirt.
+
+## 6. Kaynak, bağımlılık, rollback
+Commit/tree/blob, SHA-256, SOURCE_MANIFEST, lock, kanıt-kaynak ve arşiv bütünlüğü doğrulanır. Eksik ZIP/kısmi checkout/kanıtsız kaynak çalışan ürün değildir. Güvenilmeyen paket komutlarını otomatik çalıştırma. Kod/API/DB/dependency ve veri göçünde teşhis, bakım, arıza, etki, normal revert/rollback yaz. Geçmiş korunur.
+
+## 7. Yetki ve bağımsız güvenlik
+H01 nihai karar sahibi. CEO-0174/0179=B kapsamında CODE/REPO, izole DEV, izinli yerel build/sentetik TEST ve kontrollü aktarım yalnız kayıtlı sınırlarında. Aynı onay tekrar istenmez. Security ve IV operasyonel yönetimden bağımsızdır. F0, gerçek IAM grant/provenance, W-A, fencing/idempotency, kalıcı korumalı T1 COMMIT, bağımsız güvenlik/kabul, gerçek veri ve dış etkiler ayrı kapılar. PROD/deploy, main merge, yeni/genişletilmiş CI, ücretli sağlayıcı/harcama, secret/müşteri verisi açık yetki ister. Aşağıdaki tarihsel dar CI istisnaları yalnız kendi PR/workflow/kaynak/sentetik test sınırında geçerlidir. Belirsizlikte FAIL-CLOSED/HOLD; çalışma/kabul izni varsayma. Yeni karar gerçekten gerekiyorsa riskleriyle seçenek sun.
+
+## 8. İlerleme ve kabul
+Üç ayrı metrik: (1) geliştirme = tasarım %15 + kaynak kod %35 + fonksiyonel test %20 + entegrasyon %20 + nihai kabul %10; önceden sabitlenmiş kriterlerde kanıtlı tamamlanan/toplam, yoksa HESAPLANAMADI; (2) ürün kabulü ilgili kanonik kriter oranı; Core/UI/ORG/MVP/W8/IV ortalaması genel sistem kabulü değildir; (3) 24 alan olgunluğu ordinal 0/25/50/75/100 tasarım/kaynak sınıflaması, geliştirme yüzdesine çevrilmez. %60/30/10 efor hedefi bu üç metriğe karıştırılmaz. Rapor: önceki/güncel/delta, kriter/payda, SHA/kanıt, entegrasyon sınırı, blocker, sahip, sıradaki aksiyon. Kanıt tekrar sayılmaz, tahmini/onaysız genel yüzde yok. Sentetik test gerçek kabul değildir.
+
+## 9. Harici adaylar ve devir
+Firecrawl (Research Agent, Market Intelligence, Documentation, Knowledge/RAG), Paperclip AI ve diğer servisler yalnız potansiyel ADAY; mevcut kaynak/çakışma, mimari, tenant izolasyonu, güvenlik/veri paylaşımı, API/dependency/maliyet ve rollback incelenmeden onaylı/uygulanmış sayılmaz. ChatGPT plugin bağlantısı ürün entegrasyonu değildir.
+Her geliştirme turu kısa kanıtlı devir: yapılan iş, ne/neden/nerede/nasıl, değişen path/commit/manifest, mimari/katalog/karar etkisi, test, geliştirme/kabul, HOLD, bakım/rollback, sahip, sonraki görev. Her yanıtta kısa durum, açık iş, sıradaki adım, yeni CEO kararı gereği; danışmanlıkta yapılmamış iş/test yapılmış gösterilmez. Yalnız erişilebilir kayıtlar kullanılabilir. Teknik gerçeklik GitHub'dadır.
+
+**TEMEL İLKE:** Maksimum somut geliştirme, minimum gereksiz bürokrasi, paralel ve sahipli çalışma, kontrollü entegrasyon, kanıtlı ilerleme, sürümlü devir.
+
+---
+
+# Korunan tarihçe — 19–21.11.2026 (eski durum pinleri güncel değer değildir)
+
 # AI Company OS — Master Integration & Release Management / MI-BOOT-01
 2026-11-19: kullanıcı önceki merkezi entegrasyon önerisini başlatmayı ve çalışma tercihini hafızaya kaydetmeyi istedi. Bu ek, mevcut Design Master ve sekiz fazlı yol haritasını değiştirmez; CEO-0174 / CEO-0179=B sınırları korunur.
 ## Ortak taban ve görev sahipliği
