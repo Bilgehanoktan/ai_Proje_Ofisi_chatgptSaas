@@ -1,0 +1,69 @@
+{
+  "classification": "LOCAL_D0_HTTP_CROSS_LAYER_DIAGNOSTIC_OWNER_HOLD",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "ui_pr49_base": "8b3c4e3dd7a0292d2ffabd23430fd24920e3c9ac",
+  "api_pr47": "a647095f57c319210596a3552dfacf40a37baf2d",
+  "source_pins": {
+    "backend/app/api/demo.py": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+    "backend/app/core/orchestrator/engine.py": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+    "backend/app/core/task_engine/dag.py": "04487bda631e9133f3904451a39fc8722e985997",
+    "backend/app/core/policy/denial.py": "9768b34e447c08136440c891b1974fae131f3ebd",
+    "frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+    "frontend/features/core-review/planProjection.ts": "e337a8da904e31b027f02d5876ab451d8da1d699",
+    "frontend/features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "frontend/features/data/projectionRead.ts": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+    "backend+frontend/fixtures/core.preview.json": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+    "backend+frontend/fixtures/core.plan.projection.json": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac"
+  },
+  "verified_pins": [
+    12,
+    12
+  ],
+  "r4_reader_sha256": "2b2f24e78237cee7ddd74bb4e91386be466d58c43b221a6347f5f91efd98af48",
+  "new_tests": {
+    "pass": 4,
+    "fail": 0,
+    "exit": 0,
+    "raw_tap_sha256": "70b7940d8221ed9855b3024ea56695570cda1a50177518db7754cbfeb92a0ca4"
+  },
+  "previous_26_tests": "historical not rerun",
+  "environment": "Python 3.13.5 FastAPI 0.128.2 Uvicorn 0.48.0 Node 22.16.0 TS 5.8.3 strict scoped compile; unpinned diagnostic, no full app",
+  "boundaries": [
+    "exact PR47 plan route AST in isolated test app only",
+    "real loopback proxy-to-backend HTTP",
+    "frontend GET direct call and injected browser transport; no React render or native Chromium",
+    "organizationCap exact constant stub only; no live ORG read, IAM, T1, PG, IV or release",
+    "D0 fixture plan with 7 reference tasks and 6 waves; no real runs or grant",
+    "tampered fixture restored and source pins reverified"
+  ],
+  "product_changes": 0,
+  "manifest_changes": 0,
+  "acceptance": {
+    "ui": [
+      21,
+      40
+    ],
+    "w8": [
+      3,
+      8
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "core": [
+      12,
+      16
+    ],
+    "iv": [
+      0,
+      7
+    ],
+    "delta_pp": 0,
+    "weighted_development": null
+  },
+  "local_zip_sha256": "a680049766aa41f6d940aa73e385a95d7b156f70600b252002d22d6412f24daa",
+  "local_zip_status": "conversation only; not full checkout or GitHub binary transfer",
+  "next": "MI05/06 and 03API source owners approve exact sources; central manifest writer reconciles; original full suites and native build/Chromium remain open. Authenticated consistent-snapshot Core/ORG reader separately requires NW02/NW03 real provenance.",
+  "rollback": "ordinary isolated revert of candidate-only records; no product path or DB change"
+}
