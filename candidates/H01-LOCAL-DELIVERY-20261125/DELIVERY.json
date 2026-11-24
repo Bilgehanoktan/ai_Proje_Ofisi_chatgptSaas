@@ -1,0 +1,51 @@
+{
+  "status": "OWNER_REVIEW_HOLD_ARCHIVAL_ONLY",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "pr31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+  "pr55": "65ddae6a33d94593ed686b53698a6d8ad48919b4",
+  "files": [
+    {
+      "path": "app/engines/model_gateway/runtime_model_review.py",
+      "blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+      "bytes": 3836,
+      "sha256": "510aed92aefd9807e2d26581ca73feb45e543e6d5efe7b992e35748146ca897a"
+    },
+    {
+      "path": "app/engines/model_gateway/sample_adapter.py",
+      "blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+      "bytes": 8796,
+      "sha256": "cb34d32c1bdd3c129f90767f422395630b5239ab6b653f7a95994f5e5dcb830b"
+    },
+    {
+      "path": "app/engines/skill_engine/resolver.py",
+      "blob": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+      "bytes": 2303,
+      "sha256": "d03acc8d0419a39b90eb6b014bda135373b4c7258793f7f2175fe1398e83bb2a"
+    }
+  ],
+  "local_archives": [
+    {
+      "file": "AIOS_RUNTIME_MEMORY_LINK_20261124.zip",
+      "sha256": "efcb5a2df853f71b17904371ae8f59dbaa660ab3db2171f25ff34bf1d7168dcb",
+      "tests": "7/7 isolated doubles"
+    },
+    {
+      "file": "AIOS_RUNTIME_SAMPLE_CONSUMER_20261124.zip",
+      "sha256": "edc253c6ce5295989e77f8d3fe6a794b2b88914d911cb523041308116599f39b",
+      "tests": "12/12 isolated doubles + real sample/skill/policy"
+    },
+    {
+      "file": "AIOS_PR55_R2_OWNER_REVIEW_20261124.zip",
+      "sha256": "47ca639e55497e56ec54c3c8e9220bfd439aa96a9418dd08caacafec7b210b15",
+      "tests": "9 new + 18 justified regressions = 27/27"
+    }
+  ],
+  "new_unique_tests": 28,
+  "old_tests_not_new_credit": 18,
+  "canonical_acceptance_delta_pp": 0,
+  "weighted_development": "HESAPLANAMADI",
+  "signed_fullchain": "NOT_RUN",
+  "owner_review": "MI07/MI08/MI09 HOLD",
+  "archive_bytes_uploaded": false,
+  "rollback": "Normal revert of archival commit; no product files or manifest changed."
+}
