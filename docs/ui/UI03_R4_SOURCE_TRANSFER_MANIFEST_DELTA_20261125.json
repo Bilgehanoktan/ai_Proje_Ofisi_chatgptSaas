@@ -1,0 +1,54 @@
+{
+  "task": "MI05-UI03-R4-ISOLATED-SOURCE-TRANSFER-20261125",
+  "authority": "H01 explicit controlled integration instruction; CEO-0174/0179=B; same MI05 source scope",
+  "classification": "ISOLATED_PRODUCT_PATH_TRANSFER_NOT_CANONICAL_MANIFEST_OR_ACCEPTANCE",
+  "parent": "9563178b8a0c21d3f37c9c8f37371692e894dda6",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "changes": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "before": "b9046f4f4f92ea121ecb530c7fa781af96d8d79d",
+      "after": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+      "bytes": 4083,
+      "sha256": "2b2f24e78237cee7ddd74bb4e91386be466d58c43b221a6347f5f91efd98af48"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui03-visibility-r4.test.cjs",
+      "before": null,
+      "after": "89b5437a2791b7c170c64291ac0b918e5239f9c0",
+      "bytes": 2052,
+      "sha256": "d02cd6e7406730a1c388040e794c1a24cfbf1a256cf853b217e3b7765ab1f111"
+    }
+  ],
+  "retained_r3_delta": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "blob": "687443fdf73ef53bd39017b6581b7ce05e0f497a",
+      "bytes": 5530,
+      "sha256": "4017e86f9fda414e7f2edb82791fa63e97d62cd9c2e1c76907cdb2b0bb52f857"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+      "blob": "9376c029905b82c8eaace11bde76d5211ccd5449",
+      "bytes": 6555,
+      "sha256": "8cf129f4e823e54c2f6cd9570b6c7cfe0f54efac1c0f5b2821f155256945056e"
+    }
+  ],
+  "manifest": {
+    "preserved_blob": "c576cd213a9359328517f168aba2fc63ad2d0218",
+    "entries": 558,
+    "expected_after": 560,
+    "product_files_after": 561,
+    "status": "HOLD_CENTRAL_SINGLE_WRITER_REBIND_4_PATHS_NOT_FULL_VALIDATED"
+  },
+  "evidence": {
+    "previous_r4": "5/5 plus 12/12 and 9/9 historical scoped",
+    "previous_link": "4/4 real local HTTP slice; unchanged R4 exact blob",
+    "full_build": "NOT_RUN",
+    "chromium": "NOT_RUN",
+    "real_iam_org": "HOLD"
+  },
+  "rollback": "normal revert only; keep historical candidate and source pins",
+  "next": "MI-P0 rebind four manifest entries on authorized common candidate after owner review; full build and browser, no independent acceptance"
+}
