@@ -1,0 +1,90 @@
+{
+  "revision": "0195",
+  "parent": "f230083545ad02c5e7abfeece8d39971827262b2",
+  "source_commit": "1456df0cc18f78d9b98c611c84af0fb911e0587b",
+  "branch": "recovery/0195-admission-claim",
+  "product_files": 238,
+  "manifest_entries": 237,
+  "manifest_blob": "7f632297eeba72665792d4cd75a68772fe9308c4",
+  "prior_product_blobs_preserved": 235,
+  "product_path_size_parity": true,
+  "local_source_evidence_blob_matches": 11,
+  "base_dependencies_exact_git_blob_matches": 22,
+  "previous_delta_manifest_entries_verified": 33,
+  "source_changes": [
+    {
+      "path": "catalog/revisions/TECHNICAL_CATALOG_0195.json",
+      "sha": "6e2d00764339119a58edd966f67a63c77e0e9450",
+      "size": 3520
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "sha": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "size": 2134
+    },
+    {
+      "path": "docs/0195/ARCHITECTURE_AND_CATALOG.md",
+      "sha": "f97424ea59c2788b234151b3b696be5f4769c729",
+      "size": 3939
+    },
+    {
+      "path": "docs/0195/BASE_PINS.json",
+      "sha": "8be11e0ef3166b747f9ebf7502eae3589e4159ec",
+      "size": 5228
+    },
+    {
+      "path": "docs/0195/PG_STATUS.txt",
+      "sha": "236775ae033785e8a51de4296830436dd7a3eada",
+      "size": 858
+    },
+    {
+      "path": "docs/0195/REGRESSION_0193.txt",
+      "sha": "e06e0642519187d2682234ae0e8ada261c7a429d",
+      "size": 2674
+    },
+    {
+      "path": "docs/0195/REGRESSION_0194.txt",
+      "sha": "3238e132fb833ed9902659489558b98f86ffa37b",
+      "size": 3726
+    },
+    {
+      "path": "docs/0195/TEST_LOG.txt",
+      "sha": "51701fc104907c7522e2969833da43452e76dada",
+      "size": 1957
+    },
+    {
+      "path": "handover/NEXT_STEP_0195.md",
+      "sha": "3cb3f90d41c427f020c6853f95c023a7ffff4c15",
+      "size": 595
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "sha": "7f632297eeba72665792d4cd75a68772fe9308c4",
+      "size": 42127
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "sha": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "size": 13176
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+      "sha": "c30130313541ea9d857724de1bab98ad088374af",
+      "size": 10496
+    }
+  ],
+  "tests": {
+    "new_sqlite": 19,
+    "regression_0194": 35,
+    "regression_0193": 25,
+    "passed": 79,
+    "pg_skipped": 5
+  },
+  "actual_pg": "NOT_RUN",
+  "full_suite": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "main_before": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "full_archive_downloaded": false
+}

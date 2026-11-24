@@ -1,0 +1,240 @@
+{
+  "revision": "0197-U",
+  "source_changes": [
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "prior": "652d12b5daf53859f723e6ffe06dfd03c3efd13f",
+      "current": "e3ad19477c8e1711d1b2bfa2694813b75a319bbc",
+      "bytes": 48351,
+      "origin": "regenerated"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "prior": null,
+      "current": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "bytes": 2994,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "prior": null,
+      "current": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "bytes": 2285,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+      "prior": null,
+      "current": "5680fa428be81645a43d7442ec161c0c10384986",
+      "bytes": 1698,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "prior": null,
+      "current": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "bytes": 1548,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+      "prior": null,
+      "current": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+      "bytes": 692,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "prior": "84a326beb6ceb176daab7df8767708d168db91bd",
+      "current": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "bytes": 4286,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "prior": null,
+      "current": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "bytes": 13176,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "prior": null,
+      "current": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "bytes": 2495,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "prior": null,
+      "current": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "bytes": 8493,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+      "prior": null,
+      "current": "b011ae715b424a185963af552f524586115a23ec",
+      "bytes": 1105,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+      "prior": "29f30a3873c72fd62c5a384f15623af042370d6e",
+      "current": "7d710685366a55c117e49043a64f1eeabf5079cf",
+      "bytes": 1391,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+      "prior": "9f233ce635e9912833de53847011e5db3fb84ac9",
+      "current": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+      "bytes": 2715,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py",
+      "prior": null,
+      "current": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+      "bytes": 5319,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "prior": null,
+      "current": "c0fbed40fc09db7894e9c609bcff6d4c875d1376",
+      "bytes": 8405,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+      "prior": null,
+      "current": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+      "bytes": 3373,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+      "prior": null,
+      "current": "c30130313541ea9d857724de1bab98ad088374af",
+      "bytes": 10496,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_access_0194.py",
+      "prior": null,
+      "current": "a792abc90b7a09fb703982f6efd1cd4f648b073c",
+      "bytes": 7089,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "prior": null,
+      "current": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+      "bytes": 8077,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_model_invocation_0196.py",
+      "prior": null,
+      "current": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e",
+      "bytes": 4668,
+      "origin": "0196-MA"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_transition_mapping_0194.py",
+      "prior": null,
+      "current": "75f3fb01653b226830546e3600ef75b8dbcfd636",
+      "bytes": 7176,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+      "prior": null,
+      "current": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "bytes": 14108,
+      "origin": "0195"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_transaction_0193.py",
+      "prior": null,
+      "current": "13b679db71409e9fddb0fda6c61eeecadcb73b8d",
+      "bytes": 9667,
+      "origin": "0195"
+    }
+  ],
+  "auxiliary_changes": [
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "prior": null,
+      "current": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "bytes": 1346,
+      "origin": "0195"
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "prior": null,
+      "current": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "bytes": 878,
+      "origin": "0195"
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "prior": null,
+      "current": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "bytes": 2437,
+      "origin": "0195"
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "prior": null,
+      "current": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "bytes": 2134,
+      "origin": "0195"
+    },
+    {
+      "path": "tests/integration/launch_w8_unified.py",
+      "prior": null,
+      "current": "deb473c01a8658d1bb44be484a171a9c63622905",
+      "bytes": 3931,
+      "origin": "new-integration"
+    },
+    {
+      "path": "tests/integration/test_w8_unified.py",
+      "prior": null,
+      "current": "730fa98bed8c6a34ccedffb9e103f49910daac3c",
+      "bytes": 4458,
+      "origin": "new-integration"
+    },
+    {
+      "path": "tests/integration/w8_unified.py",
+      "prior": null,
+      "current": "278e7c11c5de278b4ebe358c53bce6e93bfb2c53",
+      "bytes": 15578,
+      "origin": "new-integration"
+    }
+  ],
+  "root_catalog_refs": [
+    "catalog/revisions/TECHNICAL_CATALOG_0195.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0194_M.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0196_MA.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0188_W8_P1.json"
+  ],
+  "symbols": {
+    "runner": [
+      "verify_aux",
+      "prepare",
+      "reviewed",
+      "test",
+      "smoke"
+    ],
+    "launcher": [
+      "launch"
+    ]
+  },
+  "new_api_endpoints": 0,
+  "new_dependency_pins": 0,
+  "database": "Four existing candidate SQL fixtures copied and verified for disposable tests. No canonical migration applied.",
+  "diagnosis": "Auxiliary source missing/changed -> verify exact fixture/harness pins. Lock drift -> stop and review. Port unavailable -> choose different pair; never kill unrelated process. Missing SMOKE_OK -> run smoke on fresh stage; preserve failed sample files. No arbitrary migration, real grants or provider calls.",
+  "rollback": "Stop unified launcher with Ctrl+C; retain original P1/S3 stages, source branch refs and exact commits; fresh isolated stage for retry; no data migration."
+}

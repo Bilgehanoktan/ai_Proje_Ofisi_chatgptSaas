@@ -1,0 +1,138 @@
+{
+  "revision": "UNIFIED-U1",
+  "parents": {
+    "ui": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+    "core": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "office": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+  },
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumDynamicFloors.ts",
+      "change": "EXACT_TRANSFER",
+      "blob": "d53d8c78b6d980ddc531d2e0a3ea89f6d8e992c2",
+      "sha256": "b65acc33a6dbc233a221a7c90c6ba21441aa99d52c4efeb90f40c330ed2f5eb3",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumFloorRender.ts",
+      "change": "EXACT_TRANSFER",
+      "blob": "305ce5e5757c26a7a619e39115e49264ddfe9b7d",
+      "sha256": "d409f536a60142297484eb89e3de3e28a32df70201518ab81fcfda477175c4e5",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumFloorSvg.ts",
+      "change": "EXACT_TRANSFER",
+      "blob": "5007c2a02b4ca33490bcf9681d2a0a7ef58a9b4f",
+      "sha256": "e2f8f5059b0b3201eccf651db1dadb074f2c74645982d55cdaa908c5d6ccb277",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/premiumFloorTraffic.ts",
+      "change": "EXACT_TRANSFER",
+      "blob": "937773a16328451045d447ab267723ef68adfd55",
+      "sha256": "e086719d04984b2e7debee33be4b3133fc470935272216dcc625119c44e90703",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs",
+      "change": "EXACT_TRANSFER",
+      "blob": "209789688fa45c3fc44bfc0293a8d77513cbefc9",
+      "sha256": "7fb5b7f01f576af06365936111e1725642977ad47c0097e7ed928516a622b8a7",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-floor-render.test.cjs",
+      "change": "EXACT_TRANSFER",
+      "blob": "85d1a58643d8be75041ec1ad66e6b16cb13dd792",
+      "sha256": "eeee35ab782cd6cd90ba27cab143277d5780f9f6653568fdcab20c9d9571b2ad",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/premium-floor-traffic.test.cjs",
+      "change": "EXACT_TRANSFER",
+      "blob": "53145d8869c053ea8156c96fc8082b3cd7baf5d8",
+      "sha256": "5dd909527ca5764d43019ea5208eae71e31ad966316969b147d5edd8983367cf",
+      "source": "089a4a256cdf0fc835035041ac519b4c15250542",
+      "catalog_origin": "catalog/revisions/TECHNICAL_CATALOG_UX_PREMIUM_07_A5R3.json (plus A5R1/R2)"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/unifiedOfficePreview.ts",
+      "change": "ADD",
+      "blob": "e31d2d535a0d4a4a566a090d0d3236937a51b1d5",
+      "sha256": "f514b3ae32e0b230b56016e805e2f60eb928b48f0294bdc174aa8e8a11c7acf0",
+      "exports": [
+        "createUnifiedOfficePreview"
+      ],
+      "dependencies": [
+        "premiumActorIdentity",
+        "premiumFloorTraffic",
+        "premiumHybridLayout",
+        "premiumFloorRender",
+        "premiumFloorSvg"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/components/UnifiedOfficePreview.tsx",
+      "change": "ADD",
+      "blob": "059a55f5a5c939bc54a7ead4e45f0b339c71d70b",
+      "sha256": "b898e04ed830fb797e74e91d899595928dfdddd65a10aa9508861b21e7a9835b",
+      "exports": [
+        "default UnifiedOfficePreview"
+      ],
+      "dependencies": [
+        "react/useState",
+        "unifiedOfficePreview"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/office/premium/unified/page.tsx",
+      "change": "ADD",
+      "blob": "fb6cf1fe045f216df1ad4a24cb72eb6d42f3219f",
+      "sha256": "6774c6ee4ea014816e5479cbd5fd50950fd6f3fc7eb24ed3fbe02f5e9c850303",
+      "exports": [
+        "default page",
+        "metadata"
+      ],
+      "dependencies": [
+        "next/link",
+        "SharedSnapshotPanel",
+        "UnifiedOfficePreview"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/office/premium/page.tsx",
+      "change": "LINK_ONLY_MODIFY",
+      "blob": "2a21f807a63e8808da56cd9c980882244c3df05b",
+      "sha256": "05a8059df3ee9b975f54d2db29de37f902e839f4a5e88a147993a905b463bfeb",
+      "exports": [
+        "default page",
+        "metadata"
+      ],
+      "dependencies": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/unified-office-preview.test.cjs",
+      "change": "ADD",
+      "blob": "a9ed8f9200ad136464e9ff491ce2b2d5b334c241",
+      "sha256": "fae656229c129f706748372f13f0da8dcbc9cd9a6ab1e14de758be83bbc2daa0",
+      "exports": [],
+      "dependencies": [],
+      "test_count": 5
+    }
+  ],
+  "ui_route": "/office/premium/unified",
+  "new_api": [],
+  "db": [],
+  "events": [],
+  "dependency_changes": [],
+  "diagnosis": "docs/UNIFIED-U1/INTEGRATION_PLAN.md",
+  "rollback": "b7353a445ad6d3dafe77900837bdb4dc9ca74911"
+}

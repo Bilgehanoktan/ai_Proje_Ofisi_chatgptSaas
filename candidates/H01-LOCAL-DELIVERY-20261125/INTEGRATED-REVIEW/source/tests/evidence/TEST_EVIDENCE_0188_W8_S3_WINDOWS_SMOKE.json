@@ -1,0 +1,53 @@
+{
+  "revision": "0188-W8-S3",
+  "checkout": "0491e625e0fead0140d6a8e133b364d808e3adff",
+  "origin": "User-supplied Windows terminal transcript, no independent verifier",
+  "transcript_sha256": "c591cb01d347bff2ae55fb777570f45b2b7ba821ac88d22fcb60045193aafabe",
+  "review_sha256": "549eee93c7406e5aa9391e63afbb59780c535dbc002fd07acdcf3d02506f7fa5",
+  "actual_loopback": {
+    "backend": "127.0.0.1:8000",
+    "frontend": "127.0.0.1:3000",
+    "status": "PASS",
+    "five_api_parity": "PASS",
+    "paired_writer": "PASS",
+    "unknown_reservation_minor": 100,
+    "spend_allowed": false,
+    "db_hashes_unchanged": "PASS inferred from successful smoke exit"
+  },
+  "browser": {
+    "executable": "Google Chrome locally installed",
+    "baseline_captures": 52,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "navigation_entries": 13,
+    "paired_panel": "PASS",
+    "malformed_response_hold": "PASS",
+    "reserve_floor_reset": "PASS",
+    "pixel_review": "NOT_RUN",
+    "screenshot_bytes": "Not yet supplied"
+  },
+  "diagnosis": "Connection refused after successful smoke: runner terminates both servers in finally. No crash observed in supplied transcript.",
+  "interactive_launcher": "SOURCE_CANDIDATE_NOT_RUN",
+  "unresolved": [
+    "Physical Windows symlink test",
+    "Separate skipped Node readback test (five live route parity checked separately)",
+    "Pixel review",
+    "Independent acceptance",
+    "Parallel PostgreSQL recovery branch not merged"
+  ],
+  "real_agents": 0,
+  "provider_calls": 0,
+  "independent_acceptance": "HOLD"
+}

@@ -1,0 +1,1831 @@
+{
+  "id": "P10J16-XTRACK-01",
+  "status": "STATIC_REVIEW_ONLY_NO_MERGE",
+  "pins": {
+    "core": {
+      "commit": "66c1616ff4a2ab98de1268de8871fc7dc55d30f2",
+      "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+      "count": 392
+    },
+    "ui": {
+      "commit": "49d48fb4a1a08ac54a074dd3f3b63d7f15aa78ad",
+      "manifest_blob": "e0dfff291acf9fab0893569bbc8be855a12d58d3",
+      "count": 442
+    },
+    "office": {
+      "commit": "7dac004e95e07ceb337fea00fc38f860d98e9b95",
+      "manifest_blob": "ead7eb00754306089729e43ba66f553bcc695709",
+      "count": 400
+    },
+    "base": {
+      "commit": "f2457545cf52805e5ed5ea86cd869c326fd162ca",
+      "manifest_blob": "150cda5f380d889240ca05b51a50ce8baf6e01c0",
+      "count": 377
+    },
+    "corePrev": {
+      "commit": "c715e1edfd1af021b4c0be0681c6958455b6a26f",
+      "manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+      "count": 392
+    }
+  },
+  "scope": {
+    "product_changes": 0,
+    "active_branch_changes": 0,
+    "merge": false,
+    "authority": "D0; independent HOLD"
+  },
+  "counts": {
+    "unchanged": 335,
+    "ui_only_change": 103,
+    "office_only_change": 24,
+    "both_same": 3,
+    "both_different": 1
+  },
+  "core_ui": {
+    "equal": 377,
+    "ui_only": 50,
+    "core_only": 0,
+    "different": 15,
+    "details": [
+      {
+        "path": "ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+        "kind": "different",
+        "ui": {
+          "bytes": 5649,
+          "sha256": "2b9c7adc4ae9d4201bf8ec7ca2b9788ccf7f68a2efd9422b8a7b561d552171e9"
+        },
+        "core": {
+          "bytes": 5229,
+          "sha256": "808ede44c79324dea98af33315fde68d3255666c614d4a63968f21d33445234b"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 1611,
+          "sha256": "841956afa1f9d192f069a24ac0b37809e4b855b8a28cfe97bc54c4a5ccce637e"
+        },
+        "core": {
+          "bytes": 1557,
+          "sha256": "e654d367aaddf5135a3a7ab62698a7c6cdf3c2dbe132f04390b6f07d1a35ebd1"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/design-system/Navigation.module.css",
+        "kind": "different",
+        "ui": {
+          "bytes": 3266,
+          "sha256": "d44fb7e6482becfe0b1b0c7b26c79410dc4ab48f081dc1f2881a234c78337a98"
+        },
+        "core": {
+          "bytes": 2531,
+          "sha256": "7ece57a439f638ad696cf4ecfee321e4e577991f66707ccb977b2a948fda1754"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/design-system/Navigation.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 4711,
+          "sha256": "10c737f3254fdfa2a2bb72bd4ed12eebc1293b85dcc7cb01e9be8e10da3bc7c0"
+        },
+        "core": {
+          "bytes": 3498,
+          "sha256": "d1b983b85534973d2b93f39b5aadffe64904a988a1e3a929e9d1ea7d41782c0a"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 2116,
+          "sha256": "d924652f6d11010f472e61d84f01258891836711e8386d86af34f3a60283dff0"
+        },
+        "core": {
+          "bytes": 1461,
+          "sha256": "13d7e13fa43bf1e7341f2b8274482e0bbb68608209b6ae94c0390ba8dedd824d"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 12450,
+          "sha256": "00d8e373f8dcc5c3ccfebabfb5340cfc47e84bf398c42bf5545bd4cb2315f65e"
+        },
+        "core": {
+          "bytes": 9047,
+          "sha256": "ceb0f43f6ec9e024e200e63cb7c653f8a106286f658a457903efee39bd26994c"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 1638,
+          "sha256": "10448cff67717d9dda933aed300d04a0dfbf62e7cb4d71ada3ace87081b5a1b5"
+        },
+        "core": {
+          "bytes": 1475,
+          "sha256": "5241529282052f656d70fd4b58e9bd9d63faa7a9e1bc19ab4bf954c6d567faa3"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/data/useProjectionRead.ts",
+        "kind": "different",
+        "ui": {
+          "bytes": 796,
+          "sha256": "5cedc7d451cc1f6f2481dcc54ce442db00997fa92bd6ce1d96021f2a8ee30332"
+        },
+        "core": {
+          "bytes": 731,
+          "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 3142,
+          "sha256": "82bf6c76bfd419e9842ac7e35eda755febeb29c26cefb4a11c77eba37bfb360d"
+        },
+        "core": {
+          "bytes": 2467,
+          "sha256": "e429fb9f000fc340ab8ecab6722b8137fb3114f290a1ec49a4968da8b4ee5441"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 2979,
+          "sha256": "e04cfdc1af0b80e165a45d80b1225ecbc21cd524c4c4ace4c714a1fdef5fbc3c"
+        },
+        "core": {
+          "bytes": 2309,
+          "sha256": "c1858c0751e594aba4fbc07728e99d39fab867c0f45bf52e099690fc97350cca"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+        "kind": "different",
+        "ui": {
+          "bytes": 3279,
+          "sha256": "7f3a9e8a6ae81f75e5174ad6658ebf88f9be50340d45f2d9f2bcbdcb0b70465a"
+        },
+        "core": {
+          "bytes": 2275,
+          "sha256": "836f879fbd95e5d3a47e523fd693f6eb4dd650cd052fcb7f6001cbf8b6305faf"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 6732,
+          "sha256": "558da1a7d181f3399659540c8c637f29ca8bf3cd4c7a37b4a9dbacc8e79829df"
+        },
+        "core": {
+          "bytes": 4668,
+          "sha256": "9265d5b98dfe2820562334e7129a101d4f72da160d08eb7c3c6c2efb0bf42d1e"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+        "kind": "different",
+        "ui": {
+          "bytes": 3123,
+          "sha256": "f4a1ddd06467f01d57a6ac9017d3c6b1d824a0790517315d5b81dd6a36a8eb23"
+        },
+        "core": {
+          "bytes": 1696,
+          "sha256": "9309bf6be6eb8b899fa4dba11d3b02453b110b9ced35ba3ef5fa10a1e6eb3b09"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+        "kind": "different",
+        "ui": {
+          "bytes": 6288,
+          "sha256": "84a7d5a27af92cc8adee06034f80748f3a8ee0af1b05aed53a16bc51e2eebf66"
+        },
+        "core": {
+          "bytes": 5366,
+          "sha256": "1a577547419fe27e938c87965fe3d6e605531d01b9ddb06fe97ef4f04b0e7c62"
+        }
+      },
+      {
+        "path": "ai-company-os-frontend/office/engine/officeArtwork.ts",
+        "kind": "different",
+        "ui": {
+          "bytes": 5648,
+          "sha256": "56a3302a580f68824a8c0dc3f14de24656953005bb27225810406d3c0ba9e6cf"
+        },
+        "core": {
+          "bytes": 4404,
+          "sha256": "08590111ef5353ebf04f6121ab9431bb019d0368eab78f7ed442d014c4bdacb1"
+        }
+      }
+    ]
+  },
+  "checks": {
+    "core_manifest_identical": true,
+    "core_no_missing_in_ui": true,
+    "ui_delta_additive": true,
+    "office_delta_additive": true,
+    "one_double_edit": true,
+    "ui_preserves_join_hold": true,
+    "office_preserves_join_hold": true
+  },
+  "office_panel": {
+    "path": "ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+    "blobs": {
+      "base": "539833649fa3de74dfe8e7a79f7bfe4fbec74dbb",
+      "ui": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+      "office": "a55f1004df509ce4759c228b67beef0f6729bd72"
+    },
+    "finding": "UI adds SharedSnapshotPanel import and rendering; office adds premium link only. Both are additive against the same base; preserve both in future reviewed composition. Not applied.",
+    "required_dependencies": [
+      "features/data/SharedSnapshotProvider.tsx",
+      "features/data/SharedSnapshotPanel.tsx",
+      "app/office/premium/page.tsx",
+      "app/office/premium/native/page.tsx"
+    ],
+    "separate_boundary": "Premium geometry and historical replay must not imply identity, live location, or release."
+  },
+  "cross_dependency_review": [
+    {
+      "path": "office/scenes/PremiumNativeScene.tsx",
+      "finding": "Imports useProjectionRead('office-workbench') and displays historical sample, does not import premiumHybridLayout; A1 renderer binding still pending. UI hook adds reset and preserves state/data/read shape; full type/build/browser test pending."
+    }
+  ],
+  "rows": [
+    {
+      "path": "ai-company-os-backend/CONTRACT_PIN.md",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2766,
+        "sha256": "e613ace21e31439cfca55c833e6c8813aaaac7aab6741543c97ed4c8a173a42d"
+      },
+      "ui": {
+        "bytes": 3264,
+        "sha256": "606e3f3e50ea600ab6f2aa3fbaebb4502bca4a8aa2017febb40eb1ef1a95f511"
+      },
+      "office": {
+        "bytes": 2766,
+        "sha256": "e613ace21e31439cfca55c833e6c8813aaaac7aab6741543c97ed4c8a173a42d"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 777,
+        "sha256": "8f2ad36ae2c88f1cc6dffbffc25f24783526ce97dfaef4249794f54c10b93ffb"
+      },
+      "ui": {
+        "bytes": 1659,
+        "sha256": "169f6a24d47bf1bd328a974d9dcfc36f1c8d9341400203bd81e1a9814ba807b8"
+      },
+      "office": {
+        "bytes": 777,
+        "sha256": "8f2ad36ae2c88f1cc6dffbffc25f24783526ce97dfaef4249794f54c10b93ffb"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2285,
+        "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57"
+      },
+      "ui": {
+        "bytes": 3649,
+        "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+      },
+      "office": {
+        "bytes": 2285,
+        "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/app/core/development_review/research_slice.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 11516,
+        "sha256": "6b0793a9a81ef03cb45ff04fb964b2e394b5ebcbad89c19572e5f03dc23cb461"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/app/core/development_review/shared_snapshot.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1369,
+        "sha256": "714ce68e7fea401e30c42381a3b883ece9ac2a92f3af9dc47478cb5fc002cce2"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/effect_fence_reference.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 5572,
+        "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/external_claim_review.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 5574,
+        "sha256": "9fc7e5de6af70271a11da25db6a68151385aaff82ba956f99d48a735793ba667"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 10586,
+        "sha256": "6aed1371dae1d4e40b5f735aa360a06883dff868e3c748535dc8763373034175"
+      },
+      "ui": {
+        "bytes": 20298,
+        "sha256": "892c6e534d30c59d985e5c9d3e37719d6279110c02c1c1b439500e098d389881"
+      },
+      "office": {
+        "bytes": 10586,
+        "sha256": "6aed1371dae1d4e40b5f735aa360a06883dff868e3c748535dc8763373034175"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 7103,
+        "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239"
+      },
+      "ui": {
+        "bytes": 7835,
+        "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+      },
+      "office": {
+        "bytes": 7103,
+        "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 13176,
+        "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
+      },
+      "ui": {
+        "bytes": 17868,
+        "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e"
+      },
+      "office": {
+        "bytes": 13176,
+        "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 4409,
+        "sha256": "7c3086ba3030a072fe2bba6a9a4925232228b746a83fffeb9a9bed416f16f86b"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1532,
+        "sha256": "3898776d470313243439e8a007f53daec0c6ab07f53460554f478c2cdba35112"
+      },
+      "ui": {
+        "bytes": 4783,
+        "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+      },
+      "office": {
+        "bytes": 1532,
+        "sha256": "3898776d470313243439e8a007f53daec0c6ab07f53460554f478c2cdba35112"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/contracts/source/ceo.office.shared.snapshot.schema.json",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2709,
+        "sha256": "e85bc656ca8dca50937501752dac4edb3a1833c8727d00f3ddcfdf07a4212ac7"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 9712,
+        "sha256": "ba9c77f0c7b529b532a91c25aee88f6b3aa1136181a79206180d5c5e6d0312b9"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 5086,
+        "sha256": "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 7897,
+        "sha256": "8d09543e811f8ab8c79cffa712f2bfc0995dfafaf017d0d67ccc421276ff2d01"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_canonical_research_0224.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 11125,
+        "sha256": "1292634b1a4ea7581634435163d5f7a7064c9fb29ae3be888a019d96ef5b8164"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3582,
+        "sha256": "c2f8563d93d33a82e231216339831a5f9a774021648be8c91ede6626173db606"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_company_multiproject_0213.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 6418,
+        "sha256": "50cc62f60b36bd53ae44b775526844ef1b81ceee852055b15d67b3c35c0d2525"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 5007,
+        "sha256": "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_external_claim_review_0215.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 4817,
+        "sha256": "70c7bafc78d32ab4afc9869109ef088ff47d0961aa16b1850ca6e2bc5fb14198"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_lifecycle_db_http_0225.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 6047,
+        "sha256": "f4731601b65b8a5cc47ee1bfc63e2012ac334b27df876d2295ba6e60524d7a52"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 5649,
+        "sha256": "2b9c7adc4ae9d4201bf8ec7ca2b9788ccf7f68a2efd9422b8a7b561d552171e9"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_pinned_research_t1_0225.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 5303,
+        "sha256": "7a6371c41539317863bb4dfa674514d53b76f08baf7a41a7c6d2c6fcfef61ac5"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 4042,
+        "sha256": "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_research_company_snapshot_0224.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 6400,
+        "sha256": "1ecfd81ed079d4ccd90bde3c75f256845ad2ac3896b6ea0f78f05a36353e2a23"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_research_roster_0224.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3913,
+        "sha256": "71192aa17660d6b458cf2cd8ce24cdbdc9f54a63cab029f65a3ea9ff28950c69"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_research_t1_integration_0225.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 11626,
+        "sha256": "d4a8aedded72b54217095310518a49567161a9a82057a2d0b99d93c034cb9c2f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_result_reference_0221.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 10753,
+        "sha256": "acc08b9ce4065a7c73e1e34612e57f70123b755e95bd0fa0de458204362319ad"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_sample_task_0221.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 4282,
+        "sha256": "7f582ba285398c2bcfd1be04a301e6fe016641a225abcf9e50e9063ade8a075f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3127,
+        "sha256": "24f6db16cee419de307499727dcea219f33be113a36591c9273c09f187376c28"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_shared_snapshot_0222.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2221,
+        "sha256": "b41e3a3f721e41dbcfcec4ce3c84508ef0097c7f9bc1929d1334c4aaca783a50"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_shared_snapshot_db_0223.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2362,
+        "sha256": "91d8837b5949289209290b0de90ca8b8f835ff6a39e333e405864043d7a843e7"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_signed_consume_reference_0217.py",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 4879,
+        "sha256": "d16ebb5860e9f2c92b25d39aa4b19b72acccc061a4b0c880d464abe69fa54b9f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/CONTRACT_PIN.md",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2766,
+        "sha256": "e613ace21e31439cfca55c833e6c8813aaaac7aab6741543c97ed4c8a173a42d"
+      },
+      "ui": {
+        "bytes": 3264,
+        "sha256": "606e3f3e50ea600ab6f2aa3fbaebb4502bca4a8aa2017febb40eb1ef1a95f511"
+      },
+      "office": {
+        "bytes": 2766,
+        "sha256": "e613ace21e31439cfca55c833e6c8813aaaac7aab6741543c97ed4c8a173a42d"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/app/api/demo/plan/route.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1323,
+        "sha256": "09ec024c8ec56491c041a7d6341260c73e12192de23775ee99594b8ca960b6f7"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 918,
+        "sha256": "e71ea3b15e8e576704f98a22879e9b169fc0c2689834468ff5562eea7b706be8"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/app/layout.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 300,
+        "sha256": "8d0ce347b59032c25a5a1e2f58c984691bf791cfc2df7ae445944d43774dfe13"
+      },
+      "ui": {
+        "bytes": 429,
+        "sha256": "936722ee95f24d2477efd5cc4246ccdd131c199b58fe5c994ccff161b9e52758"
+      },
+      "office": {
+        "bytes": 300,
+        "sha256": "8d0ce347b59032c25a5a1e2f58c984691bf791cfc2df7ae445944d43774dfe13"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/app/office/premium/native/page.tsx",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 398,
+        "sha256": "a733017b66d72f6c1e136519a4b32e0f37e0ba6e009ef872d7229a6c8f21c120"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/app/office/premium/page.tsx",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1250,
+        "sha256": "1d2002aaf077e4b4f8f8061ec30fec677ae3c15c4a9e94b17e747d461edd408e"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2772,
+        "sha256": "0c7040e3d26c0e33fe74f0f4cf7a2be1b172bffdad42dde459c285fbfdfb29e1"
+      },
+      "ui": {
+        "bytes": 2902,
+        "sha256": "da1083ff150eaf817bbbbc2709fa2083d3b65f4758694cc048c713fb3ecf382f"
+      },
+      "office": {
+        "bytes": 2772,
+        "sha256": "0c7040e3d26c0e33fe74f0f4cf7a2be1b172bffdad42dde459c285fbfdfb29e1"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1557,
+        "sha256": "e654d367aaddf5135a3a7ab62698a7c6cdf3c2dbe132f04390b6f07d1a35ebd1"
+      },
+      "ui": {
+        "bytes": 1611,
+        "sha256": "841956afa1f9d192f069a24ac0b37809e4b855b8a28cfe97bc54c4a5ccce637e"
+      },
+      "office": {
+        "bytes": 1557,
+        "sha256": "e654d367aaddf5135a3a7ab62698a7c6cdf3c2dbe132f04390b6f07d1a35ebd1"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "kind": "both_different",
+      "base": {
+        "bytes": 2905,
+        "sha256": "2a2c503aef71bea16a2c2c7e5a51dffdde0e4706a6b010851ba4b9afab35c1b4"
+      },
+      "ui": {
+        "bytes": 3011,
+        "sha256": "c3fe73638078ea1d4819b9acd50ad0a233cd81e11290e61da9644153651b3f56"
+      },
+      "office": {
+        "bytes": 2989,
+        "sha256": "1f0d4b4f8a63de649b684350b5894f95b21e270bf204505b011f990eb43a0d7e"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 704,
+        "sha256": "dadc7de6906196aa1abc62343d81741552d234a526fc9b639f2e5b7c265c6341"
+      },
+      "ui": {
+        "bytes": 735,
+        "sha256": "77e83cf349824ec02059a10c6f801579aaa6baf83c6ea23572a55e8c1ffdc9e5"
+      },
+      "office": {
+        "bytes": 704,
+        "sha256": "dadc7de6906196aa1abc62343d81741552d234a526fc9b639f2e5b7c265c6341"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/contracts/generated/ceo.office.shared.snapshot.schema.json",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2709,
+        "sha256": "e85bc656ca8dca50937501752dac4edb3a1833c8727d00f3ddcfdf07a4212ac7"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/design-system/Navigation.module.css",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2531,
+        "sha256": "7ece57a439f638ad696cf4ecfee321e4e577991f66707ccb977b2a948fda1754"
+      },
+      "ui": {
+        "bytes": 3266,
+        "sha256": "d44fb7e6482becfe0b1b0c7b26c79410dc4ab48f081dc1f2881a234c78337a98"
+      },
+      "office": {
+        "bytes": 2531,
+        "sha256": "7ece57a439f638ad696cf4ecfee321e4e577991f66707ccb977b2a948fda1754"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/design-system/Navigation.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 3498,
+        "sha256": "d1b983b85534973d2b93f39b5aadffe64904a988a1e3a929e9d1ea7d41782c0a"
+      },
+      "ui": {
+        "bytes": 4711,
+        "sha256": "10c737f3254fdfa2a2bb72bd4ed12eebc1293b85dcc7cb01e9be8e10da3bc7c0"
+      },
+      "office": {
+        "bytes": 3498,
+        "sha256": "d1b983b85534973d2b93f39b5aadffe64904a988a1e3a929e9d1ea7d41782c0a"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 3365,
+        "sha256": "4f74ca0ee99be3e3f0f9c7af2c77f2f8c23217b2fc7f087fca45fc68a1034e84"
+      },
+      "ui": {
+        "bytes": 3655,
+        "sha256": "e7b3cc74c10e7c41904bf24124886bdcdeca16d47e257272b2450dc1789a507d"
+      },
+      "office": {
+        "bytes": 3365,
+        "sha256": "4f74ca0ee99be3e3f0f9c7af2c77f2f8c23217b2fc7f087fca45fc68a1034e84"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1461,
+        "sha256": "13d7e13fa43bf1e7341f2b8274482e0bbb68608209b6ae94c0390ba8dedd824d"
+      },
+      "ui": {
+        "bytes": 2116,
+        "sha256": "d924652f6d11010f472e61d84f01258891836711e8386d86af34f3a60283dff0"
+      },
+      "office": {
+        "bytes": 1461,
+        "sha256": "13d7e13fa43bf1e7341f2b8274482e0bbb68608209b6ae94c0390ba8dedd824d"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 9477,
+        "sha256": "b4dc3b283772ae833a54cba699b37911b719780a6b26f417e266ac380365cc0d"
+      },
+      "ui": {
+        "bytes": 12450,
+        "sha256": "00d8e373f8dcc5c3ccfebabfb5340cfc47e84bf398c42bf5545bd4cb2315f65e"
+      },
+      "office": {
+        "bytes": 9477,
+        "sha256": "b4dc3b283772ae833a54cba699b37911b719780a6b26f417e266ac380365cc0d"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1475,
+        "sha256": "5241529282052f656d70fd4b58e9bd9d63faa7a9e1bc19ab4bf954c6d567faa3"
+      },
+      "ui": {
+        "bytes": 1638,
+        "sha256": "10448cff67717d9dda933aed300d04a0dfbf62e7cb4d71ada3ace87081b5a1b5"
+      },
+      "office": {
+        "bytes": 1475,
+        "sha256": "5241529282052f656d70fd4b58e9bd9d63faa7a9e1bc19ab4bf954c6d567faa3"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.module.css",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 859,
+        "sha256": "609367a9d7ebbee793f31ef380ea83415d71ea6e57ddec1822f9e06b7c50b97d"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 808,
+        "sha256": "e94c376fe6f9cc116cbb84ae64399cd928c1ecbfc5d1acd201a00a11a716d5bb"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/sectionModel.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1133,
+        "sha256": "0d668e2a8ee43f70d3c01ffce54c3e44b278d0a8a855a0fc78e819e6f1f8aef3"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/core-review/CorePreview.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 3378,
+        "sha256": "411df1d31c019deba0915fc79297e593547cbe57e0218396722a88216f9f5285"
+      },
+      "ui": {
+        "bytes": 3679,
+        "sha256": "35ba33a4756d6368d971324552abd6a6e0089f4a330874149ebaa72a57e3e5b6"
+      },
+      "office": {
+        "bytes": 3378,
+        "sha256": "411df1d31c019deba0915fc79297e593547cbe57e0218396722a88216f9f5285"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/core-review/planProjection.ts",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2653,
+        "sha256": "81f1fbe1bffbe571966c3256001c53ee6754717b0d3ec8998a55530cd3d06820"
+      },
+      "ui": {
+        "bytes": 3441,
+        "sha256": "30d3421e1e0dc91b0e93d49f939e9523b47a371071abb1d0e59a3ea536537bc5"
+      },
+      "office": {
+        "bytes": 2653,
+        "sha256": "81f1fbe1bffbe571966c3256001c53ee6754717b0d3ec8998a55530cd3d06820"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1716,
+        "sha256": "d81d6a1572961c81d8e3193cb977160652f403b2d3493714644f5b8f3e0c8557"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2205,
+        "sha256": "965bdfe15a45cb7b38cecc0f5a521fbb596722475ea5b9794ff17b24a40ca9ec"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/projectionRead.ts",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2973,
+        "sha256": "751fd7d7b40d2f40d69a25c811cbbc28e133440e1b5235821b41b3e484e21106"
+      },
+      "ui": {
+        "bytes": 2984,
+        "sha256": "ba40068ea9807347a547ddd82721bc0acf750f2a058c353561ac8ab3e32c650d"
+      },
+      "office": {
+        "bytes": 2973,
+        "sha256": "751fd7d7b40d2f40d69a25c811cbbc28e133440e1b5235821b41b3e484e21106"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/projectionRegistry.ts",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1436,
+        "sha256": "51d63175815dfaa780146e5f550acada901cfe474ec20e6dc35406e0bf5e8b79"
+      },
+      "ui": {
+        "bytes": 1528,
+        "sha256": "c7fec9d9b6adde98f259c9fd662d56f68f4a5799ad25e215f0d570b7635756ce"
+      },
+      "office": {
+        "bytes": 1436,
+        "sha256": "51d63175815dfaa780146e5f550acada901cfe474ec20e6dc35406e0bf5e8b79"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/sharedSnapshot.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3270,
+        "sha256": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/useProjectionRead.ts",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 731,
+        "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
+      },
+      "ui": {
+        "bytes": 796,
+        "sha256": "5cedc7d451cc1f6f2481dcc54ce442db00997fa92bd6ce1d96021f2a8ee30332"
+      },
+      "office": {
+        "bytes": 731,
+        "sha256": "b2225f4f154d96b5edb5f3c4a9daa557829e86b737dc53bfdde1d570c30a88db"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2160,
+        "sha256": "0c56dfa146a73aed708a5e9f4695f71b0618da3a6640a8fd6d55f86dd93b591a"
+      },
+      "ui": {
+        "bytes": 4901,
+        "sha256": "342a6f4bdbfc76e293be58404774eeec66feee22df35377197c9f0a967246eb8"
+      },
+      "office": {
+        "bytes": 2160,
+        "sha256": "0c56dfa146a73aed708a5e9f4695f71b0618da3a6640a8fd6d55f86dd93b591a"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+      "kind": "both_same",
+      "base": {
+        "bytes": 1311,
+        "sha256": "ce62bb27b4eac34b06b765460c109b0566e8789f068cc3748411fc37fd5792eb"
+      },
+      "ui": {
+        "bytes": 1316,
+        "sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8"
+      },
+      "office": {
+        "bytes": 1316,
+        "sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2518,
+        "sha256": "91b73f42e98a772dc6244832cf5d8a79c55d2b42750e0485e4c27f3aa4ddb132"
+      },
+      "ui": {
+        "bytes": 3541,
+        "sha256": "6513d0538321b485a2cc1010bc623fd2657b5e97c9578dd1c5935c15700b82c8"
+      },
+      "office": {
+        "bytes": 2518,
+        "sha256": "91b73f42e98a772dc6244832cf5d8a79c55d2b42750e0485e4c27f3aa4ddb132"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+      "kind": "both_same",
+      "base": {
+        "bytes": 3658,
+        "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+      },
+      "ui": null,
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+      "kind": "both_same",
+      "base": null,
+      "ui": {
+        "bytes": 3658,
+        "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+      },
+      "office": {
+        "bytes": 3658,
+        "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/studioContext.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 930,
+        "sha256": "17c1879ce218635683576f5cde5ca01fd2655fc98e24fab36b12e739030ac277"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/evidence/studioGovernance.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1359,
+        "sha256": "d1a4552ecf78b3b06022e42e29d00250a6868316522a0f11b31b77a8eb545e9c"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/graph/PlanGraph.module.css",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1543,
+        "sha256": "ece407c8c61c3cf94a1ea23e17b89d5d3ff4572fb80f1b460e66733eefab9761"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/graph/PlanGraph.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2417,
+        "sha256": "b635df09e03d7bfa69fb6f7151e8993b463dd07f3d711effe54b8496256ed5a9"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/graph/graphPresentation.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1976,
+        "sha256": "b01cf1a8ee85a02bc20499f93bddb6478d9a2503d88d569b20385bad6e2126ab"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1682,
+        "sha256": "eb78987fe3a7f95e4021992c3ac92dced6b131a1bc27ace759f65eea4964dca9"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2516,
+        "sha256": "652541ce003d45c89ab7bac94429bb240621ddecc6f3814a9aaa7dd0e41c6e41"
+      },
+      "ui": {
+        "bytes": 3142,
+        "sha256": "82bf6c76bfd419e9842ac7e35eda755febeb29c26cefb4a11c77eba37bfb360d"
+      },
+      "office": {
+        "bytes": 2516,
+        "sha256": "652541ce003d45c89ab7bac94429bb240621ddecc6f3814a9aaa7dd0e41c6e41"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2358,
+        "sha256": "cf5722c31b1427f68502ffdd1d6a89790c32033c115b206f1fb43cb187ef6f69"
+      },
+      "ui": {
+        "bytes": 2979,
+        "sha256": "e04cfdc1af0b80e165a45d80b1225ecbc21cd524c4c4ace4c714a1fdef5fbc3c"
+      },
+      "office": {
+        "bytes": 2358,
+        "sha256": "cf5722c31b1427f68502ffdd1d6a89790c32033c115b206f1fb43cb187ef6f69"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3159,
+        "sha256": "7dbd3019867bc8e8868be0f5eec4e5d9aab6dcb126e88c85d98aca1c0152e62f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/historicalEvidence.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1741,
+        "sha256": "032abe3f5879d6157b502c3153eb4f6a58d8684b853b1cc4e394e4282ed3667f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/historicalPresentation.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1253,
+        "sha256": "5713cdfe90a2d513d3e9bfbf71f1fa066f1d25b76508e38611ae99ba4bdb433c"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/studioContext.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2603,
+        "sha256": "a3476bd415c5f0a55c31fc90ad9fe7aa025ca2ae64f180d28b0af3bf0c194805"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1991,
+        "sha256": "d91a2106b168bddb3ff9163832f705826a3abe5a006091ee57661100fe661c6e"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2275,
+        "sha256": "836f879fbd95e5d3a47e523fd693f6eb4dd650cd052fcb7f6001cbf8b6305faf"
+      },
+      "ui": {
+        "bytes": 3279,
+        "sha256": "7f3a9e8a6ae81f75e5174ad6658ebf88f9be50340d45f2d9f2bcbdcb0b70465a"
+      },
+      "office": {
+        "bytes": 2275,
+        "sha256": "836f879fbd95e5d3a47e523fd693f6eb4dd650cd052fcb7f6001cbf8b6305faf"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 6151,
+        "sha256": "08c235c4240a9500a51136345b179880f95b2ce7e886c6388ec414bf91b2577e"
+      },
+      "ui": {
+        "bytes": 6732,
+        "sha256": "558da1a7d181f3399659540c8c637f29ca8bf3cd4c7a37b4a9dbacc8e79829df"
+      },
+      "office": {
+        "bytes": 6151,
+        "sha256": "08c235c4240a9500a51136345b179880f95b2ce7e886c6388ec414bf91b2577e"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/dependencyNeighborhood.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1357,
+        "sha256": "d78f591095ddcc635949c034824b96c451ff54fbd3c23ca22dec949a0f21d520"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2467,
+        "sha256": "352ae15da25b705f7f156c74b0dd9c8bef5dae4e9f01d2c24c389072ee4fb78e"
+      },
+      "ui": {
+        "bytes": 3330,
+        "sha256": "5a4b716c62470f7c569067960a6b4bbdf58380a470a68b95b474d5d3bc1ab026"
+      },
+      "office": {
+        "bytes": 2467,
+        "sha256": "352ae15da25b705f7f156c74b0dd9c8bef5dae4e9f01d2c24c389072ee4fb78e"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/ParallelStudio.module.css",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2740,
+        "sha256": "22e2139cf1cf377d742a64f2960333df55642cd6108600be9fe8dec44d225298"
+      },
+      "ui": {
+        "bytes": 3051,
+        "sha256": "9f2e2c050d912b902cd999e8027b228b69a05ad7297a36417f848555d47ca0ff"
+      },
+      "office": {
+        "bytes": 2740,
+        "sha256": "22e2139cf1cf377d742a64f2960333df55642cd6108600be9fe8dec44d225298"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2717,
+        "sha256": "ab4dd8d67392c8512ab88fd8fb31816ea90a6bf232994d3b603de225480a37de"
+      },
+      "ui": {
+        "bytes": 3075,
+        "sha256": "cd349cfecba4ad097c9a79cd854a60b5be333c0862924a3b5bb0bd2e8127c1f3"
+      },
+      "office": {
+        "bytes": 2717,
+        "sha256": "ab4dd8d67392c8512ab88fd8fb31816ea90a6bf232994d3b603de225480a37de"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 3536,
+        "sha256": "b5ef19beb955152c71f381dc19673ac5da44fde2ad058cf319054773715f8b1f"
+      },
+      "ui": {
+        "bytes": 5138,
+        "sha256": "66b8e495116e6e60b2c831021aa13a995d46acfc2d94022190233722edc00c42"
+      },
+      "office": {
+        "bytes": 3536,
+        "sha256": "b5ef19beb955152c71f381dc19673ac5da44fde2ad058cf319054773715f8b1f"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/draftHistory.ts",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1532,
+        "sha256": "3bba9722556ea5467291bd8f7c5f3d0554743893f577592229e77c0fae7926cb"
+      },
+      "ui": {
+        "bytes": 2097,
+        "sha256": "f6755891d7cad4c5fa11aa667fcc4ff21ca45a12723b71a50391df8c219d7d50"
+      },
+      "office": {
+        "bytes": 1532,
+        "sha256": "3bba9722556ea5467291bd8f7c5f3d0554743893f577592229e77c0fae7926cb"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/draftOverview.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 352,
+        "sha256": "ecff4e6aca5cc6c43fe406debe4d004e97da2837c6a400cea3da07387cd45b45"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/readbackBoundary.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1293,
+        "sha256": "1d45a99fb4c26e7398992f7a0092d28836051636752855a0435d68bcc03e3541"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/office/assets/premiumOfficeHtml.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 41143,
+        "sha256": "bf7fd53c9e4d175387c5245cd9a1a86702ce836a53fae59f1c97672edc154468"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 2290,
+        "sha256": "ff808284d181053776c4c59e55d773e2e3b8c41ea22720de9aaa107ad41fe17b"
+      },
+      "ui": {
+        "bytes": 3123,
+        "sha256": "f4a1ddd06467f01d57a6ac9017d3c6b1d824a0790517315d5b81dd6a36a8eb23"
+      },
+      "office": {
+        "bytes": 2290,
+        "sha256": "ff808284d181053776c4c59e55d773e2e3b8c41ea22720de9aaa107ad41fe17b"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 5366,
+        "sha256": "1a577547419fe27e938c87965fe3d6e605531d01b9ddb06fe97ef4f04b0e7c62"
+      },
+      "ui": {
+        "bytes": 6288,
+        "sha256": "84a7d5a27af92cc8adee06034f80748f3a8ee0af1b05aed53a16bc51e2eebf66"
+      },
+      "office": {
+        "bytes": 5366,
+        "sha256": "1a577547419fe27e938c87965fe3d6e605531d01b9ddb06fe97ef4f04b0e7c62"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/cameraInput.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1222,
+        "sha256": "1e8abb6015e25ff6bcb0039c0d059c9542a4c910bc08f729a79719871e997b0c"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/officeArtwork.ts",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 5072,
+        "sha256": "e38460ca4b884cd7259b1d9dc06f5e8198965dac2792f0824eb505fc5e11523d"
+      },
+      "ui": {
+        "bytes": 5648,
+        "sha256": "56a3302a580f68824a8c0dc3f14de24656953005bb27225810406d3c0ba9e6cf"
+      },
+      "office": {
+        "bytes": 5072,
+        "sha256": "e38460ca4b884cd7259b1d9dc06f5e8198965dac2792f0824eb505fc5e11523d"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumHybridLayout.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 10955,
+        "sha256": "b0c13f8544a1fc4403b98a4cead5a55c986a6986158848f6aaa1dacab93e9328"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumLift.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1820,
+        "sha256": "b7ab097875576862c21dd60a3fe9ff14f9142de790af8dbb902750d8ded9bc67"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumModel.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 6309,
+        "sha256": "07405280965f63f236c1084d0c2fee9730d26fd96f1e13e795d1503270f58d43"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumOfficeV0.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 4614,
+        "sha256": "41105b6e3196ea043936b7f4da91b341a1a46b5e1bb9053bfab710a7116e6e9a"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumPresentation.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1865,
+        "sha256": "d06c396ce4628b258f41185aa3565c7275b8bd79d2c88313a43b5002937c4715"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumRouting.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 2098,
+        "sha256": "ed635338d270c917968b972fddb9cdd66a7ca31e1877bb78f9dfdea450b1c53c"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumTraffic.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 3722,
+        "sha256": "955047ac505021e0ffa8698288780543d93eb81d94db6c2a147fa10f8a1f1081"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/roomAccents.ts",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1464,
+        "sha256": "67c81a8654514ceb7aade3a92f6b8272fbf89fed924768b194e7c1aa7121a294"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/office/scenes/OfficeScene.tsx",
+      "kind": "office_only_change",
+      "base": {
+        "bytes": 9361,
+        "sha256": "7c3b5972a84f0c6684191c77a8edfc88c87f1681b67ae30c53be9ae971175921"
+      },
+      "ui": {
+        "bytes": 9361,
+        "sha256": "7c3b5972a84f0c6684191c77a8edfc88c87f1681b67ae30c53be9ae971175921"
+      },
+      "office": {
+        "bytes": 11211,
+        "sha256": "d8f671ebca70530c9b560471628dd8a3b1016cc8615226dbbf6e95ad82271478"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/scenes/PremiumNativeScene.tsx",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 14510,
+        "sha256": "45a567a35dfca099be4ca0535e541d5c0389bb12a8cea8d6de2a1b019ba5f43c"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/scenes/premiumArt.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 4363,
+        "sha256": "dbfc24e7eb82bbcaa8adcc31c375bc57778ec5511d0d927378217df9e3a84aa8"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/office/scenes/premiumAtlasPaint.ts",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 2805,
+        "sha256": "bed0398ad15ad53a0dec2afcfc37edc371c0f1042456420f2e0d3896a196fa39"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/scripts/run-studio-0223.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2663,
+        "sha256": "cc99199bbfc32bb6c4d11c9ce0dd115ee3396ec04c73307ec63212e1fab9a410"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/historical-evidence-0214.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2123,
+        "sha256": "1aa90b23630cf86f91df9ac591d5f10370d5c996c2115df0a323960598256de3"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/historical-presentation-0215.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2916,
+        "sha256": "bb2d72e425c86587cc0207d8a5f233fa9147eccf8812f3139dc79ef6c360a8e2"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/plan-proxy-0223.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2171,
+        "sha256": "62bee7a870c5645aa95c84fa0a1f46cef3d8b7c50b86748651392756fb730f59"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-camera.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1708,
+        "sha256": "99daf9c27ed325485a67ff85275a0a51101d0cd798d5f7af4317e63207ce7fbb"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-geometry.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1812,
+        "sha256": "2cb318c5881a449e7a225a02a2b32b21e03d9c95bdea66583ff0d149d2579c2a"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-hybrid-layout.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 5797,
+        "sha256": "8d4ad80cb166b361d63ccc6be0a5251a7973d199138e171a10d884fe3b56c6c2"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-model.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 4574,
+        "sha256": "3e0cb6291ec6c19974e05f8a487d5b594fbc1d6c3d33ed99a37a06966b034602"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-office-v0.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1415,
+        "sha256": "bde7eb529d84f27c0daa1352357cf80193278e42d44be4c5a027d3643a2bdbc2"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-presentation.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 4017,
+        "sha256": "6d7490a0e8aefd66a0433566bb63df048ae6cb79707b713ab7181de38b38f35f"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-routing.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1930,
+        "sha256": "212c91dcab331df587b43d8192aa8855772c48fcbe80a210da6252f072f0eab6"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-traffic-boundary.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 1664,
+        "sha256": "995729adb62b2cf59a165bb51d40d94091c6ebd46ff95e9e19212125ee414217"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-traffic.test.cjs",
+      "kind": "office_only_change",
+      "base": null,
+      "ui": null,
+      "office": {
+        "bytes": 2565,
+        "sha256": "9e07dac651294e222c7543b304f4debdfde5987978fd3f8fec97514e2f312e1a"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/projection-registry.test.cjs",
+      "kind": "ui_only_change",
+      "base": {
+        "bytes": 1685,
+        "sha256": "d2acee60a2a3e6e840d235b9a34c43e959bd7222b48ca04aff6e9cc6ef8a0336"
+      },
+      "ui": {
+        "bytes": 1699,
+        "sha256": "8af4094142bf6166542d0681ea193f53384a84378fbf558d5e1846fad289edbf"
+      },
+      "office": {
+        "bytes": 1685,
+        "sha256": "d2acee60a2a3e6e840d235b9a34c43e959bd7222b48ca04aff6e9cc6ef8a0336"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 2462,
+        "sha256": "ceba1eb2c2403b9a9b0ba08e9b61ef23eabca856a82715f5de5cc82064561d32"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1234,
+        "sha256": "c03332dd1fb69f1140555bee26e59c34241aaf23605452d5ea260b393d6b66f2"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/studio-context-0223.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3955,
+        "sha256": "75b956a0d00b812acd7ab1a146a35ae24091ae5728b1f4d1bd565610fdfb3cc9"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10h-model.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3297,
+        "sha256": "f3b8cfdf0d91e98c67482183c24dbacdf4ab9dda2cc2a8d3cfd2bc9df105e6cc"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10i-model.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3670,
+        "sha256": "cbfe5e6e7289c08f9c5496fa8d6f5454a0331f383d64c5fd7c4dd8927f237c9f"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j-model.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 744,
+        "sha256": "50780fc5fef42ef26d573033f1577a4763f152f962b1671fa53cc016a1cfddee"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j05-model.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 3261,
+        "sha256": "e534d04b0b90535fcb35e3dd8d5641dc908e56852a2a5188bf145c2d6848ba38"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j11-sections.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1027,
+        "sha256": "d08b3d4d151772dd7d816efaec7ef625efa09eb692649edd06920112e171a8f0"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j12-studio.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1632,
+        "sha256": "7d1cf5c232508c166416bcba08a0dcc3d61f80d7d180b2540fe98e52548538f8"
+      },
+      "office": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j14-governance.test.cjs",
+      "kind": "ui_only_change",
+      "base": null,
+      "ui": {
+        "bytes": 1816,
+        "sha256": "e13ab2e36665e1a78afe575746747cbfe7084a23b94cdb1cb3dc83e93ada2157"
+      },
+      "office": null
+    }
+  ],
+  "verification_scope": "Manifest-declared SHA-256 and byte length comparison, exact OfficePanel source readback; not full source rehash, checkout, typecheck, build, browser, PG or independent acceptance.",
+  "next": [
+    "Wait for A2 revision evidence and re-pin all heads.",
+    "Keep 0227 connected-workstation acceptance on core; W8 P10J15 union uses its own manifest and review.",
+    "Re-run three-way comparison, inspect new conflicts and cross dependencies. Do not copy stale source or merge automatically.",
+    "After approved composition, run exact full source verification and W8; require distinct historical/shared replay vs decorative premium status."
+  ]
+}

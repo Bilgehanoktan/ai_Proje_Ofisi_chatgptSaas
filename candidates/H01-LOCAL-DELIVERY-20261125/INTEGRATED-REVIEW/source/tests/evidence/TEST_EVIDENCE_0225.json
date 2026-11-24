@@ -1,0 +1,96 @@
+{
+  "revision": "0225",
+  "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
+  "base_commit": "b201833f948f91293414e91000bc53377de9b6d1",
+  "scope": "D0 exact selected source subset; isolated SQLite; local HTTP; compiled TS",
+  "new_tests": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_research_t1_integration_0225.py",
+      "git_blob": "0c0eb3b3d9b762f959bbec678af2832e65ba2553",
+      "sha256": "d4a8aedded72b54217095310518a49567161a9a82057a2d0b99d93c034cb9c2f",
+      "bytes": 11626,
+      "tests": 12,
+      "result": "PASS",
+      "purpose": "Original T1 admission, ordinary transition, company event ordering, persisted readback, fault rollback at 15 role-write points; no historical pin admission wrapper."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pinned_research_t1_0225.py",
+      "git_blob": "5e57e7f49f4b8767aeeb4530ca6469b865849650",
+      "sha256": "7a6371c41539317863bb4dfa674514d53b76f08baf7a41a7c6d2c6fcfef61ac5",
+      "bytes": 5303,
+      "tests": 8,
+      "result": "PASS",
+      "purpose": "0220 scheduled admission with retained pins, 0196L admission-bound transitions, same-cursor plan/company/budget readback, tamper and unknown quarantine."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_db_http_0225.py",
+      "git_blob": "990f6637b0cdb5264b1d01f0e2abb792b67070b5",
+      "sha256": "f4731601b65b8a5cc47ee1bfc63e2012ac334b27df876d2295ba6e60524d7a52",
+      "bytes": 6047,
+      "tests": 5,
+      "result": "PASS",
+      "purpose": "Original historical writer, real DB and mounted FastAPI routes, four prefixes and failure terminal, negative inputs; not full ASGI app."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+      "git_blob": "3e16b9952af6886b6579729108a0278042ac4052",
+      "sha256": "808ede44c79324dea98af33315fde68d3255666c614d4a63968f21d33445234b",
+      "bytes": 5229,
+      "tests": 7,
+      "result": "PASS",
+      "purpose": "Real uvicorn loopback HTTP, exact compiled TS proxy and Studio parser; no mock upstream; mismatch HOLD; not React/browser."
+    }
+  ],
+  "new_pass": 32,
+  "prior_rerun": 102,
+  "total_unique_selected_pass": 134,
+  "python": {
+    "pass": 81,
+    "new": 32,
+    "prior": 49
+  },
+  "node": {
+    "pass": 53,
+    "prior": 53
+  },
+  "duplicate_python_runner_pass_excluded": 5,
+  "rollback_fault_subcases": 15,
+  "versions": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0"
+  },
+  "locked_acceptance": false,
+  "actual_agents": 0,
+  "actual_provider_calls": 0,
+  "actual_spend": 0,
+  "logs": {
+    "combined.log": "5c363b3f28d9cedb6a671a56b5c1be140d9ce2e6f16cfd9d8fa30c64b195b9b5",
+    "lifecycle-db-http.log": "6b072702d1c185a017813ab39fcb24666b36b1b4ceb51835fdb5683503bd45a4",
+    "lifecycle-proxy.log": "c0aa010e9a9fb81b948af6a7a63a75de004419f50e0ab24c3d1b762e819741a9",
+    "pinned-research-t1.log": "3e06c7ceaec468b6fda2c0fbe245793cb8aff83eccd6497c1047e1d4dfb8a2c3",
+    "research-t1.log": "70fc11f8ec41730d4461e825008bc4872d1f2ad469fb7cf1ac4c48c99a133856",
+    "studio-regression.log": "e26c2daa4fc3a25d81bc791459948baed9d05d4f849b3eaf8efdf9a0c26b4f47"
+  },
+  "residual": {
+    "exact_full_checkout": "BLOCKED_DNS",
+    "locked_dependencies": "NOT_RUN",
+    "original_0220_SQL6": "NOT_RUN",
+    "original_0221_SQL10": "NOT_RUN",
+    "original_0224_SQL8": "NOT_RUN",
+    "original_0223_DB4": "NOT_RUN",
+    "full_0224_research_result_slice": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_backend_build": "NOT_RUN",
+    "full_frontend_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  }
+}

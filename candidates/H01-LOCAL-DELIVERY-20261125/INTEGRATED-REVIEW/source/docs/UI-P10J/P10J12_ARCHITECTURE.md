@@ -1,0 +1,15 @@
+# UI-P10J-12 — Agent Studio and static Office room context
+
+Parent UI 9cd9ebee9f0760eeec24a86bf02487f02096eea8; observed core c94753b4f2bc8a3e739ffa997ca9547772deeaf2 (TRACK-0223). Roadmap phase 4, parallel E/W1; phase 2 remains product-critical; phase 3 only role/plan presentation here. No new execution or security authority.
+
+## Changes
+- AgentDirectory now exposes catalogue counts, selected role, direct predecessors/followers from the validated reference plan, department and filter context. Human CEO remains ultimate authority. Counts are templates, not employees. No reporting relationships fabricated. Existing AgentDetail tabs preserved; core AgentDetail/StudioContextPanel not imported.
+- OfficeIllustration uses local room selection to focus camera and filter the existing validated artwork stations. Reset restores all rooms, all stations and home camera. Focused room uses pressed semantics, visual emphasis and a scope caption. Reserve floor remains empty. Existing geometry, artwork, collisions, pathfinding, office snapshot and JOIN_HOLD unchanged; no live avatars or movement. OfficeIllustration and its CSS overlap with core; scoped UI changes only, explicitly retain core variants for later reconciliation.
+- New shared presentation-only studioContext helpers. No API, DB, dependencies, event, agent identity, real assignment, grant or persistent mutation.
+- Browser harness extends current 68-capture plan with role/filter/dependency and room/reset checks. Existing 52+16 captures remain planned, not executed. W8 adapter pins exact parent, manifest and browser; adds 6 new model tests before inherited chain.
+- Exact local TypeScript 5.8.3 strict compile and Node 22.16.0 model tests 6/6 PASS; model/test SHA-256 exact match. Four original source pins checked before modification. New TSX/React/build/browser/full W8 NOT_RUN. No independent or product gate promoted. Full ZIP not materialized locally.
+
+## Integration and maintenance
+Per-area status is recorded in progress/INTEGRATION_MATRIX_UI_P10J12.json and progress/INTEGRATION_MATRIX_UI_P10J12.md, preserving pinned core TRACK-0223 and separate UI evidence. Every future UI delivery must update a revisioned 24-area matrix plus item-level source/integration/test/acceptance, without equating a branch-local source change with unified product acceptance. Core status is read-only, not rewritten on UI branch.
+Diagnose Agent Studio via readPlanProjection guard, selected role, query and direct task links. Never derive organization hierarchy from DAG. Diagnose office via selected room, validated station list, gallery camera and keyed floor remount. Reset camera restores local scope; no DB restore. Revert bounded UI changes or use pinned parent 9cd9ebee9f0760eeec24a86bf02487f02096eea8. 
+Next: exact W8 review/build/browser; separate 0223 integration candidate, preserve SharedSnapshotProvider and StudioContextPanel with their full contract graph. Reconcile shared presentation and authority via three-way review, not overwrite. Follow core's phase-2 SQL/PG/RLS prerequisites. No core merge, main, CI, PROD or real provider.

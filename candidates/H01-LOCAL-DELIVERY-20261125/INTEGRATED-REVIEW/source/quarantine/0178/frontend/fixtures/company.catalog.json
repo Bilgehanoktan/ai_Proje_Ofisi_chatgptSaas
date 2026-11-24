@@ -1,0 +1,238 @@
+{
+  "schema_version": "company.catalog.v0-D0",
+  "data_status": "D0_SAMPLE_NO_RUNTIME",
+  "sections": {
+    "İş ve Denetim": [
+      {
+        "title": "Orchestrator / DAG",
+        "description": "Planlama → delegasyon → QA → IV → release",
+        "status": "D0 plan doğrulama adayı · gerçek görev yok"
+      },
+      {
+        "title": "RunAdmission",
+        "description": "Grant · bütçe · lease · epoch",
+        "status": "HOLD"
+      },
+      {
+        "title": "Event Store",
+        "description": "T1 / outbox / sıralama",
+        "status": "D0 değişmez örnek ledger · T1/PG yok"
+      }
+    ],
+    "Beceriler": [
+      {
+        "title": "Skill Library",
+        "description": "Kaynak → karantina → F0 → yayın",
+        "status": "0/35 F0"
+      },
+      {
+        "title": "Model adaptörleri",
+        "description": "Model ve sağlayıcı sözleşmeleri",
+        "status": "Bağlı değil"
+      },
+      {
+        "title": "Şirket hafızası",
+        "description": "Bilgi saklama ≠ davranışa terfi",
+        "status": "Etkin değil"
+      }
+    ],
+    "WorkType": [
+      {
+        "title": "Research",
+        "description": "Kaynaklı araştırma ve belge analizi",
+        "status": "RELEASE_HOLD"
+      },
+      {
+        "title": "Excel W1",
+        "description": "Kaynak → staging → commit → IV",
+        "status": "RELEASE_HOLD"
+      },
+      {
+        "title": "Obligation",
+        "description": "Yükümlülük / termin takibi",
+        "status": "RELEASE_HOLD"
+      },
+      {
+        "title": "Independent Verifier",
+        "description": "QA’dan ayrı güven kökü",
+        "status": "IV_PASS_DENY"
+      }
+    ],
+    "Hedefler": [
+      {
+        "title": "Kasım 2026",
+        "description": "1.000.000 TRY · tarihsel stratejik hedef",
+        "status": "Gerçekleşen: bilinmiyor"
+      },
+      {
+        "title": "Nisan 2027",
+        "description": "10.000.000 TRY · tarihsel stratejik hedef",
+        "status": "Gerçekleşen: bilinmiyor"
+      },
+      {
+        "title": "Tahsilat",
+        "description": "Gelirden ayrı gösterilir",
+        "status": "—"
+      }
+    ],
+    "Karar Kutusu": [
+      {
+        "title": "İnsan CEO / H01",
+        "description": "Gerçek karar vakası bulunmuyor",
+        "status": "HOLD"
+      },
+      {
+        "title": "Yetki",
+        "description": "CODE=C · REPO=C · DEV=B",
+        "status": "Koşullu / etkin değil"
+      }
+    ],
+    "Güvenlik": [
+      {
+        "title": "Başlangıç yetkileri",
+        "description": "CODE / REPO / DEV",
+        "status": "0/3 etkin"
+      },
+      {
+        "title": "Repo / DEV kontrolleri",
+        "description": "C01–C24",
+        "status": "0/24 PASS"
+      },
+      {
+        "title": "F0 bağımsız makbuzları",
+        "description": "35 kabul yuvası",
+        "status": "0/35"
+      },
+      {
+        "title": "Negatif senaryolar",
+        "description": "NEG-01–30",
+        "status": "0/30 · NOT_RUN"
+      },
+      {
+        "title": "W-A / PEP / IV",
+        "description": "Gerçek bağımsız güven kökleri",
+        "status": "HOLD"
+      }
+    ],
+    "SaaS ve Finans": [
+      {
+        "title": "Tenant / Company",
+        "description": "ORG-A → genişlemeye açık",
+        "status": "Gerçek müşteri yok"
+      },
+      {
+        "title": "Abonelik ve kota",
+        "description": "Paket ve kullanım tasarımı",
+        "status": "Etkin değil"
+      },
+      {
+        "title": "Gelir",
+        "description": "Muhasebeleştirilmiş gelir, TRY",
+        "status": "—"
+      },
+      {
+        "title": "Tahsilat",
+        "description": "Ayrı KPI",
+        "status": "—"
+      }
+    ],
+    "Raporlar": [
+      {
+        "title": "Kanıt görünümü",
+        "description": "QA, IV ve release ayrı",
+        "status": "Gerçek kanıt yok"
+      },
+      {
+        "title": "Raporlama",
+        "description": "Sentetik katalog · dışa aktarma yok",
+        "status": "HOLD"
+      }
+    ],
+    "Tercihler": [
+      {
+        "title": "Görünüm",
+        "description": "Koyu tema · sistem fontu",
+        "status": "Yerel arayüz"
+      },
+      {
+        "title": "Ortam",
+        "description": "A0_SAMPLE_ONLY",
+        "status": "Değiştirilemez"
+      }
+    ],
+    "Olaylar": [
+      {
+        "title": "Event stream",
+        "description": "Gerçek olay / SSE yok",
+        "status": "UNKNOWN"
+      },
+      {
+        "title": "Güvenli durdurma",
+        "description": "Gerçek intent veya komut gönderilmez",
+        "status": "HOLD"
+      }
+    ]
+  },
+  "lanes": [
+    {
+      "id": "W1",
+      "title": "Frontend / Ofis",
+      "scope": "Görsel kaynak adayı"
+    },
+    {
+      "id": "W2",
+      "title": "API / Sözleşmeler",
+      "scope": "Salt-okunur DTO"
+    },
+    {
+      "id": "W3",
+      "title": "Runtime / Organizasyon",
+      "scope": "Durum kataloğu"
+    },
+    {
+      "id": "W4",
+      "title": "Güvenlik / Altyapı",
+      "scope": "Ret sözleşmesi"
+    },
+    {
+      "id": "W5",
+      "title": "Skill / Hafıza",
+      "scope": "Katalog"
+    },
+    {
+      "id": "W6",
+      "title": "WorkType / IV",
+      "scope": "Katalog"
+    },
+    {
+      "id": "W7",
+      "title": "SaaS / Finans",
+      "scope": "Null KPI"
+    },
+    {
+      "id": "W8",
+      "title": "Entegrasyon / QA",
+      "scope": "Kontrol listesi"
+    }
+  ],
+  "agent_detail_tabs": [
+    "Genel Bakış",
+    "Beceriler ve Şablonlar",
+    "Görevler ve DAG",
+    "Yetkiler ve Güvenlik",
+    "Model ve Çalıştırma",
+    "Maliyet ve Kullanım",
+    "QA, Kanıt ve Audit"
+  ],
+  "authority": {
+    "code_effective": false,
+    "repo_effective": false,
+    "dev_effective": false,
+    "real_test": "NOT_RUN"
+  },
+  "limitations": [
+    "No actual agent instances",
+    "No external effects",
+    "No verified financial results"
+  ]
+}

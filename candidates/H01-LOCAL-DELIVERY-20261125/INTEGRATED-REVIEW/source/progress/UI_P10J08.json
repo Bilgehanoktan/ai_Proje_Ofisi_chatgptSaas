@@ -1,0 +1,357 @@
+{
+  "revision": "UI-P10J-08",
+  "source": "182adb096cb7ae46103fe86e465df36217561a71",
+  "core": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+  "tracks": [
+    {
+      "id": "A",
+      "done": 3,
+      "total": 5,
+      "detail": "No new runtime engine or authority; historical event explorer"
+    },
+    {
+      "id": "B",
+      "done": 3,
+      "total": 5,
+      "detail": "34 local exact recovered, 390 path/size, W8 chain 7/7 Git tree pins; lock probes failed"
+    },
+    {
+      "id": "C",
+      "done": 3,
+      "total": 5,
+      "detail": "Terminal/prefix interactive detail explorer; React NOT_RUN"
+    },
+    {
+      "id": "D",
+      "done": 2,
+      "total": 5,
+      "detail": "Chair details and four role portrait previews; visual tests NOT_RUN"
+    },
+    {
+      "id": "E",
+      "done": 3,
+      "total": 5,
+      "detail": "Shared graph model 11/11, graph selection source integrated"
+    },
+    {
+      "id": "F",
+      "done": 2,
+      "total": 5,
+      "detail": "Prefix provenance/lease/model/memory HOLD detail explorer"
+    },
+    {
+      "id": "G",
+      "done": 2,
+      "total": 5,
+      "detail": "Shared historical finance/security explorer; independent acceptance HOLD"
+    },
+    {
+      "id": "H",
+      "done": 3,
+      "total": 5,
+      "detail": "New graph CSS and TSX syntax only; full acceptance NOT_RUN"
+    }
+  ],
+  "original_gates": {
+    "passed": 21,
+    "total": 40,
+    "percent": 52.5,
+    "delta": 0
+  },
+  "independent_acceptance": {
+    "passed": 0,
+    "total": 7
+  },
+  "core_gates": "7/16",
+  "tests": {
+    "environment": {
+      "node": "22.16.0",
+      "typescript": "5.8.3 (unpinned)",
+      "python": "3.13.5"
+    },
+    "read": {
+      "pass": 12,
+      "total": 12,
+      "log_sha256": "08a9fcab8d994c404249a5d4c3ecd246cb45c468cbec0236844cf50bee928f20"
+    },
+    "scope": {
+      "pass": 9,
+      "total": 9,
+      "log_sha256": "a56f5a6808b5254a411f9961597c483b2856370725c422e4c0ff60cf3a3e44dc"
+    },
+    "session": {
+      "pass": 14,
+      "total": 14,
+      "log_sha256": "1a1639abd50db0a3d2562681a91515c969129658374fd3d48282f170e2b998af"
+    },
+    "graph_and_overview": {
+      "pass": 14,
+      "total": 14,
+      "log_sha256": "e0c293f66ab3c603846ce2d136607f7def6f44edd5f2d532b9e1132547cec65b"
+    },
+    "total": 49,
+    "passed": 49,
+    "scope_note": "Actual exact source and original test files, fixed fixtures, mock fetch; not actual full product."
+  },
+  "blockers": {
+    "checkout": "PASS Windows",
+    "reviewed_locks": "PASS exact P10J08",
+    "full_w8": "PASS user Windows transcript",
+    "build": "PASS",
+    "real_api": "7/7 PASS",
+    "browser": "4 scripts PASS; 52 captures, visual review HOLD",
+    "combined_0222": "HOLD",
+    "pg_rls": "HOLD",
+    "independent": "0/7"
+  },
+  "next": "P10J09 raw evidence and visual review, targeted React interactions, separate controlled 0222 candidate",
+  "latest_parallel_check": {
+    "core_0221_source": "fdbcdef68ed097bf4aa164f44b5e6fdb791cb241",
+    "counts": {
+      "same": 332,
+      "ui_only": 50,
+      "core_only": 26,
+      "diverged": 4
+    },
+    "selected_contract_blob_matches": "75/75",
+    "status": "source candidate only; acceptance not inspected",
+    "new_paths": [
+      "fenced_transition.py",
+      "intent_authority.py",
+      "sample_adapter.py",
+      "test_result_reference_0221.py",
+      "test_sample_task_0221.py"
+    ],
+    "merge": false
+  },
+  "source_parent": "9970f1946668d275bf813e62e11cbd532eb45a20",
+  "manifest": "2a555e7e511fe80078b233324f3442d79cd590c6",
+  "windows": {
+    "revision": "UI-P10J-08",
+    "source_tested": "182adb096cb7ae46103fe86e465df36217561a71",
+    "old_review": "510ab77355529f6c03f6701b0611d3bc1c3cc66a514b7f9179ffc54c452dd718",
+    "user_pasted_log_sha256": "c83b186b080ede95910cb6c96ae5c394747699604281a52bf5f5de389c89dfa5",
+    "evidence_origin": "user-provided Windows console transcript; not independently replayed",
+    "audit": {
+      "source": 390,
+      "pairs": 16,
+      "auxiliary": 20
+    },
+    "backend": {
+      "total": 839,
+      "pass": 821,
+      "fail": 0,
+      "skip": 18,
+      "pg_skip": 13,
+      "platform_skip": 5
+    },
+    "node": {
+      "pass": 369,
+      "skip": 1,
+      "fail": 0
+    },
+    "archive_audit_tests": 9,
+    "targeted": {
+      "memory": {
+        "pass": 14,
+        "skip": 1
+      },
+      "authority": {
+        "pass": 10
+      }
+    },
+    "build": "FAIL: case-insensitive extensionless resolution, two module stem collisions",
+    "api": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "new_candidate_manifest": "2a555e7e511fe80078b233324f3442d79cd590c6",
+    "delta": [
+      {
+        "from": "ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+        "to": "ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+        "blob": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "bytes": 3658,
+        "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+      },
+      {
+        "from": "ai-company-os-frontend/features/project-management/DependencyNeighborhood.tsx",
+        "to": "ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+        "blob": "f3f64f6a4566d6c2fd5f7cd18729c4eae51d4121",
+        "bytes": 1991,
+        "sha256": "d91a2106b168bddb3ff9163832f705826a3abe5a006091ee57661100fe661c6e"
+      },
+      {
+        "path": "ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+        "old_blob": "0f7bff6fe9ade87a0754559b4e41fb1f692081ea",
+        "bytes": 1316,
+        "sha256": "5cf5a070a19a297678903c3810eb766a0a59fbd2a6ddec280d3a11b3d26ea8d8"
+      },
+      {
+        "path": "ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+        "old_blob": "0cde375f20bc54d941cdf203ee2ddca5d2de65ab",
+        "bytes": 2874,
+        "sha256": "ef683e81aede7dd2a24c5999ac24a8d538380a71632146e86926165f12075ddb"
+      },
+      {
+        "path": "ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+        "old_blob": "8fe0c91ee233b26d6bb10f40271bc9521dd6b235",
+        "bytes": 3037,
+        "sha256": "0943905f6b67240a2795c42c56b619eb515133919ab0ed1c575f903394c29c60"
+      },
+      {
+        "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+        "old_blob": "3f16dc336c42ab2b3f92875047edb0744e2efd92",
+        "bytes": 6610,
+        "sha256": "81aae794649a063d4263a05ee914178ad333c18491d7436474238f1da6b65448"
+      }
+    ],
+    "source_candidate_acceptance": "NOT_RUN",
+    "independent": "0/7"
+  },
+  "current_windows_w8": {
+    "revision": "UI-P10J-08-W8-ACCEPTANCE",
+    "source_tested": "752b225deac4557a548faec7191a090fbfba19f7",
+    "source_tree": "e4e16879901fe045be686fceaa1db525d02c8996",
+    "manifest_blob": "2a555e7e511fe80078b233324f3442d79cd590c6",
+    "runner_blob": "5b992e332c245ea332a1e00d16172bb1ef81f1ba",
+    "review_sha256": "754ea4debaa8a902554b9dc1e99b17ecf815f612a957d8c9aabe6010dd6b7694",
+    "user_pasted_transcript_sha256": "27f848f89f80e0367a9f743bf6b02bd5744280a94a3bf6a029ee239c01d80e41",
+    "evidence_origin": "User supplied Windows transcript, latest segment only; not independently rerun or raw screenshots inspected.",
+    "stage": "AI_COMPANY_OS_P10J08_20261116_223448",
+    "audit": {
+      "source": 390,
+      "pairs": 16,
+      "auxiliary": 20
+    },
+    "dependencies": {
+      "comparison": "PASS",
+      "install": "PASS",
+      "npm_packages": 61,
+      "python_wheels": 28
+    },
+    "tests": {
+      "backend": {
+        "total": 839,
+        "pass": 821,
+        "skip": 18,
+        "fail": 0,
+        "pg_skip": 13,
+        "platform_skip": 5
+      },
+      "node": {
+        "pass": 369,
+        "skip": 1,
+        "fail": 0
+      },
+      "archive": {
+        "pass": 9,
+        "total": 9
+      },
+      "next_build": "PASS",
+      "typescript": "PASS",
+      "api_parity": {
+        "pass": 7,
+        "total": 7
+      },
+      "browser_scripts": {
+        "pass": 4,
+        "total": 4
+      },
+      "captures": {
+        "count": 52,
+        "views": 13,
+        "widths": [
+          1440,
+          390
+        ],
+        "themes": [
+          "dark",
+          "light"
+        ],
+        "pixel_review": "HOLD"
+      },
+      "sample_db_integrity": {
+        "pass": 5,
+        "total": 5,
+        "scope": "W8 smoke compares before/after hashes, marker verified in transcript; hashes not separately supplied"
+      }
+    },
+    "markers": [
+      "INSTALL_OK",
+      "BUILD_TEST_OK",
+      "SMOKE_OK"
+    ],
+    "status": "W8_LOCAL_D0_PASS_USER_TRANSCRIPT",
+    "open": [
+      "raw evidence bundle and screenshot visual review",
+      "targeted new DAG/editor/role interaction browser tests",
+      "0222 controlled union and full regression",
+      "13 PostgreSQL and 5 platform skips; one Node skip",
+      "D03/D04 independent authority and recovery residuals",
+      "independent acceptance 0/7",
+      "CSS autoprefixer and Starlette warnings"
+    ],
+    "parallel": {
+      "heads": {
+        "integration/ui-0212-p10j": "752b225deac4557a548faec7191a090fbfba19f7",
+        "integration/0220-plan-dag-admission": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+        "integration/0221-sample-result-context": "6423e91d32a8ce660105b8ea76e44489dc36018d",
+        "integration/0222-shared-ceo-office": "70d6c305c34a36361214343526d5c134cb6c9c9f",
+        "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+      },
+      "core_source": "70d6c305c34a36361214343526d5c134cb6c9c9f",
+      "core_tree": "95247c7b8e71649bbbecf992e1c1f8f5b5278512",
+      "counts": {
+        "same": 326,
+        "ui_only": 49,
+        "core_only": 41,
+        "diverged": 5
+      },
+      "divergent": [
+        "product/SOURCE_MANIFEST.json",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+      ],
+      "core_gates": "7/16 for 0222, not upgraded by UI evidence",
+      "merge": false
+    }
+  },
+  "historical_blockers": {
+    "checkout": "PASS on user Windows",
+    "dns": "github.com and npm registry resolution failed; api.github.com and pypi.org lookup timed out",
+    "archive_audit": {
+      "auditor_blob": "9a8a55b67360a8d55b4e647b29f745d4e8b6b378",
+      "old_archives": 2,
+      "exit_codes": [
+        1,
+        1
+      ],
+      "reason": "FULL_PRODUCT_MANIFEST_MISSING_OR_AMBIGUOUS",
+      "report_sha256": "677e46bf3e65907844b5807816151c9139cc9e847778cfbc5e78197f567a4938"
+    },
+    "npm": {
+      "exit": 1,
+      "reason": "ENOTCACHED",
+      "log_sha256": "7a71821f6bbbb647346b40455cb00c0517da7f700cd1705c45d96ac7f114e990"
+    },
+    "pip": {
+      "exit": 1,
+      "reason": "No matching distribution fastapi==0.163.0 in offline wheelhouse",
+      "log_sha256": "a1ceb133ccb361060674c43f8d32c56057e6c13892523e107e515ffe501a1887"
+    },
+    "installed": {
+      "fastapi": "0.128.2",
+      "starlette": "0.50.0",
+      "uvicorn": "0.48.0",
+      "cryptography": "46.0.4",
+      "psycopg": "missing"
+    },
+    "reviewed_locks": "PASS for OLD manifest only",
+    "full_w8": "NOT_RUN",
+    "build": "FAIL old manifest; portability source candidate prepared",
+    "real_api": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "new_manifest_review": "HOLD"
+  }
+}

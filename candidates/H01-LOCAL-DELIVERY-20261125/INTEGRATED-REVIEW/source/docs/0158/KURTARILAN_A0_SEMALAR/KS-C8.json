@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aicos:a0:v95:contract:DecisionResult:0.1.0",
+  "title": "DecisionResult",
+  "type": "object",
+  "properties": {
+    "outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reason_code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rule_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audit_event_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "outcome",
+    "reason_code",
+    "rule_revision",
+    "audit_event_ref",
+    "authority_ref"
+  ],
+  "additionalProperties": false
+}

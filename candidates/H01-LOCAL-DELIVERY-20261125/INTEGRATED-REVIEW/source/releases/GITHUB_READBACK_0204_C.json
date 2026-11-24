@@ -1,0 +1,65 @@
+{
+  "revision": "0204-C",
+  "parent": "76c110fdef1d35a86e09609920be67210caee741",
+  "source": "f2510aaab5232dad8f29537638bf7ee3056b708a",
+  "manifest_blob": "4034db18f859c269334e390c61538678a8a80e14",
+  "product_manifest_count": 258,
+  "product_files_including_manifest": 259,
+  "changed_files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "bytes": 16755,
+      "sha256": "2a903ae65205575d1c90cea07465aaa6cbe3ba881aa11529358f2d2b85a2fe99",
+      "blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "status": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+      "bytes": 15264,
+      "sha256": "49ddaea03aa86f98ec39e92005c3dbbc1c1846653508288a1dab3257f869e938",
+      "blob": "ce4f8fb249787c9e18a03a63225dbcddf7445650",
+      "status": "added"
+    },
+    {
+      "path": "database/0204C/company_event_order.sql",
+      "bytes": 1808,
+      "sha256": "548d22bfb26068b516508c6157787c7c9828fa767121ffcc8a489f011aec9c12",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "status": "added"
+    }
+  ],
+  "source_blob_match": "3/3 local Git blob SHA-1 exact vs remote tree; 256 unchanged manifest entries preserved, not full byte verification",
+  "previous_zip": "0203-T CRC and 13/13 SHA256+size PASS",
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "actual_pg": "UNAVAILABLE",
+    "checkout": "DNS_FAILURE"
+  },
+  "executed": {
+    "commands": [
+      "PYTHONPATH=. python -m unittest discover -s tests -p test_company_coordination_0204.py -v",
+      "PYTHONPATH=.:tests python -m unittest -v test_retained_history_0201 test_signed_history_0202 test_terminal_anchor_0203"
+    ],
+    "new_pass": 51,
+    "new_pure_replay": 26,
+    "new_actual_sqlite_fixture": 25,
+    "previous_selected_rerun": 54,
+    "previous_mocked_snapshot_tests": 9,
+    "total_selected_pass": 105,
+    "fail": 0,
+    "compile_changed_python": 2,
+    "new_log_sha256": "cbe630888e55cf9d8c76252d5d5de345bc206dbff451d13e2f80134e3f99bc79",
+    "regression_log_sha256": "c961bc34551fd59d85047e8b3e54e166a6f0b12b427b4423027f2dcc77fa7c53"
+  },
+  "not_run": {
+    "full_T1_decorator_integration": "NOT_RUN",
+    "prior_0201_integration": 5,
+    "prior_0203_lifecycle": 7,
+    "prior_pg": 13,
+    "prior_164_selected": "NOT_RERUN",
+    "full_product_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "authority": "NONE"
+}

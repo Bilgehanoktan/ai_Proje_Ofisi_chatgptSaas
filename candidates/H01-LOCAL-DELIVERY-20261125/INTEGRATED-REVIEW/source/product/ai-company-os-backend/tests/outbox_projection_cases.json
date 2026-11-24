@@ -1,0 +1,420 @@
+[
+  {
+    "name": "local hold",
+    "valid": true,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "claimed",
+    "valid": true,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "CLAIMED",
+      "generation": 1,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "unknown",
+    "valid": true,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "UNKNOWN_HOLD",
+      "generation": 2,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "readback",
+    "valid": true,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "READBACK_HOLD",
+      "generation": 9007199254740991,
+      "readback_recorded": true
+    }
+  },
+  {
+    "name": "overflow",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "CLAIMED",
+      "generation": 9007199254740992,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "boolean generation",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "CLAIMED",
+      "generation": true,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "fraction",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "CLAIMED",
+      "generation": 1.5,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "zero",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "CLAIMED",
+      "generation": 0,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "null claimed",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "CLAIMED",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "generation local hold",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": 1,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "readback missing",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "READBACK_HOLD",
+      "generation": 1,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "readback false phase",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "UNKNOWN_HOLD",
+      "generation": 1,
+      "readback_recorded": true
+    }
+  },
+  {
+    "name": "tenant mismatch",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "other",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "extra key",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false,
+      "readback_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  },
+  {
+    "name": "dispatch",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": true,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "retry",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": true,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "reconciled",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": true,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "provider",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": true,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "release",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": true,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "mode",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "other",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "admission",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "ALLOW",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "generation": null,
+      "readback_recorded": false
+    }
+  },
+  {
+    "name": "missing generation",
+    "valid": false,
+    "body": {
+      "schema_version": "outbox.review.projection.v1-D0",
+      "mode": "D0_OUTBOX_REVIEW_0184",
+      "tenant": "synthetic-tenant",
+      "company": "synthetic-company",
+      "admission": "DENY",
+      "dispatch_allowed": false,
+      "retry_allowed": false,
+      "reconciled": false,
+      "provider_called": false,
+      "release_ready": false,
+      "phase": "LOCAL_HOLD",
+      "readback_recorded": false
+    }
+  }
+]

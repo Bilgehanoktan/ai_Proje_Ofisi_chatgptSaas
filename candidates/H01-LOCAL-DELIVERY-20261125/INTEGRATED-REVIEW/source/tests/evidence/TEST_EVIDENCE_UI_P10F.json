@@ -1,0 +1,94 @@
+{
+  "revision": "UI-P10F",
+  "source_commit": "5b57199c397fa6ae183ec16c9efaa480dfc78175",
+  "parent": "14738822c38eb179825e00a01e48e2a3a0c16c3d",
+  "manifest_blob": "44844b647640694a00abc62f200af034d38ac6ff",
+  "scope": "isolated D0 selected diagnostics; not locked product acceptance",
+  "inventory": {
+    "product": 373,
+    "frontend": 158,
+    "manifest_entries": 372,
+    "unchanged": 359,
+    "added": 5,
+    "modified": 8,
+    "deleted": 0,
+    "local_exact_source_files": 113,
+    "local_aggregate_sha256": "546732a1bc0945df1c4a747b67e28dbd7fa19707d911e3fc496ad4131f775740"
+  },
+  "tests": {
+    "original_0211": {
+      "executed": 10,
+      "expected_protection": 9,
+      "residual_reproduced": 1
+    },
+    "new_direct_T1_SQLite": {
+      "executed": 8,
+      "expected_protection": 7,
+      "residual_reproduced": 1
+    },
+    "lifecycle": {
+      "passed": 25,
+      "executed": 25
+    },
+    "same_app_compiled_GET": {
+      "passed": 7,
+      "executed": 7,
+      "post_denied": 7,
+      "db_unchanged": 5
+    },
+    "model": {
+      "passed": 43,
+      "new": 16,
+      "rerun": 27
+    },
+    "standalone_SVG_Chromium": {
+      "passed": 18,
+      "executed": 18
+    },
+    "TSX_syntax": {
+      "passed": 4,
+      "executed": 4
+    },
+    "preflight_probes": {
+      "passed": 6,
+      "executed": 6
+    },
+    "core29": {
+      "exact": 37,
+      "required": 55,
+      "missing": 18,
+      "status": "NOT_RUN"
+    },
+    "original_witness_journal_wrapper": "NOT_RUN",
+    "next_build": "FAIL_EXIT_127_next_not_found",
+    "next_end_to_end": "NOT_RUN_0_of_7",
+    "original_browser": "NOT_RUN_0_of_52",
+    "PG_RLS": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "residuals": [
+    "D-04: restoring authority store permits replay in original authority test",
+    "D-04: restoring both disposable authority and product databases allows second real original ordinary T1 commit"
+  ],
+  "D03": "cooperating publisher serialized; independent external authority not established",
+  "D01_D02": "open",
+  "locks": "original W8 generates reviewed locks in separate stage; current reviewed lock unavailable; no package-lock in source tree",
+  "core_scope": {
+    "included": "0211",
+    "independent_0212_0213_head": "e33ffb633bc5a445aec1fb4946625884d503c348",
+    "production_changes": 0,
+    "test_additions": [
+      "test_intent_authority_t1_0212.py",
+      "test_company_terminal_0212.py"
+    ],
+    "historical_0212": "52 outcomes; 51 protections + one residual; not rerun",
+    "merge": "NOT_PERFORMED"
+  },
+  "blockers": [
+    "DNS archive download failure",
+    "historical 0212 library archive has no authorized raw-byte materialization path",
+    "18 missing original core lock files",
+    "Next/React dependencies absent",
+    "original W8 adapter not executed end-to-end"
+  ]
+}

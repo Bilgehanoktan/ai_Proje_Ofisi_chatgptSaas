@@ -1,0 +1,110 @@
+{
+  "revision": "UI-P10J-08-W8-ACCEPTANCE",
+  "source_tested": "752b225deac4557a548faec7191a090fbfba19f7",
+  "source_tree": "e4e16879901fe045be686fceaa1db525d02c8996",
+  "manifest_blob": "2a555e7e511fe80078b233324f3442d79cd590c6",
+  "runner_blob": "5b992e332c245ea332a1e00d16172bb1ef81f1ba",
+  "review_sha256": "754ea4debaa8a902554b9dc1e99b17ecf815f612a957d8c9aabe6010dd6b7694",
+  "user_pasted_transcript_sha256": "27f848f89f80e0367a9f743bf6b02bd5744280a94a3bf6a029ee239c01d80e41",
+  "evidence_origin": "User supplied Windows transcript, latest segment only; not independently rerun or raw screenshots inspected.",
+  "stage": "AI_COMPANY_OS_P10J08_20261116_223448",
+  "audit": {
+    "source": 390,
+    "pairs": 16,
+    "auxiliary": 20
+  },
+  "dependencies": {
+    "comparison": "PASS",
+    "install": "PASS",
+    "npm_packages": 61,
+    "python_wheels": 28
+  },
+  "tests": {
+    "backend": {
+      "total": 839,
+      "pass": 821,
+      "skip": 18,
+      "fail": 0,
+      "pg_skip": 13,
+      "platform_skip": 5
+    },
+    "node": {
+      "pass": 369,
+      "skip": 1,
+      "fail": 0
+    },
+    "archive": {
+      "pass": 9,
+      "total": 9
+    },
+    "next_build": "PASS",
+    "typescript": "PASS",
+    "api_parity": {
+      "pass": 7,
+      "total": 7
+    },
+    "browser_scripts": {
+      "pass": 4,
+      "total": 4
+    },
+    "captures": {
+      "count": 52,
+      "views": 13,
+      "widths": [
+        1440,
+        390
+      ],
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "pixel_review": "HOLD"
+    },
+    "sample_db_integrity": {
+      "pass": 5,
+      "total": 5,
+      "scope": "W8 smoke compares before/after hashes, marker verified in transcript; hashes not separately supplied"
+    }
+  },
+  "markers": [
+    "INSTALL_OK",
+    "BUILD_TEST_OK",
+    "SMOKE_OK"
+  ],
+  "status": "W8_LOCAL_D0_PASS_USER_TRANSCRIPT",
+  "open": [
+    "raw evidence bundle and screenshot visual review",
+    "targeted new DAG/editor/role interaction browser tests",
+    "0222 controlled union and full regression",
+    "13 PostgreSQL and 5 platform skips; one Node skip",
+    "D03/D04 independent authority and recovery residuals",
+    "independent acceptance 0/7",
+    "CSS autoprefixer and Starlette warnings"
+  ],
+  "parallel": {
+    "heads": {
+      "integration/ui-0212-p10j": "752b225deac4557a548faec7191a090fbfba19f7",
+      "integration/0220-plan-dag-admission": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+      "integration/0221-sample-result-context": "6423e91d32a8ce660105b8ea76e44489dc36018d",
+      "integration/0222-shared-ceo-office": "70d6c305c34a36361214343526d5c134cb6c9c9f",
+      "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+    },
+    "core_source": "70d6c305c34a36361214343526d5c134cb6c9c9f",
+    "core_tree": "95247c7b8e71649bbbecf992e1c1f8f5b5278512",
+    "counts": {
+      "same": 326,
+      "ui_only": 49,
+      "core_only": 41,
+      "diverged": 5
+    },
+    "divergent": [
+      "product/SOURCE_MANIFEST.json",
+      "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "core_gates": "7/16 for 0222, not upgraded by UI evidence",
+    "merge": false
+  }
+}

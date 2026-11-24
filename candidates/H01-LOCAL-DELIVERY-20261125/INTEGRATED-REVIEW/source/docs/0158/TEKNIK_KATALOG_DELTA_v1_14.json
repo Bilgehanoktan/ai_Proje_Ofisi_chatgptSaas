@@ -1,0 +1,212 @@
+{
+  "version": "v1.14 Delta",
+  "status": "UNRATIFIED_SOURCE_CANDIDATE_NOT_RUN",
+  "entries": [
+    {
+      "id": "CHG-0155-01",
+      "file": "dag.py",
+      "symbols": "valid_id, topological_waves, ancestors, validate_release_boundary",
+      "why_how": "D0 field, graph, QA path checks; no production scheduler",
+      "diagnosis": "GraphError: TASK_FIELD_INVALID, DEPENDENCY_INVALID/MISSING, DAG_CYCLE, PRODUCER_QA_BYPASS",
+      "rollback": "Restore entire R2 source ZIP; remove R3 additive route, fixtures, schema and test together; preserve R2 manifest."
+    },
+    {
+      "id": "CHG-0155-02",
+      "file": "orchestrator.py",
+      "symbols": "parse_plan, canonical_plan, preview_plan",
+      "why_how": "Deterministic sorted tasks/edges/waves; content SHA-256; v0 projection unchanged in shape",
+      "diagnosis": "Compare scope, plan ID, digest, revision; HOLD only",
+      "rollback": "Restore entire R2 source ZIP; remove R3 additive route, fixtures, schema and test together; preserve R2 manifest."
+    },
+    {
+      "id": "CHG-0155-03",
+      "file": "main.py",
+      "symbols": "plan_projection",
+      "why_how": "Add fixed synthetic GET /demo/v1/core/plan-projection; GraphError => 409 HOLD",
+      "diagnosis": "Inspect local fixture, GraphError, old v0 shape; no runtime call",
+      "rollback": "Restore entire R2 source ZIP; remove R3 additive route, fixtures, schema and test together; preserve R2 manifest."
+    },
+    {
+      "id": "CHG-0155-04",
+      "file": "core.plan.projection.schema.json / core.plan.projection.json / CONTRACT_PIN.md (BE+FE)",
+      "symbols": "D0 projection v1",
+      "why_how": "Two new byte-identical schema/fixture pairs; independently prepared reference, not API capture",
+      "diagnosis": "Compare pins and shared bytes; no KS/NS acceptance",
+      "rollback": "Restore entire R2 source ZIP; remove R3 additive route, fixtures, schema and test together; preserve R2 manifest."
+    },
+    {
+      "id": "CHG-0155-05",
+      "file": "planProjection.ts / CorePreview.tsx",
+      "symbols": "readPlanProjection, CorePreview",
+      "why_how": "Remove independent wave scheduler; static reference guard checks IDs, roles, dependencies, edges, levels, pin; explicit HOLD",
+      "diagnosis": "Check PLAN_SCOPE_OR_PIN_MISMATCH, TASK_BINDING_MISMATCH, EDGE_MISMATCH, WAVE_*; no fetch",
+      "rollback": "Restore entire R2 source ZIP; remove R3 additive route, fixtures, schema and test together; preserve R2 manifest."
+    },
+    {
+      "id": "CHG-0155-06",
+      "file": "tests/test_plan_projection.py",
+      "symbols": "PlanProjectionTests",
+      "why_how": "Five unittest candidate methods, no extra dependency; NOT_RUN",
+      "diagnosis": "Future authorized test run only; compare actual compiler output against reference",
+      "rollback": "Restore entire R2 source ZIP; remove R3 additive route, fixtures, schema and test together; preserve R2 manifest."
+    }
+  ],
+  "file_changes": [
+    {
+      "path": "ai-company-os-backend/CONTRACT_PIN.md",
+      "status": "MODIFIED",
+      "before": {
+        "bytes": 894,
+        "sha256": "84e1bdda431e61b6ac9cf54db8048070ab01dc6aa746f5f7e82973a5baa8282e"
+      },
+      "after": {
+        "bytes": 1308,
+        "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
+      },
+      "lines_before": 9,
+      "lines_after": 14
+    },
+    {
+      "path": "ai-company-os-backend/app/core/dag.py",
+      "status": "MODIFIED",
+      "before": {
+        "bytes": 2629,
+        "sha256": "1aeb6bb39daa092ac23d7292174251f0bef536a1812903ac211251055e047114"
+      },
+      "after": {
+        "bytes": 3367,
+        "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1"
+      },
+      "lines_before": 67,
+      "lines_after": 81
+    },
+    {
+      "path": "ai-company-os-backend/app/core/orchestrator.py",
+      "status": "MODIFIED",
+      "before": {
+        "bytes": 947,
+        "sha256": "f54bc73aa38011b05eda3553e8f2f78ac0192af68d60b465fc9fbec660e87392"
+      },
+      "after": {
+        "bytes": 3049,
+        "sha256": "7aafa1380d12bdcdf8a9d00de4d7427abebab8a433c57b5dc74af10802b17aa2"
+      },
+      "lines_before": 15,
+      "lines_after": 56
+    },
+    {
+      "path": "ai-company-os-backend/app/main.py",
+      "status": "MODIFIED",
+      "before": {
+        "bytes": 1513,
+        "sha256": "b9dd5ffc8b94229c903635d636ab14065a7aa29e1e131f0d91e66c32910241fa"
+      },
+      "after": {
+        "bytes": 2001,
+        "sha256": "1cbea873fa4f6fb21fe348a911f7bb1ba677b3c3496f07f0c598a3d61bce89fe"
+      },
+      "lines_before": 40,
+      "lines_after": 51
+    },
+    {
+      "path": "ai-company-os-frontend/CONTRACT_PIN.md",
+      "status": "MODIFIED",
+      "before": {
+        "bytes": 894,
+        "sha256": "84e1bdda431e61b6ac9cf54db8048070ab01dc6aa746f5f7e82973a5baa8282e"
+      },
+      "after": {
+        "bytes": 1308,
+        "sha256": "f614d7d9a5f931e389d971a02b98462139e045ee2671bda05ee5d7032bb8b002"
+      },
+      "lines_before": 9,
+      "lines_after": 14
+    },
+    {
+      "path": "ai-company-os-frontend/features/CorePreview.tsx",
+      "status": "MODIFIED",
+      "before": {
+        "bytes": 3401,
+        "sha256": "194f166a7a4f126ad0ae58fd255b1f62127ce80c37caed24a10460416a4a56eb"
+      },
+      "after": {
+        "bytes": 3378,
+        "sha256": "7b93cdbb9e61872f9340a93dde21c7b5570ac80dc4ea55e89d755df3b1cbf610"
+      },
+      "lines_before": 9,
+      "lines_after": 8
+    },
+    {
+      "path": "ai-company-os-backend/contracts/source/core.plan.projection.schema.json",
+      "status": "ADDED",
+      "before": null,
+      "after": {
+        "bytes": 3532,
+        "sha256": "4e1b26ae8a122807351d7d6cbe6ba0e051de9171a93a0248070b22869c828421"
+      },
+      "lines_before": 0,
+      "lines_after": 164
+    },
+    {
+      "path": "ai-company-os-backend/fixtures/core.plan.projection.json",
+      "status": "ADDED",
+      "before": null,
+      "after": {
+        "bytes": 2462,
+        "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+      },
+      "lines_before": 0,
+      "lines_after": 138
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_plan_projection.py",
+      "status": "ADDED",
+      "before": null,
+      "after": {
+        "bytes": 2472,
+        "sha256": "2f0e5ec8f52b49a4d8268a2977d34abec00c43d06d867020448f7a65f0c858fc"
+      },
+      "lines_before": 0,
+      "lines_after": 54
+    },
+    {
+      "path": "ai-company-os-frontend/contracts/generated/core.plan.projection.schema.json",
+      "status": "ADDED",
+      "before": null,
+      "after": {
+        "bytes": 3532,
+        "sha256": "4e1b26ae8a122807351d7d6cbe6ba0e051de9171a93a0248070b22869c828421"
+      },
+      "lines_before": 0,
+      "lines_after": 164
+    },
+    {
+      "path": "ai-company-os-frontend/features/planProjection.ts",
+      "status": "ADDED",
+      "before": null,
+      "after": {
+        "bytes": 2647,
+        "sha256": "6fb1d02cda17197c5dbad8ee4fbf3fcf928531461d275266608fdda6e82b8074"
+      },
+      "lines_before": 0,
+      "lines_after": 35
+    },
+    {
+      "path": "ai-company-os-frontend/fixtures/core.plan.projection.json",
+      "status": "ADDED",
+      "before": null,
+      "after": {
+        "bytes": 2462,
+        "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+      },
+      "lines_before": 0,
+      "lines_after": 138
+    }
+  ],
+  "dependencies_added": [],
+  "database_changes": [],
+  "api_additions": [
+    "GET /demo/v1/core/plan-projection (fixed synthetic only)"
+  ],
+  "api_compatibility": "v0 response shape preserved; input validation tightened; no actual compatibility test"
+}

@@ -1,0 +1,63 @@
+{
+  "revision": "W1-0198-P03",
+  "source_commit": "f58cf95402b06daddfc3b7ec067533451772eb8f",
+  "executed": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "python_command": "python -B -m unittest discover -s tests -p test_prefix_wire_p03.py -v",
+    "node_command": "tsc --strict --target ES2022 --lib ES2022,DOM --module commonjs --rootDir . --outDir compiled features/data/projectionRegistry.ts; node each test with compiled module and fixture args",
+    "python_pure": {
+      "passed": 6,
+      "failed": 0,
+      "source_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+      "test_blob": "829c935b91d266a6eec01958e9b5afa35d519d05"
+    },
+    "prefix_parser": {
+      "passed": 23,
+      "failed": 0,
+      "source_blob": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c",
+      "test_blob": "7ee6769f44f07253c089d76860bcedc53b2dc70a",
+      "python_vector_blob": "53459c4b6961455dc183cb3b20382559862e98f6"
+    },
+    "registry": {
+      "passed": 11,
+      "new": 1,
+      "regression": 10,
+      "source_blob": "a9293468f0e5249e641f80fc5b91c2d2f9f67d39",
+      "test_blob": "0e44dbaf1e2297ea9a1cf2388bfb2aad8d062d0a"
+    },
+    "transport": {
+      "passed": 12,
+      "regression": 12,
+      "source_blob": "ba82bc6ff78ad85a0003cdb520dc674ec7800bf1",
+      "test_blob": "226e0e9721677235184547b8d79e91b2e6c541fb"
+    },
+    "terminal": {
+      "passed": 14,
+      "regression": 14,
+      "source_blob": "e58fd219c713a4195c8110e727c013d048efdfd4",
+      "test_blob": "760883907bec65cf36a99e15e30be58d5abd5099"
+    },
+    "total": 66,
+    "new": 30,
+    "regression": 36,
+    "failed": 0,
+    "skipped": 0,
+    "exact_changed_test_blobs_match": true,
+    "plan_revision_recomputed": "MATCH"
+  },
+  "prepared_not_run": [
+    "P02 8 persisted fixture/API tests",
+    "P03 9 persisted fixture/API tests",
+    "browser_lifecycle_prefix_p03.py",
+    "seven API loopback parity",
+    "five DB hash guards",
+    "runner preflight",
+    "pinned TypeScript 5.9.3",
+    "React lifecycle/Next build/full suite",
+    "actual PostgreSQL"
+  ],
+  "blocker": "git ls-remote github.com failed DNS; exact full product not materialized. Only selected pure Python/TS subset executed. Windows deferred by user.",
+  "independent_acceptance": "HOLD",
+  "historical_counts_not_additive": true
+}

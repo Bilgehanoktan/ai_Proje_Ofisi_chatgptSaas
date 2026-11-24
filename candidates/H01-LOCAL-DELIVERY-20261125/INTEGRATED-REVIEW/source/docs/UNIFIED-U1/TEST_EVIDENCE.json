@@ -1,0 +1,57 @@
+{
+  "revision": "UNIFIED-U1",
+  "parents": {
+    "ui": "b7353a445ad6d3dafe77900837bdb4dc9ca74911",
+    "core": "167e5239882dc7b49bd96647412fe6761da0be5e",
+    "office": "089a4a256cdf0fc835035041ac519b4c15250542",
+    "a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36"
+  },
+  "env": {
+    "os": "Linux",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "pinned_typescript": "5.9.3 NOT_RUN"
+  },
+  "parent_delta": "21/21 PASS",
+  "strict_compile": "PASS",
+  "tests": {
+    "U1": 5,
+    "A5R3": 12,
+    "A5R2": 17,
+    "A5R1": 15,
+    "total": 49,
+    "failed": 0
+  },
+  "tsx_syntax": 3,
+  "tsx_full_typecheck": "NOT_RUN",
+  "backend": "NOT_RUN",
+  "pg": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "native": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "full_zip": "BLOCKED_DNS",
+  "gate_promotion": false,
+  "office_join": "JOIN_HOLD",
+  "exact_blobs": {
+    "office/engine/premiumDynamicFloors.ts": "d53d8c78b6d980ddc531d2e0a3ea89f6d8e992c2",
+    "office/engine/premiumFloorRender.ts": "305ce5e5757c26a7a619e39115e49264ddfe9b7d",
+    "office/engine/premiumFloorSvg.ts": "5007c2a02b4ca33490bcf9681d2a0a7ef58a9b4f",
+    "office/engine/premiumFloorTraffic.ts": "937773a16328451045d447ab267723ef68adfd55",
+    "tests/premium-dynamic-floors.test.cjs": "209789688fa45c3fc44bfc0293a8d77513cbefc9",
+    "tests/premium-floor-render.test.cjs": "85d1a58643d8be75041ec1ad66e6b16cb13dd792",
+    "tests/premium-floor-traffic.test.cjs": "53145d8869c053ea8156c96fc8082b3cd7baf5d8"
+  },
+  "dependency_blobs": {
+    "premiumActorIdentity.ts": "1189295b372f2b9360cbecbf5357f2ad356f1824",
+    "premiumHybridLayout.ts": "b22331afc90dc7059cc8e3c098ba83477c993d90",
+    "premiumRouting.ts": "da139ea32dea7358acfddb2782c6cfb2e9e7a4cd",
+    "premiumTraffic.ts": "e236e61cfb6fdee7fd5f3356aa7e6ea0c9b2914e"
+  },
+  "new_blobs": {
+    "office/engine/unifiedOfficePreview.ts": "e31d2d535a0d4a4a566a090d0d3236937a51b1d5",
+    "office/components/UnifiedOfficePreview.tsx": "059a55f5a5c939bc54a7ead4e45f0b339c71d70b",
+    "app/office/premium/unified/page.tsx": "fb6cf1fe045f216df1ad4a24cb72eb6d42f3219f",
+    "app/office/premium/page.tsx": "2a21f807a63e8808da56cd9c980882244c3df05b",
+    "tests/unified-office-preview.test.cjs": "a9ed8f9200ad136464e9ff491ce2b2d5b334c241"
+  }
+}

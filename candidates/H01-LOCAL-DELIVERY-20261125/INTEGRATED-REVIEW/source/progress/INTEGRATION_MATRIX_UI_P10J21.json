@@ -1,0 +1,49 @@
+{
+  "revision": "UI-P10J-21",
+  "parent": "ae3f5e45c8dc77359f5ae7701efc833585d3c4a9",
+  "scope": "W1 presentation / W5 source inventory / W8 test adapter",
+  "changed_areas": [
+    {
+      "id": 1,
+      "name": "Frontend",
+      "source": "integrated",
+      "test": "TSX transpile only"
+    },
+    {
+      "id": 2,
+      "name": "UI/UX",
+      "source": "integrated",
+      "test": "browser NOT_RUN"
+    },
+    {
+      "id": 10,
+      "name": "Skill & Tool",
+      "source": "read-only inventory",
+      "test": "model 10/10 shared"
+    },
+    {
+      "id": 13,
+      "name": "Memory & Knowledge",
+      "source": "read-only inventory",
+      "test": "model 10/10 shared"
+    },
+    {
+      "id": 20,
+      "name": "Test & QA",
+      "source": "model and W8 wrapper",
+      "test": "W8 NOT_RUN"
+    },
+    {
+      "id": 24,
+      "name": "Technical catalog",
+      "source": "revision updated"
+    }
+  ],
+  "remaining_areas": "unchanged; no promotion",
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}

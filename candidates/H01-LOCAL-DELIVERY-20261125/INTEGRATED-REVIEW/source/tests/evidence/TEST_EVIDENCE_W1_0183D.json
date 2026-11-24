@@ -1,0 +1,40 @@
+{
+  "revision": "W1-0183D",
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 local (pin 5.9.3)",
+    "browser": "installed Chromium via Playwright"
+  },
+  "commands": [
+    "tsc office/engine/galleryCamera.ts --strict --target ES2022 --module commonjs --outDir <temp>",
+    "node tests/gallery-camera.test.cjs <temp>/galleryCamera.js",
+    "TypeScript transpileModule OfficeIllustration.tsx (syntax only)",
+    "Playwright page.set_content standalone HTML containing compiled camera helper and prior artwork"
+  ],
+  "helper": {
+    "pass": 10,
+    "fail": 0
+  },
+  "tsx_syntax": "PASS",
+  "standalone_browser": {
+    "pass": 10,
+    "fail": 0,
+    "checks": [
+      "image decoded",
+      "zoom cap",
+      "reset",
+      "focus station",
+      "button pan",
+      "keyboard pan",
+      "mouse drag",
+      "floor reset and reserve empty",
+      "390px no page overflow",
+      "no page errors"
+    ]
+  },
+  "full_next_build": "NOT_RUN",
+  "full_product_typecheck": "NOT_RUN",
+  "react_browser": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "historical": "Previous W1 tests retained; not rerun this round."
+}

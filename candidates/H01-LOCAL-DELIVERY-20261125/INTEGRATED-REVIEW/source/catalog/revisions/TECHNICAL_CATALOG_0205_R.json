@@ -1,0 +1,138 @@
+{
+  "revision": "0205-R",
+  "parent": "cb03319e1e8d46246973c9c6bfad23482043e529",
+  "source": "bb2b88bf44ed23b523b269b50cad326c313b75fa",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_recovery.py",
+      "bytes": 10457,
+      "sha256": "42c6ce3c16a354a00ac0d3a16067e10d51f57351730fab514e7530d964eab5dd",
+      "blob": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0",
+      "status": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_recovery_0205.py",
+      "bytes": 12267,
+      "sha256": "050b68f9438d022b9c0914ebbc0d4672ab9d0496d8308f847c50d07179e9a05a",
+      "blob": "8db01a9227d71b51e28485d823c304c5c48ab67b",
+      "status": "added"
+    }
+  ],
+  "modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_recovery.py",
+      "classes": [
+        "CompanyCheckpoint",
+        "WitnessRecord",
+        "WitnessReader",
+        "D0WitnessStore",
+        "RecoveryReview"
+      ],
+      "functions": [
+        "_sha",
+        "_uint",
+        "_bytes",
+        "checkpoint",
+        "_valid",
+        "witness_bytes",
+        "witness_sha",
+        "_base",
+        "_pending",
+        "_transition",
+        "genesis",
+        "stage_pending",
+        "advance_recovery_epoch",
+        "_latest",
+        "WitnessReader.__init__",
+        "WitnessReader.read_latest",
+        "D0WitnessStore.__init__",
+        "D0WitnessStore.append",
+        "review_recovery"
+      ],
+      "dependencies": [
+        "contextlib.closing",
+        "dataclasses",
+        "hashlib.sha256",
+        "pathlib.Path",
+        "json",
+        "re",
+        "sqlite3",
+        "company_coordination.SCOPE",
+        "company_coordination.replay_company",
+        "company_coordination.inspect_company"
+      ],
+      "errors": [
+        "D0_RECOVERY_CHECKPOINT_HOLD",
+        "D0_RECOVERY_CHECKPOINT_LIMIT",
+        "D0_RECOVERY_WITNESS_FORMAT_HOLD",
+        "D0_RECOVERY_GENESIS_HOLD",
+        "D0_RECOVERY_WITNESS_CHAIN_HOLD",
+        "D0_RECOVERY_PENDING_HOLD",
+        "D0_RECOVERY_MONOTONIC_HOLD",
+        "D0_RECOVERY_WITNESS_LIMIT",
+        "D0_RECOVERY_EXTERNAL_PIN_HOLD",
+        "D0_RECOVERY_WITNESS_CAS_HOLD",
+        "D0_RECOVERY_CHECKPOINT_MISMATCH_HOLD",
+        "D0_RECOVERY_READBACK_HOLD",
+        "D0_RECOVERY_WITNESS_CHANGED_HOLD",
+        "D0_RECOVERY_EXTERNAL_OR_READBACK_HOLD"
+      ],
+      "results": [
+        "D0_RECOVERY_UNKNOWN_COMMIT_MATCH_ONLY",
+        "D0_RECOVERY_UNKNOWN_ABSENCE_NOT_PROOF",
+        "D0_RECOVERY_CHECKPOINT_MATCH_READ_ONLY"
+      ]
+    }
+  ],
+  "database": [
+    {
+      "table": "recovery_witness",
+      "scope": "separate local SQLite fixture, not canonical DB or WORM",
+      "pk": "generation",
+      "unique": "digest",
+      "columns": [
+        "generation INTEGER",
+        "digest TEXT",
+        "body BLOB"
+      ],
+      "triggers": [
+        "witness_no_update",
+        "witness_no_delete",
+        "witness_no_replace"
+      ],
+      "transaction": "BEGIN IMMEDIATE CAS append; read mode=ro, query_only, BEGIN"
+    }
+  ],
+  "api": [],
+  "events_new": [],
+  "dependencies_new": [],
+  "tests": {
+    "commands": [
+      "PYTHONPATH=.:tests python -m unittest -v test_company_recovery_0205",
+      "PYTHONPATH=.:tests python -m unittest -v test_retained_history_0201 test_signed_history_0202 test_terminal_anchor_0203 test_company_coordination_0204"
+    ],
+    "new_pass": 43,
+    "new_checkpoint_tests": 12,
+    "new_witness_sqlite": 13,
+    "new_recovery_sqlite": 18,
+    "previous_selected_rerun": 105,
+    "previous_mocked_underlying_snapshot": 9,
+    "total_selected_pass": 148,
+    "fail": 0,
+    "compile_changed_python": 2,
+    "new_log_sha256": "91f013dac12589563981a1d28599ce163d847cf3044595f4f5e08612b8e3597f",
+    "regression_log_sha256": "6a5dadd24d8849006fbbe995dfded4c064e02ab4f9548fb24ac3d85589564feb"
+  },
+  "not_run": {
+    "prior_0201_integration": 5,
+    "prior_0203_lifecycle": 7,
+    "full_T1_decorator": "NOT_RUN",
+    "prior_pg": 13,
+    "prior_164_selected": "NOT_RERUN",
+    "full_product_build_browser": "NOT_RUN",
+    "actual_independent_witness": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "decisions": "Provisional SHA-256 checkpoint, append-only local witness fixture, one pending target, separate recovery epoch; no local target publication. No normative ratification.",
+  "rollback": "Pin parent or revert two new paths and manifest; preserve evidence, no pending deletion."
+}

@@ -1,0 +1,93 @@
+{
+  "revision": "0206",
+  "source_commit": "f1b50dc2be8a455e3f3aee92b14d2d79433338a4",
+  "tree": "441a063f45556144e79fcdef613e52d31c62c32e",
+  "baseline": "877261d594ee5512afb81ccb28c9a4d1a7910ad1",
+  "frontend_parent": "23505d8f95500aef72466824ddb3956a14a594a8",
+  "manifest_blob": "756bb6bd4717d363a9af4edd9d20ae558afdf71e",
+  "manifest_entries": 334,
+  "product_files": 335,
+  "source_tree_files": 1335,
+  "source_tree_exact_non_generated": 1332,
+  "source_tree_errors": 0,
+  "checks": {
+    "parent_manifest_path_size": [
+      260,
+      314
+    ],
+    "three_way_conflict_except_manifest": 0,
+    "combined_manifest_path_size": 334,
+    "shared_contract_blob_parity": 12,
+    "carry": 22,
+    "ai": 8,
+    "p06_lock_matching": 43
+  },
+  "actual_local_file_hashes_verified": 7,
+  "local_full_checkout": "BLOCKED_DNS",
+  "sql_pins": [
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "bytes": 1346
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "bytes": 878
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "bytes": 2437
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "bytes": 2134
+    },
+    {
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "bytes": 1751
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "bytes": 1031
+    },
+    {
+      "path": "database/0204C/company_event_order.sql",
+      "blob": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "bytes": 1808
+    },
+    {
+      "path": "database/migrations/0183_D0_PHYSICAL_CANDIDATE.sql",
+      "blob": "8e6b4a4e886459be74ae575becd5917c5f070fab",
+      "bytes": 2915
+    }
+  ],
+  "main_before": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "ci_workflows": 0,
+  "tests": {
+    "combined_product": "NOT_RUN",
+    "prior_0205_selected_pass": 148,
+    "prior_p05_reconciled_selected_pass": 57,
+    "prior_p06_selected_pass": 97,
+    "prior_results_not_additive": true,
+    "prior_core_integration_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1": "NOT_RUN",
+    "actual_pg_13": "NOT_RUN",
+    "build_browser": "NOT_RUN",
+    "independent": "HOLD",
+    "snapshot_regressions": {
+      "passed": 24,
+      "new": 0,
+      "rerun": 24,
+      "scope": "exact 7-file dependency closure with real SQLite",
+      "evidence": "tests/evidence/TEST_EVIDENCE_0206_SNAPSHOT.json"
+    }
+  },
+  "full_archive_downloaded": false,
+  "local_slice_zip_sha256": "7c60e1a0e97ac571b484a9c231fe0a7d997382389de56189046c657a6833ced3"
+}

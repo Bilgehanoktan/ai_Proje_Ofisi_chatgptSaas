@@ -1,0 +1,58 @@
+{
+  "revision": "0211",
+  "source_commit": "b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d",
+  "parallel": [
+    {
+      "line": "A/B",
+      "state": "23/23 remote missing blobs matched; local materialization and core29 NOT_RUN"
+    },
+    {
+      "line": "C",
+      "state": "Original Company/Terminal NOT_RUN"
+    },
+    {
+      "line": "D",
+      "state": "9 component behaviors PASS; 1 reproduced residual; original T1 and independent authority HOLD"
+    },
+    {
+      "line": "E",
+      "state": "Historical projection only; unchanged"
+    },
+    {
+      "line": "F/G",
+      "state": "PG/RLS/full build NOT_RUN"
+    }
+  ],
+  "tests": {
+    "runner_pass": 10,
+    "behavior_pass": 9,
+    "residual_reproduced": 1,
+    "failed": 0,
+    "skipped": 0,
+    "previous_0210_selected_pass": 154,
+    "previous_0210_rerun": false,
+    "original_0210_wrapper": "NOT_RUN",
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "recovery": {
+    "lock_blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "remote_pins_prior_0210": 55,
+    "missing_previous_local": 23,
+    "remote_missing_pin_readback_0211": 23,
+    "remote_missing_pin_mismatches": 0,
+    "previous_local_exact": 32,
+    "new_local_recovered": 0,
+    "current_full_checkout": "BLOCKED",
+    "core_target_tests": 29,
+    "core_tests": "NOT_RUN"
+  },
+  "next": "handover/NEXT_STEP_0211.md"
+}

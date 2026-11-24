@@ -1,0 +1,357 @@
+{
+  "revision": "0199-C",
+  "parent": "2d2ee7c4b4eafbdec9b721c8ad1b8f0428f78a3f",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "operation": "ADD",
+      "bytes": 9251,
+      "sha256": "d81e3c5fc8cee82f306787f1d1d5dca594350f9df278d7ee7d3d7219602996d3",
+      "git_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "symbols": [
+        {
+          "name": "RunHistoryPin",
+          "kind": "ClassDef",
+          "line": 20,
+          "end": 23,
+          "doc": null
+        },
+        {
+          "name": "TaskHistory",
+          "kind": "ClassDef",
+          "line": 26,
+          "end": 32,
+          "doc": null
+        },
+        {
+          "name": "PlanHistoryReview",
+          "kind": "ClassDef",
+          "line": 35,
+          "end": 45,
+          "doc": null
+        },
+        {
+          "name": "_rows",
+          "kind": "FunctionDef",
+          "line": 48,
+          "end": 54,
+          "doc": null
+        },
+        {
+          "name": "_validate_unadmitted",
+          "kind": "FunctionDef",
+          "line": 57,
+          "end": 62,
+          "doc": null
+        },
+        {
+          "name": "_reconcile_pools",
+          "kind": "FunctionDef",
+          "line": 65,
+          "end": 100,
+          "doc": "Optional stricter profile: each pinned pool belongs only to these runs.\nInitial balance zero, recognized cost zero; exact revision chain and current row.\nNo inference about other pools, external effects or actual financial accounting."
+        },
+        {
+          "name": "inspect_plan_history",
+          "kind": "FunctionDef",
+          "line": 103,
+          "end": 158,
+          "doc": "Validate exact persisted agent roster and all pinned run histories.\nUnadmitted agents must have exact QUEUED head and no scoped artifacts.\nHuman/IV are gates, never agent runs. Current supported replay has no success\nauthority: descendants cannot progress on a bare SUCCEEDED head. Optional\nexclusive pool replay verifies all known mutations of pinned sample pools.\nA single consistent snapshot is an explicit caller precondition."
+        }
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "operation": "ADD",
+      "bytes": 9848,
+      "sha256": "adb6e42cc994d90ff90ecfb74527f36cee22a43867abd830c579067744e92e79",
+      "git_blob": "9db44143d1d5395e222d111a4e847930f019208e",
+      "symbols": [
+        {
+          "name": "PlanHistoryTests",
+          "kind": "ClassDef",
+          "line": 18,
+          "end": 88,
+          "doc": null
+        },
+        {
+          "name": "ParallelRootTests",
+          "kind": "ClassDef",
+          "line": 90,
+          "end": 116,
+          "doc": null
+        },
+        {
+          "name": "setUp",
+          "kind": "FunctionDef",
+          "line": 19,
+          "end": 22,
+          "doc": null
+        },
+        {
+          "name": "pins",
+          "kind": "FunctionDef",
+          "line": 23,
+          "end": 24,
+          "doc": null
+        },
+        {
+          "name": "review",
+          "kind": "FunctionDef",
+          "line": 25,
+          "end": 29,
+          "doc": null
+        },
+        {
+          "name": "change",
+          "kind": "FunctionDef",
+          "line": 30,
+          "end": 31,
+          "doc": null
+        },
+        {
+          "name": "hold",
+          "kind": "FunctionDef",
+          "line": 32,
+          "end": 34,
+          "doc": null
+        },
+        {
+          "name": "test_admitted_roster_and_gates",
+          "kind": "FunctionDef",
+          "line": 35,
+          "end": 38,
+          "doc": null
+        },
+        {
+          "name": "test_full_failed_history_budget",
+          "kind": "FunctionDef",
+          "line": 39,
+          "end": 41,
+          "doc": null
+        },
+        {
+          "name": "test_renewal_budget_revision",
+          "kind": "FunctionDef",
+          "line": 42,
+          "end": 43,
+          "doc": null
+        },
+        {
+          "name": "test_open_admitted_pool",
+          "kind": "FunctionDef",
+          "line": 44,
+          "end": 44,
+          "doc": null
+        },
+        {
+          "name": "test_missing_pin",
+          "kind": "FunctionDef",
+          "line": 45,
+          "end": 45,
+          "doc": null
+        },
+        {
+          "name": "test_duplicate_pin",
+          "kind": "FunctionDef",
+          "line": 46,
+          "end": 46,
+          "doc": null
+        },
+        {
+          "name": "test_bad_revision",
+          "kind": "FunctionDef",
+          "line": 47,
+          "end": 47,
+          "doc": null
+        },
+        {
+          "name": "test_changed_plan_label",
+          "kind": "FunctionDef",
+          "line": 48,
+          "end": 49,
+          "doc": null
+        },
+        {
+          "name": "test_pin_wrong_principal",
+          "kind": "FunctionDef",
+          "line": 50,
+          "end": 51,
+          "doc": null
+        },
+        {
+          "name": "test_forged_success",
+          "kind": "FunctionDef",
+          "line": 52,
+          "end": 52,
+          "doc": null
+        },
+        {
+          "name": "test_forged_descendant",
+          "kind": "FunctionDef",
+          "line": 53,
+          "end": 53,
+          "doc": null
+        },
+        {
+          "name": "test_actual_descendant_claim_without_verified_predecessor",
+          "kind": "FunctionDef",
+          "line": 54,
+          "end": 64,
+          "doc": null
+        },
+        {
+          "name": "test_missing_head",
+          "kind": "FunctionDef",
+          "line": 65,
+          "end": 65,
+          "doc": null
+        },
+        {
+          "name": "test_extra_human_head",
+          "kind": "FunctionDef",
+          "line": 66,
+          "end": 67,
+          "doc": null
+        },
+        {
+          "name": "test_unadmitted_event",
+          "kind": "FunctionDef",
+          "line": 68,
+          "end": 69,
+          "doc": null
+        },
+        {
+          "name": "test_unadmitted_pin_has_command",
+          "kind": "FunctionDef",
+          "line": 70,
+          "end": 71,
+          "doc": null
+        },
+        {
+          "name": "test_tampered_admitted_history_no_partial",
+          "kind": "FunctionDef",
+          "line": 72,
+          "end": 73,
+          "doc": null
+        },
+        {
+          "name": "test_tampered_budget_postimage",
+          "kind": "FunctionDef",
+          "line": 74,
+          "end": 75,
+          "doc": null
+        },
+        {
+          "name": "test_bad_budget_anchor",
+          "kind": "FunctionDef",
+          "line": 76,
+          "end": 76,
+          "doc": null
+        },
+        {
+          "name": "test_duplicate_budget_anchor",
+          "kind": "FunctionDef",
+          "line": 77,
+          "end": 77,
+          "doc": null
+        },
+        {
+          "name": "test_missing_pool_anchor",
+          "kind": "FunctionDef",
+          "line": 78,
+          "end": 78,
+          "doc": null
+        },
+        {
+          "name": "test_foreign_reservation",
+          "kind": "FunctionDef",
+          "line": 79,
+          "end": 81,
+          "doc": null
+        },
+        {
+          "name": "test_separate_read_transaction_consistency",
+          "kind": "FunctionDef",
+          "line": 82,
+          "end": 88,
+          "doc": null
+        },
+        {
+          "name": "setUp",
+          "kind": "FunctionDef",
+          "line": 91,
+          "end": 98,
+          "doc": null
+        },
+        {
+          "name": "claim",
+          "kind": "FunctionDef",
+          "line": 99,
+          "end": 103,
+          "doc": null
+        },
+        {
+          "name": "review",
+          "kind": "FunctionDef",
+          "line": 104,
+          "end": 107,
+          "doc": null
+        },
+        {
+          "name": "test_all_queued",
+          "kind": "FunctionDef",
+          "line": 108,
+          "end": 110,
+          "doc": null
+        },
+        {
+          "name": "test_two_roots_shared_pool",
+          "kind": "FunctionDef",
+          "line": 111,
+          "end": 114,
+          "doc": null
+        },
+        {
+          "name": "test_pin_order_independent",
+          "kind": "FunctionDef",
+          "line": 115,
+          "end": 116,
+          "doc": null
+        }
+      ]
+    }
+  ],
+  "api_changes": [],
+  "schema_changes": [],
+  "dependencies_new": [],
+  "database_reads": {
+    "run_heads": "exact scoped plan roster",
+    "run_admissions": "per-run binding or absence",
+    "run_leases": "per-run current/closed lease or absence",
+    "sample_reservations": "per-run and optional exclusive pool exact roster",
+    "run_mutations": "historical exact set",
+    "events": "historical exact set",
+    "outbox": "historical presence not delivery",
+    "run_audit": "historical exact set",
+    "run_lease_renewals": "historical exact set",
+    "sample_settlements": "historical exact set",
+    "fences": "referenced key checks via per-run readback",
+    "sample_budgets": "optional exclusive pinned pool current row"
+  },
+  "tests": {
+    "new_sqlite": 26,
+    "regression": 127,
+    "pg_skipped": 10,
+    "full_suite": "NOT_RUN"
+  },
+  "traceability": [
+    "D07 task lifecycle",
+    "D10 transaction",
+    "D13 historical Office input",
+    "D15 event state",
+    "D17 budget/data integrity"
+  ],
+  "limits": "see docs/0199C/ARCHITECTURE_AND_CATALOG.md",
+  "rollback": "revert only added source/test; no applied migration"
+}

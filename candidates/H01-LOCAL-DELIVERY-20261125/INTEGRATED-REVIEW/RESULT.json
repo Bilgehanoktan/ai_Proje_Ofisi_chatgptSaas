@@ -1,0 +1,122 @@
+{
+  "task": "H01-MI-P0-INTEGRATED-REVIEW-20261125",
+  "status": "ARCHIVAL_SOURCE_COMPOSITION_ONLY_OWNER_AND_SECURITY_HOLD",
+  "h01_instruction": "25 Nov request to close open blockers and advance integration; operational authorization, not source-owner or independent acceptance",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "archival_parent": "8a48dc398e2a1d655881c9013096e6ec8440de0c",
+  "source_heads": {
+    "PR31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "PR49": "062dd63d9573a944aa456faa430e05503553b8dd",
+    "PR53": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+    "PR54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+    "PR55": "65ddae6a33d94593ed686b53698a6d8ad48919b4",
+    "archived_runtime_skill_adapter": "8a48dc398e2a1d655881c9013096e6ec8440de0c"
+  },
+  "snapshot": {
+    "tree": "65082253500682d8039824c7992287d9af1eb466",
+    "product_tree": "c050374aaeb2f8ccc61c86f32a0de16ae986db49",
+    "manifest_blob": "d188d88585b135dcda6c0453962a6b41f4455ef7",
+    "files": 1913,
+    "product_files": 582,
+    "manifest_entries": 581,
+    "retained_pr31_nonproduct_blobs": 1331,
+    "previous_product_files": 566,
+    "changed_paths_excluding_manifest": 34,
+    "new_paths": 16,
+    "replaced_paths": 18,
+    "retained_product_blobs": 547,
+    "readback": "581/581 paths, bytes, mode and expected Git blobs; inherited SHA256 pins retained from owner manifests; full local byte hashing NOT_RUN",
+    "scope": "PR31 root exact + selected product blobs; historical root docs and runner pins retained, not rewritten/approved for this tree"
+  },
+  "review": {
+    "open_PRs": 44,
+    "path_inventory": "selected overlay paths checked in all 44 PR file lists; old PR2/3 registry/DAG/resolver blobs match original; UI owner ancestors retained; original PR31 conflicts remain explicitly excluded",
+    "owner_approval": "HOLD",
+    "R2": "archived exact Skill resolver supersedes PR55 resolver only; original PR55 test retained",
+    "UI": "latest PR49 R4 plus four manifest delta entries; lock staged not approved to install"
+  },
+  "test": {
+    "method": "Linux CPython 3.13.5, stdlib only, python -B -S -m unittest discover -s tests -v",
+    "actual": 30,
+    "pass": 30,
+    "fail": 0,
+    "exit": 0,
+    "source_files_including_tests": 19,
+    "source_scope": "Exact combined Model/Skill/router slice. No mocked product dependencies for these 30 tests. No signed recovered Memory test, Core/DAG, UI full build, or full source test in this run.",
+    "new_unique_test_methods": 0,
+    "reused_methods": 30,
+    "reason": "first actual combined candidate regression; changed source combination",
+    "log_sha256": "435901723b5f320ffda4a71c8ecbee90b3708462de56c8c0dcb9b8d56f045507",
+    "log_blob": "2460fdc119b0e67a9737ee09473cf79501525393"
+  },
+  "blockers": [
+    {
+      "scope": "IAM/T1",
+      "owner": "MI03/04 + security",
+      "reason": "PR46 competing authority blob, 12 original IAM and 7 G7 regressions pending, actual protected PostgreSQL not proven"
+    },
+    {
+      "scope": "API",
+      "owner": "03API/W2",
+      "reason": "PR47 historical API owner lineage and 9 original tests + 11 MVP unrun"
+    },
+    {
+      "scope": "Office and shared proxy",
+      "owner": "MI05/MI10",
+      "reason": "PR50/51 known combined MIME header negative, exact follow-up owner review and full regression required"
+    },
+    {
+      "scope": "W8",
+      "owner": "MI01 + independent security",
+      "reason": "approved C50/R9/native and license review, C07 then real Chromium C08 and C05; this snapshot is not an approved runner pin"
+    },
+    {
+      "scope": "Runtime signed Memory",
+      "owner": "MI07/08/09",
+      "reason": "signed chain and reviewed cryptography unavailable; no provider/commit/grant"
+    },
+    {
+      "scope": "source environment",
+      "reason": "Git remote tree exists; private repo DNS/authenticated full local checkout unavailable, full ZIP not made; full master addenda review incomplete"
+    }
+  ],
+  "progress": {
+    "canonical_product": [
+      553,
+      553
+    ],
+    "archival_product": [
+      566,
+      582
+    ],
+    "weighted": "HESAPLANAMADI",
+    "acceptance": {
+      "core": [
+        12,
+        16
+      ],
+      "ui": [
+        21,
+        40
+      ],
+      "w8": [
+        3,
+        8
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "iv": [
+        0,
+        7
+      ]
+    },
+    "acceptance_delta_pp": 0,
+    "ordinal_delta": 0
+  },
+  "rollback": "Normal revert of isolated archival commit or ignore snapshot; all source owner refs and canonical product tree unchanged. No root CI/deploy change.",
+  "next": "Owner review of exact unified tree; resolve three divergent path variants and API lineage; actual approved environment for 28 backend + 11 MVP tests and signed Runtime, then C07/C08/C05. Do not run archived workflow or use stale runner/manifest pins."
+}

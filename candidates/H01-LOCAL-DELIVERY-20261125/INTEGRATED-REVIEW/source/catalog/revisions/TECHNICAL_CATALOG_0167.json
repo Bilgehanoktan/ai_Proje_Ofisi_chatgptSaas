@@ -1,0 +1,115 @@
+{
+  "revision": "0167",
+  "status": "SOURCE_INTEGRATED_NOT_RUN",
+  "promoted": [
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/coordinator.py",
+      "original": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/coordinator.py",
+      "blob": "4532e42aa0f81714f2c35441b466b48b6d1bc12c",
+      "sha256": "27e9fe0dc2508230069e3ce51dd5c639a2d2d93ed8ca7e8d5dbeea8c419be1bf",
+      "bytes": 2149
+    },
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/evidence_store.py",
+      "original": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/evidence_store.py",
+      "blob": "ed7534b7d85292b71ae644dcf0a92d21e4a3d6f7",
+      "sha256": "bc2b2eae7ad74e24f6d18a649f53c64fe5e5c3749e625f56af9204642d316576",
+      "bytes": 4496
+    },
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "original": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "blob": "e1f52722e1d33841539b709036ed1a100216b9b6",
+      "sha256": "7b73b247949fe1cb50b192396fd3477a23ea7c1676a2646266914c4f56c025b1",
+      "bytes": 1505
+    },
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/trusted_policy.py",
+      "original": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/trusted_policy.py",
+      "blob": "e804d9f52784b15b7bc86376a91007af04adae5a",
+      "sha256": "5d49a9771d556a5b89e61d6e840238e1f1fafc731d7598a08530b543e1c0a8fa",
+      "bytes": 2395
+    },
+    {
+      "target": "product/ai-company-os-backend/tests/test_development_review_0165.py",
+      "original": "quarantine/0165/product/ai-company-os-backend/tests/test_development_review_0165.py",
+      "blob": "7b01c0bf61274505ef47677170707ae64c1d5a7c",
+      "sha256": "2133379dbe9b75d65096f97d9989f1ae212b0dab2fd71842fabf2f275e0b094a",
+      "bytes": 6911
+    },
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/coordination_readback.py",
+      "original": "quarantine/0166/product/ai-company-os-backend/app/core/development_review/coordination_readback.py",
+      "blob": "d3853f4daa0c2e5acbd57490e4829c8b81227dd7",
+      "sha256": "d725134ca5deed8b3079f146d1ce2177fe85b4d2c33db1ab13a0a59889eb16fb",
+      "bytes": 2913
+    },
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/staging_readback.py",
+      "original": "quarantine/0166/product/ai-company-os-backend/app/core/development_review/staging_readback.py",
+      "blob": "acc9a8cb2ec865662ca972e0342f004700135f67",
+      "sha256": "955ca7a382c0620cc4e5b3f658588d43bfd689e043b51be9cbed86e12fe92364",
+      "bytes": 5293
+    },
+    {
+      "target": "product/ai-company-os-backend/app/core/development_review/trust_boundary.py",
+      "original": "quarantine/0166/product/ai-company-os-backend/app/core/development_review/trust_boundary.py",
+      "blob": "b662f4c5d0464a5b615bd8d0538193ae0c20add8",
+      "sha256": "99f51fe6eff70e06f9d8e013d8c284f23b4bfdf3444bfa3c66e38088a525af95",
+      "bytes": 3408
+    },
+    {
+      "target": "product/ai-company-os-backend/tests/test_development_review_0166.py",
+      "original": "quarantine/0166/product/ai-company-os-backend/tests/test_development_review_0166.py",
+      "blob": "8ab5e70123a12bdba5e48e82a110b9e31bc3c61a",
+      "sha256": "98edcf5f661db2f6342ff047eb760565bb1a989e76061cbfed2e5a20d795d0d8",
+      "bytes": 7369
+    }
+  ],
+  "symbol_refs": [
+    "catalog/revisions/TECHNICAL_CATALOG_0165.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0166.json"
+  ],
+  "new_helpers": [
+    {
+      "path": "scripts/verify_product.py",
+      "symbols": [
+        "git_blob",
+        "verify",
+        "main"
+      ],
+      "deps": [
+        "argparse",
+        "hashlib",
+        "json",
+        "re",
+        "pathlib"
+      ],
+      "effect": "read-only local source checks"
+    },
+    {
+      "path": "scripts/Prepare-Local.ps1",
+      "symbols": [
+        "RepoRoot",
+        "ManifestBlob"
+      ],
+      "deps": [
+        "Python3",
+        "PowerShell",
+        "optional Node/npm"
+      ],
+      "effect": "read-only wrapper"
+    }
+  ],
+  "api_delta": [],
+  "canonical_db_delta": [],
+  "event_delta": [],
+  "dependency_version_delta": [],
+  "tests": {
+    "product_candidates": 134,
+    "quarantine_candidates": 24,
+    "status": "NOT_RUN",
+    "helper_fixture_checks": 4,
+    "helper_scope": "standalone non-product source integrity helper"
+  }
+}

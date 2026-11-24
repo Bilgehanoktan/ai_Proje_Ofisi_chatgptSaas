@@ -1,0 +1,78 @@
+{
+  "revision": "0200-S",
+  "status": "SEPARATE_SOURCE_REVIEW_NO_MERGE",
+  "source_commit": "ca8da198bed3d862721e83d60ec4639bc1c9d584",
+  "observed_other_branch": "integration/w1-0198-p01",
+  "observed_other_head": "78c4286c6ae974f1f231c3ab3070eb0e864ddd4f",
+  "carry_checks": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "expected": "f45c26e1243852ce65b3ed74b336ef83359877e0",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_snapshot_0200.py",
+      "expected": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+      "expected": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "other": null,
+      "status": "MISSING"
+    }
+  ],
+  "exact_dependency_matches": 29,
+  "dependency_differences": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "actual": null
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "actual": null
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "actual": null
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+      "actual": null
+    }
+  ],
+  "conflicting_carry_paths": 0,
+  "merge": "NOT_PERFORMED",
+  "combined_tests": "NOT_RUN",
+  "notes": "W1/API/UI, AI/model/skill/memory remain with other conversation. Re-pin active head, transfer 0198-E then 0199-C then 0200-S; regenerate shared metadata and rerun combined tests. No automatic merge."
+}

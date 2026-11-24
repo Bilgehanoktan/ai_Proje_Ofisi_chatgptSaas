@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fixed 0196-L historical prefix",
+  "oneOf": [
+    {
+      "const": {
+        "schema_version": "lifecycle.prefix.v1-D0",
+        "mode": "D0_0196L_HISTORICAL_PREFIX",
+        "tenant": "synthetic-tenant",
+        "company": "synthetic-company",
+        "environment": "A0_SAMPLE_ONLY",
+        "plan_revision": "sha256:c75ec1070786538f38bdccdcf6a75de62a9e02e9bcb7e4a4bb9df5f7e96638a0",
+        "task_id": "a",
+        "run_id": "demo-a",
+        "agent_instance_id": "demo-agent",
+        "principal_id": "demo-principal",
+        "attempt": 0,
+        "head_version": 1,
+        "state": "ADMITTED",
+        "timeline": [
+          {
+            "version": 1,
+            "kind": "D0_RUN_ADMISSION",
+            "state": "ADMITTED"
+          }
+        ],
+        "lease_present": true,
+        "lease_version": 1,
+        "heartbeat_revision": 0,
+        "fence": 1,
+        "heartbeat_tick": 10,
+        "expires_tick": 20,
+        "policy_epoch": 2,
+        "witness_epoch": 3,
+        "sample_budget_revision": 1,
+        "sample_outstanding_minor": 20,
+        "sample_recognized_minor": 0,
+        "currency": "USD",
+        "freshness": "HISTORICAL_SAMPLE",
+        "lease_freshness": "UNKNOWN",
+        "causality": "EXACT_FIXED_PREFIX_ONLY",
+        "geometry_join": "HOLD",
+        "model_binding": "HOLD",
+        "memory_acl": "HOLD",
+        "independent_acceptance": "HOLD",
+        "decision": "HOLD",
+        "dispatch_allowed": false,
+        "provider_called": false,
+        "spend_allowed": false,
+        "release_ready": false,
+        "authoritative": false,
+        "real_run_count": null
+      }
+    },
+    {
+      "const": {
+        "schema_version": "lifecycle.prefix.v1-D0",
+        "mode": "D0_0196L_HISTORICAL_PREFIX",
+        "tenant": "synthetic-tenant",
+        "company": "synthetic-company",
+        "environment": "A0_SAMPLE_ONLY",
+        "plan_revision": "sha256:c75ec1070786538f38bdccdcf6a75de62a9e02e9bcb7e4a4bb9df5f7e96638a0",
+        "task_id": "a",
+        "run_id": "demo-a",
+        "agent_instance_id": "demo-agent",
+        "principal_id": "demo-principal",
+        "attempt": 0,
+        "head_version": 2,
+        "state": "RUNNING",
+        "timeline": [
+          {
+            "version": 1,
+            "kind": "D0_RUN_ADMISSION",
+            "state": "ADMITTED"
+          },
+          {
+            "version": 2,
+            "kind": "D0_RUN_TRANSITION",
+            "state": "RUNNING"
+          }
+        ],
+        "lease_present": true,
+        "lease_version": 1,
+        "heartbeat_revision": 0,
+        "fence": 1,
+        "heartbeat_tick": 10,
+        "expires_tick": 20,
+        "policy_epoch": 2,
+        "witness_epoch": 3,
+        "sample_budget_revision": 1,
+        "sample_outstanding_minor": 20,
+        "sample_recognized_minor": 0,
+        "currency": "USD",
+        "freshness": "HISTORICAL_SAMPLE",
+        "lease_freshness": "UNKNOWN",
+        "causality": "EXACT_FIXED_PREFIX_ONLY",
+        "geometry_join": "HOLD",
+        "model_binding": "HOLD",
+        "memory_acl": "HOLD",
+        "independent_acceptance": "HOLD",
+        "decision": "HOLD",
+        "dispatch_allowed": false,
+        "provider_called": false,
+        "spend_allowed": false,
+        "release_ready": false,
+        "authoritative": false,
+        "real_run_count": null
+      }
+    },
+    {
+      "const": {
+        "schema_version": "lifecycle.prefix.v1-D0",
+        "mode": "D0_0196L_HISTORICAL_PREFIX",
+        "tenant": "synthetic-tenant",
+        "company": "synthetic-company",
+        "environment": "A0_SAMPLE_ONLY",
+        "plan_revision": "sha256:c75ec1070786538f38bdccdcf6a75de62a9e02e9bcb7e4a4bb9df5f7e96638a0",
+        "task_id": "a",
+        "run_id": "demo-a",
+        "agent_instance_id": "demo-agent",
+        "principal_id": "demo-principal",
+        "attempt": 0,
+        "head_version": 3,
+        "state": "RUNNING",
+        "timeline": [
+          {
+            "version": 1,
+            "kind": "D0_RUN_ADMISSION",
+            "state": "ADMITTED"
+          },
+          {
+            "version": 2,
+            "kind": "D0_RUN_TRANSITION",
+            "state": "RUNNING"
+          },
+          {
+            "version": 3,
+            "kind": "D0_LEASE_RENEWAL",
+            "state": "RUNNING"
+          }
+        ],
+        "lease_present": true,
+        "lease_version": 2,
+        "heartbeat_revision": 1,
+        "fence": 1,
+        "heartbeat_tick": 11,
+        "expires_tick": 31,
+        "policy_epoch": 2,
+        "witness_epoch": 3,
+        "sample_budget_revision": 2,
+        "sample_outstanding_minor": 20,
+        "sample_recognized_minor": 0,
+        "currency": "USD",
+        "freshness": "HISTORICAL_SAMPLE",
+        "lease_freshness": "UNKNOWN",
+        "causality": "EXACT_FIXED_PREFIX_ONLY",
+        "geometry_join": "HOLD",
+        "model_binding": "HOLD",
+        "memory_acl": "HOLD",
+        "independent_acceptance": "HOLD",
+        "decision": "HOLD",
+        "dispatch_allowed": false,
+        "provider_called": false,
+        "spend_allowed": false,
+        "release_ready": false,
+        "authoritative": false,
+        "real_run_count": null
+      }
+    },
+    {
+      "const": {
+        "schema_version": "lifecycle.prefix.v1-D0",
+        "mode": "D0_0196L_HISTORICAL_PREFIX",
+        "tenant": "synthetic-tenant",
+        "company": "synthetic-company",
+        "environment": "A0_SAMPLE_ONLY",
+        "plan_revision": "sha256:c75ec1070786538f38bdccdcf6a75de62a9e02e9bcb7e4a4bb9df5f7e96638a0",
+        "task_id": "a",
+        "run_id": "demo-a",
+        "agent_instance_id": "demo-agent",
+        "principal_id": "demo-principal",
+        "attempt": 0,
+        "head_version": 4,
+        "state": "VERIFYING",
+        "timeline": [
+          {
+            "version": 1,
+            "kind": "D0_RUN_ADMISSION",
+            "state": "ADMITTED"
+          },
+          {
+            "version": 2,
+            "kind": "D0_RUN_TRANSITION",
+            "state": "RUNNING"
+          },
+          {
+            "version": 3,
+            "kind": "D0_LEASE_RENEWAL",
+            "state": "RUNNING"
+          },
+          {
+            "version": 4,
+            "kind": "D0_RUN_TRANSITION",
+            "state": "VERIFYING"
+          }
+        ],
+        "lease_present": true,
+        "lease_version": 2,
+        "heartbeat_revision": 1,
+        "fence": 1,
+        "heartbeat_tick": 11,
+        "expires_tick": 31,
+        "policy_epoch": 2,
+        "witness_epoch": 3,
+        "sample_budget_revision": 2,
+        "sample_outstanding_minor": 20,
+        "sample_recognized_minor": 0,
+        "currency": "USD",
+        "freshness": "HISTORICAL_SAMPLE",
+        "lease_freshness": "UNKNOWN",
+        "causality": "EXACT_FIXED_PREFIX_ONLY",
+        "geometry_join": "HOLD",
+        "model_binding": "HOLD",
+        "memory_acl": "HOLD",
+        "independent_acceptance": "HOLD",
+        "decision": "HOLD",
+        "dispatch_allowed": false,
+        "provider_called": false,
+        "spend_allowed": false,
+        "release_ready": false,
+        "authoritative": false,
+        "real_run_count": null
+      }
+    }
+  ]
+}

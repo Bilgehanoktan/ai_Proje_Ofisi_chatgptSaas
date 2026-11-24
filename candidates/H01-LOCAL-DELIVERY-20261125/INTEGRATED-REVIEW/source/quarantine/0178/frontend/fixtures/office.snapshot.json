@@ -1,0 +1,116 @@
+{
+  "schema_version": "office.snapshot.v0-D0",
+  "tenant_id": "synthetic-tenant",
+  "world_id": "demo-world",
+  "environment_id": "A0_SAMPLE_ONLY",
+  "snapshot_seq": 0,
+  "layout_revision": "draft-hybrid-floor-1",
+  "as_of": "2026-11-01T00:00:00Z",
+  "data_status": "D0_SAMPLE_NO_RUNTIME",
+  "policy_epoch": null,
+  "wa_epoch": null,
+  "agents": [],
+  "work_summary": {
+    "verified_active_runs": null,
+    "verification_status": "UNVERIFIED"
+  },
+  "role_templates": [
+    {
+      "id": "orchestrator",
+      "name": "Orchestrator",
+      "description": "Operasyon yönetimi",
+      "department": "Yönetim"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "description": "Araştırma ve kaynak analizi",
+      "department": "Araştırma"
+    },
+    {
+      "id": "engineer",
+      "name": "Engineer",
+      "description": "Mühendislik ve üretim",
+      "department": "Mühendislik"
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "description": "Kalite incelemesi; IV değildir",
+      "department": "Kalite"
+    }
+  ],
+  "floors": [
+    {
+      "id": "floor-1",
+      "name": "Kat 1 · Çekirdek operasyon",
+      "stations": [
+        {
+          "id": "station-orchestrator",
+          "role_template_id": "orchestrator",
+          "x": 0,
+          "y": 0,
+          "agent_instance_id": null
+        },
+        {
+          "id": "station-research",
+          "role_template_id": "research",
+          "x": 1,
+          "y": 0,
+          "agent_instance_id": null
+        },
+        {
+          "id": "station-engineer",
+          "role_template_id": "engineer",
+          "x": 0,
+          "y": 1,
+          "agent_instance_id": null
+        },
+        {
+          "id": "station-qa",
+          "role_template_id": "qa",
+          "x": 1,
+          "y": 1,
+          "agent_instance_id": null
+        }
+      ]
+    },
+    {
+      "id": "floor-2",
+      "name": "Kat 2 · Genişleme rezervi",
+      "stations": []
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "active_runs",
+      "label": "Doğrulanmış aktif işler",
+      "value": null
+    },
+    {
+      "metric_id": "pending_decisions",
+      "label": "Gerçek karar talepleri",
+      "value": null
+    },
+    {
+      "metric_id": "revenue",
+      "label": "Muhasebeleştirilmiş gelir (TRY)",
+      "value": null
+    },
+    {
+      "metric_id": "verified_outputs",
+      "label": "Bağımsız doğrulanmış çıktı",
+      "value": null
+    }
+  ],
+  "decision_cases": [],
+  "activity": [],
+  "authority": {
+    "code_effective": false,
+    "repo_effective": false,
+    "dev_effective": false,
+    "security_acceptance": "HOLD",
+    "real_test": "NOT_RUN",
+    "production": "NOT_AUTHORIZED"
+  }
+}

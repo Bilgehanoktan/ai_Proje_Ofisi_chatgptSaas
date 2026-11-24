@@ -1,0 +1,335 @@
+{
+  "revision": "0200-S",
+  "parent": "37278c47bd04d645beed8f23341bbae427ee90d5",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "operation": "ADD",
+      "bytes": 3042,
+      "sha256": "5e8dea18d478499875adf0000243705968c4930af1752261ff66a77cda21425a",
+      "git_blob": "f45c26e1243852ce65b3ed74b336ef83359877e0",
+      "symbols": [
+        {
+          "name": "_check_context",
+          "kind": "FunctionDef",
+          "line": 13,
+          "end": 22,
+          "doc": null
+        },
+        {
+          "name": "read_plan_snapshot",
+          "kind": "FunctionDef",
+          "line": 25,
+          "end": 64,
+          "doc": "Return historical sample evidence only after clean rollback and close.\n\nNever commit, retry, switch to a weaker isolation level, reuse an open\ntransaction, or return a partial projection after cleanup errors.\nA dedicated connection factory and trusted disposable local deployment\nare required; the database-name/role guard is not an authorization system."
+        }
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_snapshot_0200.py",
+      "operation": "ADD",
+      "bytes": 4899,
+      "sha256": "842a1feebcd9d68dddbcb3764c11be23b672dc4aabdd2b43ffc37a95003cfa5a",
+      "git_blob": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+      "symbols": [
+        {
+          "name": "Cursor",
+          "kind": "ClassDef",
+          "line": 9,
+          "end": 21,
+          "doc": null
+        },
+        {
+          "name": "DB",
+          "kind": "ClassDef",
+          "line": 22,
+          "end": 32,
+          "doc": null
+        },
+        {
+          "name": "SnapshotTests",
+          "kind": "ClassDef",
+          "line": 33,
+          "end": 78,
+          "doc": null
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 10,
+          "end": 10,
+          "doc": null
+        },
+        {
+          "name": "__enter__",
+          "kind": "FunctionDef",
+          "line": 11,
+          "end": 11,
+          "doc": null
+        },
+        {
+          "name": "__exit__",
+          "kind": "FunctionDef",
+          "line": 12,
+          "end": 14,
+          "doc": null
+        },
+        {
+          "name": "execute",
+          "kind": "FunctionDef",
+          "line": 15,
+          "end": 20,
+          "doc": null
+        },
+        {
+          "name": "fetchone",
+          "kind": "FunctionDef",
+          "line": 21,
+          "end": 21,
+          "doc": null
+        },
+        {
+          "name": "__init__",
+          "kind": "FunctionDef",
+          "line": 23,
+          "end": 25,
+          "doc": null
+        },
+        {
+          "name": "cursor",
+          "kind": "FunctionDef",
+          "line": 26,
+          "end": 26,
+          "doc": null
+        },
+        {
+          "name": "rollback",
+          "kind": "FunctionDef",
+          "line": 27,
+          "end": 29,
+          "doc": null
+        },
+        {
+          "name": "close",
+          "kind": "FunctionDef",
+          "line": 30,
+          "end": 32,
+          "doc": null
+        },
+        {
+          "name": "call",
+          "kind": "FunctionDef",
+          "line": 34,
+          "end": 38,
+          "doc": null
+        },
+        {
+          "name": "hold",
+          "kind": "FunctionDef",
+          "line": 39,
+          "end": 41,
+          "doc": null
+        },
+        {
+          "name": "test_exact_sequence",
+          "kind": "FunctionDef",
+          "line": 42,
+          "end": 45,
+          "doc": null
+        },
+        {
+          "name": "test_readback_hold_preserved",
+          "kind": "FunctionDef",
+          "line": 46,
+          "end": 47,
+          "doc": null
+        },
+        {
+          "name": "test_contexts_fail_closed",
+          "kind": "FunctionDef",
+          "line": 48,
+          "end": 51,
+          "doc": null
+        },
+        {
+          "name": "test_context_change_discards_result",
+          "kind": "FunctionDef",
+          "line": 52,
+          "end": 53,
+          "doc": null
+        },
+        {
+          "name": "test_fresh_status",
+          "kind": "FunctionDef",
+          "line": 54,
+          "end": 57,
+          "doc": null
+        },
+        {
+          "name": "test_autocommit",
+          "kind": "FunctionDef",
+          "line": 58,
+          "end": 59,
+          "doc": null
+        },
+        {
+          "name": "test_setup_failure",
+          "kind": "FunctionDef",
+          "line": 60,
+          "end": 63,
+          "doc": null
+        },
+        {
+          "name": "test_cleanup_failure",
+          "kind": "FunctionDef",
+          "line": 64,
+          "end": 67,
+          "doc": null
+        },
+        {
+          "name": "test_review_exception",
+          "kind": "FunctionDef",
+          "line": 68,
+          "end": 71,
+          "doc": null
+        },
+        {
+          "name": "test_connection_failure",
+          "kind": "FunctionDef",
+          "line": 72,
+          "end": 74,
+          "doc": null
+        },
+        {
+          "name": "test_no_retry",
+          "kind": "FunctionDef",
+          "line": 75,
+          "end": 78,
+          "doc": null
+        },
+        {
+          "name": "fail",
+          "kind": "FunctionDef",
+          "line": 73,
+          "end": 73,
+          "doc": null
+        },
+        {
+          "name": "connect",
+          "kind": "FunctionDef",
+          "line": 77,
+          "end": 77,
+          "doc": null
+        }
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+      "operation": "ADD",
+      "bytes": 2974,
+      "sha256": "c586b85edd27ec86976659b917f8e5132e6e4efae385e5a86d143cb8deeda3c3",
+      "git_blob": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "symbols": [
+        {
+          "name": "PgSnapshotTests",
+          "kind": "ClassDef",
+          "line": 15,
+          "end": 55,
+          "doc": null
+        },
+        {
+          "name": "setUpClass",
+          "kind": "FunctionDef",
+          "line": 17,
+          "end": 20,
+          "doc": null
+        },
+        {
+          "name": "setUp",
+          "kind": "FunctionDef",
+          "line": 21,
+          "end": 26,
+          "doc": null
+        },
+        {
+          "name": "connect",
+          "kind": "FunctionDef",
+          "line": 27,
+          "end": 29,
+          "doc": null
+        },
+        {
+          "name": "review",
+          "kind": "FunctionDef",
+          "line": 30,
+          "end": 31,
+          "doc": null
+        },
+        {
+          "name": "test_actual_admission_snapshot",
+          "kind": "FunctionDef",
+          "line": 32,
+          "end": 33,
+          "doc": null
+        },
+        {
+          "name": "test_actual_concurrent_commit_not_visible_until_fresh_snapshot",
+          "kind": "FunctionDef",
+          "line": 34,
+          "end": 42,
+          "doc": null
+        },
+        {
+          "name": "test_actual_transaction_rejects_write",
+          "kind": "FunctionDef",
+          "line": 43,
+          "end": 55,
+          "doc": null
+        },
+        {
+          "name": "race",
+          "kind": "FunctionDef",
+          "line": 36,
+          "end": 39,
+          "doc": null
+        },
+        {
+          "name": "write",
+          "kind": "FunctionDef",
+          "line": 45,
+          "end": 51,
+          "doc": null
+        }
+      ]
+    }
+  ],
+  "api_changes": [],
+  "schema_changes": [],
+  "dependencies_new": [],
+  "database_reads": [
+    "pg_catalog.pg_roles",
+    "current_database/current_setting",
+    "existing 0199-C readback tables"
+  ],
+  "database_writes": [],
+  "tests": {
+    "protocol_new_pass": 11,
+    "regressions_pass": 153,
+    "actual_pg_new_not_run": 3,
+    "actual_pg_total_not_run": 13
+  },
+  "traceability": {
+    "R03": "HOLD",
+    "W3/W4": "D0 snapshot boundary",
+    "W1": "not modified",
+    "W8": "separate"
+  },
+  "limits": [
+    "trusted exclusive factory",
+    "not actual PostgreSQL evidence",
+    "not independent custody",
+    "no authority",
+    "per-statement timeout not total"
+  ],
+  "rollback": "Revert three added product paths; no migration/data undo; pin parent 0199-C."
+}
