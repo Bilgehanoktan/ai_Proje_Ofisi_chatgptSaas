@@ -1,0 +1,390 @@
+{
+  "revision": "MI09-NW06-SKILL-SOURCE-REFERENCE-20261124",
+  "status": "ISOLATED_SKILL_SOURCE_REFERENCE_REVIEW_HOLD",
+  "canonical_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "source_owner": "MI-09 / Skill",
+  "owner_ref": "planning/w5-ext-07r6-source-preflight@cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
+  "architecture": {
+    "master": "v11.6.135-rc1",
+    "reviewed_local_master_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "section": "R08 Skill Library ve capability karantina, lines 419–432; D08/D14/D20/D21, exact source identity/digest/license/custody; 0159-B addendum",
+    "addendum_blob": "ba525a51589256af1860f1bfc842f67d31eec78a",
+    "normative_change": false,
+    "scope": "inspect_capabilities independently validates expected_source before equality. Rejects invalid reference rather than diagnostic match or exception. Both pins remain synthetic and not proof of authentic provenance or real grant."
+  },
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+      "before": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+      "blob": "1a448e4658ffd8dcf3884fef150dab8d77b766ca",
+      "bytes": 2152,
+      "sha256": "787449cec4ec414c2d656450bf81d697d082b87ff24b171d8e9a59fd9723b35a"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_skill_source_reference_boundary.py",
+      "before": null,
+      "blob": "a403434173d7bc0b6e13a1829cc56405281f1fe9",
+      "bytes": 2800,
+      "sha256": "b1e0d3e38c62a6b848e7bfbb567e4ca978b9b2c91cc84e69d335b43220e6d76c"
+    }
+  ],
+  "symbols": [
+    "app.engines.skill_engine.resolver.inspect_capabilities"
+  ],
+  "unchanged": [
+    "public signature",
+    "existing SKILL_SOURCE_PIN_HOLD",
+    "status QUARANTINED",
+    "effective_tools empty",
+    "enabled False"
+  ],
+  "api_changes": [],
+  "db_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "manifest": {
+    "before": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "after": "bcf61cf9996790dfb79f310367e2034497a03bdd",
+    "entries": 553,
+    "product_files": 554
+  },
+  "test": {
+    "environment": "Linux Python 3.13.5 stdlib only -B -S; 22/22 original exact Git blob SHA1, SHA256 and bytes verified from prior pinned archives and connector source; no production stubs or installed dependencies",
+    "command": "python -B -S -m unittest discover -s tests -p 'test_*.py' -v",
+    "original": {
+      "total": 12,
+      "pass": 12,
+      "exit": 0,
+      "log_sha256": "645b7e028b9c0a05ef3128eaca9d118add77f1b0b120fe5706525ec7ef825dcb"
+    },
+    "baseline_augmented": {
+      "total": 18,
+      "pass": 16,
+      "fail": 2,
+      "exit": 1,
+      "log_sha256": "d9bb9481e0c2ac690dac274eb0f4604f88cdd827ced61fa5e95806705999a0af"
+    },
+    "repaired": {
+      "total": 18,
+      "pass": 18,
+      "exit": 0,
+      "original": 12,
+      "new": 6,
+      "log": "docs/master-integration/MI09-NW06-SKILL-SOURCE-REFERENCE-20261124/candidate.log",
+      "log_blob": "c8853a5cb168baae5881539b3eebd8def7b0f503",
+      "log_sha256": "798135c977ec1175c26ac22d9d74ef854e561f6886bd96d59db0111def6b0f71"
+    },
+    "original_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "bytes": 5065,
+        "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+        "blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+        "bytes": 725,
+        "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/skill_review.py",
+        "blob": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+        "bytes": 315,
+        "sha256": "e591da76572a6a57b73ee167e5f072629506969b431582c8098ae1c066697eef"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/t1_review.py",
+        "blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+        "bytes": 517,
+        "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/manifest_review.py",
+        "blob": "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+        "bytes": 1904,
+        "sha256": "cf283466d3c2966f11d1c21acbacc0ace6fd53e3dc8be157e1850d4fe2dd151e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+        "blob": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+        "bytes": 2101,
+        "sha256": "f538ae06791e2e6e6d1fae4173b800f3ec1a7bf8ea51357e00bf7d00c7c470fb"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+        "blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+        "bytes": 1305,
+        "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+        "blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+        "bytes": 1391,
+        "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/gateway.py",
+        "blob": "d9ef74951acb8daa57e9b8339fb8f8152369d932",
+        "bytes": 242,
+        "sha256": "7453cb37b258accc8d027fdfa85606d69b01907f1f067a2f61f7dc1073c4645d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/knowledge_engine/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+        "blob": "7d710685366a55c117e49043a64f1eeabf5079cf",
+        "bytes": 1391,
+        "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+        "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+        "bytes": 2715,
+        "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_engines_0159b.py",
+        "blob": "9d3c5385fa72565c3cd6d24fd91eec7e71c9c803",
+        "bytes": 4082,
+        "sha256": "c7c8c861f73a1b4e432891b2084790917573d05dd7b7d391d69c4dc4acb8c24a"
+      }
+    ],
+    "candidate_pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+        "blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "bytes": 5065,
+        "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+        "blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+        "bytes": 725,
+        "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/skill_review.py",
+        "blob": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+        "bytes": 315,
+        "sha256": "e591da76572a6a57b73ee167e5f072629506969b431582c8098ae1c066697eef"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/t1_review.py",
+        "blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+        "bytes": 517,
+        "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/manifest_review.py",
+        "blob": "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+        "bytes": 1904,
+        "sha256": "cf283466d3c2966f11d1c21acbacc0ace6fd53e3dc8be157e1850d4fe2dd151e"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+        "before": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+        "blob": "1a448e4658ffd8dcf3884fef150dab8d77b766ca",
+        "bytes": 2152,
+        "sha256": "787449cec4ec414c2d656450bf81d697d082b87ff24b171d8e9a59fd9723b35a"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+        "blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+        "bytes": 1305,
+        "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+        "blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+        "bytes": 1391,
+        "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/model_gateway/gateway.py",
+        "blob": "d9ef74951acb8daa57e9b8339fb8f8152369d932",
+        "bytes": 242,
+        "sha256": "7453cb37b258accc8d027fdfa85606d69b01907f1f067a2f61f7dc1073c4645d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/knowledge_engine/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+        "blob": "7d710685366a55c117e49043a64f1eeabf5079cf",
+        "bytes": 1391,
+        "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/__init__.py",
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+        "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+        "bytes": 2715,
+        "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_engines_0159b.py",
+        "blob": "9d3c5385fa72565c3cd6d24fd91eec7e71c9c803",
+        "bytes": 4082,
+        "sha256": "c7c8c861f73a1b4e432891b2084790917573d05dd7b7d391d69c4dc4acb8c24a"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_skill_source_reference_boundary.py",
+        "before": null,
+        "blob": "a403434173d7bc0b6e13a1829cc56405281f1fe9",
+        "bytes": 2800,
+        "sha256": "b1e0d3e38c62a6b848e7bfbb567e4ca978b9b2c91cc84e69d335b43220e6d76c"
+      }
+    ],
+    "full_chain": "NOT_RUN; prior 344 fullchain not replaced"
+  },
+  "ownership": {
+    "open_prs_checked": 43,
+    "divergent_paths": 0,
+    "historical_PR2_PR3_same_original_blob": true,
+    "explicit_owner_approval": "HOLD",
+    "canonical_promotion": "HOLD",
+    "PR53_router_and_PR54_DAG_paths_unchanged": true
+  },
+  "blockers": {
+    "sql6": "NOT_RUN reviewed cryptography / exact fixture closure",
+    "iam_g7_api_28": "NOT_RUN per PR52; Windows checkout 3/3 evidence retained, no unapproved install",
+    "dependency": "C50 candidate and OpenSSL advisory HOLD pending owners/security",
+    "full_archive": "DNS git ls-remote failed in local environment",
+    "w8": "HOLD",
+    "independent_acceptance": "HOLD"
+  },
+  "progress": {
+    "isolated_product_functions_fixed": 1,
+    "canonical_source_delta": 0,
+    "acceptance": {
+      "Core": "12/16",
+      "UI": "21/40",
+      "W8": "3/8",
+      "MVP": "0/11",
+      "IV": "0/7"
+    },
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  },
+  "next": "MI-09 owner review exact source; integrate with approved NW06 candidate after central manifest review. Preserve PR53 and PR54. Full Model/Skill/Memory, SQL, W8 and IV remain separate.",
+  "rollback": "Normal revert of isolated commit or leave review branch unmerged. Preserve prior source/test/manifest. No DB reset, real grant or secret.",
+  "limits": "No new CI, real provider, spend, customer data, live authority, protected COMMIT, deployment, main or canonical merge. No full repo archive; scoped local evidence package only."
+}
