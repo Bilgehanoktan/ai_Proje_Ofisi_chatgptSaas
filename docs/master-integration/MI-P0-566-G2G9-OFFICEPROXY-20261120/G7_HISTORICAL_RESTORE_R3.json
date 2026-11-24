@@ -1,0 +1,234 @@
+{
+  "revision": "MI-P0-G7-HISTORICAL-RESTORE-R3-20261124",
+  "authorization": "User explicit GitHub addition; review-only historical fixture recovery and prior test evidence, no owner approval implied",
+  "parent": "98998942ad5cec0cbc9629ab7839501dd22f05d3",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "source": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+  "governance": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner_refs": [
+    "a59a15a94b9eaa2bb7687297e9057e286f297ede",
+    "4fb39a5b2a41866b10ba836d1a6974e258d8217f"
+  ],
+  "architecture": {
+    "target": "v11.6.135-rc1",
+    "local_master_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "review": "R03 lines 363–385; R10 lines 435–449; preserve separate restoration/witness and atomic protected T1 gates. Current full addenda review incomplete.",
+    "normative_change": false
+  },
+  "restoration": {
+    "prior_review_tree": "aa1b685725705eb5a56c551b7f54b5999226c1a0",
+    "files": [
+      {
+        "path": "candidates/D4-R4/identity_binding.py",
+        "blob": "e1e977880324664bb359eee3286223a796878f44",
+        "bytes": 5178,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-B/identity_fence_review.py",
+        "blob": "9f7ed76800f562e419c727b22d54d0ef1eb650f4",
+        "bytes": 3197,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-G5/COMMON_SCOPE_PROFILE.json",
+        "blob": "e1e7c6ce36e4fe9bc4ebe7ba99dd573e484549fe",
+        "bytes": 1673,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json",
+        "blob": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+        "bytes": 3320,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-G6B/test_checkout.py",
+        "blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "bytes": 6392,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-G6B/test_protocol.py",
+        "blob": "defb33bc46fdf1c978164133b371f063ffffeb04",
+        "bytes": 7303,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-G7/SOURCE_PINS.json",
+        "blob": "cef9ce82a497522d2e4a9347b77453879e4790f3",
+        "bytes": 5704,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-G7/test_checkout.py",
+        "blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "bytes": 6392,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/D5-INTENT/intent_identity.py",
+        "blob": "fbdc75920bbcc698fb726190d52aa2e37e06a818",
+        "bytes": 3372,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/durable_ops.py",
+        "blob": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+        "bytes": 8942,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/integration_guard.py",
+        "blob": "2cde13e048e0907ef06c104fc5883fe4c1b08271",
+        "bytes": 4996,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/office_bridge.py",
+        "blob": "98b2436dab43cbadf546d8e9e662c12080b83fd2",
+        "bytes": 9224,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.py",
+        "blob": "d6b314a402399fa7e133bccf2e8bb3a39848fead",
+        "bytes": 3620,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/operations.sql",
+        "blob": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+        "bytes": 1725,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/org_model.py",
+        "blob": "cdb33238bf9eaf2a66f1d895ded165cc0065a605",
+        "bytes": 2342,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/persistence.py",
+        "blob": "4124099a497f5bc7fd34756664c7e293055e949e",
+        "bytes": 8075,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/schema.sql",
+        "blob": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+        "bytes": 2787,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-05R3/staffing.py",
+        "blob": "e0b9078284922d281996869daa15a455572c1785",
+        "bytes": 3179,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-06/SOURCE_PINS.json",
+        "blob": "e45173de240af85882764dfc3033e188d049085d",
+        "bytes": 2735,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-06/org_core_bridge.py",
+        "blob": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+        "bytes": 6701,
+        "mode": "100644"
+      },
+      {
+        "path": "candidates/ORG-06/test_org_core_checkout.py",
+        "blob": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87",
+        "bytes": 5066,
+        "mode": "100644"
+      }
+    ],
+    "g7_pins": [
+      56,
+      56
+    ],
+    "nested_org06_pins": [
+      21,
+      21
+    ],
+    "pin_manifest_blob": "cef9ce82a497522d2e4a9347b77453879e4790f3",
+    "product_tree": "16be5b9fe11a391ae2eabb2d847403c621f6419b",
+    "manifest": "35ef4764f9fa724bed182b96d76a2746b0c38602",
+    "product_files": 566,
+    "manifest_entries": 565,
+    "product_changed": false,
+    "source_evidence": "Git blob and sizes, no full byte rehash or runtime"
+  },
+  "prior_local_combined": {
+    "classification": "Previously executed R2 local scoped regression, not PR31 full product runtime",
+    "refs": {
+      "PR53": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+      "PR54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+      "PR55": "65ddae6a33d94593ed686b53698a6d8ad48919b4"
+    },
+    "pins": [
+      69,
+      69
+    ],
+    "methods": [
+      180,
+      180
+    ],
+    "new_tests_this_turn": 0,
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "command": "python -B -S -m unittest discover -s tests -p 'test_*.py' -v",
+    "exit": 0,
+    "original_log_bytes": 20340,
+    "original_log_sha256": "f5088fb2f2f4054e10e71b94814c333ccf2eafc2bc4d9704a9a1839d94da55ee",
+    "gzip_log": {
+      "path": "docs/master-integration/MI-P0-566-G2G9-OFFICEPROXY-20261120/combined-r2.log.gz",
+      "blob": "d1fd2e4ccdb76153cd73ee46b253b7dd1085ac32",
+      "bytes": 3164,
+      "sha256": "634a0a89dd865091e4848d527eb730043ceeb2cba1330f2c39e7dd2796e06fcb"
+    },
+    "archive": {
+      "name": "AIOS_NW06_NW07_MEMORY_JOINT_R2_20261124.zip",
+      "sha256": "315e99522ce15d97fa0b5836ccc7a66078d3bcdc7cf26e7425e794940af2193f",
+      "scope": "local conversation archive; not full repo"
+    },
+    "previous_record": "PR31 comment 7143561483"
+  },
+  "next_witness": {
+    "status": "NOT_RUN",
+    "test_blobs": [
+      "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb",
+      "4d476aa49fcfeb754ffe8eefdda0fba7531258c0",
+      "0b9a538b5bf80574f771486e56b70d8d0ec8b278"
+    ],
+    "dependency": "Original memory witness tests import cryptography Ed25519PrivateKey; both witnessed T1 and SQL suites transitively import that fixture. PR52 approved dependency review still HOLD; no substitution."
+  },
+  "gates": {
+    "source_owner": "HOLD for product promotion, original source restoration review only",
+    "integrated_g7": "NOT_RUN; original scheduler pin f354ee1fdceca013ad6cf32fdea7c41001794083 differs from PR54 eb3e283e3406996254283595e14711e90b2bca8c; preserve original pins",
+    "backend28": "NOT_RUN",
+    "sql6": "NOT_RUN",
+    "w8": "HOLD",
+    "iv": "HOLD",
+    "full_checkout": "BLOCKED local DNS; no full ZIP"
+  },
+  "progress": {
+    "canonical_product": 553,
+    "canonical_source_delta": 0,
+    "review_product": 566,
+    "prospective_product": 569,
+    "acceptance": {
+      "Core": "12/16",
+      "UI": "21/40",
+      "W8": "3/8",
+      "MVP": "0/11",
+      "IV": "0/7"
+    },
+    "delta": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "rollback": "Ordinary revert this review-only commit; retain PR19 source, prior PR31 product tree and all owner branches. No DB change."
+}

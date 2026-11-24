@@ -1,0 +1,117 @@
+{
+  "revision": "ORG-08-READBACK",
+  "classification": "PROPOSED_READ_ONLY_RECONCILIATION",
+  "common_scope": [
+    "synthetic-tenant",
+    "synthetic-company",
+    "A0_SAMPLE_ONLY"
+  ],
+  "old_pg_scope_aliasing": false,
+  "new_common_pg_fixture": "D4-R6 owner review pending; NOT_CREATED",
+  "references": [
+    {
+      "field": "tenant",
+      "owner": "Core valid_scope / ORG Scope",
+      "status": "EXACT_D0_READBACK_CANDIDATE"
+    },
+    {
+      "field": "company",
+      "owner": "Core valid_scope / ORG Scope",
+      "status": "EXACT_D0_READBACK_CANDIDATE"
+    },
+    {
+      "field": "environment",
+      "owner": "Core valid_scope / ORG Scope",
+      "status": "EXACT_D0_READBACK_CANDIDATE"
+    },
+    {
+      "field": "org_head",
+      "owner": "R3 Store / ORG-06",
+      "status": "RETAINED_HEAD_CHECK_CANDIDATE"
+    },
+    {
+      "field": "org_sequence",
+      "owner": "R3 Store._read",
+      "status": "INTERNAL_DIGEST_READBACK; external canonical sequence pin HOLD"
+    },
+    {
+      "field": "staffing_digest",
+      "owner": "R3 Store._read",
+      "status": "INTERNAL_DIGEST_READBACK; independent provenance HOLD"
+    },
+    {
+      "field": "team_digest",
+      "owner": "R3 OperationsStore._team",
+      "status": "INTERNAL_DIGEST_READBACK; independent provenance HOLD"
+    },
+    {
+      "field": "project",
+      "owner": "Core company membership / R3 team",
+      "status": "EXACT_D0_REFERENCE_CANDIDATE; project grant HOLD"
+    },
+    {
+      "field": "plan_revision",
+      "owner": "Core research_slice",
+      "status": "EXACT_D0_REFERENCE_CANDIDATE"
+    },
+    {
+      "field": "task",
+      "owner": "Core TaskHistory",
+      "status": "EXACT_D0_REFERENCE_CANDIDATE"
+    },
+    {
+      "field": "run",
+      "owner": "Core RunHistoryPin / Member",
+      "status": "INTERNAL_D0_JOIN_ONLY; not emitted"
+    },
+    {
+      "field": "agent",
+      "owner": "Core Member / ORG staffing",
+      "status": "INTERNAL_D0_JOIN_ONLY; not emitted"
+    },
+    {
+      "field": "principal",
+      "owner": "Core Member / actual IAM owner",
+      "status": "STRUCTURAL_EQUALITY_ONLY; actual authentication and provenance HOLD"
+    },
+    {
+      "field": "policy_epoch",
+      "owner": "Core D4 / policy publisher",
+      "status": "HOLD"
+    },
+    {
+      "field": "witness_epoch",
+      "owner": "Core D4 / independent witness",
+      "status": "HOLD"
+    },
+    {
+      "field": "role_revision",
+      "owner": "Core D4 / IAM role map",
+      "status": "HOLD"
+    },
+    {
+      "field": "full_intent_digest",
+      "owner": "Core D4 / existing authority fence",
+      "status": "HOLD"
+    }
+  ],
+  "studio": {
+    "existing_schema": "org.studio.preview.v0-D0",
+    "resolver": "existing R3 ReadSession port; real owner implementation absent",
+    "project_permission_inferred": false,
+    "http_registered": false,
+    "transport_owner": "ORG-07A a2f4461d558af0f69e51cf1570ccea64b7d9ac20; existing isolated router only",
+    "transport_reimplemented": false
+  },
+  "office": {
+    "existing_schema": "org.combined.preview.v0-D0",
+    "internal_summary": "org.runtime.office.readback.v0-D0",
+    "world_layout_epoch_proven": false,
+    "geometry_join": "HOLD",
+    "placement": null
+  },
+  "atomic_cross_store": false,
+  "actual_iam": "HOLD",
+  "independent_security": "HOLD",
+  "product": "HOLD"
+}

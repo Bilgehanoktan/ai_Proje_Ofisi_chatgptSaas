@@ -1,0 +1,64 @@
+{
+  "actual_core_research_join": "NOT_IMPLEMENTED",
+  "admin": "org10_admin",
+  "authority": false,
+  "cluster": "aicos_org10_disposable",
+  "cross_database_join": "NOT_ASSUMED",
+  "database": "aicos_org10_disposable",
+  "ddl": "SOURCE_CANDIDATE",
+  "gates": {
+    "common_pg": "HOLD",
+    "independent_security": "HOLD",
+    "office_geometry": "HOLD",
+    "product": "HOLD",
+    "protected_publication": "HOLD",
+    "real_iam": "HOLD"
+  },
+  "negative_control": [
+    "synthetic-tenant-org10-control",
+    "synthetic-company-org10-control",
+    "A0_SAMPLE_ONLY"
+  ],
+  "old_pg_scopes_aliased": false,
+  "port_proposed": 55436,
+  "port_reserved": false,
+  "postgres_acceptance": "NOT_RUN",
+  "required_join_fields": [
+    "tenant",
+    "company",
+    "environment",
+    "org_head",
+    "org_sequence",
+    "staffing_digest",
+    "team_digest",
+    "project",
+    "plan_revision",
+    "task",
+    "run",
+    "agent",
+    "principal",
+    "policy_epoch",
+    "witness_epoch",
+    "role_revision",
+    "full_intent_digest"
+  ],
+  "required_join_reference": "ORG-08-READBACK/IAM_RUNTIME_ALIGNMENT.json; D4-R6/COMMON_SCOPE_PROFILE.json",
+  "revision": "ORG-10",
+  "roles": {
+    "common_reader": "aicos_org10_reader_a",
+    "common_writer": "aicos_org10_writer_a",
+    "control_writer": "aicos_org10_writer_b",
+    "owner_nologin": "aicos_org10_owner",
+    "unmapped_login": "aicos_org10_unmapped"
+  },
+  "schema": "aicos_org10_fixture",
+  "scope": [
+    "synthetic-tenant",
+    "synthetic-company",
+    "A0_SAMPLE_ONLY"
+  ],
+  "scope_match_only_not_iam": true,
+  "shared_core_credentials": false,
+  "source": "D4-R6 COMMON_SCOPE_PROFILE",
+  "status": "PROPOSED_OWNER_REVIEW"
+}

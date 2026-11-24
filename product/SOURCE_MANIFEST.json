@@ -1,9 +1,9 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "MI03-GATE03-SQL-REGRESSION-R1",
-  "status": "ISOLATED_ORG_OWNER_SOURCE_PACKAGE_SQLITE_11_PASS_OWNER_REVIEW_HOLD",
+  "doc_revision": "MI-P0-566-CROSSOWNER-ISOLATED-SOURCE-CANDIDATE-20261120",
+  "status": "DRAFT_ISOLATED_SOURCE_REVIEW_ONLY_NOT_W8_PG_IV_AUTHORIZED",
   "parent_candidate_sha256": null,
-  "parent_git_commit": "65a0e978c20378041e98f70e6ed074151214a3bb",
+  "parent_git_commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
   "source_git_commit": null,
   "files": {
     "AI_Company_OS_Offline_Demo.html": {
@@ -427,8 +427,8 @@
       "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
     },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
-      "bytes": 7835,
-      "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+      "bytes": 9184,
+      "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
     },
     "ai-company-os-backend/app/core/transaction/intent_identity.py": {
       "bytes": 3393,
@@ -1103,8 +1103,8 @@
       "sha256": "4f8b6110c1c6618a870dbad0890e9786ff5da4c508c656771176b4edb6212a4f"
     },
     "ai-company-os-frontend/app/api/demo/admission/route.ts": {
-      "bytes": 1217,
-      "sha256": "a9fb739797e13a70851ce5057c46e06df4dc9a235efd5d82a1333ba666006bac"
+      "bytes": 658,
+      "sha256": "6a8820675e37d41eb8765df6e3ef880ae9bec646080ccba2c2b57c3cd8213457"
     },
     "ai-company-os-frontend/app/api/demo/lifecycle-prefix/route.ts": {
       "bytes": 1203,
@@ -1119,16 +1119,16 @@
       "sha256": "1b8f2a4c28c37c867a02ecadb4b51e5c905a9dc66b8189d2acd0bbedfe555769"
     },
     "ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
-      "bytes": 1213,
-      "sha256": "afa5e6397a4cebc234417c61dabe6448c5d386fa556fb919e2a7eed0cf298460"
+      "bytes": 2114,
+      "sha256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa"
     },
     "ai-company-os-frontend/app/api/demo/organization/route.ts": {
       "bytes": 527,
       "sha256": "68586ac79f5111bcbe2b30cb09f3f6b35ef8fbee38ec59881d88bf00ea0a6f22"
     },
     "ai-company-os-frontend/app/api/demo/outbox/route.ts": {
-      "bytes": 1205,
-      "sha256": "2332570b374be81c01f05b5000b072a5fb7626c7d1ca07a3c4a03c1b0f64180d"
+      "bytes": 643,
+      "sha256": "ec3f1b8599c3017b5cd8d7e70857e22a83edfbb791cbd5985437f1e3c351ff94"
     },
     "ai-company-os-frontend/app/api/demo/plan/route.ts": {
       "bytes": 1323,
@@ -1139,8 +1139,8 @@
       "sha256": "e71ea3b15e8e576704f98a22879e9b169fc0c2689834468ff5562eea7b706be8"
     },
     "ai-company-os-frontend/app/api/demo/task-budget/route.ts": {
-      "bytes": 1215,
-      "sha256": "8da7e857fc1aded0a18a110f32fadcf84b2eef92fcf0b7829be0ba796675c7db"
+      "bytes": 656,
+      "sha256": "66f34ac01200a067e9ada506c61248aa12b610d620495b6a8ab75a0a2f945dc4"
     },
     "ai-company-os-frontend/app/globals.css": {
       "bytes": 11130,
@@ -2213,9 +2213,61 @@
     "ai-company-os-backend/tests/test_org_sql_runtime_mi03.py": {
       "bytes": 7056,
       "sha256": "d46408edae8f467a19b4bdda4647d8afc73f87508ac080ea34be015014268cb6"
+    },
+    "ai-company-os-backend/app/core/iam_session.py": {
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
+    },
+    "ai-company-os-backend/tests/test_iam_session_d5g1.py": {
+      "bytes": 4691,
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc"
+    },
+    "ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
+    },
+    "ai-company-os-backend/app/core/transaction/identity_fence_review.py": {
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347"
+    },
+    "ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331"
+    },
+    "ai-company-os-backend/app/core/transaction/org_membership_review.py": {
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
+    },
+    "ai-company-os-backend/tests/test_iam_org_d5g5.py": {
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
+    },
+    "ai-company-os-backend/app/core/transaction/core_org_session_review.py": {
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae"
+    },
+    "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py": {
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e"
+    },
+    "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": {
+      "bytes": 1827,
+      "sha256": "22ad73c2b74d400e251e779fe1d66e25be54031ca7890af9524a6b66deeaeb5a"
+    },
+    "ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs": {
+      "bytes": 5998,
+      "sha256": "7607d0371edff9512d2669a1b0f30dec55879bd77a4e87d2c06026d9ea8b5102"
+    },
+    "ai-company-os-frontend/tests/office-workbench-deadline.test.cjs": {
+      "bytes": 4001,
+      "sha256": "6d01c856ac4fc88d22a223f3b77f24b292ed7e4af8a5d3cc465ce5506c17dbf9"
+    },
+    "ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs": {
+      "bytes": 2510,
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140"
     }
   },
-  "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
+  "parent_source_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
   "source_git_commit_note": "No self-reference; exact commit and owner pins in evidence",
   "additional_parent_git_commit": null,
   "additional_parent_source_manifest_blob": null,
@@ -2224,5 +2276,29 @@
     "SKILL": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
     "ORG_ASSIGNMENT_D0": "6efc6714757ebd698d27efd7022afc2c92af70d0",
     "ORG_ORG06": "a59a15a94b9eaa2bb7687297e9057e286f297ede"
+  },
+  "mi_p0_crossowner_566_20261120": {
+    "scope": "ISOLATED_CANDIDATE_DO_NOT_PROMOTE_WITHOUT_OWNER_AND_W8_SECURITY",
+    "canonical_commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "canonical_manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "owner_G2_G9_commit": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "owner_G2_G9_manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
+    "owner_Office_Proxy_commit": "59c098b0ec3387ef1318e4957248e843e1526d81",
+    "owner_Office_Proxy_manifest_blob": "7845c8bba67abedb9577325c76bfb3c239fe54c6",
+    "delta_G2_G9_count": 10,
+    "delta_Office_Proxy_count": 8,
+    "cross_owner_code_path_conflicts": 0,
+    "shared_manifest_collision": "MANUALLY_RECOMPOSED_FROM_EXACT_OWNER_ENTRIES",
+    "expected_product_files": 566,
+    "expected_manifest_entries": 565,
+    "source_owner_ratification": "HOLD",
+    "C04_W8": "NOT_RUN",
+    "C05_legal": "HOLD",
+    "C06_C08": "NOT_RUN",
+    "protected_postgres": "HOLD",
+    "independent_security": "HOLD",
+    "MVP_acceptance": "0/11",
+    "IV_acceptance": "0/7",
+    "rollback": "Delete draft review branch or normal revert; canonical and owners remain intact"
   }
 }
