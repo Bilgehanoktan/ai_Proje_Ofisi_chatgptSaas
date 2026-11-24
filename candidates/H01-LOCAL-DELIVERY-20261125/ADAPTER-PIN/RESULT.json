@@ -1,0 +1,137 @@
+{
+  "task": "NW06-ADAPTER-PIN-MODEL-SKILL-20261125",
+  "status": "ARCHIVAL_CANDIDATE_OWNER_HOLD",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "archival_parent": "018f0457738d43c77f9dab7ab3fa978e9702c360",
+  "skill_r2_source_commit": "4efbf0c757be1b5f84285630ff1a83a30314b368",
+  "source_owner": "MI07/MI09",
+  "architecture": "D08/D21, R08; no normative change, no new engine; diagnostic only",
+  "source_pins": [
+    [
+      "app/core/runtime_preview.py",
+      "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+      725,
+      "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121"
+    ],
+    [
+      "app/core/t1_review.py",
+      "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+      517,
+      "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2"
+    ],
+    [
+      "app/core/agent_runtime/lifecycle.py",
+      "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      7251,
+      "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    ],
+    [
+      "app/core/transaction/review.py",
+      "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      5065,
+      "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+    ],
+    [
+      "app/engines/model_gateway/registry.py",
+      "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      1305,
+      "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+    ],
+    [
+      "app/engines/model_gateway/fallback.py",
+      "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+      1391,
+      "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5"
+    ],
+    [
+      "app/engines/model_gateway/provider_contract.py",
+      "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+      2986,
+      "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9"
+    ],
+    [
+      "app/core/skill_review.py",
+      "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+      315,
+      "e591da76572a6a57b73ee167e5f072629506969b431582c8098ae1c066697eef"
+    ],
+    [
+      "app/engines/skill_engine/manifest_review.py",
+      "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+      1904,
+      "cf283466d3c2966f11d1c21acbacc0ace6fd53e3dc8be157e1850d4fe2dd151e"
+    ],
+    [
+      "app/engines/skill_engine/resolver.py",
+      "0c6829a006f28f283e39d7aca62a8de1c3683949",
+      2303,
+      "d03acc8d0419a39b90eb6b014bda135373b4c7258793f7f2175fe1398e83bb2a"
+    ]
+  ],
+  "changed_files": [
+    [
+      "app/engines/model_gateway/registry.py",
+      1821,
+      "7c344c2db0b23140520afb323164c541acc83864b555e8964a68ece7ac8b4551"
+    ],
+    [
+      "tests/test_adapter_pin_boundary.py",
+      4580,
+      "002c10f96b5c424849ae6c24a96804f752373fe78257512a253bd8cbc03550a9"
+    ],
+    [
+      "tests/test_adapter_skill_integration.py",
+      2396,
+      "a9482cf6ffd1f8150cd48213fa9c65d5d983483e084934aedff5bf81ecbf5bd7"
+    ]
+  ],
+  "tests": {
+    "command": "python -B -S -m unittest discover -s tests -v",
+    "scope": "exact ten-file local source slice, stdlib only, no mocked product dependencies; not full regression",
+    "baseline": {
+      "passed": 4,
+      "failed": 10,
+      "errors": 1,
+      "total": 15,
+      "exit": 1,
+      "raw_sha256": "4cb39ab32c411e0e864db093cf0f6b78fbf725a9d207d10b9b6210fac0139ee9"
+    },
+    "candidate": {
+      "passed": 15,
+      "failed": 0,
+      "errors": 0,
+      "total": 15,
+      "exit": 0,
+      "raw_sha256": "8238c2d57b33acb4ed971f6b5a67449610b20bf7c289c6431a828af324da995b"
+    },
+    "new_unique_methods": 15,
+    "prior_test_credit": 0
+  },
+  "decision": "Require exact plain tuple, string, Scope and AdapterPin types before membership/hash/equality. Compatibility of intentional subclasses and other consumers requires owner review. No actual provider execution, authorization, or complete security claim.",
+  "ownership": "8 newest PR path lists inspected; complete open-PR collision inventory not finished. Existing MI07 transfer and MI09 registry blob identical. Archive only; no product or manifest mutation.",
+  "manifest": "Proposed delta only: 1 registry replacement, 2 test additions. Resolver R2 separately archived; no combined product manifest.",
+  "rollback": "Discard this archival slice or normal revert of this isolated commit; preserve earlier sources/tests.",
+  "next": "MI07/MI09 review exact-type compatibility and run original full affected model/skill/Runtime tests on approved checkout. Reconcile PR53, PR55-R2 and existing Runtime candidates; central manifest only after source owner approval.",
+  "progress": {
+    "canonical_product_files": [
+      553,
+      553
+    ],
+    "canonical_manifest": [
+      552,
+      552
+    ],
+    "weighted": "HESAPLANAMADI",
+    "acceptance_delta_pp": 0,
+    "ordinal_delta": 0,
+    "canonical_source_gain": 0
+  },
+  "blockers": [
+    "complete current Design Master addendum review and full exact source ZIP unavailable in this environment",
+    "full owner/path inventory and owner approval",
+    "reviewed C50, R9 locks and full product/IV tests",
+    "no CI or real grant"
+  ]
+}
