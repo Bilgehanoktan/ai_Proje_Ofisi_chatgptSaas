@@ -1,0 +1,90 @@
+{
+  "task": "MI07-NW06-METRIC-CATALOG-20261124",
+  "status": "ISOLATED_SOURCE_CANDIDATE_OWNER_REVIEW_HOLD",
+  "date": "2026-11-24",
+  "canonical_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "owner_transfer_head": "bd6882b0dd3b7117be859e147712e55f4c92c58a",
+  "governance_head": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting_head": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "design_parent": {
+    "path": "docs/0158/AI_Company_OS_DESIGN_MASTER_DOC_REV_0158_RECOVERY_ADAY.md",
+    "blob": "cc6b04ac4a1d34722b845518663095a804e4dba0",
+    "bytes": 12198871,
+    "sha256": "90877583bae5a13c1815d104f0742e4bc015c76570341c44a7baaa040412db01",
+    "recovery": "byte-exact local 0155 suffix plus exact GitHub 5734-byte prefix",
+    "relevant_review": "D30-05A (proposal, not new normative approval); 0196-MA, 0207, 0208, 0209 addenda",
+    "full_addendum_review": "INCOMPLETE"
+  },
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "symbol": "inspect_route",
+      "before": "fa0f058486cc9dfe263fa9562f1bd4387b91760b",
+      "after": "b8638d29266b0da310d8f7b1baa31a19b48a567d",
+      "sha256": "aac580a3ae6c19a10069d3b16243cf860eadd62a29a01f5f13e76d2b32935b36",
+      "bytes": 6026
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_metric_catalog_boundary.py",
+      "blob": "27add29056b2de3b1f70c70c8ae738a2c75482f6",
+      "sha256": "755a365c91b583f50a69269de5c0b888eafba84eb1189f963c8eb6589a21e9f3",
+      "bytes": 3698
+    }
+  ],
+  "defect": "No eligible profile branch bypassed metric catalog membership; replay could verify a record tied to extraneous metrics. Move existing membership check before returning valid empty eligibility result; preserve malformed-input precedence and all deny-only flags. No model selection, external calls or real grants.",
+  "tests": {
+    "source_pins": "19/19 Git blob, byte size and SHA-256 match canonical manifest",
+    "runtime": "Linux Python 3.13.5 stdlib only (-B -S), exact source slice, no third party dependency or network",
+    "command": "python -B -S -m unittest discover -s tests -p 'test_router*.py' -v",
+    "baseline": {
+      "pass": 12,
+      "fail": 3,
+      "exit": 1,
+      "log_sha256": "9abc1cec404ec7d69a5605a688653f31eb5f11d2b65df03a7e4eea0cf865d90c"
+    },
+    "after": {
+      "pass": 15,
+      "fail": 0,
+      "exit": 0,
+      "log_sha256": "1e1230ba92be109654410cba9046f2900fb819449ee78ad0d7c51b64d9f7c290"
+    },
+    "original": 10,
+    "new": 5,
+    "archive": {
+      "name": "AIOS_NW06_ROUTER_CATALOG_REPAIR_EVIDENCE_20261124.zip",
+      "entries": 29,
+      "bytes": 27941,
+      "sha256": "032c50f8a8f8ab917c31fd59a1b0222969ec68e3f786c9d0f2202f08887801a1",
+      "location": "conversation only; not full product archive"
+    }
+  },
+  "catalog_delta": {
+    "technical_area": "MI-07 existing Model Gateway",
+    "api": "unchanged",
+    "db": "unchanged",
+    "event": "unchanged",
+    "dependencies": "unchanged",
+    "normative_decisions": "unchanged",
+    "maintenance": "On catalog hold check metrics and profile digest membership, regenerate from approved snapshot only; do not bypass pins.",
+    "rollback": "Normal revert this isolated commit; preserve old branch and evidence, no DB or runtime effects."
+  },
+  "gates": {
+    "canonical_transfer": "HOLD_SOURCE_OWNER_AND_CENTRAL_REVIEW",
+    "full_checkout": "BLOCKED",
+    "full_product_build": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "w8": "HOLD",
+    "ci": "NOT_RUN",
+    "real_grants": "NONE"
+  },
+  "progress": {
+    "isolated_product_files": 554,
+    "isolated_manifest_entries": 553,
+    "canonical_product_files": 553,
+    "canonical_manifest_entries": 552,
+    "canonical_gain": 0,
+    "weighted": "HESAPLANAMADI",
+    "acceptance_delta": 0
+  },
+  "next": "MI-07 source owner review, then central manifest reconciliation against selected combined sources; owner-reviewed source transfer only. Existing R9 dependency and other security gates remain separate."
+}
