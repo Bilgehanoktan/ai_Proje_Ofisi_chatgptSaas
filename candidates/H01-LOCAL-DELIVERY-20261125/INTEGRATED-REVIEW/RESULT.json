@@ -118,5 +118,181 @@
     "ordinal_delta": 0
   },
   "rollback": "Normal revert of isolated archival commit or ignore snapshot; all source owner refs and canonical product tree unchanged. No root CI/deploy change.",
-  "next": "Owner review of exact unified tree; resolve three divergent path variants and API lineage; actual approved environment for 28 backend + 11 MVP tests and signed Runtime, then C07/C08/C05. Do not run archived workflow or use stale runner/manifest pins."
+  "next": "Owner review of exact unified tree; resolve three divergent path variants and API lineage; actual approved environment for 28 backend + 11 MVP tests and signed Runtime, then C07/C08/C05. Do not run archived workflow or use stale runner/manifest pins.",
+  "test_expanded": {
+    "source_tree": "c050374aaeb2f8ccc61c86f32a0de16ae986db49",
+    "command": "Linux CPython 3.13.5, stdlib only, python -B -S -m unittest discover -s tests -v",
+    "pass": 53,
+    "total": 53,
+    "exit": 0,
+    "source_pins": 26,
+    "groups": {
+      "model_skill_router": 30,
+      "core_scheduler_dag": 23
+    },
+    "unique_new_test_methods": 0,
+    "previous_30_subset": true,
+    "raw_sha256": "48f4461b1d03e75ede18806e65a7ca897f060fb3a3832b97d0276f392199bc53",
+    "gzip_sha256": "10aba01a4a48dfacb451e42ff7958cedc0382b577537990bd2eac1fb6e1e108c",
+    "gzip_blob": "6b1413f6f3c0e90d9921feedd520828a046bc876",
+    "pins": [
+      {
+        "path": "ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d",
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "bytes": 3864,
+        "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2",
+        "blob": "eb3e283e3406996254283595e14711e90b2bca8c"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/engine.py",
+        "bytes": 3082,
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3",
+        "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "bytes": 692,
+        "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482",
+        "blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/policy/denial.py",
+        "bytes": 1335,
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4",
+        "blob": "9768b34e447c08136440c891b1974fae131f3ebd"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/runtime_preview.py",
+        "bytes": 725,
+        "sha256": "4f78c1fb56b765d35438482c972bc33b2f346c2d158271831b76e426f2d58121",
+        "blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/skill_review.py",
+        "bytes": 315,
+        "sha256": "e591da76572a6a57b73ee167e5f072629506969b431582c8098ae1c066697eef",
+        "blob": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/t1_review.py",
+        "bytes": 517,
+        "sha256": "7fb4c2baec9994d686de45812f33760da636f6bf69e551ff73b0e600280cd2e2",
+        "blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/task_engine/dag.py",
+        "bytes": 3542,
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051",
+        "blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/transaction/review.py",
+        "bytes": 5065,
+        "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908",
+        "blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/capability_resolver.py",
+        "bytes": 3576,
+        "sha256": "a336a1348f70b6ec7602af6b5dac2d5e4fe59ea7cc65c9ab139eb5c8af10be17",
+        "blob": "b90b0853ba466b89fd82bc38512517637afe1e02"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/cost_estimator.py",
+        "bytes": 2475,
+        "sha256": "efbeaae7e981d50225f9bfc7457335e5075dce6765a41c58fd278abb721f1f2d",
+        "blob": "b244e311574fd2fb31b7e30a7f4026095cbca8f2"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/fallback.py",
+        "bytes": 1391,
+        "sha256": "0086783ef670ec59978dfc485805d47ae47d8d34157c0ecddd17d4f8d88264c5",
+        "blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/profile_registry.py",
+        "bytes": 2589,
+        "sha256": "29c108efc0c63035492caaa41672a8be973fae7d317bab2142191ec5a0184e15",
+        "blob": "ec16d064a0ac12fe46c72230399e41c2c56e2a83"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/provider_contract.py",
+        "bytes": 2986,
+        "sha256": "5dc710d945ab80733fed830a35bbf1c722299690f8172ddb8c93147a9591dfd9",
+        "blob": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/registry.py",
+        "bytes": 1821,
+        "sha256": "7c344c2db0b23140520afb323164c541acc83864b555e8964a68ece7ac8b4551",
+        "blob": "d805516dd2da0f88e6207f31f2c377f2fefaf493"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/router.py",
+        "bytes": 6026,
+        "sha256": "aac580a3ae6c19a10069d3b16243cf860eadd62a29a01f5f13e76d2b32935b36",
+        "blob": "b8638d29266b0da310d8f7b1baa31a19b48a567d"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/model_gateway/routing_decision.py",
+        "bytes": 5909,
+        "sha256": "749a955dca129d46ba8dff3bdb8ca4751b54b343c5ebd10767ca403092afdd92",
+        "blob": "031ec8f8e4cfc86d8e3a17f0d4e0d266ae1657f8"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/skill_engine/manifest_review.py",
+        "bytes": 1904,
+        "sha256": "cf283466d3c2966f11d1c21acbacc0ace6fd53e3dc8be157e1850d4fe2dd151e",
+        "blob": "26c4eea34bb938ae4e9a311d9331d3ccab77487d"
+      },
+      {
+        "path": "ai-company-os-backend/app/engines/skill_engine/resolver.py",
+        "bytes": 2303,
+        "sha256": "d03acc8d0419a39b90eb6b014bda135373b4c7258793f7f2175fe1398e83bb2a",
+        "blob": "0c6829a006f28f283e39d7aca62a8de1c3683949"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_adapter_pin_boundary.py",
+        "bytes": 4580,
+        "sha256": "002c10f96b5c424849ae6c24a96804f752373fe78257512a253bd8cbc03550a9",
+        "blob": "61a92c1db4b907705256beddf95baf147574f701"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_adapter_skill_integration.py",
+        "bytes": 2396,
+        "sha256": "a9482cf6ffd1f8150cd48213fa9c65d5d983483e084934aedff5bf81ecbf5bd7",
+        "blob": "7ae738c5b3182b05fe7a4ec4a5a6a374acb02d06"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "bytes": 5933,
+        "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62",
+        "blob": "f17fc813bec76e91c91cf1a35e177972a8c29e34"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_plan_text_boundary.py",
+        "bytes": 2508,
+        "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89",
+        "blob": "143cf34da870125e367947181854e1a0af9c2b30"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_router_cost_review.py",
+        "bytes": 7169,
+        "sha256": "dc979a87eb60a32a3055002dea6baf49013ce9d5b1c5a7718dd49b3b5c32eed0",
+        "blob": "82d0760ce5f4fc17deb5e16350428c67b1acc3f2"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_router_metric_catalog_boundary.py",
+        "bytes": 3698,
+        "sha256": "755a365c91b583f50a69269de5c0b888eafba84eb1189f963c8eb6589a21e9f3",
+        "blob": "27add29056b2de3b1f70c70c8ae738a2c75482f6"
+      }
+    ],
+    "limits": "No external dependency, SQL consumer, signed Memory, API, UI build or full product execution. Same 30 previous subset included; do not sum 30+53."
+  }
 }
