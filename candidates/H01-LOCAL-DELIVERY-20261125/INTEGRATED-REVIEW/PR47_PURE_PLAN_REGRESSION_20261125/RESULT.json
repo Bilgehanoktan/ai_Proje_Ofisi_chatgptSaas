@@ -1,0 +1,107 @@
+{
+  "task": "W2-PR47-PURE-PLAN-REGRESSION-20261125",
+  "classification": "HISTORICAL_EXACT_PR47_STDLIB_SOURCE_SLICE_ONLY",
+  "source_head": "a647095f57c319210596a3552dfacf40a37baf2d",
+  "source_tree": "5348b07b7769692117a3cae984ed2d4a53be5c3a",
+  "source_manifest": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "79771c6dce3fda0b9b6275cacbac1a3d24a4c9a8",
+  "owner": "03API/W2 and Core/NW07",
+  "source_pins": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "bytes": 59,
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "git_blob": "04487bda631e9133f3904451a39fc8722e985997",
+      "bytes": 3367,
+      "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+      "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+      "bytes": 1335,
+      "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+    },
+    {
+      "path": "product/ai-company-os-backend/fixtures/core.plan.projection.json",
+      "git_blob": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+      "bytes": 2462,
+      "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+    },
+    {
+      "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+      "git_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+      "bytes": 8418,
+      "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_projection.py",
+      "git_blob": "ae2b1e90b367be591b8cc59b979419780115802a",
+      "bytes": 2472,
+      "sha256": "2f0e5ec8f52b49a4d8268a2977d34abec00c43d06d867020448f7a65f0c858fc"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "bytes": 3082,
+      "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/dag.py",
+      "git_blob": "acf97a2216e0c089056ffbba30db3eb8fe1484a7",
+      "bytes": 355,
+      "sha256": "5884ae7fce504bbb6c573bbe61023843793d1d9a24de05a567ff5e8cd923ca92"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+      "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+      "bytes": 259,
+      "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+    }
+  ],
+  "pre_post": "12/12 Git blobs, bytes, local SHA256, source manifest checked; unchanged after run",
+  "command": "env -i PATH=/usr/bin:/bin /opt/pyvenv/bin/python -B -S -m unittest discover -s tests -p test_plan_projection.py -v",
+  "runtime": "Python 3.13.5 Linux, stdlib-only; no third-party imports",
+  "initial_launch": "127: /usr/local/bin/python nonexistent; corrected absolute interpreter, no test executed on first launch",
+  "result": {
+    "pass": 5,
+    "fail": 0,
+    "exit": 0,
+    "log_sha256": "0c051fbb2e5108c8ff69de8a63e07c782753b6991a689e5698115004194e0dac",
+    "local_pins_sha256": "99e86c5e04a11b8435b5a775f996093f36011c33ca928dc8aed7e8aa35681ef5"
+  },
+  "reuse": "PR54 R3 already ran same five test methods on newer DAG 6e389fe77252eecb29e4f152760f1dd7ffe07bc1; this is old PR47 DAG 04487bda631e9133f3904451a39fc8722e985997, separate source baseline; no extra unique criteria or product acceptance",
+  "known_limit": "No full checkout, API9 or MVP11, IAM12/G7 7 NOT_RUN; PR47 historical manifest demo.py stale and test_api_core_plan_read_boundary_03.py absent; no dependency install, no CI, no canonical transfer; R4 retains corrected DAG and manifest",
+  "next": "Dependency owner and independent security review; run original API9/MVP11 on exact reviewed offline runtime; do not overwrite R4 DAG with historical PR47",
+  "progress": {
+    "product_code_changes": 0,
+    "canonical_product_delta": 0,
+    "acceptance_delta": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "rollback": "normal revert evidence-only commit"
+}
