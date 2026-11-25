@@ -1,0 +1,90 @@
+{
+  "task": "MI01-R6-W8-UI-REQUALIFICATION-20261126",
+  "classification": "SCOPED_SYNTHETIC_JSX_COMPOSITION_NOT_FULL_W8_OR_ACCEPTANCE",
+  "base": "2bbf36061b6bd6b98fe46ad773beb475d5d303c1",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "source": "3f50b5b2d6dfa3a6ac0ed18cefa8f86fda5336ab",
+  "r6_manifest": "d344a2c2651632103599f1c739e65bf98ecf80cb",
+  "pr38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+  "pr38_manifest": "9660da1104617b4764d5f1e32009e4e3405b47f8",
+  "open_pr_count": 44,
+  "source_blobs": {
+    "components/dashboard/OfficePanel.tsx": "eacb81100fb34a8e74f619a5a8e2283a97337253",
+    "features/evidence/AgentDirectory.tsx": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+    "features/evidence/AgentRoleProfile.tsx": "f47317db9acd182a3feb9e054f5ab55530db5a0e"
+  },
+  "test_overlay": [
+    {
+      "path": "tests/ui-p10j16-office-composition.test.cjs",
+      "old": "d16bd96d948ea5fb83701b6c4edfe5b416b2869a",
+      "proposed": "f55f72ffc1ec9c5de81b4be0fd13d2a5f01d5fe5",
+      "bytes": 4029,
+      "sha256": "c9b66a7d45fb298647ad1d74179f61dcc37733beb41bea08894e1f4036fc1431"
+    },
+    {
+      "path": "tests/ui-p10j18-agent-profile.test.cjs",
+      "old": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+      "proposed": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+      "bytes": 6849,
+      "sha256": "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932"
+    }
+  ],
+  "verification": {
+    "git_blob": "7/7 PASS",
+    "manifest_sha256_size": "7/7 PASS (R6 5, PR38 2)"
+  },
+  "runtime": "Linux Node 22.16.0 TypeScript 5.8.3 already installed; no new packages; original test mocks only",
+  "runs": {
+    "original": {
+      "command": "NODE_PATH=$(npm root -g) node --test original_tests/*.cjs",
+      "exit": 1,
+      "node_reported_pass": 6,
+      "node_reported_fail": 3,
+      "notes": "8 Office methods incl 2 route assertions fail; AgentProfile file fails at module load so individual methods not run",
+      "sha256": "ca96b2075d8502c0c06a4f94865bb07578f4d8223c8a1a0e54e851510fff03c0"
+    },
+    "corrected": {
+      "command": "NODE_PATH=$(npm root -g) node --test tests/*.cjs",
+      "exit": 0,
+      "pass": 23,
+      "fail": 0,
+      "office": 8,
+      "agent": 15,
+      "sha256": "0c2eeb6d5877244f6e50cfef0fd339ff97d3664e7878c7070f67b53b44e1c239"
+    }
+  },
+  "raw_zip": {
+    "blob": "9a7309f1bc19da19e694bb6f88f37b4b42412a79",
+    "bytes": 2580,
+    "sha256": "1942a67ff258af7290b61915f6cc6d76d1f123db8ba431254a3bfd3dad4f5da9"
+  },
+  "local_scoped_zip": {
+    "bytes": 16323,
+    "sha256": "4e9a227e65872527bb043e48437a89dff9a3defe51eeadda91949cf5a27e8a12",
+    "full_product_archive": false
+  },
+  "impact": "MI01/05/06 existing source-compatible test overlay only. No production behavior changes, schema, API, locks, authority or normative architecture change. Owner PR38/35/36 review submissions absent; no central manifest change.",
+  "gates": {
+    "pr38_test_overlay": "TECHNICAL_COMPATIBILITY_PASS_OWNER_HOLD",
+    "cryptography": "HOLD",
+    "C50_R9": "HOLD",
+    "IAM": "0/12 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "API": "0/9 NOT_RUN",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "core": "12/16",
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "weighted": "HESAPLANAMADI",
+    "acceptance_delta": 0,
+    "ordinal": "unchanged"
+  },
+  "next": "Owner reconcile two exact existing test variants; cryptography and API20 reviewed runtime; full exact checkout; original backend suites; manifest single writer; C07/C08/C05",
+  "rollback": "normal evidence revert; preserve all original source/test blobs and owner branches"
+}
