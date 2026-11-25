@@ -650,5 +650,105 @@
     },
     "rollback": "Normal revert archival commit, retains R3 and all owner branches; no CI/PROD/main/real grant/DB/schema changes.",
     "next": "Avoid further partial diagnostics as substitute for original 28 tests. Obtain approved exact checkout/R9/C50 dependencies and owner dispositions; original PR46 12, PR19/G7 7, PR47 9 then 11 MVP. Resolve full D04 independently; W8 owner/C07/C08/C05."
+  },
+  "r5_environment": {
+    "task": "H01-MI-P0-EXACT-CHECKOUT-ACQUISITION-20261125",
+    "classification": "SOURCE_EXPORT_TOOL_PREPARED_AND_TESTED_REAL_FETCH_BLOCKED_NO_PRODUCT_DELTA",
+    "parent": "1ac127144515496dd7e70d940c76a3122a4a0570",
+    "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "source_refs": {
+      "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+      "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "49": "894b7989c9d524bb4cb2893faba28cf7e76a5a6d",
+      "52": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+      "54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a"
+    },
+    "conflict": "44 open PRs; relevant heads unchanged; previous exact path inventory reused; no product, lock, workflow or owner branch modifications. PR46/47/52 zero submitted reviews.",
+    "snapshot": {
+      "source_tree": "78593080158f644114c6ce2739a985ba1fde8217",
+      "product_tree": "2440b9e2d3f513f2789feb634066655847101828",
+      "manifest_blob": "3de94145197137fb60506fc05dfa23bbee00c208",
+      "source_blobs": 1915,
+      "product_files": 584,
+      "manifest_entries": 583,
+      "remote_tree_modes": "1915 regular 100644 blobs, 365 subtrees, nontruncated"
+    },
+    "export": {
+      "path": "AIOS_R4_SOURCE_EXPORT_20261125.py",
+      "blob": "0905c068f684cfe66d983691b2f43df8bbd20e34",
+      "sha256": "8698a75a0f94960381591719f96bbedfc6ad266966cbca7b5fdfaa599f6a6197",
+      "purpose": "Acquire exact R4 full root archive via local Git object database or read-only fetch into temporary bare repository, verify every archive Git blob and 583 manifest SHA256/length records. No product imports, install, remote writes, CI or credentials in output. ZIP is not original historical Git checkout. Existing owner test runners unchanged.",
+      "local_fixture_tests": {
+        "run": 6,
+        "pass": 6,
+        "fail": 0,
+        "elapsed_seconds": 0.297,
+        "methods": [
+          "test_exact_archive",
+          "test_existing_output",
+          "test_missing_file",
+          "test_tampered_zip",
+          "test_wrong_manifest",
+          "test_wrong_tree"
+        ],
+        "scope": "Synthetic local Git repository; not actual R4 full export, not product tests."
+      },
+      "actual_export_attempt": {
+        "status": "BLOCKED",
+        "exit": 1,
+        "git_exit": 128,
+        "error": "Could not resolve host: github.com",
+        "archive_created": false,
+        "log_blob": "0b3709a9bd97970d64f12dcaa6559592afe4653f",
+        "log_sha256": "217fadf34fd39ad6230db68911482b996b5d5fe5fb76eb6b779386bc8c65cd87"
+      },
+      "operator_command": "python -B -S AIOS_R4_SOURCE_EXPORT_20261125.py --output AIOS_R4_EXACT_SOURCE.zip",
+      "windows_validation": "NOT_RUN",
+      "source_zip": "NOT_RECEIVED"
+    },
+    "dependency": {
+      "historical_PR52": "Windows PR19/46/47 3/3 clean checkout, 25/25 C50 and 20/20 R9 wheel byte verification. Local library exact-name search did not return those archives; no reinstallation.",
+      "fastapi": "GHSA-f56c-v883-vx8r Nov 17 2026; 0.163.2 fixes affected range. R9 owner review remains HOLD; no blanket approval.",
+      "openssl": "Official advisory 2026-11-10 https://openssl-library.org/news/secadv/20261110.txt states fixes committed, release planned 2026-12-01; CVE-2026-95692 affects 4.0 before 4.0.4 and 3.5 before 3.5.10. Both reported native version families require review; actual reachability for bounded Ed25519 and D0 API not established. No new independent security disposition.",
+      "cryptography": "PyPI 50.0.2 latest observed stable; no reviewed patched wheel established. Developer changelog/recorded wheel strings require exact native verification, no inferred approval.",
+      "python": "Python.org 3.13.18 is source-only; 3.13.17 last binary installer. No silent runtime substitution.",
+      "source_urls": [
+        "https://pypi.org/project/cryptography/",
+        "https://www.python.org/downloads/release/python-31318/",
+        "https://github.com/fastapi/fastapi/security/advisories/GHSA-f56c-v883-vx8r",
+        "https://openssl-library.org/news/secadv/20261110.txt"
+      ]
+    },
+    "blockers": {
+      "original_IAM_12": "NOT_RUN",
+      "original_G7_7": "NOT_RUN",
+      "original_API_9": "NOT_RUN",
+      "original_MVP_11": "NOT_RUN",
+      "C50_R9": "HOLD owner/runtime/security/license",
+      "full_design_master": "Relevant prior source review retained; full addendum verification incomplete",
+      "canonical_transfer": "HOLD owner dispositions"
+    },
+    "progress": {
+      "archival_product": [
+        584,
+        584
+      ],
+      "canonical_product": [
+        553,
+        553
+      ],
+      "new_product_source": 0,
+      "original_28_closed": 0,
+      "acceptance_delta_pp": 0,
+      "ordinal_delta": 0,
+      "weighted": "HESAPLANAMADI",
+      "new_product_gain": 0
+    },
+    "next": "User-side exact R4 ZIP export using existing authenticated Git and upload. Keep existing exact PR19/46/47 checkouts and reviewed wheel bytes. Security and dependency owner disposition in parallel, then existing original 28 + 11 MVP. No further archive-only code candidates as substitute.",
+    "rollback": "Normal revert this handover-only commit. Product source snapshot, all owner branches, locks and prior evidence unchanged."
   }
 }
