@@ -1,0 +1,55 @@
+{
+  "revision": "UI-P10J-22",
+  "parent": "df4c95688424c7c43d38941d219cf05932dd9040",
+  "scope": "W1 UI / W7 finance presentation / W4 security presentation / W8 test adapter only",
+  "changed_areas": [
+    {
+      "id": 1,
+      "name": "Frontend",
+      "source": "integrated",
+      "test": "TSX transpile"
+    },
+    {
+      "id": 2,
+      "name": "UI/UX",
+      "source": "integrated",
+      "test": "browser NOT_RUN"
+    },
+    {
+      "id": 14,
+      "name": "Security & IAM",
+      "source": "read-only inspector",
+      "test": "model shared"
+    },
+    {
+      "id": 15,
+      "name": "Independent Verifier",
+      "source": "read-only inspector",
+      "test": "model shared; independent NOT_RUN"
+    },
+    {
+      "id": 19,
+      "name": "Finance & Billing",
+      "source": "read-only inspector",
+      "test": "model shared"
+    },
+    {
+      "id": 20,
+      "name": "Test & QA",
+      "source": "W8 adapter",
+      "test": "12/12 isolated; W8 NOT_RUN"
+    },
+    {
+      "id": 24,
+      "name": "Technical catalog",
+      "source": "revision updated"
+    }
+  ],
+  "remaining_areas": "unchanged; no gate promotion",
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "revision": "0207",
+  "source_commit": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "source_manifest_blob": "756bb6bd4717d363a9af4edd9d20ae558afdf71e",
+  "scope": "Static candidate dependency closure for 29 existing D0 SQLite/handler tests; runtime closure not demonstrated; no PG/live provider",
+  "historical_runner_blob": "befb9f429791a01b2fe37009e40f994a5924b2ff",
+  "tests": [
+    {
+      "module": "test_retained_snapshot_0201",
+      "count": 5
+    },
+    {
+      "module": "test_terminal_anchor_lifecycle_0203",
+      "count": 7
+    },
+    {
+      "module": "test_lifecycle_projection_p02",
+      "count": 8
+    },
+    {
+      "module": "test_lifecycle_prefix_p03",
+      "count": 9
+    }
+  ],
+  "direct_dependency_pins": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "46.0.4",
+    "uvicorn": "0.34.2"
+  },
+  "files": [
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "bytes": 1346,
+      "git_blob": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "sha256": null
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "bytes": 878,
+      "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "sha256": null
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "bytes": 2437,
+      "git_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "sha256": null
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "bytes": 2134,
+      "git_blob": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "sha256": null
+    },
+    {
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "bytes": 1751,
+      "git_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "sha256": null
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "bytes": 1031,
+      "git_blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "sha256": null
+    },
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/__init__.py",
+      "bytes": 53,
+      "git_blob": "2d899e27663a6e414765904ffd9c4624a825adde",
+      "sha256": "204dd3047d08ca62e823cf02fa9c35a2b17d829ce048bbb342e55bd20b20e23e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "bytes": 777,
+      "git_blob": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+      "sha256": "8f2ad36ae2c88f1cc6dffbffc25f24783526ce97dfaef4249794f54c10b93ffb"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+      "bytes": 774,
+      "git_blob": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+      "sha256": "6e8e047df1392ad3809c55cc72d1822361fbaf632b826880da97134a0152c3e4"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "bytes": 59,
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "bytes": 49,
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "bytes": 7251,
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "bytes": 2994,
+      "git_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "bytes": 2285,
+      "git_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+      "bytes": 1698,
+      "git_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+      "sha256": "35cb245bce423a4edebae97099fb578cf8ab9ce3a4a0bf7b495b9565cc247e24"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "bytes": 66,
+      "git_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+      "bytes": 3597,
+      "git_blob": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+      "sha256": "2b9a978bdbd7d4b1414f395817fa2ada2342bff996b0a1fb9d812abd53ff03df"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+      "bytes": 1868,
+      "git_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+      "sha256": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+      "bytes": 6879,
+      "git_blob": "2b9a01807621eac35239baab55b10df6b1edb91b",
+      "sha256": "a015c574755409abfbe9cd58bd49ceabced9676b317e9597290b6ddfe1610f0c"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+      "bytes": 3802,
+      "git_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+      "sha256": "4be862d34e292dfc94a01fdb3d3e7254363126afe653d9637ddf75f743e07a03"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+      "bytes": 287,
+      "git_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+      "sha256": "30d5585648be281c058fee53678a44851b57576e28a48d721dc3465100e7a7db"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "bytes": 9374,
+      "git_blob": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "sha256": "c7528010ffb7c7ab14f8b67eccb9d062fff7d4c5825edaa3ed8d9b7d670f5060"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "bytes": 3093,
+      "git_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "sha256": "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "bytes": 9251,
+      "git_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "sha256": "d81e3c5fc8cee82f306787f1d1d5dca594350f9df278d7ee7d3d7219602996d3"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "bytes": 3394,
+      "git_blob": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+      "sha256": "63cdda83e4b6430278a020bd2728b0a65e192bf01cc487f4e98917f207969b65"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "bytes": 1548,
+      "git_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "sha256": "4730949fe2af90c58b70a92d2462881e20deccde535882e8785e9eaaf76bae71"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "bytes": 8523,
+      "git_blob": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+      "sha256": "86835d29aab941370a914518c892d91d4ba8b3742ff8772698e56b009b8b07a0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "bytes": 8011,
+      "git_blob": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+      "sha256": "8aed120d971f3fe3e33e93d3c8e521ed90a7b397314f1fb6f0c0a80dabb439f5"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+      "bytes": 7640,
+      "git_blob": "3108a4ba72d999984502e2687a4e6589b079df1d",
+      "sha256": "7b4767f61e78d256750ec82364a0a2fbc6d0c1dc21a874709764df4c174471ff"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+      "bytes": 259,
+      "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+      "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "bytes": 3082,
+      "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+      "bytes": 692,
+      "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+      "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+      "bytes": 49,
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+      "bytes": 1335,
+      "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+      "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+      "bytes": 49,
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "bytes": 3367,
+      "git_blob": "04487bda631e9133f3904451a39fc8722e985997",
+      "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "bytes": 49,
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "bytes": 4286,
+      "git_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "bytes": 13176,
+      "git_blob": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "sha256": "88f8a2ed36f58b1dc1b57b788241098fc7a84a29f06730c80b2547ac0168d157"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+      "bytes": 18997,
+      "git_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+      "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "bytes": 2495,
+      "git_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "bytes": 8493,
+      "git_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "bytes": 5065,
+      "git_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+      "bytes": 1105,
+      "git_blob": "b011ae715b424a185963af552f524586115a23ec",
+      "sha256": "ae7f27db7c8ccd62ea09be950a94178ed436b9cac1afe05daa61298f5236638e"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+      "bytes": 6096,
+      "git_blob": "53459c4b6961455dc183cb3b20382559862e98f6",
+      "sha256": "8038e168861f8f5f37509b15a2f8c0a43441e5495ad418907ddaf017c09af722"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+      "bytes": 10496,
+      "git_blob": "c30130313541ea9d857724de1bab98ad088374af",
+      "sha256": "d78954c237f7aa26838c4987665108c243e5646fa6e3b8e44ac77fb321df6dc4"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "bytes": 6541,
+      "git_blob": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+      "bytes": 14286,
+      "git_blob": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+      "sha256": "083fc5fa1e391eef4e7f6b7fb51ed453bc4f33b933a3f963e2428b03cbd18bdd"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+      "bytes": 3867,
+      "git_blob": "7517cb4bdd2458684aa4540b127669ce1902521d",
+      "sha256": "579d16b3a8afe7d3c56a26d4ef5842d3d0d91518e5b46511ae35f7ebaa569e6c"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+      "bytes": 3757,
+      "git_blob": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+      "sha256": "e48978990c84d22dd80a3b0be81b97a73032cbc9a1225903148d8f7df75a50e1"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "bytes": 9848,
+      "git_blob": "9db44143d1d5395e222d111a4e847930f019208e",
+      "sha256": "adb6e42cc994d90ff90ecfb74527f36cee22a43867abd830c579067744e92e79"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+      "bytes": 3163,
+      "git_blob": "c9963f21766da435a00a18a5f49073ebe8603664",
+      "sha256": "f8aa59af6f79868078b41d570f6a7bae00952b85550dc948159bb531f0f3c8e9"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+      "bytes": 6939,
+      "git_blob": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+      "sha256": "af69858bd268938c77ec1477f46c4b52d6b5c783ef80ead8ecf22179d08bd5a2"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+      "bytes": 14108,
+      "git_blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3"
+    }
+  ]
+}

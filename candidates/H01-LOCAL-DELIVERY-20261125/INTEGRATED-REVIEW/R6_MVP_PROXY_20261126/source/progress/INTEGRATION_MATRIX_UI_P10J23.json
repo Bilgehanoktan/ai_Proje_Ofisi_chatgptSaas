@@ -1,0 +1,37 @@
+{
+  "revision": "UI-P10J-23",
+  "parent": "1ec4576cfa9898dc202427f03e4340544c01e2cb",
+  "scope": "W1 UI EDS; no core or office merge",
+  "changed_areas": [
+    {
+      "id": 1,
+      "name": "Frontend",
+      "source": "scoped CSS",
+      "test": "standalone fixture 8/8"
+    },
+    {
+      "id": 2,
+      "name": "UI/UX",
+      "source": "responsive typography, cards, inputs",
+      "test": "two themes, four widths"
+    },
+    {
+      "id": 20,
+      "name": "Test & QA",
+      "source": "fixture and W8 pin adapter",
+      "test": "fixture PASS; W8 NOT_RUN"
+    },
+    {
+      "id": 24,
+      "name": "Technical catalog",
+      "source": "updated"
+    }
+  ],
+  "remaining_areas": "unchanged; no gate promotion",
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}

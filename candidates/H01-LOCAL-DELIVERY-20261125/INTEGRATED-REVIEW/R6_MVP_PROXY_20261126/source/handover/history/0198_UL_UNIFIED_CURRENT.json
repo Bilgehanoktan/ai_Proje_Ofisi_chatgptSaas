@@ -1,0 +1,42 @@
+{
+  "revision": "0197-U",
+  "branch": "integration/0197-unified",
+  "source_commit": "fd9fed3d41779522da8d48f2a80aaade5a9f57b3",
+  "parent_commit": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
+  "integration_parents": {
+    "windows": "8346a6dc8dcc31db6463fd1de7cbf8e8b4ff06a9",
+    "core": "9ece621baaadd160b3f90d4c8071d6a74d697604",
+    "memory_model": "ef9cc8368309bd4d880b36137c7f25fc07a018db"
+  },
+  "product": "ISOLATED_UNIFIED_SOURCE_CANDIDATE",
+  "product_files": 270,
+  "manifest_entries": 269,
+  "manifest_blob": "e3ad19477c8e1711d1b2bfa2694813b75a319bbc",
+  "source_readback": "269_PATH_SIZE_PASS_23_PRODUCT_DELTAS",
+  "full_product_sha256": "PENDING_WINDOWS_AUDIT",
+  "selected_controls_passed": 0,
+  "full_product_tests": "NOT_RUN_ON_UNIFIED",
+  "full_next_build": "NOT_RUN_ON_UNIFIED",
+  "actual_react_browser": "NOT_RUN_ON_UNIFIED",
+  "actual_postgresql": "NOT_RUN",
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "normative_status": "HOLD",
+  "actual_agents": 0,
+  "actual_provider_calls": 0,
+  "dependency_lock": "EXPECTED_REBOUND_P1_REVIEW_PENDING_ACTUAL",
+  "expected_review_sha256": "20fb43a71e6a02f2dd0e4222542600cb0988dfab6a5aa61bf7318fbf6d98afdd",
+  "prior_evidence": {
+    "windows_P1": "449_PASS_2_SKIP_BUILD_PASS_LIVE_PENDING",
+    "windows_S3": "444_PASS_52_CAPTURES_5_API_PARITY",
+    "core_0195": "79_PASS_5_PG_SKIP",
+    "memory_model_0196_MA": "41_PASS"
+  },
+  "transfer_evidence": "releases/GITHUB_READBACK_0197_U.json",
+  "next": "Fresh Windows isolated stage: audit 269 source SHA256 + 8 auxiliary pins, preflight, exact lock check, install/test/build, smoke then launcher. In parallel lease/terminal settlement, ToolGateway, verified budget/ACL/graph and PG. No real grants or main merge.",
+  "previous_pointers": [
+    "handover/history/0197_U_PARENT_P1.json",
+    "handover/history/0197_U_PARENT_0195.json",
+    "handover/history/0197_U_PARENT_0196_MA.json"
+  ]
+}

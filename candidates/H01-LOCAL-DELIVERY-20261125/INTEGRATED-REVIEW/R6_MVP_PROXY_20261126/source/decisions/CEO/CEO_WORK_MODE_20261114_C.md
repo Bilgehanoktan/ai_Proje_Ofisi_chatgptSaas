@@ -1,0 +1,3 @@
+# CEO-WORK-MODE-20261114-C
+Tarih: 2026-11-14. Kullanıcı: “AI Company OS için C çalışma yaklaşımını seçiyorum. Mevcut güvenlik sınırlarını koruyarak kararı kaydet ve geliştirmeye devam et.”
+Seçenek C: kaynak geliştirme ve gerçek yetki/bağımsız kabul hazırlığı paralel. Bu, iş sıralaması kararıdır; 0151 OPS_T01 zarfındaki farklı C seçimi değildir. Yetkili kaynak kapsamı ve belge aktarımı sürer; normatif T01, gerçek REPO/DEV/TEST/CI/PROD, F0, harcama, dış çağrı, main merge, bağımsız kabul ayrı. NO_CODE uyuşmazlığı ve kesin aday dosya kapsamı çözülmeden yeni ürün kodu yazılmaz. C yönü tekrar sorulmaz. Önceki CEO-19-01=C, CEO-19-02=B, GOV-00=B, T1, R1, IV, PEP, F3 ve sürekli GitHub aktarım onayı korunur. R8 ve 0162-A geçmişi değişmez. Bu turda gerçek grant/receipt ve kod yok.

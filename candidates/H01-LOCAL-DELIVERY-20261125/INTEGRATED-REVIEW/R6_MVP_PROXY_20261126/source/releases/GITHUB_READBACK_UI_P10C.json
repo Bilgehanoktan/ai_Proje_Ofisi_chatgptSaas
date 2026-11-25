@@ -1,0 +1,58 @@
+{
+  "revision": "UI-P10C",
+  "source_commit": "fde156a2784c5274f2a19c7437d975fd1c375c2a",
+  "base_ui": "7c3960baee4eca42acd858776adc590b45d6ff74",
+  "manifest_blob": "68d623aba80fb461e625bb4c2fd1c8ceb7de6f7d",
+  "manifest_entries": 358,
+  "product_files": 359,
+  "frontend_files": 147,
+  "unchanged_parent_product_blobs": 347,
+  "deleted": 0,
+  "manifest_path_size_match": 358,
+  "new_model": 12,
+  "model_regression": 21,
+  "proxy_http_fixture": {
+    "pass": 28,
+    "endpoints": [
+      "mvp",
+      "outbox",
+      "lifecycle",
+      "lifecycle-prefix"
+    ],
+    "scope": "exact compiled original frontend GET and parser; synthetic upstream fixture, not original backend"
+  },
+  "original_outbox_http": {
+    "pass": 7,
+    "scope": "original AtomicSample, OutboxReviewSample, FastAPI router, Uvicorn and compiled GET; SQLite temp DB; isolated app, 6 configured DB read hash comparisons",
+    "phases": [
+      "missing env 503",
+      "unready 503",
+      "LOCAL_HOLD 200",
+      "CLAIMED 200",
+      "UNKNOWN_HOLD 200",
+      "READBACK_HOLD 200",
+      "corrupt audit 503"
+    ]
+  },
+  "source_recovered_exact": 12,
+  "historical_original_chains_across_runs": "4/7 (previous 3 not rerun)",
+  "product_http": "0/7 NOT_RUN",
+  "standalone_browser": {
+    "pass": 14,
+    "viewports": [
+      1100,
+      390
+    ],
+    "scope": "standalone DOM harness using compiled pure models and CSS, not React"
+  },
+  "new_tsx_syntax": 2,
+  "typescript": "5.8.3 global",
+  "node": "22.16.0",
+  "fastapi": "0.128.2",
+  "uvicorn": "0.48.0",
+  "full_checkout": "BLOCKED_DNS",
+  "full_build": "NOT_RUN",
+  "product_browser": "NOT_RUN",
+  "independent": "HOLD",
+  "core": "0211 published separately, not merged; next core 0212"
+}

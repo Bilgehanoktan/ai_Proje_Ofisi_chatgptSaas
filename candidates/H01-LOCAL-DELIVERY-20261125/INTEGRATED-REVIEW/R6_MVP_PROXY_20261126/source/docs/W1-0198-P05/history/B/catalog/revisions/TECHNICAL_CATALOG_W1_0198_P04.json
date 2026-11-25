@@ -1,0 +1,206 @@
+{
+  "revision": "W1-0198-P04",
+  "variant": "PROGRESS",
+  "parent": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
+  "source_commit": "7d623ec052a1276f181faa7c52378331c42f877f",
+  "product_delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/d0_snapshot.py",
+      "git_blob": "c067e844f1c3200c625f4811d13f12c59a602e95",
+      "bytes": 2592,
+      "sha256": "ef17e343571236d1c3c7b261551627ab727c6f632c1cc3a867c22d24b05e09a7",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+      "git_blob": "46d3309fb11dc0f17ad69eda455cf594db47d034",
+      "bytes": 3489,
+      "sha256": "ac1c25ae1b5d62e6c6a7eefea6e52db4b39559fc9f08740de7ea0d8fafe5d3e2",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+      "git_blob": "b9a5639b165b71f1c43d3e53d95a8a41378c8e58",
+      "bytes": 6270,
+      "sha256": "309f5942b54acc5eadbbcc4fffbf322a47329de1b43306f81724e8257f2acad6",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_d0_snapshot_p04.py",
+      "git_blob": "42d761960c0a5fe3efb573612fab36ac9f797619",
+      "bytes": 4349,
+      "sha256": "c09c67844f61608f8f957526bed49e4e6a5fb81b714ede302b80606cca83e817",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/eds.css",
+      "git_blob": "e3f9f91888ca7535c43b1510fd04b4fbc675fe4c",
+      "bytes": 6652,
+      "sha256": "265e7ae2622cc8600efdf846e32dd52ec49d6d2988e144bfa928c63f89116f9f",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "git_blob": "785aad140f9b840f9dbb870a7db56129709c9e84",
+      "bytes": 9062,
+      "sha256": "fa19da5bc74d7368551b83ed4d613193854d08c5a8041c201ea6d63993595a09",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionScope.ts",
+      "git_blob": "4f711297dcea3a9cc96d84db0167f1dcc5c5c65e",
+      "bytes": 1605,
+      "sha256": "652a3679c9e1536945ed28f669c79d481e9143154fda73062dd5de483001ae7f",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "git_blob": "7f1757a9aa419f621ee753c35a3f6ba6407bead3",
+      "bytes": 2226,
+      "sha256": "051cd781d33a527211375d4f1f4413f0473f309bb634af31ff32c7ea53fb05c2",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/progress/PlanProgressPanel.tsx",
+      "git_blob": "c004536714069c5f398c053fd2ec63addfa7f0e4",
+      "bytes": 1318,
+      "sha256": "79e3e353c118cbcdaf5b0cd8375c665090bda71d7b3866ef40639c926b6f3063",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/progress/progressModel.ts",
+      "git_blob": "ec976fc8b901e0af2d8625083d6e5a603805bf2f",
+      "bytes": 2060,
+      "sha256": "679e5f88ac688bc2453f6d105df788607183928019aa1f7319e8de61da301d5c",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+      "git_blob": "1c35eae82c96dea1607b2f3b7c63702f458bee18",
+      "bytes": 9566,
+      "sha256": "0d0edeb7ce6b7f5ba71bfc123f9ffe708daffda166d27bbbed8fe89903cdc181",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/progress-model.test.cjs",
+      "git_blob": "76aaf58b78637f048932dc29d59926fc0778faee",
+      "bytes": 1664,
+      "sha256": "d13ec8adc80efe49b6e811498b3abd30cb1a74b6528e0eb8b773b73a2c62e524",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/projection-scope.test.cjs",
+      "git_blob": "58054af5ed662627d23fa20fe370823beb718dbb",
+      "bytes": 1754,
+      "sha256": "c33f0058338e117992be7710ddbc743c66d10a9aadbda7bfca3f20a2b0e4a3c5",
+      "change": "added"
+    }
+  ],
+  "symbols": [
+    {
+      "path": "app/core/development_review/d0_snapshot.py",
+      "exports": [
+        "NAMES",
+        "MAX_BYTES",
+        "ReadCursor",
+        "open_d0_snapshot"
+      ],
+      "internal": [
+        "_check_path"
+      ]
+    },
+    {
+      "path": "app/core/development_review/lifecycle_projection.py",
+      "modified": [
+        "read_lifecycle_projection"
+      ],
+      "compatibility": [
+        "ReadCursor import"
+      ]
+    },
+    {
+      "path": "app/core/development_review/lifecycle_prefix_projection.py",
+      "modified": [
+        "read_lifecycle_prefix"
+      ]
+    },
+    {
+      "path": "features/data/projectionScope.ts",
+      "exports": [
+        "BindingReview",
+        "inspectPlanBinding"
+      ]
+    },
+    {
+      "path": "features/mvp/LifecyclePrefixReadback.tsx",
+      "modified": [
+        "LifecyclePrefixReadback"
+      ]
+    },
+    {
+      "path": "features/progress/progressModel.ts",
+      "exports": [
+        "PlanProgress",
+        "parsePlanProgress",
+        "summarizePlan"
+      ]
+    },
+    {
+      "path": "features/progress/PlanProgressPanel.tsx",
+      "exports": [
+        "PlanProgressPanel"
+      ]
+    },
+    {
+      "path": "features/ceo-dashboard/Dashboard.tsx",
+      "modified": [
+        "Dashboard",
+        "DashboardView"
+      ]
+    }
+  ],
+  "api_changes": [],
+  "existing_api_paths_affected": [
+    "GET /demo/v1/lifecycle/sample-projection",
+    "GET /demo/v1/lifecycle/prefix-projection",
+    "GET /api/demo/lifecycle",
+    "GET /api/demo/lifecycle-prefix"
+  ],
+  "db_schema_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "tests": {
+    "new_sqlite_guard": 13,
+    "new_scope": 9,
+    "new_progress": 10,
+    "regression": 66,
+    "total": 98,
+    "p02_p03_persisted_executed": 0
+  },
+  "progress": {
+    "canonical": "progress/W1_0198_MILESTONES.json",
+    "mirror": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "git_blob": "1c35eae82c96dea1607b2f3b7c63702f458bee18",
+    "done": 20,
+    "total": 40,
+    "percent": 50,
+    "acceptance_done": 0
+  },
+  "runner_changes": [
+    {
+      "path": "tests/integration/launch_w8_unified.py",
+      "git_blob": "5a66c2b37651c338a3ad6d6a02f99837e7797d83"
+    },
+    {
+      "path": "tests/integration/run_combined_helpers.cjs",
+      "git_blob": "114c4c3cbafd8dd6a8f7b2ef48ecaf1f02771224"
+    },
+    {
+      "path": "tests/integration/w8_unified.py",
+      "git_blob": "01de49152a3ccd95b546ef655c0d49192e15d827"
+    }
+  ],
+  "maintenance": "docs/W1-0198-P04/ARCHITECTURE_AND_CATALOG.md",
+  "plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json",
+  "parallel_collision": "handover/W1_0198_P04_PARALLEL_COLLISION.json"
+}

@@ -1,0 +1,37 @@
+{
+  "revision": "W1-0183B",
+  "node": "22.16.0",
+  "typescript": "5.8.3 local, not 5.9.3 pin",
+  "chromium": "144.0.7559.96",
+  "new_helper_tests": {
+    "pass": 8,
+    "fail": 0
+  },
+  "workflow_regression": {
+    "pass": 8,
+    "fail": 0
+  },
+  "syntactic_transpile": {
+    "pass": 3,
+    "fail": 0
+  },
+  "standalone_browser": {
+    "pass": 7,
+    "fail": 0,
+    "checks": [
+      "image decoded",
+      "research selection and highlight",
+      "clear",
+      "empty second floor",
+      "return resets",
+      "390px no overflow",
+      "no page errors"
+    ],
+    "method": "Playwright page.set_content of generated HTML; file:// blocked by administrator; missing Playwright bundled browser, used installed /usr/bin/chromium. This is not actual React or Next test."
+  },
+  "full_next_build": "NOT_RUN",
+  "product_typecheck": "NOT_RUN",
+  "react_browser": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "notes": "Only exact D0 helper and independent HTML. Historical 0183A source regression rerun; no full backend tests."
+}

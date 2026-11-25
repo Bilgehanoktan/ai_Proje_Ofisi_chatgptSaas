@@ -1,0 +1,82 @@
+{
+  "revision": "UI-P10I",
+  "source": "2febb84e539eddcfe4821783910c430ac20697c8",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/dependencyNeighborhood.ts",
+      "bytes": 1357,
+      "sha256": "d78f591095ddcc635949c034824b96c451ff54fbd3c23ca22dec949a0f21d520"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/DependencyNeighborhood.tsx",
+      "bytes": 1663,
+      "sha256": "74b22d09ae1ca1742bc0d8f02db8ee70102c2f64ce86146ee8eddd6a0c48892d"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "bytes": 6297,
+      "sha256": "ef8e4ffc3f892ede7897a8fb4bb07b9d81d4decebeb87f2455ca591c6a6f0f85"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+      "bytes": 2983,
+      "sha256": "4223cb52be2793e3be7050222e2db20388cab3f690691aee4812f63210576fdc"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+      "bytes": 796,
+      "sha256": "5cedc7d451cc1f6f2481dcc54ce442db00997fa92bd6ce1d96021f2a8ee30332"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+      "bytes": 3075,
+      "sha256": "cd349cfecba4ad097c9a79cd854a60b5be333c0862924a3b5bb0bd2e8127c1f3"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "bytes": 3684,
+      "sha256": "1d7746d64be35f5a1121538fb0989c57aad37e3ba1c25f0df473fae8520141d7"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "bytes": 2390,
+      "sha256": "75b86f629526f7efc3a316d20ecdb45dd281fcd6983017ef45f8f33efbe7ae5f"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10i-model.test.cjs",
+      "bytes": 3670,
+      "sha256": "cbfe5e6e7289c08f9c5496fa8d6f5454a0331f383d64c5fd7c4dd8927f237c9f"
+    }
+  ],
+  "aux": [
+    {
+      "path": "tests/integration/audit_source_archive.py",
+      "blob": "9a8a55b67360a8d55b4e647b29f745d4e8b6b378"
+    },
+    {
+      "path": "tests/integration/test_audit_source_archive.py",
+      "blob": "d361a22ee65f44fdbca8a81fffdb51b8f390e028"
+    },
+    {
+      "path": "tests/integration/w8_p10i.py",
+      "blob": "ec8d8f9479cff0a502a5e60c23e2fc414ed27601"
+    }
+  ],
+  "symbols": [
+    "dependencyNeighborhood",
+    "DependencyNeighborhood",
+    "ProjectStudio",
+    "useProjectionRead.reset",
+    "ProjectionReadbackCenter",
+    "WorkflowDraft",
+    "AgentDirectory",
+    "audit",
+    "ArchiveAuditTests",
+    "load_candidate"
+  ],
+  "api_changes": [],
+  "db_migrations": [],
+  "dependency_changes": [],
+  "maintenance": "# UI-P10I — D0 archive and W8 verification + project evidence UI\n\nSource 2febb84e539eddcfe4821783910c430ac20697c8; parent 1a879d5374730015dcc3bf563b7efb3100fd4ec0; manifest a26c4d53e66d800226beae27626f03c68f5bb064. 384 pins, 385 product files, 166 frontend; 3 additions, 6 modifications, 375 preserved, zero deletion. Parent package 228/228; P10H full tree 381 path/size matches, 206 exact selected local bytes (46 recovered); P10I 209 exact selected product files. Full checkout not materialized.\n\n## Actual verification\nOriginal core_0207 lock and runner/helper recovered exactly. Original runner --check-only verifies 55; strict mode HOLD because FastAPI/Starlette/Uvicorn pins differ; explicit --diagnostic-unpinned 29/29. Actual 0211 wrapper 12 outcomes (10 protections, 2 reproduced risks), original Office Workbench helper 8/8, 75 UI model (9 new), 9 archive auditor cases, six TS/TSX syntax, 7 same-app compiled GET parity and 5 unchanged DB. Real Next 0/7 and original 52 captures NOT_RUN. P10H W8 aux 18 + exact mirror; P10I nested adapter load and 20 aux pins PASS. Four original browser scripts recovered, not executed. P04 milestone mirror remains 20/40 historical by exact pin; current canonical UI tracking remains 21/40. npm offline ENOTCACHED, Python wheel download --no-index missing FastAPI; no reviewed lock. Next build exit127; original tsconfig partial typecheck fails missing sources/React. No full product or independent acceptance.\n\n## Changes and maintenance\n- dependencyNeighborhood recomputes from original pinned projectView/plan guard; direct and transitive ancestors/followers only. DependencyNeighborhood component renders responsive three-column local graph, navigable tasks and direct/all toggle. No execution dates or live task causality. ProjectStudio and CSS integrate it.\n- useProjectionRead.reset cancels generation then clears local entry; per-card clear button in ProjectionReadbackCenter. No new fetch, state aggregation or persistence. Old late result rejected by original reader. Workflow draft count, AgentDirectory selected department shortcut. Office art retained; original office merge tested. Shared Memory/Model/Finance/Security readback boundaries remain HOLD.\n- audit_source_archive: read-only ZIP manifest pin/count and every product byte/size check, rejects unsafe/duplicate/case alias/nonregular paths; no extraction or execution. 9 tests; provided evidence ZIP correctly rejected as non-full.\n- W8 P10I adapter pins P10H, adds archive auditor and new model suite to original reviewed chain. Existing helper and milestone mirror kept exact. No changes to API, DB migration, provider, dependencies or authority.\n- D03/D04: see D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md; design candidate only, options not ratified. No operational change.\n\nDiagnosis: use archive auditor before extract; W8 audit/prepare/review/install/test/smoke only on exact clean checkout, not selected evidence; preserve reviewed lock provenance. For UI inspect plan pin and reset generation, never infer live status. For root restore retain evidence and quarantine. Rollback to parent on separate branch only, no DB migration or main merge.\n",
+  "rollback": "1a879d5374730015dcc3bf563b7efb3100fd4ec0"
+}

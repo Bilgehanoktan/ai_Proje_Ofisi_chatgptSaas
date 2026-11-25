@@ -1,0 +1,15 @@
+# UI-P10J-16 / XTRACK-02 — controlled premium composition
+
+Pinned UI parent a8789a91283d9c1c0f47452b639dc3d320db792f; premium A2R1 ba67700ab7c405131f5a207e438f69b0f7c94002; core 0227 52219c7a222bae41735c9a9b9f7f7082462982b4. Source a2bc3097717333e1dbd8ab4876213021728e61b0, manifest 8b88d3e6ad080ab61bd91b95c9b98d28faea9b1a. Single-parent isolated candidate, NOT a git branch merge. CEO-0174/0179=B D0 only. No main/CI/PROD, actual grant, provider, spend or independent authority.
+
+## Product changes
+26 source additions, two replacements, no deletion; 468 manifest pins, 469 product files. 26 exact A2R1 blobs, including inherited premium routes, scenes, engine models, camera and ten original test files; one manual OfficePanel reconciliation and one new isolated JSX test. 440 parent source blobs preserved. Core backend, API, contracts, DB and package pins unchanged. A2 identity model and A1 layout remain separate unwired models; no new binding to the legacy renderer. Premium link in embedded and fullscreen OfficePanel; shared historical snapshot stays visible, explicit decorative D0 explanation, STATIC_ONLY and JOIN_HOLD retained. No live task/agent identity or geometry join.
+
+## Evidence
+New local Node 22.16.0 / TS 5.8.3: 8/8 actual isolated JSX projection tests, two exact tested source blobs. Mocked components/JSX, not real React/browser. Git tree path/size 468/468, exact premium blobs 26/26, parent 440/440. Core 0227 now 8/16 after transferred historical A3, not repeated or claimed as union acceptance. A2R1 prior 46/46 is historical, not rerun. UI 21/40 and MVP 0/11/independent 0/7 unchanged. Full checkout DNS blocked, full build, browser, premium suites and PG/RLS NOT_RUN.
+
+## W8 acceptance and next
+Use new tests/integration/w8_p10j16.py with parent pin and candidate manifest 8b88d3e6ad080ab61bd91b95c9b98d28faea9b1a. Audit, prepare NEW stage outside source, review actual transitive dependency locks and REVIEW.json SHA-256, install, test, smoke. New adapter adds ten premium model suites plus eight OfficePanel tests before inherited P10J15 tests. Browser harness preserves 72 planned captures, adds four (desktop/mobile iframe and native) plus keyboard navigation, sandbox, loopback historical read, non-authoritative state, and return to standard office. No screenshots generated in this turn. Do not treat previous A0 evidence as union acceptance. Re-pin premium A3 after publication, before further composition; its traffic/renderer work remains owned by that branch.
+
+## Maintenance and rollback
+If OfficePanel link or shared snapshot missing, compare exact pinned source parents; never overwrite either with older source. If premium models fail, inspect original blob IDs in revision catalog; do not silently alter A2. For browser route failure check sandbox, Phaser ready, historical API and console; preserve raw logs. Do not change HOLD or authority to make tests pass. Roll back by selecting pinned UI parent in fresh isolated checkout; no live DB restore. No new API/DB/dependency or normative decision.

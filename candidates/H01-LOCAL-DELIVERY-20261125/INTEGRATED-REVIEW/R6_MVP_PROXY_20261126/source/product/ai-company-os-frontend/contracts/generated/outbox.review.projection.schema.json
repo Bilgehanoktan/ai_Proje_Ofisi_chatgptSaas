@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D0 Outbox review projection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mode",
+    "tenant",
+    "company",
+    "admission",
+    "dispatch_allowed",
+    "retry_allowed",
+    "reconciled",
+    "provider_called",
+    "release_ready",
+    "phase",
+    "generation",
+    "readback_recorded"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "outbox.review.projection.v1-D0"
+    },
+    "mode": {
+      "const": "D0_OUTBOX_REVIEW_0184"
+    },
+    "tenant": {
+      "const": "synthetic-tenant"
+    },
+    "company": {
+      "const": "synthetic-company"
+    },
+    "admission": {
+      "const": "DENY"
+    },
+    "dispatch_allowed": {
+      "const": false
+    },
+    "retry_allowed": {
+      "const": false
+    },
+    "reconciled": {
+      "const": false
+    },
+    "provider_called": {
+      "const": false
+    },
+    "release_ready": {
+      "const": false
+    },
+    "phase": {
+      "enum": [
+        "LOCAL_HOLD",
+        "CLAIMED",
+        "UNKNOWN_HOLD",
+        "READBACK_HOLD"
+      ]
+    },
+    "generation": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "readback_recorded": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "phase": {
+            "const": "LOCAL_HOLD"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "generation": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "generation": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "phase": {
+            "const": "READBACK_HOLD"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "readback_recorded": {
+            "const": true
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "readback_recorded": {
+            "const": false
+          }
+        }
+      }
+    }
+  ]
+}

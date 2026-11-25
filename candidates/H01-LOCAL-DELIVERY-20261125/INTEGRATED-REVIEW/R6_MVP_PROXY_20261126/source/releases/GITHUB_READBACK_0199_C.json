@@ -1,0 +1,177 @@
+{
+  "revision": "0199-C",
+  "parent": "2d2ee7c4b4eafbdec9b721c8ad1b8f0428f78a3f",
+  "source_commit": "7a46e9bf3f5dd8f61883ff3444efca0dbbb185e1",
+  "branch": "workstream/0199-plan-history",
+  "product_files": 245,
+  "manifest_entries": 244,
+  "manifest_blob": "146a776cb3b8901774ed0d3803332e832502ebe5",
+  "prior_product_blobs_preserved": 242,
+  "product_path_size_parity": true,
+  "local_source_evidence_blob_matches": 15,
+  "base_dependencies_exact_git_blob_matches": 31,
+  "prior_delta_manifest_entries_verified": 46,
+  "source_changes": [
+    {
+      "path": "catalog/revisions/TECHNICAL_CATALOG_0199_C.json",
+      "sha": "2207b88030b5b40f07775057340eebadcf81b92e",
+      "size": 9461
+    },
+    {
+      "path": "docs/0199C/ARCHITECTURE_AND_CATALOG.md",
+      "sha": "8a7478de1626e0687dddd91b018b7d76d25e4d86",
+      "size": 4899
+    },
+    {
+      "path": "docs/0199C/BASE_PINS.json",
+      "sha": "6bba37e95a206db3dcd6f93340de37b5c06e5ef3",
+      "size": 7474
+    },
+    {
+      "path": "docs/0199C/TEST_INITIAL.txt",
+      "sha": "ec687520383910d0043b92dfe59a458d181de7a7",
+      "size": 2790
+    },
+    {
+      "path": "docs/0199C/test_admission_mapping_0195.txt",
+      "sha": "4c7828a1bb70cf4100a64ff40c5b2d11f112416f",
+      "size": 1957
+    },
+    {
+      "path": "docs/0199C/test_history_readback_0198.txt",
+      "sha": "3ea208a77ce3195ca33f384f9ea623054b706569",
+      "size": 2173
+    },
+    {
+      "path": "docs/0199C/test_lifecycle_mapping_0196.txt",
+      "sha": "ef23faed1e6364741775101623cb97a6b00ae90a",
+      "size": 2961
+    },
+    {
+      "path": "docs/0199C/test_pg_lifecycle_mapping_0196.txt",
+      "sha": "f116407218f58e71a14f68d6bce8e7bce5e94262",
+      "size": 884
+    },
+    {
+      "path": "docs/0199C/test_pg_transition_mapping_0194.txt",
+      "sha": "236775ae033785e8a51de4296830436dd7a3eada",
+      "size": 858
+    },
+    {
+      "path": "docs/0199C/test_plan_history_review_0199.txt",
+      "sha": "29a3e82c49a91f3c17a6b1b27b427bd04a857ac1",
+      "size": 2962
+    },
+    {
+      "path": "docs/0199C/test_transition_mapping_0194.txt",
+      "sha": "53deeaff3f300d3bf2faef7924e858f7d38ee459",
+      "size": 3726
+    },
+    {
+      "path": "docs/0199C/test_transition_transaction_0193.txt",
+      "sha": "7d4d1d7f894f2918a4a8514532f53351d3fbb6e6",
+      "size": 2674
+    },
+    {
+      "path": "handover/NEXT_STEP_0199_C.md",
+      "sha": "2e6c1e0c1aaf9da4cc2ca95e3dc3e1cb1a5d8150",
+      "size": 828
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "sha": "146a776cb3b8901774ed0d3803332e832502ebe5",
+      "size": 43398
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "sha": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "size": 9251
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "sha": "9db44143d1d5395e222d111a4e847930f019208e",
+      "size": 9848
+    }
+  ],
+  "tests": {
+    "new_sqlite": 26,
+    "regression_0198E": 22,
+    "regression_0196L": 26,
+    "regression_0195": 19,
+    "regression_0194": 35,
+    "regression_0193": 25,
+    "passed": 153,
+    "pg_skipped": 10
+  },
+  "actual_pg": "NOT_RUN",
+  "full_suite": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "main_before": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "full_archive_downloaded": false,
+  "parallel": {
+    "revision": "0199-C",
+    "status": "SEPARATE_SOURCE_REVIEW_NO_MERGE",
+    "plan_history_source": "7a46e9bf3f5dd8f61883ff3444efca0dbbb185e1",
+    "unified_branch": "integration/0198-ul-lifecycle",
+    "unified_head": "9eee77b0f8467f4926973218a2de48aabe9dd95c",
+    "observed_branch_heads": [
+      {
+        "name": "integration/0198-ul-lifecycle",
+        "sha": "9eee77b0f8467f4926973218a2de48aabe9dd95c"
+      },
+      {
+        "name": "main",
+        "sha": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+      },
+      {
+        "name": "workstream/0198-event-history",
+        "sha": "2d2ee7c4b4eafbdec9b721c8ad1b8f0428f78a3f"
+      }
+    ],
+    "carry_checks": [
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+        "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+        "other": null,
+        "status": "MISSING"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+        "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+        "other": null,
+        "status": "MISSING"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+        "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+        "other": null,
+        "status": "MISSING"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+        "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+        "other": null,
+        "status": "MISSING"
+      }
+    ],
+    "dependency_differences": [
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+        "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+        "actual": null
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+        "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+        "actual": null
+      }
+    ],
+    "exact_dependency_matches": 29,
+    "conflicting_carry_paths": 0,
+    "merge": "NOT_PERFORMED",
+    "combined_tests": "NOT_RUN",
+    "notes": "Other conversation owns W1/API/UI and AI/model/memory/tool. Repin before controlled carry; history prerequisite then plan history. Regenerate shared metadata; no automatic merge or main changes."
+  }
+}

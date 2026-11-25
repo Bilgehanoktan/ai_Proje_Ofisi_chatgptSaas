@@ -1,0 +1,35 @@
+{
+  "revision": "UI-P10J-13",
+  "checks": {
+    "parent_tree_manifest_path_size": "PASS_BOTH",
+    "manual_parent_sha256": "PASS_2_OF_2",
+    "shared_schema_pin_parity": "PASS_METADATA",
+    "new_product_tests": "SELECTED_ORIGINAL_SHARED_REPLAY_28_OF_28_PASS",
+    "full_w8": "NOT_RUN",
+    "postgres": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "limitations": "Exact six-file subset only. No actual HTTP/SQLite route, Studio context, React, full W8, full archive, PostgreSQL/RLS or independent acceptance.",
+  "source_commit": "7049122143611f35a2152f721f7d99d514a7af9d",
+  "environment": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3 (not pinned full product version)"
+  },
+  "selected_tests": {
+    "python": 6,
+    "node": 22,
+    "strict_compile": "PASS",
+    "source_sha256": {
+      "app/core/development_review/lifecycle_prefix_wire.py": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462",
+      "app/core/development_review/shared_snapshot.py": "714ce68e7fea401e30c42381a3b883ece9ac2a92f3af9dc47478cb5fc002cce2",
+      "tests/test_shared_snapshot_0222.py": "b41e3a3f721e41dbcfcec4ce3c84508ef0097c7f9bc1929d1334c4aaca783a50",
+      "features/mvp/lifecyclePrefix.ts": "e205c0e995ea5d9b49ead972a3baeef072fb05d348291dd06bf8d2c3598fa501",
+      "features/data/sharedSnapshot.ts": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e",
+      "tests/shared-snapshot-0222.test.cjs": "ceba1eb2c2403b9a9b0ba08e9b61ef23eabca856a82715f5de5cc82064561d32"
+    },
+    "fixture": "four replays generated with exact Python serializer",
+    "python_log_sha256": "a2f683089d53c983be223fb68dee0a89093d85915e2cf80b3a441aaa0ff20f96",
+    "node_log_sha256": "841c5ce6fd6fe5d1f67dd1451a579b25a84701f4b122fe65109e69ad66ab8978"
+  }
+}

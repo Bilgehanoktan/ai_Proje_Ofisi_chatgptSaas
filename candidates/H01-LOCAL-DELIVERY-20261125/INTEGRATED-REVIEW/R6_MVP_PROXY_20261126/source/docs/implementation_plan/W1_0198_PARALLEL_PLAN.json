@@ -1,0 +1,157 @@
+{
+  "id": "W1-0198-A-H",
+  "round": "W1-0198-P05",
+  "parent": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+  "source_commit": "0346991ed928a8fa682902dee9cc53aa2c0102e2",
+  "mode": "PARALLEL_LOGICAL_PATH_OWNERSHIP_SINGLE_ISOLATED_INTEGRATION_BRANCH",
+  "shared_integration_owner": "Dashboard.tsx, manifest, master/catalog/tracker/handover — integration coordinator; one isolated branch",
+  "dependency_rules": [
+    "B provides read abstraction; C–G use existing validated D0 contracts independently; real lifecycle, memory, model, finance and security contracts remain dependencies",
+    "H may proceed independently; A full Windows deferred by user",
+    "No cross-store join unless exact shared proof; no live cache, dispatch, mutation, provider calls or geometry join"
+  ],
+  "lanes": [
+    {
+      "id": "A",
+      "name": "Birleşik UI ve backend regresyonu",
+      "status": "RECONCILED_GUARD_HELPERS_PASS_FIXTURES_OPEN",
+      "done": "11 new real SQLite merged guard tests; 46 selected regressions PASS; both parent test sources retained; full fixture/API 17 NOT_RUN",
+      "next": "Materialize exact dependency closure and run 17 persisted cases; then pinned suite/build/browser",
+      "owner": [
+        "tests/projection-read.test.cjs",
+        "tests/integration/run_combined_helpers.cjs",
+        "tests/integration/w8_unified.py",
+        "tests/integration/launch_w8_unified.py",
+        "tests/lifecycle-projection.test.cjs",
+        "tests/projection-registry.test.cjs",
+        "tests/integration/browser_lifecycle_p02.py",
+        "tests/test_lifecycle_projection_p02.py",
+        "tests/test_prefix_wire_p03.py",
+        "tests/test_lifecycle_prefix_p03.py",
+        "tests/lifecycle-prefix.test.cjs",
+        "tests/integration/browser_lifecycle_prefix_p03.py",
+        "tests/test_d0_snapshot_p04.py",
+        "tests/projection-scope.test.cjs",
+        "tests/progress-model.test.cjs"
+      ],
+      "progress_percent": 40
+    },
+    {
+      "id": "B",
+      "name": "Merkezi frontend veri bağlantı katmanı",
+      "status": "RECONCILED_SESSION_AND_SCOPE_SOURCE_HELPER_PASS",
+      "done": "Preserved owner-token hook, historical identity guard, strict prefix scope checks and 7-key registry",
+      "next": "React lifecycle and 7-route parity; trusted current scope/clock",
+      "owner": [
+        "features/data/projectionRead.ts",
+        "features/data/useProjectionRead.ts",
+        "features/mvp/MvpDiagnosticsPanel.tsx",
+        "features/mvp/AdmissionProjectionPanel.tsx",
+        "features/mvp/TaskBudgetPanel.tsx",
+        "features/mvp/OutboxProjectionPanel.tsx",
+        "features/data/projectionRegistry.ts",
+        "features/data/projectionScope.ts"
+      ],
+      "progress_percent": 60
+    },
+    {
+      "id": "C",
+      "name": "CEO Dashboard veri entegrasyonu",
+      "status": "RECONCILED_CEO_PROGRESS_SOURCE",
+      "done": "CEO progress panel and historical identity diagnostics integrated; 20/40 baseline unchanged",
+      "next": "Canonical operation data and browser acceptance",
+      "owner": [
+        "features/ceo-dashboard/OperationalReadback.tsx",
+        "features/progress/PlanProgressPanel.tsx",
+        "features/progress/progressModel.ts",
+        "features/progress/w1PlanProgress.json",
+        "progress/W1_0198_MILESTONES.json"
+      ],
+      "progress_percent": 60
+    },
+    {
+      "id": "D",
+      "name": "Agent Runtime ve Office Engine bağlantısı",
+      "status": "RECONCILED_LIFECYCLE_READ_GUARD_TESTED",
+      "done": "Single active lifecycle snapshot combines SQLite allowlist/authorizer/single head with deadline and pre/post sidecar checks",
+      "next": "17 actual fixture tests; trusted active lease/clock/placement",
+      "owner": [
+        "features/mvp/OfficeWorkbenchPanel.tsx",
+        "app/core/development_review/lifecycle_projection.py",
+        "app/api/lifecycle_projection.py",
+        "app/api/demo/lifecycle/route.ts",
+        "features/mvp/LifecycleReadback.tsx",
+        "contracts/source/lifecycle.projection.schema.json",
+        "contracts/generated/lifecycle.projection.schema.json",
+        "app/core/development_review/lifecycle_prefix_projection.py",
+        "app/core/development_review/lifecycle_prefix_wire.py",
+        "app/api/lifecycle_prefix_projection.py",
+        "app/api/demo/lifecycle-prefix/route.ts",
+        "features/mvp/LifecyclePrefixReadback.tsx",
+        "contracts/source/lifecycle.prefix.schema.json",
+        "contracts/generated/lifecycle.prefix.schema.json",
+        "app/core/development_review/d0_snapshot.py"
+      ],
+      "progress_percent": 40
+    },
+    {
+      "id": "E",
+      "name": "Görev ve Workflow Studio entegrasyonu",
+      "status": "RECONCILED_DAG_DIAGNOSTICS",
+      "done": "Both identity and scope diagnostics; all joins HOLD",
+      "next": "Canonical task/run/causal mapping",
+      "owner": [
+        "components/dashboard/DevelopmentReviewPanel.tsx"
+      ],
+      "progress_percent": 60
+    },
+    {
+      "id": "F",
+      "name": "Memory ve Model Gateway ekranları",
+      "status": "HOLD_PREREQUISITES_RETAINED",
+      "done": "Historical model/ACL prerequisite display preserved",
+      "next": "Independent model reservation/registry and ACL/tombstone/witness",
+      "owner": [
+        "features/capabilities/CapabilityReadback.tsx"
+      ],
+      "progress_percent": 40
+    },
+    {
+      "id": "G",
+      "name": "Finans ve güvenlik projeksiyonları",
+      "status": "RECONCILED_READ_GUARD_SOURCE",
+      "done": "Historical settlement and reservation use common guarded reader; no aggregation",
+      "next": "17 fixture tests, canonical ledger and independent evidence",
+      "owner": [
+        "features/ceo-dashboard/Dashboard.tsx"
+      ],
+      "progress_percent": 40
+    },
+    {
+      "id": "H",
+      "name": "Görsel kalite ve kullanıcı deneyimi",
+      "status": "RECONCILED_UI_SOURCE_VISUAL_OPEN",
+      "done": "Both EDS additions, progress panel and both floor resets retained",
+      "next": "Full build and current light/dark/mobile visual/accessibility",
+      "owner": [
+        "design-system/eds.css"
+      ],
+      "progress_percent": 60
+    }
+  ],
+  "variant": "RECONCILED",
+  "branch": "integration/w1-0198-p05-reconciled",
+  "parallel_collision": "RESOLVED_SOURCE_ONLY",
+  "measurement": {
+    "method": "equal-weight milestone count (source/helper/parent/integrated/acceptance; not whole-product completion)",
+    "canonical": "progress/W1_0198_MILESTONES.json",
+    "frontend_mirror": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "done": 20,
+    "total": 40,
+    "percent": 50,
+    "accepted": 0,
+    "baseline": "first explicit 40-gate measurement; preserve IDs/titles and denominator unless recorded scope change",
+    "note": "P04 frozen 20/40 gate vector retained byte-identically; no new gate closure in P05."
+  },
+  "additional_parent": "34635cbd5f6df7bc2a01b5d07e4cc015cf1ec84b"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "SCOPE-0162E-UI-04-05",
+  "status": "H01_REQUEST_RECORDED_PRE_HOLD",
+  "user_instruction": "ürünentegrasyonunuyap",
+  "source": "0162-C local archive; SHA-256 9b3132c0ed232a91c2f27a3929f6a969bdd504aa62193313e81667db5f40a4ba",
+  "parent_commit": "b2d2c3fc5e36975ba45d403d2bef18c25ae80271",
+  "product_manifest_blob": "bda53ce4daf85cfd6a7b823e2cf4b8deff59dbda",
+  "product": "R8",
+  "scope": [
+    {
+      "target": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "candidate_path": "quarantine/0162C/product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "candidate_sha256": "9d870a49384e0618cd4f5a80384489321f87760bef5cc73c95bcef68ca392956",
+      "candidate_bytes": 1266,
+      "operation": "ADD",
+      "old_sha256": null,
+      "old_bytes": null
+    },
+    {
+      "target": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "candidate_path": "quarantine/0162C/product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "candidate_sha256": "97eab6148e944ebdf877c39c5ba0ac5b804a1adcd742a0aa6c3fa0fdd0bf4d36",
+      "candidate_bytes": 2882,
+      "operation": "ADD",
+      "old_sha256": null,
+      "old_bytes": null
+    },
+    {
+      "target": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "candidate_path": "quarantine/0162C/product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "candidate_sha256": "10707538997f9022444d62e431d242440592e835c889b55cdbe5762ad0a9eb02",
+      "candidate_bytes": 871,
+      "operation": "ADD",
+      "old_sha256": null,
+      "old_bytes": null
+    },
+    {
+      "target": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "candidate_path": "quarantine/0162C/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "candidate_sha256": "79b155362d51818e19a3139b190399f72473d8ca16633c26594b705e0108cb3d",
+      "candidate_bytes": 6941,
+      "operation": "REPLACE",
+      "old_sha256": "820cb9a7e79b35492d0cbdf469c714409115a0b6d07da2acc3b8810e132a105c",
+      "old_bytes": 9986
+    }
+  ],
+  "scope_digest": null,
+  "scope_digest_note": "Independent authority must confirm canonical serialization and exact grant digest; this is an unsigned review envelope.",
+  "allowed_target": "synthetic read-only UI-04/05 only, no live join or external effect",
+  "excluded": [
+    "backend integration",
+    "API/schema/dependency changes",
+    "product manifest update before authorization",
+    "main merge",
+    "DEV",
+    "build",
+    "TEST",
+    "CI",
+    "PROD",
+    "external calls"
+  ],
+  "reviewer": null,
+  "coi": null,
+  "sod": null,
+  "custody": null,
+  "pre_receipt": null,
+  "post_receipt": null,
+  "grant": null,
+  "actual_product_changes": 0,
+  "tests": "NOT_RUN",
+  "next": "P02-P05 real authorized independent review and distinct T01; then P06 exact four-file slice; P07 POST; T02 before source repo write"
+}

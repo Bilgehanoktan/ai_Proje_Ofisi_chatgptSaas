@@ -1,0 +1,61 @@
+{
+  "revision": "W1-0198-P04",
+  "variant": "PROGRESS",
+  "source_commit": "7d623ec052a1276f181faa7c52378331c42f877f",
+  "executed": {
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "commands": [
+      "python -B -m unittest discover -s tests -p test_d0_snapshot_p04.py -v",
+      "tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM --rootDir . --outDir compiled features/data/projectionScope.ts features/progress/progressModel.ts",
+      "node tests/projection-scope.test.cjs compiled/features/data/projectionScope.js <P03 Python prefix cases>",
+      "node tests/progress-model.test.cjs compiled/features/progress/progressModel.js features/progress/w1PlanProgress.json",
+      "P03 selected Python/Node commands rerun; terminal test initial path error corrected using exact pinned P02 test, 14/14 PASS"
+    ],
+    "sqlite_guard": {
+      "passed": 13,
+      "source_blob": "c067e844f1c3200c625f4811d13f12c59a602e95",
+      "test_blob": "42d761960c0a5fe3efb573612fab36ac9f797619",
+      "scope": "actual temporary SQLite, not lifecycle fixture"
+    },
+    "scope": {
+      "passed": 9,
+      "source_blob": "4f711297dcea3a9cc96d84db0167f1dcc5c5c65e",
+      "test_blob": "58054af5ed662627d23fa20fe370823beb718dbb"
+    },
+    "progress": {
+      "passed": 10,
+      "source_blob": "ec976fc8b901e0af2d8625083d6e5a603805bf2f",
+      "test_blob": "76aaf58b78637f048932dc29d59926fc0778faee",
+      "fixture_blob": "1c35eae82c96dea1607b2f3b7c63702f458bee18"
+    },
+    "prior_regression": {
+      "prefix_wire": 6,
+      "prefix_parser": 23,
+      "registry": 11,
+      "transport": 12,
+      "terminal": 14,
+      "total": 66
+    },
+    "new": 32,
+    "regression": 66,
+    "total": 98,
+    "failed": 0,
+    "skipped": 0,
+    "exact_new_test_blobs_match": true
+  },
+  "prepared_not_run": [
+    "P02 8 persisted fixture/API",
+    "P03 9 persisted fixture/API",
+    "7 API parity",
+    "pinned TS5.9.3/React/Next build",
+    "current browser",
+    "Windows",
+    "PostgreSQL",
+    "independent acceptance"
+  ],
+  "blocker": "Direct checkout DNS failure; full backend dependency closure not materialized. Shared SQLite guard and pure helpers tested, not full lifecycle readers.",
+  "parallel_branch_tests_not_counted": true,
+  "historical_counts_not_additive": true
+}

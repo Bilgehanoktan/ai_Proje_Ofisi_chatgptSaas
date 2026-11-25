@@ -1,0 +1,88 @@
+{
+  "revision": "UI-P10J-12",
+  "parent": "9cd9ebee9f0760eeec24a86bf02487f02096eea8",
+  "core_observed": "c94753b4f2bc8a3e739ffa997ca9547772deeaf2",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "before": "b60f2972cb2733cf4abae44bc335cf0acdd0afb4",
+      "after": "6fd1992c5470dccc1330cd1cb0eb26942edca58e",
+      "sha256": "aed6e4a4ba68afa613db9d31718d9d39a39b1ab5f0a2fc02926f8ec3f0959e0f",
+      "symbols": [
+        "AgentDirectory"
+      ],
+      "purpose": "Role catalogue, selected role and reference task dependency context"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+      "before": "67edc97176bb5a257afc0121ae34ac53315288af",
+      "after": "6b87f0d00ac5406fec4b6f5e92db9d5fb94d4b26",
+      "sha256": "6513d0538321b485a2cc1010bc623fd2657b5e97c9578dd1c5935c15700b82c8",
+      "purpose": "Responsive role catalogue and dependency cards"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/studioContext.ts",
+      "after": "d244f53bccb14c7626a96bad77cf246d7c4ee96c",
+      "sha256": "17c1879ce218635683576f5cde5ca01fd2655fc98e24fab36b12e739030ac277",
+      "symbols": [
+        "roleTaskContext",
+        "roomStations",
+        "selectedRoom",
+        "StudioTask",
+        "StudioStation"
+      ],
+      "purpose": "Presentation-only validated-input helpers"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+      "before": "6e5a7de85d32a6215b81c5288628167b23376c9a",
+      "after": "74dd811061a7c66663d7c842d431222cbe25cdc6",
+      "sha256": "84a7d5a27af92cc8adee06034f80748f3a8ee0af1b05aed53a16bc51e2eebf66",
+      "symbols": [
+        "OfficeIllustration",
+        "resetGallery"
+      ],
+      "purpose": "Room selection, filtered station list, camera reset"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+      "before": "556953c116c92f9c858fb3a3765e17701c794c47",
+      "after": "2682eb756362593f3cf2b379d57cb418ce6abad3",
+      "sha256": "f4a1ddd06467f01d57a6ac9017d3c6b1d824a0790517315d5b81dd6a36a8eb23",
+      "purpose": "Room selection emphasis and scope"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j12-studio.test.cjs",
+      "after": "08b97562c6ae81fa99e1500275961dcec445a0ce",
+      "sha256": "7d1cf5c232508c166416bcba08a0dcc3d61f80d7d180b2540fe98e52548538f8",
+      "purpose": "Six model tests"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "after": "0c7a84225766444c1b2bf00c799c0d539dd47c61",
+      "purpose": "396 product manifest pins"
+    },
+    {
+      "path": "tests/integration/browser_0187_w1.py",
+      "before": "fab1cb848f6fe5f1aa0f3afbe52e80accb39b9a6",
+      "after": "757ee7326165624b8f01bec14e0b43f5c8573497",
+      "purpose": "Extend browser role/room acceptance"
+    },
+    {
+      "path": "tests/integration/w8_p10j12.py",
+      "symbols": [
+        "load_candidate",
+        "test_candidate"
+      ],
+      "purpose": "Preserve W8 and add model tests"
+    }
+  ],
+  "api": [],
+  "db": [],
+  "events": [],
+  "dependencies": [],
+  "test": "6 model PASS; full W8 NOT_RUN",
+  "maintenance": "docs/UI-P10J/P10J12_ARCHITECTURE.md",
+  "rollback": "9cd9ebee9f0760eeec24a86bf02487f02096eea8",
+  "per_area": "progress/INTEGRATION_MATRIX_UI_P10J12.json"
+}

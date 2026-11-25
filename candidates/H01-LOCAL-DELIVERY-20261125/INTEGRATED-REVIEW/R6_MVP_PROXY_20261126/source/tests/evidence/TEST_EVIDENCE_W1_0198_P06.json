@@ -1,0 +1,73 @@
+{
+  "revision": "W1-0198-P06",
+  "source_commit": "08361b6c3c7bed4fde77623fdf5fafcb047cca06",
+  "parent_commit": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
+  "tested_product_commit": "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+  "lock": {
+    "path": "tests/integration/lifecycle_p05_source_lock.json",
+    "git_blob": "44ba5836b086b576c45d50ace2e64152f41c9adc",
+    "files": 44,
+    "bytes": 160282,
+    "sha256_verified_product_files": 39,
+    "sql_git_blob_and_size_verified": 5,
+    "pre_post_checks": "PASS"
+  },
+  "runner": {
+    "path": "tests/integration/run_lifecycle_p05.py",
+    "git_blob": "befb9f429791a01b2fe37009e40f994a5924b2ff"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "fastapi": "0.128.2"
+  },
+  "executed": {
+    "p02": 8,
+    "p03": 9,
+    "transition_0194": 35,
+    "admission_0195": 19,
+    "lifecycle_0196": 26,
+    "unique_cases": 97,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "newly_executed_pending_cases": 17,
+    "regression": 80
+  },
+  "reports": [
+    {
+      "path": "tests/evidence/W1_0198_P06/selected_17.json",
+      "git_blob": "d84565aee2a718f606e2ae6afc5f40292826f951",
+      "sha256": "a9a83073d9324ad454974f0f13b3edcaf96e9702ef1d6880277469f7dd749e8a",
+      "status": "PASS",
+      "cases": 17
+    },
+    {
+      "path": "tests/evidence/W1_0198_P06/regression_80.json",
+      "git_blob": "311565766c27745665bbf6ff8ed918ea8a6dda2c",
+      "sha256": "d41a47496ec09a0af62cc7b4b5460ac799c13822fd85cc2b88e537f959626a9a",
+      "status": "PASS",
+      "cases": 80
+    },
+    {
+      "path": "tests/evidence/W1_0198_P06/regression_initial_count_mismatch.json",
+      "git_blob": "c2856a847cf6ae3c80b7b696af07060c2f809839",
+      "sha256": "15a706d2c4f0086f887323632a9dd2e783579c7adaeb9d1a369d39ba3e6a666a",
+      "status": "FAIL_EXPECTED_COUNT_ONLY",
+      "cases": 80
+    }
+  ],
+  "initial_mismatch": "Initial regression expected 34 transition/schedule cases, actual 35; all 80 cases passed but count gate FAIL. Corrected expected count to 35 and reran; preserved both reports. No test or product source modified.",
+  "not_run": [
+    "full backend suite",
+    "full product build",
+    "React/browser",
+    "seven endpoint HTTP/frontend parity",
+    "real PostgreSQL",
+    "Windows",
+    "live provider"
+  ],
+  "independent_acceptance": "HOLD",
+  "historical_counts_not_additive": true,
+  "blocker": "Direct local GitHub DNS/archive unavailable; exact closure recovered from connector and verified reusable local bytes. Full checkout still unavailable."
+}

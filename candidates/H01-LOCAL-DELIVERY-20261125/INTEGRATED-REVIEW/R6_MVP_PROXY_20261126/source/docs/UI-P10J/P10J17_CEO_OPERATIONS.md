@@ -1,0 +1,12 @@
+# UI-P10J-17 — CEO operational presentation
+
+Parent 4b11e9d24d1a7a63bb4a2810c129e0bd58fa6465; manifest d314b5cef9b40db2c48a4034248debd4fd7bfba1. Isolated D0 source, no main/CI/PROD/real grants or effects. Core 0227 E1 runner work and premium A3 traffic remain separate, no imports or changes to either owner branch.
+
+## What / why / where / how
+Extend existing features/ceo-dashboard/OperationalReadback.tsx mounted in Dashboard summary. The existing typed task-budget reader is the sole input: role observed/expected meters, sample reserve/observed/remaining minor units, pair reference and budget version. Data shown only for historical phase; idle/loading/HOLD clears charts. Retain existing read/reset controls, unknown real runs, non-atomic/causality/geometry/dispatch boundaries. No joined snapshot, live KPI or fabricated revenue. New CSS module uses EDS tokens, collapses to one column <=900px, preserves readable values. No changes to Dashboard top-level revision label (still historical UI-P10J-14), shared data layer, office engine, API, DB, dependencies or contract. Product sources: 2 additions, 1 replacement; 467 prior source pins preserved; 470 manifest pins plus manifest =471 files.
+
+## Evidence and limitations
+9/9 actual isolated JSX tests on Node 22.16.0 and TS 5.8.3; mocked read hook, status helper and JSX runtime, no real React/DOM. Exact three local source files pinned. Raw log hash c0752b02eb1dcb1e83e06dc8116b8311330a953452a8c0b36f3f2cf1b9b6fffa. W8 adapter preserves inherited gates and adds new test. Browser plan 80 captures (76 inherited +4 CEO paired read in desktop/mobile dark/light). Actual fixture checks budget 100/0/900, chart/reset and overflow; NOT_RUN. Full checkout/build/browser/PG and independent acceptance NOT_RUN/HOLD. UI 21/40 prior, core 8/16 separately recorded, MVP 0/11. No gate promotion.
+
+## Maintenance / rollback
+If details missing: inspect existing hook phase and GET parser, confirm fixed paired D0 response, do not bypass validation. On HOLD preserve no data and existing timeout/reset. If meters overflow inspect scoped CSS/EDS breakpoint. Never convert sample money to actual expenditure or role observation to performance. Roll back to parent using isolated checkout or revert this source delta + manifest + W8 pins together. No DB migration/restore. Next P10J18 Agent Studio, re-pin current parallel branches. W8 audit/prepare/install/test/smoke with fresh reviewed lock approval; see P10J16_RUNBOOK.md and new manifest/runner.

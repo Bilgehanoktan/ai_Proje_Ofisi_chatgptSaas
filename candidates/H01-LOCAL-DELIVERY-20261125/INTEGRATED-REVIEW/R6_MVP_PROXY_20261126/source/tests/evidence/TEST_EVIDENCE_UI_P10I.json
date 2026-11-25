@@ -1,0 +1,86 @@
+{
+  "revision": "UI-P10I",
+  "source_commit": "2febb84e539eddcfe4821783910c430ac20697c8",
+  "parent": "1a879d5374730015dcc3bf563b7efb3100fd4ec0",
+  "manifest_blob": "a26c4d53e66d800226beae27626f03c68f5bb064",
+  "scope": "D0 selected exact source and unpinned diagnostics only",
+  "inventory": {
+    "product": 385,
+    "frontend": 166,
+    "manifest_entries": 384,
+    "unchanged": 375,
+    "added": 3,
+    "modified": 6,
+    "deleted": 0,
+    "parent_zip_verified": 228,
+    "parent_remote_path_size": 381,
+    "parent_local_exact": 206,
+    "recovered_parent_product": 46,
+    "local_candidate_exact": 209
+  },
+  "tests": {
+    "core29_original_runner_source_check": {
+      "verified": 55,
+      "status": "SOURCE_MATCH_TESTS_NOT_RUN"
+    },
+    "core29_original_runner_strict": {
+      "status": "HOLD",
+      "reason": "DIRECT_DEPENDENCY_PIN_MISMATCH",
+      "passed": null
+    },
+    "core29_original_runner_diagnostic": {
+      "passed": 29,
+      "total": 29,
+      "environment": "DIAGNOSTIC_UNPINNED"
+    },
+    "wrapper0211": {
+      "executed": 12,
+      "protection": 10,
+      "residual": 2
+    },
+    "office_merge_original": {
+      "passed": 8,
+      "total": 8
+    },
+    "ui_model": {
+      "passed": 75,
+      "new": 9,
+      "previous": 66
+    },
+    "archive_audit": {
+      "passed": 9,
+      "total": 9,
+      "parent_archive": "HOLD_FULL_PRODUCT_MANIFEST_MISSING"
+    },
+    "tsx_syntax": 6,
+    "same_app_compiled_GET": {
+      "passed": 7,
+      "total": 7,
+      "post_denied": 7,
+      "db_unchanged": 5
+    },
+    "w8_aux": {
+      "parent_pins": 18,
+      "new_candidate_pins": 20,
+      "milestone_mirror": "exact",
+      "nested_load": "PASS",
+      "whole_audit": "HOLD missing product manifest"
+    },
+    "npm_lock": "FAIL ENOTCACHED",
+    "python_wheelhouse": "FAIL no indexed/cached matching distribution",
+    "next_build": "FAIL exit127",
+    "partial_typecheck": "FAIL incomplete source and dependencies; not full typecheck",
+    "next_api": "0/7 NOT_RUN",
+    "product_browser": "0/52 NOT_RUN",
+    "PG_RLS": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "security": "D03/D04 design deepening only; 2 residual reproductions remain; no new authority",
+  "blockers": [
+    "Full remote archive not materialized; 381/381 path-size not all bytes",
+    "npm/pypi DNS unavailable; reviewed locks absent",
+    "Full source/dependency environment missing",
+    "No React product acceptance; Office visuals retained rather than changed"
+  ],
+  "historical_milestone_mirror": "P04 20/40 exact historical source; current UI tracker 21/40 separate, unchanged"
+}

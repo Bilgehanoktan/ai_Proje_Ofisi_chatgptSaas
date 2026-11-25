@@ -1,0 +1,30 @@
+{
+  "revision": "W1-0183C",
+  "environment": {
+    "node": "22.16.0",
+    "typescript": "5.8.3 local; pin 5.9.3",
+    "postcss": "installed local"
+  },
+  "commands": [
+    "tsc design-system/navigationModel.ts --target ES2022 --module commonjs --strict --outDir <temp>",
+    "node tests/navigation-model.test.cjs <temp>/navigationModel.js",
+    "TypeScript transpileModule Navigation.tsx (syntax only)",
+    "postcss.parse Navigation.module.css (syntax only)"
+  ],
+  "helper": {
+    "pass": 8,
+    "fail": 0
+  },
+  "tsx_syntax": "PASS",
+  "css_parse": "PASS",
+  "dependency_presence": {
+    "next": "NOT_INSTALLED",
+    "react": "NOT_INSTALLED",
+    "phaser": "NOT_INSTALLED"
+  },
+  "full_next_build": "NOT_RUN",
+  "full_product_typecheck": "NOT_RUN",
+  "current_react_browser": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "historical_tests": "W1-0183A/B prior results preserved; not rerun in this round"
+}

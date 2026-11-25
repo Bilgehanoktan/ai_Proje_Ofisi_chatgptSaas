@@ -1,0 +1,120 @@
+{
+  "revision": "0226",
+  "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
+  "tooling_commit": "8bce11edf99371950d003469f23e7d0c27e8b8d5",
+  "base_commit": "32b4453d848827400774a73f18fc4674e424e976",
+  "recovered_original": [
+    {
+      "module": "test_transition_mapping_0194",
+      "pass": 35
+    },
+    {
+      "module": "test_admission_mapping_0195",
+      "pass": 19
+    },
+    {
+      "module": "test_lifecycle_mapping_0196",
+      "pass": 26
+    },
+    {
+      "module": "test_history_readback_0198",
+      "pass": 22
+    },
+    {
+      "module": "test_plan_history_review_0199",
+      "pass": 26
+    },
+    {
+      "module": "test_retained_snapshot_0201",
+      "pass": 5
+    },
+    {
+      "module": "test_terminal_anchor_lifecycle_0203",
+      "pass": 7
+    },
+    {
+      "module": "test_lifecycle_projection_p02",
+      "pass": 8
+    },
+    {
+      "module": "test_lifecycle_prefix_p03",
+      "pass": 9
+    },
+    {
+      "module": "test_company_terminal_0212",
+      "pass": 6
+    },
+    {
+      "module": "test_scheduled_admission_0220",
+      "pass": 6
+    },
+    {
+      "module": "test_shared_snapshot_db_0223",
+      "pass": 4
+    }
+  ],
+  "recovered_original_pass": 173,
+  "prior_rerun": 134,
+  "python_pass": 254,
+  "node_pass": 53,
+  "total_unique_selected_pass": 307,
+  "new_test_cases": 0,
+  "duplicate_python_runner_pass_excluded": 5,
+  "core29_subset": {
+    "pass": 29,
+    "source": "CURRENT",
+    "locked": false
+  },
+  "versions": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "uvicorn": "0.48.0",
+    "cryptography": "46.0.4",
+    "httpx": "0.28.1",
+    "jsonschema": "4.26.0",
+    "node": "22.16.0",
+    "typescript": "5.8.3"
+  },
+  "direct_python_matches": 3,
+  "direct_python_mismatches": 3,
+  "frontend_local_direct_matches": 0,
+  "preflight_exit": 1,
+  "preflight_reason": "partial source; missing manifest, locks, binaries, packages",
+  "logs": {
+    "0194.log": "df37c2a3ce2bb793c91a515f508b2cebb0b1f676594bc8e2f52e461f5fb21d3e",
+    "0195_0196.log": "40563b02d46a87f940f6c05aa91bba43b7b7ddacd29fb6ebcbf8b05b910d1591",
+    "0198_0199.log": "dcbd405537e06a144b217dbc0cd2a7ef68ae7135bf7423fdd257642af96d7400",
+    "0201.log": "db9f914dad1c4335ac94590f7054ee40259f96757dd8081af359fa994d595077",
+    "0212_0220.log": "47754fb0d50ed81498187d1fb3a19d16c3b2af3c572ca174e0a8a1e2a3fdc508",
+    "DB4_P02_P03.log": "ea7ec0cb5029480d3bb32acd53894b71b7c933c67bcb0d5b98ce65723d58aa75",
+    "combined_0226.log": "d33c36863daf4c40dee80ab0fa1d66c3bbe45c8b0e6295b2bb36bd039900be64",
+    "core29_current.log": "b1a509a0d4e29b60f3758e38d2c98fcf52a357f78f10872d630ee79e9595a6c1",
+    "preflight_0226.json": "fee35321809e95918753c41662fa584d8857c4a9801a8784d124f8480a5c5385",
+    "preflight_0226.log": "fee35321809e95918753c41662fa584d8857c4a9801a8784d124f8480a5c5385",
+    "studio_0226.log": "bf925b25a1438d997e9f77d795bfa9b9264903aeb7e5137d1790e42cdeb8735c"
+  },
+  "command": "PYTHONPATH=.:tests PYTHONDONTWRITEBYTECODE=1 python -m unittest -v test_transition_mapping_0194 test_admission_mapping_0195 test_lifecycle_mapping_0196 test_history_readback_0198 test_plan_history_review_0199 test_retained_snapshot_0201 test_terminal_anchor_lifecycle_0203 test_lifecycle_projection_p02 test_lifecycle_prefix_p03 test_company_terminal_0212 test_scheduled_admission_0220 test_shared_snapshot_db_0223 test_research_t1_integration_0225 test_lifecycle_db_http_0225 test_lifecycle_proxy_0225 test_pinned_research_t1_0225 test_research_roster_0224 test_research_company_snapshot_0224 test_plan_projection test_pinned_schedule_0220 test_shared_snapshot_0222",
+  "frontend_command": "AICOS_TSC=<absolute tsc.js> AICOS_NODE_DECLARATION=<diagnostic process.d.ts> AICOS_PYTHON=python node scripts/run-studio-0223.cjs",
+  "residual": {
+    "exact_full_checkout": "BLOCKED_DNS_PARTIAL_81_OF_392",
+    "locked_dependencies": "MISMATCH_AND_TRANSITIVE_LOCKS_ABSENT",
+    "original_0220_SQL6": "PASS_SQLITE_6",
+    "original_0221_SQL10": "NOT_RUN",
+    "original_0224_SQL8": "NOT_RUN",
+    "original_0223_DB4": "PASS_SQLITE_ROUTER_4",
+    "full_0224_research_result_slice": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "rls": "NOT_RUN",
+    "full_backend_build": "NOT_RUN",
+    "full_frontend_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD",
+    "locked_core29": "CURRENT_NONLOCKED_29_PASS_HISTORICAL_LOCKED_NOT_RUN"
+  },
+  "actual_provider_calls": 0,
+  "actual_agents": 0
+}

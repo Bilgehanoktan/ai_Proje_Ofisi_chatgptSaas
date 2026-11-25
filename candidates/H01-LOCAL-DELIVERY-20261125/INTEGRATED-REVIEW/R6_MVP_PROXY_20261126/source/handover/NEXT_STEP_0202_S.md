@@ -1,0 +1,3 @@
+# 0202-S next — 0203
+
+P0: recover exact local checkout and run five 0201 integration cases, then signed wrapper against real retained readback; run 13 actual PostgreSQL checks when isolated environment available. Establish external latest-pin store, key registry, custody, clock, revocation and W-A provenance; bind terminal receipts to T1 commit/readback atomically; no actual success/release authority. Resolve R03/non-owner RLS and full tests. P1: define explicit project membership, global/company ordering, shared budget allocation and restore fencing; no silent new schema or authority. W1 P05 and AI/MEM remain separate; carry review with dependency closure and optional crypto provenance before merge. No automatic merge, real agents, external calls, spending or PROD.

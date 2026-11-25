@@ -1,0 +1,21 @@
+{
+  "revision": "0188-W8-P1",
+  "previous_s3": "444 PASS 2 SKIP, 52 browser captures, 5 live API parity, unchanged DB hashes; interactive startup user reports works",
+  "source_commit": "716eee3cee87c0f69c96ac36f1df5c1c9d2cf32c",
+  "manifest_blob": "652d12b5daf53859f723e6ffe06dfd03c3efd13f",
+  "readback_path_sizes": 250,
+  "source_delta": 17,
+  "expected_review_sha256": "94a5b62787fdb00cd9e119a856ed7ce7f255debb55da36da0cce0d115690578f",
+  "review_basis": "exact S1 REVIEW bytes with only manifest blob substitution; S3 fingerprint reproduced locally; verify exact P1 actual inventory",
+  "new_tests": "5 proxy + 2 runner candidate",
+  "full_test": "NOT_RUN",
+  "build": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "independent_acceptance": "HOLD",
+  "limitations": [
+    "User reported S3 interactive open, no new terminal evidence supplied",
+    "No P1 full regression or live alternate port execution",
+    "Port availability may change after probe",
+    "Physical symlink and visual pixel review remain open"
+  ]
+}

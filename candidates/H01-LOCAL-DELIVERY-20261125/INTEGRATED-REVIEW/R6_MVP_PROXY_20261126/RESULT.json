@@ -1,0 +1,14 @@
+{
+  "integration": "Real inspect_mvp fixture output through injected fetch: HTTP response object 200, exact body retained. Live backend HTTP not tested.",
+  "source_tree": "ea89d4c232461f5649409a934e9d25d2d2bb8d2a",
+  "manifest_blob": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "before": "6 pass 2 fail 1 skipped",
+  "owner": "MI05 review HOLD",
+  "change": "MVP diagnostics GET reuses bounded JSON reader. No API/DB/event changes.",
+  "rollback": "Revert archival delivery commit; canonical product unchanged.",
+  "after": "8 pass 0 fail 1 skipped",
+  "command": "node --test tests/mvpProxy.test.cjs (MVP_PROXY_JS points to compiled GET)",
+  "zip_sha256": "1438353c49d0b72c8e0d05f73fa4084c9f5ac6d29cec065382417ea3d5fb190e",
+  "base_source": "d4150875db536143d578aa4183d6ea0314ef109b",
+  "parent": "a0cd7e9778a6c54a6b0feca8c506f47322f11252"
+}

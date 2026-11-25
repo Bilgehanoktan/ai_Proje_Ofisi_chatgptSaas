@@ -1,0 +1,158 @@
+{
+  "revision": "0207",
+  "baseline": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "source_commit": "d06e65dba202d79740b05980eea739596ad134c3",
+  "source_tree": "ad81b109b556e6d81d189b5c8787d5d9f71dd431",
+  "product_files": 336,
+  "manifest_entries": 335,
+  "prior_non_manifest_files_unchanged": 334,
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_runtime_memory_model_0207.py",
+      "kind": "add",
+      "blob": "01f3110955e4c9e02ed7244a305216163d34df99",
+      "bytes": 4628,
+      "sha256": "6787ddf20de8a9f0097ad3d58d3c9cf30b4b4268324028ec4a5070bd40ac26b1",
+      "symbols": [
+        "RuntimeMemoryModelTests",
+        "setUp",
+        "review",
+        "test_input_digest_and_provider_gate_independent_of_memory",
+        "test_lease_expiry_denied_by_both",
+        "test_revocation_exposes_independent_gate_gap",
+        "test_run_version_drift_denied_by_both",
+        "test_same_run_lease_and_fixture_input_never_grant",
+        "test_terminal_run_denied_by_both",
+        "test_witness_epoch_drift_denied_by_both"
+      ],
+      "dependencies": [
+        "unittest",
+        "dataclasses",
+        "hashlib",
+        "RunState",
+        "publish_snapshot",
+        "ProviderKind",
+        "ProviderRequest",
+        "AdapterPin",
+        "InvocationEnvelope",
+        "invocation_digest",
+        "inspect_invocation",
+        "test_memory_store_0196"
+      ],
+      "purpose": "Tests only; joint inspection in fixture, no production coordinator."
+    },
+    {
+      "path": "tests/integration/core_0207_source_lock.json",
+      "kind": "add",
+      "blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+      "files": 55,
+      "test_cases": 29,
+      "pins": "49 product entries and 6 SQL files; static closure; Git blob+size, product SHA256; direct dependency pins not transitive lock"
+    },
+    {
+      "path": "tests/integration/run_core_0207.py",
+      "kind": "add",
+      "blob": "b019a5e60cfff4183b00e99f252ffe00bc164eda",
+      "symbols": [
+        "blob",
+        "main"
+      ],
+      "dependencies": [
+        "Python stdlib",
+        "historical pinned run_lifecycle_p05.py"
+      ],
+      "purpose": "Disposable exact slice materialization, version preflight, case count and report; not executed in this round."
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "blob": "573166141f186245b94b818b9c0b1cdaf85d37e9",
+      "purpose": "335 entries; 334 previous non-manifest files unchanged."
+    }
+  ],
+  "api_changes": [],
+  "database_schema_changes": [],
+  "event_schema_changes": [],
+  "product_runtime_changes": [],
+  "dependency_version_changes": [],
+  "test_runner_direct_pins": {
+    "fastapi": "0.163.0",
+    "starlette": "1.10.0",
+    "cryptography": "46.0.4",
+    "uvicorn": "0.34.2"
+  },
+  "evidence": "tests/evidence/TEST_EVIDENCE_0207.json",
+  "tests": {
+    "passed": 72,
+    "new": 7,
+    "regression": 65,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "observed": "A new memory revocation/tombstone changes memory decision to STALE_HOLD and old snapshot to CAS_HOLD, but model envelope still structurally matches because it does not bind the memory pin. Both remain DENY/HOLD; no live call, data release or spend.",
+      "required": "Design a combined immutable admission/input provenance binding including memory snapshot/revocation, ACL, run/version/attempt, lease/fence, witness/policy epoch, provider registry and input digest. Recheck at authority/effect boundary; test revocation race and rollback. No self-grant or normative change."
+    }
+  ],
+  "parallel": [
+    {
+      "line": "A",
+      "scope": "Retained snapshot and terminal lifecycle 12",
+      "state": "STATIC_LOCK_READY_NOT_RUN"
+    },
+    {
+      "line": "B",
+      "scope": "Lifecycle projection and prefix 17",
+      "state": "STATIC_LOCK_READY_NOT_RUN"
+    },
+    {
+      "line": "C",
+      "scope": "CompanyCoordinatedMapping + original T1 / terminal anchor / recovery",
+      "state": "NOT_RUN"
+    },
+    {
+      "line": "D",
+      "scope": "Runtime, Memory, Model",
+      "state": "7_NEW_41_AI_MEMORY_REGRESSION_PASS",
+      "finding": "0207-D-01"
+    },
+    {
+      "line": "E",
+      "scope": "Office/CEO/Workflow projection and 7 read-only API/proxy endpoints",
+      "state": "NOT_RUN"
+    },
+    {
+      "line": "F",
+      "scope": "PostgreSQL / R03 / owner and non-owner RLS / independent witness",
+      "state": "HOLD_NOT_RUN"
+    },
+    {
+      "line": "G",
+      "scope": "Full build, browser and transitive lock",
+      "state": "NOT_RUN"
+    }
+  ],
+  "rollback": "Return to pinned 0206 commit; no DB migration or runtime writes. Retain 0207 evidence and branch.",
+  "maintenance": "Use exact manifest and source lock. Refuse missing/mismatched file or dependency; diagnostic-unpinned is non-acceptance. Record actual case IDs and source pins; do not add historical results.",
+  "authority": {
+    "agents": 0,
+    "provider_calls": 0,
+    "live_grants": 0,
+    "spend": 0,
+    "CI": "NOT_RUN",
+    "main_merge": false,
+    "PROD": false
+  }
+}

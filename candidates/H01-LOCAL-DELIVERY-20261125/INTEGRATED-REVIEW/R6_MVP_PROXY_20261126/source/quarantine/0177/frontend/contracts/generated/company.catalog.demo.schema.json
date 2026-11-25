@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Synthetic company catalog D0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "data_status",
+    "sections",
+    "lanes",
+    "agent_detail_tabs",
+    "authority",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "company.catalog.v0-D0"
+    },
+    "data_status": {
+      "const": "D0_SAMPLE_NO_RUNTIME"
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "title",
+            "description",
+            "status"
+          ],
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "lanes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "scope"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "agent_detail_tabs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authority": {
+      "type": "object",
+      "required": [
+        "code_effective",
+        "repo_effective",
+        "dev_effective",
+        "real_test"
+      ],
+      "properties": {
+        "code_effective": {
+          "const": false
+        },
+        "repo_effective": {
+          "const": false
+        },
+        "dev_effective": {
+          "const": false
+        },
+        "real_test": {
+          "const": "NOT_RUN"
+        }
+      },
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
