@@ -1,0 +1,26 @@
+{
+  "revision": "0188-W8-S3",
+  "changes": [
+    {
+      "file": "product/ai-company-os-frontend/tsconfig.json",
+      "symbol": "compilerOptions.incremental",
+      "change": "Explicit true, matching observed Next.js 15.5.29 suggestion; noEmit/strict retained",
+      "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
+    },
+    {
+      "file": "product/SOURCE_MANIFEST.json",
+      "change": "regenerated config pin"
+    },
+    {
+      "file": "tests/integration/w8_local.py",
+      "symbol": "MANIFEST_BLOB",
+      "change": "new pin; strict pre/post-build verification unchanged"
+    }
+  ],
+  "api_changes": 0,
+  "db_schema_changes": 0,
+  "dependency_changes": 0,
+  "diagnosis": "Next build auto-rewrites tsconfig when incremental absent. Do not manually mark BUILD_TEST_OK, restore post-build bytes, or weaken guard.",
+  "rollback": "Preserve immutable S2 source/stage. Use fresh S3 stage with exact reviewed lock inventory.",
+  "test": "S3 full test/build and smoke pending"
+}

@@ -1,0 +1,24 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');
+const {parseTaskBudgetProjection:parse}=require(process.argv[2]);const {GET}=require(process.argv[3]);
+const plan='6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9';
+const office={schema_version:'office.workbench.v1-D0',mode:'D0_OFFICE_WORKBENCH_0187',tenant:'synthetic-tenant',company:'synthetic-company',world_id:'demo-world',plan_digest:plan,layout_revision:'draft-hybrid-floor-1',iv:'HOLD',release:'HOLD',freshness:'HISTORICAL_SAMPLE',dispatch_allowed:false,provider_called:false,spend_allowed:false,release_ready:false,real_run_count:null,geometry_join:'HOLD',sample_event_count:5,roles:['orchestrator','research','engineer','qa'].map((role,i)=>({role,station_id:'station-'+role,observed:i===2?2:1,total:i===2?2:1}))};
+const budget={schema_version:'admission.sample.v1-D0',mode:'D0_ADMISSION_STORE_0186',tenant:'synthetic-tenant',company:'synthetic-company',phase:'RESERVED',version:1,sample_reserved_minor:100,sample_observed_minor:0,sample_remaining_minor:900,admission:'DENY',dispatch_allowed:false,spend_allowed:false,release_ready:false,actual_cost_minor:null,authoritative:false};
+const sample={schema_version:'task.budget.snapshot.v1-D0',mode:'D0_PAIRED_SAMPLE_0188',tenant:'synthetic-tenant',company:'synthetic-company',plan_digest:plan,task_id:'research',run_id:'demo-run',sample_budget_ref:'demo-budget',consistency:'STABLE_DOUBLE_READ_NOT_ATOMIC',freshness:'HISTORICAL_SAMPLE',causality:'UNPROVEN',lease_binding:'HOLD',geometry_join:'HOLD',dispatch_allowed:false,spend_allowed:false,release_ready:false,authoritative:false,pair_id:'a'.repeat(32),workbench_event_seq:5,research_event_seq:3,admission_version:1,sample_admission_ref:'demo-admission',office,budget};
+test('valid joined projection',()=>assert.equal(parse(sample).research_event_seq,3));
+for(const [name,change] of Object.entries({pair:{pair_id:'b'},seq:{workbench_event_seq:4},research:{research_event_seq:null},version:{admission_version:2},admission:{sample_admission_ref:null},causal:{causality:'PROVEN'},authority:{authoritative:true},extra:{extra:true},budget:{budget:{...budget,sample_reserved_minor:0}},office:{office:{...office,provider_called:true}}}))test('reject '+name,()=>assert.equal(parse({...sample,...change}),null));
+test('unknown retains reservation',()=>assert.equal(parse({...sample,admission_version:2,budget:{...budget,version:2,phase:'UNKNOWN_HOLD'}}).budget.sample_reserved_minor,100));
+test('proxy 200 and invalid 503',async()=>{const prior=global.fetch;try{global.fetch=async(url,opts)=>{assert.equal(url,'http://127.0.0.1:8000/demo/v1/task-budget/sample-projection');assert.equal(opts.redirect,'error');return Response.json(sample);};assert.equal((await GET()).status,200);global.fetch=async()=>Response.json({...sample,spend_allowed:true});assert.equal((await GET()).status,503);global.fetch=async()=>Response.json({text:'x'.repeat(9000)});assert.equal((await GET()).status,503);}finally{global.fetch=prior;}});
+
+test('configured loopback port and invalid config fail closed',async()=>{
+ const saved=process.env.AICOS_D0_BACKEND_PORT,old=global.fetch;
+ try {
+  let urls=[];global.fetch=async(url)=>{urls.push(url);throw Error('synthetic offline');};
+  process.env.AICOS_D0_BACKEND_PORT='17301';
+  assert.equal((await GET()).status,503);
+  assert.deepEqual(urls,['http://127.0.0.1:17301/demo/v1/task-budget/sample-projection']);
+  for(const value of ['', '0','80','65536','49152','017301','17301/path','17301@evil.test','http://evil.test',' 17301','17301.0']){
+   process.env.AICOS_D0_BACKEND_PORT=value;urls=[];
+   assert.equal((await GET()).status,503);assert.deepEqual(urls,[]);
+  }
+ }finally{global.fetch=old;if(saved===undefined)delete process.env.AICOS_D0_BACKEND_PORT;else process.env.AICOS_D0_BACKEND_PORT=saved;}
+});

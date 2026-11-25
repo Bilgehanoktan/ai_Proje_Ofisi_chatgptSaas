@@ -1,0 +1,243 @@
+# UI-P10J-23 — Premium management EDS
+Parent 1ec4576cfa9898dc202427f03e4340544c01e2cb; manifest 614c1d4c7d0b48540927daca9aadf34e7b7b8008. 491 source pins / 492 product files; one CSS replacement (exact parent prefix + scoped suffix), 490 retained pins, no deletion or addition to product. Actual 8/8 standalone Chromium fixture runs; eight PNGs separate from 99 planned product captures. No layout.tsx, office, backend, API, DB, dependency or authority changes. Full W8/build/browser/native NOT_RUN. Core 9/16 historical, UI 21/40, MVP 0/11, independent 0/7 unchanged. [Revision](../docs/UI-P10J/P10J23_PREMIUM_EDS.md) · [Runbook](../docs/UI-P10J/P10J23_RUNBOOK.md). Next P10J24 clean checkout, review, build/test/smoke; preserve parallel ownership, no merge without approval.
+
+---
+
+# UI-P10J-22 — Finance & Security Studio
+Parent df4c95688424c7c43d38941d219cf05932dd9040; manifest 3d7bb6a05f523b2691c8a7cfe048f030e2d94c91. 491 source pins / 492 product files; 3 additions, 2 replacements, 486 retained pins, zero deletion. Five changed/new product blobs matched local bytes; eight referenced backend blobs checked. Source inspector is static presentation only: 3 finance, 5 security; independent domain search, visible-only selection, source/requirement/boundary details. Existing finance/security model guards and tabs retained. No backend, API, DB, dependency, runtime, Office or authority change. 12/12 isolated model tests, strict model compile and 3/3 TSX transpile; W8 wrapper AST PASS, entire W8/build/browser/native NOT_RUN. Prior gates unchanged: core 9/16 historical, UI 21/40, MVP 0/11, independent 0/7. No cross-branch merge. Next P10J23 visual polish within UI scope; inspect latest parallel refs and avoid Office/core-owned files before edits. [Revision](../docs/UI-P10J/P10J22_FINANCE_SECURITY.md) · [Runbook](../docs/UI-P10J/P10J22_RUNBOOK.md).
+
+---
+
+# UI-P10J-21 — Skill & Memory Studio
+
+Parent ae3f5e45c8dc77359f5ae7701efc833585d3c4a9; manifest ce8b61352b9b56825a8ecd01238025fc07b7d2d2; 489 product files. Two additions, one replacement, 485 previous source pins retained. 10/10 actual isolated model tests and TSX transpile; W8 wrapper AST only, full build/browser/PG NOT_RUN. 99 inherited planned captures unchanged; extra manual Studio scenarios NOT_RUN. No backend/office/core transfer or authority change. Core 9/16 and UI 21/40 historical; independent 0/7. [Revision](../docs/UI-P10J/P10J21_SKILL_MEMORY.md) · [Runbook](../docs/UI-P10J/P10J21_RUNBOOK.md). Next P10J22 Finance & Security Studio after latest parallel head check.
+
+---
+
+# UI-P10J-20 — Workflow inspector / A4R2 source
+
+Parent b5cfa4fe8d839037bbb760f6361a474b42f8578a; manifest 9672f2e26f0635448f56cc02d338641bbe3ed5a5; 487 product files. 16/16 local tests + 5/5 doubled adapter groups; exact A4R2 scene and native script. W8/build/browser/PG NOT_RUN; 94 UI + 5 native planned captures; core 9/16 separately. No new gate. [Revision handover](../docs/UI-P10J/P10J20_WORKFLOW_INSPECTOR.md) · [Runbook](../docs/UI-P10J/P10J20_RUNBOOK.md). Next P10J21 Skill & Memory Studio, reviewed W8.
+
+---
+
+# UI-P10J-19 — Project roadmap and A4 source integration
+
+Parent 4a011d2f4d11e6bf7526ba596ca00b16643ea5bf; manifest 6caabe5948967e1532a117e99780e7fb90b1b968; 483 product files, 11/11 local isolated JSX checks. A4 four exact blobs, new hybrid link, actual native acceptance NOT_RUN. W8/build/browser/PG NOT_RUN, 90 planned captures. Core 9/16 separately accepted E1; no new UI gate. [Revision handover](../docs/UI-P10J/P10J19_PROJECT_ROADMAP.md) · [Runbook](../docs/UI-P10J/P10J19_RUNBOOK.md). Next P10J20 Workflow Studio and reviewed W8.
+
+---
+
+# UI-P10J-18 — Agent profile and exact A3 source
+
+Parent cc6a62b33feecb0f4a827ca1a5b4857be1a4f243; manifest a234ce2017432b88d1cabad37872d3f8444850ee; 476 product files, 14/14 local isolated JSX checks. A3 two exact source additions, renderer NOT_BOUND. W8/build/browser/PG NOT_RUN; 84 planned captures; no new authority or gate. [Revision handover](../docs/UI-P10J/P10J18_AGENT_PROFILE.md). Next P10J19 Project Studio, re-pin A4/core, reviewed W8.
+
+---
+
+# UI-P10J-17 — CEO operational presentation
+
+Parent 4b11e9d24d1a7a63bb4a2810c129e0bd58fa6465; manifest d314b5cef9b40db2c48a4034248debd4fd7bfba1; 471 product files. 9/9 isolated JSX checks PASS; full W8/browser/PG NOT_RUN, 80 planned captures. No new authority or gate. [Revision handover](../docs/UI-P10J/P10J17_CEO_OPERATIONS.md). Next P10J18 Agent Studio, reviewed W8 and current parallel re-pin.
+
+---
+
+# UI-P10J-16 — controlled premium composition (D0)
+
+Source a2bc3097717333e1dbd8ab4876213021728e61b0; parent a8789a91283d9c1c0f47452b639dc3d320db792f; office ba67700ab7c405131f5a207e438f69b0f7c94002; core 52219c7a222bae41735c9a9b9f7f7082462982b4; manifest 8b88d3e6ad080ab61bd91b95c9b98d28faea9b1a. 469 product files; 26 exact premium transfers, one reconciled OfficePanel and one test. 8 actual isolated JSX checks PASS; full W8/build/browser and PG/RLS NOT_RUN. Browser plan 76 captures. No live geometry/agent binding. Core A3 transferred historical acceptance 8/16 separate from UI 21/40. [Revision handover](../docs/UI-P10J/P10J16_RECONCILIATION.md) · [W8 runbook](../docs/UI-P10J/P10J16_RUNBOOK.md). Next: reviewed W8 and real premium routes browser checks; re-pin A3 before next composition. No main merge or grant.
+
+---
+
+# UI-P10J-15 — validation and residual closure
+UI parent 1d0d4eb89e0aff92720c0d545247b7bd3713012e; 0225 core 32b4453d848827400774a73f18fc4674e424e976; source a0d89cb77931e0f886e6603367d26a2460f445da; harness a1c70764c7b938c7c23ff7425c33a1f3a37e02db; observed 0226 c715e1edfd1af021b4c0be0681c6958455b6a26f. Core 0226 product unchanged; exact revision-specific evidence and operational runner imported. Original branches unchanged; no actual runtime/authority change. Single-parent isolated candidate, not a Git merge.
+
+443 product files including manifest e0dfff291acf9fab0893569bbc8be855a12d58d3; 442 path/size checks, 438 previous product source blobs unchanged, four new test files. Three exact 0225 tests; test_lifecycle_proxy_0225.py test-only delta invokes installed TypeScript JS through Node and confines ambient type discovery to empty directory; original diagnostic fallback preserved. Original proxy blob 3e16b9952af6886b6579729108a0278042ac4052 retained on core; candidate 2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d. Proxy variant NOT_RUN. 155/155 backend non-test product blobs exact 0225/0226; 236/237 total core backend product blobs exact, one test variant. Seven core DDL blobs unchanged. No schema/API/runtime/package changes. Full SHA audit and ZIP local NOT_RUN.
+
+Newly executed: 51/51 selected reruns (17 historical presentation, 6 governance, 6 Python serializer, 22 Node replay parser/transport), 12 distinct exact product files, 13 physical copies due shared prefix, strict TS 5.8.3/Node 22.16.0/Python 3.13.5. Fixed fixture/serializer regression, not DB writer, real HTTP or browser. Local ZIP SHA-256 a34439bf9791ba59fd1561a13b16b7c7c62c96618765c01771bc25f0444adc5f.
+Historical 0225 core 134 selected passes, followed by 0226 307 unique selected passes (173 recovered +134 reruns), NOT additive to local 51; original SQL6 and DB4 passed on core. Root plan VERIFYING v3, 3 persisted events, 20 sample minor units reserved; descendants queued, IV/H01 no run. Historical 0196L FAILED terminal is a different plan. Original SQL10/SQL8/0219 full composition, archive result and independent authority still open. 29 current nonlocked diagnostic PASS is not historical locked29. No gate promotion: 7/16, UI 21/40, independent 0/7.
+
+W8 p10j15 pins P14 adapter and candidate manifest, adds 17 original historical presentation cases. Browser harness retains 68 earlier captures and adds four planned captures, same app-session digest CEO/Office/Agent/Project context, exact plan read, mismatch/expiry, separate lifecycle slots/reset, skill diagnostic and organization IV distinction. Browser plan and adapter NOT_RUN. Existing Workflow draft checks retained; live Research is not shown in any view. No new data API or fake skills/agents; persisted canonical Research evidence and exact identity DTO required before connecting.
+Environment actual: DNS [Errno -3], no postgres/initdb/pg_ctl/psql/docker, psycopg or psycopg2; no full checkout or reviewed locks. PG runner 0215 exact transferred; five D0 DDL do not define RLS policies; separate two-tenant non-owner FORCE RLS design and independent review needed. No PG test or RLS closure.
+
+Maintenance: follow P10J15_RUNBOOK.md and 0226 core records. On failure verify checkout, locks, compiler, scope, event/command/journal/lease/budget and archive. UNKNOWN quarantine, no auto retry. Roll back tests/harness/manifest together to 1d0d4eb89e0aff92720c0d545247b7bd3713012e on separate branch, not DB restore. No real provider/tool/agent/spend/main/CI/PROD.
+
+---
+
+# UI-P10J-14 — core/UI source reconciliation (D0)
+Parent UI 14348b3d6259a41725142585da886aefb63f11e8; latest core b201833f948f91293414e91000bc53377de9b6d1; source f7d66eb39c6151bfd994919ac7df51a4e72fe694; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. CEO-0174/0179=B only; no new normative authority.
+
+## What/why/how
+- 28 exact core product blobs selected (all differing backend product paths + five historical evidence frontend paths); 233/233 core backend product blobs exact in candidate. UI-only tests retained. 439 product files, 438 manifest records, 25 new paths, 36 changed/new including manifest. Source composition, not a Git merge or proven runtime integration. No DB migrations or package changes. Core database/contracts tree differences absent in observed heads; old UI browser harness retained.
+- Both lifecycle readers retain local reset, filters, selectable timeline, provenance and independent scope; include exact core HistoricalEvidenceStrip with explicit unobserved slots and identity. Terminal and prefix remain separate; no live join. P13 provider and Project Studio unchanged.
+- Authority wrapper replaced with exact 0224 core owner source, adds company/result optional bindings and separation checks; same original root/claim semantics, no second implementation. New core fenced_transition, scheduler, scheduled admission, sample model, Research and test closure all transferred. Actual SQL composition and production independent custody remain HOLD. No grant, provider, live dispatch or release.
+- Skill Studio adds static source/quarantine/F0/publish gate presentation using existing diagnostic read/reset. No actual skill catalog, install, enabled count, or grant. Organization Studio groups exact four role templates, H01 and coordination role; separate IV/PEP/W-A. Not real staffing or reporting assignments.
+- Local strict TS 5.8.3 + Node 22.16.0, 6/6 exact new governance model tests PASS; source SHA pins match local. 43 prior 0224 selected and 28 P13 replay tests are historical only. No new React, full W8, canonical SQL8, PG13/RLS, independent acceptance. Git DNS unavailable; no postgres/psql/docker in local PATH.
+- W8 adapter pins P12 parent and new manifest; retains review/lock gates, adds model test and existing run-studio-0223 before inherited suite. New adapter not executed; browser harness still historical 68 captures and needs explicit shared replay / studio / lifecycle interaction coverage before acceptance. No CI.
+
+## Maintenance / rollback
+Use exact manifest aecff74cb7c9084d80a90cf7f317545c5e086e4e; inspect UI historical scope and reset, test sample slots and missing/invalid rows. Diagnose core by exact project/plan/run, company pin, result archive and intent journal; unknown stays quarantine, no retry. PG run only on disposable database, non-owner RLS and two-session contention; never use SQLite as PG proof. New UI grouping/model is presentation choice. Roll back to 14348b3d6259a41725142585da886aefb63f11e8 on separate branch; no live DB restore, no main merge. Next: exact checkout, W8 audit/prepare/review/install/test/smoke; run canonical SQL8 and PG13 plus RLS; targeted browser tests for both readbacks, shared snapshot and new studios; only then extend Research UI persisted evidence.
+
+---
+
+
+## Selected local regression — evidence supplement
+Exact source 7049122143611f35a2152f721f7d99d514a7af9d; 6/6 re-materialized files matched candidate SHA-256. Original Python shared replay 6/6 and Node parser/transport 22/22 PASS, strict TypeScript compile PASS, Python 3.13.5 / Node 22.16.0 / TS 5.8.3. Four fixed Python-generated replays, no DB/HTTP, React, Studio, full W8 or PG execution. Product tree path/size 413/413, exact core blob 30/30, manual source hash readback 2/2. No new acceptance. Full checkout remains unavailable. See revisioned evidence and matrix. Historical initial NOT_RUN entry superseded only for these selected checks.
+
+# UI-P10J-13 — bounded shared historical Studio integration
+
+UI parent 3384a301d7f1727153f64df950a82fc20bb234a5; core source c94753b4f2bc8a3e739ffa997ca9547772deeaf2; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. CEO-0174/0179=B isolated source scope only. Single-parent candidate, not a branch merge. Full Git trees untruncated: 397 UI product blobs / 385 core; 317 identical, 48 UI-only, 36 core-only, 32 different incl manifest. Selected 30 exact core blobs, two manual UI edits. Manifest pins 413; no files deleted. Parent manifests verified path and length against both trees; manual parent bytes SHA-256 verified. Core pin metadata reused; not full byte rehash.
+
+## Composition
+- Root app/layout wraps children in existing SharedSnapshotProvider; CEO summary adds SharedSnapshotPanel; existing OfficePanel adds office variant. Shared session is app-local, finite historical replay, not live SSE. 4s read timeout, 30s expiry and clear on hidden; no project/world association. Static fixture SnapshotStrip explicitly labels geometry. Existing UI sections, navigation, room camera/filter, independent lifecycle readbacks and draft workflow retained.
+- Exact core AgentDetail and CorePreview include StudioContextPanel; ProjectStudio adds same context to selected reference task. Fixed plan GET validated against pinned fixture; no role-to-instance assignment. Local workflow draft remains separate from canonical plan. No live avatar motion.
+- Read-only API /demo/v1/lifecycle/shared-snapshot and frontend /api/demo/shared-snapshot plus /api/demo/plan. Core replay serializer and paired schema copied. No DB changes, grants, provider calls, external effects, dependencies, main or CI. Authority and all remaining core execution changes not imported. UI variants of lifecycle readers preserved; later semantic reconciliation still required.
+- No full checkout in current environment (GitHub DNS unavailable); no new product test, full build, browser or PG/RLS acceptance. Original core diagnostic runner and tests transferred as candidates. Previous W8 PASS applies only to P10J-08. Need exact new manifest and union-specific W8 review/adapter before any build.
+
+## Maintenance / rollback
+Check app layout/provider, shared route 503 and parser framing/digest/sequence; confirm both panels display same digest within app session and clear on hidden/expiry. Validate plan proxy 503 for altered plan; task/role selection must never assign historical agent. Check all 13 destinations and P12 role/room interactions, no fake status; run exact locked regression and browser. Roll back by starting a fresh branch at UI parent 3384a301d7f1727153f64df950a82fc20bb234a5; preserve original heads, no live DB restore. Next: exact core source closure review for intent authority, T1 and two lifecycle readers, then full union with reviewed W8/PG and Research vertical slice. No new gate promoted.
+
+---
+
+# UI-P10J-12 — Agent Studio and static Office room context
+
+Parent UI 9cd9ebee9f0760eeec24a86bf02487f02096eea8; observed core c94753b4f2bc8a3e739ffa997ca9547772deeaf2 (TRACK-0223). Roadmap phase 4, parallel E/W1; phase 2 remains product-critical; phase 3 only role/plan presentation here. No new execution or security authority.
+
+## Changes
+- AgentDirectory now exposes catalogue counts, selected role, direct predecessors/followers from the validated reference plan, department and filter context. Human CEO remains ultimate authority. Counts are templates, not employees. No reporting relationships fabricated. Existing AgentDetail tabs preserved; core AgentDetail/StudioContextPanel not imported.
+- OfficeIllustration uses local room selection to focus camera and filter the existing validated artwork stations. Reset restores all rooms, all stations and home camera. Focused room uses pressed semantics, visual emphasis and a scope caption. Reserve floor remains empty. Existing geometry, artwork, collisions, pathfinding, office snapshot and JOIN_HOLD unchanged; no live avatars or movement. OfficeIllustration and its CSS overlap with core; scoped UI changes only, explicitly retain core variants for later reconciliation.
+- New shared presentation-only studioContext helpers. No API, DB, dependencies, event, agent identity, real assignment, grant or persistent mutation.
+- Browser harness extends current 68-capture plan with role/filter/dependency and room/reset checks. Existing 52+16 captures remain planned, not executed. W8 adapter pins exact parent, manifest and browser; adds 6 new model tests before inherited chain.
+- Exact local TypeScript 5.8.3 strict compile and Node 22.16.0 model tests 6/6 PASS; model/test SHA-256 exact match. Four original source pins checked before modification. New TSX/React/build/browser/full W8 NOT_RUN. No independent or product gate promoted. Full ZIP not materialized locally.
+
+## Integration and maintenance
+Per-area status is recorded in progress/INTEGRATION_MATRIX_UI_P10J12.json and progress/INTEGRATION_MATRIX_UI_P10J12.md, preserving pinned core TRACK-0223 and separate UI evidence. Every future UI delivery must update a revisioned 24-area matrix plus item-level source/integration/test/acceptance, without equating a branch-local source change with unified product acceptance. Core status is read-only, not rewritten on UI branch.
+Diagnose Agent Studio via readPlanProjection guard, selected role, query and direct task links. Never derive organization hierarchy from DAG. Diagnose office via selected room, validated station list, gallery camera and keyed floor remount. Reset camera restores local scope; no DB restore. Revert bounded UI changes or use pinned parent 9cd9ebee9f0760eeec24a86bf02487f02096eea8. 
+Next: exact W8 review/build/browser; separate 0223 integration candidate, preserve SharedSnapshotProvider and StudioContextPanel with their full contract graph. Reconcile shared presentation and authority via three-way review, not overwrite. Follow core's phase-2 SQL/PG/RLS prerequisites. No core merge, main, CI, PROD or real provider.
+
+---
+# UI-P10J-11 — CEO and Work studios information architecture
+
+Parent UI 9610417c422c2cf162f023a1a8dc5e6bedaf69ec; observed core c94753b4f2bc8a3e739ffa997ca9547772deeaf2. Bounded UI presentation candidate under CEO-0174/0179; no branch union, main merge, CI, PROD or external effects.
+
+## Product changes
+CEO default: Yönetim özeti (SnapshotStrip, MetricsStrip, OperationalReadback, four static role templates and links to goals/decision catalog). Operations: original OfficePanel/OperationPanel and WorkbenchLifecyclePanel. Technical evidence: original terminal/prefix readers, CorePreview, MVP, outbox, admission, seven independent readbacks, plan progress and development lanes. Snapshot provenance and D0/HOLD banner remain visible. No synthetic role template is promoted to employee or live KPI. Office-only route retains both original historical readers, floor reset, decor and its independent readback center.
+Work/Audit: Project Studio (existing reference plan and dependency view), Workflow Studio (existing local draft validator, graph and undo/redo), İş denetimi (existing catalogue, CorePreview, task-budget, review stages, lifecycle readers and three readbacks). The former all-in-one DevelopmentReviewPanel gains optional review-only mode; default all remains compatible. Other 10 catalogue destinations retain their existing components; all 13 navigation destinations remain. Version label now P10J-11.
+SectionSwitcher is an accessible pressed-button group, not a route or authority state. Unmount the inactive section: cancels existing scoped readers through their own cleanup; returning starts fresh. Reset local floor/role/display and unpersisted workflow draft on selection; visible warning explicitly explains this. No new domain state, API, event, DB, grant or dependency.
+
+## Parallel reconciliation (reviewed, not executed)
+Compared both pinned Dashboard implementations. Core Dashboard adds SharedSnapshotPanel and uses a distinct shared historical provider/consumer contract; UI adds local workflow draft, readback center, role directory, office decorations and independent historical prefix. On a future isolated union candidate preserve this new section layout and existing UI consumers; integrate core SharedSnapshotProvider/app layout and its exact API/contract dependencies together before inserting shared historical observation in CEO summary/office. Keep local prefix vs shared session semantics distinct, never aggregate or assume synchronized data. Review the exact two-sided Dashboard, lifecycle readers, intent_authority and manifest using ancestor and latest heads; security owner retains authority implementation. No auto merge. Existing 0223 agent/plan changes not claimed as included here.
+
+## Evidence / acceptance
+Two original changed product files SHA-256 and length matched prior manifest before transformation. New manifest 394 pins, six changed/new product files; no backend/dependency changes. Exact local section model and test SHA-256 match candidate; TypeScript 5.8.3 strict compile and Node 22.16.0 four tests PASS. Three exact TSX files independently rematerialized, SHA-256 match, transpile syntax diagnostics zero. Not full typecheck or React test. All four original W8 browser scripts adapt to new section navigation; 52 default captures retained, 16 section captures added (68 planned), with actual height target <=3 viewport heights, no horizontal overflow, 7/7 and 3/3 readback inventory, local draft add/undo/redo/cycle and section reset. Browser NOT_RUN, new full W8 NOT_RUN; previous P10J08 acceptance cannot be carried over. No new UI or core gate accepted.
+W8 adapter pins prior adapter, manifest and all four replacement browser blobs, retains original verification, dependency approval, API parity, read-only DB guards and historical core29 checks. Adds section model test before inherited tests. Run only from exact checkout with new review/stage. Full ZIP not materialized locally; authenticated pinned GitHub archive is delivery. P10J11 source code is not a running build yet.
+
+## Maintenance and rollback
+Debug section selection via SectionSwitcher aria-pressed, check view/section-specific mount and read cleanup. Verify inactive components absent, not hidden via CSS. For failed layout inspect computed height/overflow at 390/1440 in both themes. For draft reset reproduce switch away/back; local-only behavior is intentional and not saved. Rollback isolated UI branch from 9610417c422c2cf162f023a1a8dc5e6bedaf69ec, or bounded revert, not a live DB restore. Core branch unchanged.
+Next: W8 audit/build/browser on exact P10J11; controlled 0223 union candidate and Agent Studio/office visual improvement on distinct scopes. Preserve HOLD and no fake live status.
+
+---
+# UI-P10J-10 — mobile navigation source candidate
+
+Parent UI 2edf353f3c4a2ceb533b7bccd3cd52bc8632b732; parallel core c94753b4f2bc8a3e739ffa997ca9547772deeaf2; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. Complete untruncated Git tree comparison: UI 391 product blobs, core 385; 320 same, 42 UI-only, 36 core-only, 29 differing shared paths. Previous P10J09 comparison is historical. Dashboard, shared projection readers, authority, contracts and manifest differ. No union/merge. Navigation TSX/CSS identical across observed heads before this candidate.
+
+## Changes
+- Navigation: independent mobile disclosure defaults closed; search and 13 destinations retained; Escape clears search first then closes; Ctrl/Meta+K opens and focuses search; in-page selection closes and focuses main; full office Link retained. Desktop compact toggle and labels retained. No API/DB/dependency/authority changes.
+- CSS: mobile 44px disclosure and bounded scroll region; closed panel excluded from layout and accessibility tree by display:none, desktop retains original menu. Design target heading y<=240px; actual rendered height NOT_RUN.
+- Existing browser harness updated for mobile menu, keyboard/search, focus, 13 routes and 52 captures. Existing harness history remains at parent. New exact W8 adapter pins parent, manifest and changed harness; inherits review/install/build/smoke gates. New W8 run required; previous 8/8 applies only to prior source.
+
+## Evidence and rollback
+Both original navigation files matched prior manifest SHA-256/length. New manifest retains 390 pins, changes only two source records. Exact new Navigation.tsx SHA-256 10c737f3254fdfa2a2bb72bd4ed12eebc1293b85dcc7cb01e9be8e10da3bc7c0; locally re-materialized and independently hashed with Node crypto; TypeScript 5.8.3 transpileModule diagnostics 0, not typecheck or React product test. New CSS SHA-256 d44fb7e6482becfe0b1b0c7b26c79410dc4ab48f081dc1f2881a234c78337a98 generated in connector script. Actual React/Next build, browser, pixel comparison, full W8 and PostgreSQL NOT_RUN. No promotion of UI 21/40, historical core 7/16 or independent 0/7. Full ZIP not materialized in this environment. Rollback via isolated branch from 2edf353f3c4a2ceb533b7bccd3cd52bc8632b732; historical tested source 752b225deac4557a548faec7191a090fbfba19f7. Do not restore live DB. Troubleshoot disclosure via data-mobile-open, computed visibility, focus and keyboard events; W8 audit exact manifest and auxiliary pins before preparing new review. No main/CI/PROD.
+
+## Next
+Run exact P10J10 W8 audit and fresh reviewed lock/install/test/smoke; measure both themes and viewports, inspect 52 captures. Reconcile 29 differing paths at actual heads with common ancestor; CEO summary/operations/evidence and Work/Audit splitting follow on a separately scoped candidate. Preserve all seven reads, source provenance, HOLD and independent IV; no fake agents. Breakpoint 680px retained, 44px disclosure and scroll cap are presentation choices, not normative decisions.
+
+---
+# UI-P10J-09 — exact delivery and real-screen review
+
+Source archive reconstructed full Git tree e4e16879901fe045be686fceaa1db525d02c8996 from 1,544 blobs, exact tested source 752b225deac4557a548faec7191a090fbfba19f7. Original pinned archive auditor and W8 audit executed locally: 390/390, 16 pairs, 20 auxiliary blobs PASS. Raw REVIEW/lock hashes and all three acceptance markers match. Raw core29 report: 29 PASS, 55 exact historical 0207 files, no promotion to 0223. All 52 PNGs decoded, distinct SHA-256, four viewports/themes; contact-sheet review and selected full screen inspection. User Windows full run not independently replayed. PowerShell transcript omitted native command stdout; original console paste remains separate. No raw wheel or DB bytes; no pixel comparison baseline.
+
+## Product findings and next work
+- P0 mobile navigation: 12 non-office views show large open menu before heading (~75% first 844px viewport). Reuse design-system/Navigation.tsx and Navigation.module.css; implement accessible compact menu, keyboard focus, Escape, search, 13 destinations, preserve desktop and office route. Proposed mobile heading visible within first 240px when menu closed. Update browser harness explicitly, test all destinations and themes.
+- P0 CEO and Work/Audit information architecture: 7182/13477 px CEO desktop/mobile, 7079/11624 px Work/Audit. Separate summary, operations and detailed evidence; preserve source/HOLD and all 7 existing reads. Proposed initial overview <=3 viewport heights before optional detail expansion; test actual measured height, no loss of evidence. Dashboard.tsx shared with core; do not overwrite without reconciliation.
+- P1 Office: keep static D0 four rooms and empty reserve floor. Improve zoom, labels, room presentation and role detail; real motion/avatars only on verified runtime identity and location. No invented agent.
+- P1 Project/Workflow/Agent: real graph selection, editor validation, undo/redo and role context browser tests; reconcile with 0223 Agent/Workflow source before feature overlap.
+- P2 catalog-only WorkType, Goals, Decision Inbox, Preferences: existing read-only states, no new grants. Improve hierarchy and domain-specific views; preserve canonical data/unknowns. Finance, Security, Reports, Events and Skill need focused information organization.
+- Version label still P10J-05 on P10J08, correct presentation version via source provenance in future candidate. CSS autoprefixer and Starlette warnings open.
+- Visual acceptance: current 52 screenshots are baseline candidates, not reviewed pixel comparison. Check 390/1440 both themes, accessible menu, keyboard, graph actions, reserve floor, no horizontal overflow, no new network requests, no fake live data, unchanged sample DB hashes. Full W8 rerun for any code candidate.
+
+Parallel 0223 source c963630b5d174f4c078b84b42ea88318086ea18e at observation; 320 same, 49 UI-only, 53 core-only, 5 divergent paths. No final 0223 handover found in this snapshot. Do not auto merge. UI 21/40 historic gate count retained pending explicit criterion mapping; W8 local 8/8. Independent 0/7. Core 7/16 last confirmed 0222; not regraded. No new product code, no main/CI/PROD changes. Rollback uses tested source 752b225deac4557a548faec7191a090fbfba19f7 and original evidence, no live DB restore.
+
+---
+# UI-P10J-08 — local Windows W8 PASS
+
+Exact source 752b225deac4557a548faec7191a090fbfba19f7; manifest 2a555e7e511fe80078b233324f3442d79cd590c6; reviewed fingerprint 754ea4debaa8a902554b9dc1e99b17ecf815f612a957d8c9aabe6010dd6b7694. User Windows transcript SHA-256 27f848f89f80e0367a9f743bf6b02bd5744280a94a3bf6a029ee239c01d80e41. Only latest P10J08 run counted; old failed run retained in prior evidence. Source audit 390/390, 16 shared pairs, 20 auxiliary blobs; unchanged reviewed dependency inventory and install passed. Backend 821/839 passed, 18 skipped (13 PG, 5 platform), zero failures; Node 369 pass, 1 skip; 9 archive tests. Next build/typecheck passed. 7 loopback API parity, 4 browser scripts, 52 baseline captures (13 views x 2 widths x 2 themes); W8 before/after guard for 5 sample DBs passed. INSTALL_OK, BUILD_TEST_OK, SMOKE_OK markers match review. User transcript evidence, not independent replay. No raw PNGs or reviewed pixel baseline supplied; no new DAG interaction-specific browser acceptance inferred. CSS autoprefixer and Starlette warnings remain. No live agents, external effect, main/CI/PROD or independent acceptance.
+
+0222 concurrent head 70d6c305c34a36361214343526d5c134cb6c9c9f: 326 same, 49 UI-only, 41 core-only, 5 divergent product paths; shared Dashboard, two lifecycle panels, intent_authority and manifest require explicit three-way reconciliation. No merge. Core 7/16 unchanged. Historical UI 21/40 ordinal retained pending explicit gate mapping; W8 8/8 local stages now passed.
+
+Next P10J-09: collect exact source ZIP and raw review/log/markers/52 PNG evidence separately, inspect visual baseline, targeted React graph/editor/role/office interactions, prepare separate 0222 union candidate only after source/authority review. Re-run W8 with union-specific locks and PG tests in permitted disposable environment. Rollback to tested UI commit; no live database restore.
+
+---
+# UI-P10J-08 — Windows portability fix (source candidate)
+Prior exact UI checkout 182adb096cb7ae46103fe86e465df36217561a71, review 510ab77355529f6c03f6701b0611d3bc1c3cc66a514b7f9179ffc54c452dd718. User Windows transcript: full W8 source audit passed 390 SHA-256/16 shared pairs/20 auxiliary blobs; 369 Node passes and 1 skip; 9 archive tests; backend 821 pass, 18 skip, zero failures of 839 (13 PG, 5 platform). 142 previous errors eliminated using process-scoped canonical TEMP/TMP. Next build failed on case-insensitive extensionless module resolution. No API/browser smoke.
+Rename component files to HistoricalEvidencePanel.tsx and DependencyNeighborhoodPanel.tsx, preserve exact component blobs; update four component imports, leave model files, API/DB/dependencies and safety guards unchanged. New W8 adapter pins original P10J05 and new manifest, detects same-stem casefold collisions and obsolete imports, scopes Windows TEMP/TMP/TMPDIR to a canonical disposable directory and checks child interpreter path. Original lock gate intact; new manifest requires new review even with same dependency versions. Candidate not yet built or browser-tested. CSS warnings remain. Rollback: use old exact checkout and stage, not restore any live DB. No merge/CI/PROD/independent acceptance. UI gates remain 21/40 until evidence review.
+Evidence: ../../tests/evidence/TEST_EVIDENCE_UI_P10J08_WINDOWS.json.
+
+
+# UI-P10J-06/07 — verification, 0220 alignment, environment HOLD
+UI source 182adb096cb7ae46103fe86e465df36217561a71; core 0220 final delivery a37ffd559105d7a72df41a6d3354203a8282edb4; common ancestor b395d1944877128ab1bb7fa6477fc3188841fe57. P10J-06 attempted documentation commit was not applied (connector call ceiling); this record closes that documentation gap, not product acceptance. Full UI tree: 391 files / 390 manifest pins, 390 path/size matches; manifest 106bc3353d545cf4145093c766b8b9d18caecc5d. Three-way product comparison: 333 identical, 50 UI-only, 23 core-only, 4 divergent; 75 selected API/contracts/projection paths identical. 0220 7/16 gates, UI 21/40 and independent 0/7 unchanged. No product change, new authority, merge, CI or PROD.
+Prior P10J-06 46 model checks; P10J-07 independently re-materialized 50 exact files in isolated product layout and reran 49/49 (12 read, 9 scope, 14 session/join, 11 graph, 3 draft overview). Actual original tests, mock fetch/fixed fixtures; Node 22.16.0, TS 5.8.3 not pinned. Exact original archive auditor rejects both historical uploads (missing full product manifest). 20 unique nested archives scanned; old archive not a current checkout. 340 source pins missing. DNS, offline npm and wheelhouse block locks; full W8, build, seven API and 52 browser tests NOT_RUN.
+Integration review (proposed, no merge): preserve shared projectionRead/Scope/Session and parsers. Reconcile two lifecycle views into one guarded reader/renderer retaining reset, filters, explicit provenance and unobserved slots; consolidate layoutWaves/graphPresentation and role context only after reviewing validated canonical/draft boundaries. Core owns intent_authority, scheduler, admission; no stale UI wrapper overwrites. Regenerate union manifest from exact bytes and test on separate explicitly scoped integration candidate. No live snapshot/SSE or actual assignment claimed. W8 first, no new decorative engine.
+[Evidence](../../tests/evidence/TEST_EVIDENCE_UI_P10J07.json) · [Runbook](P10J07_W8_RUNBOOK.md) · [Comparison](../../releases/GITHUB_READBACK_UI_P10J06.json). Rollback documentation commit only; product remains pinned.
+
+# P10J-05 final readback
+
+Product source 50c2a5a0c0cbb852f0139a2e2a135a7df6b8c66f; 391 files / 390 pins, 12/12 changed SHA-256, 390/390 paths/sizes and 378 preserved old Git blobs. 34 local exact archive recoveries. 20/20 W8 auxiliary and 7/7 adapter chain Git tree pins; W8 NOT_RUN. Graph model 11/11, exact PlanGraph TSX syntax zero errors, standalone Chromium native details sanity PASS (not React/product). npm ENOTCACHED and Python wheels unavailable; reviewed locks absent. 21/40, independent 0/7 unchanged. [Readback](../releases/GITHUB_READBACK_UI_P10J05.json).
+
+# P10J-05 baseline compatibility correction
+
+Initial source commit 8297bc479efa3da5ddc292a0ed1b6be41f15dec3; new manifest 106bc3353d545cf4145093c766b8b9d18caecc5d; same 390 pins / 391 product files. Two lifecycle panels retain original vN · STATE timeline and add collapsed event explorer. Static review of original P02/P03 browser contracts exposed selector/text risk; fixed prior to acceptance, actual browser still NOT_RUN. Local dependency probes on exact package/requirements: npm offline ENOTCACHED, pip no-index missing FastAPI. No reviewed locks. Graph model 11/11 previously executed; no React/product acceptance. Source delta and evidence updated.
+
+# UI-P10J-05 — graph and historical presentation
+Parent fe88ad7ca3e774f313e64804415192c034414ca8; manifest e7534a4d65aaa960e7d07788197181b4721e7075; 390 pins and 391 product files. 8 replacements, 4 additions; no deletions. 34 exact prior files recovered locally from 0155; full checkout and reviewed dependencies remain missing. New graphPresentation model 11/11 local tests (one exact original plan fixture); React/office visual/build/API/browser/full W8 NOT_RUN. Project graph shows full validated plan independent of filters. Workflow graph uses validated draft waves and explicit source/target pick, existing editDraft owns changes and cycle rejection. HistoricalEvidence reused in terminal/prefix panels with independent reader reset and provenance; no timestamp or current runtime inferred. AgentDirectory shows static plan role templates, no assignment. Office chair furniture and role portrait preview are decorative, not movement. Finance/Security/Memory/Model contexts benefit through shared historical prefix/terminal components; no new service/API/DB/permission. New W8 adapter candidate pins previous exact adapter, no bypass. 21/40, 0/7 unchanged. Diagnose graph from original guard, compare reference versus draft edges; revert single bounded product commit on isolated branch. D03/D04 and core 0213 stay separate.
+
+# P10J-04 readback and test-layout correction
+
+Reconciliation commit 1b5481c2ed677e9ea04c913dd231696b6f14b741: 15/15 P10I delivery paths exact (13 direct, 2 historical), 387/387 product Git blobs preserved. Standalone tests re-run from repository-relative layout: 12/12 classifier, 4/4 substituted-parent adapter; test import corrected to scripts.parallel_preflight. Full W8 remains NOT_RUN. Original P10I versions of three common docs preserved in reconciliation commit; P10J references appended hereafter.
+
+# UI-P10J-04 — parallel reconciliation and W8 source chain
+Parent 3077fa9c4f285bea8425f53f036570db6f859c9c; P10I final documentation commit 61c61894cd29f3dd5a5c148516ffccd369bf47e1; common source 2febb84e539eddcfe4821783910c430ac20697c8; 0213 reference 3cec45d2040fc35293ddcb82840ee543ba1f4019 remains separate. All 15 P10I delivery paths accounted for: 13 exact transfers, 2 exact historical snapshots; current P10J handover retains prior content. Original P10I adapter recovered exact. P10J adapter now pins P10I, adds only P10J model tests; inherited W8 review gates preserved. New offline three-way inventory classifier and tests, coordination protocol in AGENTS. 12 local synthetic classifier tests and 4 mocked-parent adapter tests pass; actual full W8 chain load/build/API/browser NOT_RUN. 387 product files and 386 manifest pins unchanged. No API/DB/dependency/authority change. 21/40 UI milestones and 0/7 independent acceptance unchanged.
+Core 0213: new tests and design only; multi-project SQLite result not PostgreSQL/RLS or independent acceptance. UI uses historical/read-only provenance; no fabricated ACTIVE_VERIFIED. Do not merge core.
+Diagnosis: check pinned common ancestor, untruncated trees and expected branch heads; inspect overlap/manual list. W8 actual lock review remains mandatory. Rollback via bounded revert on isolated branch, preserve prior claims/history. Full ZIP not materialized; DNS failure. See checkpoint, evidence and catalog for exact paths.
+
+# P10J-03 final readback
+
+Source integration 346cf03de51c1b24ab1a5e9f9a973de6a12b61d0; W8 unittest invocation fix 9df9c2fa74bc31b6c01d2a2b5581432c0d1a98fb. 12/12 changed/new product SHA pins verified; 386/386 paths/sizes, 374 preserved Git blobs. 18 additional exact prior source pins (41 distinct old pins across batches). 20/20 W8 auxiliary Git tree pins and milestone mirror match; full W8 NOT_RUN. Standalone draft summary 3/3 and previous checkout auditor 8/8 rerun in this round. See ../tests/evidence/TEST_EVIDENCE_UI_P10J.json. 21/40 and 0/7 unchanged.
+
+# UI-P10J-03 — parallel source integration
+Parent 96aa2c1247c49430f2e01c4f8eae9e70a5ffa4c1. Manifest 35724e95238201da97a9f98b390d879704f68771; 386 pins, 387 product files, 10 modifications + 2 additions, no deletion. 385 parent product blobs match P10I; 384 parent paths/sizes match; 12 selected SHA/length matches this batch, 23 unique across two batches (not full byte audit). W8 P10I adapter absent in parent tree and fetch 404; new P10J candidate preserves P10H chain, adds P10I/P10J models and two original archive auxiliary pins. Full W8 NOT_RUN. Local standalone draftOverview 3/3 on TS 5.8.3 / Node 22.16.0, not locked product run. All UI React, artwork and API/build/browser tests NOT_RUN. 21/40, independent 0/7. No live authority, no main/CI/PROD. Details: ../progress/UI_P10J.json and ../catalog/revisions/TECHNICAL_CATALOG_UI_P10J.json.
+
+# UI-P10J-02 — source recovery checkpoint
+
+Product baseline P10I 2febb84e539eddcfe4821783910c430ac20697c8; manifest blob a26c4d53e66d800226beae27626f03c68f5bb064; 384 pins, 385 product files. 12 remote SHA/length matches from checkpoint 01. New standalone checkout audit candidate: 8/8 local fixture checks, not full checkout. Product unchanged; 21/40, independent 0/7. See ../docs/UI-P10J/REMOTE_SOURCE_CHECKPOINT.md and audit_manifest.py. Historical pointer retained below.
+
+# UI-P10H — D0 original wrapper and UI candidate
+
+Source a5b2bd5139d374e3828fbe0e374407c2433bd58d; parent f2457545cf52805e5ed5ea86cd869c326fd162ca; manifest e818c96e2c81580cfdc27302e8690d68ba743ffd. 381 pins, 382 product files, 163 frontend, 4 additions and 6 modifications, 371 preserved. No production backend change. Parent 198/198 selected package hashes, 377/377 remote paths/sizes, 156/377 local exact bytes. All 19 recovered files exact. Full checkout and remote full byte audit still incomplete; no main merge, no new grant.
+
+## Actual tests
+39 memory/model, 49 joint/witness, 33 original T1/wrapper, 12 new tests of real 0211 execute_authority_fenced_transition (10 protections, 2 residuals), 52 original core regression outcomes = 185 backend outcomes. Negative cases count as reproduced boundaries, not security acceptance. 66 model tests (12 new), 4 TSX syntax checks, 22 standalone Chromium SVG checks, 7 same original app.main plus compiled GET parity; POST denied and 5 SQLite hashes unchanged. Original W8 blob recovered and P10G/P10H nested loads verified; audit HOLD due incomplete checkout. Lock probe ENOTCACHED; Next exit127; real Next 0/7 and browser 0/52 NOT_RUN. PostgreSQL/RLS and independent acceptance HOLD.
+
+## Changes, diagnosis, maintenance
+- test_authority_wrapper_p10h: actual 0211 wrapper with original 0210 fixture and original SQL mapping; explicit disposable stores. D03 root identity replacement, D04 triple restore reproduce residual. Other original tests include external latest and restore gaps. No production authority changes.
+- readbackBoundary and ProjectionReadbackCenter: static seven endpoint scope/limit descriptions, distinct from historical data; no cross-snapshot join or permission.
+- draftHistory/WorkflowDraft: bounded redo/undo, validator on every candidate snapshot, successful divergent edit clears redo; reset clears histories and drag source. No canonical plan mutation.
+- roomAccents/officeArtwork/OfficeDecorPanel: two original static room signage assets, four placements on core floor only, reserve floor unchanged. No path, collision or occupancy mutation.
+- AgentDirectory: selected department role template count only. ProjectStudio preserved; no new ProjectStudio feature claimed. Model/Memory/Finance/Security evidence scope only. No API, database migration, dependency upgrades or runtime grant.
+- W8 P10H candidate adapter pins P10G adapter, selects new manifest and adds model test; original lock review preserved. Nested loading PASS, whole runner not executed. Recover complete checkout, verify auxiliary sources and obtain reviewed dependency locks; do not use simulated substitute packages.
+
+## D03/D04 design candidate (not approved production authority)
+Maintain independent authority in a separate administrative and restore domain. Monotonic root/claim ledger with nonrollbackable witness and distinct backup custody. Bind intent/scope/epoch/idempotency to effect sink; sink must reject stale epoch or repeated claim. No retry on ambiguous outcome, partition or timeout; quarantine and independently reconcile. Require independent negative tests for root replacement, all-store restore, split brain, lease expiry, key rotation, unknown outcome, and bypass at actual effect boundary. D01/02/03/04 remain open; local SQLite cannot prove this architecture. No deployment or operational permission granted.
+
+Rollback: restore candidate parent on separate integration branch, keep original logs and fixtures. No main modification. Never clear claims or recover by overwriting authority. For UI inspect guide and DAG validation; compare exact blob and local evidence. 21/40 milestones and 0/7 independent acceptance remain unchanged.
+
+# UI-P10I — full checkout and reviewed product verification
+
+Priority: obtain exact full P10H GitHub archive (not selected evidence ZIP), verify 381 product SHA-256 entries and auxiliary pins. Recover original W8 harness auxiliary closure; run audit, prepare reviewed lock inventory, install only after explicit review, then full backend/Next build and product smoke 7 API/52 captures. Do not bypass lock or security gates. Original 0210/0211 wrapper diagnostic work is complete in selected environment; run locked regression when available. D03/D04 external authority design requires independent approval and verification; no real grant. Continue A-H, especially ProjectStudio graphical context and React accessibility/office product acceptance. Retain previous decisions and source versions; update catalog/progress/evidence/handover.
+## Concurrent 0221 source checkpoint
+First ref update aborted because 0221 appeared. Rechecked exact fdbcdef68ed097bf4aa164f44b5e6fdb791cb241: 332 identical product paths, 50 UI-only, 26 core-only, same 4 divergent paths, 75/75 selected contract blobs identical. 0221 changes fencing, intent authority and sample adapter, adds two tests. No 0221 acceptance claimed. This documentation-only snapshot records 0220 final and 0221 source checkpoints; neither merged.

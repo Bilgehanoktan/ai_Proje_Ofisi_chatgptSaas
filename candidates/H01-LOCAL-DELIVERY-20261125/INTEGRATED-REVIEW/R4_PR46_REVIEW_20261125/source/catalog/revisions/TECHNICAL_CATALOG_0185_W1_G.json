@@ -1,0 +1,81 @@
+{
+  "revision": "0185-W1-G",
+  "files": [
+    {
+      "path": "ai-company-os-frontend/features/finance/financeModel.ts",
+      "symbols": [
+        "FinanceMetric",
+        "CatalogRow",
+        "FinanceView",
+        "readFinanceView",
+        "financeMetricText",
+        "fields",
+        "hold",
+        "record",
+        "rows"
+      ],
+      "purpose": "Strict D0 fixture/scope/authority/catalog guards; eight unavailable metrics, pinned historical goals and SaaS states; no finance computation.",
+      "dependencies": [
+        "fixtures/company.catalog.json",
+        "fixtures/office.snapshot.json"
+      ],
+      "errors": [
+        "FINANCE_SCOPE_HOLD",
+        "FINANCE_AUTHORITY_HOLD",
+        "FINANCE_SOURCE_HOLD",
+        "FINANCE_REVENUE_HOLD",
+        "FINANCE_CATALOG_HOLD"
+      ],
+      "diagnosis": "Inspect source pins, exact rows, snapshot scope and null revenue; do not relax to accept actual data."
+    },
+    {
+      "path": "ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+      "symbols": [
+        "FinanceStudio",
+        "tabs",
+        "Tab"
+      ],
+      "purpose": "Read-only metrics, source field selection, SaaS and historical goals tabs; no new authority.",
+      "dependencies": [
+        "React",
+        "financeModel",
+        "FinanceStudio.module.css",
+        "EDS"
+      ]
+    },
+    {
+      "path": "ai-company-os-frontend/features/finance/FinanceStudio.module.css",
+      "symbols": [
+        "studio",
+        "banner",
+        "metrics",
+        "metric",
+        "detail",
+        "cards",
+        "card",
+        "boundary"
+      ],
+      "purpose": "Responsive layout, EDS tokens, reduced motion."
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "symbols": [
+        "DashboardView"
+      ],
+      "purpose": "Add FinanceStudio import and conditional mount on existing SaaS ve Finans navigation; preserve original catalog.",
+      "diagnosis": "Check exact anchor and reconcile other branch Dashboard instead of overwriting."
+    },
+    {
+      "path": "ai-company-os-frontend/tests/finance-model.test.cjs",
+      "symbols": [
+        "12 node:test cases"
+      ],
+      "purpose": "Null/zero separation, distinct sources, historical goals, fail-closed scope/authority/catalog and malformed inputs, copy independence."
+    }
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "contract_changes": 0,
+  "dependency_changes": 0,
+  "rollback": "Revert exact five source changes on the isolated branch and regenerate manifest; preserve ABCDEF and 0186 history."
+}

@@ -1,0 +1,43 @@
+{
+  "revision": "UI-P10J-19",
+  "counts": {
+    "prior_product": 476,
+    "product": 483,
+    "manifest": 482,
+    "added": 7,
+    "replaced": 2,
+    "retained": 473,
+    "deleted": 0
+  },
+  "gates": {
+    "ui": "21/40 prior; no new UI gate",
+    "core": "9/16 separate core 0227; E1 accepted in core scope only",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "full_build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  },
+  "browser": {
+    "old_blob": "9d4a741e9c8b4e643e494b0c19f0d789d6967a17",
+    "blob": "baac24da1edba991a240a0c41258f0f9a35d95fa",
+    "old_captures": 84,
+    "new_captures": 6,
+    "planned": 90,
+    "status": "NOT_RUN",
+    "scope": "4 Project roadmap viewport/theme, 2 hybrid native viewport checks; no full motion or native performance acceptance"
+  },
+  "a4": {
+    "commit": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+    "parent": "82b1f5877f90149e5aaa3e8a0029d2a0f91c9e64",
+    "manifest": "ce504ea64491081bc35881246680045dbde24b28",
+    "exact_transfers": 4,
+    "matching_dependency_manifest_pins": 9,
+    "owner_evidence": "10 new +66 prior selected reruns =76 PASS on A4 branch; not rerun here",
+    "renderer": "SOURCE_BOUND_NOT_NATIVE_ACCEPTED",
+    "portal": "HOLD",
+    "canonical_join": "HOLD"
+  },
+  "next": "P10J20 Workflow Studio; re-pin core and A4R2/A5; prioritize exact W8 build and browser acceptance on reviewed connected workstation."
+}

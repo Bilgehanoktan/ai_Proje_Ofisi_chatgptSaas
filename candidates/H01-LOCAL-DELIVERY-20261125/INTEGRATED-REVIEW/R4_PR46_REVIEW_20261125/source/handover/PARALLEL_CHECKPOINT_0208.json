@@ -1,0 +1,79 @@
+{
+  "revision": "0208",
+  "baseline": "9bbc4bed75c56a36bcacc8c430a79bf3612aa85b",
+  "source_commit": "596529ed3d3de59b29065239b42033774e31af6e",
+  "parallel": [
+    {
+      "line": "A",
+      "priority": "P0",
+      "status": "REMOTE_BYTES_VERIFIED_NOT_RUN",
+      "scope": "5 retained+7 terminal lifecycle; 55-file lock verified, 47 missing locally"
+    },
+    {
+      "line": "B",
+      "priority": "P0",
+      "status": "REMOTE_BYTES_VERIFIED_NOT_RUN",
+      "scope": "8 lifecycle+9 prefix; installed direct pins differ"
+    },
+    {
+      "line": "C",
+      "priority": "P0",
+      "status": "STATIC_CALL_CHAIN_REVIEW_NOT_RUN",
+      "scope": "LogicalT1Coordinator.commit -> PostgresSession -> CompanyCoordinatedMapping -> TerminalAnchorMapping -> lifecycle writer. Anchor terminal-only; ordinary transition uses commit_transition. Same transaction cursor; no actual composed test."
+    },
+    {
+      "line": "D",
+      "priority": "P0",
+      "status": "D0_JOINT_INSPECTION_PASS_EFFECT_GATE_HOLD",
+      "scope": "26 new tests plus 72 regression; D-02 restore gap reproduced"
+    },
+    {
+      "line": "E",
+      "priority": "P1",
+      "status": "STATIC_EXISTING_READBACK_REVIEW_NOT_RUN",
+      "scope": "Existing Dashboard uses task-budget/lifecycle/prefix views; fixture office geometry separate. No new runtime API/geometry binding, no active KPI."
+    },
+    {
+      "line": "F",
+      "priority": "P0",
+      "status": "PG_NOT_AVAILABLE",
+      "scope": "Local SQLite rollback/restore test evidence; PG13 and independent witness HOLD"
+    },
+    {
+      "line": "G",
+      "priority": "P0",
+      "status": "BLOCKED_CHECKOUT_DEPENDENCIES",
+      "scope": "Chromium available; Next/React/Phaser unresolved, TypeScript pin differs. No install/build/browser product test."
+    }
+  ],
+  "tests": {
+    "passed": 98,
+    "new": 26,
+    "regression": 72,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "D0_JOINT_INSPECTION_PASS_EFFECT_GATE_HOLD",
+      "result": "JointContext binds memory generation/graph, invocation and registry. Exact span compare and second read deny stale pins/revocation. Historical independent model reader remains structural only. No default dispatch, real effect boundary or independent authority."
+    },
+    {
+      "id": "0208-D-02",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "result": "A pre-revocation SQLite file copy with old caller pin still structurally matches. Local snapshot digest is not anti-restore proof. Independent restore-external latest witness and monotonic trusted head must be checked; actual effect atomicity remains HOLD."
+    }
+  ],
+  "next": "handover/NEXT_STEP_0208.md"
+}

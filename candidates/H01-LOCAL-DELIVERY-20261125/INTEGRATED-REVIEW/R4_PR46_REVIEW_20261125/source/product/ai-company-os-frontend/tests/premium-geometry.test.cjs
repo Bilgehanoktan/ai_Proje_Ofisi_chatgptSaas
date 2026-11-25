@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');const V=require(process.argv[2]),M=require(process.argv[3]);const fixture=JSON.parse(fs.readFileSync(process.argv[4]));let count=0;
+const test=(name,f)=>{f();console.log('PASS',name);count++};const check=(x=fixture,a=M.initialActors())=>V.inspectGeometryGap(x,a);
+test('four historical station differences with no binding',()=>{const r=check();assert.equal(r.rows.length,4);assert(r.rows.every(v=>v.binding==='NONE'&&v.agentInstance===null));assert.deepEqual(r.rows.map(v=>v.visualCell),M.initialActors().map(a=>a.cell));assert.deepEqual(r.rows.map(v=>v.snapshotCell),[[0,0],[1,0],[0,1],[1,1]]);});
+test('never grants authority even for exact sample',()=>{const r=check();assert.equal(r.status,'JOIN_HOLD');assert(!r.authoritative&&!r.placement&&!r.taskBinding);assert.equal(r.reasons.length,5);});
+test('forged sequence and epoch remove diagnostic rows',()=>{for(const change of [{snapshot_seq:1},{wa_epoch:0},{tenant_id:'other'},{agents:[{id:'x'}]}])assert.deepEqual(check({...fixture,...change}).rows,[]);});
+test('missing or reordered visual roles rejected',()=>{assert.deepEqual(check(fixture,M.initialActors().slice(1)).rows,[]);assert.deepEqual(check(fixture,M.initialActors().reverse()).rows,[]);});
+test('invalid visual cells fail closed',()=>{for(const cell of [[-1,0],[12,0],[0,10],[0,.5],[2,2,2]]){const a=M.initialActors();a[0].cell=cell;assert.deepEqual(check(fixture,a).rows,[]);}});
+test('duplicate visual cells rejected',()=>{const a=M.initialActors();a[1].cell=a[0].cell;assert.deepEqual(check(fixture,a).rows,[]);});
+test('diagnostic copied coordinates cannot mutate model',()=>{const a=M.initialActors(),r=check(fixture,a);r.rows[0].visualCell[0]=99;assert.deepEqual(a[0].cell,[2,2]);});
+console.log(`${count}/${count} PASS`);

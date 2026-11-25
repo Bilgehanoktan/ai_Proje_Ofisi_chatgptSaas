@@ -1,0 +1,2621 @@
+{
+  "revision": "UI-P10J-10",
+  "source_commit": "f6d7c74587072c55f582ba54a9c010d4ef5af289",
+  "source_parent": "2edf353f3c4a2ceb533b7bccd3cd52bc8632b732",
+  "verified_ui_head": "f6d7c74587072c55f582ba54a9c010d4ef5af289",
+  "core_observed": "c94753b4f2bc8a3e739ffa997ca9547772deeaf2",
+  "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+  "trees": [
+    "9f5169e45823890392ead38c26a8ca1464e9771a",
+    "588927cea61c7968c39dbe01db84924b3b61be87",
+    "9f3939f74fd97994ba7e2dd0e211e6c133c961cb"
+  ],
+  "source_readback": {
+    "product_files": 391,
+    "unchanged_product_blobs": 388,
+    "manifest_path_size_matches": 390,
+    "changed_product_paths": [
+      "product/SOURCE_MANIFEST.json",
+      "product/ai-company-os-frontend/design-system/Navigation.tsx",
+      "product/ai-company-os-frontend/design-system/Navigation.module.css"
+    ],
+    "new_product_files": 0,
+    "deleted_product_files": 0,
+    "changed_navigation_sha256_pins": 2,
+    "full_byte_audit": "NOT_RUN"
+  },
+  "comparison": {
+    "method": "exact three-way Git blob identity, not semantic merge validation",
+    "counts": {
+      "unchanged": 315,
+      "convergent": 3,
+      "ui_only_change": 51,
+      "core_only_change": 53,
+      "both_changed_differently": 5
+    },
+    "common_differing_paths": 31,
+    "categories": {
+      "unchanged": [
+        {
+          "path": "product/AI_Company_OS_Offline_Demo.html",
+          "base": "1b7b4ce55553711beccb686174040427d926b5a0",
+          "ui": "1b7b4ce55553711beccb686174040427d926b5a0",
+          "core": "1b7b4ce55553711beccb686174040427d926b5a0"
+        },
+        {
+          "path": "product/CORE_REVIEW.md",
+          "base": "89884d45488f6ff083d0d732c3ad489b8537483b",
+          "ui": "89884d45488f6ff083d0d732c3ad489b8537483b",
+          "core": "89884d45488f6ff083d0d732c3ad489b8537483b"
+        },
+        {
+          "path": "product/README.md",
+          "base": "8315a2473ab99c1297f537ec91418771be579816",
+          "ui": "8315a2473ab99c1297f537ec91418771be579816",
+          "core": "8315a2473ab99c1297f537ec91418771be579816"
+        },
+        {
+          "path": "product/REVIEW_CHECKLIST.md",
+          "base": "f645660f1e81b4243b2d3b0f9deeadd73121f852",
+          "ui": "f645660f1e81b4243b2d3b0f9deeadd73121f852",
+          "core": "f645660f1e81b4243b2d3b0f9deeadd73121f852"
+        },
+        {
+          "path": "product/ai-company-os-backend/.gitignore",
+          "base": "2dc3387ca18fbbffa398452f341c913c9106f3ba",
+          "ui": "2dc3387ca18fbbffa398452f341c913c9106f3ba",
+          "core": "2dc3387ca18fbbffa398452f341c913c9106f3ba"
+        },
+        {
+          "path": "product/ai-company-os-backend/AGENTS.md",
+          "base": "e44bf50d1a371a7c9af4ce63edf9bb07ac072273",
+          "ui": "e44bf50d1a371a7c9af4ce63edf9bb07ac072273",
+          "core": "e44bf50d1a371a7c9af4ce63edf9bb07ac072273"
+        },
+        {
+          "path": "product/ai-company-os-backend/README.md",
+          "base": "9a5ad295f3aa887e64fc3c59b73476402487b00f",
+          "ui": "9a5ad295f3aa887e64fc3c59b73476402487b00f",
+          "core": "9a5ad295f3aa887e64fc3c59b73476402487b00f"
+        },
+        {
+          "path": "product/ai-company-os-backend/SECURITY.md",
+          "base": "2e3d0e9a9b655847a7dcbf7ef2f10e670f78b218",
+          "ui": "2e3d0e9a9b655847a7dcbf7ef2f10e670f78b218",
+          "core": "2e3d0e9a9b655847a7dcbf7ef2f10e670f78b218"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/__init__.py",
+          "base": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "ui": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "core": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/__init__.py",
+          "base": "2d899e27663a6e414765904ffd9c4624a825adde",
+          "ui": "2d899e27663a6e414765904ffd9c4624a825adde",
+          "core": "2d899e27663a6e414765904ffd9c4624a825adde"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/admission_projection.py",
+          "base": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b",
+          "ui": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b",
+          "core": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/demo.py",
+          "base": "4d80172bc467953039ff57296055f68d740a3ff2",
+          "ui": "4d80172bc467953039ff57296055f68d740a3ff2",
+          "core": "4d80172bc467953039ff57296055f68d740a3ff2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+          "base": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+          "ui": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+          "core": "8f79bccf34660f63e57e14c67d4e0fe9132bde62"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/mvp_diagnostics.py",
+          "base": "98709a90e5d5401c4cb780a30c6e1924f2f89b65",
+          "ui": "98709a90e5d5401c4cb780a30c6e1924f2f89b65",
+          "core": "98709a90e5d5401c4cb780a30c6e1924f2f89b65"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/office_workbench_projection.py",
+          "base": "735f1aa950285b55278cc369ae08620c972f3f66",
+          "ui": "735f1aa950285b55278cc369ae08620c972f3f66",
+          "core": "735f1aa950285b55278cc369ae08620c972f3f66"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/outbox_projection.py",
+          "base": "3dc3a9407ee626284c9388124843cb34ab132a6d",
+          "ui": "3dc3a9407ee626284c9388124843cb34ab132a6d",
+          "core": "3dc3a9407ee626284c9388124843cb34ab132a6d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/task_budget_projection.py",
+          "base": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b",
+          "ui": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b",
+          "core": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/__init__.py",
+          "base": "9d457472970b7f581687ba142d1bf99ba91c7388",
+          "ui": "9d457472970b7f581687ba142d1bf99ba91c7388",
+          "core": "9d457472970b7f581687ba142d1bf99ba91c7388"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+          "base": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "ui": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "core": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+          "base": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+          "ui": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+          "core": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+          "base": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+          "ui": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+          "core": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+          "base": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+          "ui": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+          "core": "a16409c0eb6a48b5c868767d6580574641ed05b8"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/plan_binding.py",
+          "base": "c445726efb9fbd34410f5189d5aad39dc4a85201",
+          "ui": "c445726efb9fbd34410f5189d5aad39dc4a85201",
+          "core": "c445726efb9fbd34410f5189d5aad39dc4a85201"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+          "base": "ea66a72bdb84c267ded348342a941ce8e5927005",
+          "ui": "ea66a72bdb84c267ded348342a941ce8e5927005",
+          "core": "ea66a72bdb84c267ded348342a941ce8e5927005"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+          "base": "5680fa428be81645a43d7442ec161c0c10384986",
+          "ui": "5680fa428be81645a43d7442ec161c0c10384986",
+          "core": "5680fa428be81645a43d7442ec161c0c10384986"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/causal_ledger_review.py",
+          "base": "6e41d14b704591f9ca6bd18c0c91a6ac338ab2e0",
+          "ui": "6e41d14b704591f9ca6bd18c0c91a6ac338ab2e0",
+          "core": "6e41d14b704591f9ca6bd18c0c91a6ac338ab2e0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/dag.py",
+          "base": "acf97a2216e0c089056ffbba30db3eb8fe1484a7",
+          "ui": "acf97a2216e0c089056ffbba30db3eb8fe1484a7",
+          "core": "acf97a2216e0c089056ffbba30db3eb8fe1484a7"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+          "base": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+          "ui": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+          "core": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/admission_demo.py",
+          "base": "f8a6f0b25c01df4ed881de84f632045f5a343644",
+          "ui": "f8a6f0b25c01df4ed881de84f632045f5a343644",
+          "core": "f8a6f0b25c01df4ed881de84f632045f5a343644"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/admission_sample.py",
+          "base": "a697188c51173e23d645fac95abf99c282f939b3",
+          "ui": "a697188c51173e23d645fac95abf99c282f939b3",
+          "core": "a697188c51173e23d645fac95abf99c282f939b3"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/atomic_sample.py",
+          "base": "77998cd03cb8682dd54f854356ecba620f7d906b",
+          "ui": "77998cd03cb8682dd54f854356ecba620f7d906b",
+          "core": "77998cd03cb8682dd54f854356ecba620f7d906b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/coordination_readback.py",
+          "base": "d3853f4daa0c2e5acbd57490e4829c8b81227dd7",
+          "ui": "d3853f4daa0c2e5acbd57490e4829c8b81227dd7",
+          "core": "d3853f4daa0c2e5acbd57490e4829c8b81227dd7"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/coordinator.py",
+          "base": "4532e42aa0f81714f2c35441b466b48b6d1bc12c",
+          "ui": "4532e42aa0f81714f2c35441b466b48b6d1bc12c",
+          "core": "4532e42aa0f81714f2c35441b466b48b6d1bc12c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/d0_snapshot.py",
+          "base": "c067e844f1c3200c625f4811d13f12c59a602e95",
+          "ui": "c067e844f1c3200c625f4811d13f12c59a602e95",
+          "core": "c067e844f1c3200c625f4811d13f12c59a602e95"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/evidence.py",
+          "base": "3bf24b68ac2e4960ca2b4e48cc17b78ddd54490f",
+          "ui": "3bf24b68ac2e4960ca2b4e48cc17b78ddd54490f",
+          "core": "3bf24b68ac2e4960ca2b4e48cc17b78ddd54490f"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/evidence_store.py",
+          "base": "ed7534b7d85292b71ae644dcf0a92d21e4a3d6f7",
+          "ui": "ed7534b7d85292b71ae644dcf0a92d21e4a3d6f7",
+          "core": "ed7534b7d85292b71ae644dcf0a92d21e4a3d6f7"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+          "base": "e1f52722e1d33841539b709036ed1a100216b9b6",
+          "ui": "e1f52722e1d33841539b709036ed1a100216b9b6",
+          "core": "e1f52722e1d33841539b709036ed1a100216b9b6"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+          "base": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+          "ui": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+          "core": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+          "base": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+          "ui": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+          "core": "d9f2137d1afe3596d49f10fb4ada99b946416a99"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+          "base": "2b9a01807621eac35239baab55b10df6b1edb91b",
+          "ui": "2b9a01807621eac35239baab55b10df6b1edb91b",
+          "core": "2b9a01807621eac35239baab55b10df6b1edb91b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+          "base": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+          "ui": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+          "core": "c770c02b5b77eba66b6c3c1b361853075d1d4b14"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/model.py",
+          "base": "ebd68c6245c21c7fce16c0b6206dc9626050310a",
+          "ui": "ebd68c6245c21c7fce16c0b6206dc9626050310a",
+          "core": "ebd68c6245c21c7fce16c0b6206dc9626050310a"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/office_workbench.py",
+          "base": "9a0f053482c0783f453b9afc3972aab97c3881ea",
+          "ui": "9a0f053482c0783f453b9afc3972aab97c3881ea",
+          "core": "9a0f053482c0783f453b9afc3972aab97c3881ea"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/outbox_claim_sample.py",
+          "base": "bbfb25daad824f1ff427c48e4727360c9721c13d",
+          "ui": "bbfb25daad824f1ff427c48e4727360c9721c13d",
+          "core": "bbfb25daad824f1ff427c48e4727360c9721c13d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/outbox_demo.py",
+          "base": "9a1cbac866123659de1df26d9bffa0f3472cd847",
+          "ui": "9a1cbac866123659de1df26d9bffa0f3472cd847",
+          "core": "9a1cbac866123659de1df26d9bffa0f3472cd847"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/paired_demo.py",
+          "base": "7399a527549d6be3d1aa9692fcc5998c0dbf9961",
+          "ui": "7399a527549d6be3d1aa9692fcc5998c0dbf9961",
+          "core": "7399a527549d6be3d1aa9692fcc5998c0dbf9961"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/planner.py",
+          "base": "4c3bc95109c0bf209dc3298db044dcac56a40454",
+          "ui": "4c3bc95109c0bf209dc3298db044dcac56a40454",
+          "core": "4c3bc95109c0bf209dc3298db044dcac56a40454"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/policy.py",
+          "base": "c103af3841e3389086393b78bc78ca1911d8b776",
+          "ui": "c103af3841e3389086393b78bc78ca1911d8b776",
+          "core": "c103af3841e3389086393b78bc78ca1911d8b776"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/sandbox_demo.py",
+          "base": "0739bbc2bd216b3a712fc9bd0015c2bcfb9c6d50",
+          "ui": "0739bbc2bd216b3a712fc9bd0015c2bcfb9c6d50",
+          "core": "0739bbc2bd216b3a712fc9bd0015c2bcfb9c6d50"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/sandbox_store.py",
+          "base": "3b2c7339a869571bb8fe4bd381c50d3f2a1a2368",
+          "ui": "3b2c7339a869571bb8fe4bd381c50d3f2a1a2368",
+          "core": "3b2c7339a869571bb8fe4bd381c50d3f2a1a2368"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/staging_readback.py",
+          "base": "acc9a8cb2ec865662ca972e0342f004700135f67",
+          "ui": "acc9a8cb2ec865662ca972e0342f004700135f67",
+          "core": "acc9a8cb2ec865662ca972e0342f004700135f67"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+          "base": "18b40307d069622be114b77de272aaa4adaa0f85",
+          "ui": "18b40307d069622be114b77de272aaa4adaa0f85",
+          "core": "18b40307d069622be114b77de272aaa4adaa0f85"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/trust_boundary.py",
+          "base": "b662f4c5d0464a5b615bd8d0538193ae0c20add8",
+          "ui": "b662f4c5d0464a5b615bd8d0538193ae0c20add8",
+          "core": "b662f4c5d0464a5b615bd8d0538193ae0c20add8"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/trusted_policy.py",
+          "base": "e804d9f52784b15b7bc86376a91007af04adae5a",
+          "ui": "e804d9f52784b15b7bc86376a91007af04adae5a",
+          "core": "e804d9f52784b15b7bc86376a91007af04adae5a"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+          "base": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+          "ui": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+          "core": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/causal_review.py",
+          "base": "bc4c8c92ab107bb96e255430cb1e174c4fa960db",
+          "ui": "bc4c8c92ab107bb96e255430cb1e174c4fa960db",
+          "core": "bc4c8c92ab107bb96e255430cb1e174c4fa960db"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+          "base": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+          "ui": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+          "core": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/company_recovery.py",
+          "base": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0",
+          "ui": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0",
+          "core": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+          "base": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+          "ui": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+          "core": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+          "base": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+          "ui": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+          "core": "e3f94cab61a27c7d4c89d02516887146b2026eb3"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/outbox_review.py",
+          "base": "40bb09dfd9023739c4d0ed730f745d6e8688140e",
+          "ui": "40bb09dfd9023739c4d0ed730f745d6e8688140e",
+          "core": "40bb09dfd9023739c4d0ed730f745d6e8688140e"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+          "base": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+          "ui": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+          "core": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+          "base": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+          "ui": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+          "core": "9ba612632e7ebc36e875544fa90f348b7834fd0b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+          "base": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+          "ui": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+          "core": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+          "base": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+          "ui": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+          "core": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+          "base": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+          "ui": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+          "core": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/sqlite_preview.py",
+          "base": "2343afd8183d2ebc3381c1a2392c5bbf88913123",
+          "ui": "2343afd8183d2ebc3381c1a2392c5bbf88913123",
+          "core": "2343afd8183d2ebc3381c1a2392c5bbf88913123"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+          "base": "3108a4ba72d999984502e2687a4e6589b079df1d",
+          "ui": "3108a4ba72d999984502e2687a4e6589b079df1d",
+          "core": "3108a4ba72d999984502e2687a4e6589b079df1d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/fence_review.py",
+          "base": "07286b4beee55510240c287795783db56beb980b",
+          "ui": "07286b4beee55510240c287795783db56beb980b",
+          "core": "07286b4beee55510240c287795783db56beb980b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/iv_review.py",
+          "base": "6ab3604143e5e2f349ddfbdbbef506589518b913",
+          "ui": "6ab3604143e5e2f349ddfbdbbef506589518b913",
+          "core": "6ab3604143e5e2f349ddfbdbbef506589518b913"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/office.py",
+          "base": "378e6e44995b3978780f91f759f168836732d9b0",
+          "ui": "378e6e44995b3978780f91f759f168836732d9b0",
+          "core": "378e6e44995b3978780f91f759f168836732d9b0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+          "base": "9c1e71bb5024a99ec60f934c5944584f63217692",
+          "ui": "9c1e71bb5024a99ec60f934c5944584f63217692",
+          "core": "9c1e71bb5024a99ec60f934c5944584f63217692"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+          "base": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+          "ui": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+          "core": "f327ab8a69336cd1ba4d61f56035f540c66d700e"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+          "base": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+          "ui": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+          "core": "f7f70d1ae771d398f09d5abd92911f76c2add9a1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/outbox_review.py",
+          "base": "a33df3390af4e04f3445762b3145571f71d075fd",
+          "ui": "a33df3390af4e04f3445762b3145571f71d075fd",
+          "core": "a33df3390af4e04f3445762b3145571f71d075fd"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+          "base": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "ui": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "core": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+          "base": "9768b34e447c08136440c891b1974fae131f3ebd",
+          "ui": "9768b34e447c08136440c891b1974fae131f3ebd",
+          "core": "9768b34e447c08136440c891b1974fae131f3ebd"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+          "base": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e",
+          "ui": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e",
+          "core": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy/iv_review.py",
+          "base": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb",
+          "ui": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb",
+          "core": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy/receipt_review.py",
+          "base": "3f335a148519f3e79862745187f89cd2e5105747",
+          "ui": "3f335a148519f3e79862745187f89cd2e5105747",
+          "core": "3f335a148519f3e79862745187f89cd2e5105747"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+          "base": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+          "ui": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+          "core": "da6414affbf9207b10b65fbb5aa327a021dc05a6"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/policy_gateway_review.py",
+          "base": "5d106510a07247ff093c5a6b9de503a11824e048",
+          "ui": "5d106510a07247ff093c5a6b9de503a11824e048",
+          "core": "5d106510a07247ff093c5a6b9de503a11824e048"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/runtime_plan_binding.py",
+          "base": "749a32b22a435a916eb8f7b34e6159e5e721f8c4",
+          "ui": "749a32b22a435a916eb8f7b34e6159e5e721f8c4",
+          "core": "749a32b22a435a916eb8f7b34e6159e5e721f8c4"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/runtime_preview.py",
+          "base": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+          "ui": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+          "core": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/security.py",
+          "base": "0d7006647df77b55bf79f00fc1e3cc4b237fd4bd",
+          "ui": "0d7006647df77b55bf79f00fc1e3cc4b237fd4bd",
+          "core": "0d7006647df77b55bf79f00fc1e3cc4b237fd4bd"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/skill_review.py",
+          "base": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+          "ui": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+          "core": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/t1_port.py",
+          "base": "e7c8ee8a732728454173eff6af0abe96e3b41add",
+          "ui": "e7c8ee8a732728454173eff6af0abe96e3b41add",
+          "core": "e7c8ee8a732728454173eff6af0abe96e3b41add"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/t1_review.py",
+          "base": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+          "ui": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+          "core": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+          "base": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "ui": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "core": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+          "base": "04487bda631e9133f3904451a39fc8722e985997",
+          "ui": "04487bda631e9133f3904451a39fc8722e985997",
+          "core": "04487bda631e9133f3904451a39fc8722e985997"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+          "base": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "ui": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "core": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/admission_bundle.py",
+          "base": "276b4330afdce7cde98f92f8051c019eb7345fe1",
+          "ui": "276b4330afdce7cde98f92f8051c019eb7345fe1",
+          "core": "276b4330afdce7cde98f92f8051c019eb7345fe1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/fence_review.py",
+          "base": "d922dab553ba96577a8247d4f4667ee967e2a5a5",
+          "ui": "d922dab553ba96577a8247d4f4667ee967e2a5a5",
+          "core": "d922dab553ba96577a8247d4f4667ee967e2a5a5"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+          "base": "b0dde358be781b48e06b8901acc63ef31b013db0",
+          "ui": "b0dde358be781b48e06b8901acc63ef31b013db0",
+          "core": "b0dde358be781b48e06b8901acc63ef31b013db0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+          "base": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+          "ui": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+          "core": "923fb705094cab97fb5af99ada7c1bdcef76da59"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+          "base": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+          "ui": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+          "core": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+          "base": "e722a9188a76034f5133c3f61be1da16930a8924",
+          "ui": "e722a9188a76034f5133c3f61be1da16930a8924",
+          "core": "e722a9188a76034f5133c3f61be1da16930a8924"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/readback_review.py",
+          "base": "bba032b058a8c9406e58fa90091b1894cd795190",
+          "ui": "bba032b058a8c9406e58fa90091b1894cd795190",
+          "core": "bba032b058a8c9406e58fa90091b1894cd795190"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+          "base": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+          "ui": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+          "core": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+          "base": "b011ae715b424a185963af552f524586115a23ec",
+          "ui": "b011ae715b424a185963af552f524586115a23ec",
+          "core": "b011ae715b424a185963af552f524586115a23ec"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+          "base": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2",
+          "ui": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2",
+          "core": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/witness_review.py",
+          "base": "201970fc5211074459b62a5253122e1038b2e99c",
+          "ui": "201970fc5211074459b62a5253122e1038b2e99c",
+          "core": "201970fc5211074459b62a5253122e1038b2e99c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/demo_policy.py",
+          "base": "03db51b35e436b5cb4f194b2c3caec51b212ebef",
+          "ui": "03db51b35e436b5cb4f194b2c3caec51b212ebef",
+          "core": "03db51b35e436b5cb4f194b2c3caec51b212ebef"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/__init__.py",
+          "base": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "ui": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "core": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/budget_engine/__init__.py",
+          "base": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2",
+          "ui": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2",
+          "core": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/budget_engine/reservation_review.py",
+          "base": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+          "ui": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+          "core": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/knowledge_engine/__init__.py",
+          "base": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "ui": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "core": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+          "base": "7d710685366a55c117e49043a64f1eeabf5079cf",
+          "ui": "7d710685366a55c117e49043a64f1eeabf5079cf",
+          "core": "7d710685366a55c117e49043a64f1eeabf5079cf"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/memory_engine/__init__.py",
+          "base": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "ui": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "core": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+          "base": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+          "ui": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+          "core": "c62c79bf9fa66d76505ca8e9e9195564e281cafe"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py",
+          "base": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+          "ui": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+          "core": "b24c782973ec8731f8dbea17d0379ae5abe897f0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+          "base": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+          "ui": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+          "core": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/__init__.py",
+          "base": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "ui": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "core": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/fallback.py",
+          "base": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+          "ui": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+          "core": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/gateway.py",
+          "base": "d9ef74951acb8daa57e9b8339fb8f8152369d932",
+          "ui": "d9ef74951acb8daa57e9b8339fb8f8152369d932",
+          "core": "d9ef74951acb8daa57e9b8339fb8f8152369d932"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/provider_contract.py",
+          "base": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+          "ui": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c",
+          "core": "e3a75a6d97ca6e50399c56d23f08f2325aa58c7c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+          "base": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+          "ui": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+          "core": "c923113239c7d783fd32419b2ef51bbcf4c299bf"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+          "base": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+          "ui": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+          "core": "3d136ad8a06f5e21d074748e371a1ed614b0c276"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/office_engine/__init__.py",
+          "base": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "ui": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "core": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/office_engine/freshness.py",
+          "base": "b988420248dc3591aa0180a23bdf32b74d7cb3b6",
+          "ui": "b988420248dc3591aa0180a23bdf32b74d7cb3b6",
+          "core": "b988420248dc3591aa0180a23bdf32b74d7cb3b6"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/office_engine/layout.py",
+          "base": "cf47623d303d21aed11eb5ee69b66a757c6a5d18",
+          "ui": "cf47623d303d21aed11eb5ee69b66a757c6a5d18",
+          "core": "cf47623d303d21aed11eb5ee69b66a757c6a5d18"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/skill_engine/__init__.py",
+          "base": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "ui": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "core": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/skill_engine/manifest_review.py",
+          "base": "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+          "ui": "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+          "core": "26c4eea34bb938ae4e9a311d9331d3ccab77487d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+          "base": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+          "ui": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+          "core": "fede5e35bf2221920a83b4d8183c9374b72d9668"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/main.py",
+          "base": "d49c3dadb277753d5bc5589a1660506d6103ec99",
+          "ui": "d49c3dadb277753d5bc5589a1660506d6103ec99",
+          "core": "d49c3dadb277753d5bc5589a1660506d6103ec99"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/observability/__init__.py",
+          "base": "98dc7640ebb9f6a44710b9788d7f5c0cc46f2fc3",
+          "ui": "98dc7640ebb9f6a44710b9788d7f5c0cc46f2fc3",
+          "core": "98dc7640ebb9f6a44710b9788d7f5c0cc46f2fc3"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/observability/finance_projection.py",
+          "base": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc",
+          "ui": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc",
+          "core": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/admission.sample.projection.schema.json",
+          "base": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+          "ui": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+          "core": "c95f39c263ae72788785a3c938be9c3c1b841ebb"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/company.catalog.demo.schema.json",
+          "base": "963bfb2557628cea2696c0e557e5aeaf9a23ea62",
+          "ui": "963bfb2557628cea2696c0e557e5aeaf9a23ea62",
+          "core": "963bfb2557628cea2696c0e557e5aeaf9a23ea62"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/core.plan.projection.schema.json",
+          "base": "15695c990538cb8b017bf41e5cd8f29d65254b61",
+          "ui": "15695c990538cb8b017bf41e5cd8f29d65254b61",
+          "core": "15695c990538cb8b017bf41e5cd8f29d65254b61"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/core.preview.demo.schema.json",
+          "base": "117ee745023ebf7fd33385f32991bc00ef995cb3",
+          "ui": "117ee745023ebf7fd33385f32991bc00ef995cb3",
+          "core": "117ee745023ebf7fd33385f32991bc00ef995cb3"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/core.preview.response.schema.json",
+          "base": "3bb1cab16eb699b0a16ce62f172287367e97f317",
+          "ui": "3bb1cab16eb699b0a16ce62f172287367e97f317",
+          "core": "3bb1cab16eb699b0a16ce62f172287367e97f317"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/lifecycle.prefix.schema.json",
+          "base": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2",
+          "ui": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2",
+          "core": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/lifecycle.projection.schema.json",
+          "base": "7bd60d5bf04ad36304afaf016fe8578b0622eba7",
+          "ui": "7bd60d5bf04ad36304afaf016fe8578b0622eba7",
+          "core": "7bd60d5bf04ad36304afaf016fe8578b0622eba7"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/mvp.diagnostics.schema.json",
+          "base": "5b2037f397586a46a4e36faadc1c491e4c2d1684",
+          "ui": "5b2037f397586a46a4e36faadc1c491e4c2d1684",
+          "core": "5b2037f397586a46a4e36faadc1c491e4c2d1684"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/office.snapshot.demo.schema.json",
+          "base": "ba6b81452a3d07de20b3161ba90f14f7788b64b3",
+          "ui": "ba6b81452a3d07de20b3161ba90f14f7788b64b3",
+          "core": "ba6b81452a3d07de20b3161ba90f14f7788b64b3"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/office.workbench.projection.schema.json",
+          "base": "551896b51b6f74c9839dbe452b1edf2044d3ec5b",
+          "ui": "551896b51b6f74c9839dbe452b1edf2044d3ec5b",
+          "core": "551896b51b6f74c9839dbe452b1edf2044d3ec5b"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/outbox.review.projection.schema.json",
+          "base": "0588e2efe7a670855a19c483912b2a5b6d42cdf9",
+          "ui": "0588e2efe7a670855a19c483912b2a5b6d42cdf9",
+          "core": "0588e2efe7a670855a19c483912b2a5b6d42cdf9"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/task.budget.snapshot.schema.json",
+          "base": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+          "ui": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+          "core": "67a5d7002bb9eed6cc47ef4983ca6768972c005e"
+        },
+        {
+          "path": "product/ai-company-os-backend/fixtures/company.catalog.json",
+          "base": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e",
+          "ui": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e",
+          "core": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e"
+        },
+        {
+          "path": "product/ai-company-os-backend/fixtures/core.plan.projection.json",
+          "base": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+          "ui": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+          "core": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac"
+        },
+        {
+          "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+          "base": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+          "ui": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+          "core": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7"
+        },
+        {
+          "path": "product/ai-company-os-backend/fixtures/office.snapshot.json",
+          "base": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+          "ui": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+          "core": "ac57b926e701196c7507a396aa868ce5e8bd5806"
+        },
+        {
+          "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+          "base": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+          "ui": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+          "core": "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+        },
+        {
+          "path": "product/ai-company-os-backend/requirements-test.txt",
+          "base": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187",
+          "ui": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187",
+          "core": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187"
+        },
+        {
+          "path": "product/ai-company-os-backend/requirements.txt",
+          "base": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+          "ui": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+          "core": "297b0a1ff6a125166f9f7eca94390062644bee7c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+          "base": "53459c4b6961455dc183cb3b20382559862e98f6",
+          "ui": "53459c4b6961455dc183cb3b20382559862e98f6",
+          "core": "53459c4b6961455dc183cb3b20382559862e98f6"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/office_workbench_cases.json",
+          "base": "29aa823d16c2b7975c322b41b99f9db4ec2b2c4e",
+          "ui": "29aa823d16c2b7975c322b41b99f9db4ec2b2c4e",
+          "core": "29aa823d16c2b7975c322b41b99f9db4ec2b2c4e"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/outbox_projection_cases.json",
+          "base": "1105786e4ada1cb44f310a0f6fe1188ff3764c10",
+          "ui": "1105786e4ada1cb44f310a0f6fe1188ff3764c10",
+          "core": "1105786e4ada1cb44f310a0f6fe1188ff3764c10"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_bundle.py",
+          "base": "37e11dfffb2b98bd451cb1de0d384b1533c294e1",
+          "ui": "37e11dfffb2b98bd451cb1de0d384b1533c294e1",
+          "core": "37e11dfffb2b98bd451cb1de0d384b1533c294e1"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+          "base": "c30130313541ea9d857724de1bab98ad088374af",
+          "ui": "c30130313541ea9d857724de1bab98ad088374af",
+          "core": "c30130313541ea9d857724de1bab98ad088374af"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_admission_sample.py",
+          "base": "11f31bf090bd8f08826cb7fd3227a9a082bd53b8",
+          "ui": "11f31bf090bd8f08826cb7fd3227a9a082bd53b8",
+          "core": "11f31bf090bd8f08826cb7fd3227a9a082bd53b8"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_atomic_sample.py",
+          "base": "4481ae4f1074e8a847eee54248d6576ea96734c9",
+          "ui": "4481ae4f1074e8a847eee54248d6576ea96734c9",
+          "core": "4481ae4f1074e8a847eee54248d6576ea96734c9"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+          "base": "ce4f8fb249787c9e18a03a63225dbcddf7445650",
+          "ui": "ce4f8fb249787c9e18a03a63225dbcddf7445650",
+          "core": "ce4f8fb249787c9e18a03a63225dbcddf7445650"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_recovery_0205.py",
+          "base": "8db01a9227d71b51e28485d823c304c5c48ab67b",
+          "ui": "8db01a9227d71b51e28485d823c304c5c48ab67b",
+          "core": "8db01a9227d71b51e28485d823c304c5c48ab67b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_d0_snapshot_p04.py",
+          "base": "42d761960c0a5fe3efb573612fab36ac9f797619",
+          "ui": "42d761960c0a5fe3efb573612fab36ac9f797619",
+          "core": "42d761960c0a5fe3efb573612fab36ac9f797619"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_development_review_0164.py",
+          "base": "818785baa36d6fcc4911d7ff7795d245b8189ef8",
+          "ui": "818785baa36d6fcc4911d7ff7795d245b8189ef8",
+          "core": "818785baa36d6fcc4911d7ff7795d245b8189ef8"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_development_review_0165.py",
+          "base": "1d946e1aac68ab71908f32871dee4d440001facd",
+          "ui": "1d946e1aac68ab71908f32871dee4d440001facd",
+          "core": "1d946e1aac68ab71908f32871dee4d440001facd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_development_review_0166.py",
+          "base": "8ab5e70123a12bdba5e48e82a110b9e31bc3c61a",
+          "ui": "8ab5e70123a12bdba5e48e82a110b9e31bc3c61a",
+          "core": "8ab5e70123a12bdba5e48e82a110b9e31bc3c61a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_engines_0159b.py",
+          "base": "9d3c5385fa72565c3cd6d24fd91eec7e71c9c803",
+          "ui": "9d3c5385fa72565c3cd6d24fd91eec7e71c9c803",
+          "core": "9d3c5385fa72565c3cd6d24fd91eec7e71c9c803"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_fenced_transition_0210.py",
+          "base": "93d3a0ea046a1e83d94230f10cbbb5a767cea719",
+          "ui": "93d3a0ea046a1e83d94230f10cbbb5a767cea719",
+          "core": "93d3a0ea046a1e83d94230f10cbbb5a767cea719"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+          "base": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+          "ui": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+          "core": "703fce14be041f9dc0ed9de88a816d281c28fc3d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_joint_context_0208.py",
+          "base": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd",
+          "ui": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd",
+          "core": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+          "base": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+          "ui": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+          "core": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+          "base": "7517cb4bdd2458684aa4540b127669ce1902521d",
+          "ui": "7517cb4bdd2458684aa4540b127669ce1902521d",
+          "core": "7517cb4bdd2458684aa4540b127669ce1902521d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+          "base": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+          "ui": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+          "core": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_read_snapshot_p04.py",
+          "base": "ef0b536700ae1f8ef29229abba3713aa56c5377c",
+          "ui": "ef0b536700ae1f8ef29229abba3713aa56c5377c",
+          "core": "ef0b536700ae1f8ef29229abba3713aa56c5377c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_lifecycle_snapshot_merge_p05.py",
+          "base": "619d14e103207f840e82c96774ae773e38914b3e",
+          "ui": "619d14e103207f840e82c96774ae773e38914b3e",
+          "core": "619d14e103207f840e82c96774ae773e38914b3e"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_access_0194.py",
+          "base": "a792abc90b7a09fb703982f6efd1cd4f648b073c",
+          "ui": "a792abc90b7a09fb703982f6efd1cd4f648b073c",
+          "core": "a792abc90b7a09fb703982f6efd1cd4f648b073c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+          "base": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+          "ui": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+          "core": "cb0e998ef084e90b8d357637b1e93fbe10861a80"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_memory_witness_0209.py",
+          "base": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb",
+          "ui": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb",
+          "core": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_model_invocation_0196.py",
+          "base": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e",
+          "ui": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e",
+          "core": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_mvp_diagnostics.py",
+          "base": "282b0e951872213181ec0098dcee20f0c3aa0407",
+          "ui": "282b0e951872213181ec0098dcee20f0c3aa0407",
+          "core": "282b0e951872213181ec0098dcee20f0c3aa0407"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_office_workbench.py",
+          "base": "8d9677064f658d6513dc7a8d55ab32118840a2d5",
+          "ui": "8d9677064f658d6513dc7a8d55ab32118840a2d5",
+          "core": "8d9677064f658d6513dc7a8d55ab32118840a2d5"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_office_workbench_cli.py",
+          "base": "c078100d8d43de660b91cdcb7a8d2e72f4a75e13",
+          "ui": "c078100d8d43de660b91cdcb7a8d2e72f4a75e13",
+          "core": "c078100d8d43de660b91cdcb7a8d2e72f4a75e13"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_outbox_claim_sample.py",
+          "base": "e772322572c1bd40b7965ad2062fe824a653b422",
+          "ui": "e772322572c1bd40b7965ad2062fe824a653b422",
+          "core": "e772322572c1bd40b7965ad2062fe824a653b422"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_outbox_contract.py",
+          "base": "e25923c06e25e5e9ba1900cd98e5f63c172a9960",
+          "ui": "e25923c06e25e5e9ba1900cd98e5f63c172a9960",
+          "core": "e25923c06e25e5e9ba1900cd98e5f63c172a9960"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_outbox_projection.py",
+          "base": "2790a7ee1f7d6567eb220c53876ae1715a687562",
+          "ui": "2790a7ee1f7d6567eb220c53876ae1715a687562",
+          "core": "2790a7ee1f7d6567eb220c53876ae1715a687562"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py",
+          "base": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b",
+          "ui": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b",
+          "core": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+          "base": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+          "ui": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+          "core": "261e2484f111ffd9c0f124cc47c6837425d801a2"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pg_transition_mapping_0194.py",
+          "base": "75f3fb01653b226830546e3600ef75b8dbcfd636",
+          "ui": "75f3fb01653b226830546e3600ef75b8dbcfd636",
+          "core": "75f3fb01653b226830546e3600ef75b8dbcfd636"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+          "base": "9db44143d1d5395e222d111a4e847930f019208e",
+          "ui": "9db44143d1d5395e222d111a4e847930f019208e",
+          "core": "9db44143d1d5395e222d111a4e847930f019208e"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_plan_projection.py",
+          "base": "ae2b1e90b367be591b8cc59b979419780115802a",
+          "ui": "ae2b1e90b367be591b8cc59b979419780115802a",
+          "core": "ae2b1e90b367be591b8cc59b979419780115802a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_postgres_snapshot_0200.py",
+          "base": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+          "ui": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+          "core": "be16207b0c3b72d91452f67a86ae0516c0c99acf"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_prefix_wire_p03.py",
+          "base": "829c935b91d266a6eec01958e9b5afa35d519d05",
+          "ui": "829c935b91d266a6eec01958e9b5afa35d519d05",
+          "core": "829c935b91d266a6eec01958e9b5afa35d519d05"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_provider_contract.py",
+          "base": "eb66254ca51fa18c0e59f3993ea04a8cad30f6b9",
+          "ui": "eb66254ca51fa18c0e59f3993ea04a8cad30f6b9",
+          "core": "eb66254ca51fa18c0e59f3993ea04a8cad30f6b9"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_retained_history_0201.py",
+          "base": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe",
+          "ui": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe",
+          "core": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+          "base": "c9963f21766da435a00a18a5f49073ebe8603664",
+          "ui": "c9963f21766da435a00a18a5f49073ebe8603664",
+          "core": "c9963f21766da435a00a18a5f49073ebe8603664"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_review_0161.py",
+          "base": "5510c6305ab79770108a1ed2c14c65ddf9c70d67",
+          "ui": "5510c6305ab79770108a1ed2c14c65ddf9c70d67",
+          "core": "5510c6305ab79770108a1ed2c14c65ddf9c70d67"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_binding_0157.py",
+          "base": "8e354f1f6daa858f58a0237283fdeb5e8f36e7d4",
+          "ui": "8e354f1f6daa858f58a0237283fdeb5e8f36e7d4",
+          "core": "8e354f1f6daa858f58a0237283fdeb5e8f36e7d4"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_memory_model_0207.py",
+          "base": "01f3110955e4c9e02ed7244a305216163d34df99",
+          "ui": "01f3110955e4c9e02ed7244a305216163d34df99",
+          "core": "01f3110955e4c9e02ed7244a305216163d34df99"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_preview_0156.py",
+          "base": "84cdba7d77c73c1ea5a673a7c99dfb7007e197de",
+          "ui": "84cdba7d77c73c1ea5a673a7c99dfb7007e197de",
+          "core": "84cdba7d77c73c1ea5a673a7c99dfb7007e197de"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_sandbox_store.py",
+          "base": "741b535c2ece4a54e0ef4a62e4d0f6958e920ab8",
+          "ui": "741b535c2ece4a54e0ef4a62e4d0f6958e920ab8",
+          "core": "741b535c2ece4a54e0ef4a62e4d0f6958e920ab8"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_security_review_0158.py",
+          "base": "c56b52384b916e41ce1e8160232a4e5d3b354ebd",
+          "ui": "c56b52384b916e41ce1e8160232a4e5d3b354ebd",
+          "core": "c56b52384b916e41ce1e8160232a4e5d3b354ebd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_signed_history_0202.py",
+          "base": "f79e85ae29b7e3bf5722493ca6fd608b026991cd",
+          "ui": "f79e85ae29b7e3bf5722493ca6fd608b026991cd",
+          "core": "f79e85ae29b7e3bf5722493ca6fd608b026991cd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_sqlite_preview.py",
+          "base": "542a8a23b58b0ca3dcf14553a5d0f5ff473c973d",
+          "ui": "542a8a23b58b0ca3dcf14553a5d0f5ff473c973d",
+          "core": "542a8a23b58b0ca3dcf14553a5d0f5ff473c973d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_t1_review_0157.py",
+          "base": "0cbe063a8754b05f2592b2742c1ea5481def0dbc",
+          "ui": "0cbe063a8754b05f2592b2742c1ea5481def0dbc",
+          "core": "0cbe063a8754b05f2592b2742c1ea5481def0dbc"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_task_budget_integration.py",
+          "base": "21f81967d9d908c8ffcbdafbda3ca75ec96c8e8f",
+          "ui": "21f81967d9d908c8ffcbdafbda3ca75ec96c8e8f",
+          "core": "21f81967d9d908c8ffcbdafbda3ca75ec96c8e8f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_task_budget_snapshot.py",
+          "base": "94172c3b46e3858dd952162addcc83192783d31b",
+          "ui": "94172c3b46e3858dd952162addcc83192783d31b",
+          "core": "94172c3b46e3858dd952162addcc83192783d31b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_terminal_anchor_0203.py",
+          "base": "92c642c907f2a45d31ad9cae23b976c9347130c1",
+          "ui": "92c642c907f2a45d31ad9cae23b976c9347130c1",
+          "core": "92c642c907f2a45d31ad9cae23b976c9347130c1"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+          "base": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+          "ui": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+          "core": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+          "base": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+          "ui": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+          "core": "a4a3827ec4267ce275efe52fe5488e1868502c3f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_transition_transaction_0193.py",
+          "base": "13b679db71409e9fddb0fda6c61eeecadcb73b8d",
+          "ui": "13b679db71409e9fddb0fda6c61eeecadcb73b8d",
+          "core": "13b679db71409e9fddb0fda6c61eeecadcb73b8d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_witnessed_sql_0209.py",
+          "base": "0b9a538b5bf80574f771486e56b70d8d0ec8b278",
+          "ui": "0b9a538b5bf80574f771486e56b70d8d0ec8b278",
+          "core": "0b9a538b5bf80574f771486e56b70d8d0ec8b278"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_witnessed_t1_0209.py",
+          "base": "4d476aa49fcfeb754ffe8eefdda0fba7531258c0",
+          "ui": "4d476aa49fcfeb754ffe8eefdda0fba7531258c0",
+          "core": "4d476aa49fcfeb754ffe8eefdda0fba7531258c0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/.gitignore",
+          "base": "2dc3387ca18fbbffa398452f341c913c9106f3ba",
+          "ui": "2dc3387ca18fbbffa398452f341c913c9106f3ba",
+          "core": "2dc3387ca18fbbffa398452f341c913c9106f3ba"
+        },
+        {
+          "path": "product/ai-company-os-frontend/AGENTS.md",
+          "base": "e44bf50d1a371a7c9af4ce63edf9bb07ac072273",
+          "ui": "e44bf50d1a371a7c9af4ce63edf9bb07ac072273",
+          "core": "e44bf50d1a371a7c9af4ce63edf9bb07ac072273"
+        },
+        {
+          "path": "product/ai-company-os-frontend/README.md",
+          "base": "08e181736f65759f52167da598d7a5a2db16ab53",
+          "ui": "08e181736f65759f52167da598d7a5a2db16ab53",
+          "core": "08e181736f65759f52167da598d7a5a2db16ab53"
+        },
+        {
+          "path": "product/ai-company-os-frontend/SECURITY.md",
+          "base": "2e3d0e9a9b655847a7dcbf7ef2f10e670f78b218",
+          "ui": "2e3d0e9a9b655847a7dcbf7ef2f10e670f78b218",
+          "core": "2e3d0e9a9b655847a7dcbf7ef2f10e670f78b218"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/admission/route.ts",
+          "base": "c0a867a669993738d8b06a08fa7089f836a911b3",
+          "ui": "c0a867a669993738d8b06a08fa7089f836a911b3",
+          "core": "c0a867a669993738d8b06a08fa7089f836a911b3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/lifecycle-prefix/route.ts",
+          "base": "ad9206746f9bbd27dd3c44f30e801c06dace8bd7",
+          "ui": "ad9206746f9bbd27dd3c44f30e801c06dace8bd7",
+          "core": "ad9206746f9bbd27dd3c44f30e801c06dace8bd7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/lifecycle/route.ts",
+          "base": "1a0cbd9a7f01093659e5e968a28be1cbcfe7f214",
+          "ui": "1a0cbd9a7f01093659e5e968a28be1cbcfe7f214",
+          "core": "1a0cbd9a7f01093659e5e968a28be1cbcfe7f214"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/mvp/route.ts",
+          "base": "199877a68ada2f98bc94c5b3ab5bbab7386d5afb",
+          "ui": "199877a68ada2f98bc94c5b3ab5bbab7386d5afb",
+          "core": "199877a68ada2f98bc94c5b3ab5bbab7386d5afb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+          "base": "749a289984049e0cec27ed93d656023ba4da1fff",
+          "ui": "749a289984049e0cec27ed93d656023ba4da1fff",
+          "core": "749a289984049e0cec27ed93d656023ba4da1fff"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/outbox/route.ts",
+          "base": "7dc1c9eb20feaf70358ba6137f35a3cbbec8a4ce",
+          "ui": "7dc1c9eb20feaf70358ba6137f35a3cbbec8a4ce",
+          "core": "7dc1c9eb20feaf70358ba6137f35a3cbbec8a4ce"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/task-budget/route.ts",
+          "base": "91256098c2a61001e7305bf3658c8178219591ed",
+          "ui": "91256098c2a61001e7305bf3658c8178219591ed",
+          "core": "91256098c2a61001e7305bf3658c8178219591ed"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/globals.css",
+          "base": "4762316bf085b61c01ccf5a788d9c028f5ac6aab",
+          "ui": "4762316bf085b61c01ccf5a788d9c028f5ac6aab",
+          "core": "4762316bf085b61c01ccf5a788d9c028f5ac6aab"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/office/page.tsx",
+          "base": "5ba5e89c4a41b830ac8945da2b9a7f6f353aab6b",
+          "ui": "5ba5e89c4a41b830ac8945da2b9a7f6f353aab6b",
+          "core": "5ba5e89c4a41b830ac8945da2b9a7f6f353aab6b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/page.tsx",
+          "base": "852b6f6819c2963f5333abd35a6f5d5f45c9f211",
+          "ui": "852b6f6819c2963f5333abd35a6f5d5f45c9f211",
+          "core": "852b6f6819c2963f5333abd35a6f5d5f45c9f211"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+          "base": "187289ca6e97dbfa30d5237207e6b4f797638f01",
+          "ui": "187289ca6e97dbfa30d5237207e6b4f797638f01",
+          "core": "187289ca6e97dbfa30d5237207e6b4f797638f01"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/MetricsStrip.tsx",
+          "base": "52cd085bc9989a797498fef8a968381e6bd010b9",
+          "ui": "52cd085bc9989a797498fef8a968381e6bd010b9",
+          "core": "52cd085bc9989a797498fef8a968381e6bd010b9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+          "base": "23bfc5ddc0c93ac65d5e46fb3b5d5617ca05cdc8",
+          "ui": "23bfc5ddc0c93ac65d5e46fb3b5d5617ca05cdc8",
+          "core": "23bfc5ddc0c93ac65d5e46fb3b5d5617ca05cdc8"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/admission.sample.projection.schema.json",
+          "base": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+          "ui": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+          "core": "c95f39c263ae72788785a3c938be9c3c1b841ebb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/company.catalog.demo.schema.json",
+          "base": "963bfb2557628cea2696c0e557e5aeaf9a23ea62",
+          "ui": "963bfb2557628cea2696c0e557e5aeaf9a23ea62",
+          "core": "963bfb2557628cea2696c0e557e5aeaf9a23ea62"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/core.plan.projection.schema.json",
+          "base": "15695c990538cb8b017bf41e5cd8f29d65254b61",
+          "ui": "15695c990538cb8b017bf41e5cd8f29d65254b61",
+          "core": "15695c990538cb8b017bf41e5cd8f29d65254b61"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/core.preview.demo.schema.json",
+          "base": "117ee745023ebf7fd33385f32991bc00ef995cb3",
+          "ui": "117ee745023ebf7fd33385f32991bc00ef995cb3",
+          "core": "117ee745023ebf7fd33385f32991bc00ef995cb3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/core.preview.response.schema.json",
+          "base": "3bb1cab16eb699b0a16ce62f172287367e97f317",
+          "ui": "3bb1cab16eb699b0a16ce62f172287367e97f317",
+          "core": "3bb1cab16eb699b0a16ce62f172287367e97f317"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/lifecycle.prefix.schema.json",
+          "base": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2",
+          "ui": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2",
+          "core": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/lifecycle.projection.schema.json",
+          "base": "7bd60d5bf04ad36304afaf016fe8578b0622eba7",
+          "ui": "7bd60d5bf04ad36304afaf016fe8578b0622eba7",
+          "core": "7bd60d5bf04ad36304afaf016fe8578b0622eba7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/mvp.diagnostics.schema.json",
+          "base": "5b2037f397586a46a4e36faadc1c491e4c2d1684",
+          "ui": "5b2037f397586a46a4e36faadc1c491e4c2d1684",
+          "core": "5b2037f397586a46a4e36faadc1c491e4c2d1684"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/office.snapshot.demo.schema.json",
+          "base": "ba6b81452a3d07de20b3161ba90f14f7788b64b3",
+          "ui": "ba6b81452a3d07de20b3161ba90f14f7788b64b3",
+          "core": "ba6b81452a3d07de20b3161ba90f14f7788b64b3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/office.workbench.projection.schema.json",
+          "base": "551896b51b6f74c9839dbe452b1edf2044d3ec5b",
+          "ui": "551896b51b6f74c9839dbe452b1edf2044d3ec5b",
+          "core": "551896b51b6f74c9839dbe452b1edf2044d3ec5b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/outbox.review.projection.schema.json",
+          "base": "0588e2efe7a670855a19c483912b2a5b6d42cdf9",
+          "ui": "0588e2efe7a670855a19c483912b2a5b6d42cdf9",
+          "core": "0588e2efe7a670855a19c483912b2a5b6d42cdf9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/task.budget.snapshot.schema.json",
+          "base": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+          "ui": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+          "core": "67a5d7002bb9eed6cc47ef4983ca6768972c005e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/EvidencePanel.tsx",
+          "base": "21ffd43b585e4e53f95ffae10cea0d14c9cc96a1",
+          "ui": "21ffd43b585e4e53f95ffae10cea0d14c9cc96a1",
+          "core": "21ffd43b585e4e53f95ffae10cea0d14c9cc96a1"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/MetricCards.tsx",
+          "base": "8d857f05d1aca962525f95d9f5c8e4bb67a37836",
+          "ui": "8d857f05d1aca962525f95d9f5c8e4bb67a37836",
+          "core": "8d857f05d1aca962525f95d9f5c8e4bb67a37836"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/OfficeControls.tsx",
+          "base": "39cccf3020426365918127e6a003ded300c2f55d",
+          "ui": "39cccf3020426365918127e6a003ded300c2f55d",
+          "core": "39cccf3020426365918127e6a003ded300c2f55d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/ThemeFrame.tsx",
+          "base": "c36adf84d5eb2a86e1741391331117c72886d701",
+          "ui": "c36adf84d5eb2a86e1741391331117c72886d701",
+          "core": "c36adf84d5eb2a86e1741391331117c72886d701"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/WorkflowProjection.module.css",
+          "base": "46f8f70d60033bdf8d80fa1d6fe4ffaed8614b0b",
+          "ui": "46f8f70d60033bdf8d80fa1d6fe4ffaed8614b0b",
+          "core": "46f8f70d60033bdf8d80fa1d6fe4ffaed8614b0b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/catalogPresentation.ts",
+          "base": "2b77e09b128feb2e66ec0536995899d54d57ebe3",
+          "ui": "2b77e09b128feb2e66ec0536995899d54d57ebe3",
+          "core": "2b77e09b128feb2e66ec0536995899d54d57ebe3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/eds.css",
+          "base": "d5227c57cbf033a7269abe409ee5929819bc2a0d",
+          "ui": "d5227c57cbf033a7269abe409ee5929819bc2a0d",
+          "core": "d5227c57cbf033a7269abe409ee5929819bc2a0d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/navigationModel.ts",
+          "base": "d41206b847daafa15e3a50023792ac10680814ad",
+          "ui": "d41206b847daafa15e3a50023792ac10680814ad",
+          "core": "d41206b847daafa15e3a50023792ac10680814ad"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/roleVisuals.ts",
+          "base": "535cb083119108e86b5bef20024930c00ad66c17",
+          "ui": "535cb083119108e86b5bef20024930c00ad66c17",
+          "core": "535cb083119108e86b5bef20024930c00ad66c17"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/workflowLayout.ts",
+          "base": "5a6b4e6ad4b2946cc8bc4c911f8ca507a1f622fc",
+          "ui": "5a6b4e6ad4b2946cc8bc4c911f8ca507a1f622fc",
+          "core": "5a6b4e6ad4b2946cc8bc4c911f8ca507a1f622fc"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/CorePreview.tsx",
+          "base": "5535e29dc083a276d02944b2a8e56cb611e53a8b",
+          "ui": "5535e29dc083a276d02944b2a8e56cb611e53a8b",
+          "core": "5535e29dc083a276d02944b2a8e56cb611e53a8b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/Dashboard.tsx",
+          "base": "9c6782b6909298d9b33660d25c5f566a2367d2b7",
+          "ui": "9c6782b6909298d9b33660d25c5f566a2367d2b7",
+          "core": "9c6782b6909298d9b33660d25c5f566a2367d2b7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+          "base": "96e602c1e1add9eba5a59b7e10b2a3da9d51365e",
+          "ui": "96e602c1e1add9eba5a59b7e10b2a3da9d51365e",
+          "core": "96e602c1e1add9eba5a59b7e10b2a3da9d51365e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionScope.ts",
+          "base": "4f711297dcea3a9cc96d84db0167f1dcc5c5c65e",
+          "ui": "4f711297dcea3a9cc96d84db0167f1dcc5c5c65e",
+          "core": "4f711297dcea3a9cc96d84db0167f1dcc5c5c65e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionSession.ts",
+          "base": "80982deb9d75d337334da167eee2be169afd42df",
+          "ui": "80982deb9d75d337334da167eee2be169afd42df",
+          "core": "80982deb9d75d337334da167eee2be169afd42df"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.module.css",
+          "base": "4f38166abe7f1ed0ec901b624c83932211589b39",
+          "ui": "4f38166abe7f1ed0ec901b624c83932211589b39",
+          "core": "4f38166abe7f1ed0ec901b624c83932211589b39"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+          "base": "934edeaa248526261623be36e84b039e671b2b33",
+          "ui": "934edeaa248526261623be36e84b039e671b2b33",
+          "core": "934edeaa248526261623be36e84b039e671b2b33"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/finance/financeModel.ts",
+          "base": "c9526fc5be3330b043c05c9a45ff2755eb66794e",
+          "ui": "c9526fc5be3330b043c05c9a45ff2755eb66794e",
+          "core": "c9526fc5be3330b043c05c9a45ff2755eb66794e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/AdmissionProjectionPanel.tsx",
+          "base": "75bd2791deb9aefcc1edd9669d57ae9bcee4a649",
+          "ui": "75bd2791deb9aefcc1edd9669d57ae9bcee4a649",
+          "core": "75bd2791deb9aefcc1edd9669d57ae9bcee4a649"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/MvpDiagnosticsPanel.tsx",
+          "base": "65c407ba56a39e3bb977c6dac83ea26efebaa4c3",
+          "ui": "65c407ba56a39e3bb977c6dac83ea26efebaa4c3",
+          "core": "65c407ba56a39e3bb977c6dac83ea26efebaa4c3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/OfficeWorkbenchPanel.tsx",
+          "base": "549dd65f94c5b063de7a6ab227bc4770f6f9b27a",
+          "ui": "549dd65f94c5b063de7a6ab227bc4770f6f9b27a",
+          "core": "549dd65f94c5b063de7a6ab227bc4770f6f9b27a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/OutboxProjectionPanel.tsx",
+          "base": "501d7a781c7b9e19c11395fb9ed0a48de316c27d",
+          "ui": "501d7a781c7b9e19c11395fb9ed0a48de316c27d",
+          "core": "501d7a781c7b9e19c11395fb9ed0a48de316c27d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/TaskBudgetPanel.tsx",
+          "base": "5547bc2168cc483f5328915afdd4e0be30d9f6bd",
+          "ui": "5547bc2168cc483f5328915afdd4e0be30d9f6bd",
+          "core": "5547bc2168cc483f5328915afdd4e0be30d9f6bd"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/WorkbenchLifecyclePanel.tsx",
+          "base": "ba7f294c13ecaae6b32bf1671db2724123803ecf",
+          "ui": "ba7f294c13ecaae6b32bf1671db2724123803ecf",
+          "core": "ba7f294c13ecaae6b32bf1671db2724123803ecf"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/admissionProjection.ts",
+          "base": "5af643c596185be4d8a30cd75f6c56e77de33c57",
+          "ui": "5af643c596185be4d8a30cd75f6c56e77de33c57",
+          "core": "5af643c596185be4d8a30cd75f6c56e77de33c57"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/historicalJoin.ts",
+          "base": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+          "ui": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+          "core": "03ac36fcf87208cfc2bc90e9abb1297eda244117"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/lifecyclePrefix.ts",
+          "base": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c",
+          "ui": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c",
+          "core": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/lifecycleProjection.ts",
+          "base": "1f465778c8637c969fece51011e98cacd66ca63b",
+          "ui": "1f465778c8637c969fece51011e98cacd66ca63b",
+          "core": "1f465778c8637c969fece51011e98cacd66ca63b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/localBackend.ts",
+          "base": "9231711d7efb18dd18b68e3322f62337a6477484",
+          "ui": "9231711d7efb18dd18b68e3322f62337a6477484",
+          "core": "9231711d7efb18dd18b68e3322f62337a6477484"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/mvpDiagnostics.ts",
+          "base": "46ab7ced93eef8c10622230b940c0eb566b2358b",
+          "ui": "46ab7ced93eef8c10622230b940c0eb566b2358b",
+          "core": "46ab7ced93eef8c10622230b940c0eb566b2358b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/officeWorkbenchProjection.ts",
+          "base": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+          "ui": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+          "core": "d8d0cf4ce765651bd5490df1482a92ff0c668943"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/outboxProjection.ts",
+          "base": "4a10084ac38bb9f6de70c581c2936feca9094f5a",
+          "ui": "4a10084ac38bb9f6de70c581c2936feca9094f5a",
+          "core": "4a10084ac38bb9f6de70c581c2936feca9094f5a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/taskBudgetProjection.ts",
+          "base": "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9",
+          "ui": "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9",
+          "core": "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/workbenchSnapshot.ts",
+          "base": "9dab39341559e92ce4161bd5f683af5ec9c77153",
+          "ui": "9dab39341559e92ce4161bd5f683af5ec9c77153",
+          "core": "9dab39341559e92ce4161bd5f683af5ec9c77153"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/planProjection.ts",
+          "base": "5191a090961a163a461914333f4425ff3f5c7c1e",
+          "ui": "5191a090961a163a461914333f4425ff3f5c7c1e",
+          "core": "5191a090961a163a461914333f4425ff3f5c7c1e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/progress/PlanProgressPanel.tsx",
+          "base": "c004536714069c5f398c053fd2ec63addfa7f0e4",
+          "ui": "c004536714069c5f398c053fd2ec63addfa7f0e4",
+          "core": "c004536714069c5f398c053fd2ec63addfa7f0e4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/progress/progressModel.ts",
+          "base": "ec976fc8b901e0af2d8625083d6e5a603805bf2f",
+          "ui": "ec976fc8b901e0af2d8625083d6e5a603805bf2f",
+          "core": "ec976fc8b901e0af2d8625083d6e5a603805bf2f"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+          "base": "1c35eae82c96dea1607b2f3b7c63702f458bee18",
+          "ui": "1c35eae82c96dea1607b2f3b7c63702f458bee18",
+          "core": "1c35eae82c96dea1607b2f3b7c63702f458bee18"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/projectModel.ts",
+          "base": "44e8b08ee910a68da1bd3c398824bf6fe1d5084e",
+          "ui": "44e8b08ee910a68da1bd3c398824bf6fe1d5084e",
+          "core": "44e8b08ee910a68da1bd3c398824bf6fe1d5084e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/security/SecurityStudio.module.css",
+          "base": "88637d1c97d15423e5c12ff0605b92a132bb09a3",
+          "ui": "88637d1c97d15423e5c12ff0605b92a132bb09a3",
+          "core": "88637d1c97d15423e5c12ff0605b92a132bb09a3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/security/SecurityStudio.tsx",
+          "base": "756f2049db76899007baf5900bdbc7d84d8bc96a",
+          "ui": "756f2049db76899007baf5900bdbc7d84d8bc96a",
+          "core": "756f2049db76899007baf5900bdbc7d84d8bc96a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/security/securityModel.ts",
+          "base": "e4b2e2cd9894c2f0d28bf576645c4dd6a1f4029e",
+          "ui": "e4b2e2cd9894c2f0d28bf576645c4dd6a1f4029e",
+          "core": "e4b2e2cd9894c2f0d28bf576645c4dd6a1f4029e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/uiCatalog.json",
+          "base": "076e6848e24d59e9601d1932ade5d34afd8464b9",
+          "ui": "076e6848e24d59e9601d1932ade5d34afd8464b9",
+          "core": "076e6848e24d59e9601d1932ade5d34afd8464b9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/fixtures/company.catalog.json",
+          "base": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e",
+          "ui": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e",
+          "core": "4a4c89bf3ed3ea1994e5923e16cc92d45c124d1e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/fixtures/core.plan.projection.json",
+          "base": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+          "ui": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+          "core": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac"
+        },
+        {
+          "path": "product/ai-company-os-frontend/fixtures/core.preview.json",
+          "base": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+          "ui": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+          "core": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/fixtures/office.snapshot.json",
+          "base": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+          "ui": "ac57b926e701196c7507a396aa868ce5e8bd5806",
+          "core": "ac57b926e701196c7507a396aa868ce5e8bd5806"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/OfficeScene.tsx",
+          "base": "a737eabaf8a090b90a28f31dffddbfc7b5d84ae6",
+          "ui": "a737eabaf8a090b90a28f31dffddbfc7b5d84ae6",
+          "core": "a737eabaf8a090b90a28f31dffddbfc7b5d84ae6"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/galleryCamera.ts",
+          "base": "7eb435374a88113203eeaa67d7d3f31fb03a43bf",
+          "ui": "7eb435374a88113203eeaa67d7d3f31fb03a43bf",
+          "core": "7eb435374a88113203eeaa67d7d3f31fb03a43bf"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/geometry.ts",
+          "base": "1e5934f4157bb52d43dd280649657af10a899da4",
+          "ui": "1e5934f4157bb52d43dd280649657af10a899da4",
+          "core": "1e5934f4157bb52d43dd280649657af10a899da4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/geometry.ts",
+          "base": "ce038e1ad1bb345a7fab5379093ae5bd1fd6d147",
+          "ui": "ce038e1ad1bb345a7fab5379093ae5bd1fd6d147",
+          "core": "ce038e1ad1bb345a7fab5379093ae5bd1fd6d147"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/scenes/OfficeScene.tsx",
+          "base": "edc39bfc6814e1cff97233fc525dc04366f48866",
+          "ui": "edc39bfc6814e1cff97233fc525dc04366f48866",
+          "core": "edc39bfc6814e1cff97233fc525dc04366f48866"
+        },
+        {
+          "path": "product/ai-company-os-frontend/package.json",
+          "base": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+          "ui": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+          "core": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/public/office-core.svg",
+          "base": "5998d29c0c459c2a4ca8a3d50fc4b54b8d61ff0a",
+          "ui": "5998d29c0c459c2a4ca8a3d50fc4b54b8d61ff0a",
+          "core": "5998d29c0c459c2a4ca8a3d50fc4b54b8d61ff0a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/public/office-reserve.svg",
+          "base": "73c1c7099aff40a508fa1c73e93b89bc10f687d9",
+          "ui": "73c1c7099aff40a508fa1c73e93b89bc10f687d9",
+          "core": "73c1c7099aff40a508fa1c73e93b89bc10f687d9"
+        },
+        {
+          "path": "product/ai-company-os-frontend/scripts/run-diagnostics-tests.cjs",
+          "base": "fe0fa151c6926a7c5f12f3c7a836d21402d04c27",
+          "ui": "fe0fa151c6926a7c5f12f3c7a836d21402d04c27",
+          "core": "fe0fa151c6926a7c5f12f3c7a836d21402d04c27"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/admission-projection.test.cjs",
+          "base": "166572d2a0c6859dc4d39561264422ed2732c4fe",
+          "ui": "166572d2a0c6859dc4d39561264422ed2732c4fe",
+          "core": "166572d2a0c6859dc4d39561264422ed2732c4fe"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/browser_next_0182.py",
+          "base": "89ef991f2ffc03314a797e97d4421b6e71ed25a3",
+          "ui": "89ef991f2ffc03314a797e97d4421b6e71ed25a3",
+          "core": "89ef991f2ffc03314a797e97d4421b6e71ed25a3"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/browser_offline_0182.py",
+          "base": "30f219d6fbfbcd4263bbd7220cea56f051e3656e",
+          "ui": "30f219d6fbfbcd4263bbd7220cea56f051e3656e",
+          "core": "30f219d6fbfbcd4263bbd7220cea56f051e3656e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/finance-model.test.cjs",
+          "base": "101232f1bebdd5bee246f0252ab47398f8a11343",
+          "ui": "101232f1bebdd5bee246f0252ab47398f8a11343",
+          "core": "101232f1bebdd5bee246f0252ab47398f8a11343"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/gallery-camera.test.cjs",
+          "base": "647a5adedd2c86f5cb6ae78dcdb3b98f0bbb07a7",
+          "ui": "647a5adedd2c86f5cb6ae78dcdb3b98f0bbb07a7",
+          "core": "647a5adedd2c86f5cb6ae78dcdb3b98f0bbb07a7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/lifecycle-prefix.test.cjs",
+          "base": "7ee6769f44f07253c089d76860bcedc53b2dc70a",
+          "ui": "7ee6769f44f07253c089d76860bcedc53b2dc70a",
+          "core": "7ee6769f44f07253c089d76860bcedc53b2dc70a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/lifecycle-projection.test.cjs",
+          "base": "8a7e44416eed793d7c22eb0c234635170e9d2998",
+          "ui": "8a7e44416eed793d7c22eb0c234635170e9d2998",
+          "core": "8a7e44416eed793d7c22eb0c234635170e9d2998"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/mvpDiagnostics.test.cjs",
+          "base": "4e1cc389b9f1aafccdf63532ed3bd9b36cae8842",
+          "ui": "4e1cc389b9f1aafccdf63532ed3bd9b36cae8842",
+          "core": "4e1cc389b9f1aafccdf63532ed3bd9b36cae8842"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/mvpProxy.test.cjs",
+          "base": "e78ba803fc1b3ef85057d1315a32a38c0e9d4037",
+          "ui": "e78ba803fc1b3ef85057d1315a32a38c0e9d4037",
+          "core": "e78ba803fc1b3ef85057d1315a32a38c0e9d4037"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/navigation-model.test.cjs",
+          "base": "67395deef9e553beace053ab6019f1a4c5a519e4",
+          "ui": "67395deef9e553beace053ab6019f1a4c5a519e4",
+          "core": "67395deef9e553beace053ab6019f1a4c5a519e4"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/office-artwork.test.cjs",
+          "base": "15595a963845220d48f7ff34fa998c8424538c31",
+          "ui": "15595a963845220d48f7ff34fa998c8424538c31",
+          "core": "15595a963845220d48f7ff34fa998c8424538c31"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/office-workbench.test.cjs",
+          "base": "bbad34677abeb0f2fada6b68ad4805b09ee077c7",
+          "ui": "bbad34677abeb0f2fada6b68ad4805b09ee077c7",
+          "core": "bbad34677abeb0f2fada6b68ad4805b09ee077c7"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/outbox-contract.test.cjs",
+          "base": "db319ae7a865ee498e5e6127e151143b92e9c067",
+          "ui": "db319ae7a865ee498e5e6127e151143b92e9c067",
+          "core": "db319ae7a865ee498e5e6127e151143b92e9c067"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/outbox-projection.test.cjs",
+          "base": "29c03bd93fbb6d20e480979ac0df0f23f1108a13",
+          "ui": "29c03bd93fbb6d20e480979ac0df0f23f1108a13",
+          "core": "29c03bd93fbb6d20e480979ac0df0f23f1108a13"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/progress-model.test.cjs",
+          "base": "76aaf58b78637f048932dc29d59926fc0778faee",
+          "ui": "76aaf58b78637f048932dc29d59926fc0778faee",
+          "core": "76aaf58b78637f048932dc29d59926fc0778faee"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/project-model.test.cjs",
+          "base": "b59cdbc1f824171349db4f6cd4e3dc60ea42a132",
+          "ui": "b59cdbc1f824171349db4f6cd4e3dc60ea42a132",
+          "core": "b59cdbc1f824171349db4f6cd4e3dc60ea42a132"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-read.test.cjs",
+          "base": "226e0e9721677235184547b8d79e91b2e6c541fb",
+          "ui": "226e0e9721677235184547b8d79e91b2e6c541fb",
+          "core": "226e0e9721677235184547b8d79e91b2e6c541fb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-scope.test.cjs",
+          "base": "58054af5ed662627d23fa20fe370823beb718dbb",
+          "ui": "58054af5ed662627d23fa20fe370823beb718dbb",
+          "core": "58054af5ed662627d23fa20fe370823beb718dbb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-session-join.test.cjs",
+          "base": "00557f3a15bd27f422e212920302a02a1bf88f98",
+          "ui": "00557f3a15bd27f422e212920302a02a1bf88f98",
+          "core": "00557f3a15bd27f422e212920302a02a1bf88f98"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/role-visuals.test.cjs",
+          "base": "7b41dc8fdcfae1cc9cccffcd713cbf926e4b4321",
+          "ui": "7b41dc8fdcfae1cc9cccffcd713cbf926e4b4321",
+          "core": "7b41dc8fdcfae1cc9cccffcd713cbf926e4b4321"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/security-model.test.cjs",
+          "base": "88ada4cc78324ac0084af95574bbef02c01d3ade",
+          "ui": "88ada4cc78324ac0084af95574bbef02c01d3ade",
+          "core": "88ada4cc78324ac0084af95574bbef02c01d3ade"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/task-budget.test.cjs",
+          "base": "4a0ec2845d467bfe4caabddefffde1f0da896cd1",
+          "ui": "4a0ec2845d467bfe4caabddefffde1f0da896cd1",
+          "core": "4a0ec2845d467bfe4caabddefffde1f0da896cd1"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/workbench-snapshot.test.cjs",
+          "base": "3262d5356004d8f4b06c0f167c3aad35c8687771",
+          "ui": "3262d5356004d8f4b06c0f167c3aad35c8687771",
+          "core": "3262d5356004d8f4b06c0f167c3aad35c8687771"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/workflow-layout.test.cjs",
+          "base": "5bac81cc99b97af4e37509b8c748fcd117881c11",
+          "ui": "5bac81cc99b97af4e37509b8c748fcd117881c11",
+          "core": "5bac81cc99b97af4e37509b8c748fcd117881c11"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tsconfig.json",
+          "base": "b2fd07b5e6375aca372f24630486acb672c6cbb2",
+          "ui": "b2fd07b5e6375aca372f24630486acb672c6cbb2",
+          "core": "b2fd07b5e6375aca372f24630486acb672c6cbb2"
+        }
+      ],
+      "convergent": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+          "base": null,
+          "ui": "c35a2e497ce013409c1943f293799d83c7164e83",
+          "core": "c35a2e497ce013409c1943f293799d83c7164e83"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_intent_authority_0211.py",
+          "base": null,
+          "ui": "0179b7f3b10d2dac1db07ffef68dae3d230244fd",
+          "core": "0179b7f3b10d2dac1db07ffef68dae3d230244fd"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_intent_authority_t1_0212.py",
+          "base": null,
+          "ui": "9296347d9253d74902ed1c6a89e273d8e516f2b5",
+          "core": "9296347d9253d74902ed1c6a89e273d8e516f2b5"
+        }
+      ],
+      "ui_only_change": [
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_boundary_p10g.py",
+          "base": null,
+          "ui": "e452f1c6422e975df5787de079949a164955fbe2",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_sqlite_p10f.py",
+          "base": null,
+          "ui": "3f0f86a721ec15fbc12515e9719057b91f521d84",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+          "base": null,
+          "ui": "149371b9d1c19d5c7f6872b4c356bad57da1d063",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.module.css",
+          "base": "20b81d1d78ef5a11e5f196f60d5f2426e67dfd35",
+          "ui": "2b7649d904056f1c4a588bb3764ee9b343dd0d4e",
+          "core": "20b81d1d78ef5a11e5f196f60d5f2426e67dfd35"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+          "base": "b25760113ad7dd163e2f2c751425232609ab712e",
+          "ui": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+          "core": "b25760113ad7dd163e2f2c751425232609ab712e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+          "base": "d80f97e1e6255221df3a9fd17accf330cce4eb5c",
+          "ui": "0235984b397d6f2b4afab09d06a7280b09fef268",
+          "core": "d80f97e1e6255221df3a9fd17accf330cce4eb5c"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+          "base": "01e32cc20d639bf99b3e4e5e9d937ccbb8b879d0",
+          "ui": "73ef76f14855875aa50a7e619214a5311c1393f2",
+          "core": "01e32cc20d639bf99b3e4e5e9d937ccbb8b879d0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+          "base": null,
+          "ui": "b60f2972cb2733cf4abae44bc335cf0acdd0afb4",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/EvidenceDetails.tsx",
+          "base": null,
+          "ui": "af6bd8b3023e2916166199089d425fdcf906d889",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+          "base": null,
+          "ui": "67edc97176bb5a257afc0121ae34ac53315288af",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/HistoricalEvidencePanel.tsx",
+          "base": null,
+          "ui": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/evidenceContext.ts",
+          "base": null,
+          "ui": "fc22615642a694ca6082836f65243bdd277943e4",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/evidenceModel.ts",
+          "base": null,
+          "ui": "2475839630057637a8c5c84046c9c8ffdea8ae21",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/evidenceReview.ts",
+          "base": null,
+          "ui": "c798f441c24a84625bf2b68a7eff0756e7cb785b",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/evidence/historicalEvidence.ts",
+          "base": null,
+          "ui": "8d4310590ed78eb657eea95954ab7f94ea1160c5",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+          "base": null,
+          "ui": "a1d773853bbd703ac03fbbee3f9f1935d71234b8",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+          "base": null,
+          "ui": "2aa37596ca8c0f2098b8d2c4bf47d48be46540af",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/graph/graphPresentation.ts",
+          "base": null,
+          "ui": "560ec8dcbba9ae3800d4f06058ed2c0841187661",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/DependencyNeighborhoodPanel.tsx",
+          "base": null,
+          "ui": "f3f64f6a4566d6c2fd5f7cd18729c4eae51d4121",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.module.css",
+          "base": "06c814cd4254122fae17ca91766fbb75274ac953",
+          "ui": "ee7e65f44d9852130708ade29e8bce3e483b4766",
+          "core": "06c814cd4254122fae17ca91766fbb75274ac953"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+          "base": "5813c2a39888029aaf629b39ca51318489ef6d7d",
+          "ui": "024930889aed3c2ec5b9926062cfabfea4686472",
+          "core": "5813c2a39888029aaf629b39ca51318489ef6d7d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/project-management/dependencyNeighborhood.ts",
+          "base": null,
+          "ui": "ea8269e04c3c6c3c18a4ab8c9e9ef9099d967347",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+          "base": null,
+          "ui": "420869b823ea9ef787b294b8e08e9e4ee4522aca",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/ParallelStudio.module.css",
+          "base": null,
+          "ui": "d834f6615540232f259e5d920c06c16b9488e686",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+          "base": null,
+          "ui": "b41ee9d0cabd206327f7ea2769932a10bc6d0e4f",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+          "base": null,
+          "ui": "ba284c05e36436852c13477cea05097d7c35972e",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/draftGraph.ts",
+          "base": null,
+          "ui": "1ed12b2c77cd4f50264bfd2ddaec14c85c129954",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+          "base": null,
+          "ui": "d7cf426e00e5d55f83c382d176cf699e96ccae16",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/draftOverview.ts",
+          "base": null,
+          "ui": "deeafbac7f47bf48fa304599fae1cff33e4e08ed",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/readbackBoundary.ts",
+          "base": null,
+          "ui": "ee4c425f48de1b99a5cba8e346996f204736a3dd",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/readbackCatalog.ts",
+          "base": null,
+          "ui": "bca4e3001b0ebed77646c668b656d65215a76508",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/workflow/readbackPresentation.ts",
+          "base": null,
+          "ui": "4ef1ec5f99033c33c8a35efa35164aaac23c55bd",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.module.css",
+          "base": "6ec7bec831e72b52b226079a1838e6075b978784",
+          "ui": "556953c116c92f9c858fb3a3765e17701c794c47",
+          "core": "6ec7bec831e72b52b226079a1838e6075b978784"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/components/OfficeIllustration.tsx",
+          "base": "3ffa3df3f3248a51956d1c55b1d3cb9ffcbaa417",
+          "ui": "6e5a7de85d32a6215b81c5288628167b23376c9a",
+          "core": "3ffa3df3f3248a51956d1c55b1d3cb9ffcbaa417"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/decorCatalog.ts",
+          "base": null,
+          "ui": "220435b1d1a9c049a95e9059821576b970ed5667",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/deskAccessories.ts",
+          "base": null,
+          "ui": "a7d2f25f142e4fa5891d0efd381a592b11b0db35",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+          "base": "756a324c59d86647582462c9a32a8f0068913724",
+          "ui": "46be91ef34615773ddbfd205b9331e7861c8251b",
+          "core": "756a324c59d86647582462c9a32a8f0068913724"
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/roomAccents.ts",
+          "base": null,
+          "ui": "966b2288ac7b552bc806ebdd4e4bcf672f2513de",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/stationDecor.ts",
+          "base": null,
+          "ui": "e0a75216b0c86e713822921e8d94f45ba561eefe",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/office/engine/wallDecor.ts",
+          "base": null,
+          "ui": "762be79b4e6b19d2eb8cb70e81755d8ac8454811",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10b-model.test.cjs",
+          "base": null,
+          "ui": "1d62c3e5864b4e4494cfbd421357096dd74742f7",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10c-model.test.cjs",
+          "base": null,
+          "ui": "01ba29cc1dd4030853994fb80d82f5a302a9e3b8",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10d-model.test.cjs",
+          "base": null,
+          "ui": "923e00a63961ef572c7ffa0866c59245a7a81f68",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10e-model.test.cjs",
+          "base": null,
+          "ui": "a84d2778e9b3d5815a88cd6dddf270d2274dd003",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10f-model.test.cjs",
+          "base": null,
+          "ui": "ffdc8a0a621126a43b46f2c192d8f9abcab197f7",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10g-model.test.cjs",
+          "base": null,
+          "ui": "e9d14b6e484a4d5f475f1d412a17a31751893212",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10h-model.test.cjs",
+          "base": null,
+          "ui": "72b08fd2c6d1702ed490f777ba636bdc84dce9d2",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10i-model.test.cjs",
+          "base": null,
+          "ui": "a99f94073e5f3955d73f3c0dda0b8ff737eb316c",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10j-model.test.cjs",
+          "base": null,
+          "ui": "5f9093b5891d869f75aed39329b336e0ead26229",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui-p10j05-model.test.cjs",
+          "base": null,
+          "ui": "1080631ab3585b720ad27eebc166155555075acb",
+          "core": null
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/workflow-draft.test.cjs",
+          "base": null,
+          "ui": "5a6f41a986f455cdc3f9644de2300a89e89c59b3",
+          "core": null
+        }
+      ],
+      "core_only_change": [
+        {
+          "path": "product/ai-company-os-backend/CONTRACT_PIN.md",
+          "base": "f997a337773dd26e2011a604aad3e31d47b2fb17",
+          "ui": "f997a337773dd26e2011a604aad3e31d47b2fb17",
+          "core": "212db95a20268bb6261a5832446a1d9718b2195b"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+          "base": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+          "ui": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+          "core": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+          "base": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+          "ui": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+          "core": "f354ee1fdceca013ad6cf32fdea7c41001794083"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py",
+          "base": null,
+          "ui": null,
+          "core": "54b3ff7bf96ecd032fa72851183fe671e69a6418"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/effect_fence_reference.py",
+          "base": null,
+          "ui": null,
+          "core": "3730a404de13673a1cbcd36353ff75d1b3642004"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/external_claim_review.py",
+          "base": null,
+          "ui": null,
+          "core": "f7616fca91825a63302e3fb2a41da8a0411eeed2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+          "base": "350fd89572d047d9ac89f3a6c80b494772e563ba",
+          "ui": "350fd89572d047d9ac89f3a6c80b494772e563ba",
+          "core": "b43a8d1129138b917c499ad1091ac61940af1846"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+          "base": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+          "ui": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+          "core": "ba134d2e7d4ddecb41334071fc02236a35435dac"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/signed_consume_reference.py",
+          "base": null,
+          "ui": null,
+          "core": "477bcde63418dd43f886df7b32c5acd006d64a79"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+          "base": "783e9842c4712dac37b650354286f3f7c06290f0",
+          "ui": "783e9842c4712dac37b650354286f3f7c06290f0",
+          "core": "86ddb2771c881dd3da6bc2b5845bf98f3577c713"
+        },
+        {
+          "path": "product/ai-company-os-backend/contracts/source/ceo.office.shared.snapshot.schema.json",
+          "base": null,
+          "ui": null,
+          "core": "35341938ec016b1b125a01e72eea1cc8a60e5b8a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_fullchain_0214.py",
+          "base": null,
+          "ui": null,
+          "core": "4918027e828e8e72273ee4d6a508cac3aa6e9b59"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+          "base": null,
+          "ui": null,
+          "core": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_fence_binding_0219.py",
+          "base": null,
+          "ui": null,
+          "core": "12bebeac8b3d2b2d1bd4a04a540836489d90a1eb"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_company_multiproject_0213.py",
+          "base": null,
+          "ui": null,
+          "core": "a190919f0719716fccebd6d6f15177633864d56a"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+          "base": null,
+          "ui": null,
+          "core": "81b473eae07b66b3cfe38c52018fd6431e36c94f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_external_claim_review_0215.py",
+          "base": null,
+          "ui": null,
+          "core": "b31672e1f4b48364190c37ad2a33a311ae8e23e5"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+          "base": null,
+          "ui": null,
+          "core": "65716d57080ea94602a8d49da1682d0d14bb74dc"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_result_reference_0221.py",
+          "base": null,
+          "ui": null,
+          "core": "bb3f67caeb2102d944e5950cf04eb3705d963587"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_sample_task_0221.py",
+          "base": null,
+          "ui": null,
+          "core": "010eec304471c547af45514a2d8208e8752da20f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+          "base": null,
+          "ui": null,
+          "core": "3e01853c9fb3d184c3bd74fe2c5bbbb5904a36af"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_shared_snapshot_0222.py",
+          "base": null,
+          "ui": null,
+          "core": "6cf54bde13d8b9ca5a03ea1f48fbf32c8d7aaa44"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_shared_snapshot_db_0223.py",
+          "base": null,
+          "ui": null,
+          "core": "7645a6d0871a7047f8d75e7d8c810f9f50875ac4"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_signed_consume_reference_0217.py",
+          "base": null,
+          "ui": null,
+          "core": "08f7a7d07376779bc90baa9062e17a9695436b45"
+        },
+        {
+          "path": "product/ai-company-os-frontend/CONTRACT_PIN.md",
+          "base": "f997a337773dd26e2011a604aad3e31d47b2fb17",
+          "ui": "f997a337773dd26e2011a604aad3e31d47b2fb17",
+          "core": "212db95a20268bb6261a5832446a1d9718b2195b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/plan/route.ts",
+          "base": null,
+          "ui": null,
+          "core": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts",
+          "base": null,
+          "ui": null,
+          "core": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6"
+        },
+        {
+          "path": "product/ai-company-os-frontend/app/layout.tsx",
+          "base": "ba4cb5b81def3aefd93be62d163f0d5aa503e35f",
+          "ui": "ba4cb5b81def3aefd93be62d163f0d5aa503e35f",
+          "core": "29f15f7920c11b64db7526e0b53721e9ce60022a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+          "base": "560bce08058a7a68aea0523e5d1a57e844363d39",
+          "ui": "560bce08058a7a68aea0523e5d1a57e844363d39",
+          "core": "e7feeb6dffab3408cbe7afce836afded5ad42229"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+          "base": "539833649fa3de74dfe8e7a79f7bfe4fbec74dbb",
+          "ui": "539833649fa3de74dfe8e7a79f7bfe4fbec74dbb",
+          "core": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256"
+        },
+        {
+          "path": "product/ai-company-os-frontend/components/dashboard/SnapshotStrip.tsx",
+          "base": "8d6e5f9790ac7908178b262562de6afc206cd301",
+          "ui": "8d6e5f9790ac7908178b262562de6afc206cd301",
+          "core": "6118c9d5a57f7991094e72ef9903fa65a5e6c724"
+        },
+        {
+          "path": "product/ai-company-os-frontend/contracts/generated/ceo.office.shared.snapshot.schema.json",
+          "base": null,
+          "ui": null,
+          "core": "35341938ec016b1b125a01e72eea1cc8a60e5b8a"
+        },
+        {
+          "path": "product/ai-company-os-frontend/design-system/WorkflowProjection.tsx",
+          "base": "4831d41af6c33cd85e183fabc1751bb0ca1d7620",
+          "ui": "4831d41af6c33cd85e183fabc1751bb0ca1d7620",
+          "core": "faee00939e584b7339729a2b1a072af8cd8d0df1"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/core-review/CorePreview.tsx",
+          "base": "38cc1aa3852aa9bfea8f402726196da64e627152",
+          "ui": "38cc1aa3852aa9bfea8f402726196da64e627152",
+          "core": "1cde40d7c912ef389a562e687676d03cc09b40bb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/core-review/planProjection.ts",
+          "base": "2981fd4fbff4c7f3215a8b59b1a5ff58e7eb1830",
+          "ui": "2981fd4fbff4c7f3215a8b59b1a5ff58e7eb1830",
+          "core": "e337a8da904e31b027f02d5876ab451d8da1d699"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+          "base": null,
+          "ui": null,
+          "core": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+          "base": null,
+          "ui": null,
+          "core": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+          "base": "ba82bc6ff78ad85a0003cdb520dc674ec7800bf1",
+          "ui": "ba82bc6ff78ad85a0003cdb520dc674ec7800bf1",
+          "core": "5456a3812117d4f4d9503e4875625e58bea0382b"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/projectionRegistry.ts",
+          "base": "a9293468f0e5249e641f80fc5b91c2d2f9f67d39",
+          "ui": "a9293468f0e5249e641f80fc5b91c2d2f9f67d39",
+          "core": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/sharedSnapshot.ts",
+          "base": null,
+          "ui": null,
+          "core": "9abf25315e79ba54b071702ca5b74b9656f3bbbc"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/HistoricalEvidenceStrip.tsx",
+          "base": null,
+          "ui": null,
+          "core": "8e687088be274910977395186debba39d676ab9d"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+          "base": null,
+          "ui": null,
+          "core": "dbfed501c97f0570b0f6a93e9cf0838c41449038"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/historicalEvidence.ts",
+          "base": null,
+          "ui": null,
+          "core": "9192827b261d611d2a9d4475dbc52145c37c4518"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/historicalPresentation.ts",
+          "base": null,
+          "ui": null,
+          "core": "a760a0ebf7f49ac79ff8948e496aecaa7770b9ee"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/studioContext.ts",
+          "base": null,
+          "ui": null,
+          "core": "722f085bf56e0f9bdfeb666e1e29e1de8d1e1b4e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/scripts/run-studio-0223.cjs",
+          "base": null,
+          "ui": null,
+          "core": "3cd1db24c0dc8965f8055c3117fea84f99c35a65"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/historical-evidence-0214.test.cjs",
+          "base": null,
+          "ui": null,
+          "core": "52ee3a5dcf137b08a4d46f59be7341583c9d667e"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/historical-presentation-0215.test.cjs",
+          "base": null,
+          "ui": null,
+          "core": "14c1db2508cfbdd9fd86dda099849aeda1068eb8"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/plan-proxy-0223.test.cjs",
+          "base": null,
+          "ui": null,
+          "core": "2b6a5ac820002eed90d970d9943846bec8264a7f"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/projection-registry.test.cjs",
+          "base": "0e44dbaf1e2297ea9a1cf2388bfb2aad8d062d0a",
+          "ui": "0e44dbaf1e2297ea9a1cf2388bfb2aad8d062d0a",
+          "core": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+          "base": null,
+          "ui": null,
+          "core": "16b8070f809c590d0d4b2796adc6db186cd23f29"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/studio-context-0217.test.cjs",
+          "base": null,
+          "ui": null,
+          "core": "d0acdf19a4f102561e47de0b85cd8646a18b0d90"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/studio-context-0223.test.cjs",
+          "base": null,
+          "ui": null,
+          "core": "9196c6d6051d46653ec86829f00dca9aa546688b"
+        }
+      ],
+      "both_changed_differently": [
+        {
+          "path": "product/SOURCE_MANIFEST.json",
+          "base": "d8fbc81d6a0a8e409e92b906de9d86db2b65dd12",
+          "ui": "2888802a725b269bb34edd60ff838f0eaa85381f",
+          "core": "8a4e9bcc4e3bedd8229e7023b57b430eaccf0680"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "base": null,
+          "ui": "e015a0fb7f2eff07117dc5f9acb309e5bbcb6f52",
+          "core": "fa47acd32adb309896f762ec50e47bf26641adbb"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+          "base": "d90f1242b47f94ec5969acc1b408470ef769b2bd",
+          "ui": "8f0325ec269b94a5c4c4a284fb91e42debc45ae2",
+          "core": "593af6fd77724bd3b771fc408e4dbda4464abaa8"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+          "base": "69737471493a4233d94dc74da94a492d7fb844bf",
+          "ui": "29b3230b8f36ffcc5aa4eb678dc7f6ed353764b1",
+          "core": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+          "base": "fcbe651133d797c814b95214ec726eeddbe2c49a",
+          "ui": "2fc616f6ddb96de8590ab0c1d041615da81e3c66",
+          "core": "46827e7a4925cf56efdcda498250ce5e0f05e10e"
+        }
+      ]
+    }
+  },
+  "authority": {
+    "merge": false,
+    "main": false,
+    "ci": false,
+    "prod": false,
+    "independent_acceptance": "HOLD"
+  },
+  "full_zip": "authenticated GitHub pinned archive link; local bytes not materialized",
+  "next": "W8 fresh reviewed candidate; manually reconcile both-changed files, verify unilateral paths and semantic dependencies before any separate union"
+}

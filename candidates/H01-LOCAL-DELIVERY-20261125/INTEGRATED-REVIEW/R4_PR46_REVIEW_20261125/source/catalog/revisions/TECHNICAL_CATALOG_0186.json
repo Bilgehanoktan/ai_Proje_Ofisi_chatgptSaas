@@ -1,0 +1,311 @@
+{
+  "revision": "0186",
+  "parent_commit": "ba74dd586c6ec4cfc768ae5ceb6b364d901782cb",
+  "source_commit": "e5db7974daa47652ca5773aeb5ece177a7b1a457",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/CONTRACT_PIN.md",
+      "blob": "15bcdf2e320134898647b0dd6979775674c29f85",
+      "bytes": 2065,
+      "sha256": "eebf749044dc3f5960f48f7a4e8212f85d97e922a15e8f1d804dcad610f8ee85",
+      "operation": "MODIFY",
+      "symbols": "0186 schema pin"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/admission_projection.py",
+      "blob": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b",
+      "bytes": 715,
+      "sha256": "69ebb03c9b5e6d7f2d3572324015c9a0bc71c46af0f679aeb7a16609a3bad48a",
+      "operation": "ADD",
+      "symbols": "router, admission_projection()"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/demo.py",
+      "blob": "b0a657f29984fe516e7704cb78bc6bd1066f385c",
+      "bytes": 2954,
+      "sha256": "4a10af5039aa0ae150f57cc25cd77e5de6875956a0e569b47072fe6e948921fa",
+      "operation": "MODIFY",
+      "symbols": "register admission_projection_router"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/admission_demo.py",
+      "blob": "f8a6f0b25c01df4ed881de84f632045f5a343644",
+      "bytes": 709,
+      "sha256": "ddf0e4295efbc02cdda05a73c207229aba2b3260adc28fd0cbae95f67c8ed08e",
+      "operation": "ADD",
+      "symbols": "main(); create/admit/known/unknown/snapshot CLI"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/admission_sample.py",
+      "blob": "98f8ee3001d6763c7720bdecb8dbc69ab8f78474",
+      "bytes": 8231,
+      "sha256": "2aeb2c765d9e7d06be7d1e1bcd3e2694fcaf8499470b205708da7ac72ee68270",
+      "operation": "ADD",
+      "symbols": "PROFILE, PLAN, SCOPE, OWNER, DDL, STATES, fixed_bundle(), _path(), _state(), _open(), AdmissionSample.create/apply(), read_admission()"
+    },
+    {
+      "path": "product/ai-company-os-backend/contracts/source/admission.sample.projection.schema.json",
+      "blob": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+      "bytes": 3079,
+      "sha256": "c28b116abdae37d324d76cf4bd255f0dcf86368604805a6093f377059b5a7193",
+      "operation": "ADD",
+      "symbols": "Draft 2020-12, exact 15 fields and four phase tuples"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_sample.py",
+      "blob": "11f31bf090bd8f08826cb7fd3227a9a082bd53b8",
+      "bytes": 6069,
+      "sha256": "11cad0a4f7786cee91250b531b0ebb1e1f6f94d2e5854648e51d6715143ec2d7",
+      "operation": "ADD",
+      "symbols": "AdmissionSampleTests; 14 tests"
+    },
+    {
+      "path": "product/ai-company-os-frontend/CONTRACT_PIN.md",
+      "blob": "15bcdf2e320134898647b0dd6979775674c29f85",
+      "bytes": 2065,
+      "sha256": "eebf749044dc3f5960f48f7a4e8212f85d97e922a15e8f1d804dcad610f8ee85",
+      "operation": "MODIFY",
+      "symbols": "byte-identical schema pin"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/admission/route.ts",
+      "blob": "670fb8af660e089887ec5a182d94097ce0ae76b4",
+      "bytes": 1126,
+      "sha256": "f494eab65357a36572dd17c0e4e07499af39121b185229b40cfcd76a5a8d71b4",
+      "operation": "ADD",
+      "symbols": "GET fixed loopback proxy"
+    },
+    {
+      "path": "product/ai-company-os-frontend/contracts/generated/admission.sample.projection.schema.json",
+      "blob": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+      "bytes": 3079,
+      "sha256": "c28b116abdae37d324d76cf4bd255f0dcf86368604805a6093f377059b5a7193",
+      "operation": "ADD",
+      "symbols": "byte-identical generated copy"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "088588c8fed1676e1ee4db1bd6a662ab77d8dbc0",
+      "bytes": 7652,
+      "sha256": "24216737106461535e1d02e65105feb1b4fe85b1aca7b5d18680720cc949976e",
+      "operation": "MODIFY",
+      "symbols": "DashboardView mounts AdmissionProjectionPanel; 0186 version label"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/AdmissionProjectionPanel.tsx",
+      "blob": "8880a7a4fdd302164da0506ad2363bfcc580ed21",
+      "bytes": 1599,
+      "sha256": "deedb72ab168cf6336e67a0d29d7159712597a113549d5d3705b9693e492e273",
+      "operation": "ADD",
+      "symbols": "AdmissionProjectionPanel/read()"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/admissionProjection.ts",
+      "blob": "5af643c596185be4d8a30cd75f6c56e77de33c57",
+      "bytes": 1574,
+      "sha256": "e49e9c5382471b8abf7511b38e5392052476d2fdf0b5acec73b92ca4fdf32060",
+      "operation": "ADD",
+      "symbols": "AdmissionProjection, parseAdmissionProjection(), states"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/admission-projection.test.cjs",
+      "blob": "ee3b98b3ff80a71859a057d9058192cb5931286e",
+      "bytes": 2471,
+      "sha256": "42ac64db37cbfd9cd3ac8aecb527b606cc29f6f8fe68dd4f245b72a3970ceef1",
+      "operation": "ADD",
+      "symbols": "9 parser/proxy tests"
+    }
+  ],
+  "classes": [
+    "AdmissionSample",
+    "AdmissionSampleTests",
+    "AdmissionProjection"
+  ],
+  "functions": [
+    "fixed_bundle",
+    "_path",
+    "_state",
+    "_open",
+    "AdmissionSample.create",
+    "AdmissionSample.apply",
+    "read_admission",
+    "admission_projection",
+    "main",
+    "parseAdmissionProjection",
+    "GET",
+    "AdmissionProjectionPanel"
+  ],
+  "api": [
+    {
+      "method": "GET",
+      "path": "/demo/v1/admission/sample-projection",
+      "config": "AICOS_D0_ADMISSION_DB",
+      "status": "200 valid or 503 D0_ADMISSION_READBACK_HOLD",
+      "writes": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/demo/admission",
+      "target": "http://127.0.0.1:8000/demo/v1/admission/sample-projection",
+      "limits": "2500ms, 4096 bytes, no redirects, exact parser",
+      "writes": false
+    }
+  ],
+  "database": {
+    "profile": "D0_ADMISSION_STORE_0186",
+    "suffix": ".admission.d0.sqlite",
+    "tables": [
+      {
+        "name": "meta",
+        "columns": [
+          "profile"
+        ]
+      },
+      {
+        "name": "membership",
+        "columns": [
+          "tenant",
+          "company",
+          "principal"
+        ],
+        "key": "composite PK; fixed OWNER only"
+      },
+      {
+        "name": "sample_budget",
+        "columns": [
+          "id",
+          "version",
+          "phase",
+          "reserved",
+          "observed"
+        ],
+        "key": "single id=1; nonnegative, <=1000 total"
+      },
+      {
+        "name": "sample_event",
+        "columns": [
+          "command",
+          "version",
+          "kind"
+        ],
+        "key": "command PK, unique version"
+      },
+      {
+        "name": "sample_admission",
+        "columns": [
+          "id",
+          "command",
+          "tenant",
+          "company",
+          "principal"
+        ],
+        "key": "FK event and composite membership"
+      },
+      {
+        "name": "sample_audit",
+        "columns": [
+          "command",
+          "decision"
+        ],
+        "key": "FK event, SAMPLE_ONLY"
+      },
+      {
+        "name": "sample_outbox",
+        "columns": [
+          "command",
+          "status"
+        ],
+        "key": "FK event, DENY"
+      }
+    ],
+    "transaction": "BEGIN IMMEDIATE, _state before and after, version CAS, atomic event/admission/audit/outbox plus budget",
+    "migration": "none; new exclusive sample profile only",
+    "canonical_mapping": "HOLD, 4/5/7 unresolved",
+    "postgresql": "NOT_RUN"
+  },
+  "events": {
+    "commands": [
+      "demo-admit",
+      "demo-settle"
+    ],
+    "kinds": [
+      "ADMIT",
+      "KNOWN_SAMPLE",
+      "UNKNOWN"
+    ],
+    "states": {
+      "PENDING": [
+        0,
+        0,
+        0,
+        1000
+      ],
+      "RESERVED": [
+        1,
+        100,
+        0,
+        900
+      ],
+      "SETTLED_SAMPLE": [
+        2,
+        0,
+        60,
+        940
+      ],
+      "UNKNOWN_HOLD": [
+        2,
+        100,
+        0,
+        900
+      ]
+    },
+    "tuple": "version,reserved,observed,remaining; synthetic integer minor units",
+    "idempotency": "same command/kind repeat ignored; conflicting settlement denied; UNKNOWN cannot release"
+  },
+  "dependencies": {
+    "new_direct": [],
+    "existing": "stdlib sqlite3, pathlib, contextlib, existing FastAPI, jsonschema test dependency, TypeScript, React",
+    "locks": "NOT_GENERATED"
+  },
+  "errors": [
+    "ADMISSION_SAMPLE_PATH_HOLD",
+    "ADMISSION_SAMPLE_SCOPE_HOLD",
+    "ADMISSION_SAMPLE_STATE_HOLD",
+    "ADMISSION_SAMPLE_BINDING_HOLD",
+    "ADMISSION_SAMPLE_MISSING",
+    "ADMISSION_SAMPLE_REQUEST_HOLD",
+    "ADMISSION_SAMPLE_IDEMPOTENCY_HOLD",
+    "ADMISSION_SAMPLE_CAS_HOLD",
+    "ADMISSION_SAMPLE_BUNDLE_HOLD",
+    "D0_ADMISSION_READBACK_HOLD"
+  ],
+  "security": {
+    "scope": "fixed synthetic owner, no real authentication or RLS",
+    "clock": "fixed 0185 synthetic clock/lease/witness reference, not trusted",
+    "effects": "all deny, actual cost null, no provider, no authority",
+    "custody": "trusted local directory only, no adversarial file protection"
+  },
+  "tests": {
+    "new_python": 14,
+    "new_node": 9,
+    "regression_python": 52,
+    "regression_node": 36,
+    "selected_python": 66,
+    "selected_node": 45,
+    "selected_total": 111,
+    "ts_strict_compile": "PASS",
+    "schema_byte_parity": "PASS",
+    "cli_reopen": "PASS",
+    "isolated_http_normal": 200,
+    "isolated_http_broken_audit": 503,
+    "compiled_proxy_normal": 200,
+    "compiled_proxy_broken_audit": 503,
+    "db_sha_unchanged_on_get": true,
+    "full_backend": "NOT_RUN",
+    "full_next_build": "NOT_RUN",
+    "current_browser": "NOT_RUN",
+    "postgresql": "NOT_RUN",
+    "dependency_lock": "NOT_GENERATED"
+  },
+  "maintenance": "docs/0186/ARCHITECTURE_AND_CATALOG.md"
+}

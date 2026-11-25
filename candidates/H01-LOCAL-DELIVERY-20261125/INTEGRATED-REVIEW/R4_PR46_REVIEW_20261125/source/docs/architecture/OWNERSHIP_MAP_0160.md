@@ -1,0 +1,2 @@
+# Mantıksal sahiplik — aday
+Orchestrator ve Task Engine ayrı core paketleri; lifecycle ve plan binding agent_runtime; ledger/causal/outbox event_store; fence/T1 transaction; gateway/denial/witness/IV review policy. Model/skill/memory/knowledge/office engines altında. API demo sadece salt okunur; main facade. Frontend görsel projeksiyon otorite değil. Backend contracts/source tek aday şema kaynağı, frontend generated tüketici; R06 0/16, 0/55. Gerçek owner atanmış sayılmaz. IV policy içindeki inceleme kodu bağımsız yürütme/anahtar güven kökü değildir.

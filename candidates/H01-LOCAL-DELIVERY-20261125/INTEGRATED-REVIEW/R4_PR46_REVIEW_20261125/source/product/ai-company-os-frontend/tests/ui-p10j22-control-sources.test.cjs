@@ -1,0 +1,14 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {sources,filterSources,selectSource,sourceBoundary}=require(process.env.P10J22_MODEL);
+test('eight unique pinned source candidates',()=>{assert.equal(sources.length,8);assert.equal(new Set(sources.map(s=>s.id)).size,8);assert.ok(sources.every(s=>/^[a-f0-9]{40}$/.test(s.blob)&&s.path.startsWith('product/ai-company-os-backend/app/')));});
+test('finance three sources',()=>assert.deepEqual(filterSources('finance','').map(s=>s.id),['reservation','admission','projection']));
+test('security five sources',()=>assert.deepEqual(filterSources('security','').map(s=>s.id),['gateway','witness','iv','receipt','outbox']));
+test('no cross-domain search',()=>assert.deepEqual(filterSources('finance','inspect_witness'),[]));
+test('Turkish search',()=>assert.deepEqual(filterSources('finance',' BÜTÇE REZERVASYON ').map(s=>s.id),['reservation']));
+test('symbol search',()=>assert.deepEqual(filterSources('security','inspect_receipt').map(s=>s.id),['receipt']));
+test('multiword intersection',()=>assert.deepEqual(filterSources('security','outbox unknown').map(s=>s.id),['outbox']));
+test('no result and invalid domain',()=>{assert.deepEqual(filterSources('security','missing'),[]);assert.deepEqual(filterSources('unknown',''),[]);});
+test('invalid or oversized query',()=>{assert.deepEqual(filterSources('finance',null),[]);assert.deepEqual(filterSources('finance','x'.repeat(201)),[]);});
+test('selected row must belong to visible domain and query',()=>{assert.equal(selectSource('finance','','witness'),null);assert.equal(selectSource('security','outbox','iv'),null);assert.equal(selectSource('security','outbox','outbox').id,'outbox');});
+test('source statuses do not imply authorization',()=>{assert.ok(sources.every(s=>['HOLD','DENY','INCONCLUSIVE','UNVERIFIED'].includes(s.boundary)));assert.equal(sources.find(s=>s.id==='gateway').boundary,'DENY');assert.equal(sources.find(s=>s.id==='iv').boundary,'INCONCLUSIVE');});
+test('unknown values and denied operations',()=>{const b=sourceBoundary();for(const k of ['actualBudget','actualCost','actualRevenue','actualCollection','actualReceipts'])assert.equal(b[k],null);for(const k of ['spendAllowed','grantAllowed','retryAllowed','releaseAllowed'])assert.equal(b[k],false);});

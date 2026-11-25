@@ -1,0 +1,55 @@
+{
+  "revision": "UI-P10J-17",
+  "manifest": "d314b5cef9b40db2c48a4034248debd4fd7bfba1",
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+      "bytes": 3092,
+      "sha256": "ec7f1afe66f0f05628ed6d8272949f59875ac082b88d13f91dd134d1b3dd3777",
+      "blob": "65a2bbe1e7c9dfb6223df669d15ce87ce85a9a86",
+      "change": "replace"
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+      "bytes": 1118,
+      "sha256": "bdc4f9b160742cff6fef996ec297b12675ef849126636719bc53043d9c6fe3fc",
+      "blob": "137119431f81a19e5a4136bdac7d1a3ccbe5d29e",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j17-ceo.test.cjs",
+      "bytes": 4267,
+      "sha256": "0c6e00fcceff84c9369b18bf3bd0c81a0e8b22d5e9a6d7fa6a9a918fd0fec15b",
+      "blob": "27167d887f7cd228f8ea6f83887b444f74b2b1e1",
+      "change": "add"
+    }
+  ],
+  "test": {
+    "actual": 9,
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "mode": "actual TSX transpile and isolated JSX invocation; mocked hook/status/CSS; not actual React or browser",
+    "log_sha256": "c0752b02eb1dcb1e83e06dc8116b8311330a953452a8c0b36f3f2cf1b9b6fffa"
+  },
+  "browser": {
+    "blob": "2dc45a405400c856983e47c8efd20b39231a0390",
+    "previous_captures": 76,
+    "new_captures": 4,
+    "planned": 80,
+    "status": "NOT_RUN",
+    "new_cases": "desktop/mobile dark/light actual paired API read, 4 meters, budget 100/0/900 in existing UNKNOWN fixture, clear and overflow"
+  },
+  "gates": {
+    "ui": "21/40 prior, no new accepted gate",
+    "core": "8/16 historical core record, not union",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  }
+}

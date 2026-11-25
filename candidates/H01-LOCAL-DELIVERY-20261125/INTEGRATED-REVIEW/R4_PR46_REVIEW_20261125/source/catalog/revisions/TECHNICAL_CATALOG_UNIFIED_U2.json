@@ -1,0 +1,101 @@
+{
+  "revision": "UNIFIED-U2",
+  "parent": "b03e56ac6849654f52f7e421590becf3e3719dd0",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/sharedReplaySession.ts",
+      "change": "ADD",
+      "bytes": 2458,
+      "sha256": "c382c9c2ff500a8da5bff6b3881812637d21a6488d7dbc801cfdad3fa5dc2689",
+      "blob": "90dcd080c6ed53c4a8ff8e2aad1978509725515e",
+      "exports": [
+        "createSharedReplaySession",
+        "SHARED_READ_TIMEOUT_MS",
+        "SHARED_DISPLAY_TTL_MS",
+        "SharedSessionState",
+        "SharedSessionOptions"
+      ],
+      "methods": [
+        "snapshot",
+        "read",
+        "reset",
+        "invalidate",
+        "cancel"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+      "change": "MODIFY",
+      "bytes": 1354,
+      "sha256": "2fe6316918d262665054d05a034b5d1d1bc6200ac1b1dd0b21956de89a8d4c9c",
+      "blob": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+      "exports": [
+        "SharedSnapshotProvider",
+        "useSharedSnapshot"
+      ],
+      "methods": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "change": "MODIFY",
+      "bytes": 2002,
+      "sha256": "93a1cfa49f86b220c11387425e8800d60876b5c362f5b66a21c39594c92dd216",
+      "blob": "6f62688761d8cf2f4b2e759e5fd30eef07881141",
+      "exports": [
+        "default"
+      ],
+      "methods": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+      "change": "MODIFY",
+      "bytes": 3302,
+      "sha256": "212e106dfc3c2c177a20e39497d8de44a4b3ba53fe7e067de918a9e3c4081749",
+      "blob": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+      "exports": [
+        "default"
+      ],
+      "methods": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "change": "MODIFY",
+      "bytes": 3358,
+      "sha256": "7d75044a6b8083467b9acf77d996e3adf35c2debdde74d5a88c3157bc4c30dcc",
+      "blob": "eacb81100fb34a8e74f619a5a8e2283a97337253",
+      "exports": [
+        "default"
+      ],
+      "methods": []
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/unified-shared-session.test.cjs",
+      "change": "ADD",
+      "bytes": 6526,
+      "sha256": "9407c69fd00467ce5062b0e1796b38abfbfc51677918a13665273b22acbbad45",
+      "blob": "0de40e28d6fead7bd13d9958c73edd1c2df2f1ca",
+      "exports": [],
+      "methods": [],
+      "test_count": 14
+    },
+    {
+      "path": "tests/integration/run_unified_u2_session.py",
+      "change": "ADD",
+      "blob": "c27eb541d4ad4c26f879dd5a45e98f20dd81de2f",
+      "sha256": "5f1e2931931304576e89cba9620ff2bd3cd8fad73c8641578095920d1be6397a",
+      "dependencies": [
+        "FastAPI",
+        "uvicorn",
+        "original route/wire/replay",
+        "node:test"
+      ],
+      "purpose": "fixture reader only"
+    }
+  ],
+  "api_change": [],
+  "db_change": [],
+  "event_change": [],
+  "dependency_change": [],
+  "diagnosis": "docs/UNIFIED-U2/ARCHITECTURE_AND_PLAN.md",
+  "rollback": "b03e56ac6849654f52f7e421590becf3e3719dd0"
+}

@@ -1,0 +1,13 @@
+const test=require('node:test'),assert=require('node:assert/strict'),path=require('node:path');
+const {filterReadbackCards,readbackLabels,readbackGroups}=require(path.join(process.env.P10D_MODEL,'features/workflow/readbackCatalog.js'));
+test('CEO has seven independent endpoint cards',()=>assert.equal(filterReadbackCards('Genel Bakış','').ids.length,7));
+test('office preserves view boundaries',()=>assert.deepEqual(filterReadbackCards('Sanal Ofis','').ids,['office-workbench','lifecycle','lifecycle-prefix']));
+test('security group never expands office view',()=>assert.deepEqual(filterReadbackCards('Sanal Ofis','','security').ids,['lifecycle','lifecycle-prefix']));
+test('finance intersection not join',()=>assert.deepEqual(filterReadbackCards('SaaS ve Finans','','finance'),{total:3,ids:['admission','task-budget','lifecycle']}));
+test('search uses Turkish casing',()=>assert.deepEqual(filterReadbackCards('Genel Bakış','İŞ İSTASYONU').ids,['office-workbench']));
+test('search endpoint id',()=>assert.deepEqual(filterReadbackCards('Genel Bakış','outbox').ids,['outbox']));
+test('unknown view or prototype rejected',()=>{for(const v of ['toString','__proto__','unknown'])assert.equal(filterReadbackCards(v,''),null)});
+test('unknown group rejected',()=>assert.equal(filterReadbackCards('Genel Bakış','','__proto__'),null));
+test('filter returns new array without mutating scope',()=>{const a=filterReadbackCards('Genel Bakış','');a.ids.pop();assert.equal(filterReadbackCards('Genel Bakış','').ids.length,7)});
+test('empty search results not fabricated',()=>assert.deepEqual(filterReadbackCards('Güvenlik','mvp'),{total:3,ids:[]}));
+test('all group and labels unique',()=>{assert.equal(new Set(readbackGroups.map(x=>x.id)).size,4);assert.equal(Object.keys(readbackLabels).length,7)});

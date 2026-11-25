@@ -1,0 +1,12 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {readbackFacts}=require(process.env.FACT_JS),{decorCatalog,decorUri}=require(process.env.DECOR_JS);
+test('historical only',()=>{for(const p of ['idle','loading','hold','live'])assert.deepEqual(readbackFacts('admission',p,{phase:'RESERVED'}),[])});
+test('whitelisted individual fields',()=>assert.deepEqual(readbackFacts('admission','historical',{phase:'RESERVED',actual_cost_minor:900,dispatch_allowed:true}),[{label:'Örnek durum',value:'RESERVED'}]));
+test('unknown endpoint and prototype names denied',()=>{for(const k of ['toString','__proto__','unknown'])assert.deepEqual(readbackFacts(k,'historical',{}),[])});
+test('invalid data shape hidden',()=>{for(const v of [null,[],7,'foo'])assert.deepEqual(readbackFacts('admission','historical',v),[])});
+test('zero preserved',()=>assert.deepEqual(readbackFacts('admission','historical',{sample_reserved_minor:0}),[{label:'Örnek rezervasyon (minor)',value:'0'}]));
+test('null and object are unknown',()=>assert.deepEqual(readbackFacts('outbox','historical',{generation:null,phase:{}}),[{label:'Örnek durum',value:'—'},{label:'Nesil',value:'—'}]));
+test('no combined authority or data',()=>assert.deepEqual(readbackFacts('task-budget','historical',{pair_id:'p',office:{sample_event_count:4},budget:{sample_reserved_minor:10}}),[{label:'Örnek çift kimliği',value:'p'}]));
+test('catalog IDs unique and six assets',()=>{assert.equal(decorCatalog.length,6);assert.equal(new Set(decorCatalog.map(x=>x.id)).size,6)});
+test('all assets embedded static SVG',()=>{for(const a of decorCatalog){const uri=decorUri(a.id);assert.ok(uri.startsWith('data:image/svg+xml;charset=utf-8,'));const svg=decodeURIComponent(uri.split(',')[1]);assert.match(svg,/^<svg.*<\/svg>$/);assert.doesNotMatch(svg,/<script|href=|onload=/i)}});
+test('unknown asset rejected',()=>assert.equal(decorUri('https://other.example'),null));

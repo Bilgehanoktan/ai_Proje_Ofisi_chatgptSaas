@@ -1,0 +1,92 @@
+{
+  "revision": "UI-P10J-12",
+  "parent": "9cd9ebee9f0760eeec24a86bf02487f02096eea8",
+  "prior": "progress/UI_P10J11.json",
+  "original_gates": {
+    "passed": 21,
+    "total": 40,
+    "delta": 0
+  },
+  "core": {
+    "passed": 7,
+    "total": 16,
+    "scope": "0223 historical pinned record"
+  },
+  "independent": {
+    "passed": 0,
+    "total": 7
+  },
+  "w8": {
+    "historical": "8/8 P10J08",
+    "candidate": "NOT_RUN"
+  },
+  "local_model": {
+    "passed": 6,
+    "total": 6
+  },
+  "manifest_entries": 396,
+  "items": [
+    {
+      "id": "P12-01",
+      "name": "Agent Studio catalogue and profile context",
+      "source": "INTEGRATED_UI_SOURCE",
+      "test": "MODEL_PARTIAL_PASS; REACT_NOT_RUN",
+      "union": "PENDING_0223",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    },
+    {
+      "id": "P12-02",
+      "name": "Reference plan predecessor/follower display",
+      "source": "INTEGRATED_UI_SOURCE",
+      "test": "3 MODEL_PASS",
+      "union": "PENDING_0223",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    },
+    {
+      "id": "P12-03",
+      "name": "Office room focus/filter/reset and styling",
+      "source": "INTEGRATED_UI_SOURCE",
+      "test": "3 MODEL_PASS; BROWSER_NOT_RUN",
+      "union": "PENDING_SHARED_PATH_REVIEW",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    },
+    {
+      "id": "P12-04",
+      "name": "Real avatar/live location and authenticated placement",
+      "source": "NOT_IMPLEMENTED_THIS_ROUND",
+      "test": "NOT_RUN",
+      "union": "HOLD",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    },
+    {
+      "id": "P12-05",
+      "name": "Core shared snapshot and StudioContextPanel",
+      "source": "CORE_BRANCH_ONLY",
+      "test": "CORE_HISTORICAL_SELECTED_PASS",
+      "union": "NOT_MERGED",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    },
+    {
+      "id": "P12-06",
+      "name": "W8 68 screen browser suite",
+      "source": "HARNESS_UPDATED",
+      "test": "NOT_RUN",
+      "union": "NOT_APPLICABLE",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    },
+    {
+      "id": "P12-07",
+      "name": "Architecture/catalog/matrix/handover",
+      "source": "UPDATED_UI",
+      "test": "DOCUMENT_READBACK_PENDING",
+      "union": "SEPARATE_RECORD",
+      "acceptance": "HOLD_OR_NOT_RUN"
+    }
+  ],
+  "area_matrix": "progress/INTEGRATION_MATRIX_UI_P10J12.json",
+  "parallel": {
+    "core": "c94753b4f2bc8a3e739ffa997ca9547772deeaf2",
+    "merge": false
+  },
+  "next": "W8 actual product acceptance; explicit 0223 union reconciliation"
+}

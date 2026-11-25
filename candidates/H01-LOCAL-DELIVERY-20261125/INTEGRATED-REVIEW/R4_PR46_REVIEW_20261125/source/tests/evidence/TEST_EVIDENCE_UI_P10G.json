@@ -1,0 +1,90 @@
+{
+  "revision": "UI-P10G",
+  "source_commit": "9ebe8aa2cad28e6f3357c2ad81f05f963aa691dc",
+  "parent": "0b9e476264128ce523e3acab97712fe78fd5582e",
+  "manifest_blob": "150cda5f380d889240ca05b51a50ce8baf6e01c0",
+  "scope": "D0 exact-source diagnostics, unpinned local dependency environment",
+  "inventory": {
+    "product": 378,
+    "frontend": 160,
+    "manifest_entries": 377,
+    "unchanged": 371,
+    "added": 5,
+    "modified": 1,
+    "deleted": 0,
+    "parent_local_zip_verified": 177,
+    "core_lock_exact": 55,
+    "recovered": 18
+  },
+  "tests": {
+    "original_unique": {
+      "executed": 180,
+      "expected_behavior": 179,
+      "residual_reproduced": 1,
+      "groups": {
+        "t1_scheduler": 35,
+        "admission": 19,
+        "lifecycle": 26,
+        "history_plan": 48,
+        "core29": 29,
+        "authority_0211": 10,
+        "authority_0212": 7,
+        "company_0212": 6
+      }
+    },
+    "core29": {
+      "passed": 29,
+      "exact": 55,
+      "locked": false
+    },
+    "combined_0212": {
+      "executed": 52,
+      "expected_behavior": 51,
+      "residual_reproduced": 1,
+      "subset_of_original_unique": true
+    },
+    "boundary": {
+      "executed": 3,
+      "expected_behavior": 2,
+      "residual_reproduced": 1
+    },
+    "ui_model": {
+      "passed": 54,
+      "new": 11,
+      "rerun": 43
+    },
+    "tsx_syntax": {
+      "passed": 1
+    },
+    "same_app_compiled_get": {
+      "passed": 7,
+      "post_denied": 7,
+      "db_unchanged": 5
+    },
+    "original_witness_journal_wrapper": "NOT_RUN",
+    "w8": "syntax and pin checked; local original runner absent, load HOLD",
+    "npm_lock": "FAIL_ENOTCACHED",
+    "next_build": "FAIL_EXIT_127",
+    "next_api": "0/7_NOT_RUN",
+    "browser": "0/52_NOT_RUN",
+    "PG_RLS": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "residuals": [
+    "D-03 POSIX disposable authority path replacement during original ordinary T1 commit: local lock does not establish independent file custody",
+    "D-04 original authority restore replay reproduced"
+  ],
+  "core_union": {
+    "ref": "e33ffb633bc5a445aec1fb4946625884d503c348",
+    "core_0213_same_commit": true,
+    "test_sources_exact": 2,
+    "production_code_changes": 0
+  },
+  "blockers": [
+    "No full checkout bytes (DNS)",
+    "Missing local W8 original runner and original witness dependency closure",
+    "Reviewed locks absent; npm offline cache miss",
+    "Next missing"
+  ],
+  "environment": "FastAPI 0.128.2 / Starlette 0.50.0 / Uvicorn 0.48.0 / cryptography 46.0.4; direct locked environment not matched."
+}

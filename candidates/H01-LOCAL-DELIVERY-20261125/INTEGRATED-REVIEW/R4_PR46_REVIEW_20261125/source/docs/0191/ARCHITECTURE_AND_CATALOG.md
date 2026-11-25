@@ -1,0 +1,3 @@
+# 0191 — product core
+LogicalT1Coordinator in existing transaction/port.py sequences required roles under one injected transaction context; validates receipt before context exit and returns only after exit. Legacy T1Port and DisabledT1 unchanged. No concrete PostgreSQL session, authoritative locks, replay or independent acceptance; R03 physical mapping HOLD. No runtime wiring. Tests NOT_RUN. Rollback: revert this isolated commit; no migration.
+User priority: T1, PostgreSQL, Agent Runtime, Orchestrator, Event Store, Memory/Knowledge, Model Gateway, Skill/Tool, Office/UI, SaaS/security. W8 Windows independent; do not wait. No CI/main/PROD/external effects.

@@ -1,0 +1,632 @@
+{
+  "base": "R8 / 0162-B",
+  "candidate_only": true,
+  "records": [
+    {
+      "change_id": "CHG-0162C-01",
+      "path": "quarantine/0162C/product/ai-company-os-backend/app/core/event_store/reconciliation_review.py",
+      "proposed_destination": "product/ai-company-os-backend/app/core/event_store/reconciliation_review.py",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "12c79ac6b742cf1d9c76f1352a114d84c42bd2502a186c90790b06e56e97d6f9",
+      "bytes": 4180,
+      "lines": 73,
+      "workstream": "W4",
+      "domain": "D15,D16,D21",
+      "source_ref": "R02; 0162-F12,F13,F18",
+      "purpose": "Outbox/fence/makbuz kimliği ve epoch ayrımı, UNKNOWN/CONFLICT karantina",
+      "symbols": [
+        {
+          "name": "Outcome",
+          "kind": "class",
+          "line": 9,
+          "end": 13
+        },
+        {
+          "name": "ReconciliationPin",
+          "kind": "class",
+          "line": 16,
+          "end": 34
+        },
+        {
+          "name": "ReconciliationReview",
+          "kind": "class",
+          "line": 37,
+          "end": 45
+        },
+        {
+          "name": "valid_pin",
+          "kind": "function",
+          "line": 48,
+          "end": 53
+        },
+        {
+          "name": "inspect_reconciliation",
+          "kind": "function",
+          "line": 56,
+          "end": 73
+        }
+      ],
+      "imports": [
+        "from dataclasses import dataclass",
+        "from enum import Enum",
+        "from app.core.agent_runtime.lifecycle import Scope, valid_scope, token, uint",
+        "from app.core.transaction.review import digest_ok",
+        "from app.core.transaction.fence_review import FenceObservation, valid_fence, FencePhase",
+        "from app.core.event_store.outbox_review import OutboxObservation, valid_outbox, Phase"
+      ],
+      "dependencies": "outbox_review.py, fence_review.py, lifecycle.py, transaction/review.py",
+      "troubleshooting": "Correlation, effect/idempotency, epoch ve receipt farkını incele; sağlayıcıya yeniden gönderme yok",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-02",
+      "path": "quarantine/0162C/product/ai-company-os-backend/app/core/transaction/terminal_review.py",
+      "proposed_destination": "product/ai-company-os-backend/app/core/transaction/terminal_review.py",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "f24f72264d6898b04b0ec48dd887a9fc2f99da749abcac9463943315199ad191",
+      "bytes": 9648,
+      "lines": 140,
+      "workstream": "W3/W4",
+      "domain": "D07,D15,D16",
+      "source_ref": "R01/R03; 0162-F1–F11",
+      "purpose": "Terminal CAS, sekiz rol, mutation digest, admission/lease bağlama; stop ayrı HOLD",
+      "symbols": [
+        {
+          "name": "TerminalPin",
+          "kind": "class",
+          "line": 9,
+          "end": 28
+        },
+        {
+          "name": "MutationBinding",
+          "kind": "class",
+          "line": 31,
+          "end": 41
+        },
+        {
+          "name": "TerminalReview",
+          "kind": "class",
+          "line": 44,
+          "end": 53
+        },
+        {
+          "name": "inspect_pre_admission_stop",
+          "kind": "function",
+          "line": 56,
+          "end": 62
+        },
+        {
+          "name": "inspect_terminal",
+          "kind": "function",
+          "line": 65,
+          "end": 140
+        }
+      ],
+      "imports": [
+        "from dataclasses import dataclass",
+        "from app.core.agent_runtime.lifecycle import (RunObservation, RunState, Scope, LeaseObservation, ClockSample,\n    EDGES, TERMINAL, valid_scope, valid_lease, inspect_lease, token, uint)",
+        "from app.core.transaction.review import LogicalIntent, RoleObservation, Operation, valid_intent, digest_ok, REQUIRED",
+        "from app.core.transaction.readback_review import HeadReadback, valid_head, AdmissionPin, valid_admission"
+      ],
+      "dependencies": "lifecycle.py, transaction/review.py, readback_review.py",
+      "troubleshooting": "CAS, lease, mutation ve rol kimliklerini sırasıyla incele; fiziksel T1 ve kontrol düzlemi açık",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-03",
+      "path": "quarantine/0162C/product/ai-company-os-backend/app/engines/budget_engine/settlement_review.py",
+      "proposed_destination": "product/ai-company-os-backend/app/engines/budget_engine/settlement_review.py",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "17ea4c7251b11b813251bc20307127cc75d124e42a192701cbf73347153e2913",
+      "bytes": 5312,
+      "lines": 104,
+      "workstream": "W7",
+      "domain": "D17,D15,D07",
+      "source_ref": "R11; 0162-F4,F14,F15",
+      "purpose": "Company-period head, reservation ve economic event ayrı, maliyet belirsizliğinde exposure",
+      "symbols": [
+        {
+          "name": "CompanyBudgetHead",
+          "kind": "class",
+          "line": 8,
+          "end": 21
+        },
+        {
+          "name": "ReservationPin",
+          "kind": "class",
+          "line": 24,
+          "end": 35
+        },
+        {
+          "name": "SettlementPin",
+          "kind": "class",
+          "line": 38,
+          "end": 46
+        },
+        {
+          "name": "SettlementReview",
+          "kind": "class",
+          "line": 49,
+          "end": 56
+        },
+        {
+          "name": "currency_ok",
+          "kind": "function",
+          "line": 59,
+          "end": 60
+        },
+        {
+          "name": "valid_head",
+          "kind": "function",
+          "line": 63,
+          "end": 66
+        },
+        {
+          "name": "valid_reservation",
+          "kind": "function",
+          "line": 69,
+          "end": 71
+        },
+        {
+          "name": "inspect_settlement",
+          "kind": "function",
+          "line": 74,
+          "end": 104
+        }
+      ],
+      "imports": [
+        "from dataclasses import dataclass",
+        "from app.core.agent_runtime.lifecycle import Scope, valid_scope, token, uint",
+        "from app.core.transaction.review import digest_ok",
+        "from app.core.event_store.reconciliation_review import Outcome, ReconciliationPin, valid_pin"
+      ],
+      "dependencies": "reconciliation_review.py, lifecycle.py, transaction/review.py",
+      "troubleshooting": "Period, currency, outcome, duplicate ve CAS kontrolü; hiçbir posting/FX yok",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-04",
+      "path": "quarantine/0162C/product/ai-company-os-backend/tests/test_review_0162.py",
+      "proposed_destination": "product/ai-company-os-backend/tests/test_review_0162.py",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "1bcde627ed2c56c41c6173b8ecd2011a1a8682f88d80aee8c85902f8ff50a883",
+      "bytes": 8346,
+      "lines": 93,
+      "workstream": "W8",
+      "domain": "D11,D18",
+      "source_ref": "0162-O01–O22 alt kümesi",
+      "purpose": "Sentetik olumlu şekil ve negatif oracle kaynakları; hiçbir test çalışmadı",
+      "symbols": [
+        {
+          "name": "terminal_args",
+          "kind": "function",
+          "line": 16,
+          "end": 26
+        },
+        {
+          "name": "rec_args",
+          "kind": "function",
+          "line": 28,
+          "end": 32
+        },
+        {
+          "name": "budget_args",
+          "kind": "function",
+          "line": 34,
+          "end": 39
+        },
+        {
+          "name": "TerminalCandidates",
+          "kind": "class",
+          "line": 41,
+          "end": 61
+        },
+        {
+          "name": "ReconciliationCandidates",
+          "kind": "class",
+          "line": 63,
+          "end": 75
+        },
+        {
+          "name": "SettlementCandidates",
+          "kind": "class",
+          "line": 77,
+          "end": 93
+        },
+        {
+          "name": "test_shape_never_commits",
+          "kind": "function",
+          "line": 42,
+          "end": 43
+        },
+        {
+          "name": "test_reopen_denied",
+          "kind": "function",
+          "line": 44,
+          "end": 45
+        },
+        {
+          "name": "test_receipt_missing",
+          "kind": "function",
+          "line": 46,
+          "end": 47
+        },
+        {
+          "name": "test_unknown_success",
+          "kind": "function",
+          "line": 48,
+          "end": 49
+        },
+        {
+          "name": "test_expired_worker",
+          "kind": "function",
+          "line": 50,
+          "end": 51
+        },
+        {
+          "name": "test_pre_admission_stop",
+          "kind": "function",
+          "line": 52,
+          "end": 53
+        },
+        {
+          "name": "test_outbox_mismatch",
+          "kind": "function",
+          "line": 54,
+          "end": 55
+        },
+        {
+          "name": "test_postcommit_version",
+          "kind": "function",
+          "line": 56,
+          "end": 57
+        },
+        {
+          "name": "test_mutation_digest_mismatch",
+          "kind": "function",
+          "line": 58,
+          "end": 59
+        },
+        {
+          "name": "test_control_plane_stop_separate",
+          "kind": "function",
+          "line": 60,
+          "end": 61
+        },
+        {
+          "name": "test_applied_claim",
+          "kind": "function",
+          "line": 64,
+          "end": 65
+        },
+        {
+          "name": "test_not_applied_claim",
+          "kind": "function",
+          "line": 66,
+          "end": 67
+        },
+        {
+          "name": "test_correlation_mismatch",
+          "kind": "function",
+          "line": 68,
+          "end": 69
+        },
+        {
+          "name": "test_conflicting_receipt",
+          "kind": "function",
+          "line": 70,
+          "end": 71
+        },
+        {
+          "name": "test_restore_epoch",
+          "kind": "function",
+          "line": 72,
+          "end": 73
+        },
+        {
+          "name": "test_unknown",
+          "kind": "function",
+          "line": 74,
+          "end": 75
+        },
+        {
+          "name": "test_shape_never_posts",
+          "kind": "function",
+          "line": 78,
+          "end": 79
+        },
+        {
+          "name": "test_duplicate",
+          "kind": "function",
+          "line": 80,
+          "end": 81
+        },
+        {
+          "name": "test_event_conflict",
+          "kind": "function",
+          "line": 82,
+          "end": 83
+        },
+        {
+          "name": "test_unknown",
+          "kind": "function",
+          "line": 84,
+          "end": 85
+        },
+        {
+          "name": "test_overage",
+          "kind": "function",
+          "line": 86,
+          "end": 87
+        },
+        {
+          "name": "test_currency",
+          "kind": "function",
+          "line": 88,
+          "end": 89
+        },
+        {
+          "name": "test_cas",
+          "kind": "function",
+          "line": 90,
+          "end": 91
+        },
+        {
+          "name": "test_outcome_scope_conflict",
+          "kind": "function",
+          "line": 92,
+          "end": 93
+        }
+      ],
+      "imports": [
+        "from dataclasses import replace",
+        "import unittest",
+        "from app.core.agent_runtime.lifecycle import Scope, RunObservation, RunState, LeaseObservation, ClockSample",
+        "from app.core.transaction.review import LogicalIntent, Operation, RoleObservation, REQUIRED",
+        "from app.core.transaction.readback_review import HeadReadback, AdmissionPin",
+        "from app.core.transaction.terminal_review import TerminalPin, MutationBinding, inspect_terminal, inspect_pre_admission_stop",
+        "from app.core.event_store.outbox_review import OutboxObservation, Phase",
+        "from app.core.transaction.fence_review import FenceObservation, FencePhase",
+        "from app.core.event_store.reconciliation_review import Outcome, ReconciliationPin, inspect_reconciliation",
+        "from app.engines.budget_engine.settlement_review import CompanyBudgetHead, ReservationPin, SettlementPin, inspect_settlement"
+      ],
+      "dependencies": "Python unittest, dataclasses; 3 aday modül, R8 temel tipleri",
+      "troubleshooting": "Yetkili test ortamı ve scope olmadan import/collect yok",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-05",
+      "path": "quarantine/0162C/product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "proposed_destination": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "9d870a49384e0618cd4f5a80384489321f87760bef5cc73c95bcef68ca392956",
+      "bytes": 1266,
+      "lines": 10,
+      "workstream": "W1",
+      "domain": "D13,D05",
+      "source_ref": "UI-04/05",
+      "purpose": "Rol/istasyon detayı; gerçek instance/grant/kanıt yok",
+      "symbols": [
+        {
+          "name": "RoleButton",
+          "kind": "function",
+          "line": 4
+        },
+        {
+          "name": "AgentDetail",
+          "kind": "function",
+          "line": 7
+        }
+      ],
+      "imports": [
+        "import type ui from '../../features/uiCatalog.json';"
+      ],
+      "dependencies": "R8 uiCatalog.json",
+      "troubleshooting": "Eksik rol durumunda boş görünüm; gerçek ajan oluşturma yok",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-06",
+      "path": "quarantine/0162C/product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "proposed_destination": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "97eab6148e944ebdf877c39c5ba0ac5b804a1adcd742a0aa6c3fa0fdd0bf4d36",
+      "bytes": 2882,
+      "lines": 19,
+      "workstream": "W1",
+      "domain": "D13",
+      "source_ref": "UI-04/05; R04/R05",
+      "purpose": "Controlled kat/görünüm; statik SVG, bağımsız geometri, JOIN_HOLD",
+      "symbols": [
+        {
+          "name": "OfficePanel",
+          "kind": "function",
+          "line": 10
+        }
+      ],
+      "imports": [
+        "import type {ReactNode} from 'react';",
+        "import Link from 'next/link';",
+        "import OfficeScene from '../../office/scenes/OfficeScene';",
+        "import type {Floor} from '../../office/engine/geometry';",
+        "import type fixture from '../../fixtures/office.snapshot.json';"
+      ],
+      "dependencies": "R8 OfficeScene, geometry, snapshot fixture, Next Link",
+      "troubleshooting": "Layout revision uyuşmazlığında join yok; geometri preview yerel seçimi gerçek ajan değil",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-07",
+      "path": "quarantine/0162C/product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "proposed_destination": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "operation": "add_candidate",
+      "old_git_blob": null,
+      "sha256": "10707538997f9022444d62e431d242440592e835c889b55cdbe5762ad0a9eb02",
+      "bytes": 871,
+      "lines": 7,
+      "workstream": "W1",
+      "domain": "D13",
+      "source_ref": "UI-04/05",
+      "purpose": "Controlled salt-okunur panel, gerçek aktivite/onay yok",
+      "symbols": [
+        {
+          "name": "OperationPanel",
+          "kind": "function",
+          "line": 5
+        }
+      ],
+      "imports": [
+        "import type {ReactNode} from 'react';"
+      ],
+      "dependencies": "React type ReactNode",
+      "troubleshooting": "Panel owner Dashboard; hiçbir gerçek onay işlemi yok",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    },
+    {
+      "change_id": "CHG-0162C-08",
+      "path": "quarantine/0162C/product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "proposed_destination": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "operation": "modify_candidate",
+      "old_git_blob": "8228066163493768a77c99a7929533f4c50e3af6",
+      "sha256": "79b155362d51818e19a3139b190399f72473d8ca16633c26594b705e0108cb3d",
+      "bytes": 6941,
+      "lines": 56,
+      "workstream": "W1",
+      "domain": "D13",
+      "source_ref": "UI-04/05; R04/R05",
+      "purpose": "Tek seçim ve panel sahibi; mevcut navigation, statik fixture, reset ve ayrıştırılmış paneller",
+      "symbols": [
+        {
+          "name": "Dashboard",
+          "kind": "function",
+          "line": 23
+        },
+        {
+          "name": "DashboardView",
+          "kind": "function",
+          "line": 26
+        },
+        {
+          "name": "resetContext",
+          "kind": "function",
+          "line": 39
+        },
+        {
+          "name": "changeFloor",
+          "kind": "function",
+          "line": 40
+        },
+        {
+          "name": "changeDisplay",
+          "kind": "function",
+          "line": 41
+        },
+        {
+          "name": "navigate",
+          "kind": "function",
+          "line": 42
+        },
+        {
+          "name": "openStation",
+          "kind": "function",
+          "line": 43
+        },
+        {
+          "name": "openRole",
+          "kind": "function",
+          "line": 44
+        },
+        {
+          "name": "changeDetail",
+          "kind": "function",
+          "line": 45
+        },
+        {
+          "name": "stationList",
+          "kind": "function",
+          "line": 46
+        }
+      ],
+      "imports": [
+        "import {useState} from 'react';",
+        "import Link from 'next/link';",
+        "import CorePreview from '../core-review/CorePreview';",
+        "import {validateDemoLayout} from '../../office/engine/geometry';",
+        "import core from '../../fixtures/core.preview.json';",
+        "import fixture from '../../fixtures/office.snapshot.json';",
+        "import catalog from '../../fixtures/company.catalog.json';",
+        "import ui from '../uiCatalog.json';",
+        "import SnapshotStrip from '../../components/dashboard/SnapshotStrip';",
+        "import MetricsStrip from '../../components/dashboard/MetricsStrip';",
+        "import OfficePanel,{type Display,type SnapshotFloor} from '../../components/dashboard/OfficePanel';",
+        "import AgentDetail,{RoleButton,type Role} from '../../components/dashboard/AgentDetail';",
+        "import OperationPanel,{type Panel} from '../../components/dashboard/OperationPanel';"
+      ],
+      "dependencies": "R8 CorePreview, geometry, fixtures, SnapshotStrip, MetricsStrip; 3 aday panel",
+      "troubleshooting": "Kat/view/layout reset; statik fallback; eski Dashboard blob ile geri dön",
+      "rollback": "Karantina paketini ayır; R8 ürün ağacı değişmedi. Yetkili gelecek entegrasyonda parent pin ile olağan revert, force yok.",
+      "status": "SOURCE_CANDIDATE_NOT_INTEGRATED",
+      "test": "NOT_RUN",
+      "reviewer": null,
+      "receipt": null,
+      "api_change": false,
+      "database_change": false,
+      "external_dependency_change": false
+    }
+  ]
+}

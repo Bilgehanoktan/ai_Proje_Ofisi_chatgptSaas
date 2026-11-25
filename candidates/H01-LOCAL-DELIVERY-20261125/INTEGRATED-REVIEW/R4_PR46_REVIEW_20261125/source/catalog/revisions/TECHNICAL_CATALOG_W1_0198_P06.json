@@ -1,0 +1,48 @@
+{
+  "revision": "W1-0198-P06",
+  "parent": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
+  "source_commit": "08361b6c3c7bed4fde77623fdf5fafcb047cca06",
+  "product_delta": [],
+  "helper_files": [],
+  "symbols": [],
+  "api_changes": [],
+  "db_schema_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "existing_runner": {
+    "path": "tests/integration/run_lifecycle_p05.py",
+    "git_blob": "befb9f429791a01b2fe37009e40f994a5924b2ff"
+  },
+  "source_lock": {
+    "path": "tests/integration/lifecycle_p05_source_lock.json",
+    "git_blob": "44ba5836b086b576c45d50ace2e64152f41c9adc",
+    "files": 44,
+    "bytes": 160282,
+    "sha256_verified_product_files": 39,
+    "sql_git_blob_and_size_verified": 5,
+    "pre_post_checks": "PASS"
+  },
+  "existing_test_modules": [
+    "test_lifecycle_projection_p02",
+    "test_lifecycle_prefix_p03",
+    "test_transition_mapping_0194",
+    "test_admission_mapping_0195",
+    "test_lifecycle_mapping_0196"
+  ],
+  "tests": {
+    "p02": 8,
+    "p03": 9,
+    "transition_0194": 35,
+    "admission_0195": 19,
+    "lifecycle_0196": 26,
+    "unique_cases": 97,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "newly_executed_pending_cases": 17,
+    "regression": 80
+  },
+  "evidence": "tests/evidence/TEST_EVIDENCE_W1_0198_P06.json",
+  "gate_tracker": "progress/W1_0198_GATE_TRACKER.json",
+  "maintenance": "docs/W1-0198-P06/ARCHITECTURE_AND_CATALOG.md"
+}

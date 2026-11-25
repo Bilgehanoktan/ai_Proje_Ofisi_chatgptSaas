@@ -1,0 +1,150 @@
+{
+  "task": "H01-MI-P0-R4-HISTORICAL-CHECKOUT-RECOVERY-AND-PR46-REVIEW-20261125",
+  "classification": "EXACT_SHALLOW_CHECKOUT_RECOVERY_AND_ISOLATED_OWNER_REVIEW_ONLY",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "8fe2599dbb5407779b154d8bee88b179ea4482cd",
+  "source_base": "78593080158f644114c6ce2739a985ba1fde8217",
+  "source_tree": "ce3d537075d3401a53b48f677a60ecde17d2b6a3",
+  "product_tree": "5582d6aa9d92b47dedeb3ef085714693dec0c531",
+  "manifest_blob": "1faf756d1a4d08b5a975e08ffd107389d4bcd69f",
+  "manifest_sha256": "4a394d484ab57176df795549f63acd7b288f1bee46287674ad0568f9d565ab97",
+  "manifest_verified": [
+    583,
+    583
+  ],
+  "source_blobs": 1915,
+  "product_files": 584,
+  "checkout_recovery": [
+    {
+      "pr": 19,
+      "head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "tree": "20c14563ea2970b0dbaedf6ed9181b8adf211be4",
+      "blobs": 1890,
+      "manifest": [
+        561,
+        561
+      ],
+      "fsck": "PASS",
+      "clean": true,
+      "shallow": true
+    },
+    {
+      "pr": 46,
+      "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "tree": "3294c4336223b2d70c8397f613451b760406547a",
+      "blobs": 1891,
+      "manifest": [
+        561,
+        561
+      ],
+      "fsck": "PASS",
+      "clean": true,
+      "shallow": true
+    },
+    {
+      "pr": 47,
+      "head": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "tree": "5348b07b7769692117a3cae984ed2d4a53be5c3a",
+      "blobs": 1859,
+      "manifest": [
+        551,
+        552
+      ],
+      "extra": "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+      "stale": "ai-company-os-backend/app/api/demo.py",
+      "fsck": "PASS",
+      "clean": true,
+      "shallow": true
+    }
+  ],
+  "original_runner": {
+    "commit": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+    "blob": "fd76499ab82f4b8d01b8c27008311e254d34158d",
+    "manifest": 561,
+    "g7": 56,
+    "org06": 21
+  },
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "old": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "new": "d492c6d3ea99214e28c0fa4e772139169bd39a17"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+      "old": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+      "new": "f2176332ebdef0c0b0597977582bab5c5b34c59d"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "old": "3de94145197137fb60506fc05dfa23bbee00c208",
+      "new": "1faf756d1a4d08b5a975e08ffd107389d4bcd69f"
+    }
+  ],
+  "tests": {
+    "python": "3.13.5",
+    "isolated": "env -i; -B -S; stdlib only",
+    "iam_authority_d5g2": [
+      19,
+      19
+    ],
+    "existing_three_store": [
+      6,
+      6
+    ],
+    "new_methods": 0,
+    "original_28": {
+      "IAM": "0/12 NOT_RUN",
+      "G7": "0/7 NOT_RUN",
+      "API": "0/9 NOT_RUN"
+    },
+    "post_run_integrity": "PASS: exact 3 changed paths; original checkouts clean"
+  },
+  "conflicts": {
+    "open_prs": 44,
+    "approval_absent": [
+      19,
+      31,
+      46,
+      47,
+      52,
+      54
+    ],
+    "pr50_51": "comments only",
+    "canonical_and_owner_heads": "unchanged at inspection",
+    "scheduler": "historical exact PR19 separate; R4 current scheduler retained",
+    "pr47": "original stale manifest preserved; R4 exact API/test already manifest-pinned"
+  },
+  "evidence_sha256": {
+    "source_preflight.log": "2ece2c2749f8e7c3808eebf566c5926c5b0e000f272191f70bb231878f9304ab",
+    "overlay_iam.log": "f5d6c649e82d2e5e913090f930e3dcf8ee32eb575c3eb247cd796802d89dda41",
+    "overlay_three_store.log": "e8a1ee9c0ddf9e65bf9b5892aa51828708b7c6ac6c5a87e8ff563ebee4a90876"
+  },
+  "delivery": {
+    "file": "AIOS_R4_PR19_PR46_PR47_EXACT_DEV_20261125.zip",
+    "bytes": 46349027,
+    "sha256": "39462bf81905960b6da1e2c291795d4bf2227bf107647df8b8c65db83c3f00ed",
+    "crc": "PASS",
+    "entries": 13733,
+    "local_only_full_zip": true
+  },
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "blockers": [
+    "C50/R9 independent security/license/dependency and source owner review; no unapproved third-party import/install",
+    "D04 residual, real IAM grant, protected COMMIT and independent acceptance remain HOLD",
+    "PR47 historical manifest correction needs owner; integrated R4 already covers its exact source",
+    "full Design Master review incomplete"
+  ],
+  "next": "Resolve exact dependency/runtime owner and independent security dispositions; run original IAM12 G7 7 API9 separately at pinned checkouts; review source merge; W8 C07/C08/C05 sequence.",
+  "rollback": "Discard isolated review source; original R4 and canonical/owner refs untouched. Revert archival handover commit normally if required."
+}

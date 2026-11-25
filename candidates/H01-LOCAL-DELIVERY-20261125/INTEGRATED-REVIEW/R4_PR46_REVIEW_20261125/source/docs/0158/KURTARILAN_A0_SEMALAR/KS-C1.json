@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aicos:a0:v95:contract:IdentityScope:0.1.0",
+  "title": "IdentityScope",
+  "type": "object",
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "company_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor_principal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_revision": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "tenant_id",
+    "company_id",
+    "actor_principal_id",
+    "environment_id",
+    "scope_revision"
+  ],
+  "additionalProperties": false
+}

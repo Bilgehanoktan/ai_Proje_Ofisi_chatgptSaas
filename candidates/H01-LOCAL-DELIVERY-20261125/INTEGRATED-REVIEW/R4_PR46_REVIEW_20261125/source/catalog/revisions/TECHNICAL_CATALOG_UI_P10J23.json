@@ -1,0 +1,52 @@
+{
+  "revision": "UI-P10J-23",
+  "parent": "1ec4576cfa9898dc202427f03e4340544c01e2cb",
+  "manifest_blob": "614c1d4c7d0b48540927daca9aadf34e7b7b8008",
+  "product_files": 492,
+  "manifest_entries": 491,
+  "added": 0,
+  "modified": 1,
+  "retained": 490,
+  "deleted": 0,
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/design-system/eds.css",
+      "old_blob": "d5227c57cbf033a7269abe409ee5929819bc2a0d",
+      "blob": "9ac0f950a11eccc8c4b9290c3b98a21aa7d44387",
+      "bytes": 10677,
+      "sha256": "0f44f75eb436ced7b85a1a0c4a2bab7a9826481ef122dafa35dfbb437464f4fa",
+      "change": "append-only management styles"
+    }
+  ],
+  "tokens": [
+    "--management-shadow",
+    "--management-rule"
+  ],
+  "selectors": [
+    ".shell:not(.shell-office) main>.topline",
+    ".shell:not(.shell-office) main>.panel:not(.office-panel):not(.operation-panel)",
+    ".shell:not(.shell-office) main>.metrics"
+  ],
+  "dependencies": [
+    "existing EDS theme tokens",
+    "globals.css exact parent"
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "dependency_changes": [],
+  "authority_changes": [],
+  "tests": {
+    "fixture": "8/8 PASS; Chromium 144.0.7559.96, dark/light x 1440/768/390/320",
+    "test_blob": "dfc38739353b24526293f2fd278a906d692f08df",
+    "evidence_blob": "7072564966130d591165386641e894057e6554db",
+    "w8": "NOT_RUN",
+    "full_next_build": "NOT_RUN",
+    "native": "NOT_RUN"
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}

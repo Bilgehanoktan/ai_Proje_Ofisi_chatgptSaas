@@ -1,0 +1,24 @@
+{
+  "revision": "0198-E",
+  "status": "SEPARATE_SOURCE_REVIEW_NO_MERGE",
+  "common_base": "9ece621baaadd160b3f90d4c8071d6a74d697604",
+  "lifecycle_history_source": "0dd841e8cb17116320b5db2bdebfd8e400b9fdd9",
+  "unified_branch": "integration/0197-unified",
+  "unified_head": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
+  "source_path_overlap": [],
+  "source_paths_needed_on_unified": [
+    "database/0196L/candidate_lease_settlement.sql",
+    "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+    "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+    "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+    "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+    "product/ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py"
+  ],
+  "source_comparison_status": [
+    "ahead",
+    "ahead"
+  ],
+  "merge": "NOT_PERFORMED",
+  "combined_tests": "NOT_RUN",
+  "notes": "Bring exact lifecycle delta then history delta; compare dependencies, regenerate shared metadata and manifest, rerun combined unique tests. Unified is active in other conversation; do not overwrite. No main merge or authority."
+}

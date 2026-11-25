@@ -1,0 +1,138 @@
+{
+  "revision": "UI-P10J-22",
+  "parent": "df4c95688424c7c43d38941d219cf05932dd9040",
+  "manifest_blob": "3d7bb6a05f523b2691c8a7cfe048f030e2d94c91",
+  "product_files": 492,
+  "manifest_entries": 491,
+  "added": 3,
+  "modified": 2,
+  "retained": 486,
+  "deleted": 0,
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/ControlSourceInspector.tsx",
+      "change": "ADD",
+      "blob": "0ec8b2487afbe26edb71cae0d58fa29c5c6b36a5",
+      "bytes": 1986,
+      "sha256": "30fd0f830b684cd859f440f6141f8c1028fb969cbc12200873560c3e8b01b0e5"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/controlSourceCatalog.ts",
+      "change": "ADD",
+      "blob": "7de4e6cac2cdadacc4fe9b25b3440c8ce3ce03f2",
+      "bytes": 4008,
+      "sha256": "aca7a8a55b7f97da904823ef45ca70270683be6b7e8a546f178d948c9aa85a00"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j22-control-sources.test.cjs",
+      "change": "ADD",
+      "blob": "1aa776e55f490a0fca3fcc12b9accc88fac29acf",
+      "bytes": 2296,
+      "sha256": "8a0fec0a6414677fd9f1b05e807aefbf6e0dcf25eaf7122130bac63021f0f364"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+      "change": "MODIFY",
+      "blob": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+      "bytes": 2933,
+      "sha256": "bfa530329a272e41c93d80e2d753c83ae7bcd7406c15a5246271c8f9f9f2967e"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/security/SecurityStudio.tsx",
+      "change": "MODIFY",
+      "blob": "7984cd8560269bde141dc5048ada0cb7d942274e",
+      "bytes": 3344,
+      "sha256": "c12c4afbde0f77682fbd4f409ccb721ca38f818cf63614868cad2a96acfbff23"
+    }
+  ],
+  "source_references": [
+    {
+      "domain": "finance",
+      "path": "product/ai-company-os-backend/app/engines/budget_engine/reservation_review.py",
+      "symbol": "inspect_reservation",
+      "blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961"
+    },
+    {
+      "domain": "finance",
+      "path": "product/ai-company-os-backend/app/core/transaction/admission_bundle.py",
+      "symbol": "inspect_admission_bundle",
+      "blob": "276b4330afdce7cde98f92f8051c019eb7345fe1"
+    },
+    {
+      "domain": "finance",
+      "path": "product/ai-company-os-backend/app/observability/finance_projection.py",
+      "symbol": "project_finance",
+      "blob": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc"
+    },
+    {
+      "domain": "security",
+      "path": "product/ai-company-os-backend/app/core/policy/gateway_review.py",
+      "symbol": "inspect_gateway",
+      "blob": "d2f5b2fe04ce160f416bcae2e748dfeae730f68e"
+    },
+    {
+      "domain": "security",
+      "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+      "symbol": "inspect_witness",
+      "blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6"
+    },
+    {
+      "domain": "security",
+      "path": "product/ai-company-os-backend/app/core/policy/iv_review.py",
+      "symbol": "inspect_iv",
+      "blob": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb"
+    },
+    {
+      "domain": "security",
+      "path": "product/ai-company-os-backend/app/core/policy/receipt_review.py",
+      "symbol": "inspect_receipt",
+      "blob": "3f335a148519f3e79862745187f89cd2e5105747"
+    },
+    {
+      "domain": "security",
+      "path": "product/ai-company-os-backend/app/core/event_store/outbox_review.py",
+      "symbol": "inspect_outbox",
+      "blob": "40bb09dfd9023739c4d0ed730f745d6e8688140e"
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "dependency_changes": [],
+  "authority_changes": [],
+  "symbols": {
+    "controlSourceCatalog": [
+      "Domain",
+      "Source",
+      "sources",
+      "filterSources",
+      "selectSource",
+      "sourceBoundary"
+    ],
+    "ControlSourceInspector": [
+      "ControlSourceInspector"
+    ],
+    "FinanceStudio": [
+      "FinanceStudio"
+    ],
+    "SecurityStudio": [
+      "SecurityStudio"
+    ]
+  },
+  "tests": {
+    "model": "12/12 PASS",
+    "typescript": "strict isolated model compilation PASS",
+    "tsx": "3/3 transpile diagnostics zero; not full typecheck",
+    "wrapper": "AST PASS; W8 NOT_RUN",
+    "browser": "NOT_RUN",
+    "logs": {
+      "model_sha256": "439496492ecefa41c9283335fdd1965d9dc1a58610b6da25146c73d3b25562b4",
+      "tsx_sha256": "11e589973693ec5d344e4064efb3aca576f2a7c9b768dce838dccdae9cb49618"
+    }
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  }
+}

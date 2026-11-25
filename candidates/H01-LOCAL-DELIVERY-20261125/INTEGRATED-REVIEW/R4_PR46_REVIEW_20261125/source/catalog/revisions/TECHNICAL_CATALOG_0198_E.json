@@ -1,0 +1,350 @@
+{
+  "revision": "0198-E",
+  "parent": "a7c4f417faf17959e3165193aa247815954bfa42",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "operation": "ADD",
+      "bytes": 9374,
+      "sha256": "c7528010ffb7c7ab14f8b67eccb9d062fff7d4c5825edaa3ed8d9b7d670f5060",
+      "git_blob": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "symbols": [
+        {
+          "name": "OrdinaryPin",
+          "kind": "ClassDef",
+          "line": 17,
+          "end": 21,
+          "doc": null
+        },
+        {
+          "name": "LifecyclePin",
+          "kind": "ClassDef",
+          "line": 24,
+          "end": 26,
+          "doc": null
+        },
+        {
+          "name": "HistoryReview",
+          "kind": "ClassDef",
+          "line": 29,
+          "end": 38,
+          "doc": null
+        },
+        {
+          "name": "_same_lease_intent",
+          "kind": "FunctionDef",
+          "line": 41,
+          "end": 44,
+          "doc": null
+        },
+        {
+          "name": "_exact_rows",
+          "kind": "FunctionDef",
+          "line": 47,
+          "end": 54,
+          "doc": null
+        },
+        {
+          "name": "inspect_history",
+          "kind": "FunctionDef",
+          "line": 57,
+          "end": 144,
+          "doc": "Exact complete per-run history; independent expected pins are a caller precondition.\nOnly accepts the initial QUEUED head plus admission and ordinary/renewal/failure pins.\nGlobal budget balance, foreign runs, independent signatures and anti-restore are not proven."
+        },
+        {
+          "name": "office_history_projection",
+          "kind": "FunctionDef",
+          "line": 147,
+          "end": 154,
+          "doc": "Internal projection only, not an OfficeV0 schema or trusted live snapshot."
+        },
+        {
+          "name": "record",
+          "kind": "FunctionDef",
+          "line": 78,
+          "end": 89,
+          "doc": null
+        }
+      ],
+      "imports": [
+        "from dataclasses import dataclass, field, replace",
+        "from app.core.agent_runtime.lifecycle import RunState, RunObservation, valid_lease, uint",
+        "from app.core.agent_runtime.postgres_run import PostgresRunRepository",
+        "from app.core.agent_runtime.transition_command import validate_transition",
+        "from app.core.transaction.review import valid_intent, Operation, required_roles, BASE_ROLES",
+        "from app.core.transaction.postgres_transition_mapping import _key, _KEY, _one, _lease, lease_digest, transaction_ref",
+        "from app.core.transaction.postgres_admission_mapping import claim_digest, valid_budget",
+        "from app.core.transaction.postgres_lifecycle_mapping import AdmissionBinding, LifecycleSpec, D0PostgresLifecycleMapping, verify_admission_binding, FAILURE"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "operation": "ADD",
+      "bytes": 6541,
+      "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773",
+      "git_blob": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "symbols": [
+        {
+          "name": "HistoryTests",
+          "kind": "ClassDef",
+          "line": 13,
+          "end": 93,
+          "doc": null
+        },
+        {
+          "name": "setUp",
+          "kind": "FunctionDef",
+          "line": 14,
+          "end": 16,
+          "doc": null
+        },
+        {
+          "name": "ordinary",
+          "kind": "FunctionDef",
+          "line": 17,
+          "end": 22,
+          "doc": null
+        },
+        {
+          "name": "life",
+          "kind": "FunctionDef",
+          "line": 23,
+          "end": 26,
+          "doc": null
+        },
+        {
+          "name": "chain",
+          "kind": "FunctionDef",
+          "line": 27,
+          "end": 32,
+          "doc": null
+        },
+        {
+          "name": "inspect",
+          "kind": "FunctionDef",
+          "line": 33,
+          "end": 38,
+          "doc": null
+        },
+        {
+          "name": "change",
+          "kind": "FunctionDef",
+          "line": 39,
+          "end": 40,
+          "doc": null
+        },
+        {
+          "name": "hold",
+          "kind": "FunctionDef",
+          "line": 41,
+          "end": 44,
+          "doc": null
+        },
+        {
+          "name": "test_admission_only",
+          "kind": "FunctionDef",
+          "line": 45,
+          "end": 46,
+          "doc": null
+        },
+        {
+          "name": "test_full_history_and_projection",
+          "kind": "FunctionDef",
+          "line": 47,
+          "end": 52,
+          "doc": null
+        },
+        {
+          "name": "test_open_renewed",
+          "kind": "FunctionDef",
+          "line": 53,
+          "end": 55,
+          "doc": null
+        },
+        {
+          "name": "test_missing_pin",
+          "kind": "FunctionDef",
+          "line": 56,
+          "end": 57,
+          "doc": null
+        },
+        {
+          "name": "test_wrong_order",
+          "kind": "FunctionDef",
+          "line": 58,
+          "end": 59,
+          "doc": null
+        },
+        {
+          "name": "test_bad_intent",
+          "kind": "FunctionDef",
+          "line": 60,
+          "end": 61,
+          "doc": null
+        },
+        {
+          "name": "test_wrong_lease_pin",
+          "kind": "FunctionDef",
+          "line": 62,
+          "end": 63,
+          "doc": null
+        },
+        {
+          "name": "test_extra_pin_after_terminal",
+          "kind": "FunctionDef",
+          "line": 64,
+          "end": 65,
+          "doc": null
+        },
+        {
+          "name": "test_missing_historical_mutation",
+          "kind": "FunctionDef",
+          "line": 66,
+          "end": 67,
+          "doc": null
+        },
+        {
+          "name": "test_changed_historical_event",
+          "kind": "FunctionDef",
+          "line": 68,
+          "end": 69,
+          "doc": null
+        },
+        {
+          "name": "test_changed_historical_audit",
+          "kind": "FunctionDef",
+          "line": 70,
+          "end": 71,
+          "doc": null
+        },
+        {
+          "name": "test_missing_outbox",
+          "kind": "FunctionDef",
+          "line": 72,
+          "end": 73,
+          "doc": null
+        },
+        {
+          "name": "test_missing_fence",
+          "kind": "FunctionDef",
+          "line": 74,
+          "end": 75,
+          "doc": null
+        },
+        {
+          "name": "test_renewal_tamper",
+          "kind": "FunctionDef",
+          "line": 76,
+          "end": 77,
+          "doc": null
+        },
+        {
+          "name": "test_settlement_tamper",
+          "kind": "FunctionDef",
+          "line": 78,
+          "end": 79,
+          "doc": null
+        },
+        {
+          "name": "test_extra_event",
+          "kind": "FunctionDef",
+          "line": 80,
+          "end": 81,
+          "doc": null
+        },
+        {
+          "name": "test_head_tamper",
+          "kind": "FunctionDef",
+          "line": 82,
+          "end": 83,
+          "doc": null
+        },
+        {
+          "name": "test_open_lease_tamper",
+          "kind": "FunctionDef",
+          "line": 84,
+          "end": 85,
+          "doc": null
+        },
+        {
+          "name": "test_reservation_tamper",
+          "kind": "FunctionDef",
+          "line": 86,
+          "end": 87,
+          "doc": null
+        },
+        {
+          "name": "test_scope_pin_mismatch",
+          "kind": "FunctionDef",
+          "line": 88,
+          "end": 89,
+          "doc": null
+        },
+        {
+          "name": "test_invalid_commands",
+          "kind": "FunctionDef",
+          "line": 90,
+          "end": 91,
+          "doc": null
+        },
+        {
+          "name": "test_invalid_projection",
+          "kind": "FunctionDef",
+          "line": 92,
+          "end": 93,
+          "doc": null
+        }
+      ],
+      "imports": [
+        "import unittest",
+        "import sqlite3",
+        "from contextlib import closing",
+        "from dataclasses import replace",
+        "import test_lifecycle_mapping_0196 as lifecycle",
+        "from test_transition_mapping_0194 import SQLiteCursorShim",
+        "from app.core.agent_runtime.lifecycle import RunState",
+        "from app.core.agent_runtime.transition_command import transition_digest",
+        "from app.core.transaction.review import LogicalIntent, Operation",
+        "from app.core.event_store.history_readback import OrdinaryPin, LifecyclePin, inspect_history, office_history_projection"
+      ]
+    }
+  ],
+  "api_changes": [],
+  "database_changes": [],
+  "read_tables": [
+    "run_heads",
+    "run_leases",
+    "run_mutations",
+    "events",
+    "outbox",
+    "run_audit",
+    "fences",
+    "run_lease_renewals",
+    "sample_settlements",
+    "run_admissions",
+    "sample_reservations"
+  ],
+  "events": [
+    "D0_RUN_ADMISSION",
+    "D0_RUN_TRANSITION",
+    "D0_LEASE_RENEWAL",
+    "D0_RUN_FAILURE"
+  ],
+  "new_dependencies": [],
+  "tests": {
+    "new": 22,
+    "regressions": 105,
+    "pg_skipped": 10,
+    "full_suite": "NOT_RUN"
+  },
+  "traceability": [
+    "R02",
+    "R03",
+    "R04",
+    "R09",
+    "R12"
+  ],
+  "diagnostics": "docs/0198E/ARCHITECTURE_AND_CATALOG.md",
+  "rollback": "Revert two added product paths; no migration.",
+  "authority": "HOLD"
+}

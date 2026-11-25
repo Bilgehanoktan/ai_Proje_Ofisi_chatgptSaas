@@ -1,0 +1,50 @@
+{
+  "revision": "W1-0198-P02",
+  "source_commit": "66e6d15f26ccfb23095f06884c2f347c65b2df46",
+  "executed": {
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "command": "tsc --strict --target ES2022 --lib ES2022,DOM --module commonjs ...; node <test> <compiled modules>",
+    "new_parser": {
+      "passed": 14,
+      "failed": 0,
+      "source_blob": "e58fd219c713a4195c8110e727c013d048efdfd4",
+      "test_blob": "760883907bec65cf36a99e15e30be58d5abd5099"
+    },
+    "new_registry": {
+      "passed": 10,
+      "failed": 0,
+      "source_blob": "5e5482982ba69fde14c832273b2e6286c375c746",
+      "test_blob": "4cb77c2ac54855fd36ef510e8102052df1711937"
+    },
+    "regression_transport": {
+      "passed": 12,
+      "failed": 0,
+      "source_blob": "9a79f16a90d080e5b29af756fd14582a4246d515",
+      "test_blob": "226e0e9721677235184547b8d79e91b2e6c541fb"
+    },
+    "reused_parser_blobs": [
+      "46ab7ced93eef8c10622230b940c0eb566b2358b",
+      "5af643c596185be4d8a30cd75f6c56e77de33c57",
+      "4a10084ac38bb9f6de70c581c2936feca9094f5a",
+      "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+      "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9"
+    ],
+    "total": 36,
+    "skipped": 0,
+    "exact_local_git_blobs_match": true
+  },
+  "prepared_not_run": [
+    "8 backend lifecycle fixture/API tests",
+    "browser_lifecycle_p02.py",
+    "six API loopback parity",
+    "four DB hash guards",
+    "runner preflight",
+    "pinned TS5.9.3",
+    "React lifecycle/Next build/full suite",
+    "actual PG"
+  ],
+  "blocker": "Local direct Git checkout DNS unavailable; only exact pure frontend subset materialized and executed. Windows deferred by user.",
+  "independent_acceptance": "HOLD",
+  "historical_counts_not_additive": true
+}

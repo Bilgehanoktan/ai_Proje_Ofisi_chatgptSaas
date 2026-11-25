@@ -1,0 +1,102 @@
+{
+  "revision": "0202-S",
+  "parent": "f6bf82ed85335d9189b6161dbb0d983b07d70b40",
+  "source": "c69a8394e75dca1d16ad04585a3c1dc375109733",
+  "observed_other_branch": "integration/w1-0198-p05",
+  "observed_other_head": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
+  "observed_ai_mem_branch": "workstream/0196-memory-model",
+  "observed_ai_mem_head": "ef9cc8368309bd4d880b36137c7f25fc07a018db",
+  "carry_checks": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "expected": "f45c26e1243852ce65b3ed74b336ef83359877e0",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_snapshot_0200.py",
+      "expected": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+      "expected": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "expected": "0cf363f8f8961b8b135335bdc9d394aa93ca501f",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_history_0201.py",
+      "expected": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+      "expected": "c9963f21766da435a00a18a5f49073ebe8603664",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404",
+      "basis": "0201-R pinned observation"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "expected": "54004cf5cee1c655c665602f6c87e5a363097868",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_history_0202.py",
+      "expected": "f79e85ae29b7e3bf5722493ca6fd608b026991cd",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404"
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+      "expected": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+      "ui_blob": null,
+      "status": "NOT_FOUND_404"
+    }
+  ],
+  "merge": "NOT_PERFORMED",
+  "combined_tests": "NOT_RUN",
+  "notes": "Separate workstreams. Verify dependency closure, optional crypto lock and shared manifest before integration; no inferred merge."
+}

@@ -1,0 +1,188 @@
+{
+  "revision": "DOC-REV-0177",
+  "status": "ISOLATED_INTEGRATED_SOURCE_CANDIDATE",
+  "parent_commit": "889796c5878c5c9cba342869cfa0c7664cd99080",
+  "original_frontend_tree": "12eaaf95a34ab7006f27bbdcb728887821e75295",
+  "candidate_frontend_tree": "a5fe3be5c456aaa932135f80ed51954899d04b59",
+  "product_tree_unchanged": true,
+  "old_files": 39,
+  "candidate_files": 46,
+  "added": 7,
+  "modified": 6,
+  "removed": 0,
+  "unchanged": 33,
+  "changes": [
+    {
+      "path": "app/layout.tsx",
+      "before": "00966b7baf7dc8f222fb05e78f7ed352cd0f28b2",
+      "after": "ba4cb5b81def3aefd93be62d163f0d5aa503e35f",
+      "action": "modified"
+    },
+    {
+      "path": "components/dashboard/MetricsStrip.tsx",
+      "before": "03a9a4555d69543367c677273d6a0f5743a67b6f",
+      "after": "52cd085bc9989a797498fef8a968381e6bd010b9",
+      "action": "modified"
+    },
+    {
+      "path": "components/dashboard/OfficePanel.tsx",
+      "before": "5b2a9eb264de1c9670fb7e0af0919d6e320981df",
+      "after": "cb6a64382be1e11e75fdecf827874f03e6f6a72b",
+      "action": "modified"
+    },
+    {
+      "path": "design-system/EvidencePanel.tsx",
+      "before": null,
+      "after": "21ffd43b585e4e53f95ffae10cea0d14c9cc96a1",
+      "action": "added"
+    },
+    {
+      "path": "design-system/MetricCards.tsx",
+      "before": null,
+      "after": "8d857f05d1aca962525f95d9f5c8e4bb67a37836",
+      "action": "added"
+    },
+    {
+      "path": "design-system/Navigation.tsx",
+      "before": null,
+      "after": "9b72b1dd1a33d1a0475ef3da2dc60f1491050394",
+      "action": "added"
+    },
+    {
+      "path": "design-system/OfficeControls.tsx",
+      "before": null,
+      "after": "39cccf3020426365918127e6a003ded300c2f55d",
+      "action": "added"
+    },
+    {
+      "path": "design-system/ThemeFrame.tsx",
+      "before": null,
+      "after": "c36adf84d5eb2a86e1741391331117c72886d701",
+      "action": "added"
+    },
+    {
+      "path": "design-system/WorkflowProjection.tsx",
+      "before": null,
+      "after": "7c812b387d82f5a638294d8ddcc5570eb4c94f1d",
+      "action": "added"
+    },
+    {
+      "path": "design-system/eds.css",
+      "before": null,
+      "after": "68ec67aad3f45bcadc78902e2386d1b23b553dba",
+      "action": "added"
+    },
+    {
+      "path": "features/ceo-dashboard/Dashboard.tsx",
+      "before": "6c378a90480048421ee59861f472f9c1f17a9a48",
+      "after": "98654db604bf845b4e190a6c176155999a5f56ee",
+      "action": "modified"
+    },
+    {
+      "path": "features/core-review/CorePreview.tsx",
+      "before": "c6761664a8ab395e6223a7cffc5f1aeddea12d32",
+      "after": "772b5ce660f368e05ac96a3c1472ba611ee2e693",
+      "action": "modified"
+    },
+    {
+      "path": "features/uiCatalog.json",
+      "before": "ed970812d7883cbd265c51ff19bafd52317ecbe0",
+      "after": "076e6848e24d59e9601d1932ade5d34afd8464b9",
+      "action": "modified"
+    }
+  ],
+  "static_checks": {
+    "source_transform_checks": 37,
+    "contrast_pairs": [
+      13.66,
+      7.55,
+      9.16,
+      10.92,
+      16.27,
+      6.31,
+      7.5,
+      7.25
+    ],
+    "tree_diff": "PASS",
+    "product_tests": "NOT_RUN"
+  },
+  "independent_gates": {
+    "PRE": "HOLD",
+    "T01": "HOLD",
+    "T06": "HOLD"
+  },
+  "test_matrix": [
+    {
+      "id": "EDS-T01",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T02",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T03",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T04",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T05",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T06",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T07",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T08",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T09",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T10",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T11",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T12",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T13",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    },
+    {
+      "id": "EDS-T14",
+      "status": "NOT_RUN",
+      "kind": "product acceptance candidate"
+    }
+  ],
+  "rollback": "Do not promote. Remove candidate subtree and revision addenda by reviewed revert; product tree unchanged.",
+  "separate_branch": "recovery/0172-r12-readback-integration (diverged; not merged)"
+}

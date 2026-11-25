@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ai-company-os:d0:core-plan-projection:1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scope",
+    "plan_id",
+    "worktype",
+    "tasks",
+    "waves",
+    "edges",
+    "validation",
+    "admission",
+    "dispatch_allowed",
+    "release_ready",
+    "real_run_count",
+    "digest",
+    "revision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "core.plan.projection.v1-D0"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tenant_id",
+        "environment_id"
+      ],
+      "properties": {
+        "tenant_id": {
+          "const": "synthetic-tenant"
+        },
+        "environment_id": {
+          "const": "A0_SAMPLE_ONLY"
+        }
+      }
+    },
+    "plan_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}$"
+    },
+    "worktype": {
+      "const": "RESEARCH"
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "role",
+          "depends_on",
+          "state",
+          "run_id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "role": {
+            "enum": [
+              "orchestrator",
+              "research",
+              "engineer",
+              "qa",
+              "independent-verifier",
+              "human-authority"
+            ]
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}$"
+            },
+            "uniqueItems": true,
+            "maxItems": 99
+          },
+          "state": {
+            "const": "HOLD"
+          },
+          "run_id": {
+            "const": null
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "waves": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}$"
+        },
+        "minItems": 1,
+        "maxItems": 100,
+        "uniqueItems": true
+      },
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "from",
+          "to"
+        ],
+        "properties": {
+          "from": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}$"
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,127}$"
+          }
+        }
+      },
+      "uniqueItems": true,
+      "maxItems": 4950
+    },
+    "validation": {
+      "const": "VALIDATED_D0_GRAPH"
+    },
+    "admission": {
+      "const": "DENY"
+    },
+    "dispatch_allowed": {
+      "const": false
+    },
+    "release_ready": {
+      "const": false
+    },
+    "real_run_count": {
+      "const": null
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}
