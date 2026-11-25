@@ -1,0 +1,10 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {reviewDraft}=require(process.env.DRAFT_JS);
+const tasks=()=>[{id:'a',depends_on:[]},{id:'b',depends_on:['a']},{id:'c',depends_on:[]}];
+test('base waves deterministic',()=>assert.deepEqual(reviewDraft(tasks(),[]),{ok:true,waves:[['a','c'],['b']]}));
+test('addition changes local waves without mutating base',()=>{const t=tasks(),before=JSON.stringify(t);assert.deepEqual(reviewDraft(t,[{from:'b',to:'c'}]),{ok:true,waves:[['a'],['b'],['c']]});assert.equal(JSON.stringify(t),before)});
+for(const [name,edges,reason] of [['cycle',[{from:'b',to:'a'}],'CYCLE'],['self',[{from:'a',to:'a'}],'EDGE_ENDPOINT'],['unknown',[{from:'z',to:'a'}],'EDGE_ENDPOINT'],['base duplicate',[{from:'a',to:'b'}],'DUPLICATE_EDGE'],['draft duplicate',[{from:'b',to:'c'},{from:'b',to:'c'}],'DUPLICATE_EDGE']])test(name,()=>assert.deepEqual(reviewDraft(tasks(),edges),{ok:false,reason}));
+test('duplicate task',()=>assert.deepEqual(reviewDraft([...tasks(),tasks()[0]],[]),{ok:false,reason:'TASK_ID'}));
+test('invalid base edge',()=>assert.deepEqual(reviewDraft([{id:'a',depends_on:['x']}],[]),{ok:false,reason:'BASE_EDGE'}));
+test('empty plan',()=>assert.deepEqual(reviewDraft([],[]),{ok:false,reason:'DRAFT_LIMIT'}));
+test('reset restores baseline',()=>{assert.equal(reviewDraft(tasks(),[{from:'b',to:'c'}]).ok,true);assert.deepEqual(reviewDraft(tasks(),[]),{ok:true,waves:[['a','c'],['b']]})});

@@ -1,0 +1,6 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {parseLifecyclePrefix}=require(process.argv[2]);const cases=require(process.argv[3]);
+const clone=v=>JSON.parse(JSON.stringify(v));
+for(const x of cases)test('Python/TS parity v'+x.head_version,()=>assert.deepEqual(parseLifecyclePrefix(x),x));
+for(const [name,mutate] of [['scope',x=>x.tenant='other'],['revision',x=>x.plan_revision='wrong'],['agent',x=>x.agent_instance_id='demo-other'],['attempt',x=>x.attempt=1],['lease',x=>x.lease_version=1],['heartbeat',x=>x.heartbeat_revision=0],['fence',x=>x.fence=2],['clock',x=>x.lease_freshness='FRESH'],['causal',x=>x.timeline.reverse()],['gap',x=>x.timeline.pop()],['budget',x=>x.sample_outstanding_minor=0],['model',x=>x.model_binding='PASS'],['memory',x=>x.memory_acl='ALLOW'],['geometry',x=>x.geometry_join='PASS'],['dispatch',x=>x.dispatch_allowed=true],['authority',x=>x.authoritative=true],['extra',x=>x.extra=1],['terminal',x=>x.head_version=5]])test(name+' HOLD',()=>{const x=clone(cases[2]);mutate(x);assert.equal(parseLifecyclePrefix(x),null)});
+test('parsed values do not alias previous result',()=>{const a=parseLifecyclePrefix(cases[2]);a.timeline[0].state='FORGED';assert.equal(parseLifecyclePrefix(cases[2]).timeline[0].state,'ADMITTED')});

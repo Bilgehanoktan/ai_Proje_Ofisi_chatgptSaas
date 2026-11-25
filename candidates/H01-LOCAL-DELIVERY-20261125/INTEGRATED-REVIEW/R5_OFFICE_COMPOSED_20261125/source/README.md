@@ -1,0 +1,3 @@
+# AI Company OS — 0167 / R11 local MVP source candidate
+
+142 product files, 141 manifest entries; source integrated, runtime NOT_RUN. [Start here: local MVP preparation](docs/0167/LOCAL_MVP_SETUP.md). [Project index](PROJECT_INDEX.md) · [manifest](product/SOURCE_MANIFEST.json) · [architecture](docs/architecture/DESIGN_MASTER.md) · [technical catalog](catalog/TECHNICAL_CATALOG.md) · [handover](handover/CURRENT.md). Backend/Frontend in product/. No live API join, independent acceptance, actual agent runtime, CI, PROD or main merge. Previous source-only exceptions do not confer runtime grant. Historical root README retained in docs/0167/HISTORICAL_ROOT_README.md.

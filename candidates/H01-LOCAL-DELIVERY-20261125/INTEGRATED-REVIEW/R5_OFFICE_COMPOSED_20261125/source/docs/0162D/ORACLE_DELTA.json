@@ -1,0 +1,104 @@
+{
+  "prior_documentary": 30,
+  "new_documentary": 12,
+  "r8_tests_not_run": 65,
+  "local_c_tests_not_run": 24,
+  "rows": [
+    {
+      "id": "0162D-O01",
+      "finding": "0162-D01",
+      "stimulus": "AdmissionPin budget_id only; reservation_id is self supplied and only BUDGET role compared",
+      "expected": "Bind independent admission/reservation/request identity and reservation disposition; no closure without proof",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O02",
+      "finding": "0162-D02",
+      "stimulus": "HeadReadback has request digest, not before/after state bytes; HEAD/FENCE/AUDIT IDs not pinned",
+      "expected": "Separate before/after artifact digest and exact row/commit identities, independent readback",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O03",
+      "finding": "0162-D03",
+      "stimulus": "SUCCEEDED receipt/artifact digest shape and outcome string not independent proof; control-plane returns early",
+      "expected": "Bind IV/current artifact and outcome evidence; separate stop authority and time/fence readback",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O04",
+      "finding": "0162-D04",
+      "stimulus": "send_intent_ref presence only; receipt lacks exact send ref and claim owner/fence binding; no authoritative issuer",
+      "expected": "Exact send record, generation, issuer, evidence digest, cursor and contradictory readbacks; history != live authority",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O05",
+      "finding": "0162-D05",
+      "stimulus": "Outcome pin compared only as caller shape, no inspect_reconciliation/authoritative outcome result",
+      "expected": "Require typed verified outcome input and exact effect/receipt/usage binding; retain exposure",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O06",
+      "finding": "0162-D06",
+      "stimulus": "prior_event compares full object, including expected_budget_revision; replay after head advance may conflict; no economic event lookup",
+      "expected": "Separate immutable economic payload/digest from CAS envelope; authoritative unique lookup; no duplicate posting",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O07",
+      "finding": "0162-D07",
+      "stimulus": "Reservation membership, outstanding allocation and amount provenance not authoritative; currency shape not registered unit",
+      "expected": "Exact company-period reservation ledger and usage/currency owner, CAS race oracle",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O08",
+      "finding": "0162-D08",
+      "stimulus": "Dashboard context separate from OfficeScene local selection; same station names have different coordinates",
+      "expected": "No implicit join; explicit owner/digest and mapping; preserve independent demo; keyboard/fallback acceptance",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O09",
+      "finding": "0162-D09",
+      "stimulus": "24 methods cover shape negatives but not real CAS, receipt replay/forgery, ledger contention, browser or restore",
+      "expected": "Extend documentary oracles; keep NOT_RUN, no collect/import",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O10",
+      "finding": "0162-D10",
+      "stimulus": "Signature/root/custody not verified; no new IV authority",
+      "expected": "Owner selects canonical serialization, algorithm, key custody, trusted time and revocation; release CAS separate",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O11",
+      "finding": "0162-D11",
+      "stimulus": "20 backend crosswalk is not the 55 OfficeV0 inventory",
+      "expected": "Preserve separate ledgers; no false owner or canonical acceptance",
+      "actual": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "0162D-O12",
+      "finding": "0162-D12",
+      "stimulus": "Scope remains proposed, grant/receipts null, P08 documentation only",
+      "expected": "No source transfer/integration; actual independent PRE/T01/POST and separate DEV/TEST",
+      "actual": null,
+      "status": "NOT_RUN"
+    }
+  ]
+}

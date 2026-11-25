@@ -1,0 +1,307 @@
+{
+  "status": "DESIGN_ONLY_NOT_RUN",
+  "existing_executable_tests_not_run": 65,
+  "new_executable_tests": 0,
+  "rows": [
+    {
+      "id": "0162-O01",
+      "workstream": "W3",
+      "scenario": "Terminal reopening",
+      "stimulus": "SUCCEEDED -> RUNNING",
+      "expected": "DENY; no state write",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O02",
+      "workstream": "W3",
+      "scenario": "Success without IV",
+      "stimulus": "VERIFYING -> SUCCEEDED with absent receipt",
+      "expected": "HOLD; no success or release",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O03",
+      "workstream": "W3",
+      "scenario": "Stop after expiry",
+      "stimulus": "Expired lease + authorized stop proposal",
+      "expected": "No worker write; control-plane stop separate HOLD",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O04",
+      "workstream": "W3",
+      "scenario": "Pre-admission cancel",
+      "stimulus": "CREATED no lease/reservation",
+      "expected": "No fictitious budget/lease; special write-set HOLD",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O05",
+      "workstream": "W3",
+      "scenario": "Timeout with caller clock",
+      "stimulus": "No trusted clock receipt",
+      "expected": "HOLD, no terminal assertion",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O06",
+      "workstream": "W3",
+      "scenario": "Old worker after stop",
+      "stimulus": "Old fence after new fence",
+      "expected": "DENY effect",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O07",
+      "workstream": "W4",
+      "scenario": "Terminal CAS race",
+      "stimulus": "Same expected version two contenders",
+      "expected": "At most one atomic winner; no partial rows",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O08",
+      "workstream": "W4",
+      "scenario": "Terminal outbox mismatch",
+      "stimulus": "Different event/outbox/commit IDs",
+      "expected": "HOLD",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O09",
+      "workstream": "W4",
+      "scenario": "Terminal postcommit version missing",
+      "stimulus": "No consistent readback",
+      "expected": "Atomicity unproven",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O10",
+      "workstream": "W4",
+      "scenario": "Crash after send",
+      "stimulus": "No ACK",
+      "expected": "UNKNOWN; no resend",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O11",
+      "workstream": "W4",
+      "scenario": "Crash after ACK",
+      "stimulus": "Receipt not durably recorded",
+      "expected": "UNKNOWN; no resend",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O12",
+      "workstream": "W4",
+      "scenario": "Cross-scope receipt",
+      "stimulus": "Other tenant/provider correlation",
+      "expected": "Quarantine",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O13",
+      "workstream": "W4",
+      "scenario": "Confirmed applied",
+      "stimulus": "Independent exact receipt",
+      "expected": "No resend; no release grant",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O14",
+      "workstream": "W4",
+      "scenario": "Confirmed not applied",
+      "stimulus": "Independent negative proof",
+      "expected": "No automatic retry; separate live gates",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O15",
+      "workstream": "W4",
+      "scenario": "Restore old epoch",
+      "stimulus": "Historical receipt + stale executor",
+      "expected": "Retain evidence; deny effect",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O16",
+      "workstream": "W4",
+      "scenario": "Contradictory outcomes",
+      "stimulus": "Two conflicting receipts",
+      "expected": "Quarantine",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O17",
+      "workstream": "W7",
+      "scenario": "Duplicate economic event",
+      "stimulus": "Same ID and digest",
+      "expected": "No duplicate ledger posting",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O18",
+      "workstream": "W7",
+      "scenario": "Changed settlement",
+      "stimulus": "Same event ID different amount",
+      "expected": "Conflict HOLD",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O19",
+      "workstream": "W7",
+      "scenario": "Unknown cost",
+      "stimulus": "Unknown usage/outcome",
+      "expected": "Retain exposure; no release",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O20",
+      "workstream": "W7",
+      "scenario": "Shared budget race",
+      "stimulus": "Two runs same company budget head",
+      "expected": "No oversubscription; CAS",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O21",
+      "workstream": "W7",
+      "scenario": "Cost exceeds reservation",
+      "stimulus": "Confirmed amount > reserved",
+      "expected": "HOLD escalation; no clamping",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O22",
+      "workstream": "W7",
+      "scenario": "Currency mismatch",
+      "stimulus": "Different settlement currency",
+      "expected": "HOLD; no implicit FX",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O23",
+      "workstream": "W6",
+      "scenario": "Key revoked",
+      "stimulus": "Valid shape but revoked key",
+      "expected": "HOLD",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O24",
+      "workstream": "W6",
+      "scenario": "Shared recovery custody",
+      "stimulus": "QA and IV different IDs same admin",
+      "expected": "No independent proof",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O25",
+      "workstream": "W6",
+      "scenario": "Artifact changed after IV",
+      "stimulus": "New revision before release",
+      "expected": "Release CAS HOLD",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O26",
+      "workstream": "W1",
+      "scenario": "Layout mismatch",
+      "stimulus": "draft-hybrid-floor-1 vs layout-d3-demo",
+      "expected": "Static fallback, no live join",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O27",
+      "workstream": "W1",
+      "scenario": "Sequence gap",
+      "stimulus": "seq jumps or stale epoch",
+      "expected": "Freeze live motion; no RunState change",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O28",
+      "workstream": "W1",
+      "scenario": "Floor switch",
+      "stimulus": "Selection old floor",
+      "expected": "Reset context; keyboard access retained",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O29",
+      "workstream": "W2",
+      "scenario": "Field gap",
+      "stimulus": "Missing owner and canonical mapping",
+      "expected": "0/16 and 0/55 unchanged",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    },
+    {
+      "id": "0162-O30",
+      "workstream": "W8",
+      "scenario": "Merge without permission",
+      "stimulus": "Main merge attempted",
+      "expected": "No merge; preserve branch",
+      "actual": null,
+      "status": "NOT_RUN",
+      "oracle_source": "Future independent acceptance evidence; no execution this round"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "revision": "UI-P10F",
+  "source": "5b57199c397fa6ae183ec16c9efaa480dfc78175",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_sqlite_p10f.py",
+      "bytes": 8019,
+      "sha256": "f8eac07fadabe1b0c0a8992e7cc242c659a84386e0404563ee9ed601563dd46c"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "bytes": 9477,
+      "sha256": "b4dc3b283772ae833a54cba699b37911b719780a6b26f417e266ac380365cc0d"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "bytes": 2160,
+      "sha256": "0c56dfa146a73aed708a5e9f4695f71b0618da3a6640a8fd6d55f86dd93b591a"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/EvidenceStudio.module.css",
+      "bytes": 2518,
+      "sha256": "91b73f42e98a772dc6244832cf5d8a79c55d2b42750e0485e4c27f3aa4ddb132"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+      "bytes": 3658,
+      "sha256": "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/evidenceContext.ts",
+      "bytes": 1599,
+      "sha256": "03e4de859ab39186aa19ec05e0791064591918e9631e3814865d2edf9e8937f7"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "bytes": 6151,
+      "sha256": "08c235c4240a9500a51136345b179880f95b2ce7e886c6388ec414bf91b2577e"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+      "bytes": 2467,
+      "sha256": "352ae15da25b705f7f156c74b0dd9c8bef5dae4e9f01d2c24c389072ee4fb78e"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "bytes": 3536,
+      "sha256": "b5ef19beb955152c71f381dc19673ac5da44fde2ad058cf319054773715f8b1f"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+      "bytes": 1532,
+      "sha256": "3bba9722556ea5467291bd8f7c5f3d0554743893f577592229e77c0fae7926cb"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+      "bytes": 5072,
+      "sha256": "e38460ca4b884cd7259b1d9dc06f5e8198965dac2792f0824eb505fc5e11523d"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/wallDecor.ts",
+      "bytes": 1230,
+      "sha256": "d6b3cc6a8e4ebe5b14336b54c726bc76495e974ad25d7b3372e553cf20945207"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10f-model.test.cjs",
+      "bytes": 4390,
+      "sha256": "e9517b595236994df3b88a61dcba30c1eb5c0aede32868616867ae3f761006e9"
+    }
+  ],
+  "aux": [
+    {
+      "path": "tests/integration/preflight_ui_p10f.py",
+      "blob": "36d1a241d36ee66bec9ebcbd6ada9923727dd2b7"
+    },
+    {
+      "path": "tests/integration/w8_p10f.py",
+      "blob": "155a2179eb71bd554aa34dff36147be4658473e0"
+    }
+  ],
+  "symbols": [
+    "evidenceContext",
+    "selectedEvidenceEvent",
+    "editDraft",
+    "emptyDraftHistory",
+    "wallDecorCatalog",
+    "wallDecorUri",
+    "wallDecorAt",
+    "AuthoritySQLiteP10F",
+    "inventory",
+    "core_lock",
+    "npm_status",
+    "load_original"
+  ],
+  "api_changes": [],
+  "db_migrations": [],
+  "dependency_changes": [],
+  "maintenance": "# UI-P10F — 0211 + UI D0 source candidate\n\nSource: 5b57199c397fa6ae183ec16c9efaa480dfc78175; parent 14738822c38eb179825e00a01e48e2a3a0c16c3d. Manifest 44844b647640694a00abc62f200af034d38ac6ff. 372 pins, 373 product files, 158 frontend; 359 unchanged, 5 additions, 8 modifications, zero deletion. Selected local verification 113 exact source files, 11/13 changed product files local; two exact-source remote-only patches (Dashboard and ProjectStudio). No main merge or new authority.\n\n## Changes and maintenance\n- evidenceContext: exact lifecycle/prefix parsing, endpoint/plan/run/head revision key; selected event must remain in filtered visible record. HistoricalEvidence and EDS focus/details, AgentDirectory role template. No live identity or authority inferred.\n- draftHistory: last 20 local undo snapshots, original DAG validation on every action/undo. WorkflowDraft uses functional state update; canonical plan unchanged. ProjectStudio clears filters to reveal selected task. Dashboard label updated.\n- wallDecor: two SVG assets; officeArtwork adds four fixed wall accents, existing 16 desk accents and reserve floor preserved. No geometry/placement or runtime agent movement changes.\n- test_authority_sqlite_p10f: original ordinary T1 mapping and coordinator under 0211 claim fence, disposable SQLite only. 7 protection cases, 1 expected residual replay when both stores restored. Original 0211 tests: 9 protections + 1 residual. D-03 cooperating root serialized, independent trust open; D-04 replay reproduced, not fixed; D-01/02 open. No actual witness/journal wrapper or PG/RLS execution.\n- preflight_ui_p10f: read-only inventory, symlink/traversal guards, core lock and installed dependency reporting. Six probes pass. Full checkout absent; core29 37/55 exact, missing 18, original core29 NOT_RUN.\n- w8_p10f: new adapter loads exact original W8 runner without modifying it, binds P10F manifest, adds existing pinned auxiliary SQL/core runner and signature wheelhouse requirements, runs selected 43 model and original locked core29 before original full test/build/smoke. Original W8 stages locks for review; absence of package-lock in clean source is not itself a defect. Adapter syntax checked; final prepare/install/test/smoke not run. No dependency upgrades or lock substitution.\n\n## Verification and limits\n7/7 original backend + compiled GET rerun, 25/25 terminal/prefix rerun, 43/43 model (16 new,27 rerun), 18/18 standalone SVG Chromium, 4 TSX syntax, 6 preflight probes. No React/Next product acceptance: build exit 127, next not found. Real Next parity 0/7 and original browser 0/52 not run. Exact 0212/0213 HEAD e33ffb633bc5a445aec1fb4946625884d503c348; 0212 only two new test files, no production code modification; 0213 same commit. No merge; prior 52 outcomes historical. Independent acceptance HOLD, 21/40 original UI gates, 0/7 acceptance.\n\n## Diagnosis / rollback\nUse exact manifest and preflight; never replace absent original files with mocks. If root restore replay occurs, isolate both disposable DBs; retain logs and do not grant authority. For UI context mismatch inspect endpoint/plan/run/version and filters; for undo inspect original DAG; for art inspect SVG only. Revert candidate to parent 14738822c38eb179825e00a01e48e2a3a0c16c3d (separate branch), no DB migration. W8 adapter failure: retain original runner and review stage, regenerate a new isolated stage only after exact source recovery. No CI, PROD, real provider, effects, spend, real data or grants.\n",
+  "rollback": "14738822c38eb179825e00a01e48e2a3a0c16c3d"
+}

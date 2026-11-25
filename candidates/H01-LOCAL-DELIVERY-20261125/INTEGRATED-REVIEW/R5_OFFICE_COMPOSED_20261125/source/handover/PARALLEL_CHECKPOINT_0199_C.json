@@ -1,0 +1,64 @@
+{
+  "revision": "0199-C",
+  "status": "SEPARATE_SOURCE_REVIEW_NO_MERGE",
+  "plan_history_source": "7a46e9bf3f5dd8f61883ff3444efca0dbbb185e1",
+  "unified_branch": "integration/0198-ul-lifecycle",
+  "unified_head": "9eee77b0f8467f4926973218a2de48aabe9dd95c",
+  "observed_branch_heads": [
+    {
+      "name": "integration/0198-ul-lifecycle",
+      "sha": "9eee77b0f8467f4926973218a2de48aabe9dd95c"
+    },
+    {
+      "name": "main",
+      "sha": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+    },
+    {
+      "name": "workstream/0198-event-history",
+      "sha": "2d2ee7c4b4eafbdec9b721c8ad1b8f0428f78a3f"
+    }
+  ],
+  "carry_checks": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "other": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+      "other": null,
+      "status": "MISSING"
+    }
+  ],
+  "dependency_differences": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "actual": null
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "actual": null
+    }
+  ],
+  "exact_dependency_matches": 29,
+  "conflicting_carry_paths": 0,
+  "merge": "NOT_PERFORMED",
+  "combined_tests": "NOT_RUN",
+  "notes": "Other conversation owns W1/API/UI and AI/model/memory/tool. Repin before controlled carry; history prerequisite then plan history. Regenerate shared metadata; no automatic merge or main changes."
+}

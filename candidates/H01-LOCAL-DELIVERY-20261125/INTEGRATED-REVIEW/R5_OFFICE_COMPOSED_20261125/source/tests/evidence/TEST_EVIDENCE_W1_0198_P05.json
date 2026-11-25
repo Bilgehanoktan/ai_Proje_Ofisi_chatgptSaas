@@ -1,0 +1,62 @@
+{
+  "revision": "W1-0198-P05",
+  "source_commit": "0346991ed928a8fa682902dee9cc53aa2c0102e2",
+  "parents": [
+    "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+    "34635cbd5f6df7bc2a01b5d07e4cc015cf1ec84b"
+  ],
+  "executed": {
+    "new_sqlite_merge": {
+      "passed": 11,
+      "source_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+      "test_blob": "619d14e103207f840e82c96774ae773e38914b3e"
+    },
+    "regression_sqlite_generic": {
+      "passed": 13,
+      "source_blob": "c067e844f1c3200c625f4811d13f12c59a602e95",
+      "test_blob": "42d761960c0a5fe3efb573612fab36ac9f797619"
+    },
+    "regression_session_join": {
+      "passed": 14,
+      "source_blobs": [
+        "80982deb9d75d337334da167eee2be169afd42df",
+        "03ac36fcf87208cfc2bc90e9abb1297eda244117"
+      ],
+      "test_blob": "00557f3a15bd27f422e212920302a02a1bf88f98"
+    },
+    "regression_scope": {
+      "passed": 9,
+      "source_blob": "4f711297dcea3a9cc96d84db0167f1dcc5c5c65e",
+      "test_blob": "58054af5ed662627d23fa20fe370823beb718dbb",
+      "prefix_vector_blob": "53459c4b6961455dc183cb3b20382559862e98f6"
+    },
+    "regression_progress": {
+      "passed": 10,
+      "source_blob": "ec976fc8b901e0af2d8625083d6e5a603805bf2f",
+      "test_blob": "76aaf58b78637f048932dc29d59926fc0778faee",
+      "vector_blob": "1c35eae82c96dea1607b2f3b7c63702f458bee18"
+    },
+    "total": 57,
+    "new": 11,
+    "regression": 46,
+    "failed": 0,
+    "skipped": 0,
+    "commands": [
+      "python -B -m unittest discover -s tests -v (selected two test files only)",
+      "tsc --strict --target ES2022 --lib ES2022,DOM --module commonjs --rootDir . --outDir compiled features/data/projectionSession.ts features/mvp/historicalJoin.ts features/data/projectionScope.ts features/progress/progressModel.ts",
+      "node each of projection-session-join, projection-scope, progress-model with compiled modules and pinned fixture"
+    ]
+  },
+  "not_run": [
+    "14 parent lifecycle snapshot tests",
+    "16 parent terminal parser tests",
+    "17 P02/P03 persisted fixture/API tests",
+    "full pinned suite and React/Next build",
+    "7 API parity",
+    "browser",
+    "Windows",
+    "PostgreSQL",
+    "independent acceptance"
+  ],
+  "blocker": "DNS checkout failed; exact full backend closure unavailable. No integration acceptance. Parent test counts not additive."
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aicos:doc-spec-0099:C7-FinancialLedgerEntry:0.1.0-a0",
+  "title": "A0 unratified candidate — C7-FinancialLedgerEntry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "entry_id",
+    "scope",
+    "entry_type",
+    "original_amount_decimal",
+    "currency",
+    "economic_event_id",
+    "source_evidence_sha256",
+    "accounting_date_utc",
+    "ledger_direction",
+    "posting_state",
+    "external_effect_authorized",
+    "authority_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "0.1.0-a0"
+      ]
+    },
+    "entry_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tenant_id",
+        "environment_id",
+        "effect_class"
+      ],
+      "properties": {
+        "tenant_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "company_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "environment_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "effect_class": {
+          "type": "string",
+          "enum": [
+            "A0",
+            "A1",
+            "A2",
+            "A3"
+          ]
+        },
+        "resource_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      }
+    },
+    "entry_type": {
+      "type": "string",
+      "enum": [
+        "RECOGNIZED_REVENUE",
+        "CASH_COLLECTION",
+        "COST_ESTIMATE"
+      ]
+    },
+    "original_amount_decimal": {
+      "type": "string",
+      "pattern": "^\\d{1,15}(\\.\\d{1,6})?$"
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "economic_event_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "source_evidence_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "accounting_date_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,6})?Z$"
+    },
+    "ledger_direction": {
+      "type": "string",
+      "enum": [
+        "DEBIT",
+        "CREDIT"
+      ]
+    },
+    "posting_state": {
+      "type": "string",
+      "enum": [
+        "UNPOSTED_HOLD"
+      ]
+    },
+    "external_effect_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "authority_status": {
+      "type": "string",
+      "enum": [
+        "A0_CANDIDATE_HOLD"
+      ]
+    }
+  }
+}

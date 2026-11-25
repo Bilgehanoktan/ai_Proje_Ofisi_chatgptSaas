@@ -1,0 +1,96 @@
+{
+  "revision": "MI-P0-566-NODE41-ORIGINAL-FOUR-ROUTE-20261121",
+  "classification": "OWNER_REVIEW_EVIDENCE_ACTUAL_ISOLATED_ORIGINAL_SOURCE_TEST_NOT_FULL_566_PRODUCT_TEST",
+  "parent_source_head": "db0ab470d66acac1b0d21fa51bc523a174d0a54c",
+  "repo": "Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas",
+  "source_candidate": "566 files / 565 manifest entries",
+  "platform": {
+    "os": "Linux",
+    "node": "v22.16.0",
+    "typescript": "Version 5.8.3",
+    "compiler": "tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM with isolated process.env typing shim"
+  },
+  "verified_source_blobs": {
+    "app/api/demo/office-workbench/route.ts": "ae42ecccdda987c00537696f2698f49c374ec927",
+    "features/mvp/officeWorkbenchProjection.ts": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+    "features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "tests/office-workbench-deadline.test.cjs": "aa7afc3a93265305df6ceb8acbb03d25b901beb3",
+    "app/api/demo/admission/route.ts": "c46fa8f20e75370ce423f3ede63cd340926fe089",
+    "app/api/demo/outbox/route.ts": "12895f7c606665e6605017486473b4d2ebd8deb5",
+    "app/api/demo/task-budget/route.ts": "b8c6a4e6021b05d126c027d17fc358cc2a7d2816",
+    "features/mvp/admissionProjection.ts": "5af643c596185be4d8a30cd75f6c56e77de33c57",
+    "features/mvp/outboxProjection.ts": "4a10084ac38bb9f6de70c581c2936feca9094f5a",
+    "features/mvp/taskBudgetProjection.ts": "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9",
+    "features/mvp/readBoundedD0Json.ts": "a1ff4a1690a0b113aa882de633e063c02f9535a4",
+    "tests/d0-proxy-deadline.test.cjs": "528027639931c74b27b4d7f12813a57894cc529f",
+    "tests/d0-proxy-wallclock.test.cjs": "bc714ec16a144cba403c214bd1497525e5114821"
+  },
+  "source_integrity": "13/13 exact Git blob verified",
+  "strict_typescript_compilation": "PASS isolated subset, no Next.js build",
+  "original_suites": [
+    {
+      "name": "Admission/Outbox/TaskBudget positive and negative deadline",
+      "passed": 27,
+      "total": 27,
+      "log_sha256": "e2f65da4aebf4008b4071be3468e3502fab46f3e3ed1b77c6c0ebb6596409f85"
+    },
+    {
+      "name": "Actual wallclock 2500ms expired transport/stalled reader/stalled cancel",
+      "passed": 5,
+      "total": 5,
+      "log_sha256": "5e771f748c6ea7bfa2e679468a613ce149482372cf2dcb107d64f95fc0501aa8"
+    },
+    {
+      "name": "Office Workbench original deadline/negative 9",
+      "passed": 9,
+      "total": 9,
+      "log_sha256": "449227c62c2ce26690bbf4dbb45afb3d2245e5803138ac985d9ad7a42b126491"
+    }
+  ],
+  "test_total": 41,
+  "test_pass": 41,
+  "test_fail": 0,
+  "test_skip": 0,
+  "reported_exit_codes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "office_first_diagnostic_not_double_counted": true,
+  "actual_wallclock_observations_ms": [
+    2531,
+    2507,
+    2505,
+    2505,
+    1
+  ],
+  "container_user_artifact_sha256": {
+    "AIOS_PR31_566_Exact_Four_Route_41_PASS_20261121.json": "fa018423068e5c3a528f87e0f34b1f405c24a6f2bbeb2bf3ff6f2b89de303336",
+    "AIOS_PR31_566_Exact_Four_Route_41_PASS_20261121.md": "f2f39f0705e727c730eb69b92a2e14994de5da39d8cf1f374cb0e861b299395c",
+    "AIOS_PR31_566_Exact_Four_Route_41_PASS_EVIDENCE.zip": "c9090ab65ed870baf9382b11d36c34703c2d32335d7dd8da5490bc3dc4ec13a0"
+  },
+  "scope_limitations": [
+    "13 source/test files selected, not 566 full checkout",
+    "no combined product Next.js build or backend integration",
+    "no protected PostgreSQL or real IAM provenance",
+    "not W8 C07, Chromium C08 or independent C05",
+    "not independent tenant isolation and security release acceptance"
+  ],
+  "progress": {
+    "w8_previous": "3/8",
+    "w8_current": "3/8",
+    "delta_pp": 0,
+    "core": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "global_weighted": "HESAPLANAMADI"
+  },
+  "next_owner": "MI-05/MI-06 original 4-route and bounded JSON integration owner; MI-03/04 G2/G9 and actual PG separate; MI-01 W8 actual Windows Core29/full DEV",
+  "code_manifest_other_files_changed": false,
+  "prod_or_main_changed": false,
+  "CI_expanded": false,
+  "independent_approval_issued": false,
+  "rollback": "This commit adds one versioned evidence-only file; normal revert on isolated PR31 branch preserves source history."
+}

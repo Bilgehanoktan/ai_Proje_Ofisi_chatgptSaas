@@ -1,0 +1,847 @@
+{
+  "revision": "0194",
+  "parent": "f7a0258103b72b6052491b162c3a8fe73b99546e",
+  "files": {
+    "database/0194/candidate_transition_roles.sql": {
+      "bytes": 2437,
+      "sha256": "64c7ae1b4c89eef2d0011ce3bf035b4c782dcfbc7a1fe0ce70d6ce007f0bf917",
+      "git_blob": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "status": "NEW",
+      "symbols": []
+    },
+    "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": {
+      "bytes": 2285,
+      "sha256": "e981857ba65f9010c7a07bcab458533d2e8638e805139bc05ad6ee7eada21c57",
+      "git_blob": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "status": "NEW",
+      "symbols": [
+        {
+          "kind": "ClassDef",
+          "name": "SchedulerReview",
+          "line": 12
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "inspect_schedule",
+          "line": 19
+        }
+      ],
+      "imports": [
+        {
+          "module": "dataclasses",
+          "names": [
+            "dataclass",
+            "field"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.lifecycle",
+          "names": [
+            "RunObservation",
+            "RunState",
+            "valid_scope",
+            "uint"
+          ]
+        },
+        {
+          "module": "app.core.orchestrator.engine",
+          "names": [
+            "canonical_plan"
+          ]
+        },
+        {
+          "module": "app.core.orchestrator.readiness",
+          "names": [
+            "ready_tasks"
+          ]
+        }
+      ]
+    },
+    "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py": {
+      "bytes": 8493,
+      "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0",
+      "git_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "status": "NEW",
+      "symbols": [
+        {
+          "kind": "FunctionDef",
+          "name": "_key",
+          "line": 18
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "transaction_ref",
+          "line": 22
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "lease_digest",
+          "line": 25
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "_one",
+          "line": 30
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "_lease",
+          "line": 37
+        },
+        {
+          "kind": "ClassDef",
+          "name": "D0PostgresTransitionMapping",
+          "line": 46
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "verify_transition_rows",
+          "line": 132
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "__init__",
+          "line": 50
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "_check_lease",
+          "line": 61
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "lock_and_validate",
+          "line": 75
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "lock_transition",
+          "line": 85
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "write_role",
+          "line": 90
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "write_transition_role",
+          "line": 93
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "read_transition",
+          "line": 119
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "verify_write_set",
+          "line": 124
+        }
+      ],
+      "imports": [
+        {
+          "module": "dataclasses",
+          "names": [
+            "asdict",
+            "replace"
+          ]
+        },
+        {
+          "module": "hashlib",
+          "names": [
+            "sha256"
+          ]
+        },
+        {
+          "names": [
+            "json"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.lifecycle",
+          "names": [
+            "LeaseObservation",
+            "inspect_lease",
+            "valid_lease"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.postgres_run",
+          "names": [
+            "PostgresRunRepository"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.transition_command",
+          "names": [
+            "validate_transition"
+          ]
+        },
+        {
+          "module": "app.core.event_store.postgres_write",
+          "names": [
+            "append_event",
+            "insert_outbox",
+            "reserve_fence"
+          ]
+        },
+        {
+          "module": "app.core.transaction.port",
+          "names": [
+            "CommitReceipt"
+          ]
+        },
+        {
+          "module": "app.core.transaction.review",
+          "names": [
+            "BASE_ROLES",
+            "Operation",
+            "valid_intent",
+            "required_roles"
+          ]
+        }
+      ]
+    },
+    "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py": {
+      "bytes": 1105,
+      "sha256": "ae7f27db7c8ccd62ea09be950a94178ed436b9cac1afe05daa61298f5236638e",
+      "git_blob": "b011ae715b424a185963af552f524586115a23ec",
+      "status": "NEW",
+      "symbols": [
+        {
+          "kind": "ClassDef",
+          "name": "TransitionReconciliation",
+          "line": 6
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "reconcile_transition",
+          "line": 14
+        }
+      ],
+      "imports": [
+        {
+          "module": "dataclasses",
+          "names": [
+            "dataclass",
+            "field"
+          ]
+        },
+        {
+          "module": "app.core.transaction.postgres_transition_mapping",
+          "names": [
+            "verify_transition_rows"
+          ]
+        }
+      ]
+    },
+    "product/ai-company-os-backend/tests/test_pg_transition_mapping_0194.py": {
+      "bytes": 7176,
+      "sha256": "195135113a847a398743bbfafd29829afb41aae892dc1227a72d68750456eea2",
+      "git_blob": "75f3fb01653b226830546e3600ef75b8dbcfd636",
+      "status": "NEW",
+      "symbols": [
+        {
+          "kind": "ClassDef",
+          "name": "RealPostgresTests",
+          "line": 20
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "setUpClass",
+          "line": 22
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "drop_own_schema",
+          "line": 51
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "connect",
+          "line": 55
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "setUp",
+          "line": 64
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "commit",
+          "line": 73
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "counts",
+          "line": 78
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_commit_readback",
+          "line": 83
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_rollback_all_roles",
+          "line": 91
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_two_writers",
+          "line": 102
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_row_lock_nowait",
+          "line": 113
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_stale_lease_rollback",
+          "line": 124
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "compete",
+          "line": 104
+        },
+        {
+          "kind": "ClassDef",
+          "name": "Broken",
+          "line": 94
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "write_transition_role",
+          "line": 95
+        }
+      ],
+      "imports": [
+        {
+          "names": [
+            "os"
+          ]
+        },
+        {
+          "names": [
+            "unittest"
+          ]
+        },
+        {
+          "module": "concurrent.futures",
+          "names": [
+            "ThreadPoolExecutor"
+          ]
+        },
+        {
+          "module": "threading",
+          "names": [
+            "Barrier"
+          ]
+        },
+        {
+          "module": "dataclasses",
+          "names": [
+            "replace"
+          ]
+        },
+        {
+          "names": [
+            "test_transition_mapping_0194"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.transition_command",
+          "names": [
+            "commit_transition"
+          ]
+        },
+        {
+          "module": "app.core.transaction.port",
+          "names": [
+            "LogicalT1Coordinator"
+          ]
+        },
+        {
+          "module": "app.core.transaction.postgres_session",
+          "names": [
+            "postgres_transaction"
+          ]
+        },
+        {
+          "module": "app.core.transaction.postgres_transition_mapping",
+          "names": [
+            "D0PostgresTransitionMapping"
+          ]
+        },
+        {
+          "module": "app.core.transaction.transition_reconciliation",
+          "names": [
+            "reconcile_transition"
+          ]
+        },
+        {
+          "names": [
+            "psycopg"
+          ]
+        },
+        {
+          "module": "psycopg.conninfo",
+          "names": [
+            "conninfo_to_dict"
+          ]
+        }
+      ]
+    },
+    "product/ai-company-os-backend/tests/test_transition_mapping_0194.py": {
+      "bytes": 14108,
+      "sha256": "56b8fccfb7f220c7721d9d05d40e8f0fe7aa2d55867e37ce25e44ff99b8941e3",
+      "git_blob": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "status": "NEW",
+      "symbols": [
+        {
+          "kind": "ClassDef",
+          "name": "SQLiteCursorShim",
+          "line": 35
+        },
+        {
+          "kind": "ClassDef",
+          "name": "SQLiteConnectionShim",
+          "line": 43
+        },
+        {
+          "kind": "ClassDef",
+          "name": "MappingTests",
+          "line": 57
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "obs",
+          "line": 205
+        },
+        {
+          "kind": "ClassDef",
+          "name": "ScheduleTests",
+          "line": 207
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "__init__",
+          "line": 36
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "__enter__",
+          "line": 37
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "__exit__",
+          "line": 38
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "execute",
+          "line": 39
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "fetchone",
+          "line": 41
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "__init__",
+          "line": 45
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "cursor",
+          "line": 50
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "commit",
+          "line": 51
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "rollback",
+          "line": 54
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "close",
+          "line": 55
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "setUp",
+          "line": 58
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "commit",
+          "line": 74
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "rows",
+          "line": 78
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "assert_empty",
+          "line": 82
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "reconcile",
+          "line": 83
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "update",
+          "line": 88
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_persist_and_reopen",
+          "line": 90
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_stale_lease",
+          "line": 95
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_stale_heartbeat",
+          "line": 98
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_forged_reference",
+          "line": 101
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_revocation_epoch",
+          "line": 104
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_expiry_during_write",
+          "line": 107
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_clock_regression",
+          "line": 111
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_policy_epoch_revocation",
+          "line": 115
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_two_sqlite_writers_single_winner",
+          "line": 118
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_persisted_principal",
+          "line": 131
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_grant",
+          "line": 135
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_rollback_every_role",
+          "line": 138
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_fence_conflict_rolls_back_head",
+          "line": 147
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_idempotency_collision",
+          "line": 151
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_duplicate_commit_fails_cas",
+          "line": 155
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_unknown_after_commit",
+          "line": 159
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_absence_never_authorizes_retry",
+          "line": 163
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_missing_outbox_readback",
+          "line": 165
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_changed_audit_readback",
+          "line": 168
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_fence_readback",
+          "line": 171
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_lease_version_readback",
+          "line": 173
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_generic_commit_denied",
+          "line": 175
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_budget_role_not_mapped",
+          "line": 180
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_terminal_denied",
+          "line": 184
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_readback_tamper_inside_transaction_rolls_back",
+          "line": 189
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "setUp",
+          "line": 208
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_first_wave",
+          "line": 209
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_parallel_wave",
+          "line": 211
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_independent_gate_stays_out",
+          "line": 213
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_wrong_plan_revision",
+          "line": 215
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_duplicate",
+          "line": 217
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_missing_task",
+          "line": 219
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_forged_iv",
+          "line": 221
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_out_of_order_success",
+          "line": 223
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_failed_predecessor_not_ready",
+          "line": 225
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "test_duplicate_run_id",
+          "line": 227
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "compete",
+          "line": 120
+        },
+        {
+          "kind": "ClassDef",
+          "name": "Broken",
+          "line": 190
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "verify_write_set",
+          "line": 191
+        },
+        {
+          "kind": "ClassDef",
+          "name": "Broken",
+          "line": 141
+        },
+        {
+          "kind": "FunctionDef",
+          "name": "write_transition_role",
+          "line": 142
+        }
+      ],
+      "imports": [
+        {
+          "module": "dataclasses",
+          "names": [
+            "replace"
+          ]
+        },
+        {
+          "module": "pathlib",
+          "names": [
+            "Path"
+          ]
+        },
+        {
+          "names": [
+            "sqlite3"
+          ]
+        },
+        {
+          "names": [
+            "tempfile"
+          ]
+        },
+        {
+          "names": [
+            "unittest"
+          ]
+        },
+        {
+          "module": "contextlib",
+          "names": [
+            "closing"
+          ]
+        },
+        {
+          "module": "concurrent.futures",
+          "names": [
+            "ThreadPoolExecutor"
+          ]
+        },
+        {
+          "module": "threading",
+          "names": [
+            "Barrier"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.lifecycle",
+          "names": [
+            "Scope",
+            "RunState",
+            "RunObservation",
+            "LeaseObservation",
+            "ClockSample"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.transition_command",
+          "names": [
+            "transition_digest",
+            "commit_transition"
+          ]
+        },
+        {
+          "module": "app.core.agent_runtime.scheduler_review",
+          "names": [
+            "inspect_schedule"
+          ]
+        },
+        {
+          "module": "app.core.orchestrator.engine",
+          "names": [
+            "canonical_plan"
+          ]
+        },
+        {
+          "module": "app.core.transaction.review",
+          "names": [
+            "LogicalIntent",
+            "Operation"
+          ]
+        },
+        {
+          "module": "app.core.transaction.port",
+          "names": [
+            "LogicalT1Coordinator"
+          ]
+        },
+        {
+          "module": "app.core.transaction.postgres_session",
+          "names": [
+            "postgres_transaction",
+            "CommitOutcomeUnknown"
+          ]
+        },
+        {
+          "module": "app.core.transaction.postgres_transition_mapping",
+          "names": [
+            "D0PostgresTransitionMapping",
+            "transaction_ref"
+          ]
+        },
+        {
+          "module": "app.core.transaction.transition_reconciliation",
+          "names": [
+            "reconcile_transition"
+          ]
+        }
+      ]
+    }
+  },
+  "api_changes": [],
+  "dependencies_added": [],
+  "database_candidate": [
+    "run_leases",
+    "run_mutations",
+    "run_audit"
+  ],
+  "event_type": "D0_RUN_TRANSITION",
+  "test_evidence": {
+    "sqlite_mapping": 25,
+    "scheduler": 10,
+    "regression_mock": 25,
+    "pg_skipped": 5,
+    "pg": "NOT_RUN",
+    "full_suite": "NOT_RUN",
+    "full_build": "NOT_RUN"
+  },
+  "canonical_r03": "HOLD",
+  "independent_acceptance": "HOLD",
+  "run_authority": "HOLD",
+  "notes": "Detailed diagnostics and rollback in docs/0194/ARCHITECTURE_AND_CATALOG.md. All new sources are D0 only."
+}

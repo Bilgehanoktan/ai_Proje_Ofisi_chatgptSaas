@@ -1,0 +1,83 @@
+{
+  "revision": "W1-0198-P06",
+  "baseline": "W1-0198-P05",
+  "method": "Fixed-denominator evidence gates, not weights or product completion. Distinct test IDs count once; do not add historical runs. New tests require separate scope and denominator version.",
+  "gates": [
+    {
+      "id": "A-SOURCE-44",
+      "scope": "P04 source closure materialized locally and exact checked",
+      "baseline_verified": 6,
+      "total": 44,
+      "verified": 44,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/TEST_EVIDENCE_W1_0198_P06.json"
+    },
+    {
+      "id": "A-LIFECYCLE-17",
+      "scope": "P02/P03 persisted SQLite and direct API handler tests",
+      "baseline_verified": 0,
+      "total": 17,
+      "verified": 17,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/W1_0198_P06/selected_17.json"
+    },
+    {
+      "id": "A-REGRESSION-80",
+      "scope": "Exact 0194/0195/0196-L selected regression in P06 recovered source",
+      "baseline_verified": 0,
+      "total": 80,
+      "verified": 80,
+      "pct": 100,
+      "status": "PASS",
+      "proof": "tests/evidence/W1_0198_P06/regression_80.json",
+      "baseline_note": "P05 current-stage execution only; prior branch evidence retained separately"
+    },
+    {
+      "id": "B-API-PARITY-7",
+      "scope": "All seven endpoints through unified frontend/backend, not direct handlers",
+      "total": 7,
+      "verified": 0,
+      "pct": 0,
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "A-FULL-BUILD",
+      "scope": "Full product pinned build and regression",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "H-BROWSER",
+      "scope": "Current integrated product browser and accessibility",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "D-TRUST",
+      "scope": "Canonical active lease/current clock/placement",
+      "status": "HOLD"
+    },
+    {
+      "id": "F-TRUST",
+      "scope": "Independent memory ACL/W-A and model reservation provenance",
+      "status": "HOLD"
+    },
+    {
+      "id": "G-TRUST",
+      "scope": "Canonical ledger and independent security receipts",
+      "status": "HOLD"
+    },
+    {
+      "id": "PG",
+      "scope": "Real isolated PostgreSQL",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "INDEPENDENT",
+      "scope": "Independent product/security acceptance",
+      "status": "HOLD"
+    }
+  ],
+  "unique_test_ids_this_round": 97,
+  "global_weighted_completion": "NOT_DEFINED; no baseline for all required tasks"
+}

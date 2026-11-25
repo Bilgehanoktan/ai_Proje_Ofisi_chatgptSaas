@@ -1,0 +1,139 @@
+{
+  "revision": "0193",
+  "parent": "4f2c6d131c38ca7207d0b89ca001580466fd06d4",
+  "source": "6229e5611e7178b34945609b7478e9cb6f7aaeb5",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "bytes": 2994,
+      "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967",
+      "git_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "operation": "ADD",
+      "symbols": [
+        "PostgresRunRepository.lock",
+        "PostgresRunRepository.read",
+        "PostgresRunRepository.advance",
+        "_scope_values",
+        "_observation"
+      ],
+      "purpose": "Scoped row lock and CAS; no connection/commit",
+      "test": "SELECTED_SYNTHETIC_PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+      "bytes": 1698,
+      "sha256": "35cb245bce423a4edebae97099fb578cf8ab9ce3a4a0bf7b495b9565cc247e24",
+      "git_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+      "operation": "MODIFY",
+      "symbols": [
+        "transition_digest",
+        "validate_transition",
+        "commit_transition"
+      ],
+      "purpose": "No generic commit fallback; immutable transition preimage/target",
+      "test": "SELECTED_SYNTHETIC_PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "bytes": 4286,
+      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b",
+      "git_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "operation": "MODIFY",
+      "symbols": [
+        "TransactionSession",
+        "LogicalT1Coordinator.commit_transition",
+        "LogicalT1Coordinator._commit"
+      ],
+      "purpose": "Validate locked before/after in same context; retain legacy path",
+      "test": "SELECTED_SYNTHETIC_PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "bytes": 2495,
+      "sha256": "99846c47151ccce5dc9a49c8fcf442c73f2e537fb4365c4e2e59f01d041d25cb",
+      "git_blob": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "operation": "MODIFY",
+      "symbols": [
+        "PostgresSession.lock_transition",
+        "PostgresSession.write_transition_role",
+        "PostgresSession.read_transition",
+        "CommitOutcomeUnknown",
+        "postgres_transaction"
+      ],
+      "purpose": "Explicit unknown commit outcome; cleanup preserves ordinary primary error",
+      "test": "SELECTED_SYNTHETIC_PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_transaction_0193.py",
+      "bytes": 9667,
+      "sha256": "411d57ebb21645ce8ff7c3c8ed94f90d85b6cf3d20c186043aeb43a42fe48ecb",
+      "git_blob": "13b679db71409e9fddb0fda6c61eeecadcb73b8d",
+      "operation": "ADD",
+      "symbols": [
+        "TransactionTests",
+        "RepositoryTests"
+      ],
+      "purpose": "25 actual selected Python unittest cases using mock connection/cursor/mapping",
+      "test": "SELECTED_SYNTHETIC_PASS"
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "bytes": 878,
+      "sha256": "c8317eceef963dfeafb2452dd53e25074dc7926868fc96dfef5be14176396be6",
+      "git_blob": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "operation": "ADD",
+      "symbols": [
+        "t1_candidate.run_heads"
+      ],
+      "purpose": "D0 candidate DDL not applied or ratified",
+      "test": "NOT_RUN"
+    }
+  ],
+  "api_changes": [],
+  "event_schema_changes": [],
+  "dependency_versions_changed": [],
+  "database": [
+    {
+      "table": "t1_candidate.run_heads",
+      "status": "CANDIDATE_NOT_APPLIED",
+      "depends": "database/0192/candidate_event_outbox_fence.sql",
+      "keys": [
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "run_id"
+      ],
+      "scope_guard": "all eight fields",
+      "canonical_mapping": "HOLD"
+    }
+  ],
+  "errors": [
+    "T1_TRANSITION_PREIMAGE_MISMATCH",
+    "T1_TRANSITION_POSTIMAGE_MISMATCH",
+    "T1_COMMIT_OUTCOME_UNKNOWN",
+    "T1_CLOSE_AFTER_COMMIT_RECONCILE",
+    "RUN_HEAD_CAS_MISMATCH",
+    "RUN_HEAD_POSTIMAGE_MISMATCH"
+  ],
+  "maintenance": "docs/0193/ARCHITECTURE_AND_CATALOG.md",
+  "evidence": "tests/evidence/TEST_EVIDENCE_0193.json",
+  "dependency_links": {
+    "postgres_run.py": [
+      "agent_runtime/lifecycle.py"
+    ],
+    "transition_command.py": [
+      "agent_runtime/lifecycle.py",
+      "transaction/review.py",
+      "LogicalT1Coordinator.commit_transition"
+    ],
+    "port.py": [
+      "transaction/review.py",
+      "agent_runtime/transition_command.py"
+    ],
+    "postgres_session.py": [
+      "transaction/port.py",
+      "injected mapping",
+      "psycopg-compatible connection (no dependency added)"
+    ]
+  }
+}

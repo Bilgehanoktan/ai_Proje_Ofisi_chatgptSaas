@@ -1,0 +1,126 @@
+{
+  "revision": "0198-E",
+  "parent": "a7c4f417faf17959e3165193aa247815954bfa42",
+  "source_commit": "0dd841e8cb17116320b5db2bdebfd8e400b9fdd9",
+  "branch": "workstream/0198-event-history",
+  "product_files": 243,
+  "manifest_entries": 242,
+  "manifest_blob": "ee3f7f776d51ac058e80ee2ab0ff5a100d5b27ea",
+  "prior_product_blobs_preserved": 240,
+  "product_path_size_parity": true,
+  "local_source_evidence_blob_matches": 13,
+  "base_dependencies_exact_git_blob_matches": 29,
+  "prior_delta_manifest_entries_verified": 53,
+  "source_changes": [
+    {
+      "path": "catalog/revisions/TECHNICAL_CATALOG_0198_E.json",
+      "sha": "ec3d418806e422e63c7aff23a8e3ac52dbd35dcc",
+      "size": 9311
+    },
+    {
+      "path": "docs/0198E/ARCHITECTURE_AND_CATALOG.md",
+      "sha": "f23979597f6a8c686fc813d01213b47622dd6262",
+      "size": 3952
+    },
+    {
+      "path": "docs/0198E/BASE_PINS.json",
+      "sha": "72723d17cd546a64a55941af4eaae333ec9fe410",
+      "size": 6973
+    },
+    {
+      "path": "docs/0198E/test_admission_mapping_0195.txt",
+      "sha": "3893440757db1d8bfb60e4fbfd454e92cedcd5a3",
+      "size": 1957
+    },
+    {
+      "path": "docs/0198E/test_history_readback_0198.txt",
+      "sha": "efc8f8e8d7ff9ec53794ef7a460e01a7d98eaae8",
+      "size": 2173
+    },
+    {
+      "path": "docs/0198E/test_lifecycle_mapping_0196.txt",
+      "sha": "ef23faed1e6364741775101623cb97a6b00ae90a",
+      "size": 2961
+    },
+    {
+      "path": "docs/0198E/test_pg_lifecycle_mapping_0196.txt",
+      "sha": "f116407218f58e71a14f68d6bce8e7bce5e94262",
+      "size": 884
+    },
+    {
+      "path": "docs/0198E/test_pg_transition_mapping_0194.txt",
+      "sha": "236775ae033785e8a51de4296830436dd7a3eada",
+      "size": 858
+    },
+    {
+      "path": "docs/0198E/test_transition_mapping_0194.txt",
+      "sha": "d37b7098ff39699011afdc1dd72f168218af4e21",
+      "size": 3726
+    },
+    {
+      "path": "docs/0198E/test_transition_transaction_0193.txt",
+      "sha": "a6d0163bd0c910dbd42246439380b2f2efa3274a",
+      "size": 2674
+    },
+    {
+      "path": "handover/NEXT_STEP_0198_E.md",
+      "sha": "2203e04dd9c60764bf4160caf1caeec8b823aadc",
+      "size": 813
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "sha": "ee3f7f776d51ac058e80ee2ab0ff5a100d5b27ea",
+      "size": 43033
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "sha": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "size": 9374
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "sha": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "size": 6541
+    }
+  ],
+  "tests": {
+    "new_sqlite": 22,
+    "regression_0196L": 26,
+    "regression_0195": 19,
+    "regression_0194": 35,
+    "regression_0193": 25,
+    "passed": 127,
+    "pg_skipped": 10
+  },
+  "actual_pg": "NOT_RUN",
+  "full_suite": "NOT_RUN",
+  "full_build": "NOT_RUN",
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "main_before": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "full_archive_downloaded": false,
+  "parallel": {
+    "revision": "0198-E",
+    "status": "SEPARATE_SOURCE_REVIEW_NO_MERGE",
+    "common_base": "9ece621baaadd160b3f90d4c8071d6a74d697604",
+    "lifecycle_history_source": "0dd841e8cb17116320b5db2bdebfd8e400b9fdd9",
+    "unified_branch": "integration/0197-unified",
+    "unified_head": "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
+    "source_path_overlap": [],
+    "source_paths_needed_on_unified": [
+      "database/0196L/candidate_lease_settlement.sql",
+      "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+      "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+      "product/ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py"
+    ],
+    "source_comparison_status": [
+      "ahead",
+      "ahead"
+    ],
+    "merge": "NOT_PERFORMED",
+    "combined_tests": "NOT_RUN",
+    "notes": "Bring exact lifecycle delta then history delta; compare dependencies, regenerate shared metadata and manifest, rerun combined unique tests. Unified is active in other conversation; do not overwrite. No main merge or authority."
+  }
+}

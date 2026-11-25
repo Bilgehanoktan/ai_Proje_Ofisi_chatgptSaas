@@ -1,0 +1,89 @@
+{
+  "revision": "0202-S",
+  "parent": "f6bf82ed85335d9189b6161dbb0d983b07d70b40",
+  "source": "c69a8394e75dca1d16ad04585a3c1dc375109733",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "bytes": 7648,
+      "sha256": "88dd8b3bf522e0b1260a01f24c013fbd56a303a67421205ead87065f469ce5c9",
+      "blob": "54004cf5cee1c655c665602f6c87e5a363097868"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_history_0202.py",
+      "bytes": 7211,
+      "sha256": "4d19313c9fa150ea881aa58d2c85d14fb10f91db0ff0af3afac5ebdfdcc6fccc",
+      "blob": "f79e85ae29b7e3bf5722493ca6fd608b026991cd"
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+      "bytes": 120,
+      "sha256": "a2b52ebff7bc0ae138ca5cc06dc483826e5ec245fb506c76d01411a9beccd020",
+      "blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+    }
+  ],
+  "modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "classes": [
+        "TerminalClaim",
+        "Checkpoint",
+        "ExternalPin",
+        "SignedReview"
+      ],
+      "functions": [
+        "_token",
+        "_sha",
+        "_uint",
+        "_bytes",
+        "_valid_claim",
+        "checkpoint_bytes",
+        "terminal_bytes",
+        "verify_checkpoint",
+        "review_signed_snapshot"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "re",
+        "app.core.event_store.retained_history.review_retained_snapshot",
+        "cryptography.hazmat.primitives.asymmetric.ed25519.Ed25519PublicKey (optional 46.0.4)"
+      ],
+      "errors": [
+        "D0_SIGNED_CHECKPOINT_FORMAT_HOLD",
+        "D0_SIGNED_TERMINAL_SET_HOLD",
+        "D0_SIGNED_PIN_OR_FRESHNESS_HOLD",
+        "D0_SIGNATURE_OR_BACKEND_HOLD",
+        "D0_SIGNED_PLAN_SCOPE_HOLD",
+        "D0_SIGNED_PRINCIPAL_SET_HOLD",
+        "D0_SIGNED_READBACK_HOLD"
+      ],
+      "api": [],
+      "database": [],
+      "events": [],
+      "trace": [
+        "R03",
+        "R07",
+        "R09",
+        "R12",
+        "D14",
+        "D15",
+        "D16"
+      ],
+      "rollback": "Pin parent, revert three paths and manifest entries; preserve evidence."
+    }
+  ],
+  "tests": {
+    "new_pass": 25,
+    "direct": 19,
+    "mocked_snapshot": 6,
+    "archive_regression_pass": 14,
+    "prior_integration_not_run": 5,
+    "actual_pg_not_run": 13,
+    "prior_selected_pass_not_rerun": 164
+  },
+  "security": "HOLD; no custody, trusted clock, independent issuer or real W-A",
+  "decisions": "Provisional Ed25519 + Python sorted JSON and optional version pin. No normative ADR.",
+  "maintenance": "docs/0202S/ARCHITECTURE_AND_CATALOG.md"
+}

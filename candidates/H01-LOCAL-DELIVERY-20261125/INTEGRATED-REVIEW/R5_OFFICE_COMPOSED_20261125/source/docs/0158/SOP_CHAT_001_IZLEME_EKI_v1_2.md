@@ -1,0 +1,2 @@
+# SOP-CHAT-001 v1.2 — İzleme eki
+Kullanıcının 24 alan listesi sabittir. A–G raporunda her tur 24 satırın önceki/yeni olgunluğu ve farkı, kanıtı ve gerçek test statüsü gösterilir; değişmeyenler UNCHANGED. Her tur tek ZIP, güncel master, kaynak ZIP, katalog MD/JSON, değişiklik/kanıt/devir/plan, bu matris MD/JSON ve SHA-256 manifesti; önceki arşiv byte-exact. Kullanıcı izleme biçimi; CODE/REPO/DEV/TEST/PROD izinlerini değiştirmez.

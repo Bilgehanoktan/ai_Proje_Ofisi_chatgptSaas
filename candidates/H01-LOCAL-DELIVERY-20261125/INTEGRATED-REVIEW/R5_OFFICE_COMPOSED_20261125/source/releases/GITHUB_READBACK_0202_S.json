@@ -1,0 +1,55 @@
+{
+  "revision": "0202-S",
+  "parent": "f6bf82ed85335d9189b6161dbb0d983b07d70b40",
+  "source": "c69a8394e75dca1d16ad04585a3c1dc375109733",
+  "manifest_blob": "9c69b0fb776f97efecba210abb20a7cb8b87b147",
+  "product_manifest_count": 253,
+  "product_files_including_manifest": 254,
+  "source_files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "bytes": 7648,
+      "sha256": "88dd8b3bf522e0b1260a01f24c013fbd56a303a67421205ead87065f469ce5c9",
+      "blob": "54004cf5cee1c655c665602f6c87e5a363097868"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_history_0202.py",
+      "bytes": 7211,
+      "sha256": "4d19313c9fa150ea881aa58d2c85d14fb10f91db0ff0af3afac5ebdfdcc6fccc",
+      "blob": "f79e85ae29b7e3bf5722493ca6fd608b026991cd"
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+      "bytes": 120,
+      "sha256": "a2b52ebff7bc0ae138ca5cc06dc483826e5ec245fb506c76d01411a9beccd020",
+      "blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+    }
+  ],
+  "source_blob_match": "3/3 exact local Git blob IDs and remote readback",
+  "previous_manifest_entries": "250/250 retained; not full tree byte verification",
+  "environment": {
+    "python": "3.13.5",
+    "cryptography": "46.0.4",
+    "installed_in_this_round": false,
+    "postgresql": "UNAVAILABLE",
+    "git_checkout": "DNS_FAILURE"
+  },
+  "executed": {
+    "command": "PYTHONPATH=. python -m unittest discover -s tests -p 'test_*history_02*.py' -v",
+    "new_pass": 25,
+    "previous_archive_regression_pass": 14,
+    "pass": 39,
+    "fail": 0,
+    "direct_verifier_tests": 19,
+    "mocked_snapshot_tests": 6,
+    "scope": "actual local fixture Ed25519, SQLite archive; mocked existing readback boundary, not PG or independent custody"
+  },
+  "unexecuted": {
+    "previous_integration": 5,
+    "prior_pg": 13,
+    "prior_selected_regression": 164,
+    "full_product": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "authority": "NONE"
+}

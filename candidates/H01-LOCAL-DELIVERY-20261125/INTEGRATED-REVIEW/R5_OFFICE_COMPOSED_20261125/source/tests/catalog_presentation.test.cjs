@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+const {test}=require('node:test');
+const {presentCatalogRows}=require(process.env.EDS_HELPER_JS || '../source/catalogPresentation.js');
+const old={title:'Yetki',description:'eski',status:'HOLD'};
+const other={title:'İnsan CEO',description:'koru',status:'HOLD'};
+const next={title:'Yetki',description:'CEO-0174 kullanıcı çalışma kapsamı ayrı; normatif CODE=C · REPO=C · DEV=B',status:'Bağımsız kabul HOLD'};
+const source={'Karar Kutusu':[old,other]};
+const display={'Karar Kutusu':[next,{title:'ek',description:'x',status:'x'}]};
+test('only allowlisted existing row changes',()=>assert.deepEqual(presentCatalogRows('Karar Kutusu',source,display),[next,other]));
+test('source and display remain immutable',()=>{const snapshot=JSON.stringify([source,display]);presentCatalogRows('Karar Kutusu',source,display)[0].status='changed';assert.equal(JSON.stringify([source,display]),snapshot)});
+test('missing overlay is unknown hold',()=>assert.equal(presentCatalogRows('Karar Kutusu',source,{})[0].status,'UNKNOWN · HOLD'));
+test('duplicate overlay is unknown hold',()=>assert.equal(presentCatalogRows('Karar Kutusu',source,{'Karar Kutusu':[next,next]})[0].status,'UNKNOWN · HOLD'));
+test('unrelated rows unchanged',()=>assert.deepEqual(presentCatalogRows('Other',{Other:[old]},{Other:[next]}),[old]));
+test('unknown or inherited view never renders',()=>{assert.deepEqual(presentCatalogRows('not found',source,display),[]);assert.deepEqual(presentCatalogRows('toString',source,display),[])});
+test('security and settings titles matched only',()=>{for(const [view,title,description,status] of [['Güvenlik','Başlangıç yetkileri','Bağımsız normatif CODE / REPO / DEV','0/3 etkin · HOLD'],['Tercihler','Görünüm','Açık/koyu tema · sistem fontu','Yerel arayüz · EDS adayı']]){const a={...old,title},b={title,description,status};assert.deepEqual(presentCatalogRows(view,{[view]:[a]},{[view]:[b]}),[b])}});
+test('tampered authority metadata remains hold',()=>{for(const changed of [{...next,status:'ALLOW'},{...next,description:'forged grant'}])assert.equal(presentCatalogRows('Karar Kutusu',source,{'Karar Kutusu':[changed]})[0].status,'UNKNOWN · HOLD')});

@@ -1,0 +1,10 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),path=require('node:path');
+const root=process.env.U1_BUILD;if(!root||!path.isAbsolute(root))throw Error('U1_BUILD required');
+const {createUnifiedOfficePreview}=require(path.join(root,'unifiedOfficePreview.js'));
+const svg=v=>decodeURIComponent(v.svgUri.split(',')[1]);
+test('exact floor model renders two active and one passive fixture',()=>{const p=createUnifiedOfficePreview();assert.deepEqual(p.views.map(v=>[v.floorId,v.lifecycle,v.visibleActors]),[['d0-f1','ACTIVE',4],['d0-f2','ACTIVE',4],['d0-f3','DRAFT',0]]);assert.equal(p.initialFloorId,'d0-f1');});
+test('actual actor markers scoped to each floor',()=>{const p=createUnifiedOfficePreview();for(const v of p.views){const s=svg(v);assert.equal((s.match(/data-actor=/g)||[]).length,v.visibleActors);for(const match of s.matchAll(/data-actor="([^"]+)"/g))assert.ok(match[1].endsWith(v.floorId.slice(3)));}});
+test('SVG images are encoded local data, no remote URL, script or embedded HTML',()=>{for(const v of createUnifiedOfficePreview().views){assert.ok(v.svgUri.startsWith('data:image/svg+xml;charset=utf-8,'));const s=svg(v);assert.match(s,/^<svg xmlns="http:\/\/www.w3.org\/2000\/svg"/);assert.doesNotMatch(s,/<script|<foreignObject|\bhref=|\bon\w+=/i);}});
+test('fixed fixture is deterministic and exposes no commands or runtime identities',()=>{const a=createUnifiedOfficePreview(),b=createUnifiedOfficePreview({agentInstanceId:'actual'});assert.deepEqual(a,b);assert.equal(a.join,'JOIN_HOLD');assert.equal(a.authoritative,false);assert.ok(a.views.every(v=>v.geometryJoin==='HOLD'&&!v.authoritative&&v.portalPhase==='IDLE'));assert.deepEqual(Object.keys(a).sort(),['authoritative','initialFloorId','join','mode','views']);});
+test('view objects and array immutable, no shared mutation between calls',()=>{const a=createUnifiedOfficePreview();assert.ok(Object.isFrozen(a)&&Object.isFrozen(a.views)&&a.views.every(Object.isFrozen));assert.throws(()=>a.views[0].visibleActors=99,TypeError);assert.equal(createUnifiedOfficePreview().views[0].visibleActors,4);});

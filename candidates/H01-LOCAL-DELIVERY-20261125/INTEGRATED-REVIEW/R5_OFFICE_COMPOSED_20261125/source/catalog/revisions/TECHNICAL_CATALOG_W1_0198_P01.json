@@ -1,0 +1,170 @@
+{
+  "revision": "W1-0198-P01",
+  "parent": "9eee77b0f8467f4926973218a2de48aabe9dd95c",
+  "source_commit": "2a87695793509a52714434aa6fa6898449693df0",
+  "product_delta": [
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+      "git_blob": "187289ca6e97dbfa30d5237207e6b4f797638f01",
+      "bytes": 1557,
+      "sha256": "e654d367aaddf5135a3a7ab62698a7c6cdf3c2dbe132f04390b6f07d1a35ebd1",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/eds.css",
+      "git_blob": "4d54d5b26202a93700e6f733c6528e2dc14fde68",
+      "bytes": 4959,
+      "sha256": "e9efbf2895852d98505f35a993ab33497f0bf8bc0fa6dbfd99325a30fad488d3",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+      "git_blob": "91a9f7b88df61a20e77ded80f107080dbbc13190",
+      "bytes": 1470,
+      "sha256": "2aa0568a23dc66bd0abab3113b6f9f61fd7c1239777c04a8bf850b238cf53f53",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "git_blob": "cb73507a4429cd9a01d2174bb0501f1916935c92",
+      "bytes": 8284,
+      "sha256": "23be1d3e02088eed5aeeabfa9bb75cc1d708990d0770ffac806a315eb35e0f1d",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+      "git_blob": "68d6328507bd1bb8af71a33ec0fbf28a82fc3ba3",
+      "bytes": 1572,
+      "sha256": "2c424791c83441588e29e4c2f9aaaa508cb20dbd99958e33253f0806aa6d572e",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "git_blob": "69fa248c65090c9506660caa674f1d2e0c01d233",
+      "bytes": 2934,
+      "sha256": "6877b73d7912f4d493d36e6f3ae01218c1f646904b9126cb81b57990ffcd3d4a",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+      "git_blob": "2c46640dc6f9cfd133a04f85a8e469501c17926d",
+      "bytes": 791,
+      "sha256": "c2896eab420337fffd4c32163114d9e1d79bde88300be8798297d5dee4905c47",
+      "change": "added"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/AdmissionProjectionPanel.tsx",
+      "git_blob": "882c279b175954f588ef514cea8bd69f94f3b744",
+      "bytes": 1265,
+      "sha256": "f1ae5e219175f23d2d5d03875107429fe42c8e3a78e5351693d0663b66b90245",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/MvpDiagnosticsPanel.tsx",
+      "git_blob": "9765a41d1df738bf32e0b85f2d0b60e757780c04",
+      "bytes": 1235,
+      "sha256": "4fc4f5e65fe2ca49c9add887175a0fc7c59378c537717b3fe6d4d3ba529662e2",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/OfficeWorkbenchPanel.tsx",
+      "git_blob": "83ffa624c907e0c291a078abc136a9f8344046e9",
+      "bytes": 1442,
+      "sha256": "48f5f503664a139cf795250b5b99e00cbd1e8b8170920b1d29a519e530575a54",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/OutboxProjectionPanel.tsx",
+      "git_blob": "33fea7fc073d2c0c4ae5c6cddedb5746d1e83d79",
+      "bytes": 1202,
+      "sha256": "fd5855f5f1152ec59d6e66db257c4fd8049f70011d040391cb3b4a24e4859d63",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/TaskBudgetPanel.tsx",
+      "git_blob": "77f943647076fefdb976450d0668d69637a41c6f",
+      "bytes": 1539,
+      "sha256": "2841acae59ea0f6554c26fc4d693b281d047998e954a24db820a8e823d80282a",
+      "change": "modified"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/projection-read.test.cjs",
+      "git_blob": "226e0e9721677235184547b8d79e91b2e6c541fb",
+      "bytes": 3023,
+      "sha256": "82f828adfcde67f3186f613d07d733495d78027b277d5fcd41c8bd789df46faf",
+      "change": "added"
+    }
+  ],
+  "symbols": [
+    {
+      "path": "features/data/projectionRead.ts",
+      "exports": [
+        "endpointCaps",
+        "ProjectionKey",
+        "ReadState",
+        "Parser",
+        "readProjection",
+        "createProjectionReader",
+        "readStatus"
+      ],
+      "errors": [
+        "TIMEOUT",
+        "READBACK_HOLD",
+        "D0_READBACK_HOLD"
+      ]
+    },
+    {
+      "path": "features/data/useProjectionRead.ts",
+      "exports": [
+        "useProjectionRead"
+      ]
+    },
+    {
+      "path": "features/ceo-dashboard/OperationalReadback.tsx",
+      "exports": [
+        "OperationalReadback"
+      ]
+    },
+    {
+      "path": "features/capabilities/CapabilityReadback.tsx",
+      "exports": [
+        "CapabilityReadback"
+      ]
+    }
+  ],
+  "api_reused": [
+    "GET /api/demo/mvp",
+    "GET /api/demo/admission",
+    "GET /api/demo/outbox",
+    "GET /api/demo/office-workbench",
+    "GET /api/demo/task-budget"
+  ],
+  "api_changes": [],
+  "db_changes": [],
+  "event_changes": [],
+  "dependency_changes": [],
+  "tests": {
+    "path": "product/ai-company-os-frontend/tests/projection-read.test.cjs",
+    "passed": 12,
+    "scope": "pure helper only",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "pinned_suite": "NOT_RUN"
+  },
+  "runner_changes": [
+    {
+      "path": "tests/integration/launch_w8_unified.py",
+      "git_blob": "a172b3cb2eff5f4d084cc248cbbe99e8599f1a81"
+    },
+    {
+      "path": "tests/integration/run_combined_helpers.cjs",
+      "git_blob": "0dd78a74340273cea8f8829359e18373787b829e"
+    },
+    {
+      "path": "tests/integration/w8_unified.py",
+      "git_blob": "a8017dece093c0bc2b919fa55c29c705315c8e16"
+    }
+  ],
+  "maintenance": "docs/W1-0198-P01/ARCHITECTURE_AND_CATALOG.md",
+  "plan": "docs/implementation_plan/W1_0198_PARALLEL_PLAN.json"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "CEO-BOOTSTRAP-0163",
+  "decision_source": "H01 explicit instruction: OLUŞTUR VE KODLA, following ADR-0162F and exact first four frontend paths",
+  "classification": "OWNER_DIRECTED_ISOLATED_SOURCE_CANDIDATE_EXCEPTION",
+  "effective_scope": "THIS_SOURCE_INTEGRATION_ONLY",
+  "branch": "recovery/0163-ui-bootstrap",
+  "parent_commit": "8b97e203d1389fa4a4a28b86940a26e47ae1e63d",
+  "parent_manifest_blob": "bda53ce4daf85cfd6a7b823e2cf4b8deff59dbda",
+  "allowed_source": [
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/AgentDetail.tsx",
+      "blob": "e648eff2dfdaeb4d420b629fed285e66578c3ff5",
+      "sha256": "9d870a49384e0618cd4f5a80384489321f87760bef5cc73c95bcef68ca392956",
+      "bytes": 1266,
+      "operation": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "blob": "5b2a9eb264de1c9670fb7e0af0919d6e320981df",
+      "sha256": "97eab6148e944ebdf877c39c5ba0ac5b804a1adcd742a0aa6c3fa0fdd0bf4d36",
+      "bytes": 2882,
+      "operation": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OperationPanel.tsx",
+      "blob": "23bfc5ddc0c93ac65d5e46fb3b5d5617ca05cdc8",
+      "sha256": "10707538997f9022444d62e431d242440592e835c889b55cdbe5762ad0a9eb02",
+      "bytes": 871,
+      "operation": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "150153956b08eacd4d730d0cadc575ca2be9b1aa",
+      "sha256": "db5b8fe4debe42d5812e1f0a0fb7b7798594135cbaa077467f32c0a93e68a2f5",
+      "bytes": 6960,
+      "operation": "REPLACE"
+    }
+  ],
+  "allowed_metadata": [
+    "product/SOURCE_MANIFEST.json",
+    "versioned documentation/catalog/handover"
+  ],
+  "roles": {
+    "orchestrator": "plan_only",
+    "research": "read_only",
+    "engineer": "scoped_candidate_source",
+    "qa": "technical_review_no_own_approval",
+    "security": "policy_review_read_only",
+    "iv_agent": "separate_evidence_review_no_normative_receipt",
+    "H01": "project_owner_direction"
+  },
+  "review_requirements": [
+    "exact parent and hashes",
+    "no scope expansion",
+    "independent execution and custody needed for future true IV",
+    "fail closed on mismatch"
+  ],
+  "runtime_enforcement": "NOT_IMPLEMENTED",
+  "actual_agents_run": 0,
+  "actual_independent_receipts": 0,
+  "authenticated_T01_grant": null,
+  "pre_receipt": null,
+  "post_receipt": null,
+  "normative_code_repo_dev": "HOLD",
+  "F0": "HOLD",
+  "allowed_runtime": false,
+  "deny": [
+    "main merge",
+    "build",
+    "DEV",
+    "TEST",
+    "CI",
+    "PROD",
+    "provider calls",
+    "spend",
+    "external effects",
+    "live join",
+    "backend/schema/API/dependency changes",
+    "self-issued grants",
+    "automatic extension of source permission"
+  ],
+  "expiry": "THIS_COMMIT_ONLY_NO_FUTURE_INHERITANCE",
+  "revocation": "H01 stop; preserve history; ordinary revert of isolated branch"
+}

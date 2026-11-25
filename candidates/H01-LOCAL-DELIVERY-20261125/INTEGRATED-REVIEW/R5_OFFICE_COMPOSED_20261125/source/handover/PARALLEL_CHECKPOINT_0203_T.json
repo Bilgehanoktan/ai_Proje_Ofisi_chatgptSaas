@@ -1,0 +1,116 @@
+{
+  "revision": "0203-T",
+  "parent": "d6c27d5f3ce9ff29cdf42108510a21c277006ebd",
+  "source": "2d900ac58ca49e061ba07c7cbd56a93f27513bde",
+  "observed_other_branch": "integration/w1-0198-p05",
+  "observed_other_head": "0a8eb7b2cbfba65b2199f83f4ae2b45ba91404a8",
+  "observed_ai_mem_branch": "workstream/0196-memory-model",
+  "observed_ai_mem_head": "ef9cc8368309bd4d880b36137c7f25fc07a018db",
+  "carry_checks": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "expected": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_snapshot_0200.py",
+      "expected": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+      "expected": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "expected": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_history_0201.py",
+      "expected": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+      "expected": "c9963f21766da435a00a18a5f49073ebe8603664",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "expected": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_history_0202.py",
+      "expected": "f79e85ae29b7e3bf5722493ca6fd608b026991cd",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+      "expected": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+      "expected": "3108a4ba72d999984502e2687a4e6589b079df1d",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_0203.py",
+      "expected": "92c642c907f2a45d31ad9cae23b976c9347130c1",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+      "expected": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+      "ui_blob": null,
+      "status": "MISSING"
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "expected": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "ui_blob": null,
+      "status": "MISSING"
+    }
+  ],
+  "merge": "NOT_PERFORMED",
+  "combined_tests": "NOT_RUN",
+  "notes": "Exact pinned tree comparison, not merge permission. 0198-E through 0203-T plus optional cryptography and root DDL. Check full dependency closure and all shared paths before any integration."
+}

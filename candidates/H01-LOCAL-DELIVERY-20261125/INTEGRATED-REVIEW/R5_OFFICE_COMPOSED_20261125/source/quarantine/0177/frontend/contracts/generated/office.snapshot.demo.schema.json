@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ai-company-os:demo:office-snapshot:v0-d0",
+  "title": "Offline demo snapshot candidate",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "tenant_id",
+    "world_id",
+    "environment_id",
+    "snapshot_seq",
+    "layout_revision",
+    "as_of",
+    "data_status",
+    "policy_epoch",
+    "wa_epoch",
+    "agents",
+    "work_summary",
+    "role_templates",
+    "floors",
+    "metrics",
+    "decision_cases",
+    "activity",
+    "authority"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "office.snapshot.v0-D0"
+    },
+    "tenant_id": {
+      "const": "synthetic-tenant"
+    },
+    "world_id": {
+      "const": "demo-world"
+    },
+    "environment_id": {
+      "const": "A0_SAMPLE_ONLY"
+    },
+    "snapshot_seq": {
+      "const": 0
+    },
+    "layout_revision": {
+      "const": "draft-hybrid-floor-1"
+    },
+    "as_of": {
+      "type": "string"
+    },
+    "data_status": {
+      "const": "D0_SAMPLE_NO_RUNTIME"
+    },
+    "policy_epoch": {
+      "const": null
+    },
+    "wa_epoch": {
+      "const": null
+    },
+    "agents": {
+      "const": []
+    },
+    "work_summary": {
+      "const": {
+        "verified_active_runs": null,
+        "verification_status": "UNVERIFIED"
+      }
+    },
+    "role_templates": {
+      "type": "array"
+    },
+    "floors": {
+      "type": "array"
+    },
+    "metrics": {
+      "type": "array"
+    },
+    "decision_cases": {
+      "const": []
+    },
+    "activity": {
+      "const": []
+    },
+    "authority": {
+      "const": {
+        "code_effective": false,
+        "repo_effective": false,
+        "dev_effective": false,
+        "security_acceptance": "HOLD",
+        "real_test": "NOT_RUN",
+        "production": "NOT_AUTHORIZED"
+      }
+    }
+  }
+}

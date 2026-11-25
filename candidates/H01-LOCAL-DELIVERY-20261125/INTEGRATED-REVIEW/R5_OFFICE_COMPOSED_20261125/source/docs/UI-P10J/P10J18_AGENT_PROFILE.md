@@ -1,0 +1,14 @@
+# UI-P10J-18 — Agent Studio and A3 controlled transfer
+
+Parent cc6a62b33feecb0f4a827ca1a5b4857be1a4f243, manifest a234ce2017432b88d1cabad37872d3f8444850ee. D0 source candidate, no main/CI/PROD/grant/spend or external effects. Core 0227 b79f88b259c94e7a0901ff6a5817b3d6c91b5a17 E1 review matched/install pending; no core changes. Premium A3 82b1f5877f90149e5aaa3e8a0029d2a0f91c9e64, two new exact source blobs; no A4 render changes.
+
+## What / why / where / how
+AgentDirectory imports AgentRoleProfile, using existing readPlanProjection validation and roleTaskContext. Replaces static unsorted role task list with profile header, reference task and distinct wave counts, unknown live runs/model/skill, dependency list ordered by plan wave. Invalid plan/unknown wave remains unknown, valid empty reference role can be zero. No real role-instance/task association. Existing AgentDetail and StudioContextPanel history remain unchanged and independent. Filters and selected role preserved. Scoped CSS tokens responsive at 680px; wave-order profile is a design choice, not staffing authority. No API/DB/backend/package/contract changes.
+A3 transfers premiumIdentityTraffic.ts and its test unchanged; five existing A3 dependency manifest pins match. A3 controller is not wired to Native Phaser; A4 owner handles adapter/render tick barrier. No portal/real placement.
+Five additions, one replacement, no deletions, 469 previous source blobs retained; 475 manifest pins, 476 product files.
+
+## Evidence
+14/14 real local isolated JSX tests of exact AgentRoleProfile and parent-derived AgentDirectory, mocked dependencies and JSX runtime. Node 22.16.0, TS 5.8.3; raw log SHA-256 e41241f8eeba4272fa70fa0f46f733031397b17b5ca23805e3f285a4972f8bca. No full React/Next/typecheck/browser. A3 original 20 new plus 46 historical regression PASS on owner branch only; no local rerun here. New W8 wrapper adds 14 profile checks and original A3 traffic test before inherited W8. Browser test plan 84 captures, 80 inherited plus 4 Agent Studio desktop/mobile dark/light; NOT_RUN. DNS checkout unavailable; full checkout/lock/build/PG/browser remains open. Core 8/16, UI 21/40, MVP 0/11, independent 0/7 unchanged; no acceptance promotion.
+
+## Diagnose / maintain / rollback
+If role tasks missing inspect plan validation and role ID; do not display zero for failed plan. If order wrong inspect plan.waves and roleTaskContext; no inferred scheduling or live work. If historical record is present it remains independent and does not assign the role. For A3 errors use owner pinned maintenance doc, preserve HOLD. Revert scoped UI source and A3 exact additions with manifest and runner, or fresh checkout parent; no DB restore. Review actual W8 locks on new stage, use P10J18 runner, then inspect real 84 planned captures. Next P10J19 Project Studio; re-pin A4 and core before new composition.

@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const test=require('node:test');
+const {inputBounds,inputPan,inputZoom,inputDragged}=require(process.argv[2]);
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
+test('zoom fits and centers',()=>assert.deepEqual(inputBounds({zoom:.1,x:999,y:-999}),{zoom:.75,x:0,y:-0}));
+test('nonfinite inputs normalize',()=>{const v=inputBounds({zoom:NaN,x:Infinity,y:NaN});near(v.zoom,1);near(v.x,0);near(v.y,0)});
+test('maximum zoom and extent',()=>{const v=inputBounds({zoom:5,x:1e5,y:-1e5});near(v.zoom,1.45);near(v.x,(900-900/1.45)/2);near(v.y,-(510-510/1.45)/2)});
+test('drag direction and zoom scaling',()=>{const v=inputPan({zoom:1.4,x:0,y:0},14,-28);near(v.x,-10);near(v.y,20)});
+test('drag at fit cannot expose world',()=>{const v=inputPan({zoom:1,x:0,y:0},100,-100);near(v.x,0);near(v.y,0)});
+test('pointer anchor stays fixed away from clamp',()=>{const v={zoom:1.15,x:0,y:0},x=500,y=290;const n=inputZoom(v,x,y,-70);near(v.x+(x-450)/v.zoom,n.x+(x-450)/n.zoom);near(v.y+(y-255)/v.zoom,n.y+(y-255)/n.zoom)});
+test('wheel down zooms out',()=>assert.ok(inputZoom({zoom:1.4,x:0,y:0},450,255,70).zoom<1.4));
+test('wheel up zooms in',()=>assert.ok(inputZoom({zoom:1,x:0,y:0},450,255,-70).zoom>1));
+test('wheel bounded at extreme',()=>{const n=inputZoom({zoom:1,x:0,y:0},900,510,-1e8);near(n.zoom,1.45);assert.ok(n.x<141&&n.y<80)});
+test('drag threshold',()=>{assert.equal(inputDragged(0,0,3,4),false);assert.equal(inputDragged(0,0,4,4),true);assert.equal(inputDragged(NaN,0,99,99),false)});
+test('nonfinite drag and wheel stable',()=>{const v={zoom:1.25,x:5,y:8};assert.deepEqual(inputPan(v,NaN,Infinity),v);assert.deepEqual(inputZoom(v,NaN,Infinity,NaN),v)});
