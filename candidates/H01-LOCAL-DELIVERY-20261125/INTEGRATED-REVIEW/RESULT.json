@@ -397,5 +397,122 @@
     },
     "rollback": "Normal revert archival commit only; exact original source-owner branches and R1 tree preserved. No CI/main/deploy, grant, external effect or policy changes.",
     "next": "MI05/MI10 review strict MIME source and scoped evidence; MI03/04 PR46 12 IAM + G7 7, 03API PR47 9 + 11 MVP on approved actual checkout; independent dependency review, signed Memory then W8 C07 C08 C05."
+  },
+  "r3": {
+    "task": "H01-NW03-NW04-API-SCHEDULER-SEAM-20261125",
+    "classification": "ARCHIVAL_SOURCE_COMPOSITION_AND_PARTIAL_DIAGNOSTIC_ONLY",
+    "parent": "ad0eded8b9e7e6f6d0371ebfcf8f5621b4b29c0c",
+    "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "snapshot": {
+      "tree": "4503cee4ee1f63c38d24d246ad9a84b16c18a275",
+      "product_tree": "814227fb1106321aafca81e38f8905e1d1230391",
+      "manifest_blob": "1729826cf1cb42d6721f333d237fab2ec3cb7e69",
+      "product_files": 584,
+      "manifest_entries": 583,
+      "retained_nonmanifest_product_blobs": 581,
+      "readback": "583/583 expected path, size, mode, Git blob; inherited SHA256 retained, full raw SHA256 rehash NOT_RUN"
+    },
+    "source_refs": {
+      "PR31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+      "PR44": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+      "PR46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "PR47": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "PR54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a"
+    },
+    "changes": [
+      {
+        "path": "product/ai-company-os-backend/app/api/demo.py",
+        "before": "4d80172bc467953039ff57296055f68d740a3ff2",
+        "after": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+        "bytes": 5118,
+        "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+        "before": null,
+        "after": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+        "bytes": 5654,
+        "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca",
+        "classification": "Exact remote original test, 9 methods, NOT_RUN; local hand-transcription hash mismatch excluded from local package; server create_blob of exact retrieved content equals existing blob, UTF-8 digest independently computed"
+      }
+    ],
+    "tests": {
+      "runtime": "CPython 3.13.5 -B -S; no third-party imports",
+      "verified_source_files": 10,
+      "unchanged_R2_manifest_pins": 8,
+      "pure_api_helpers": 8,
+      "scheduler_old_new_actual_plan_prefix": 6,
+      "total": 14,
+      "pass": 14,
+      "fail": 0,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "test_type": "actual pure functions, exact PR47 helper AST extracted, not decorated FastAPI route; current and historical Scheduler loaded with actual canonical plan and synthetic observations; no original G7/ORG06 SQL chain or HTTP status assertions executed",
+      "plan_digest": "6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9",
+      "raw_evidence": {
+        "path": "api-scheduler-diagnostics.raw.json.gz",
+        "blob": "838a83804edca538361d49a0bdb325db6ad1b932",
+        "sha256": "efcf1424465e25d6402943f310597fb849c40787dd454eb157ca111674d390d0",
+        "bytes": 3968,
+        "contains": "exact diagnostic scripts, source pins, actual logs and exit codes"
+      },
+      "raw_logs": {
+        "helper_sha256": "7959dac8e4313e1cca573e9ff263084ac3e036f268b5dd0e2990e9e00fffa46c",
+        "scheduler_sha256": "a6da353ff7c5597aaeda723de25ce955e672d62f81b505f0618fe113acb16a6e"
+      },
+      "local_archive": {
+        "name": "AIOS_NW03_NW04_API_SCHEDULER_SEAM_20261125.zip",
+        "bytes": 24836,
+        "entries": 19,
+        "sha256": "89ee285588c52bb8239264744e4168d54f5ebde362e4789e092f3411d0e907f1",
+        "classification": "conversation file, not full checkout or repo binary upload"
+      }
+    },
+    "conflict": {
+      "PR_inventory": "44 open PR file lists checked for 5 API/IAM/Scheduler paths. PR2/3 older demo.py lineage; PR47 sole current API change; PR19/31/46 authority variant, PR54 Scheduler owner.",
+      "G7": {
+        "matched": 55,
+        "total": 56
+      },
+      "ORG06": {
+        "matched": 20,
+        "total": 21
+      },
+      "single_pin_conflict": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "old_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "current_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "compatibility": "4 valid actual plan prefix states equal HOLD outputs (QUEUED0, ADMITTED1, RUNNING2, VERIFYING3), same-version state changes rejected by PR54, bare success denied by both; not a full DB/ORG acceptance",
+      "decision": "Keep original G7 and ORG06 pin files and exact PR19 runner intact. Source owner review and explicit versioned successor test binding required, no silent repin; PR46 competing authority not applied."
+    },
+    "blockers": {
+      "original_12_IAM": "NOT_RUN; actual signed witness/test fixture dependency review and full checkout",
+      "original_7_G7": "NOT_RUN; runner requires exact PR19 clean checkout + 561 manifest entries; current R3 pins differ at scheduler; cryptography imported through 0221",
+      "original_9_API": "NOT_RUN; approved R9 actual FastAPI/TestClient environment absent",
+      "original_11_MVP": "NOT_RUN",
+      "dependency": "Direct git ls-remote DNS resolution fails; connector metadata/selected bytes only, previous C50/R9 security and license HOLD remain. No unapproved dependency installation or import.",
+      "ownership": "MI03/04/06/54 owners to ratify versioned successor pin; 03API source owner to ratify PR47 exact source; independent Security/IV remains separate.",
+      "full_design_master": "Full addendum review incomplete; no canonical transfer"
+    },
+    "progress": {
+      "archival_product": [
+        583,
+        584
+      ],
+      "canonical_product": [
+        553,
+        553
+      ],
+      "acceptance_delta_pp": 0,
+      "ordinal_delta": 0,
+      "weighted": "HESAPLANAMADI",
+      "new_diagnostic_methods": 14,
+      "original_28_closed": 0
+    },
+    "rollback": "Normal revert archival commit only. Preserve R2 exact snapshot, source branches, historical G7 pin and test records. No CI, main, deploy, actual grants or real data.",
+    "next": "Run original G7 7 on exact PR19 with approved dependency environment; source-owner review explicit successor pins for current Scheduler/authority; run PR46 12 and PR47 9 + 11 MVP, then W8 C07 C08 C05. Do not count diagnostics as acceptance."
   }
 }

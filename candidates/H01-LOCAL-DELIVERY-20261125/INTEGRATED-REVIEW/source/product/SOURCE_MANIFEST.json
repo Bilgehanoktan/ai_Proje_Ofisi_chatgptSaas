@@ -1,6 +1,6 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "H01-MI-P0-INTEGRATED-REVIEW-R2-20261125",
+  "doc_revision": "H01-MI-P0-INTEGRATED-REVIEW-R3-20261125",
   "status": "ARCHIVAL_REVIEW_ONLY_OWNER_SECURITY_DEPENDENCY_HOLD_NOT_EXECUTION_APPROVED",
   "parent_candidate_sha256": null,
   "parent_git_commit": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
@@ -31,8 +31,8 @@
       "sha256": "69ebb03c9b5e6d7f2d3572324015c9a0bc71c46af0f679aeb7a16609a3bad48a"
     },
     "ai-company-os-backend/app/api/demo.py": {
-      "bytes": 3518,
-      "sha256": "7cab82ab1cdb51b225489dee2ec1d8c2d19ab97a584aa7492e20216020382c7f"
+      "bytes": 5118,
+      "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75"
     },
     "ai-company-os-backend/app/api/lifecycle_prefix_projection.py": {
       "bytes": 1659,
@@ -793,6 +793,10 @@
     "ai-company-os-backend/tests/test_admission_sample.py": {
       "bytes": 6069,
       "sha256": "11cad0a4f7786cee91250b531b0ebb1e1f6f94d2e5854648e51d6715143ec2d7"
+    },
+    "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py": {
+      "bytes": 5654,
+      "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca"
     },
     "ai-company-os-backend/tests/test_atomic_sample.py": {
       "bytes": 3618,
@@ -2398,7 +2402,7 @@
     ],
     "test_scope": "30/30 local stdlib exact 19-file slice only; not full product"
   },
-  "previous_archival_manifest_blob": "d188d88585b135dcda6c0453962a6b41f4455ef7",
+  "previous_archival_manifest_blob": "0a91f1a9b3da248535783517e0220e504f9e7f0a",
   "h01_proxy_r6_20261125": {
     "parent_archival_commit": "8771bb192909ebe948e9bf7eeef9f79d2c29b978",
     "parent_product_tree": "c050374aaeb2f8ccc61c86f32a0de16ae986db49",
@@ -2425,5 +2429,34 @@
         "blob": "ca2de86ac69da40c188ca8a3e1504a3749860762"
       }
     ]
+  },
+  "h01_api_scheduler_seam_20261125": {
+    "parent_archival_commit": "ad0eded8b9e7e6f6d0371ebfcf8f5621b4b29c0c",
+    "parent_product_tree": "23852e9074a15334b264a070086c56ccb0fad42a",
+    "source_PR47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/api/demo.py",
+        "before": "4d80172bc467953039ff57296055f68d740a3ff2",
+        "sha": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+        "bytes": 5118,
+        "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+        "before": null,
+        "sha": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+        "bytes": 5654,
+        "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca"
+      }
+    ],
+    "product_files": 584,
+    "manifest_entries": 583,
+    "diagnostic": "8 actual pure helper checks + 6 Scheduler seam checks, NOT original HTTP/SQL",
+    "source_owner": "HOLD",
+    "G7_pin": "55/56; historical pin unchanged",
+    "ORG06_pin": "20/21; historical pin unchanged",
+    "authority_variant_PR46": "NOT_APPLIED_OWNER_HOLD",
+    "original_backend_tests": "28 NOT_RUN"
   }
 }
