@@ -1,0 +1,70 @@
+{
+  "task": "MI05-R7-EXACT-SOURCE-RECOVERY-20261125",
+  "classification": "SOURCE_TRANSPORT_TOOL_LOCAL_FIXTURE_VALIDATED_REAL_FETCH_BLOCKED",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "canonical_tree": "fac62a73dab9c06f71cb3be19bf0ccf34b0ba572",
+  "canonical_blobs": 1858,
+  "canonical_bytes": 21550583,
+  "canonical_manifest": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "canonical_manifest_entries": 552,
+  "parent": "9a74c398f2fff65d57254f7de3a0e00a70dda90d",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "open_prs": 44,
+  "compared_pr_heads": {
+    "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "49": "9a74c398f2fff65d57254f7de3a0e00a70dda90d",
+    "50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+    "51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+    "54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a"
+  },
+  "conflicts": [
+    "product/SOURCE_MANIFEST.json",
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+    "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+    "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts"
+  ],
+  "tool": {
+    "path": "candidates/MI05-CEO-RUNTIME-ORG-R2-20261125/source-recovery/AIOS_EXACT_SOURCE_RECOVERY_20261125.py",
+    "blob": "ee3e667f0e8e6adbb14ef77dfa9b5db7ec5da271",
+    "bytes": 11730,
+    "sha256": "d878dd8b55c98ecb31bcda6ecb7ea8da5a88bf4c0584e9b863ba7b58be5a305a",
+    "operation": "read-only Git remote fetch into temporary bare repo; exact commit/tree/path/blob/mode/SHA256 verification; preserve separate source ZIPs and manifest HOLDs; no merge, no product execution, no dependencies installed",
+    "head_guard": "Only PR49 direct successor adding exactly these two handoff files allowed; archives pinned parent; any other drift HOLD."
+  },
+  "local_validation": {
+    "environment": "Python 3.13.5, local synthetic Git repository only",
+    "initial_failure": "git archive represents normal non-executable files in DOS ZIP attributes; explicit mode verification corrected",
+    "tests": [
+      "test_exact_archive",
+      "test_full_recovery",
+      "test_overwrite_refused",
+      "test_pr49_single_handoff_only",
+      "test_pr49_source_drift",
+      "test_remote_drift",
+      "test_stale_manifest",
+      "test_unsafe_paths",
+      "test_wrong_tree"
+    ],
+    "pass": 9,
+    "fail": 0,
+    "exit": 0,
+    "raw_summary": "Ran 9 tests in 0.522s\nOK",
+    "actual_github_fetch": "BLOCKED: Could not resolve host: github.com",
+    "real_archive": "NOT_CREATED",
+    "original_runtime_tests": "NOT_RUN",
+    "scope": "tool selftests are not product regression or integration acceptance"
+  },
+  "progress": {
+    "new_product_code": 0,
+    "canonical_transfer": 0,
+    "weighted": null,
+    "acceptance_delta_pp": 0,
+    "ordinal_delta": 0
+  },
+  "next": "Run the hash-pinned recovery tool once on authenticated Windows PC and upload output ZIP. No tokens copied or shared. Source-owner reviews, full reviewed dependency lock, original Runtime/API tests and canonical manifest reconciliation still required. No repeated partial recovery until actual full sources available.",
+  "rollback": "Normal revert this evidence-only handoff, preserve all prior product sources. No branch merge, CI, PROD, independent acceptance or runtime grants."
+}
