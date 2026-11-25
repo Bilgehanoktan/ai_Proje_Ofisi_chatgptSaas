@@ -1,0 +1,637 @@
+{
+  "task": "MI-P0-R6-DELTA-INTEGRITY-20261125",
+  "classification": "SOURCE_DELTA_CONTENT_AUDIT_NOT_PROMOTION",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "base_manifest": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "r6_commit": "3f50b5b2d6dfa3a6ac0ed18cefa8f86fda5336ab",
+  "r6_source_tree": "d4150875db536143d578aa4183d6ea0314ef109b",
+  "r6_product_tree": "ed7d0eb05610f21b9a4c6dac3663dab8ff2901b0",
+  "r6_manifest": "d344a2c2651632103599f1c739e65bf98ecf80cb",
+  "open_pr_count": 44,
+  "checks": {
+    "path_and_size": "585/585 PASS",
+    "delta_content_sha256_and_size": "60/60 PASS; fetched UTF-8 GitHub blobs in four groups of 15; SHA256 implementation checked against abc vector",
+    "unchanged_blob_and_manifest": "525/525 PASS; not independently rehashed",
+    "added": 33,
+    "modified_nonmanifest": 27,
+    "deleted": 0,
+    "full_local_checkout": "NOT_AVAILABLE",
+    "full_local_archive": "NOT_CREATED",
+    "product_transfer": "HOLD",
+    "new_product_code": 0,
+    "new_runtime_tests": 0
+  },
+  "delta": [
+    {
+      "path": "product/ai-company-os-backend/app/api/demo.py",
+      "status": "MODIFIED",
+      "old_blob": "4d80172bc467953039ff57296055f68d740a3ff2",
+      "new_blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+      "bytes": 5118,
+      "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "status": "MODIFIED",
+      "old_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "new_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "bytes": 3864,
+      "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "status": "MODIFIED",
+      "old_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "new_blob": "95438f2d300f09242876893943ee250884ebdde6",
+      "bytes": 3399,
+      "sha256": "32ac801451c0532bf09fcee53d4f9121d33767d15acfa1006f78d6fb76b0d645",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "status": "MODIFIED",
+      "old_blob": "04487bda631e9133f3904451a39fc8722e985997",
+      "new_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+      "bytes": 3542,
+      "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "status": "MODIFIED",
+      "old_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+      "new_blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+      "bytes": 10066,
+      "sha256": "c1d0cef446a374885054d6cda8852c273297c05f92eed3debcde42e4c5127125",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+      "status": "MODIFIED",
+      "old_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      "new_blob": "d805516dd2da0f88e6207f31f2c377f2fefaf493",
+      "bytes": 1821,
+      "sha256": "7c344c2db0b23140520afb323164c541acc83864b555e8964a68ece7ac8b4551",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "status": "MODIFIED",
+      "old_blob": "fa0f058486cc9dfe263fa9562f1bd4387b91760b",
+      "new_blob": "b8638d29266b0da310d8f7b1baa31a19b48a567d",
+      "bytes": 6026,
+      "sha256": "aac580a3ae6c19a10069d3b16243cf860eadd62a29a01f5f13e76d2b32935b36",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "status": "MODIFIED",
+      "old_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1",
+      "new_blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+      "bytes": 3836,
+      "sha256": "510aed92aefd9807e2d26581ca73feb45e543e6d5efe7b992e35748146ca897a",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+      "status": "MODIFIED",
+      "old_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+      "new_blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+      "bytes": 8796,
+      "sha256": "cb34d32c1bdd3c129f90767f422395630b5239ab6b653f7a95994f5e5dcb830b",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/office_engine/layout.py",
+      "status": "MODIFIED",
+      "old_blob": "cf47623d303d21aed11eb5ee69b66a757c6a5d18",
+      "new_blob": "4e637a46bcc1efbf0b6e5637e32b70398f70f1c2",
+      "bytes": 3319,
+      "sha256": "24089966253bd3d950f6aebfe9b65f2b2a2cc86d680beb3a472005301d153639",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+      "status": "MODIFIED",
+      "old_blob": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+      "new_blob": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+      "bytes": 2303,
+      "sha256": "d03acc8d0419a39b90eb6b014bda135373b4c7258793f7f2175fe1398e83bb2a",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_adapter_pin_boundary.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "61a92c1db4b907705256beddf95baf147574f701",
+      "bytes": 4580,
+      "sha256": "002c10f96b5c424849ae6c24a96804f752373fe78257512a253bd8cbc03550a9",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_adapter_skill_integration.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "7ae738c5b3182b05fe7a4ec4a5a6a374acb02d06",
+      "bytes": 2396,
+      "sha256": "a9482cf6ffd1f8150cd48213fa9c65d5d983483e084934aedff5bf81ecbf5bd7",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+      "bytes": 5654,
+      "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+      "status": "MODIFIED",
+      "old_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+      "new_blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+      "bytes": 8792,
+      "sha256": "d8363de0bab41ed8ee6625d996f8ba63d21ff24d33e831c87ad7a3dc8a993c1f",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+      "bytes": 4691,
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_ledger_envelope_boundary.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "7163756d9a4ba23eafb08f8ef19f4c031756f943",
+      "bytes": 4328,
+      "sha256": "521714cea0ffa8388a47d01dc14b1b779685cd6483bbd4d9a15006ffd7bbed57",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_office_layout_boundary.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "cc01ff57c5800cad4d5c1b2ae46dfa03a37ecb78",
+      "bytes": 4102,
+      "sha256": "abd404baa79746eb254d3b17236d64aebe427f71e88255fe3e0bdf4fc526a5fb",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "status": "MODIFIED",
+      "old_blob": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+      "new_blob": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+      "bytes": 5933,
+      "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "143cf34da870125e367947181854e1a0af9c2b30",
+      "bytes": 2508,
+      "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_recovered_sample_consumer.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "31e0de7b54ad5674a4df2312e7ff054767605d24",
+      "bytes": 6353,
+      "sha256": "0a130fc2abe0ceef45b0e706cb33dafaad6acbed51782177f9beb7d53b287518",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_metric_catalog_boundary.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "27add29056b2de3b1f70c70c8ae738a2c75482f6",
+      "bytes": 3698,
+      "sha256": "755a365c91b583f50a69269de5c0b888eafba84eb1189f963c8eb6589a21e9f3",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "449fc4eb642016162a8fc0fcdcc414b3cc1d8661",
+      "bytes": 5444,
+      "sha256": "90aacef08befa13b6203e08cd769d2238b628547c42e31661501ed5a2ed7b04b",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_skill_exact_source_type_review.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "0bdfdf2ac6c68011f4e2074868017c10abd9b321",
+      "bytes": 3309,
+      "sha256": "7cd8591c93db5281b856ad55e50676989dd2481298d775b5ee11f1efa1943aa7",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_skill_source_reference_boundary.py",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "a403434173d7bc0b6e13a1829cc56405281f1fe9",
+      "bytes": 2800,
+      "sha256": "b1e0d3e38c62a6b848e7bfbb567e4ca978b9b2c91cc84e69d335b43220e6d76c",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/admission/route.ts",
+      "status": "MODIFIED",
+      "old_blob": "c0a867a669993738d8b06a08fa7089f836a911b3",
+      "new_blob": "c46fa8f20e75370ce423f3ede63cd340926fe089",
+      "bytes": 658,
+      "sha256": "6a8820675e37d41eb8765df6e3ef880ae9bec646080ccba2c2b57c3cd8213457",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "status": "MODIFIED",
+      "old_blob": "749a289984049e0cec27ed93d656023ba4da1fff",
+      "new_blob": "75691925ab0cd294b878831a3210f101630320ca",
+      "bytes": 2191,
+      "sha256": "eba48b58f9fc12e12f3f2aabeac33b557c75f7494f2bfd79e8ccfefce2dc723f",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/outbox/route.ts",
+      "status": "MODIFIED",
+      "old_blob": "7dc1c9eb20feaf70358ba6137f35a3cbbec8a4ce",
+      "new_blob": "12895f7c606665e6605017486473b4d2ebd8deb5",
+      "bytes": 643,
+      "sha256": "ec3f1b8599c3017b5cd8d7e70857e22a83edfbb791cbd5985437f1e3c351ff94",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/task-budget/route.ts",
+      "status": "MODIFIED",
+      "old_blob": "91256098c2a61001e7305bf3658c8178219591ed",
+      "new_blob": "b8c6a4e6021b05d126c027d17fc358cc2a7d2816",
+      "bytes": 656,
+      "sha256": "66f34ac01200a067e9ada506c61248aa12b610d620495b6a8ab75a0a2f945dc4",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/MetricCards.tsx",
+      "status": "MODIFIED",
+      "old_blob": "8d857f05d1aca962525f95d9f5c8e4bb67a37836",
+      "new_blob": "20ba4e7a32d03dac612bb3ff293d64dfabcff4b0",
+      "bytes": 1024,
+      "sha256": "fefa8e7ad28bc935f7a7ab376761f1e521704b633db0964f623edbb3811b69e5",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+      "status": "MODIFIED",
+      "old_blob": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+      "new_blob": "3399dd5bbdc805e9d6793fb0d693db1c1a197aa7",
+      "bytes": 4927,
+      "sha256": "f92ca35c45bcd9faa339f4bb604d28b0ce0dd7a320e7fc81da533e9ac543a192",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/ThemeFrame.tsx",
+      "status": "MODIFIED",
+      "old_blob": "c36adf84d5eb2a86e1741391331117c72886d701",
+      "new_blob": "b24fbf9a3a341bb0160f143618f62c35e2332e03",
+      "bytes": 1238,
+      "sha256": "951829574206e7b98dad48cd8e1eca89983cf8b6bf0f06d91614619333548765",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.module.css",
+      "status": "MODIFIED",
+      "old_blob": "137119431f81a19e5a4136bdac7d1a3ccbe5d29e",
+      "new_blob": "f909da8b520cf1a3cdb95a972c495e140294ffc9",
+      "bytes": 1773,
+      "sha256": "fa5d97834198166111dd96b9267b0927b2f46c03c1fed7dda7c902204c6f0007",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/OperationalReadback.tsx",
+      "status": "MODIFIED",
+      "old_blob": "65a2bbe1e7c9dfb6223df669d15ce87ce85a9a86",
+      "new_blob": "5a83e9861c8edfeca99f253a09ca4d7cb1fa15b2",
+      "bytes": 3743,
+      "sha256": "1b99e9449d2cbedb8a918c5acf99d001a3b101a24d3fb461eaa1686482d6c6d2",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "status": "MODIFIED",
+      "old_blob": "6f62688761d8cf2f4b2e759e5fd30eef07881141",
+      "new_blob": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+      "bytes": 5876,
+      "sha256": "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "status": "MODIFIED",
+      "old_blob": "fc7ab9b7fb55c871fc2d82a701db89e0945e7aed",
+      "new_blob": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+      "bytes": 4083,
+      "sha256": "2b2f24e78237cee7ddd74bb4e91386be466d58c43b221a6347f5f91efd98af48",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/useProjectionRead.ts",
+      "status": "MODIFIED",
+      "old_blob": "73ef76f14855875aa50a7e619214a5311c1393f2",
+      "new_blob": "4294f67533cd1ff0d92a117935393bbee84d2abe",
+      "bytes": 1143,
+      "sha256": "ab564790a16f07c27c6bb69d5440b13ef843e62fbd8364c580baeac9b95f5eb1",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/graph/PlanGraph.module.css",
+      "status": "MODIFIED",
+      "old_blob": "a1d773853bbd703ac03fbbee3f9f1935d71234b8",
+      "new_blob": "ea163dd9818e595804d5b85d7dd38564daba40fd",
+      "bytes": 1986,
+      "sha256": "20c690f3d4166ea23c6a91e7c12aa5793c64e77ce5ad6a5c16713d71a650a384",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/graph/PlanGraph.tsx",
+      "status": "MODIFIED",
+      "old_blob": "2aa37596ca8c0f2098b8d2c4bf47d48be46540af",
+      "new_blob": "4816132235bf0c13df694f7df0e55696f2002781",
+      "bytes": 3687,
+      "sha256": "32e2749800f7c1cdc80ad3ba24494db05377555d7ee30f418e11b601d0655d73",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "b19455b413e4cf706ba8c15b5d065def91b0537b",
+      "bytes": 1904,
+      "sha256": "0356dac780530cb9c93c17e35219f2e37cb40a0a29076a64dc886a401eec52e9",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/package-lock.json",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "bytes": 33618,
+      "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "528027639931c74b27b4d7f12813a57894cc529f",
+      "bytes": 5998,
+      "sha256": "7607d0371edff9512d2669a1b0f30dec55879bd77a4e87d2c06026d9ea8b5102",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "bc714ec16a144cba403c214bd1497525e5114821",
+      "bytes": 2510,
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/four-proxy-mime-integration.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "ca2de86ac69da40c188ca8a3e1504a3749860762",
+      "bytes": 1524,
+      "sha256": "b11cb4c17bc44758da1c6c3881a2f7860138e8dc8668a700928f5013318e1ac2",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/office-workbench-deadline.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "aa7afc3a93265305df6ceb8acbb03d25b901beb3",
+      "bytes": 4001,
+      "sha256": "6d01c856ac4fc88d22a223f3b77f24b292ed7e4af8a5d3cc465ce5506c17dbf9",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-plan-graph-zoom.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "7836a3602efe162a5bac6e4f63fbe52870a1d1df",
+      "bytes": 5576,
+      "sha256": "5a77f2bc70fd070a97069ce83cd6e62e234c1304d43b80edec4f79adf659ec12",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui01-shell-navigation.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "4f77df4ef57d064b4c938137bd479f8d5d8d509a",
+      "bytes": 7064,
+      "sha256": "573d9e190bde138562384f3aaae67a6ba2c43d5242d600123fc72c0edcc9271c",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui02-ceo-provenance.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "11e7a75cfd3ddbb7ba26a7a706585730ab3249b1",
+      "bytes": 5283,
+      "sha256": "cb40e1ca8789a2c7d8d9c5f698a223ee1f7a9fe929bac100ca2e704fc83af57a",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+      "bytes": 9718,
+      "sha256": "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui03-projection-freshness.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "27a8c8989d1a253af205c61eb21738bf3958329a",
+      "bytes": 3007,
+      "sha256": "5944af18fa2d29b42956851731e7d8658d305605ec09fb60ba3acc9c6e4f3a90",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+      "bytes": 6668,
+      "sha256": "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1",
+      "content_check": "PASS"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui03-visibility-r4.test.cjs",
+      "status": "ADDED",
+      "old_blob": null,
+      "new_blob": "89b5437a2791b7c170c64291ac0b918e5239f9c0",
+      "bytes": 2052,
+      "sha256": "d02cd6e7406730a1c388040e794c1a24cfbf1a256cf853b217e3b7765ab1f111",
+      "content_check": "PASS"
+    }
+  ],
+  "g7": {
+    "pr19_head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "pr19_original_pins": "56/56 tree matches",
+    "r6_original_pins": "53/56 tree matches",
+    "drift": [
+      {
+        "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+        "expected": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "actual": "95438f2d300f09242876893943ee250884ebdde6"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "expected": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "actual": "d492c6d3ea99214e28c0fa4e772139169bd39a17"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "expected": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "actual": "eb3e283e3406996254283595e14711e90b2bca8c"
+      }
+    ],
+    "runner": "PR44 exact PR19 checkout required; do not rewrite historical pins",
+    "tests": "0/7 NOT_RUN"
+  },
+  "w8": {
+    "pr38_head": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "missing_owner_variants": [
+      "requirements-history-signatures.txt",
+      "ui-p10j16-office-composition.test.cjs",
+      "ui-p10j18-agent-profile.test.cjs"
+    ],
+    "r6_backend_direct": [
+      "fastapi==0.163.0",
+      "starlette==1.10.0",
+      "uvicorn==0.34.2",
+      "cryptography==46.0.4"
+    ],
+    "dependency_review": "PR52 R9 candidate not approved; C50 owner/security HOLD",
+    "reviewed_r9_record": "38b4c8249b9747c53f49b3840405fb63caa61756",
+    "local_env": [
+      "Python 3.13.5",
+      "FastAPI 0.128.2",
+      "Starlette 0.50.0",
+      "cryptography 46.0.4"
+    ],
+    "iam": "0/12 NOT_RUN",
+    "api": "0/9 NOT_RUN",
+    "g7": "0/7 NOT_RUN",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD"
+  },
+  "owner_review": "PR31/44/46/47/52 no submitted approval; PR50/51 comments only in prior review",
+  "previous_evidence": [
+    "f5f209a3fe940826a416ad2dabe4fef0d02754e8",
+    "701da50dceda5ada3eba47e30b7cbd0daaf44c59"
+  ],
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "MI01/dependency/security exact R9/C50 disposition; PR44 original PR19 checkout; PR46/47 unchanged tests under reviewed environment; single writer owner reconciliation. No further duplicate candidate.",
+  "rollback": "normal evidence-only revert; preserve product-dev and R6 source tree"
+}
