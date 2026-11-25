@@ -30,6 +30,7 @@ const panel=compile(moduleCompile(target),{
  './SharedSnapshotProvider':{useSharedSnapshot:()=>({state:{phase:'idle',data:null},read:()=>{},reset:()=>{},planRead:{state:snapshot,data:snapshot.data,read:()=>actions.plan++,reset:()=>actions.planReset++}})},
  './useProjectionRead':{useProjectionRead:(key)=>{assert.equal(key,'organization');return {state:organization,data:organization.data,read:()=>actions.org++,reset:()=>actions.orgReset++}}},
  './projectionRead':{readStatus},
+ '../mvp/historicalJoin':compile(moduleCompile(path.resolve(__dirname,'../features/mvp/historicalJoin.ts')),{}),
  '../security/securityModel':{readSecurityView:()=>({ok:true,trust:[{id:'iv',status:'INCONCLUSIVE'},{id:'release',status:'HOLD'}]})},
  }).default;
 const walk=(node,fn)=>{
