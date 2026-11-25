@@ -1,0 +1,52 @@
+{
+  "task": "MI-P0-C50-R9-FASTAPI-PIN-RECONCILIATION-20261125",
+  "classification": "REVIEW_ONLY_NOT_APPROVED_DO_NOT_INSTALL",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "c39cc5f7e4da399e777d0cc659a082b0abc8c136",
+  "pr52": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+  "original_c50_blob": "46cec5f605701a5b8c97c91f3d412f9907b71021",
+  "r9_blob": "ab9908b033b9b62017a7689716420f61ce2c6364",
+  "direct_requirements_preimage_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+  "static_validation": {
+    "unique_c50_rows": 25,
+    "unique_r9_rows": 20,
+    "unchanged_c50_rows": 24,
+    "r9_exact_rows_after": 20,
+    "changed_rows": [
+      "fastapi"
+    ],
+    "old_fastapi": "fastapi==0.163.0 --hash=sha256:7572550ab4935e3ff373dc0191aea410d6c48127cc5477bc290b992fe539e345",
+    "new_fastapi": "fastapi==0.163.2 --hash=sha256:825a8fdd18d7bfcb1b86735e9805c59b7400d55c4060d3df5331b62ae452f004",
+    "c50_only": [
+      "cffi",
+      "click",
+      "cryptography",
+      "pycparser",
+      "uvicorn"
+    ]
+  },
+  "direct_requirement_patch": "proposal only; source file not changed",
+  "crypto_direct_pin": "46.0.4",
+  "crypto_c50_candidate": "50.0.2",
+  "security": {
+    "fastapi": "https://github.com/fastapi/fastapi/security/advisories/GHSA-f56c-v883-vx8r",
+    "cryptography": "https://cryptography.io/en/latest/changelog/",
+    "openssl": "https://www.openssl-library.org/news/vulnerabilities-4.0/index.html",
+    "runtime": "https://www.python.org/downloads/release/python-31318/",
+    "disposition": "C50 25-wheel union metadata/bytes, native notices and runtime review NOT_RUN/HOLD; W8 28-wheel graph distinct; no risk acceptance"
+  },
+  "tests": {
+    "lock_text_static": "PASS",
+    "install": "NOT_RUN",
+    "IAM": "0/12 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "API": "0/9 NOT_RUN",
+    "W8": "HOLD"
+  },
+  "owner": "PR52 dependency/runtime and independent Security/IV; source owner 03API for requirements patch; central product manifest writer only after approval",
+  "product_files_changed": 0,
+  "canonical_acceptance_delta": 0,
+  "rollback": "normal revert archival commit only; no product files touched"
+}
