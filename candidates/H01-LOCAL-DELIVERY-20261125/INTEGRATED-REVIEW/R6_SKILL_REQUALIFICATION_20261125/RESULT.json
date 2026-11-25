@@ -1,0 +1,36 @@
+{
+  "classification": "D0 source-slice regression, NOT independent acceptance or source owner signoff",
+  "parent": "3f50b5b2d6dfa3a6ac0ed18cefa8f86fda5336ab",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "r6_product_tree": "ed7d0eb05610f21b9a4c6dac3663dab8ff2901b0",
+  "manifest": "d344a2c2651632103599f1c739e65bf98ecf80cb",
+  "verified_source_blobs": 16,
+  "verified_manifest_sha256_sizes": 16,
+  "pr55_head": "65ddae6a33d94593ed686b53698a6d8ad48919b4",
+  "test_blob": "0bdfdf2ac6c68011f4e2074868017c10abd9b321",
+  "r6": {
+    "resolver": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+    "pass": 9,
+    "fail": 0,
+    "exit": 0
+  },
+  "pr55_resolver_on_r6_slice": {
+    "resolver": "1a448e4658ffd8dcf3884fef150dab8d77b766ca",
+    "pass": 3,
+    "fail": 6,
+    "exit": 1
+  },
+  "recommendation": "Retain R6 strict resolver; do not overwrite PR55 or product-dev; source owner review HOLD",
+  "g7": "53/56 source pins on R6. ledger, intent_authority and scheduler_review drift. Original PR44 runner must retain PR19 checkout.",
+  "w8": "R6 cryptography 46.0.4 stale; PR38 three source changes absent; PR52 R9 unapproved",
+  "evidence_zip": {
+    "sha256": "f7f84bff11306d9a238e4e481bbd768bc0a05b271a8baae89b0ee2993eb0662f",
+    "blob": "1b441cedc8452eb0a3e27117980251647e6c801e",
+    "bytes": 4004
+  },
+  "next": "MI09 owner reconcile resolver; W8 owner approve exact security dependency evidence; NW03 exact PR19 original seven tests separate from R6 regression; no independent acceptance",
+  "rollback": "Evidence-only revert; no product mutation",
+  "acceptance_delta": 0
+}
