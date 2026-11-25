@@ -1,0 +1,77 @@
+{
+  "task": "MI-P0-R6-MIME-REQUALIFICATION-20261125",
+  "classification": "SCOPED_D0_LOCAL_SYNTHETIC_COMPARISON_NOT_PRODUCT_ACCEPTANCE",
+  "parent": "f5f209a3fe940826a416ad2dabe4fef0d02754e8",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "source_commit": "3f50b5b2d6dfa3a6ac0ed18cefa8f86fda5336ab",
+  "product_tree": "ed7d0eb05610f21b9a4c6dac3663dab8ff2901b0",
+  "manifest_blob": "d344a2c2651632103599f1c739e65bf98ecf80cb",
+  "exact_git_blobs": 14,
+  "R6_manifest_bytes_sha256": 12,
+  "open_pr_count": 44,
+  "pr50_head": "596282284a9b29216a89a7cc20651b3b31c501bd",
+  "pr51_head": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+  "source_variants": [
+    {
+      "path": "features/mvp/readBoundedD0Json.ts",
+      "r6": "b19455b413e4cf706ba8c15b5d065def91b0537b",
+      "pr51": "f3fe889b41ad3d8445025458225aa34d3d63a5e9"
+    },
+    {
+      "path": "app/api/demo/office-workbench/route.ts",
+      "r6": "75691925ab0cd294b878831a3210f101630320ca",
+      "pr50": "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079"
+    }
+  ],
+  "environment": "Node 22.16.0 TS 5.8.3 Linux; transpileModule; no package installation/full typecheck",
+  "original_test_blobs": [
+    "ca2de86ac69da40c188ca8a3e1504a3749860762",
+    "528027639931c74b27b4d7f12813a57894cc529f"
+  ],
+  "logs": {
+    "r6.log": {
+      "tests": 20,
+      "pass": 20,
+      "fail": 0,
+      "exit": 0,
+      "sha256": "d28ef8231cbc0be5d38ec43c2a392beba2008b61d6e109d49746bd2abb90425a"
+    },
+    "comparison.log": {
+      "tests": 20,
+      "pass": 8,
+      "fail": 12,
+      "exit": 1,
+      "sha256": "698292b4b7e1efa9f2c6e976cdd55a7baade22350ebefa4aaf670218f4daf541"
+    },
+    "deadlines.log": {
+      "tests": 27,
+      "pass": 27,
+      "fail": 0,
+      "exit": 0,
+      "sha256": "5358722ee92940a20288f1179ab90fcb55d02180f0bfe03dc32cd3fb6aefae69"
+    }
+  },
+  "raw_zip": {
+    "blob": "04ddd60f70e1578dac857375125bce442897a3c9",
+    "sha256": "1dcbbf2433b63722060836dfc4288060debdcd947777bdaecd3431220c544cf6",
+    "bytes": 2449
+  },
+  "recommendation": "Retain stricter R6 variants; malformed combined/duplicate Content-Type incorrectly accepted by PR50/51 variants on R6 slice. Source owner review HOLD.",
+  "impact": "MI05/06 MI10 four local D0 GET proxies; no source/API/DB/event/dependency changes",
+  "gates": {
+    "owner": "HOLD",
+    "C50_R9": "HOLD",
+    "IAM": "0/12 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "API": "0/9 NOT_RUN",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "MVP": "0/11",
+    "weighted": "HESAPLANAMADI",
+    "acceptance_delta": 0
+  },
+  "rollback": "Normal evidence-only revert; preserve R6 and owner branches."
+}
