@@ -21,10 +21,14 @@ export function createProjectionReader<T>(key:ProjectionKey,parse:Parser<T>,publ
  const retention=Number.isFinite(displayTtlMs)?Math.min(PROJECTION_DISPLAY_TTL_MS,Math.max(1,displayTtlMs)):PROJECTION_DISPLAY_TTL_MS;
  function cancel(){generation++;if(timer!==undefined)clearTimeout(timer);timer=undefined;if(expiry!==undefined)clearTimeout(expiry);expiry=undefined;active?.abort();active=null;}
  function invalidate(){cancel();publish({phase:'hold',data:null,reason:'STALE'});}
+ // Match the existing shared replay visibility boundary even before a visibilitychange event.
+ const isHidden=()=>typeof document!=='undefined'&&document.hidden;
  async function read(){
-  cancel();const id=generation,c=new AbortController();active=c;publish({phase:'loading',data:null});
+  cancel();if(isHidden()){invalidate();return;}
+  const id=generation,c=new AbortController();active=c;publish({phase:'loading',data:null});
   timer=setTimeout(()=>{if(id!==generation)return;cancel();publish({phase:'hold',data:null,reason:'TIMEOUT'});},timeoutMs);
   try{const data=await readProjection(key,parse,c.signal,transport);if(id===generation&&!c.signal.aborted){
+   if(isHidden()){invalidate();return;}
    publish({phase:'historical',data});
    expiry=setTimeout(()=>{if(id===generation)invalidate();},retention);
   }}

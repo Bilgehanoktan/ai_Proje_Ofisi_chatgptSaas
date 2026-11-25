@@ -1,0 +1,63 @@
+{
+  "task": "MI05-UI-READSTATUS-PRESENTATION-R3-20261123",
+  "date": "2026-11-23",
+  "classification": "UI_PRESENTATION_SOURCE_CANDIDATE_OWNER_REVIEW_HOLD",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "parent_pr48": "59400debd73bf3b5e2df1e0d2fe008fd4e633917",
+  "ancestry_pr45": "17911f73003e6ac303579d40d4a9aac8a3e2fe98",
+  "owner": "MI-05 Premium UI",
+  "file_writes": [
+    {
+      "path": "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "symbol": "SharedSnapshotPanel.status",
+      "before_blob": "4a35c712a92a609e8ed07e5ea28d24a15eb67576",
+      "after_blob": "687443fdf73ef53bd39017b6581b7ce05e0f497a",
+      "bytes": 5530,
+      "sha256": "4017e86f9fda414e7f2edb82791fa63e97d62cd9c2e1c76907cdb2b0bb52f857"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+      "symbol": "8 targeted presentation tests",
+      "after_blob": "9376c029905b82c8eaace11bde76d5211ccd5449",
+      "bytes": 6555,
+      "sha256": "8cf129f4e823e54c2f6cd9570b6c7cfe0f54efac1c0f5b2821f155256945056e"
+    }
+  ],
+  "reader_pr48_unchanged": {
+    "projectionRead": "b9046f4f4f92ea121ecb530c7fa781af96d8d79d",
+    "useProjectionRead": "4294f67533cd1ff0d92a117935393bbee84d2abe"
+  },
+  "actual_local_tests": {
+    "scope": "8 isolated mocked JSX presentation only",
+    "node": "22.16.0",
+    "typescript": "5.8.3 (global)",
+    "passed": 8,
+    "total": 8,
+    "failed": 0,
+    "skipped": 0,
+    "tap_sha256": "febc2422f5c2ab87fd5c5b10946f815d31f111e7bfe28cf532b73335642a8fb8"
+  },
+  "prior_pr48_12_9": "HISTORICAL_NOT_RERUN",
+  "api": "UNCHANGED",
+  "database": "UNCHANGED",
+  "event": "UNCHANGED",
+  "iam_grant": "NONE",
+  "authority": "NONE",
+  "geometry_join": "HOLD",
+  "manifest_status": "CENTRAL_OWNER_REBIND_REQUIRED_HOLD",
+  "next_build": "NOT_RUN",
+  "chromium": "NOT_RUN",
+  "w8_c07": "HOLD",
+  "w8_c08": "NOT_RUN",
+  "independent_c05": "HOLD",
+  "acceptance": {
+    "ui_before": "21/40",
+    "ui_after": "21/40",
+    "delta": 0,
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "weighted_development": "HESAPLANAMADI"
+  },
+  "rollback": "CLOSE_DRAFT_OR_NORMAL_ISOLATED_REVERT"
+}

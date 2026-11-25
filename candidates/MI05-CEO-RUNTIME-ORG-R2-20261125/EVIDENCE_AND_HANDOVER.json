@@ -1,0 +1,113 @@
+{
+  "task": "MI05-CEO-RUNTIME-ORG-R2-20261125",
+  "classification": "ISOLATED_R4_PRODUCT_SOURCE_TRANSFER_AND_SCOPED_D0_HTTP_DIAGNOSTIC_NOT_ACCEPTANCE",
+  "h01": "User authorized closure of open integration obstacles and continued product development; existing independent limits preserved",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "ui_source_commit": "062dd63d9573a944aa456faa430e05503553b8dd",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "open_prs": 44,
+  "compared_pr_heads": {
+    "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+    "51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+    "53": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+    "54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+    "55": "65ddae6a33d94593ed686b53698a6d8ad48919b4"
+  },
+  "new_http": {
+    "pass": 6,
+    "fail": 0,
+    "exit": 0,
+    "raw_tap": "d279dad911802c0c8f8db215039f2de9db24fd8f",
+    "sha256": "33eb60935f3f6965784297978222ca5cfab750a415f37d253f394f4dfb2b44ad"
+  },
+  "rerun": {
+    "projection_read": 12,
+    "freshness": 9,
+    "visibility_r4": 5,
+    "total": 26,
+    "count_as_new": false
+  },
+  "environment": "Python 3.13.5 FastAPI 0.128.2 Uvicorn 0.48.0 Node 22.16.0 TS 5.8.3 strict slice PASS; no reviewed full lock/build",
+  "chromium": {
+    "attempt": "BLOCKED",
+    "reason": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:18732/",
+    "cases": 0,
+    "C08": "NOT_RUN",
+    "no_bypass": true
+  },
+  "findings": [
+    "Actual organization route invokes readOwnerBoundOrganization without owner; 503 no-store, no backend fetch. No fake credential supplied.",
+    "Runtime exact lifecycle_prefix_wire.py and shared_snapshot.py generate D0 fixture through test-only ASGI route; actual Next shared-snapshot GET and reader over real loopback HTTP. Persisted lifecycle reader NOT_RUN.",
+    "Plan revision differs from fixed historical runtime prefix. project_id/world_id null, geometry_join HOLD, not a causal join or live KPI.",
+    "No product code changes outside R4; no API/IAM/ORG Runtime owner paths overwritten."
+  ],
+  "manifest": {
+    "product_files": 561,
+    "current_entries": 558,
+    "proposed_entries": 560,
+    "proposal_blob": "7a872822210f2c929764e85e4d59e9a3a6ea0d6c",
+    "path_size": "560/560",
+    "delta": {
+      "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": {
+        "bytes": 5530,
+        "sha256": "4017e86f9fda414e7f2edb82791fa63e97d62cd9c2e1c76907cdb2b0bb52f857",
+        "blob": "687443fdf73ef53bd39017b6581b7ce05e0f497a"
+      },
+      "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs": {
+        "bytes": 6555,
+        "sha256": "8cf129f4e823e54c2f6cd9570b6c7cfe0f54efac1c0f5b2821f155256945056e",
+        "blob": "9376c029905b82c8eaace11bde76d5211ccd5449"
+      },
+      "ai-company-os-frontend/features/data/projectionRead.ts": {
+        "bytes": 4083,
+        "sha256": "2b2f24e78237cee7ddd74bb4e91386be466d58c43b221a6347f5f91efd98af48",
+        "blob": "4cbdcedff13166a6f4228fafd260b2ebf5add90a"
+      },
+      "ai-company-os-frontend/tests/ui03-visibility-r4.test.cjs": {
+        "bytes": 2052,
+        "sha256": "d02cd6e7406730a1c388040e794c1a24cfbf1a256cf853b217e3b7765ab1f111",
+        "blob": "89b5437a2791b7c170c64291ac0b918e5239f9c0"
+      }
+    },
+    "shared_file": "c576cd213a9359328517f168aba2fc63ad2d0218",
+    "central_owner_review": "HOLD",
+    "inherited_sha256": "556 not independently rehashed; do not promote"
+  },
+  "local_package": {
+    "files": 62,
+    "sha256": "aef8f07d4567e6dafe74cfd12888dd75de024029d438f5bcabdb0877b51d5c6c",
+    "scope": "exact selected source and diagnostic evidence; not full checkout"
+  },
+  "acceptance": {
+    "UI": [
+      21,
+      40
+    ],
+    "Core": [
+      12,
+      16
+    ],
+    "W8": [
+      3,
+      8
+    ],
+    "MVP": [
+      0,
+      11
+    ],
+    "IV": [
+      0,
+      7
+    ],
+    "delta_pp": 0,
+    "weighted_development": null,
+    "ordinal_delta": 0
+  },
+  "next": "MI-P0 central owner manifest rebind and source-owner review; MI03/04 trusted server session and scoped ORG endpoint; NW07/03API persisted runtime consistent snapshot tied to exact plan; reviewed lock/full C07 then genuine Chromium C08 then independent C05.",
+  "rollback": "ordinary revert R4 source commit on isolated branch; candidate evidence only; preserve canonical/main and no DB effects"
+}

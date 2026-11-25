@@ -1,0 +1,109 @@
+{
+  "task": "MI05-UI03-R5-JOIN-REGRESSION-20261125",
+  "status": "ISOLATED_PRODUCT_SOURCE_TRANSFER_SCOPED_PASS_CANONICAL_HOLD",
+  "authority": "H01 explicitly requested controlled integration and blocker closure, existing MI05 ownership and CEO-0174/0179=B scope",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "parent": "5264c9fdc9f9a62cf9f9328e0fa88c2aa7225f76",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "open_prs": 44,
+  "compared_pr_heads": {
+    "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+    "51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+    "54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a"
+  },
+  "conflicting_paths": 0,
+  "changes": [
+    {
+      "path": "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "before": "687443fdf73ef53bd39017b6581b7ce05e0f497a",
+      "after": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+      "bytes": 5876,
+      "sha256": "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+      "before": "c8a333c82c3706f3b8e4ee191034bdf30bec1187",
+      "after": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+      "bytes": 9718,
+      "sha256": "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+      "before": "9376c029905b82c8eaace11bde76d5211ccd5449",
+      "after": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+      "bytes": 6668,
+      "sha256": "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
+    }
+  ],
+  "code": "SharedSnapshotPanel reuses existing inspectHistoricalJoin only when both validated historical inputs present; diagnostic comparison only, no combined data, grant, mutation, live authority, API/schema/DB/event changes. Both CEO/Office show JOIN_HOLD plus reason; stale input removes reason.",
+  "pins": {
+    "historicalJoin": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+    "projectionRead": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+    "organizationParser": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+    "planFixture": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+    "prefixParser": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c"
+  },
+  "tests": {
+    "before": "Original exact UI02 file-level FAIL Unexpected import ./projectionRead; 11 methods did not execute",
+    "harness_only": "11/11 PASS",
+    "first_combined": "19/23 PASS, four new assertions failed due JSX test flattening whitespace; no code weakening, regex whitespace corrected",
+    "final": "23/23 PASS, 19 existing +4 new, no double counting",
+    "environment": "Node 22.16.0 TS5.8.3 transpileModule and mocked UI hooks/JSX; actual helper and original source/test fixtures; no full TS typecheck, React runtime, browser or C07",
+    "command": "NODE_PATH=$(npm root -g) node --test tests/ui02-ceo-source-summary.test.cjs tests/ui03-readstatus-presentation-r3.test.cjs",
+    "raw_log_blob": "61ff1c52fa93053e907d5d97472d77dd1e960c78",
+    "raw_log_sha256": "3622b19a767b88bc6a7e958cf0c3e8e4667bd33f411ad044b800a2f0d09ed6e3"
+  },
+  "manifest": {
+    "product_files": 561,
+    "actual_entries": 558,
+    "proposed_entries": 560,
+    "old_proposal": "7a872822210f2c929764e85e4d59e9a3a6ea0d6c",
+    "new_proposal": "fb7fc930f9223017ad3beb4643bea94f3e6b8486",
+    "shared_blob": "c576cd213a9359328517f168aba2fc63ad2d0218",
+    "central_writer": "HOLD",
+    "scope": "proposal only; 3 exact changed SHA256, 15 previous verified delta, 542 inherited pins; full checkout not available"
+  },
+  "progress": {
+    "new_product_function": 1,
+    "existing_regression_blocker_closed": 1,
+    "new_tests": 4,
+    "existing_tests_rerun": 19,
+    "canonical_source_delta": 0,
+    "acceptance": {
+      "ui": [
+        21,
+        40
+      ],
+      "core": [
+        12,
+        16
+      ],
+      "w8": [
+        3,
+        8
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "iv": [
+        0,
+        7
+      ]
+    },
+    "delta_pp": 0,
+    "weighted": null,
+    "ordinal_delta": 0
+  },
+  "remaining": [
+    "Central single-writer source owner disposition and manifest transfer",
+    "Real scoped ORG owner composition and persisted runtime same-plan binding",
+    "Reviewed dependency lock/full exact archive, full C07, native C08 and independent C05"
+  ],
+  "rollback": "ordinary revert of this isolated source commit; prior R4 and source/evidence history preserved; no DB or policy change"
+}

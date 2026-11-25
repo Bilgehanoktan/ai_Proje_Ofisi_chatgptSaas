@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: STALE plan explains expiry, hides plan counts, preserves ORG isolation
+ok 1 - STALE plan explains expiry, hides plan counts, preserves ORG isolation
+  ---
+  duration_ms: 1.572562
+  type: 'test'
+  ...
+# Subtest: TIMEOUT organization explains deadline and never shows an active agent
+ok 2 - TIMEOUT organization explains deadline and never shows an active agent
+  ---
+  duration_ms: 0.251229
+  type: 'test'
+  ...
+# Subtest: READBACK_HOLD retains generic refusal, not a false timeout
+ok 3 - READBACK_HOLD retains generic refusal, not a false timeout
+  ---
+  duration_ms: 0.269607
+  type: 'test'
+  ...
+# Subtest: historical D0 is distinguishable from actual completion, identity and grant
+ok 4 - historical D0 is distinguishable from actual completion, identity and grant
+  ---
+  duration_ms: 0.239591
+  type: 'test'
+  ...
+# Subtest: loading clears displayed counts and keeps independent states
+ok 5 - loading clears displayed counts and keeps independent states
+  ---
+  duration_ms: 0.222746
+  type: 'test'
+  ...
+# Subtest: existing read and reset buttons still delegate without actions or live API writes
+ok 6 - existing read and reset buttons still delegate without actions or live API writes
+  ---
+  duration_ms: 0.305982
+  type: 'test'
+  ...
+# Subtest: Office view remains historical-only with no CEO cross-reader join or geometry authority
+ok 7 - Office view remains historical-only with no CEO cross-reader join or geometry authority
+  ---
+  duration_ms: 0.127993
+  type: 'test'
+  ...
+# Subtest: CEO control source, release and join limitations are preserved
+ok 8 - CEO control source, release and join limitations are preserved
+  ---
+  duration_ms: 0.176276
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16.520734

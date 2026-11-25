@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: exact ORG route refuses ownerless read, no cache, no data
+ok 1 - exact ORG route refuses ownerless read, no cache, no data
+  ---
+  duration_ms: 61.391776
+  type: 'test'
+  ...
+# Subtest: ownerless ORG binding never invokes backend even when client supplies a credential
+ok 2 - ownerless ORG binding never invokes backend even when client supplies a credential
+  ---
+  duration_ms: 1.218234
+  type: 'test'
+  ...
+# Subtest: exact historical Runtime wire -> exact SSE proxy over real HTTP -> shared reader
+ok 3 - exact historical Runtime wire -> exact SSE proxy over real HTTP -> shared reader
+  ---
+  duration_ms: 27.163721
+  type: 'test'
+  ...
+# Subtest: plan and Runtime wire have unequal plan revision: no evidence of causal join
+ok 4 - plan and Runtime wire have unequal plan revision: no evidence of causal join
+  ---
+  duration_ms: 15.891524
+  type: 'test'
+  ...
+# Subtest: tampered runtime wire rejected by actual proxy, historical session cleared, recovery
+ok 5 - tampered runtime wire rejected by actual proxy, historical session cleared, recovery
+  ---
+  duration_ms: 18.600314
+  type: 'test'
+  ...
+# Subtest: resume header rejected by actual SSE proxy
+ok 6 - resume header rejected by actual SSE proxy
+  ---
+  duration_ms: 1.743306
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 185.441556

@@ -1,0 +1,88 @@
+{
+  "task": "MI05-CEO-RUNTIME-ORG-R3-20261125",
+  "classification": "UI_DELTA_BYTE_VALIDATED_ORG_OWNER_PORT_POSITIVE_NEGATIVE_HTTP_DIAGNOSTIC",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "tested_ui_head": "c60767c9f22097cc11a75e4f88c8f95007930b76",
+  "compared_pr_heads": {
+    "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+    "51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+    "53": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+    "54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+    "55": "65ddae6a33d94593ed686b53698a6d8ad48919b4"
+  },
+  "open_pr_count": 44,
+  "manifest": {
+    "proposal_blob": "7a872822210f2c929764e85e4d59e9a3a6ea0d6c",
+    "current_product_manifest_blob": "c576cd213a9359328517f168aba2fc63ad2d0218",
+    "actual_entries": 558,
+    "proposed_entries": 560,
+    "changed_source_sha256_recalculated": "18/18 PASS",
+    "unchanged_canonical_blob_manifest_size_mode_match": "542/542 PASS",
+    "deleted": 0,
+    "case_mode_issue": 0,
+    "conflicting_nonmanifest_ui_paths": 0,
+    "scope": "Delta rehash plus canonical inherited record equivalence, not full checkout or independent rehash of inherited source. Central single writer must approve and rebind. Do not auto-merge."
+  },
+  "source_pins": {
+    "ownerBinding": "9441f5ead5e9b420ee99b0884578e96e5f4b7f51",
+    "proxy": "f257f77ca5887b2477bdf3fc3f68e2b37c735eff",
+    "parser": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+    "route": "fe445fa4b8fff74eae3def2d9f12d8c93c8e154b",
+    "localBackend": "9231711d7efb18dd18b68e3322f62337a6477484"
+  },
+  "local_recovery": "26/26 exact archived source pins reverified",
+  "new_tests": {
+    "pass": 8,
+    "fail": 0,
+    "exit": 0,
+    "source_blob": "1dead56b981aaa9c0e25ed7f3b59f7f25a7c25bd",
+    "source_sha256": "3a18229cee0ad5b2d41fe2cbfc166aad2563756ebd4a8985d9ab8a68083f0a7d",
+    "tap_blob": "264960c18daa460401d8e250f0a1517dabc3421f",
+    "tap_sha256": "eea4a0d6a5c0569a2350404b6c46def5f8f1c43feb3c5d29f7772370103366cc",
+    "compile": "PASS strict TS5.8.3 fresh exact source compile; Node22.16.0",
+    "command": "tsc --target ES2022 --lib ES2023,DOM --strict --module commonjs --rootDir frontend --outDir compiled frontend/env.d.ts frontend/app/api/demo/organization/route.ts frontend/features/organization/organizationOwnerBinding.ts; node --test tests/org-owner-seam.integration.cjs",
+    "boundary": "Test-only local HTTP service and synthetic owner injected via existing port. No production credential, persisted ORG backend, real session issuer, grant, route registration, UI render, PG, or independent authority."
+  },
+  "blockers": [
+    "No source owner approval recorded on PR31/47/49/54; shared manifest central single writer HOLD.",
+    "Reviewed dependency lock/full checkout absent; installed Python requirements differ; full build/C07/C08/IV remain HOLD/NOT_RUN.",
+    "Actual Runtime DB reader not run; owner-bound real ORG endpoint absent; no causal join."
+  ],
+  "progress": {
+    "new_product_paths": 0,
+    "new_tests": 8,
+    "canonical_source_delta": 0,
+    "acceptance": {
+      "ui": [
+        21,
+        40
+      ],
+      "core": [
+        12,
+        16
+      ],
+      "w8": [
+        3,
+        8
+      ],
+      "mvp": [
+        0,
+        11
+      ],
+      "iv": [
+        0,
+        7
+      ]
+    },
+    "weighted": null,
+    "ordinal_delta": 0
+  },
+  "next": "MI-P0 review exact 18 UI deltas and existing 560 proposal against current PR31, with 542 inherited records; rebind in designated central integration branch only after source-owner signoff. MI03/04 and 03API supply independently verified scoped owner composition and real ORG endpoint; NW07 actual persisted Runtime reader and same-plan binding. No new feature candidate.",
+  "rollback": "ordinary revert of this evidence-only commit; original product and prior manifests unchanged"
+}
