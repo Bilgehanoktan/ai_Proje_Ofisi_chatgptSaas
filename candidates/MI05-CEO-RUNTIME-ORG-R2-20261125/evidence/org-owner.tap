@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: positive exact owner scope and revision crosses real HTTP and preserves all deny boundaries
+ok 1 - positive exact owner scope and revision crosses real HTTP and preserves all deny boundaries
+  ---
+  duration_ms: 37.127774
+  type: 'test'
+  ...
+# Subtest: different tenant with otherwise valid projection cannot cross owner boundary
+ok 2 - different tenant with otherwise valid projection cannot cross owner boundary
+  ---
+  duration_ms: 4.505258
+  type: 'test'
+  ...
+# Subtest: different company with otherwise valid projection cannot cross owner boundary
+ok 3 - different company with otherwise valid projection cannot cross owner boundary
+  ---
+  duration_ms: 3.518051
+  type: 'test'
+  ...
+# Subtest: different environment with otherwise valid projection cannot cross owner boundary
+ok 4 - different environment with otherwise valid projection cannot cross owner boundary
+  ---
+  duration_ms: 3.67008
+  type: 'test'
+  ...
+# Subtest: different revision with otherwise valid projection cannot cross owner boundary
+ok 5 - different revision with otherwise valid projection cannot cross owner boundary
+  ---
+  duration_ms: 2.863735
+  type: 'test'
+  ...
+# Subtest: authority escalation in backend response rejected
+ok 6 - authority escalation in backend response rejected
+  ---
+  duration_ms: 2.994923
+  type: 'test'
+  ...
+# Subtest: existing product route stays ownerless even when test owner seam is available
+ok 7 - existing product route stays ownerless even when test owner seam is available
+  ---
+  duration_ms: 0.476648
+  type: 'test'
+  ...
+# Subtest: client Authorization cannot replace the owner and triggers no network
+ok 8 - client Authorization cannot replace the owner and triggers no network
+  ---
+  duration_ms: 0.441946
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 153.785983
