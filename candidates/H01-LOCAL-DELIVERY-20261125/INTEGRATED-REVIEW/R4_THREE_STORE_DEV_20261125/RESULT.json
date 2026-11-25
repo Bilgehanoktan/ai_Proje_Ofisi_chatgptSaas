@@ -1,0 +1,181 @@
+{
+  "task": "H01-MI-P0-R4-THREE-STORE-CURRENT-DEV-20261125",
+  "classification": "CURRENT_R4_REAL_D0_WRITER_AND_THREE_SQLITE_STORE_READBACK_PASS_NOT_ORIGINAL_G7_OR_ACCEPTANCE",
+  "source_commit": "1ac127144515496dd7e70d940c76a3122a4a0570",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "handover_parent": "4513ac7009613bd14c288ff18f56834d4907bd0e",
+  "integrity": {
+    "source_tree": "78593080158f644114c6ce2739a985ba1fde8217",
+    "product_tree": "2440b9e2d3f513f2789feb634066655847101828",
+    "manifest_blob": "3de94145197137fb60506fc05dfa23bbee00c208",
+    "archive_sha256": "12c5cd95db0d2037441e854f6664baa773af8e5f027e6f713f8b5723b5a40705",
+    "post_test_source_bytes": [
+      1915,
+      1915
+    ],
+    "manifest_sha256_matches": [
+      583,
+      583
+    ],
+    "original_git_checkout": false
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "flags": "-B -S, env -i, PYTHONPATH=.:tests",
+    "no_third_party_packages": true
+  },
+  "pins": {
+    "tests/test_iam_org_d5g5.py": {
+      "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
+    },
+    "tests/test_core_org_session_sqlite_d5g7.py": {
+      "blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e"
+    },
+    "tests/test_pinned_research_t1_0225.py": {
+      "blob": "5e57e7f49f4b8767aeeb4530ca6469b865849650",
+      "sha256": "7a6371c41539317863bb4dfa674514d53b76f08baf7a41a7c6d2c6fcfef61ac5"
+    },
+    "tests/test_research_t1_integration_0225.py": {
+      "blob": "0c0eb3b3d9b762f959bbec678af2832e65ba2553",
+      "sha256": "d4a8aedded72b54217095310518a49567161a9a82057a2d0b99d93c034cb9c2f"
+    },
+    "tests/test_research_company_snapshot_0224.py": {
+      "blob": "d51dca6c425a40d196390361e071d02026d1f548",
+      "sha256": "1ecfd81ed079d4ccd90bde3c75f256845ad2ac3896b6ea0f78f05a36353e2a23"
+    },
+    "app/core/transaction/core_org_session_review.py": {
+      "blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae"
+    },
+    "app/core/transaction/intent_authority.py": {
+      "blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+      "sha256": "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    },
+    "app/core/transaction/org_membership_review.py": {
+      "blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
+    },
+    "app/core/agent_runtime/scheduler_review.py": {
+      "blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+    },
+    "app/core/iam_session.py": {
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
+    },
+    "app/core/development_review/research_slice.py": {
+      "blob": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+      "sha256": "6b0793a9a81ef03cb45ff04fb964b2e394b5ebcbad89c19572e5f03dc23cb461"
+    },
+    "org_core_bridge.py": {
+      "blob": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+      "sha256": "be0a90ab3a68639961d0cf392d01c07d353fdfc3066ea02bde751dcf2bdac614"
+    },
+    "durable_ops.py": {
+      "blob": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "sha256": "8e0ea5e8f573339be13da88de4b982849dc44c9a67be6384795c51a45b8b10de"
+    }
+  },
+  "tests": {
+    "current_R4_original_component_methods": 31,
+    "iam_org_d5g5": 12,
+    "core_org_session_sqlite_d5g7_protocol": 19,
+    "new_current_three_store_methods": 6,
+    "new_test_pass": 6,
+    "total_this_round_final": 37,
+    "fail_final": 0,
+    "initial_harness_error": "6 setup errors caused by wrong .iam.sqlite suffix; changed test path to .authority.sqlite only; source unchanged; initial log retained, not counted as product failures or extra passes."
+  },
+  "functional_result": "Original pinned 0225 writer from QUEUED through ADMITTED/RUNNING/VERIFYING root (3 actual persisted events). Same existing Core history reader, product OperationsStore and durable D0 IAM session match on each prefix for still-queued research task; all remain HOLD; no claim or mutation during review, three DB dumps unchanged. Core member/audit tamper, latest member drift, ORG head drift and revoked session all fail closed. No cross-store atomicity, independent issuer, signed result, grant, dispatch or PG proof. No additional runtime code.",
+  "conflicts": {
+    "open_prs": 44,
+    "relevant_heads_unchanged": true,
+    "reviews_no_approval": [
+      19,
+      31,
+      46,
+      47,
+      49,
+      50,
+      51,
+      52,
+      54
+    ],
+    "PR50_PR51": "comments only",
+    "PR31_PR46": "authority wrapper variants b28788f46a39c282d79d29c4abd817ed5fc9de99 vs d492c6d3ea99214e28c0fa4e772139169bd39a17; PR46 session scope binding not transferred",
+    "PR19_PR54": "G7 historical scheduler f354ee1fdceca013ad6cf32fdea7c41001794083 vs current R4 eb3e283e3406996254283595e14711e90b2bca8c; no repinning",
+    "PR52": "dependency/runtime/security/license review HOLD"
+  },
+  "blockers": {
+    "original_IAM_wrapper_12": "NOT_RUN: signed fixture and reviewed crypto environment, owner exact PR46",
+    "original_G7_7": "NOT_RUN: original runner requires exact PR19 clean git, 56 source pins, reviewed crypto; current test is separate",
+    "original_API_9": "NOT_RUN: FastAPI/Starlette/httpx approved lock, PR47 original source",
+    "MVP11": "0/11; remaining acceptance criteria not test count",
+    "W8": "C07 HOLD, C08 NOT_RUN, C05 HOLD",
+    "PG_IV": "HOLD independent custody/issuer/sink/PG and IV; known D04 joint restore residual",
+    "full_design_master": "Relevant R03/R08/R10 and 0225 reviewed, full master addenda not completed"
+  },
+  "progress": {
+    "canonical_files": [
+      553,
+      553
+    ],
+    "archive_files": [
+      584,
+      584
+    ],
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "w8": [
+      3,
+      8
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "iv": [
+      0,
+      7
+    ],
+    "weighted": null,
+    "ordinal_delta": 0,
+    "new_product_code": 0,
+    "local_integration_gain": "Current R4 actual three-store historical structural readback, 6 new methods"
+  },
+  "next": "Owner dispositions PR46 authority/PR19 historical scheduler/PR50/51 MIME and C50/R9 dependency security/license; original signed IAM12 G7 7 API9 exact checkouts and reviewed locks, then MVP and W8 C07/C08/IV. No further duplicate tests replacing original gates.",
+  "rollback": "Evidence-only handover normal revert; local test harness outside product, all source bytes unchanged; remove temporary test data.",
+  "files": {
+    "current_r4_three_store.py": {
+      "bytes": 7133,
+      "sha256": "a698a2e330bcc43d0a3404e4599a3ce170e3225266c3c03be8bbc0f1ac928d79",
+      "git_blob": "a33db3180e3b2f077176ea504bb9dce8baa1b698"
+    },
+    "iam-org-r4.log": {
+      "bytes": 3568,
+      "sha256": "d9c40a3a4fbbd79e7c3533f1bd8da03fd9128a7153ec22472ade3cd1d1ea2662",
+      "git_blob": "f7c6ca45097cc21958087bcac3502954a135ea89"
+    },
+    "three-store-initial-path-error.log": {
+      "bytes": 10927,
+      "sha256": "b027c0147d64c7171b959c0023d19d25a7d3ccaa19535255a090299234b908a6",
+      "git_blob": "760559d10a1bce475761171a2a0a4fd1c6d57b7e"
+    },
+    "three-store.log": {
+      "bytes": 672,
+      "sha256": "cde0556318685bb131f5ceab61396730c38887360543c62d1ca4477585243d81",
+      "git_blob": "c1fe98ed446ff64f8467d8b8b2d45f0dbb4dd553"
+    }
+  }
+}
