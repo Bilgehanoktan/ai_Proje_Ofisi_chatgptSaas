@@ -1,0 +1,64 @@
+{
+  "task": "MI03-NW02-R6-G2-REQUALIFICATION-20261126",
+  "classification": "EXACT_R6_D0_STDLIB_DURABLE_IAM_REGRESSION_ONLY",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "578ef7cab2df7668283704e0a7650b886b94c852",
+  "source_tree": "d4150875db536143d578aa4183d6ea0314ef109b",
+  "manifest": "d344a2c2651632103599f1c739e65bf98ecf80cb",
+  "pr46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+  "open_pr_count": 44,
+  "exact_pins": {
+    "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+    "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "app/core/iam_session.py": "f3c37428acd475e09c228bce47d534d6584cd944",
+    "app/core/transaction/intent_authority.py": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+    "tests/test_iam_authority_d5g2.py": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+  },
+  "verification": "6/6 git blob; 6/6 manifest size and SHA256",
+  "environment": "Linux CPython 3.13.5 SQLite 3.46.1; python -S; no third-party dependencies loaded or installed",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python -S -m unittest discover -s tests -p test_iam_authority_d5g2.py -v",
+  "result": {
+    "exit": 0,
+    "pass": 19,
+    "fail": 0,
+    "skip": 0
+  },
+  "raw_log": {
+    "blob": "d5a900550377b4faa8de87ad1d9bcced45768ee2",
+    "bytes": 2469,
+    "sha256": "99790984c7106fb1471c7378cf578f7eb5d055d014971cddc0bc703b5d364a83"
+  },
+  "local_zip": {
+    "bytes": 12358,
+    "sha256": "525bcd3598cb81599941d0c56ac186094c008512eb8a7ca282eb380bdefa9856",
+    "full_product_archive": false
+  },
+  "scope": "Existing D0 durable IAM original G2 methods on R6 altered authority source, not previous PR19/50-method CI or 12 wrapper tests. No new code, source promotion, runtime policy, API, DB schema or independent acceptance. Prior evidence preserved.",
+  "gates": {
+    "owner": "HOLD: PR46 remains draft, no submitted review",
+    "G2_R6_durable": "19/19 PASS scoped",
+    "IAM_T1_wrapper": "0/12 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "API": "0/9 NOT_RUN",
+    "C50_R9": "HOLD",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "restore_replay": "OPEN independent root and sink fence required"
+  },
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "MI03/04 review exact R6 authority variant and original 12 wrapper tests with approved crypto/full checkout; MI01 and dependency owner resolve C50/R9; PR44 exact original PR19 G7 checkout; owner reconciliation before product transfer",
+  "rollback": "normal revert evidence commit; no source changes"
+}
