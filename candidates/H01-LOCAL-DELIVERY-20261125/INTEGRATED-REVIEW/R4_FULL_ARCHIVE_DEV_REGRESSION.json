@@ -1,0 +1,97 @@
+{
+  "task": "H01-MI-P0-R4-FULL-ARCHIVE-DEV-REGRESSION-20261125",
+  "classification": "EXACT_FULL_ARCHIVE_LOCAL_D0_SQLITE_AND_WRITER_REPLAY_NOT_ACCEPTANCE",
+  "source_commit": "1ac127144515496dd7e70d940c76a3122a4a0570",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "1d959ce8b07223533cff56ec1fb0910b639c5639",
+  "integrity": {
+    "archive_sha256": "12c5cd95db0d2037441e854f6664baa773af8e5f027e6f713f8b5723b5a40705",
+    "archive_bytes": 6402755,
+    "source_tree": "78593080158f644114c6ce2739a985ba1fde8217",
+    "product_tree": "2440b9e2d3f513f2789feb634066655847101828",
+    "manifest_blob": "3de94145197137fb60506fc05dfa23bbee00c208",
+    "source_blobs": 1915,
+    "manifest_entries": 583,
+    "product_files": 584,
+    "post_test_byte_matches": 1915,
+    "status": "PASS",
+    "original_git_checkout": false
+  },
+  "environment": "CPython 3.13.5, SQLite 3.46.1, -B -S, isolated clean environment, no third-party imports or install",
+  "tests": [
+    {
+      "group": "test_research_t1_integration_0225 test_pinned_research_t1_0225",
+      "pass": 20,
+      "total": 20,
+      "exit": 0,
+      "log_sha256": "e560bf46abb5f2093ce6185f4ac08658c30f01d1a4e0899f906fdd0a92d5e5e0"
+    },
+    {
+      "group": "test_transition_mapping_0194 test_admission_mapping_0195 test_lifecycle_mapping_0196",
+      "pass": 80,
+      "total": 80,
+      "exit": 0,
+      "log_sha256": "e073d716e73feb6f215e3703f8f4e24ad7624864166f19ad12d8c4ca2e2c5eca"
+    },
+    {
+      "group": "writer_readback_r4.py",
+      "pass": 2,
+      "total": 2,
+      "exit": 0,
+      "log_sha256": "7e6320b96362bb5403d3c865ea76c8e2cb3dde5628f0b2fd500d7b1c1dcf5efa",
+      "source_sha256": "ee7f9068666792c7b3edf7bad5edf5e35d7b38a768ab0a4b1a203b520a88d1c7",
+      "note": "Initial run discovered 26 repeated original methods; corrected import, 2 distinct methods only."
+    }
+  ],
+  "distinct_executed": 102,
+  "original_methods": 100,
+  "new_cross_integration_methods": 2,
+  "source_paths_recovery": "All 26 previously missing R6 paths available in independently verified archive; current R4 not historical lock rebinding.",
+  "runtime": "Research root VERIFYING; separate fixed 0196L persisted prefix v1-4 exact readback and historical shared replay; terminal FAILED v5 releases 20 synthetic minor units; tampered audit denied; no actual dispatch/authority",
+  "evidence_archive": {
+    "name": "AIOS_R4_DEV_REGRESSION_EVIDENCE_20261125.zip",
+    "bytes": 6269,
+    "sha256": "12d52f736a81709e10e6e8979c112ec3c05aaab56cc94a2926bbc8084687ddf9",
+    "git_blob_if_uploaded": "a8bd3080ebf247af62fc6fb838ec9c69ea5ae891",
+    "raw_zip_location": "conversation attachment; binary not uploaded in this commit"
+  },
+  "conflict": "44 open PRs unchanged; PR31/46 authority conflict; G7/ORG06 scheduler pins differ; PR52 C50/R9 dependency/security HOLD",
+  "remaining": "12 IAM, 7 G7, 9 API, 11 MVP NOT_RUN; historical Git checkout required for pinned runners; reviewed C50/R9 absent, strict PG and owner/independent Security HOLD; full Design Master addenda incomplete; C07 HOLD, C08 NOT_RUN, C05 HOLD",
+  "progress": {
+    "canonical": [
+      553,
+      553
+    ],
+    "archive": [
+      584,
+      584
+    ],
+    "core": [
+      12,
+      16
+    ],
+    "ui": [
+      21,
+      40
+    ],
+    "w8": [
+      3,
+      8
+    ],
+    "mvp": [
+      0,
+      11
+    ],
+    "iv": [
+      0,
+      7
+    ],
+    "acceptance_delta_pp": 0,
+    "ordinal_delta": 0,
+    "weighted": null,
+    "new_product_code": 0
+  },
+  "rollback": "Normal revert evidence-only commit; source/manifest/owner branches unchanged"
+}
