@@ -294,5 +294,108 @@
       }
     ],
     "limits": "No external dependency, SQL consumer, signed Memory, API, UI build or full product execution. Same 30 previous subset included; do not sum 30+53."
+  },
+  "r2": {
+    "task": "H01-MI-P0-NW05-FOUR-PROXY-CLOSURE-20261125",
+    "classification": "ARCHIVAL_SOURCE_COMPOSITION_ONLY_OWNER_HOLD",
+    "parent": "8771bb192909ebe948e9bf7eeef9f79d2c29b978",
+    "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "snapshot": {
+      "previous_tree": "65082253500682d8039824c7992287d9af1eb466",
+      "tree": "e8ee23e8a2c17098a801e1ecabcfc62085743a64",
+      "product_tree": "23852e9074a15334b264a070086c56ccb0fad42a",
+      "manifest_blob": "0a91f1a9b3da248535783517e0220e504f9e7f0a",
+      "product_files": 583,
+      "manifest_entries": 582,
+      "readback": "582/582 expected path, size, mode, Git blob and inherited digest pins; NOT all raw byte SHA256 rehashed",
+      "total_repo_blobs": 1914,
+      "retained_product_blobs": 579
+    },
+    "owner_refs": {
+      "PR50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+      "PR51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+      "PR49": "5264c9fdc9f9a62cf9f9328e0fa88c2aa7225f76"
+    },
+    "changes": [
+      {
+        "path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+        "before": "ae42ecccdda987c00537696f2698f49c374ec927",
+        "after": "75691925ab0cd294b878831a3210f101630320ca",
+        "bytes": 2191,
+        "sha256": "eba48b58f9fc12e12f3f2aabeac33b557c75f7494f2bfd79e8ccfefce2dc723f"
+      },
+      {
+        "path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+        "before": "a1ff4a1690a0b113aa882de633e063c02f9535a4",
+        "after": "b19455b413e4cf706ba8c15b5d065def91b0537b",
+        "bytes": 1904,
+        "sha256": "0356dac780530cb9c93c17e35219f2e37cb40a0a29076a64dc886a401eec52e9"
+      },
+      {
+        "path": "product/ai-company-os-frontend/tests/four-proxy-mime-integration.cjs",
+        "before": null,
+        "after": "ca2de86ac69da40c188ca8a3e1504a3749860762",
+        "bytes": 1524,
+        "sha256": "b11cb4c17bc44758da1c6c3881a2f7860138e8dc8668a700928f5013318e1ac2"
+      }
+    ],
+    "test": {
+      "runtime": "Node 22.16.0 / global tsc 5.8.3 strict ES2022 commonjs; ambient process.env declaration only; no package install or real network",
+      "scope": "10 source files and 3 exact original tests + new test, actual parsers, mocked transport, real Response/Headers",
+      "original_git_pins": 13,
+      "unchanged_manifest_pin_checks": 11,
+      "baseline": "8/20 PASS, 12 FAIL, exit 1 on PR50/51 exact split-token versions",
+      "candidate": {
+        "deadline": 27,
+        "wallclock": 5,
+        "office": 9,
+        "mime_cross_route": 20,
+        "total": 61,
+        "pass": 61,
+        "fail": 0
+      },
+      "timer_ms": {
+        "admission_fetch": 2529,
+        "outbox_fetch": 2516,
+        "task_budget_fetch": 2504,
+        "stalled_body": 2511,
+        "stalled_cancel": 1
+      },
+      "compiler_exit": 0,
+      "baseline_compiler_exit": 0,
+      "raw_logs_gzip": {
+        "path": "proxy-r6-evidence.raw.json.gz",
+        "blob": "726a675fe324031ce1648f7ff1d5b79a7190925a",
+        "sha256": "daedb7997cfd11660c308c0828908c9a3c4c1bd8225b322c13e92a59d904ec45"
+      },
+      "unique_new_test_methods": 20,
+      "prior_credit": 0,
+      "semantic_overlap": "Prior R6 focused MIME probes not counted as new acceptance; 41 original regressions first run in this exact combined R6 source slice."
+    },
+    "conflict": {
+      "open_PRs": 44,
+      "previous_full_inventory": "reuse prior exact inventory; current relevant heads checked; UI PR49 moved twice with archival candidate/evidence additions only, no product change",
+      "mime": "Existing PR50 and PR51 alternatives remain open; exact prior R6 variants selected only inside archival review snapshot, not owner path or shared product write. R6 stricter optional single UTF-8 charset policy rejects other valid parameters; owner ratification required.",
+      "api": "Historical PR2/3 demo.py blob 679694d58f289d0cb763080467c16fb0e470e38c is older narrower endpoint set; current canonical 4d80172bc467953039ff57296055f68d740a3ff2 and PR47 32a1bac1336dfd9ed625d74a59c01cb92baf303a retain modern included routers. No competing modern replacement seen among these three. Source-owner decision and 9 actual TestClient tests still HOLD.",
+      "iam": "PR31 b28788f46a39c282d79d29c4abd817ed5fc9de99 vs PR46 d492c6d3ea99214e28c0fa4e772139169bd39a17; exact additional wrapper session_check requires 12 original tests and owner/security review. No transfer."
+    },
+    "environment": "Installed runtime metadata: cryptography 46.0.4 vs required reviewed C50; fastapi 0.128.2, starlette 0.50.0, httpx 0.28.1, pydantic 2.13.5, anyio 4.13.0, psycopg missing. Not approved R9/C50 environment. No imports/tests with those dependencies.",
+    "progress": {
+      "archival_product": [
+        582,
+        583
+      ],
+      "canonical_product": [
+        553,
+        553
+      ],
+      "acceptance_delta": 0,
+      "weighted": "HESAPLANAMADI",
+      "ordinal_delta": 0
+    },
+    "rollback": "Normal revert archival commit only; exact original source-owner branches and R1 tree preserved. No CI/main/deploy, grant, external effect or policy changes.",
+    "next": "MI05/MI10 review strict MIME source and scoped evidence; MI03/04 PR46 12 IAM + G7 7, 03API PR47 9 + 11 MVP on approved actual checkout; independent dependency review, signed Memory then W8 C07 C08 C05."
   }
 }

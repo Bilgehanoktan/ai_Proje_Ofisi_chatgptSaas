@@ -1,6 +1,6 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "H01-MI-P0-INTEGRATED-REVIEW-SNAPSHOT-20261125",
+  "doc_revision": "H01-MI-P0-INTEGRATED-REVIEW-R2-20261125",
   "status": "ARCHIVAL_REVIEW_ONLY_OWNER_SECURITY_DEPENDENCY_HOLD_NOT_EXECUTION_APPROVED",
   "parent_candidate_sha256": null,
   "parent_git_commit": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
@@ -1219,8 +1219,8 @@
       "sha256": "1b8f2a4c28c37c867a02ecadb4b51e5c905a9dc66b8189d2acd0bbedfe555769"
     },
     "ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
-      "bytes": 2114,
-      "sha256": "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa"
+      "bytes": 2191,
+      "sha256": "eba48b58f9fc12e12f3f2aabeac33b557c75f7494f2bfd79e8ccfefce2dc723f"
     },
     "ai-company-os-frontend/app/api/demo/organization/route.ts": {
       "bytes": 527,
@@ -1655,8 +1655,8 @@
       "sha256": "396fa72faf5af310c3dd3f45afe01181ecfa823e638ffa8d804b3d36601bf44c"
     },
     "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": {
-      "bytes": 1827,
-      "sha256": "22ad73c2b74d400e251e779fe1d66e25be54031ca7890af9524a6b66deeaeb5a"
+      "bytes": 1904,
+      "sha256": "0356dac780530cb9c93c17e35219f2e37cb40a0a29076a64dc886a401eec52e9"
     },
     "ai-company-os-frontend/features/mvp/studioContext.ts": {
       "bytes": 2603,
@@ -2021,6 +2021,10 @@
     "ai-company-os-frontend/tests/finance-model.test.cjs": {
       "bytes": 3128,
       "sha256": "364d6a284e7ef72cde035130c4056983b5d65001760936e92538a5e44009d18d"
+    },
+    "ai-company-os-frontend/tests/four-proxy-mime-integration.cjs": {
+      "bytes": 1524,
+      "sha256": "b11cb4c17bc44758da1c6c3881a2f7860138e8dc8668a700928f5013318e1ac2"
     },
     "ai-company-os-frontend/tests/gallery-camera.test.cjs": {
       "bytes": 1840,
@@ -2393,5 +2397,33 @@
       "R9/C50 security/license/native review"
     ],
     "test_scope": "30/30 local stdlib exact 19-file slice only; not full product"
+  },
+  "previous_archival_manifest_blob": "d188d88585b135dcda6c0453962a6b41f4455ef7",
+  "h01_proxy_r6_20261125": {
+    "parent_archival_commit": "8771bb192909ebe948e9bf7eeef9f79d2c29b978",
+    "parent_product_tree": "c050374aaeb2f8ccc61c86f32a0de16ae986db49",
+    "source_owner_refs": {
+      "PR50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+      "PR51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d"
+    },
+    "strict_mime_contract": "application/json with optional one UTF-8 charset only; owner compatibility ratification HOLD",
+    "product_files": 583,
+    "manifest_entries": 582,
+    "source_owner_review": "HOLD",
+    "scoped_test": "61/61 local four-proxy route suite, mocked transport; 41 original and 20 route-level boundary checks",
+    "delta": [
+      {
+        "path": "ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+        "blob": "75691925ab0cd294b878831a3210f101630320ca"
+      },
+      {
+        "path": "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+        "blob": "b19455b413e4cf706ba8c15b5d065def91b0537b"
+      },
+      {
+        "path": "ai-company-os-frontend/tests/four-proxy-mime-integration.cjs",
+        "blob": "ca2de86ac69da40c188ca8a3e1504a3749860762"
+      }
+    ]
   }
 }

@@ -21,7 +21,7 @@ export async function readBoundedD0Json(
   const response = await beforeDeadline(fetch(endpoint, {
     method:'GET',cache:'no-store',redirect:'error',signal,headers:{Accept:'application/json'},
   }), signal);
-  if (!response.ok || !response.headers.get('content-type')?.startsWith('application/json') || !response.body)
+  if (!response.ok || !/^[\t ]*application\/json[\t ]*(?:;[\t ]*charset[\t ]*=[\t ]*(?:utf-8|"utf-8")[\t ]*)?(?![\s\S])/i.test(response.headers.get('content-type')??'') || !response.body)
     throw Error('response');
   const reader = response.body.getReader();
   const decoder = new TextDecoder('utf-8', {fatal:true});
