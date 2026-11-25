@@ -1,0 +1,62 @@
+{
+  "revision": "0198-UL",
+  "parents": [
+    "0bcfd8d4cdcd8ef5f5af3af85f0b34f9b68ea841",
+    "a7c4f417faf17959e3165193aa247815954bfa42"
+  ],
+  "source_commit": "3e34c178796e247559259ae2733e5bdb70e633f7",
+  "product_additions": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+      "git_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+      "bytes": 18997,
+      "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+      "git_blob": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+      "bytes": 14286,
+      "sha256": "083fc5fa1e391eef4e7f6b7fb51ed453bc4f33b933a3f963e2428b03cbd18bdd"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py",
+      "git_blob": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b",
+      "bytes": 8750,
+      "sha256": "38fd8dbe7ed0f9f6ff4ab90bc3c59c67ace3593ce4ff9555b71e1601bbf20f84"
+    }
+  ],
+  "database_candidate": {
+    "path": "database/0196L/candidate_lease_settlement.sql",
+    "git_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+    "tables": [
+      "run_lease_renewals",
+      "sample_settlements"
+    ],
+    "status": "NOT_APPLIED"
+  },
+  "symbols": "catalog/revisions/TECHNICAL_CATALOG_0196_L.json",
+  "runner_changes": [
+    {
+      "path": "tests/integration/w8_unified.py",
+      "symbols": [
+        "DATABASE_FIXTURES",
+        "MANIFEST_BLOB",
+        "verify_aux",
+        "prepare"
+      ],
+      "why": "pin new source union and stage lifecycle fixture"
+    },
+    {
+      "path": "tests/integration/launch_w8_unified.py",
+      "symbols": [
+        "launch"
+      ],
+      "why": "require explicit reviewed digest instead of old manifest approval"
+    }
+  ],
+  "api_changes": [],
+  "dependency_changes": [],
+  "frontend_changes": [],
+  "test_status": "NOT_RUN",
+  "maintenance": "docs/0198-UL/ARCHITECTURE_AND_CATALOG.md"
+}

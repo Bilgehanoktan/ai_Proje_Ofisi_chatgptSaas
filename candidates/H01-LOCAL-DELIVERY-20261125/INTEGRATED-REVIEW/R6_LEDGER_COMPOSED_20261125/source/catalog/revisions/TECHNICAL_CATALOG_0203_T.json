@@ -1,0 +1,176 @@
+{
+  "revision": "0203-T",
+  "parent": "d6c27d5f3ce9ff29cdf42108510a21c277006ebd",
+  "source": "2d900ac58ca49e061ba07c7cbd56a93f27513bde",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "bytes": 3394,
+      "sha256": "63cdda83e4b6430278a020bd2728b0a65e192bf01cc487f4e98917f207969b65",
+      "blob": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+      "status": "modified"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "bytes": 8523,
+      "sha256": "86835d29aab941370a914518c892d91d4ba8b3742ff8772698e56b009b8b07a0",
+      "blob": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+      "status": "modified"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "bytes": 8011,
+      "sha256": "8aed120d971f3fe3e33e93d3c8e521ed90a7b397314f1fb6f0c0a80dabb439f5",
+      "blob": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+      "status": "modified"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+      "bytes": 7640,
+      "sha256": "7b4767f61e78d256750ec82364a0a2fbc6d0c1dc21a874709764df4c174471ff",
+      "blob": "3108a4ba72d999984502e2687a4e6589b079df1d",
+      "status": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_0203.py",
+      "bytes": 7611,
+      "sha256": "ffeef3d5bc67d4a75ce4c42fddfa533dac23ee36eb7a55efdfd28f5637dc6694",
+      "blob": "92c642c907f2a45d31ad9cae23b976c9347130c1",
+      "status": "added"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+      "bytes": 6939,
+      "sha256": "af69858bd268938c77ec1477f46c4b52d6b5c783ef80ead8ecf22179d08bd5a2",
+      "blob": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+      "status": "added"
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "bytes": 1031,
+      "sha256": "a2528a52bb15d0cacde8f7f1de2526b20cf8bb3a682f204539f1fffe56421b56",
+      "blob": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "status": "added"
+    }
+  ],
+  "modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+      "classes": [
+        "TerminalAnchor",
+        "TerminalAnchorMapping"
+      ],
+      "functions": [
+        "_sha",
+        "_valid",
+        "anchor_from_pin",
+        "_exact",
+        "_terminal_rows",
+        "verify_anchor",
+        "write_anchor",
+        "verify_plan_anchors",
+        "TerminalAnchor.row",
+        "TerminalAnchorMapping.__init__",
+        "TerminalAnchorMapping.lock_and_validate",
+        "TerminalAnchorMapping.write_role",
+        "TerminalAnchorMapping.verify_write_set"
+      ],
+      "dependencies": [
+        "retained_history",
+        "history_readback.LifecyclePin",
+        "postgres_lifecycle_mapping.D0PostgresLifecycleMapping",
+        "postgres_transition_mapping.transaction_ref",
+        "transaction.review.Operation"
+      ],
+      "errors": [
+        "D0_ANCHOR_TERMINAL_ONLY",
+        "D0_ANCHOR_SCOPE_HOLD",
+        "D0_ANCHOR_FORMAT_HOLD",
+        "D0_ANCHOR_ROW_HOLD",
+        "D0_ANCHOR_REUSE_HOLD",
+        "D0_ANCHOR_ARCHIVE_HOLD",
+        "D0_ANCHOR_INTENT_HOLD",
+        "D0_ANCHOR_RECEIPT_HOLD",
+        "D0_ANCHOR_PLAN_HOLD",
+        "D0_ANCHOR_COMMAND_LIMIT",
+        "D0_ANCHOR_EXTRA_HOLD",
+        "D0_ANCHOR_PLAN_SET_HOLD"
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "functions": [
+        "read_plan_snapshot"
+      ],
+      "change": "opt-in require_terminal_anchors; same cursor verify_plan_anchors"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "classes": [
+        "RetainedReview"
+      ],
+      "functions": [
+        "review_retained_snapshot"
+      ],
+      "change": "strict propagation; atomic_anchor_match"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "classes": [
+        "SignedReview"
+      ],
+      "functions": [
+        "review_signed_snapshot"
+      ],
+      "change": "strict propagation; atomic_anchor_match required if selected"
+    }
+  ],
+  "database": [
+    {
+      "table": "t1_candidate.terminal_command_anchors",
+      "ddl": "database/0203T/terminal_command_anchors.sql",
+      "pk": [
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "run_id"
+      ],
+      "unique": [
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "transaction_ref"
+      ],
+      "foreign_keys": [
+        "run_mutations(scope,run_id,version)",
+        "sample_settlements(scope,run_id)"
+      ],
+      "scope": "D0 only; R03 HOLD"
+    }
+  ],
+  "api": [],
+  "new_events": [],
+  "new_dependencies": [],
+  "tests": {
+    "command": "PYTHONPATH=.:tests python -m unittest -v test_retained_history_0201 test_signed_history_0202 test_terminal_anchor_0203",
+    "pass": 54,
+    "fail": 0,
+    "new_actual_sqlite": 12,
+    "new_strict_mock": 3,
+    "prior_archive_regression": 14,
+    "prior_signature_regression": 25,
+    "prior_signature_mock_underlying": 6,
+    "static_compile_changed_python": 6,
+    "log_sha256": "dc57618a8377b5a8582ca9a354d8792964ace85f0b558ecc9871a22812e1c6e2"
+  },
+  "unexecuted": {
+    "new_lifecycle_integration": 7,
+    "prior_retained_integration": 5,
+    "prior_pg": 13,
+    "prior_selected_regression": 164,
+    "full_product": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "rollback": "Pin parent or revert 7 changed paths + manifest, keep history data; no production migration.",
+  "engineering_choices": "separate candidate table; opt-in strict path; pre-staged archive, postcommit signing; not normative."
+}

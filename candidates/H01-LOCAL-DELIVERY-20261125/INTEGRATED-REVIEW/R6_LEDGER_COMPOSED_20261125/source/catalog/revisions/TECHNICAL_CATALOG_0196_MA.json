@@ -1,0 +1,84 @@
+{
+  "revision": "0196-MA",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "blob": "c0fbed40fc09db7894e9c609bcff6d4c875d1376",
+      "bytes": 8405,
+      "sha256": "f80f3d64350f9c38f718ad4d1671e6ad0b69e8986a2a3a9f268bedb37b99da4f",
+      "symbols": [
+        "Snapshot",
+        "SnapshotPin",
+        "create_store",
+        "publish_snapshot",
+        "inspect_stored_memory",
+        "_encode",
+        "_decode",
+        "_head",
+        "_load"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "pathlib",
+        "contextlib",
+        "hashlib",
+        "json",
+        "memory_engine.retrieval",
+        "memory_engine.runtime_binding",
+        "knowledge_engine.provenance",
+        "agent_runtime.lifecycle"
+      ],
+      "database": "disposable snapshots(generation PK,digest,graph,metadata,raw); BEGIN IMMEDIATE CAS; no canonical migration",
+      "diagnosis": "CAS_HOLD: compare expected current generation/digests; MONOTONIC_HOLD: check same run/target, ACL revision, tombstone keys/sequence and epochs; READ_HOLD: check path, schema, bytes/digests. No blind retry."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+      "blob": "3d136ad8a06f5e21d074748e371a1ed614b0c276",
+      "bytes": 3373,
+      "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6",
+      "symbols": [
+        "InvocationEnvelope",
+        "invocation_digest",
+        "inspect_invocation"
+      ],
+      "dependencies": [
+        "agent_runtime.lifecycle",
+        "provider_contract",
+        "registry",
+        "hashlib",
+        "json"
+      ],
+      "diagnosis": "MODEL_RUN_REFERENCE_HOLD, MODEL_LEASE_HOLD, MODEL_INPUT_DIGEST_HOLD, MODEL_INVOCATION_DIGEST_HOLD: compare exact persisted references when available; all flags false."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "blob": "cb0e998ef084e90b8d357637b1e93fbe10861a80",
+      "bytes": 8077,
+      "sha256": "7592f7f1f9c41a55a8697c22cd5cd273907deeb4d41e78888c64c562425dcc98",
+      "symbols": [
+        "SnapshotStoreTests"
+      ],
+      "change": "15 actual SQLite fixture tests including two threads, rollback and read-only hash"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_model_invocation_0196.py",
+      "blob": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e",
+      "bytes": 4668,
+      "sha256": "fe1c62ba445f07185346009f2e4835bd5757815197288ef52cdf9b00f768bd0a",
+      "symbols": [
+        "ModelInvocationTests"
+      ],
+      "change": "9 model envelope tests"
+    }
+  ],
+  "http_endpoints_added": 0,
+  "external_dependencies_added": 0,
+  "canonical_db_migrations": 0,
+  "rollback": "Return to pinned 0194-M; discard only disposable synthetic DB; do not reset main or other branches.",
+  "limits": [
+    "15 real disposable SQLite tests (including actual two-thread race and rollback), not PostgreSQL concurrency.",
+    "Model invocation is structural review; no SDK, adapter execution, actual provider, tool, content release or cost.",
+    "No full regression/build/browser, production IAM, trusted reference authority or independent acceptance.",
+    "Logical tombstones do not physically erase historical raw fixture bytes. No external witness or anti-restore proof; reader snapshot may predate a subsequent writer."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "revision": "0226",
+  "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
+  "product_changes": [],
+  "files": [
+    {
+      "path": "scripts/preflight_mvp_0226.py",
+      "bytes": 7013,
+      "git_blob": "e4a0cf46c908bfe9c9df5e8772dd54f61bf6bf4a",
+      "sha256": "240d96499e5bc34ede19113c92f9b6e63f66e6f577e0a2a10f927f9c09b06187",
+      "functions": [
+        "read_safe",
+        "python_version",
+        "version_row",
+        "lock_status",
+        "inspect",
+        "main"
+      ],
+      "dependencies": [
+        "stdlib",
+        "scripts/verify_product.py"
+      ],
+      "api_changes": [],
+      "db_changes": [],
+      "test": "Actual partial source preflight exit 1 expected; no full source success exercised",
+      "rollback": "Revert tooling commit; no migration"
+    }
+  ],
+  "recovered_original": [
+    [
+      "test_transition_mapping_0194",
+      35
+    ],
+    [
+      "test_admission_mapping_0195",
+      19
+    ],
+    [
+      "test_lifecycle_mapping_0196",
+      26
+    ],
+    [
+      "test_history_readback_0198",
+      22
+    ],
+    [
+      "test_plan_history_review_0199",
+      26
+    ],
+    [
+      "test_retained_snapshot_0201",
+      5
+    ],
+    [
+      "test_terminal_anchor_lifecycle_0203",
+      7
+    ],
+    [
+      "test_lifecycle_projection_p02",
+      8
+    ],
+    [
+      "test_lifecycle_prefix_p03",
+      9
+    ],
+    [
+      "test_company_terminal_0212",
+      6
+    ],
+    [
+      "test_scheduled_admission_0220",
+      6
+    ],
+    [
+      "test_shared_snapshot_db_0223",
+      4
+    ]
+  ],
+  "maintenance": "docs/0226/LOCAL_ACCEPTANCE_RUNBOOK.md"
+}

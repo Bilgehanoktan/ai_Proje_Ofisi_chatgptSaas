@@ -1,0 +1,56 @@
+{
+  "revision": "0188-W8-S2",
+  "changes": [
+    {
+      "file": "test_atomic_sample.py",
+      "symbols": [
+        "AtomicTests.test_rollback",
+        "AtomicTests.test_scope_and_meta"
+      ],
+      "change": "closing + transaction context; original assertions retained"
+    },
+    {
+      "file": "test_sandbox_store.py",
+      "symbols": [
+        "TestWorkbench.test_rollback",
+        "PLAN"
+      ],
+      "change": "close test connection; explicit UTF-8"
+    },
+    {
+      "file": "test_development_review_0165.py",
+      "symbols": [
+        "RegistryPolicyTests.test_staging_*"
+      ],
+      "change": "close five in-memory handles"
+    },
+    {
+      "file": "test_runtime_binding_0157.py",
+      "symbols": [
+        "BindingTests.setUp",
+        "BindingTests.test_label_tamper_rejected"
+      ],
+      "change": "UTF-8 and digest tamper oracle"
+    },
+    {
+      "file": "test_office_workbench.py",
+      "symbols": [
+        "OfficeWorkbenchTests.test_symlink",
+        "OfficeWorkbenchTests.test_symlink_guard_no_db_open"
+      ],
+      "change": "real symlink skip only Windows 1314; guard checks SQLite not opened"
+    },
+    {
+      "file": "tests/integration/w8_local.py",
+      "symbols": [
+        "MANIFEST_BLOB"
+      ],
+      "change": "new manifest pin"
+    }
+  ],
+  "api_changes": 0,
+  "db_schema_changes": 0,
+  "dependency_changes": 0,
+  "diagnosis": "Inspect Windows rerun skips/errors; no bypass HOLD",
+  "rollback": "Prior immutable S1 source and stage retained; never mix manifest and source"
+}

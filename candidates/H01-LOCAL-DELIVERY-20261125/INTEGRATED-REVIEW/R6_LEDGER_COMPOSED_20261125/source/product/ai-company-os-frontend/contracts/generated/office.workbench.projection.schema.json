@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D0 office workbench projection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "mode",
+    "tenant",
+    "company",
+    "world_id",
+    "plan_digest",
+    "layout_revision",
+    "iv",
+    "release",
+    "freshness",
+    "dispatch_allowed",
+    "provider_called",
+    "spend_allowed",
+    "release_ready",
+    "real_run_count",
+    "geometry_join",
+    "sample_event_count",
+    "roles"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "office.workbench.v1-D0"
+    },
+    "mode": {
+      "const": "D0_OFFICE_WORKBENCH_0187"
+    },
+    "tenant": {
+      "const": "synthetic-tenant"
+    },
+    "company": {
+      "const": "synthetic-company"
+    },
+    "world_id": {
+      "const": "demo-world"
+    },
+    "plan_digest": {
+      "const": "6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9"
+    },
+    "layout_revision": {
+      "const": "draft-hybrid-floor-1"
+    },
+    "iv": {
+      "const": "HOLD"
+    },
+    "release": {
+      "const": "HOLD"
+    },
+    "freshness": {
+      "const": "HISTORICAL_SAMPLE"
+    },
+    "dispatch_allowed": {
+      "const": false
+    },
+    "provider_called": {
+      "const": false
+    },
+    "spend_allowed": {
+      "const": false
+    },
+    "release_ready": {
+      "const": false
+    },
+    "real_run_count": {
+      "const": null
+    },
+    "geometry_join": {
+      "const": "HOLD"
+    },
+    "sample_event_count": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "sample_event_count": {
+          "const": 0
+        },
+        "roles": {
+          "const": [
+            {
+              "role": "orchestrator",
+              "station_id": "station-orchestrator",
+              "observed": 0,
+              "total": 1
+            },
+            {
+              "role": "research",
+              "station_id": "station-research",
+              "observed": 0,
+              "total": 1
+            },
+            {
+              "role": "engineer",
+              "station_id": "station-engineer",
+              "observed": 0,
+              "total": 2
+            },
+            {
+              "role": "qa",
+              "station_id": "station-qa",
+              "observed": 0,
+              "total": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "sample_event_count": {
+          "const": 1
+        },
+        "roles": {
+          "const": [
+            {
+              "role": "orchestrator",
+              "station_id": "station-orchestrator",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "research",
+              "station_id": "station-research",
+              "observed": 0,
+              "total": 1
+            },
+            {
+              "role": "engineer",
+              "station_id": "station-engineer",
+              "observed": 0,
+              "total": 2
+            },
+            {
+              "role": "qa",
+              "station_id": "station-qa",
+              "observed": 0,
+              "total": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "sample_event_count": {
+          "const": 2
+        },
+        "roles": {
+          "const": [
+            {
+              "role": "orchestrator",
+              "station_id": "station-orchestrator",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "research",
+              "station_id": "station-research",
+              "observed": 0,
+              "total": 1
+            },
+            {
+              "role": "engineer",
+              "station_id": "station-engineer",
+              "observed": 1,
+              "total": 2
+            },
+            {
+              "role": "qa",
+              "station_id": "station-qa",
+              "observed": 0,
+              "total": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "sample_event_count": {
+          "const": 3
+        },
+        "roles": {
+          "const": [
+            {
+              "role": "orchestrator",
+              "station_id": "station-orchestrator",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "research",
+              "station_id": "station-research",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "engineer",
+              "station_id": "station-engineer",
+              "observed": 1,
+              "total": 2
+            },
+            {
+              "role": "qa",
+              "station_id": "station-qa",
+              "observed": 0,
+              "total": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "sample_event_count": {
+          "const": 4
+        },
+        "roles": {
+          "const": [
+            {
+              "role": "orchestrator",
+              "station_id": "station-orchestrator",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "research",
+              "station_id": "station-research",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "engineer",
+              "station_id": "station-engineer",
+              "observed": 2,
+              "total": 2
+            },
+            {
+              "role": "qa",
+              "station_id": "station-qa",
+              "observed": 0,
+              "total": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "properties": {
+        "sample_event_count": {
+          "const": 5
+        },
+        "roles": {
+          "const": [
+            {
+              "role": "orchestrator",
+              "station_id": "station-orchestrator",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "research",
+              "station_id": "station-research",
+              "observed": 1,
+              "total": 1
+            },
+            {
+              "role": "engineer",
+              "station_id": "station-engineer",
+              "observed": 2,
+              "total": 2
+            },
+            {
+              "role": "qa",
+              "station_id": "station-qa",
+              "observed": 1,
+              "total": 1
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

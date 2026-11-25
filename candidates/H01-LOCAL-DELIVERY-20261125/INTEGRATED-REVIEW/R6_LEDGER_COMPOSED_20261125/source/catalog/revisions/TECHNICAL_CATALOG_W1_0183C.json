@@ -1,0 +1,73 @@
+{
+  "revision": "W1-0183C",
+  "components": [
+    {
+      "path": "ai-company-os-frontend/design-system/navigationModel.ts",
+      "symbols": [
+        "NavItem",
+        "NavGroup",
+        "normalizeNav",
+        "groupNavigation",
+        "groups",
+        "aliases",
+        "own"
+      ],
+      "purpose": "Read-only filter and group existing canonical navigation; Turkish accent/dotless normalization, English aliases, AND terms, fallback group.",
+      "dependencies": [],
+      "maintenance": "Update display aliases only after checking canonical menu; unknown entries retained, never synthesize route. Check exact source order and case normalization."
+    },
+    {
+      "path": "ai-company-os-frontend/design-system/Navigation.tsx",
+      "symbols": [
+        "Navigation",
+        "toggleCompact",
+        "clearSearch",
+        "shortcut"
+      ],
+      "purpose": "Controlled search, compact mode, Ctrl/Cmd+K focus, Escape clear, canonical link /office, unchanged callback props. Ignores shortcut in other editable controls.",
+      "dependencies": [
+        "React",
+        "Next Link",
+        "navigationModel",
+        "Navigation.module.css"
+      ],
+      "maintenance": "Check focus effect and cleanup; inspect keyboard, IME, editable controls, current selection, responsive rail and route after build."
+    },
+    {
+      "path": "ai-company-os-frontend/design-system/Navigation.module.css",
+      "symbols": [
+        "root",
+        "tools",
+        "toggle",
+        "shortcut",
+        "search",
+        "searchRow",
+        "group",
+        "groupLabel",
+        "item",
+        "itemLabel",
+        "empty",
+        "nav"
+      ],
+      "purpose": "Scoped EDS styles, icon rail using :has, two-column mobile menu, native control focus and reduced motion.",
+      "dependencies": [
+        "EDS tokens",
+        "Dashboard .shell/.sidebar classes",
+        "CSS :has support"
+      ],
+      "maintenance": "Next CSS module compilation and browser verification required. In older browsers width may remain expanded; labels still accessible via aria-label."
+    },
+    {
+      "path": "ai-company-os-frontend/tests/navigation-model.test.cjs",
+      "symbols": [
+        "8 Node tests"
+      ],
+      "purpose": "Canonical thirteen entries, Turkish normalization, aliases, AND terms, whitespace, group search, unknown/prototype key handling, no mutation."
+    }
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "contract_changes": 0,
+  "dependency_changes": 0,
+  "rollback": "Revert four W1 source paths, regenerate destination manifest. Preserve independent branch changes and histories; never copy old manifest over newer branch."
+}

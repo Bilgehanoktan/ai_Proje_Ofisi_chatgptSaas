@@ -1,0 +1,104 @@
+{
+  "revision": "0201-R",
+  "parent": "b3813f2692da002d75b678ec8e7b522ca4f1ce6a",
+  "source": "1ebf6c195b0534d3356b94e51b8d4d4cd3340906",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "bytes": 8238,
+      "sha256": "4251703080dceac583517c91bd55f41aa142cd861705211d9675717c064419d3",
+      "blob": "0cf363f8f8961b8b135335bdc9d394aa93ca501f"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_history_0201.py",
+      "bytes": 3815,
+      "sha256": "8344ef8216421d038f9ceec8e7063da3ba880e37c1ec04159993ce9fdf5c263a",
+      "blob": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+      "bytes": 3163,
+      "sha256": "f8aa59af6f79868078b41d570f6a7bae00952b85550dc948159bb531f0f3c8e9",
+      "blob": "c9963f21766da435a00a18a5f49073ebe8603664"
+    }
+  ],
+  "modules": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "classes": [
+        "ReferenceReader",
+        "ReferenceStore",
+        "RetainedReview"
+      ],
+      "functions": [
+        "_encode",
+        "reference_bytes",
+        "digest",
+        "history_reference",
+        "review_retained_snapshot",
+        "ReferenceReader.__init__",
+        "ReferenceReader.read",
+        "ReferenceStore.__init__",
+        "ReferenceStore.put"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "hashlib",
+        "json",
+        "dataclasses",
+        "pathlib",
+        "importlib",
+        "app.core.event_store.postgres_snapshot",
+        "app.core.event_store.history_readback",
+        "app.core.transaction.postgres_lifecycle_mapping",
+        "app.core.transaction.postgres_transition_mapping"
+      ],
+      "errors": [
+        "D0_REFERENCE_DEPTH_HOLD",
+        "D0_REFERENCE_SIZE_HOLD",
+        "D0_REFERENCE_TYPE_HOLD",
+        "D0_REFERENCE_KIND_HOLD",
+        "D0_REFERENCE_DIGEST_HOLD",
+        "D0_REFERENCE_MISSING_OR_CORRUPT",
+        "D0_REFERENCE_COLLISION_HOLD",
+        "D0_REFERENCE_ENVELOPE_HOLD",
+        "D0_REFERENCE_ANCHORS_HOLD",
+        "D0_RETAINED_REFERENCE_HOLD",
+        "D0_RETAINED_READBACK_HOLD"
+      ],
+      "table": "local D0 SQLite reference_objects; no canonical T1 mapping",
+      "api": [],
+      "events": [],
+      "trace": [
+        "R01",
+        "R02",
+        "R03",
+        "R07",
+        "R09",
+        "R11",
+        "R12"
+      ],
+      "rollback": "Revert three source/test additions and manifest entries; retain archive data; pin parent."
+    }
+  ],
+  "tests": {
+    "archive": {
+      "pass": 14,
+      "scope": "actual local SQLite/unit"
+    },
+    "snapshot": {
+      "not_run": 5,
+      "scope": "previous real SQLite fixture, patched PG adapter"
+    },
+    "old_selected": {
+      "historical_pass": 164,
+      "rerun": 0
+    },
+    "postgresql": {
+      "not_run": 13
+    }
+  },
+  "security": "HOLD",
+  "decisions": "Provisional D0 archive/serialization bounds; not normative",
+  "maintenance": "docs/0201R/ARCHITECTURE_AND_CATALOG.md"
+}

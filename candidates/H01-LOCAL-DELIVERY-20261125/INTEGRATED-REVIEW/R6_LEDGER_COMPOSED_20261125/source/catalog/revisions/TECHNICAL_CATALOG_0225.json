@@ -1,0 +1,57 @@
+{
+  "revision": "0225",
+  "source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_research_t1_integration_0225.py",
+      "git_blob": "0c0eb3b3d9b762f959bbec678af2832e65ba2553",
+      "sha256": "d4a8aedded72b54217095310518a49567161a9a82057a2d0b99d93c034cb9c2f",
+      "bytes": 11626,
+      "tests": 12,
+      "result": "PASS",
+      "purpose": "Original T1 admission, ordinary transition, company event ordering, persisted readback, fault rollback at 15 role-write points; no historical pin admission wrapper."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pinned_research_t1_0225.py",
+      "git_blob": "5e57e7f49f4b8767aeeb4530ca6469b865849650",
+      "sha256": "7a6371c41539317863bb4dfa674514d53b76f08baf7a41a7c6d2c6fcfef61ac5",
+      "bytes": 5303,
+      "tests": 8,
+      "result": "PASS",
+      "purpose": "0220 scheduled admission with retained pins, 0196L admission-bound transitions, same-cursor plan/company/budget readback, tamper and unknown quarantine."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_db_http_0225.py",
+      "git_blob": "990f6637b0cdb5264b1d01f0e2abb792b67070b5",
+      "sha256": "f4731601b65b8a5cc47ee1bfc63e2012ac334b27df876d2295ba6e60524d7a52",
+      "bytes": 6047,
+      "tests": 5,
+      "result": "PASS",
+      "purpose": "Original historical writer, real DB and mounted FastAPI routes, four prefixes and failure terminal, negative inputs; not full ASGI app."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+      "git_blob": "3e16b9952af6886b6579729108a0278042ac4052",
+      "sha256": "808ede44c79324dea98af33315fde68d3255666c614d4a63968f21d33445234b",
+      "bytes": 5229,
+      "tests": 7,
+      "result": "PASS",
+      "purpose": "Real uvicorn loopback HTTP, exact compiled TS proxy and Studio parser; no mock upstream; mismatch HOLD; not React/browser."
+    }
+  ],
+  "production_runtime_changes": [],
+  "new_api": [],
+  "new_db_schema": [],
+  "dependencies_added": [],
+  "reuse": [
+    "T1 LogicalT1Coordinator",
+    "D0PostgresAdmissionMapping",
+    "D0AdmissionBoundTransitionMapping",
+    "company event ordering",
+    "plan history",
+    "historical lifecycle route",
+    "TS proxy/parser"
+  ],
+  "maintenance": "See docs/0225/ARCHITECTURE_AND_CATALOG.md",
+  "rollback": "Revert four test files and manifest; no production migration."
+}

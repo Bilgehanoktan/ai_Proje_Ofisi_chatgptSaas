@@ -1,0 +1,77 @@
+{
+  "revision": "0209",
+  "baseline": "f832f00bffa4162b1f31a9bd192a5aedd44986fb",
+  "source_commit": "9164fe68b545144953ea138c5d9cde3f12a18e12",
+  "tree": "155a224e90b4091bc56f1dbab07bb6ead0a35f10",
+  "manifest_blob": "02b7b2cdea8ba2d21c14cc2bda2a4107502ae237",
+  "manifest_entries": 342,
+  "product_files": 343,
+  "prior_non_manifest_files_unchanged": 337,
+  "source_tree_files": 1368,
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "kind": "add",
+      "git_blob": "a16409c0eb6a48b5c868767d6580574641ed05b8"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+      "kind": "add",
+      "git_blob": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_witness_0209.py",
+      "kind": "add",
+      "git_blob": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_witnessed_t1_0209.py",
+      "kind": "add",
+      "git_blob": "4d476aa49fcfeb754ffe8eefdda0fba7531258c0"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_witnessed_sql_0209.py",
+      "kind": "add",
+      "git_blob": "0b9a538b5bf80574f771486e56b70d8d0ec8b278"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "git_blob": "02b7b2cdea8ba2d21c14cc2bda2a4107502ae237"
+    }
+  ],
+  "local_verified_product_files": 44,
+  "local_verified_sql_files": 3,
+  "evidence_path": "tests/evidence/TEST_EVIDENCE_0209.json",
+  "evidence_blob": "6edf26ff6f92ee32533219a84de8bd7b5e55e6fc",
+  "evidence_sha256": "dc8b5a570c383e936ffaed9e37b2687a9ceb02e82aed500b780ac87f579226f8",
+  "local_slice_zip_sha256": "bfc9925c8f392f7f05a1d5878d47584ee8ef6bb72509cf5412c913a527363cb3",
+  "full_archive_downloaded": false,
+  "local_full_checkout": "BLOCKED_DNS",
+  "core_lock": {
+    "blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "remote_pin_match": 55,
+    "local_exact_files": 19,
+    "local_missing_files": 36,
+    "target_tests": 29,
+    "status": "NOT_RUN"
+  },
+  "tests": {
+    "passed": 138,
+    "new": 40,
+    "regression": 98,
+    "failed": 0,
+    "skipped": 0,
+    "original_ordinary_sqlite": 7,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "main_expected": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "CI": "NOT_RUN"
+}

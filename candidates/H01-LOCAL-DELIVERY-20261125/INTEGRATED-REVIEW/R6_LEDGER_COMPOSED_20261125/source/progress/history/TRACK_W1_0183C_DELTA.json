@@ -1,0 +1,36 @@
+{
+  "revision": "W1-0183C",
+  "baseline": "W1-0183B / TRACK-0184",
+  "kind": "PARALLEL_DELTA_NOT_GLOBAL_REPLACEMENT",
+  "changed": [
+    {
+      "id": 1,
+      "area": "Frontend",
+      "design": 75,
+      "source": 50,
+      "evidence": "4-file navigation source slice, actual helper tests only"
+    },
+    {
+      "id": 2,
+      "area": "UI/UX Design System",
+      "design": 50,
+      "source": 50,
+      "evidence": "EDS-03 grouping, Turkish/English search and compact rail"
+    },
+    {
+      "id": 20,
+      "area": "Test & QA",
+      "design": 75,
+      "source": 25,
+      "evidence": "8 helper checks, TSX syntax and CSS parse"
+    },
+    {
+      "id": 24,
+      "area": "Technical catalog",
+      "design": 75,
+      "source": 75,
+      "evidence": "scope/catalog/manifest/handover delta"
+    }
+  ],
+  "note": "No score uplift without current product build/browser acceptance. Global tracker not overwritten."
+}

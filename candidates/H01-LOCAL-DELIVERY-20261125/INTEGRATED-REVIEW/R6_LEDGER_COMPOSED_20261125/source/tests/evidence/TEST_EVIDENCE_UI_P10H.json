@@ -1,0 +1,90 @@
+{
+  "revision": "UI-P10H",
+  "source_commit": "a5b2bd5139d374e3828fbe0e374407c2433bd58d",
+  "parent": "f2457545cf52805e5ed5ea86cd869c326fd162ca",
+  "manifest_blob": "e818c96e2c81580cfdc27302e8690d68ba743ffd",
+  "scope": "D0 exact selected sources; unreviewed local environment; no independent acceptance",
+  "inventory": {
+    "product": 382,
+    "frontend": 163,
+    "manifest_entries": 381,
+    "unchanged": 371,
+    "added": 4,
+    "modified": 6,
+    "deleted": 0,
+    "parent_zip_verified": 198,
+    "parent_remote_path_size": 377,
+    "parent_local_exact": 156,
+    "parent_local_aggregate_sha256": "95d18a04e03a852d50c9d8b834bcd843f1153ad3da50ab7e4e438e23e145a529",
+    "recovered_original_files": 19,
+    "local_candidate_exact": 160
+  },
+  "tests": {
+    "original_memory_model": {
+      "executed": 39,
+      "groups": [
+        17,
+        15,
+        7
+      ]
+    },
+    "original_joint_witness": {
+      "executed": 49,
+      "groups": [
+        26,
+        23
+      ]
+    },
+    "original_wrapper": {
+      "executed": 33,
+      "groups": [
+        10,
+        7,
+        16
+      ],
+      "scope": "0210 original fixtures, witnessed T1 stand-in and original SQL mappings"
+    },
+    "new_0211_wrapper": {
+      "executed": 12,
+      "protection": 10,
+      "residual": 2
+    },
+    "core52": {
+      "executed": 52,
+      "includes_residual": true
+    },
+    "backend_total": 185,
+    "ui_model": {
+      "executed": 66,
+      "new": 12,
+      "previous": 54
+    },
+    "tsx_syntax": 4,
+    "svg_chromium": 22,
+    "same_app_compiled_get": {
+      "passed": 7,
+      "post_denied": 7,
+      "db_unchanged": 5
+    },
+    "next_api": "0/7 NOT_RUN",
+    "product_browser": "0/52 NOT_RUN",
+    "w8_original": "exact blob recovered, nested P10G/P10H load PASS, audit HOLD incomplete checkout",
+    "npm_lock": "FAIL ENOTCACHED",
+    "next_build": "FAIL exit127",
+    "PG_RLS": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "residuals": [
+    "D03 root file path replacement under actual 0211 wrapper permits local historical commit",
+    "D04 all three stores restored permits replay under actual 0211 wrapper",
+    "Original tests include memory/model and external witness boundaries; passing negative tests not protection"
+  ],
+  "security_proposal": "design only: separate authority custody/admin/restore domain; monotonic nonrollbackable root and claim ledger; effect-sink enforcement of epoch, fencing and idempotency; network partition, timeout and unknown commit HOLD; independent proof required",
+  "blockers": [
+    "Full GitHub archive not materialized; remote path/size verification only for full set",
+    "Full remote byte audit hit tool-call limit",
+    "Reviewed locks absent; npm offline cache miss",
+    "Next/React absent",
+    "ProjectStudio unchanged; product TSX/browser acceptance open"
+  ]
+}

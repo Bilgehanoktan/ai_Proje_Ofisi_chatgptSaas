@@ -1,0 +1,4 @@
+# 0198-E → next
+1. Re-pin `integration/0197-unified` and lifecycle/history heads; do not merge automatically. 0197-U currently lacks 0196-L. Integrate exact lifecycle + history delta under isolated scope, regenerate metadata, verify full product SHA-256, run combined suites; avoid double counting tests.
+2. P0 real PostgreSQL on trusted disposable loopback environment, R03 ownership, witness/clock and terminal authority; run existing opt-in PG suites. Keep real grants, CI, PROD, main and paid calls HOLD.
+3. P1 Office history projection contract owner review; plan-wide causal snapshot/sequence and trusted freshness; API/UI only after contract reconciliation. Model invocation needs verified persisted reservation/admission/lease and independent ACL/ToolGateway review; coordinate with other conversation.

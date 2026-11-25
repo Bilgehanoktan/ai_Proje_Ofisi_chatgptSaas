@@ -1,0 +1,2 @@
+# 0177 isolated integrated frontend candidate
+This directory contains a complete copy of the pinned frontend with 13 source deltas applied, not a production or authorized product tree. See ../../docs/0177/ARCHITECTURE_AND_CATALOG.md and CANDIDATE_MANIFEST.json. Existing product remains untouched; no automatic copying, build, CI or release. Independent PRE/T01/T06 remain HOLD. Use this tree for exact review.

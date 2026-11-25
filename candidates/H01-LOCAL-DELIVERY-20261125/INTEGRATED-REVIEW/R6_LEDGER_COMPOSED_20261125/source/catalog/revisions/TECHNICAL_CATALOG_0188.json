@@ -1,0 +1,245 @@
+{
+  "revision": "0188",
+  "parent_commit": "89d12284546077a6e69374c7ed794235c5e9703f",
+  "source_commit": "3a4c5d3ae85c1521af2cf4bb05fcafce81aeb3ac",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/CONTRACT_PIN.md",
+      "blob": "f997a337773dd26e2011a604aad3e31d47b2fb17",
+      "previous_blob": "f40286a8f23b04a98e51900ee59afc520f706735",
+      "bytes": 2766,
+      "sha256": "e613ace21e31439cfca55c833e6c8813aaaac7aab6741543c97ed4c8a173a42d",
+      "operation": "MODIFY",
+      "symbols": "0188 schema hash and limits"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/demo.py",
+      "blob": "7ef602f2f68da8bb1bb72b246d9196d946b14196",
+      "previous_blob": "2749d4cf4572157f821ca489e03c9fc393662425",
+      "bytes": 3239,
+      "sha256": "88de32a52e683fff73def3d0b187e80c265ff0b82370434a48fa7b71d4339723",
+      "operation": "MODIFY",
+      "symbols": "register task_budget_projection_router"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/task_budget_projection.py",
+      "blob": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b",
+      "previous_blob": null,
+      "bytes": 839,
+      "sha256": "2364566cb9da40e6cb6dfd1113ceb04ff30aaffe371eb009b6f346f5b2d76d50",
+      "operation": "ADD",
+      "symbols": "router; task_budget_projection()"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/admission_sample.py",
+      "blob": "a697188c51173e23d645fac95abf99c282f939b3",
+      "previous_blob": "98f8ee3001d6763c7720bdecb8dbc69ab8f78474",
+      "bytes": 8408,
+      "sha256": "5a719f529fc8baa44e4952be73d5bc0f7d7f981ca92796f4428d15c8e7c6542d",
+      "operation": "MODIFY",
+      "symbols": "AdmissionSample.create(*, pair_id=None); existing apply/read unchanged"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/paired_demo.py",
+      "blob": "7399a527549d6be3d1aa9692fcc5998c0dbf9961",
+      "previous_blob": null,
+      "bytes": 1537,
+      "sha256": "08c423a65679ec5ff720264ec26db82d8ddc4282a9461b6bb71cee2e6c5c241e",
+      "operation": "ADD",
+      "symbols": "main(); exclusive paired CLI"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/sandbox_store.py",
+      "blob": "3b2c7339a869571bb8fe4bd381c50d3f2a1a2368",
+      "previous_blob": "08d1d5c1cc2b3a3d83159de7813be6c7ddd20445",
+      "bytes": 8216,
+      "sha256": "4ca3997a68b7a2655c6e07f4e1dde4fdfe77367a2fb83bfacb86c3c3a04debbe",
+      "operation": "MODIFY",
+      "symbols": "Workbench.create(*, pair_id=None); fixed plan/path guard"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+      "blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+      "previous_blob": null,
+      "bytes": 4591,
+      "sha256": "dc9c82ccfd1eb394405ef22cae2cf279c76b7f9c16c7e35854bf633619c005f4",
+      "operation": "ADD",
+      "symbols": "PLAN, SCOPE, DDL; new_pair_id(), _valid_pair(), write_pair_marker(), read_pair_marker(), _collect(), read_task_budget_snapshot()"
+    },
+    {
+      "path": "product/ai-company-os-backend/contracts/source/task.budget.snapshot.schema.json",
+      "blob": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+      "previous_blob": null,
+      "bytes": 17500,
+      "sha256": "0c8c2306d12f3870a4d46445a177fe98acb0650ecf4e819a7c80bc704c239dd2",
+      "operation": "ADD",
+      "symbols": "Draft 2020-12 nested contracts; pair ID and two version axes"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_task_budget_integration.py",
+      "blob": "21f81967d9d908c8ffcbdafbda3ca75ec96c8e8f",
+      "previous_blob": null,
+      "bytes": 2930,
+      "sha256": "da403e0a5b31f0a922aeeae76be1de9e96025e6d0fc5f0e555038f835f1eca57",
+      "operation": "ADD",
+      "symbols": "RealWriterPairTests.test_pair_roundtrip_and_schema() — NOT_RUN"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_task_budget_snapshot.py",
+      "blob": "94172c3b46e3858dd952162addcc83192783d31b",
+      "previous_blob": null,
+      "bytes": 4484,
+      "sha256": "13ba5287977be4ff25d3bd29b408d339919d7376704c8c3e401b7eed0b72b927",
+      "operation": "ADD",
+      "symbols": "PairTests; ten selected tests PASS with substituted readers"
+    },
+    {
+      "path": "product/ai-company-os-frontend/CONTRACT_PIN.md",
+      "blob": "f997a337773dd26e2011a604aad3e31d47b2fb17",
+      "previous_blob": "f40286a8f23b04a98e51900ee59afc520f706735",
+      "bytes": 2766,
+      "sha256": "e613ace21e31439cfca55c833e6c8813aaaac7aab6741543c97ed4c8a173a42d",
+      "operation": "MODIFY",
+      "symbols": "0188 schema hash and limits"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/task-budget/route.ts",
+      "blob": "29d0d3f274948a4e1e60466c6ba3af50d5c50ff3",
+      "previous_blob": null,
+      "bytes": 1124,
+      "sha256": "c9013db9f138c1194247509e111dc45770a8f537f13123b2aba0d30ca8698d89",
+      "operation": "ADD",
+      "symbols": "GET(); fixed loopback, timeout, 8192-byte cap"
+    },
+    {
+      "path": "product/ai-company-os-frontend/contracts/generated/task.budget.snapshot.schema.json",
+      "blob": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+      "previous_blob": null,
+      "bytes": 17500,
+      "sha256": "0c8c2306d12f3870a4d46445a177fe98acb0650ecf4e819a7c80bc704c239dd2",
+      "operation": "ADD",
+      "symbols": "Draft 2020-12 nested contracts; pair ID and two version axes"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/OfficeWorkbenchPanel.tsx",
+      "blob": "d7e088afdcb23f7edfe149a7271fad58976ad162",
+      "previous_blob": "02959405b4947513efd1c587c65c49e9faae6dd7",
+      "bytes": 1618,
+      "sha256": "19c93030d5aa650af75f9d9e73843f48c058cdf9bf1cdeef4066225e7fbebd3f",
+      "operation": "MODIFY",
+      "symbols": "mount TaskBudgetPanel in existing shared panel"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/TaskBudgetPanel.tsx",
+      "blob": "ffb8fa114f6cb44fc5ade0636829bfcb4ab044a6",
+      "previous_blob": null,
+      "bytes": 1875,
+      "sha256": "8bb9f3dfc2a0f0ca8ac28991442ab712f4e0fc6762371e92a3ba25b31f16405f",
+      "operation": "ADD",
+      "symbols": "TaskBudgetPanel(); manual read, abort, HOLD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/taskBudgetProjection.ts",
+      "blob": "a99a8c2505be84f81f4dd45fdc20e69bfbb9bac9",
+      "previous_blob": null,
+      "bytes": 1854,
+      "sha256": "544f0616d62c2b806927ab26776a946e46907a6da7ee800a2e720257014cd562",
+      "operation": "ADD",
+      "symbols": "TaskBudgetProjection; parseTaskBudgetProjection()"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/task-budget.test.cjs",
+      "blob": "fdca2cd84251cc606bffef169d1da44930222a95",
+      "previous_blob": null,
+      "bytes": 3013,
+      "sha256": "ffe0f1f2a77adc8786e7c381d5c8f367dce82b6ab1d8f0474091603f9163ae56",
+      "operation": "ADD",
+      "symbols": "13 selected Node tests PASS, mocked fetch"
+    }
+  ],
+  "api": [
+    {
+      "method": "GET",
+      "path": "/demo/v1/task-budget/sample-projection",
+      "owner": "app/api/task_budget_projection.py",
+      "env": [
+        "AICOS_D0_WORKBENCH_DB",
+        "AICOS_D0_ADMISSION_DB"
+      ],
+      "returns": [
+        "200 paired historical projection",
+        "503 D0_TASK_BUDGET_HOLD"
+      ],
+      "writes": false
+    },
+    {
+      "method": "GET",
+      "path": "/api/demo/task-budget",
+      "owner": "frontend/app/api/demo/task-budget/route.ts",
+      "target": "127.0.0.1:8000",
+      "max_bytes": 8192,
+      "timeout_ms": 2500,
+      "writes": false
+    }
+  ],
+  "database": [
+    {
+      "profile": "optional fresh sample_pair per existing disposable store",
+      "table": "sample_pair",
+      "columns": [
+        "id",
+        "pair_id",
+        "tenant",
+        "company",
+        "environment",
+        "plan_digest",
+        "task_id",
+        "run_id",
+        "agent_id",
+        "principal"
+      ],
+      "create_only": true,
+      "existing_db_migration": false,
+      "canonical_T1": false
+    }
+  ],
+  "events": [
+    {
+      "type": "existing sample_event",
+      "change": "no new event type; projection binds fixed research ordinal 3 to existing validated Workbench prefix; admission version independent, no causal link"
+    }
+  ],
+  "dependencies": {
+    "new": [],
+    "existing": [
+      "sqlite3",
+      "uuid",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Node"
+    ],
+    "build": "NOT_RUN"
+  },
+  "tests": {
+    "python_selected_pass": 10,
+    "node_selected_pass": 13,
+    "actual_writer_integration": "NOT_RUN",
+    "schema_validation": "NOT_RUN",
+    "prior_0187_and_0186_rerun": false,
+    "full_build": "NOT_RUN"
+  },
+  "errors": [
+    "D0_PAIR_ID_HOLD",
+    "D0_PAIR_PATH_HOLD",
+    "D0_PAIR_SCOPE_HOLD",
+    "D0_PAIR_MISMATCH_HOLD",
+    "D0_PAIR_CHANGED_HOLD",
+    "D0_PAIR_AUTHORITY_HOLD",
+    "D0_PAIR_VERSION_HOLD",
+    "D0_PAIR_PLAN_OR_PATH_HOLD",
+    "D0_TASK_BUDGET_HOLD"
+  ],
+  "authority": "D0 only; causal, trusted lease, geometry, physical T1 and actual grants HOLD",
+  "rollback": "revert source commit on isolated branch, retain old files and logs; paired DBs disposable only, never migrate or repair automatically"
+}

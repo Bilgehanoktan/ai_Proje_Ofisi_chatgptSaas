@@ -1,0 +1,38 @@
+{
+  "revision": "0226",
+  "base_commit": "32b4453d848827400774a73f18fc4674e424e976",
+  "product_source_commit": "6e475e3ea31c22dc9f98f779aa28677546f2696e",
+  "tooling_commit": "8bce11edf99371950d003469f23e7d0c27e8b8d5",
+  "product_manifest_blob": "981a13fc226184dc3a911ae0d94e0042285ff302",
+  "manifest_entries": 392,
+  "product_files": 393,
+  "local_exact_product_files": 81,
+  "recovered_22_match": 22,
+  "sql_exact": 7,
+  "product_delta": 0,
+  "full_checkout": false,
+  "historical_core_current_match": 52,
+  "historical_core_total": 55,
+  "tooling": {
+    "path": "scripts/preflight_mvp_0226.py",
+    "bytes": 7013,
+    "git_blob": "e4a0cf46c908bfe9c9df5e8772dd54f61bf6bf4a",
+    "sha256": "240d96499e5bc34ede19113c92f9b6e63f66e6f577e0a2a10f927f9c09b06187",
+    "functions": [
+      "read_safe",
+      "python_version",
+      "version_row",
+      "lock_status",
+      "inspect",
+      "main"
+    ],
+    "dependencies": [
+      "stdlib",
+      "scripts/verify_product.py"
+    ],
+    "api_changes": [],
+    "db_changes": [],
+    "test": "Actual partial source preflight exit 1 expected; no full source success exercised",
+    "rollback": "Revert tooling commit; no migration"
+  }
+}

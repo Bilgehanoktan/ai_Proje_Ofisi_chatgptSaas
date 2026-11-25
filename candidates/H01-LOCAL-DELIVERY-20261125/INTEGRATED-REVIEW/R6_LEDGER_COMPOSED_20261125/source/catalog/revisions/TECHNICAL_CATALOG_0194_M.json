@@ -1,0 +1,103 @@
+{
+  "revision": "0194-M",
+  "source_root": "product/ai-company-os-backend/",
+  "files": [
+    {
+      "path": "app/engines/memory_engine/retrieval.py",
+      "old": "9f233ce635e9912833de53847011e5db3fb84ac9",
+      "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+      "bytes": 2715,
+      "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc",
+      "symbols": [
+        "valid_view",
+        "inspect_retrieval"
+      ],
+      "change": "validate both tombstone snapshots including exact bool/int types before equality",
+      "dependencies": [
+        "runtime_preview",
+        "t1_review"
+      ]
+    },
+    {
+      "path": "app/engines/knowledge_engine/provenance.py",
+      "old": "29f30a3873c72fd62c5a384f15623af042370d6e",
+      "blob": "7d710685366a55c117e49043a64f1eeabf5079cf",
+      "bytes": 1391,
+      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0",
+      "symbols": [
+        "inspect_span"
+      ],
+      "change": "validate embedded source pin separately",
+      "dependencies": [
+        "runtime_preview",
+        "t1_review",
+        "hashlib"
+      ]
+    },
+    {
+      "path": "app/engines/memory_engine/runtime_binding.py",
+      "old": "4a4f499f679cda78cd034c7f2476e636a46b6ced",
+      "blob": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+      "bytes": 5319,
+      "sha256": "57b51fc559c7a6e06e91c1f8570b5c683cc294b292809a3376599c7cbbf9993f",
+      "symbols": [
+        "MemoryAclEntry",
+        "MemoryAclView",
+        "MemoryAccessReview",
+        "_valid_run",
+        "_valid_acl",
+        "inspect_run_memory_access",
+        "inspect_run_memory (unchanged signature)"
+      ],
+      "change": "run/lease + lineage + ACL exact ancestor coverage + source byte/span review",
+      "dependencies": [
+        "agent_runtime.lifecycle",
+        "t1_review",
+        "memory_engine.retrieval",
+        "knowledge_engine.provenance",
+        "dataclasses"
+      ]
+    },
+    {
+      "path": "tests/test_memory_access_0194.py",
+      "old": null,
+      "blob": "a792abc90b7a09fb703982f6efd1cd4f648b073c",
+      "bytes": 7089,
+      "sha256": "0cf2317e8da1cb10da8846b9ad3f7ecfb70a4b63279ee214b1b6c7946ae2aa6e",
+      "symbols": [
+        "MemoryAccessTests"
+      ],
+      "change": "17 tests",
+      "dependencies": [
+        "unittest",
+        "dataclasses",
+        "hashlib",
+        "candidate source"
+      ]
+    }
+  ],
+  "new_public_http_endpoints": 0,
+  "db_schema_changes": 0,
+  "new_external_dependencies": 0,
+  "permissions": "No real grants or retrieval. Caller supplied observations untrusted; exact match only.",
+  "diagnosis": {
+    "RUN_REFERENCE_HOLD": "compare complete run envelope and RUNNING state",
+    "MEMORY_LEASE_HOLD": "check scope, heartbeat, epochs and reference",
+    "TOMBSTONE_VIEW_UNKNOWN_HOLD": "check both complete views and exact numeric types",
+    "STALE_HOLD": "revoke target/ancestor and propagate to cache",
+    "MEMORY_ACL_REFERENCE_HOLD": "compare current ACL scope, revision, version/attempt and epochs",
+    "MEMORY_ACL_COVERAGE_HOLD": "missing or extra entry for supplied ancestor closure",
+    "MEMORY_ACL_PIN_HOLD": "revision or digest mismatch",
+    "MEMORY_ACL_DENY": "ancestor denied",
+    "MEMORY_SOURCE_SCOPE_HOLD": "source outside supplied closure or wrong principal",
+    "MEMORY_SOURCE_PIN_HOLD": "source revision/digest mismatch",
+    "SOURCE_DIGEST_HOLD": "raw bytes differ",
+    "SPAN_BOUNDS_HOLD": "invalid byte span",
+    "SPAN_DIGEST_HOLD": "span hash differs",
+    "D0_MEMORY_ACCESS_MATCH_ONLY": "structure matches; still HOLD"
+  },
+  "rollback": "Use pinned parent 0193; revert only this isolated branch delta or abandon branch. No DB migration or data undo.",
+  "open": [
+    "Canonical graph digest, trusted current ACL/tombstone/source acquisition, atomic or version-fenced read and revocation, actual store integration and auth; no automatic content release."
+  ]
+}

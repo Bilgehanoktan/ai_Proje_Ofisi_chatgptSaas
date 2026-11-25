@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aicos:a0:v95:contract:TimeContext:0.1.0",
+  "title": "TimeContext",
+  "type": "object",
+  "properties": {
+    "local_datetime": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timezone_iana": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tzdb_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "utc_instant": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dst_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "clock_source": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "local_datetime",
+    "timezone_iana",
+    "tzdb_version",
+    "utc_instant",
+    "dst_policy",
+    "clock_source"
+  ],
+  "additionalProperties": false
+}

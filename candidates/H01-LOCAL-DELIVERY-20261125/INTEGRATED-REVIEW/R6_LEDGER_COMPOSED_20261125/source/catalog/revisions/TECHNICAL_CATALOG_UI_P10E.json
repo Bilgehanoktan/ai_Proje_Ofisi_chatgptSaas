@@ -1,0 +1,137 @@
+{
+  "revision": "UI-P10E",
+  "source_commit": "42d501826d0cf8493e850297171588993efffd07",
+  "changed": [
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx",
+      "bytes": 2816,
+      "sha256": "a1dd8b3b42660755aa3f15f95aa8518288a11b1eeb7c4033453f03a6832158c1",
+      "change": "MODIFY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "bytes": 1868,
+      "sha256": "300f24a756691e35dc9d9c5cec1e3851841f610b7cd4c1e49e4c149bbfe07255",
+      "change": "MODIFY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/evidenceReview.ts",
+      "bytes": 787,
+      "sha256": "513a98d530227529bbf70ec19ada5889a811ac1b60f34de85ce1fe9975142aea",
+      "change": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "bytes": 6036,
+      "sha256": "b5fd30798f79c8a7b37a0ba7e91681ba542657eafb8d53fca3f7fd23582ea97c",
+      "change": "MODIFY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+      "bytes": 2088,
+      "sha256": "b3cb57f9c71032752214f74f1f97fd7ea55dcfbb517006753f379e3984d641b4",
+      "change": "MODIFY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+      "bytes": 4804,
+      "sha256": "fb7887a02c54b3ff5cfdd88b6ed847e48c6f9e72e92379537a03d2588586b0c2",
+      "change": "MODIFY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/deskAccessories.ts",
+      "bytes": 1106,
+      "sha256": "53003693c2ab339971075979c3baa36d5caf383e3a8efb70016a4f6ba6ae2e2f",
+      "change": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10e-model.test.cjs",
+      "bytes": 2797,
+      "sha256": "fa82214433f658d2e15ee837504a7027b4efe12ef6c90860f351f6838413e01e",
+      "change": "ADD"
+    }
+  ],
+  "symbols": [
+    "reviewTimeline",
+    "reviewEngines",
+    "deskAccessoryCatalog",
+    "deskAccessoryUri",
+    "reservedDeskAccessories",
+    "officeArtwork",
+    "HistoricalEvidence",
+    "AgentDirectory",
+    "ProjectStudio",
+    "OfficeDecorPanel"
+  ],
+  "api_added": [],
+  "db_added": [],
+  "dependencies_added": [],
+  "core_added": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "bytes": 7103,
+      "sha256": "94cfaa844d8c5ddccc65165a797c112f0cc7c2a4501d27525fe710932b919239"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_intent_authority_0211.py",
+      "bytes": 4895,
+      "sha256": "ddef3499e45c05ca9fcaff1dfa7396ee0cdde4aa5a8f00aea12703464d56fb8c"
+    }
+  ],
+  "test": {
+    "revision": "UI-P10E",
+    "source_commit": "42d501826d0cf8493e850297171588993efffd07",
+    "parent_ui": "4b44c802f31c826b449b76e99da875eee92ff0b9",
+    "core_0211": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
+    "manifest_entries": 367,
+    "product_files": 368,
+    "frontend_files": 154,
+    "manifest_path_size_match": 367,
+    "core_added": 2,
+    "ui_added": 3,
+    "ui_modified": 5,
+    "original_lifecycle": {
+      "terminal": 11,
+      "prefix": 14,
+      "unchanged_database_checks": 15,
+      "write_denials": 8,
+      "scope": "Original T1 mappings and readers, actual SQLite dialect shim, original router and compiled GET; not PostgreSQL"
+    },
+    "same_backend": {
+      "pass": 7,
+      "total": 7,
+      "keys": [
+        "mvp",
+        "admission",
+        "outbox",
+        "office-workbench",
+        "task-budget",
+        "lifecycle",
+        "lifecycle-prefix"
+      ],
+      "exact_bodies": 7,
+      "post_denied": 7,
+      "unchanged_databases": 5,
+      "registered_routes": 13,
+      "scope": "original app.main:app in one process + strict-compiled original GET functions; selected recovered 0210 backend paths unchanged in union; 0211 authority addition NOT_RUN, not Next server/locked full checkout"
+    },
+    "new_model": 11,
+    "prior_p10d_model_rerun": 16,
+    "standalone_svg_browser": 14,
+    "tsx_syntax_local": 3,
+    "project_studio": "remote source patch only; full React NOT_RUN",
+    "full_build": "BLOCKED_NEXT_NOT_FOUND",
+    "product_browser": "0/52 NOT_RUN",
+    "independent": "HOLD",
+    "core_latest_confirmed": "0212",
+    "core_0213": "branch observed CURRENT remained 0212; separate",
+    "environment": "Node 22.16; TS 5.8.3; FastAPI 0.128.2; Uvicorn 0.48.0; SQLite; no pinned install",
+    "diagnostic_harness_adjustments": [
+      "HOLD comparison corrected to exact endpoint-specific body; product unchanged",
+      "minimal local process.env declaration for selected GET strict compile; no package installation"
+    ],
+    "local_package": "selected recovered closure, test harnesses, evidence, UI delta; full remote archive separate"
+  },
+  "rollback": "4b44c802f31c826b449b76e99da875eee92ff0b9",
+  "authority": "HOLD"
+}

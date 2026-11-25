@@ -1,0 +1,135 @@
+{
+  "revision": "0183",
+  "parent_commit": "da434ab0fde4a7dc949967c970e48e940c59ac53",
+  "source_commit": "72a5210530c794ea931a7429086cb94f9ac377d5",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/atomic_sample.py",
+      "blob": "8ae633ec9d115d66be4f432be93a126620477963",
+      "bytes": 6146,
+      "sha256": "d2fd7d1a1c6705abd60223744bd8c1c61e4b30fe4bf0d068bfc7c7623e4d3ef7",
+      "operation": "ADD",
+      "symbols": "AtomicSample.create/_db/renew/observe/snapshot; integer; holder_ok; DDL; SCOPE"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_atomic_sample.py",
+      "blob": "60f99cba63270b082440e8010fdea74c274492f0",
+      "bytes": 3561,
+      "sha256": "4d42171744d823487fc10d8e83600ec104cce0ee8ed1b1695aa592187b93f759",
+      "operation": "ADD",
+      "symbols": "AtomicTests, 9 actual synthetic tests"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "2981a17c0d194b9c876f6d239e69c5f64c9b0e4d",
+      "bytes": 7409,
+      "sha256": "afe59ddf48f2fed9de11925a03433ef2a20aca2005ec10f62caca71d0659c617",
+      "operation": "MODIFY",
+      "symbols": "DashboardView mounts WorkbenchLifecyclePanel only in CEO overview; version label 0183"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/WorkbenchLifecyclePanel.tsx",
+      "blob": "ba7f294c13ecaae6b32bf1671db2724123803ecf",
+      "bytes": 1554,
+      "sha256": "b1e7190f49d41c83092265d70e705e743c1639acbfc4175c83fb815070e97845",
+      "operation": "ADD",
+      "symbols": "WorkbenchLifecyclePanel, manual JSON, no fetch/storage or authority"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/workbenchSnapshot.ts",
+      "blob": "9dab39341559e92ce4161bd5f683af5ec9c77153",
+      "bytes": 2113,
+      "sha256": "9c2dcdc394975c708c185e4c8fe002bfbd8d8d45c34fa5f9e4791408b9d9427d",
+      "operation": "ADD",
+      "symbols": "parseWorkbenchSnapshot, SampleTask, SampleSnapshot"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/workbench-snapshot.test.cjs",
+      "blob": "3262d5356004d8f4b06c0f167c3aad35c8687771",
+      "bytes": 1573,
+      "sha256": "763ec34dfae3f27b556f20ad7ee6340e6b34aafcef34a3464d3bebf78a0330b5",
+      "operation": "ADD",
+      "symbols": "6 actual Node tests"
+    },
+    {
+      "path": "database/migrations/0183_D0_PHYSICAL_CANDIDATE.sql",
+      "blob": "8e6b4a4e886459be74ae575becd5917c5f070fab",
+      "bytes": 2915,
+      "sha256": "a283d0c0b10294b824de0f34f431aeeeb1fb2071cde7d7f81bb62a4faf716d59",
+      "operation": "ADD_DESIGN_ONLY",
+      "symbols": "Five proposed physical tables, composite scope keys, forced RLS, explicit ROLLBACK; NOT_RUN"
+    }
+  ],
+  "database": {
+    "sqlite_lab": {
+      "tables": [
+        "meta",
+        "head",
+        "lease",
+        "event",
+        "audit",
+        "outbox"
+      ],
+      "scope": "fixed synthetic single aggregate, NOT canonical T1 or 0182 workbench schema",
+      "transaction": "BEGIN IMMEDIATE; head CAS + event + audit + DENY outbox atomically; lease renewal is separate transaction",
+      "idempotency": "command_id plus exact version, holder, fence, tick"
+    },
+    "postgresql_candidate": {
+      "status": "DESIGN_ONLY_NOT_RUN",
+      "schema": "aicos_d0_candidate",
+      "tables": [
+        "head",
+        "lease",
+        "event",
+        "audit",
+        "outbox"
+      ],
+      "physical_owner_mapping": "HOLD",
+      "grants": "none"
+    }
+  },
+  "api_changes": [],
+  "canonical_event_changes": [],
+  "dependency_changes": [],
+  "dependencies": {
+    "python": "stdlib sqlite3/pathlib/contextlib; test unittest/tempfile/concurrent.futures",
+    "frontend": "existing React, existing fixed fixture, TypeScript",
+    "sql": "PostgreSQL candidate only; server and driver unavailable"
+  },
+  "tests": {
+    "new_python": 9,
+    "new_node": 6,
+    "full_backend": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "current_browser": "NOT_RUN",
+    "postgresql": "NOT_RUN",
+    "previous_0182": "62 historical checks, not rerun"
+  },
+  "errors": [
+    "SAMPLE_PATH_INVALID",
+    "SAMPLE_SCOPE_DENY",
+    "SAMPLE_DB_MISSING",
+    "SAMPLE_DB_SCOPE_MISMATCH",
+    "SAMPLE_LEASE_INVALID",
+    "SAMPLE_TERMINAL",
+    "SAMPLE_CLOCK_REGRESSION",
+    "SAMPLE_LEASE_BUSY_OR_STALE",
+    "SAMPLE_LEASE_EXPIRED",
+    "SAMPLE_FENCE_EXHAUSTED",
+    "SAMPLE_COMMAND_INVALID",
+    "SAMPLE_IDEMPOTENCY_CONFLICT",
+    "SAMPLE_LEASE_STALE",
+    "SAMPLE_CAS_HOLD"
+  ],
+  "traceability": {
+    "W1": "read-only CLI lifecycle panel",
+    "W2": "fixed 0182 envelope reader; no canonical contract change",
+    "W3": "synthetic heartbeat/fence",
+    "W4": "SQLite atomic lab + PostgreSQL DDL candidate",
+    "W5": "existing sample adapter retained; new provider interface pending",
+    "W6": "independent acceptance HOLD",
+    "W7": "fixed metadata scope only; actual SaaS and billing pending",
+    "W8": "15 selected tests, exact source pins"
+  },
+  "maintenance": "docs/0183/ARCHITECTURE_AND_CATALOG.md"
+}

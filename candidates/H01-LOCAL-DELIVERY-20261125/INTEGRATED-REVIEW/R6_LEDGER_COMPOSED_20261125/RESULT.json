@@ -1,0 +1,92 @@
+{
+  "task": "MI-P0-R6-LEDGER-ENVELOPE-COMPOSITION-20261125",
+  "classification": "ARCHIVAL_COMPOSED_REVIEW_ONLY_NOT_CANONICAL_PROMOTION",
+  "parent": "3e5073d284134de0c555e7769802675d867f6a14",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "r5_source_tree": "cc01304493aa10f72772b0612cc466ce28878c31",
+  "r5_product_tree": "121a1182f046908d0520393943897ac7f4a9036a",
+  "r5_manifest": "f00e56d51223f1e184b0ff91a35cf76c5f5aa3f0",
+  "r6_source_tree": "d4150875db536143d578aa4183d6ea0314ef109b",
+  "r6_product_tree": "ed7d0eb05610f21b9a4c6dac3663dab8ff2901b0",
+  "r6_manifest_blob": "d344a2c2651632103599f1c739e65bf98ecf80cb",
+  "files": {
+    "product_before": 585,
+    "product_after": 586,
+    "manifest_entries": 585,
+    "source_blobs": 1917,
+    "unchanged_source_blobs": 1914,
+    "deleted": 0,
+    "manifest_check": "585/585 path/size/digest-field validity; two changed payloads match locally tested Git blobs and SHA256; no fresh full-byte SHA256 audit"
+  },
+  "delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "function": "append_preview",
+      "before": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "after": "95438f2d300f09242876893943ee250884ebdde6",
+      "bytes": 3399,
+      "sha256": "32ac801451c0532bf09fcee53d4f9121d33767d15acfa1006f78d6fb76b0d645"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_ledger_envelope_boundary.py",
+      "before": null,
+      "after": "7163756d9a4ba23eafb08f8ef19f4c031756f943",
+      "bytes": 4328,
+      "sha256": "521714cea0ffa8388a47d01dc14b1b779685cd6483bbd4d9a15006ffd7bbed57"
+    }
+  ],
+  "contract": "core.preview.demo.schema.json blob 117ee745023ebf7fd33385f32991bc00ef995cb3: event_id nonempty string, floor_id string, kind enum, station_id string/null; no schema change",
+  "test": {
+    "runtime": "Python 3.13.5 Linux stdlib only",
+    "command": "env -i PATH=/usr/bin:/bin python -B -S -m unittest discover -s tests -p test_ledger_envelope_boundary.py -v",
+    "preimage": "6/6 exact local Git blob and SHA256 matched R5 manifest",
+    "before": {
+      "methods": 10,
+      "passed_methods": 4,
+      "failed_methods": 6,
+      "assertion_failures": 7,
+      "errors": 9,
+      "exit": 1,
+      "sha256": "9ab77e7859dd32e2663a2e89456ec4c07c8eb359e8457ac7df0c6609f2ac2afe"
+    },
+    "after": {
+      "methods": 10,
+      "pass": 10,
+      "exit": 0,
+      "sha256": "afa3562613969ad0bdc8af5c3901f2bf3ad263cf5d3db369b39cce5e31894d87"
+    },
+    "zip_sha256": "8f1d68ce2e5906a375b7a89cea44e64c1e8b21ba342ac1035029bab8fd3f7d44",
+    "zip_entries": 12,
+    "zip_crc": "PASS",
+    "prior_R5_composition": "7/7 historical; not rerun here"
+  },
+  "conflicts": {
+    "open_PR_path_lists": 44,
+    "matching_PR2_PR3": "both same original ledger blob e3f94cab61a27c7d4c89d02516887146b2026eb3",
+    "divergent_path_variants": 0,
+    "owner_signoff": "HOLD"
+  },
+  "impact": "D0 ledger only; type checks precede set membership; reject invalid event identity before append, preserve freshness, idempotency and no persistent/live authority. No API/DB/schema/dependency change.",
+  "gates": {
+    "owner": "HOLD",
+    "C50_R9": "HOLD",
+    "IAM": "0/12 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "API": "0/9 NOT_RUN",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "canonical": "unchanged 553 files",
+    "core": "12/16",
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "weighted": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  },
+  "limitations": "source slice only; full Design Master review, full source ZIP and full regression not completed; no independent acceptance",
+  "rollback": "ordinary revert of this archival commit; retain R5 tree and canonical source"
+}

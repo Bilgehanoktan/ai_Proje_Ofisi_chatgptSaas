@@ -1,0 +1,74 @@
+{
+  "revision": "UI-P10J-15",
+  "scope": "11 roadmap MVP targets, not the 16 integration gates; no newly accepted criterion",
+  "criteria": [
+    {
+      "id": "1",
+      "name": "Şirket oluşturma",
+      "status": "HOLD",
+      "evidence": "Synthetic company scope only"
+    },
+    {
+      "id": "2",
+      "name": "Departman ve ajan tanımı",
+      "status": "PARTIAL",
+      "evidence": "Four role templates; no actual instance"
+    },
+    {
+      "id": "3",
+      "name": "Kullanıcı görev talebi",
+      "status": "HOLD",
+      "evidence": "No actual request workflow"
+    },
+    {
+      "id": "4",
+      "name": "Otomatik görev planı",
+      "status": "PARTIAL",
+      "evidence": "Canonical fixed compiler/plan"
+    },
+    {
+      "id": "5",
+      "name": "DAG sırası yürütme",
+      "status": "PARTIAL",
+      "evidence": "Root SQL VERIFYING v3; successors held"
+    },
+    {
+      "id": "6",
+      "name": "İzinli AI modeli",
+      "status": "HOLD",
+      "evidence": "Fixed sample, no provider"
+    },
+    {
+      "id": "7",
+      "name": "İzinli araç",
+      "status": "HOLD",
+      "evidence": "No tool call/grant"
+    },
+    {
+      "id": "8",
+      "name": "Kalıcı hafıza/sonuç",
+      "status": "PARTIAL",
+      "evidence": "Persisted event prefix; archive/witness SQL10/8 pending"
+    },
+    {
+      "id": "9",
+      "name": "Ofis gerçek durum projeksiyonu",
+      "status": "HOLD",
+      "evidence": "Separate historical replay, no same-plan placement/browser"
+    },
+    {
+      "id": "10",
+      "name": "QA ve bağımsız IV",
+      "status": "HOLD",
+      "evidence": "No successful QA/IV or receipt"
+    },
+    {
+      "id": "11",
+      "name": "İnsan onayı ve bütçe",
+      "status": "PARTIAL",
+      "evidence": "Sample reservation, no actual H01 release"
+    }
+  ],
+  "integration_gates": "7/16 historical",
+  "independent": "0/7"
+}

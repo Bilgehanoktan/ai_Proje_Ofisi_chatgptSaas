@@ -1,0 +1,792 @@
+{
+  "revision": "0206",
+  "baseline": "877261d594ee5512afb81ccb28c9a4d1a7910ad1",
+  "frontend_parent": "23505d8f95500aef72466824ddb3956a14a594a8",
+  "memory_parent": "ef9cc8368309bd4d880b36137c7f25fc07a018db",
+  "prior_test_branch": "eef7da68d5c00b38af11d8c1f92509e82e44fc2d",
+  "merge_base": "a7c4f417faf17959e3165193aa247815954bfa42",
+  "product_files": 335,
+  "manifest_entries": 334,
+  "source_added": 74,
+  "source_replaced": 34,
+  "source_deleted": 0,
+  "carry22": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/history_readback.py",
+      "expected": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "actual": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_history_readback_0198.py",
+      "expected": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "actual": "703fce14be041f9dc0ed9de88a816d281c28fc3d",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/plan_history_review.py",
+      "expected": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "actual": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_history_review_0199.py",
+      "expected": "9db44143d1d5395e222d111a4e847930f019208e",
+      "actual": "9db44143d1d5395e222d111a4e847930f019208e",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_snapshot.py",
+      "expected": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+      "actual": "9ba612632e7ebc36e875544fa90f348b7834fd0b",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_postgres_snapshot_0200.py",
+      "expected": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+      "actual": "be16207b0c3b72d91452f67a86ae0516c0c99acf",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_snapshot_0200.py",
+      "expected": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "actual": "261e2484f111ffd9c0f124cc47c6837425d801a2",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "expected": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+      "actual": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_history_0201.py",
+      "expected": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe",
+      "actual": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+      "expected": "c9963f21766da435a00a18a5f49073ebe8603664",
+      "actual": "c9963f21766da435a00a18a5f49073ebe8603664",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/signed_history.py",
+      "expected": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+      "actual": "d4d379a7e4e55fd6f81f102d3fcb0903d50db0a1",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_signed_history_0202.py",
+      "expected": "f79e85ae29b7e3bf5722493ca6fd608b026991cd",
+      "actual": "f79e85ae29b7e3bf5722493ca6fd608b026991cd",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements-history-signatures.txt",
+      "expected": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+      "actual": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/terminal_anchor.py",
+      "expected": "3108a4ba72d999984502e2687a4e6589b079df1d",
+      "actual": "3108a4ba72d999984502e2687a4e6589b079df1d",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_0203.py",
+      "expected": "92c642c907f2a45d31ad9cae23b976c9347130c1",
+      "actual": "92c642c907f2a45d31ad9cae23b976c9347130c1",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_terminal_anchor_lifecycle_0203.py",
+      "expected": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+      "actual": "9df4cd28b960d122c786e2a7cd14e8bdf5ac92e3",
+      "match": true
+    },
+    {
+      "path": "database/0203T/terminal_command_anchors.sql",
+      "expected": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "actual": "0b5f9725f4020e4f41ec1a0090efa9cddc8a050f",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_coordination.py",
+      "expected": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "actual": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_coordination_0204.py",
+      "expected": "ce4f8fb249787c9e18a03a63225dbcddf7445650",
+      "actual": "ce4f8fb249787c9e18a03a63225dbcddf7445650",
+      "match": true
+    },
+    {
+      "path": "database/0204C/company_event_order.sql",
+      "expected": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "actual": "edb2ef263204b89f88f172000ecb031428a027e4",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/company_recovery.py",
+      "expected": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0",
+      "actual": "aaefcebc02c02546a66cd2a32e52f00981b7bcd0",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_company_recovery_0205.py",
+      "expected": "8db01a9227d71b51e28485d823c304c5c48ab67b",
+      "actual": "8db01a9227d71b51e28485d823c304c5c48ab67b",
+      "match": true
+    }
+  ],
+  "aiFiles": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+      "blob": "7d710685366a55c117e49043a64f1eeabf5079cf"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+      "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py",
+      "blob": "b24c782973ec8731f8dbea17d0379ae5abe897f0"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "blob": "c0fbed40fc09db7894e9c609bcff6d4c875d1376"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+      "blob": "3d136ad8a06f5e21d074748e371a1ed614b0c276"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_access_0194.py",
+      "blob": "a792abc90b7a09fb703982f6efd1cd4f648b073c"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+      "blob": "cb0e998ef084e90b8d357637b1e93fbe10861a80"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_model_invocation_0196.py",
+      "blob": "10ff36e7715f1b1f2d9402ce146f46d3b6929b3e"
+    }
+  ],
+  "contracts": [
+    {
+      "name": "admission.sample.projection.schema.json",
+      "backend": "c95f39c263ae72788785a3c938be9c3c1b841ebb",
+      "frontend": "c95f39c263ae72788785a3c938be9c3c1b841ebb"
+    },
+    {
+      "name": "company.catalog.demo.schema.json",
+      "backend": "963bfb2557628cea2696c0e557e5aeaf9a23ea62",
+      "frontend": "963bfb2557628cea2696c0e557e5aeaf9a23ea62"
+    },
+    {
+      "name": "core.plan.projection.schema.json",
+      "backend": "15695c990538cb8b017bf41e5cd8f29d65254b61",
+      "frontend": "15695c990538cb8b017bf41e5cd8f29d65254b61"
+    },
+    {
+      "name": "core.preview.demo.schema.json",
+      "backend": "117ee745023ebf7fd33385f32991bc00ef995cb3",
+      "frontend": "117ee745023ebf7fd33385f32991bc00ef995cb3"
+    },
+    {
+      "name": "core.preview.response.schema.json",
+      "backend": "3bb1cab16eb699b0a16ce62f172287367e97f317",
+      "frontend": "3bb1cab16eb699b0a16ce62f172287367e97f317"
+    },
+    {
+      "name": "mvp.diagnostics.schema.json",
+      "backend": "5b2037f397586a46a4e36faadc1c491e4c2d1684",
+      "frontend": "5b2037f397586a46a4e36faadc1c491e4c2d1684"
+    },
+    {
+      "name": "office.snapshot.demo.schema.json",
+      "backend": "ba6b81452a3d07de20b3161ba90f14f7788b64b3",
+      "frontend": "ba6b81452a3d07de20b3161ba90f14f7788b64b3"
+    },
+    {
+      "name": "office.workbench.projection.schema.json",
+      "backend": "551896b51b6f74c9839dbe452b1edf2044d3ec5b",
+      "frontend": "551896b51b6f74c9839dbe452b1edf2044d3ec5b"
+    },
+    {
+      "name": "outbox.review.projection.schema.json",
+      "backend": "0588e2efe7a670855a19c483912b2a5b6d42cdf9",
+      "frontend": "0588e2efe7a670855a19c483912b2a5b6d42cdf9"
+    },
+    {
+      "name": "task.budget.snapshot.schema.json",
+      "backend": "67a5d7002bb9eed6cc47ef4983ca6768972c005e",
+      "frontend": "67a5d7002bb9eed6cc47ef4983ca6768972c005e"
+    },
+    {
+      "name": "lifecycle.prefix.schema.json",
+      "backend": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2",
+      "frontend": "15e3f9070fb62d888abc8734fc4a82d3d76c53c2"
+    },
+    {
+      "name": "lifecycle.projection.schema.json",
+      "backend": "7bd60d5bf04ad36304afaf016fe8578b0622eba7",
+      "frontend": "7bd60d5bf04ad36304afaf016fe8578b0622eba7"
+    }
+  ],
+  "fixture_lock_comparison": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "locked": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "combined": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/__init__.py",
+      "locked": "2d899e27663a6e414765904ffd9c4624a825adde",
+      "combined": "2d899e27663a6e414765904ffd9c4624a825adde",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "locked": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "combined": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "locked": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "combined": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "locked": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "combined": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/postgres_run.py",
+      "locked": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "combined": "ea66a72bdb84c267ded348342a941ce8e5927005",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "locked": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "combined": "719ce306304bca7b294483c1a8f7c74c64dd0b73",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/transition_command.py",
+      "locked": "5680fa428be81645a43d7442ec161c0c10384986",
+      "combined": "5680fa428be81645a43d7442ec161c0c10384986",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "locked": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "combined": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_projection.py",
+      "locked": "2b9a01807621eac35239baab55b10df6b1edb91b",
+      "combined": "2b9a01807621eac35239baab55b10df6b1edb91b",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_projection.py",
+      "locked": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+      "combined": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+      "locked": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+      "combined": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+      "locked": "285b1b56f47df44d7a53dafb1ceaa7071e3f9e45",
+      "combined": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+      "match": false
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/__init__.py",
+      "locked": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+      "combined": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "locked": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "combined": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/postgres_write.py",
+      "locked": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "combined": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+      "locked": "9c1e71bb5024a99ec60f934c5944584f63217692",
+      "combined": "9c1e71bb5024a99ec60f934c5944584f63217692",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "locked": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "combined": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+      "locked": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+      "combined": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+      "locked": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "combined": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+      "locked": "9768b34e447c08136440c891b1974fae131f3ebd",
+      "combined": "9768b34e447c08136440c891b1974fae131f3ebd",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+      "locked": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "combined": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "locked": "04487bda631e9133f3904451a39fc8722e985997",
+      "combined": "04487bda631e9133f3904451a39fc8722e985997",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "locked": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "combined": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "locked": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "combined": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+      "locked": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "combined": "0a3ce60662254b8f1e5bb27c9dd6c2ae2656d254",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+      "locked": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+      "combined": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_session.py",
+      "locked": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "combined": "8e65e4575a77b11c38c2d2e62ec91fc89d75e23c",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+      "locked": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "combined": "e722a9188a76034f5133c3f61be1da16930a8924",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "locked": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "combined": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/transition_reconciliation.py",
+      "locked": "b011ae715b424a185963af552f524586115a23ec",
+      "combined": "b011ae715b424a185963af552f524586115a23ec",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_projection.py",
+      "locked": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+      "combined": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py",
+      "locked": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+      "combined": "b465e37d2959b1c29dd0e14980f286de86c1c906",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_mapping_0195.py",
+      "locked": "c30130313541ea9d857724de1bab98ad088374af",
+      "combined": "c30130313541ea9d857724de1bab98ad088374af",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_transition_mapping_0194.py",
+      "locked": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "combined": "a4a3827ec4267ce275efe52fe5488e1868502c3f",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+      "locked": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+      "combined": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_projection_p02.py",
+      "locked": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+      "combined": "0072e1e62e483e6c507bb9cfba706ba0f82fbdf7",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_prefix_p03.py",
+      "locked": "7517cb4bdd2458684aa4540b127669ce1902521d",
+      "combined": "7517cb4bdd2458684aa4540b127669ce1902521d",
+      "match": true
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/lifecycle_prefix_cases.json",
+      "locked": "53459c4b6961455dc183cb3b20382559862e98f6",
+      "combined": "53459c4b6961455dc183cb3b20382559862e98f6",
+      "match": true
+    },
+    {
+      "path": "database/0192/candidate_event_outbox_fence.sql",
+      "locked": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "combined": "6e4780bf9f267c0926b40d582d5afdbd6faa543c",
+      "match": true
+    },
+    {
+      "path": "database/0193/candidate_run_head.sql",
+      "locked": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "combined": "180924e97ee1f31fa27332941a41e37fdf73017e",
+      "match": true
+    },
+    {
+      "path": "database/0194/candidate_transition_roles.sql",
+      "locked": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "combined": "7b5d374bb7973b283e4fcfa0d796ed6128ef9d27",
+      "match": true
+    },
+    {
+      "path": "database/0195/candidate_admission_budget.sql",
+      "locked": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "combined": "d5dc6abc045da14ef42e88b4e85e50e9062a1b27",
+      "match": true
+    },
+    {
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "locked": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "combined": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "match": true
+    }
+  ],
+  "imported_harness": [
+    {
+      "path": "tests/integration/browser_0187_w1.py",
+      "blob": "b829ad9b2fa12f7910e014ec87e9ee2a59d17370"
+    },
+    {
+      "path": "tests/integration/browser_lifecycle_p02.py",
+      "blob": "d7e8760b3f366d410459b33dc16f44b1144fe231"
+    },
+    {
+      "path": "tests/integration/browser_lifecycle_prefix_p03.py",
+      "blob": "c41ea2455ce1bd6792fa829be0377344fd30e9da"
+    },
+    {
+      "path": "tests/integration/browser_task_budget_0188.py",
+      "blob": "4511877f03ffae35d4baef7267c6d7e8ea6bf583"
+    },
+    {
+      "path": "tests/integration/launch_w8_p1.py",
+      "blob": "d7b5b0ba23714c2d6c12e0a296978a50f7466a73"
+    },
+    {
+      "path": "tests/integration/launch_w8_s3.py",
+      "blob": "b11d39cbfa6d2ce9427f80401ab555000392da22"
+    },
+    {
+      "path": "tests/integration/launch_w8_unified.py",
+      "blob": "393841e9b97bb04e0eda0717cb7f54aad66aba85"
+    },
+    {
+      "path": "tests/integration/office-workbench-merge.test.cjs",
+      "blob": "c19cb85bd9f418c69ba47eb177b5151db20d43b7"
+    },
+    {
+      "path": "tests/integration/run_combined_helpers.cjs",
+      "blob": "5d830e090ad87e36c7b340cf9213b91d7682b136"
+    },
+    {
+      "path": "tests/integration/test_w8_local.py",
+      "blob": "ef16a147e5db501ad06d619f32e8230fff471298"
+    },
+    {
+      "path": "tests/integration/test_w8_unified.py",
+      "blob": "730fa98bed8c6a34ccedffb9e103f49910daac3c"
+    },
+    {
+      "path": "tests/integration/verify_checkout.py",
+      "blob": "45b33d9f4248068f50a4b7ba9df111734b9c7ea9"
+    },
+    {
+      "path": "tests/integration/w8_local.py",
+      "blob": "8b3722373ba252bba9c077331840975d53383726"
+    },
+    {
+      "path": "tests/integration/w8_unified.py",
+      "blob": "162a2387e5cdea6828a0cbbf0dab247bc4678551"
+    }
+  ],
+  "checks": {
+    "parent_manifest_path_size": [
+      260,
+      314
+    ],
+    "three_way_conflict_except_manifest": 0,
+    "combined_manifest_path_size": 334,
+    "shared_contract_blob_parity": 12,
+    "carry": 22,
+    "ai": 8,
+    "p06_lock_matching": 43
+  },
+  "tests": {
+    "combined_product": "NOT_RUN",
+    "prior_0205_selected_pass": 148,
+    "prior_p05_reconciled_selected_pass": 57,
+    "prior_p06_selected_pass": 97,
+    "prior_results_not_additive": true,
+    "prior_core_integration_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1": "NOT_RUN",
+    "actual_pg_13": "NOT_RUN",
+    "build_browser": "NOT_RUN",
+    "independent": "HOLD",
+    "snapshot_regressions": {
+      "passed": 24,
+      "new": 0,
+      "rerun": 24,
+      "scope": "exact 7-file dependency closure with real SQLite",
+      "evidence": "tests/evidence/TEST_EVIDENCE_0206_SNAPSHOT.json"
+    }
+  },
+  "notes": [
+    "No CI, main merge, live actions or new grants.",
+    "P06 evidence is from a different snapshot guard; never transfer PASS to combined tree.",
+    "P05 W8 harness pins are historical; must be repinned/reviewed before use. W8 current branch not merged.",
+    "Source manifests inherited; full SHA-256 byte verification pending local checkout."
+  ],
+  "source_commit": "f1b50dc2be8a455e3f3aee92b14d2d79433338a4",
+  "api_changes": [
+    {
+      "method": "GET",
+      "backend": "/demo/v1/lifecycle/sample-projection",
+      "frontend": "/api/demo/lifecycle",
+      "schema": "lifecycle.projection.schema.json",
+      "guard": "fixed env AICOS_D0_LIFECYCLE_DB; 503/no-store on failure",
+      "authority": "D0 historical only"
+    },
+    {
+      "method": "GET",
+      "backend": "/demo/v1/lifecycle/prefix-projection",
+      "frontend": "/api/demo/lifecycle-prefix",
+      "schema": "lifecycle.prefix.schema.json",
+      "guard": "fixed env AICOS_D0_LIFECYCLE_PREFIX_DB; 503/no-store on failure",
+      "authority": "D0 historical only"
+    }
+  ],
+  "symbols": [
+    {
+      "path": "app/core/development_review/lifecycle_read_snapshot.py",
+      "symbols": [
+        "lifecycle_snapshot",
+        "require_single_head",
+        "_authorizer",
+        "_check_path"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "pathlib",
+        "contextlib",
+        "time"
+      ],
+      "diagnosis": "PATH/SCHEMA/JOURNAL/HEAD_COUNT/DEADLINE HOLD; preserve source; no repair"
+    },
+    {
+      "path": "app/core/development_review/d0_snapshot.py",
+      "symbols": [
+        "ReadCursor",
+        "open_d0_snapshot"
+      ],
+      "status": "compatibility helper, not canonical lifecycle boundary"
+    },
+    {
+      "path": "app/core/development_review/lifecycle_projection.py",
+      "symbols": [
+        "fixed_chain",
+        "ReadCursor",
+        "read_lifecycle_projection"
+      ],
+      "dependencies": [
+        "lifecycle_read_snapshot",
+        "agent_runtime.lifecycle",
+        "postgres_admission_mapping",
+        "postgres_lifecycle_mapping",
+        "postgres_transition_mapping"
+      ]
+    },
+    {
+      "path": "app/core/development_review/lifecycle_prefix_projection.py",
+      "symbols": [
+        "read_lifecycle_prefix"
+      ],
+      "dependencies": [
+        "lifecycle_read_snapshot",
+        "lifecycle_projection",
+        "lifecycle_prefix_wire",
+        "postgres_run",
+        "postgres_admission_mapping",
+        "postgres_lifecycle_mapping"
+      ]
+    },
+    {
+      "path": "app/engines/memory_engine/snapshot_store.py",
+      "symbols": [
+        "Snapshot",
+        "SnapshotPin",
+        "create_store",
+        "publish_snapshot",
+        "inspect_stored_memory"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "retrieval",
+        "memory_engine.runtime_binding",
+        "knowledge_engine.provenance",
+        "agent_runtime.lifecycle"
+      ]
+    },
+    {
+      "path": "app/engines/model_gateway/runtime_binding.py",
+      "symbols": [
+        "InvocationEnvelope",
+        "invocation_digest",
+        "inspect_invocation"
+      ],
+      "dependencies": [
+        "agent_runtime.lifecycle",
+        "provider_contract",
+        "registry"
+      ]
+    },
+    {
+      "path": "features/data/projectionSession.ts",
+      "status": "owner-token readback session"
+    },
+    {
+      "path": "features/data/projectionScope.ts",
+      "status": "historical scope guard"
+    },
+    {
+      "path": "features/progress/PlanProgressPanel.tsx",
+      "status": "historical 40-gate milestone display, not global completion"
+    }
+  ],
+  "db_schema": {
+    "canonical_migrations_added": 0,
+    "retained_candidate_sql": [
+      "database/0203T/terminal_command_anchors.sql",
+      "database/0204C/company_event_order.sql"
+    ],
+    "memory_fixture": "snapshots(generation PK,digest,graph,metadata,raw), local BEGIN IMMEDIATE CAS only",
+    "lifecycle_tables": [
+      "run_heads",
+      "run_leases",
+      "run_admissions",
+      "sample_budgets",
+      "sample_reservations",
+      "run_mutations",
+      "events",
+      "outbox",
+      "fences",
+      "run_audit",
+      "run_lease_renewals",
+      "sample_settlements"
+    ],
+    "events_changed": 0
+  },
+  "dependency_changes": {
+    "backend": {
+      "fastapi": [
+        "0.115.12",
+        "0.163.0"
+      ],
+      "starlette": [
+        null,
+        "1.10.0"
+      ],
+      "uvicorn": [
+        "0.34.2",
+        "0.34.2"
+      ]
+    },
+    "frontend": {
+      "next": [
+        "15.5.9",
+        "15.5.29"
+      ],
+      "react": [
+        "19.1.4",
+        "19.1.10"
+      ],
+      "react-dom": [
+        "19.1.4",
+        "19.1.10"
+      ],
+      "overrides_added": {
+        "postcss": "8.5.32",
+        "sharp": "0.35.5"
+      },
+      "typescript": "5.9.3",
+      "phaser": "3.90.0"
+    },
+    "status": "Imported P05 historical candidate pins, not installed or freshly audited; review transitive locks and compatibility with history signature requirements before build."
+  },
+  "catalog_refs": [
+    "catalog/revisions/TECHNICAL_CATALOG_0194_M.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0196_MA.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P01.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P02.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P03.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P04.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P05.json",
+    "catalog/revisions/TECHNICAL_CATALOG_W1_0198_P06.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0205_R.json"
+  ]
+}

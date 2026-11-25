@@ -1,0 +1,39 @@
+'use strict';
+const assert=require('node:assert/strict'),test=require('node:test'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),ts=require('typescript');
+const file=path.join(__dirname,'../features/evidence/AgentRoleProfile.tsx');
+const result=ts.transpileModule(fs.readFileSync(file,'utf8'),{fileName:file,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true},reportDiagnostics:true});
+const jsx=(type,props)=>({type,props}),mod={exports:{}};
+vm.runInNewContext(result.outputText,{exports:mod.exports,module:mod,require:id=>{if(id==='react/jsx-runtime')return {jsx,jsxs:jsx};if(id==='./AgentRoleProfile.module.css')return {};throw Error(id)}});
+const {default:Profile,orderRoleTasks}=mod.exports;
+const role={id:'engineer',name:'Engineer',department:'Mühendislik',description:'Teknik üretim ve dönüşüm'};
+const tasks=[{id:'merge',label:'Taslağı birleştir',predecessors:[{id:'draft',label:'Çıktı taslağı'},{id:'research',label:'Kaynak incelemesi'}],followers:[{id:'qa',label:'Kalite incelemesi'}]},{id:'draft',label:'Çıktı taslağı',predecessors:[{id:'plan',label:'Talebi ayrıştır'}],followers:[{id:'merge',label:'Taslağı birleştir'}]}];
+const waves=[['plan'],['draft','research'],['merge'],['qa'],['iv'],['release']];
+const render=(t=tasks,w=waves,r=role)=>Profile({role:r,tasks:t,waves:w});
+function flatten(x,out=[]){if(Array.isArray(x))for(const y of x)flatten(y,out);else if(x&&typeof x==='object'){out.push(x);flatten(x.props?.children,out)}return out}
+const nodes=(x,t)=>flatten(x).filter(n=>n.type===t);
+function words(x){if(Array.isArray(x))return x.map(words).join(' ');if(x&&typeof x==='object')return words(x.props?.children);return typeof x==='string'||typeof x==='number'?String(x):''}
+const values=x=>nodes(x,'dd').slice(0,4).map(words);
+test('TSX syntax',()=>assert.equal(result.diagnostics.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0));
+test('role tasks sorted by validated wave without mutating input',()=>{assert.equal(JSON.stringify(orderRoleTasks(tasks,waves).map(t=>[t.id,t.wave])),JSON.stringify([['draft',2],['merge',3]]));assert.equal(tasks[0].id,'merge')});
+test('profile counts reference tasks and distinct waves only',()=>assert.deepEqual(values(render()),['2','2','—','—']));
+test('dependencies remain attached to their own task',()=>{const rows=nodes(render(),'li').map(words);assert.match(rows[0],/Dalga 2.*Çıktı taslağı.*Talebi ayrıştır/);assert.match(rows[1],/Dalga 3.*Taslağı birleştir.*Kaynak incelemesi.*Kalite incelemesi/)});
+test('unknown wave stays unknown, does not infer schedule',()=>{const x=render(tasks,[]);assert.equal(values(x)[1],'—');assert.match(words(x),/Dalga bilinmiyor/)});
+test('invalid plan does not report zero reference tasks',()=>{const x=render(null);assert.deepEqual(values(x),['—','—','—','—']);assert.equal(nodes(x,'li').length,0);assert.match(words(x),/Plan doğrulanamadı/)});
+test('valid empty role is distinct from invalid plan',()=>{const x=render([]);assert.deepEqual(values(x),['0','0','—','—']);assert.match(words(x),/Bu rol için referans görev yok/)});
+test('role switch does not preserve former plan rows',()=>{const x=render([{id:'research',label:'Kaynak incelemesi',predecessors:[],followers:[]}],waves,{...role,id:'research',name:'Research'});assert.deepEqual(values(x),['1','1','—','—']);assert.equal(nodes(x,'li').length,1);assert.doesNotMatch(words(x),/Taslağı birleştir/)});
+test('history and authority remain explicitly unbound',()=>{const x=render();assert.match(words(x),/görev geçmişi değildir/);assert.match(words(x),/bu role ait geçmiş olarak kabul edilmez/);assert.match(words(x),/Atama yok/);assert.equal(nodes(x,'button').length,0)});
+test('two tasks in same wave count once',()=>assert.deepEqual(values(render(tasks,[['draft','merge']])),['2','1','—','—']));
+// AgentDirectory composition: actual parent-derived component, isolated mocked collaborators.
+const directoryFile=path.join(__dirname,'../features/evidence/AgentDirectory.tsx');
+const directory=ts.transpileModule(fs.readFileSync(directoryFile,'utf8'),{fileName:directoryFile,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true},reportDiagnostics:true});
+let planOk=true,filterHidden=false,received;
+const roles=[role,{id:'research',name:'Research',department:'Araştırma',description:'Kaynak'}];
+const plan={ok:true,plan:{tasks:[{id:'draft',role:'engineer'},{id:'merge',role:'engineer'},{id:'research',role:'research'}],waves}};
+const dirMod={exports:{}};
+const dirModules={'react/jsx-runtime':{jsx,jsxs:jsx},react:{useState:v=>[v,()=>{}]},'../../components/dashboard/AgentDetail':{RoleButton:'RoleButton'},'./evidenceModel':{roleDirectory:r=>filterHidden?[]:r},'../core-review/planProjection':{readPlanProjection:()=>planOk?plan:{ok:false,reason:'HOLD'}},'./studioContext':{roleTaskContext:(ts,id)=>{received=[ts,id];return id==='engineer'?tasks:[]}},'./studioGovernance':{organizationTemplate:()=>null},'./EvidenceStudio.module.css':{},'./AgentRoleProfile':Profile};
+vm.runInNewContext(directory.outputText,{exports:dirMod.exports,module:dirMod,require:id=>{assert.ok(Object.hasOwn(dirModules,id),id);return dirModules[id]}});
+const dirRender=selected=>dirMod.exports.default({roles,selected,onSelect:()=>{}});
+test('directory integration has no syntax errors and uses selected role context',()=>{assert.equal(directory.diagnostics.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0);const p=nodes(dirRender('engineer'),Profile)[0].props;assert.equal(p.role.id,'engineer');assert.equal(p.tasks,tasks);assert.equal(p.waves,waves);assert.equal(received[0],plan.plan.tasks);assert.equal(received[1],'engineer')});
+test('directory no selection mounts no profile',()=>assert.equal(nodes(dirRender(undefined),Profile).length,0));
+test('directory invalid plan passes unknown not empty valid tasks',()=>{planOk=false;try{const p=nodes(dirRender('engineer'),Profile)[0].props;assert.equal(p.tasks,null);assert.equal(p.waves.length,0)}finally{planOk=true}});
+test('directory filtered selection preserves selected profile',()=>{filterHidden=true;try{const x=dirRender('engineer');assert.match(words(x),/Seçili rol filtre dışında/);assert.equal(nodes(x,Profile)[0].props.role.id,'engineer')}finally{filterHidden=false}});

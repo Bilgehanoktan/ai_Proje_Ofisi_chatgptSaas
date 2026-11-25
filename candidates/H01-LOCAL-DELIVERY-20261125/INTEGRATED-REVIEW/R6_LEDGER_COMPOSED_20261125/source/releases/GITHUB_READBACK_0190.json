@@ -1,0 +1,78 @@
+{
+  "revision": "0190",
+  "parent_commit": "853a77143c8b61e400314152b1fc1ce6b4c00b22",
+  "source_commit": "e2b2ccf20179dd8d4aebe763c72ef4eac3a46308",
+  "branch": "recovery/0190-t1-race",
+  "source_repo_files": 752,
+  "product_files": 224,
+  "product_blobs_unchanged": 224,
+  "manifest_entries": 223,
+  "product_manifest_blob": "6068ca53e95fbf0e6edc5554361fd52a9bd2e526",
+  "local_product_blob_matches": 54,
+  "source_delta_blob_matches": 3,
+  "changes": [
+    {
+      "path": "scripts/run_postgres_0189.py",
+      "blob": "48ace3da977f9c4bb49b2e6cbbd935eac007e832",
+      "bytes": 4391,
+      "sha256": "9ae24fbd7c8a555643e6b0c9c0aed4e93a61d6c23b06a76069f0d2a45eb416de",
+      "operation": "MODIFY",
+      "symbols": [
+        "run",
+        "main"
+      ]
+    },
+    {
+      "path": "tests/integration/postgres_race_0190.py",
+      "blob": "320eff27f16f0116f4c13f5d5aea31d05a8e734f",
+      "bytes": 5923,
+      "sha256": "b58ad2fc1baf8120853510cd94dbdfcb17ea6dbd3075248e74826a566bbcead1",
+      "operation": "ADD",
+      "symbols": [
+        "writer_sql",
+        "readback_sql",
+        "wait_for",
+        "session",
+        "send",
+        "finish",
+        "run_races"
+      ]
+    },
+    {
+      "path": "tests/integration/test_postgres_race_preflight_0190.py",
+      "blob": "577b2008113fae8ded54187b40b3b413817d9519",
+      "bytes": 1624,
+      "sha256": "6f2358716d8be16121f462495e53273c8561f94af5299b67d662a6a0874cca6f",
+      "operation": "ADD",
+      "symbols": [
+        "RacePreflight"
+      ]
+    }
+  ],
+  "prior_zip_manifest_records": 72,
+  "prior_zip_crc_and_hash": "PASS",
+  "tests": {
+    "python_product_pass": 37,
+    "node_product_pass": 13,
+    "cli_http_pass": 5,
+    "pg_preflight_pass": 8,
+    "total_selected_controls_pass": 63,
+    "actual_pg_planned": 14,
+    "actual_pg_pass": 0,
+    "actual_pg_status": "NOT_RUN_MISSING_INITDB",
+    "full_backend": "NOT_RUN",
+    "full_next_build": "NOT_RUN",
+    "browser": "NOT_RUN"
+  },
+  "logs": {
+    "TEST_PRODUCT_0190.log": "7079995e33feafc503a43ec9ccea4a0115915dd996dc4b3e06326c301cfeb194",
+    "TEST_NODE_0190.log": "8c999343c78b4492682c43c0578cda9e29c8b06a4a610172768f3274af7c73e5",
+    "TEST_LOOPBACK_0190.log": "2de3c275aa249733cca30369a7fa69e8ccc349fa55f1967b272ea58f4ca2dfbf",
+    "TEST_PG_PREFLIGHT_0190.log": "f45e7444e7f6e6388f79ced430ca2acfb7f21c2e56fcf9a85633f25e0145894d",
+    "TEST_PG_BLOCKED_0190.log": "621e57394269c05ecef6cd2158eccf13ab2eedd55cd4f58230c80eb880cbb45c"
+  },
+  "canonical_mapping": "HOLD",
+  "independent_acceptance": "HOLD",
+  "actual_agents": 0,
+  "actual_provider_calls": 0
+}
