@@ -1,0 +1,75 @@
+{
+  "task": "MI05-NW06-R6-MVP-PROXY-TRANSPORT-20261126",
+  "classification": "ACTUAL_LOOPBACK_HTTP_TO_EXACT_TRANSPILED_PROXY_SYNTHETIC_HTTP_SERVER_NOT_FASTAPI",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "handover_parent": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "source_path": "candidates/H01-LOCAL-DELIVERY-20261125/INTEGRATED-REVIEW/R6_MVP_PROXY_20261126/source",
+  "source_tree": "ea89d4c232461f5649409a934e9d25d2d2bb8d2a",
+  "product_tree": "43bf99d0bac5b0a4d3ed98d46213535c4318feff",
+  "manifest_blob": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "source_count": 586,
+  "manifest_path_size_matches": "585/585",
+  "exact_pins": {
+    "app/api/demo/mvp/route.ts": {
+      "bytes": 660,
+      "sha256": "43b90ceeaa2b247b7409c648d520a2c741d4427a7e61ccd3294fd1bc5875130e",
+      "blob": "0bd58c204a805027e166f61fc5d5f889eb70ab7d"
+    },
+    "features/mvp/localBackend.ts": {
+      "bytes": 475,
+      "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71",
+      "blob": "9231711d7efb18dd18b68e3322f62337a6477484"
+    },
+    "features/mvp/mvpDiagnostics.ts": {
+      "bytes": 2140,
+      "sha256": "65a4beb72b4fae67c0fe757b0edaf47dbbab42a5d304cb4e43ead4e07936205c",
+      "blob": "46ab7ced93eef8c10622230b940c0eb566b2358b"
+    },
+    "features/mvp/readBoundedD0Json.ts": {
+      "bytes": 1904,
+      "sha256": "0356dac780530cb9c93c17e35219f2e37cb40a0a29076a64dc886a401eec52e9",
+      "blob": "b19455b413e4cf706ba8c15b5d065def91b0537b"
+    }
+  },
+  "environment": "Linux Node 22.16.0 TypeScript 5.8.3 installed; no new dependencies; loopback 127.0.0.1 only",
+  "command": "NODE_PATH=$(npm root -g) node compile.cjs && node --test transport.test.cjs",
+  "actual_tests": {
+    "pass": 7,
+    "fail": 0,
+    "skip": 0,
+    "exit": 0
+  },
+  "evidence_files": {
+    "compile.cjs": {
+      "bytes": 686,
+      "sha256": "cb1a6cab5e4be2852fa510f834c46a4ab6e32387e5ebd627c09a113eea484043",
+      "blob": "8d15fedbf9fc8696769d096fac95aaa639ab6d98"
+    },
+    "transport.test.cjs": {
+      "bytes": 3766,
+      "sha256": "2847ab472d072b3c4ff177986c99833061e03a8c934ca4632c84d69b510f39db",
+      "blob": "159aaf6c8e5db23e30099e31c5f83b0626d9b769"
+    },
+    "run.tap": {
+      "bytes": 1250,
+      "sha256": "94da7188419127bbc41fe0d0d384d28aff5977d2cae92e1bdaa38ba3a0ede220",
+      "blob": "4124cf9ee2d90c34f12aa912b6d79acf87631c2a"
+    }
+  },
+  "source_resolution": "R6 is an intentional nested archive under handover; previous root-tree discrepancy is explained, source locator verified. Latest R6 nested MVP proxy successor differs by route/test/manifest only. No full local archive, no full manifest content SHA256 audit in this round.",
+  "limits": "Actual Node HTTP socket transport, synthetic server emits D0 fixture; not actual FastAPI/backend, original 9 API/12 IAM/7 G7, build, browser or IV. Owner and C50/R9 HOLD. No product code/API/DB/event changes; no new dependency or CI.",
+  "acceptance": {
+    "Core": "12/16",
+    "UI": "21/40",
+    "W8": "3/8",
+    "MVP": "0/11",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "Normal revert evidence-only commit; source trees and original owner branches untouched.",
+  "next": "Use exact nested source tree path with git archive and original verify_product.py on approved connected host; owner review of current proxy, dependency graph approval; original 28 methods and central promotion remain HOLD."
+}

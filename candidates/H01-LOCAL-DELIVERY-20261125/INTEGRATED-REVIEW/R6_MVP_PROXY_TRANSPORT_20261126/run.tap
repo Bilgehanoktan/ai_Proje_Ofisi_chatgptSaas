@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: actual loopback HTTP preserves safe wire envelope
+ok 1 - actual loopback HTTP preserves safe wire envelope
+  ---
+  duration_ms: 55.464845
+  type: 'test'
+  ...
+# Subtest: actual loopback redirect is not followed
+ok 2 - actual loopback redirect is not followed
+  ---
+  duration_ms: 7.173833
+  type: 'test'
+  ...
+# Subtest: actual ambiguous duplicate content-type rejected
+ok 3 - actual ambiguous duplicate content-type rejected
+  ---
+  duration_ms: 3.664799
+  type: 'test'
+  ...
+# Subtest: actual streamed response over cap rejected
+ok 4 - actual streamed response over cap rejected
+  ---
+  duration_ms: 4.9961
+  type: 'test'
+  ...
+# Subtest: actual malformed UTF-8 rejected
+ok 5 - actual malformed UTF-8 rejected
+  ---
+  duration_ms: 5.248149
+  type: 'test'
+  ...
+# Subtest: actual stalled response body returns HOLD at shared deadline
+ok 6 - actual stalled response body returns HOLD at shared deadline
+  ---
+  duration_ms: 2502.809124
+  type: 'test'
+  ...
+# Subtest: actual wire with positive dispatch is rejected
+ok 7 - actual wire with positive dispatch is rejected
+  ---
+  duration_ms: 4.129098
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2637.03721
