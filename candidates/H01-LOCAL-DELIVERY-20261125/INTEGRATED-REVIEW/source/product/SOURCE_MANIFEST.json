@@ -1,6 +1,6 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "H01-MI-P0-INTEGRATED-REVIEW-R3-20261125",
+  "doc_revision": "H01-MI-P0-INTEGRATED-REVIEW-R4-20261125",
   "status": "ARCHIVAL_REVIEW_ONLY_OWNER_SECURITY_DEPENDENCY_HOLD_NOT_EXECUTION_APPROVED",
   "parent_candidate_sha256": null,
   "parent_git_commit": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
@@ -1499,8 +1499,8 @@
       "sha256": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e"
     },
     "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": {
-      "bytes": 5530,
-      "sha256": "4017e86f9fda414e7f2edb82791fa63e97d62cd9c2e1c76907cdb2b0bb52f857"
+      "bytes": 5876,
+      "sha256": "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
     },
     "ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": {
       "bytes": 1354,
@@ -2287,16 +2287,16 @@
       "sha256": "cb40e1ca8789a2c7d8d9c5f698a223ee1f7a9fe929bac100ca2e704fc83af57a"
     },
     "ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": {
-      "bytes": 7235,
-      "sha256": "e8981dce5fbef9006194688c40f6f8959afb573b7b4cafc1e6860d9b2c6dd503"
+      "bytes": 9718,
+      "sha256": "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
     },
     "ai-company-os-frontend/tests/ui03-projection-freshness.test.cjs": {
       "bytes": 3007,
       "sha256": "5944af18fa2d29b42956851731e7d8658d305605ec09fb60ba3acc9c6e4f3a90"
     },
     "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs": {
-      "bytes": 6555,
-      "sha256": "8cf129f4e823e54c2f6cd9570b6c7cfe0f54efac1c0f5b2821f155256945056e"
+      "bytes": 6668,
+      "sha256": "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
     },
     "ai-company-os-frontend/tests/ui03-visibility-r4.test.cjs": {
       "bytes": 2052,
@@ -2402,7 +2402,7 @@
     ],
     "test_scope": "30/30 local stdlib exact 19-file slice only; not full product"
   },
-  "previous_archival_manifest_blob": "0a91f1a9b3da248535783517e0220e504f9e7f0a",
+  "previous_archival_manifest_blob": "1729826cf1cb42d6721f333d237fab2ec3cb7e69",
   "h01_proxy_r6_20261125": {
     "parent_archival_commit": "8771bb192909ebe948e9bf7eeef9f79d2c29b978",
     "parent_product_tree": "c050374aaeb2f8ccc61c86f32a0de16ae986db49",
@@ -2458,5 +2458,44 @@
     "ORG06_pin": "20/21; historical pin unchanged",
     "authority_variant_PR46": "NOT_APPLIED_OWNER_HOLD",
     "original_backend_tests": "28 NOT_RUN"
+  },
+  "h01_ui_r5_20261125": {
+    "parent_archival_commit": "82a0c0594e43d3ed49e7a8cf1e0932dfa7e9ed06",
+    "source_PR49": "894b7989c9d524bb4cb2893faba28cf7e76a5a6d",
+    "owner_handover_blob": "991fc7c69e244e97e777637c02b4bbf6e388de16",
+    "product_files": 584,
+    "manifest_entries": 583,
+    "changes": [
+      {
+        "path": "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+        "before": "687443fdf73ef53bd39017b6581b7ce05e0f497a",
+        "after": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+        "bytes": 5876,
+        "sha256": "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
+      },
+      {
+        "path": "ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+        "before": "c8a333c82c3706f3b8e4ee191034bdf30bec1187",
+        "after": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+        "bytes": 9718,
+        "sha256": "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
+      },
+      {
+        "path": "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+        "before": "9376c029905b82c8eaace11bde76d5211ccd5449",
+        "after": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+        "bytes": 6668,
+        "sha256": "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
+      }
+    ],
+    "source_owner_evidence": "23/23 owner scoped synthetic UI tests, 19 existing +4 new; not rerun in this central round",
+    "pins": {
+      "historicalJoin": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+      "projectionRead": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+      "organizationParser": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+      "planFixture": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+      "prefixParser": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c"
+    },
+    "classification": "ARCHIVAL_ONLY_NO_CANONICAL_PROMOTION"
   }
 }

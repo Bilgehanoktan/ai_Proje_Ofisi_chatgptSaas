@@ -13,9 +13,11 @@ const actions=[];let shared,planRead,orgRead,security;
 const s=(phase,data=null)=>({phase,data});
 const useSharedSnapshot=()=>({state:shared,read:()=>actions.push('snapshot-read'),reset:()=>actions.push('snapshot-reset'),planRead});
 const useProjectionRead=k=>{assert.equal(k,'organization');return orgRead};
-const mod=load('features/data/SharedSnapshotPanel.tsx',{'react/jsx-runtime':{jsx,jsxs:jsx},'./SharedSnapshotProvider':{useSharedSnapshot},'./useProjectionRead':{useProjectionRead},'../security/securityModel':{readSecurityView:()=>security}});
+const orgParser=load('features/organization/organizationProjection.ts',{});
+const projectionRead=load('features/data/projectionRead.ts',{'../organization/organizationProjection':orgParser});
+const mod=load('features/data/SharedSnapshotPanel.tsx',{'react/jsx-runtime':{jsx,jsxs:jsx},'./SharedSnapshotProvider':{useSharedSnapshot},'./useProjectionRead':{useProjectionRead},'./projectionRead':projectionRead,'../mvp/historicalJoin':load('features/mvp/historicalJoin.ts',{}),'../security/securityModel':{readSecurityView:()=>security}});
 const render=(office=false)=>mod.default({office});
-const plan={tasks:[{id:'plan',state:'HOLD'},{id:'qa',state:'HOLD'}],waves:[['plan'],['qa']]};
+const plan={scope:{tenant_id:'synthetic-tenant',environment_id:'A0_SAMPLE_ONLY'},revision:'sha256:'+'a'.repeat(64),tasks:[{id:'plan',state:'HOLD',run_id:null},{id:'qa',state:'HOLD',run_id:null}],waves:[['plan'],['qa']]};
 const org={positions:[{id:'p1',occupied:true},{id:'p2',occupied:false}],units:[{id:'d1'}]};
 function state(share=s('idle'),p=s('idle'),o=s('idle'),sec={ok:true,trust:[{id:'iv',status:'INCONCLUSIVE'},{id:'release',status:'HOLD'}]}){shared=share;planRead={state:p,data:p.data,read:()=>actions.push('plan-read'),reset:()=>actions.push('plan-reset')};orgRead={state:o,data:o.data,read:()=>actions.push('org-read'),reset:()=>actions.push('org-reset')};security=sec;}
 function panel(x,name){return nodes(x,'article').find(n=>n.props['aria-label']===name)}
@@ -29,3 +31,13 @@ test('loading disables independent read buttons and refuses stale evidence',()=>
 test('Office original presentation remains separate from CEO readback and retains shared status',()=>{state();const x=render(true);assert.equal(nodes(x,'section').filter(n=>n.props['aria-label']==='CEO kaynak ve kontrol özeti').length,0);assert.match(words(x),/Aynı uygulama oturumu/);assert.match(words(x),/Canlı SSE/);assert.equal(nodes(x,'a').length,0)});
 test('security parser HOLD fails closed and does not show signed acceptance',()=>{state(s('idle'),s('idle'),s('idle'),{ok:false,reason:'SECURITY_SCOPE_HOLD'});const x=render();assert.match(words(x),/IV:\s*HOLD\s*· Yayın:\s*HOLD/);assert.match(words(x),/bağımsız güvenlik kabulü HOLD/);assert.doesNotMatch(words(x),/APPROVED|PASS_ACCEPT/)});
 test('no money, dispatch, grant, or real position inferred when unverified',()=>{state();const x=render();assert.match(words(x),/işlem başlatmaz, dispatch veya harcama izni üretmez/);assert.match(words(x),/aynı tenant\/anda olduğuna dair kanıt olmadan eşleştirilmez/)});
+
+// Historical identity comparison is the real product helper, not an authorization stub.
+const fixedPlan=require('../fixtures/core.plan.projection.json');
+const runtimePrefix={tenant:'synthetic-tenant',company:'synthetic-company',environment:'A0_SAMPLE_ONLY',plan_revision:'sha256:c75ec1070786538f38bdccdcf6a75de62a9e02e9bcb7e4a4bb9df5f7e96638a0',task_id:'a',run_id:'demo-a',freshness:'HISTORICAL_SAMPLE',state:'VERIFYING',policy_epoch:2,witness_epoch:3,sample_outstanding_minor:20,currency:'USD',agent_instance_id:'demo-agent'};
+const runtime=(prefix=runtimePrefix)=>s('historical',{snapshot_seq:4,prefix,project_id:null,world_id:null});
+function joinText(x){return words(nodes(x,'p').find(n=>n.props['aria-label']==='Plan Runtime bağlama durumu'));}
+test('actual pinned plan and historical Runtime revision mismatch is explicit in CEO and Office',()=>{state(runtime(),s('historical',fixedPlan));for(const office of [false,true]){const x=render(office);assert.match(joinText(x),/PLAN_REVISION_MISMATCH\s+· JOIN_HOLD/);assert.doesNotMatch(joinText(x),/JOIN_ALLOWED/);}});
+test('expired plan or Runtime evidence removes the comparison reason immediately',()=>{state(runtime(),s('hold',fixedPlan));assert.match(joinText(render()),/SOURCE_UNAVAILABLE\s+· JOIN_HOLD/);state(s('hold',runtime().data),s('historical',fixedPlan));assert.match(joinText(render(true)),/SOURCE_UNAVAILABLE\s+· JOIN_HOLD/);});
+test('matching plan task run and scope remain historical only, no live join',()=>{const exact={...fixedPlan,scope:{tenant_id:runtimePrefix.tenant,company_id:runtimePrefix.company,environment_id:runtimePrefix.environment},revision:runtimePrefix.plan_revision,tasks:[{id:runtimePrefix.task_id,run_id:runtimePrefix.run_id}]};state(runtime(),s('historical',exact));assert.match(joinText(render()),/HISTORICAL_ONLY\s+· JOIN_HOLD/);});
+test('mismatched tenant cannot be presented as a matched Runtime plan',()=>{state(runtime({...runtimePrefix,tenant:'synthetic-other'}),s('historical',fixedPlan));assert.match(joinText(render()),/SCOPE_MISMATCH\s+· JOIN_HOLD/);});

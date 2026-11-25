@@ -514,5 +514,141 @@
     },
     "rollback": "Normal revert archival commit only. Preserve R2 exact snapshot, source branches, historical G7 pin and test records. No CI, main, deploy, actual grants or real data.",
     "next": "Run original G7 7 on exact PR19 with approved dependency environment; source-owner review explicit successor pins for current Scheduler/authority; run PR46 12 and PR47 9 + 11 MVP, then W8 C07 C08 C05. Do not count diagnostics as acceptance."
+  },
+  "r4": {
+    "task": "H01-NW02-MI05-IAM-UI-R5-20261125",
+    "classification": "EXACT_PR46_COMPONENT_REGRESSION_AND_ARCHIVAL_UI_OWNER_SOURCE_TRANSFER",
+    "parent": "82a0c0594e43d3ed49e7a8cf1e0932dfa7e9ed06",
+    "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "snapshot": {
+      "tree": "78593080158f644114c6ce2739a985ba1fde8217",
+      "product_tree": "2440b9e2d3f513f2789feb634066655847101828",
+      "manifest_blob": "3de94145197137fb60506fc05dfa23bbee00c208",
+      "product_files": 584,
+      "manifest_entries": 583,
+      "readback": "583/583 paths, bytes, modes, expected Git blobs; inherited owner SHA256 pins, not full local raw-byte hash"
+    },
+    "iam": {
+      "source_ref": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "source_pins": [
+        {
+          "path": "app/core/iam_session.py",
+          "bytes": 15424,
+          "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+          "blob": "f3c37428acd475e09c228bce47d534d6584cd944"
+        },
+        {
+          "path": "app/core/transaction/intent_authority.py",
+          "bytes": 10066,
+          "sha256": "c1d0cef446a374885054d6cda8852c273297c05f92eed3debcde42e4c5127125",
+          "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17"
+        },
+        {
+          "path": "tests/test_iam_authority_d5g2.py",
+          "bytes": 11216,
+          "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043",
+          "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+        }
+      ],
+      "command": "python -B -S -m unittest discover -s tests -p test_iam_authority_d5g2.py -v",
+      "environment": "CPython 3.13.5 / SQLite 3.46.1; stdlib, disposable SQLite, exact namespace-package slice (no full checkout)",
+      "actual": 19,
+      "pass": 19,
+      "fail": 0,
+      "exit": 0,
+      "unique_new_test_methods": 0,
+      "elapsed_seconds": 0.36,
+      "log_blob": "6cfeb24880b1e7d79ce12b6993567033e78ae86b",
+      "log_sha256": "a2748ca2709fa9e9ada0a79f7d0c1bdd4fd5fc988a8dfd4cd0e836e5d0968634",
+      "scope": "Original G2 tests run on exact PR46 authority source; exercises durable IAM/claim/fence methods, not changed full T1 wrapper; historical G2 tests not counted as new acceptance. Explicit known D04 joint restore residual reproduced by original test.",
+      "archive": {
+        "file": "AIOS_IAM_R4_D5G2_20261125.zip",
+        "bytes": 11655,
+        "sha256": "2fe51675285ad3907f89d101c34e4669f82fa101aeabf9543ff0110e9020e4a3",
+        "entries": 5
+      },
+      "disposition": "PR46 authority variant preserved in original owner branch and test record only. R4 product path unchanged b28788f...; no owner approval, wrapper NOT_RUN."
+    },
+    "ui": {
+      "source_ref": "894b7989c9d524bb4cb2893faba28cf7e76a5a6d",
+      "owner_handover_blob": "991fc7c69e244e97e777637c02b4bbf6e388de16",
+      "changes": [
+        {
+          "path": "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+          "before": "687443fdf73ef53bd39017b6581b7ce05e0f497a",
+          "after": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+          "bytes": 5876,
+          "sha256": "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
+        },
+        {
+          "path": "ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+          "before": "c8a333c82c3706f3b8e4ee191034bdf30bec1187",
+          "after": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+          "bytes": 9718,
+          "sha256": "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
+        },
+        {
+          "path": "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+          "before": "9376c029905b82c8eaace11bde76d5211ccd5449",
+          "after": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+          "bytes": 6668,
+          "sha256": "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
+        }
+      ],
+      "pins": {
+        "historicalJoin": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+        "projectionRead": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+        "organizationParser": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f",
+        "planFixture": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+        "prefixParser": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c"
+      },
+      "owner_evidence_blob": "61ff1c52fa93053e907d5d97472d77dd1e960c78",
+      "owner_evidence_sha256": "3622b19a767b88bc6a7e958cf0c3e8e4667bd33f411ad044b800a2f0d09ed6e3",
+      "owner_scoped_pass": 23,
+      "owner_new_methods": 4,
+      "rerun_in_central_round": false,
+      "meaning": "CEO and Office display existing inspectHistoricalJoin diagnostic, matching identity remains JOIN_HOLD; stale source removes reason. No live join, authority, API/DB/event or real KPI. Original owner records reused; copied exact blob from owner branch into archival tree."
+    },
+    "conflict": {
+      "open_PRs": 44,
+      "previous_inventory": "Previous full inventory reused for backend paths at unchanged relevant heads. PR49 changed since R3; exact compare showed 3 product files and 3 separate candidate/evidence changes; owner R5 record states 0 conflicts in 44 open PR inventory.",
+      "ui_base_paths_match": 3,
+      "ui_dependency_pins_match": 5,
+      "authority_variant": "PR46 vs PR31/R3 authority; G7/ORG06 scheduler mismatch remains; applying PR46 would introduce another G7 source pin mismatch. Keep original pins and source branches."
+    },
+    "blockers": {
+      "original_12_IAM": "NOT_RUN",
+      "original_7_G7": "NOT_RUN",
+      "original_9_API": "NOT_RUN",
+      "original_11_MVP": "NOT_RUN",
+      "full_checkout": "BLOCKED; direct authenticated full archive unavailable in this environment, full ZIP not delivered",
+      "dependencies": "R9/C50 review HOLD, no package installation",
+      "owner": "PR46/G7/ORG06 successor pins, API and MIME review HOLD; UI owner R5 source staged, canonical central writer pending",
+      "security": "D04 restore residual, protected PG, real grant and independent C05/IV HOLD",
+      "architecture": "Full Design Master addendum review incomplete"
+    },
+    "progress": {
+      "archival_product": [
+        584,
+        584
+      ],
+      "canonical_product": [
+        553,
+        553
+      ],
+      "archive_replaced_sources": 1,
+      "archive_replaced_tests": 2,
+      "new_local_original_regression_execution": 19,
+      "new_local_test_methods": 0,
+      "owner_23_not_double_counted": true,
+      "original_28_closed": 0,
+      "acceptance_delta_pp": 0,
+      "ordinal_delta": 0,
+      "weighted": "HESAPLANAMADI"
+    },
+    "rollback": "Normal revert archival commit, retains R3 and all owner branches; no CI/PROD/main/real grant/DB/schema changes.",
+    "next": "Avoid further partial diagnostics as substitute for original 28 tests. Obtain approved exact checkout/R9/C50 dependencies and owner dispositions; original PR46 12, PR19/G7 7, PR47 9 then 11 MVP. Resolve full D04 independently; W8 owner/C07/C08/C05."
   }
 }
