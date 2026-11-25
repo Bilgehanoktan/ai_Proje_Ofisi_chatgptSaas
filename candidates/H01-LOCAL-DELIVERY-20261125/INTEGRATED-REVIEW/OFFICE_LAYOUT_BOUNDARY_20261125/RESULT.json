@@ -1,0 +1,130 @@
+{
+  "task": "MI05-06-OFFICE-LAYOUT-BOUNDARY-20261125",
+  "classification": "EXACT_D0_PRODUCT_SOURCE_REPAIR_OWNER_REVIEW_ONLY",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "8e8eb31e78c5f6538b26b882399d26023e568fc4",
+  "source": "R4 product tree 5582d6aa9d92b47dedeb3ef085714693dec0c531; canonical and historical PR2/3 identical original layout blob",
+  "r4_manifest": "1faf756d1a4d08b5a975e08ffd107389d4bcd69f",
+  "canonical_manifest": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+  "design_reference": {
+    "master_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "relevant_lines": [
+      13,
+      68,
+      87,
+      394
+    ],
+    "scope": "synthetic geometry only; revision/coordinate mismatch with real snapshot remains HOLD"
+  },
+  "owner": "MI05/06; central manifest writer after owner review",
+  "conflicts": {
+    "open_pr_path_lists": 44,
+    "matching": [
+      {
+        "pr": 2,
+        "head": "da669e9ca4db6b87cc7f598c5eab767888c30e83",
+        "blob": "cf47623d303d21aed11eb5ee69b66a757c6a5d18"
+      },
+      {
+        "pr": 3,
+        "head": "54d4601f1ea1093d79a317f282a1696d95fe3cd3",
+        "blob": "cf47623d303d21aed11eb5ee69b66a757c6a5d18"
+      }
+    ],
+    "divergent_layout_variants": 0,
+    "new_test_path_collision": 0
+  },
+  "manifest_delta": {
+    "status": "PROPOSAL_NOT_APPLIED",
+    "rebind": {
+      "path": "ai-company-os-backend/app/engines/office_engine/layout.py",
+      "old": {
+        "blob": "cf47623d303d21aed11eb5ee69b66a757c6a5d18",
+        "bytes": 1577,
+        "sha256": "751545635e2a2f6ea8ebdb05e2fd37230281ed3d7c72769ad8af46c81fd9e819"
+      },
+      "new": {
+        "blob": "4e637a46bcc1efbf0b6e5637e32b70398f70f1c2",
+        "bytes": 3319,
+        "sha256": "24089966253bd3d950f6aebfe9b65f2b2a2cc86d680beb3a472005301d153639"
+      }
+    },
+    "add": {
+      "path": "ai-company-os-backend/tests/test_office_layout_boundary.py",
+      "blob": "cc01ff57c5800cad4d5c1b2ae46dfa03a37ecb78",
+      "bytes": 4102,
+      "sha256": "abd404baa79746eb254d3b17236d64aebe427f71e88255fe3e0bdf4fc526a5fb"
+    },
+    "r4_projected_entries": 584,
+    "r4_projected_files": 585
+  },
+  "exact_preimage_pins": [
+    [
+      "app/__init__.py",
+      "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    ],
+    [
+      "app/core/__init__.py",
+      "9d457472970b7f581687ba142d1bf99ba91c7388"
+    ],
+    [
+      "app/core/office.py",
+      "378e6e44995b3978780f91f759f168836732d9b0"
+    ],
+    [
+      "app/engines/__init__.py",
+      "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+    ],
+    [
+      "app/engines/office_engine/__init__.py",
+      "5b19819cd7070302e874ecee80170a3921ce8fb0"
+    ],
+    [
+      "app/engines/office_engine/layout.py",
+      "cf47623d303d21aed11eb5ee69b66a757c6a5d18"
+    ],
+    [
+      "fixtures/core.preview.json",
+      "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7"
+    ]
+  ],
+  "test": {
+    "command": "env -i PATH=/usr/bin:/bin /opt/pyvenv/bin/python -B -S -m unittest discover -s tests -p test_office_layout_boundary.py -v",
+    "runtime": "Python 3.13.5 Linux, stdlib only",
+    "before": {
+      "methods": 14,
+      "passed_methods": 5,
+      "failed_methods": 9,
+      "subtest_failures": 8,
+      "subtest_errors": 8,
+      "exit": 1,
+      "log_sha256": "cd51e7c6fbeb2cd29bb7c8b19b0a0973f4fa87c8b428f550beb0fe26ecefd473"
+    },
+    "after": {
+      "methods": 14,
+      "pass": 14,
+      "exit": 0,
+      "log_sha256": "c2107cf8a6845ee10818c7c64ec7b8e59d030a4187988a6c6261fdbb149ec751"
+    },
+    "no_large_allocation": "mock range for preallocation checks; no huge allocation performed"
+  },
+  "impact": "existing validate_layout; preallocation bounds, strict integer positions and malformed shape rejection via existing ValueError codes; valid D0 two-floor fixture and facade preserved; no live placement, schema/API/DB/event changes or new runtime dependency",
+  "limits": "full suite, HTTP projection, browser, W8, owner and independent security acceptance NOT_RUN/HOLD; exact full master clause review incomplete",
+  "progress": {
+    "canonical_files": 553,
+    "r4_files": 584,
+    "changed_product_candidate_source": 1,
+    "new_test_file": 1,
+    "canonical_delta": 0,
+    "core": "12/16",
+    "ui": "21/40",
+    "w8": "3/8",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "ordinal_delta": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "rollback": "ordinary revert archive commit; before integration restore exact layout blob and remove new tests; no branch deletion/force"
+}
