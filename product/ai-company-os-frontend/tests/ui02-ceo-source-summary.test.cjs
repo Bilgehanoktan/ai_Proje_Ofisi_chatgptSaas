@@ -11,11 +11,10 @@ test('static KPI values never become verified live numbers',()=>{const before=JS
 test('original public metric formatter stays numeric-only and defensive',()=>{assert.equal(Metrics.formatMetric(5),'5');assert.equal(Metrics.formatMetric(NaN),'—');assert.equal(Metrics.formatMetric('99'),'—')});
 const actions=[];let shared,planRead,orgRead,security;
 const s=(phase,data=null)=>({phase,data});
-const useSharedSnapshot=()=>({state:shared,read:()=>actions.push('snapshot-read'),reset:()=>actions.push('snapshot-reset'),planRead});
-const useProjectionRead=k=>{assert.equal(k,'organization');return orgRead};
+const useSharedSnapshot=()=>({state:shared,read:()=>actions.push('snapshot-read'),reset:()=>actions.push('snapshot-reset'),planRead,organizationRead:orgRead});
 const orgParser=load('features/organization/organizationProjection.ts',{});
 const projectionRead=load('features/data/projectionRead.ts',{'../organization/organizationProjection':orgParser});
-const mod=load('features/data/SharedSnapshotPanel.tsx',{'react/jsx-runtime':{jsx,jsxs:jsx},'./SharedSnapshotProvider':{useSharedSnapshot},'./useProjectionRead':{useProjectionRead},'./projectionRead':projectionRead,'../mvp/historicalJoin':load('features/mvp/historicalJoin.ts',{}),'../security/securityModel':{readSecurityView:()=>security}});
+const mod=load('features/data/SharedSnapshotPanel.tsx',{'react/jsx-runtime':{jsx,jsxs:jsx},'./SharedSnapshotProvider':{useSharedSnapshot},'next/link':'a','./projectionRead':projectionRead,'../mvp/historicalJoin':load('features/mvp/historicalJoin.ts',{}),'../security/securityModel':{readSecurityView:()=>security}});
 const render=(office=false)=>mod.default({office});
 const plan={scope:{tenant_id:'synthetic-tenant',environment_id:'A0_SAMPLE_ONLY'},revision:'sha256:'+'a'.repeat(64),tasks:[{id:'plan',state:'HOLD',run_id:null},{id:'qa',state:'HOLD',run_id:null}],waves:[['plan'],['qa']]};
 const org={positions:[{id:'p1',occupied:true},{id:'p2',occupied:false}],units:[{id:'d1'}]};

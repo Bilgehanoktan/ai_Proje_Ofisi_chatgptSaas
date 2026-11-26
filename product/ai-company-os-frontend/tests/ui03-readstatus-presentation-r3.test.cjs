@@ -27,8 +27,8 @@ let snapshot,organization;
 const actions={plan:0,org:0,planReset:0,orgReset:0};
 const panel=compile(moduleCompile(target),{
  'react/jsx-runtime':elements,
- './SharedSnapshotProvider':{useSharedSnapshot:()=>({state:{phase:'idle',data:null},read:()=>{},reset:()=>{},planRead:{state:snapshot,data:snapshot.data,read:()=>actions.plan++,reset:()=>actions.planReset++}})},
- './useProjectionRead':{useProjectionRead:(key)=>{assert.equal(key,'organization');return {state:organization,data:organization.data,read:()=>actions.org++,reset:()=>actions.orgReset++}}},
+ './SharedSnapshotProvider':{useSharedSnapshot:()=>({state:{phase:'idle',data:null},read:()=>{},reset:()=>{},planRead:{state:snapshot,data:snapshot.data,read:()=>actions.plan++,reset:()=>actions.planReset++},organizationRead:{state:organization,data:organization.data,read:()=>actions.org++,reset:()=>actions.orgReset++}})},
+ 'next/link':{default:'a'},
  './projectionRead':{readStatus},
  '../mvp/historicalJoin':compile(moduleCompile(path.resolve(__dirname,'../features/mvp/historicalJoin.ts')),{}),
  '../security/securityModel':{readSecurityView:()=>({ok:true,trust:[{id:'iv',status:'INCONCLUSIVE'},{id:'release',status:'HOLD'}]})},

@@ -1,0 +1,81 @@
+{
+  "task": "H01-B-MI05-06-UI-SHARED-ORG-TRANSFER-20261126",
+  "authorization": "b47d4354ee95a5750d69e30523fa401b56aea20f",
+  "parent": "a626c7be52bbb7df0272a98dbdbbfedb02faecd1",
+  "source": "70b07c50531ac3427811cebaeb4e8b810581b983",
+  "common_ancestor": "c7eba2ca6da7328fb3a39585a048c8e1941f0b1a",
+  "scope": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "before": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+      "after": "1419c3253fdf5496738e93f6edbdfb6f654bd860",
+      "bytes": 7039,
+      "sha256": "bad849abd3325e8fcc4df12e3d0f573ba27e3ac375bb85435abcd824ed8f0309"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+      "before": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+      "after": "3b02873f6f645fe1d9f698ce966727d70e696220",
+      "bytes": 1593,
+      "sha256": "fd2f2d101a88b593a8fbe4b0a44e91aa0715fa77ff1de3a7f4d0f6fa38a23588"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+      "before": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+      "after": "84790dfad205c0b280c66b759d594e86ddccfcf0",
+      "bytes": 4742,
+      "sha256": "d62b83dda0049f8f177031f3e9d66dbc0b7ffb504361f401be962b1a5a219649"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+      "before": "990b06ee2b5adc115547615719610ccc02a66061",
+      "after": "ba5c811246dac69677f618c0d5568f2ca0701006",
+      "bytes": 2109,
+      "sha256": "3e4de8799d55065edb0d9cf932d467127b2ecd652a97a7bf5b3931416b774f22"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+      "before": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+      "after": "c48d8116036357776a9b8f52401fa14ba1554021",
+      "bytes": 9641,
+      "sha256": "8c834d64e0156d05d09de2afdec20d735aab94a2ac743e5e2120fe055e5a6ac8"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+      "before": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+      "after": "7b54683e75bc8591acedc6b0e7d3b9dceb574cb5",
+      "bytes": 6620,
+      "sha256": "e30f7fefaae6d62e9c0f2ac0a45b4036a00d8e83aa3e1fb9d332a8851f504757"
+    }
+  ],
+  "technical_disposition": "APPROVED_FOR_DEVELOPMENT_SOURCE_TRANSFER_ONLY. Existing root provider and validated separate historical ORG reader; no runtime identity join, authority, writes or new dependency. Current canonical six preimage blobs match common ancestor, no overlap with first transfer.",
+  "review": "Existing parser scope fields and runtime_binding null, independent state/TTL/visibility/reset, unchanged registered reader, Plan parser and shared replay; frontend consumers use historical source only; Link preserves root layout on client navigation. Existing two harnesses adapted for context and Link; not executed at this revision. No new runtime/API/DB/event/lock or normative architecture.",
+  "evidence": "Prior canonical 68 scoped checks preserved at their original exact source, NOT evidence for these six modified files. Build/functional/browser tests NOT_RUN for new UI scope. Source-only decision under H01 B and 0.4; mandatory acceptance gates retained.",
+  "manifest": {
+    "entries": 566,
+    "sha256": "9aff713c045e0374c7095f2dfe3ce111d6e2aecddc5b0cb219c3335397d66829",
+    "changed_payload_sha256": "6/6"
+  },
+  "gates": {
+    "UI_source": "TRANSFERRED_ONLY",
+    "runtime_binding": "HOLD",
+    "IAM_T1": "HOLD",
+    "C50_R9": "HOLD",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "independent": "HOLD",
+    "full_build": "NOT_RUN"
+  },
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "Ordinary revert of this commit; first Core transfer preserved.",
+  "limitations": "Full source ZIP/full master review not complete; not full payload rehash. No actual browser/runtime execution."
+}
