@@ -1,6 +1,6 @@
 {
   "version": "0.1.0-draft.6-recovery-r11-task-budget-dev",
-  "doc_revision": "R6-SOURCE-CONSOLIDATED-REVIEW-20261126",
+  "doc_revision": "R6-SOURCE-CONSOLIDATED-LINEAGE-REVIEW-20261126",
   "status": "ARCHIVAL_COMPOSED_REVIEW_ONLY_OWNER_SECURITY_DEPENDENCY_HOLD_NOT_EXECUTION_APPROVED",
   "parent_candidate_sha256": null,
   "parent_git_commit": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
@@ -523,8 +523,8 @@
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
     "ai-company-os-backend/app/engines/memory_engine/retrieval.py": {
-      "bytes": 2715,
-      "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+      "bytes": 3231,
+      "sha256": "7aa8ebf859cd7a56ca39b59b9f5c1708bb4745840cf401f5beaa7760c745b68e"
     },
     "ai-company-os-backend/app/engines/memory_engine/runtime_binding.py": {
       "bytes": 5319,
@@ -1113,6 +1113,10 @@
     "ai-company-os-backend/tests/test_retained_snapshot_0201.py": {
       "bytes": 3163,
       "sha256": "f8aa59af6f79868078b41d570f6a7bae00952b85550dc948159bb531f0f3c8e9"
+    },
+    "ai-company-os-backend/tests/test_retrieval_exact_boundary.py": {
+      "bytes": 4565,
+      "sha256": "f1a36a360b42cdd661004eab95b05cb71abac16c3b6ae85755249c3f4d1da0b2"
     },
     "ai-company-os-backend/tests/test_review_0161.py": {
       "bytes": 6307,
@@ -2414,7 +2418,7 @@
     ],
     "test_scope": "30/30 local stdlib exact 19-file slice only; not full product"
   },
-  "previous_archival_manifest_blob": "5b7aaf58e41fd21d87ff272a15c833975a7cd8d6",
+  "previous_archival_manifest_blob": "359e084b4a8aceb9120fda6a3be3e298646b4f1f",
   "h01_proxy_r6_20261125": {
     "parent_archival_commit": "8771bb192909ebe948e9bf7eeef9f79d2c29b978",
     "parent_product_tree": "c050374aaeb2f8ccc61c86f32a0de16ae986db49",
@@ -2644,5 +2648,34 @@
       }
     ],
     "dependency_hold": "FastAPI source pin proposal only; no dependency approval/install; crypto requirements-history-signatures remains 46.0.4, C50 50.0.2 not approved; W8 original runner pinned historical manifest, no auto-repin."
+  },
+  "h01_r6_lineage_20261126": {
+    "classification": "D0_REVIEW_ONLY_OWNER_HOLD",
+    "parent": "9818660fc71648841288f7bc59fc179eac3ee29c",
+    "owner_head": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+        "old": {
+          "blob": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+          "bytes": 2715,
+          "sha256": "a5b57626ad1a12e7454f6c2d83606d547154ecc0824c65c9dfbfc35b4fd0f8cc"
+        },
+        "new": {
+          "blob": "7b12226e93c07b58d8c9a3a4b4728569a890fc0b",
+          "bytes": 3231,
+          "sha256": "7aa8ebf859cd7a56ca39b59b9f5c1708bb4745840cf401f5beaa7760c745b68e"
+        }
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_retrieval_exact_boundary.py",
+        "old": null,
+        "new": {
+          "blob": "0f48ef470db902be579090980cd43197b98096ad",
+          "bytes": 4565,
+          "sha256": "f1a36a360b42cdd661004eab95b05cb71abac16c3b6ae85755249c3f4d1da0b2"
+        }
+      }
+    ]
   }
 }

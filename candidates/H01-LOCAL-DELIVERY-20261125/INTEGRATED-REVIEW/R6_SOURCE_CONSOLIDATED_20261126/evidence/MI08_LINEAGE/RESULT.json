@@ -1,0 +1,134 @@
+{
+  "task": "MI08-R10-R6-LINEAGE-EXACT-BOUNDARY-20261126",
+  "classification": "D0_SOURCE_FIX_SCOPED_LOCAL_TEST_OWNER_HOLD",
+  "parent": "9818660fc71648841288f7bc59fc179eac3ee29c",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner": {
+    "branch": "integration/w5-mem-05e-r1-authority-source-alignment",
+    "head": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+    "review": "HOLD",
+    "checked_prs": [
+      19,
+      31,
+      44,
+      46,
+      49,
+      53,
+      54,
+      55
+    ]
+  },
+  "architecture": {
+    "area": "MI08/R10",
+    "symbols": [
+      "_exact_scope",
+      "_exact_token",
+      "valid_keys",
+      "valid_view",
+      "inspect_retrieval"
+    ],
+    "change": "Exact scope, node, tombstone and primitive types before comparison. No real authority, retrieval, release, deletion receipt, API, DB, event or normative change.",
+    "master": "Historical 0155 R10 section; full current 0158 not reviewed."
+  },
+  "source_tree": "3e492e5c0be0b1b2753ec6cd85196df6ee2650c4",
+  "product_tree": "4031188ba96bce6ff31a78429706ae234e14de9f",
+  "manifest_blob": "7dd15ee932c67c3963576804585a966b577736dc",
+  "source_files": 1923,
+  "product_files": 588,
+  "manifest_entries": 587,
+  "delta": [
+    {
+      "path": "ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+      "before": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+      "after": "7b12226e93c07b58d8c9a3a4b4728569a890fc0b",
+      "bytes": 3231,
+      "sha256": "7aa8ebf859cd7a56ca39b59b9f5c1708bb4745840cf401f5beaa7760c745b68e"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_retrieval_exact_boundary.py",
+      "before": null,
+      "after": "0f48ef470db902be579090980cd43197b98096ad",
+      "bytes": 4565,
+      "sha256": "f1a36a360b42cdd661004eab95b05cb71abac16c3b6ae85755249c3f4d1da0b2"
+    }
+  ],
+  "runner": {
+    "before": "a9fca768ccbba2a7520da1e8f704e10cb4d5d381",
+    "after": "2d1c4a8c6dfaf6ba0265f2b9c1304e64ab29cc24",
+    "change": "manifest constant only; prior gates unchanged"
+  },
+  "baseline_pins": {
+    "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/engines/__init__.py": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+    "app/core/t1_review.py": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+    "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+    "app/core/runtime_preview.py": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+    "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "app/engines/memory_engine/retrieval.py": "c62c79bf9fa66d76505ca8e9e9195564e281cafe",
+    "app/engines/memory_engine/__init__.py": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+    "app/engines/knowledge_engine/__init__.py": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+    "app/engines/knowledge_engine/provenance.py": "759f42b9e87ad3f15f1e0cdc8c983a2ddf21f4a7",
+    "app/engines/memory_engine/runtime_binding.py": "b24c782973ec8731f8dbea17d0379ae5abe897f0",
+    "tests/test_memory_access_0194.py": "a792abc90b7a09fb703982f6efd1cd4f648b073c"
+  },
+  "environment": "Linux CPython 3.13.5 -B -S stdlib only; 15 baseline Git blobs matched",
+  "tests": {
+    "new": {
+      "command": "python -B -S -m unittest discover -s tests -p test_retrieval_exact_boundary.py -v",
+      "before": {
+        "pass": 6,
+        "fail": 10,
+        "exit": 1,
+        "raw_sha256": "76bc62fb95518302c4a4d85faabefb64b442e7e775632549f444f8cae7b1f55c"
+      },
+      "after": {
+        "pass": 16,
+        "fail": 0,
+        "exit": 0,
+        "raw_sha256": "0befe43de89aa3902e4673084c41814e95751d60e5f90e022dbe4120bba3a850"
+      }
+    },
+    "original_consumer": {
+      "command": "python -B -S -m unittest discover -s tests -p test_memory_access_0194.py -v",
+      "pass": 17,
+      "fail": 0,
+      "exit": 0,
+      "raw_sha256": "85ac1da2101dd15480378d4f4c56d568f4ea78e74c6cb5741194a1676629519e"
+    },
+    "logs": [
+      {
+        "path": "before.log.gz",
+        "sha": "a716443a01f8340ad07872b21742f1bedaf7f8d1"
+      },
+      {
+        "path": "after.log.gz",
+        "sha": "6ab7cc4f75424f29d920f88fcaf0809f5a756d7f"
+      },
+      {
+        "path": "original-after.log.gz",
+        "sha": "cc8372d907c1b3b829ec12df47f2d2d08eab89ff"
+      }
+    ]
+  },
+  "verification": {
+    "manifest_path_sizes": "587/587",
+    "full_byte_audit": "NOT_RUN",
+    "changed": 3,
+    "added": 1,
+    "removed": 0
+  },
+  "limits": "No full product execution, real tenant validation, grant, owner signoff, new CI or canonical transfer. Runtime binding ACL and lease equality still require separate review; C50/R9 and W8 C07/C08/C05 remain HOLD/NOT_RUN.",
+  "rollback": "Normal archival commit revert; restore source, test, manifest and W8 pin together; preserve history.",
+  "next": "Review Runtime–Memory ACL and run/lease boundaries; continue independent source work before eventual single Codex handoff.",
+  "progress": {
+    "canonical_delta": 0,
+    "acceptance_delta": 0,
+    "ordinal_delta": 0,
+    "weighted": "HESAPLANAMADI"
+  }
+}

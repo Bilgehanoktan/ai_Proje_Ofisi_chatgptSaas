@@ -1,5 +1,5 @@
 """R10: bounded lineage closure and current tombstone review; no retrieval IO."""
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 from ...core.runtime_preview import Scope, valid_scope, token, uint
 from ...core.t1_review import digest_ok
 
@@ -31,27 +31,40 @@ class RetrievalReview:
     deletion_receipt: None = None
 
 
+def _exact_scope(scope: object) -> bool:
+    # Compare only primitive values, never caller-defined equality/hash methods.
+    return (type(scope) is Scope
+            and all(type(getattr(scope, f.name)) is str for f in fields(Scope))
+            and valid_scope(scope))
+
+
+def _exact_token(value: object) -> bool:
+    return type(value) is str and token(value)
+
+
 def valid_keys(keys: object) -> bool:
-    return (isinstance(keys, tuple) and len(keys) <= 512
-            and all(token(k) for k in keys) and len(set(keys)) == len(keys))
+    return (type(keys) is tuple and len(keys) <= 512
+            and all(_exact_token(k) for k in keys) and len(set(keys)) == len(keys))
 
 
 def valid_view(view: object, scope: Scope) -> bool:
-    return (isinstance(view, TombstoneView) and view.scope == scope
+    return (type(view) is TombstoneView and _exact_scope(scope)
+            and _exact_scope(view.scope) and view.scope == scope
             and view.complete is True and uint(view.epoch) and uint(view.sequence)
             and valid_keys(view.keys))
 
 
 def inspect_retrieval(scope: Scope, nodes: tuple[Node, ...], target: str,
                       view: TombstoneView, current: TombstoneView) -> RetrievalReview:
-    if not valid_scope(scope) or not token(target):
+    if not _exact_scope(scope) or not _exact_token(target):
         return RetrievalReview('MEMORY_SCOPE_HOLD')
     if not valid_view(view, scope) or not valid_view(current, scope) or view != current:
         return RetrievalReview('TOMBSTONE_VIEW_UNKNOWN_HOLD')
-    if not isinstance(nodes, tuple) or not nodes or len(nodes) > 512:
+    if type(nodes) is not tuple or not nodes or len(nodes) > 512:
         return RetrievalReview('LINEAGE_GRAPH_HOLD')
-    if not all(isinstance(n, Node) and n.scope == scope and token(n.node_id) and token(n.revision)
-               and digest_ok(n.digest) and valid_keys(n.parents) for n in nodes):
+    if not all(type(n) is Node and _exact_scope(n.scope) and n.scope == scope
+               and _exact_token(n.node_id) and _exact_token(n.revision)
+               and type(n.digest) is str and digest_ok(n.digest) and valid_keys(n.parents) for n in nodes):
         return RetrievalReview('LINEAGE_SCOPE_OR_PIN_HOLD')
     by_id = {n.node_id: n for n in nodes}
     if len(by_id) != len(nodes) or target not in by_id or any(p not in by_id for n in nodes for p in n.parents):
