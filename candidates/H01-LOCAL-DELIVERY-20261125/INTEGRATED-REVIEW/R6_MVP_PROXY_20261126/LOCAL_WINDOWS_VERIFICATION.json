@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-26",
+  "scope": "isolated R6 local development verification",
+  "baseline": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "archive_sha256": "1438353c49d0b72c8e0d05f73fa4084c9f5ac6d29cec065382417ea3d5fb190e",
+  "source_tree": "ea89d4c232461f5649409a934e9d25d2d2bb8d2a",
+  "manifest_blob": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "verified": {
+    "tree_files": 1917,
+    "product_files": 586,
+    "manifest_entries": 585,
+    "postbuild_manifest_entries": 585
+  },
+  "github": {
+    "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+    "product_dev": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "queue_revision": "MI-P0-NW01-OWNER-MANIFEST-CLOSURE-R4-20261123",
+    "delivery": "ISOLATED_BRANCH_BASELINE_READBACK_PASS",
+    "canonical_transfer": "HOLD_SOURCE_OWNER_AND_CENTRAL_WRITER"
+  },
+  "frontend": {
+    "npm_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "dependency_mode": "reused existing Windows modules, 30 installed entries match exact lock versions, zero new downloads",
+    "build": "PASS with temporary cache disabled and two workers after ENOSPC; three existing autoprefixer warnings; temporary config removed",
+    "typecheck": "PASS after Next typegen and again after full build",
+    "http": {
+      "/": 200,
+      "/office": 200,
+      "/office/premium/unified": 200,
+      "/api/demo/mvp": 503
+    },
+    "mvp_response": {
+      "mode": "D0_READBACK_HOLD"
+    }
+  },
+  "tests": {
+    "r6_boundary": {
+      "passed": 52
+    },
+    "r6_history_office_projection": {
+      "passed": 22,
+      "storage": "isolated historic D0 test fixture"
+    },
+    "r6_office_cli": {
+      "passed": 1
+    },
+    "r6_frontend_diagnostics": {
+      "passed": 16,
+      "failed": 0,
+      "skipped": 1
+    },
+    "original_iam": {
+      "total": 12,
+      "executed": 0,
+      "error": "cryptography unavailable"
+    },
+    "original_g7": {
+      "total": 7,
+      "executed": 0,
+      "matching_source_pins": 56,
+      "error": "cryptography unavailable",
+      "pin_checkout": "PR19 0a8907f1 original source",
+      "r6_pins_reported": {
+        "matching": 53,
+        "total": 56,
+        "different": [
+          "ledger.py",
+          "intent_authority.py",
+          "scheduler_review.py"
+        ]
+      }
+    },
+    "original_api": {
+      "total": 9,
+      "executed": 0,
+      "error": "FastAPI unavailable"
+    },
+    "live_backend_http": "BLOCKED_C50_R9_DEPENDENCY_OWNER_REVIEW",
+    "chromium_c08": "NOT_RUN",
+    "independent_c05": "HOLD",
+    "formal_c07": "HOLD"
+  },
+  "memory": {
+    "status": "BLOCKED",
+    "reason": "available named live card does not identify this workspace; exact mapping and guard not confirmed"
+  },
+  "product_source_delta": 0,
+  "canonical_acceptance_delta_pp": 0,
+  "c50_r9": {
+    "archive_original_lock_matching": 24,
+    "archive_original_lock_total": 25,
+    "replacement": "fastapi-0.163.2-py3-none-any.whl",
+    "replacement_sha256": "825a8fdd18d7bfcb1b86735e9805c59b7400d55c4060d3df5331b62ae452f004",
+    "reconciled_wheel_pins": 25,
+    "record_hashes": 809,
+    "license_metadata_present": 25,
+    "installed": false,
+    "remaining": [
+      "dependency/licensing/security owner disposition",
+      "usable Windows x64 CPython 3.13",
+      "03API owner requirements pin approval"
+    ]
+  }
+}
