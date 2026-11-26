@@ -1,0 +1,110 @@
+{
+  "classification": "ACTUAL_R6_PURE_RESEARCH_ROSTER_SEAM_ONLY",
+  "baseline": "3f0181859d7e735b442adeab9da280a933aa8c82",
+  "manifest": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "pins": [
+    {
+      "path": "app/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/core/__init__.py",
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "bytes": 59,
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    {
+      "path": "app/core/agent_runtime/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "app/core/agent_runtime/lifecycle.py",
+      "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+      "bytes": 7251,
+      "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+    },
+    {
+      "path": "app/core/agent_runtime/scheduler_review.py",
+      "git_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "bytes": 3864,
+      "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+    },
+    {
+      "path": "app/core/orchestrator/__init__.py",
+      "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+      "bytes": 259,
+      "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+    },
+    {
+      "path": "app/core/orchestrator/engine.py",
+      "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+      "bytes": 3082,
+      "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+    },
+    {
+      "path": "app/core/orchestrator/readiness.py",
+      "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+      "bytes": 692,
+      "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+    },
+    {
+      "path": "app/core/task_engine/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "app/core/task_engine/dag.py",
+      "git_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+      "bytes": 3542,
+      "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+    },
+    {
+      "path": "app/core/policy/__init__.py",
+      "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+      "bytes": 49,
+      "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+    },
+    {
+      "path": "app/core/policy/denial.py",
+      "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+      "bytes": 1335,
+      "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+    },
+    {
+      "path": "app/core/development_review/__init__.py",
+      "git_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "bytes": 66,
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    {
+      "path": "app/core/development_review/research_slice.py",
+      "git_blob": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+      "bytes": 11516,
+      "sha256": "6b0793a9a81ef03cb45ff04fb964b2e394b5ebcbad89c19572e5f03dc23cb461"
+    },
+    {
+      "path": "fixtures/core.preview.json",
+      "git_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+      "bytes": 8418,
+      "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+    }
+  ],
+  "command": "PYTHONPATH=\"$PWD\" python -B -S ../check_research_roster.py",
+  "pass": 12,
+  "total": 12,
+  "exit": 0,
+  "log_sha256": "b70f7a10d0353e724c14f24b78ccd0009a3e804c534552af00b8640fb910c826",
+  "test_sha256": "8d0a05d5d9f5a1cf2a17c671546031adfb774b7630fc6cd22fb9af4708e6a037",
+  "plan_revision": "sha256:6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9",
+  "scope": "Existing canonical fixture -> canonical_plan -> inspect_pinned_schedule -> review_research_roster. Generated synthetic observation roster, no SQL, no T1 result linkage, no worker dispatch or real effects. Previous 82 PR54 methods not rerun. New diagnostic methods, not original SQL6 or acceptance.",
+  "source_owner": "HOLD",
+  "product_changes": 0,
+  "canonical_promotion": 0,
+  "next": "Run original scheduled SQL6 and ResearchFixture on reviewed dependencies in exact R6 checkout; retain original gates."
+}

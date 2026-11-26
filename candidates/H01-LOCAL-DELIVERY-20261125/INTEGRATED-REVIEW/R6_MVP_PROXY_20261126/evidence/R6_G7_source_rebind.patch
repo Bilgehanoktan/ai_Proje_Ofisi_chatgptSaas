@@ -1,0 +1,56 @@
+diff --git a/candidates/ORG-06/SOURCE_PINS.json b/candidates/ORG-06/SOURCE_PINS.json
+index e45173de240af85882764dfc3033e188d049085d..766904e54a7c5ef7c465160933918d93e51f145b 100644
+--- a/candidates/ORG-06/SOURCE_PINS.json
++++ b/candidates/ORG-06/SOURCE_PINS.json
+@@ -9,7 +9,7 @@
+     "product/ai-company-os-backend/app/core/event_store/plan_history_review.py": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+     "product/ai-company-os-backend/app/core/event_store/company_coordination.py": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+     "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+-    "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
++    "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "eb3e283e3406996254283595e14711e90b2bca8c",
+     "product/ai-company-os-backend/app/core/orchestrator/engine.py": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+     "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+     "product/ai-company-os-backend/tests/test_admission_mapping_0195.py": "c30130313541ea9d857724de1bab98ad088374af",
+@@ -27,5 +27,5 @@
+     "candidates/ORG-05R3/schema.sql": "32b7609b18e8a53420f17d23f4b53544e7f6f6ad",
+     "candidates/ORG-05R3/operations.sql": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a"
+   },
+-  "boundary": "21 selected Git blob pins, not complete dependency closure. 12 selected Core blobs match parent, D4R3 and U3A; 9 R3 blobs from parent. Exact full checkout required. No merge."
++  "boundary": "21 selected Git blob pins, not complete dependency closure. Historical parent/Core/U3A pins and nine R3 blobs retained; one Scheduler pin rebound to R6 for proposed isolated D0 regression only. Owner approval HOLD; exact full checkout required. No merge or acceptance."
+ }
+diff --git a/candidates/D5-G7/SOURCE_PINS.json b/candidates/D5-G7/SOURCE_PINS.json
+index cef9ce82a497522d2e4a9347b77453879e4790f3..7af2a08175fde38008e6b6cba4c308b5b198672a 100644
+--- a/candidates/D5-G7/SOURCE_PINS.json
++++ b/candidates/D5-G7/SOURCE_PINS.json
+@@ -4,11 +4,11 @@
+   "product/ai-company-os-backend/app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+   "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+   "product/ai-company-os-backend/app/core/event_store/__init__.py": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+-  "product/ai-company-os-backend/app/core/event_store/ledger.py": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
++  "product/ai-company-os-backend/app/core/event_store/ledger.py": "95438f2d300f09242876893943ee250884ebdde6",
+   "product/ai-company-os-backend/app/core/event_store/company_coordination.py": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+   "product/ai-company-os-backend/app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+   "product/ai-company-os-backend/app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+-  "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
++  "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+   "product/ai-company-os-backend/app/core/iam_session.py": "f3c37428acd475e09c228bce47d534d6584cd944",
+   "product/ai-company-os-backend/app/core/transaction/identity_binding.py": "e1e977880324664bb359eee3286223a796878f44",
+   "product/ai-company-os-backend/app/core/transaction/intent_identity.py": "472b2a5fd935b59cec22a248853cd5b0f301a8e9",
+@@ -32,7 +32,7 @@
+   "candidates/D5-G5/IAM_RUNTIME_ALIGNMENT.json": "044ad8d7a37e12e71f7f13ca222e28d5fdb6377e",
+   "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+   "product/ai-company-os-backend/app/core/event_store/plan_history_review.py": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+-  "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
++  "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "eb3e283e3406996254283595e14711e90b2bca8c",
+   "product/ai-company-os-backend/app/core/orchestrator/engine.py": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+   "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+   "product/ai-company-os-backend/tests/test_admission_mapping_0195.py": "c30130313541ea9d857724de1bab98ad088374af",
+@@ -49,7 +49,7 @@
+   "database/0204C/company_event_order.sql": "edb2ef263204b89f88f172000ecb031428a027e4",
+   "candidates/ORG-06/org_core_bridge.py": "78443c1c2270a796dee234be67c8f4b0ab138a54",
+   "candidates/ORG-06/test_org_core_checkout.py": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87",
+-  "candidates/ORG-06/SOURCE_PINS.json": "e45173de240af85882764dfc3033e188d049085d",
++  "candidates/ORG-06/SOURCE_PINS.json": "766904e54a7c5ef7c465160933918d93e51f145b",
+   "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+   "candidates/D5-G6B/test_checkout.py": "6bd86d7972c8bca511b5702117be3542431e7493",
+   "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
