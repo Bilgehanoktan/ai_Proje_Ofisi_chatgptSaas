@@ -62,3 +62,7 @@ Reuse the existing canonical deadline and late response cleanup for all nine ind
 
 ## H01 B — Project and Workflow shared plan readback (27.11.2026)
 Existing ProjectStudio and WorkflowDraft now consume historical planRead from the existing SharedSnapshotProvider through their existing plan guards, with explicit offline source, timeout and stale labels. Two exact preimages and new payload hashes verified; TSX syntax 2/2 and mock wiring 10/10 PASS (not full typecheck, React/browser or live runtime). Manifest 572 entries. See ../catalog/revisions/H01_B_PROJECT_WORKFLOW_SHARED_PLAN_20261127.json. No approved CEO command ingress or actual run; IAM/T1, C50/R9 and IV remain HOLD. Normal revert for rollback.
+
+
+## H01 B — D5-G1 exact internal session source transfer (27.11.2026)
+Original stdlib-only process-local D0 IAM session resolver and unchanged unittest from 97f03aca9d9ed84e85a0249ee39cb035e7df9fd8; verified 2/2 payload SHA256/bytes and original 14/14 historical PASS log pin. No new tests run, no public issuer, API, live grant, DB or authority/T1 activation. G2 successor remains explicitly HOLD (PR19/31/46 preserved); no credential rehydration. Manifest 574 entries. See ../catalog/revisions/H01_B_D5G1_SESSION_SOURCE_TRANSFER_20261127.json. Ordinary revert for rollback.

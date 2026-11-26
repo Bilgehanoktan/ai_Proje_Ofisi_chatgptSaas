@@ -1,0 +1,51 @@
+{
+  "task": "H01-B-D5G1-SESSION-SOURCE-TRANSFER-20261127",
+  "parent": "d87e0a3e4614bf6092379ba82a522436189a78d0",
+  "source": "97f03aca9d9ed84e85a0249ee39cb035e7df9fd8",
+  "governance": "e63407070bcf7516fc11757fd5f819ade4662232",
+  "classification": "D0_SOURCE_ONLY_OWNER_REVIEW_CLOSED",
+  "paths": [
+    {
+      "path": "product/ai-company-os-backend/app/core/iam_session.py",
+      "blob": "864fe30c72ebcc6783575c62f98748fb2d9cfff6",
+      "bytes": 5243,
+      "sha256": "1f4f5709850c89ee893e71c60cf22fc3d7582f293e2e872de690f1e63f981c4a",
+      "change": "ADD"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+      "blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e",
+      "bytes": 4691,
+      "sha256": "9f5361d9da2b2757a35bb0cdce9aeb1f5804483a0468f60c69abdc0235072ecc",
+      "change": "ADD"
+    }
+  ],
+  "disposition": "Exact original G1 owner source, not the newer G2 durable variant. Process-local server-provisioned synthetic bearer lookup, HUMAN/AGENT observation, exact D0 scope, expiry, monotonic rollback latch and local CAS revoke. SessionObservation always HOLD with grant_allowed and dispatch_allowed false. Stdlib only. No issuer, login, HTTP endpoint, live IAM, persisted session, DB migration, event, authority hook, or T1 activation. No untrusted bootstrap; no rehydration/reuse of old credentials after process restart. No mapping to D4 or ORG permission. Technical owner source review only under H01 B; no independent approval.",
+  "conflicts": {
+    "original": "workstream/0230-d5g1-internal-iam-session",
+    "audit": "78da1ae5da98e40c256824b53558811dc412704c",
+    "PR19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "PR31": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+    "PR46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "resolution": "PR19/31 contain G2 successor, same G1 original test. PR46 inherits G2. Do not merge, revert or change these branches; G2 replacement and its dependent G4/G5/G7 stay HOLD. Canonical paths absent before transfer, source selection explicitly staged as G1 predecessor, not rollback of existing canonical runtime. PR44/10/6/5/54/55 no exact path overlap."
+  },
+  "evidence": {
+    "original": "14/14 PASS; Python 3.13.5, exit 0, original exact G1 test/source blob; not rerun in this turn",
+    "log_blob": "607992c12391260eec4df27429c32cfeac02de21",
+    "log_sha256": "8c26e337b0e859bf8a5268072056facf4c3e9d111b8edb74753db5ed7e18cdc9",
+    "exit_blob": "573541ac9702dd3969c9bc859d2b91ec1f7e6e56",
+    "criteria_blob": "c81622b91a49cd0e39a4245147ca1427cabeb413",
+    "source_manifest": "40136a75e9bda468a5661932e94cf276707a81f8",
+    "verified": "2/2 fetched UTF-8 payload byte/SHA256 and Git blob pins; historical raw log SHA256 matches owner progress; 572 retained source blobs",
+    "limits": "No new test run, full product build, native browser, full ZIP or full latest Design Master read. G2 signed wrapper12/G7 original7, C50/R9, PG, IV and actual command ingress remain HOLD."
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Ordinary revert of this source transfer; no data migration. Diagnose malformed credential/scope/clock/bootstrap, revoke returns false; never log bearer or digest; do not reset clock fault or rehydrate credentials. Re-review G2 as explicit replacement under separate mandatory gates."
+}
