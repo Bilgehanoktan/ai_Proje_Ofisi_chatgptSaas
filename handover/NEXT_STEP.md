@@ -42,3 +42,7 @@ Nine existing blobs selected from 9818660fc71648841288f7bc59fc179eac3ee29c onto 
 
 ## H01 B — R6 API / Office bounded read source transfer (26.11.2026)
 Six existing exact blobs from 9818660fc71648841288f7bc59fc179eac3ee29c onto 5dd94b135000baeb38b629aa5f62a84a4e507d98: fixed D0 plan source/output pins, no-store and fail-closed API, paired shared JSON reader and Office GET, three existing tests. Manifest 572 entries. API9/combined build/native browser NOT_RUN; no dependency or runtime grant change. See ../catalog/revisions/H01_B_R6_API_OFFICE_READ_TRANSFER_20261126.json. Next: IAM/ORG reference and signed wrapper technical review, approved C50/R9 lock/runtime; no live execution or acceptance. Revert this commit for rollback.
+
+
+## H01 B — R6 bounded plan route transfer (26.11.2026)
+Exact existing plan route from b8c4633cf3c9416f64406ee742db7d9e3c27d634 onto 55b4d0719ccd6ce2483d8a9d4c646451234a0a68; retain canonical bounded reader and add explicit redirected-response rejection. Strict TypeScript and seven isolated injected-fetch checks passed with exact parser and fixtures. Manifest 572 entries. No live HTTP, full build, browser, new grant or acceptance. See ../catalog/revisions/H01_B_R6_PLAN_BOUNDED_READER_TRANSFER_20261126.json. Next: reconcile shared snapshot transport without reverting newer UI and cleanup; IAM12/G7/C50 and independent security remain HOLD. Rollback by ordinary revert of this commit.

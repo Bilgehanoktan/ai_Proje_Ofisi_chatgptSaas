@@ -1,0 +1,60 @@
+{
+  "task": "H01-B-R6-PLAN-BOUNDED-READER-TRANSFER-20261126",
+  "parent": "55b4d0719ccd6ce2483d8a9d4c646451234a0a68",
+  "source": "b8c4633cf3c9416f64406ee742db7d9e3c27d634",
+  "governance": "138d96d1cf7e8d6992bba490f0e2979fabc4f001",
+  "classification": "DEVELOPMENT_SOURCE_TRANSFER_ONLY",
+  "paths": [
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/plan/route.ts",
+      "before": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+      "after": "8caeb19d92478d307e234880fb9828e414759235",
+      "bytes": 678,
+      "sha256": "c02ae3748f1256b15dfd3c441641712bc49a5e5a2787dcca6ce5e19ae224aa40"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+      "before": "b27c4734962c1832db45e55cdcade9cca5f2e4b5",
+      "after": "743af32b712702424fa223826b91d9c2e1dc96cf",
+      "bytes": 2382,
+      "sha256": "935edd77029e0896fe51d0f94afa8b60d04ad4de312b5ecb4c10546acb69f635"
+    }
+  ],
+  "technical_disposition": "Transfer exact existing plan route; retain stronger canonical helper and add explicit redirected response rejection to preserve the old route contract. Same endpoint, parser, 16384-byte limit, no-store and 503 HOLD. No write, new endpoint, DB, event, dependency or privilege changes.",
+  "source_owner": "H01 B central technical reviewer; MI05/06 and W2 read-only route",
+  "conflict_review": "12 relevant PR file lists; plan route absent; shared helper older PR26/29/31 and PR51 variants superseded by canonical cleanup/MIME guard. Do not merge older variants.",
+  "evidence": {
+    "environment": "Node 22.16.0, TypeScript 5.8.3, isolated source slice, no package installation",
+    "compile": "PASS strict TypeScript",
+    "local_checks": "7/7 PASS: exact fixed plan 200, redirected response 503, invalid MIME 503, invalid projection 503, oversize 503, stalled fetch 503 (2502 ms), stalled body 503 (2509 ms). Injected fetch, actual canonical parser and exact fixture bytes. No live HTTP/browser.",
+    "parser_blob": "e337a8da904e31b027f02d5876ab451d8da1d699",
+    "port_blob": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "fixture_blobs": [
+      "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+      "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7"
+    ],
+    "limits": "Full application, original API9, IAM12, G7 and native C08 NOT_RUN. Full Design Master and complete byte rehash remain incomplete; prior exact architecture and scoped review retained."
+  },
+  "manifest": {
+    "entries": 572,
+    "changed_payload_sha256": "2/2 locally calculated",
+    "base_path_size": "572/572"
+  },
+  "gates": {
+    "C50_R9": "HOLD",
+    "IAM_T1": "HOLD",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "IV": "HOLD"
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Ordinary revert this source transfer; retain all earlier history. No database migration. Diagnose on 503 and transport deadline; retain exact parser and manifest."
+}

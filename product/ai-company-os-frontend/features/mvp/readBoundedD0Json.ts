@@ -31,7 +31,7 @@ export async function readBoundedD0Json(
     method:'GET',cache:'no-store',redirect:'error',signal,headers:{Accept:'application/json'},
   }), signal, cancelResponse);
   if (signal.aborted) {cancelResponse(response); throw Error('deadline');}
-  if (!response.ok || !/^[\t ]*application\/json[\t ]*(?:;[\t ]*charset[\t ]*=[\t ]*(?:utf-8|"utf-8")[\t ]*)?(?![\s\S])/i.test(response.headers.get('content-type')??'') || !response.body) {
+  if (!response.ok || response.redirected || !/^[\t ]*application\/json[\t ]*(?:;[\t ]*charset[\t ]*=[\t ]*(?:utf-8|"utf-8")[\t ]*)?(?![\s\S])/i.test(response.headers.get('content-type')??'') || !response.body) {
     cancelResponse(response);
     throw Error('response');
   }
