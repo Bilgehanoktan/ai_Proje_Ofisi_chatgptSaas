@@ -1,0 +1,25 @@
+{
+  "baseline": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "postgres": "17.12",
+  "suites": [
+    {
+      "suite": "test_pg_transition_mapping_0194.py",
+      "exit": 0,
+      "passed": 5,
+      "output": "test_commit_readback (test_pg_transition_mapping_0194.RealPostgresTests.test_commit_readback) ... ok\r\ntest_rollback_all_roles (test_pg_transition_mapping_0194.RealPostgresTests.test_rollback_all_roles) ... ok\r\ntest_row_lock_nowait (test_pg_transition_mapping_0194.RealPostgresTests.test_row_lock_nowait) ... ok\r\ntest_stale_lease_rollback (test_pg_transition_mapping_0194.RealPostgresTests.test_stale_lease_rollback) ... ok\r\ntest_two_writers (test_pg_transition_mapping_0194.RealPostgresTests.test_two_writers) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 2.637s\r\n\r\nOK\r\n"
+    },
+    {
+      "suite": "test_pg_lifecycle_mapping_0196.py",
+      "exit": 0,
+      "passed": 5,
+      "output": "test_chain (test_pg_lifecycle_mapping_0196.PgLifecycleTests.test_chain) ... ok\r\ntest_renewal_rollback_expiry (test_pg_lifecycle_mapping_0196.PgLifecycleTests.test_renewal_rollback_expiry) ... ok\r\ntest_renewal_vs_terminal (test_pg_lifecycle_mapping_0196.PgLifecycleTests.test_renewal_vs_terminal) ... ok\r\ntest_rollback_all_terminal_roles (test_pg_lifecycle_mapping_0196.PgLifecycleTests.test_rollback_all_terminal_roles) ... ok\r\ntest_shared_budget_claim_cas (test_pg_lifecycle_mapping_0196.PgLifecycleTests.test_shared_budget_claim_cas) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 4.238s\r\n\r\nOK\r\n"
+    },
+    {
+      "suite": "test_pg_snapshot_0200.py",
+      "exit": 0,
+      "passed": 3,
+      "output": "test_actual_admission_snapshot (test_pg_snapshot_0200.PgSnapshotTests.test_actual_admission_snapshot) ... ok\r\ntest_actual_concurrent_commit_not_visible_until_fresh_snapshot (test_pg_snapshot_0200.PgSnapshotTests.test_actual_concurrent_commit_not_visible_until_fresh_snapshot) ... ok\r\ntest_actual_transaction_rejects_write (test_pg_snapshot_0200.PgSnapshotTests.test_actual_transaction_rejects_write) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 2.131s\r\n\r\nOK\r\n"
+    }
+  ],
+  "total_passed": 13
+}
