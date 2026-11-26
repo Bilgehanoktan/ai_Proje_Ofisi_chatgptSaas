@@ -58,3 +58,7 @@ Three existing test files from b8c4633cf3c9416f64406ee742db7d9e3c27d634 explicit
 
 ## H01 B — D0 independent projection transport (27.11.2026)
 Reuse the existing canonical deadline and late response cleanup for all nine independent JSON read endpoints; preserve UI03 R3 visibility/TTL and HOLD contract. Strict TS compile exit 0, original 12/12 TAP PASS, 4/4 isolated targeted transport checks exit 0. No actual browser/full build or runtime execution. See ../catalog/revisions/H01_B_D0_PROJECTION_TRANSPORT_20261127.json. CEO authorized command ingress remains absent; IAM/T1, C50/R9, IV remain HOLD. Ordinary revert for rollback.
+
+
+## H01 B — Project and Workflow shared plan readback (27.11.2026)
+Existing ProjectStudio and WorkflowDraft now consume historical planRead from the existing SharedSnapshotProvider through their existing plan guards, with explicit offline source, timeout and stale labels. Two exact preimages and new payload hashes verified; TSX syntax 2/2 and mock wiring 10/10 PASS (not full typecheck, React/browser or live runtime). Manifest 572 entries. See ../catalog/revisions/H01_B_PROJECT_WORKFLOW_SHARED_PLAN_20261127.json. No approved CEO command ingress or actual run; IAM/T1, C50/R9 and IV remain HOLD. Normal revert for rollback.

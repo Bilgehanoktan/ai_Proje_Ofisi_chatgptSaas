@@ -7,6 +7,8 @@ import PlanGraph from '../graph/PlanGraph';
 import {editDraft,emptyDraftHistory,type DraftAction} from './draftHistory';
 import styles from './ParallelStudio.module.css';
 import DraftInspector from './WorkflowDraftInspector';
+import {useSharedSnapshot} from '../data/SharedSnapshotProvider';
+import {readStatus} from '../data/projectionRead';
 import StudioContextPanel from '../mvp/StudioContextPanel';
 export default function WorkflowDraft(){
  const [draft,setDraft]=useState(emptyDraftHistory),[from,setFrom]=useState(''),[to,setTo]=useState('');
@@ -14,13 +16,16 @@ export default function WorkflowDraft(){
  const [inspected,setInspected]=useState('plan');
  const {edges,message}=draft;
  const dragSource=useRef<string|null>(null);
- const sourceId=useId(),targetId=useId(),base=readPlanProjection();
+ const {planRead}=useSharedSnapshot();
+ const historicalPlan=planRead.state.phase==='historical'?planRead.state.data:undefined;
+ const sourceId=useId(),targetId=useId(),base=readPlanProjection(historicalPlan);
  if(!base.ok)return <section className="panel" role="alert">Workflow taslağı · HOLD · {base.reason}</section>;
  const review=reviewDraft(base.plan.tasks,edges);
  const summary=review.ok?draftOverview(review.waves,base.plan.edges.length,edges.length):null;
  function edit(action:DraftAction){if(base.ok)setDraft(current=>editDraft(base.plan.tasks,current,action));}
  function addEdge(source:string,target:string){edit({kind:'add',edge:{from:source,to:target}});}
  return <section className={`panel ${styles.studio}`} aria-label="Yerel workflow taslak editörü"><div className="bar"><div><div className="eyebrow">WORKFLOW / DESIGN SANDBOX</div><h2>Bağımlılık tasarım stüdyosu</h2><small>Kanonik plan değişmez · kayıt ve yürütme yok</small></div><span className="pill">DRAFT · HOLD</span></div>
+ <p className="sub" role="status" aria-label="Plan kaynak durumu">{readStatus(planRead.state,{idle:'Backend planı okunmadı',loading:'Backend planı okunuyor',historical:'Backend derleyici yanıtı sabit planla eşleşti · HOLD',hold:'Backend planı reddedildi · HOLD'})}{historicalPlan?' · tarihsel D0':' · çevrimdışı referans'} · gerçek yürütme yok</p>
  <div className={styles.controls}><label htmlFor={sourceId}>Ön koşul<select id={sourceId} value={from} onChange={e=>setFrom(e.target.value)}><option value="">Seçin</option>{base.plan.tasks.map(t=><option key={t.id} value={t.id}>{t.label}</option>)}</select></label><label htmlFor={targetId}>Bağımlı görev<select id={targetId} value={to} onChange={e=>setTo(e.target.value)}><option value="">Seçin</option>{base.plan.tasks.map(t=><option key={t.id} value={t.id}>{t.label}</option>)}</select></label><button type="button" disabled={!from||!to} onClick={()=>addEdge(from,to)}>Taslak bağlantı ekle</button><button type="button" disabled={!draft.past.length} onClick={()=>edit({kind:'undo'})}>Geri al</button><button type="button" disabled={!draft.future.length} onClick={()=>edit({kind:'redo'})}>İleri al</button><button type="button" onClick={()=>{dragSource.current=null;edit({kind:'reset'});setFrom('');setTo('');setGraphPick('from');setInspected('plan');}}>Sıfırla</button></div>
  <p role="status" className="sub">{message||'Bir görevi başka göreve sürükleyerek veya seçim kutularıyla bağlantı ekleyin. Referans bağlantılar korunur.'}</p>
  {summary&&<div className={styles.overview} aria-label="Taslak topoloji özeti"><span>Görev <strong>{summary.taskCount}</strong></span><span>Dalga <strong>{summary.waveCount}</strong></span><span>En geniş dalga <strong>{summary.largestWave}</strong></span><span>Referans bağlantı <strong>{summary.baseEdgeCount}</strong></span><span>Ek bağlantı <strong>{summary.addedEdgeCount}</strong></span></div>}

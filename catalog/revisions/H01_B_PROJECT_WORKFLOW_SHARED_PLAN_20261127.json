@@ -1,0 +1,39 @@
+{
+  "task": "H01-B-PROJECT-WORKFLOW-SHARED-PLAN-20261127",
+  "parent": "433706c9632d429e3b3e67ec0cc17495a2cd104d",
+  "governance": "412f5c2fe98569b7d8076aa0a93f14ab58a81331",
+  "classification": "EXISTING_D0_PRODUCT_UI_CONNECTION",
+  "paths": [
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "old_blob": "091e37581f95e7ce3bf8dcf3d2641bdc11c37a8b",
+      "new_blob": "dd68ace6096c4f24f555460783587ac1f1ea3af1",
+      "bytes": 7481,
+      "sha256": "3bd476dab6cc5abf804f7050aea4cc0747e50b0661ecd400b1c637670650b914"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "old_blob": "9ce6776fd2cda03f6f033cc47ad285d2b93e96cd",
+      "new_blob": "a5019316bac7675a5640f6da113178231f1c3e63",
+      "bytes": 6422,
+      "sha256": "7fde3c4a43acbb802344c17d2f042407d28e7f1eb2a2f9531052c52317d30866"
+    }
+  ],
+  "disposition": "Connect existing ProjectStudio and WorkflowDraft to the already shared, fixed-plan backend observation through useSharedSnapshot. Feed the existing projectView/readPlanProjection only when phase is historical; otherwise use explicitly labelled offline fixture. readStatus preserves TIMEOUT and STALE provenance. Existing draft remains local, no automatic read, new API, DB, event, grant, dependency, execution, persistence or release change. Historical fixed-plan data is not a live project.",
+  "conflicts": "PR49/48/45/43/42/51/50/31/29/26 changed path lists contain neither file. Existing shared provider, parsers and newer UI successors retained.",
+  "evidence": {
+    "environment": "Node 22.16.0 and TypeScript 5.8.3; exact two canonical preimage blobs verified with git hash-object; new blobs and SHA256 calculated locally.",
+    "syntax": "2/2 TypeScript transpileModule TSX syntax checks PASS, not full typecheck.",
+    "wiring": "10/10 local Node VM mock React/JSX wiring checks PASS: each of two actual compiled files exercised in idle/loading/historical/timeout/stale; input identity and source/absence labels asserted. Dependency model, hook, readStatus and rendering environment mocked. No actual React DOM, full build, browser or original suites. No new test files added.",
+    "limits": "Full Design Master, full ZIP and full byte rehash incomplete. C50/R9, IAM/T1 signed wrapper12/G7, independent IV and CEO authorized ingress remain HOLD/open."
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Normal revert. Diagnose planRead phase, exact fixed-plan parser and UI source badge; no data migration. Existing local draft is not a committed plan."
+}

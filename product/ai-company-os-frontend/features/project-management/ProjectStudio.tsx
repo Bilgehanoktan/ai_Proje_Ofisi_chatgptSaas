@@ -5,16 +5,21 @@ import {sortProjectRows} from '../evidence/evidenceModel';
 import styles from './ProjectStudio.module.css';
 import DependencyNeighborhood from './DependencyNeighborhoodPanel';
 import PlanGraph from '../graph/PlanGraph';
+import {useSharedSnapshot} from '../data/SharedSnapshotProvider';
+import {readStatus} from '../data/projectionRead';
 import StudioContextPanel from '../mvp/StudioContextPanel';
 import ProjectRoadmap from './ProjectRoadmap';
 export default function ProjectStudio(){
  const [query,setQuery]=useState(''),[role,setRole]=useState(''),[mode,setMode]=useState<'board'|'table'>('board'),[selected,setSelected]=useState('plan'),[sort,setSort]=useState<'wave'|'label'|'role'>('wave'),[descending,setDescending]=useState(false),[waveFilter,setWaveFilter]=useState('');
- const searchId=useId(),roleId=useId(),view=projectView();
+ const {planRead}=useSharedSnapshot();
+ const historicalPlan=planRead.state.phase==='historical'?planRead.state.data:undefined;
+ const searchId=useId(),roleId=useId(),view=projectView(historicalPlan);
  if(!view.ok)return <section className="panel" role="alert">Project Studio · PLAN HOLD · {view.reason}</section>;
  const rows=filterRows(view.rows,query,role).filter(r=>!waveFilter||String(r.wave)===waveFilter),tableRows=sortProjectRows(rows,sort,descending),ctx=projectContext(view,selected);
  const taskButton=({task:t,wave}:ProjectRow)=><button type="button" key={t.id} className={styles.task} aria-pressed={selected===t.id} onClick={()=>setSelected(t.id)}><strong>{t.label}</strong><small>{t.role} · Dalga {wave}</small><span className={styles.hold}>{t.state}</span></button>;
  return <section className={`panel ${styles.studio}`} aria-label="Proje yönetim merkezi">
   <div className="bar"><div><div className="eyebrow">PROJECT MANAGEMENT / D0</div><h2>Project Management Studio</h2><small>Tek referans plan · salt okunur</small></div><span className="pill">ADMISSION DENY</span></div>
+ <p className="sub" role="status" aria-label="Plan kaynak durumu">{readStatus(planRead.state,{idle:'Backend planı okunmadı',loading:'Backend planı okunuyor',historical:'Backend derleyici yanıtı sabit planla eşleşti · HOLD',hold:'Backend planı reddedildi · HOLD'})}{historicalPlan?' · tarihsel D0':' · çevrimdışı referans'} · gerçek yürütme yok</p>
   <div className={styles.hero}><div><small>WorkType / Plan kimliği</small><h3>{view.plan.worktype} · {view.plan.plan_id}</h3><small>Revizyon {view.plan.digest.slice(0,12)}… · A0_SAMPLE_ONLY</small></div><div className={styles.hold}>RELEASE HOLD</div></div>
   <div className={styles.metrics}>{[['Plan görevleri',view.rows.length],['Bağımlılıklar',view.plan.edges.length],['Plan dalgaları',view.groups.length],['HOLD görevleri',view.holdCount]].map(([name,count])=><div key={name}><small>{name}</small><strong>{count}</strong></div>)}</div>
   <p className="sub">Dalga sırası zaman takvimi değildir. Dar ekranda panoyu yatay kaydırın. Gerçek ilerleme, süre, tarih, run ve teslimat verisi yok; hesaplanmaz.</p>
