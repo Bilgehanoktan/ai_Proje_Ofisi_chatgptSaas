@@ -1,0 +1,46 @@
+{
+  "baseline": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "previous_evidence_commit": "72abeccdc4313c3d40ede3acccbe643aba6a25d7",
+  "runtime": "3.13.14 AMD64",
+  "third_party_installed": 0,
+  "suites": [
+    {
+      "args": [
+        "-E",
+        "-s",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_company_coordination_0204.py",
+        "-v"
+      ],
+      "exit": 0,
+      "pass_count": 51,
+      "stdout": "",
+      "stderr": "test_cap_across_runs_same_project (test_company_coordination_0204.CompanySQLTests.test_cap_across_runs_same_project) ... ok\ntest_cap_before_write (test_company_coordination_0204.CompanySQLTests.test_cap_before_write) ... ok\ntest_changed_index (test_company_coordination_0204.CompanySQLTests.test_changed_index) ... ok\ntest_concurrent_project_sequence_one_winner (test_company_coordination_0204.CompanySQLTests.test_concurrent_project_sequence_one_winner) ... ok\ntest_empty_snapshot (test_company_coordination_0204.CompanySQLTests.test_empty_snapshot) ... ok\ntest_foreign_event (test_company_coordination_0204.CompanySQLTests.test_foreign_event) ... ok\ntest_foreign_pool (test_company_coordination_0204.CompanySQLTests.test_foreign_pool) ... ok\ntest_index_failure_rollback (test_company_coordination_0204.CompanySQLTests.test_index_failure_rollback) ... ok\ntest_member_mismatch (test_company_coordination_0204.CompanySQLTests.test_member_mismatch) ... ok\ntest_missing_event (test_company_coordination_0204.CompanySQLTests.test_missing_event) ... ok\ntest_missing_index (test_company_coordination_0204.CompanySQLTests.test_missing_index) ... ok\ntest_missing_predecessor (test_company_coordination_0204.CompanySQLTests.test_missing_predecessor) ... ok\ntest_old_history_guard (test_company_coordination_0204.CompanySQLTests.test_old_history_guard) ... ok\ntest_old_prefix (test_company_coordination_0204.CompanySQLTests.test_old_prefix) ... ok\ntest_preimage_tamper (test_company_coordination_0204.CompanySQLTests.test_preimage_tamper) ... ok\ntest_readback_two_projects (test_company_coordination_0204.CompanySQLTests.test_readback_two_projects) ... ok\ntest_rollback_after_index (test_company_coordination_0204.CompanySQLTests.test_rollback_after_index) ... ok\ntest_run_gap (test_company_coordination_0204.CompanySQLTests.test_run_gap) ... ok\ntest_stream_cas_rejects_gap (test_company_coordination_0204.CompanySQLTests.test_stream_cas_rejects_gap) ... ok\ntest_unknown_cost (test_company_coordination_0204.CompanySQLTests.test_unknown_cost) ... ok\ntest_wrong_pool_postimage (test_company_coordination_0204.CompanySQLTests.test_wrong_pool_postimage) ... ok\ntest_wrong_postimage_rolls_back_everything (test_company_coordination_0204.CompanySQLTests.test_wrong_postimage_rolls_back_everything) ... ok\ntest_wrong_principal (test_company_coordination_0204.CompanySQLTests.test_wrong_principal) ... ok\ntest_wrong_reservation_project_pool (test_company_coordination_0204.CompanySQLTests.test_wrong_reservation_project_pool) ... ok\ntest_wrong_settlement (test_company_coordination_0204.CompanySQLTests.test_wrong_settlement) ... ok\ntest_wrong_stream_head (test_company_coordination_0204.CompanySQLTests.test_wrong_stream_head) ... ok\ntest_all_released (test_company_coordination_0204.ReplayTests.test_all_released) ... ok\ntest_bool_rejected (test_company_coordination_0204.ReplayTests.test_bool_rejected) ... ok\ntest_duplicate_admission (test_company_coordination_0204.ReplayTests.test_duplicate_admission) ... ok\ntest_duplicate_allocation (test_company_coordination_0204.ReplayTests.test_duplicate_allocation) ... ok\ntest_duplicate_parents (test_company_coordination_0204.ReplayTests.test_duplicate_parents) ... ok\ntest_duplicate_run (test_company_coordination_0204.ReplayTests.test_duplicate_run) ... ok\ntest_duplicate_transaction (test_company_coordination_0204.ReplayTests.test_duplicate_transaction) ... ok\ntest_empty_history (test_company_coordination_0204.ReplayTests.test_empty_history) ... ok\ntest_failure_no_success (test_company_coordination_0204.ReplayTests.test_failure_no_success) ... ok\ntest_future_parent (test_company_coordination_0204.ReplayTests.test_future_parent) ... ok\ntest_gap_and_wrong_run_version (test_company_coordination_0204.ReplayTests.test_gap_and_wrong_run_version) ... ok\ntest_interleaved_projects (test_company_coordination_0204.ReplayTests.test_interleaved_projects) ... ok\ntest_missing_allocation (test_company_coordination_0204.ReplayTests.test_missing_allocation) ... ok\ntest_no_budget_change_on_ordinary (test_company_coordination_0204.ReplayTests.test_no_budget_change_on_ordinary) ... ok\ntest_overallocated_pool (test_company_coordination_0204.ReplayTests.test_overallocated_pool) ... ok\ntest_project_cap (test_company_coordination_0204.ReplayTests.test_project_cap) ... ok\ntest_renew_without_admission (test_company_coordination_0204.ReplayTests.test_renew_without_admission) ... ok\ntest_reopen_closed_run (test_company_coordination_0204.ReplayTests.test_reopen_closed_run) ... ok\ntest_revision_collision (test_company_coordination_0204.ReplayTests.test_revision_collision) ... ok\ntest_same_actor_allowed (test_company_coordination_0204.ReplayTests.test_same_actor_allowed) ... ok\ntest_self_parent (test_company_coordination_0204.ReplayTests.test_self_parent) ... ok\ntest_stale_budget (test_company_coordination_0204.ReplayTests.test_stale_budget) ... ok\ntest_unknown_run (test_company_coordination_0204.ReplayTests.test_unknown_run) ... ok\ntest_wrong_project (test_company_coordination_0204.ReplayTests.test_wrong_project) ... ok\ntest_wrong_release (test_company_coordination_0204.ReplayTests.test_wrong_release) ... ok\n\n----------------------------------------------------------------------\nRan 51 tests in 1.144s\n\nOK\n"
+    },
+    {
+      "args": [
+        "-E",
+        "-s",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_history_review_0199.py",
+        "-v"
+      ],
+      "exit": 0,
+      "pass_count": 26,
+      "stdout": "",
+      "stderr": "test_all_queued (test_plan_history_review_0199.ParallelRootTests.test_all_queued) ... ok\ntest_pin_order_independent (test_plan_history_review_0199.ParallelRootTests.test_pin_order_independent) ... ok\ntest_two_roots_shared_pool (test_plan_history_review_0199.ParallelRootTests.test_two_roots_shared_pool) ... ok\ntest_actual_descendant_claim_without_verified_predecessor (test_plan_history_review_0199.PlanHistoryTests.test_actual_descendant_claim_without_verified_predecessor) ... ok\ntest_admitted_roster_and_gates (test_plan_history_review_0199.PlanHistoryTests.test_admitted_roster_and_gates) ... ok\ntest_bad_budget_anchor (test_plan_history_review_0199.PlanHistoryTests.test_bad_budget_anchor) ... ok\ntest_bad_revision (test_plan_history_review_0199.PlanHistoryTests.test_bad_revision) ... ok\ntest_changed_plan_label (test_plan_history_review_0199.PlanHistoryTests.test_changed_plan_label) ... ok\ntest_duplicate_budget_anchor (test_plan_history_review_0199.PlanHistoryTests.test_duplicate_budget_anchor) ... ok\ntest_duplicate_pin (test_plan_history_review_0199.PlanHistoryTests.test_duplicate_pin) ... ok\ntest_extra_human_head (test_plan_history_review_0199.PlanHistoryTests.test_extra_human_head) ... ok\ntest_foreign_reservation (test_plan_history_review_0199.PlanHistoryTests.test_foreign_reservation) ... ok\ntest_forged_descendant (test_plan_history_review_0199.PlanHistoryTests.test_forged_descendant) ... ok\ntest_forged_success (test_plan_history_review_0199.PlanHistoryTests.test_forged_success) ... ok\ntest_full_failed_history_budget (test_plan_history_review_0199.PlanHistoryTests.test_full_failed_history_budget) ... ok\ntest_missing_head (test_plan_history_review_0199.PlanHistoryTests.test_missing_head) ... ok\ntest_missing_pin (test_plan_history_review_0199.PlanHistoryTests.test_missing_pin) ... ok\ntest_missing_pool_anchor (test_plan_history_review_0199.PlanHistoryTests.test_missing_pool_anchor) ... ok\ntest_open_admitted_pool (test_plan_history_review_0199.PlanHistoryTests.test_open_admitted_pool) ... ok\ntest_pin_wrong_principal (test_plan_history_review_0199.PlanHistoryTests.test_pin_wrong_principal) ... ok\ntest_renewal_budget_revision (test_plan_history_review_0199.PlanHistoryTests.test_renewal_budget_revision) ... ok\ntest_separate_read_transaction_consistency (test_plan_history_review_0199.PlanHistoryTests.test_separate_read_transaction_consistency) ... ok\ntest_tampered_admitted_history_no_partial (test_plan_history_review_0199.PlanHistoryTests.test_tampered_admitted_history_no_partial) ... ok\ntest_tampered_budget_postimage (test_plan_history_review_0199.PlanHistoryTests.test_tampered_budget_postimage) ... ok\ntest_unadmitted_event (test_plan_history_review_0199.PlanHistoryTests.test_unadmitted_event) ... ok\ntest_unadmitted_pin_has_command (test_plan_history_review_0199.PlanHistoryTests.test_unadmitted_pin_has_command) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 1.493s\n\nOK\n"
+    }
+  ]
+}
