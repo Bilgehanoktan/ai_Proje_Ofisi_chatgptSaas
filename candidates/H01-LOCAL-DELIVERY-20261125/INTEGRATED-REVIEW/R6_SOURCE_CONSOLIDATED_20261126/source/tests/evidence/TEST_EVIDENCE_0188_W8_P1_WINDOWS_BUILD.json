@@ -1,0 +1,56 @@
+{
+  "revision": "0188-W8-P1",
+  "checkout": "fa381a1a4e0d6e643ba336708f9aaa6713dcdeb1",
+  "source_commit": "716eee3cee87c0f69c96ac36f1df5c1c9d2cf32c",
+  "origin": "User supplied Windows terminal transcript; not independent acceptance",
+  "transcript_sha256": "4d263fa65d7dd7bdf733fbc605555dcff55f0c615f56322d1ece2f7e2b7b31fa",
+  "manifest_blob": "652d12b5daf53859f723e6ffe06dfd03c3efd13f",
+  "stage": "C:\\AIOS\\w8-stage-p1-313",
+  "review_sha256": "94a5b62787fdb00cd9e119a856ed7ce7f255debb55da36da0cce0d115690578f",
+  "source_audit": {
+    "pins": 250,
+    "pairs": 14,
+    "result": "PASS"
+  },
+  "install": {
+    "python_packages": 25,
+    "platform_npm_packages": 30,
+    "pip_check": "PASS"
+  },
+  "node": {
+    "pass": 185,
+    "skip": 1,
+    "fail": 0,
+    "new_port_tests": "5/5 PASS mock fetch"
+  },
+  "python": {
+    "ran": 265,
+    "pass": 264,
+    "skip": 1,
+    "fail": 0,
+    "errors": 0
+  },
+  "total": {
+    "pass": 449,
+    "skip": 2,
+    "fail": 0
+  },
+  "build": {
+    "next": "15.5.29",
+    "compile": "PASS",
+    "static_pages": "5/5",
+    "standalone_tsc": "PASS",
+    "post_build_gate": "PASS inferred from subsequent launcher reaching sample read after installed and build marker checks"
+  },
+  "launch": {
+    "status": "HOLD",
+    "reason": "Missing stage sample-pair/demo.workbench.d0.sqlite; interactive launcher requires previous smoke; no server launch observed",
+    "product_defect": "No observed build or port proxy test failure",
+    "operator_instructions_defect": "Prior response omitted required smoke command before launch"
+  },
+  "new_runner_preflight": "NOT_RUN",
+  "live_alternate_ports": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "next": "Run test_w8_local.py preflight and smoke on existing P1 stage at 17300/17301, then launch only on smoke success. No reinstall or source change.",
+  "independent_acceptance": "HOLD"
+}

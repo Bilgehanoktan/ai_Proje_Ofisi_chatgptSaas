@@ -1,0 +1,12 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {entries,filterEntries,selectedEntry,studioBoundary}=require(process.env.P10J21_MODEL);
+test('six source candidates, unique identifiers and blob pins',()=>{assert.equal(entries.length,6);assert.equal(new Set(entries.map(e=>e.id)).size,6);assert.ok(entries.every(e=>/^[a-f0-9]{40}$/.test(e.blob)&&e.path.startsWith('product/ai-company-os-backend/app/engines/')));});
+test('skill is quarantined',()=>{assert.equal(filterEntries('skill','all','').length,2);assert.ok(filterEntries('skill','all','').every(e=>e.boundary==='QUARANTINED'));});
+test('memory and knowledge remain HOLD',()=>{assert.equal(filterEntries('memory','all','').length,3);assert.equal(filterEntries('knowledge','all','').length,1);assert.ok(entries.filter(e=>e.area!=='skill').every(e=>e.boundary==='HOLD'));});
+test('role and area intersection',()=>{assert.deepEqual(filterEntries('memory','research','').map(e=>e.id),['lineage','access']);});
+test('Turkish search and trimmed text',()=>{assert.deepEqual(filterEntries('all','all','  HAFIZA LİNEAGE ').map(e=>e.id),['lineage']);});
+test('symbol search and no match',()=>{assert.deepEqual(filterEntries('all','all','inspect_span').map(e=>e.id),['provenance']);assert.deepEqual(filterEntries('all','all','missing'),[]);});
+test('unknown area or role fails closed',()=>{assert.deepEqual(filterEntries('fake','all',''),[]);assert.deepEqual(filterEntries('all','iv',''),[]);});
+test('oversized or nonstring input rejected',()=>{assert.deepEqual(filterEntries('all','all','x'.repeat(201)),[]);assert.deepEqual(filterEntries('all','all',null),[]);});
+test('selection only from visible candidates',()=>{assert.equal(selectedEntry(filterEntries('skill','all',''),'lineage'),null);assert.equal(selectedEntry(entries,'lineage').id,'lineage');assert.equal(selectedEntry(entries,''),null);});
+test('no assignments or authority inferred',()=>{const b=studioBoundary();assert.ok(['installedCount','enabledCount','memoryCount','sourceCount','actualAssignments'].every(k=>b[k]===null));assert.ok(['contentAvailable','grantAllowed','installAllowed','retrievalAllowed','releaseAllowed'].every(k=>b[k]===false));});

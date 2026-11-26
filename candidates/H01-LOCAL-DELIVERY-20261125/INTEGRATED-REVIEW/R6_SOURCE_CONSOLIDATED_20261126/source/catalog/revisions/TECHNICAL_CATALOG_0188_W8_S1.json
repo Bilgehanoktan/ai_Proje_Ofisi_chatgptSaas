@@ -1,0 +1,44 @@
+{
+  "revision": "0188-W8-S1",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/package.json",
+      "change": "Next/React security candidates, explicit PostCSS/Sharp overrides",
+      "dependencies": {
+        "next": "15.5.29",
+        "react": "19.1.10",
+        "react-dom": "19.1.10",
+        "postcss_override": "8.5.32",
+        "sharp_override": "0.35.5",
+        "fastapi": "0.163.0",
+        "starlette": "1.10.0",
+        "uvicorn": "0.34.2"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/requirements.txt",
+      "change": "FastAPI and Starlette candidate pins, uvicorn unchanged"
+    },
+    {
+      "path": "tests/integration/w8_local.py",
+      "symbols": [
+        "MANIFEST_BLOB",
+        "lock_inventory"
+      ],
+      "change": "Reject all missing or mismatched override entries incl nested",
+      "diagnosis": "Regenerate fresh stage, inspect package-lock, do not bypass guard"
+    },
+    {
+      "path": "tests/integration/test_w8_local.py",
+      "symbols": [
+        "Preflight.test_override_pin_drift_stops_review"
+      ],
+      "change": "Three synthetic reject vectors; 9 overall tests PASS"
+    }
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "contract_changes": 0,
+  "independent_acceptance": "HOLD",
+  "rollback": "Revert pins, manifest and runner together; do not run old vulnerable stage."
+}

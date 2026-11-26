@@ -1,0 +1,64 @@
+{
+  "revision": "0210",
+  "baseline": "b9cd16ca6dbb6d8344c34b9446564af7d2a29040",
+  "source_commit": "cd1dd5e61e259d4f16b94ae7e386e32730c8fd13",
+  "tree": "c34eed15dab1bcc5706828304642a0723a28c262",
+  "manifest_blob": "d8fbc81d6a0a8e409e92b906de9d86db2b65dd12",
+  "manifest_entries": 344,
+  "product_files": 345,
+  "prior_non_manifest_files_unchanged": 342,
+  "source_tree_files": 1378,
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/fenced_transition.py",
+      "kind": "add",
+      "git_blob": "350fd89572d047d9ac89f3a6c80b494772e563ba"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_fenced_transition_0210.py",
+      "kind": "add",
+      "git_blob": "93d3a0ea046a1e83d94230f10cbbb5a767cea719"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "git_blob": "d8fbc81d6a0a8e409e92b906de9d86db2b65dd12"
+    }
+  ],
+  "local_selected_product_files": 46,
+  "local_selected_sql_files": 3,
+  "local_additionally_recovered_product_files": 10,
+  "local_additionally_recovered_sql_files": 3,
+  "evidence_path": "tests/evidence/TEST_EVIDENCE_0210.json",
+  "evidence_blob": "23190392b59e14d433327642bc38c4c73691c890",
+  "evidence_sha256": "8d7bda1ab1d180f75bf42cf4bb4f731fe04bdb24888185b524658a813b308b22",
+  "local_slice_zip_sha256": "6d1315a002e7b4d235dc07d50f5ca43c193d63de6dbebed2e074d4683ca60c53",
+  "full_archive_downloaded": false,
+  "local_full_checkout": "BLOCKED",
+  "core_lock": {
+    "blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "remote_pin_match": 55,
+    "local_exact_files": 32,
+    "local_missing_files": 23,
+    "target_tests": 29,
+    "status": "NOT_RUN",
+    "recovered_this_round": 13
+  },
+  "tests": {
+    "passed": 154,
+    "new": 16,
+    "regression": 138,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "main_expected": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "CI": "NOT_RUN"
+}

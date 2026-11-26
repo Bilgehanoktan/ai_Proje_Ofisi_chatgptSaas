@@ -1,0 +1,495 @@
+{
+  "revision": "0196-L",
+  "baseline": "0195",
+  "status": "D0_SYNTHETIC_TESTED_PG_HOLD",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+      "bytes": 18997,
+      "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1",
+      "git_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+      "purpose": "D0 lifecycle mapping and historical admission binding",
+      "imports": [
+        "from dataclasses import asdict, dataclass, field, replace",
+        "from hashlib import sha256",
+        "import json",
+        "from app.core.agent_runtime.lifecycle import RunObservation, RunState, EDGES, valid_lease, inspect_lease, uint",
+        "from app.core.agent_runtime.postgres_run import PostgresRunRepository, _scope_values, _WHERE",
+        "from app.core.transaction.review import Operation, valid_intent, required_roles, BASE_ROLES",
+        "from app.core.transaction.port import CommitReceipt",
+        "from app.core.transaction.postgres_transition_mapping import D0PostgresTransitionMapping, _key, _one, _lease, lease_digest, transaction_ref, _KEY",
+        "from app.core.transaction.postgres_admission_mapping import ClaimSpec, SampleBudget, claim_digest, valid_budget, _BKEY, D0PostgresAdmissionMapping",
+        "from app.core.event_store.postgres_write import append_event, insert_outbox, reserve_fence"
+      ],
+      "symbols": [
+        {
+          "name": "AdmissionBinding",
+          "line": 25,
+          "end_line": 27,
+          "methods": []
+        },
+        {
+          "name": "LifecycleSpec",
+          "line": 30,
+          "end_line": 36,
+          "methods": []
+        },
+        {
+          "name": "lifecycle_digest",
+          "line": 39,
+          "end_line": 40,
+          "methods": []
+        },
+        {
+          "name": "_expect",
+          "line": 43,
+          "end_line": 46,
+          "methods": []
+        },
+        {
+          "name": "verify_admission_binding",
+          "line": 49,
+          "end_line": 104,
+          "methods": []
+        },
+        {
+          "name": "D0AdmissionBoundTransitionMapping",
+          "line": 107,
+          "end_line": 116,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 109,
+              "end_line": 110
+            },
+            {
+              "name": "lock_and_validate",
+              "line": 111,
+              "end_line": 113
+            },
+            {
+              "name": "verify_write_set",
+              "line": 114,
+              "end_line": 116
+            }
+          ]
+        },
+        {
+          "name": "D0PostgresLifecycleMapping",
+          "line": 119,
+          "end_line": 225,
+          "methods": [
+            {
+              "name": "__init__",
+              "line": 125,
+              "end_line": 126
+            },
+            {
+              "name": "_clock",
+              "line": 127,
+              "end_line": 132
+            },
+            {
+              "name": "_budget",
+              "line": 133,
+              "end_line": 134
+            },
+            {
+              "name": "_validate",
+              "line": 135,
+              "end_line": 154
+            },
+            {
+              "name": "lock_and_validate",
+              "line": 155,
+              "end_line": 168
+            },
+            {
+              "name": "write_role",
+              "line": 169,
+              "end_line": 197
+            },
+            {
+              "name": "_verify_rows",
+              "line": 198,
+              "end_line": 218
+            },
+            {
+              "name": "verify_write_set",
+              "line": 219,
+              "end_line": 225
+            }
+          ]
+        },
+        {
+          "name": "LifecycleReconciliation",
+          "line": 229,
+          "end_line": 235,
+          "methods": []
+        },
+        {
+          "name": "reconcile_lifecycle",
+          "line": 238,
+          "end_line": 244,
+          "methods": []
+        }
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_mapping_0196.py",
+      "bytes": 14286,
+      "sha256": "083fc5fa1e391eef4e7f6b7fb51ed453bc4f33b933a3f963e2428b03cbd18bdd",
+      "git_blob": "455ea4bc4aee2a32b78e1cbb81e6438bd4ecc622",
+      "purpose": "26 local selected SQLite tests",
+      "imports": [
+        "import unittest",
+        "import sqlite3",
+        "from contextlib import closing",
+        "from dataclasses import replace",
+        "from concurrent.futures import ThreadPoolExecutor",
+        "from threading import Barrier",
+        "import test_admission_mapping_0195 as base",
+        "from test_transition_mapping_0194 import SQLiteConnectionShim, SQLiteCursorShim",
+        "from app.core.agent_runtime.lifecycle import RunState",
+        "from app.core.agent_runtime.transition_command import commit_transition, transition_digest",
+        "from app.core.transaction.review import LogicalIntent, Operation",
+        "from app.core.transaction.port import LogicalT1Coordinator",
+        "from app.core.transaction.postgres_session import postgres_transaction, CommitOutcomeUnknown",
+        "from app.core.transaction.postgres_lifecycle_mapping import AdmissionBinding, LifecycleSpec, D0AdmissionBoundTransitionMapping, D0PostgresLifecycleMapping, lifecycle_digest, reconcile_lifecycle, FAILURE"
+      ],
+      "symbols": [
+        {
+          "name": "LifecycleTests",
+          "line": 18,
+          "end_line": 192,
+          "methods": [
+            {
+              "name": "setUp",
+              "line": 19,
+              "end_line": 29
+            },
+            {
+              "name": "coordinator",
+              "line": 30,
+              "end_line": 31
+            },
+            {
+              "name": "ordinary",
+              "line": 32,
+              "end_line": 35
+            },
+            {
+              "name": "renewal",
+              "line": 36,
+              "end_line": 39
+            },
+            {
+              "name": "failure",
+              "line": 40,
+              "end_line": 41
+            },
+            {
+              "name": "intent",
+              "line": 42,
+              "end_line": 45
+            },
+            {
+              "name": "execute",
+              "line": 46,
+              "end_line": 47
+            },
+            {
+              "name": "dump",
+              "line": 48,
+              "end_line": 50
+            },
+            {
+              "name": "row",
+              "line": 51,
+              "end_line": 52
+            },
+            {
+              "name": "running",
+              "line": 53,
+              "end_line": 54
+            },
+            {
+              "name": "reconcile",
+              "line": 55,
+              "end_line": 58
+            },
+            {
+              "name": "test_full_chain",
+              "line": 59,
+              "end_line": 72
+            },
+            {
+              "name": "test_renewal_history_two",
+              "line": 73,
+              "end_line": 78
+            },
+            {
+              "name": "test_renewal_rollback_each_role",
+              "line": 79,
+              "end_line": 88
+            },
+            {
+              "name": "test_terminal_rollback_each_role",
+              "line": 89,
+              "end_line": 98
+            },
+            {
+              "name": "test_renewal_fence_change",
+              "line": 99,
+              "end_line": 102
+            },
+            {
+              "name": "test_renewal_expired_precommit",
+              "line": 103,
+              "end_line": 106
+            },
+            {
+              "name": "test_renewal_wa_change",
+              "line": 107,
+              "end_line": 110
+            },
+            {
+              "name": "test_renewal_bounded",
+              "line": 111,
+              "end_line": 113
+            },
+            {
+              "name": "test_renewal_not_backdated",
+              "line": 114,
+              "end_line": 116
+            },
+            {
+              "name": "test_terminal_unknown_cost",
+              "line": 117,
+              "end_line": 120
+            },
+            {
+              "name": "test_terminal_no_success",
+              "line": 121,
+              "end_line": 124
+            },
+            {
+              "name": "test_terminal_no_unknown",
+              "line": 125,
+              "end_line": 128
+            },
+            {
+              "name": "test_terminal_no_cancel",
+              "line": 129,
+              "end_line": 132
+            },
+            {
+              "name": "test_ordinary_missing_admission_binding",
+              "line": 133,
+              "end_line": 136
+            },
+            {
+              "name": "test_ordinary_tampered_initial_audit",
+              "line": 137,
+              "end_line": 140
+            },
+            {
+              "name": "test_ordinary_tampered_renewal_history",
+              "line": 141,
+              "end_line": 144
+            },
+            {
+              "name": "test_ordinary_renewal_outbox_missing",
+              "line": 145,
+              "end_line": 147
+            },
+            {
+              "name": "test_terminal_budget_source_changed",
+              "line": 148,
+              "end_line": 151
+            },
+            {
+              "name": "test_terminal_wrong_reservation",
+              "line": 152,
+              "end_line": 155
+            },
+            {
+              "name": "test_terminal_duplicate",
+              "line": 156,
+              "end_line": 159
+            },
+            {
+              "name": "test_unknown_terminal_readback",
+              "line": 160,
+              "end_line": 164
+            },
+            {
+              "name": "test_unknown_renewal_readback",
+              "line": 165,
+              "end_line": 168
+            },
+            {
+              "name": "test_parallel_renewal_one_winner",
+              "line": 169,
+              "end_line": 176
+            },
+            {
+              "name": "test_parallel_renew_vs_failure",
+              "line": 177,
+              "end_line": 184
+            },
+            {
+              "name": "test_terminal_budget_cas",
+              "line": 185,
+              "end_line": 188
+            },
+            {
+              "name": "test_renewal_stale_clock",
+              "line": 189,
+              "end_line": 192
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pg_lifecycle_mapping_0196.py",
+      "bytes": 8750,
+      "sha256": "38fd8dbe7ed0f9f6ff4ab90bc3c59c67ace3593ce4ff9555b71e1601bbf20f84",
+      "git_blob": "94545b8c89d7bc1f1cd6d9ecc9f141983ba7175b",
+      "purpose": "5 opt-in PG tests NOT_RUN",
+      "imports": [
+        "import os",
+        "import unittest",
+        "from dataclasses import replace",
+        "from concurrent.futures import ThreadPoolExecutor",
+        "from threading import Barrier",
+        "import test_admission_mapping_0195 as base",
+        "from test_transition_mapping_0194 import obs, PLAN",
+        "import test_lifecycle_mapping_0196 as lifecycle_test",
+        "from app.core.agent_runtime.lifecycle import RunState",
+        "from app.core.transaction.port import LogicalT1Coordinator",
+        "from app.core.transaction.postgres_session import postgres_transaction",
+        "from app.core.transaction.postgres_admission_mapping import D0PostgresAdmissionMapping",
+        "from app.core.transaction.postgres_lifecycle_mapping import AdmissionBinding, D0PostgresLifecycleMapping, reconcile_lifecycle, FAILURE"
+      ],
+      "symbols": [
+        {
+          "name": "PgLifecycleTests",
+          "line": 19,
+          "end_line": 120,
+          "methods": [
+            {
+              "name": "setUpClass",
+              "line": 21,
+              "end_line": 41
+            },
+            {
+              "name": "drop_own_schema",
+              "line": 43,
+              "end_line": 44
+            },
+            {
+              "name": "connect",
+              "line": 45,
+              "end_line": 50
+            },
+            {
+              "name": "setUp",
+              "line": 51,
+              "end_line": 63
+            },
+            {
+              "name": "coordinator",
+              "line": 64,
+              "end_line": 66
+            },
+            {
+              "name": "row",
+              "line": 73,
+              "end_line": 74
+            },
+            {
+              "name": "test_chain",
+              "line": 75,
+              "end_line": 84
+            },
+            {
+              "name": "test_rollback_all_terminal_roles",
+              "line": 85,
+              "end_line": 96
+            },
+            {
+              "name": "test_renewal_vs_terminal",
+              "line": 97,
+              "end_line": 104
+            },
+            {
+              "name": "test_renewal_rollback_expiry",
+              "line": 105,
+              "end_line": 109
+            },
+            {
+              "name": "test_shared_budget_claim_cas",
+              "line": 110,
+              "end_line": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "database/0196L/candidate_lease_settlement.sql",
+      "bytes": 1751,
+      "sha256": "587855f42933b7d3e7bf2be0758c57d91d554bf19334e881e3a8274a3e3e73c3",
+      "git_blob": "e4c9a84ff705c39486579c393b1f3aaef9e34da9",
+      "purpose": "2 candidate tables and FK constraints NOT_APPLIED"
+    }
+  ],
+  "api_changes": [],
+  "dependency_changes": [],
+  "database": {
+    "candidate_only": true,
+    "tables": [
+      "t1_candidate.run_lease_renewals",
+      "t1_candidate.sample_settlements"
+    ],
+    "fk": "deferrable mutation and settlement reservation links"
+  },
+  "events": [
+    "D0_LEASE_RENEWAL",
+    "D0_RUN_FAILURE"
+  ],
+  "test": {
+    "new_sqlite": 26,
+    "regression_0195": 19,
+    "regression_0194": 35,
+    "regression_0193": 25,
+    "pg_skipped": 10,
+    "full_suite": "NOT_RUN"
+  },
+  "traceability": {
+    "R01": [
+      "lease renewal",
+      "head CAS",
+      "same fence",
+      "clock freshness"
+    ],
+    "R03": [
+      "eight-role atomic mapping",
+      "readback"
+    ],
+    "R02": [
+      "UNKNOWN reconciliation"
+    ],
+    "R11": [
+      "zero-cost sample settlement"
+    ],
+    "R06": [
+      "parallel merge review"
+    ]
+  },
+  "maintenance": "docs/0196L/ARCHITECTURE_AND_CATALOG.md",
+  "independent_acceptance": "HOLD",
+  "rollback": "return to parent 0195; discard disposable DB; do not reset main"
+}

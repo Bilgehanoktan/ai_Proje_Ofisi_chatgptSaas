@@ -1,0 +1,51 @@
+{
+  "revision": "0188-W8",
+  "source_merge": "4ffbfc0c03de7945860306b450c1a6457eb144c3",
+  "carried_catalogs": [
+    "catalog/revisions/TECHNICAL_CATALOG_0187_W1_I.json",
+    "catalog/revisions/TECHNICAL_CATALOG_0188.json"
+  ],
+  "scope": "docs/0188-W8/SCOPE.json",
+  "added_tooling": [
+    {
+      "file": "tests/integration/w8_local.py",
+      "symbols": [
+        "verify",
+        "prepare",
+        "lock_inventory",
+        "reviewed",
+        "install",
+        "test",
+        "smoke",
+        "ready",
+        "env_local"
+      ],
+      "why": "Full reproducible isolated installation/build/readback pipeline",
+      "dependencies": [
+        "Python stdlib",
+        "Node/npm",
+        "reviewed pinned dependencies",
+        "existing integration harnesses"
+      ],
+      "failure": "HOLD on manifest/lock/source/command failure; stage retained; no bypass"
+    },
+    {
+      "file": "tests/integration/test_w8_local.py",
+      "symbols": [
+        "Preflight"
+      ],
+      "why": "Eight offline fail-closed checks"
+    },
+    {
+      "file": "tests/integration/browser_task_budget_0188.py",
+      "symbols": [
+        "browser test"
+      ],
+      "why": "Actual React paired view acceptance after build; NOT_RUN"
+    }
+  ],
+  "api_delta": "17 exact 0188 paths; see 0188 catalog",
+  "db_delta": "0188 paired disposable sample only; no canonical T1 mapping",
+  "dependency_delta": "No product pins changed; proposed Playwright test-tool pin; locks absent",
+  "rollback": "Revert source merge first-parent on isolated branch; remove W8-only tools/records in separate reviewed revert; preserve histories. Remove only disposable stage after evidence retention."
+}

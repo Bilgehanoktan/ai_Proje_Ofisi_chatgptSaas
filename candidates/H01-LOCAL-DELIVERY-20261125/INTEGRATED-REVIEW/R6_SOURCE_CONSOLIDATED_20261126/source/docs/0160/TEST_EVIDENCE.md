@@ -1,0 +1,2 @@
+# 0160 statik kanıt
+Parent full manifest 222/222; R6 84/84; current source 114/114. Python AST 60/60, 78 iç import ifadesi ve isim çözümü, 0 çözülmeyen, açık import graph cycle 0 (implicit init ve dinamik import davranışı çalıştırılmadı). 16 core import dışı AST eşit; 6 API fonksiyonu AST eşit. TS parse 15/15, statik relative import/reexport çözümü; build/type-check/browser NOT_RUN. 9 FE/BE pin çifti aynı, 16 A0 schema arşivi aynı; 48 unittest metodu NOT_RUN. CI, DB, sağlayıcı, gerçek test ve bağımsız kabul yok. Kaynak/katalog Git tree yerel eşleşmesi yalnız dosya bütünlüğü.

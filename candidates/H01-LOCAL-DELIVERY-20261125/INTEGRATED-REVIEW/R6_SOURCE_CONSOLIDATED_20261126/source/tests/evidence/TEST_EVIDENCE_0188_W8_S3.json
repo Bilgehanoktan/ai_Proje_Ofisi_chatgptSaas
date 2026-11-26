@@ -1,0 +1,52 @@
+{
+  "revision": "0188-W8-S3",
+  "prior_checkout": "32474e6deef691cda06714e32cd72929ce67533a",
+  "prior_manifest": "59396d0b378b274103b63449593392571dedb287",
+  "origin": "User Windows transcript, not independent verifier",
+  "transcript_sha256": "85c820d8c6b02a34e685792af8b3d626735fb01f4db401eefb8a0f36781bfef6",
+  "environment": {
+    "python": "3.13.14",
+    "node": "24.14.0",
+    "npm": "11.9.0"
+  },
+  "source_audit": "249/249 and 14 shared pairs PASS",
+  "review_sha256": "d4960a5756516de23173c512d894fb5c9b412827d9e0281dd621f1250285238f",
+  "install": "PASS: 25 Python, 30 platform npm, pip check",
+  "node": {
+    "pass": 180,
+    "fail": 0,
+    "skip": 1,
+    "skip_reason": "real local backend readback"
+  },
+  "python": {
+    "ran": 265,
+    "pass": 264,
+    "fail": 0,
+    "errors": 0,
+    "skip": 1,
+    "skip_reason": "Windows real symlink privilege 1314; guard-no-open PASS"
+  },
+  "next_build": {
+    "compile": "PASS",
+    "static_pages": "5/5",
+    "routes": [
+      "/",
+      "/_not-found",
+      "/office",
+      "/api/demo/admission",
+      "/api/demo/mvp",
+      "/api/demo/office-workbench",
+      "/api/demo/outbox",
+      "/api/demo/task-budget"
+    ],
+    "shared_first_load": "103 kB",
+    "standalone_tsc_noEmit": "PASS"
+  },
+  "post_build_source_verification": "HOLD tsconfig.json changed; Next log reports incremental=true auto insertion",
+  "build_marker": "NOT_WRITTEN",
+  "browser": "NOT_RUN",
+  "warning": "Starlette httpx TestClient deprecated",
+  "s3_regression": "NOT_RUN",
+  "expected_s3_review_sha256": "549eee93c7406e5aa9391e63afbb59780c535dbc002fd07acdcf3d02506f7fa5",
+  "independent_acceptance": "HOLD"
+}

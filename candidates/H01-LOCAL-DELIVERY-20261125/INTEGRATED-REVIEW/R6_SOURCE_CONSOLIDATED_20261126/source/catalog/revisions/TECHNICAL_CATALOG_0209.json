@@ -1,0 +1,249 @@
+{
+  "revision": "0209",
+  "baseline": "f832f00bffa4162b1f31a9bd192a5aedd44986fb",
+  "source_commit": "9164fe68b545144953ea138c5d9cde3f12a18e12",
+  "source_tree": "155a224e90b4091bc56f1dbab07bb6ead0a35f10",
+  "product_files": 343,
+  "manifest_entries": 342,
+  "prior_non_manifest_files_unchanged": 337,
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/memory_witness.py",
+      "bytes": 10752,
+      "git_blob": "a16409c0eb6a48b5c868767d6580574641ed05b8",
+      "sha256": "91b4268c410265be18b6248a3c1f652788200f08f81786914a796b6d8b39b1db",
+      "kind": "add",
+      "symbols": [
+        "MemoryWitness",
+        "LatestWitnessPin",
+        "witness_bytes",
+        "witness_sha",
+        "_valid",
+        "_transition",
+        "_decode",
+        "_path",
+        "_connect",
+        "_latest",
+        "MemoryWitnessReader.read_latest",
+        "D0MemoryWitnessStore.create",
+        "D0MemoryWitnessStore.append",
+        "WitnessedReview",
+        "inspect_witnessed_context"
+      ],
+      "dependencies": [
+        "sqlite3",
+        "cryptography.hazmat.primitives.asymmetric.ed25519",
+        "cryptography.exceptions.InvalidSignature",
+        "SnapshotPin",
+        "_pin_ok",
+        "JointReview",
+        "inspect_joint_context",
+        "Scope",
+        "ClockSample"
+      ],
+      "purpose": "Signed append-only separate fixture witness, exact external digest/key/recovery epoch, monotonic sequence and pending target; no independent authority."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/witnessed_mapping.py",
+      "bytes": 5404,
+      "git_blob": "804d578dd34b9b5fb66549edc5500e3e8adb0ea2",
+      "sha256": "279f377da4be9a4425a1bc77ba160217e811c7e0c31e1cbccccbeb6cf9ea716b",
+      "kind": "add",
+      "symbols": [
+        "binding_digest",
+        "WitnessedTransitionMapping",
+        "lock_and_validate",
+        "write_role",
+        "lock_transition",
+        "write_transition_role",
+        "read_transition",
+        "verify_write_set"
+      ],
+      "dependencies": [
+        "LogicalIntent",
+        "CommitReceipt",
+        "validate_transition",
+        "required_roles",
+        "joint_context_digest",
+        "inspect_witnessed_context",
+        "LatestWitnessPin"
+      ],
+      "purpose": "Opt-in RUNNING->VERIFYING guard using locked preimage and fresh observation before writes and before receipt; no generic commit or real effect."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_memory_witness_0209.py",
+      "bytes": 10155,
+      "git_blob": "eaebfd13271c6dca3d56d98d043e1e990d2dd5bb",
+      "sha256": "3485e328bc7900d24b91681bd6f49adea48938e3d44ccdc4632ec2ae77df02ad",
+      "kind": "add",
+      "symbols": [
+        "MemoryWitnessTests"
+      ],
+      "tests": 23,
+      "purpose": "Signed local witness, staging, concurrency, restore, stale/forged reference and quarantine tests."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_witnessed_t1_0209.py",
+      "bytes": 8253,
+      "git_blob": "4d476aa49fcfeb754ffe8eefdda0fba7531258c0",
+      "sha256": "cf157958b9686f897cca79b8b238842a7cd56d040b5eb2ea4f0affc4f4368f64",
+      "kind": "add",
+      "symbols": [
+        "FixtureConnection",
+        "FixtureMapping",
+        "WitnessedT1Tests"
+      ],
+      "tests": 10,
+      "purpose": "Original T1 coordinator/session with explicit SQLite stand-in mapping, rollback/UNKNOWN."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_witnessed_sql_0209.py",
+      "bytes": 7231,
+      "git_blob": "0b9a538b5bf80574f771486e56b70d8d0ec8b278",
+      "sha256": "0b4265731a587e20255d434c11aa4e956faaba6df83f6155425b5ef6dc7f9439",
+      "kind": "add",
+      "symbols": [
+        "Cursor",
+        "Connection",
+        "FaultMapping",
+        "WitnessedSqlTests"
+      ],
+      "tests": 7,
+      "purpose": "Original candidate SQL mapping and pinned 0192/0193/0194 DDL on SQLite; final-check race reproduced."
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "git_blob": "02b7b2cdea8ba2d21c14cc2bda2a4107502ae237",
+      "purpose": "342 entries; 337 prior non-manifest files unchanged."
+    }
+  ],
+  "api_changes": [],
+  "database_schema_changes": [
+    {
+      "scope": "D0 local fixture only",
+      "table": "memory_witness",
+      "columns": [
+        "sequence INTEGER PRIMARY KEY",
+        "digest TEXT NOT NULL UNIQUE",
+        "body BLOB NOT NULL",
+        "signature BLOB NOT NULL"
+      ],
+      "triggers": [
+        "no_update",
+        "no_delete",
+        "no_replace"
+      ],
+      "canonical_migration": false
+    }
+  ],
+  "event_schema_changes": [],
+  "dependency_version_changes": [],
+  "dependency_usage": [
+    {
+      "name": "cryptography",
+      "version": "46.0.4",
+      "existing_optional_pin": true,
+      "usage": "Ed25519 signed fixture witness"
+    }
+  ],
+  "tests": {
+    "passed": 138,
+    "new": 40,
+    "regression": 98,
+    "failed": 0,
+    "skipped": 0,
+    "original_ordinary_sqlite": 7,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "source_lock": {
+    "remote_pin_match": 55,
+    "local_exact_files": 19,
+    "local_missing_files": 36,
+    "target_tests": 29,
+    "status": "NOT_RUN"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "D0_JOINT_AND_WITNESSED_ORDINARY_T1_PASS_EFFECT_GATE_HOLD",
+      "result": "Joint context pin and explicit witness checks bracket ordinary RUNNING->VERIFYING original T1 mapping. Not a mandatory runtime/provider gate; actual budget/reservation proof and default dispatch wiring absent."
+    },
+    {
+      "id": "0208-D-02",
+      "priority": "P0",
+      "status": "D0_EXTERNAL_PIN_ANTI_RESTORE_PASS_INDEPENDENT_CUSTODY_HOLD",
+      "result": "Signed head, separate store, externally expected latest digest and key pin reject old memory or both restored stores when the latest external pin remains current. All-three rollback can still structurally match. Fixture key/store not independent custody; recovery key rotation, trusted time, authoritative publication and restore-external trust root HOLD."
+    },
+    {
+      "id": "0209-D-03",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "result": "test_final_check_to_commit_gap_remains advances signed witness after the last check and before original T1 commit. D0 state persists; no grant/effect. Separate witness and T1 stores cannot prove atomicity by repeated reads. Need authoritative fence/effect-boundary protocol with durable pending/unknown reconciliation, not blind retry or new grant."
+    }
+  ],
+  "parallel": [
+    {
+      "line": "A",
+      "priority": "P0",
+      "status": "PARTIAL_SOURCE_RECOVERY_NOT_RUN",
+      "scope": "55 lock paths unchanged; 19 exact files local (+11), 36 absent; 12 original core tests NOT_RUN"
+    },
+    {
+      "line": "B",
+      "priority": "P0",
+      "status": "PARTIAL_SOURCE_RECOVERY_NOT_RUN",
+      "scope": "17 lifecycle/API integration tests NOT_RUN; direct pins mismatch"
+    },
+    {
+      "line": "C",
+      "priority": "P0",
+      "status": "ORIGINAL_ORDINARY_T1_SQLITE_PASS_FULL_COMPANY_TERMINAL_NOT_RUN",
+      "scope": "7 actual original ordinary six-role SQL mapping tests; CompanyCoordinatedMapping and TerminalAnchorMapping composition remains open"
+    },
+    {
+      "line": "D",
+      "priority": "P0",
+      "status": "D0_SIGNED_WITNESS_AND_T1_PASS",
+      "scope": "23 witness, 10 coordinator/session stand-in, 7 actual ordinary mapping SQLite; D-02 custody and D-03 race HOLD"
+    },
+    {
+      "line": "E",
+      "priority": "P1",
+      "status": "UNCHANGED_NOT_RUN",
+      "scope": "Existing historical CEO/Office readbacks only; no new wiring"
+    },
+    {
+      "line": "F",
+      "priority": "P0",
+      "status": "SQLITE_CONCURRENCY_ROLLBACK_PASS_PG_NOT_RUN",
+      "scope": "Witness CAS and ordinary T1 one-winner; 13 PG, non-owner RLS, cross-project, external trust root not run"
+    },
+    {
+      "line": "G",
+      "priority": "P0",
+      "status": "BLOCKED_CHECKOUT_DEPENDENCIES",
+      "scope": "Full checkout DNS, prior frontend deps absent; no install/build/browser this round"
+    }
+  ],
+  "evidence": "tests/evidence/TEST_EVIDENCE_0209.json",
+  "rollback": "Return to exact 0208 commit; no canonical migration. Keep 0209 evidence and fixture stores separate. No runtime authority change.",
+  "maintenance": "Compare signed latest record digest/key pin, scope, snapshot and epochs; pending means HOLD. Do not clear pending on absence. Reconcile UNKNOWN by exact readback; never treat D0 receipt as grant.",
+  "authority": {
+    "agents": 0,
+    "provider_calls": 0,
+    "live_grants": 0,
+    "spend": 0,
+    "CI": "NOT_RUN",
+    "main_merge": false,
+    "PROD": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "revision": "0185-W1-H",
+  "branch": "integration/0185-w1-abcdefgh",
+  "source_commit": "14f645b27757c021c003a04ccb64fd837f721b44",
+  "source_tree": "94cab5c9d70a616295e0482043e43ac60168f8cb",
+  "parent_commit": "7e7077a8f9242e07e4259621a9df86c89ed021aa",
+  "manifest_blob": "554174b4a21e6160074786840aead3924e651b74",
+  "manifest_entries": 217,
+  "manifest_path_size_matches": 217,
+  "product_files": 218,
+  "exact_local_source_blob_matches": 5,
+  "unchanged_parent_product_blobs": 212,
+  "backend_tree_unchanged": true,
+  "delta": {
+    "added": 4,
+    "replaced": 1,
+    "manifest": 1,
+    "deleted": 0
+  },
+  "other_branch": "recovery/0187-office-workbench",
+  "other_head_at_scope": "89d12284546077a6e69374c7ed794235c5e9703f",
+  "other_head_at_readback": "89d12284546077a6e69374c7ed794235c5e9703f",
+  "cumulative_w1_paths": 32,
+  "cumulative_conflicts_at_scope": [
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "w1_blob": "b8b7925c3e2e819f88400e98165f1d8959cc0a55",
+      "base_0185": "cb6a64382be1e11e75fdecf827874f03e6f6a72b",
+      "other_blob": "b64d64952352d1e9820b184f2d5936570ba9b4bf",
+      "conflict": true
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "w1_blob": "770ed9ed5c856d3fd147a9e9d6298260003f6189",
+      "base_0185": "5ca45a298491a19f92569d397d7c04cde508a3a3",
+      "other_blob": "be669e8171972796cb37285c41ec0fb55e73837f",
+      "conflict": true
+    }
+  ],
+  "tests": {
+    "security_helper": 13,
+    "tsx_syntax": 2,
+    "standalone_browser": 12,
+    "full_next_build": "NOT_RUN",
+    "actual_react_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "scope": "Source readback; no main or active recovery branch modification or merge. No actual runtime, grants or full archive download."
+}

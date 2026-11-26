@@ -1,0 +1,62 @@
+{
+  "revision": "0201-R",
+  "parent": "b3813f2692da002d75b678ec8e7b522ca4f1ce6a",
+  "source": "1ebf6c195b0534d3356b94e51b8d4d4cd3340906",
+  "manifest_blob": "2adbfc24895c4389c2570c71c5113276b8f52a63",
+  "product_manifest_count": 250,
+  "product_files_including_manifest": 251,
+  "source_files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/retained_history.py",
+      "bytes": 8238,
+      "sha256": "4251703080dceac583517c91bd55f41aa142cd861705211d9675717c064419d3",
+      "blob": "0cf363f8f8961b8b135335bdc9d394aa93ca501f"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_history_0201.py",
+      "bytes": 3815,
+      "sha256": "8344ef8216421d038f9ceec8e7063da3ba880e37c1ec04159993ce9fdf5c263a",
+      "blob": "dbe72ab92d9746f2508feb7f7c3a14b2f4edfabe"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_retained_snapshot_0201.py",
+      "bytes": 3163,
+      "sha256": "f8aa59af6f79868078b41d570f6a7bae00952b85550dc948159bb531f0f3c8e9",
+      "blob": "c9963f21766da435a00a18a5f49073ebe8603664"
+    }
+  ],
+  "source_blob_match": "3/3 exact local Git blob IDs; remote readback checked",
+  "previous_manifest_entries": "247/247 retained in manifest; not full tree byte verification",
+  "python": "3.13.5",
+  "executed": {
+    "command": "PYTHONPATH=. python -m unittest discover -s tests -p test_retained_history_0201.py -v",
+    "pass": 14,
+    "fail": 0,
+    "scope": "actual SQLite local archive and pure encoding, not full checkout or PG",
+    "tests": [
+      "bad_digest",
+      "changed_reference",
+      "dict_order",
+      "domain_separation",
+      "idempotent",
+      "missing",
+      "no_authority",
+      "read_only_missing_archive",
+      "reopen",
+      "replace_blocked",
+      "tamper_detected",
+      "type_separation",
+      "unsupported_and_size",
+      "update_delete_blocked"
+    ]
+  },
+  "unexecuted": {
+    "new_integration": 5,
+    "prior_pg": 13,
+    "prior_selected_regression": 164,
+    "full_product": "NOT_RUN",
+    "independent_acceptance": "HOLD"
+  },
+  "environment": "GitHub connector read/write available; local git DNS blocked; no postgres, psycopg or docker observed",
+  "no_actual_grants": true
+}

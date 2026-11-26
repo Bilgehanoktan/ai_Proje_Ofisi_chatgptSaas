@@ -1,0 +1,37 @@
+{
+  "revision": "0206",
+  "scope": "Git tree structural verification plus exact SQLite guard slice",
+  "checks": {
+    "parent_manifest_path_size": [
+      260,
+      314
+    ],
+    "three_way_conflict_except_manifest": 0,
+    "combined_manifest_path_size": 334,
+    "shared_contract_blob_parity": 12,
+    "carry": 22,
+    "ai": 8,
+    "p06_lock_matching": 43
+  },
+  "tests": {
+    "combined_product": "NOT_RUN",
+    "prior_0205_selected_pass": 148,
+    "prior_p05_reconciled_selected_pass": 57,
+    "prior_p06_selected_pass": 97,
+    "prior_results_not_additive": true,
+    "prior_core_integration_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1": "NOT_RUN",
+    "actual_pg_13": "NOT_RUN",
+    "build_browser": "NOT_RUN",
+    "independent": "HOLD",
+    "snapshot_regressions": {
+      "passed": 24,
+      "new": 0,
+      "rerun": 24,
+      "scope": "exact 7-file dependency closure with real SQLite",
+      "evidence": "tests/evidence/TEST_EVIDENCE_0206_SNAPSHOT.json"
+    }
+  },
+  "selected_report": "TEST_EVIDENCE_0206_SNAPSHOT.json"
+}

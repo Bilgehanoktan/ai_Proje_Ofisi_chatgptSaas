@@ -1,0 +1,50 @@
+{
+  "revision": "UNIFIED-U2",
+  "parent": "b03e56ac6849654f52f7e421590becf3e3719dd0",
+  "core": "167e5239882dc7b49bd96647412fe6761da0be5e",
+  "ui": "33fabd52740dc79be6bb4847e6e9865f69556c09",
+  "office": "089a4a256cdf0fc835035041ac519b4c15250542",
+  "a6": "438985fea059f0ffafdfa16f0d090cb854b5fc36",
+  "previous_u1_review": "docs/UNIFIED-U1/THREE_WAY_SCOPE.json",
+  "ui_latest": "P10J24 acceptance-only; product same as P10J23; 10 new external records, not imported/rebound",
+  "decisions": [
+    {
+      "path": "components/dashboard/OfficePanel.tsx",
+      "core": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+      "u1": "ca4ae08572c05f63b171f05b72a5fa31b6ead1b9",
+      "u2": "eacb81100fb34a8e74f619a5a8e2283a97337253",
+      "reason": "Core Office shared read, static geometry and workbench retained; UI premium navigation preserved; add direct client route link only."
+    },
+    {
+      "path": "features/ceo-dashboard/Dashboard.tsx",
+      "core": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+      "u1": "3cf52a0fa79cdae441c5124d537f20b051d01f28",
+      "decision": "KEEP_U1",
+      "reason": "All capitalized core JSX component tags present; UI partitions summary/operations/evidence and retains core panels; source review only, reachability/browser NOT_RUN."
+    },
+    {
+      "path": "features/mvp/LifecyclePrefixReadback.tsx",
+      "core": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+      "u1": "64725b14c80ce4a6ae838d47c923cbde0ac3af30",
+      "decision": "KEEP_U1",
+      "reason": "All original read, join/binding, facts and HOLD kept; additional reset/timeline/details."
+    },
+    {
+      "path": "features/mvp/LifecycleReadback.tsx",
+      "core": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+      "u1": "4c1c2ed5aa96702fd71929fec0d3f5af46057c26",
+      "decision": "KEEP_U1",
+      "reason": "All core read, plan mismatch, terminal facts and HOLD kept; added reset/timeline/filter."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py",
+      "core": "3e16b9952af6886b6579729108a0278042ac4052",
+      "u1": "2f2dfb5cef4e50c2cb7e74399ccb28156f27da3d",
+      "decision": "KEEP_U1",
+      "reason": "Original test assertions unchanged; existing UI portable installed compiler/empty typeRoots fallback retained; original DB-backed test not run this round."
+    }
+  ],
+  "all_other_u1_product_paths": "unchanged",
+  "external_closure": "P10J24 historical pin overlay, D1/DB and W8 union-specific runner remain U3; not silently copied",
+  "contract_review": "docs/UNIFIED-U2/OFFICE_FIELD_REVIEW_55.json"
+}

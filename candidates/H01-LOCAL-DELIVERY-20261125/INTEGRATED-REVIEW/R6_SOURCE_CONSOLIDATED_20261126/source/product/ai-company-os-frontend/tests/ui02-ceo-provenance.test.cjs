@@ -1,0 +1,26 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),ts=require('typescript');
+const root=path.join(__dirname,'../features/ceo-dashboard');
+const file=path.join(root,'OperationalReadback.tsx');
+const compiled=ts.transpileModule(fs.readFileSync(file,'utf8'),{fileName:file,compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true},reportDiagnostics:true});
+const jsx=(type,props)=>({type,props});let current,reads=0,resets=0,key='';
+const css={details:'details',card:'card',rows:'rows',row:'row',budget:'budget',hold:'hold',source:'source',provenance:'provenance'};
+const modules={'react/jsx-runtime':{jsx,jsxs:jsx},'../data/useProjectionRead':{useProjectionRead:k=>{key=k;return {state:current,data:current.data,read:()=>reads++,reset:()=>resets++}}},'../data/projectionRead':{readStatus:(s,l)=>s.reason==='TIMEOUT'?'Okuma zaman aşımı · HOLD':l[s.phase]},'./OperationalReadback.module.css':css};
+const mod={exports:{}};vm.runInNewContext(compiled.outputText,{exports:mod.exports,module:mod,require:id=>{assert.ok(Object.hasOwn(modules,id),id);return modules[id]}});
+const roles=[['orchestrator',1,1],['research',1,1],['engineer',1,2],['qa',0,1]].map(([role,observed,total])=>({role,station_id:'station-'+role,observed,total}));
+const sample={pair_id:'a'.repeat(32),research_event_seq:3,office:{sample_event_count:3,roles},budget:{phase:'UNKNOWN_HOLD',version:2,sample_reserved_minor:100,sample_observed_minor:0,sample_remaining_minor:900}};
+const render=(phase,data=null,reason)=>{current={phase,data,reason};return mod.exports.default()};
+function flatten(x,out=[]){if(Array.isArray(x)){for(const y of x)flatten(y,out)}else if(x&&typeof x==='object'){out.push(x);flatten(x.props?.children,out)}return out}
+function nodes(x,t){return flatten(x).filter(n=>n.type===t)}
+function words(x){if(Array.isArray(x))return x.map(words).join(' ');if(x&&typeof x==='object')return words(x.props?.children);return typeof x==='string'||typeof x==='number'?String(x):''}
+function button(x,name){return nodes(x,'button').find(n=>words(n)===name)}
+test('compile and only pre-existing D0 reader endpoint',()=>{assert.equal(compiled.diagnostics.filter(d=>d.category===ts.DiagnosticCategory.Error).length,0);render('idle');assert.equal(key,'task-budget');});
+test('idle does not present historical data as live KPI',()=>{const x=render('idle');assert.equal(nodes(x,'meter').length,0);assert.match(words(x),/Canlı operasyon doğrulanmadı · HOLD/);assert.match(words(x),/Gerçek görev \/ çalışan — · HOLD/);assert.equal(button(x,'Kaydı temizle').props.disabled,true);});
+test('loading does not leak stale historical evidence',()=>{const x=render('loading',sample);assert.doesNotMatch(words(x),/900|aaaaaaaaaaaaaaaa/);assert.match(words(x),/Canlı operasyon doğrulanmadı/);assert.equal(button(x,'Operasyon kaydını oku').props.disabled,true);});
+test('timeout HOLD clears stale evidence and reports timeout',()=>{const x=render('hold',sample,'TIMEOUT');assert.match(words(x),/zaman aşımı/);assert.equal(nodes(x,'meter').length,0);assert.doesNotMatch(words(x),/900|aaaaaaaaaaaaaaaa/);});
+test('valid historical sample derives denominator from original role totals',()=>{const x=render('historical',sample);assert.match(words(x),/Örnek ofis olayları 3\/5/);assert.match(words(x),/Şema doğrulandı · yalnız tarihsel D0/);assert.match(words(x),/Gerçek harcama \/ yürütme DENY/);assert.equal(nodes(x,'meter').length,4);});
+test('no magic five denominator for a different valid presented role layout',()=>{const data={...sample,office:{sample_event_count:2,roles:[{role:'research',station_id:'r',observed:2,total:3}]}};const x=render('historical',data);assert.match(words(x),/Örnek ofis olayları 2\/3/);assert.doesNotMatch(words(x),/Örnek ofis olayları 2\/5/);});
+test('preserves zero budget and source pair without claiming atomicity',()=>{const x=render('historical',sample);assert.deepEqual(nodes(x,'dd').filter(n=>!nodes(n,'dl').length).map(words).slice(0,3),['100','0','900']);assert.match(words(x),/Atomiklik doğrulanmadı/);assert.match(words(x),new RegExp(sample.pair_id));});
+test('never invokes write capability; existing read/reset callbacks preserved',()=>{const x=render('historical',sample);button(x,'Operasyon kaydını oku').props.onClick();button(x,'Kaydı temizle').props.onClick();assert.equal(reads,1);assert.equal(resets,1);assert.equal(nodes(render('idle'),'meter').length,0);});
+test('source and provenance section exist in historical and HOLD states',()=>{for(const phase of ['idle','hold','historical']){const x=render(phase,phase==='historical'?sample:null);const section=nodes(x,'section').find(n=>n.props['aria-label']==='Veri kökeni ve yetki sınırları');assert.ok(section);assert.equal(section.props.className,'provenance');assert.match(words(section),/\/api\/demo\/task-budget/);}});
+test('styling includes contrast tokens and responsive single column',()=>{const css=fs.readFileSync(path.join(root,'OperationalReadback.module.css'),'utf8');assert.match(css,/\.provenance\{/);assert.match(css,/@media\(max-width:680px\)\{\.provenance ul/);assert.match(css,/var\(--muted\)/);});

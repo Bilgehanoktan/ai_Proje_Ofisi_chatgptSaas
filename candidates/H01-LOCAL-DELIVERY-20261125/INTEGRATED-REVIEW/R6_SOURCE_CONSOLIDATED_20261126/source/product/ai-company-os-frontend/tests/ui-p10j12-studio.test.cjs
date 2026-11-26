@@ -1,0 +1,12 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const {roleTaskContext,roomStations,selectedRoom}=require(path.join(process.env.P10D_MODEL,'studioContext.js'));
+const tasks=[{id:'p',label:'Plan',role:'orchestrator',depends_on:[]},{id:'r',label:'Research',role:'research',depends_on:['p']},{id:'q',label:'QA',role:'qa',depends_on:['r']}];
+const stations=[{id:'s1',room:'research',role:'research'},{id:'s2',room:'quality',role:'qa'}];
+test('role tasks show direct predecessors and followers',()=>assert.deepEqual(roleTaskContext(tasks,'research'),[{id:'r',label:'Research',predecessors:[{id:'p',label:'Plan'}],followers:[{id:'q',label:'QA'}]}]));
+test('unknown role and empty plan return no task',()=>{assert.deepEqual(roleTaskContext(tasks,'unknown'),[]);assert.deepEqual(roleTaskContext([],'qa'),[]);});
+test('dependency display does not mutate plan',()=>{const before=JSON.stringify(tasks);roleTaskContext(tasks,'qa');assert.equal(JSON.stringify(tasks),before);});
+test('all and room-filtered stations preserve source records',()=>{assert.deepEqual(roomStations(stations,null),stations);assert.deepEqual(roomStations(stations,'quality'),[stations[1]]);});
+test('unknown room and reserve floor have no stations',()=>{assert.deepEqual(roomStations(stations,'missing'),[]);assert.deepEqual(roomStations([],null),[]);});
+test('room lookup is exact and does not invent a room',()=>{const rooms=[{id:'research'}];assert.equal(selectedRoom(rooms,'research'),rooms[0]);assert.equal(selectedRoom(rooms,'Research'),undefined);assert.equal(selectedRoom(rooms,null),undefined);});

@@ -1,0 +1,5 @@
+# 0201-R next
+P0: obtain exact 0201-R checkout and run five new retained-snapshot integration tests plus selected old regression; independently re-read source manifest. Actual guarded disposable PostgreSQL 13 previous tests, real non-owner RLS, R03 mapping. Establish protected separate pin issuer/key custody and signed terminal receipt profile, trusted clock and W-A; no success authority until independently accepted. Define archive pin anchoring relative to T1 and fail-closed crash reconciliation.
+P1: company-scoped cross-project ordering and causal high-water protocol; shared budget project membership and atomic allocation/settlement; restart/restore with independently pinned latest digest and witness. Preserve existing 0199 exclusive pool semantics.
+Parallel: re-pin P05 and AI/MEM heads, carry exact 0198-E, 0199-C, 0200-S, 0201-R paths after dependency and shared metadata review. No automatic merge, no changes to UI branch. Full combined backend/Next/browser and W8 separate.
+No actual agent/provider/spend/CI/main/PROD or independent acceptance.

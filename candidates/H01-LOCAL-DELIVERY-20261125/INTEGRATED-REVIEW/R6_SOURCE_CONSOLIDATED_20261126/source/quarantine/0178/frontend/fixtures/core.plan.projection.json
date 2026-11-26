@@ -1,0 +1,138 @@
+{
+  "schema_version": "core.plan.projection.v1-D0",
+  "scope": {
+    "tenant_id": "synthetic-tenant",
+    "environment_id": "A0_SAMPLE_ONLY"
+  },
+  "plan_id": "demo-plan-research",
+  "worktype": "RESEARCH",
+  "tasks": [
+    {
+      "id": "draft",
+      "label": "Çıktı taslağı",
+      "role": "engineer",
+      "depends_on": [
+        "plan"
+      ],
+      "state": "HOLD",
+      "run_id": null
+    },
+    {
+      "id": "iv",
+      "label": "Bağımsız doğrulama sınırı",
+      "role": "independent-verifier",
+      "depends_on": [
+        "qa"
+      ],
+      "state": "HOLD",
+      "run_id": null
+    },
+    {
+      "id": "merge",
+      "label": "Taslağı birleştir",
+      "role": "engineer",
+      "depends_on": [
+        "draft",
+        "research"
+      ],
+      "state": "HOLD",
+      "run_id": null
+    },
+    {
+      "id": "plan",
+      "label": "Talebi ayrıştır",
+      "role": "orchestrator",
+      "depends_on": [],
+      "state": "HOLD",
+      "run_id": null
+    },
+    {
+      "id": "qa",
+      "label": "Kalite incelemesi",
+      "role": "qa",
+      "depends_on": [
+        "merge"
+      ],
+      "state": "HOLD",
+      "run_id": null
+    },
+    {
+      "id": "release",
+      "label": "Yayın kapısı",
+      "role": "human-authority",
+      "depends_on": [
+        "iv"
+      ],
+      "state": "HOLD",
+      "run_id": null
+    },
+    {
+      "id": "research",
+      "label": "Kaynak incelemesi",
+      "role": "research",
+      "depends_on": [
+        "plan"
+      ],
+      "state": "HOLD",
+      "run_id": null
+    }
+  ],
+  "waves": [
+    [
+      "plan"
+    ],
+    [
+      "draft",
+      "research"
+    ],
+    [
+      "merge"
+    ],
+    [
+      "qa"
+    ],
+    [
+      "iv"
+    ],
+    [
+      "release"
+    ]
+  ],
+  "edges": [
+    {
+      "from": "plan",
+      "to": "draft"
+    },
+    {
+      "from": "qa",
+      "to": "iv"
+    },
+    {
+      "from": "draft",
+      "to": "merge"
+    },
+    {
+      "from": "research",
+      "to": "merge"
+    },
+    {
+      "from": "merge",
+      "to": "qa"
+    },
+    {
+      "from": "iv",
+      "to": "release"
+    },
+    {
+      "from": "plan",
+      "to": "research"
+    }
+  ],
+  "validation": "VALIDATED_D0_GRAPH",
+  "admission": "DENY",
+  "dispatch_allowed": false,
+  "release_ready": false,
+  "real_run_count": null,
+  "digest": "6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9",
+  "revision": "sha256:6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9"
+}

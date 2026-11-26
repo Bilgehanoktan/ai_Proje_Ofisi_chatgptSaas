@@ -1,0 +1,110 @@
+{
+  "revision": "UI-P10J-07",
+  "source": "182adb096cb7ae46103fe86e465df36217561a71",
+  "manifest": "106bc3353d545cf4145093c766b8b9d18caecc5d",
+  "tests": {
+    "environment": {
+      "node": "22.16.0",
+      "typescript": "5.8.3 (unpinned)",
+      "python": "3.13.5"
+    },
+    "read": {
+      "pass": 12,
+      "total": 12,
+      "log_sha256": "08a9fcab8d994c404249a5d4c3ecd246cb45c468cbec0236844cf50bee928f20"
+    },
+    "scope": {
+      "pass": 9,
+      "total": 9,
+      "log_sha256": "a56f5a6808b5254a411f9961597c483b2856370725c422e4c0ff60cf3a3e44dc"
+    },
+    "session": {
+      "pass": 14,
+      "total": 14,
+      "log_sha256": "1a1639abd50db0a3d2562681a91515c969129658374fd3d48282f170e2b998af"
+    },
+    "graph_and_overview": {
+      "pass": 14,
+      "total": 14,
+      "log_sha256": "e0c293f66ab3c603846ce2d136607f7def6f44edd5f2d532b9e1132547cec65b"
+    },
+    "total": 49,
+    "passed": 49,
+    "scope_note": "Actual exact source and original test files, fixed fixtures, mock fetch; not actual full product."
+  },
+  "blockers": {
+    "checkout": "50/390 exact local product pins; 340 absent",
+    "dns": "github.com and npm registry resolution failed; api.github.com and pypi.org lookup timed out",
+    "archive_audit": {
+      "auditor_blob": "9a8a55b67360a8d55b4e647b29f745d4e8b6b378",
+      "old_archives": 2,
+      "exit_codes": [
+        1,
+        1
+      ],
+      "reason": "FULL_PRODUCT_MANIFEST_MISSING_OR_AMBIGUOUS",
+      "report_sha256": "677e46bf3e65907844b5807816151c9139cc9e847778cfbc5e78197f567a4938"
+    },
+    "npm": {
+      "exit": 1,
+      "reason": "ENOTCACHED",
+      "log_sha256": "7a71821f6bbbb647346b40455cb00c0517da7f700cd1705c45d96ac7f114e990"
+    },
+    "pip": {
+      "exit": 1,
+      "reason": "No matching distribution fastapi==0.163.0 in offline wheelhouse",
+      "log_sha256": "a1ceb133ccb361060674c43f8d32c56057e6c13892523e107e515ffe501a1887"
+    },
+    "installed": {
+      "fastapi": "0.128.2",
+      "starlette": "0.50.0",
+      "uvicorn": "0.48.0",
+      "cryptography": "46.0.4",
+      "psycopg": "missing"
+    },
+    "reviewed_locks": false,
+    "full_w8": "NOT_RUN",
+    "build": "NOT_RUN",
+    "real_api": "0/7 NOT_RUN",
+    "browser": "0/52 NOT_RUN"
+  },
+  "overlap": {
+    "base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+    "ui": "182adb096cb7ae46103fe86e465df36217561a71",
+    "core": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+    "counts": {
+      "same": 333,
+      "ui_only": 50,
+      "core_only": 23,
+      "diverged": 4
+    },
+    "diverged": [
+      "product/SOURCE_MANIFEST.json",
+      "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "shared_contract_selection": "75/75 identical blob pins",
+    "merge_authorized": false
+  },
+  "product_changed": false,
+  "latest_parallel_check": {
+    "core_0221_source": "fdbcdef68ed097bf4aa164f44b5e6fdb791cb241",
+    "counts": {
+      "same": 332,
+      "ui_only": 50,
+      "core_only": 26,
+      "diverged": 4
+    },
+    "selected_contract_blob_matches": "75/75",
+    "status": "source candidate only; acceptance not inspected",
+    "new_paths": [
+      "fenced_transition.py",
+      "intent_authority.py",
+      "sample_adapter.py",
+      "test_result_reference_0221.py",
+      "test_sample_task_0221.py"
+    ],
+    "merge": false
+  }
+}

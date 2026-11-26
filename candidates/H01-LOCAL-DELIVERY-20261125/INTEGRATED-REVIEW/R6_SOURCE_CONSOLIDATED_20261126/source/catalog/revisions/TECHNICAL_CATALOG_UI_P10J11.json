@@ -1,0 +1,111 @@
+{
+  "revision": "UI-P10J-11",
+  "parent": "9610417c422c2cf162f023a1a8dc5e6bedaf69ec",
+  "core_observed": "c94753b4f2bc8a3e739ffa997ca9547772deeaf2",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "before": "8f0325ec269b94a5c4c4a284fb91e42debc45ae2",
+      "after": "39a00b6283cfee2a2fd5f80763852c32ba03ecba",
+      "sha256": "0893211e584cf74bff8ce25798aac77708581bcbd2f4fe2e4065af59213bd147",
+      "symbols": [
+        "Dashboard",
+        "DashboardView",
+        "resetSections",
+        "changeCeoSection",
+        "changeWorkSection",
+        "navigate"
+      ],
+      "purpose": "Split CEO and Work content, reset context"
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+      "before": "187289ca6e97dbfa30d5237207e6b4f797638f01",
+      "after": "0de1a4ddd21fa7a54f97e0fbdb2f5a151f05f376",
+      "sha256": "841956afa1f9d192f069a24ac0b37809e4b855b8a28cfe97bc54c4a5ccce637e",
+      "symbols": [
+        "DevelopmentReviewPanel"
+      ],
+      "purpose": "Optional review-only mode; compatible default"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.tsx",
+      "after": "4808f72a163928143eebd329463fe76cbf41b32f",
+      "sha256": "e94c376fe6f9cc116cbb84ae64399cd928c1ecbfc5d1acd201a00a11a716d5bb",
+      "symbols": [
+        "SectionSwitcher"
+      ],
+      "purpose": "Accessible section selection"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.module.css",
+      "after": "e62833fa8b5de69091748a6f4a3dce899c8dce65",
+      "sha256": "609367a9d7ebbee793f31ef380ea83415d71ea6e57ddec1822f9e06b7c50b97d",
+      "purpose": "Responsive layout using existing EDS tokens"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/sectionModel.ts",
+      "after": "7a0c8b6c7dc8a1c0f99616cb2b13fec3d35163c2",
+      "sha256": "0d668e2a8ee43f70d3c01ffce54c3e44b278d0a8a855a0fc78e819e6f1f8aef3",
+      "symbols": [
+        "ceoSections",
+        "workSections",
+        "isSection",
+        "CeoSection",
+        "WorkSection",
+        "SectionOption"
+      ],
+      "purpose": "View-local section catalog and predicate"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j11-sections.test.cjs",
+      "after": "d774e8fb2fe0957f339b36f4635ccee67d96c512",
+      "sha256": "d08b3d4d151772dd7d816efaec7ef625efa09eb692649edd06920112e171a8f0",
+      "purpose": "Four local model tests"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "after": "606f6449d1bdcb4a83db9e2857644761adc1a63a",
+      "purpose": "394 manifest entries"
+    },
+    {
+      "path": "tests/integration/browser_0187_w1.py",
+      "before": "8463d4104c2b7085dc325db87542288ea5fb35a4",
+      "after": "fab1cb848f6fe5f1aa0f3afbe52e80accb39b9a6",
+      "purpose": "Adapt browser section selection; retain original assertions"
+    },
+    {
+      "path": "tests/integration/browser_lifecycle_p02.py",
+      "before": "d7e8760b3f366d410459b33dc16f44b1144fe231",
+      "after": "e444e60d53914e78e77418fc1ac63e1dc0b7a4de",
+      "purpose": "Adapt browser section selection; retain original assertions"
+    },
+    {
+      "path": "tests/integration/browser_lifecycle_prefix_p03.py",
+      "before": "c41ea2455ce1bd6792fa829be0377344fd30e9da",
+      "after": "15b6f9656f5768e942fd63810d0ca1eb438edab3",
+      "purpose": "Adapt browser section selection; retain original assertions"
+    },
+    {
+      "path": "tests/integration/browser_task_budget_0188.py",
+      "before": "4511877f03ffae35d4baef7267c6d7e8ea6bf583",
+      "after": "70714854ccf650862602d541420ccd7b985408d0",
+      "purpose": "Adapt browser section selection; retain original assertions"
+    },
+    {
+      "path": "tests/integration/w8_p10j11.py",
+      "symbols": [
+        "load_candidate",
+        "test_candidate"
+      ],
+      "purpose": "Pin inherited W8 and add exact section model tests"
+    }
+  ],
+  "api": [],
+  "db": [],
+  "event": [],
+  "dependencies": [],
+  "test": "4 local model PASS; 3 TSX syntax PASS; browser/full W8 NOT_RUN",
+  "rollback": "9610417c422c2cf162f023a1a8dc5e6bedaf69ec",
+  "maintenance": "docs/UI-P10J/P10J11_ARCHITECTURE.md"
+}

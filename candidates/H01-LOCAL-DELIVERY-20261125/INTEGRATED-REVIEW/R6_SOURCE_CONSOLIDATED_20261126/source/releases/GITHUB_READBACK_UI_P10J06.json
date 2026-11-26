@@ -1,0 +1,44 @@
+{
+  "revision": "UI-P10J-06",
+  "base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+  "ui": "182adb096cb7ae46103fe86e465df36217561a71",
+  "core": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+  "counts": {
+    "same": 333,
+    "ui_only": 50,
+    "core_only": 23,
+    "diverged": 4
+  },
+  "diverged": [
+    "product/SOURCE_MANIFEST.json",
+    "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+    "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+    "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+  ],
+  "shared_contract_selection": "75/75 identical blob pins",
+  "merge_authorized": false,
+  "manifest": "106bc3353d545cf4145093c766b8b9d18caecc5d",
+  "ui_path_size": "390/390",
+  "prior_model_tests": "46/46 previously executed",
+  "prior_write": "not applied",
+  "current_revalidation": "UI-P10J-07",
+  "latest_parallel_check": {
+    "core_0221_source": "fdbcdef68ed097bf4aa164f44b5e6fdb791cb241",
+    "counts": {
+      "same": 332,
+      "ui_only": 50,
+      "core_only": 26,
+      "diverged": 4
+    },
+    "selected_contract_blob_matches": "75/75",
+    "status": "source candidate only; acceptance not inspected",
+    "new_paths": [
+      "fenced_transition.py",
+      "intent_authority.py",
+      "sample_adapter.py",
+      "test_result_reference_0221.py",
+      "test_sample_task_0221.py"
+    ],
+    "merge": false
+  }
+}

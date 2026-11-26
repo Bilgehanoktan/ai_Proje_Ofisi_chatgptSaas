@@ -1,0 +1,9 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {organizationTemplate,skillBoundary}=require(process.env.P10J14_MODEL);
+const roles=['orchestrator','research','engineer','qa'].map(id=>({id,name:id,department:id,description:'template'}));
+test('exact four role templates and independent roots',()=>{const o=organizationTemplate(roles);assert.equal(o.human,'H01');assert.equal(o.coordinator.id,'orchestrator');assert.equal(o.groups.length,4);assert.ok(o.independent.includes('Independent Verifier'));assert.equal(o.actualEmployees,null);assert.equal(o.assignmentAllowed,false);});
+test('missing or duplicate role fails closed',()=>{assert.equal(organizationTemplate(roles.slice(1)),null);assert.equal(organizationTemplate([...roles.slice(0,3),roles[0]]),null);});
+test('unknown role or blank department fails closed',()=>{assert.equal(organizationTemplate([...roles.slice(0,3),{...roles[3],id:'iv'}]),null);assert.equal(organizationTemplate([...roles.slice(0,3),{...roles[3],department:' '}]),null);});
+test('department groups retain role identity without assignment',()=>{const o=organizationTemplate(roles.map(r=>({...r,department:'same'})));assert.equal(o.groups.length,1);assert.deepEqual(o.groups[0].roles.map(r=>r.id),roles.map(r=>r.id));assert.equal(o.decision,'HOLD');});
+test('skill boundary does not invent counts or grant',()=>{const s=skillBoundary();assert.equal(s.installedCount,null);assert.equal(s.enabledCount,null);assert.deepEqual(s.effectiveTools,[]);assert.equal(s.installAllowed,false);assert.equal(s.grantAllowed,false);assert.equal(s.executionAllowed,false);});
+test('skill review precedes denied publish',()=>{const s=skillBoundary();assert.deepEqual(s.stages.map(x=>x.id),['source','quarantine','review','publish']);assert.equal(s.stages.at(-1).status,'DENY');});

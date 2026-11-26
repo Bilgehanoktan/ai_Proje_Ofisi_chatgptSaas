@@ -1,0 +1,62 @@
+{
+  "revision": "UNIFIED-U2",
+  "parent": "b03e56ac6849654f52f7e421590becf3e3719dd0",
+  "env": {
+    "os": "Linux",
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "pinned_typescript": "5.9.3 NOT_RUN"
+  },
+  "exact_original_blobs": {
+    "product/ai-company-os-frontend/features/mvp/lifecyclePrefix.ts": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c",
+    "product/ai-company-os-frontend/features/mvp/historicalJoin.ts": "03ac36fcf87208cfc2bc90e9abb1297eda244117",
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484",
+    "product/ai-company-os-frontend/features/mvp/studioContext.ts": "722f085bf56e0f9bdfeb666e1e29e1de8d1e1b4e",
+    "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+    "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+    "product/ai-company-os-frontend/fixtures/core.plan.projection.json": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+    "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+    "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py": "54b3ff7bf96ecd032fa72851183fe671e69a6418",
+    "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822"
+  },
+  "verified_u1_delta": "27/27 PASS",
+  "strict_compile": "PASS",
+  "new_tests": {
+    "count": 14,
+    "pass": 14,
+    "fail": 0
+  },
+  "regression": {
+    "U1": 5,
+    "A5R3": 12,
+    "A5R2": 17,
+    "A5R1": 15,
+    "total": 49,
+    "pass": 49
+  },
+  "selected_total": 63,
+  "tsx_syntax": 4,
+  "tsx_typecheck": "NOT_RUN",
+  "http": "actual original FastAPI router + Python replay builders + loopback + compiled frontend route GET + parser/session",
+  "reader": "fixture stub; actual DB NOT_RUN",
+  "full_next": "NOT_RUN",
+  "browser": "NOT_RUN",
+  "PG": "NOT_RUN",
+  "native": "NOT_RUN",
+  "full_local_checkout": "BLOCKED_DNS",
+  "new_gate": 0,
+  "new_blobs": {
+    "features/data/sharedReplaySession.ts": "90dcd080c6ed53c4a8ff8e2aad1978509725515e",
+    "features/data/SharedSnapshotProvider.tsx": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+    "features/data/SharedSnapshotPanel.tsx": "6f62688761d8cf2f4b2e759e5fd30eef07881141",
+    "features/mvp/StudioContextPanel.tsx": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+    "components/dashboard/OfficePanel.tsx": "eacb81100fb34a8e74f619a5a8e2283a97337253",
+    "tests/unified-shared-session.test.cjs": "0de40e28d6fead7bd13d9958c73edd1c2df2f1ca"
+  },
+  "harness": {
+    "path": "tests/integration/run_unified_u2_session.py",
+    "blob": "c27eb541d4ad4c26f879dd5a45e98f20dd81de2f",
+    "sha256": "5f1e2931931304576e89cba9620ff2bd3cd8fad73c8641578095920d1be6397a"
+  }
+}

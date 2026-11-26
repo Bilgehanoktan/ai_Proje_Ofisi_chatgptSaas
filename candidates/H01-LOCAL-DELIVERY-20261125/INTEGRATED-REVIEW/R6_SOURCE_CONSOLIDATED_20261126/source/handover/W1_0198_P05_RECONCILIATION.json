@@ -1,0 +1,33 @@
+{
+  "revision": "W1-0198-P05",
+  "common_parent": "f17615e53ddd10abcbae1d603b0629263d78c4c6",
+  "parents": [
+    "4ead00903f34e0226f0ca6475c89aaeacb9de364",
+    "34635cbd5f6df7bc2a01b5d07e4cc015cf1ec84b"
+  ],
+  "source_commit": "0346991ed928a8fa682902dee9cc53aa2c0102e2",
+  "decision": "CONTROLLED_SOURCE_MERGE_NOT_RUNTIME_ACCEPTANCE",
+  "exact_b_imports": [
+    "product/ai-company-os-backend/app/core/development_review/d0_snapshot.py",
+    "product/ai-company-os-backend/tests/test_d0_snapshot_p04.py",
+    "product/ai-company-os-frontend/features/data/projectionScope.ts",
+    "product/ai-company-os-frontend/features/progress/PlanProgressPanel.tsx",
+    "product/ai-company-os-frontend/features/progress/progressModel.ts",
+    "product/ai-company-os-frontend/features/progress/w1PlanProgress.json",
+    "product/ai-company-os-frontend/tests/progress-model.test.cjs",
+    "product/ai-company-os-frontend/tests/projection-scope.test.cjs"
+  ],
+  "new_or_reconciled": [
+    "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+    "product/ai-company-os-backend/tests/test_lifecycle_snapshot_merge_p05.py",
+    "product/ai-company-os-frontend/design-system/eds.css",
+    "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+    "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx"
+  ],
+  "reader_selection": "A readers exact; canonical lifecycle_read_snapshot strengthened; B generic helper retained offline",
+  "ui_selection": "A session, terminal clone and floor resets retained; B progress/strict scope exact; Dashboard, prefix and CSS reconciled",
+  "metadata": "Both P04 metadata archived byte-exact; B unique history preserved; P05 active pointers",
+  "test_counts_not_additive": true,
+  "progress": "20/40 unchanged",
+  "no_main": true
+}

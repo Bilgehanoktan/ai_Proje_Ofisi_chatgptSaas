@@ -1,0 +1,157 @@
+{
+  "revision": "0206",
+  "source_commit": "f1b50dc2be8a455e3f3aee92b14d2d79433338a4",
+  "scope": "Exact seven-file dependency-closed snapshot guard slice, real temporary SQLite fixture, no full checkout",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "command": "python -B -m unittest discover -s tests -p 'test_*.py' -v",
+  "passed": 24,
+  "failed": 0,
+  "skipped": 0,
+  "new": 0,
+  "rerun": 24,
+  "initial_copy_error": "One manually copied test file initially had whitespace mismatch; execution stopped at preflight; corrected local copy to exact Git blob before executing, no remote source change.",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "bytes": 59,
+      "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+      "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "bytes": 66,
+      "git_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/d0_snapshot.py",
+      "bytes": 2592,
+      "git_blob": "c067e844f1c3200c625f4811d13f12c59a602e95",
+      "sha256": "ef17e343571236d1c3c7b261551627ab727c6f632c1cc3a867c22d24b05e09a7"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_read_snapshot.py",
+      "bytes": 3802,
+      "git_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+      "sha256": "4be862d34e292dfc94a01fdb3d3e7254363126afe653d9637ddf75f743e07a03"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_d0_snapshot_p04.py",
+      "bytes": 4349,
+      "git_blob": "42d761960c0a5fe3efb573612fab36ac9f797619",
+      "sha256": "c09c67844f61608f8f957526bed49e4e6a5fb81b714ede302b80606cca83e817"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_lifecycle_snapshot_merge_p05.py",
+      "bytes": 4258,
+      "git_blob": "619d14e103207f840e82c96774ae773e38914b3e",
+      "sha256": "c36fd20098749daea35cbfd66915cff992054cf315976b130d827545777be750"
+    }
+  ],
+  "cases": [
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_actual_read_preserves_hash",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_cursor_closed",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_deadline_holds",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_empty_file",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_exception_cleanup_preserves_hash",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_missing_does_not_create",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_oversize",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_reject_write_attach_and_multiple_statements",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_relative_path",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_sidecar_appears_during_read",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_sidecars",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_symlink",
+      "status": "PASS"
+    },
+    {
+      "case": "test_d0_snapshot_p04.SnapshotTests.test_wrong_name",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_authorizer",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_deadline",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_duplicate_head",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_empty_file",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_exact_read_and_hash",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_exception_cleanup",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_missing_table",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_sidecars_before_and_after",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_trigger",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_view",
+      "status": "PASS"
+    },
+    {
+      "case": "test_lifecycle_snapshot_merge_p05.MergeTests.test_writer_blocked",
+      "status": "PASS"
+    }
+  ],
+  "log_sha256": "687cc817ba241cfcba621a426447e828fffd1c9bb433bb8a6c9bc9e811837726"
+}

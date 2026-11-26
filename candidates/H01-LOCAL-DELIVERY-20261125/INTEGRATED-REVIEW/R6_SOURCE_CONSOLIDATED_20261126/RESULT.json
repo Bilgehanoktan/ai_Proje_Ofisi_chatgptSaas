@@ -1,0 +1,128 @@
+{
+  "task": "MI-P0-R6-SOURCE-CONSOLIDATION-20261126",
+  "classification": "ARCHIVAL_REVIEW_ONLY_OWNER_SECURITY_DEPENDENCY_HOLD",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent": "346c74eaa0c6d0523a75607e86a35298365e666b",
+  "original_r6": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "base_source_tree": "75c92fba62175abadafe81e7f065bc60c41d5a26",
+  "source_tree": "bd3a4906713c6c89f777d37294e684f6bbc503c7",
+  "product_tree": "f31bc1647371c4e0ff0234630d3dbd2a7021e4d5",
+  "manifest_blob": "359e084b4a8aceb9120fda6a3be3e298646b4f1f",
+  "source_files": 1918,
+  "product_files": 587,
+  "manifest_entries": 586,
+  "unchanged_source_blobs": 1912,
+  "added": [
+    "product/ai-company-os-backend/tests/test_provenance_exact_value_boundary.py"
+  ],
+  "changed": [
+    "product/SOURCE_MANIFEST.json",
+    "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+    "product/ai-company-os-backend/requirements.txt",
+    "product/ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+    "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs"
+  ],
+  "removed": [],
+  "verified_overlay_bytes": 5,
+  "verified_manifest_path_sizes": 586,
+  "overlays": [
+    {
+      "path": "ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+      "ref": "346c74eaa0c6d0523a75607e86a35298365e666b",
+      "src": "candidates/H01-LOCAL-DELIVERY-20261125/INTEGRATED-REVIEW/R6_KNOWLEDGE_PROVENANCE_20261126/candidate/provenance.py",
+      "before": "7d710685366a55c117e49043a64f1eeabf5079cf",
+      "after": "759f42b9e87ad3f15f1e0cdc8c983a2ddf21f4a7",
+      "bytes": 1710,
+      "sha256": "d8d39e43ec4bd26183bb83e30a4da959f6295c4e4804dc0a1fa321a9d3f354dc",
+      "owner": "MI08",
+      "previous_metadata": {
+        "bytes": 1391,
+        "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_provenance_exact_value_boundary.py",
+      "ref": "346c74eaa0c6d0523a75607e86a35298365e666b",
+      "src": "candidates/H01-LOCAL-DELIVERY-20261125/INTEGRATED-REVIEW/R6_KNOWLEDGE_PROVENANCE_20261126/tests/test_provenance_exact_value_boundary.py",
+      "before": null,
+      "after": "b119cdf8c2c23670f0b325f45e2b2bf7b0b3d5f5",
+      "bytes": 3140,
+      "sha256": "0842236fe94da9078c837898e89e3850ccb4881fcfdcf8a55ddbd3430344f2aa",
+      "owner": "MI08",
+      "previous_metadata": null
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+      "ref": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+      "src": "product/ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+      "before": "d16bd96d948ea5fb83701b6c4edfe5b416b2869a",
+      "after": "f55f72ffc1ec9c5de81b4be0fd13d2a5f01d5fe5",
+      "bytes": 4029,
+      "sha256": "c9b66a7d45fb298647ad1d74179f61dcc37733beb41bea08894e1f4036fc1431",
+      "owner": "MI01/05",
+      "previous_metadata": {
+        "bytes": 3972,
+        "sha256": "8bb0a81933001c64558df9e630af93390b1549714370750e8cb43bea2cef2bee"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+      "ref": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+      "src": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+      "before": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+      "after": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+      "bytes": 6849,
+      "sha256": "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932",
+      "owner": "MI01/05",
+      "previous_metadata": {
+        "bytes": 6431,
+        "sha256": "6d140aaa1196d77d4ffa0c719aa0e806e6a1df7b66312b4876a5990f4cce3905"
+      }
+    },
+    {
+      "path": "ai-company-os-backend/requirements.txt",
+      "before": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+      "after": "b2e70349a0468b016a27515d75c7aa00d1ffb317",
+      "bytes": 128,
+      "sha256": "979e08957b092545fe0b85c07087195fdb10c6daddfa9b6a547996629f0c38c9",
+      "previous_metadata": {
+        "bytes": 128,
+        "sha256": "e1e7b627b7f83b54687170391406cbf996a85dfb02fed06591b301c01a78799a"
+      },
+      "owner": "03API/MI01/Security",
+      "ref": "79771c6dce3fda0b9b6275cacbac1a3d24a4c9a8"
+    }
+  ],
+  "evidence_reused": {
+    "reader_office": "346c74eaa0c6d0523a75607e86a35298365e666b",
+    "knowledge": "9/9 local scoped; exact candidate blob",
+    "w8_ui": "23/23 scoped test overlay; original PR38 exact",
+    "fastapi": "existing exact patch apply/reverse evidence; no runtime",
+    "model_scheduler_skill": "3f0181859d7e735b442adeab9da280a933aa8c82; PR53/54 already present; retain R6 resolver variant owner HOLD"
+  },
+  "open": [
+    "MI08 provenance owner",
+    "MI01/05 W8 test and reader/Office owner",
+    "03API FastAPI pin owner",
+    "PR52 dependency/runtime, Security/IV and license owners",
+    "PR49 historical variant requalification",
+    "G7 53/56 R6 vs original 56/56",
+    "original 28 tests, full W8 C07/C08 and C05",
+    "actual full checkout and per-byte 586 manifest audit",
+    "full Design Master review"
+  ],
+  "tests_this_round": "No new executions; exact reused evidence only, no duplicate credit. New combined tree not executed.",
+  "authority": "No install, no CI, no product-dev/main modification, no owner approval or independent acceptance. Existing R6 original, composed predecessor, Codex branch and evidence preserved.",
+  "next": "Complete owner resolution and W8 runner/source lock review. Later give a single fixed source tree and exact conditional locks to Codex; no new Codex task in this round.",
+  "rollback": "Leave archive unpromoted; normal revert only of archival commit. Restore corresponding manifest with source if later transferred.",
+  "progress": {
+    "new_candidate_source_code": 0,
+    "existing_overlay_source_or_test_paths": 5,
+    "canonical_delta": 0,
+    "acceptance_delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  }
+}
