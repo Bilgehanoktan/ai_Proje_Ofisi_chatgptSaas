@@ -1,0 +1,81 @@
+{
+  "task": "MI08-R10-R6-KNOWLEDGE-EXACT-PROVENANCE-20261126",
+  "status": "ISOLATED_OWNER_REVIEW_HOLD",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "baseline": "e7fe06d9d4fb3c664984e15469d0d18ce0f4f4b3",
+  "original_r6": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner_branch": "integration/w5-mem-05e-r1-authority-source-alignment",
+  "owner_head": "e85cd16e19c8f32da948b9bba98115667c9e1573",
+  "architecture": {
+    "master_archive_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "relevant_sections": "0155 lines 435-449; 0159B architecture addendum ba525a51589256af1860f1bfc842f67d31eec78a",
+    "catalog": "MI08 R10 D09; valid_source, inspect_span",
+    "normative_change": false,
+    "api_db_event_dependency_change": false
+  },
+  "manifest_delta": {
+    "path": "ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+    "before": {
+      "bytes": 1391,
+      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0",
+      "blob": "7d710685366a55c117e49043a64f1eeabf5079cf"
+    },
+    "after": {
+      "bytes": 1710,
+      "sha256": "d8d39e43ec4bd26183bb83e30a4da959f6295c4e4804dc0a1fa321a9d3f354dc",
+      "blob": "759f42b9e87ad3f15f1e0cdc8c983a2ddf21f4a7"
+    },
+    "test_proposed_addition": {
+      "path": "ai-company-os-backend/tests/test_provenance_exact_value_boundary.py",
+      "bytes": 3140,
+      "sha256": "0842236fe94da9078c837898e89e3850ccb4881fcfdcf8a55ddbd3430344f2aa",
+      "blob": "b119cdf8c2c23670f0b325f45e2b2bf7b0b3d5f5"
+    }
+  },
+  "source_pins": {
+    "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+    "app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "app/core/runtime_preview.py": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+    "app/core/t1_review.py": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+    "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+    "app/core/transaction/review.py": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "app/engines/__init__.py": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+    "app/engines/knowledge_engine/__init__.py": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+    "app/engines/knowledge_engine/provenance.py": "7d710685366a55c117e49043a64f1eeabf5079cf"
+  },
+  "tests": {
+    "command": "python -B -S -m unittest -v test_provenance_exact_value_boundary",
+    "env": "Python 3.13.5 Linux, stdlib only, 11 exact baseline blobs",
+    "before": {
+      "pass": 3,
+      "fail": 6,
+      "exit": 1,
+      "sha256": "c7266fd3edbccd8ec5795858aedc4dd746e0f1bbb6530847af1551d59f239402"
+    },
+    "after": {
+      "pass": 9,
+      "fail": 0,
+      "exit": 0,
+      "sha256": "6526fbac64ee8b7d49455acde655cabd3e39225b20a6b1af984fdd1ce5f01f5c"
+    }
+  },
+  "codex_latest": {
+    "commit": "3f0181859d7e735b442adeab9da280a933aa8c82",
+    "reported": 18,
+    "scope": "Model/Scheduler/Skill compatibility and three synthetic suites; not rerun here"
+  },
+  "limits": "No authentic retrieval or grant; existing Memory workspace/card guard BLOCKED; owner approval, full original Memory/model regression, full build, independent IV HOLD. Full Design Master review incomplete; no canonical or composed manifest mutation, no dependency or CI changes.",
+  "rollback": "Leave archive unpromoted or normal revert archival commit; if approved restore original exact provenance blob and manifest/test together.",
+  "progress": {
+    "new_isolated_source_functions": 2,
+    "new_tests": 9,
+    "canonical_delta": 0,
+    "acceptance_delta": 0,
+    "ordinal_delta": 0,
+    "weighted": "HESAPLANAMADI"
+  }
+}
