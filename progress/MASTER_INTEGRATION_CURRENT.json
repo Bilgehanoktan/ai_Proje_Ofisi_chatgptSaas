@@ -15248,23 +15248,23 @@
       "MVP": "11/11"
     },
     "last_product_transfer": {
-      "canonical": "55b4d0719ccd6ce2483d8a9d4c646451234a0a68",
-      "previous": "5dd94b135000baeb38b629aa5f62a84a4e507d98",
+      "canonical": "4d5b7195b3609bee3db42bb9212b322f98d00ed4",
+      "previous": "55b4d0719ccd6ce2483d8a9d4c646451234a0a68",
       "commits": [
-        "55b4d0719ccd6ce2483d8a9d4c646451234a0a68"
+        "4d5b7195b3609bee3db42bb9212b322f98d00ed4"
       ],
       "product_files": 573,
       "manifest_entries": 572,
-      "manifest_blob": "2a0bf42d39b7b11bf0062aec8056a25860ad7e6b",
-      "changed_exact_payload_sha256": "6/6",
-      "product_code_files": 3,
-      "existing_test_files": 3,
-      "added": 1,
+      "manifest_blob": "d2b90f6ab8421d0c4b52979e62a3d4d2b49f27c3",
+      "changed_exact_payload_sha256": "2/2",
+      "product_code_files": 2,
+      "existing_test_files": 0,
+      "added": 0,
       "deleted": 0,
       "cumulative_H01_B": {
-        "code": 15,
+        "code": 17,
         "tests": 14,
-        "changed": 29,
+        "changed": 31,
         "added": 9,
         "deleted": 0
       },
@@ -15402,7 +15402,12 @@
         "ordinal": "unchanged"
       },
       "full_build": "NOT_RUN",
-      "independent": "HOLD"
+      "independent": "HOLD",
+      "task": "H01-B-R6-PLAN-BOUNDED-READER-TRANSFER-20261126",
+      "source": "b8c4633cf3c9416f64406ee742db7d9e3c27d634",
+      "catalog": "catalog/revisions/H01_B_R6_PLAN_BOUNDED_READER_TRANSFER_20261126.json",
+      "local_evidence": "Strict TS PASS; 7/7 isolated injected fetch; 570/570 retained product blobs; 572/572 path/size; no new acceptance or full application build",
+      "next": "Reconcile shared snapshot transport without overwriting stronger canonical reader/UI; IAM12/G7 mandatory checks and C50/R9 remain HOLD"
     },
     "previous_product_transfer": {
       "canonical": "5dd94b135000baeb38b629aa5f62a84a4e507d98",
@@ -15571,6 +15576,163 @@
           "canonical": "7b54683e75bc8591acedc6b0e7d3b9dceb574cb5"
         }
       ],
+      "acceptance": {
+        "UI": "21/40",
+        "Core": "12/16",
+        "MVP": "0/11",
+        "W8": "3/8",
+        "IV": "0/7",
+        "integration": "HESAPLANAMADI",
+        "weighted": "HESAPLANAMADI",
+        "ordinal": "unchanged"
+      },
+      "full_build": "NOT_RUN",
+      "independent": "HOLD"
+    },
+    "plan_reader_previous_transfer": {
+      "canonical": "55b4d0719ccd6ce2483d8a9d4c646451234a0a68",
+      "previous": "5dd94b135000baeb38b629aa5f62a84a4e507d98",
+      "commits": [
+        "55b4d0719ccd6ce2483d8a9d4c646451234a0a68"
+      ],
+      "product_files": 573,
+      "manifest_entries": 572,
+      "manifest_blob": "2a0bf42d39b7b11bf0062aec8056a25860ad7e6b",
+      "changed_exact_payload_sha256": "6/6",
+      "product_code_files": 3,
+      "existing_test_files": 3,
+      "added": 1,
+      "deleted": 0,
+      "cumulative_H01_B": {
+        "code": 15,
+        "tests": 14,
+        "changed": 29,
+        "added": 9,
+        "deleted": 0
+      },
+      "remaining_R6_additions": [
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "blob": "f3c37428acd475e09c228bce47d534d6584cd944"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "blob": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "blob": "675615e04059280ec6aa99e9679b4388cd018c2d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_adapter_skill_integration.py",
+          "blob": "7ae738c5b3182b05fe7a4ec4a5a6a374acb02d06"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+          "blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+          "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+          "blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+          "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_session_d5g1.py",
+          "blob": "6be21cfdcaf7408d7d17b5848966bb7f6772581e"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_recovered_sample_consumer.py",
+          "blob": "31e0de7b54ad5674a4df2312e7ff054767605d24"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
+          "blob": "449fc4eb642016162a8fc0fcdcc414b3cc1d8661"
+        },
+        {
+          "path": "product/ai-company-os-frontend/package-lock.json",
+          "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+          "blob": "bc714ec16a144cba403c214bd1497525e5114821"
+        }
+      ],
+      "remaining_R6_replacements": [
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+          "canonical_blob": "fa47acd32adb309896f762ec50e47bf26641adbb"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+          "blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+          "canonical_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+          "blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+          "canonical_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713"
+        },
+        {
+          "path": "product/ai-company-os-backend/requirements.txt",
+          "blob": "b2e70349a0468b016a27515d75c7aa00d1ffb317",
+          "canonical_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+          "blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+          "canonical_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+          "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+          "canonical_blob": "851d642c88486d0d6e8818265866a898108eaa1c"
+        }
+      ],
+      "intentional_UI_successors": [
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+          "r6": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+          "canonical": "1419c3253fdf5496738e93f6edbdfb6f654bd860"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+          "r6": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+          "canonical": "3b02873f6f645fe1d9f698ce966727d70e696220"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+          "r6": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+          "canonical": "84790dfad205c0b280c66b759d594e86ddccfcf0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+          "r6": "990b06ee2b5adc115547615719610ccc02a66061",
+          "canonical": "ba5c811246dac69677f618c0d5568f2ca0701006"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+          "r6": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+          "canonical": "c48d8116036357776a9b8f52401fa14ba1554021"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+          "r6": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+          "canonical": "7b54683e75bc8591acedc6b0e7d3b9dceb574cb5"
+        }
+      ],
+      "remaining_gate": "IAM/T1 signed wrapper12 and G7 original7 NOT_RUN; real authority and independent root HOLD; runtime memory and dependencies C50/R9 security/license HOLD; original API9 and native browser NOT_RUN; standalone diagnostic tests not transferred pending runner compatibility. No CI.",
       "acceptance": {
         "UI": "21/40",
         "Core": "12/16",
