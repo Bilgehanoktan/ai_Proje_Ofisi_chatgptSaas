@@ -27,3 +27,6 @@ Transferred three exact R6 source blobs from 5d2fddb onto e826dd6: the MVP route
 
 ## R6 four proxy routes on product-dev
 Reconciled Admission, Outbox, Task Budget and Office Workbench routes from exact R6 source 5d2fddb. Base ade40b6; scope: four route blobs and three original regression suites. Manifest 556/556; strict TypeScript compile and 56 existing MIME/deadline checks passed. Shared application build and independent acceptance remain open. Rollback by reverting this commit.
+
+## R6 UI and Office presentation
+Shared base 1e2fa7a; 17 exact R6 blobs from 5d2fddb: navigation/theme, CEO evidence presentation, historical projection expiry/visibility, plan graph zoom, and seven existing suites. Manifest 563/563; 68 existing focused checks passed. Full shared Next build and browser still open; lock and backend source were not replaced. Rollback by reverting this commit. Continue Core/IAM/ORG/Model/Skill/Memory source reconciliation.
