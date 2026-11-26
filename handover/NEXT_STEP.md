@@ -50,3 +50,7 @@ Exact existing plan route from b8c4633cf3c9416f64406ee742db7d9e3c27d634 onto 55b
 
 ## H01 B — R6 shared snapshot transport transfer (26.11.2026)
 Four existing source modules reconciled from b8c4633cf3c9416f64406ee742db7d9e3c27d634 while retaining stronger canonical JSON cleanup, MIME and redirect guards. Shared historical replay transport bounded; late/invalid responses cancelled. Strict TypeScript and 9/9 isolated synthetic injected-fetch checks passed; full U2/live HTTP/browser NOT_RUN. 572 manifest entries. See ../catalog/revisions/H01_B_R6_SHARED_SNAPSHOT_TRANSFER_20261126.json. Next: independent Model/Skill/Memory candidate reconciliation; IAM12/G7/C50/IV HOLD. Ordinary revert for rollback.
+
+
+## H01 B — R6 RESEARCH fixture encoding transfer (26.11.2026)
+Three existing test files from b8c4633cf3c9416f64406ee742db7d9e3c27d634 explicitly decode the unchanged core.preview.json as UTF-8; no new test methods or runtime code. 3/3 exact changed source byte/SHA256 matches; prior isolated handover reports 54 Research methods passed, no fresh run here. See ../catalog/revisions/H01_B_R6_RESEARCH_UTF8_TRANSFER_20261126.json. Remaining recovered-memory and IAM/T1/C50/R9/IV HOLD. Revert normally for rollback.

@@ -34,7 +34,7 @@ class ResearchFixture:
     company = company_fixture.CompanyTerminalTests.company
 
     def __init__(self, owner):
-        self.plan = json.loads((Path(__file__).resolve().parents[1]/'fixtures/core.preview.json').read_text())['plan']
+        self.plan = json.loads((Path(__file__).resolve().parents[1]/'fixtures/core.preview.json').read_text(encoding='utf-8'))['plan']
         assert canonical_plan(self.plan)['revision'] == RESEARCH_REVISION
         self.project = 'demo-research-project'
         # Existing helper event() uses project-a; override it below with the pinned project.

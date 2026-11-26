@@ -1,0 +1,50 @@
+{
+  "task": "H01-B-R6-RESEARCH-UTF8-TRANSFER-20261126",
+  "parent": "009100652d83ff698869aeadf702b87c492fc452",
+  "source": "b8c4633cf3c9416f64406ee742db7d9e3c27d634",
+  "governance": "0095f7248dccd4a0fe974ad9ab353bed569f9d0c",
+  "classification": "EXISTING_TEST_PORTABILITY_SOURCE_TRANSFER_ONLY",
+  "paths": [
+    {
+      "name": "test_canonical_research_0224.py",
+      "old": "e121ee6275def01070397a942a8434ff37b611a6",
+      "sha": "ff879639270a6015ff62ccc2744c585a21f43c4b",
+      "path": "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+      "bytes": 11141,
+      "sha256": "11a35c292eeca396c983dae6804f0cd9e3dcc424407ff3e96d08b0e90f5909cd"
+    },
+    {
+      "name": "test_research_company_snapshot_0224.py",
+      "old": "d51dca6c425a40d196390361e071d02026d1f548",
+      "sha": "55181725d71b976141b0a079ba37f4b35d03b065",
+      "path": "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py",
+      "bytes": 6416,
+      "sha256": "f6c7c52337ae149fcad0be278eb8c63077460ac54ef5c81228a3e1efbe87a3d4"
+    },
+    {
+      "name": "test_research_roster_0224.py",
+      "old": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+      "sha": "4d7c76bd92edac2c5b9b963369d92774a61c5605",
+      "path": "product/ai-company-os-backend/tests/test_research_roster_0224.py",
+      "bytes": 3929,
+      "sha256": "8fa34ac09e9d910ac4d63befcb1d4d3189823333cf9ecd3d775f0edf3ecc6f90"
+    }
+  ],
+  "disposition": "Existing R6 RESEARCH tests explicitly read immutable JSON fixture as UTF-8. Each diff is one encoding argument. Preserve test methods, assertions, fixture and canonical product behavior. No new tests, runtime source, API, database, event, dependency, grant or acceptance change.",
+  "conflicts": "Relevant PR54/46/44/38/37/36/35/34/33/31/19 file lists had no matching path; expected-parent update required.",
+  "evidence": {
+    "prior": "R6 isolated handover eighth slice records 54 Research tests PASS after UTF-8 correction; prior candidate evidence only, not independently rerun here.",
+    "current": "3/3 exact source blob and SHA256/byte match; 572 base manifest path/size match. No local runtime test executed this turn.",
+    "fixture_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+    "limits": "Full Design Master, full ZIP, full byte rehash, native Windows current-head test not completed. Recovered-memory Runtime/sample adapter stay HOLD pending C50/R9 and signed review. Preserve stronger canonical provenance and its tests rather than isolated candidate downgrade."
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Normal revert of this transfer; no DB migration. Diagnose Windows fixture decoding and plan revision mismatch; keep exact UTF-8 source."
+}
