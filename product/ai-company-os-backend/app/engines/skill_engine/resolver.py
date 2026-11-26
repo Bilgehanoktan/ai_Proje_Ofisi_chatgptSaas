@@ -25,8 +25,11 @@ class CapabilityReview:
 
 
 def valid_source(p: object) -> bool:
-    return (isinstance(p, SourcePin) and digest_ok(p.raw_digest)
-            and all(token(v) for v in (p.source_id, p.revision, p.license_ref, p.custody_ref)))
+    # Source pins are plain value records; do not invoke custom equality.
+    return (type(p) is SourcePin
+            and type(p.raw_digest) is str and digest_ok(p.raw_digest)
+            and all(type(v) is str and token(v)
+                    for v in (p.source_id, p.revision, p.license_ref, p.custody_ref)))
 
 
 def inspect_capabilities(skill: SkillManifestSample, reference: SkillManifestSample,
@@ -35,7 +38,8 @@ def inspect_capabilities(skill: SkillManifestSample, reference: SkillManifestSam
                          requested: tuple[str, ...], policy_tools: tuple[str, ...]) -> CapabilityReview:
     if not valid_scope(scope) or not inspect_skill(skill, reference, scope).structural_match:
         return CapabilityReview('SKILL_PIN_SCOPE_HOLD')
-    if not valid_source(source) or source != expected_source or source.raw_digest != skill.manifest_digest:
+    if (not valid_source(source) or not valid_source(expected_source)
+            or source != expected_source or source.raw_digest != skill.manifest_digest):
         return CapabilityReview('SKILL_SOURCE_PIN_HOLD')
     if not exact_pin(adapter, registry) or adapter.scope != scope:
         return CapabilityReview('ADAPTER_SCOPE_HOLD')

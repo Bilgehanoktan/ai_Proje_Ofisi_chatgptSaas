@@ -1,0 +1,106 @@
+{
+  "task": "H01-B-R6-MODEL-SKILL-KNOWLEDGE-D0-TRANSFER-20261126",
+  "authorization": "b47d4354ee95a5750d69e30523fa401b56aea20f",
+  "parent": "7e3c4b8efae077174342e8d89f6c67b1d2514a2e",
+  "source_delivery": "9818660fc71648841288f7bc59fc179eac3ee29c",
+  "source_tree": "6dd3b83a9f0aee5d2a39fce374779b284fb661fb",
+  "scope": [
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+      "before": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+      "after": "d805516dd2da0f88e6207f31f2c377f2fefaf493",
+      "bytes": 1821,
+      "sha256": "7c344c2db0b23140520afb323164c541acc83864b555e8964a68ece7ac8b4551"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "before": "fa0f058486cc9dfe263fa9562f1bd4387b91760b",
+      "after": "b8638d29266b0da310d8f7b1baa31a19b48a567d",
+      "bytes": 6026,
+      "sha256": "aac580a3ae6c19a10069d3b16243cf860eadd62a29a01f5f13e76d2b32935b36"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+      "before": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+      "after": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+      "bytes": 2303,
+      "sha256": "d03acc8d0419a39b90eb6b014bda135373b4c7258793f7f2175fe1398e83bb2a"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+      "before": "7d710685366a55c117e49043a64f1eeabf5079cf",
+      "after": "759f42b9e87ad3f15f1e0cdc8c983a2ddf21f4a7",
+      "bytes": 1710,
+      "sha256": "d8d39e43ec4bd26183bb83e30a4da959f6295c4e4804dc0a1fa321a9d3f354dc"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_adapter_pin_boundary.py",
+      "before": null,
+      "after": "61a92c1db4b907705256beddf95baf147574f701",
+      "bytes": 4580,
+      "sha256": "002c10f96b5c424849ae6c24a96804f752373fe78257512a253bd8cbc03550a9"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_router_metric_catalog_boundary.py",
+      "before": null,
+      "after": "27add29056b2de3b1f70c70c8ae738a2c75482f6",
+      "bytes": 3698,
+      "sha256": "755a365c91b583f50a69269de5c0b888eafba84eb1189f963c8eb6589a21e9f3"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_skill_exact_source_type_review.py",
+      "before": null,
+      "after": "0bdfdf2ac6c68011f4e2074868017c10abd9b321",
+      "bytes": 3309,
+      "sha256": "7cd8591c93db5281b856ad55e50676989dd2481298d775b5ee11f1efa1943aa7"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_skill_source_reference_boundary.py",
+      "before": null,
+      "after": "a403434173d7bc0b6e13a1829cc56405281f1fe9",
+      "bytes": 2800,
+      "sha256": "b1e0d3e38c62a6b848e7bfbb567e4ca978b9b2c91cc84e69d335b43220e6d76c"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_provenance_exact_value_boundary.py",
+      "before": null,
+      "after": "b119cdf8c2c23670f0b325f45e2b2bf7b0b3d5f5",
+      "bytes": 3140,
+      "sha256": "0842236fe94da9078c837898e89e3850ccb4881fcfdcf8a55ddbd3430344f2aa"
+    }
+  ],
+  "technical_disposition": "APPROVED_FOR_DEVELOPMENT_SOURCE_TRANSFER: exact plain adapter/source/provenance values and metric catalog validation for HOLD cases. No real retrieval, provider, grant, spending or dispatch.",
+  "review": "Exact old/new diffs reviewed; PR53 router exact match; choose strict R6 Skill resolver over PR55 variant with six scoped failures; preserve existing deny contracts. Recovered-memory runtime and sample adapter held for cryptography/authority dependency review. Five existing test blobs added; no new tests authored or executed.",
+  "evidence": [
+    "PR53 exact router and original regression source",
+    "PR55 discussion exact R6 9/9 vs older 3/9 and 18/18 original scope",
+    "R6_KNOWLEDGE_PROVENANCE_20261126 9/9 scoped"
+  ],
+  "manifest": {
+    "entries": 571,
+    "sha256": "98474159b2eaf1cc4ae313fc5a95bc8a26fb486841c8922b71ff6bd67c1ea8ca",
+    "changed_payload_sha256": "9/9"
+  },
+  "gates": {
+    "recovered_memory": "HOLD",
+    "real_grant": "HOLD",
+    "IAM_T1": "HOLD",
+    "C50_R9": "HOLD",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "independent": "HOLD",
+    "full_build": "NOT_RUN"
+  },
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "Ordinary revert of this transfer; preserve two earlier source transfers.",
+  "limitations": "No new execution, full source byte rehash or full ZIP; full Design Master review incomplete. Prior tests are scoped historical evidence, not combined product verification."
+}

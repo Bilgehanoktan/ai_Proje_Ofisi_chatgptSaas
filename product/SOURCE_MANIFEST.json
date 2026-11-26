@@ -503,8 +503,8 @@
       "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
     },
     "ai-company-os-backend/app/engines/knowledge_engine/provenance.py": {
-      "bytes": 1391,
-      "sha256": "4234178a8c820e2fd29fc52edb5e1b2a065d2a9006e9eea2acf257c79f3cffb0"
+      "bytes": 1710,
+      "sha256": "d8d39e43ec4bd26183bb83e30a4da959f6295c4e4804dc0a1fa321a9d3f354dc"
     },
     "ai-company-os-backend/app/engines/memory_engine/__init__.py": {
       "bytes": 52,
@@ -567,16 +567,16 @@
       "sha256": "a6e585285cafd1db50c47ab7aae9c1cda681f9f2c86ae5e385f51903622bc0cb"
     },
     "ai-company-os-backend/app/engines/model_gateway/registry.py": {
-      "bytes": 1305,
-      "sha256": "a8f5eda622c6bddab7596ce2963868a2553da8acd6705e251ef7591710501c15"
+      "bytes": 1821,
+      "sha256": "7c344c2db0b23140520afb323164c541acc83864b555e8964a68ece7ac8b4551"
     },
     "ai-company-os-backend/app/engines/model_gateway/reservation_usage_receipt.py": {
       "bytes": 6865,
       "sha256": "fb18a61f3f0b59bcef44b346183ee955c7935d547c398e70991da5415a5de090"
     },
     "ai-company-os-backend/app/engines/model_gateway/router.py": {
-      "bytes": 5872,
-      "sha256": "20b28e235259fe11ad16059ec75b7928d6f1b8aaed4041accb4081011fa1c1e4"
+      "bytes": 6026,
+      "sha256": "aac580a3ae6c19a10069d3b16243cf860eadd62a29a01f5f13e76d2b32935b36"
     },
     "ai-company-os-backend/app/engines/model_gateway/routing_decision.py": {
       "bytes": 5909,
@@ -619,8 +619,8 @@
       "sha256": "cf283466d3c2966f11d1c21acbacc0ace6fd53e3dc8be157e1850d4fe2dd151e"
     },
     "ai-company-os-backend/app/engines/skill_engine/resolver.py": {
-      "bytes": 2101,
-      "sha256": "f538ae06791e2e6e6d1fae4173b800f3ec1a7bf8ea51357e00bf7d00c7c470fb"
+      "bytes": 2303,
+      "sha256": "d03acc8d0419a39b90eb6b014bda135373b4c7258793f7f2175fe1398e83bb2a"
     },
     "ai-company-os-backend/app/main.py": {
       "bytes": 565,
@@ -2269,6 +2269,26 @@
     "ai-company-os-backend/tests/test_office_layout_boundary.py": {
       "bytes": 4102,
       "sha256": "abd404baa79746eb254d3b17236d64aebe427f71e88255fe3e0bdf4fc526a5fb"
+    },
+    "ai-company-os-backend/tests/test_adapter_pin_boundary.py": {
+      "bytes": 4580,
+      "sha256": "002c10f96b5c424849ae6c24a96804f752373fe78257512a253bd8cbc03550a9"
+    },
+    "ai-company-os-backend/tests/test_router_metric_catalog_boundary.py": {
+      "bytes": 3698,
+      "sha256": "755a365c91b583f50a69269de5c0b888eafba84eb1189f963c8eb6589a21e9f3"
+    },
+    "ai-company-os-backend/tests/test_skill_exact_source_type_review.py": {
+      "bytes": 3309,
+      "sha256": "7cd8591c93db5281b856ad55e50676989dd2481298d775b5ee11f1efa1943aa7"
+    },
+    "ai-company-os-backend/tests/test_skill_source_reference_boundary.py": {
+      "bytes": 2800,
+      "sha256": "b1e0d3e38c62a6b848e7bfbb567e4ca978b9b2c91cc84e69d335b43220e6d76c"
+    },
+    "ai-company-os-backend/tests/test_provenance_exact_value_boundary.py": {
+      "bytes": 3140,
+      "sha256": "0842236fe94da9078c837898e89e3850ccb4881fcfdcf8a55ddbd3430344f2aa"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2309,6 +2329,24 @@
       "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
       "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
       "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs"
+    ],
+    "status": "SOURCE_TRANSFER_ONLY"
+  },
+  "central_h01_b_model_skill_knowledge_transfer_20261126": {
+    "parent": "7e3c4b8efae077174342e8d89f6c67b1d2514a2e",
+    "governance": "b47d4354ee95a5750d69e30523fa401b56aea20f",
+    "source_tree": "6dd3b83a9f0aee5d2a39fce374779b284fb661fb",
+    "source_manifest": "359e084b4a8aceb9120fda6a3be3e298646b4f1f",
+    "paths": [
+      "product/ai-company-os-backend/app/engines/model_gateway/registry.py",
+      "product/ai-company-os-backend/app/engines/model_gateway/router.py",
+      "product/ai-company-os-backend/app/engines/skill_engine/resolver.py",
+      "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+      "product/ai-company-os-backend/tests/test_adapter_pin_boundary.py",
+      "product/ai-company-os-backend/tests/test_router_metric_catalog_boundary.py",
+      "product/ai-company-os-backend/tests/test_skill_exact_source_type_review.py",
+      "product/ai-company-os-backend/tests/test_skill_source_reference_boundary.py",
+      "product/ai-company-os-backend/tests/test_provenance_exact_value_boundary.py"
     ],
     "status": "SOURCE_TRANSFER_ONLY"
   }
