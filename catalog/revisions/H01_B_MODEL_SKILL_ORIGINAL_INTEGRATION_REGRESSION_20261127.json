@@ -1,0 +1,43 @@
+{
+  "task": "H01-B-MODEL-SKILL-ORIGINAL-INTEGRATION-REGRESSION-20261127",
+  "parent": "d74318f0ddff2025a47e6e539c72a06777a6a1aa",
+  "governance": "1f0a52c5e0cfa3d24642aa192bdacad4386fda73",
+  "source": "5d2fddb84502e0052afa75bac409a1f8aad8c1b5",
+  "source_path": "candidates/H01-LOCAL-DELIVERY-20261125/ADAPTER-PIN/tests/test_adapter_skill_integration.py",
+  "classification": "EXACT_EXISTING_REGRESSION_SOURCE_TRANSFER_ONLY",
+  "technical_owner": "H01-B central writer / MI07/MI09",
+  "paths": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_adapter_skill_integration.py",
+      "blob": "7ae738c5b3182b05fe7a4ec4a5a6a374acb02d06",
+      "bytes": 2396,
+      "sha256": "a9482cf6ffd1f8150cd48213fa9c65d5d983483e084934aedff5bf81ecbf5bd7",
+      "change": "ADD"
+    }
+  ],
+  "technical_disposition": "Exact archived 4-method Model Gateway/Skill cross-component regression source; existing stricter registry and resolver preserved. Ten archived dependency pins matched current product Git tree and manifest. Existing companion test_adapter_pin_boundary already present. 44 current open PR path lists inspected (no target collision); no new test authored or run. No runtime/API/DB/event/dependency/grant change.",
+  "evidence": {
+    "source_result_blob": "92594429e3e1ff65538509b52eee92e6c0d40042",
+    "raw_log_blob": "2c1c87b0e5045e25abdd392cd37138f3832e616a",
+    "raw_sha256": "8238c2d57b33acb4ed971f6b5a67449610b20bf7c289c6431a828af324da995b",
+    "original_combined": "15/15 archived scoped PASS (11 companion + 4 transferred methods), exit 0; not newly executed or accepted",
+    "pins": "10/10 source paths and manifest pins matched canonical tree; test companion exact original blob 61a92c1db4b907705256beddf95baf147574f701"
+  },
+  "manifest": {
+    "previous": 574,
+    "current": 575,
+    "retained_entries": 574
+  },
+  "remaining": "G2 successor, signed wrapper12, G7 original7, API9, C50/R9, native browser and independent IV remain HOLD/NOT_RUN; no new product functionality or acceptance",
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "W8": "3/8",
+    "IV": "0/7",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Ordinary revert of exact source transfer; no database migration or runtime change. Full latest Design Master, full ZIP, full build and complete regression not performed."
+}

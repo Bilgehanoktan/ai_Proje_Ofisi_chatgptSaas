@@ -66,3 +66,6 @@ Existing ProjectStudio and WorkflowDraft now consume historical planRead from th
 
 ## H01 B — D5-G1 exact internal session source transfer (27.11.2026)
 Original stdlib-only process-local D0 IAM session resolver and unchanged unittest from 97f03aca9d9ed84e85a0249ee39cb035e7df9fd8; verified 2/2 payload SHA256/bytes and original 14/14 historical PASS log pin. No new tests run, no public issuer, API, live grant, DB or authority/T1 activation. G2 successor remains explicitly HOLD (PR19/31/46 preserved); no credential rehydration. Manifest 574 entries. See ../catalog/revisions/H01_B_D5G1_SESSION_SOURCE_TRANSFER_20261127.json. Ordinary revert for rollback.
+
+## H01 B — Model/Skill original cross-component regression source transfer (27.11.2026)
+Exact archived test_adapter_skill_integration.py (four existing methods, no new tests or runtime code) transferred with 10/10 dependency source pins matching current product. Archived 15/15 combined scoped PASS log verified, no rerun or new acceptance. 575 manifest entries; retain stricter canonical registry/resolver. See ../catalog/revisions/H01_B_MODEL_SKILL_ORIGINAL_INTEGRATION_REGRESSION_20261127.json. G2 signed wrapper12/G7 original7, API9, C50/R9 and IV remain HOLD/NOT_RUN. Ordinary revert for rollback.
