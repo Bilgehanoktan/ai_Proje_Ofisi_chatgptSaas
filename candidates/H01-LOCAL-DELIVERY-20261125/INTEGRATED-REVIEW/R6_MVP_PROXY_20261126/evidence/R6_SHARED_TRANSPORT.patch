@@ -1,0 +1,49 @@
+diff --git a/product/ai-company-os-frontend/features/data/sharedSnapshot.ts b/product/ai-company-os-frontend/features/data/sharedSnapshot.ts
+index 9abf25315e79ba54b071702ca5b74b9656f3bbbc..f5a06da9a065b787cbb3df59a8f8eab30262b0ca 100644
+--- a/product/ai-company-os-frontend/features/data/sharedSnapshot.ts
++++ b/product/ai-company-os-frontend/features/data/sharedSnapshot.ts
+@@ -34,8 +34,16 @@
+  return snapshot;
+ }
+ export async function readSharedText(response:Response,signal:AbortSignal):Promise<string>{
+- if(signal.aborted||!response.ok||response.redirected||response.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='text/event-stream'||!response.body)throw Error('D0_SHARED_RESPONSE_HOLD');
+- const reader=response.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true});let size=0,text='';
+- try{for(;;){const {done,value}=await reader.read();if(signal.aborted)throw Error('D0_SHARED_ABORT');if(done)break;size+=value.byteLength;if(size>sharedCap)throw Error('D0_SHARED_SIZE_HOLD');text+=decoder.decode(value,{stream:true});}return text+decoder.decode();}
++ // Only complete UTF-8 finite replays; reject partial representations and ambiguous MIME.
++ if(signal.aborted||response.status!==200||response.redirected||response.headers.has('content-range')||!/^[\t ]*text\/event-stream[\t ]*(?:;[\t ]*charset[\t ]*=[\t ]*(?:utf-8|"utf-8")[\t ]*)?(?![\s\S])/i.test(response.headers.get('content-type')??'')||!response.body)throw Error('D0_SHARED_RESPONSE_HOLD');
++ const reader=response.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true,ignoreBOM:true});let size=0,text='';
++ // Abort even when a custom or stalled transport never resolves its pending read.
++ function read(){return new Promise<ReadableStreamReadResult<Uint8Array>>((resolve,reject)=>{
++  if(signal.aborted){reject(Error('D0_SHARED_ABORT'));return;}
++  const abort=()=>{signal.removeEventListener('abort',abort);reject(Error('D0_SHARED_ABORT'));};
++  signal.addEventListener('abort',abort,{once:true});
++  reader.read().then(value=>{signal.removeEventListener('abort',abort);resolve(value);},error=>{signal.removeEventListener('abort',abort);reject(error);});
++ });}
++ try{for(;;){const {done,value}=await read();if(signal.aborted)throw Error('D0_SHARED_ABORT');if(done)break;size+=value.byteLength;if(size>sharedCap)throw Error('D0_SHARED_SIZE_HOLD');text+=decoder.decode(value,{stream:true});}text+=decoder.decode();if(text.charCodeAt(0)===0xfeff)throw Error('D0_SHARED_FRAME_HOLD');return text;}
+  finally{void reader.cancel().catch(()=>{});reader.releaseLock();}
+ }
+diff --git a/product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs b/product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs
+index 16b8070f809c590d0d4b2796adc6db186cd23f29..6019c03bfe302455dee77cf1a58a5c27115ef7e9 100644
+--- a/product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs
++++ b/product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs
+@@ -25,3 +25,20 @@
+ test('oversize fails',async()=>assert.rejects(readSharedText(response('x'.repeat(16385)),new AbortController().signal)));
+ test('invalid UTF8 fails',async()=>assert.rejects(readSharedText(response(Uint8Array.of(255)),new AbortController().signal)));
+ test('aborted read fails',async()=>{const c=new AbortController();c.abort();await assert.rejects(readSharedText(response(sample(1)),c.signal));});
++
++// The finite D0 replay is an exact complete UTF-8 response, not a range or stream subscription.
++for(const type of ['text/event-stream; charset=iso-8859-9','text/event-stream; charset=utf-8; charset=utf-8','text/event-stream; boundary=x','text/event-stream, text/event-stream'])
++ test('reject contradictory or extra SSE media parameter '+type,async()=>assert.rejects(readSharedText(response(sample(1),type),new AbortController().signal)));
++for(const type of ['text/event-stream; charset=utf-8','Text/Event-Stream ; Charset="UTF-8"'])
++ test('accept explicit UTF-8 SSE '+type,async()=>assert.equal(await readSharedText(response(sample(1),type),new AbortController().signal),sample(1)));
++for(const status of [201,206])test('reject non-200 SSE '+status,async()=>assert.rejects(readSharedText(new Response(sample(1),{status,headers:{'Content-Type':'text/event-stream'}}),new AbortController().signal)));
++test('reject content-range on 200',async()=>assert.rejects(readSharedText(new Response(sample(1),{headers:{'Content-Type':'text/event-stream','Content-Range':'bytes 0-99/100'}}),new AbortController().signal)));
++test('reject BOM before canonical replay',async()=>assert.rejects(readSharedText(response('\ufeff'+sample(1)),new AbortController().signal)));
++test('stalled body abort rejects without waiting for transport',async()=>{
++ const c=new AbortController();let cancelled=false,timer;
++ const stream=new ReadableStream({pull(){return new Promise(()=>{});},cancel(){cancelled=true;}});
++ const work=readSharedText(response(stream),c.signal);
++ const outcome=work.then(()=> 'accepted',()=> 'rejected');
++ try{c.abort();assert.equal(await Promise.race([outcome,new Promise(r=>{timer=setTimeout(()=>r('stalled'),250);})]),'rejected');assert.equal(cancelled,true);assert.equal(stream.locked,false);}
++ finally{clearTimeout(timer);if(stream.locked){/* baseline may retain a pending read; no external handle */}}
++});

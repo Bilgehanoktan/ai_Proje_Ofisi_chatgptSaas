@@ -1,0 +1,122 @@
+{
+  "classification": "R6_EXISTING_SHARED_REPLAY_TRANSPORT_REPAIR_LOCAL_TESTED_OWNER_REVIEW_HOLD",
+  "baseline": "2a9b8ddd3e4d78c32fd8f6a1e7844b842597da2e",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "manifest": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "owner": "MI05 with MI10 QA; no owner approval inferred",
+  "scope": "Existing finite historical CEO/Office SSE transport only; no live API, assignment, memory or real T1 join. Existing Research and 0196L plan revisions are distinct; JOIN_HOLD retained.",
+  "architecture": "No schema, authority, API, DB, event, dependency or architecture change; readSharedText enforces exact complete historical UTF-8 framing and abort. Existing Python producer and TS parser unchanged.",
+  "source_pins": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/sharedSnapshot.ts",
+      "git_blob": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+      "bytes": 3270,
+      "sha256": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/lifecyclePrefix.ts",
+      "git_blob": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c",
+      "bytes": 2187,
+      "sha256": "e205c0e995ea5d9b49ead972a3baeef072fb05d348291dd06bf8d2c3598fa501"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+      "git_blob": "16b8070f809c590d0d4b2796adc6db186cd23f29",
+      "bytes": 2462,
+      "sha256": "ceba1eb2c2403b9a9b0ba08e9b61ef23eabca856a82715f5de5cc82064561d32"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py",
+      "git_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+      "bytes": 1868,
+      "sha256": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py",
+      "git_blob": "54b3ff7bf96ecd032fa72851183fe671e69a6418",
+      "bytes": 1369,
+      "sha256": "714ce68e7fea401e30c42381a3b883ece9ac2a92f3af9dc47478cb5fc002cce2"
+    }
+  ],
+  "postimage": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/sharedSnapshot.ts",
+      "git_blob": "f5a06da9a065b787cbb3df59a8f8eab30262b0ca",
+      "bytes": 4096,
+      "sha256": "7e6912812a71efd1c1f41f5bcc0f85ab571c5a80ce7214c1eee2dfcc40b8ee71"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/shared-snapshot-0222.test.cjs",
+      "git_blob": "6019c03bfe302455dee77cf1a58a5c27115ef7e9",
+      "bytes": 4369,
+      "sha256": "a18758e541d7a5fc477e3b9a80f583b1592a4bc4ca7e6845abd93399fa59db72"
+    }
+  ],
+  "patch": {
+    "path": "R6_SHARED_TRANSPORT.patch",
+    "git_blob": "ac84b851a8080591824aeefa84bfb30f4215e546",
+    "sha256": "b7cf71419508e8591019be4dc81dd38c1237018b93bf5691bb8b003b5998a3bb",
+    "bytes": 5307,
+    "apply_reverse": "PASS"
+  },
+  "environment": {
+    "node": "22.16.0",
+    "tsc": "5.8.3",
+    "python": "3.13.5",
+    "network": "none",
+    "third_party_install": "none"
+  },
+  "commands": [
+    "PYTHONPATH=backend python -B -S (build_shared_replay(prefix_wire(n)) for n in 1..4)",
+    "tsc --target es2022 --module commonjs --lib es2022,dom --strict --outDir original/build original/features/data/sharedSnapshot.ts",
+    "SHARED_HELPER_JS=$PWD/original/build/data/sharedSnapshot.js SHARED_REPLAY_DIR=$PWD/replay node --test original/tests/shared-snapshot-0222.test.cjs",
+    "SHARED_HELPER_JS=$PWD/original/build/data/sharedSnapshot.js SHARED_REPLAY_DIR=$PWD/replay node --test patched/tests/shared-snapshot-0222.test.cjs",
+    "tsc --target es2022 --module commonjs --lib es2022,dom --strict --outDir patched/build patched/features/data/sharedSnapshot.ts",
+    "SHARED_HELPER_JS=$PWD/patched/build/data/sharedSnapshot.js SHARED_REPLAY_DIR=$PWD/replay node --test patched/tests/shared-snapshot-0222.test.cjs"
+  ],
+  "runs": [
+    {
+      "name": "original",
+      "pass": 22,
+      "total": 22,
+      "exit": 0,
+      "sha256": "0047552d2b79136eeff1ff78d8b84fe8f7cc890062ed6c96ee98a89db22d1235",
+      "git_blob": "31852d987d5996e64610bdc78583019a50d5bb5b"
+    },
+    {
+      "name": "before",
+      "pass": 25,
+      "total": 33,
+      "fail": 8,
+      "exit": 1,
+      "sha256": "a2e8ae826653e9868cf0d5c1093be6b6719a7b9d2ae66de87575b975562aa466",
+      "git_blob": "6a6d90a4bd3c6ea20ae2e4e7fc70ed6cf88d1b4b"
+    },
+    {
+      "name": "after",
+      "pass": 33,
+      "total": 33,
+      "fail": 0,
+      "exit": 0,
+      "sha256": "2690809160ef3d313611ba0f9fabdd51be33f4c01c8498959b6961497f5522b2",
+      "git_blob": "71fe7b78b0aeacba3074d893b81b46566e659a72"
+    }
+  ],
+  "replay_sha256": [
+    "7649c708bddd3b9914d9bddfc350cefdc6526017c22d549e63b3eaf245d96013",
+    "eb1e62b51daeb350e4aa55f3a808199756f6a8420032b41def090fadf5f178cd",
+    "6237de8227dfe6d6cb0280f8b4162513fcc07689424473d0026e5cb8f15b9a42",
+    "98cdab3f912500cf59b3ebfe205f5b8812d74f62364d57461afde76358c53cc2"
+  ],
+  "raw_logs": "R6_SHARED_TRANSPORT_LOGS.json: each gzip+base64 record decodes to exact original TAP bytes; verify SHA256 above",
+  "owner_review": "HOLD",
+  "archive_product_mutation": 0,
+  "canonical_promotion": 0,
+  "acceptance_delta": 0,
+  "weighted": "HESAPLANAMADI",
+  "ordinal_delta": 0,
+  "known_limits": "Source slice only. No actual HTTP server, Chromium, full Next build, SQL6, signed T1, real Memory join or IV. Stalled pending body read tested, not a fetch or digest that ignores its abort signal. Full Design Master review not complete. PR path check 22/29/31/45/48/49/50/51 found no exact modified path; complete active writer disposition still required.",
+  "next": "MI05/QA review and approved R6 source+manifest application; same local reviewed dependency environment for original persisted prefix tests and actual HTTP integration.",
+  "rollback": "Reverse patch in disposable exact R6 test workspace; verified apply and reverse byte parity. Evidence-only commit normal revert."
+}
