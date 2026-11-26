@@ -15248,24 +15248,24 @@
       "MVP": "11/11"
     },
     "last_product_transfer": {
-      "canonical": "d74318f0ddff2025a47e6e539c72a06777a6a1aa",
-      "previous": "d87e0a3e4614bf6092379ba82a522436189a78d0",
+      "canonical": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
+      "previous": "d74318f0ddff2025a47e6e539c72a06777a6a1aa",
       "commits": [
-        "d74318f0ddff2025a47e6e539c72a06777a6a1aa"
+        "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6"
       ],
-      "product_files": 575,
-      "manifest_entries": 574,
-      "manifest_blob": "cad6225ad8f4d1656bf5847b157abf2fa072d3f0",
-      "changed_exact_payload_sha256": "2/2",
-      "product_code_files": 1,
+      "product_files": 576,
+      "manifest_entries": 575,
+      "manifest_blob": "faf7c4b8c96df4b895d60aa2b51f334c3bcd59d6",
+      "changed_exact_payload_sha256": "1/1",
+      "product_code_files": 0,
       "existing_test_files": 1,
-      "added": 2,
+      "added": 1,
       "deleted": 0,
       "cumulative_H01_B": {
         "code": 25,
-        "tests": 18,
-        "changed": 43,
-        "added": 11,
+        "tests": 19,
+        "changed": 44,
+        "added": 12,
         "deleted": 0
       },
       "remaining_R6_additions": [
@@ -15280,10 +15280,6 @@
         {
           "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
           "blob": "675615e04059280ec6aa99e9679b4388cd018c2d"
-        },
-        {
-          "path": "product/ai-company-os-backend/tests/test_adapter_skill_integration.py",
-          "blob": "7ae738c5b3182b05fe7a4ec4a5a6a374acb02d06"
         },
         {
           "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
@@ -15401,11 +15397,11 @@
       },
       "full_build": "NOT_RUN",
       "independent": "HOLD",
-      "task": "H01-B-D5G1-SESSION-SOURCE-TRANSFER-20261127",
-      "source": "97f03aca9d9ed84e85a0249ee39cb035e7df9fd8",
-      "catalog": "catalog/revisions/H01_B_D5G1_SESSION_SOURCE_TRANSFER_20261127.json",
-      "local_evidence": "2/2 exact source payload SHA256/bytes and Git blob pins; original G1 14/14 PASS log and hash verified, no new execution; 572 unchanged prior product blobs; 574 manifest path/size. No new acceptance.",
-      "next": "D5-G2 successor and exact authority variant technical closure, G4/G5/G7 dependent on same session/ORG reference and signed wrapper/G7 original tests; preserve C50/R9 and independent PG/IV gates."
+      "task": "H01-B-MODEL-SKILL-ORIGINAL-INTEGRATION-REGRESSION-20261127",
+      "source": "5d2fddb84502e0052afa75bac409a1f8aad8c1b5",
+      "catalog": "catalog/revisions/H01_B_MODEL_SKILL_ORIGINAL_INTEGRATION_REGRESSION_20261127.json",
+      "local_evidence": "Exact archived regression file SHA256/bytes and Git blob; 10/10 dependencies matched current pins; original 15/15 raw log verified; 575/575 manifest paths/modes/sizes, 574 retained product blobs, no deletion. No new tests or functional gain.",
+      "next": "Mandatory IAM/T1 wrapper12 and G7 original7 blocked on reviewed C50/R9. Resolve dependency owner and independent review before G2/real protected commit. Independent product UI/backend source wiring may continue; avoid repetitive tests."
     },
     "previous_product_transfer": {
       "canonical": "5dd94b135000baeb38b629aa5f62a84a4e507d98",
@@ -16553,6 +16549,166 @@
       "catalog": "catalog/revisions/H01_B_PROJECT_WORKFLOW_SHARED_PLAN_20261127.json",
       "local_evidence": "2/2 exact preimages and changed payload SHA256; 2/2 TSX syntax/transpile; 10/10 mocked component wiring checks, no actual React/browser or full typecheck; 570 unchanged product blobs; 572 manifest path/size. No new acceptance.",
       "next": "Prioritize existing IAM/authority D0 source owner technical gates and C50/R9 dependencies before CEO command ingress; no new demo command route or grant bypass."
+    },
+    "model_skill_regression_previous_transfer": {
+      "canonical": "d74318f0ddff2025a47e6e539c72a06777a6a1aa",
+      "previous": "d87e0a3e4614bf6092379ba82a522436189a78d0",
+      "commits": [
+        "d74318f0ddff2025a47e6e539c72a06777a6a1aa"
+      ],
+      "product_files": 575,
+      "manifest_entries": 574,
+      "manifest_blob": "cad6225ad8f4d1656bf5847b157abf2fa072d3f0",
+      "changed_exact_payload_sha256": "2/2",
+      "product_code_files": 1,
+      "existing_test_files": 1,
+      "added": 2,
+      "deleted": 0,
+      "cumulative_H01_B": {
+        "code": 25,
+        "tests": 18,
+        "changed": 43,
+        "added": 11,
+        "deleted": 0
+      },
+      "remaining_R6_additions": [
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "blob": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "blob": "675615e04059280ec6aa99e9679b4388cd018c2d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_adapter_skill_integration.py",
+          "blob": "7ae738c5b3182b05fe7a4ec4a5a6a374acb02d06"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+          "blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+          "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+          "blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+          "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_recovered_sample_consumer.py",
+          "blob": "31e0de7b54ad5674a4df2312e7ff054767605d24"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
+          "blob": "449fc4eb642016162a8fc0fcdcc414b3cc1d8661"
+        },
+        {
+          "path": "product/ai-company-os-frontend/package-lock.json",
+          "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+          "blob": "bc714ec16a144cba403c214bd1497525e5114821"
+        }
+      ],
+      "remaining_R6_replacements": [
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+          "canonical_blob": "fa47acd32adb309896f762ec50e47bf26641adbb"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+          "blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+          "canonical_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+          "blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+          "canonical_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713"
+        },
+        {
+          "path": "product/ai-company-os-backend/requirements.txt",
+          "blob": "b2e70349a0468b016a27515d75c7aa00d1ffb317",
+          "canonical_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+          "blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+          "canonical_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+          "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+          "canonical_blob": "851d642c88486d0d6e8818265866a898108eaa1c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+          "canonical_blob": "864fe30c72ebcc6783575c62f98748fb2d9cfff6",
+          "disposition": "G2 successor HOLD; G1 predecessor transferred, not G2 or actual authority"
+        }
+      ],
+      "intentional_UI_successors": [
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+          "r6": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+          "canonical": "1419c3253fdf5496738e93f6edbdfb6f654bd860"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+          "r6": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+          "canonical": "3b02873f6f645fe1d9f698ce966727d70e696220"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+          "r6": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+          "canonical": "84790dfad205c0b280c66b759d594e86ddccfcf0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+          "r6": "990b06ee2b5adc115547615719610ccc02a66061",
+          "canonical": "ba5c811246dac69677f618c0d5568f2ca0701006"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+          "r6": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+          "canonical": "c48d8116036357776a9b8f52401fa14ba1554021"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+          "r6": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+          "canonical": "7b54683e75bc8591acedc6b0e7d3b9dceb574cb5"
+        }
+      ],
+      "remaining_gate": "IAM/T1 signed wrapper12 and G7 original7 NOT_RUN; real authority and independent root HOLD; runtime memory and dependencies C50/R9 security/license HOLD; original API9 and native browser NOT_RUN; standalone diagnostic tests not transferred pending runner compatibility. No CI.",
+      "acceptance": {
+        "UI": "21/40",
+        "Core": "12/16",
+        "MVP": "0/11",
+        "W8": "3/8",
+        "IV": "0/7",
+        "integration": "HESAPLANAMADI",
+        "weighted": "HESAPLANAMADI",
+        "ordinal": "unchanged"
+      },
+      "full_build": "NOT_RUN",
+      "independent": "HOLD",
+      "task": "H01-B-D5G1-SESSION-SOURCE-TRANSFER-20261127",
+      "source": "97f03aca9d9ed84e85a0249ee39cb035e7df9fd8",
+      "catalog": "catalog/revisions/H01_B_D5G1_SESSION_SOURCE_TRANSFER_20261127.json",
+      "local_evidence": "2/2 exact source payload SHA256/bytes and Git blob pins; original G1 14/14 PASS log and hash verified, no new execution; 572 unchanged prior product blobs; 574 manifest path/size. No new acceptance.",
+      "next": "D5-G2 successor and exact authority variant technical closure, G4/G5/G7 dependent on same session/ORG reference and signed wrapper/G7 original tests; preserve C50/R9 and independent PG/IV gates."
     }
   }
 }
