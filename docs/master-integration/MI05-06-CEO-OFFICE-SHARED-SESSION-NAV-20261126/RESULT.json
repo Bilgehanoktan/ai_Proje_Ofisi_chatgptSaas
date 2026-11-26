@@ -1,0 +1,31 @@
+{
+  "task": "MI05-06-CEO-OFFICE-SHARED-SESSION-NAV-20261126",
+  "status": "SOURCE_CANDIDATE_OWNER_REVIEW_HOLD",
+  "parent": "c7eba2ca6da7328fb3a39585a048c8e1941f0b1a",
+  "parent_manifest": "884ad96683c5bc150295a3cd250e9a32c6392f58",
+  "source_path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+  "source_before_blob": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+  "source_before": {
+    "bytes": 5876,
+    "sha256": "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
+  },
+  "source_after": {
+    "bytes": 5929,
+    "sha256": "d69e1d8e5405b1e3a0e5c58498deb4d9a070f0313d5f76a3e727dac1ed31100e"
+  },
+  "manifest_count": 563,
+  "manifest_after_sha256": "0c9dab36f4a43c07f9eadfb2e364de2baef6fa0742906d148d4dfc811a361c3b",
+  "finding": "OfficePanel already mounts SharedSnapshotPanel office under common app/layout SharedSnapshotProvider. CEO summary contains one ordinary anchor to /office, which can reload the document and lose the in-memory shared historical state.",
+  "change": "Use existing Next Link, prefetch false; no new data read, route, provider, authority or dependency. Client transition expected to preserve root layout; existing 30s TTL/visibility fail-closed behavior unchanged. Hard reload/new tab intentionally not persisted.",
+  "architecture": "v135 single projection principle; presentation-only, no normative change; D0 historical only, no real live binding.",
+  "ownership": "PR45 older same-path candidate; PR49 exact current blob; current R6 delivery root has older divergent panel; do not overwrite or merge owner branches. Three early historical PR listings truncated, active source owner confirmation pending. Isolated source candidate only.",
+  "tests": "NOT_RUN per current product-first direction; mandatory browser acceptance remains HOLD.",
+  "acceptance": {
+    "before": "21/40 historical",
+    "after": "21/40 historical",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "next": "MI05/06 owner review, integrate only after exact-source reconciliation. Codex current shared build and required browser verify CEO read -> Office via Link -> back; same digest/sequence while unexpired; hidden/expired/reset clears; hard reload remains idle. No C07/C08/C05 waiver.",
+  "rollback": "Do not promote; or revert isolated commit. Canonical and R6 delivery unchanged."
+}

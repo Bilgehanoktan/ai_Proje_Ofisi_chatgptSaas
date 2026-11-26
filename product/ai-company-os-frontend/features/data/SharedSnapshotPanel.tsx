@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import {useSharedSnapshot} from './SharedSnapshotProvider';
 import {useProjectionRead} from './useProjectionRead';
 import {readStatus,type ReadState} from './projectionRead';
@@ -28,7 +29,7 @@ export default function SharedSnapshotPanel({office=false}:{office?:boolean}){
    <article aria-label="CEO proje planı"><h3>Proje / görev planı</h3><p role="status" data-phase={planRead.state.phase}>{status(planRead.state)}</p><strong>{plan?`${plan.tasks.length} referans görev · ${plan.waves.length} dalga`:'— · Gerçek görev yok'}</strong><small>{plan?'A0_SAMPLE_ONLY · gerçek tamamlanma bilinmiyor':'Onaylı canlı proje verisi yok'}</small><div className="chips"><button type="button" onClick={planRead.read} disabled={planRead.state.phase==='loading'}>Plan kaydını oku</button><button type="button" onClick={planRead.reset} disabled={planRead.state.phase==='idle'}>Planı temizle</button></div></article>
    <article aria-label="CEO organizasyon kaydı"><h3>AI çalışanlar / organizasyon</h3><p role="status" data-phase={organization.state.phase}>{status(organization.state)}</p><strong>{org?`${org.positions.length} tarihsel pozisyon`:'— · Aktif ajan bilinmiyor'}</strong><small>{org?'Doluluk kaydı gerçek çalışan veya IAM grant değildir':'Gerçek kimlik, yetki ve çalışan durumu HOLD'}</small><div className="chips"><button type="button" onClick={organization.read} disabled={organization.state.phase==='loading'}>ORG kaydını oku</button><button type="button" onClick={organization.reset} disabled={organization.state.phase==='idle'}>ORG temizle</button></div></article>
    <article aria-label="CEO karar ve güvenlik sınırı"><h3>Kararlar / güvenlik / IV</h3><p role="status">Statik D0 kontrol kaynağı · kabul değil</p><strong>IV: {iv} · Yayın: {release}</strong><small>Gerçek karar talebi — · etkin H01 onayı — · bağımsız güvenlik kabulü HOLD</small><p className="sub">Güvenlik ve Karar Kutusu ayrıntıları mevcut sol menüdedir.</p></article>
-   <article aria-label="CEO ofis ve workflow sınırı"><h3>Sanal ofis / Workflow</h3><p role="status">Statik geometri · JOIN_HOLD</p><strong>Gerçek konum ve aktif workflow —</strong><small>Plan, ORG ve ortak oturum ayrı kaynaktır; otomatik birleştirilmez.</small><p><a href="/office">Mevcut Sanal Ofis sayfasına geç</a></p></article>
+   <article aria-label="CEO ofis ve workflow sınırı"><h3>Sanal ofis / Workflow</h3><p role="status">Statik geometri · JOIN_HOLD</p><strong>Gerçek konum ve aktif workflow —</strong><small>Plan, ORG ve ortak oturum ayrı kaynaktır; otomatik birleştirilmez.</small><p><Link href="/office" prefetch={false}>Mevcut Sanal Ofis sayfasına geç</Link></p></article>
   </div>
   <p className="sub">Bu özet işlem başlatmaz, dispatch veya harcama izni üretmez. Farklı endpoint sonuçları aynı tenant/anda olduğuna dair kanıt olmadan eşleştirilmez.</p>
  </section>}
