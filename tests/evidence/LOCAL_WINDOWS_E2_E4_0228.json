@@ -1,0 +1,38 @@
+{
+  "classification": "LOCAL_D0_CANDIDATE",
+  "gate_promotion": false,
+  "manifest_sha256": "9c8209afbab8f4a540914a4f9d520faaecdfd3e934dd6e03c88ed825853b0f0d",
+  "manifest_entries": 392,
+  "E2": {
+    "passed": 984,
+    "skipped": 16,
+    "failures": 0,
+    "errors": 0,
+    "log_sha256": "ce626def0cc6254304767810fa8abe03d7243af15032bf630b8f841832da993a",
+    "scope": "reviewed E1 runtime with two exact candidate test modules"
+  },
+  "E3": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "log_sha256": "31b64bdbc9bdb3df5f7591a4a31df02aec30e228f5674684dffcfe890911869b",
+    "scope": "original pinned E1 runtime"
+  },
+  "E4": {
+    "status": "PASS",
+    "scope": "actual Chrome and local D0 SQLite/ASGI/Next, not production",
+    "harness_sha256": "d6fca3f19106bf4368f862cf6ff0ad6f6fc261fb53d937a1d96b2991452558c9",
+    "verified": [
+      "CEO/Office/Studio shared replay",
+      "invalid plan HOLD",
+      "invalid event stream HOLD",
+      "Last-Event-ID refused",
+      "full replay restored",
+      "Office navigation retained shared view",
+      "SQLite hash unchanged"
+    ]
+  },
+  "D3": "DISPOSABLE_FIXTURE_ONLY",
+  "B3": "HOLD",
+  "canonical_mapping": "HOLD",
+  "production": "NOT_RUN"
+}

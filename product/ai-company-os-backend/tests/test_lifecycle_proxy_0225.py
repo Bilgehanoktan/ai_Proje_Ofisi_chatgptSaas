@@ -46,11 +46,14 @@ class LifecycleProxyTests(unittest.TestCase):
     def setUpClass(cls):
         cls.tmp=tempfile.TemporaryDirectory();cls.addClassCleanup(cls.tmp.cleanup)
         cls.root=Path(cls.tmp.name);cls.out=cls.root/'compiled';cls.path=cls.root/'lifecycle-prefix.d0.sqlite'
-        declaration=cls.root/'process.d.ts';declaration.write_text('declare const process: {env: Record<string,string|undefined>};\n')
+        sources=['app/api/demo/shared-snapshot/route.ts','features/core-review/planProjection.ts','features/mvp/studioContext.ts']
+        if not (FRONTEND/'node_modules/@types/node').is_dir():
+            declaration=cls.root/'process.d.ts'
+            declaration.write_text('declare const process: {env: Record<string,string|undefined>};\n',encoding='utf-8')
+            sources.append(str(declaration))
         subprocess.run([os.environ.get('AICOS_TSC','tsc'),'--target','ES2022','--lib','ESNext,DOM','--strict',
             '--module','commonjs','--esModuleInterop','--resolveJsonModule','--rootDir',str(FRONTEND),
-            '--outDir',str(cls.out),'app/api/demo/shared-snapshot/route.ts','features/core-review/planProjection.ts',
-            'features/mvp/studioContext.ts',str(declaration)],cwd=FRONTEND,check=True,timeout=30)
+            '--outDir',str(cls.out),*sources],cwd=FRONTEND,check=True,timeout=30)
         sock=socket.socket();cls.addClassCleanup(sock.close)
         for port in range(18325,18355):
             try:sock.bind(('127.0.0.1',port));break
