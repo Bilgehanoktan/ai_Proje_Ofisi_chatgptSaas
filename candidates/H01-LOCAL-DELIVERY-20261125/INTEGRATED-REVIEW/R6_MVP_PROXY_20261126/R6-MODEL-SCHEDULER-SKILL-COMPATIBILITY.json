@@ -1,0 +1,51 @@
+{
+  "baseline": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "scope": "R6 native source comparison and isolated synthetic regressions",
+  "source_comparison": [
+    {
+      "pr": 53,
+      "file": "router.py",
+      "pr_blob": "b8638d29266b0da310d8f7b1baa31a19b48a567d",
+      "r6_blob": "b8638d29266b0da310d8f7b1baa31a19b48a567d",
+      "identical": true
+    },
+    {
+      "pr": 54,
+      "file": "scheduler_review.py",
+      "pr_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "r6_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "identical": true
+    },
+    {
+      "pr": 54,
+      "file": "dag.py",
+      "pr_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+      "r6_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+      "identical": true
+    },
+    {
+      "pr": 55,
+      "file": "resolver.py",
+      "pr_blob": "1a448e4658ffd8dcf3884fef150dab8d77b766ca",
+      "r6_blob": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+      "identical": false
+    }
+  ],
+  "tests": [
+    {
+      "suite": "test_adapter_skill_integration.py",
+      "passed": 4
+    },
+    {
+      "suite": "test_runtime_memory_model_0207.py",
+      "passed": 7
+    },
+    {
+      "suite": "test_runtime_recovered_memory_link.py",
+      "passed": 7
+    }
+  ],
+  "test_environment": "CPython 3.14 stdlib-only; no external providers or installed packages",
+  "result": "18 passed, zero failures",
+  "transfer": "PR53 and PR54 product implementations already present; PR55 resolver differs and requires owner selection; no source or manifest mutation"
+}
