@@ -24,3 +24,6 @@ Base 254e018; selective source 4f561bb. The SQLite teardown fix transfers cleanl
 
 ## R6 diagnostics integration on product-dev
 Transferred three exact R6 source blobs from 5d2fddb onto e826dd6: the MVP route, bounded JSON reader and existing proxy tests. TypeScript compile passed; proxy tests 8 PASS / 1 live-loopback SKIP. Manifest 553/553. Shared application build and R6 workstream reconciliation remain open. Keep main gated by independent acceptance. Revert this commit for source rollback.
+
+## R6 four proxy routes on product-dev
+Reconciled Admission, Outbox, Task Budget and Office Workbench routes from exact R6 source 5d2fddb. Base ade40b6; scope: four route blobs and three original regression suites. Manifest 556/556; strict TypeScript compile and 56 existing MIME/deadline checks passed. Shared application build and independent acceptance remain open. Rollback by reverting this commit.
