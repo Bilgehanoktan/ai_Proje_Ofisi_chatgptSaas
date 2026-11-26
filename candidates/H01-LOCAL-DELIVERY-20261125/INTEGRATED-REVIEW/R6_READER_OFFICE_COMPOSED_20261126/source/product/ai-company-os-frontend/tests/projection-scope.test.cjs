@@ -1,0 +1,14 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {inspectPlanBinding}=require(process.argv[2]);const cases=require(process.argv[3]);
+const x=()=>JSON.parse(JSON.stringify(cases[2]));
+const plan=()=>({scope:{tenant_id:'synthetic-tenant',environment_id:'A0_SAMPLE_ONLY'},digest:x().plan_revision.slice(7),revision:x().plan_revision,tasks:[{id:'a'}]});
+const expect=(r,reason)=>assert.deepEqual(r,{reason,join:'HOLD',placement_allowed:false,dispatch_allowed:false});
+test('even exact plan/task match cannot join',()=>expect(inspectPlanBinding(x(),plan()),'STRUCTURAL_MATCH_ONLY'));
+test('actual office plan revision differs',()=>{let p=plan();p.digest='6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9';p.revision='sha256:'+p.digest;expect(inspectPlanBinding(x(),p),'REVISION_MISMATCH')});
+test('scope mismatch',()=>{let p=plan();p.scope.tenant_id='other';expect(inspectPlanBinding(x(),p),'SCOPE_MISMATCH')});
+test('task missing',()=>{let p=plan();p.tasks=[{id:'b'}];expect(inspectPlanBinding(x(),p),'TASK_MISSING')});
+test('duplicate task id',()=>{let p=plan();p.tasks.push({id:'a'});expect(inspectPlanBinding(x(),p),'REFERENCE_SHAPE_HOLD')});
+test('malformed digest',()=>{let p=plan();p.digest='x';expect(inspectPlanBinding(x(),p),'REFERENCE_SHAPE_HOLD')});
+test('forged run freshness rejected',()=>{let r=x();r.lease_freshness='FRESH';expect(inspectPlanBinding(r,plan()),'REFERENCE_SHAPE_HOLD')});
+test('malformed run or plan',()=>{expect(inspectPlanBinding(null,plan()),'REFERENCE_SHAPE_HOLD');expect(inspectPlanBinding(x(),null),'REFERENCE_SHAPE_HOLD')});
+test('oversize graph',()=>{let p=plan();p.tasks=Array.from({length:101},(_,i)=>({id:'t'+i}));expect(inspectPlanBinding(x(),p),'REFERENCE_SHAPE_HOLD')});

@@ -1,0 +1,17 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {roleDirectory,sortProjectRows,admissionBars,evidenceNotice}=require(process.env.EVIDENCE_JS);
+const roles=[{id:'qa',name:'QA',department:'Kalite',description:'İnceleme'},{id:'eng',name:'Engineer',department:'Mühendislik',description:'Teknik üretim'}];
+test('role search normalizes Turkish',()=>assert.deepEqual(roleDirectory(roles,'inceleme','').map(r=>r.id),['qa']));
+test('department filter',()=>assert.deepEqual(roleDirectory(roles,'','Mühendislik').map(r=>r.id),['eng']));
+test('multi word search and immutable source',()=>{const before=JSON.stringify(roles);assert.equal(roleDirectory(roles,'teknik engineer','').length,1);assert.equal(JSON.stringify(roles),before)});
+test('no match',()=>assert.deepEqual(roleDirectory(roles,'missing',''),[]));
+const rows=[{wave:2,task:{id:'b',label:'Z',role:'qa'}},{wave:1,task:{id:'a',label:'A',role:'engineer'}}];
+test('sort wave ascending',()=>assert.deepEqual(sortProjectRows(rows,'wave').map(r=>r.task.id),['a','b']));
+test('sort label descending without mutation',()=>{const before=JSON.stringify(rows);assert.deepEqual(sortProjectRows(rows,'label',true).map(r=>r.task.id),['b','a']);assert.equal(JSON.stringify(rows),before)});
+test('sort role',()=>assert.deepEqual(sortProjectRows(rows,'role').map(r=>r.task.id),['a','b']));
+const data={sample_reserved_minor:0,sample_observed_minor:60,sample_remaining_minor:940};
+test('admission bars preserve zero and exact values',()=>assert.deepEqual(admissionBars('admission','historical',data).map(b=>b.value),[0,60,940]));
+test('other endpoints or stale phases do not chart',()=>{for(const [k,p] of [['outbox','historical'],['admission','hold'],['admission','loading']])assert.deepEqual(admissionBars(k,p,data),[])});
+test('negative or fractional values rejected',()=>{for(const v of [-1,1.5,Infinity,NaN,null])assert.deepEqual(admissionBars('admission','historical',{...data,sample_reserved_minor:v}),[])});
+test('unknown data hidden',()=>assert.deepEqual(admissionBars('admission','historical',{}),[]));
+test('notice distinguishes historical from authority',()=>{assert.match(evidenceNotice('historical'),/kanıtlanmadı/);assert.match(evidenceNotice('hold'),/gösterilmez/)});

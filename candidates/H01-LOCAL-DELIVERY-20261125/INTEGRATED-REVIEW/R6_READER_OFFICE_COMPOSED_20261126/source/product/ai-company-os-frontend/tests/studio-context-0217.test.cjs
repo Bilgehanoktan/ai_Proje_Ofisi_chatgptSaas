@@ -1,0 +1,10 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {studioContext,historicalAgentContext}=require(process.env.AICOS_STUDIO_COMPILED);
+const task={id:'plan',label:'Plan',role:'Planner',state:'HOLD',depends_on:['source']};
+test('selected role is not assigned agent',()=>{const v=studioContext(task);assert.equal(v.roleLabel,'Planner');assert.equal(v.roleStatus,'PLAN_ROLE_ONLY');assert.equal(v.dependencyCount,1);assert.equal(v.dispatchAllowed,false);assert.equal(v.placementAllowed,false)});
+test('missing task holds',()=>assert.equal(studioContext(undefined),null));
+test('running is not a plan role',()=>assert.equal(studioContext({...task,state:'RUNNING'}),null));
+test('empty role holds',()=>assert.equal(studioContext({...task,role:''}),null));
+test('historical sample cannot authorize assignment',()=>{const v=historicalAgentContext();assert.equal(v.decision,'HOLD');assert.equal(v.dispatchAllowed,false);assert.equal(v.placementAllowed,false)});
+test('selection is recalculated from current task',()=>{const first=studioContext(task);const second=studioContext({...task,id:'qa',role:'QA'});assert.equal(first.taskId,'plan');assert.equal(second.taskId,'qa');assert.equal(second.roleLabel,'QA')});

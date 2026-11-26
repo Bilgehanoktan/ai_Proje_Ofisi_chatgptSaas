@@ -1,0 +1,80 @@
+{
+  "task": "MI-P0-R6-READER-OFFICE-MANIFEST-COMPOSE-20261126",
+  "status": "ARCHIVAL_COMPOSED_REVIEW_ONLY_OWNER_HOLD",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "parent_archival_commit": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "parent_product_tree": "43bf99d0bac5b0a4d3ed98d46213535c4318feff",
+  "parent_manifest": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "tree_pin_correction": "ea89d4c232461f5649409a934e9d25d2d2bb8d2a is repository root tree, not nested product subtree. Confirmed via contents at exact archival commit.",
+  "product_tree": "f59141035dc2ab84c02ea35ca3bb53c8c0e878ba",
+  "manifest_blob": "5b7aaf58e41fd21d87ff272a15c833975a7cd8d6",
+  "product_files": 586,
+  "manifest_entries": 585,
+  "tree_path_size_verified": 585,
+  "unchanged_git_blobs": 583,
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+      "before": "b19455b413e4cf706ba8c15b5d065def91b0537b",
+      "after": "b27c4734962c1832db45e55cdcade9cca5f2e4b5",
+      "sha256": "645dfeb2438cd98e146600312be0077a61ac9b96a3690af023240d0ad1486eb6"
+    },
+    {
+      "path": "ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "before": "75691925ab0cd294b878831a3210f101630320ca",
+      "after": "57df02ba951f0a40c8b5525974a9a6555b67c60d",
+      "sha256": "455fe30b40973316792bd1462c9efc2dd62968380dbda0f4d39045de651fd92c"
+    }
+  ],
+  "owner_crosscheck": {
+    "PR53": {
+      "head": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+      "exact": 2,
+      "total": 2
+    },
+    "PR54": {
+      "head": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+      "exact": 4,
+      "total": 4
+    },
+    "PR55": {
+      "head": "65ddae6a33d94593ed686b53698a6d8ad48919b4",
+      "exact": 1,
+      "total": 2,
+      "divergent_path": "app/engines/skill_engine/resolver.py",
+      "pr_blob": "1a448e4658ffd8dcf3884fef150dab8d77b766ca",
+      "r6_blob": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+      "disposition": "preserve R6 exact class/field type validation; owner review HOLD; no new test result"
+    }
+  },
+  "tests": {
+    "new_executions": 0,
+    "previous_reader": "10/10 selected plus 7 transport requalification, c07e42aef43cf7a7fbe21feb80d08c1522860bd0",
+    "previous_office": "8/8 selected, 8bde20fa8fc57c1221dfaaef9aa4d40534f022ee",
+    "codex_sqlite": "80/80 599a5c231dc7b0e4b01057fb07ba378440f3fce5",
+    "codex_pg": "13/13 c7e96f429d34728a9434e5acb5c6d42b3cb5f71b",
+    "codex_evidence_scope": "original R6 source; backend blobs unchanged; not a new full composed candidate test",
+    "full_original_frontend": "NOT_RUN after two changes",
+    "full_build_browser": "NOT_RUN"
+  },
+  "catalog": {
+    "areas": "MI05/06 frontend/office",
+    "symbols": "GET, readBoundedD0Json",
+    "normative_change": false,
+    "api_db_event_dependency_change": false
+  },
+  "owner": "MI05/06 source owners, central manifest owner; MI09 for resolver divergence",
+  "next": "Owner review exact paired diff and composed manifest; Codex runs original affected frontend suite and build under approved environment; API20/C50 separate; no redundant backend tests unless dependencies or backend changes.",
+  "limits": "Tree/path/size and unchanged Git identity checked; not full local checkout or all 585 SHA256 rehash. Full Design Master review incomplete. No owner/IV approval, runtime/dependency install, canonical transfer, new CI, main or PROD. Full local ZIP not generated.",
+  "rollback": "Leave archive unpromoted; normal revert of archival commit if needed; never reset branch. Paired source and manifest rollback together if later transferred.",
+  "progress": {
+    "new_source_functions": 0,
+    "reused_source_files_composed": 2,
+    "canonical_delta": 0,
+    "acceptance_delta": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  }
+}

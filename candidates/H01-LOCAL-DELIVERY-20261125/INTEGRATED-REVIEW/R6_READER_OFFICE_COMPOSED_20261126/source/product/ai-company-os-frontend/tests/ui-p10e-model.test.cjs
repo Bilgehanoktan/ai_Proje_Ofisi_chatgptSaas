@@ -1,0 +1,18 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const root=process.env.P10D_MODEL;
+const {reviewTimeline,reviewEngines}=require(path.join(root,'features/evidence/evidenceReview.js'));
+const {expectedLifecycle}=require(path.join(root,'features/mvp/lifecycleProjection.js'));
+const {deskAccessoryCatalog,deskAccessoryUri,reservedDeskAccessories}=require(path.join(root,'office/engine/deskAccessories.js'));
+const {officeArtwork}=require(path.join(root,'office/engine/officeArtwork.js'));
+const layout=JSON.parse(fs.readFileSync(process.env.P10D_FIXTURE,'utf8')).layout;
+test('terminal all events',()=>assert.equal(reviewTimeline('lifecycle','historical',expectedLifecycle,'','',false).total,5));
+test('filter exact state',()=>assert.deepEqual(reviewTimeline('lifecycle','historical',expectedLifecycle,'','RUNNING',false).rows.map(x=>x.version),[2,3]));
+test('reverse order preserves original',()=>{assert.deepEqual(reviewTimeline('lifecycle','historical',expectedLifecycle,'','',true).rows.map(x=>x.version),[5,4,3,2,1]);assert.equal(expectedLifecycle.timeline[0].version,1)});
+test('query version and state',()=>assert.deepEqual(reviewTimeline('lifecycle','historical',expectedLifecycle,'3','RUNNING',false).rows.map(x=>x.version),[3]));
+test('no live timeline',()=>assert.equal(reviewTimeline('lifecycle','loading',expectedLifecycle,'','',false).total,0));
+test('no outbox timeline',()=>assert.equal(reviewTimeline('outbox','historical',expectedLifecycle,'','',false).total,0));
+test('engine search stays within exact eight findings',()=>{const sections=Object.fromEntries(['orchestrator','runtime','event_store','model','gateway','tools','verifier','finance'].map(k=>[k,'D0_HOLD']));assert.equal(reviewEngines('mvp','historical',{sections},'finance').length,1);assert.equal(reviewEngines('mvp','hold',{sections},'').length,0)});
+test('fixed two assets',()=>{assert.equal(deskAccessoryCatalog.length,2);assert.match(deskAccessoryUri('keyboard'),/^data:image\/svg\+xml/);assert.equal(deskAccessoryUri('forged'),null)});
+test('reserve only and finite',()=>{assert.equal(reservedDeskAccessories(450,100,'live'),'');assert.equal(reservedDeskAccessories(NaN,100,null),'');assert.equal(reservedDeskAccessories(901,100,null),'');assert.equal((reservedDeskAccessories(450,100,null).match(/data-accessory=/g)||[]).length,2)});
+test('floor renders eight accessories; geometry unchanged',()=>{const f=layout.floors[0],before=JSON.stringify(f),a=officeArtwork(f);assert.equal(a.ok,true);assert.equal((a.svg.match(/data-accessory=/g)||[]).length,8);assert.equal(JSON.stringify(f),before);assert.equal(a.stations.length,4)});
+test('reserve floor no accessory',()=>assert.doesNotMatch(officeArtwork(layout.floors[1]).svg,/data-accessory=/));

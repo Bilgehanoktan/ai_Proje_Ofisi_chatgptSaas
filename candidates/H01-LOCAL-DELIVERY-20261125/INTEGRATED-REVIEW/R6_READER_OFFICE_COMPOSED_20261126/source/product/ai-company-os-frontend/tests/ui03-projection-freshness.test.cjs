@@ -1,0 +1,17 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const fs=require('node:fs');
+const {createProjectionReader,PROJECTION_DISPLAY_TTL_MS,readStatus}=require(process.argv[2]);
+const parse=x=>x?.mode==='D0'&&x.allowed===false?x:null;
+const good=()=>Response.json({mode:'D0',allowed:false});
+const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const make=(ttl=20,transport=async()=>good())=>{const states=[],r=createProjectionReader('plan',parse,x=>states.push(x),transport,400,ttl);return {r,states}};
+test('display policy max 30 seconds and explicitly non-authoritative',()=>assert.equal(PROJECTION_DISPLAY_TTL_MS,30000));
+test('historical D0 display expires to STALE without old data',async()=>{const {r,states}=make(12);await r.read();assert.equal(states.at(-1).phase,'historical');await sleep(32);assert.deepEqual(states.at(-1),{phase:'hold',data:null,reason:'STALE'});r.cancel();});
+test('stale status is explicit and denotes HOLD',()=>assert.match(readStatus({phase:'hold',data:null,reason:'STALE'},{idle:'',loading:'',historical:'',hold:'Generic hold'}),/süresi doldu · HOLD/));
+test('explicit invalidate clears readback and suppresses expired body',async()=>{let release;const {r,states}=make(10,()=>new Promise(resolve=>release=resolve));const p=r.read();r.invalidate();release(good());await p;assert.deepEqual(states.at(-1),{phase:'hold',data:null,reason:'STALE'});r.cancel();});
+test('invalidate already accepted history and no later resurrection',async()=>{const {r,states}=make(10);await r.read();r.invalidate();await sleep(30);assert.deepEqual(states.at(-1),{phase:'hold',data:null,reason:'STALE'});r.cancel();});
+test('new read generation supersedes earlier display expiry',async()=>{let n=0;const {r,states}=make(45,async()=>Response.json({mode:'D0',allowed:false,seq:++n}));await r.read();await sleep(25);await r.read();await sleep(30);assert.equal(states.at(-1).phase,'historical');assert.equal(states.at(-1).data.seq,2);await sleep(30);assert.deepEqual(states.at(-1),{phase:'hold',data:null,reason:'STALE'});r.cancel();});
+test('cancel on unmount prevents delayed stale publication',async()=>{const {r,states}=make(10);await r.read();const count=states.length;r.cancel();await sleep(30);assert.equal(states.length,count);});
+test('failed refresh hides historical data and expires no later',async()=>{let n=0;const {r,states}=make(20,async()=>++n===1?good():new Response('{}',{status:503}));await r.read();await r.read();assert.deepEqual(states.at(-1),{phase:'hold',data:null,reason:'READBACK_HOLD'});await sleep(30);assert.equal(states.at(-1).phase,'hold');assert.equal(states.at(-1).data,null);r.cancel();});
+test('hidden tab revocation wired in existing hook; never automatic read or grant',()=>{const hook=fs.readFileSync(process.argv[3],'utf8');assert.match(hook,/visibilitychange/);assert.match(hook,/document\.hidden/);assert.match(hook,/session\.reader\.invalidate\(\)/);assert.doesNotMatch(hook,/dispatch\(|grant\(|POST|PUT|PATCH/);});
