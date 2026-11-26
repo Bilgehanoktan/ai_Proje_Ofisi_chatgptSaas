@@ -1,5 +1,6 @@
 /** Bounded finite SSE replay; no EventSource, live cursor, placement or authority. */
 import {parseLifecyclePrefix,type LifecyclePrefix} from '../mvp/lifecyclePrefix';
+import {beforeDeadline,cancelResponse} from '../mvp/readBoundedD0Json';
 export const sharedCap=16384;
 export const sharedProfile='ceo-office.prefix.v1-D0' as const;
 export type SharedSnapshot={profile:typeof sharedProfile;source:'D0_0196L_HISTORICAL_PREFIX';project_id:null;world_id:null;snapshot_seq:number;prefix:LifecyclePrefix;digest:string};
@@ -34,8 +35,8 @@ export async function parseSharedReplay(text:string):Promise<SharedSnapshot>{
  return snapshot;
 }
 export async function readSharedText(response:Response,signal:AbortSignal):Promise<string>{
- if(signal.aborted||!response.ok||response.redirected||response.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='text/event-stream'||!response.body)throw Error('D0_SHARED_RESPONSE_HOLD');
+ if(signal.aborted||!response.ok||response.redirected||response.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='text/event-stream'||!response.body){cancelResponse(response);throw Error('D0_SHARED_RESPONSE_HOLD');}
  const reader=response.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true});let size=0,text='';
- try{for(;;){const {done,value}=await reader.read();if(signal.aborted)throw Error('D0_SHARED_ABORT');if(done)break;size+=value.byteLength;if(size>sharedCap)throw Error('D0_SHARED_SIZE_HOLD');text+=decoder.decode(value,{stream:true});}return text+decoder.decode();}
+ try{for(;;){const {done,value}=await beforeDeadline(reader.read(),signal);if(signal.aborted)throw Error('D0_SHARED_ABORT');if(done)break;size+=value.byteLength;if(size>sharedCap)throw Error('D0_SHARED_SIZE_HOLD');text+=decoder.decode(value,{stream:true});}return text+decoder.decode();}
  finally{void reader.cancel().catch(()=>{});reader.releaseLock();}
 }

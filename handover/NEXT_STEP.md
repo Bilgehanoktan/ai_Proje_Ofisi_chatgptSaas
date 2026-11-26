@@ -46,3 +46,7 @@ Six existing exact blobs from 9818660fc71648841288f7bc59fc179eac3ee29c onto 5dd9
 
 ## H01 B — R6 bounded plan route transfer (26.11.2026)
 Exact existing plan route from b8c4633cf3c9416f64406ee742db7d9e3c27d634 onto 55b4d0719ccd6ce2483d8a9d4c646451234a0a68; retain canonical bounded reader and add explicit redirected-response rejection. Strict TypeScript and seven isolated injected-fetch checks passed with exact parser and fixtures. Manifest 572 entries. No live HTTP, full build, browser, new grant or acceptance. See ../catalog/revisions/H01_B_R6_PLAN_BOUNDED_READER_TRANSFER_20261126.json. Next: reconcile shared snapshot transport without reverting newer UI and cleanup; IAM12/G7/C50 and independent security remain HOLD. Rollback by ordinary revert of this commit.
+
+
+## H01 B — R6 shared snapshot transport transfer (26.11.2026)
+Four existing source modules reconciled from b8c4633cf3c9416f64406ee742db7d9e3c27d634 while retaining stronger canonical JSON cleanup, MIME and redirect guards. Shared historical replay transport bounded; late/invalid responses cancelled. Strict TypeScript and 9/9 isolated synthetic injected-fetch checks passed; full U2/live HTTP/browser NOT_RUN. 572 manifest entries. See ../catalog/revisions/H01_B_R6_SHARED_SNAPSHOT_TRANSFER_20261126.json. Next: independent Model/Skill/Memory candidate reconciliation; IAM12/G7/C50/IV HOLD. Ordinary revert for rollback.

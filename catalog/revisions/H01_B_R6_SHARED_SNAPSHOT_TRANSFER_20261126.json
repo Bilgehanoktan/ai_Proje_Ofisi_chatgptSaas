@@ -1,0 +1,62 @@
+{
+  "task": "H01-B-R6-SHARED-SNAPSHOT-TRANSFER-20261126",
+  "parent": "4d5b7195b3609bee3db42bb9212b322f98d00ed4",
+  "source": "b8c4633cf3c9416f64406ee742db7d9e3c27d634",
+  "governance": "c46bf24f8b9e26788b4a189ee7dc1dc699aefc37",
+  "classification": "D0_READ_ONLY_SOURCE_TRANSFER",
+  "paths": [
+    {
+      "p": "features/mvp/readBoundedD0Json.ts",
+      "old": "743af32b712702424fa223826b91d9c2e1dc96cf",
+      "sha": "4b740d7a012d6daa17a8e1b2fc168ab0c26ce54c",
+      "bytes": 2396,
+      "hash": "62833aef9bbca7e48af43370f027c01720ac71a0252453492afe1f5a9d7f720f",
+      "path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts"
+    },
+    {
+      "p": "features/data/sharedSnapshot.ts",
+      "old": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+      "sha": "69b78a32b7e18686f3052d507119c4057f1761b0",
+      "bytes": 3392,
+      "hash": "2da2930a156d6444fca1e26a072e3aee972d61219a2e35e1e43f3cbbaf0e1019",
+      "path": "product/ai-company-os-frontend/features/data/sharedSnapshot.ts"
+    },
+    {
+      "p": "features/data/sharedReplaySession.ts",
+      "old": "90dcd080c6ed53c4a8ff8e2aad1978509725515e",
+      "sha": "59e35748a53037cb96971f7d011efe82184acb5d",
+      "bytes": 2640,
+      "hash": "ce8c95f126c8ba7dbe1aa2bc5c22b3124908844ead4587f20d977c27c44c7528",
+      "path": "product/ai-company-os-frontend/features/data/sharedReplaySession.ts"
+    },
+    {
+      "p": "app/api/demo/shared-snapshot/route.ts",
+      "old": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+      "sha": "b176d3d7fe5336b174f394a9e0121cdb4f4457aa",
+      "bytes": 1069,
+      "hash": "ec40da8c4a797ccaf0a99cc249d960b529426fefa41f05f6fccebc952916f05a",
+      "path": "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts"
+    }
+  ],
+  "disposition": "R6 bounded shared transport adapted to stronger canonical helper; export existing beforeDeadline and cancelResponse; preserve strict JSON MIME and redirects; cancel late/invalid SSE responses; bound fetch/read/parse at existing 2500ms server and 4000ms client, retain 30000ms display TTL, generation and hidden/reset semantics. No DB, event schema, new endpoint, package, grant or execution. No change to six newer UI successors.",
+  "conflicts": "Relevant PR49/48/45/43/42/50 none of four; 51/31/29/26 older helper variants already superseded; no bulk merge.",
+  "evidence": {
+    "environment": "Node 22.16.0, TypeScript 5.8.3; strict compile PASS; exact six preimage blobs locally verified; changed four payload hashes locally calculated",
+    "result": "9/9 targeted local checks PASS, synthetic prefix fixture derived from exact lifecycle parser, injected fetch; valid prefix through route, scope drift, resume denial, stalled fetch, stalled body cleanup, late upstream cleanup, client reset late cleanup, client timeout HOLD, invalid MIME cleanup. Not actual backend, native browser or original U2 full suite.",
+    "limits": "Full Design Master and full byte rehash incomplete; original U2 full harness, live backend, build, C08 NOT_RUN. IAM/T1 and dependency/security gates unchanged."
+  },
+  "manifest": {
+    "entries": 572,
+    "retained_blobs": 568,
+    "changed": 4
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Normal revert this commit; no DB changes. Diagnose 503, transport timing, historical profile/digest; retain existing UI."
+}

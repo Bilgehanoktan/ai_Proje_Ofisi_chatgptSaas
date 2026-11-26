@@ -1,5 +1,6 @@
 /** U2 shared historical session: one in-memory reader, no runtime authority. */
 import {parseSharedReplay,readSharedText,type SharedSnapshot} from './sharedSnapshot';
+import {beforeDeadline,cancelResponse} from '../mvp/readBoundedD0Json';
 export const SHARED_READ_TIMEOUT_MS=4000;
 export const SHARED_DISPLAY_TTL_MS=30000;
 export type SharedSessionState=Readonly<{phase:'idle'|'loading'|'hold';data:null}>|Readonly<{phase:'historical';data:SharedSnapshot}>;
@@ -23,9 +24,9 @@ export function createSharedReplaySession(options:SharedSessionOptions){
   if(id!==generation)return;
   readTimer=schedule(()=>{if(id===generation)invalidate();},SHARED_READ_TIMEOUT_MS);
   try{
-   const response=await request(controller.signal);
-   if(id!==generation||controller.signal.aborted)return;
-   const data=await parseSharedReplay(await readSharedText(response,controller.signal));
+   const response=await beforeDeadline(request(controller.signal),controller.signal,cancelResponse);
+   if(id!==generation||controller.signal.aborted){cancelResponse(response);return;}
+   const data=await beforeDeadline(parseSharedReplay(await readSharedText(response,controller.signal)),controller.signal);
    if(id!==generation||controller.signal.aborted)return;
    if(isHidden()){invalidate();return;}
    readTimer?.();readTimer=null;active=null;
