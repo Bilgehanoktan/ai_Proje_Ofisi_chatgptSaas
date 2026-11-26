@@ -1,8 +1,8 @@
 /** Bound every asynchronous stage of a local-only D0 JSON proxy to one deadline.
  *  Not a production auth, tenant or egress adapter. */
-function beforeDeadline<T>(work: Promise<T>, signal: AbortSignal): Promise<T> {
+export function beforeDeadline<T>(work: Promise<T>, signal: AbortSignal): Promise<T> {
   return new Promise<T>((resolve, reject) => {
-    if (signal.aborted) { reject(Error('deadline')); return; }
+    if (signal.aborted) { void work.catch(() => {}); reject(Error('deadline')); return; }
     const abort = () => reject(Error('deadline'));
     signal.addEventListener('abort', abort, {once: true});
     work.then(

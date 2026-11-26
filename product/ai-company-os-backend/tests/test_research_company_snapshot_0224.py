@@ -28,7 +28,7 @@ class SelectCursor:
 
 class ResearchCompanySnapshotTests(unittest.TestCase):
     def setUp(self):
-        self.plan=json.loads((Path(__file__).resolve().parents[1]/'fixtures/core.preview.json').read_text())['plan']
+        self.plan=json.loads((Path(__file__).resolve().parents[1]/'fixtures/core.preview.json').read_text(encoding='utf-8'))['plan']
         self.project='demo-research-project'
         self.initial=tuple(RunObservation(Scope(*SCOPE,RESEARCH_REVISION,t,'demo-run-'+t,
             'demo-agent-'+t,'demo-principal-'+t),RunState.QUEUED,0,0) for t in ('draft','merge','plan','qa','research'))

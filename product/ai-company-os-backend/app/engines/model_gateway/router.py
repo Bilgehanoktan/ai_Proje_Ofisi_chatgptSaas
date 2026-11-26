@@ -91,12 +91,14 @@ def inspect_route(query,profiles,registry,policy,expected_policy_pin,metrics,
         if metrics_digest(metrics)!=policy.metrics_pin:
             return RoutingReview("ROUTE_METRIC_PIN_HOLD")
         cap=inspect_capabilities(query,profiles,registry,policy.catalog_pin,policy.allowed)
-        if cap.reason!="D0_CANDIDATES_ONLY":
+        if cap.reason not in ("D0_CANDIDATES_ONLY", "NO_ELIGIBLE_PROFILE_HOLD"):
             return RoutingReview(cap.reason,excluded=cap.excluded)
         indexed={profile_digest(p,registry):p for p in profiles}
         observed={m.profile_digest:m for m in metrics}
         if not set(observed)<=set(indexed):
             return RoutingReview("ROUTE_METRIC_CATALOG_HOLD")
+        if cap.reason=="NO_ELIGIBLE_PROFILE_HOLD":
+            return RoutingReview(cap.reason,excluded=cap.excluded)
         eligible=[]; excluded=list(cap.excluded)
         for key in cap.candidate_digests:
             p=indexed[key]; m=observed.get(key)

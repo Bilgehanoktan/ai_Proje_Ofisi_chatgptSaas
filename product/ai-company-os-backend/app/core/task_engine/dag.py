@@ -1,6 +1,7 @@
 """Pure graph validation and deterministic wave planning. Never schedules work."""
 from dataclasses import dataclass
 from typing import Iterable
+from itertools import islice
 import re
 
 @dataclass(frozen=True)
@@ -19,11 +20,13 @@ class GraphError(ValueError):
     pass
 
 def topological_waves(tasks: Iterable[Task]) -> tuple[tuple[str, ...], ...]:
-    tasks = tuple(tasks)
+    # Reject oversize iterables without consuming the entire input.
+    tasks = tuple(islice(tasks, 101))
     if not tasks or len(tasks) > 100:
         raise GraphError("TASK_COUNT_INVALID")
     if any(not isinstance(t, Task) or not valid_id(t.id) or not isinstance(t.role, str) or t.role not in ROLES
            or not isinstance(t.label, str) or not t.label.strip() or len(t.label) > 256
+           or re.search(r"[\ud800-\udfff]", t.label) is not None
            or not isinstance(t.depends_on, tuple) or any(not valid_id(d) for d in t.depends_on) for t in tasks):
         raise GraphError("TASK_FIELD_INVALID")
     by_id = {t.id: t for t in tasks}
