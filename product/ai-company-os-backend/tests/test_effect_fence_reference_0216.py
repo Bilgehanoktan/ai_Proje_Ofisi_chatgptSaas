@@ -1,4 +1,5 @@
 import concurrent.futures
+from contextlib import closing
 from dataclasses import replace
 from pathlib import Path
 import shutil
@@ -77,7 +78,7 @@ class ReferenceTests(unittest.TestCase):
 
     def test_append_only(self):
         self.f.consume_synthetic(self.h,self.i)
-        with sqlite3.connect(self.path) as db:
+        with closing(sqlite3.connect(self.path)) as db, db:
             for sql in ('DELETE FROM consumed','UPDATE heads SET epoch=2','INSERT OR REPLACE INTO consumed SELECT * FROM consumed'):
                 with self.assertRaises(sqlite3.IntegrityError): db.execute(sql)
 
@@ -91,10 +92,10 @@ class ReferenceTests(unittest.TestCase):
 
     def test_product_restore_does_not_reset_reference(self):
         product=Path(self.tmp.name)/'product.sqlite'
-        with sqlite3.connect(product) as db: db.execute('CREATE TABLE sample(x)')
+        with closing(sqlite3.connect(product)) as db, db: db.execute('CREATE TABLE sample(x)')
         backup=product.with_suffix('.backup'); shutil.copyfile(product,backup)
         self.f.consume_synthetic(self.h,self.i)
-        with sqlite3.connect(product) as db: db.execute('INSERT INTO sample VALUES (1)')
+        with closing(sqlite3.connect(product)) as db, db: db.execute('INSERT INTO sample VALUES (1)')
         shutil.copyfile(backup,product)
         with self.assertRaisesRegex(ValueError,'ALREADY_CONSUMED'):
             self.f.consume_synthetic(self.h,self.i)
