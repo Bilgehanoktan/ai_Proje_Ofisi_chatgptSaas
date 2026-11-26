@@ -21,3 +21,6 @@
 
 ## 0228 Windows delta on shared product-dev
 Base 254e018; selective source 4f561bb. The SQLite teardown fix transfers cleanly: the parent test blob was identical. Preserve the existing product-dev TypeScript harness, which already uses a pinned local compiler and isolated type roots. Manifest 552/552 and targeted Windows regression 13/13 passed using the reviewed 0227 interpreter. 0227 E2/E4 evidence stays scoped to its original runtime; shared full-chain and R6 acceptance remain open. Next reconcile the R6 workstream sources against this shared base, resolve owner decisions, and prepare the main release candidate. Main requires independent acceptance and H01 approval. Rollback: revert this transfer commit.
+
+## R6 diagnostics integration on product-dev
+Transferred three exact R6 source blobs from 5d2fddb onto e826dd6: the MVP route, bounded JSON reader and existing proxy tests. TypeScript compile passed; proxy tests 8 PASS / 1 live-loopback SKIP. Manifest 553/553. Shared application build and R6 workstream reconciliation remain open. Keep main gated by independent acceptance. Revert this commit for source rollback.

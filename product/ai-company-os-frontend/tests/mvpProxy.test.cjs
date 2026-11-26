@@ -8,6 +8,31 @@ test('fixed loopback GET, no cache or redirects',async()=>withFetch(async(url,op
 test('unsafe response refused',async()=>withFetch(async()=>Response.json({...body,dispatch_allowed:true}),async()=>assert.equal((await GET()).status,503)));
 test('network failure held',async()=>withFetch(async()=>{throw Error('network')},async()=>assert.equal((await GET()).status,503)));
 test('non-JSON held',async()=>withFetch(async()=>new Response('bad'),async()=>assert.equal((await GET()).status,503)));
+test('accepts UTF-8 JSON with case-insensitive media type', async () => {
+  const headers = {'content-type': 'Application/JSON; charset="UTF-8"'};
+  await withFetch(async () => new Response(JSON.stringify(body), {headers}), async () => {
+    assert.equal((await GET()).status, 200);
+  });
+});
+test('deadline returns HOLD when backend stops responding', async () => {
+  let finish;
+  let timer;
+  const upstream = new Promise(resolve => { finish = resolve; });
+  try {
+    await withFetch(() => upstream, async () => {
+      const watchdog = new Promise((_, reject) => {
+        timer = setTimeout(() => reject(Error('route did not return HOLD')), 4000);
+      });
+      const response = await Promise.race([GET(), watchdog]);
+      assert.equal(response.status, 503);
+      assert.equal(response.headers.get('cache-control'), 'no-store');
+      assert.deepEqual(await response.json(), {mode: 'D0_READBACK_HOLD'});
+    });
+  } finally {
+    clearTimeout(timer);
+    finish(Response.json(body));
+  }
+});
 test('oversize held',async()=>withFetch(async()=>Response.json({data:'x'.repeat(17000)}),async()=>assert.equal((await GET()).status,503)));
 test('real local backend readback',{skip:process.env.MVP_LOOPBACK_TEST!=='1'},async()=>{const r=await GET();assert.equal(r.status,200);const data=await r.json();assert.equal(data.sections.event_store,'SQLITE_MEMORY_READBACK_ONLY');assert.equal(data.sample_event_rows,3);assert.equal(data.dispatch_allowed,false);assert.equal(data.diagnostic_remaining_minor,6900);});
 
