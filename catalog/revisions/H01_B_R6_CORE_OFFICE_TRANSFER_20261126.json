@@ -1,0 +1,99 @@
+{
+  "task": "H01-B-CENTRAL-R6-CORE-OFFICE-TRANSFER-20261126",
+  "authorization": "b47d4354ee95a5750d69e30523fa401b56aea20f",
+  "parent": "c7eba2ca6da7328fb3a39585a048c8e1941f0b1a",
+  "source_delivery": "9818660fc71648841288f7bc59fc179eac3ee29c",
+  "source_tree": "6dd3b83a9f0aee5d2a39fce374779b284fb661fb",
+  "scope": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "before": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+      "after": "eb3e283e3406996254283595e14711e90b2bca8c",
+      "bytes": 3864,
+      "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "before": "04487bda631e9133f3904451a39fc8722e985997",
+      "after": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+      "bytes": 3542,
+      "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "before": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+      "after": "95438f2d300f09242876893943ee250884ebdde6",
+      "bytes": 3399,
+      "sha256": "32ac801451c0532bf09fcee53d4f9121d33767d15acfa1006f78d6fb76b0d645"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/office_engine/layout.py",
+      "before": "cf47623d303d21aed11eb5ee69b66a757c6a5d18",
+      "after": "4e637a46bcc1efbf0b6e5637e32b70398f70f1c2",
+      "bytes": 3319,
+      "sha256": "24089966253bd3d950f6aebfe9b65f2b2a2cc86d680beb3a472005301d153639"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "before": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+      "after": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+      "bytes": 5933,
+      "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+      "before": null,
+      "after": "143cf34da870125e367947181854e1a0af9c2b30",
+      "bytes": 2508,
+      "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_ledger_envelope_boundary.py",
+      "before": null,
+      "after": "7163756d9a4ba23eafb08f8ef19f4c031756f943",
+      "bytes": 4328,
+      "sha256": "521714cea0ffa8388a47d01dc14b1b779685cd6483bbd4d9a15006ffd7bbed57"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_office_layout_boundary.py",
+      "before": null,
+      "after": "cc01ff57c5800cad4d5c1b2ae46dfa03a37ecb78",
+      "bytes": 4102,
+      "sha256": "abd404baa79746eb254d3b17236d64aebe427f71e88255fe3e0bdf4fc526a5fb"
+    }
+  ],
+  "technical_disposition": "APPROVED_FOR_DEVELOPMENT_SOURCE_TRANSFER: D0 pure DAG/scheduler review, demo event envelope, static geometry only. No real admission, assignment, T1, grant, external effects, schema or dependency change.",
+  "review": "Reviewed exact implementation deltas, original PR54 matching scheduler/DAG, historic ledger/layout variants; current R6 and canonical base pinned. Retain prior narrow evidence, not full product results. No new tests or CI.",
+  "evidence": [
+    "PR54 82 scoped methods at 41dc540b43546854b9e0b6e2d855bffe5fdd965a; no credit for rerun",
+    "R6_LEDGER_COMPOSED_20261125 10/10",
+    "OFFICE_LAYOUT_BOUNDARY_20261125 14/14",
+    "R5_OFFICE_COMPOSED_20261125 7/7; prior scoped only"
+  ],
+  "manifest": {
+    "entries": 566,
+    "sha256": "702a4e9aedc75d83eb56d51658e8ca397d7e856fe21a891c24a675231dc84461",
+    "changed_payload_sha256": "8/8"
+  },
+  "gates": {
+    "G7": "original pin runner historical, rebind required",
+    "IAM_T1": "HOLD",
+    "C50_R9": "HOLD",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "independent": "HOLD",
+    "full_build": "NOT_RUN"
+  },
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "Ordinary revert of source transfer; preserve prior blobs and separate archive. No force.",
+  "limitations": "No fresh full source byte rehash or full ZIP; full Design Master review incomplete; exact source slices only."
+}

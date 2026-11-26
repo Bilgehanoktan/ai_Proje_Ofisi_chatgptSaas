@@ -67,3 +67,40 @@ class PinnedScheduleTests(TestCase):
         rows=initial(); changed=(replace(rows[0],scope=replace(rows[0].scope,plan_revision='sha256:'+'0'*64)),*rows[1:])
         with self.assertRaisesRegex(ValueError,'RUN_BINDING'):
             inspect_pinned_schedule(PLAN,changed,rows)
+
+    def test_same_version_changed_root_state_rejected(self):
+        rows=initial()
+        for state in (RunState.ADMITTED, RunState.RUNNING, RunState.FAILED):
+            with self.subTest(state=state):
+                changed=(replace(rows[0],state=state),*rows[1:])
+                with self.assertRaisesRegex(ValueError,'D0_SCHEDULE_STATE_VERSION_HOLD'):
+                    inspect_pinned_schedule(PLAN,changed,rows)
+
+    def test_same_version_stopped_child_rejected(self):
+        rows=initial()
+        for state in (RunState.CANCELLED, RunState.TIMED_OUT):
+            with self.subTest(state=state):
+                changed=(rows[0],replace(rows[1],state=state),rows[2])
+                with self.assertRaisesRegex(ValueError,'D0_SCHEDULE_STATE_VERSION_HOLD'):
+                    inspect_pinned_schedule(PLAN,changed,rows)
+
+    def test_nonzero_pin_version_drift_rejected(self):
+        rows=tuple(replace(r,version=7) for r in initial())
+        changed=(replace(rows[0],state=RunState.RUNNING),*rows[1:])
+        with self.assertRaisesRegex(ValueError,'D0_SCHEDULE_STATE_VERSION_HOLD'):
+            inspect_pinned_schedule(PLAN,changed,rows)
+
+    def test_unchanged_nonzero_pin_remains_ready_only(self):
+        rows=tuple(replace(r,version=7) for r in initial())
+        review=inspect_pinned_schedule(PLAN,rows,rows)
+        self.assertEqual(review.ready,('a',))
+        self.assertEqual(review.decision,'HOLD')
+        self.assertFalse(review.claim_allowed or review.dispatch_allowed)
+
+    def test_advanced_stop_remains_hold_only(self):
+        rows=initial()
+        changed=(rows[0],replace(rows[1],state=RunState.CANCELLED,version=1),rows[2])
+        review=inspect_pinned_schedule(PLAN,changed,rows)
+        self.assertEqual(review.ready,('a',))
+        self.assertEqual(review.decision,'HOLD')
+        self.assertFalse(review.claim_allowed or review.dispatch_allowed)

@@ -30,3 +30,6 @@ Reconciled Admission, Outbox, Task Budget and Office Workbench routes from exact
 
 ## R6 UI and Office presentation
 Shared base 1e2fa7a; 17 exact R6 blobs from 5d2fddb: navigation/theme, CEO evidence presentation, historical projection expiry/visibility, plan graph zoom, and seven existing suites. Manifest 563/563; 68 existing focused checks passed. Full shared Next build and browser still open; lock and backend source were not replaced. Rollback by reverting this commit. Continue Core/IAM/ORG/Model/Skill/Memory source reconciliation.
+
+## H01 B — exact R6 Core/Office source transfer (26.11.2026)
+Central technical reviewer authorized at b47d4354ee95a5750d69e30523fa401b56aea20f. Transfer eight existing source/test blobs from consolidated R6 onto c7eba2ca6da7328fb3a39585a048c8e1941f0b1a: scheduler same-version guard, bounded DAG input, demo ledger envelope and bounded Office geometry. Manifest 566 entries. Historical scoped evidence only; full build and W8/IV HOLD. See ../catalog/revisions/H01_B_R6_CORE_OFFICE_TRANSFER_20261126.json. Next review exact UI shared reader and remaining model/skill/knowledge source; preserve real IAM/T1 and dependency gates. Revert this commit for rollback.

@@ -127,8 +127,8 @@
       "sha256": "79f664d2de14a90846dbfcc4a2dd6e99913a0ef1644b009480e25b4d3b188967"
     },
     "ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": {
-      "bytes": 3649,
-      "sha256": "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+      "bytes": 3864,
+      "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
     },
     "ai-company-os-backend/app/core/agent_runtime/transition_command.py": {
       "bytes": 1698,
@@ -279,8 +279,8 @@
       "sha256": "c7528010ffb7c7ab14f8b67eccb9d062fff7d4c5825edaa3ed8d9b7d670f5060"
     },
     "ai-company-os-backend/app/core/event_store/ledger.py": {
-      "bytes": 3093,
-      "sha256": "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+      "bytes": 3399,
+      "sha256": "32ac801451c0532bf09fcee53d4f9121d33767d15acfa1006f78d6fb76b0d645"
     },
     "ai-company-os-backend/app/core/event_store/outbox_review.py": {
       "bytes": 4408,
@@ -399,8 +399,8 @@
       "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
     },
     "ai-company-os-backend/app/core/task_engine/dag.py": {
-      "bytes": 3367,
-      "sha256": "bb4f8944c00dfcbf00c388d173ab650b5eb7dec4a37fe4a20169543ef6298df1"
+      "bytes": 3542,
+      "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
     },
     "ai-company-os-backend/app/core/transaction/__init__.py": {
       "bytes": 49,
@@ -607,8 +607,8 @@
       "sha256": "1ac4a749c5152b43625faa5491960199e2eaa1f4537b6e782275e211309907ee"
     },
     "ai-company-os-backend/app/engines/office_engine/layout.py": {
-      "bytes": 1577,
-      "sha256": "751545635e2a2f6ea8ebdb05e2fd37230281ed3d7c72769ad8af46c81fd9e819"
+      "bytes": 3319,
+      "sha256": "24089966253bd3d950f6aebfe9b65f2b2a2cc86d680beb3a472005301d153639"
     },
     "ai-company-os-backend/app/engines/skill_engine/__init__.py": {
       "bytes": 52,
@@ -943,8 +943,8 @@
       "sha256": "7a6371c41539317863bb4dfa674514d53b76f08baf7a41a7c6d2c6fcfef61ac5"
     },
     "ai-company-os-backend/tests/test_pinned_schedule_0220.py": {
-      "bytes": 4042,
-      "sha256": "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+      "bytes": 5933,
+      "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62"
     },
     "ai-company-os-backend/tests/test_plan_history_review_0199.py": {
       "bytes": 9848,
@@ -2257,6 +2257,18 @@
     "ai-company-os-frontend/tests/ui03-visibility-r4.test.cjs": {
       "bytes": 2052,
       "sha256": "d02cd6e7406730a1c388040e794c1a24cfbf1a256cf853b217e3b7765ab1f111"
+    },
+    "ai-company-os-backend/tests/test_plan_text_boundary.py": {
+      "bytes": 2508,
+      "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89"
+    },
+    "ai-company-os-backend/tests/test_ledger_envelope_boundary.py": {
+      "bytes": 4328,
+      "sha256": "521714cea0ffa8388a47d01dc14b1b779685cd6483bbd4d9a15006ffd7bbed57"
+    },
+    "ai-company-os-backend/tests/test_office_layout_boundary.py": {
+      "bytes": 4102,
+      "sha256": "abd404baa79746eb254d3b17236d64aebe427f71e88255fe3e0bdf4fc526a5fb"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2268,5 +2280,22 @@
     "SKILL": "cc8bae72ef0f5f47b62b9a9f2fae7fdfb2382603",
     "ORG_ASSIGNMENT_D0": "6efc6714757ebd698d27efd7022afc2c92af70d0",
     "ORG_ORG06": "a59a15a94b9eaa2bb7687297e9057e286f297ede"
+  },
+  "central_h01_b_transfer_20261126": {
+    "parent": "c7eba2ca6da7328fb3a39585a048c8e1941f0b1a",
+    "governance": "b47d4354ee95a5750d69e30523fa401b56aea20f",
+    "source_tree": "6dd3b83a9f0aee5d2a39fce374779b284fb661fb",
+    "source_manifest": "359e084b4a8aceb9120fda6a3be3e298646b4f1f",
+    "paths": [
+      "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+      "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "product/ai-company-os-backend/app/core/event_store/ledger.py",
+      "product/ai-company-os-backend/app/engines/office_engine/layout.py",
+      "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+      "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+      "product/ai-company-os-backend/tests/test_ledger_envelope_boundary.py",
+      "product/ai-company-os-backend/tests/test_office_layout_boundary.py"
+    ],
+    "status": "SOURCE_TRANSFER_ONLY"
   }
 }

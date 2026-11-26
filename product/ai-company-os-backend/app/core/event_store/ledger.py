@@ -33,9 +33,14 @@ def append_preview(ledger: Ledger, event: Event, floors: dict[str, frozenset[str
     if (event.tenant_id,event.world_id,event.environment_id,event.stream_id,event.layout_revision) != (
         "synthetic-tenant","demo-world","A0_SAMPLE_ONLY","demo-ui-stream","layout-d3-demo"):
         return reject("SCOPE_OR_LAYOUT_MISMATCH")
-    if type(event.seq) is not int or event.seq < 1 or not event.event_id:
+    if (type(event.seq) is not int or event.seq < 1
+            or type(event.event_id) is not str or not event.event_id):
         return reject("ENVELOPE_INVALID")
-    if event.floor_id not in floors or event.kind not in {"DEMO_FLOOR_SELECTED","DEMO_STATION_SELECTED"}:
+    # Validate JSON field types before hash-based membership or identity checks.
+    if (type(event.floor_id) is not str or type(event.kind) is not str
+            or (event.station_id is not None and type(event.station_id) is not str)
+            or event.floor_id not in floors
+            or event.kind not in {"DEMO_FLOOR_SELECTED","DEMO_STATION_SELECTED"}):
         return reject("PAYLOAD_INVALID")
     if event.kind == "DEMO_FLOOR_SELECTED" and event.station_id is not None:
         return reject("PAYLOAD_INVALID")

@@ -64,6 +64,9 @@ def inspect_pinned_schedule(plan, observations, initial_observations):
         # Even a causally consistent bare SUCCEEDED head is not a release receipt.
         if current.state is RunState.SUCCEEDED:
             raise ValueError('D0_SCHEDULE_SUCCESS_PROOF_HOLD')
+        # A state transition cannot reuse the pinned initial run version.
+        if current.version == pin.version and current.state is not pin.state:
+            raise ValueError('D0_SCHEDULE_STATE_VERSION_HOLD')
     if not set(review.ready).issubset(baseline.ready):
         raise ValueError('D0_SCHEDULE_PREDECESSOR_PROOF_HOLD')
     return SchedulerReview('D0_PINNED_READY_ONLY_HISTORY_AND_ADMISSION_REQUIRED', review.ready)
