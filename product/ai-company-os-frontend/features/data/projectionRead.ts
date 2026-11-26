@@ -1,5 +1,6 @@
 /** Browser-only D0 read transport. No authority, persistence, retry or live adapter. */
 import {organizationCap} from '../organization/organizationProjection';
+import {beforeDeadline,cancelResponse} from '../mvp/readBoundedD0Json';
 export const endpointCaps = Object.freeze({mvp:16384,admission:4096,outbox:4096,'office-workbench':4096,'task-budget':8192,lifecycle:8192,'lifecycle-prefix':8192,plan:16384,organization:organizationCap} as const);
 export type ProjectionKey=keyof typeof endpointCaps;
 export const PROJECTION_DISPLAY_TTL_MS=30000; // UI retention only; never source freshness or authority.
@@ -7,10 +8,10 @@ export type ReadState<T>={phase:'idle'|'loading';data:null}|{phase:'historical';
 export type Parser<T>=(raw:unknown)=>T|null;
 export async function readProjection<T>(key:ProjectionKey,parse:Parser<T>,signal:AbortSignal,transport:typeof fetch=fetch):Promise<T>{
  if(!Object.hasOwn(endpointCaps,key)||signal.aborted)throw Error('D0_READBACK_HOLD');
- const response=await transport('/api/demo/'+key,{method:'GET',cache:'no-store',redirect:'error',credentials:'same-origin',headers:{Accept:'application/json'},signal});
- if(signal.aborted||!response.ok||response.redirected||response.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='application/json'||!response.body)throw Error('D0_READBACK_HOLD');
+ const response=await beforeDeadline(transport('/api/demo/'+key,{method:'GET',cache:'no-store',redirect:'error',credentials:'same-origin',headers:{Accept:'application/json'},signal}),signal,cancelResponse);
+ if(signal.aborted||!response.ok||response.redirected||response.headers.get('content-type')?.split(';')[0].trim().toLowerCase()!=='application/json'||!response.body){cancelResponse(response);throw Error('D0_READBACK_HOLD');}
  const reader=response.body.getReader(),decoder=new TextDecoder('utf-8',{fatal:true});let size=0,text='';
- try{for(;;){const {done,value}=await reader.read();if(signal.aborted)throw Error('D0_READBACK_HOLD');if(done)break;size+=value.byteLength;if(size>endpointCaps[key])throw Error('D0_READBACK_HOLD');text+=decoder.decode(value,{stream:true});}text+=decoder.decode();}
+ try{for(;;){const {done,value}=await beforeDeadline(reader.read(),signal);if(signal.aborted)throw Error('D0_READBACK_HOLD');if(done)break;size+=value.byteLength;if(size>endpointCaps[key])throw Error('D0_READBACK_HOLD');text+=decoder.decode(value,{stream:true});}text+=decoder.decode();}
  finally{void reader.cancel().catch(()=>{});reader.releaseLock();}
  const result=parse(JSON.parse(text));if(result===null||signal.aborted)throw Error('D0_READBACK_HOLD');return result;
 }

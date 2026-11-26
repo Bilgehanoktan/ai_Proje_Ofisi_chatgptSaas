@@ -54,3 +54,7 @@ Four existing source modules reconciled from b8c4633cf3c9416f64406ee742db7d9e3c2
 
 ## H01 B — R6 RESEARCH fixture encoding transfer (26.11.2026)
 Three existing test files from b8c4633cf3c9416f64406ee742db7d9e3c27d634 explicitly decode the unchanged core.preview.json as UTF-8; no new test methods or runtime code. 3/3 exact changed source byte/SHA256 matches; prior isolated handover reports 54 Research methods passed, no fresh run here. See ../catalog/revisions/H01_B_R6_RESEARCH_UTF8_TRANSFER_20261126.json. Remaining recovered-memory and IAM/T1/C50/R9/IV HOLD. Revert normally for rollback.
+
+
+## H01 B — D0 independent projection transport (27.11.2026)
+Reuse the existing canonical deadline and late response cleanup for all nine independent JSON read endpoints; preserve UI03 R3 visibility/TTL and HOLD contract. Strict TS compile exit 0, original 12/12 TAP PASS, 4/4 isolated targeted transport checks exit 0. No actual browser/full build or runtime execution. See ../catalog/revisions/H01_B_D0_PROJECTION_TRANSPORT_20261127.json. CEO authorized command ingress remains absent; IAM/T1, C50/R9, IV remain HOLD. Ordinary revert for rollback.

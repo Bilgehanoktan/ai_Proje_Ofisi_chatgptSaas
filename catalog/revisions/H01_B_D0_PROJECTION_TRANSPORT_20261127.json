@@ -1,0 +1,55 @@
+{
+  "task": "H01-B-D0-PROJECTION-TRANSPORT-20261127",
+  "parent": "0b613bbd50b672400a64aa9e1d22a90ab2303ae6",
+  "governance": "7c23309c0b347856f8d40da2fcd3d63eb7841300",
+  "classification": "D0_EXISTING_PRODUCT_SOURCE_FIX",
+  "paths": [
+    {
+      "path": "product/ai-company-os-frontend/features/data/projectionRead.ts",
+      "old_blob": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+      "new_blob": "58e1085b1804c8b83f17f0e8c836feee84706164",
+      "bytes": 4243,
+      "sha256": "290e52112355facc19bc937c7f26258530c9e26927ecab48682feb68823f3fec"
+    }
+  ],
+  "disposition": "Reuse canonical beforeDeadline and cancelResponse in existing independent nine-endpoint JSON reader. Abort settles pending fetch/read, cancels late or invalid response body. Preserve GET whitelist, exact endpoint caps, parser, same-origin, no-store, redirect rejection, state machine, TIMEOUT/STALE reasons, 30s display TTL and visibility guards. No API, DB, event, dependency, grant or live execution changes.",
+  "conflict_review": "PR49 head 3361ae04310b9b7f51114aefca83f8c8c5255410 exact canonical reader preimage; PR48 head 59400debd73bf3b5e2df1e0d2fe008fd4e633917 older variant without visibility guard; preserve canonical successor. PR51/50/45/43/42/31/29/26 path absent in changed lists. No bulk merge.",
+  "evidence": {
+    "environment": "Node 22.16.0 / TypeScript 5.8.3; three exact source blobs reconstructed and git hash-object verified locally, no install",
+    "compile": {
+      "command": "tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM --outDir build features/data/projectionRead.ts",
+      "exit": 0
+    },
+    "preimages": {
+      "projection": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+      "helper": "4b740d7a012d6daa17a8e1b2fc168ab0c26ce54c",
+      "org": "cb824d03aa76b45aae3f7f11237f4f6fa82fd96f"
+    },
+    "original": {
+      "blob": "226e0e9721677235184547b8d79e91b2e6c541fb",
+      "tap": "12 tests, pass 12, fail 0, cancelled 0, skipped 0",
+      "exit": "not captured separately; complete TAP summary observed"
+    },
+    "targeted": {
+      "exit": 0,
+      "tap": "4 tests, pass 4, fail 0, cancelled 0, skipped 0",
+      "cases": [
+        "late response body cancelled after abort and call settles before response",
+        "stalled stream aborted and reader unlocked",
+        "invalid response body cancelled",
+        "reader timeout settles while transport remains pending"
+      ],
+      "transport": "injected Response/ReadableStream, no network or actual browser"
+    },
+    "limits": "Original UI03 full freshness suite and full build/native browser not run. Full Design Master and complete ZIP/full rehash incomplete; no new acceptance."
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Normal revert; no data migration. Diagnose pending transport, invalid MIME, endpoint cap, parser HOLD, TIMEOUT and STALE. Preserve independent historical scope."
+}
