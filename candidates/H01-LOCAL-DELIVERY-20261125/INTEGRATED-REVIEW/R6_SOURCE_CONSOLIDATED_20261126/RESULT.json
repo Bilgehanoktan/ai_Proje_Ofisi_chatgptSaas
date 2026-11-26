@@ -7,10 +7,10 @@
   "parent": "346c74eaa0c6d0523a75607e86a35298365e666b",
   "original_r6": "567466eb0314c495b2543ff8fe1aed1ab558d674",
   "base_source_tree": "75c92fba62175abadafe81e7f065bc60c41d5a26",
-  "source_tree": "bd3a4906713c6c89f777d37294e684f6bbc503c7",
+  "source_tree": "6dd3b83a9f0aee5d2a39fce374779b284fb661fb",
   "product_tree": "f31bc1647371c4e0ff0234630d3dbd2a7021e4d5",
   "manifest_blob": "359e084b4a8aceb9120fda6a3be3e298646b4f1f",
-  "source_files": 1918,
+  "source_files": 1922,
   "product_files": 587,
   "manifest_entries": 586,
   "unchanged_source_blobs": 1912,
@@ -113,7 +113,7 @@
     "actual full checkout and per-byte 586 manifest audit",
     "full Design Master review"
   ],
-  "tests_this_round": "No new executions; exact reused evidence only, no duplicate credit. New combined tree not executed.",
+  "tests_this_round": "No new test executions; exact prior scoped evidence reused. W8 runner binding static only, full combined checkout NOT_RUN.",
   "authority": "No install, no CI, no product-dev/main modification, no owner approval or independent acceptance. Existing R6 original, composed predecessor, Codex branch and evidence preserved.",
   "next": "Complete owner resolution and W8 runner/source lock review. Later give a single fixed source tree and exact conditional locks to Codex; no new Codex task in this round.",
   "rollback": "Leave archive unpromoted; normal revert only of archival commit. Restore corresponding manifest with source if later transferred.",
@@ -123,6 +123,44 @@
     "canonical_delta": 0,
     "acceptance_delta_pp": 0,
     "weighted": "HESAPLANAMADI",
-    "ordinal": "unchanged"
+    "ordinal": "unchanged",
+    "w8_existing_aux_paths_carried": 4,
+    "w8_adapter_review_pin_changes": 1
+  },
+  "previous_consolidated_commit": "79681c5f4b16eb6b1b0b3e3c0c295d23a53c1469",
+  "previous_consolidated_source_tree": "bd3a4906713c6c89f777d37294e684f6bbc503c7",
+  "w8_source_binding": {
+    "classification": "OWNER_REVIEW_ONLY_NO_C04_C06_C07_C08_EXECUTION",
+    "owner_pr38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "previous_adapter": "e1330a7c33f6c5d5c353a19b0be1ae1281fd0700",
+    "owner_adapter": "1609d857b46ea973180c45271d87fcc92083f0a6",
+    "new_adapter": "a9fca768ccbba2a7520da1e8f704e10cb4d5d381",
+    "only_owner_adapter_delta": "MANIFEST constant exact current candidate manifest",
+    "manifest": "359e084b4a8aceb9120fda6a3be3e298646b4f1f",
+    "explicit_parent_aux_pins_verified": 14,
+    "additional_exact_owner_files": [
+      {
+        "path": "tests/integration/w8_frozen_npm.py",
+        "blob": "257ba8f110508ff30ad03212111cfe8e2299d801"
+      },
+      {
+        "path": "tests/integration/locks/mi01-frozen-npm/package-lock.json",
+        "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe"
+      },
+      {
+        "path": "tests/integration/test_w8_frozen_npm.py",
+        "blob": "efa2e0aa0d6dcdcead9c090248c2f0e659e0c148"
+      },
+      {
+        "path": "tests/integration/test_w8_frozen_npm_integration.py",
+        "blob": "7a3baa89862e69e057285ff2f37b0220e71628e2"
+      }
+    ],
+    "npm_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+    "npm_package_blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3",
+    "lock_graph": "61/61 registry integrity syntax and direct/override version parity PASS, no fresh tarball or actual helper execution",
+    "preserved": "original inherited runner P23/P24; historical C50 R2 contract not repinned; product tree unchanged",
+    "remaining": "full inherited audit and complete 586 byte manifest audit NOT_RUN; C50 cryptography46 vs50 and FastAPI version + runtime requalification/approval remain HOLD; new formal W8 approval needed for exact manifest/locks; no review SHA substituted",
+    "new_tests": 0
   }
 }
