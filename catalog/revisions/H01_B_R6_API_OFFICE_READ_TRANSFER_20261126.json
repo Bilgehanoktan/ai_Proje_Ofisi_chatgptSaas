@@ -1,0 +1,85 @@
+{
+  "task": "H01-B-R6-API-OFFICE-READ-TRANSFER-20261126",
+  "authorization": "ea6c8778f96ab50b8c1eb24c0efa0bd055151f21",
+  "parent": "5dd94b135000baeb38b629aa5f62a84a4e507d98",
+  "source_delivery": "9818660fc71648841288f7bc59fc179eac3ee29c",
+  "source_tree": "6dd3b83a9f0aee5d2a39fce374779b284fb661fb",
+  "scope": [
+    {
+      "path": "product/ai-company-os-backend/app/api/demo.py",
+      "before": "4d80172bc467953039ff57296055f68d740a3ff2",
+      "after": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+      "bytes": 5118,
+      "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+      "before": null,
+      "after": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+      "bytes": 5654,
+      "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca"
+    },
+    {
+      "path": "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "before": "75691925ab0cd294b878831a3210f101630320ca",
+      "after": "57df02ba951f0a40c8b5525974a9a6555b67c60d",
+      "bytes": 654,
+      "sha256": "455fe30b40973316792bd1462c9efc2dd62968380dbda0f4d39045de651fd92c"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+      "before": "b19455b413e4cf706ba8c15b5d065def91b0537b",
+      "after": "b27c4734962c1832db45e55cdcade9cca5f2e4b5",
+      "bytes": 2359,
+      "sha256": "645dfeb2438cd98e146600312be0077a61ac9b96a3690af023240d0ad1486eb6"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j16-office-composition.test.cjs",
+      "before": "d16bd96d948ea5fb83701b6c4edfe5b416b2869a",
+      "after": "f55f72ffc1ec9c5de81b4be0fd13d2a5f01d5fe5",
+      "bytes": 4029,
+      "sha256": "c9b66a7d45fb298647ad1d74179f61dcc37733beb41bea08894e1f4036fc1431"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+      "before": "3518a5b465b2863f1d29009a540499b3ba55ab37",
+      "after": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+      "bytes": 6849,
+      "sha256": "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932"
+    }
+  ],
+  "technical_disposition": "APPROVED_FOR_DEVELOPMENT_SOURCE_TRANSFER: read-only fixed D0 plan pins and canonical type-sensitive response, no-store; common bounded JSON reader with late transport cleanup; Office GET reuses helper without weakening strict MIME, redirect, size, parser or deadline. No command/write/grant/schema or dependency changes.",
+  "review": "PR47 exact two blobs; fixture preimages exact; PR50/51 older MIME alternatives not imported; retain anchored strict regex and shared helper. PR38 two exact test successors for existing Office/Agent Directory routes. Six changed payload bytes checked; full HTTP9, original affected frontend runtime/build/browser NOT_RUN; do not claim their acceptance.",
+  "evidence": [
+    "R6_READER_CLEANUP_20261126 10/10 selected +7 transport",
+    "R6_READER_OFFICE_COMPOSED_20261126 prior Office 8/8",
+    "R6_W8_UI_REQUALIFICATION_20261126 23/23 scoped prior",
+    "PR47 exact fixed plan fixture checks; HTTP9 NOT_RUN"
+  ],
+  "manifest": {
+    "entries": 572,
+    "sha256": "d0fc577806702d5ea3e57331558616ebb0c3b544ac3c7e09c92ff007736e87ec",
+    "changed_payload_sha256": "6/6"
+  },
+  "gates": {
+    "IAM_T1": "HOLD original signed wrapper 12 and G7 exact 7 pending",
+    "C50_R9": "HOLD",
+    "API9": "NOT_RUN",
+    "C07": "HOLD",
+    "C08": "NOT_RUN",
+    "C05": "HOLD",
+    "independent": "HOLD",
+    "full_build": "NOT_RUN"
+  },
+  "acceptance": {
+    "core": "12/16",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "iv": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "Ordinary revert of this source transfer; preserve existing branch and previous transfers.",
+  "limitations": "Full source ZIP and full master review incomplete. Fresh full source byte rehash and full execution not performed; existing evidence is scoped, not new combined proof."
+}

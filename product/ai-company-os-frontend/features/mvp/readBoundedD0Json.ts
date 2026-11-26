@@ -1,15 +1,24 @@
 /** Bound every asynchronous stage of a local-only D0 JSON proxy to one deadline.
  *  Not a production auth, tenant or egress adapter. */
-function beforeDeadline<T>(work: Promise<T>, signal: AbortSignal): Promise<T> {
+function beforeDeadline<T>(work: Promise<T>, signal: AbortSignal, onLateValue?: (value: T) => void): Promise<T> {
   return new Promise<T>((resolve, reject) => {
-    if (signal.aborted) { reject(Error('deadline')); return; }
     const abort = () => reject(Error('deadline'));
     signal.addEventListener('abort', abort, {once: true});
     work.then(
-      value => {signal.removeEventListener('abort', abort); resolve(value);},
+      value => {
+        signal.removeEventListener('abort', abort);
+        if (signal.aborted) {onLateValue?.(value); reject(Error('deadline')); return;}
+        resolve(value);
+      },
       error => {signal.removeEventListener('abort', abort); reject(error);},
     );
+    // Attach handlers even when the deadline has already expired.
+    if (signal.aborted) abort();
   });
+}
+
+function cancelResponse(response: Response): void {
+  if (response.body && !response.body.locked) void response.body.cancel().catch(() => {});
 }
 
 export async function readBoundedD0Json(
@@ -20,9 +29,12 @@ export async function readBoundedD0Json(
   const signal = AbortSignal.timeout(2500);
   const response = await beforeDeadline(fetch(endpoint, {
     method:'GET',cache:'no-store',redirect:'error',signal,headers:{Accept:'application/json'},
-  }), signal);
-  if (!response.ok || !/^[\t ]*application\/json[\t ]*(?:;[\t ]*charset[\t ]*=[\t ]*(?:utf-8|"utf-8")[\t ]*)?(?![\s\S])/i.test(response.headers.get('content-type')??'') || !response.body)
+  }), signal, cancelResponse);
+  if (signal.aborted) {cancelResponse(response); throw Error('deadline');}
+  if (!response.ok || !/^[\t ]*application\/json[\t ]*(?:;[\t ]*charset[\t ]*=[\t ]*(?:utf-8|"utf-8")[\t ]*)?(?![\s\S])/i.test(response.headers.get('content-type')??'') || !response.body) {
+    cancelResponse(response);
     throw Error('response');
+  }
   const reader = response.body.getReader();
   const decoder = new TextDecoder('utf-8', {fatal:true});
   let size = 0, text = '';
