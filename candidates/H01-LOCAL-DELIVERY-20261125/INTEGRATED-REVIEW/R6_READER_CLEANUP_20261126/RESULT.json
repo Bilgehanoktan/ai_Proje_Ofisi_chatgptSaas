@@ -1,0 +1,58 @@
+{
+  "task": "MI05-R6-READER-CLEANUP-20261126",
+  "status": "OWNER_HOLD_ISOLATED_FIX",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "baseline": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "original_blob": "b19455b413e4cf706ba8c15b5d065def91b0537b",
+  "original_path": "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+  "candidate_blob": "b27c4734962c1832db45e55cdcade9cca5f2e4b5",
+  "source_tree": "ea89d4c232461f5649409a934e9d25d2d2bb8d2a",
+  "manifest_blob": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "candidate_sha256": "645dfeb2438cd98e146600312be0077a61ac9b96a3690af023240d0ad1486eb6",
+  "test_sha256": "5e16e2e7d19858f485e2f55c069678912580103406349be216cc866ed42cbff8",
+  "before": {
+    "pass": 3,
+    "fail": 7,
+    "exit": 1,
+    "raw_sha256": "dd85f0cb17bf8354b50534da6a0225b149054b3fda1ea9b409506eb5feaf309f"
+  },
+  "after": {
+    "pass": 10,
+    "fail": 0,
+    "exit": 0,
+    "raw_sha256": "c1ce6d5c67a58d2b4d9e8a8ef1aebd14d42be342998a764b9afd2a7903580de1"
+  },
+  "transport_requalification": {
+    "pass": 7,
+    "fail": 0,
+    "exit": 0,
+    "not_new_methods": true,
+    "source_commit": "4456933dfa514d0a989cf818c6e4c1d8da7d5ef7",
+    "raw_sha256": "467adc8123d80df55371bbaf2df4f25b4505bc5cba69bd4ee2a9bb496294d21c"
+  },
+  "environment": "Linux Node22.16.0 TS5.8.3 strict compile, mocked fetch for cleanup; real loopback synthetic HTTP fixture for unchanged transport tests. No new packages.",
+  "commands": [
+    "tsc --strict --target ES2022 --module commonjs --outDir before source/readBoundedD0Json.ts",
+    "node reader-cleanup.test.cjs before/readBoundedD0Json.js",
+    "tsc --strict --target ES2022 --module commonjs --outDir after candidate/readBoundedD0Json.ts",
+    "node reader-cleanup.test.cjs after/readBoundedD0Json.js",
+    "existing transport compile.cjs with candidate helper, NODE_PATH=$(npm root -g) node compile.cjs && node --test transport.test.cjs"
+  ],
+  "gzip_logs": [
+    {
+      "path": "before.tap.gz",
+      "sha": "3e3308eb99536065d4de8a5a864a3a4111918e17"
+    },
+    {
+      "path": "after.tap.gz",
+      "sha": "0ba6e6ee385f377e8892e1bc507110c6d1085401"
+    },
+    {
+      "path": "transport-after.tap.gz",
+      "sha": "3af6b702d98dcee67d5f583cc4d343abcb0fd552"
+    }
+  ],
+  "archive_sha256": "d8029cc3a225ea50604727b46d571933b4780d5f06ae1fb060ce8426af1605f9",
+  "limits": "No full checkout, full build, actual FastAPI, original 28 tests or Chromium/IV. No source-owner approval. Separate Office route not modified. Product manifest unchanged. No change in canonical acceptance. Source owner must review exact delta and rebind manifest/run original four consumers prior to promotion.",
+  "rollback": "Normal revert of archival evidence commit only; preserve original R6 and Codex branch."
+}
