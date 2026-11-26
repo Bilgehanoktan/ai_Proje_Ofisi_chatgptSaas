@@ -15224,5 +15224,28 @@
       "ordinal_24_delta": 0
     },
     "rollback": "No product promotion: preserve canonical; revert this single governance commit normally if disproven; preserve prior historical status and PRs."
+  },
+  "central_writer_authorization_20261126": {
+    "decision": "H01 B",
+    "verbatim": "B seçeneğini H01 olarak onaylıyorum. ChatGPT'yi MI-01–MI-10 kapsamında kaynak uzlaştırması, teknik kaynak sahibi incelemesi ve kontrollü integration/product-dev aktarımı için merkezi yetkili yazıcı olarak görevlendiriyorum. Mevcut çakışma, bütünlük ve zorunlu teknik inceleme koşullarını koru. Bağımsız Security/IV, gerçek IAM/T1, harcama, CI, main ve PROD kapılarını değiştirme. Kararı kaydet ve uygulanabilir entegrasyonları gerçekleştir.",
+    "role": "ChatGPT central technical source reviewer and controlled canonical writer",
+    "scope": "MI-01–MI-10 technical source only",
+    "excluded": [
+      "independent Security/IV",
+      "real IAM/T1",
+      "spend",
+      "CI",
+      "main",
+      "PROD"
+    ],
+    "conditions": "Exact scope, source/semantic review, manifest, conflict control, mandatory gates, rollback, expected-parent",
+    "canonical_at_decision": "c7eba2ca6da7328fb3a39585a048c8e1941f0b1a",
+    "status": "AUTHORIZED_NOT_AUTO_ACCEPTED",
+    "goals": {
+      "UI": "40/40",
+      "CORE": "16/16",
+      "INTEGRATION": "100%; denominator pending",
+      "MVP": "11/11"
+    }
   }
 }
