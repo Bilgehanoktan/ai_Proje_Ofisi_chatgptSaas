@@ -1,0 +1,77 @@
+{
+  "task": "MI05-R6-OFFICE-READER-REUSE-20261126",
+  "status": "OWNER_HOLD_ISOLATED_SOURCE_DELTA",
+  "baseline_archive_commit": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "source_tree": "ea89d4c232461f5649409a934e9d25d2d2bb8d2a",
+  "manifest_blob": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "reader_candidate_commit": "c07e42aef43cf7a7fbe21feb80d08c1522860bd0",
+  "manifest_delta": {
+    "ai-company-os-frontend/app/api/demo/office-workbench/route.ts": {
+      "before": {
+        "bytes": 2191,
+        "sha256": "eba48b58f9fc12e12f3f2aabeac33b557c75f7494f2bfd79e8ccfefce2dc723f",
+        "git_blob": "75691925ab0cd294b878831a3210f101630320ca"
+      },
+      "after": {
+        "bytes": 654,
+        "sha256": "455fe30b40973316792bd1462c9efc2dd62968380dbda0f4d39045de651fd92c",
+        "git_blob": "57df02ba951f0a40c8b5525974a9a6555b67c60d"
+      }
+    },
+    "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": {
+      "before": {
+        "bytes": 1904,
+        "sha256": "0356dac780530cb9c93c17e35219f2e37cb40a0a29076a64dc886a401eec52e9",
+        "git_blob": "b19455b413e4cf706ba8c15b5d065def91b0537b"
+      },
+      "after": {
+        "bytes": 2359,
+        "sha256": "645dfeb2438cd98e146600312be0077a61ac9b96a3690af023240d0ad1486eb6",
+        "git_blob": "b27c4734962c1832db45e55cdcade9cca5f2e4b5"
+      },
+      "note": "Reuse existing fix from reader_candidate_commit; no duplicate credit."
+    }
+  },
+  "unchanged_dependencies": {
+    "officeWorkbenchProjection.ts": "d8d0cf4ce765651bd5490df1482a92ff0c668943",
+    "localBackend.ts": "9231711d7efb18dd18b68e3322f62337a6477484"
+  },
+  "catalog": {
+    "symbol": "GET",
+    "endpoint": "/demo/v1/office/workbench-projection",
+    "dependency": "readBoundedD0Json",
+    "cap_bytes": 4096,
+    "deadline_ms": 2500,
+    "api_db_event_dependency_change": false,
+    "wire": "same D0 200/503 no-store, original parser, no live authority"
+  },
+  "test": {
+    "environment": "Linux Node 22.16.0 TS 5.8.3 strict compile; native Web Streams and injected fetch. No actual backend.",
+    "before": {
+      "pass": 4,
+      "fail": 4,
+      "exit": 1,
+      "raw_sha256": "79a8606cedc989fa51fe17a50a5bab39d5349f2503ebe9cbdaa8c2ce528048c8"
+    },
+    "after": {
+      "pass": 8,
+      "fail": 0,
+      "exit": 0,
+      "raw_sha256": "061a86b597e01892fdee3c86f92c7bccce728bcacaf9b772e8cc14131c4a3080"
+    },
+    "source_raw_sha256": "ee715d6106b413eb66ad56ae9838a776a80f0b80bc21e01c63ea7dc6809f374b",
+    "ambient_declaration": "declare const process: {env: Record<string, string | undefined>};",
+    "commands": [
+      "tsc --strict --target ES2022 --module commonjs --outDir <before-or-after>/js process.d.ts <before-or-after>/app/api/demo/office-workbench/route.ts",
+      "node office-reader.test.cjs <before-or-after>/js/app/api/demo/office-workbench/route.js"
+    ]
+  },
+  "archive_sha256": "c900c991b48a6dd3dfc3de209f3987bd1e7b76a1dced5b3626a2ee747e8bbe9b",
+  "owner": "MI05 PR22 and PR26/51 source owners; central manifest owner",
+  "next": "Review both exact source entries, rebind combined manifest then Codex runs original Office suite/full build and browser. PR52 C50/runtime security stays separate HOLD.",
+  "rollback": "Do not apply isolated candidate or normal revert of archival commit. If later promoted revert paired source entries and manifest together.",
+  "limits": "Full exact checkout/manifest rebuild and full Design Master review incomplete; no actual FastAPI, 28 tests, Chromium, independent approval or canonical promotion. Codex branch unchanged.",
+  "canonical_delta": 0,
+  "acceptance_delta": 0
+}
