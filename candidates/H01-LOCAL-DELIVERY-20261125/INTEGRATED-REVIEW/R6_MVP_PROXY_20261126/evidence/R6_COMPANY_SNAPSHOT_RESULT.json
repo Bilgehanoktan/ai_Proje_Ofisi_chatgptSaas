@@ -1,0 +1,42 @@
+{
+  "classification": "ACTUAL_ORIGINAL_R6_0224_SQLITE_COMPANY_READBACK_ONLY",
+  "baseline": "8bc3786d1de02cf70c59bb44566553dea50579ec",
+  "canonical": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "manifest": "45be0e18204493dcdb883eba75b12279d15f3190",
+  "governance": "4cce3cd8b93760160a2809c0badacd461692b098",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner": "MI02 Core/DB, MI03/04 IAM/ORG/T1; source-owner disposition HOLD",
+  "environment": "CPython 3.13.5 / SQLite 3.46.1, -B -S, original disposable SQLite fixture and SELECT-only dialect; no external dependencies installed",
+  "command": "cd product/ai-company-os-backend && python -B -S -m unittest discover -s tests -p test_research_company_snapshot_0224.py -v",
+  "source_pins": {
+    "total": 26,
+    "manifest_product": 19,
+    "sql_outside_manifest": 7,
+    "verified": 26,
+    "git_blob": "08107eb911bf9b3253dbb2c8585fbaba4087fc12",
+    "sha256": "824c9ffb7f602441e737f3e05847f11f022135d15fc453d36492788fbc00d96a",
+    "file": "R6_COMPANY_SNAPSHOT_PINS.json"
+  },
+  "result": {
+    "passed": 8,
+    "total": 8,
+    "exit": 0,
+    "log_blob": "1fe632dceefcd6f141366ea45bcd7ce4b647778c",
+    "log_sha256": "15ba50833164655d0ccd8d2beee7e8c757732d13104a76145674fea424d6c2b9",
+    "log": "R6_COMPANY_SNAPSHOT.log"
+  },
+  "scope": "Existing Research plan, exact persisted membership/head pins, company event order, sample reservation and budget, tamper rejection, DB bytes unchanged on read. Original seeded test uses direct fixture SQL, not T1 writer. No new prototype or parallel source.",
+  "prior_evidence": "Previous pure roster 12 and original PR54 82 methods not rerun or recounted.",
+  "blocked": "Original test_research_t1_integration_0225.py and test_pinned_research_t1_0225.py not run: remaining exact transaction/history source closure not recovered locally. Source owner reviews PR31/44/46/47/49/54/55 empty; PR50/51 COMMENTED only. Full R6 checkout, reviewed dependency/security gates, real PostgreSQL, Memory result proof, actual HTTP/CEO integration and IV HOLD. Previous shared SSE patch remains unapplied. Complete Design Master review not completed.",
+  "changes": {
+    "product_code": 0,
+    "manifest": 0,
+    "canonical_transfer": 0,
+    "architecture_catalog": "No normative change; evidence only for Core/DB readback, not a new criterion.",
+    "acceptance_delta_pp": 0,
+    "ordinal_delta": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "next": "Run original 0225 T1 SQLite writer and pinned history tests using remaining exact sources, then original 0224 result archive/authority seam under reviewed dependencies. Preserve independent gates.",
+  "rollback": "Normal revert evidence-only commit; no DB rollback or product changes."
+}
