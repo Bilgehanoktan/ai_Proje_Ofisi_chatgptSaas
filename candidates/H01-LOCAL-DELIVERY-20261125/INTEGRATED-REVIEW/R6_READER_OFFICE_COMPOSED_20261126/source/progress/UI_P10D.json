@@ -1,0 +1,165 @@
+{
+  "revision": "UI-P10D",
+  "baseline": "UI-P10C",
+  "core_ui_base": "0210",
+  "core_latest_separate": "0211",
+  "original_gate_count": 40,
+  "done": 21,
+  "delta": 0,
+  "acceptance": {
+    "done": 0,
+    "total": 7
+  },
+  "tracks": [
+    {
+      "id": "A",
+      "done": 3,
+      "total": 5,
+      "status": "MVP 10 original isolated; snapshot/wire 15; prior regressions 33"
+    },
+    {
+      "id": "B",
+      "done": 3,
+      "total": 5,
+      "status": "Historical original chains 5/7; product 0/7"
+    },
+    {
+      "id": "C",
+      "done": 3,
+      "total": 5,
+      "status": "Historical metrics and 8 engine findings, no live KPI"
+    },
+    {
+      "id": "D",
+      "done": 2,
+      "total": 5,
+      "status": "Plant/monitor on four reserved desks; 10 real SVG browser checks"
+    },
+    {
+      "id": "E",
+      "done": 3,
+      "total": 5,
+      "status": "Role filter recovery, dependency navigation and aria-sort; React NOT_RUN"
+    },
+    {
+      "id": "F",
+      "done": 2,
+      "total": 5,
+      "status": "MVP model/memory related diagnostic boundaries; no authority"
+    },
+    {
+      "id": "G",
+      "done": 2,
+      "total": 5,
+      "status": "Lifecycle timeline and Outbox snapshot distinction; no ledger join"
+    },
+    {
+      "id": "H",
+      "done": 3,
+      "total": 5,
+      "status": "Evidence timeline and contextual state; no full notifications acceptance"
+    }
+  ],
+  "round": [
+    {
+      "id": 1,
+      "task": "MVP isolated original chain",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 2,
+      "task": "Terminal lifecycle",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 3,
+      "task": "Prefix lifecycle",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 4,
+      "task": "7/7 product API",
+      "status": "BLOCKED"
+    },
+    {
+      "id": 5,
+      "task": "CEO KPI evidence",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 6,
+      "task": "Office desk decoration",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 7,
+      "task": "Agent and Project interactions",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 8,
+      "task": "Finance and Security timeline",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 9,
+      "task": "EDS notifications",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 10,
+      "task": "Next build/browser",
+      "status": "BLOCKED"
+    },
+    {
+      "id": 11,
+      "task": "0211 integration review",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 12,
+      "task": "Catalog and handover",
+      "status": "DONE"
+    }
+  ],
+  "core_scores_changed": false,
+  "next_ui": "UI-P10E",
+  "next_core": "0212",
+  "evidence": {
+    "revision": "UI-P10D",
+    "source_commit": "8a40ab40e07313d94e588edeaf814f735b241eba",
+    "parent": "b7f58d86f943cc1ad58ad2c60198f8cb2b500fb0",
+    "manifest_entries": 362,
+    "product_files": 363,
+    "frontend_files": 151,
+    "unchanged_parent_manifest_entries": 349,
+    "manifest_path_size_match": 362,
+    "new_model": 16,
+    "prior_model_regression": 33,
+    "mvp_original_isolated_http": 10,
+    "mvp_scope": "exact inspect_mvp and original handler AST, compiled original GET, isolated FastAPI; not app.main",
+    "snapshot_boundary": 10,
+    "prefix_wire": 5,
+    "prefix_wire_parser": 4,
+    "standalone_svg_browser": 10,
+    "tsx_syntax": 4,
+    "full_build": "BLOCKED_NEXT_NOT_FOUND",
+    "product_browser": "NOT_RUN",
+    "product_api": "0/7 NOT_RUN",
+    "historical_original_isolated_chains": "5/7 across rounds; earlier chains not rerun",
+    "terminal_prefix_full_chain": "BLOCKED exact T1 mapping dependencies",
+    "independent": "HOLD",
+    "environment": "Node22.16 TS5.8.3 FastAPI0.128.2 Uvicorn0.48.0; not pinned full product",
+    "core_review": {
+      "ancestor": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "core_source": "b5b83e548f2e03c9e7a8c5a3b1a11b00849e5e1d",
+      "core_added": [
+        "app/core/transaction/intent_authority.py",
+        "tests/test_intent_authority_0211.py"
+      ],
+      "ui_changed_since_ancestor": 22,
+      "product_manifest_entry_overlap": 0,
+      "merge": "NOT_PERFORMED; manifest and handover reconciliation required"
+    }
+  }
+}

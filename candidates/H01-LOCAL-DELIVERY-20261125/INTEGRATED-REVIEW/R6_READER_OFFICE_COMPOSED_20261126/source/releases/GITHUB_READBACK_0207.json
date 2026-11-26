@@ -1,0 +1,64 @@
+{
+  "revision": "0207",
+  "baseline": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "source_commit": "d06e65dba202d79740b05980eea739596ad134c3",
+  "tree": "ad81b109b556e6d81d189b5c8787d5d9f71dd431",
+  "manifest_blob": "573166141f186245b94b818b9c0b1cdaf85d37e9",
+  "manifest_entries": 335,
+  "product_files": 336,
+  "prior_non_manifest_files_unchanged": 334,
+  "source_tree_files": 1345,
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_runtime_memory_model_0207.py",
+      "kind": "add",
+      "blob": "01f3110955e4c9e02ed7244a305216163d34df99"
+    },
+    {
+      "path": "tests/integration/core_0207_source_lock.json",
+      "kind": "add",
+      "blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c"
+    },
+    {
+      "path": "tests/integration/run_core_0207.py",
+      "kind": "add",
+      "blob": "b019a5e60cfff4183b00e99f252ffe00bc164eda"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "blob": "573166141f186245b94b818b9c0b1cdaf85d37e9"
+    }
+  ],
+  "local_verified_baseline_files": 28,
+  "local_verified_new_files": 1,
+  "evidence_path": "tests/evidence/TEST_EVIDENCE_0207.json",
+  "evidence_blob": "0b26cd09594edb5b13449ddc56aba413dd222c22",
+  "evidence_sha256": "803ec3bd3694b3879cbf4df440092477d73b3a7199d82f25a032bc946c238da7",
+  "local_slice_zip_sha256": "2cafac6e498e3c94eac4b226be34ea1217e77fc24a03d35100988d997b94dd4c",
+  "full_archive_downloaded": false,
+  "local_full_checkout": "BLOCKED_DNS",
+  "core_lock": {
+    "blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "files": 55,
+    "expected_cases": 29,
+    "status": "STATIC_CANDIDATE_NOT_RUN"
+  },
+  "tests": {
+    "passed": 72,
+    "new": 7,
+    "regression": 65,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "main_unchanged_expected": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "CI": "NOT_RUN"
+}

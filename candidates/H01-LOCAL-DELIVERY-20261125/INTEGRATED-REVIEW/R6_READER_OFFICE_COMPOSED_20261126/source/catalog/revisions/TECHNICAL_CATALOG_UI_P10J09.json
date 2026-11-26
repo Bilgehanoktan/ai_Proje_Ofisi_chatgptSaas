@@ -1,0 +1,36 @@
+{
+  "revision": "UI-P10J-09",
+  "source_changes": [],
+  "audit": "tests/evidence/TEST_EVIDENCE_UI_P10J09.json",
+  "review": "docs/UI-P10J/P10J09_REAL_UI_REVIEW.md",
+  "planned": [
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+      "symbols": [
+        "Navigation",
+        "toggleCompact",
+        "clearSearch"
+      ],
+      "reason": "mobile first viewport",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.module.css",
+      "reason": "mobile navigation layout",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "symbols": [
+        "Dashboard",
+        "DashboardView"
+      ],
+      "reason": "summary and evidence hierarchy; shared conflict",
+      "status": "HOLD_RECONCILIATION"
+    }
+  ],
+  "api_changes": [],
+  "db_changes": [],
+  "dependency_changes": [],
+  "rollback": "tested source 752b225d"
+}

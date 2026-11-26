@@ -1,0 +1,80 @@
+{
+  "revision": "0187-W1-I",
+  "source_commit": "11eed33a9e9d0bf14a075d02fdd04d461197c683",
+  "parents": [
+    "89d12284546077a6e69374c7ed794235c5e9703f",
+    "67aa93aed3023c51de6b865d80fc96bf202e20e8"
+  ],
+  "changed_files": [
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "symbols": [
+        "Dashboard",
+        "DashboardView"
+      ],
+      "why": "Preserve 0187 admission while mounting W1 FinanceStudio/SecurityStudio",
+      "how": "Minimal import/mount changes and display revision on 0187 target; no changed props or route",
+      "dependencies": [
+        "AdmissionProjectionPanel",
+        "FinanceStudio",
+        "SecurityStudio",
+        "DevelopmentReviewPanel",
+        "OfficePanel"
+      ],
+      "rollback": "Revert merge against first parent; never copy old Dashboard whole into newer branch."
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx",
+      "symbols": [
+        "OfficePanel",
+        "SnapshotFloor",
+        "Display"
+      ],
+      "why": "Preserve historical Office Workbench readback with premium gallery",
+      "how": "W1 scene branch and snapshot label; retain 0187 floor-1 workbench, engine/list and JOIN_HOLD",
+      "dependencies": [
+        "OfficeIllustration",
+        "OfficeWorkbenchPanel",
+        "OfficeScene",
+        "OfficeControls"
+      ],
+      "diagnosis": "Check floor/revision guard, static fallback, fixed loopback proxy, data source scope; never join geometry to actual agents."
+    }
+  ],
+  "carried_ui_catalogs": [
+    "TECHNICAL_CATALOG_W1_0183A.json",
+    "TECHNICAL_CATALOG_W1_0183B.json",
+    "TECHNICAL_CATALOG_W1_0183C.json",
+    "TECHNICAL_CATALOG_W1_0183D.json",
+    "TECHNICAL_CATALOG_0185_W1_E.json",
+    "TECHNICAL_CATALOG_0185_W1_F.json",
+    "TECHNICAL_CATALOG_0185_W1_G.json",
+    "TECHNICAL_CATALOG_0185_W1_H.json"
+  ],
+  "backend_catalog": "TECHNICAL_CATALOG_0187.json",
+  "full_delta": "docs/0187-W1-I/SCOPE.json",
+  "tools": [
+    {
+      "path": "tests/integration/office-workbench-merge.test.cjs",
+      "purpose": "8 synthetic parse/mock route cases; PASS"
+    },
+    {
+      "path": "tests/integration/run_combined_helpers.cjs",
+      "purpose": "Pinned helper suite launcher; syntax only, full run NOT_RUN"
+    },
+    {
+      "path": "tests/integration/verify_checkout.py",
+      "purpose": "Exact local byte manifest + pair parity; syntax only, complete checkout unavailable"
+    },
+    {
+      "path": "tests/integration/browser_0187_w1.py",
+      "purpose": "52 actual product screenshot baseline captures; syntax only, full browser NOT_RUN"
+    }
+  ],
+  "api_changes": 0,
+  "db_changes": 0,
+  "contract_changes": 0,
+  "dependency_changes": 0,
+  "full_acceptance": "OPEN",
+  "independent_acceptance": "HOLD"
+}

@@ -1,0 +1,32 @@
+/* DOC-REV-0177 isolated EDS candidate; load after globals.css. No domain state. */
+.eds-frame[data-eds-theme=dark]{color-scheme:dark;--bg:#101522;--panel:#1d2535;--text:#eef2f8;--muted:#aab7ca;--line:#39465b;--accent:#f27869;--surface-raised:#273247;--outline-strong:#70839b;--focus:#9de8df;--selected:#3c303e;--selected-text:#ffd3ca;--hold-bg:#30271d;--hold-text:#f7dba9;--hold-line:#9b7947}
+.eds-frame[data-eds-theme=light]{color-scheme:light;--bg:#f3f5f9;--panel:#ffffff;--text:#172033;--muted:#526176;--line:#c7d0dd;--accent:#a83229;--surface-raised:#e9eef6;--outline-strong:#63728a;--focus:#146c63;--selected:#fce4e0;--selected-text:#85271f;--hold-bg:#fff3d8;--hold-text:#704818;--hold-line:#a57534}
+.eds-frame{min-height:100dvh;background:var(--bg);color:var(--text)}
+.eds-frame .shell,.eds-frame main{background:var(--bg);color:var(--text)}
+.eds-frame .sidebar,.eds-frame .panel,.eds-frame .metric,.eds-frame .item,.eds-frame .lane,.eds-frame .snapshot-strip,.eds-frame .office-engine-preview{background:var(--panel);color:var(--text);border-color:var(--line)}
+.eds-frame .panel,.eds-frame .metric,.eds-frame .item{border-radius:16px}
+.eds-frame .sidebar{border-radius:0;box-shadow:0 0 24px #0001}
+.eds-frame .navlabel,.eds-frame .eyebrow,.eds-frame .navicon,.eds-frame .item p,.eds-frame .role .end,.eds-frame small,.eds-frame .sub,.eds-frame .muted,.eds-frame footer{color:var(--muted)}
+.eds-frame button,.eds-frame select,.eds-frame .nav-link,.eds-frame .action-link,.eds-frame .role{background:var(--surface-raised);color:var(--text);border-color:var(--line);min-height:44px}
+.eds-frame .sidebar nav button,.eds-frame .sidebar nav .nav-link{background:transparent;border:1px solid transparent}
+.eds-frame button[aria-pressed=true],.eds-frame .active,.eds-frame [aria-current=page]{background:var(--selected)!important;color:var(--selected-text)!important;border-color:var(--accent)!important}
+.eds-frame button:hover:not(:disabled),.eds-frame .nav-link:hover{border-color:var(--outline-strong)}
+.eds-frame :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.eds-frame button:disabled{opacity:.55;cursor:not-allowed}
+.eds-frame .notice,.eds-frame .pill,.eds-frame .layout-hold{background:var(--hold-bg);color:var(--hold-text);border-color:var(--hold-line)}
+.eds-frame .item .status{color:var(--hold-text)}
+.eds-frame .empty,.eds-frame .reason{border-color:var(--outline-strong)}
+.eds-frame .skip-link{background:var(--selected);color:var(--selected-text)}
+.eds-frame .engine-fallback span,.eds-frame .scene .corner{background:#101b29;color:#eef2f8}
+.eds-frame .eds-nav{gap:6px}
+.eds-frame .eds-card{min-width:0;transition:transform 150ms ease,border-color 150ms ease;overflow-wrap:anywhere}
+.eds-frame .eds-value{font-size:clamp(24px,3vw,36px);font-weight:700}
+.eds-frame .eds-waves .dag-wave{border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--panel)}
+.eds-frame .eds-waves h4{margin:0;color:var(--muted);font-size:12px}
+.eds-frame .eds-evidence{display:grid;gap:8px;margin:10px 0}
+.eds-frame .eds-evidence>div{border-left:3px solid var(--hold-line);padding:8px;background:var(--hold-bg);color:var(--hold-text);overflow-wrap:anywhere}
+.eds-frame .eds-evidence small{display:block;color:var(--hold-text)}
+@media(hover:hover) and (pointer:fine){.eds-frame .eds-card:hover{transform:translateY(-2px);border-color:var(--outline-strong)}}
+@media(max-width:680px){.eds-frame .sidebar nav{display:flex;flex-wrap:wrap}.eds-frame .sidebar nav button,.eds-frame .sidebar nav .nav-link{min-height:44px}.eds-frame .topline{align-items:flex-start}.eds-frame .floor-switch button{min-width:0;width:100%}}
+@media(max-width:400px){.eds-frame .metrics,.eds-frame .sectiongrid,.eds-frame .agentgrid,.eds-frame .lanegrid,.eds-frame .station-list{grid-template-columns:1fr}.eds-frame main{padding:10px}.eds-frame .panel{padding:10px}.eds-frame .workspace{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.eds-frame *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.eds-frame .eds-card:hover{transform:none}}

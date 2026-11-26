@@ -1,0 +1,68 @@
+{
+  "revision": "0207",
+  "baseline": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+  "source_commit": "d06e65dba202d79740b05980eea739596ad134c3",
+  "parallel": [
+    {
+      "line": "A",
+      "scope": "Retained snapshot and terminal lifecycle 12",
+      "state": "STATIC_LOCK_READY_NOT_RUN"
+    },
+    {
+      "line": "B",
+      "scope": "Lifecycle projection and prefix 17",
+      "state": "STATIC_LOCK_READY_NOT_RUN"
+    },
+    {
+      "line": "C",
+      "scope": "CompanyCoordinatedMapping + original T1 / terminal anchor / recovery",
+      "state": "NOT_RUN"
+    },
+    {
+      "line": "D",
+      "scope": "Runtime, Memory, Model",
+      "state": "7_NEW_41_AI_MEMORY_REGRESSION_PASS",
+      "finding": "0207-D-01"
+    },
+    {
+      "line": "E",
+      "scope": "Office/CEO/Workflow projection and 7 read-only API/proxy endpoints",
+      "state": "NOT_RUN"
+    },
+    {
+      "line": "F",
+      "scope": "PostgreSQL / R03 / owner and non-owner RLS / independent witness",
+      "state": "HOLD_NOT_RUN"
+    },
+    {
+      "line": "G",
+      "scope": "Full build, browser and transitive lock",
+      "state": "NOT_RUN"
+    }
+  ],
+  "tests": {
+    "passed": 72,
+    "new": 7,
+    "regression": 65,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "observed": "A new memory revocation/tombstone changes memory decision to STALE_HOLD and old snapshot to CAS_HOLD, but model envelope still structurally matches because it does not bind the memory pin. Both remain DENY/HOLD; no live call, data release or spend.",
+      "required": "Design a combined immutable admission/input provenance binding including memory snapshot/revocation, ACL, run/version/attempt, lease/fence, witness/policy epoch, provider registry and input digest. Recheck at authority/effect boundary; test revocation race and rollback. No self-grant or normative change."
+    }
+  ],
+  "next": "handover/NEXT_STEP_0207.md"
+}

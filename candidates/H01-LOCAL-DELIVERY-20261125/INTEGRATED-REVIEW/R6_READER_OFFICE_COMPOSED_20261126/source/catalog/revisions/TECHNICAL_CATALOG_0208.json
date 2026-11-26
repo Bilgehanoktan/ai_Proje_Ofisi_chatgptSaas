@@ -1,0 +1,225 @@
+{
+  "revision": "0208",
+  "baseline": "9bbc4bed75c56a36bcacc8c430a79bf3612aa85b",
+  "source_commit": "596529ed3d3de59b29065239b42033774e31af6e",
+  "source_tree": "95c90712a6c49853140882f6612187c0472e9184",
+  "product_files": 338,
+  "manifest_entries": 337,
+  "prior_non_manifest_files_unchanged": 334,
+  "changes": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "bytes": 3694,
+      "git_blob": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341",
+      "sha256": "786928f7b0a12af8995e20886dbabfd9139e0ff8ffef7a049c994adf987ca6b6",
+      "kind": "add",
+      "symbols": [
+        "JointContext",
+        "JointReview",
+        "joint_context_digest",
+        "inspect_joint_context"
+      ],
+      "dependencies": [
+        "app.core.agent_runtime.lifecycle.valid_scope",
+        "app.core.t1_review.digest_ok",
+        "SnapshotPin",
+        "_pin_ok",
+        "inspect_stored_memory_input",
+        "InvocationEnvelope",
+        "invocation_digest",
+        "inspect_invocation",
+        "dataclasses",
+        "hashlib",
+        "json"
+      ],
+      "purpose": "D0 joint immutable digest, bracket model review with exact memory span reads; all authority flags false."
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "bytes": 9580,
+      "git_blob": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1",
+      "sha256": "ac03b3ab7ce63b851853f61d8b68f76c17bcf1e7a61518e6c42acfd378ebe169",
+      "kind": "append",
+      "previous_blob": "c0fbed40fc09db7894e9c609bcff6d4c875d1376",
+      "symbols": [
+        "inspect_stored_memory_input"
+      ],
+      "dependencies": [
+        "SnapshotPin",
+        "_pin_ok",
+        "_valid_run",
+        "_connect",
+        "_head",
+        "_load",
+        "inspect_run_memory_access",
+        "sqlite3"
+      ],
+      "purpose": "Read-only snapshot and exact approved span compare; no bytes returned. Existing functions preserved."
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_joint_context_0208.py",
+      "bytes": 9128,
+      "git_blob": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd",
+      "sha256": "9fd2c905a6821d0bcf33e09ea707dae1ab190225b016d66ff7cf2ef60f63d822",
+      "kind": "add",
+      "symbols": [
+        "JointContextTests",
+        "setUp",
+        "review",
+        "repin",
+        "test_acl_deny_after_new_pin",
+        "test_changed_model_without_joint_digest",
+        "test_changed_pin_without_joint_digest",
+        "test_cross_principal",
+        "test_effect_cannot_be_pinned",
+        "test_exact_span_matches_without_authority",
+        "test_expired_lease",
+        "test_failed_revocation_transaction_preserves_pin",
+        "test_fence_drift",
+        "test_full_source_not_authorized_span",
+        "test_graph_pin_tampering_cannot_be_repinned",
+        "test_invalid_input_and_pin_shape",
+        "test_missing_store_and_tampered_raw",
+        "test_model_input_hash_must_match_even_with_exact_span",
+        "test_new_revoked_pin",
+        "test_old_pin_after_revocation",
+        "test_policy_drift",
+        "test_read_only_preserves_store",
+        "test_real_provider_cannot_be_pinned",
+        "test_registry_order_is_bound",
+        "test_repin_arbitrary_input_does_not_bypass_span",
+        "test_restore_external_witness_still_required",
+        "test_revocation_between_reads",
+        "test_run_drift",
+        "test_terminal",
+        "test_witness_drift"
+      ],
+      "dependencies": [
+        "test_runtime_memory_model_0207",
+        "joint_context",
+        "publish_snapshot",
+        "unittest.mock",
+        "sqlite3"
+      ],
+      "purpose": "26 actual D0 local tests including revocation interleave, rollback and restore limitation."
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "git_blob": "268f575b534bda97d8ed57a1f7f3f4de8bdf62cd",
+      "purpose": "337 records; one changed prior file and two new."
+    }
+  ],
+  "api_changes": [],
+  "database_schema_changes": [],
+  "event_schema_changes": [],
+  "dependency_version_changes": [],
+  "tests": {
+    "passed": 98,
+    "new": 26,
+    "regression": 72,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "source_lock": {
+    "remote_bytes_verified": 55,
+    "remote_product_sha256_verified": 49,
+    "sql_git_blob_verified": 6,
+    "local_exact_files": 8,
+    "local_missing_files": 47,
+    "target_tests": 29,
+    "status": "NOT_RUN"
+  },
+  "environment": {
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "cryptography": "46.0.4",
+    "uvicorn": "0.48.0",
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "chromium": "144.0.7559.96",
+    "postgresql": "NOT_AVAILABLE",
+    "psycopg": "NOT_AVAILABLE",
+    "frontend_dependencies": "NOT_RESOLVED"
+  },
+  "open_findings": [
+    {
+      "id": "0207-D-01",
+      "priority": "P0",
+      "status": "D0_JOINT_INSPECTION_PASS_EFFECT_GATE_HOLD",
+      "result": "JointContext binds memory generation/graph, invocation and registry. Exact span compare and second read deny stale pins/revocation. Historical independent model reader remains structural only. No default dispatch, real effect boundary or independent authority."
+    },
+    {
+      "id": "0208-D-02",
+      "priority": "P0",
+      "status": "OPEN_REPRODUCED",
+      "result": "A pre-revocation SQLite file copy with old caller pin still structurally matches. Local snapshot digest is not anti-restore proof. Independent restore-external latest witness and monotonic trusted head must be checked; actual effect atomicity remains HOLD."
+    }
+  ],
+  "parallel": [
+    {
+      "line": "A",
+      "priority": "P0",
+      "status": "REMOTE_BYTES_VERIFIED_NOT_RUN",
+      "scope": "5 retained+7 terminal lifecycle; 55-file lock verified, 47 missing locally"
+    },
+    {
+      "line": "B",
+      "priority": "P0",
+      "status": "REMOTE_BYTES_VERIFIED_NOT_RUN",
+      "scope": "8 lifecycle+9 prefix; installed direct pins differ"
+    },
+    {
+      "line": "C",
+      "priority": "P0",
+      "status": "STATIC_CALL_CHAIN_REVIEW_NOT_RUN",
+      "scope": "LogicalT1Coordinator.commit -> PostgresSession -> CompanyCoordinatedMapping -> TerminalAnchorMapping -> lifecycle writer. Anchor terminal-only; ordinary transition uses commit_transition. Same transaction cursor; no actual composed test."
+    },
+    {
+      "line": "D",
+      "priority": "P0",
+      "status": "D0_JOINT_INSPECTION_PASS_EFFECT_GATE_HOLD",
+      "scope": "26 new tests plus 72 regression; D-02 restore gap reproduced"
+    },
+    {
+      "line": "E",
+      "priority": "P1",
+      "status": "STATIC_EXISTING_READBACK_REVIEW_NOT_RUN",
+      "scope": "Existing Dashboard uses task-budget/lifecycle/prefix views; fixture office geometry separate. No new runtime API/geometry binding, no active KPI."
+    },
+    {
+      "line": "F",
+      "priority": "P0",
+      "status": "PG_NOT_AVAILABLE",
+      "scope": "Local SQLite rollback/restore test evidence; PG13 and independent witness HOLD"
+    },
+    {
+      "line": "G",
+      "priority": "P0",
+      "status": "BLOCKED_CHECKOUT_DEPENDENCIES",
+      "scope": "Chromium available; Next/React/Phaser unresolved, TypeScript pin differs. No install/build/browser product test."
+    }
+  ],
+  "evidence": "tests/evidence/TEST_EVIDENCE_0208.json",
+  "rollback": "Restore 0207 pinned branch/commit; no schema migration. Retain 0208 branch and evidence. No runtime permission change.",
+  "maintenance": "Inspect exact snapshot generation, digest, graph and span; mismatch is DENY. Never use structural_match as authority. Recheck independent external witness and T1 effect boundary before any future grant.",
+  "authority": {
+    "agents": 0,
+    "provider_calls": 0,
+    "live_grants": 0,
+    "spend": 0,
+    "CI": "NOT_RUN",
+    "main_merge": false,
+    "PROD": false
+  }
+}

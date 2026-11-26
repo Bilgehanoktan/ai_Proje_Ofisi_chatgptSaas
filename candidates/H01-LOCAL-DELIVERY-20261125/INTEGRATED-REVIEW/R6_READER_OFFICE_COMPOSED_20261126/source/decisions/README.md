@@ -1,0 +1,2 @@
+# Karar indeksi
+[Design Master 0158](../docs/0158/AI_Company_OS_DESIGN_MASTER_DOC_REV_0158_RECOVERY_ADAY.md) esas. CEO-19-01=C, CEO-19-02=B, GOV-00=B tasarım yönleri; T1, R1/W-A, bağımsız IV, F3 sıfır dış yazma korunur. [T01](../docs/0158/T01_KAPI_DURUMU_0152.md) · [H01](../docs/0158/OPS_T01_H01_KARAR_ZARFI_0151.md) · [R03](../docs/0158/R03_T1_PHYSICAL_MAPPING_0157.md). 0159-A dar repo düzeni onayı, bağımsız normatif kabul değildir.

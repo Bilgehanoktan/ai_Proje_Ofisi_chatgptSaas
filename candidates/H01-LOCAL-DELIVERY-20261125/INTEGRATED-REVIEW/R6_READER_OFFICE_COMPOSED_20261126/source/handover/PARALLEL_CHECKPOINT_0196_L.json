@@ -1,0 +1,39 @@
+{
+  "revision": "0196-L",
+  "status": "SOURCE_PATH_DISJOINT_PINNED_NO_MERGE",
+  "common_ancestor": "f7a0258103b72b6052491b162c3a8fe73b99546e",
+  "lifecycle_source": "3fbea3977e0a9eb87f1a3a551acbd3558c7bdbe9",
+  "other_branch": "workstream/0196-memory-model",
+  "other_head": "ef9cc8368309bd4d880b36137c7f25fc07a018db",
+  "common_changed_paths": [
+    "PROJECT_INDEX.md",
+    "docs/architecture/DESIGN_MASTER.md",
+    "handover/CURRENT.json",
+    "handover/CURRENT.md",
+    "handover/NEXT_STEP.md",
+    "product/SOURCE_MANIFEST.json",
+    "progress/DEVELOPMENT_TRACKER_24.json",
+    "progress/DEVELOPMENT_TRACKER_24.md"
+  ],
+  "source_path_overlap": [],
+  "other_source_paths": [
+    "product/ai-company-os-backend/app/engines/knowledge_engine/provenance.py",
+    "product/ai-company-os-backend/app/engines/memory_engine/retrieval.py",
+    "product/ai-company-os-backend/app/engines/memory_engine/runtime_binding.py",
+    "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+    "product/ai-company-os-backend/app/engines/model_gateway/runtime_binding.py",
+    "product/ai-company-os-backend/tests/test_memory_access_0194.py",
+    "product/ai-company-os-backend/tests/test_memory_store_0196.py",
+    "product/ai-company-os-backend/tests/test_model_invocation_0196.py"
+  ],
+  "checks_next": [
+    "Re-pin both branch heads, do not force update",
+    "Recompute exact source delta overlap and check interface compatibility",
+    "Preserve separate revision records; regenerate common metadata and manifest from union",
+    "Run combined local selected suites and record unique test IDs; no count addition",
+    "Model invocation must bind persisted admission, lease and reservation readback; actual authority remains HOLD"
+  ],
+  "merge": "NOT_PERFORMED",
+  "combined_tests": "NOT_RUN",
+  "w8": "SEPARATE"
+}

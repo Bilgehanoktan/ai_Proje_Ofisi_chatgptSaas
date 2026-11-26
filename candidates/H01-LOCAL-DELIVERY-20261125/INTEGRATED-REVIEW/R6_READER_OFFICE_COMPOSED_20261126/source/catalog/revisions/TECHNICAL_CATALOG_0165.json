@@ -1,0 +1,345 @@
+{
+  "revision": "0165",
+  "pins": [
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/__init__.py",
+      "blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+      "sha256": "6a5b537fe66b5219a57a5a01fc861b53dbda8177a2bdb458207415cb0410b86e",
+      "bytes": 66,
+      "lines": 1
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/evidence.py",
+      "blob": "3bf24b68ac2e4960ca2b4e48cc17b78ddd54490f",
+      "sha256": "2cc7f396a920ac4add48039ed1db99dae507e8f5fa134c23e724b1a3bc07882e",
+      "bytes": 4926,
+      "lines": 95
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/model.py",
+      "blob": "ebd68c6245c21c7fce16c0b6206dc9626050310a",
+      "sha256": "c18b358f8d1f77cdcece402721f8aba3bb7364490d1589c8a0ab954de2600481",
+      "bytes": 3221,
+      "lines": 84
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/planner.py",
+      "blob": "4c3bc95109c0bf209dc3298db044dcac56a40454",
+      "sha256": "f31da08014d96b2659664d70230a4af225d766b8c36484b921f39216c8dea612",
+      "bytes": 1687,
+      "lines": 44
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/development_review/policy.py",
+      "blob": "c103af3841e3389086393b78bc78ca1911d8b776",
+      "sha256": "10bd2f97ec88f2cfba8cff4681e59bc8c2deb0fd85c38ce4124ba0c82451ad45",
+      "bytes": 4627,
+      "lines": 92
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_development_review_0164.py",
+      "blob": "818785baa36d6fcc4911d7ff7795d245b8189ef8",
+      "sha256": "8f291f7bbcfb8b9b701c4088f17c4700bd3ae8e1b90aa38614e25d76da780e1c",
+      "bytes": 8342,
+      "lines": 165
+    },
+    {
+      "path": "product/ai-company-os-frontend/components/dashboard/DevelopmentReviewPanel.tsx",
+      "blob": "a4cb541fad00e550ab254f8210a321b26b0be708",
+      "sha256": "ac31e876df3494c8a32a254ccb5ea50fbaca27ab14a63a431542dab830dfe85b",
+      "bytes": 1121,
+      "lines": 15
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "blob": "6c378a90480048421ee59861f472f9c1f17a9a48",
+      "sha256": "961d42494ddb3d7f0f634f0426e385ca419dd927528d1c8aba68d11386942b6d",
+      "bytes": 7125,
+      "lines": 58
+    },
+    {
+      "path": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/coordinator.py",
+      "blob": "4532e42aa0f81714f2c35441b466b48b6d1bc12c",
+      "sha256": "27e9fe0dc2508230069e3ce51dd5c639a2d2d93ed8ca7e8d5dbeea8c419be1bf",
+      "bytes": 2149,
+      "lines": 38
+    },
+    {
+      "path": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/evidence_store.py",
+      "blob": "ed7534b7d85292b71ae644dcf0a92d21e4a3d6f7",
+      "sha256": "bc2b2eae7ad74e24f6d18a649f53c64fe5e5c3749e625f56af9204642d316576",
+      "bytes": 4496,
+      "lines": 83
+    },
+    {
+      "path": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/identity_registry.py",
+      "blob": "e1f52722e1d33841539b709036ed1a100216b9b6",
+      "sha256": "7b73b247949fe1cb50b192396fd3477a23ea7c1676a2646266914c4f56c025b1",
+      "bytes": 1505,
+      "lines": 33
+    },
+    {
+      "path": "quarantine/0165/product/ai-company-os-backend/app/core/development_review/trusted_policy.py",
+      "blob": "e804d9f52784b15b7bc86376a91007af04adae5a",
+      "sha256": "5d49a9771d556a5b89e61d6e840238e1f1fafc731d7598a08530b543e1c0a8fa",
+      "bytes": 2395,
+      "lines": 48
+    },
+    {
+      "path": "quarantine/0165/product/ai-company-os-backend/tests/test_development_review_0165.py",
+      "blob": "7b01c0bf61274505ef47677170707ae64c1d5a7c",
+      "sha256": "2133379dbe9b75d65096f97d9989f1ae212b0dab2fd71842fabf2f275e0b094a",
+      "bytes": 6911,
+      "lines": 122
+    }
+  ],
+  "symbols": [
+    {
+      "file": "identity_registry.py",
+      "classes": [
+        "RegistrySnapshot"
+      ],
+      "functions": [
+        "registry_digest",
+        "inspect_registry"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "model",
+        "agent_runtime.lifecycle",
+        "transaction.review"
+      ]
+    },
+    {
+      "file": "trusted_policy.py",
+      "classes": [
+        "PolicySnapshot"
+      ],
+      "functions": [
+        "policy_digest",
+        "inspect_policy"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "model",
+        "planner",
+        "identity_registry",
+        "agent_runtime.lifecycle",
+        "transaction.review"
+      ]
+    },
+    {
+      "file": "evidence_store.py",
+      "classes": [],
+      "functions": [
+        "initialize_staging",
+        "stage_batch",
+        "inspect_staged"
+      ],
+      "dependencies": [
+        "sqlite3 (stdlib)",
+        "dataclasses",
+        "json",
+        "model",
+        "planner",
+        "evidence"
+      ]
+    },
+    {
+      "file": "coordinator.py",
+      "classes": [
+        "CoordinationReview"
+      ],
+      "functions": [
+        "inspect_coordination"
+      ],
+      "dependencies": [
+        "dataclasses",
+        "model",
+        "planner",
+        "identity_registry",
+        "trusted_policy",
+        "policy",
+        "evidence"
+      ]
+    },
+    {
+      "file": "DevelopmentReviewPanel.tsx",
+      "classes": [],
+      "functions": [
+        "DevelopmentReviewPanel"
+      ],
+      "dependencies": [
+        "React/TSX existing"
+      ]
+    },
+    {
+      "file": "Dashboard.tsx",
+      "classes": [],
+      "functions": [
+        "Dashboard",
+        "DashboardView"
+      ],
+      "dependencies": [
+        "existing R9 imports",
+        "DevelopmentReviewPanel"
+      ]
+    },
+    {
+      "file": "test_development_review_0165.py",
+      "classes": [
+        "RegistryPolicyTests"
+      ],
+      "functions": [
+        "test_registry_match",
+        "test_registry_wrong_digest",
+        "test_registry_issuer_is_producer",
+        "test_registry_shared_custody",
+        "test_policy_match_only",
+        "test_policy_expired",
+        "test_policy_not_yet_valid",
+        "test_revocation_unknown",
+        "test_policy_registry_pin",
+        "test_policy_issuer_mismatch",
+        "test_coordinator_no_effect_flags",
+        "test_coordinator_chain",
+        "test_coordinator_patch_tamper",
+        "test_staging_complete_readback",
+        "test_staging_duplicate",
+        "test_staging_reject_incomplete",
+        "test_staging_update_denied",
+        "test_staging_delete_denied"
+      ],
+      "dependencies": [
+        "unittest",
+        "sqlite3 (stdlib)",
+        "development_review"
+      ]
+    }
+  ],
+  "promoted_original_catalog": "catalog/revisions/TECHNICAL_CATALOG_0164.json",
+  "api_delta": [],
+  "database_candidate": {
+    "table": "development_evidence_d0",
+    "columns": [
+      "scope_sha",
+      "plan_sha",
+      "seq",
+      "evidence_id",
+      "previous_sha",
+      "entry_sha",
+      "body"
+    ],
+    "primary_key": [
+      "scope_sha",
+      "seq"
+    ],
+    "unique": [
+      [
+        "scope_sha",
+        "evidence_id"
+      ],
+      [
+        "scope_sha",
+        "entry_sha"
+      ]
+    ],
+    "triggers": [
+      "development_evidence_no_update",
+      "development_evidence_no_delete"
+    ],
+    "status": "QUARANTINE_DDL_NOT_EXECUTED",
+    "canonical_migration": false
+  },
+  "events": [],
+  "dependency_versions_changed": false,
+  "tests": [
+    {
+      "name": "test_registry_match",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_registry_wrong_digest",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_registry_issuer_is_producer",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_registry_shared_custody",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_policy_match_only",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_policy_expired",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_policy_not_yet_valid",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_revocation_unknown",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_policy_registry_pin",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_policy_issuer_mismatch",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_coordinator_no_effect_flags",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_coordinator_chain",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_coordinator_patch_tamper",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_staging_complete_readback",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_staging_duplicate",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_staging_reject_incomplete",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_staging_update_denied",
+      "status": "NOT_RUN"
+    },
+    {
+      "name": "test_staging_delete_denied",
+      "status": "NOT_RUN"
+    }
+  ],
+  "security": "No runtime authority or authenticated reference; HOLD; SQLite staging not canonical.",
+  "errors": [
+    "POLICY_INVALID_OR_REVOKED",
+    "POLICY_PIN_TIME_EPOCH_MISMATCH",
+    "REGISTRY_PIN_HOLD",
+    "POLICY_REGISTRY_SOD_HOLD",
+    "STAGING_HOLD",
+    "STAGING_DUPLICATE_HOLD",
+    "STAGING_DB_HOLD",
+    "STAGING_REFERENCE_HOLD",
+    "STAGING_INCOMPLETE_HOLD",
+    "STAGING_READBACK_HOLD",
+    "IMMUTABLE_EVIDENCE",
+    "D0_REVIEW_MATCH_NO_AUTHORITY"
+  ]
+}

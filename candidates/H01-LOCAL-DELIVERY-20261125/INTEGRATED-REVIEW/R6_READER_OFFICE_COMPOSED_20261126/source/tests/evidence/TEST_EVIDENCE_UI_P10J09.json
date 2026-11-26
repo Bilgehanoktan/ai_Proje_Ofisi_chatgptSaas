@@ -1,0 +1,85 @@
+{
+  "revision": "UI-P10J-09",
+  "source_commit": "752b225deac4557a548faec7191a090fbfba19f7",
+  "source_tree": "e4e16879901fe045be686fceaa1db525d02c8996",
+  "archive_files": 1544,
+  "source_archive_sha256": "557effdf7722dfe034aa81af031c6e7e7652c3dd22cc85249a0d0174adbfc801",
+  "evidence_archive_sha256": "1a2f0e81231d5aa3898c9d04313a71026f6c2449ce08682ada55c6b046a7503b",
+  "reconstructed_git_tree": "MATCH",
+  "local_archive_audit": {
+    "status": "SOURCE_MATCH_NOT_ACCEPTANCE",
+    "exact": 390,
+    "missing": 0,
+    "extra": 0,
+    "mismatch": 0,
+    "report_sha256": "f1a6e1f30f06badf5b8e2027543b9978bc965ec777558d53a827061fa3ed2519"
+  },
+  "local_w8_audit": {
+    "status": "PASS",
+    "source": 390,
+    "pairs": 16,
+    "auxiliary": 20
+  },
+  "review": "754ea4debaa8a902554b9dc1e99b17ecf815f612a957d8c9aabe6010dd6b7694",
+  "locks": {
+    "npm": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+    "python": "bedb32b1d0462180ccc25fc4487af3b61ba30c4ee0dfd946fa33a3fe6fdc5253",
+    "wheel_hash_inventory": 28,
+    "raw_wheels": "NOT_SUPPLIED"
+  },
+  "markers": "3/3 match",
+  "core29": {
+    "status": "PASS",
+    "passed": 29,
+    "verified_files": 55,
+    "source": "614aa63efbd0a95d0fa5fe47390df043d773370f",
+    "report_sha256": "840f57bdebda7d600c8e79bad966bbf203ea5160ef38f29a69ad1ef1801642a1",
+    "scope": "historical 0207 source in tested UI only"
+  },
+  "raw_transcript": "8e5783ad61cdb3e3375eea14038df9c86046332d7bdd8483956c39aa7d989eaa",
+  "captures": {
+    "count": 52,
+    "unique_hashes": 52,
+    "decoded": 52,
+    "full_page_heights": {
+      "desktop_ceo": 7182,
+      "mobile_ceo": 13477,
+      "desktop_work": 7079,
+      "mobile_work": 11624
+    },
+    "inventory_sha256": "5be6c6870b28cd1184a4684bb7e35ec224af26f304e1407da5c55139ebf5f4fd",
+    "visual_review": "four viewport contact sheets and selected full page/office detail; not pixel baseline acceptance"
+  },
+  "limits": [
+    "PowerShell transcript omits native stdout, prior console paste preserved separately.",
+    "Raw wheels and DB bytes absent.",
+    "No independent full Windows replay or pixel reference comparison."
+  ],
+  "parallel": {
+    "heads": {
+      "integration/ui-0212-p10j": "6712776e2a7ab11e7f514ff985d2c5041de27939",
+      "integration/0220-plan-dag-admission": "a37ffd559105d7a72df41a6d3354203a8282edb4",
+      "integration/0221-sample-result-context": "6423e91d32a8ce660105b8ea76e44489dc36018d",
+      "integration/0222-shared-ceo-office": "70d6c305c34a36361214343526d5c134cb6c9c9f",
+      "integration/0223-agent-workflow-studio": "c963630b5d174f4c078b84b42ea88318086ea18e",
+      "main": "b4e055e25a59e25fc87d846aeb36540fbaa91f67"
+    },
+    "core0223_tree": "e5e7cfb999c7a89a80aba362d8653749f35ebb31",
+    "counts": {
+      "same": 320,
+      "ui_only": 49,
+      "core_only": 53,
+      "diverged": 5
+    },
+    "divergent": [
+      "product/SOURCE_MANIFEST.json",
+      "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx",
+      "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx",
+      "product/ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "merge": false,
+    "core0223_status": "observed source candidate, final handover not found at snapshot",
+    "previous_observed_0223": "e499d8f063af872e2e83407935693b0ffed655c6"
+  }
+}

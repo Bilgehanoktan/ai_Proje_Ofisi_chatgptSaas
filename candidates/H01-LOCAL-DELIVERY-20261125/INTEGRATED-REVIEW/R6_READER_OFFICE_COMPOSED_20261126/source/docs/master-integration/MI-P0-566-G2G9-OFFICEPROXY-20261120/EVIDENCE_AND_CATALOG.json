@@ -1,0 +1,196 @@
+{
+  "revision": "MI-P0-566-CROSSOWNER-ISOLATED-REVIEW-20261120-R1",
+  "timestamp_date": "2026-11-20",
+  "status": "ISOLATED_SOURCE_CANDIDATE_GITHUB_EXACT_STATIC_AUDIT_PASS_OWNER_AND_RUNTIME_HOLD",
+  "canonical": {
+    "ref": "integration/product-dev",
+    "sha": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "product_files": 553,
+    "manifest_entries": 552,
+    "manifest_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76"
+  },
+  "owners": [
+    {
+      "pr": 19,
+      "source_sha": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "product_files": 562,
+      "manifest_entries": 561,
+      "manifest_blob": "566b7210b6edb95a21b999dc1d881a12284d9011",
+      "source_delta": 10,
+      "authority_variant_status": "OWNER_SECURITY_HOLD"
+    },
+    {
+      "pr": 29,
+      "source_sha": "59c098b0ec3387ef1318e4957248e843e1526d81",
+      "product_files": 557,
+      "manifest_entries": 556,
+      "manifest_blob": "7845c8bba67abedb9577325c76bfb3c239fe54c6",
+      "source_delta": 8,
+      "owner_review": "HOLD"
+    }
+  ],
+  "isolated": {
+    "branch": "review/mi-p0-566-g2g9-officeproxy-source-20261120",
+    "source_commit": "886e45d352389c483cd463487b74e3a1da04689a",
+    "root_tree": "9c0409efaa8a2dfaed85176a5fac6b7552629686",
+    "parent_commit": "254e0188998d0d245bd8ee4eb901aead02951a66",
+    "manifest_blob": "35ef4764f9fa724bed182b96d76a2746b0c38602",
+    "product_files_including_manifest": 566,
+    "manifest_entry_count": 565,
+    "source_path_deltas_including_manifest": 19,
+    "source_content_paths_reused_exact": 18,
+    "all_565_manifest_size_and_path_checked": true,
+    "source_same_path_conflict_count": 0,
+    "shared_manifest_count": 1,
+    "mode": "100644",
+    "protected_original_owner_blobs": true,
+    "compare_to_canonical": {
+      "ahead": 1,
+      "behind": 0,
+      "changed_paths": 19,
+      "other_root_paths": 0
+    }
+  },
+  "changes": {
+    "backend_owned_modified": [
+      "ai-company-os-backend/app/core/transaction/intent_authority.py"
+    ],
+    "backend_owned_added": [
+      "ai-company-os-backend/app/core/iam_session.py",
+      "ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+      "ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "ai-company-os-backend/tests/test_iam_session_d5g1.py"
+    ],
+    "frontend_owned_modified": [
+      "ai-company-os-frontend/app/api/demo/admission/route.ts",
+      "ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+      "ai-company-os-frontend/app/api/demo/outbox/route.ts",
+      "ai-company-os-frontend/app/api/demo/task-budget/route.ts"
+    ],
+    "frontend_owned_added": [
+      "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+      "ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs",
+      "ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+      "ai-company-os-frontend/tests/office-workbench-deadline.test.cjs"
+    ],
+    "manifest_recomposed_from_owner_entries": true,
+    "no_other_root_changes": true
+  },
+  "test_evidence": {
+    "this_candidate": "SOURCE_STRUCTURE_ONLY",
+    "live_checkout_static": {
+      "checked_manifest_path_byte_entries": [
+        565,
+        565
+      ],
+      "exact_owner_file_blob_reuses": [
+        18,
+        18
+      ],
+      "product_path_collision": [
+        0,
+        18
+      ],
+      "full_product_tree_files": 566,
+      "status": "PASS_GITHUB_GIT_TREE_STATIC"
+    },
+    "original_selected_test_evidence_separate": {
+      "PR19_historical_D0": [
+        72,
+        72
+      ],
+      "PR29_cross_owner_selected": [
+        12,
+        12
+      ],
+      "PR23_independent_Office_old_and_R2": [
+        15,
+        15
+      ],
+      "note": "These tests were NOT run on this exact new 566-file candidate and cannot be double-counted"
+    },
+    "actual_this_candidate_full_W8": "NOT_RUN",
+    "actual_this_candidate_original_G7_current_ORG": "NOT_RUN",
+    "actual_this_candidate_integrated_API_browser": "NOT_RUN",
+    "actual_this_candidate_protected_PostgreSQL": "NOT_RUN",
+    "actual_this_candidate_independent_IV": "NOT_RUN",
+    "actual_this_candidate_11_MVP_end_to_end": "NOT_RUN"
+  },
+  "security": {
+    "authority_owner_approval": "HOLD",
+    "independent_root_issuer_sink": "HOLD",
+    "restore_replay_negative": "HOLD",
+    "protected_PG": "HOLD",
+    "independent_IV": "HOLD",
+    "main": "UNCHANGED",
+    "PROD": "UNCHANGED",
+    "CI": "UNCHANGED",
+    "secrets": "UNCHANGED",
+    "external_effects": "NONE"
+  },
+  "progress": {
+    "weights": {
+      "design": 15,
+      "code": 35,
+      "functional_tests": 20,
+      "integration": 20,
+      "final_acceptance": 10
+    },
+    "overall_previous": null,
+    "overall_current": null,
+    "overall_delta_pp": null,
+    "denominators_ratified": [
+      0,
+      10
+    ],
+    "Core_previous": [
+      12,
+      16
+    ],
+    "Core_current": [
+      12,
+      16
+    ],
+    "UI_previous": [
+      21,
+      40
+    ],
+    "UI_current": [
+      21,
+      40
+    ],
+    "MVP_previous": [
+      0,
+      11
+    ],
+    "MVP_current": [
+      0,
+      11
+    ],
+    "IV_previous": [
+      0,
+      7
+    ],
+    "IV_current": [
+      0,
+      7
+    ],
+    "product_acceptance_delta_pp": 0,
+    "source_only_delta_files": 13,
+    "canonical_delta_files": 0
+  },
+  "run_constraints": "Owner PR20 original W8 C04 requires clean exact checkout and pip wheelhouse network; container GitHub DNS is unavailable. Cannot claim install or build. Source-only GitHub tree build is not npm/Next/PG/IV pass.",
+  "next": [
+    "Independent MI-01/Unified C04 wheelhouse + C05 hash/license ratification, then C06-C08 W8 on exact 553 and this candidate",
+    "MI-03/04 approve G2/G9 intent_authority owner variant and run original current-ORG G7 against this exact candidate",
+    "MI-05/Unified review PR29 four-proxy source and source-manifest compatibility",
+    "MI-02 independent root/issuer/sink, protected PG COMMIT/restore, 8 A negative cases and 7 IV acceptance",
+    "Original eleven MVP E2E acceptance after all safety gates"
+  ],
+  "rollback": "Close draft review PR or revert isolated 19-path source commit; do not change canonical/owners or rewrite history."
+}

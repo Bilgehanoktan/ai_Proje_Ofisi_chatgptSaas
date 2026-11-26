@@ -1,0 +1,83 @@
+{
+  "revision": "UI-P10H",
+  "source": "a5b2bd5139d374e3828fbe0e374407c2433bd58d",
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/tests/test_authority_wrapper_p10h.py",
+      "bytes": 7897,
+      "sha256": "8d09543e811f8ab8c79cffa712f2bfc0995dfafaf017d0d67ccc421276ff2d01"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/readbackBoundary.ts",
+      "bytes": 1293,
+      "sha256": "1d45a99fb4c26e7398992f7a0092d28836051636752855a0435d68bcc03e3541"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/roomAccents.ts",
+      "bytes": 1464,
+      "sha256": "67c81a8654514ceb7aade3a92f6b8272fbf89fed924768b194e7c1aa7121a294"
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10h-model.test.cjs",
+      "bytes": 3297,
+      "sha256": "f3b8cfdf0d91e98c67482183c24dbacdf4ab9dda2cc2a8d3cfd2bc9df105e6cc"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/ProjectionReadbackCenter.tsx",
+      "bytes": 2971,
+      "sha256": "1c7b432a0105cdf31c4765de914990fbfa58ac7d96205c002a4c4dba53b47ac6"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/OfficeDecorPanel.tsx",
+      "bytes": 2853,
+      "sha256": "c95fea31257ddfb4165c9fd7213b2dc5b13e8304d15baa65b2e928fb890adbec"
+    },
+    {
+      "path": "product/ai-company-os-frontend/office/engine/officeArtwork.ts",
+      "bytes": 5197,
+      "sha256": "19be699e883e506bef32d59b01426d02e520643dfd58a7450b468f4960daf18b"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/draftHistory.ts",
+      "bytes": 2097,
+      "sha256": "f6755891d7cad4c5fa11aa667fcc4ff21ca45a12723b71a50391df8c219d7d50"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "bytes": 3666,
+      "sha256": "e889a6a33e2f78aa10a7758c496cdd41fff93f0a74e7ca80c63ada24a37eccad"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "bytes": 2271,
+      "sha256": "fc5861e97484f60ea98042b04f09d5b46e40ffa40cb3cf7df5fa4a43315f8f60"
+    }
+  ],
+  "aux": [
+    {
+      "path": "tests/integration/w8_p10h.py",
+      "blob": "b9dc676f2e5477e5c58e839c5f66d582c191d608"
+    }
+  ],
+  "symbols": [
+    "AuthorityWrapperP10H",
+    "readbackBoundary",
+    "roomAccentCatalog",
+    "roomAccentUri",
+    "roomAccentAt",
+    "DraftHistory",
+    "DraftAction",
+    "editDraft",
+    "WorkflowDraft",
+    "AgentDirectory",
+    "ProjectionReadbackCenter",
+    "OfficeDecorPanel",
+    "officeArtwork",
+    "load_candidate"
+  ],
+  "api_changes": [],
+  "db_migrations": [],
+  "dependency_changes": [],
+  "maintenance": "# UI-P10H — D0 original wrapper and UI candidate\n\nSource a5b2bd5139d374e3828fbe0e374407c2433bd58d; parent f2457545cf52805e5ed5ea86cd869c326fd162ca; manifest e818c96e2c81580cfdc27302e8690d68ba743ffd. 381 pins, 382 product files, 163 frontend, 4 additions and 6 modifications, 371 preserved. No production backend change. Parent 198/198 selected package hashes, 377/377 remote paths/sizes, 156/377 local exact bytes. All 19 recovered files exact. Full checkout and remote full byte audit still incomplete; no main merge, no new grant.\n\n## Actual tests\n39 memory/model, 49 joint/witness, 33 original T1/wrapper, 12 new tests of real 0211 execute_authority_fenced_transition (10 protections, 2 residuals), 52 original core regression outcomes = 185 backend outcomes. Negative cases count as reproduced boundaries, not security acceptance. 66 model tests (12 new), 4 TSX syntax checks, 22 standalone Chromium SVG checks, 7 same original app.main plus compiled GET parity; POST denied and 5 SQLite hashes unchanged. Original W8 blob recovered and P10G/P10H nested loads verified; audit HOLD due incomplete checkout. Lock probe ENOTCACHED; Next exit127; real Next 0/7 and browser 0/52 NOT_RUN. PostgreSQL/RLS and independent acceptance HOLD.\n\n## Changes, diagnosis, maintenance\n- test_authority_wrapper_p10h: actual 0211 wrapper with original 0210 fixture and original SQL mapping; explicit disposable stores. D03 root identity replacement, D04 triple restore reproduce residual. Other original tests include external latest and restore gaps. No production authority changes.\n- readbackBoundary and ProjectionReadbackCenter: static seven endpoint scope/limit descriptions, distinct from historical data; no cross-snapshot join or permission.\n- draftHistory/WorkflowDraft: bounded redo/undo, validator on every candidate snapshot, successful divergent edit clears redo; reset clears histories and drag source. No canonical plan mutation.\n- roomAccents/officeArtwork/OfficeDecorPanel: two original static room signage assets, four placements on core floor only, reserve floor unchanged. No path, collision or occupancy mutation.\n- AgentDirectory: selected department role template count only. ProjectStudio preserved; no new ProjectStudio feature claimed. Model/Memory/Finance/Security evidence scope only. No API, database migration, dependency upgrades or runtime grant.\n- W8 P10H candidate adapter pins P10G adapter, selects new manifest and adds model test; original lock review preserved. Nested loading PASS, whole runner not executed. Recover complete checkout, verify auxiliary sources and obtain reviewed dependency locks; do not use simulated substitute packages.\n\n## D03/D04 design candidate (not approved production authority)\nMaintain independent authority in a separate administrative and restore domain. Monotonic root/claim ledger with nonrollbackable witness and distinct backup custody. Bind intent/scope/epoch/idempotency to effect sink; sink must reject stale epoch or repeated claim. No retry on ambiguous outcome, partition or timeout; quarantine and independently reconcile. Require independent negative tests for root replacement, all-store restore, split brain, lease expiry, key rotation, unknown outcome, and bypass at actual effect boundary. D01/02/03/04 remain open; local SQLite cannot prove this architecture. No deployment or operational permission granted.\n\nRollback: restore candidate parent on separate integration branch, keep original logs and fixtures. No main modification. Never clear claims or recover by overwriting authority. For UI inspect guide and DAG validation; compare exact blob and local evidence. 21/40 milestones and 0/7 independent acceptance remain unchanged.\n",
+  "rollback": "f2457545cf52805e5ed5ea86cd869c326fd162ca"
+}

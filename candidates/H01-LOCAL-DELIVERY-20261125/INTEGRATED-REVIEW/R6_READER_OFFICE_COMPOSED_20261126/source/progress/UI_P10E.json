@@ -1,0 +1,182 @@
+{
+  "revision": "UI-P10E",
+  "baseline": "UI-P10D",
+  "core_ui_base": "0211_SOURCE_UNION_CANDIDATE",
+  "core_latest_separate": "0212",
+  "original_gate_count": 40,
+  "done": 21,
+  "delta": 0,
+  "acceptance": {
+    "done": 0,
+    "total": 7
+  },
+  "tracks": [
+    {
+      "id": "A",
+      "done": 3,
+      "total": 5,
+      "status": "25 lifecycle + 7 same-app API scenarios; 27 model; full locked regression open"
+    },
+    {
+      "id": "B",
+      "done": 3,
+      "total": 5,
+      "status": "7/7 same original backend + compiled GET; Next E2E open"
+    },
+    {
+      "id": "C",
+      "done": 3,
+      "total": 5,
+      "status": "Engine finding search and filter; actual React pending"
+    },
+    {
+      "id": "D",
+      "done": 2,
+      "total": 5,
+      "status": "Two accessories on four reserved desks; 14 standalone checks"
+    },
+    {
+      "id": "E",
+      "done": 3,
+      "total": 5,
+      "status": "Role sorting and project wave filter; React pending"
+    },
+    {
+      "id": "F",
+      "done": 2,
+      "total": 5,
+      "status": "Historical engine findings search; no provider/memory effect"
+    },
+    {
+      "id": "G",
+      "done": 2,
+      "total": 5,
+      "status": "State/query/order filter on validated historical lifecycle; no real ledger"
+    },
+    {
+      "id": "H",
+      "done": 3,
+      "total": 5,
+      "status": "Source-level EDS filters, aria-pressed/status; full notifications and browser pending"
+    }
+  ],
+  "round": [
+    {
+      "id": 1,
+      "task": "Recover original Lifecycle closure",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 2,
+      "task": "Terminal writer SQLite HTTP",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 3,
+      "task": "Prefix writer SQLite HTTP",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 4,
+      "task": "Reconcile 0211 and UI manifests",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 5,
+      "task": "Combined source candidate and regression plan",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 6,
+      "task": "7 API parity same app.main + compiled GET (Next E2E open)",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 7,
+      "task": "CEO evidence cards",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 8,
+      "task": "Office SVG decoration and catalog",
+      "status": "DONE_BOUNDED"
+    },
+    {
+      "id": 9,
+      "task": "Agent/Project source interactions",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 10,
+      "task": "Finance/Security/EDS source interactions",
+      "status": "PARTIAL"
+    },
+    {
+      "id": 11,
+      "task": "Next build/52 product browser",
+      "status": "BLOCKED"
+    },
+    {
+      "id": 12,
+      "task": "Catalog/test/handover",
+      "status": "DONE"
+    }
+  ],
+  "core_scores_changed": false,
+  "next_ui": "UI-P10F",
+  "next_core": "0213 separate",
+  "evidence": {
+    "revision": "UI-P10E",
+    "source_commit": "42d501826d0cf8493e850297171588993efffd07",
+    "parent_ui": "4b44c802f31c826b449b76e99da875eee92ff0b9",
+    "core_0211": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
+    "manifest_entries": 367,
+    "product_files": 368,
+    "frontend_files": 154,
+    "manifest_path_size_match": 367,
+    "core_added": 2,
+    "ui_added": 3,
+    "ui_modified": 5,
+    "original_lifecycle": {
+      "terminal": 11,
+      "prefix": 14,
+      "unchanged_database_checks": 15,
+      "write_denials": 8,
+      "scope": "Original T1 mappings and readers, actual SQLite dialect shim, original router and compiled GET; not PostgreSQL"
+    },
+    "same_backend": {
+      "pass": 7,
+      "total": 7,
+      "keys": [
+        "mvp",
+        "admission",
+        "outbox",
+        "office-workbench",
+        "task-budget",
+        "lifecycle",
+        "lifecycle-prefix"
+      ],
+      "exact_bodies": 7,
+      "post_denied": 7,
+      "unchanged_databases": 5,
+      "registered_routes": 13,
+      "scope": "original app.main:app in one process + strict-compiled original GET functions; selected recovered 0210 backend paths unchanged in union; 0211 authority addition NOT_RUN, not Next server/locked full checkout"
+    },
+    "new_model": 11,
+    "prior_p10d_model_rerun": 16,
+    "standalone_svg_browser": 14,
+    "tsx_syntax_local": 3,
+    "project_studio": "remote source patch only; full React NOT_RUN",
+    "full_build": "BLOCKED_NEXT_NOT_FOUND",
+    "product_browser": "0/52 NOT_RUN",
+    "independent": "HOLD",
+    "core_latest_confirmed": "0212",
+    "core_0213": "branch observed CURRENT remained 0212; separate",
+    "environment": "Node 22.16; TS 5.8.3; FastAPI 0.128.2; Uvicorn 0.48.0; SQLite; no pinned install",
+    "diagnostic_harness_adjustments": [
+      "HOLD comparison corrected to exact endpoint-specific body; product unchanged",
+      "minimal local process.env declaration for selected GET strict compile; no package installation"
+    ],
+    "local_package": "selected recovered closure, test harnesses, evidence, UI delta; full remote archive separate"
+  }
+}

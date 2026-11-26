@@ -1,0 +1,12 @@
+# 0164 / R10 — development review candidate
+R9 product remains 126 blobs, manifest 125 entries. Source candidates in quarantine/0164, not product integration. User continuation interpreted as new scoped candidate work and archive transfer, not general authority. 0163 exception exhausted.
+
+W3/W4/W6/W8: pure development-review package; fixed seven-task/six-wave DAG with QA and Security parallel, IV depends on both. Existing RESEARCH DAG lacks security and policy-review roles; kept intact, separate fixed graph chosen. Separate principal/custody/execution labels; synthetic only. Scope pins parent commit, manifest SHA-256, exact allowed files and epochs. FileReadback compares caller-provided before/after bytes and manifest, no IO. PolicyReview HOLD or DENY, all effect flags false. Evidence verifies task dependencies, scope, plan, candidate set, output bytes, duplicate IDs and verdict; both references are caller-supplied, no authenticated signature or trusted custody. Canonical ordering is plan task order, not actual execution time. No runtime, no release, no auto source write, no API/DB/schema/dependency change. Python serialization profile not ratified across languages.
+
+W1 R9 unchanged; future read-only review projection depends on accepted schema. W2 owner 0/16, 0/55 and 20 backend field gaps unchanged. W5 unchanged; W7 terminal/reconciliation/settlement candidates remain 0162-C quarantine; D01–D12 and physical 4/5/7 HOLD. D4/D5 absent. No real agents or normative receipts. No real tests; six AST parse only, 34 new unittest methods NOT_RUN, total 123 candidates (65 R8/R9+24 C+34 D0).
+
+## Known limitations
+Scope allowlist resides in the candidate itself, not independent trusted policy; self-modification never authorized. Shape comparison is not actual identity or SoD enforcement. No trusted parent checkout/absence proof; no persistent replay protection, CAS, evidence storage, trusted clock, signature validation, or real receipt; no binding between actual QA result and asserted verdict. Source candidate is not authoritative. No autonomous merge.
+
+## Next 0165
+Prepare trusted policy/custody and readback boundary design, then isolated scoped candidate integration only with explicit product scope; real T01/DEV/TEST/CI and F0 remain separate. Parallel W2 owner/55 gap, W3/W4 R03 and terminal/reconciliation, W7 settlement, W1 review projection design, W8 acceptance oracles. No broadened source authority.

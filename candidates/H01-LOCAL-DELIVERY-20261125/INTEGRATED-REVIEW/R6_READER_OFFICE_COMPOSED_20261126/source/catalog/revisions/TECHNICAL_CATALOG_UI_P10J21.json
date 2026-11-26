@@ -1,0 +1,79 @@
+{
+  "revision": "UI-P10J-21",
+  "status": "SOURCE_INTEGRATED_FULL_ACCEPTANCE_NOT_RUN",
+  "parent": "ae3f5e45c8dc77359f5ae7701efc833585d3c4a9",
+  "manifest": "ce8b61352b9b56825a8ecd01238025fc07b7d2d2",
+  "counts": {
+    "parent_product": 487,
+    "product": 489,
+    "manifest": 488,
+    "added": 2,
+    "replaced": 1,
+    "retained_source_pins": 485,
+    "deleted": 0
+  },
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/capabilities/studioCatalog.ts",
+      "blob": "2aa7bc04ede511f624f64bcc1cc87a8bd99a5ac4",
+      "sha256": "d604c6d815413e3228f647f36fd96685acd0b3a27cefa59428cd7473c33b86cf",
+      "bytes": 3293,
+      "symbols": [
+        "entries",
+        "filterEntries",
+        "selectedEntry",
+        "studioBoundary"
+      ],
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/features/capabilities/CapabilityReadback.tsx",
+      "blob": "b95d618c8bfc1f4c00bfe4c7aee880f43ae7bd0d",
+      "sha256": "b30269dbb2aade62b97835b8ec3265f84d0832a63b3a4dad29a1cdea8b24d6f2",
+      "bytes": 4781,
+      "symbols": [
+        "CapabilityReadback",
+        "clear"
+      ],
+      "change": "replace",
+      "dependencies": [
+        "useProjectionRead",
+        "readStatus",
+        "skillBoundary",
+        "studioCatalog",
+        "React useState"
+      ]
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j21-capabilities.test.cjs",
+      "blob": "ed192cf8c2e09764b6377be7cf07b61937cd18fa",
+      "sha256": "43c6b12db5963baea05f05a614be9ce1703e8506336eab33060114fbdd4804dd",
+      "bytes": 2191,
+      "change": "add"
+    }
+  ],
+  "test": {
+    "model": "10/10 PASS",
+    "strict_typescript": "5.8.3 PASS",
+    "node": "22.16.0",
+    "tsx": "transpile only PASS",
+    "model_log_sha256": "616024def7b2fd10a24457b08b7bbc7ebf0dfc48e16b83157be7ae1cfb6012f1",
+    "w8": "AST PASS; full NOT_RUN",
+    "browser": "NOT_RUN",
+    "captures": 99
+  },
+  "changes": {
+    "backend": 0,
+    "api": 0,
+    "db": 0,
+    "dependencies": 0,
+    "authority": 0
+  },
+  "gates": {
+    "core": "9/16 historical",
+    "ui": "21/40",
+    "mvp": "0/11",
+    "independent": "0/7"
+  },
+  "next": "P10J22 Finance & Security Studio"
+}

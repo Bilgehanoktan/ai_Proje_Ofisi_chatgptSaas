@@ -1,0 +1,255 @@
+{
+  "revision": "UNIFIED-U3A",
+  "parent": "e014868ae03cf73487aba156647eeac9442422cb",
+  "environment": {
+    "os": "Linux",
+    "python": "3.13.5",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "fastapi": "0.128.2",
+    "uvicorn": "0.48.0",
+    "playwright": "1.57.0"
+  },
+  "actual": {
+    "delta_crc_sha256": {
+      "U1": 27,
+      "U2": 23
+    },
+    "local_exact_product": 37,
+    "strict_subset_compile": 2,
+    "reruns": {
+      "U2": 14,
+      "U1": 5,
+      "A5R3": 12,
+      "A5R2": 17,
+      "A5R1": 15,
+      "total": 63,
+      "failed": 0
+    },
+    "runner_mechanics": {
+      "pass": 10,
+      "total": 10,
+      "parent": "fake"
+    },
+    "workflow_tsx_syntax": "PASS",
+    "python_syntax": "PASS"
+  },
+  "remote": {
+    "manifest_entries": 504,
+    "product_files": 505,
+    "shared_pairs": 17,
+    "historical_closure": 55
+  },
+  "blockers": {
+    "git": "Could not resolve host github.com",
+    "npm": "ENOTCACHED (offline @types/node), exit 1",
+    "pip": "No matching distribution fastapi==0.163.0 (no-index), exit 1",
+    "local_full_source": "BLOCKED",
+    "local_postgres": "binaries and psycopg absent"
+  },
+  "tests": {
+    "full_backend": "NOT_RUN",
+    "full_next": "NOT_RUN",
+    "full_typecheck": "NOT_RUN",
+    "real_db": "NOT_RUN",
+    "PG13": "NOT_RUN",
+    "RLS": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "native": "NOT_RUN",
+    "actual_W8_chain": "NOT_RUN"
+  },
+  "core_prior": {
+    "ref": "bebee3198ede68cd201cba363752a9006be35581",
+    "gates": "11/16",
+    "D2": "13/13 raw accepted prior",
+    "D3": "scope review"
+  },
+  "new_gate": 0,
+  "local_recovered_pins": {
+    "product/ai-company-os-frontend/package.json": {
+      "bytes": 619,
+      "sha256": "e00528a32e54e21b7547ad08762a44dede75366af0f0781140f42b35f102c0f0",
+      "blob": "55a6d296ee20daad2cd36f4552f9feb3f4440ba3"
+    },
+    "product/ai-company-os-backend/requirements.txt": {
+      "bytes": 128,
+      "sha256": "e1e7b627b7f83b54687170391406cbf996a85dfb02fed06591b301c01a78799a",
+      "blob": "297b0a1ff6a125166f9f7eca94390062644bee7c"
+    },
+    "product/ai-company-os-backend/requirements-test.txt": {
+      "bytes": 92,
+      "sha256": "ba0bd6f14734ee8ea5631476bfff673b07b96b0b22c4e493a7c92bc0dae8a0e4",
+      "blob": "9dd748002ae8a2c18fe293fec6c8cacaa82ef187"
+    },
+    "product/ai-company-os-backend/requirements-history-signatures.txt": {
+      "bytes": 120,
+      "sha256": "a2b52ebff7bc0ae138ca5cc06dc483826e5ec245fb506c76d01411a9beccd020",
+      "blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141"
+    },
+    "product/ai-company-os-backend/app/api/lifecycle_prefix_projection.py": {
+      "bytes": 1659,
+      "sha256": "169f6a24d47bf1bd328a974d9dcfc36f1c8d9341400203bd81e1a9814ba807b8",
+      "blob": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822"
+    },
+    "product/ai-company-os-backend/app/core/development_review/lifecycle_prefix_wire.py": {
+      "bytes": 1868,
+      "sha256": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462",
+      "blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99"
+    },
+    "product/ai-company-os-backend/app/core/development_review/shared_snapshot.py": {
+      "bytes": 1369,
+      "sha256": "714ce68e7fea401e30c42381a3b883ece9ac2a92f3af9dc47478cb5fc002cce2",
+      "blob": "54b3ff7bf96ecd032fa72851183fe671e69a6418"
+    },
+    "product/ai-company-os-frontend/fixtures/core.plan.projection.json": {
+      "bytes": 2462,
+      "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb",
+      "blob": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac"
+    },
+    "product/ai-company-os-frontend/tests/premium-dynamic-floors.test.cjs": {
+      "bytes": 6808,
+      "sha256": "7fb5b7f01f576af06365936111e1725642977ad47c0097e7ed928516a622b8a7",
+      "blob": "209789688fa45c3fc44bfc0293a8d77513cbefc9"
+    },
+    "product/ai-company-os-frontend/tests/premium-floor-render.test.cjs": {
+      "bytes": 7470,
+      "sha256": "eeee35ab782cd6cd90ba27cab143277d5780f9f6653568fdcab20c9d9571b2ad",
+      "blob": "85d1a58643d8be75041ec1ad66e6b16cb13dd792"
+    },
+    "product/ai-company-os-frontend/tests/unified-office-preview.test.cjs": {
+      "bytes": 2109,
+      "sha256": "fae656229c129f706748372f13f0da8dcbc9cd9a6ab1e14de758be83bbc2daa0",
+      "blob": "a9ed8f9200ad136464e9ff491ce2b2d5b334c241"
+    },
+    "product/ai-company-os-frontend/tests/premium-floor-traffic.test.cjs": {
+      "bytes": 10077,
+      "sha256": "5dd909527ca5764d43019ea5208eae71e31ad966316969b147d5edd8983367cf",
+      "blob": "53145d8869c053ea8156c96fc8082b3cd7baf5d8"
+    },
+    "product/ai-company-os-frontend/tests/unified-shared-session.test.cjs": {
+      "bytes": 6526,
+      "sha256": "9407c69fd00467ce5062b0e1796b38abfbfc51677918a13665273b22acbbad45",
+      "blob": "0de40e28d6fead7bd13d9958c73edd1c2df2f1ca"
+    },
+    "product/ai-company-os-frontend/office/components/UnifiedOfficePreview.tsx": {
+      "bytes": 1487,
+      "sha256": "b898e04ed830fb797e74e91d899595928dfdddd65a10aa9508861b21e7a9835b",
+      "blob": "059a55f5a5c939bc54a7ead4e45f0b339c71d70b"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumActorIdentity.ts": {
+      "bytes": 5650,
+      "sha256": "43e1e0532cf98e82cffbaaaf99e659408658c6753c6d41ff1a0fa7b436ae02e0",
+      "blob": "1189295b372f2b9360cbecbf5357f2ad356f1824"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumTraffic.ts": {
+      "bytes": 3722,
+      "sha256": "955047ac505021e0ffa8698288780543d93eb81d94db6c2a147fa10f8a1f1081",
+      "blob": "e236e61cfb6fdee7fd5f3356aa7e6ea0c9b2914e"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumFloorRender.ts": {
+      "bytes": 5499,
+      "sha256": "d409f536a60142297484eb89e3de3e28a32df70201518ab81fcfda477175c4e5",
+      "blob": "305ce5e5757c26a7a619e39115e49264ddfe9b7d"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumHybridLayout.ts": {
+      "bytes": 10955,
+      "sha256": "b0c13f8544a1fc4403b98a4cead5a55c986a6986158848f6aaa1dacab93e9328",
+      "blob": "b22331afc90dc7059cc8e3c098ba83477c993d90"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumRouting.ts": {
+      "bytes": 2098,
+      "sha256": "ed635338d270c917968b972fddb9cdd66a7ca31e1877bb78f9dfdea450b1c53c",
+      "blob": "da139ea32dea7358acfddb2782c6cfb2e9e7a4cd"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumDynamicFloors.ts": {
+      "bytes": 8557,
+      "sha256": "b65acc33a6dbc233a221a7c90c6ba21441aa99d52c4efeb90f40c330ed2f5eb3",
+      "blob": "d53d8c78b6d980ddc531d2e0a3ea89f6d8e992c2"
+    },
+    "product/ai-company-os-frontend/office/engine/unifiedOfficePreview.ts": {
+      "bytes": 1676,
+      "sha256": "f514b3ae32e0b230b56016e805e2f60eb928b48f0294bdc174aa8e8a11c7acf0",
+      "blob": "e31d2d535a0d4a4a566a090d0d3236937a51b1d5"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumFloorSvg.ts": {
+      "bytes": 3416,
+      "sha256": "e2f8f5059b0b3201eccf651db1dadb074f2c74645982d55cdaa908c5d6ccb277",
+      "blob": "5007c2a02b4ca33490bcf9681d2a0a7ef58a9b4f"
+    },
+    "product/ai-company-os-frontend/office/engine/premiumFloorTraffic.ts": {
+      "bytes": 10465,
+      "sha256": "e086719d04984b2e7debee33be4b3133fc470935272216dcc625119c44e90703",
+      "blob": "937773a16328451045d447ab267723ef68adfd55"
+    },
+    "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": {
+      "bytes": 3358,
+      "sha256": "7d75044a6b8083467b9acf77d996e3adf35c2debdde74d5a88c3157bc4c30dcc",
+      "blob": "eacb81100fb34a8e74f619a5a8e2283a97337253"
+    },
+    "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx": {
+      "bytes": 5787,
+      "sha256": "1ab583553a1d0315acf193eb1f3637ed3a39d62fd1d5de166120f5e23b82ecc0",
+      "blob": "84aac4623c9829a4eb609996ba066ded5efd9128"
+    },
+    "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": {
+      "bytes": 3302,
+      "sha256": "212e106dfc3c2c177a20e39497d8de44a4b3ba53fe7e067de918a9e3c4081749",
+      "blob": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39"
+    },
+    "product/ai-company-os-frontend/features/mvp/lifecyclePrefix.ts": {
+      "bytes": 2187,
+      "sha256": "e205c0e995ea5d9b49ead972a3baeef072fb05d348291dd06bf8d2c3598fa501",
+      "blob": "1b0265e47f4df4948ea35781a7bda0cb054b3c3c"
+    },
+    "product/ai-company-os-frontend/features/mvp/historicalJoin.ts": {
+      "bytes": 1431,
+      "sha256": "d431bb88ead7b3b2afad5661f4f3cab9df521315eb62e4678f47e40272ee0771",
+      "blob": "03ac36fcf87208cfc2bc90e9abb1297eda244117"
+    },
+    "product/ai-company-os-frontend/features/mvp/studioContext.ts": {
+      "bytes": 2603,
+      "sha256": "a3476bd415c5f0a55c31fc90ad9fe7aa025ca2ae64f180d28b0af3bf0c194805",
+      "blob": "722f085bf56e0f9bdfeb666e1e29e1de8d1e1b4e"
+    },
+    "product/ai-company-os-frontend/features/mvp/localBackend.ts": {
+      "bytes": 475,
+      "sha256": "b7d843d4ac5bad5c6fc028e59a316b8b9841e295c202a7b9d3b5809bf5a03c71",
+      "blob": "9231711d7efb18dd18b68e3322f62337a6477484"
+    },
+    "product/ai-company-os-frontend/features/data/sharedReplaySession.ts": {
+      "bytes": 2458,
+      "sha256": "c382c9c2ff500a8da5bff6b3881812637d21a6488d7dbc801cfdad3fa5dc2689",
+      "blob": "90dcd080c6ed53c4a8ff8e2aad1978509725515e"
+    },
+    "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": {
+      "bytes": 3270,
+      "sha256": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e",
+      "blob": "9abf25315e79ba54b071702ca5b74b9656f3bbbc"
+    },
+    "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": {
+      "bytes": 2002,
+      "sha256": "93a1cfa49f86b220c11387425e8800d60876b5c362f5b66a21c39594c92dd216",
+      "blob": "6f62688761d8cf2f4b2e759e5fd30eef07881141"
+    },
+    "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": {
+      "bytes": 1354,
+      "sha256": "2fe6316918d262665054d05a034b5d1d1bc6200ac1b1dd0b21956de89a8d4c9c",
+      "blob": "2085382bf5cd514a95d3e246ead6a00b47aa75bf"
+    },
+    "product/ai-company-os-frontend/app/office/premium/page.tsx": {
+      "bytes": 1488,
+      "sha256": "05a8059df3ee9b975f54d2db29de37f902e839f4a5e88a147993a905b463bfeb",
+      "blob": "2a21f807a63e8808da56cd9c980882244c3df05b"
+    },
+    "product/ai-company-os-frontend/app/office/premium/unified/page.tsx": {
+      "bytes": 680,
+      "sha256": "6774c6ee4ea014816e5479cbd5fd50950fd6f3fc7eb24ed3fbe02f5e9c850303",
+      "blob": "fb6cf1fe045f216df1ad4a24cb72eb6d42f3219f"
+    },
+    "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": {
+      "bytes": 918,
+      "sha256": "e71ea3b15e8e576704f98a22879e9b169fc0c2689834468ff5562eea7b706be8",
+      "blob": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6"
+    }
+  }
+}

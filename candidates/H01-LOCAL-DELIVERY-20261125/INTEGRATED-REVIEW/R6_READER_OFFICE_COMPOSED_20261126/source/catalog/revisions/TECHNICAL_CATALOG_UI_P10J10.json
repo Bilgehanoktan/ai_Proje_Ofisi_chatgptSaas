@@ -1,0 +1,54 @@
+{
+  "revision": "UI-P10J-10",
+  "parent": "2edf353f3c4a2ceb533b7bccd3cd52bc8632b732",
+  "core_observed": "c94753b4f2bc8a3e739ffa997ca9547772deeaf2",
+  "files": [
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.tsx",
+      "symbols": [
+        "Navigation",
+        "isMobile",
+        "toggleCompact",
+        "clearSearch",
+        "closeMobile",
+        "toggleMobile",
+        "select"
+      ],
+      "before": "b25760113ad7dd163e2f2c751425232609ab712e",
+      "after": "f0d997ad1a84061b4c275d06fddb197d26cdb3dc",
+      "sha256": "10c737f3254fdfa2a2bb72bd4ed12eebc1293b85dcc7cb01e9be8e10da3bc7c0",
+      "purpose": "Responsive disclosure and focus"
+    },
+    {
+      "path": "product/ai-company-os-frontend/design-system/Navigation.module.css",
+      "before": "20b81d1d78ef5a11e5f196f60d5f2426e67dfd35",
+      "after": "2b7649d904056f1c4a588bb3764ee9b343dd0d4e",
+      "sha256": "d44fb7e6482becfe0b1b0c7b26c79410dc4ab48f081dc1f2881a234c78337a98",
+      "purpose": "Mobile visibility and bounded scroll"
+    },
+    {
+      "path": "tests/integration/browser_0187_w1.py",
+      "before": "b829ad9b2fa12f7910e014ec87e9ee2a59d17370",
+      "after": "8463d4104c2b7085dc325db87542288ea5fb35a4",
+      "purpose": "Actual browser acceptance candidate"
+    },
+    {
+      "path": "tests/integration/w8_p10j10.py",
+      "symbols": [
+        "load_candidate"
+      ],
+      "purpose": "Exact W8 chain adapter"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "after": "2888802a725b269bb34edd60ff838f0eaa85381f",
+      "purpose": "390 source pins"
+    }
+  ],
+  "api": [],
+  "db": [],
+  "dependencies": [],
+  "tests": "TSX syntax PASS; runtime NOT_RUN",
+  "rollback": "2edf353f3c4a2ceb533b7bccd3cd52bc8632b732",
+  "maintenance": "docs/UI-P10J/P10J10_ARCHITECTURE.md"
+}

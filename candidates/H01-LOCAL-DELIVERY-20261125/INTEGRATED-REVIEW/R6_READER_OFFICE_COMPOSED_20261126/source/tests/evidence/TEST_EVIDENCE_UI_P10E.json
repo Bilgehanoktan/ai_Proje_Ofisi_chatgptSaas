@@ -1,0 +1,54 @@
+{
+  "revision": "UI-P10E",
+  "source_commit": "42d501826d0cf8493e850297171588993efffd07",
+  "parent_ui": "4b44c802f31c826b449b76e99da875eee92ff0b9",
+  "core_0211": "e39c023f7fc8a8c7b3490e870f82a3109e76967b",
+  "manifest_entries": 367,
+  "product_files": 368,
+  "frontend_files": 154,
+  "manifest_path_size_match": 367,
+  "core_added": 2,
+  "ui_added": 3,
+  "ui_modified": 5,
+  "original_lifecycle": {
+    "terminal": 11,
+    "prefix": 14,
+    "unchanged_database_checks": 15,
+    "write_denials": 8,
+    "scope": "Original T1 mappings and readers, actual SQLite dialect shim, original router and compiled GET; not PostgreSQL"
+  },
+  "same_backend": {
+    "pass": 7,
+    "total": 7,
+    "keys": [
+      "mvp",
+      "admission",
+      "outbox",
+      "office-workbench",
+      "task-budget",
+      "lifecycle",
+      "lifecycle-prefix"
+    ],
+    "exact_bodies": 7,
+    "post_denied": 7,
+    "unchanged_databases": 5,
+    "registered_routes": 13,
+    "scope": "original app.main:app in one process + strict-compiled original GET functions; selected recovered 0210 backend paths unchanged in union; 0211 authority addition NOT_RUN, not Next server/locked full checkout"
+  },
+  "new_model": 11,
+  "prior_p10d_model_rerun": 16,
+  "standalone_svg_browser": 14,
+  "tsx_syntax_local": 3,
+  "project_studio": "remote source patch only; full React NOT_RUN",
+  "full_build": "BLOCKED_NEXT_NOT_FOUND",
+  "product_browser": "0/52 NOT_RUN",
+  "independent": "HOLD",
+  "core_latest_confirmed": "0212",
+  "core_0213": "branch observed CURRENT remained 0212; separate",
+  "environment": "Node 22.16; TS 5.8.3; FastAPI 0.128.2; Uvicorn 0.48.0; SQLite; no pinned install",
+  "diagnostic_harness_adjustments": [
+    "HOLD comparison corrected to exact endpoint-specific body; product unchanged",
+    "minimal local process.env declaration for selected GET strict compile; no package installation"
+  ],
+  "local_package": "selected recovered closure, test harnesses, evidence, UI delta; full remote archive separate"
+}

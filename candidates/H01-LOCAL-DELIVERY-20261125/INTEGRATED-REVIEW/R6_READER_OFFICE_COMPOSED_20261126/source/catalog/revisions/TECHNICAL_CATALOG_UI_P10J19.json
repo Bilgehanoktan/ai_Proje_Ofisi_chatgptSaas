@@ -1,0 +1,174 @@
+{
+  "revision": "UI-P10J-19",
+  "status": "D0_PROJECT_ROADMAP_A4_SOURCE_NOT_ACCEPTED",
+  "parent": "4a011d2f4d11e6bf7526ba596ca00b16643ea5bf",
+  "core_observed": "6ecba208102d4974123da9de14872c66fcebd8a5",
+  "manifest": "6caabe5948967e1532a117e99780e7fb90b1b968",
+  "counts": {
+    "prior_product": 476,
+    "product": 483,
+    "manifest": 482,
+    "added": 7,
+    "replaced": 2,
+    "retained": 473,
+    "deleted": 0
+  },
+  "delta": [
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectRoadmap.tsx",
+      "bytes": 2297,
+      "sha256": "ab5f4455cde40321f2e3a9706a41b687d6d527a5b594853735f5701fbf453685",
+      "blob": "7d895929afeb2347b44a46083daaed38e2a1916f",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectRoadmap.module.css",
+      "bytes": 1405,
+      "sha256": "40e21e450375d9bfc74dd89a1cdf282151442938e2f587a012fc98f3895bab22",
+      "blob": "1c4333554d3394148bfa295daf16fdde72c8d82e",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j19-roadmap.test.cjs",
+      "bytes": 3978,
+      "sha256": "b30122cc0c22aae3aebed9a71d4a46dadcf22e61933d0d451764d18b1a63c1d1",
+      "blob": "deaf3d23b30ae5c7c842841356418fced31a2cb6",
+      "source": "local",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "bytes": 6854,
+      "sha256": "b4ba6108c5a17b555b83000720f097995268a365beb99b6fb78df6900c4a68a6",
+      "blob": "091e37581f95e7ce3bf8dcf3d2641bdc11c37a8b",
+      "source": "manual",
+      "change": "replace"
+    },
+    {
+      "path": "ai-company-os-frontend/app/office/premium/page.tsx",
+      "bytes": 1359,
+      "sha256": "476d67c33c7a85be34264cade91a8106d3b6b37c0e59be45b745ed577d4dc235",
+      "blob": "d88f283005fff2585c9d961097c0f2b5fcfb763e",
+      "source": "manual",
+      "change": "replace"
+    },
+    {
+      "path": "ai-company-os-frontend/app/office/premium/hybrid/page.tsx",
+      "bytes": 407,
+      "sha256": "81f5e3dcbe1ee62f5fc8a482ec533cba10e34104f98f1efd98f5a28aa6cb815f",
+      "blob": "df3b3ac2ad76def6036f44cd549c26e3fe72dbca",
+      "source": "exact_A4",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/office/engine/premiumHybridRender.ts",
+      "bytes": 2375,
+      "sha256": "e706128f470737794a72e1ef1b2daa5803cdf0f1b6f400bf93703a7cd03c812e",
+      "blob": "62f5420def96be88bf423d8d010a791bb2299ed9",
+      "source": "exact_A4",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/office/scenes/PremiumHybridScene.tsx",
+      "bytes": 9739,
+      "sha256": "6be20a9d0a2ab34bb5fe1db21e3311ae54f7e91647a51c40bb0ab778f59501e1",
+      "blob": "8fe0766a096ea6b5969d8993f5bd29a80b220387",
+      "source": "exact_A4",
+      "change": "add"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/premium-hybrid-render.test.cjs",
+      "bytes": 4027,
+      "sha256": "e5204c7b3f5320a269f13308be8beae6e607223dada1df935f8a7c09713e8530",
+      "blob": "583924781c30bfebf974054148cc32359ceb11f2",
+      "source": "exact_A4",
+      "change": "add"
+    }
+  ],
+  "local": {
+    "actual": 11,
+    "pass": 11,
+    "fail": 0,
+    "skip": 0,
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "mode": "isolated actual ProjectRoadmap TSX with mocked JSX and CSS, manually reproduced reference task fixture; not actual plan parser, parent mount or DOM",
+    "initial_run": "10 PASS / 1 FAIL due to whitespace in JSX test helper; test regex fixed; rerun 11 PASS",
+    "initial_log_sha256": "ba410236d30b28a907806fb1ea086639338a63692953df8340044f7f9821c409",
+    "log_sha256": "1c636f28f058b4ddf4f4a342f06b2289d8576914852d1d8cb26524ea382f1821"
+  },
+  "a4": {
+    "commit": "f709ab9daea7766b62ae2b18d0909b7141ec1966",
+    "parent": "82b1f5877f90149e5aaa3e8a0029d2a0f91c9e64",
+    "manifest": "ce504ea64491081bc35881246680045dbde24b28",
+    "exact_transfers": 4,
+    "matching_dependency_manifest_pins": 9,
+    "owner_evidence": "10 new +66 prior selected reruns =76 PASS on A4 branch; not rerun here",
+    "renderer": "SOURCE_BOUND_NOT_NATIVE_ACCEPTED",
+    "portal": "HOLD",
+    "canonical_join": "HOLD"
+  },
+  "browser": {
+    "old_blob": "9d4a741e9c8b4e643e494b0c19f0d789d6967a17",
+    "blob": "baac24da1edba991a240a0c41258f0f9a35d95fa",
+    "old_captures": 84,
+    "new_captures": 6,
+    "planned": 90,
+    "status": "NOT_RUN",
+    "scope": "4 Project roadmap viewport/theme, 2 hybrid native viewport checks; no full motion or native performance acceptance"
+  },
+  "gates": {
+    "ui": "21/40 prior; no new UI gate",
+    "core": "9/16 separate core 0227; E1 accepted in core scope only",
+    "mvp": "0/11",
+    "independent": "0/7 HOLD",
+    "full_build": "NOT_RUN",
+    "W8": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "PG_RLS": "NOT_RUN"
+  },
+  "symbols": [
+    {
+      "file": "ai-company-os-frontend/features/project-management/ProjectRoadmap.tsx",
+      "symbol": "roadmapFacts",
+      "input": "validated ProjectView",
+      "output": "logical wave summary, count and gate references",
+      "authority": "none"
+    },
+    {
+      "file": "ai-company-os-frontend/features/project-management/ProjectRoadmap.tsx",
+      "symbol": "ProjectRoadmap",
+      "input": "view,selected,onSelect",
+      "output": "selectable wave/gate UI",
+      "dependencies": [
+        "ai-company-os-frontend/features/project-management/ProjectRoadmap.module.css"
+      ]
+    },
+    {
+      "file": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "symbol": "ProjectStudio",
+      "change": "mount roadmap with existing selection; retain board, table, graph and history"
+    },
+    {
+      "file": "ai-company-os-frontend/app/office/premium/page.tsx",
+      "symbol": "PremiumOfficePage",
+      "change": "add separate hybrid link; retain native and iframe"
+    },
+    {
+      "file": "ai-company-os-frontend/office/engine/premiumHybridRender.ts",
+      "symbol": "createHybridRender",
+      "change": "exact A4 transfer",
+      "reference": "docs/UX-PREMIUM-07/A4R1_RENDER.md at pinned owner commit"
+    }
+  ],
+  "changes": {
+    "API": 0,
+    "DB": 0,
+    "backend": 0,
+    "dependencies": 0,
+    "authority": 0
+  },
+  "next": "P10J20 Workflow Studio; re-pin core and A4R2/A5; prioritize exact W8 build and browser acceptance on reviewed connected workstation."
+}

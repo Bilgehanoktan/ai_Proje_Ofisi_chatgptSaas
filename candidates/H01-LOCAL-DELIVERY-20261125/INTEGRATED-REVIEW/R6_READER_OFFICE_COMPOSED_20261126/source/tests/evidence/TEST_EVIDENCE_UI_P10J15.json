@@ -1,0 +1,59 @@
+{
+  "revision": "UI-P10J-15",
+  "source_commit": "a0d89cb77931e0f886e6603367d26a2460f445da",
+  "manifest_blob": "e0dfff291acf9fab0893569bbc8be855a12d58d3",
+  "local_selected_rerun": {
+    "historical_presentation": 17,
+    "governance": 6,
+    "python_replay": 6,
+    "node_replay": 22,
+    "total": 51,
+    "pass": 51,
+    "distinct_source_pins": {
+      "historicalEvidence.ts": "032abe3f5879d6157b502c3153eb4f6a58d8684b853b1cc4e394e4282ed3667f",
+      "historicalPresentation.ts": "5713cdfe90a2d513d3e9bfbf71f1fa066f1d25b76508e38611ae99ba4bdb433c",
+      "lifecyclePrefix.ts": "e205c0e995ea5d9b49ead972a3baeef072fb05d348291dd06bf8d2c3598fa501",
+      "lifecycleProjection.ts": "a31d6df2d4d6f6e9a49a25ac652b56450d4e9ffa0524c25ae3b7b55d689ae12d",
+      "historical-presentation-0215.test.cjs": "bb2d72e425c86587cc0207d8a5f233fa9147eccf8812f3139dc79ef6c360a8e2",
+      "studioGovernance.ts": "d1a4552ecf78b3b06022e42e29d00250a6868316522a0f11b31b77a8eb545e9c",
+      "ui-p10j14-governance.test.cjs": "e13ab2e36665e1a78afe575746747cbfe7084a23b94cdb1cb3dc83e93ada2157",
+      "lifecycle_prefix_wire.py": "1c6e28ddc80e58da5193cd336ec12f8fc46ed6cfd5bdda1b313e64e872983462",
+      "shared_snapshot.py": "714ce68e7fea401e30c42381a3b883ece9ac2a92f3af9dc47478cb5fc002cce2",
+      "sharedSnapshot.ts": "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e",
+      "test_shared_snapshot_0222.py": "b41e3a3f721e41dbcfcec4ce3c84508ef0097c7f9bc1929d1334c4aaca783a50",
+      "shared-snapshot-0222.test.cjs": "ceba1eb2c2403b9a9b0ba08e9b61ef23eabca856a82715f5de5cc82064561d32"
+    },
+    "strict_ts": "PASS",
+    "versions": {
+      "node": "22.16.0",
+      "typescript": "5.8.3",
+      "python": "3.13.5"
+    },
+    "log_hashes": {
+      "model": "0cf34df6b0ea548a8554482ddab66834bfa0ac8f38fda13d4044d9a716cc9b28",
+      "python": "a2f683089d53c983be223fb68dee0a89093d85915e2cf80b3a441aaa0ff20f96",
+      "node": "fa34c14ce46c3c239d8eb399f3fc251ea51fd35f44a79476a42c7b56b8c5cf52",
+      "environment": "55d09a8b8e1d9405351bf34e36af271abf02884b5410051b10a18da2def9011f"
+    },
+    "archive_sha256": "a34439bf9791ba59fd1561a13b16b7c7c62c96618765c01771bc25f0444adc5f"
+  },
+  "prior_core": {
+    "0225": 134,
+    "0226": 307,
+    "overlap": true,
+    "sql6": "PASS_CORE_ONLY",
+    "db4": "PASS_CORE_ONLY"
+  },
+  "not_run": [
+    "original SQL8",
+    "original SQL10",
+    "0219 full chain",
+    "adapted proxy",
+    "full W8",
+    "browser",
+    "PG13",
+    "RLS",
+    "independent acceptance"
+  ],
+  "gates": "7/16 unchanged"
+}

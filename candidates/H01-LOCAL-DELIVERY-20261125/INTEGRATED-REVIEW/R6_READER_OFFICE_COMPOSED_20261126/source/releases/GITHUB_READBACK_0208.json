@@ -1,0 +1,89 @@
+{
+  "revision": "0208",
+  "baseline": "9bbc4bed75c56a36bcacc8c430a79bf3612aa85b",
+  "source_commit": "596529ed3d3de59b29065239b42033774e31af6e",
+  "tree": "95c90712a6c49853140882f6612187c0472e9184",
+  "manifest_blob": "268f575b534bda97d8ed57a1f7f3f4de8bdf62cd",
+  "manifest_entries": 337,
+  "product_files": 338,
+  "prior_non_manifest_files_unchanged": 334,
+  "source_tree_files": 1355,
+  "source_delta": [
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/joint_context.py",
+      "kind": "add",
+      "git_blob": "1f41b3fa0fa3955bd1b5a12ea3cbc021fa356341"
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/memory_engine/snapshot_store.py",
+      "kind": "append",
+      "git_blob": "5c7aa2b2a211970ea8fb3d90c55423157a1c10d1"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_joint_context_0208.py",
+      "kind": "add",
+      "git_blob": "d1b1d7cc03875805679bb7f745e7d21ab9cb40fd"
+    },
+    {
+      "path": "product/SOURCE_MANIFEST.json",
+      "kind": "replace",
+      "git_blob": "268f575b534bda97d8ed57a1f7f3f4de8bdf62cd"
+    }
+  ],
+  "local_verified_product_files": 31,
+  "evidence_path": "tests/evidence/TEST_EVIDENCE_0208.json",
+  "evidence_blob": "a1f5de8abc4cec5db1d53009c7e40a18ceedd19d",
+  "evidence_sha256": "4fe6bae71e83b4a6c7b953f4a579228b635fc0d2f3c91224ef7a034b4ebf59e0",
+  "local_slice_zip_sha256": "1acfc3f1bc34a0ff303a7ee2d9f8a5715158411de8cd580c33b5d456bda3fc77",
+  "full_archive_downloaded": false,
+  "local_full_checkout": "BLOCKED_DNS",
+  "core_lock": {
+    "blob": "223f6fbd28cf4c428c07eb60dda4a36f644fa58c",
+    "remote_bytes_verified": 55,
+    "remote_product_sha256_verified": 49,
+    "sql_git_blob_verified": 6,
+    "local_exact_files": 8,
+    "local_missing_files": 47,
+    "target_tests": 29,
+    "status": "NOT_RUN",
+    "sql_sha256": [
+      "02c15b573b2056c841854a6ca3b2a08b9ee2c2076a8388ff4d0118c974115003",
+      "c8317eceef963dfeafb2452dd53e25074dc7926868fc96dfef5be14176396be6",
+      "64c7ae1b4c89eef2d0011ce3bf035b4c782dcfbc7a1fe0ce70d6ce007f0bf917",
+      "91d1baf23faf319efca7120b291e5303e67cd3768073e5d8aa26443bef3f48b8",
+      "587855f42933b7d3e7bf2be0758c57d91d554bf19334e881e3a8274a3e3e73c3",
+      "a2528a52bb15d0cacde8f7f1de2526b20cf8bb3a682f204539f1fffe56421b56"
+    ]
+  },
+  "tests": {
+    "passed": 98,
+    "new": 26,
+    "regression": 72,
+    "failed": 0,
+    "skipped": 0,
+    "core_12": "NOT_RUN",
+    "combined_lifecycle_17": "NOT_RUN",
+    "full_T1_decorator": "NOT_RUN",
+    "postgresql_13": "NOT_RUN",
+    "full_build_browser": "NOT_RUN",
+    "independent_acceptance": "HOLD",
+    "canonical_mapping": "HOLD",
+    "normative_authority": "HOLD"
+  },
+  "environment": {
+    "fastapi": "0.128.2",
+    "starlette": "0.50.0",
+    "cryptography": "46.0.4",
+    "uvicorn": "0.48.0",
+    "python": "3.13.5",
+    "sqlite": "3.46.1",
+    "node": "22.16.0",
+    "typescript": "5.8.3",
+    "chromium": "144.0.7559.96",
+    "postgresql": "NOT_AVAILABLE",
+    "psycopg": "NOT_AVAILABLE",
+    "frontend_dependencies": "NOT_RESOLVED"
+  },
+  "main_expected": "b4e055e25a59e25fc87d846aeb36540fbaa91f67",
+  "CI": "NOT_RUN"
+}
