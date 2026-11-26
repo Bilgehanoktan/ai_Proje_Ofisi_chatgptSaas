@@ -1,0 +1,60 @@
+{
+  "baseline": "567466eb0314c495b2543ff8fe1aed1ab558d674",
+  "mode": "R6 disposable SQLite fixture, Python 3.13.14 AMD64",
+  "suites": [
+    {
+      "command": [
+        "-E",
+        "-s",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_transition_mapping_0194.py",
+        "-v"
+      ],
+      "exit": 0,
+      "passed": 35,
+      "output": "test_absence_never_authorizes_retry (test_transition_mapping_0194.MappingTests.test_absence_never_authorizes_retry) ... ok\ntest_budget_role_not_mapped (test_transition_mapping_0194.MappingTests.test_budget_role_not_mapped) ... ok\ntest_changed_audit_readback (test_transition_mapping_0194.MappingTests.test_changed_audit_readback) ... ok\ntest_clock_regression (test_transition_mapping_0194.MappingTests.test_clock_regression) ... ok\ntest_duplicate_commit_fails_cas (test_transition_mapping_0194.MappingTests.test_duplicate_commit_fails_cas) ... ok\ntest_expiry_during_write (test_transition_mapping_0194.MappingTests.test_expiry_during_write) ... ok\ntest_fence_conflict_rolls_back_head (test_transition_mapping_0194.MappingTests.test_fence_conflict_rolls_back_head) ... ok\ntest_forged_reference (test_transition_mapping_0194.MappingTests.test_forged_reference) ... ok\ntest_generic_commit_denied (test_transition_mapping_0194.MappingTests.test_generic_commit_denied) ... ok\ntest_idempotency_collision (test_transition_mapping_0194.MappingTests.test_idempotency_collision) ... ok\ntest_missing_outbox_readback (test_transition_mapping_0194.MappingTests.test_missing_outbox_readback) ... ok\ntest_persist_and_reopen (test_transition_mapping_0194.MappingTests.test_persist_and_reopen) ... ok\ntest_policy_epoch_revocation (test_transition_mapping_0194.MappingTests.test_policy_epoch_revocation) ... ok\ntest_readback_tamper_inside_transaction_rolls_back (test_transition_mapping_0194.MappingTests.test_readback_tamper_inside_transaction_rolls_back) ... ok\ntest_revocation_epoch (test_transition_mapping_0194.MappingTests.test_revocation_epoch) ... ok\ntest_rollback_every_role (test_transition_mapping_0194.MappingTests.test_rollback_every_role) ... ok\ntest_stale_heartbeat (test_transition_mapping_0194.MappingTests.test_stale_heartbeat) ... ok\ntest_stale_lease (test_transition_mapping_0194.MappingTests.test_stale_lease) ... ok\ntest_terminal_denied (test_transition_mapping_0194.MappingTests.test_terminal_denied) ... ok\ntest_two_sqlite_writers_single_winner (test_transition_mapping_0194.MappingTests.test_two_sqlite_writers_single_winner) ... ok\ntest_unknown_after_commit (test_transition_mapping_0194.MappingTests.test_unknown_after_commit) ... ok\ntest_wrong_fence_readback (test_transition_mapping_0194.MappingTests.test_wrong_fence_readback) ... ok\ntest_wrong_grant (test_transition_mapping_0194.MappingTests.test_wrong_grant) ... ok\ntest_wrong_lease_version_readback (test_transition_mapping_0194.MappingTests.test_wrong_lease_version_readback) ... ok\ntest_wrong_persisted_principal (test_transition_mapping_0194.MappingTests.test_wrong_persisted_principal) ... ok\ntest_duplicate (test_transition_mapping_0194.ScheduleTests.test_duplicate) ... ok\ntest_duplicate_run_id (test_transition_mapping_0194.ScheduleTests.test_duplicate_run_id) ... ok\ntest_failed_predecessor_not_ready (test_transition_mapping_0194.ScheduleTests.test_failed_predecessor_not_ready) ... ok\ntest_first_wave (test_transition_mapping_0194.ScheduleTests.test_first_wave) ... ok\ntest_forged_iv (test_transition_mapping_0194.ScheduleTests.test_forged_iv) ... ok\ntest_independent_gate_stays_out (test_transition_mapping_0194.ScheduleTests.test_independent_gate_stays_out) ... ok\ntest_missing_task (test_transition_mapping_0194.ScheduleTests.test_missing_task) ... ok\ntest_out_of_order_success (test_transition_mapping_0194.ScheduleTests.test_out_of_order_success) ... ok\ntest_parallel_wave (test_transition_mapping_0194.ScheduleTests.test_parallel_wave) ... ok\ntest_wrong_plan_revision (test_transition_mapping_0194.ScheduleTests.test_wrong_plan_revision) ... ok\n\n----------------------------------------------------------------------\nRan 35 tests in 0.767s\n\nOK\n"
+    },
+    {
+      "command": [
+        "-E",
+        "-s",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_admission_mapping_0195.py",
+        "-v"
+      ],
+      "exit": 0,
+      "passed": 19,
+      "output": "test_all_nine_rollback (test_admission_mapping_0195.ClaimTests.test_all_nine_rollback) ... ok\ntest_budget_limit (test_admission_mapping_0195.ClaimTests.test_budget_limit) ... ok\ntest_claim_then_ordinary_transition (test_admission_mapping_0195.ClaimTests.test_claim_then_ordinary_transition) ... ok\ntest_digest_tamper (test_admission_mapping_0195.ClaimTests.test_digest_tamper) ... ok\ntest_duplicate_claim (test_admission_mapping_0195.ClaimTests.test_duplicate_claim) ... ok\ntest_expiry_precommit (test_admission_mapping_0195.ClaimTests.test_expiry_precommit) ... ok\ntest_missing_roster (test_admission_mapping_0195.ClaimTests.test_missing_roster) ... ok\ntest_no_initial_backdate (test_admission_mapping_0195.ClaimTests.test_no_initial_backdate) ... ok\ntest_no_takeover (test_admission_mapping_0195.ClaimTests.test_no_takeover) ... ok\ntest_not_ready (test_admission_mapping_0195.ClaimTests.test_not_ready) ... ok\ntest_parallel_claim_one_winner (test_admission_mapping_0195.ClaimTests.test_parallel_claim_one_winner) ... ok\ntest_parallel_tasks_budget_cas (test_admission_mapping_0195.ClaimTests.test_parallel_tasks_budget_cas) ... ok\ntest_postimage_mismatch_rolls_back (test_admission_mapping_0195.ClaimTests.test_postimage_mismatch_rolls_back) ... ok\ntest_revocation_precommit (test_admission_mapping_0195.ClaimTests.test_revocation_precommit) ... ok\ntest_stale_budget_revision (test_admission_mapping_0195.ClaimTests.test_stale_budget_revision) ... ok\ntest_unknown_commit_no_duplicate (test_admission_mapping_0195.ClaimTests.test_unknown_commit_no_duplicate) ... ok\ntest_unknown_cost (test_admission_mapping_0195.ClaimTests.test_unknown_cost) ... ok\ntest_unknown_reconcile_read_only (test_admission_mapping_0195.ClaimTests.test_unknown_reconcile_read_only) ... ok\ntest_wrong_plan_digest (test_admission_mapping_0195.ClaimTests.test_wrong_plan_digest) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.868s\n\nOK\n"
+    },
+    {
+      "command": [
+        "-E",
+        "-s",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_lifecycle_mapping_0196.py",
+        "-v"
+      ],
+      "exit": 0,
+      "passed": 26,
+      "output": "test_full_chain (test_lifecycle_mapping_0196.LifecycleTests.test_full_chain) ... ok\ntest_ordinary_missing_admission_binding (test_lifecycle_mapping_0196.LifecycleTests.test_ordinary_missing_admission_binding) ... ok\ntest_ordinary_renewal_outbox_missing (test_lifecycle_mapping_0196.LifecycleTests.test_ordinary_renewal_outbox_missing) ... ok\ntest_ordinary_tampered_initial_audit (test_lifecycle_mapping_0196.LifecycleTests.test_ordinary_tampered_initial_audit) ... ok\ntest_ordinary_tampered_renewal_history (test_lifecycle_mapping_0196.LifecycleTests.test_ordinary_tampered_renewal_history) ... ok\ntest_parallel_renew_vs_failure (test_lifecycle_mapping_0196.LifecycleTests.test_parallel_renew_vs_failure) ... ok\ntest_parallel_renewal_one_winner (test_lifecycle_mapping_0196.LifecycleTests.test_parallel_renewal_one_winner) ... ok\ntest_renewal_bounded (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_bounded) ... ok\ntest_renewal_expired_precommit (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_expired_precommit) ... ok\ntest_renewal_fence_change (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_fence_change) ... ok\ntest_renewal_history_two (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_history_two) ... ok\ntest_renewal_not_backdated (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_not_backdated) ... ok\ntest_renewal_rollback_each_role (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_rollback_each_role) ... ok\ntest_renewal_stale_clock (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_stale_clock) ... ok\ntest_renewal_wa_change (test_lifecycle_mapping_0196.LifecycleTests.test_renewal_wa_change) ... ok\ntest_terminal_budget_cas (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_budget_cas) ... ok\ntest_terminal_budget_source_changed (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_budget_source_changed) ... ok\ntest_terminal_duplicate (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_duplicate) ... ok\ntest_terminal_no_cancel (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_no_cancel) ... ok\ntest_terminal_no_success (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_no_success) ... ok\ntest_terminal_no_unknown (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_no_unknown) ... ok\ntest_terminal_rollback_each_role (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_rollback_each_role) ... ok\ntest_terminal_unknown_cost (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_unknown_cost) ... ok\ntest_terminal_wrong_reservation (test_lifecycle_mapping_0196.LifecycleTests.test_terminal_wrong_reservation) ... ok\ntest_unknown_renewal_readback (test_lifecycle_mapping_0196.LifecycleTests.test_unknown_renewal_readback) ... ok\ntest_unknown_terminal_readback (test_lifecycle_mapping_0196.LifecycleTests.test_unknown_terminal_readback) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 1.584s\n\nOK\n"
+    }
+  ]
+}
