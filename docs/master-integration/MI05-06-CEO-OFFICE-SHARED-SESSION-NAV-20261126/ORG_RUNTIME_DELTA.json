@@ -1,0 +1,99 @@
+{
+  "task": "MI05-06-CEO-OFFICE-AGENT-RUNTIME-ORG-20261126",
+  "parent": "1a653d99676234cebca3442e5cf54b1c46b8e733",
+  "canonical": "c7eba2ca6da7328fb3a39585a048c8e1941f0b1a",
+  "source_owner_review": "HOLD; PR45/49 historical same-path sources not promoted; changes only on existing review branch, R6 and canonical unchanged",
+  "result": "One existing bounded ORG read instance lifted to shared root; CEO/Office/Agent/Project consume it. Existing Runtime replay and plan reader preserved; Studio join diagnosis now uses only read backend plan, not offline fallback. No real binding.",
+  "changes": [
+    {
+      "path": "ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+      "before_blob": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+      "before": {
+        "bytes": 1354,
+        "sha256": "2fe6316918d262665054d05a034b5d1d1bc6200ac1b1dd0b21956de89a8d4c9c"
+      },
+      "after": {
+        "bytes": 1593,
+        "sha256": "fd2f2d101a88b593a8fbe4b0a44e91aa0715fa77ff1de3a7f4d0f6fa38a23588"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+      "before_blob": "9d07921b5b3a2d36328f1f65fd6cfd68123cafcb",
+      "before": {
+        "bytes": 5929,
+        "sha256": "d69e1d8e5405b1e3a0e5c58498deb4d9a070f0313d5f76a3e727dac1ed31100e"
+      },
+      "after": {
+        "bytes": 7039,
+        "sha256": "bad849abd3325e8fcc4df12e3d0f573ba27e3ac375bb85435abcd824ed8f0309"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+      "before_blob": "990b06ee2b5adc115547615719610ccc02a66061",
+      "before": {
+        "bytes": 1732,
+        "sha256": "34bb77b59c989b1ecb0ec3b75d04be68923bba7c4d5d2eccf922eab78ccb741a"
+      },
+      "after": {
+        "bytes": 2109,
+        "sha256": "3e4de8799d55065edb0d9cf932d467127b2ecd652a97a7bf5b3931416b774f22"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+      "before_blob": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+      "before": {
+        "bytes": 3302,
+        "sha256": "212e106dfc3c2c177a20e39497d8de44a4b3ba53fe7e067de918a9e3c4081749"
+      },
+      "after": {
+        "bytes": 4742,
+        "sha256": "d62b83dda0049f8f177031f3e9d66dbc0b7ffb504361f401be962b1a5a219649"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+      "before_blob": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+      "before": {
+        "bytes": 9718,
+        "sha256": "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
+      },
+      "after": {
+        "bytes": 9641,
+        "sha256": "8c834d64e0156d05d09de2afdec20d735aab94a2ac743e5e2120fe055e5a6ac8"
+      }
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+      "before_blob": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+      "before": {
+        "bytes": 6668,
+        "sha256": "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
+      },
+      "after": {
+        "bytes": 6620,
+        "sha256": "e30f7fefaae6d62e9c0f2ac0a45b4036a00d8e83aa3e1fb9d332a8851f504757"
+      }
+    }
+  ],
+  "manifest_count": 563,
+  "manifest_sha256": "d871aa3751f9af45be062e9bfd280355527c096b98c7662dfa6b29ab9a6a9d9b",
+  "blockers": {
+    "plan_revision": "DAG 6ad8b079... versus Runtime c75ec107...; no company or run_id in plan",
+    "org": "runtime_binding null, identity_owner HOLD, geometry_join HOLD",
+    "runtime": "historical only, no verified issuer/assignment/current lease or placement"
+  },
+  "tests": "NOT_RUN; two existing harness adapters adjusted for context and Link only; no new test cases or CI",
+  "architecture": "Existing read model composition only; independent source clocks, no atomic snapshot or authority, no API/schema/DB/event/lock changes",
+  "acceptance": {
+    "ui_before": "21/40",
+    "ui_after": "21/40",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "NOT_REASSESSED"
+  },
+  "next": "MI05/06 source owner review exact branch; verify C07/C08 including shared ORG read/reset/expiry across CEO, Office, Agent and Project, no stale join; MI02/03/04 supply real scoped plan/run/agent/principal/position assignment with issuer/provenance and T1 evidence; independent IV retains HOLD",
+  "rollback": "Revert this isolated commit; previous navigation candidate remains. No new branch/PR."
+}

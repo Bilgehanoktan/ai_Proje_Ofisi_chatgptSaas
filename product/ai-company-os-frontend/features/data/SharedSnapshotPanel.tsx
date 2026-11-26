@@ -1,15 +1,13 @@
 "use client";
 import Link from 'next/link';
 import {useSharedSnapshot} from './SharedSnapshotProvider';
-import {useProjectionRead} from './useProjectionRead';
 import {readStatus,type ReadState} from './projectionRead';
 import {readSecurityView} from '../security/securityModel';
 import {inspectHistoricalJoin} from '../mvp/historicalJoin';
 
 /** Existing CEO/Office shared historical view; no cross-reader joins or live authority. */
 export default function SharedSnapshotPanel({office=false}:{office?:boolean}){
- const {state,read,reset,planRead}=useSharedSnapshot(),s=state.phase==='historical'?state.data:null,p=s?.prefix;
- const organization=useProjectionRead('organization');
+ const {state,read,reset,planRead,organizationRead:organization}=useSharedSnapshot(),s=state.phase==='historical'?state.data:null,p=s?.prefix;
  const plan=planRead.state.phase==='historical'?planRead.data:null;
  const org=organization.state.phase==='historical'?organization.data:null;
  // Compare identities for diagnostics only; never publish a combined snapshot.
@@ -23,6 +21,7 @@ export default function SharedSnapshotPanel({office=false}:{office?:boolean}){
  {s&&p&&<><p className="sub">{p.tenant} / {p.company} / {p.environment} · run sırası #{s.snapshot_seq} · policy/W-A {p.policy_epoch}/{p.witness_epoch}</p><div className="projection-summary-grid"><article><small>Görev / run</small><strong>{p.task_id} / {p.run_id}</strong></article><article><small>Tarihsel durum</small><strong>{p.state}</strong></article><article><small>Örnek rezervasyon</small><strong>{p.sample_outstanding_minor} minor {p.currency}</strong></article><article><small>Gerçek aktif ajan</small><strong>—</strong></article></div><p className="sub" style={{overflowWrap:'anywhere'}}>Plan: {p.plan_revision} · agent referansı: {p.agent_instance_id} · proje ve world: kanıt yok · digest: {s.digest}</p></>}
  <p className="sub" role="status" aria-label="Plan Runtime bağlama durumu">Plan / Runtime: {join?join.reason:'SOURCE_UNAVAILABLE'} · JOIN_HOLD</p>
  <p className="sub">Aynı uygulama oturumu; 30 sn görüntüleme süresi, gizlenmede veya ortak temizlemede tüm bağlı görünümlerden kaldırılır. Canlı SSE, ajan konumu, proje eşlemesi, gerçek KPI, harcama ve dispatch yok. Statik ofis geometrisi ayrı referanstır.</p>
+ {office&&<section className="panel" aria-label="Office bağımsız plan ve ORG kaynakları"><h3>Plan ve organizasyon kaynakları · ayrı tarihsel kayıtlar</h3><p role="status">Plan: {status(planRead.state)} · ORG: {status(organization.state)}</p>{plan&&<p className="sub" style={{overflowWrap:'anywhere'}}>Plan revizyonu: {plan.revision}</p>}{org&&<p className="sub" style={{overflowWrap:'anywhere'}}>ORG: {org.scope.tenant_id} / {org.scope.company_id} / {org.scope.environment_id} · revizyon {org.revision} · {org.positions.length} tarihsel pozisyon</p>}<div className="chips"><button type="button" disabled={planRead.state.phase==='loading'} onClick={planRead.read}>Plan kaydını oku</button><button type="button" disabled={planRead.state.phase==='idle'} onClick={planRead.reset}>Planı temizle</button><button type="button" disabled={organization.state.phase==='loading'} onClick={organization.read}>ORG kaydını oku</button><button type="button" disabled={organization.state.phase==='idle'} onClick={organization.reset}>ORG temizle</button></div><p className="sub">Aynı ORG okuma oturumu; gerçek ajan–pozisyon bağı ve yerleşim doğrulanmadı · JOIN_HOLD.</p></section>}
  {!office&&<section className="panel" aria-label="CEO kaynak ve kontrol özeti">
   <div className="bar"><div><h3>Proje, organizasyon ve kontrol durumu</h3><small>Birbirinden bağımsız salt-okunur kanıtlar; atomik şirket anlık görüntüsü değil</small></div><span className="pill">HOLD / NO LIVE KPI</span></div>
   <div className="projection-summary-grid">
