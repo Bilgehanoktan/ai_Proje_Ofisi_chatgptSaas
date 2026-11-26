@@ -1,0 +1,13 @@
+# R6 — paired local DEV application startup (2026-11-26)
+
+Operational code, not a test suite, patch to archived product, separate runtime or acceptance claim. Current R6 source tree ea89d4c232461f5649409a934e9d25d2d2bb8d2a / manifest 45be0e18204493dcdb883eba75b12279d15f3190 explicitly remains ARCHIVAL_COMPOSED_REVIEW_ONLY_OWNER_SECURITY_DEPENDENCY_HOLD_NOT_EXECUTION_APPROVED. The launcher refuses that status. Do not edit the archive or its manifest to unblock it. MI01/W2/dependency and source owners must first deliver an authorized, prepared isolated DEV checkout, independently pinned manifest and reviewed installed dependencies/build. Launcher is not an approval authority.
+
+The existing Next.js frontend has no start npm script, but next CLI is present in package.json dependencies. The existing backend exposes app.main:app via app/api/demo.py. The existing frontend loopback proxy reads AICOS_D0_BACKEND_PORT. This operational composition uses those exact interfaces, starts both processes on 127.0.0.1, cleans up the paired session, passes only a restricted environment, does not install/build/test, does not activate model/worker or external writes. It refuses known restricted manifest metadata, checks pinned file bytes, and requires a prebuilt frontend. It does not establish dependency trust, prove absence of extra files, prove build provenance, establish independent security, or make the current R6 runnable.
+
+After the responsible owners authorize and prepare the DEV checkout only:
+```powershell
+py -3.13 .\start_r6_local.py --root <approved-checkout> --manifest-blob <owner-pinned-manifest> --python <absolute-reviewed-venv-python.exe> --node <absolute-reviewed-node.exe>
+```
+Placeholders intentionally require actual reviewed paths and pins. No action is authorized by entering them. Existing historical R6 evidence is retained, no new tests/build/processes were run. Source-only operational utility unexecuted.
+
+Next product code (existing owners): W2 + MI02/03/04 implement authorized command-to-canonical-plan/admission binding rather than repurposing D0 GET routes. MI07/08/09 bind existing model/skill/memory through scoped gateway; MI05/06 project authorized persisted result in CEO/Office. Real model/tool/agent grants, T1 protected commit, W-A, independent IV, customer data, spend, CI, main and PROD remain gated. Existing Research root fixture reached VERIFYING v3, not full worktype completion. No product source or manifest change, no acceptance or ordinal gain; weighted HESAPLANAMADI. Rollback: revert these operational files only; no product/database rollback necessary.
