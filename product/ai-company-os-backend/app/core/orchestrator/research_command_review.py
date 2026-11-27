@@ -5,7 +5,8 @@ import json
 from app.core.agent_runtime.lifecycle import token
 from app.core.orchestrator.engine import canonical_plan
 from app.core.task_engine.dag import valid_id
-from app.core.transaction.review import digest_ok
+from app.core.transaction.review import (digest_ok, WorkItemScopeDraft, WorkItemRequestDraft,
+                                         inspect_workitem_request)
 
 
 _FIELDS = {"worktype", "project_ref", "plan_ref", "expected_plan_revision"}
@@ -33,6 +34,20 @@ class ResearchPlanBinding:
     persistence_allowed: bool = field(default=False, init=False)
     dispatch_allowed: bool = field(default=False, init=False)
     committed: bool = field(default=False, init=False)
+
+
+    def to_workitem_draft(self, scope: WorkItemScopeDraft, *, project_revision: str,
+                          worktype_version: str, workowner_ref: str) -> WorkItemRequestDraft:
+        """Transfer D0 pins to T1 review, not authenticated scope or write authority."""
+        if (type(scope) is not WorkItemScopeDraft or scope.project_ref != self.project_ref
+                or self.plan_ref != _D0_PLAN_REF or self.plan_revision != _D0_PLAN_REVISION
+                or self.root_task_id != 'plan'):
+            raise ResearchCommandError("WORKITEM_BINDING_MISMATCH")
+        draft = WorkItemRequestDraft(scope, project_revision, worktype_version, workowner_ref,
+                                     self.plan_ref, self.plan_revision, self.plan_digest, self.idempotency_key)
+        if not inspect_workitem_request(draft).structural_match:
+            raise ResearchCommandError("WORKITEM_DRAFT_HOLD")
+        return draft
 
 
 def _unique_object(pairs):

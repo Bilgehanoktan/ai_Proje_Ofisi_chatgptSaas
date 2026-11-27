@@ -339,8 +339,8 @@
       "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
     },
     "ai-company-os-backend/app/core/orchestrator/research_command_review.py": {
-      "bytes": 4684,
-      "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd"
+      "bytes": 5720,
+      "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
     },
     "ai-company-os-backend/app/core/outbox_review.py": {
       "bytes": 421,
@@ -455,8 +455,8 @@
       "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
-      "bytes": 4286,
-      "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+      "bytes": 4604,
+      "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
     },
     "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": {
       "bytes": 17868,
@@ -479,8 +479,8 @@
       "sha256": "341ff3e6572dbe99ad41aad84ac8913baca3eea84efc286a3ea3216219c70ae0"
     },
     "ai-company-os-backend/app/core/transaction/review.py": {
-      "bytes": 5065,
-      "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+      "bytes": 7329,
+      "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0"
     },
     "ai-company-os-backend/app/core/transaction/signed_consume_reference.py": {
       "bytes": 4409,
@@ -1095,8 +1095,8 @@
       "sha256": "28fe78023ad0fa8c20a25732766ee90d58c279f02f611b92fb653d29e556f9f2"
     },
     "ai-company-os-backend/tests/test_research_command_review_mvp03.py": {
-      "bytes": 4841,
-      "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f"
+      "bytes": 10002,
+      "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
     },
     "ai-company-os-backend/tests/test_research_company_snapshot_0224.py": {
       "bytes": 6416,
@@ -2636,5 +2636,42 @@
     "classification": "D0_SOURCE_ONLY",
     "tests": "NOT_RUN",
     "persistence": "HOLD"
+  },
+  "h01_mvp03_direction_a_d0_workitem_review_20261127": {
+    "parent": "c6fef15068e7f9fcd752b0513d39ca9dc39c82d4",
+    "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/review.py",
+        "previous_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "bytes": 7329,
+        "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/transaction/port.py",
+        "previous_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "bytes": 4604,
+        "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "previous_blob": "591f3685ab69d5e202124bbdd4716ebc161c5ba0",
+        "blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "bytes": 5720,
+        "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "previous_blob": "9aba76bb610c210a4195d0568929a880bb9704e4",
+        "blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "bytes": 10002,
+        "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
+      }
+    ],
+    "scope": "Non-executable D0 typed WorkItem review, no new operation in executable enum, no persistence",
+    "targeted_tests": "14/14 PASS (8 original, 6 new)",
+    "acceptance": "HOLD"
   }
 }

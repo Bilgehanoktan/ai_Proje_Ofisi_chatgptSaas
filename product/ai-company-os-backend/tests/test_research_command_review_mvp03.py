@@ -1,5 +1,7 @@
 """H01-MVP03-01 D0 binder checks; no route, identity proof, write, or durable dedup."""
 from copy import deepcopy
+from dataclasses import replace
+from unittest.mock import Mock
 import json
 from pathlib import Path
 import unittest
@@ -8,6 +10,11 @@ from app.core.orchestrator.engine import canonical_plan
 from app.core.orchestrator.research_command_review import (
     ResearchCommandError, bind_research_command,
 )
+
+from app.core.agent_runtime.lifecycle import Scope
+from app.core.transaction.port import LogicalT1Coordinator
+from app.core.transaction.review import (BASE_ROLES, LogicalIntent, Operation, WorkItemScopeDraft,
+                                         inspect_workitem_request, required_roles, valid_intent)
 
 
 class ResearchCommandReviewTests(unittest.TestCase):
@@ -97,6 +104,86 @@ class ResearchCommandReviewTests(unittest.TestCase):
         self.body["plan_ref"] = "other-plan"
         with self.assertRaises(ResearchCommandError):
             self.bind()
+
+
+    def workitem_draft(self, binding=None, scope=None, **overrides):
+        refs = dict(project_revision="project-rev-1", worktype_version="research-v1",
+                    workowner_ref="demo-owner")
+        refs.update(overrides)
+        if scope is None:
+            scope = WorkItemScopeDraft("synthetic-tenant", "synthetic-company", "A0_SAMPLE_ONLY",
+                                       self.body["project_ref"], "demo-human")
+        return (binding or self.bind()).to_workitem_draft(scope, **refs)
+
+    def test_workitem_review_is_connected_without_transaction(self):
+        binding = self.bind()
+        draft = self.workitem_draft(binding)
+        factory = Mock(side_effect=AssertionError("transaction opened"))
+        result = LogicalT1Coordinator(factory).review_workitem_request(draft)
+        self.assertEqual(draft.operation, "WORKITEM_REQUEST")
+        self.assertEqual(draft.plan_digest, binding.plan_digest)
+        self.assertEqual(draft.idempotency_key, binding.idempotency_key)
+        self.assertEqual(draft.expected_version, 0)
+        self.assertEqual(draft.scope.project_ref, binding.project_ref)
+        self.assertTrue(result.structural_match)
+        self.assertEqual(set(result.missing_roles), BASE_ROLES)
+        self.assertEqual(result.decision, "HOLD")
+        self.assertEqual(result.physical_mapping, "PHYSICAL_MAPPING_HOLD")
+        self.assertIsNone(result.committed_version)
+        self.assertFalse(result.committed or result.commit_allowed or result.dispatch_allowed)
+        self.assertFalse(any(hasattr(draft, key) for key in ("request_id", "run_id", "grant_ref", "lease_ref", "budget_ref")))
+        factory.assert_not_called()
+
+    def test_workitem_cannot_enter_existing_commit(self):
+        draft = self.workitem_draft()
+        factory = Mock(side_effect=AssertionError("transaction opened"))
+        coordinator = LogicalT1Coordinator(factory)
+        self.assertFalse(valid_intent(draft))
+        with self.assertRaisesRegex(ValueError, "T1_INTENT_INVALID"):
+            coordinator.commit(draft)
+        factory.assert_not_called()
+
+    def test_workitem_scope_and_project_mismatch(self):
+        scope = self.workitem_draft().scope
+        for changes in (dict(tenant_id="other"), dict(company_id="other"),
+                        dict(environment_id="PROD"), dict(principal_id="real-human"),
+                        dict(project_ref="other-project")):
+            with self.subTest(changes=changes), self.assertRaises(ResearchCommandError):
+                self.workitem_draft(scope=replace(scope, **changes))
+
+    def test_workitem_invalid_reference_and_plan_pins(self):
+        draft = self.workitem_draft()
+        for change in (dict(project_revision=""), dict(worktype_version=None), dict(workowner_ref="a b"),
+                       dict(plan_digest="0"*64), dict(idempotency_key="a b")):
+            with self.subTest(change=change):
+                result = inspect_workitem_request(replace(draft, **change))
+                self.assertEqual(result.decision, "DENY")
+                self.assertFalse(result.structural_match or result.commit_allowed)
+        with self.assertRaises(ResearchCommandError):
+            self.workitem_draft(binding=replace(self.bind(), plan_ref="other-plan"))
+        with self.assertRaises(ResearchCommandError):
+            self.workitem_draft(project_revision="")
+
+    def test_workitem_opaque_key_distinction_not_durable_dedup(self):
+        draft = self.workitem_draft(self.bind(key="request-1"))
+        other = self.workitem_draft(self.bind(key="request-2"))
+        self.assertNotEqual(draft, other)
+        self.assertNotIn("request-1", repr(draft))
+        self.assertEqual(draft, self.workitem_draft())
+        self.assertEqual(inspect_workitem_request(other).decision, "HOLD")
+
+    def test_workitem_does_not_extend_run_operations(self):
+        scope = Scope("synthetic-tenant", "synthetic-company", "A0_SAMPLE_ONLY", self.revision,
+                      "plan", "demo-run", "demo-agent", "demo-principal")
+        intent = LogicalIntent(scope, Operation.ADMISSION, 0, "a"*64, "effect", "idem",
+                               "grant", "lease", "budget", 1, 1)
+        self.assertEqual(set(Operation), {Operation.ADMISSION, Operation.STATE_MUTATION, Operation.TERMINAL})
+        self.assertTrue(valid_intent(intent))
+        self.assertEqual(required_roles(intent), BASE_ROLES | {"ADMISSION", "LEASE", "BUDGET"})
+        self.assertEqual(required_roles(replace(intent, operation=Operation.TERMINAL)), BASE_ROLES | {"LEASE", "BUDGET"})
+        self.assertEqual(required_roles(replace(intent, operation=Operation.STATE_MUTATION)), BASE_ROLES)
+        self.assertFalse(valid_intent(replace(intent, lease_ref="")))
+        self.assertFalse(valid_intent(replace(intent, grant_ref="")))
 
 
 if __name__ == "__main__":
