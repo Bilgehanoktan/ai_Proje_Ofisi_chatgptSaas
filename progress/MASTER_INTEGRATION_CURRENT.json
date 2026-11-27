@@ -17332,4 +17332,100 @@
   "next": "Codex exact candidate scoped binder test when reviewed local environment available. MI05/06 fixed plan selection; MI02/03/04 approved WorkItem physical mapping, HUMAN project permission and protected write/readback; MI10 independent review. No live endpoint until gates close.",
   "rollback": "ordinary revert of isolated source commit and this record; decision history remains."
 }
+,
+  "h01_mvp03_phase3_request_ui_20261127": {
+  "task": "H01-MVP03-PHASE3-REQUEST-UI-PERSISTENCE",
+  "status": "ISOLATED_UI_SOURCE_DELIVERED_PERSISTENCE_HOLD_PHASE4_HOLD",
+  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "criterion": "3",
+  "candidate_branch": "integration/h01-r6-research-unified-20261127",
+  "candidate": "a9bc809f4e75334cc27f7cdee8b171e863136fe3",
+  "previous_candidate": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
+  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "manifest": {
+    "entries": 589,
+    "product_files": 590,
+    "blob": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
+    "product_tree": "010d03d332bad3017f35565b920d6fe79ca7e086",
+    "unchanged_payload": 587,
+    "changed_payload": 2,
+    "readback": "PASS path/mode/size/blob and original pins; changed content hashes computed before tree creation"
+  },
+  "catalog": "catalog/revisions/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.json",
+  "handover": "handover/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.md",
+  "source_gain": "Existing CEO dashboard incorporates fixed plan selection panel using existing exact shared GET plan reader/parser. No new write or request read endpoint, no fake receipt. Both submission and request readback disabled. Actual UI build/browser not run.",
+  "persistence_review": {
+    "status": "HOLD",
+    "reason": "No approved Project/WorkItem physical write/read mapping verified; D0 run admission is not request persistence; HUMAN issuer/project permission and strict protected COMMIT missing.",
+    "owner": "MI02/03/04; MI10 independent review"
+  },
+  "dependency": {
+    "status": "HOLD",
+    "ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+    "rows": 25,
+    "fastapi": "0.163.2",
+    "verified": "text count and exact blob; review-only DO NOT INSTALL header",
+    "install": "NOT_RUN",
+    "owner": "MI01/10"
+  },
+  "evidence": {
+    "E01": {
+      "state": "SOURCE_READY_BROWSER_NOT_RUN",
+      "owner": "MI05/06"
+    },
+    "E02": {
+      "state": "HOLD",
+      "owner": "MI03/04"
+    },
+    "E03": {
+      "state": "SOURCE_READY_RUNTIME_NOT_RUN",
+      "owner": "MI02/05/06"
+    },
+    "E04": {
+      "state": "HOLD",
+      "owner": "MI02/03/04"
+    },
+    "E05": {
+      "state": "HOLD",
+      "owner": "MI02/05/06"
+    },
+    "E06": {
+      "state": "HOLD",
+      "owner": "MI02/03/04"
+    },
+    "E07": {
+      "state": "HOLD",
+      "owner": "MI02/03/04"
+    },
+    "E08": {
+      "state": "HOLD",
+      "owner": "MI03/04/10"
+    },
+    "E09": {
+      "state": "HOLD",
+      "owner": "MI03/04/10"
+    },
+    "E10": {
+      "state": "SOURCE_NO_MUTATION_RUNTIME_NOT_RUN",
+      "owner": "MI02/05/06/10"
+    },
+    "binder8": "NOT_RUN",
+    "build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "IV": "HOLD"
+  },
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "Resolve physical WorkItem request mapping, real HUMAN issuer and scoped permission, protected persistence and same-ID readback with existing owners; dependency/security/licensing disposition and approved exact-source test/build. No Phase4 before working authorized submit/commit/readback.",
+  "rollback": "ordinary revert isolated source and governance record; no DB changes. H01 decision retained."
+}
 }
