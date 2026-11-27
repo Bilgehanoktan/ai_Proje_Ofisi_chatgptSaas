@@ -315,8 +315,8 @@
       "sha256": "82f2a1f452471ae0a0079134065973eb1d4488b64a7d726946fb0d18fe9840fe"
     },
     "ai-company-os-backend/app/core/iam_session.py": {
-      "bytes": 5243,
-      "sha256": "1f4f5709850c89ee893e71c60cf22fc3d7582f293e2e872de690f1e63f981c4a"
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3"
     },
     "ai-company-os-backend/app/core/iv_review.py": {
       "bytes": 373,
@@ -337,6 +337,10 @@
     "ai-company-os-backend/app/core/orchestrator/readiness.py": {
       "bytes": 692,
       "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+    },
+    "ai-company-os-backend/app/core/orchestrator/research_command_review.py": {
+      "bytes": 3241,
+      "sha256": "705b14fa6c6d2dcc7ec6df9bd014d5a59705978070711a6e88264be17a1f8a99"
     },
     "ai-company-os-backend/app/core/outbox_review.py": {
       "bytes": 421,
@@ -410,6 +414,10 @@
       "bytes": 3079,
       "sha256": "91dcfea9b9f04aa39eab12702ca128677fa636ef839343d641de77b1a8e5c224"
     },
+    "ai-company-os-backend/app/core/transaction/core_org_session_review.py": {
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae"
+    },
     "ai-company-os-backend/app/core/transaction/effect_fence_reference.py": {
       "bytes": 5572,
       "sha256": "5a33d0491766e5b06790ee6799ea37c43514fbe7e1f4f6fd8aabf565a254414f"
@@ -430,13 +438,21 @@
       "bytes": 5178,
       "sha256": "7cb7d1d4607fb41479cfd42378b390dda4fc4ad6e59a581a92b3db483fa29229"
     },
+    "ai-company-os-backend/app/core/transaction/identity_fence_review.py": {
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347"
+    },
     "ai-company-os-backend/app/core/transaction/intent_authority.py": {
-      "bytes": 7835,
-      "sha256": "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+      "bytes": 10066,
+      "sha256": "c1d0cef446a374885054d6cda8852c273297c05f92eed3debcde42e4c5127125"
     },
     "ai-company-os-backend/app/core/transaction/intent_identity.py": {
       "bytes": 3393,
       "sha256": "ba5f41d29ba0350683aba443aefa06759b4d0f3c44bfc95a7d9dd721af22b326"
+    },
+    "ai-company-os-backend/app/core/transaction/org_membership_review.py": {
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
       "bytes": 4286,
@@ -587,12 +603,12 @@
       "sha256": "bdbe6471ffd35ce694d65c59330b4ef810a45f11e0c604d7f5bf21775f3cb3a6"
     },
     "ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py": {
-      "bytes": 1865,
-      "sha256": "8ac722750f0cf0c8d2bb77db3f1199ffee8edc3a2bb8f49d7396f55e342e0389"
+      "bytes": 3836,
+      "sha256": "510aed92aefd9807e2d26581ca73feb45e543e6d5efe7b992e35748146ca897a"
     },
     "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": {
-      "bytes": 4783,
-      "sha256": "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+      "bytes": 8796,
+      "sha256": "cb34d32c1bdd3c129f90767f422395630b5239ab6b653f7a95994f5e5dcb830b"
     },
     "ai-company-os-backend/app/engines/model_gateway/token_accounting.py": {
       "bytes": 7663,
@@ -815,8 +831,8 @@
       "sha256": "f8eac07fadabe1b0c0a8992e7cc242c659a84386e0404563ee9ed601563dd46c"
     },
     "ai-company-os-backend/tests/test_authority_wrapper_0213.py": {
-      "bytes": 5086,
-      "sha256": "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df"
+      "bytes": 8792,
+      "sha256": "d8363de0bab41ed8ee6625d996f8ba63d21ff24d33e831c87ad7a3dc8a993c1f"
     },
     "ai-company-os-backend/tests/test_authority_wrapper_p10h.py": {
       "bytes": 7897,
@@ -845,6 +861,10 @@
     "ai-company-os-backend/tests/test_company_terminal_0212.py": {
       "bytes": 10641,
       "sha256": "bc23269a40b2a00821ebd56414f0b71c2908ab87628f00f345bb92cd72794f55"
+    },
+    "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py": {
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e"
     },
     "ai-company-os-backend/tests/test_d0_snapshot_p04.py": {
       "bytes": 4349,
@@ -881,6 +901,18 @@
     "ai-company-os-backend/tests/test_history_readback_0198.py": {
       "bytes": 6541,
       "sha256": "1b332af65de9e3c9c31d16a4a922a74d94e2ba5534d2dcb41edebe8bf0738773"
+    },
+    "ai-company-os-backend/tests/test_iam_authority_d5g2.py": {
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043"
+    },
+    "ai-company-os-backend/tests/test_iam_identity_d5g4.py": {
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331"
+    },
+    "ai-company-os-backend/tests/test_iam_org_d5g5.py": {
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df"
     },
     "ai-company-os-backend/tests/test_iam_session_d5g1.py": {
       "bytes": 4691,
@@ -1058,6 +1090,10 @@
       "bytes": 3989,
       "sha256": "4f64d94bdefbd0b6b73c9b9aa1ebe3bbb039590f4e39d2e0656a05ff0712e9fa"
     },
+    "ai-company-os-backend/tests/test_recovered_sample_consumer.py": {
+      "bytes": 6971,
+      "sha256": "28fe78023ad0fa8c20a25732766ee90d58c279f02f611b92fb653d29e556f9f2"
+    },
     "ai-company-os-backend/tests/test_research_company_snapshot_0224.py": {
       "bytes": 6416,
       "sha256": "f6c7c52337ae149fcad0be278eb8c63077460ac54ef5c81228a3e1efbe87a3d4"
@@ -1105,6 +1141,10 @@
     "ai-company-os-backend/tests/test_runtime_preview_0156.py": {
       "bytes": 4281,
       "sha256": "fd31d787defdcccfae720c7dd21079eeb671594bf5ef36202fe6ebc5bd2dcf84"
+    },
+    "ai-company-os-backend/tests/test_runtime_recovered_memory_link.py": {
+      "bytes": 5444,
+      "sha256": "90aacef08befa13b6203e08cd769d2238b628547c42e31661501ed5a2ed7b04b"
     },
     "ai-company-os-backend/tests/test_sample_task_0221.py": {
       "bytes": 4282,
@@ -1966,6 +2006,10 @@
       "bytes": 2805,
       "sha256": "bed0398ad15ad53a0dec2afcfc37edc371c0f1042456420f2e0d3896a196fa39"
     },
+    "ai-company-os-frontend/package-lock.json": {
+      "bytes": 33618,
+      "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88"
+    },
     "ai-company-os-frontend/package.json": {
       "bytes": 619,
       "sha256": "e00528a32e54e21b7547ad08762a44dede75366af0f0781140f42b35f102c0f0"
@@ -2001,6 +2045,10 @@
     "ai-company-os-frontend/tests/d0-proxy-deadline.test.cjs": {
       "bytes": 5998,
       "sha256": "7607d0371edff9512d2669a1b0f30dec55879bd77a4e87d2c06026d9ea8b5102"
+    },
+    "ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs": {
+      "bytes": 2510,
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140"
     },
     "ai-company-os-frontend/tests/finance-model.test.cjs": {
       "bytes": 3128,
@@ -2471,5 +2519,32 @@
     ],
     "classification": "D0_READ_ONLY_SHARED_PLAN_CONTROLS",
     "scope": "Existing plan read/reset actions; no new API, dispatch, execution, authority or acceptance"
+  },
+  "phase1_r6_research_union_20261127": {
+    "classification": "ISOLATED_SOURCE_ONLY_NOT_ACCEPTANCE",
+    "base": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "r6": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+    "research": "b58d93e6f9135ac8f50bcfc15f18c3ecff063ecd",
+    "source_manifests": [
+      "c4482fbd4d2bf87346ee3974b57fd93c2d2683d1",
+      "8630a219a350cea877dfed4ea3880778ba902905",
+      "e10d6e3196bd30132fb727025476548666bfa7c3"
+    ],
+    "retained_studio_paths": [
+      "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs"
+    ],
+    "selected": 17,
+    "prior_proof": {
+      "tree": "a8915f24497cdfad79b12e682f5815bb96d35cc4",
+      "reported": "587/587",
+      "remote": "404; not independently retrieved"
+    },
+    "verification": "17 changed exact payload SHA-256 and bytes; 570 unchanged base exact blobs and existing manifest pins; tree path/mode/size recheck required",
+    "dependency_install": "HOLD",
+    "actual_execution": "HOLD",
+    "acceptance": "unchanged"
   }
 }

@@ -1,0 +1,242 @@
+{
+  "task": "H01-PHASE1-R6-RESEARCH-UNION-20261127",
+  "classification": "ISOLATED_D0_SOURCE_CANDIDATE_ONLY",
+  "sources": {
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "r6": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+    "research": "b58d93e6f9135ac8f50bcfc15f18c3ecff063ecd",
+    "governance": "50ada314a9d86d6c12a14dfcffa6656ac625098e",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93"
+  },
+  "disposition": [
+    {
+      "path": "ai-company-os-backend/app/core/iam_session.py",
+      "source": 1,
+      "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+      "bytes": 15424,
+      "sha256": "f2850117721cad5d8b5f0d981a8562da8f81359fae9aa9b28c46b63b8b3193e3",
+      "kind": "replace",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 SQLite/reference-only chain; no real grant or protected PostgreSQL activation"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+      "source": 1,
+      "blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+      "bytes": 6746,
+      "sha256": "3be4022d3c5530b860282e12108f9a424ed2e7504bd6b99b259e6321806c47ae",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 SQLite/reference-only chain; no real grant or protected PostgreSQL activation"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+      "source": 1,
+      "blob": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+      "bytes": 8738,
+      "sha256": "9ea2425e28d3bb98ac7a9a50bf581cc47c17f080f5217cc41ec07619a80f5347",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 SQLite/reference-only chain; no real grant or protected PostgreSQL activation"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/intent_authority.py",
+      "source": 1,
+      "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+      "bytes": 10066,
+      "sha256": "c1d0cef446a374885054d6cda8852c273297c05f92eed3debcde42e4c5127125",
+      "kind": "replace",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 SQLite/reference-only chain; no real grant or protected PostgreSQL activation"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "source": 1,
+      "blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+      "bytes": 6742,
+      "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 SQLite/reference-only chain; no real grant or protected PostgreSQL activation"
+    },
+    {
+      "path": "ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+      "source": 1,
+      "blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+      "bytes": 3836,
+      "sha256": "510aed92aefd9807e2d26581ca73feb45e543e6d5efe7b992e35748146ca897a",
+      "kind": "replace",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 recovered-memory review/fixed-sample path; no provider or spend"
+    },
+    {
+      "path": "ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+      "source": 1,
+      "blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+      "bytes": 8796,
+      "sha256": "cb34d32c1bdd3c129f90767f422395630b5239ab6b653f7a95994f5e5dcb830b",
+      "kind": "replace",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "D0 recovered-memory review/fixed-sample path; no provider or spend"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+      "source": 1,
+      "blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+      "bytes": 8792,
+      "sha256": "d8363de0bab41ed8ee6625d996f8ba63d21ff24d33e831c87ad7a3dc8a993c1f",
+      "kind": "replace",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+      "source": 1,
+      "blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+      "bytes": 13538,
+      "sha256": "7d4e811a54aec1dd81ad3a27a86ec0af394896244d907040f28b946935d65e9e",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+      "source": 1,
+      "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+      "bytes": 11216,
+      "sha256": "d3ee505241afee5255080ce046bd078d76e9e12dce8c1c438f1cf228b2f1f043",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+      "source": 1,
+      "blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+      "bytes": 7172,
+      "sha256": "c324e7ef91f4b106f76113b03cec40e4fc3d493b5405a1b249458b4756c3f331",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_iam_org_d5g5.py",
+      "source": 1,
+      "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+      "bytes": 6390,
+      "sha256": "2ee0f3d580038c2b60464324385bbb5c135807588671fc10929535e89ea8e8df",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_recovered_sample_consumer.py",
+      "source": 1,
+      "blob": "e5ab929cf0c4281bd51ef6f131b04831d80ef205",
+      "bytes": 6971,
+      "sha256": "28fe78023ad0fa8c20a25732766ee90d58c279f02f611b92fb653d29e556f9f2",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
+      "source": 1,
+      "blob": "449fc4eb642016162a8fc0fcdcc414b3cc1d8661",
+      "bytes": 5444,
+      "sha256": "90aacef08befa13b6203e08cd769d2238b628547c42e31661501ed5a2ed7b04b",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-frontend/package-lock.json",
+      "source": 1,
+      "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "bytes": 33618,
+      "sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "preserved exact historical lock as source; install/security/license HOLD"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+      "source": 1,
+      "blob": "bc714ec16a144cba403c214bd1497525e5114821",
+      "bytes": 2510,
+      "sha256": "46ce8369ff26a479dcf6e03df17fa593aa0af1c53f10ed2babb1c5d9e3013140",
+      "kind": "add",
+      "source_commit": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "review": "exact scoped test source; no rerun"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+      "source": 2,
+      "blob": "27a8e120fbc53bd84330f64f2f6bf649515eacd9",
+      "bytes": 3241,
+      "sha256": "705b14fa6c6d2dcc7ec6df9bd014d5a59705978070711a6e88264be17a1f8a99",
+      "kind": "add",
+      "source_commit": "b58d93e6f9135ac8f50bcfc15f18c3ecff063ecd",
+      "review": "non-normative plan binding only; no HTTP registration or write"
+    }
+  ],
+  "retained": [
+    {
+      "path": "ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "canonical_blob": "c99262af504d8e7b16362e6a023e10d8b02d69f7",
+      "r6_blob": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+      "reason": "preserve newer canonical Studio/readback or regression source"
+    },
+    {
+      "path": "ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "canonical_blob": "0c7de57a2807cff116763348d1e4192d7fa11e8e",
+      "r6_blob": "dd68ace6096c4f24f555460783587ac1f1ea3af1",
+      "reason": "preserve newer canonical Studio/readback or regression source"
+    },
+    {
+      "path": "ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "canonical_blob": "fa720e2e7f022fd8053cdc0e4ae5434ef384f1ef",
+      "r6_blob": "a5019316bac7675a5640f6da113178231f1c3e63",
+      "reason": "preserve newer canonical Studio/readback or regression source"
+    },
+    {
+      "path": "ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+      "canonical_blob": "106df38e4ccb721dc9a215233c47ed87c74acd6c",
+      "r6_blob": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+      "reason": "preserve newer canonical Studio/readback or regression source"
+    }
+  ],
+  "remaining_R6_payload": "All 16 forward R6 payload differences selected in isolation; four older paths intentionally excluded. R6 runtime/dependency/acceptance gates remain HOLD.",
+  "manifest": {
+    "entries": 587,
+    "selected_payload_sha256_verified": 17,
+    "unchanged_base_pins": 570,
+    "prior_proof": "reported 587/587; tree remote 404",
+    "new_tree_check": "required before candidate commit"
+  },
+  "scope": {
+    "API": "No route registered",
+    "DB": "D0 optional SQLite authority fixture only; no migration of existing DB; no PostgreSQL writes",
+    "events": "No new event schemas or publisher",
+    "dependency": "exact frontend lock source only; C50/R9 review HOLD",
+    "security": "F0/real IAM/T1/W-A/IV HOLD; no real effect, provider, grant, CI/main/PROD"
+  },
+  "evidence": {
+    "R6": "Historical R6 handover: 122 scoped backend tests; build/browser on earlier pinned R6 product tree, not this candidate",
+    "research": "Historical 1 valid + 8 negative binding checks on source branch; not this candidate",
+    "new_execution": "NOT_RUN"
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta": 0,
+    "development": "HESAPLANAMADI",
+    "integration": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "Leave canonical unchanged; return to pinned base via new checkout or ordinary revert of isolated commit; no force/delete.",
+  "next": "Exact candidate mandatory dependency/runtime/license/independent preflight, then approved build/smoke; ratify command persistence and protected ingress separately."
+}
