@@ -475,8 +475,8 @@
       "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
     },
     "ai-company-os-backend/app/core/transaction/readback_review.py": {
-      "bytes": 3960,
-      "sha256": "341ff3e6572dbe99ad41aad84ac8913baca3eea84efc286a3ea3216219c70ae0"
+      "bytes": 8217,
+      "sha256": "696d5404faf87ed2766975b48ae250351b46e9522ff87e4c4bcf7835296d6bb0"
     },
     "ai-company-os-backend/app/core/transaction/review.py": {
       "bytes": 7329,
@@ -2361,6 +2361,10 @@
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 608,
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
+    },
+    "ai-company-os-backend/tests/test_workitem_readback_mvp03.py": {
+      "bytes": 7173,
+      "sha256": "8e51ce36dc9cd75940473cf58ab500a933d03fabbc9bc9ff337005bd89c2c17a"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2672,6 +2676,29 @@
     ],
     "scope": "Non-executable D0 typed WorkItem review, no new operation in executable enum, no persistence",
     "targeted_tests": "14/14 PASS (8 original, 6 new)",
+    "acceptance": "HOLD"
+  },
+  "h01_mvp03_workitem_readback_review_20261127": {
+    "parent": "7e1d3db19bba810485b2fb093009e8ae6317d9e7",
+    "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/readback_review.py",
+        "previous_blob": "bba032b058a8c9406e58fa90091b1894cd795190",
+        "blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "bytes": 8217,
+        "sha256": "696d5404faf87ed2766975b48ae250351b46e9522ff87e4c4bcf7835296d6bb0"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+        "previous_blob": null,
+        "blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "bytes": 7173,
+        "sha256": "8e51ce36dc9cd75940473cf58ab500a933d03fabbc9bc9ff337005bd89c2c17a"
+      }
+    ],
+    "scope": "D0 typed WorkItem six-role readback correlation only, no physical mapping, permission, actual receipt or transaction",
+    "targeted_tests": "7 new PASS + 11 original AGENT admission regression PASS; 14 previous binder PASS reused",
     "acceptance": "HOLD"
   }
 }

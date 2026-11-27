@@ -116,5 +116,37 @@
     "source_gain": "Typed D0 draft and existing coordinator review connected; does not write or issue receipt",
     "acceptance": "0/11",
     "physical": "HOLD"
+  },
+  "physical_readback_review_20261127": {
+    "parent": "7e1d3db19bba810485b2fb093009e8ae6317d9e7",
+    "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/readback_review.py",
+        "previous_blob": "bba032b058a8c9406e58fa90091b1894cd795190",
+        "blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "bytes": 8217,
+        "sha256": "696d5404faf87ed2766975b48ae250351b46e9522ff87e4c4bcf7835296d6bb0"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+        "previous_blob": null,
+        "blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "bytes": 7173,
+        "sha256": "8e51ce36dc9cd75940473cf58ab500a933d03fabbc9bc9ff337005bd89c2c17a"
+      }
+    ],
+    "manifest": "84b001d9031ac460d19f5113780198338df79e14",
+    "evidence": "handover/evidence/H01_MVP03_PHYSICAL_READBACK_20261127/",
+    "source_gain": "Pure WorkItem six-role readback inspection; no physical authority or receipt",
+    "authority_status": "PROJECT_AND_WORKTYPEVERSION_PHYSICAL_TARGETS_UNRESOLVED",
+    "proposal": "project_heads, project_revisions, worktype_versions, worktype_scope_bindings, workitem_heads; no DDL",
+    "tests": {
+      "new": 7,
+      "agent_regression": 11,
+      "prior_binder_reused": 14
+    },
+    "acceptance": "0/11",
+    "physical": "HOLD"
   }
 }

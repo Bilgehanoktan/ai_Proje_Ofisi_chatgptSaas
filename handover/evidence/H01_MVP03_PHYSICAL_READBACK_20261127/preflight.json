@@ -1,0 +1,347 @@
+{
+  "parent": "7e1d3db19bba810485b2fb093009e8ae6317d9e7",
+  "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+  "manifest_before": "5e72517cb441c77dd6ee5242483f3b66287d6b82",
+  "manifest_after": "84b001d9031ac460d19f5113780198338df79e14",
+  "environment": "Python 3.13.5 Linux stdlib, local exact reconstructed closure, no package install",
+  "prior": {
+    "proof": "handover/evidence/H01_MVP03_DIRECTION_A_20261127/preflight.json",
+    "pass": 14,
+    "closure_verified": 16,
+    "rerun": false
+  },
+  "runs": [
+    {
+      "command": "python -B -S -m unittest discover -s tests -p test_workitem_readback_mvp03.py -v",
+      "run": 7,
+      "pass": 7,
+      "exit": 0,
+      "seconds": 0.007,
+      "blob": "741f84407bf8f77911e7bc5adf6b1b2583d1ec6e",
+      "bytes": 1066,
+      "sha256": "4d6a7e6ff4d4bc9762f2f485d946221f9a5afe780aecbae885f42573963637c5"
+    },
+    {
+      "command": "python -B -S -m unittest discover -s tests -p test_admission_bundle.py -v",
+      "run": 11,
+      "pass": 11,
+      "exit": 0,
+      "seconds": 0.002,
+      "blob": "3d5b6945c9348003a2246ed829403f41748086a4",
+      "bytes": 1129,
+      "sha256": "deae64552efeac354d4805b0b56849b8a79a78daf355ed3b26e95e01638f86c9"
+    }
+  ],
+  "initial_test_harness_error": "First new-suite attempt 6 OK and one TypeError: change_role() target selector collided with role keyword; corrected helper parameter name, reran all 7 successfully. Not counted as PASS.",
+  "closure": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "base": {
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tested": {
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "base": {
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      "tested": {
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "base": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "base": {
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      "tested": {
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+      "base": {
+        "blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "bytes": 259,
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      },
+      "tested": {
+        "blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "bytes": 259,
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "base": {
+        "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "bytes": 3082,
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      },
+      "tested": {
+        "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "bytes": 3082,
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+      "base": {
+        "blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "bytes": 5720,
+        "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
+      },
+      "tested": {
+        "blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "bytes": 5720,
+        "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+      "base": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+      "base": {
+        "blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "bytes": 1335,
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      },
+      "tested": {
+        "blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "bytes": 1335,
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+      "base": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "base": {
+        "blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "bytes": 3542,
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      },
+      "tested": {
+        "blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "bytes": 3542,
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "base": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "base": {
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "bytes": 4604,
+        "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
+      },
+      "tested": {
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "bytes": 4604,
+        "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "base": {
+        "blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "bytes": 7329,
+        "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0"
+      },
+      "tested": {
+        "blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "bytes": 7329,
+        "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+      "base": {
+        "blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "bytes": 8418,
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      },
+      "tested": {
+        "blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "bytes": 8418,
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+      "base": {
+        "blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "bytes": 10002,
+        "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
+      },
+      "tested": {
+        "blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "bytes": 10002,
+        "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/readback_review.py",
+      "base": {
+        "blob": "bba032b058a8c9406e58fa90091b1894cd795190",
+        "bytes": 3960,
+        "sha256": "341ff3e6572dbe99ad41aad84ac8913baca3eea84efc286a3ea3216219c70ae0"
+      },
+      "tested": {
+        "blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "bytes": 8217,
+        "sha256": "696d5404faf87ed2766975b48ae250351b46e9522ff87e4c4bcf7835296d6bb0"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/__init__.py",
+      "base": {
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      },
+      "tested": {
+        "blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+        "bytes": 52,
+        "sha256": "c20195c4fd1449df4233719e0a99a2f8fc5c573e1cc2be3ff2c74591f1ef1635"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/budget_engine/__init__.py",
+      "base": {
+        "blob": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2",
+        "bytes": 60,
+        "sha256": "8fe2b04756e71c23a436bcd26e82ddf6259959509153127d903c4b8ab9d22b01"
+      },
+      "tested": {
+        "blob": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2",
+        "bytes": 60,
+        "sha256": "8fe2b04756e71c23a436bcd26e82ddf6259959509153127d903c4b8ab9d22b01"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/engines/budget_engine/reservation_review.py",
+      "base": {
+        "blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+        "bytes": 2965,
+        "sha256": "92a7ea399f2b18b463397911631206e7c09ac775e94f809fe736aa3e5494e1a1"
+      },
+      "tested": {
+        "blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+        "bytes": 2965,
+        "sha256": "92a7ea399f2b18b463397911631206e7c09ac775e94f809fe736aa3e5494e1a1"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/witness_review.py",
+      "base": {
+        "blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+        "bytes": 3799,
+        "sha256": "3c658e59711007436f797d34c248d3ab1546e404d9715bf17bd72395bc6d4ff0"
+      },
+      "tested": {
+        "blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+        "bytes": 3799,
+        "sha256": "3c658e59711007436f797d34c248d3ab1546e404d9715bf17bd72395bc6d4ff0"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/admission_bundle.py",
+      "base": {
+        "blob": "276b4330afdce7cde98f92f8051c019eb7345fe1",
+        "bytes": 3079,
+        "sha256": "91dcfea9b9f04aa39eab12702ca128677fa636ef839343d641de77b1a8e5c224"
+      },
+      "tested": {
+        "blob": "276b4330afdce7cde98f92f8051c019eb7345fe1",
+        "bytes": 3079,
+        "sha256": "91dcfea9b9f04aa39eab12702ca128677fa636ef839343d641de77b1a8e5c224"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_admission_bundle.py",
+      "base": {
+        "blob": "37e11dfffb2b98bd451cb1de0d384b1533c294e1",
+        "bytes": 3648,
+        "sha256": "7d2e7d74f8633dd93aa21fac85e0111accfc3dd2a89ac0f11a41feb4d12d676c"
+      },
+      "tested": {
+        "blob": "37e11dfffb2b98bd451cb1de0d384b1533c294e1",
+        "bytes": 3648,
+        "sha256": "7d2e7d74f8633dd93aa21fac85e0111accfc3dd2a89ac0f11a41feb4d12d676c"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+      "base": null,
+      "tested": {
+        "blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "bytes": 7173,
+        "sha256": "8e51ce36dc9cd75940473cf58ab500a933d03fabbc9bc9ff337005bd89c2c17a"
+      }
+    }
+  ],
+  "excluded": "No actual DB, physical schema installation, real IAM, protected COMMIT, replay, restart, browser, external effect, acceptance or full checkout/build."
+}

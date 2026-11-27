@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from app.core.agent_runtime.lifecycle import Scope, LeaseObservation, ClockSample, valid_scope, token, uint
 from app.core.transaction.review import LogicalIntent, Operation, RoleObservation, valid_intent, inspect_write_set, digest_ok
 from app.engines.budget_engine.reservation_review import BudgetSnapshot, ReservationRequest, inspect_reservation
+from app.core.transaction.review import BASE_ROLES, WorkItemRequestDraft, inspect_workitem_request
 
 
 @dataclass(frozen=True)
@@ -79,3 +80,94 @@ def inspect_admission(i: LogicalIntent, rows: tuple[RoleObservation, ...],
             i.scope, i.budget_ref, i.idempotency_key, i.policy_epoch, i.witness_epoch):
         return ReadbackReview('RESERVATION_INTENT_BINDING_HOLD')
     return ReadbackReview('D0_READBACK_MATCH_ATOMICITY_UNPROVEN', True)
+
+
+# Direction A: non-executable observation contract. Do not route it into the
+# run-scoped writer, install DDL, or derive authority from caller observations.
+
+
+@dataclass(frozen=True)
+class WorkItemReadbackPin:
+    """Synthetic expected/observed creation image, not a receipt or FK proof."""
+    draft: WorkItemRequestDraft
+    request_id: str
+    transaction_ref: str
+    version: int
+    request_digest: str
+    worktype_digest: str
+    publish_ref: str
+    entitlement_ref: str
+    issuer_ref: str
+    session_ref: str
+    authz_revision: str
+    policy_epoch: int
+    witness_epoch: int
+
+
+@dataclass(frozen=True)
+class WorkItemRoleReadback:
+    role: str
+    record_id: str
+    pin: WorkItemReadbackPin
+    event_ref: str | None = None
+    dispatchable: bool = False
+
+
+def _valid_workitem_pin(pin: object) -> bool:
+    return (type(pin) is WorkItemReadbackPin
+            and inspect_workitem_request(pin.draft).structural_match
+            and all(token(v) for v in (pin.request_id, pin.transaction_ref,
+                                       pin.publish_ref, pin.entitlement_ref, pin.issuer_ref,
+                                       pin.session_ref, pin.authz_revision))
+            and uint(pin.version) and pin.version == 1
+            and digest_ok(pin.request_digest) and digest_ok(pin.worktype_digest)
+            and uint(pin.policy_epoch) and uint(pin.witness_epoch))
+
+
+def inspect_workitem_readback(draft: WorkItemRequestDraft,
+                              expected: WorkItemReadbackPin | None,
+                              observed: WorkItemReadbackPin | None,
+                              rows: tuple[WorkItemRoleReadback, ...], *,
+                              outcome_unknown: bool) -> ReadbackReview:
+    """Compare a synthetic creation image and six proposed role observations.
+
+    Both pins are review inputs, never authenticated Project, WorkTypeVersion,
+    HUMAN permission or independently verified COMMIT evidence. No digest is
+    generated, no ID allocated, no retry or read permission granted. An exact
+    match is still HOLD and returns no request identity or durable receipt.
+    """
+    if type(outcome_unknown) is not bool or outcome_unknown:
+        return ReadbackReview('WORKITEM_UNKNOWN_RECONCILIATION_HOLD')
+    if not inspect_workitem_request(draft).structural_match:
+        return ReadbackReview('WORKITEM_DRAFT_HOLD')
+    if not _valid_workitem_pin(expected) or not _valid_workitem_pin(observed):
+        return ReadbackReview('WORKITEM_READBACK_REFERENCE_HOLD')
+    if expected.draft != draft or observed != expected:
+        return ReadbackReview('WORKITEM_READBACK_PIN_MISMATCH_HOLD')
+    if type(rows) is not tuple or len(rows) > len(BASE_ROLES):
+        return ReadbackReview('WORKITEM_ROLE_SET_HOLD')
+    seen, record_ids, event_refs = set(), set(), {}
+    for row in rows:
+        if (type(row) is not WorkItemRoleReadback or type(row.role) is not str
+                or row.role not in BASE_ROLES or not token(row.record_id)
+                or row.dispatchable is not False):
+            return ReadbackReview('WORKITEM_ROLE_ENVELOPE_HOLD')
+        if row.role in seen or row.record_id in record_ids:
+            return ReadbackReview('WORKITEM_DUPLICATE_ROLE_HOLD')
+        if not _valid_workitem_pin(row.pin) or row.pin != expected:
+            return ReadbackReview('WORKITEM_ROLE_PIN_MISMATCH_HOLD')
+        if row.role == 'HEAD' and row.record_id != expected.request_id:
+            return ReadbackReview('WORKITEM_HEAD_REFERENCE_HOLD')
+        if row.role in ('EVENT', 'OUTBOX'):
+            if not token(row.event_ref):
+                return ReadbackReview('WORKITEM_EVENT_REFERENCE_HOLD')
+            event_refs[row.role] = row.event_ref
+        elif row.event_ref is not None:
+            return ReadbackReview('WORKITEM_EVENT_REFERENCE_HOLD')
+        seen.add(row.role)
+        record_ids.add(row.record_id)
+    if seen != BASE_ROLES:
+        return ReadbackReview('WORKITEM_ROLE_SET_HOLD')
+    if event_refs['EVENT'] != event_refs['OUTBOX']:
+        return ReadbackReview('WORKITEM_EVENT_OUTBOX_LINK_HOLD')
+    return ReadbackReview('D0_WORKITEM_READBACK_MATCH_AUTHORITY_UNPROVEN', True)
