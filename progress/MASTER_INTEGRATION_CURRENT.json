@@ -17051,6 +17051,67 @@
         "ordinal": "unchanged"
       },
       "rollback": "Record-only ordinary revert; product branch unchanged."
+    },
+    "ceo_research_c50_parallel_review_20261127": {
+      "status": "COMMAND_CONTRACT_DRAFT_READY_TECHNICAL_PIN_SELECTED_OWNER_SECURITY_HOLD",
+      "canonical": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
+      "r6": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "document": "docs/master-integration/CEO_RESEARCH_COMMAND_CONTRACT_REVIEW_20261127.md",
+      "tracks": {
+        "command": {
+          "status": "DESIGN_REVIEW_CANDIDATE",
+          "owner": "MI02/03/04 + MI05/06; independent MI10",
+          "blockers": [
+            "HUMAN H01 vs AGENT session delegation",
+            "durable command-to-plan/idempotency linkage",
+            "protected_postgres_transaction deliberately denies",
+            "root-only D0 admission; predecessor success proof absent"
+          ],
+          "proposed_route": "POST /api/v1/commands/research (not mounted, not ratified)",
+          "source_changes": 0
+        },
+        "dependency": {
+          "status": "TECHNICAL_PIN_SELECTION_REVIEW_ONLY",
+          "owner": "03API/MI01/MI03/04; independent Security/IV and licensing",
+          "pr52": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+          "existing_union": {
+            "ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+            "path": "candidates/H01-LOCAL-DELIVERY-20261125/INTEGRATED-REVIEW/C50_R9_FASTAPI_PIN_RECONCILIATION_20261125/python.lock.C50.F1632.REVIEW_ONLY.txt",
+            "blob": "fb50ae2d06594150887e849d61de027c61ae1492"
+          },
+          "existing_patch": {
+            "ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+            "path": "candidates/H01-LOCAL-DELIVERY-20261125/INTEGRATED-REVIEW/C50_R9_FASTAPI_PIN_RECONCILIATION_20261125/requirements-fastapi-01632.REVIEW_ONLY.diff",
+            "blob": "2fcc42b817145164a197d6b83094e2f1d58dfe38"
+          },
+          "text_checks": {
+            "c50": 25,
+            "r9": 20,
+            "union": 25,
+            "unchanged": 24,
+            "r9_exact": 20,
+            "changed": "fastapi"
+          },
+          "requirements_preimage": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+          "install": "NOT_RUN",
+          "security": "HOLD",
+          "license": "HOLD",
+          "runtime": "HOLD"
+        }
+      },
+      "acceptance": {
+        "UI": "21/40",
+        "Core": "12/16",
+        "MVP": "0/11",
+        "W8": "3/8",
+        "IV": "0/7",
+        "integration": "HESAPLANAMADI",
+        "weighted": "HESAPLANAMADI",
+        "ordinal": "unchanged"
+      },
+      "product_source_changes": 0,
+      "tests": "NOT_RUN; static source and lock comparison only",
+      "next": "Owner ratification of draft and exact dependency/runtime/license dispositions; preserve protected denial and existing R6 evidence."
     }
   }
 }
