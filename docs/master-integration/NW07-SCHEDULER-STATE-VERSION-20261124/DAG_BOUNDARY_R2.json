@@ -1,0 +1,219 @@
+{
+  "revision": "NW07-DAG-BOUNDARY-R2-20261124",
+  "task": "NW07 / existing Core / W3 DAG and scheduler",
+  "status": "ISOLATED_NW07_COMBINED_23_PASS_OWNER_REVIEW_HOLD",
+  "canonical_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "parent": "f9115ec765d8ad9c4fc876f430cf36630ab3c0b0",
+  "governance": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner_ref": "integration/0227-local-environment-preflight@4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "architecture": {
+    "trace": [
+      "v135 BE-04",
+      "v135 UI-12",
+      "v130 C01/C02/C03",
+      "MVP-01–05",
+      "phase 2 / roadmap B"
+    ],
+    "owner_addendum": "555a2f497f89726417a871da68de9281b7b26bbf",
+    "local_master_rev0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "scope": "Existing 100-task bound enforced during consumption, invalid UTF-16 surrogate code points rejected before existing UTF-8 canonical digest. Valid plan digests preserved. No new engine, contract, real authority or normative change."
+  },
+  "files": [
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "old": "04487bda631e9133f3904451a39fc8722e985997",
+      "sha": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+      "bytes": 3542,
+      "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+      "old": null,
+      "sha": "143cf34da870125e367947181854e1a0af9c2b30",
+      "bytes": 2508,
+      "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89"
+    }
+  ],
+  "functions": [
+    "app.core.task_engine.dag.topological_waves"
+  ],
+  "callers": [
+    "parse_plan",
+    "canonical_plan",
+    "preview_plan",
+    "validate_release_boundary",
+    "inspect_schedule",
+    "inspect_pinned_schedule"
+  ],
+  "errors": [
+    "existing TASK_COUNT_INVALID",
+    "existing TASK_FIELD_INVALID"
+  ],
+  "dependency_changes": [
+    "stdlib itertools.islice only; no external packages"
+  ],
+  "api_changes": [],
+  "db_changes": [],
+  "event_changes": [],
+  "manifest": {
+    "before": "4556de5b7ae3ba8dd274b2510463ac17bb91746d",
+    "after": "22e5016772488efeff62239436966fe17a698145",
+    "entries_before": 552,
+    "entries_after": 553,
+    "product_files_before": 553,
+    "product_files_after": 554
+  },
+  "test": {
+    "environment": "Linux Python 3.13.5, -B -S, standard library only; recovered exact original 13-file closure (all byte/Git SHA1/SHA256 verified), plus tested candidate files; no stubs or package install",
+    "command": "python -B -S -m unittest discover -s tests -p 'test_*.py' -v",
+    "baseline": {
+      "methods": 18,
+      "original_methods_pass": 12,
+      "new_methods": 6,
+      "new_methods_failing": 3,
+      "failures": 6,
+      "errors": 8,
+      "exit": 1,
+      "log_sha256": "7d3e1f8bcd8e4561db446ad7e764522237ab9991aad71c453a7c7092b636482c"
+    },
+    "dag_candidate": {
+      "methods": 18,
+      "pass": 18,
+      "exit": 0,
+      "log_sha256": "23abbf1a6d111e440ede99999c884dbc3e2c51afa118b7d93a7f5aaca41790d5"
+    },
+    "combined": {
+      "methods": 23,
+      "pass": 23,
+      "exit": 0,
+      "original": 12,
+      "prior_R1_new": 5,
+      "R2_new": 6,
+      "log": "docs/master-integration/NW07-SCHEDULER-STATE-VERSION-20261124/combined-r2.log",
+      "log_sha256": "8c83ecc85c75dd1bc961d99db5ae1cb944fb6d3ff7c7aa2c8b56fdd2ab9e3e2c",
+      "log_blob": "379d67d3bb9ad8a4d8e6dab922b3d412f5389284"
+    },
+    "pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920",
+        "bytes": 59
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d",
+        "bytes": 7251
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "git_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+        "bytes": 3864,
+        "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6",
+        "bytes": 259
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3",
+        "bytes": 3082
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482",
+        "bytes": 692
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "git_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "bytes": 3542,
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe",
+        "bytes": 49
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4",
+        "bytes": 1335
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "git_blob": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+        "bytes": 5933,
+        "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+        "git_blob": "143cf34da870125e367947181854e1a0af9c2b30",
+        "bytes": 2508,
+        "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89"
+      }
+    ],
+    "other_original_plan_projection": "NOT_RUN (fixture closure not present)",
+    "sql_consumer": "NOT_RUN",
+    "full_w8": "NOT_RUN"
+  },
+  "ownership": {
+    "checked_open_prs": 43,
+    "divergent_dag_path": 0,
+    "historical_same_blob_prs": [
+      2,
+      3
+    ],
+    "owner_approval": "HOLD",
+    "extend_existing_pr": 54,
+    "prior_evidence_preserved": true
+  },
+  "acceptance": {
+    "Core": "12/16",
+    "UI": "21/40",
+    "W8": "3/8",
+    "MVP": "0/11",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  },
+  "maintenance": "On invalid field verify Unicode scalar task label, never silently normalize or change valid digest. Count errors check source iterator limit. Consumer SQL6 and original projection fixture regression still required; no blind retries or W8 rebind by this owner.",
+  "blockers": [
+    "full source checkout DNS unavailable",
+    "reviewed dependency lock and SQL6",
+    "original plan projection fixture tests",
+    "Core owner review",
+    "W8 rebind and independent IV"
+  ],
+  "rollback": "Normal revert R2 commit, leaves R1 intact. No force or rewrite; no DB migration.",
+  "next": "Core owner review cumulative PR54 with original projection and scheduled-admission SQL6 in approved exact checkout; reconcile central manifest after source approval. Independently address NW06 without replicating PR53.",
+  "limits": "No CI, real grants, real PG COMMIT, provider, spend, customer data, deploy, main merge, independent acceptance or canonical transfer. Full repository archive unavailable; local partial ZIP only."
+}

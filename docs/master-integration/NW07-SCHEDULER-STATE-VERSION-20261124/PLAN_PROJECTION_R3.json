@@ -1,0 +1,219 @@
+{
+  "revision": "NW07-ORIGINAL-PLAN-PROJECTION-R3-20261124",
+  "classification": "ACTUAL_LOCAL_ORIGINAL_TEST_PASS_ON_EXACT_R2_SOURCE_SLICE",
+  "tested_commit": "3b6fffd29efe9e43bc6d98e2eb4a81c8dd6bd517",
+  "canonical_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "99fa310407450a5c7c3231b15b48a30fd7550810",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "owner_core": "4fb39a5b2a41866b10ba836d1a6974e258d8217f",
+  "architecture": {
+    "target": "v11.6.135-rc1",
+    "local_0155_master_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+    "relevant_section": "R09 Görev DAG ve kanonik plan, lines 109–116; ST-03/ST-09–13/UI-12/BE-04; existing 100-task, QA→IV→release, deterministic projection and HOLD",
+    "normative_change": false,
+    "full_current_master_addenda_review": "INCOMPLETE; 0158 line request returned empty, no full-review claim"
+  },
+  "manifest": {
+    "blob": "22e5016772488efeff62239436966fe17a698145",
+    "entries": 553,
+    "product_files": 554,
+    "unchanged": true
+  },
+  "source_recovery": {
+    "original_archive": "AI_Company_OS_DOC_REV_0155_TAM_PROJE_PAKETI.zip",
+    "exact_archive_paths": [
+      "fixtures/core.plan.projection.json",
+      "fixtures/core.preview.json",
+      "tests/test_plan_projection.py"
+    ],
+    "recovered_current_facade": "app/core/dag.py (original archive version differed; current exact Git blob retrieved and verified)",
+    "prior_r2_paths": 14,
+    "all_local_git_blob_sha1_sha256_bytes_match": [
+      18,
+      18
+    ],
+    "pins": [
+      {
+        "path": "product/ai-company-os-backend/app/__init__.py",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/__init__.py",
+        "git_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "bytes": 59,
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+        "git_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "bytes": 7251,
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "git_blob": "eb3e283e3406996254283595e14711e90b2bca8c",
+        "bytes": 3864,
+        "sha256": "17baa0df6e3884a496165aef0efb4de2f80011a63d3593b5813588a264e194c2"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/dag.py",
+        "git_blob": "acf97a2216e0c089056ffbba30db3eb8fe1484a7",
+        "bytes": 355,
+        "sha256": "5884ae7fce504bbb6c573bbe61023843793d1d9a24de05a567ff5e8cd923ca92"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+        "git_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "bytes": 259,
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+        "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "bytes": 3082,
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/orchestrator/readiness.py",
+        "git_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+        "bytes": 692,
+        "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+        "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "bytes": 1335,
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+        "git_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "bytes": 49,
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+        "git_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "bytes": 3542,
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      },
+      {
+        "path": "product/ai-company-os-backend/fixtures/core.plan.projection.json",
+        "git_blob": "5a0d82d8c17c5c88f9ba5b1b11ff87e6ad79bfac",
+        "bytes": 2462,
+        "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+      },
+      {
+        "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+        "git_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "bytes": 8418,
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "git_blob": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+        "bytes": 5933,
+        "sha256": "dfaf9b947e1a96da01565c93f05617c6996f00ffd66576f231a14dfbfea54c62"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_projection.py",
+        "git_blob": "ae2b1e90b367be591b8cc59b979419780115802a",
+        "bytes": 2472,
+        "sha256": "2f0e5ec8f52b49a4d8268a2977d34abec00c43d06d867020448f7a65f0c858fc"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_plan_text_boundary.py",
+        "git_blob": "143cf34da870125e367947181854e1a0af9c2b30",
+        "bytes": 2508,
+        "sha256": "259b78d7b5bc5b6b432d10b65706f9c01ef1d42fdb35f5a69ac0c5177429eb89"
+      }
+    ]
+  },
+  "test": {
+    "python": "3.13.5",
+    "environment": "Linux isolated source subset, -B -S, stdlib only; no installed third-party runtime",
+    "command": "python -B -S -m unittest discover -s tests -p test_plan_projection.py -v",
+    "actual_new_original": {
+      "pass": 5,
+      "total": 5,
+      "exit": 0
+    },
+    "prior_r2": {
+      "pass": 23,
+      "total": 23,
+      "rerun": false,
+      "evidence": "DAG_BOUNDARY_R2.json / combined-r2.log"
+    },
+    "unique_covered_methods": [
+      28,
+      28
+    ],
+    "not_one_combined_run": true,
+    "raw_log": "test_bad_graphs (test_plan_projection.PlanProjectionTests.test_bad_graphs) ... ok\ntest_malformed_and_empty (test_plan_projection.PlanProjectionTests.test_malformed_and_empty) ... ok\ntest_permutation_and_content_change (test_plan_projection.PlanProjectionTests.test_permutation_and_content_change) ... ok\ntest_qa_bypass (test_plan_projection.PlanProjectionTests.test_qa_bypass) ... ok\ntest_reference_and_v0 (test_plan_projection.PlanProjectionTests.test_reference_and_v0) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK\n",
+    "raw_log_sha256": "9c0619b26c69e109bad46a70972009a0fe65d6fca9ddf417110bf43c5f5cbe08",
+    "raw_log_blob": "878c66dcc7148ee7fcc670f02ffd196732ba7f62"
+  },
+  "sql6": {
+    "status": "NOT_RUN",
+    "original_blob": "3e01853c9fb3d184c3bd74fe2c5bbbb5904a36af",
+    "direct_fixture_dependencies": [
+      "test_admission_mapping_0195.py",
+      "test_company_terminal_0212.py",
+      "test_transition_mapping_0194.py"
+    ],
+    "transitive": "test_company_terminal_0212 imports Ed25519PrivateKey from cryptography; larger current source and SQL fixture closure required",
+    "metadata_only_local": {
+      "cryptography": "46.0.4",
+      "fastapi": "0.128.2",
+      "starlette": "0.50.0",
+      "httpx": "0.28.1",
+      "jsonschema": "4.26.0",
+      "psycopg": "NOT_INSTALLED"
+    },
+    "approved_lock": "HOLD PR52; no install or unreviewed execution"
+  },
+  "changes": {
+    "product_code": 0,
+    "product_manifest": 0,
+    "api": 0,
+    "db": 0,
+    "events": 0,
+    "dependencies": 0,
+    "isolated_source_candidate_unchanged": true,
+    "closed_test_blocker": "Original 5 projection methods executed against R2 exact source closure"
+  },
+  "acceptance": {
+    "Core": "12/16",
+    "UI": "21/40",
+    "W8": "3/8",
+    "MVP": "0/11",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal_delta": 0
+  },
+  "blockers": [
+    "Core/W3 owner review",
+    "original SQL6 verified full fixture/dependency closure",
+    "W8 rebind, C07, C08, C05",
+    "full exact checkout DNS unavailable",
+    "real PG and IV independent acceptance"
+  ],
+  "next": "Core owner review R2/R3 proof; original scheduled admission SQL6 once exact fixture and reviewed dependency closure available; independently continue NW06 current owners. No new source candidate required for projection closure.",
+  "rollback": "Normal revert of this evidence-only commit; R2 product tree and manifest remain unchanged. No database rollback.",
+  "limits": "No main/CI/PROD/real grant/provider/spend/customer data or independent acceptance. Full repository archive not available; local scope-only evidence."
+}
