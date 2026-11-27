@@ -17960,5 +17960,15 @@
     "scope": "isolated non-executable source design and targeted synthetic verification only; no real permission, commit, migration or norm ratification",
     "independent": "MI10 appointment and PR10/46/52 exact reviews remain pending",
     "acceptance": "MVP 0/11"
+  },
+  "h01_mvp03_physical_a1_20261127": {
+    "id": "H01-MVP03-PHYSICAL-A1",
+    "status": "PHYSICAL_DESIGN_DIRECTION_APPROVED_FINAL_SCHEMA_HOLD",
+    "verbatim": "**H01 olarak `H01-MVP03-PHYSICAL-A1` kararını fiziksel tasarım yönü olarak onaylıyorum.** `07c62ca1cdcc6d433bd40784ded2806fa8483cf9` teslimatından devam et. Project için `project_heads` ve `project_revisions`, WorkTypeVersion için değişmez `worktype_versions` ve ayrı kapsam etkinleştirmesi için `worktype_scope_bindings`, WorkItem için `workitem_heads` tasarımını esas al. Onaylı otoritatif eşdeğer bulunursa onu yeniden kullan.\n\n**Sıradaki teslimat, bu kayıtların otorite ve işlem sözleşmesi.** Her kaydı kimin oluşturduğunu, revize ettiğini, yayımladığını veya etkinleştirdiğini belirle. WorkItem’ın bağlanacağı kesin PK/FK’leri, kapsam izolasyonunu ve kalıcı tekrar önleme kuralını tanımla. Bunları mevcut T1 yazma ve yetkili geri okuma yoluna eşle. Mevcut AGENT işlemlerini koru. İzinli kaynak işlerini izole dalda tamamla ve değişen davranışı hedefli olarak doğrula.\n\n**Çıkış koşulu:** Project ve WorkTypeVersion otoriteleri, fiziksel anahtarlar ve WorkItem yazma/okuma işlemi tek sözleşmede incelemeye hazır. Nihai şema, MI-10 bağımsız incelemesi, gerçek HUMAN IAM, korumalı COMMIT ve migration için mevcut onay koşulları geçerli.",
+    "parent": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+    "candidate": "07c62ca1cdcc6d433bd40784ded2806fa8483cf9",
+    "review_blob": "f3a11decd834294d112be4391575112cd10fd281",
+    "scope": "Five relation design direction, reuse verified authoritative equivalents. Isolated non-executable source contract only. No final schema, authority appointment, migration, real IAM, protected COMMIT or independent acceptance.",
+    "acceptance": "MVP 0/11"
   }
 }
