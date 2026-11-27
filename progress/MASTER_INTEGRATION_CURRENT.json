@@ -17949,5 +17949,16 @@
     "ordinal": "unchanged"
   },
   "rollback": "normal revert governance-only record; no product source, CI, main, canonical, PROD, DB, grant or external effects."
-}
+},
+  "h01_mvp03_workitem_direction_a_20261127": {
+    "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+    "status": "DIRECTION_A_PRINCIPLE_APPROVED_PHYSICAL_RATIFICATION_HOLD",
+    "verbatim": "**H01 olarak A seçeneğini mimari yön olarak prensipte onaylıyorum.** Mevcut T1 Coordinator, AGENT admission’dan ayrı bir HUMAN `WORKITEM_REQUEST` işlemini destekleyecek şekilde tasarlansın. Mevcut mutation, fence, event, outbox ve audit bileşenleri tipli WorkItem kimliğiyle yeniden kullanılsın.\n\nFiziksel tablo ve anahtarları, proje ve WorkTypeVersion bağlantılarını, geriye uyumluluğu, kapsam izolasyonunu, kalıcı idempotency’yi ve yetkili geri okumayı kesinleştir. Mevcut yetki kapsamında uygulanabilen kaynak ve hedefli doğrulama işlerini izole dalda ilerlet. Bağımsız MI-10 incelemesi, gerçek IAM, korumalı COMMIT ve migration için mevcut onay koşulları geçerlidir.",
+    "previous_governance": "2edec2fec6118390737b97299c39d0dd6e445f70",
+    "candidate": "c6fef15068e7f9fcd752b0513d39ca9dc39c82d4",
+    "review_blob": "76ab21e976bd4e49b383693bbd9dc0f38578ee5a",
+    "scope": "isolated non-executable source design and targeted synthetic verification only; no real permission, commit, migration or norm ratification",
+    "independent": "MI10 appointment and PR10/46/52 exact reviews remain pending",
+    "acceptance": "MVP 0/11"
+  }
 }
