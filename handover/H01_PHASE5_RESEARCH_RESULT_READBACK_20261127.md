@@ -1,0 +1,3 @@
+# H01 Phase 5 — RESEARCH result readback source
+
+Source parent 3a515bc540352393be30b51553736f9388648084; governance 04ba25fe8934266202a2db3383f51551cac26320. Existing historical slice reader hardened with archive/journal separation and exact re-observation, explicit unlinked request. Two targeted tests added to existing suite, NOT_RUN. 589 manifest entries / 590 product files. No real request/admission/dispatch/provider/result or CEO/Office live join. Phase4 acceptance and Phase5 actual execution HOLD; prior source evidence unchanged. See ../catalog/revisions/H01_PHASE5_RESEARCH_RESULT_READBACK_20261127.json. No new schema, event, runtime, dependency or permissions. Rollback ordinary revert.

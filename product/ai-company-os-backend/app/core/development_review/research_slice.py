@@ -100,6 +100,9 @@ class ResearchSliceReview:
     qa_status: str = field(default='DEPENDENCY_HOLD', init=False)
     iv_status: str = field(default='INDEPENDENT_RECEIPT_HOLD', init=False)
     release_status: str = field(default='H01_HOLD', init=False)
+    # No authoritative WorkItem readback or request-to-run association exists.
+    request_id: None = field(default=None, init=False)
+    request_linked: bool = field(default=False, init=False)
     world_id: None = field(default=None, init=False)
     decision: str = field(default='HOLD', init=False)
     dispatch_allowed: bool = field(default=False, init=False)
@@ -127,7 +130,7 @@ def inspect_research_slice(cursor, plan, expected_revision, project_id, pins, me
     from app.core.transaction.postgres_admission_mapping import valid_budget
     from app.core.transaction.postgres_transition_mapping import transaction_ref
     from app.core.transaction.fenced_transition import (CompanyTransitionContext, SampleResultPin,
-        D0IntentJournal, resolve_result_binding, intent_pin)
+        D0IntentJournal, resolve_result_binding, intent_pin, check_result_store_separation)
     try:
         if (type(pins) is not tuple or type(members) is not tuple or type(events) is not tuple
                 or not all(type(p) is RunHistoryPin for p in pins) or type(pool) is not Pool
@@ -184,12 +187,23 @@ def inspect_research_slice(cursor, plan, expected_revision, project_id, pins, me
                     or evidence.context.invocation.run != last.before
                     or evidence.context.invocation.lease != last.lease):
                 raise ValueError('D0_RESEARCH_RESULT_LINK_HOLD')
-            binding = resolve_result_binding(last.intent, evidence.context, evidence.registry,
-                evidence.witness, evidence.witness_binding, c, evidence.company_binding,
-                evidence.result, evidence.result_reader, evidence.clock, evidence.raw)
-            receipt = evidence.journal.inspect(last.intent, intent_pin(last.intent, binding))
+            # Preserve the existing writer's archive/journal separation on readback.
+            # A local historical match is never a durable WorkItem or live result.
+            check_result_store_separation(evidence.result_reader, (evidence.journal.path,))
+            def observe_binding():
+                return resolve_result_binding(last.intent, evidence.context, evidence.registry,
+                    evidence.witness, evidence.witness_binding, c, evidence.company_binding,
+                    evidence.result, evidence.result_reader, evidence.clock, evidence.raw)
+            binding = observe_binding()
+            pin = intent_pin(last.intent, binding)
+            receipt = evidence.journal.inspect(last.intent, pin)
             if receipt.status != 'HISTORICAL' or not receipt.historical_match:
                 raise ValueError('D0_RESEARCH_RESULT_QUARANTINE_HOLD')
+            # Detect observable archive/journal drift before exposing the hash.
+            # Re-observation is not atomicity or independent custody proof.
+            check_result_store_separation(evidence.result_reader, (evidence.journal.path,))
+            if observe_binding() != binding or evidence.journal.inspect(last.intent, pin) != receipt:
+                raise ValueError('D0_RESEARCH_RESULT_RECHECK_HOLD')
             digest = evidence.result.evidence_sha
         return ResearchSliceReview('D0_RESEARCH_ROOT_RESULT_EVIDENCE_ONLY' if digest else
             'D0_RESEARCH_PREFIX_ONLY_RESULT_NOT_PROVEN', True, project_id, expected_revision,

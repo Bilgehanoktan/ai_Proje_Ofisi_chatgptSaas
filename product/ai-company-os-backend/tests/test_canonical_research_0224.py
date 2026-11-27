@@ -8,6 +8,7 @@ import json
 import sqlite3
 import tempfile
 import unittest
+from unittest.mock import patch
 import test_admission_mapping_0195 as admission
 import test_company_terminal_0212 as company_fixture
 import test_result_reference_0221 as result_fixture
@@ -112,6 +113,7 @@ class ResearchFixture:
 class CanonicalResearchTests(unittest.TestCase):
     def setUp(self): self.f=ResearchFixture(self)
     def held(self, r):
+        self.assertIsNone(r.request_id); self.assertFalse(r.request_linked)
         self.assertEqual(r.decision,'HOLD'); self.assertFalse(r.dispatch_allowed or r.release_ready or
             r.independent_verified or r.retry_allowed or r.provider_called or r.tool_called or r.spend_allowed)
         self.assertEqual((r.qa_status,r.iv_status,r.release_status),('DEPENDENCY_HOLD','INDEPENDENT_RECEIPT_HOLD','H01_HOLD'))
@@ -151,6 +153,20 @@ class CanonicalResearchTests(unittest.TestCase):
         self.assertEqual(self.f.dump(),before)
     def test_wrong_result_digest_readback(self):
         e=self.completed_prefix(); r=self.f.read(evidence=replace(e,result=replace(e.result,evidence_sha='0'*64)))
+        self.held(r); self.assertFalse(r.structural_match); self.assertIsNone(r.evidence_sha)
+    def test_result_archive_cannot_share_journal_file(self):
+        e=self.completed_prefix()
+        # Deliberately create a matching archive object inside the disposable
+        # journal file. Content match alone must not satisfy store separation.
+        alias=ReferenceStore(e.journal.path)
+        self.assertEqual(alias.put(e.result_reader.read(e.result.evidence_sha)),e.result.evidence_sha)
+        r=self.f.read(evidence=replace(e,result_reader=alias))
+        self.held(r); self.assertFalse(r.structural_match); self.assertIsNone(r.evidence_sha)
+    def test_result_archive_drift_rejected_on_recheck(self):
+        e=self.completed_prefix(); body=e.result_reader.read(e.result.evidence_sha)
+        with patch.object(type(e.result_reader),'read',side_effect=[body,b'changed']) as read:
+            r=self.f.read(evidence=e)
+        self.assertEqual(read.call_count,2)
         self.held(r); self.assertFalse(r.structural_match); self.assertIsNone(r.evidence_sha)
     def test_missing_result_does_not_imply_success(self):
         self.completed_prefix(); r=self.f.read(); self.held(r); self.assertTrue(r.structural_match); self.assertIsNone(r.evidence_sha)
