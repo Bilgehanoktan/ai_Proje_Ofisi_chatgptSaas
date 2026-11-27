@@ -1507,8 +1507,8 @@
       "sha256": "ab564790a16f07c27c6bb69d5440b13ef843e62fbd8364c580baeac9b95f5eb1"
     },
     "ai-company-os-frontend/features/evidence/AgentDirectory.tsx": {
-      "bytes": 4561,
-      "sha256": "db2e1aca824e334f749eb7078796916854d3a9c9ff818b085a51daf2f5d8219f"
+      "bytes": 5581,
+      "sha256": "7b6368573df0c9055307dd002bf6d135c130afa444c1228c3170946e09319fd9"
     },
     "ai-company-os-frontend/features/evidence/AgentRoleProfile.module.css": {
       "bytes": 1450,
@@ -2235,8 +2235,8 @@
       "sha256": "0c6e00fcceff84c9369b18bf3bd0c81a0e8b22d5e9a6d7fa6a9a918fd0fec15b"
     },
     "ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": {
-      "bytes": 6849,
-      "sha256": "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932"
+      "bytes": 8018,
+      "sha256": "26fe249b6ed085949c2ec5168f37eb7db4f88e5e81010a3ebc2b139f3ad624c7"
     },
     "ai-company-os-frontend/tests/ui-p10j19-roadmap.test.cjs": {
       "bytes": 3978,
@@ -2450,5 +2450,15 @@
     ],
     "classification": "EXACT_EXISTING_REGRESSION_SOURCE_TRANSFER_ONLY",
     "scope": "test source only, no new execution or acceptance"
+  },
+  "central_h01_b_agent_shared_plan_readback_20261127": {
+    "parent": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
+    "previous_manifest_blob": "faf7c4b8c96df4b895d60aa2b51f334c3bcd59d6",
+    "paths": [
+      "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs"
+    ],
+    "classification": "SOURCE_INTEGRATED_D0_READONLY_UI",
+    "scope": "existing role readback wiring and necessary regression; no authority or acceptance"
   }
 }

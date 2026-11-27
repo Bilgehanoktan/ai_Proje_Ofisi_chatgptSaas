@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: TSX syntax
+ok 1 - TSX syntax
+  ---
+  duration_ms: 1.09195
+  type: 'test'
+  ...
+# Subtest: role tasks sorted by validated wave without mutating input
+ok 2 - role tasks sorted by validated wave without mutating input
+  ---
+  duration_ms: 0.366874
+  type: 'test'
+  ...
+# Subtest: profile counts reference tasks and distinct waves only
+ok 3 - profile counts reference tasks and distinct waves only
+  ---
+  duration_ms: 1.067333
+  type: 'test'
+  ...
+# Subtest: dependencies remain attached to their own task
+ok 4 - dependencies remain attached to their own task
+  ---
+  duration_ms: 0.342197
+  type: 'test'
+  ...
+# Subtest: unknown wave stays unknown, does not infer schedule
+ok 5 - unknown wave stays unknown, does not infer schedule
+  ---
+  duration_ms: 8.952148
+  type: 'test'
+  ...
+# Subtest: invalid plan does not report zero reference tasks
+ok 6 - invalid plan does not report zero reference tasks
+  ---
+  duration_ms: 0.21882
+  type: 'test'
+  ...
+# Subtest: valid empty role is distinct from invalid plan
+ok 7 - valid empty role is distinct from invalid plan
+  ---
+  duration_ms: 0.155775
+  type: 'test'
+  ...
+# Subtest: role switch does not preserve former plan rows
+ok 8 - role switch does not preserve former plan rows
+  ---
+  duration_ms: 0.408417
+  type: 'test'
+  ...
+# Subtest: history and authority remain explicitly unbound
+ok 9 - history and authority remain explicitly unbound
+  ---
+  duration_ms: 0.420896
+  type: 'test'
+  ...
+# Subtest: two tasks in same wave count once
+ok 10 - two tasks in same wave count once
+  ---
+  duration_ms: 0.375928
+  type: 'test'
+  ...
+# Subtest: directory integration has no syntax errors and uses selected role context
+ok 11 - directory integration has no syntax errors and uses selected role context
+  ---
+  duration_ms: 1.927692
+  type: 'test'
+  ...
+# Subtest: directory no selection mounts no profile
+ok 12 - directory no selection mounts no profile
+  ---
+  duration_ms: 0.141254
+  type: 'test'
+  ...
+# Subtest: directory invalid plan passes unknown not empty valid tasks
+ok 13 - directory invalid plan passes unknown not empty valid tasks
+  ---
+  duration_ms: 0.170317
+  type: 'test'
+  ...
+# Subtest: directory filtered selection preserves selected profile
+ok 14 - directory filtered selection preserves selected profile
+  ---
+  duration_ms: 0.168705
+  type: 'test'
+  ...
+# Subtest: organization historical readback remains a separate non-authority child
+ok 15 - organization historical readback remains a separate non-authority child
+  ---
+  duration_ms: 0.136196
+  type: 'test'
+  ...
+# Subtest: directory shares plan source and clears stale historical input
+ok 16 - directory shares plan source and clears stale historical input
+  ---
+  duration_ms: 0.309287
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 325.558236

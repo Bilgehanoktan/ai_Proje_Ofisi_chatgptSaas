@@ -9,11 +9,15 @@ import {organizationTemplate} from './studioGovernance';
 import styles from './EvidenceStudio.module.css';
 import OrganizationReadback from '../organization/OrganizationReadback';
 import AgentRoleProfile from './AgentRoleProfile';
+import {useSharedSnapshot} from '../data/SharedSnapshotProvider';
+import {readStatus} from '../data/projectionRead';
 export default function AgentDirectory({roles,selected,onSelect}:{roles:readonly Role[];selected:string|undefined;onSelect:(role:Role)=>void}){
  const [query,setQuery]=useState(''),[department,setDepartment]=useState(''),[sort,setSort]=useState(false);
  const filtered=roleDirectory(roles,query,department);
  const rows=sort?[...filtered].sort((a,b)=>a.id.localeCompare(b.id)):filtered;
- const selectedRole=roles.find(r=>r.id===selected),plan=readPlanProjection();
+ const {planRead}=useSharedSnapshot();
+ const historicalPlan=planRead.state.phase==='historical'?planRead.state.data:undefined;
+ const selectedRole=roles.find(r=>r.id===selected),plan=readPlanProjection(historicalPlan);
  const templateTasks=selectedRole&&plan.ok?roleTaskContext(plan.plan.tasks,selectedRole.id):[];
  const departments=[...new Set(roles.map(r=>r.department))].sort();
  const organization=organizationTemplate(roles);
@@ -23,6 +27,7 @@ export default function AgentDirectory({roles,selected,onSelect}:{roles:readonly
   <div className={styles.agentStats} aria-label="Rol kataloğu özeti"><div><small>Rol şablonu</small><strong>{roles.length}</strong></div><div><small>Departman şablonu</small><strong>{departments.length}</strong></div><div><small>Gerçek aktif çalışan</small><strong>—</strong></div><div><small>Etkin yetki</small><strong>HOLD</strong></div></div>
   <section className="panel" aria-label="Organizasyon hedef mimarisi"><h3>Organizasyon merkezi · hedef şablon</h3>{organization?<><div className="sectiongrid"><article className="item"><h3>H01 · İnsan CEO</h3><small>Nihai karar otoritesi</small></article><article className="item"><h3>{organization.coordinator.name}</h3><small>Mantıksal operasyon koordinasyonu</small></article>{organization.groups.map(g=><article className="item" key={g.department}><h3>{g.department}</h3>{g.roles.map(r=><p key={r.id}>{r.name} · rol şablonu</p>)}</article>)}</div><p className="sub">Ayrı güven kökleri: {organization.independent.join(" · ")}. QA, bağımsız IV değildir. Gerçek personel, raporlama ataması veya grant doğrulanmadı.</p></>:<p role="status">Rol kataloğu uyuşmuyor · HOLD</p>}</section>
   <OrganizationReadback/>
+  <section className="panel" aria-label="Rol görev planı kaynağı"><h3>Rol görev planı · ortak okuma</h3><p role="status" data-phase={planRead.state.phase}>{readStatus(planRead.state,{idle:'Backend planı okunmadı',loading:'Backend planı okunuyor',historical:plan.ok?'Backend derleyici yanıtı sabit planla eşleşti · HOLD':'Plan uyuşmuyor · HOLD',hold:'Backend planı reddedildi · HOLD'})}{historicalPlan?' · tarihsel D0':' · çevrimdışı referans'} · gerçek atama yok</p><div className="chips"><button type="button" onClick={planRead.read} disabled={planRead.state.phase==='loading'}>Plan kaydını oku</button><button type="button" onClick={planRead.reset} disabled={planRead.state.phase==='idle'}>Planı temizle</button></div></section>
   <div className={styles.filters}><label>Rol ara<input type="search" value={query} onChange={e=>setQuery(e.target.value)}/></label><label>Departman<select value={department} onChange={e=>setDepartment(e.target.value)}><option value="">Tümü</option>{departments.map(d=><option key={d}>{d}</option>)}</select></label><button type="button" aria-pressed={sort} onClick={()=>setSort(v=>!v)}>Rol kimliğine göre sırala</button><button type="button" onClick={()=>{setQuery('');setDepartment('');setSort(false);}}>Temizle</button></div>
   <p role="status">{rows.length}/{roles.length} rol şablonu · gerçek instance yok</p>
   {hidden&&<p className={styles.notice} role="status">Seçili rol filtre dışında; bağlam korunuyor. <button type="button" onClick={()=>{setQuery('');setDepartment('');}}>Seçili rolü göster</button></p>}

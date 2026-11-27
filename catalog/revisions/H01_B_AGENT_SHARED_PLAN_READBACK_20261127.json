@@ -1,0 +1,63 @@
+{
+  "task": "H01-B-AGENT-SHARED-PLAN-READBACK-20261127",
+  "parent": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
+  "governance": "e807eb0b8ddbdeee524fea5543a0edb751c1dd5c",
+  "classification": "SOURCE_INTEGRATED_D0_READONLY_UI",
+  "technical_owner": "H01-B central writer MI05/MI06",
+  "paths": [
+    {
+      "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+      "old_blob": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+      "new_blob": "c99262af504d8e7b16362e6a023e10d8b02d69f7",
+      "sha256": "7b6368573df0c9055307dd002bf6d135c130afa444c1228c3170946e09319fd9",
+      "bytes": 5581
+    },
+    {
+      "path": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+      "old_blob": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+      "new_blob": "106df38e4ccb721dc9a215233c47ed87c74acd6c",
+      "sha256": "26fe249b6ed085949c2ec5168f37eb7db4f88e5e81010a3ebc2b139f3ad624c7",
+      "bytes": 8018
+    }
+  ],
+  "architecture": "D13 DashboardProjection, UI-P10J18; reuse existing SharedSnapshotProvider planRead and exact plan guard, no real role assignment or atomic join, no API/DB/event/dependency change. Original ORG reader remains independent.",
+  "source_pins": {
+    "provider": "3b02873f6f645fe1d9f698ce966727d70e696220",
+    "projection_read": "58e1085b1804c8b83f17f0e8c836feee84706164",
+    "plan_guard": "e337a8da904e31b027f02d5876ab451d8da1d699",
+    "agent_profile": "f47317db9acd182a3feb9e054f5ab55530db5a0e",
+    "org_readback": "ba5c811246dac69677f618c0d5568f2ca0701006"
+  },
+  "ownership": "44 open PR path lists reviewed; only PR35 test overlaps. Its exact prior ORG sentinel and assertion retained, changed button count and mock for new code; no bulk merge.",
+  "evidence": {
+    "environment": "Node 22.16.0, TypeScript 5.8.3 global, isolated local VM mocks only",
+    "original_suite": "15 existing methods retained, 1 necessary regression added; 16/16 PASS",
+    "targeted": "7 mock state groups + TSX transpile PASS",
+    "raw_log": "tests/evidence/H01_B_AGENT_SHARED_PLAN_READBACK_20261127.tap",
+    "raw_sha256": "547c064bdb9a5bbaee8ada59f48632e747666f98ca7babb92562f5a81f94d04c",
+    "raw_blob": "d7b586340a1af96a64070bfd4c70bfc0ab026af3",
+    "postimages": "2/2 exact local SHA256 and Git blob pins",
+    "full_typecheck": "NOT_RUN",
+    "full_build": "NOT_RUN",
+    "browser": "NOT_RUN",
+    "real_backend": "NOT_RUN",
+    "independent": "HOLD"
+  },
+  "manifest": {
+    "previous": 575,
+    "current": 575,
+    "product_files": 576
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "W8": "3/8",
+    "IV": "0/7",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "limitations": "Full current Design Master and exact full ZIP incomplete. No real grant, agent/task/model/skill execution, CI/main/PROD; C50/R9 and IAM12/G7 remain HOLD.",
+  "rollback": "Ordinary revert of this commit; no DB migration."
+}

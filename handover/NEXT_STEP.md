@@ -69,3 +69,6 @@ Original stdlib-only process-local D0 IAM session resolver and unchanged unittes
 
 ## H01 B — Model/Skill original cross-component regression source transfer (27.11.2026)
 Exact archived test_adapter_skill_integration.py (four existing methods, no new tests or runtime code) transferred with 10/10 dependency source pins matching current product. Archived 15/15 combined scoped PASS log verified, no rerun or new acceptance. 575 manifest entries; retain stricter canonical registry/resolver. See ../catalog/revisions/H01_B_MODEL_SKILL_ORIGINAL_INTEGRATION_REGRESSION_20261127.json. G2 signed wrapper12/G7 original7, API9, C50/R9 and IV remain HOLD/NOT_RUN. Ordinary revert for rollback.
+
+## H01 B — AI employee role shared historical plan readback (27.11.2026)
+AgentDirectory consumes existing shared planRead and exact plan guard, adds read/reset and historical/offline/STALE/TIMEOUT provenance. Existing ORG remains independent, role assignment and runtime execution HOLD. PR35 exact test fix retained; original updated suite 16/16 isolated mock PASS and 7 targeted state groups PASS. Full build/typecheck/browser/live backend NOT_RUN. See ../catalog/revisions/H01_B_AGENT_SHARED_PLAN_READBACK_20261127.json. Manifest 575 entries, 576 product files. Ordinary revert; IAM12/G7/C50/R9/IV unchanged.
