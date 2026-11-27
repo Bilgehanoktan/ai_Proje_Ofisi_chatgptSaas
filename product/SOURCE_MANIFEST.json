@@ -339,8 +339,8 @@
       "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
     },
     "ai-company-os-backend/app/core/orchestrator/research_command_review.py": {
-      "bytes": 4463,
-      "sha256": "b290147418809150b746eecbd95f3c4db2cfc2176f651dbb6e1e3af7e49f47b7"
+      "bytes": 4684,
+      "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd"
     },
     "ai-company-os-backend/app/core/outbox_review.py": {
       "bytes": 421,
@@ -1095,8 +1095,8 @@
       "sha256": "28fe78023ad0fa8c20a25732766ee90d58c279f02f611b92fb653d29e556f9f2"
     },
     "ai-company-os-backend/tests/test_research_command_review_mvp03.py": {
-      "bytes": 4509,
-      "sha256": "f1c7f7bfd0a2502a5b37f70224de61f33edf538db9a1e6ebbe859d2c0639b8da"
+      "bytes": 4841,
+      "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f"
     },
     "ai-company-os-backend/tests/test_research_company_snapshot_0224.py": {
       "bytes": 6416,
@@ -1495,8 +1495,8 @@
       "sha256": "1b99e9449d2cbedb8a918c5acf99d001a3b101a24d3fb461eaa1686482d6c6d2"
     },
     "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx": {
-      "bytes": 3665,
-      "sha256": "d31684c19649ef957868961a9c8b80f71be53fbd0836ec148826e9d119d80626"
+      "bytes": 4147,
+      "sha256": "6d1a6796c3c50f3dab80e9d292ca59dfdb4adc550bee1ecc17ef4b7d394c08c7"
     },
     "ai-company-os-frontend/features/ceo-dashboard/SectionSwitcher.module.css": {
       "bytes": 859,
@@ -2612,5 +2612,29 @@
     ],
     "tests": "NOT_RUN",
     "live_execution": "HOLD"
+  },
+  "h01_mvp03_p0_command_binding_20261127": {
+    "parent": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+    "governance": "50738ca50f32259d4613144c8c390967301c1c4c",
+    "paths": [
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "bytes": 4684,
+        "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "bytes": 4841,
+        "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f"
+      },
+      {
+        "path": "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx",
+        "bytes": 4147,
+        "sha256": "6d1a6796c3c50f3dab80e9d292ca59dfdb4adc550bee1ecc17ef4b7d394c08c7"
+      }
+    ],
+    "classification": "D0_SOURCE_ONLY",
+    "tests": "NOT_RUN",
+    "persistence": "HOLD"
   }
 }

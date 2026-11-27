@@ -1,0 +1,3 @@
+# H01 MVP03 P0 command binding / Phase 6 focus
+
+Same P0 task, parent 3d50b3343e2d1431fdbc305edd7a272c1f14a144. Retain validated opaque idempotency key in existing D0 binder and bind local CEO selection to actual successful plan observation. Re-read of same revision requires reselection. Existing HOLD buttons and GET-only reader preserved. Existing test method extended; NOT_RUN, no actual browser or persistence proof. Core/T1, IAM and C50/R9 independent decisions remain HOLD; existing PR review requests retained. 589 manifest entries/590 files, 3 changed payloads, no new runtime or persistence engine. Details: ../catalog/revisions/H01_MVP03_P0_COMMAND_BINDING_20261127.json. Normal revert. No main/CI/PROD.

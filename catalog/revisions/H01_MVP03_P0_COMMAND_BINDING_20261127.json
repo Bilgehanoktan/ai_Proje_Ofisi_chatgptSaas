@@ -1,0 +1,72 @@
+{
+  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+  "phase": "6 work focus; same P0 task",
+  "parent": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+  "governance": "50738ca50f32259d4613144c8c390967301c1c4c",
+  "decision": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "changes": [
+    {
+      "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+      "bytes": 4684,
+      "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+      "bytes": 4841,
+      "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f"
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx",
+      "bytes": 4147,
+      "sha256": "6d1a6796c3c50f3dab80e9d292ca59dfdb4adc550bee1ecc17ef4b7d394c08c7"
+    }
+  ],
+  "previous_blobs": [
+    "b4e10628abc63c3559098790ce55d109801b71b8",
+    "a9683b7be2acd1354583dadd52b6731983873210",
+    "def3649259e53bbf526386f52c82a429ea44b965"
+  ],
+  "previous_manifest": "d0be0ecb733e76a4241086415733150cd9260fe0",
+  "source_gain": [
+    "Validated opaque Idempotency-Key carried by existing internal D0 ResearchPlanBinding, hidden from repr, participates in equality; no digest protocol, persistent fence or request receipt.",
+    "CEO plan selection bound to actual shared historical ReadState object, not revision alone; reread/reset or invalid/expired observation cannot display an old selection. No new read/write endpoint; buttons remain disabled.",
+    "Existing test method extended for key preservation/distinction/redacted repr and HOLD. No new suite."
+  ],
+  "dependencies": {
+    "plan_parser": "e337a8da904e31b027f02d5876ab451d8da1d699",
+    "projection_reader": "58e1085b1804c8b83f17f0e8c836feee84706164",
+    "shared_provider": "3b02873f6f645fe1d9f698ce966727d70e696220",
+    "reader_hook": "4294f67533cd1ff0d92a117935393bbee84d2abe"
+  },
+  "ownership": "44 open PR titles checked, no WorkItem path overlap identified; existing UI and API shared files left unchanged. No independent approval or access to uncommitted work.",
+  "core": {
+    "status": "HOLD",
+    "review": "PR10 comment 7225465563",
+    "finding": "Existing T1 operation/mapping not ratified; proposed typed aggregate workitem operation not implemented. No new schema, grant or transport."
+  },
+  "iam": {
+    "status": "HOLD",
+    "review": "PR46 comment 7225466658",
+    "finding": "No real HUMAN project create/read permission yet. No write route or authorized readback."
+  },
+  "runtime": {
+    "status": "HOLD",
+    "review": "PR52 comment 7225467598",
+    "lock": "fb50ae2d06594150887e849d61de027c61ae1492",
+    "finding": "No new approval. Existing 25-row lock and pin comparison retained. No install."
+  },
+  "tests": "NOT_RUN (affected binder suite 8 methods; UI browser/typecheck not run). Local preinstalled Python 3.13.5 and tsc 5.8.3 not evidence of approved full runtime; no full exact checkout.",
+  "phase4": "E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
+  "phase5": "real execution HOLD",
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "ordinary revert source commit; no DB/event/API/dependency or data migration."
+}

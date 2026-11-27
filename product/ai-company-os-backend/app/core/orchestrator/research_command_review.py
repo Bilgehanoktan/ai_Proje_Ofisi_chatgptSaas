@@ -26,6 +26,9 @@ class ResearchPlanBinding:
     plan_revision: str
     plan_digest: str
     root_task_id: str
+    # Retain the validated opaque key for the future protected command service.
+    # This is input binding only, not a durable fence or a request identifier.
+    idempotency_key: str = field(repr=False)
     decision: str = field(default="HOLD", init=False)
     persistence_allowed: bool = field(default=False, init=False)
     dispatch_allowed: bool = field(default=False, init=False)
@@ -104,5 +107,5 @@ def bind_research_command(
     ):
         raise ResearchCommandError("COMMAND_ROOT_INVALID")
     return ResearchPlanBinding(
-        project_ref, projection["plan_id"], revision, projection["digest"], roots[0]
+        project_ref, projection["plan_id"], revision, projection["digest"], roots[0], idempotency_key
     )
