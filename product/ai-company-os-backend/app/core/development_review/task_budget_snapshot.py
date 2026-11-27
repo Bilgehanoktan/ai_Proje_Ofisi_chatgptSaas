@@ -1,9 +1,8 @@
 """D0 pair identity and stable dual readback; not a cross-database T1 or grant."""
-from contextlib import closing
 from pathlib import Path
 import re
-import sqlite3
 from uuid import uuid4
+from .paired_read_guard import guarded_read, PAIR_TABLES
 
 PLAN = '6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9'
 SCOPE = ('synthetic-tenant', 'synthetic-company', 'A0_SAMPLE_ONLY', PLAN,
@@ -35,8 +34,7 @@ def read_pair_marker(path, *, admission):
     suffix = '.admission.d0.sqlite' if admission else '.workbench.d0.sqlite'
     if not p.name.endswith(suffix) or p.is_symlink() or not p.is_file():
         raise ValueError('D0_PAIR_PATH_HOLD')
-    with closing(sqlite3.connect(p.resolve().as_uri()+'?mode=ro', uri=True, timeout=2)) as db:
-        db.execute('PRAGMA query_only=ON')
+    with guarded_read(p,suffix,PAIR_TABLES) as db:
         rows = db.execute('SELECT id,pair_id,tenant,company,environment,plan_digest,task_id,run_id,agent_id,principal FROM sample_pair LIMIT 2').fetchall()
     if len(rows) != 1 or rows[0][0] != 1 or not _valid_pair(rows[0][1]) or rows[0][2:] != SCOPE:
         raise ValueError('D0_PAIR_SCOPE_HOLD')

@@ -3,6 +3,7 @@ from contextlib import closing, contextmanager
 from pathlib import Path
 import sqlite3
 from .task_budget_snapshot import write_pair_marker
+from .paired_read_guard import guarded_read, ADMISSION_TABLES
 from app.core.agent_runtime.lifecycle import Scope, LeaseObservation, ClockSample
 from app.core.policy.witness_review import WitnessSample
 from app.core.transaction.review import LogicalIntent, Operation, RoleObservation, required_roles
@@ -56,8 +57,11 @@ def _path(path):
 def _state(db):
     if db.execute('SELECT profile FROM meta LIMIT 2').fetchall()!=[(PROFILE,)] or db.execute('SELECT tenant,company,principal FROM membership LIMIT 2').fetchall()!=[OWNER]:
         raise ValueError('ADMISSION_SAMPLE_SCOPE_HOLD')
-    row=db.execute('SELECT version,phase,reserved,observed FROM sample_budget WHERE id=1').fetchone()
-    if not row or row[1] not in STATES:
+    rows=db.execute('SELECT id,version,phase,reserved,observed FROM sample_budget LIMIT 2').fetchall()
+    if len(rows)!=1 or type(rows[0][0]) is not int or rows[0][0]!=1:
+        raise ValueError('ADMISSION_SAMPLE_STATE_HOLD')
+    row=rows[0][1:]
+    if any(type(row[i]) is not int for i in (0,2,3)) or row[1] not in STATES:
         raise ValueError('ADMISSION_SAMPLE_STATE_HOLD')
     version,reserved,observed,kinds=STATES[row[1]]
     expected=[('demo-admit' if n==1 else 'demo-settle',n,k) for n,k in enumerate(kinds,1)]
@@ -77,11 +81,14 @@ def _open(path, readonly=False):
     p=_path(path)
     if not p.is_file():
         raise ValueError('ADMISSION_SAMPLE_MISSING')
-    with closing(sqlite3.connect(p.resolve().as_uri()+('?mode=ro' if readonly else '?mode=rw'),uri=True,timeout=2)) as db:
+    if readonly:
+        with guarded_read(p,'.admission.d0.sqlite',ADMISSION_TABLES) as db:
+            yield db
+        return
+    with closing(sqlite3.connect(p.resolve().as_uri()+'?mode=rw',uri=True,timeout=2)) as db:
         db.execute('PRAGMA foreign_keys=ON')
-        if readonly: db.execute('PRAGMA query_only=ON')
         with db:
-            db.execute('BEGIN' if readonly else 'BEGIN IMMEDIATE')
+            db.execute('BEGIN IMMEDIATE')
             yield db
 
 

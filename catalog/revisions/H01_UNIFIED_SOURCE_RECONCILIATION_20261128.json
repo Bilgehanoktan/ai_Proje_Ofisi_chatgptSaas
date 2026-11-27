@@ -1,0 +1,685 @@
+{
+  "parent": "9386ec986cefad3d2a3668ff94f711218e1d0fca",
+  "shared_product": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "governance": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+  "source": "353c5c8d00dae3649b029c16e9b8aae96eb61e01",
+  "product_files_before": 592,
+  "product_files_after": 593,
+  "manifest_entries_after": 592,
+  "refs_compared": 350,
+  "source_changes": [
+    {
+      "path": "ai-company-os-backend/app/core/development_review/admission_sample.py",
+      "previous_blob": "a697188c51173e23d645fac95abf99c282f939b3",
+      "blob": "a530d415f5fb1f7e7eff79c1aa1bda3c36057859",
+      "bytes": 8672,
+      "sha256": "bcb8e58049e96277153b98a37b054d3c59e0d2e473af52d4763c369eb56ddfe3"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/development_review/paired_read_guard.py",
+      "previous_blob": null,
+      "blob": "63659a7648bafe633cb3f80300f776bf3c842cf9",
+      "bytes": 2897,
+      "sha256": "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+      "previous_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+      "blob": "086584de235756f24aebea16657fa51793fc06e2",
+      "bytes": 4515,
+      "sha256": "06dcc74490cd9fa31d66ada69a017370174b23dd3c30d7e395fd3c3b6653a798"
+    }
+  ],
+  "prior_evidence": {
+    "commit": "353c5c8d00dae3649b029c16e9b8aae96eb61e01",
+    "lock_path": "tests/evidence/W1_0198_P09/final_lock.json",
+    "lock_blob": "91b5018e3edebd8c08f41c4bc03cd5ea799701a8",
+    "status": "REPORTED_NOT_RETESTED"
+  },
+  "changed_pr_paths": {
+    "PR#10": {
+      "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#19": {
+      "head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "b28788f46a39c282d79d29c4abd817ed5fc9de99"
+      }
+    },
+    "PR#31": {
+      "head": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "ae42ecccdda987c00537696f2698f49c374ec927",
+        "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": "a1ff4a1690a0b113aa882de633e063c02f9535a4"
+      }
+    },
+    "PR#34": {
+      "head": "93d527cf436fe56d44a27f883980baa6edf236c5",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9"
+      }
+    },
+    "PR#35": {
+      "head": "39310fd452cf6cebcfd92ae02fe67c935c4c3978",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#36": {
+      "head": "683a26171ac54544260456ce84e19c38614aa5e2",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#37": {
+      "head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#38": {
+      "head": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#39": {
+      "head": "8e614ec744b59bb1c3cb6c1166f59c3a6eb4941e",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#40": {
+      "head": "1a75ea2cd287f8fbeab01f4ce5fd89c4197ba2c9",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#41": {
+      "head": "ebd307fecc081a523fec1cefcb5070cc3e38a977",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#42": {
+      "head": "659fa93ca60364395095a0efe74ab3ed37051303",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#43": {
+      "head": "5b6b5456a7a40e13bddc524f6476ab2d2339977e",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#44": {
+      "head": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#45": {
+      "head": "17911f73003e6ac303579d40d4a9aac8a3e2fe98",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "4a35c712a92a609e8ed07e5ea28d24a15eb67576",
+        "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": "c8a333c82c3706f3b8e4ee191034bdf30bec1187"
+      }
+    },
+    "PR#46": {
+      "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#47": {
+      "head": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#48": {
+      "head": "59400debd73bf3b5e2df1e0d2fe008fd4e633917",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "4a35c712a92a609e8ed07e5ea28d24a15eb67576",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "b9046f4f4f92ea121ecb530c7fa781af96d8d79d",
+        "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": "c8a333c82c3706f3b8e4ee191034bdf30bec1187"
+      }
+    },
+    "PR#49": {
+      "head": "3361ae04310b9b7f51114aefca83f8c8c5255410",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+        "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+        "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs": "38da03a56d60c37cefc15069791f7f83dd6b0ee6"
+      }
+    },
+    "PR#50": {
+      "head": "596282284a9b29216a89a7cc20651b3b31c501bd",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079"
+      }
+    },
+    "PR#51": {
+      "head": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": "f3fe889b41ad3d8445025458225aa34d3d63a5e9"
+      }
+    },
+    "PR#52": {
+      "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#53": {
+      "head": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#54": {
+      "head": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#55": {
+      "head": "65ddae6a33d94593ed686b53698a6d8ad48919b4",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/app/engines/skill_engine/resolver.py": "1a448e4658ffd8dcf3884fef150dab8d77b766ca"
+      }
+    }
+  },
+  "missing_path_inventory": {
+    "product/ai-company-os-backend/app/core/development_review/paired_read_guard.py": {
+      "disposition": "TRANSFERRED_D0",
+      "source_blobs": {
+        "origin/integration/w1-0198-p09": "63659a7648bafe633cb3f80300f776bf3c842cf9"
+      }
+    },
+    "product/ai-company-os-backend/app/core/event_store.py": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/recovery/0158-r5": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "origin/recovery/0159-structure": "e3f94cab61a27c7d4c89d02516887146b2026eb3"
+      }
+    },
+    "product/ai-company-os-backend/app/core/orchestrator.py": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/recovery/0158-r5": "62aee5a6f2c063445b574a400d7bb53472319969",
+        "origin/recovery/0159-structure": "62aee5a6f2c063445b574a400d7bb53472319969"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r9-claim-fullchain-evidence": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+        "origin/workstream/0230-d5g6a-protected-preclaim-integration": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_authority_preclaim_fullchain_d5g6a.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r9-claim-fullchain-evidence": "822d27c55b6626a07cd9a56b4dbd53d9eb52292d",
+        "origin/workstream/0230-d5g6a-protected-preclaim-integration": "822d27c55b6626a07cd9a56b4dbd53d9eb52292d"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_core_operations_assignment_mi03.py": {
+      "disposition": "HISTORICAL_REGRESSION_REVIEW",
+      "source_blobs": {
+        "origin/review/mi03-gate02-core-positive-20261119": "23c2f019a27bc9e16d8de3f2af72c239eefac035"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_postgres_strict_expiry_d5c_r6.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r6-strict-commit-hold": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "origin/planning/0230-d5c-r7-strict-preclaim-hold": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "origin/planning/0230-d5c-r8-g5-t1-protected-integration": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "origin/planning/0230-d5c-r8-transport-evidence": "cde0ed2b841c6b48500a464979096aad55a635b1"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_protected_org_t1_d5c_r8.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r8-g5-t1-protected-integration": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc",
+        "origin/planning/0230-d5c-r8-transport-evidence": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_runtime_memory_t1_w5_mem05a.py": {
+      "disposition": "HISTORICAL_REGRESSION_REVIEW",
+      "source_blobs": {
+        "origin/integration/w5-mem-05a-runtime-memory-contract": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05c-r2-memory-gateway": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05d-recovery-reconciliation": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05e-r1-authority-source-alignment": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05e-recovery-gateway-binding": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/planning/w5-mem-05c-gateway-memory-contract": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/planning/w5-mem-05c-r1-exact-regression-evidence": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/planning/w5-mem-05c-r1-portable-regression": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1"
+      }
+    },
+    "product/ai-company-os-frontend/app/api/local-mvp/readback/route.ts": {
+      "disposition": "HOLD_LEGACY_ROUTE_AND_PANEL",
+      "source_blobs": {
+        "origin/recovery/0172-r12-readback-integration": "d0bff84e4adb1cac9bc21b5b0efcb5ecb8cdd5bd"
+      }
+    },
+    "product/ai-company-os-frontend/components/dashboard/LocalReadbackPanel.tsx": {
+      "disposition": "HOLD_LEGACY_ROUTE_AND_PANEL",
+      "source_blobs": {
+        "origin/recovery/0172-r12-readback-integration": "768873f1bc4b884679b845ec43711c853283565f"
+      }
+    },
+    "product/ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/integration/ui-0210-p10d": "491dcc77bde9fd1b31a7bbf8aae33fe02c344bd5",
+        "origin/integration/ui-0211-p10e": "3a009e3250ecf4c563844957936df74cfc07cf4d",
+        "origin/integration/ui-0211-p10f": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ui-0212-p10g": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ui-0212-p10h": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ui-0212-p10i": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-02-5": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-02-5b-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-02-office-motion": "3a009e3250ecf4c563844957936df74cfc07cf4d",
+        "origin/integration/ux-premium-03-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-04-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-05-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-06-consolidation": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-07-a0-traffic-fix": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-07-a0b-build": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/planning/ux-premium-07-office-realignment": "19e18f9d1a5baaa59528adc06d81b1ab62706f74"
+      }
+    },
+    "product/ai-company-os-frontend/features/project-management/DependencyNeighborhood.tsx": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/integration/ui-0212-p10i": "f2703319f9a11d6545105c9e7652188f322fee86"
+      }
+    },
+    "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/integration/mi-03-r2-readonly-identity": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/mi-04-transport-source-transfer": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/mi-07-08-model-memory-transfer": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/mi10-limited-ci-20261119": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j20-workflow-inspector-a4r2": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j21-skill-memory-studio": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j22-finance-security-studio": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j23-premium-management-eds": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j24-product-acceptance": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j24b-source-recovery": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/unified-u1-core-ui-office": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/unified-u2-shared-runtime": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/unified-u3a-product-acceptance": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-ext-06-skill-studio": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05a-runtime-memory-contract": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05c-r2-memory-gateway": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05d-recovery-reconciliation": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05e-r1-authority-source-alignment": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05e-recovery-gateway-binding": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-01-skill-evaluation": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-02-superpowers-guidance": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-03-ui-recommendations": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-04-local-video": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-05-skill-manifest-review": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-07r5-acceptance-transfer": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-07r6-source-preflight": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-01-lineage-continuity": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-02-revision-continuity": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-03-history-commitment": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-03r1-regression-evidence": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-04-signed-checkpoint": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-05c-gateway-memory-contract": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-05c-r1-exact-regression-evidence": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-05c-r1-portable-regression": "b57e27761e60351e62224b569ad107cd54fd8daf"
+      }
+    }
+  },
+  "blob_bytes_sha256": {
+    "0aaec8456aa549d842735e1063a9e2568d5a541f": [
+      6849,
+      "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932"
+    ],
+    "19e18f9d1a5baaa59528adc06d81b1ab62706f74": [
+      3658,
+      "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    ],
+    "1a448e4658ffd8dcf3884fef150dab8d77b766ca": [
+      2152,
+      "787449cec4ec414c2d656450bf81d697d082b87ff24b171d8e9a59fd9723b35a"
+    ],
+    "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6": [
+      918,
+      "e71ea3b15e8e576704f98a22879e9b169fc0c2689834468ff5562eea7b706be8"
+    ],
+    "23c2f019a27bc9e16d8de3f2af72c239eefac035": [
+      10313,
+      "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d"
+    ],
+    "24596fdc3ac6e340d7798529b5308a6e4c6eff67": [
+      3913,
+      "71192aa17660d6b458cf2cd8ce24cdbdc9f54a63cab029f65a3ea9ff28950c69"
+    ],
+    "25f5b4f69eccefaacebfb80d65e046d23e2a1ace": [
+      2205,
+      "965bdfe15a45cb7b38cecc0f5a521fbb596722475ea5b9794ff17b24a40ca9ec"
+    ],
+    "38da03a56d60c37cefc15069791f7f83dd6b0ee6": [
+      6668,
+      "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
+    ],
+    "3a009e3250ecf4c563844957936df74cfc07cf4d": [
+      2816,
+      "a1dd8b3b42660755aa3f15f95aa8518288a11b1eeb7c4033453f03a6832158c1"
+    ],
+    "3e16b9952af6886b6579729108a0278042ac4052": [
+      5229,
+      "808ede44c79324dea98af33315fde68d3255666c614d4a63968f21d33445234b"
+    ],
+    "46827e7a4925cf56efdcda498250ce5e0f05e10e": [
+      2309,
+      "c1858c0751e594aba4fbc07728e99d39fab867c0f45bf52e099690fc97350cca"
+    ],
+    "491dcc77bde9fd1b31a7bbf8aae33fe02c344bd5": [
+      1963,
+      "da978ddabef6b660fc1dac9612ad790440595f265b27ed55aa08e0b763c9f501"
+    ],
+    "4a35c712a92a609e8ed07e5ea28d24a15eb67576": [
+      5475,
+      "7f8746fbb8f5fc26d8de369af229042fe53ebc485eae3d0c5d1717ef35d19b67"
+    ],
+    "4cbdcedff13166a6f4228fafd260b2ebf5add90a": [
+      4083,
+      "2b2f24e78237cee7ddd74bb4e91386be466d58c43b221a6347f5f91efd98af48"
+    ],
+    "5456a3812117d4f4d9503e4875625e58bea0382b": [
+      2984,
+      "ba40068ea9807347a547ddd82721bc0acf750f2a058c353561ac8ab3e32c650d"
+    ],
+    "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc": [
+      4991,
+      "817bab0d95a5bba681c7510f1db0aa2696ea4e6588877721a46f55317fd84d5e"
+    ],
+    "593af6fd77724bd3b771fc408e4dbda4464abaa8": [
+      9047,
+      "ceb0f43f6ec9e024e200e63cb7c653f8a106286f658a457903efee39bd26994c"
+    ],
+    "62aee5a6f2c063445b574a400d7bb53472319969": [
+      3049,
+      "7aafa1380d12bdcdf8a9d00de4d7427abebab8a433c57b5dc74af10802b17aa2"
+    ],
+    "63659a7648bafe633cb3f80300f776bf3c842cf9": [
+      2897,
+      "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347"
+    ],
+    "65716d57080ea94602a8d49da1682d0d14bb74dc": [
+      4042,
+      "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+    ],
+    "720044a4e4954820b8d298f73b6b75f2189b4f94": [
+      11516,
+      "6b0793a9a81ef03cb45ff04fb964b2e394b5ebcbad89c19572e5f03dc23cb461"
+    ],
+    "768873f1bc4b884679b845ec43711c853283565f": [
+      2585,
+      "dfd137538fa62ca1639c9d4ebb43599f016f567e0b7b46227281834a8049d93c"
+    ],
+    "81b473eae07b66b3cfe38c52018fd6431e36c94f": [
+      5007,
+      "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f"
+    ],
+    "822d27c55b6626a07cd9a56b4dbd53d9eb52292d": [
+      2756,
+      "c574779d63c52df48d5d85122fcd56a78e6bc1f717c9e001e273ec45460e9124"
+    ],
+    "86ddb2771c881dd3da6bc2b5845bf98f3577c713": [
+      4783,
+      "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+    ],
+    "921818de26b481ed94603d8e596a384abf04bfa9": [
+      120,
+      "14f7abb23f8fa599eec9103ef59f26ead5650b0075c7d93b1da5c2494473bcd2"
+    ],
+    "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256": [
+      3011,
+      "c3fe73638078ea1d4819b9acd50ad0a233cd81e11290e61da9644153651b3f56"
+    ],
+    "9abf25315e79ba54b071702ca5b74b9656f3bbbc": [
+      3270,
+      "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e"
+    ],
+    "9f8eff3dfeecc009f93ce2089eefff4f54aa8776": [
+      1716,
+      "d81d6a1572961c81d8e3193cb977160652f403b2d3493714644f5b8f3e0c8557"
+    ],
+    "a1ff4a1690a0b113aa882de633e063c02f9535a4": [
+      1827,
+      "22ad73c2b74d400e251e779fe1d66e25be54031ca7890af9524a6b66deeaeb5a"
+    ],
+    "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079": [
+      2138,
+      "32c9327ba59167ef55421b65c75322030aa522caa2c83cec0326d8849742b882"
+    ],
+    "abac1ae5382ab7a3d2148e815b65be0e2da1bccd": [
+      2467,
+      "e429fb9f000fc340ab8ecab6722b8137fb3114f290a1ec49a4968da8b4ee5441"
+    ],
+    "ae42ecccdda987c00537696f2698f49c374ec927": [
+      2114,
+      "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa"
+    ],
+    "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0": [
+      1323,
+      "09ec024c8ec56491c041a7d6341260c73e12192de23775ee99594b8ca960b6f7"
+    ],
+    "b28788f46a39c282d79d29c4abd817ed5fc9de99": [
+      9184,
+      "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    ],
+    "b57e27761e60351e62224b569ad107cd54fd8daf": [
+      3217,
+      "349a4acb8b7144b1e168f54254d3b0fa1e27c0341e53157bc6906950c456c937"
+    ],
+    "b9046f4f4f92ea121ecb530c7fa781af96d8d79d": [
+      3841,
+      "81a42cc8f938995bd8de50d9f6dbf5269bd0266b191f6358166957a320f2c763"
+    ],
+    "c8a333c82c3706f3b8e4ee191034bdf30bec1187": [
+      7235,
+      "e8981dce5fbef9006194688c40f6f8959afb573b7b4cafc1e6860d9b2c6dd503"
+    ],
+    "cb9f510a762b460a63e3ce64edf974a6ba5f6762": [
+      9718,
+      "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
+    ],
+    "cde0ed2b841c6b48500a464979096aad55a635b1": [
+      6387,
+      "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33"
+    ],
+    "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1": [
+      5555,
+      "944e04a3d05e0f3d02eeef9d177e5f9237ab6b7eea848aa9e42b1698fb819294"
+    ],
+    "d0bff84e4adb1cac9bc21b5b0efcb5ecb8cdd5bd": [
+      2768,
+      "5bfe86d46a3043172629ba4ceba66f458d07a0451921c3d0601c5a2140c328dc"
+    ],
+    "d51dca6c425a40d196390361e071d02026d1f548": [
+      6400,
+      "1ecfd81ed079d4ccd90bde3c75f256845ad2ac3896b6ea0f78f05a36353e2a23"
+    ],
+    "d7cdc2f1918d7328e4b180558488987ca00ad444": [
+      1699,
+      "8af4094142bf6166542d0681ea193f53384a84378fbf558d5e1846fad289edbf"
+    ],
+    "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156": [
+      5024,
+      "6d4f40c02a05a77a12f5bab842d6a28c8b0411b0272da0858cf2e8158ea1707d"
+    ],
+    "dbfed501c97f0570b0f6a93e9cf0838c41449038": [
+      3159,
+      "7dbd3019867bc8e8868be0f5eec4e5d9aab6dcb126e88c85d98aca1c0152e62f"
+    ],
+    "e121ee6275def01070397a942a8434ff37b611a6": [
+      11125,
+      "1292634b1a4ea7581634435163d5f7a7064c9fb29ae3be888a019d96ef5b8164"
+    ],
+    "e3f94cab61a27c7d4c89d02516887146b2026eb3": [
+      3093,
+      "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+    ],
+    "f2703319f9a11d6545105c9e7652188f322fee86": [
+      1663,
+      "74b22d09ae1ca1742bc0d8f02db8ee70102c2f64ce86146ee8eddd6a0c48892d"
+    ],
+    "f354ee1fdceca013ad6cf32fdea7c41001794083": [
+      3649,
+      "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+    ],
+    "f3fe889b41ad3d8445025458225aa34d3d63a5e9": [
+      1851,
+      "922b3084803032a5fb8a4e2f5d2c52397db74c071f71c1e1d06d53b3f33c9d08"
+    ],
+    "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c": [
+      5876,
+      "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
+    ],
+    "f921dbe2abc114cb2b7ff2eb384468a5779eee5b": [
+      5086,
+      "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df"
+    ],
+    "fa47acd32adb309896f762ec50e47bf26641adbb": [
+      7835,
+      "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+    ],
+    "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6": [
+      1528,
+      "c7fec9d9b6adde98f259c9fd662d56f68f4a5799ad25e215f0d570b7635756ce"
+    ]
+  },
+  "hold": [
+    "C50/R9 and official W8",
+    "Protected physical WorkItem/PostgreSQL and T1 COMMIT",
+    "Real HUMAN IAM issuer and grants",
+    "RESEARCH WorkType release",
+    "Independent MI-10",
+    "Unreviewed divergent historical or archived source payloads"
+  ],
+  "tests": "NOT_RUN",
+  "rollback": "9386ec986cefad3d2a3668ff94f711218e1d0fca"
+}

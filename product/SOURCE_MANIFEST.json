@@ -147,8 +147,8 @@
       "sha256": "ddf0e4295efbc02cdda05a73c207229aba2b3260adc28fd0cbae95f67c8ed08e"
     },
     "ai-company-os-backend/app/core/development_review/admission_sample.py": {
-      "bytes": 8408,
-      "sha256": "5a719f529fc8baa44e4952be73d5bc0f7d7f981ca92796f4428d15c8e7c6542d"
+      "bytes": 8672,
+      "sha256": "bcb8e58049e96277153b98a37b054d3c59e0d2e473af52d4763c369eb56ddfe3"
     },
     "ai-company-os-backend/app/core/development_review/atomic_sample.py": {
       "bytes": 6234,
@@ -214,6 +214,10 @@
       "bytes": 1537,
       "sha256": "08c423a65679ec5ff720264ec26db82d8ddc4282a9461b6bb71cee2e6c5c241e"
     },
+    "ai-company-os-backend/app/core/development_review/paired_read_guard.py": {
+      "bytes": 2897,
+      "sha256": "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347"
+    },
     "ai-company-os-backend/app/core/development_review/planner.py": {
       "bytes": 1687,
       "sha256": "f31da08014d96b2659664d70230a4af225d766b8c36484b921f39216c8dea612"
@@ -243,8 +247,8 @@
       "sha256": "955ca7a382c0620cc4e5b3f658588d43bfd689e043b51be9cbed86e12fe92364"
     },
     "ai-company-os-backend/app/core/development_review/task_budget_snapshot.py": {
-      "bytes": 4591,
-      "sha256": "dc9c82ccfd1eb394405ef22cae2cf279c76b7f9c16c7e35854bf633619c005f4"
+      "bytes": 4515,
+      "sha256": "06dcc74490cd9fa31d66ada69a017370174b23dd3c30d7e395fd3c3b6653a798"
     },
     "ai-company-os-backend/app/core/development_review/trust_boundary.py": {
       "bytes": 3408,
@@ -2756,6 +2760,37 @@
     ],
     "scope": "Exact D0 publication candidate package and draft binding; no publication or authority",
     "targeted_tests": "18/18 PASS: 4 new + 14 affected binder regression",
+    "acceptance": "HOLD"
+  },
+  "h01_unified_paired_d0_read_20261128": {
+    "parent": "9386ec986cefad3d2a3668ff94f711218e1d0fca",
+    "source": "353c5c8d00dae3649b029c16e9b8aae96eb61e01",
+    "governance": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/core/development_review/admission_sample.py",
+        "previous_blob": "a697188c51173e23d645fac95abf99c282f939b3",
+        "blob": "a530d415f5fb1f7e7eff79c1aa1bda3c36057859",
+        "bytes": 8672,
+        "sha256": "bcb8e58049e96277153b98a37b054d3c59e0d2e473af52d4763c369eb56ddfe3"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/development_review/paired_read_guard.py",
+        "previous_blob": null,
+        "blob": "63659a7648bafe633cb3f80300f776bf3c842cf9",
+        "bytes": 2897,
+        "sha256": "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+        "previous_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+        "blob": "086584de235756f24aebea16657fa51793fc06e2",
+        "bytes": 4515,
+        "sha256": "06dcc74490cd9fa31d66ada69a017370174b23dd3c30d7e395fd3c3b6653a798"
+      }
+    ],
+    "scope": "Exact W1-0198-P09 D0 SQLite read sources, no API, DB schema, dependency, or authority change",
+    "tests": "NOT_RUN; source branch reports 39/39 diagnostic checks, not retested",
     "acceptance": "HOLD"
   }
 }

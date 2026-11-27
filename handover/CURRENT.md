@@ -156,3 +156,7 @@ Source `cd1dd5e61e259d4f16b94ae7e386e32730c8fd13`; 345 product files / 344 manif
 
 ## H01 B — Project/Workflow direct shared-plan controls (27.11.2026)
 Existing ProjectStudio and WorkflowDraft now expose the existing shared plan read/reset callbacks directly, retaining historical/offline labels, freshness, HOLD and local draft separation. Exact two preimages and new payloads verified locally; TSX syntax 2/2 and compiled mock wiring 10/10 PASS (not full typecheck/DOM/browser/HTTP). 575 manifest entries, no new product files or dependency changes. See ../catalog/revisions/H01_B_PROJECT_WORKFLOW_PLAN_CONTROLS_20261127.json. No command ingress, actual grant/T1/worker dispatch or independent acceptance. C50/R9, IAM12/G7 and 16 R6 path review remain open; full current ZIP unavailable. Normal revert for rollback.
+
+## 2026-11-28 — birleşik dal, D0 SQLite okuma kaynakları
+
+W1-0198-P09 kaynağından üç özgün dosya aktarıldı. İki mevcut dosyanın başlangıç blobu kaynak yamanın ebeveyniyle birebir eşleşti. D0 görev/bütçe eşlemesi ve admission okumaları sınırlandırılmış SQLite okuyucuya bağlandı. Tarihsel dar kapsamlı 39/39 tanılama kaynak dalda raporlandı, bu tur test çalıştırılmadı. Kaynak ve HOLD envanteri için [teknik katalog](../catalog/revisions/H01_UNIFIED_SOURCE_RECONCILIATION_20261128.json). Geri dönüş noktası `9386ec986cefad3d2a3668ff94f711218e1d0fca`. Ortak ürün aktarımı, gerçek IAM/T1 ve bağımsız kabul bekliyor.
