@@ -475,8 +475,8 @@
       "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0"
     },
     "ai-company-os-backend/app/core/transaction/readback_review.py": {
-      "bytes": 8217,
-      "sha256": "696d5404faf87ed2766975b48ae250351b46e9522ff87e4c4bcf7835296d6bb0"
+      "bytes": 11814,
+      "sha256": "f1659491190777fe1763ca8119bdd7aa9168b7f83d526131952bb02df75cda4b"
     },
     "ai-company-os-backend/app/core/transaction/review.py": {
       "bytes": 7329,
@@ -2363,8 +2363,8 @@
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
     },
     "ai-company-os-backend/tests/test_workitem_readback_mvp03.py": {
-      "bytes": 7173,
-      "sha256": "8e51ce36dc9cd75940473cf58ab500a933d03fabbc9bc9ff337005bd89c2c17a"
+      "bytes": 12177,
+      "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2699,6 +2699,29 @@
     ],
     "scope": "D0 typed WorkItem six-role readback correlation only, no physical mapping, permission, actual receipt or transaction",
     "targeted_tests": "7 new PASS + 11 original AGENT admission regression PASS; 14 previous binder PASS reused",
+    "acceptance": "HOLD"
+  },
+  "h01_mvp03_physical_a1_authority_review_20261127": {
+    "parent": "07c62ca1cdcc6d433bd40784ded2806fa8483cf9",
+    "governance": "9aac7d0d9847d7596975dea74e49fa6e2b1af20a",
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/readback_review.py",
+        "previous_blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "blob": "f1e3049b40ee3c22117fb5ab7b8958d661157152",
+        "bytes": 11814,
+        "sha256": "f1659491190777fe1763ca8119bdd7aa9168b7f83d526131952bb02df75cda4b"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+        "previous_blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "blob": "1f42e86554824ffc8a0c6ef4b090b166fa965984",
+        "bytes": 12177,
+        "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
+      }
+    ],
+    "scope": "Non-executable authority pin correlation in existing WorkItem readback review; no physical schema, auth, COMMIT or migration",
+    "targeted_tests": "12/12 WorkItem (5 new, 7 affected regression), 11/11 AGENT admission regression; prior 14/14 binder reused",
     "acceptance": "HOLD"
   }
 }

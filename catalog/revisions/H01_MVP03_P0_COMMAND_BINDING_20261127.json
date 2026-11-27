@@ -148,5 +148,38 @@
     },
     "acceptance": "0/11",
     "physical": "HOLD"
+  },
+  "physical_a1_authority_review_20261127": {
+    "parent": "07c62ca1cdcc6d433bd40784ded2806fa8483cf9",
+    "governance": "9aac7d0d9847d7596975dea74e49fa6e2b1af20a",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/readback_review.py",
+        "previous_blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "blob": "f1e3049b40ee3c22117fb5ab7b8958d661157152",
+        "bytes": 11814,
+        "sha256": "f1659491190777fe1763ca8119bdd7aa9168b7f83d526131952bb02df75cda4b"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+        "previous_blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "blob": "1f42e86554824ffc8a0c6ef4b090b166fa965984",
+        "bytes": 12177,
+        "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
+      }
+    ],
+    "manifest": "47545484c5399b9ff3b3d60c5ec1a50419d78376",
+    "evidence": "handover/evidence/H01_MVP03_PHYSICAL_A1_AUTHORITY_20261127/",
+    "source_gain": "Existing six-role readback joined to proposed Project revision, immutable WorkTypeVersion and scoped binding observations; structural only",
+    "contract": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+    "authority": "ROLE_PROPOSAL_CUSTODY_AND_PUBLICATION_ADR_HOLD",
+    "tests": {
+      "workitem": 12,
+      "new": 5,
+      "agent_regression": 11,
+      "prior_binder_reused": 14
+    },
+    "acceptance": "0/11",
+    "physical": "HOLD"
   }
 }

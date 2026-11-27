@@ -87,6 +87,47 @@ def inspect_admission(i: LogicalIntent, rows: tuple[RoleObservation, ...],
 
 
 @dataclass(frozen=True)
+class ProjectRevisionPin:
+    """Observed candidate P+revision key, not a Project permission."""
+    scope: tuple[str, str, str]
+    project_ref: str
+    revision: str
+    revision_digest: str
+    workowner_ref: str
+
+
+@dataclass(frozen=True)
+class WorkTypeVersionPin:
+    """Candidate immutable platform RESEARCH version and separate publish ref."""
+    worktype_id: str
+    version: str
+    content_digest: str
+    provenance_digest: str
+    publish_ref: str
+
+
+@dataclass(frozen=True)
+class WorkTypeScopeBindingPin:
+    """Observed scoped binding revision; no G8, grant or runtime authority."""
+    scope: tuple[str, str, str]
+    worktype_id: str
+    version: str
+    content_digest: str
+    revision: str
+    binding_digest: str
+    publish_ref: str
+    entitlement_ref: str
+    activation_ref: str | None
+
+
+@dataclass(frozen=True)
+class WorkItemAuthorityPins:
+    project: ProjectRevisionPin
+    worktype: WorkTypeVersionPin
+    binding: WorkTypeScopeBindingPin
+
+
+@dataclass(frozen=True)
 class WorkItemReadbackPin:
     """Synthetic expected/observed creation image, not a receipt or FK proof."""
     draft: WorkItemRequestDraft
@@ -102,6 +143,7 @@ class WorkItemReadbackPin:
     authz_revision: str
     policy_epoch: int
     witness_epoch: int
+    authorities: WorkItemAuthorityPins | None = None
 
 
 @dataclass(frozen=True)
@@ -171,3 +213,46 @@ def inspect_workitem_readback(draft: WorkItemRequestDraft,
     if event_refs['EVENT'] != event_refs['OUTBOX']:
         return ReadbackReview('WORKITEM_EVENT_OUTBOX_LINK_HOLD')
     return ReadbackReview('D0_WORKITEM_READBACK_MATCH_AUTHORITY_UNPROVEN', True)
+
+
+def inspect_workitem_authority_readback(draft: WorkItemRequestDraft,
+                                        expected: WorkItemReadbackPin | None,
+                                        observed: WorkItemReadbackPin | None,
+                                        rows: tuple[WorkItemRoleReadback, ...], *,
+                                        outcome_unknown: bool) -> ReadbackReview:
+    """Join all six roles to the proposed immutable Project/catalog/binding keys.
+
+    A1 design review only: reference equality is not source authentication,
+    current publication/entitlement, G8, read permission, durable dedup or COMMIT.
+    Historical pins must never substitute for a fresh server-owned policy check.
+    """
+    base = inspect_workitem_readback(draft, expected, observed, rows,
+                                     outcome_unknown=outcome_unknown)
+    if not base.structural_match:
+        return base
+    refs = expected.authorities
+    if (type(refs) is not WorkItemAuthorityPins
+            or type(refs.project) is not ProjectRevisionPin
+            or type(refs.worktype) is not WorkTypeVersionPin
+            or type(refs.binding) is not WorkTypeScopeBindingPin):
+        return ReadbackReview('WORKITEM_AUTHORITY_REFERENCE_HOLD')
+    p, v, b = refs.project, refs.worktype, refs.binding
+    s = draft.scope
+    scope = (s.tenant_id, s.company_id, s.environment_id)
+    if (type(p.scope) is not tuple or p.scope != scope
+            or (p.project_ref, p.revision, p.workowner_ref) !=
+               (s.project_ref, draft.project_revision, draft.workowner_ref)
+            or not digest_ok(p.revision_digest)):
+        return ReadbackReview('WORKITEM_PROJECT_REVISION_LINK_HOLD')
+    if ((v.worktype_id, v.version, v.content_digest, v.publish_ref) !=
+            (draft.worktype, draft.worktype_version, expected.worktype_digest, expected.publish_ref)
+            or not digest_ok(v.provenance_digest)):
+        return ReadbackReview('WORKITEM_CATALOG_VERSION_LINK_HOLD')
+    if (type(b.scope) is not tuple or b.scope != scope
+            or (b.worktype_id, b.version, b.content_digest, b.publish_ref) !=
+               (v.worktype_id, v.version, v.content_digest, v.publish_ref)
+            or b.entitlement_ref != expected.entitlement_ref
+            or not token(b.revision) or not digest_ok(b.binding_digest)
+            or (b.activation_ref is not None and not token(b.activation_ref))):
+        return ReadbackReview('WORKITEM_SCOPE_BINDING_LINK_HOLD')
+    return ReadbackReview('D0_WORKITEM_AUTHORITY_LINKS_MATCH_HOLD', True)
