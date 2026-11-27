@@ -17263,693 +17263,684 @@
       "acceptance": "0/11 HOLD",
       "next": "Use exact candidate for API service review, reconcile approved work-item write/read contract with owners before mounting or adding schema; retain T1 fail-closed. No second persistence engine."
     }
-  }
-,
+  },
   "h01_mvp03_01_20261127": {
-  "decision": "H01-MVP03-01",
-  "decision_path": "decisions/CEO/H01_MVP03_01_20261127.md",
-  "status": "SCOPE_APPROVED_IMPLEMENTATION_ACCEPTANCE_HOLD",
-  "criterion": "3",
-  "functional_owner": "H01",
-  "independent_owner": "MI-10",
-  "technical_owners": [
-    "MI-02/03/04",
-    "MI-05/06"
-  ],
-  "candidate": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "evidence_conditions": "E01–E10; all required, no new denominator",
-  "acceptance": "0/11 unchanged",
-  "next": "Phase 3: reconcile existing binder on isolated candidate; no mounted mutation until IAM, physical mapping, protected commit and independent prerequisites."
-}
-,
-  "h01_mvp03_phase3_20261127": {
-  "task": "H01-MVP03-01-PHASE3-BINDING",
-  "status": "ISOLATED_SOURCE_UPDATED_RUNTIME_ACCEPTANCE_HOLD",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "criterion": "3",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "candidate": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
-  "previous_candidate": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "manifest": {
-    "entries": 588,
-    "product_files": 589,
-    "blob": "3d213258bdec7839af65d143366ec6fe338a47a6",
-    "unchanged_payload": 586,
-    "changed_payload": 2,
-    "readback": "PASS path/mode/size and pin reconciliation; changed content hashes computed before tree creation"
-  },
-  "catalog": "catalog/revisions/H01_MVP03_PHASE3_BINDING_20261127.json",
-  "handover": "handover/H01_MVP03_PHASE3_BINDING_20261127.md",
-  "architecture_review": {
-    "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
-    "lines": [
-      "105040-105076",
-      "116785-116827",
-      "40743-40749",
-      "97111-97116"
+    "decision": "H01-MVP03-01",
+    "decision_path": "decisions/CEO/H01_MVP03_01_20261127.md",
+    "status": "SCOPE_APPROVED_IMPLEMENTATION_ACCEPTANCE_HOLD",
+    "criterion": "3",
+    "functional_owner": "H01",
+    "independent_owner": "MI-10",
+    "technical_owners": [
+      "MI-02/03/04",
+      "MI-05/06"
     ],
-    "scope": "Relevant actual uploaded v135 passages rechecked; full latest Design Master and all addenda reconciliation incomplete."
+    "candidate": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "evidence_conditions": "E01–E10; all required, no new denominator",
+    "acceptance": "0/11 unchanged",
+    "next": "Phase 3: reconcile existing binder on isolated candidate; no mounted mutation until IAM, physical mapping, protected commit and independent prerequisites."
   },
-  "source_gain": "Existing RESEARCH binder hardened; 8 focused test methods added, NOT_RUN; no new API or DB/event schema; no actual persistence, admission, or UI mutation.",
-  "evidence": {
-    "E01_E10": "HOLD; no acceptance proof",
-    "tests": "NOT_RUN",
-    "dependency": "HOLD",
-    "IV": "HOLD"
+  "h01_mvp03_phase3_20261127": {
+    "task": "H01-MVP03-01-PHASE3-BINDING",
+    "status": "ISOLATED_SOURCE_UPDATED_RUNTIME_ACCEPTANCE_HOLD",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "criterion": "3",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "candidate": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
+    "previous_candidate": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "manifest": {
+      "entries": 588,
+      "product_files": 589,
+      "blob": "3d213258bdec7839af65d143366ec6fe338a47a6",
+      "unchanged_payload": 586,
+      "changed_payload": 2,
+      "readback": "PASS path/mode/size and pin reconciliation; changed content hashes computed before tree creation"
+    },
+    "catalog": "catalog/revisions/H01_MVP03_PHASE3_BINDING_20261127.json",
+    "handover": "handover/H01_MVP03_PHASE3_BINDING_20261127.md",
+    "architecture_review": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "lines": [
+        "105040-105076",
+        "116785-116827",
+        "40743-40749",
+        "97111-97116"
+      ],
+      "scope": "Relevant actual uploaded v135 passages rechecked; full latest Design Master and all addenda reconciliation incomplete."
+    },
+    "source_gain": "Existing RESEARCH binder hardened; 8 focused test methods added, NOT_RUN; no new API or DB/event schema; no actual persistence, admission, or UI mutation.",
+    "evidence": {
+      "E01_E10": "HOLD; no acceptance proof",
+      "tests": "NOT_RUN",
+      "dependency": "HOLD",
+      "IV": "HOLD"
+    },
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta": 0,
+      "weighted": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "next": "Codex exact candidate scoped binder test when reviewed local environment available. MI05/06 fixed plan selection; MI02/03/04 approved WorkItem physical mapping, HUMAN project permission and protected write/readback; MI10 independent review. No live endpoint until gates close.",
+    "rollback": "ordinary revert of isolated source commit and this record; decision history remains."
   },
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta": 0,
-    "weighted": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "next": "Codex exact candidate scoped binder test when reviewed local environment available. MI05/06 fixed plan selection; MI02/03/04 approved WorkItem physical mapping, HUMAN project permission and protected write/readback; MI10 independent review. No live endpoint until gates close.",
-  "rollback": "ordinary revert of isolated source commit and this record; decision history remains."
-}
-,
   "h01_mvp03_phase3_request_ui_20261127": {
-  "task": "H01-MVP03-PHASE3-REQUEST-UI-PERSISTENCE",
-  "status": "ISOLATED_UI_SOURCE_DELIVERED_PERSISTENCE_HOLD_PHASE4_HOLD",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "criterion": "3",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "candidate": "a9bc809f4e75334cc27f7cdee8b171e863136fe3",
-  "previous_candidate": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "manifest": {
-    "entries": 589,
-    "product_files": 590,
-    "blob": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
-    "product_tree": "010d03d332bad3017f35565b920d6fe79ca7e086",
-    "unchanged_payload": 587,
-    "changed_payload": 2,
-    "readback": "PASS path/mode/size/blob and original pins; changed content hashes computed before tree creation"
+    "task": "H01-MVP03-PHASE3-REQUEST-UI-PERSISTENCE",
+    "status": "ISOLATED_UI_SOURCE_DELIVERED_PERSISTENCE_HOLD_PHASE4_HOLD",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "criterion": "3",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "candidate": "a9bc809f4e75334cc27f7cdee8b171e863136fe3",
+    "previous_candidate": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "manifest": {
+      "entries": 589,
+      "product_files": 590,
+      "blob": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
+      "product_tree": "010d03d332bad3017f35565b920d6fe79ca7e086",
+      "unchanged_payload": 587,
+      "changed_payload": 2,
+      "readback": "PASS path/mode/size/blob and original pins; changed content hashes computed before tree creation"
+    },
+    "catalog": "catalog/revisions/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.json",
+    "handover": "handover/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.md",
+    "source_gain": "Existing CEO dashboard incorporates fixed plan selection panel using existing exact shared GET plan reader/parser. No new write or request read endpoint, no fake receipt. Both submission and request readback disabled. Actual UI build/browser not run.",
+    "persistence_review": {
+      "status": "HOLD",
+      "reason": "No approved Project/WorkItem physical write/read mapping verified; D0 run admission is not request persistence; HUMAN issuer/project permission and strict protected COMMIT missing.",
+      "owner": "MI02/03/04; MI10 independent review"
+    },
+    "dependency": {
+      "status": "HOLD",
+      "ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+      "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+      "rows": 25,
+      "fastapi": "0.163.2",
+      "verified": "text count and exact blob; review-only DO NOT INSTALL header",
+      "install": "NOT_RUN",
+      "owner": "MI01/10"
+    },
+    "evidence": {
+      "E01": {
+        "state": "SOURCE_READY_BROWSER_NOT_RUN",
+        "owner": "MI05/06"
+      },
+      "E02": {
+        "state": "HOLD",
+        "owner": "MI03/04"
+      },
+      "E03": {
+        "state": "SOURCE_READY_RUNTIME_NOT_RUN",
+        "owner": "MI02/05/06"
+      },
+      "E04": {
+        "state": "HOLD",
+        "owner": "MI02/03/04"
+      },
+      "E05": {
+        "state": "HOLD",
+        "owner": "MI02/05/06"
+      },
+      "E06": {
+        "state": "HOLD",
+        "owner": "MI02/03/04"
+      },
+      "E07": {
+        "state": "HOLD",
+        "owner": "MI02/03/04"
+      },
+      "E08": {
+        "state": "HOLD",
+        "owner": "MI03/04/10"
+      },
+      "E09": {
+        "state": "HOLD",
+        "owner": "MI03/04/10"
+      },
+      "E10": {
+        "state": "SOURCE_NO_MUTATION_RUNTIME_NOT_RUN",
+        "owner": "MI02/05/06/10"
+      },
+      "binder8": "NOT_RUN",
+      "build": "NOT_RUN",
+      "browser": "NOT_RUN",
+      "IV": "HOLD"
+    },
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta": 0,
+      "weighted": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "next": "Resolve physical WorkItem request mapping, real HUMAN issuer and scoped permission, protected persistence and same-ID readback with existing owners; dependency/security/licensing disposition and approved exact-source test/build. No Phase4 before working authorized submit/commit/readback.",
+    "rollback": "ordinary revert isolated source and governance record; no DB changes. H01 decision retained."
   },
-  "catalog": "catalog/revisions/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.json",
-  "handover": "handover/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.md",
-  "source_gain": "Existing CEO dashboard incorporates fixed plan selection panel using existing exact shared GET plan reader/parser. No new write or request read endpoint, no fake receipt. Both submission and request readback disabled. Actual UI build/browser not run.",
-  "persistence_review": {
-    "status": "HOLD",
-    "reason": "No approved Project/WorkItem physical write/read mapping verified; D0 run admission is not request persistence; HUMAN issuer/project permission and strict protected COMMIT missing.",
-    "owner": "MI02/03/04; MI10 independent review"
-  },
-  "dependency": {
-    "status": "HOLD",
-    "ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
-    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
-    "rows": 25,
-    "fastapi": "0.163.2",
-    "verified": "text count and exact blob; review-only DO NOT INSTALL header",
-    "install": "NOT_RUN",
-    "owner": "MI01/10"
-  },
-  "evidence": {
-    "E01": {
-      "state": "SOURCE_READY_BROWSER_NOT_RUN",
-      "owner": "MI05/06"
+  "h01_mvp03_phase4_entry_20261127": {
+    "task": "H01-MVP03-PHASE4-ACCEPTANCE",
+    "entry_task": "H01-MVP03-PHASE3-PROTECTED-WORKITEM",
+    "status": "HOLD_ENTRY_NOT_SATISFIED",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "candidate": "3a515bc540352393be30b51553736f9388648084",
+    "source_parent": "a9bc809f4e75334cc27f7cdee8b171e863136fe3",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "mapping_review": {
+      "path": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+      "blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
+      "classification": "NON_NORMATIVE_PROPOSAL",
+      "finding": "Current run-scoped LogicalIntent and grant/lease T1Port cannot represent HUMAN WorkItem without invented authority. R03 physical mapping C/HOLD; typed aggregate proposal requires Data/Runtime/IAM/MI10 review and H01 ratification if normative extension required."
     },
-    "E02": {
-      "state": "HOLD",
-      "owner": "MI03/04"
+    "manifest": {
+      "entries": 589,
+      "product_files": 590,
+      "blob": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
+      "product_tree": "010d03d332bad3017f35565b920d6fe79ca7e086",
+      "status": "exact product tree and manifest unchanged/readback PASS; prior path/size/blob proof reused, no fresh full archive hash"
     },
-    "E03": {
-      "state": "SOURCE_READY_RUNTIME_NOT_RUN",
-      "owner": "MI02/05/06"
+    "dependency": {
+      "status": "HOLD",
+      "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+      "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+      "rows": 25,
+      "owner": "MI01/10",
+      "install": "NOT_RUN"
     },
-    "E04": {
-      "state": "HOLD",
-      "owner": "MI02/03/04"
-    },
-    "E05": {
-      "state": "HOLD",
-      "owner": "MI02/05/06"
-    },
-    "E06": {
-      "state": "HOLD",
-      "owner": "MI02/03/04"
-    },
-    "E07": {
-      "state": "HOLD",
-      "owner": "MI02/03/04"
-    },
-    "E08": {
-      "state": "HOLD",
-      "owner": "MI03/04/10"
-    },
-    "E09": {
-      "state": "HOLD",
-      "owner": "MI03/04/10"
-    },
-    "E10": {
-      "state": "SOURCE_NO_MUTATION_RUNTIME_NOT_RUN",
-      "owner": "MI02/05/06/10"
+    "evidence": {
+      "E01": {
+        "status": "NOT_RUN",
+        "owner": "MI05/06",
+        "condition": "actual browser fixed plan selection"
+      },
+      "E02": {
+        "status": "HOLD",
+        "owner": "MI03/04",
+        "condition": "real HUMAN issuer and scoped create/read permission"
+      },
+      "E03": {
+        "status": "NOT_RUN",
+        "owner": "MI02/05/06",
+        "condition": "actual fixed plan pin verification"
+      },
+      "E04": {
+        "status": "HOLD",
+        "owner": "MI02/03/04",
+        "condition": "protected WorkItem mapping, durable COMMIT, HTTP201/request ID"
+      },
+      "E05": {
+        "status": "HOLD",
+        "owner": "MI02/05/06",
+        "condition": "authorized same-ID readback"
+      },
+      "E06": {
+        "status": "HOLD",
+        "owner": "MI02/03/04",
+        "condition": "restart durability"
+      },
+      "E07": {
+        "status": "HOLD",
+        "owner": "MI02/03/04",
+        "condition": "authoritative scoped idempotency, concurrency"
+      },
+      "E08": {
+        "status": "HOLD",
+        "owner": "MI03/04/10",
+        "condition": "real IAM/RLS negatives"
+      },
+      "E09": {
+        "status": "HOLD",
+        "owner": "MI03/04/10",
+        "condition": "rollback/revoke/unknown/restore independent proof"
+      },
+      "E10": {
+        "status": "NOT_RUN",
+        "owner": "MI02/05/06/10",
+        "condition": "actual no admission/dispatch/provider side effects"
+      }
     },
     "binder8": "NOT_RUN",
     "build": "NOT_RUN",
-    "browser": "NOT_RUN",
-    "IV": "HOLD"
+    "actual_browser": "NOT_RUN",
+    "actual_http_db": "HOLD",
+    "independent_acceptance": "HOLD",
+    "functional_acceptance": "HOLD",
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "source_gain": "0 product code changes; specific owner decision packet grounded in actual v135/0155 archives and current R03/port/COMMIT/RLS files. No fake persistence, migration or route.",
+    "next": "MI02/Data/Runtime ratify existing Project/WorkItem/WorkTypeVersion physical mapping and typed protected HUMAN operation with MI03/04/10. Resolve strict COMMIT/restore and actual issuer scope. Independent lock/runtime review then exact candidate implementation/acceptance.",
+    "rollback": "ordinary revert review and tracker commit; no data or schema changes; H01-MVP03-01 retained."
   },
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta": 0,
-    "weighted": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "next": "Resolve physical WorkItem request mapping, real HUMAN issuer and scoped permission, protected persistence and same-ID readback with existing owners; dependency/security/licensing disposition and approved exact-source test/build. No Phase4 before working authorized submit/commit/readback.",
-  "rollback": "ordinary revert isolated source and governance record; no DB changes. H01 decision retained."
-}
-,
-  "h01_mvp03_phase4_entry_20261127": {
-  "task": "H01-MVP03-PHASE4-ACCEPTANCE",
-  "entry_task": "H01-MVP03-PHASE3-PROTECTED-WORKITEM",
-  "status": "HOLD_ENTRY_NOT_SATISFIED",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "candidate": "3a515bc540352393be30b51553736f9388648084",
-  "source_parent": "a9bc809f4e75334cc27f7cdee8b171e863136fe3",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "mapping_review": {
-    "path": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
-    "blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
-    "classification": "NON_NORMATIVE_PROPOSAL",
-    "finding": "Current run-scoped LogicalIntent and grant/lease T1Port cannot represent HUMAN WorkItem without invented authority. R03 physical mapping C/HOLD; typed aggregate proposal requires Data/Runtime/IAM/MI10 review and H01 ratification if normative extension required."
-  },
-  "manifest": {
-    "entries": 589,
-    "product_files": 590,
-    "blob": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
-    "product_tree": "010d03d332bad3017f35565b920d6fe79ca7e086",
-    "status": "exact product tree and manifest unchanged/readback PASS; prior path/size/blob proof reused, no fresh full archive hash"
-  },
-  "dependency": {
-    "status": "HOLD",
-    "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
-    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
-    "rows": 25,
-    "owner": "MI01/10",
-    "install": "NOT_RUN"
-  },
-  "evidence": {
-    "E01": {
-      "status": "NOT_RUN",
-      "owner": "MI05/06",
-      "condition": "actual browser fixed plan selection"
-    },
-    "E02": {
-      "status": "HOLD",
-      "owner": "MI03/04",
-      "condition": "real HUMAN issuer and scoped create/read permission"
-    },
-    "E03": {
-      "status": "NOT_RUN",
-      "owner": "MI02/05/06",
-      "condition": "actual fixed plan pin verification"
-    },
-    "E04": {
-      "status": "HOLD",
-      "owner": "MI02/03/04",
-      "condition": "protected WorkItem mapping, durable COMMIT, HTTP201/request ID"
-    },
-    "E05": {
-      "status": "HOLD",
-      "owner": "MI02/05/06",
-      "condition": "authorized same-ID readback"
-    },
-    "E06": {
-      "status": "HOLD",
-      "owner": "MI02/03/04",
-      "condition": "restart durability"
-    },
-    "E07": {
-      "status": "HOLD",
-      "owner": "MI02/03/04",
-      "condition": "authoritative scoped idempotency, concurrency"
-    },
-    "E08": {
-      "status": "HOLD",
-      "owner": "MI03/04/10",
-      "condition": "real IAM/RLS negatives"
-    },
-    "E09": {
-      "status": "HOLD",
-      "owner": "MI03/04/10",
-      "condition": "rollback/revoke/unknown/restore independent proof"
-    },
-    "E10": {
-      "status": "NOT_RUN",
-      "owner": "MI02/05/06/10",
-      "condition": "actual no admission/dispatch/provider side effects"
-    }
-  },
-  "binder8": "NOT_RUN",
-  "build": "NOT_RUN",
-  "actual_browser": "NOT_RUN",
-  "actual_http_db": "HOLD",
-  "independent_acceptance": "HOLD",
-  "functional_acceptance": "HOLD",
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta_pp": 0,
-    "weighted": "HESAPLANAMADI",
-    "integration": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "source_gain": "0 product code changes; specific owner decision packet grounded in actual v135/0155 archives and current R03/port/COMMIT/RLS files. No fake persistence, migration or route.",
-  "next": "MI02/Data/Runtime ratify existing Project/WorkItem/WorkTypeVersion physical mapping and typed protected HUMAN operation with MI03/04/10. Resolve strict COMMIT/restore and actual issuer scope. Independent lock/runtime review then exact candidate implementation/acceptance.",
-  "rollback": "ordinary revert review and tracker commit; no data or schema changes; H01-MVP03-01 retained."
-}
-,
   "h01_phase5_research_result_20261127": {
-  "task": "H01-PHASE5-RESEARCH-END-TO-END",
-  "status": "PARALLEL_SOURCE_UPDATED_REAL_EXECUTION_HOLD",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
-  "previous_candidate": "3a515bc540352393be30b51553736f9388648084",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "manifest": {
-    "entries": 589,
-    "product_files": 590,
-    "blob": "d0be0ecb733e76a4241086415733150cd9260fe0",
-    "product_tree": "0d941b2cfa1800279cb8b637237475780e80e337",
-    "unchanged_payload": 587,
-    "changed_payload": 2,
-    "status": "PASS exact path/size/blob and preserved SHA256 pins; changed content SHA256 computed"
+    "task": "H01-PHASE5-RESEARCH-END-TO-END",
+    "status": "PARALLEL_SOURCE_UPDATED_REAL_EXECUTION_HOLD",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+    "previous_candidate": "3a515bc540352393be30b51553736f9388648084",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "manifest": {
+      "entries": 589,
+      "product_files": 590,
+      "blob": "d0be0ecb733e76a4241086415733150cd9260fe0",
+      "product_tree": "0d941b2cfa1800279cb8b637237475780e80e337",
+      "unchanged_payload": 587,
+      "changed_payload": 2,
+      "status": "PASS exact path/size/blob and preserved SHA256 pins; changed content SHA256 computed"
+    },
+    "catalog": "catalog/revisions/H01_PHASE5_RESEARCH_RESULT_READBACK_20261127.json",
+    "handover": "handover/H01_PHASE5_RESEARCH_RESULT_READBACK_20261127.md",
+    "source_gain": "Existing inspect_research_slice checks archive/journal file separation and reobserves binding/receipt before returning historical hash; request_id=None and request_linked=False. Existing test file extended two methods. No actual live request-run-result link or API/UI/DB change.",
+    "mapping_ratification": {
+      "status": "HOLD",
+      "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
+      "owner": "MI02/03/04 and MI10",
+      "condition": "Independent technical disposition on existing WorkItem physical mapping or typed aggregate proposal; H01 normative ratification only if required after review. No owner concurrence asserted."
+    },
+    "execution": {
+      "entry": "HOLD",
+      "request": "HOLD",
+      "admission": "HOLD",
+      "runtime": "HOLD",
+      "model_skill_memory": "HOLD",
+      "protected_result": "HOLD",
+      "ceo_office_same_record": "HOLD",
+      "qa_iv_h01": "HOLD",
+      "historical_reference": "0225 D0 SQLite root VERIFYING v3, three events; separate historical evidence, not current candidate execution.",
+      "new_tests": "NOT_RUN",
+      "old_tests": "not repeated",
+      "actual_runtime": "NOT_RUN"
+    },
+    "dependency": {
+      "status": "HOLD",
+      "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+      "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+      "rows": 25,
+      "owner": "MI01/10"
+    },
+    "phase4": "HOLD E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD; no acceptance change",
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "next": "Ratify WorkItem physical mapping and HUMAN permission, actual protected COMMIT and idempotency, independent dependency/runtime clearance. Then exact candidate tests, authorized request -> separate AGENT admission -> runtime result, same scoped CEO/Office readback. No fabricated grant or receipt.",
+    "rollback": "ordinary revert isolated source and tracker commit; no DB/API/event change."
   },
-  "catalog": "catalog/revisions/H01_PHASE5_RESEARCH_RESULT_READBACK_20261127.json",
-  "handover": "handover/H01_PHASE5_RESEARCH_RESULT_READBACK_20261127.md",
-  "source_gain": "Existing inspect_research_slice checks archive/journal file separation and reobserves binding/receipt before returning historical hash; request_id=None and request_linked=False. Existing test file extended two methods. No actual live request-run-result link or API/UI/DB change.",
-  "mapping_ratification": {
-    "status": "HOLD",
-    "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
-    "owner": "MI02/03/04 and MI10",
-    "condition": "Independent technical disposition on existing WorkItem physical mapping or typed aggregate proposal; H01 normative ratification only if required after review. No owner concurrence asserted."
-  },
-  "execution": {
-    "entry": "HOLD",
-    "request": "HOLD",
-    "admission": "HOLD",
-    "runtime": "HOLD",
-    "model_skill_memory": "HOLD",
-    "protected_result": "HOLD",
-    "ceo_office_same_record": "HOLD",
-    "qa_iv_h01": "HOLD",
-    "historical_reference": "0225 D0 SQLite root VERIFYING v3, three events; separate historical evidence, not current candidate execution.",
-    "new_tests": "NOT_RUN",
-    "old_tests": "not repeated",
-    "actual_runtime": "NOT_RUN"
-  },
-  "dependency": {
-    "status": "HOLD",
-    "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
-    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
-    "rows": 25,
-    "owner": "MI01/10"
-  },
-  "phase4": "HOLD E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD; no acceptance change",
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta_pp": 0,
-    "weighted": "HESAPLANAMADI",
-    "integration": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "next": "Ratify WorkItem physical mapping and HUMAN permission, actual protected COMMIT and idempotency, independent dependency/runtime clearance. Then exact candidate tests, authorized request -> separate AGENT admission -> runtime result, same scoped CEO/Office readback. No fabricated grant or receipt.",
-  "rollback": "ordinary revert isolated source and tracker commit; no DB/API/event change."
-}
-,
   "h01_mvp03_workitem_mapping_ratification_20261127": {
-  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
-  "priority": "P0",
-  "status": "TECHNICAL_DISPOSITION_REVIEW_REQUESTED_HOLD",
-  "candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
-  "technical_disposition": {
-    "status": "PREFERRED_NOT_RATIFIED",
-    "existing_port": "b0dde358be781b48e06b8901acc63ef31b013db0",
-    "existing_intent": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
-    "operations_sql": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
-    "operations_store": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
-    "strict_commit": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
-    "finding": "Existing run-scoped grant/lease T1 cannot represent HUMAN WorkItem; D0 OperationsStore is team/delegation/handoff review, not authoritative WorkItem. Prefer typed non-run WORKITEM_REQUEST within existing T1 coordinator, or exact already-approved mapping if owners provide it. No normative change, no fake lease, no second ledger.",
-    "master": "Actual v135 SHA256 01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9, lines 99073–99085, 105040–105076, 116785–116816, 29132–29214 directly checked; full latest addenda reconciliation incomplete."
+    "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+    "priority": "P0",
+    "status": "TECHNICAL_DISPOSITION_REVIEW_REQUESTED_HOLD",
+    "candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
+    "technical_disposition": {
+      "status": "PREFERRED_NOT_RATIFIED",
+      "existing_port": "b0dde358be781b48e06b8901acc63ef31b013db0",
+      "existing_intent": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+      "operations_sql": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+      "operations_store": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "strict_commit": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+      "finding": "Existing run-scoped grant/lease T1 cannot represent HUMAN WorkItem; D0 OperationsStore is team/delegation/handoff review, not authoritative WorkItem. Prefer typed non-run WORKITEM_REQUEST within existing T1 coordinator, or exact already-approved mapping if owners provide it. No normative change, no fake lease, no second ledger.",
+      "master": "Actual v135 SHA256 01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9, lines 99073–99085, 105040–105076, 116785–116816, 29132–29214 directly checked; full latest addenda reconciliation incomplete."
+    },
+    "coordination": {
+      "open_prs": 44,
+      "checked_review_submissions": [
+        6,
+        10,
+        19,
+        46,
+        52,
+        54
+      ],
+      "submitted_reviews_found": 0,
+      "requested_reviewers_found_on_prs": [
+        10,
+        46,
+        52,
+        54
+      ],
+      "requested_reviewers_count": 0,
+      "notes": [
+        {
+          "pr": 10,
+          "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+          "comment": 7225465563,
+          "scope": "MI02/03/04 Data/Runtime mapping + MI10 independent custody/commit/RLS/restore decision"
+        },
+        {
+          "pr": 46,
+          "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+          "comment": 7225466658,
+          "scope": "MI03/04 real HUMAN issuer/project create/read permission and revoke/expiry evidence"
+        },
+        {
+          "pr": 52,
+          "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+          "comment": 7225467598,
+          "scope": "MI01/10 existing C50/R9 lock, target runtime, security/license/native wheel disposition"
+        }
+      ],
+      "comment_readback": "3/3 PASS; requests posted to existing PR threads, no independently returned decision or verified reviewer assignment; no new PR or phase."
+    },
+    "dependencies": {
+      "status": "HOLD",
+      "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+      "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+      "rows": 25,
+      "requirements_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+      "signatures_blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+      "pin_differences": [
+        "FastAPI 0.163.0 vs review lock 0.163.2",
+        "cryptography 46.0.4 vs review lock 50.0.2"
+      ],
+      "install": "NOT_RUN"
+    },
+    "manifest": {
+      "entries": 589,
+      "product_files": 590,
+      "blob": "d0be0ecb733e76a4241086415733150cd9260fe0",
+      "product_tree": "0d941b2cfa1800279cb8b637237475780e80e337",
+      "status": "unchanged; existing proof reused"
+    },
+    "source_gain": "0 product code changes; actual existing owner-review channels received exact review requests; no approval or completion claimed.",
+    "phase4": "HOLD E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
+    "phase5": "real execution HOLD",
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "next": "Obtain authenticated technical/independent dispositions at existing review threads; if normative typed aggregate extension required, submit only that specific H01 decision after MI10 review. Exact approved physical mapping and real protected authority precede write route; no unrelated phase. H01 scope approval unchanged. No direct reviewer assignment guessed.",
+    "rollback": "ordinary revert governance record; existing PR comments preserved as request history; no data, code or schema change"
   },
-  "coordination": {
-    "open_prs": 44,
-    "checked_review_submissions": [
-      6,
-      10,
-      19,
-      46,
-      52,
-      54
+  "h01_mvp03_p0_command_binding_20261127": {
+    "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+    "priority": "P0",
+    "phase": "6 intensive work direction within existing task",
+    "status": "SOURCE_BINDING_UPDATED_REAL_PERSISTENCE_HOLD",
+    "working_direction": "H01 2026-11-27: focus Phase6 on one P0 critical path with three parallel tracks. Close a verifiable blocker or deliver working product connection; do not recreate verified manifests, lock comparisons or review requests. Core/T1 PR10: finalize existing coordinator WorkItem write/read mapping, implement approved connection; if normative decision required, present one bounded decision after technical/independent review. HUMAN IAM/API/UI PR46: connect existing identity/project permission to submit/readback and verify fail-closed panel. C50/R9 PR52: confirm outstanding decisions and owners; run prepared targeted checks only in approved environment. If one track waits, continue independent applicable work. If actual write gate opens, same-candidate HTTP201/request ID, restart, same record readback, duplicate no second row, then E01–E10. Preserve real IAM/protected COMMIT/independent acceptance; MVP03 closes only after MI10 and H01 acceptance.",
+    "candidate": "c556aa938d6d3ccbb216280e0bdb06397e9d5881",
+    "previous_candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "catalog": "catalog/revisions/H01_MVP03_P0_COMMAND_BINDING_20261127.json",
+    "handover": "handover/H01_MVP03_P0_COMMAND_BINDING_20261127.md",
+    "manifest": {
+      "entries": 589,
+      "product_files": 590,
+      "blob": "5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb",
+      "product_tree": "f4994e99c07313181fb86256af60e2b7c1a0f26e",
+      "unchanged_payload": 586,
+      "changed_payload": 3,
+      "status": "PASS exact tree paths/regular modes/size and previous pins retained; changed files SHA256 computed; commit readback PASS"
+    },
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "blob": "591f3685ab69d5e202124bbdd4716ebc161c5ba0",
+        "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd",
+        "bytes": 4684
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "blob": "9aba76bb610c210a4195d0568929a880bb9704e4",
+        "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f",
+        "bytes": 4841
+      },
+      {
+        "path": "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx",
+        "blob": "660a756e345023151117cdd8f69382052dad2bc6",
+        "sha256": "6d1a6796c3c50f3dab80e9d292ca59dfdb4adc550bee1ecc17ef4b7d394c08c7",
+        "bytes": 4147
+      }
     ],
-    "submitted_reviews_found": 0,
-    "requested_reviewers_found_on_prs": [
-      10,
-      46,
-      52,
-      54
-    ],
-    "requested_reviewers_count": 0,
-    "notes": [
+    "tracks": {
+      "core": {
+        "status": "HOLD",
+        "pr": 10,
+        "existing_comment": 7225465563,
+        "review": "no new submitted review or response observed",
+        "condition": "MI02/03/04 technical disposition and MI10 independent mapping/custody/protected COMMIT; H01 normative delta only after review"
+      },
+      "iam_ui": {
+        "status": "SOURCE_UPDATED_RUNTIME_NOT_RUN",
+        "pr": 46,
+        "existing_comment": 7225466658,
+        "review": "no new submitted review or response observed",
+        "gain": "Retain validated idempotency key in existing D0 binding (repr excluded); exact read observation local selection, read/reset clear; submit and readback disabled. No grant or actual HTTP write.",
+        "condition": "real issuer/project permission, protected T1, same-ID readback"
+      },
+      "c50_r9": {
+        "status": "HOLD",
+        "pr": 52,
+        "existing_comment": 7225467598,
+        "review": "no new submitted review or response observed",
+        "lock": "fb50ae2d06594150887e849d61de027c61ae1492",
+        "rows": 25,
+        "condition": "MI01/MI10 approved runtime/native wheel, security/license and pin reconciliation; no repeat comparison/install. Local Python3.13.5/tsc5.8.3 observed; no approved full exact checkout/runtime."
+      }
+    },
+    "tests": {
+      "binder8": "NOT_RUN",
+      "ui_browser": "NOT_RUN",
+      "build": "NOT_RUN",
+      "reason": "no approved exact runtime checkout established; no repeated historical tests. Existing test method extended; new source static review only."
+    },
+    "phase4": "HOLD: E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
+    "phase5": "real execution HOLD",
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "next": "Obtain technical/MI10 dispositions already requested, then H01 normative decision if required. Use approved existing T1 mapping, real HUMAN auth and protected commit; implement actual route and readback; no second engine. Run affected binder and actual browser after exact approved environment. No unrelated phase.",
+    "rollback": "ordinary revert source and governance commit; no DB/API/event/dependency/CI/main/PROD changes; preserve prior PR comments."
+  },
+  "h01_mvp03_p0_binder_execution_20261127": {
+    "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+    "priority": "P0",
+    "phase": "7 same P0 task",
+    "status": "BINDER_TESTS_PASS_PROTECTED_RECORD_HOLD",
+    "candidate": "ce6bbbaf5eca44a6d83982e5909b2e1b1efae7a9",
+    "tested_source": "c556aa938d6d3ccbb216280e0bdb06397e9d5881",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "manifest": {
+      "entries": 589,
+      "product_files": 590,
+      "blob": "5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb",
+      "product_tree": "f4994e99c07313181fb86256af60e2b7c1a0f26e",
+      "status": "unchanged exact product tree; prior full manifest proof reused"
+    },
+    "tests": {
+      "binder": {
+        "status": "PASS",
+        "passed": 8,
+        "total": 8,
+        "exit": 0,
+        "seconds": 0.007,
+        "environment": "CPython 3.13.5 Linux x86_64 stdlib only; -B -S; no package installation; authorized isolated synthetic test, not approved full C50/R9 runtime",
+        "command": "python -B -S -m unittest discover -s tests -p test_research_command_review_mvp03.py -v",
+        "closure": "15/15 exact file bytes, SHA256 and Git blob match candidate manifest/tree; static imports stdlib or local app; source reconstructed from connector plus identical archived fixture; not full checkout",
+        "preflight": {
+          "path": "handover/evidence/H01_MVP03_P7_BINDER_20261127/preflight.log",
+          "sha256": "3c57cf7966fdecfd38b7231ad4edfcf8cd2e472a8a4f3adf6bf109a3cd0f017a",
+          "blob": "21f5f46be9e542a6ea569fc3971cf31f71ea8da3"
+        },
+        "raw": {
+          "path": "handover/evidence/H01_MVP03_P7_BINDER_20261127/unittest.log",
+          "sha256": "a45d2bfd19098a752d4f94ed34e59ff463c762d529ecf68bcf31245c855d64fe",
+          "blob": "6d72f9c6a3e89f9296ec89dcf1f45b6f0e42cf58"
+        },
+        "github_raw_readback": "PASS exact SHA256"
+      },
+      "ui_browser": "NOT_RUN",
+      "ui_typecheck": "NOT_RUN",
+      "build": "NOT_RUN",
+      "reason": "No approved full frontend or C50/R9 exact runtime; actual browser not run. Local tsc5.8.3 differs from package pin5.9.3; no install. Direct Git checkout unavailable in container (DNS); exact scoped source verified instead."
+    },
+    "tracks": {
+      "core": {
+        "pr": 10,
+        "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+        "comment": 7225465563,
+        "status": "HOLD",
+        "owner": "MI02/03/04 technical and MI10 independent",
+        "missing": "approved typed HUMAN WorkItem physical write/read mapping, protected commit, durable idempotency, independent custody/restore and RLS; no new review response or submitted review",
+        "first_action": "ratify exact existing mapping if found or bring bounded normative WORKITEM_REQUEST extension to H01 only after independent review"
+      },
+      "iam": {
+        "pr": 46,
+        "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+        "comment": 7225466658,
+        "status": "HOLD",
+        "owner": "MI03/04 IAM/ORG, MI02/05/06 API/UI",
+        "missing": "real HUMAN issuer and project create/read permission, expiry/revocation, COMMIT, same-ID readback",
+        "first_action": "integrate server-resolved identity and approved protected operation; no synthetic grant or enabled button"
+      },
+      "runtime": {
+        "pr": 52,
+        "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+        "comment": 7225467598,
+        "status": "HOLD",
+        "owner": "MI01/10",
+        "missing": "existing 25-row C50/R9 review lock fb50ae2d06594150887e849d61de027c61ae1492 runtime/security/license/native-wheel and source pin approval",
+        "install": "NOT_RUN"
+      }
+    },
+    "coordination": "No new review submissions, replies or requested reviewers on 3 relevant PRs; actual authorized independent reviewer assignment not verified. Existing comments reused, no duplicate request. H01 can identify authorized MI10 reviewer, not replace independent review.",
+    "phase4": "E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD; binder subset PASS does not close E03",
+    "phase5": "real execution HOLD",
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI",
+      "ordinal": "unchanged"
+    },
+    "source_gain": "No new product code. Existing binder now verified on exact source; evidence-only commit. No HTTP201, request ID, actual restart/readback/dedup. Existing product safety boundaries unchanged.",
+    "next": "Obtain authenticated MI02/03/04 and MI10 disposition (establish authorized reviewer assignment). Then H01 normative decision if required; implement approved typed mapping, real HUMAN permission and protected transaction; only then real HTTP201/readback/restart/idempotency followed by E01-E10. Do not repeat binder suite unless its source/dependencies change.",
+    "rollback": "normal revert evidence and tracker commits; product tree, DB/API/events and permissions unchanged."
+  },
+  "h01_mvp03_p0_reviewer_disposition_20261127": {
+    "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+    "priority": "P0",
+    "phase": "8 same P0 task; not new roadmap phase",
+    "status": "TECHNICAL_SOURCE_AUTHORITY_CONFIRMED_INDEPENDENT_REVIEWER_UNASSIGNED_HOLD",
+    "candidate": "ce6bbbaf5eca44a6d83982e5909b2e1b1efae7a9",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "authority": {
+      "technical": "ChatGPT authorized central technical source reviewer by H01 B / WORKING_STANDARD 0.5 (blob 0f94593ddd92482321ee43c125968170ab8647fb); no additional identical appointment required. Domain owners MI02 Core/Data, MI03 IAM, MI04 T1 and MI01 runtime; authenticated physical DB/issuer/runtime custody and implementation decisions still needed.",
+      "independent": "MI10 independent Security/IV excludes central writer. PR10 A1_OWNER_BOUNDARY_MATRIX.json blob 61b3b08dba7c09c678599e54925ce7a6534022b5 A1-09 requires named independent reviewer, authority, separate operator, no self-certification. No named authorized reviewer confirmed in examined records. H01 must identify/authorize independent reviewer and review scope; not waive review.",
+      "normative": "H01 decision conditional on technical and independent disposition; no new normative approval granted."
+    },
+    "technical_disposition": {
+      "status": "TECHNICAL_RECOMMENDATION_NOT_RATIFIED",
+      "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
+      "finding": "Current run-scoped LogicalIntent/CommitIntent require agent/run grant and lease; OperationsStore is not authoritative WorkItem. Prefer existing authoritative physical mapping if proven; otherwise extend existing T1 coordinator with typed non-run HUMAN WORKITEM_REQUEST. Preserve separate admission; no fake agent lease or new ledger. Exact table/PK/FK/unique constraints, roles, RLS, request digest and protected commit/readback mapping remain unresolved. No final normative decision requested before MI10 independent disposition."
+    },
+    "review_channels": [
       {
         "pr": 10,
         "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
         "comment": 7225465563,
-        "scope": "MI02/03/04 Data/Runtime mapping + MI10 independent custody/commit/RLS/restore decision"
+        "submitted_reviews": 0,
+        "requested_reviewers": null,
+        "owner": "MI02/03/04 technical + MI10 independent",
+        "missing": "physical WorkItem aggregate write/read mapping and protected durable COMMIT/fence/restore/revoke, independent custody/acceptance",
+        "closure": "named authorized independent reviewer and authenticated source-owner mapping and independent decision; then H01 only necessary normative delta"
       },
       {
         "pr": 46,
         "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
         "comment": 7225466658,
-        "scope": "MI03/04 real HUMAN issuer/project create/read permission and revoke/expiry evidence"
+        "submitted_reviews": 0,
+        "requested_reviewers": null,
+        "owner": "MI03/04 with MI02; ORG role owner as applicable",
+        "missing": "real HUMAN issuer/session/project create/read and revocation/expiry contract",
+        "closure": "authenticated current server-side permission and protected transaction linkage, independent review"
       },
       {
         "pr": 52,
         "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
         "comment": 7225467598,
-        "scope": "MI01/10 existing C50/R9 lock, target runtime, security/license/native wheel disposition"
+        "submitted_reviews": 0,
+        "requested_reviewers": null,
+        "owner": "MI01/MI10",
+        "missing": "review-only 25-row lock fb50ae2d06594150887e849d61de027c61ae1492 target runtime/security/license/native wheel and direct pin decision",
+        "closure": "exact approved runtime, lock, provenance and independent security/license disposition before install"
       }
     ],
-    "comment_readback": "3/3 PASS; requests posted to existing PR threads, no independently returned decision or verified reviewer assignment; no new PR or phase."
-  },
-  "dependencies": {
-    "status": "HOLD",
-    "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
-    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
-    "rows": 25,
-    "requirements_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
-    "signatures_blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
-    "pin_differences": [
-      "FastAPI 0.163.0 vs review lock 0.163.2",
-      "cryptography 46.0.4 vs review lock 50.0.2"
-    ],
-    "install": "NOT_RUN"
-  },
-  "manifest": {
-    "entries": 589,
-    "product_files": 590,
-    "blob": "d0be0ecb733e76a4241086415733150cd9260fe0",
-    "product_tree": "0d941b2cfa1800279cb8b637237475780e80e337",
-    "status": "unchanged; existing proof reused"
-  },
-  "source_gain": "0 product code changes; actual existing owner-review channels received exact review requests; no approval or completion claimed.",
-  "phase4": "HOLD E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
-  "phase5": "real execution HOLD",
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta_pp": 0,
-    "weighted": "HESAPLANAMADI",
-    "integration": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "next": "Obtain authenticated technical/independent dispositions at existing review threads; if normative typed aggregate extension required, submit only that specific H01 decision after MI10 review. Exact approved physical mapping and real protected authority precede write route; no unrelated phase. H01 scope approval unchanged. No direct reviewer assignment guessed.",
-  "rollback": "ordinary revert governance record; existing PR comments preserved as request history; no data, code or schema change"
-}
-,
-  "h01_mvp03_p0_command_binding_20261127": {
-  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
-  "priority": "P0",
-  "phase": "6 intensive work direction within existing task",
-  "status": "SOURCE_BINDING_UPDATED_REAL_PERSISTENCE_HOLD",
-  "working_direction": "H01 2026-11-27: focus Phase6 on one P0 critical path with three parallel tracks. Close a verifiable blocker or deliver working product connection; do not recreate verified manifests, lock comparisons or review requests. Core/T1 PR10: finalize existing coordinator WorkItem write/read mapping, implement approved connection; if normative decision required, present one bounded decision after technical/independent review. HUMAN IAM/API/UI PR46: connect existing identity/project permission to submit/readback and verify fail-closed panel. C50/R9 PR52: confirm outstanding decisions and owners; run prepared targeted checks only in approved environment. If one track waits, continue independent applicable work. If actual write gate opens, same-candidate HTTP201/request ID, restart, same record readback, duplicate no second row, then E01–E10. Preserve real IAM/protected COMMIT/independent acceptance; MVP03 closes only after MI10 and H01 acceptance.",
-  "candidate": "c556aa938d6d3ccbb216280e0bdb06397e9d5881",
-  "previous_candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "catalog": "catalog/revisions/H01_MVP03_P0_COMMAND_BINDING_20261127.json",
-  "handover": "handover/H01_MVP03_P0_COMMAND_BINDING_20261127.md",
-  "manifest": {
-    "entries": 589,
-    "product_files": 590,
-    "blob": "5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb",
-    "product_tree": "f4994e99c07313181fb86256af60e2b7c1a0f26e",
-    "unchanged_payload": 586,
-    "changed_payload": 3,
-    "status": "PASS exact tree paths/regular modes/size and previous pins retained; changed files SHA256 computed; commit readback PASS"
-  },
-  "changes": [
-    {
-      "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
-      "blob": "591f3685ab69d5e202124bbdd4716ebc161c5ba0",
-      "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd",
-      "bytes": 4684
+    "evidence": {
+      "binder": "8/8 existing PASS, not rerun; actual local preflight and unittest logs re-read, SHA256 3c57cf7966fdecfd38b7231ad4edfcf8cd2e472a8a4f3adf6bf109a3cd0f017a and a45d2bfd19098a752d4f94ed34e59ff463c762d529ecf68bcf31245c855d64fe match recorded GitHub evidence.",
+      "manifest": "589 entries/590 files, existing product tree f4994e99c07313181fb86256af60e2b7c1a0f26e and manifest 5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb unchanged; no full archive verification",
+      "tests_this_turn": 0,
+      "code_changes": 0,
+      "review_requests_repeated": 0,
+      "actual_install": "NOT_RUN"
     },
-    {
-      "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
-      "blob": "9aba76bb610c210a4195d0568929a880bb9704e4",
-      "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f",
-      "bytes": 4841
+    "phase9_first_change": "Conditional only: after approved mapping, real HUMAN authorization and independent protection disposition and H01 normative approval if needed, implement typed WorkItem intent and authoritative write/read adapter within existing T1 coordinator using existing ResearchPlanBinding key. Until then no DDL, route activation, fake receipt, or runtime change. Then actual HTTP201 same request ID restart/replay and E01-E10; HTTP202 separate AGENT admission.",
+    "phase8_exit": "HOLD: independent reviewer assignment and written decisions missing; no other authorized approval inferred.",
+    "acceptance": {
+      "MVP": "0/11",
+      "UI": "21/40",
+      "Core": "12/16",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI",
+      "ordinal": "unchanged"
     },
-    {
-      "path": "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx",
-      "blob": "660a756e345023151117cdd8f69382052dad2bc6",
-      "sha256": "6d1a6796c3c50f3dab80e9d292ca59dfdb4adc550bee1ecc17ef4b7d394c08c7",
-      "bytes": 4147
-    }
-  ],
-  "tracks": {
-    "core": {
-      "status": "HOLD",
-      "pr": 10,
-      "existing_comment": 7225465563,
-      "review": "no new submitted review or response observed",
-      "condition": "MI02/03/04 technical disposition and MI10 independent mapping/custody/protected COMMIT; H01 normative delta only after review"
-    },
-    "iam_ui": {
-      "status": "SOURCE_UPDATED_RUNTIME_NOT_RUN",
-      "pr": 46,
-      "existing_comment": 7225466658,
-      "review": "no new submitted review or response observed",
-      "gain": "Retain validated idempotency key in existing D0 binding (repr excluded); exact read observation local selection, read/reset clear; submit and readback disabled. No grant or actual HTTP write.",
-      "condition": "real issuer/project permission, protected T1, same-ID readback"
-    },
-    "c50_r9": {
-      "status": "HOLD",
-      "pr": 52,
-      "existing_comment": 7225467598,
-      "review": "no new submitted review or response observed",
-      "lock": "fb50ae2d06594150887e849d61de027c61ae1492",
-      "rows": 25,
-      "condition": "MI01/MI10 approved runtime/native wheel, security/license and pin reconciliation; no repeat comparison/install. Local Python3.13.5/tsc5.8.3 observed; no approved full exact checkout/runtime."
-    }
+    "rollback": "normal revert governance-only record; no product source, CI, main, canonical, PROD, DB, grant or external effects."
   },
-  "tests": {
-    "binder8": "NOT_RUN",
-    "ui_browser": "NOT_RUN",
-    "build": "NOT_RUN",
-    "reason": "no approved exact runtime checkout established; no repeated historical tests. Existing test method extended; new source static review only."
-  },
-  "phase4": "HOLD: E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
-  "phase5": "real execution HOLD",
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta_pp": 0,
-    "weighted": "HESAPLANAMADI",
-    "integration": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "next": "Obtain technical/MI10 dispositions already requested, then H01 normative decision if required. Use approved existing T1 mapping, real HUMAN auth and protected commit; implement actual route and readback; no second engine. Run affected binder and actual browser after exact approved environment. No unrelated phase.",
-  "rollback": "ordinary revert source and governance commit; no DB/API/event/dependency/CI/main/PROD changes; preserve prior PR comments."
-}
-,
-  "h01_mvp03_p0_binder_execution_20261127": {
-  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
-  "priority": "P0",
-  "phase": "7 same P0 task",
-  "status": "BINDER_TESTS_PASS_PROTECTED_RECORD_HOLD",
-  "candidate": "ce6bbbaf5eca44a6d83982e5909b2e1b1efae7a9",
-  "tested_source": "c556aa938d6d3ccbb216280e0bdb06397e9d5881",
-  "candidate_branch": "integration/h01-r6-research-unified-20261127",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "manifest": {
-    "entries": 589,
-    "product_files": 590,
-    "blob": "5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb",
-    "product_tree": "f4994e99c07313181fb86256af60e2b7c1a0f26e",
-    "status": "unchanged exact product tree; prior full manifest proof reused"
-  },
-  "tests": {
-    "binder": {
-      "status": "PASS",
-      "passed": 8,
-      "total": 8,
-      "exit": 0,
-      "seconds": 0.007,
-      "environment": "CPython 3.13.5 Linux x86_64 stdlib only; -B -S; no package installation; authorized isolated synthetic test, not approved full C50/R9 runtime",
-      "command": "python -B -S -m unittest discover -s tests -p test_research_command_review_mvp03.py -v",
-      "closure": "15/15 exact file bytes, SHA256 and Git blob match candidate manifest/tree; static imports stdlib or local app; source reconstructed from connector plus identical archived fixture; not full checkout",
-      "preflight": {
-        "path": "handover/evidence/H01_MVP03_P7_BINDER_20261127/preflight.log",
-        "sha256": "3c57cf7966fdecfd38b7231ad4edfcf8cd2e472a8a4f3adf6bf109a3cd0f017a",
-        "blob": "21f5f46be9e542a6ea569fc3971cf31f71ea8da3"
-      },
-      "raw": {
-        "path": "handover/evidence/H01_MVP03_P7_BINDER_20261127/unittest.log",
-        "sha256": "a45d2bfd19098a752d4f94ed34e59ff463c762d529ecf68bcf31245c855d64fe",
-        "blob": "6d72f9c6a3e89f9296ec89dcf1f45b6f0e42cf58"
-      },
-      "github_raw_readback": "PASS exact SHA256"
-    },
-    "ui_browser": "NOT_RUN",
-    "ui_typecheck": "NOT_RUN",
-    "build": "NOT_RUN",
-    "reason": "No approved full frontend or C50/R9 exact runtime; actual browser not run. Local tsc5.8.3 differs from package pin5.9.3; no install. Direct Git checkout unavailable in container (DNS); exact scoped source verified instead."
-  },
-  "tracks": {
-    "core": {
-      "pr": 10,
-      "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
-      "comment": 7225465563,
-      "status": "HOLD",
-      "owner": "MI02/03/04 technical and MI10 independent",
-      "missing": "approved typed HUMAN WorkItem physical write/read mapping, protected commit, durable idempotency, independent custody/restore and RLS; no new review response or submitted review",
-      "first_action": "ratify exact existing mapping if found or bring bounded normative WORKITEM_REQUEST extension to H01 only after independent review"
-    },
-    "iam": {
-      "pr": 46,
-      "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
-      "comment": 7225466658,
-      "status": "HOLD",
-      "owner": "MI03/04 IAM/ORG, MI02/05/06 API/UI",
-      "missing": "real HUMAN issuer and project create/read permission, expiry/revocation, COMMIT, same-ID readback",
-      "first_action": "integrate server-resolved identity and approved protected operation; no synthetic grant or enabled button"
-    },
-    "runtime": {
-      "pr": 52,
-      "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
-      "comment": 7225467598,
-      "status": "HOLD",
-      "owner": "MI01/10",
-      "missing": "existing 25-row C50/R9 review lock fb50ae2d06594150887e849d61de027c61ae1492 runtime/security/license/native-wheel and source pin approval",
-      "install": "NOT_RUN"
-    }
-  },
-  "coordination": "No new review submissions, replies or requested reviewers on 3 relevant PRs; actual authorized independent reviewer assignment not verified. Existing comments reused, no duplicate request. H01 can identify authorized MI10 reviewer, not replace independent review.",
-  "phase4": "E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD; binder subset PASS does not close E03",
-  "phase5": "real execution HOLD",
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta_pp": 0,
-    "weighted": "HESAPLANAMADI",
-    "integration": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "source_gain": "No new product code. Existing binder now verified on exact source; evidence-only commit. No HTTP201, request ID, actual restart/readback/dedup. Existing product safety boundaries unchanged.",
-  "next": "Obtain authenticated MI02/03/04 and MI10 disposition (establish authorized reviewer assignment). Then H01 normative decision if required; implement approved typed mapping, real HUMAN permission and protected transaction; only then real HTTP201/readback/restart/idempotency followed by E01-E10. Do not repeat binder suite unless its source/dependencies change.",
-  "rollback": "normal revert evidence and tracker commits; product tree, DB/API/events and permissions unchanged."
-}
-,
-  "h01_mvp03_p0_reviewer_disposition_20261127": {
-  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
-  "priority": "P0",
-  "phase": "8 same P0 task; not new roadmap phase",
-  "status": "TECHNICAL_SOURCE_AUTHORITY_CONFIRMED_INDEPENDENT_REVIEWER_UNASSIGNED_HOLD",
-  "candidate": "ce6bbbaf5eca44a6d83982e5909b2e1b1efae7a9",
-  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
-  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
-  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
-  "authority": {
-    "technical": "ChatGPT authorized central technical source reviewer by H01 B / WORKING_STANDARD 0.5 (blob 0f94593ddd92482321ee43c125968170ab8647fb); no additional identical appointment required. Domain owners MI02 Core/Data, MI03 IAM, MI04 T1 and MI01 runtime; authenticated physical DB/issuer/runtime custody and implementation decisions still needed.",
-    "independent": "MI10 independent Security/IV excludes central writer. PR10 A1_OWNER_BOUNDARY_MATRIX.json blob 61b3b08dba7c09c678599e54925ce7a6534022b5 A1-09 requires named independent reviewer, authority, separate operator, no self-certification. No named authorized reviewer confirmed in examined records. H01 must identify/authorize independent reviewer and review scope; not waive review.",
-    "normative": "H01 decision conditional on technical and independent disposition; no new normative approval granted."
-  },
-  "technical_disposition": {
-    "status": "TECHNICAL_RECOMMENDATION_NOT_RATIFIED",
-    "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
-    "finding": "Current run-scoped LogicalIntent/CommitIntent require agent/run grant and lease; OperationsStore is not authoritative WorkItem. Prefer existing authoritative physical mapping if proven; otherwise extend existing T1 coordinator with typed non-run HUMAN WORKITEM_REQUEST. Preserve separate admission; no fake agent lease or new ledger. Exact table/PK/FK/unique constraints, roles, RLS, request digest and protected commit/readback mapping remain unresolved. No final normative decision requested before MI10 independent disposition."
-  },
-  "review_channels": [
-    {
-      "pr": 10,
-      "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
-      "comment": 7225465563,
-      "submitted_reviews": 0,
-      "requested_reviewers": null,
-      "owner": "MI02/03/04 technical + MI10 independent",
-      "missing": "physical WorkItem aggregate write/read mapping and protected durable COMMIT/fence/restore/revoke, independent custody/acceptance",
-      "closure": "named authorized independent reviewer and authenticated source-owner mapping and independent decision; then H01 only necessary normative delta"
-    },
-    {
-      "pr": 46,
-      "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
-      "comment": 7225466658,
-      "submitted_reviews": 0,
-      "requested_reviewers": null,
-      "owner": "MI03/04 with MI02; ORG role owner as applicable",
-      "missing": "real HUMAN issuer/session/project create/read and revocation/expiry contract",
-      "closure": "authenticated current server-side permission and protected transaction linkage, independent review"
-    },
-    {
-      "pr": 52,
-      "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
-      "comment": 7225467598,
-      "submitted_reviews": 0,
-      "requested_reviewers": null,
-      "owner": "MI01/MI10",
-      "missing": "review-only 25-row lock fb50ae2d06594150887e849d61de027c61ae1492 target runtime/security/license/native wheel and direct pin decision",
-      "closure": "exact approved runtime, lock, provenance and independent security/license disposition before install"
-    }
-  ],
-  "evidence": {
-    "binder": "8/8 existing PASS, not rerun; actual local preflight and unittest logs re-read, SHA256 3c57cf7966fdecfd38b7231ad4edfcf8cd2e472a8a4f3adf6bf109a3cd0f017a and a45d2bfd19098a752d4f94ed34e59ff463c762d529ecf68bcf31245c855d64fe match recorded GitHub evidence.",
-    "manifest": "589 entries/590 files, existing product tree f4994e99c07313181fb86256af60e2b7c1a0f26e and manifest 5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb unchanged; no full archive verification",
-    "tests_this_turn": 0,
-    "code_changes": 0,
-    "review_requests_repeated": 0,
-    "actual_install": "NOT_RUN"
-  },
-  "phase9_first_change": "Conditional only: after approved mapping, real HUMAN authorization and independent protection disposition and H01 normative approval if needed, implement typed WorkItem intent and authoritative write/read adapter within existing T1 coordinator using existing ResearchPlanBinding key. Until then no DDL, route activation, fake receipt, or runtime change. Then actual HTTP201 same request ID restart/replay and E01-E10; HTTP202 separate AGENT admission.",
-  "phase8_exit": "HOLD: independent reviewer assignment and written decisions missing; no other authorized approval inferred.",
-  "acceptance": {
-    "MVP": "0/11",
-    "UI": "21/40",
-    "Core": "12/16",
-    "W8": "3/8",
-    "IV": "0/7",
-    "delta_pp": 0,
-    "weighted": "HESAPLANAMADI",
-    "integration": "HESAPLANAMADI",
-    "ordinal": "unchanged"
-  },
-  "rollback": "normal revert governance-only record; no product source, CI, main, canonical, PROD, DB, grant or external effects."
-},
   "h01_mvp03_workitem_direction_a_20261127": {
     "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
     "status": "DIRECTION_A_PRINCIPLE_APPROVED_PHYSICAL_RATIFICATION_HOLD",
@@ -18022,6 +18013,9 @@
     "operational_rows": 12,
     "development": "HESAPLANAMADI",
     "acceptance_delta_pp": 0,
-    "update_rule": "Each meaningful development updates only affected rows with date, old/new status, evidence exact SHA/path, stage criterion/payda/delta if approved, acceptance separate, owner/blocker and next action; render MD from same JSON; preserve unaffected rows and prior versions in Git; no speculative progress, no extra reports merely to raise counts. Operational section mapping is navigation only, not new scoring or normative IDs. Read current heads and table every round."
+    "update_rule": "Each meaningful development updates only affected rows with date, old/new status, evidence exact SHA/path, stage criterion/payda/delta if approved, acceptance separate, owner/blocker and next action; render MD from same JSON; preserve unaffected rows and prior versions in Git; no speculative progress, no extra reports merely to raise counts. Operational section mapping is navigation only, not new scoring or normative IDs. Read current heads and table every round.",
+    "checklist_revision": 2,
+    "checklist_status": "PROVISIONAL_REPORTING_METRIC",
+    "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging."
   }
 }

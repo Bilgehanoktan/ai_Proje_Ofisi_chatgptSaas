@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 1,
+  "revision": 2,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -55,7 +55,13 @@
     },
     "acceptance_delta_pp": 0,
     "closed_operational": 0,
-    "total_operational": 12
+    "total_operational": 12,
+    "plan_checklist": {
+      "status": "PROVISIONAL_REPORTING_METRIC",
+      "definition": "Evidence-backed completion of explicit plan milestones, equal weight within each row. Closed milestones include design/source review only when explicitly scoped as such. Not official weighted development, maturity or product acceptance; denominator is a reporting proposal now frozen in revision 2 pending H01 ratification.",
+      "rollup": "Operational rows are navigation views of shared detail IDs; do not sum or average them. No aggregate product percentage.",
+      "baseline_candidate": "645c081e2cc107440662600b749d34415ad2f713"
+    }
   },
   "evidence": {
     "plan": {
@@ -89,7 +95,46 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 4,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P01.01",
+            "criterion": "Dört merkezi dal HEAD doğrulandı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P01.02",
+            "criterion": "Merkezi plan ve standardın exact kaydı mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P01.03",
+            "criterion": "Tam Design Master ekleri ve etkilenen kaynak envanteri uzlaştırıldı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P01.04",
+            "criterion": "Tam arşiv ve bütün kaynak bütünlüğü doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 2,
@@ -105,7 +150,37 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P02.01",
+            "criterion": "RESEARCH-first öncelik ve tek WorkItem yönü kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P02.02",
+            "criterion": "İlk yetkili kalıcı kayıt ve readback zinciri çalışıyor",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P02.03",
+            "criterion": "Aynı WorkItem üzerinden gerçek yürütme ve sonuç tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 3,
@@ -122,7 +197,65 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 3,
+        "total": 6,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P03.01",
+            "criterion": "Tek izole aday ve tek manifest mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P03.02",
+            "criterion": "Manifest 592/592 yol ve boyut eşleşmesi",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P03.03",
+            "criterion": "İncelenen yedi kaynak grubunun disposition kaydı mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P03.04",
+            "criterion": "RESEARCH kritik kaynak işlev farkları tümüyle uzlaştırıldı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P03.05",
+            "criterion": "D5-C-R8/PR46 ortak kaynak ve gerekli davranış doğrulaması tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P03.06",
+            "criterion": "Tam arşiv ve manifest raw hash kontrolü tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 4,
@@ -139,7 +272,55 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 5,
+        "percent": 40,
+        "items": [
+          {
+            "id": "P04.01",
+            "criterion": "Mevcut ResearchRequestPanel ve gözleme bağlı sabit plan seçimi",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P04.02",
+            "criterion": "Dört alanlı D0 komut binder sözleşmesi mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P04.03",
+            "criterion": "Yetkili gerçek Project seçimi ve giriş bağlamı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P04.04",
+            "criterion": "Yetkili POST ve hata/çift gönderim yönetimi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P04.05",
+            "criterion": "Gerçek request ID ve readback ile gönderim etkin",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 5,
@@ -156,7 +337,52 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 5,
+        "percent": 20,
+        "items": [
+          {
+            "id": "P05.01",
+            "criterion": "D0 IAM/session_check kaynakları mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P05.02",
+            "criterion": "Gerçek HUMAN issuer/root/custody doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P05.03",
+            "criterion": "Güncel Project create/read izinleri bağlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P05.04",
+            "criterion": "Revoke/expiry ve tenant izolasyonu gerçek akışta doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P05.05",
+            "criterion": "Gerekli bağımsız IAM incelemesi tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 6,
@@ -173,7 +399,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P06.01",
+            "criterion": "D0 ORG/G4/G5 referans okuyucuları mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P06.02",
+            "criterion": "Yetkili Project head/revision kaynağı mevcut",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P06.03",
+            "criterion": "Gerçek membership/WorkOwner/Project policy bağlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P06.04",
+            "criterion": "Plan approval ve stale revision sınırı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 7,
@@ -190,7 +454,55 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 5,
+        "percent": 40,
+        "items": [
+          {
+            "id": "P07.01",
+            "criterion": "Exact RESEARCH yayın adayı ve immutable kimliği mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P07.02",
+            "criterion": "Paket digest ve 8/8 tarihsel kaynak pini doğrulandı",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P07.03",
+            "criterion": "Exact sürüm QA ve bağımsız IV incelemesi tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P07.04",
+            "criterion": "H01 exact yayın kararı ve custody kaydı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P07.05",
+            "criterion": "Gerçek ayrı scope binding/entitlement doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 8,
@@ -207,7 +519,52 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 5,
+        "percent": 20,
+        "items": [
+          {
+            "id": "P08.01",
+            "criterion": "A1 fiziksel tasarım yönü ve mantıksal eşleme mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P08.02",
+            "criterion": "Nihai Project ve WorkType PK/FK/DDL onaylandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P08.03",
+            "criterion": "WorkItem head ve altı rol fiziksel eşlemesi onaylandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P08.04",
+            "criterion": "RLS/least-privilege ve bağımsız custody onayı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P08.05",
+            "criterion": "Yetkili migration/rollback ve fiziksel kaynak bağlantısı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 9,
@@ -224,7 +581,55 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 5,
+        "percent": 40,
+        "items": [
+          {
+            "id": "P09.01",
+            "criterion": "WorkItemRequestDraft ve altı rol mantıksal sözleşmesi mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P09.02",
+            "criterion": "Strict PostgreSQL fail-closed transport koruması mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P09.03",
+            "criterion": "D5-C-R8/PR46 korumalı ön kontrol uzlaştırıldı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P09.04",
+            "criterion": "Typed HUMAN WORKITEM_REQUEST mevcut Coordinator'a bağlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P09.05",
+            "criterion": "Gerçek protected COMMIT ve tutarlı write-set/readback doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 10,
@@ -241,7 +646,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P10.01",
+            "criterion": "D0 digest/fence/UNKNOWN inceleme sözleşmesi mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P10.02",
+            "criterion": "Kalıcı scoped idempotency ve duplicate conflict doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P10.03",
+            "criterion": "Absent-head CAS ve concurrency doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P10.04",
+            "criterion": "Restart/revoke/restore/UNKNOWN reconciliation doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 11,
@@ -258,7 +701,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P11.01",
+            "criterion": "Salt okunur demo API ve D0 command binder mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P11.02",
+            "criterion": "Yetkili ayrı POST gerçek server-owned scope ile bağlı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P11.03",
+            "criterion": "201 yalnız protected COMMIT ve readback; replay/202 sınırı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P11.04",
+            "criterion": "Yetkili GET ve tenant sızıntı önleme doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 12,
@@ -275,7 +756,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P12.01",
+            "criterion": "CEO plan seçimi ve readback placeholder mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P12.02",
+            "criterion": "Gerçek request ID ve WorkItem bilgileri görüntüleniyor",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P12.03",
+            "criterion": "Reload/restart sonrası aynı ID ve yetki doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P12.04",
+            "criterion": "Revocation deny ve gerçek durum sunumu doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 13,
@@ -292,7 +811,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P13.01",
+            "criterion": "Mevcut Orchestrator engine ve D0 binder mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P13.02",
+            "criterion": "Kalıcı WorkItem/approved plan ilişkilendirildi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P13.03",
+            "criterion": "Yetkili plan/dedup ve kalıcı durum akışı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 14,
@@ -309,7 +859,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P14.01",
+            "criterion": "PR54 DAG ve sabit 7 görev/6 dalga D0 kaynakları mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P14.02",
+            "criterion": "Gerçek Task/WorkItem ve plan revision bağı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P14.03",
+            "criterion": "Bağımlılık sıralı yürütme ve hata/HOLD olayları doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 15,
@@ -326,7 +907,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P15.01",
+            "criterion": "Scheduler kaynakları ve state/version guard mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P15.02",
+            "criterion": "Kalıcı plan üzerinden ready task/role/capacity seçimi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P15.03",
+            "criterion": "Ayrı AGENT admission ve yetkili dispatch",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P15.04",
+            "criterion": "Retry/recovery ve gerçek state projection doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 16,
@@ -343,7 +962,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P16.01",
+            "criterion": "Runtime ve D0 admission kaynakları mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P16.02",
+            "criterion": "Gerçek AgentInstance/principal/assignment ve current grant",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P16.03",
+            "criterion": "WorkItem/Task/AgentRun ve durable admission/lease/fence/budget",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P16.04",
+            "criterion": "Gerçek lifecycle ve terminal sonuç doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 17,
@@ -360,7 +1017,48 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 4,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P17.01",
+            "criterion": "Mevcut model registry/router ve sample adapter korunuyor",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P17.02",
+            "criterion": "Recovered-memory Runtime model inceleme bağlantısı mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P17.03",
+            "criterion": "Yetkili gerçek model seçimi ve sağlayıcı yürütmesi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P17.04",
+            "criterion": "Token/cost, sonuç ve Evidence gerçek bağlamda doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 18,
@@ -377,7 +1075,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P18.01",
+            "criterion": "Mevcut registry/resolver ve sıkı source pin kontrolü",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P18.02",
+            "criterion": "Gerçek scope/capability/version/license izni",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P18.03",
+            "criterion": "Tool Gateway yetkili Runtime çağrısı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P18.04",
+            "criterion": "Sonuç/Evidence ve dış etki sınırı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 19,
@@ -394,7 +1130,48 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 4,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P19.01",
+            "criterion": "MEM05E, signed history ve snapshot lineage kaynakları",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P19.02",
+            "criterion": "Recovered-memory Runtime/Model review tüketicisi mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P19.03",
+            "criterion": "Gerçek scoped retrieval ve policy izni",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P19.04",
+            "criterion": "T1 kalıcı sonuç/kanıt ve Memory Studio bağlantısı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 20,
@@ -411,7 +1188,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P20.01",
+            "criterion": "D0 bütçe okuma ve paired read guard kaynakları",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P20.02",
+            "criterion": "Gerçek admission bütçe rezervasyonu ve T1",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P20.03",
+            "criterion": "Gerçek cost/settlement/release ve limit kontrolü",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 21,
@@ -428,7 +1236,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P21.01",
+            "criterion": "D0 RESEARCH planında QA adımı tanımlı",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P21.02",
+            "criterion": "Gerçek çıktı ve WorkItem-bound QA incelemesi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P21.03",
+            "criterion": "Kalıcı QA kararı, düzeltme ve no-release sınırı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 22,
@@ -445,7 +1284,52 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 5,
+        "percent": 20,
+        "items": [
+          {
+            "id": "P22.01",
+            "criterion": "PR10/46/52 teknik inceleme kaydı",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P22.02",
+            "criterion": "Yetkili bağımsız MI10 reviewer ve exact kararlar",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P22.03",
+            "criterion": "Gerçek F0/W-A/D03/D04 ve custody kanıtı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P22.04",
+            "criterion": "Bağımlılık/lisans/security bağımsız onayları",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P22.05",
+            "criterion": "Gerçek WorkItem sonuç/Evidence bağımsız IV kararı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 23,
@@ -462,7 +1346,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P23.01",
+            "criterion": "Mevcut Event Store/Outbox ve D0 projection kaynakları",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P23.02",
+            "criterion": "Gerçek WorkItem ve AgentRun event sözleşmesi bağlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P23.03",
+            "criterion": "Yetkili ortak read model ve outbox tüketimi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P23.04",
+            "criterion": "Freshness/offline/replay ve no-dispatch ayrımı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 24,
@@ -479,7 +1401,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P24.01",
+            "criterion": "Dashboard/RESEARCH paneli ve plan/ORG read kaynakları",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P24.02",
+            "criterion": "Gerçek görev/agent durum ve maliyet gösterimi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P24.03",
+            "criterion": "Gerçek QA/IV/sonuç ve authorized projection doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 25,
@@ -496,7 +1449,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P25.01",
+            "criterion": "Mevcut Office layout ve ortak ORG/plan okuma kontrolleri",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P25.02",
+            "criterion": "Gerçek AgentInstance/workstation/assignment eşlemesi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P25.03",
+            "criterion": "Gerçek lifecycle/event/handoff ve freshness doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 26,
@@ -513,7 +1497,38 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P26.01",
+            "criterion": "Mevcut Project/Workflow Studio ortak read/reset kaynakları",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P26.02",
+            "criterion": "Diğer Studio'ların ortak yetkili backend bağlantıları tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P26.03",
+            "criterion": "Studio bütünleşik kapsam doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 27,
@@ -530,7 +1545,45 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P27.01",
+            "criterion": "C50/R9 lock adayları ve direct-pin farkları belirlendi",
+            "closed": true,
+            "evidence_refs": [
+              "review",
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P27.02",
+            "criterion": "Exact dependency/runtime/security/lisans onayı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P27.03",
+            "criterion": "Onaylı exact backend/frontend ortamı hazır",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P27.04",
+            "criterion": "İzinli PostgreSQL ve bütünleşik çalışma ortamı doğrulandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 28,
@@ -546,7 +1599,46 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 4,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P28.01",
+            "criterion": "Rutin tekrar testini durduran doğrulama standardı kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P28.02",
+            "criterion": "Son tur manifest yol/boyut ve yayın raw pin kontrolü kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P28.03",
+            "criterion": "Tam arşiv ve tüm ürün raw hash doğrulaması",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P28.04",
+            "criterion": "Değişen davranışın zorunlu etkilenen akış kanıtı tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 29,
@@ -562,7 +1654,84 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 0,
+        "total": 10,
+        "percent": 0,
+        "items": [
+          {
+            "id": "P29.01",
+            "criterion": "E01 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.02",
+            "criterion": "E02 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.03",
+            "criterion": "E03 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.04",
+            "criterion": "E04 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.05",
+            "criterion": "E05 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.06",
+            "criterion": "E06 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.07",
+            "criterion": "E07 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.08",
+            "criterion": "E08 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.09",
+            "criterion": "E09 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P29.10",
+            "criterion": "E10 gerçek kabul kriteri kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 30,
@@ -578,7 +1747,76 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 3,
+        "total": 8,
+        "percent": 37.5,
+        "items": [
+          {
+            "id": "P30.01",
+            "criterion": "W8 kanonik kabul sayacı 1/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.02",
+            "criterion": "W8 kanonik kabul sayacı 2/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.03",
+            "criterion": "W8 kanonik kabul sayacı 3/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.04",
+            "criterion": "W8 kanonik kabul sayacı 4/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.05",
+            "criterion": "W8 kanonik kabul sayacı 5/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.06",
+            "criterion": "W8 kanonik kabul sayacı 6/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.07",
+            "criterion": "W8 kanonik kabul sayacı 7/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P30.08",
+            "criterion": "W8 kanonik kabul sayacı 8/8 (tekil kapı kimliği bu özet kayıtta ayrıştırılmadı)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 31,
@@ -594,7 +1832,30 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 2,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P31.01",
+            "criterion": "T01–T12 teslimat sırası kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P31.02",
+            "criterion": "12 operasyonel görevin tamamı kapanmış",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 32,
@@ -610,7 +1871,39 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 3,
+        "percent": 66.7,
+        "items": [
+          {
+            "id": "P32.01",
+            "criterion": "Merkezi teknik yazıcı yetkisi kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P32.02",
+            "criterion": "İlk teknik kaynak incelemesi ve devir kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P32.03",
+            "criterion": "Kalan kritik kaynak birleşimi ve gerçek ürün bağlantıları tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 33,
@@ -626,7 +1919,37 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P33.01",
+            "criterion": "Codex yerel çalışma rolü kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P33.02",
+            "criterion": "Güncel exact approved runtime/checkout",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P33.03",
+            "criterion": "Zorunlu gerçek yerel kanıtlar SHA bağlı devredildi",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 34,
@@ -642,7 +1965,44 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P34.01",
+            "criterion": "H01 nihai karar ve dar yayın sahibi ataması kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P34.02",
+            "criterion": "Exact RESEARCH yayın kararı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P34.03",
+            "criterion": "Bağımsız reviewer/custody ve kalan yetki kararları",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P34.04",
+            "criterion": "Nihai ürün kabulü",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 35,
@@ -658,7 +2018,37 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P35.01",
+            "criterion": "UI/Core/MVP/W8/IV kanonik oranları kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P35.02",
+            "criterion": "GOAL INTEGRATION onaylı payda",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P35.03",
+            "criterion": "Genel ağırlıklı gelişim onaylı payda",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 36,
@@ -674,7 +2064,91 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 0,
+        "total": 11,
+        "percent": 0,
+        "items": [
+          {
+            "id": "P36.01",
+            "criterion": "Kanonik MVP kabul sayacı 1/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.02",
+            "criterion": "Kanonik MVP kabul sayacı 2/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.03",
+            "criterion": "Kanonik MVP kabul sayacı 3/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.04",
+            "criterion": "Kanonik MVP kabul sayacı 4/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.05",
+            "criterion": "Kanonik MVP kabul sayacı 5/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.06",
+            "criterion": "Kanonik MVP kabul sayacı 6/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.07",
+            "criterion": "Kanonik MVP kabul sayacı 7/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.08",
+            "criterion": "Kanonik MVP kabul sayacı 8/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.09",
+            "criterion": "Kanonik MVP kabul sayacı 9/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.10",
+            "criterion": "Kanonik MVP kabul sayacı 10/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P36.11",
+            "criterion": "Kanonik MVP kabul sayacı 11/11 (kriter kimliği normatif kayıtta korunur)",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 37,
@@ -690,7 +2164,37 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3,
+        "items": [
+          {
+            "id": "P37.01",
+            "criterion": "15/35/20/20/10 raporlama standardı mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P37.02",
+            "criterion": "Görev bazında aşama kriter/payda setleri onaylandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P37.03",
+            "criterion": "Kanıtla ağırlıklı gelişim hesabı mümkün",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 38,
@@ -706,7 +2210,44 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25,
+        "items": [
+          {
+            "id": "P38.01",
+            "criterion": "MVP sonrası genişleme planı kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P38.02",
+            "criterion": "Ek WorkType ve otonom proje/ekip fonksiyonları tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P38.03",
+            "criterion": "SaaS ölçek/finans/operasyon kapsamı tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P38.04",
+            "criterion": "Genişleme kapsamının ayrı kabulü",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 39,
@@ -722,7 +2263,39 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 3,
+        "percent": 66.7,
+        "items": [
+          {
+            "id": "P39.01",
+            "criterion": "12 operasyonel görev sırası ve P0 engelleri kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P39.02",
+            "criterion": "İlk kaynak incelemesi ve sonraki iş kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P39.03",
+            "criterion": "Kalan operasyonel görevler tamamen kapandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     },
     {
       "plan_section": 40,
@@ -738,7 +2311,46 @@
         "plan"
       ],
       "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "plan_checklist": {
+        "done": 2,
+        "total": 4,
+        "percent": 50,
+        "items": [
+          {
+            "id": "P40.01",
+            "criterion": "Tek mevcut aday ve güvenlik/yetki çalışma disiplini kayıtlı",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P40.02",
+            "criterion": "Güncel ilerleme tablosu ve exact devir mevcut",
+            "closed": true,
+            "evidence_refs": [
+              "plan"
+            ],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P40.03",
+            "criterion": "Tam kaynak arşivi ve kalan doğrulamalar tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          },
+          {
+            "id": "P40.04",
+            "criterion": "Çalışan bütünleşik ürün ve yetkili kabul tamamlandı",
+            "closed": false,
+            "evidence_refs": [],
+            "scope": "plan milestone only; not independent acceptance"
+          }
+        ]
+      }
     }
   ],
   "operational_rows": [
@@ -759,7 +2371,20 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 3,
+        "total": 6,
+        "percent": 50,
+        "criterion_ids": [
+          "P03.01",
+          "P03.02",
+          "P03.03",
+          "P03.04",
+          "P03.05",
+          "P03.06"
+        ]
+      }
     },
     {
       "operational_number": 2,
@@ -780,7 +2405,28 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 3,
+        "total": 14,
+        "percent": 21.4,
+        "criterion_ids": [
+          "P05.01",
+          "P05.02",
+          "P05.03",
+          "P05.04",
+          "P05.05",
+          "P22.01",
+          "P22.02",
+          "P22.03",
+          "P22.04",
+          "P22.05",
+          "P27.01",
+          "P27.02",
+          "P27.03",
+          "P27.04"
+        ]
+      }
     },
     {
       "operational_number": 3,
@@ -800,7 +2446,23 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 2,
+        "total": 9,
+        "percent": 22.2,
+        "criterion_ids": [
+          "P06.01",
+          "P06.02",
+          "P06.03",
+          "P06.04",
+          "P08.01",
+          "P08.02",
+          "P08.03",
+          "P08.04",
+          "P08.05"
+        ]
+      }
     },
     {
       "operational_number": 4,
@@ -819,7 +2481,19 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 2,
+        "total": 5,
+        "percent": 40,
+        "criterion_ids": [
+          "P07.01",
+          "P07.02",
+          "P07.03",
+          "P07.04",
+          "P07.05"
+        ]
+      }
     },
     {
       "operational_number": 5,
@@ -839,7 +2513,23 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 2,
+        "total": 9,
+        "percent": 22.2,
+        "criterion_ids": [
+          "P05.01",
+          "P05.02",
+          "P05.03",
+          "P05.04",
+          "P05.05",
+          "P06.01",
+          "P06.02",
+          "P06.03",
+          "P06.04"
+        ]
+      }
     },
     {
       "operational_number": 6,
@@ -859,7 +2549,23 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 3,
+        "total": 9,
+        "percent": 33.3,
+        "criterion_ids": [
+          "P09.01",
+          "P09.02",
+          "P09.03",
+          "P09.04",
+          "P09.05",
+          "P10.01",
+          "P10.02",
+          "P10.03",
+          "P10.04"
+        ]
+      }
     },
     {
       "operational_number": 7,
@@ -881,7 +2587,32 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 5,
+        "total": 18,
+        "percent": 27.8,
+        "criterion_ids": [
+          "P08.01",
+          "P08.02",
+          "P08.03",
+          "P08.04",
+          "P08.05",
+          "P09.01",
+          "P09.02",
+          "P09.03",
+          "P09.04",
+          "P09.05",
+          "P10.01",
+          "P10.02",
+          "P10.03",
+          "P10.04",
+          "P11.01",
+          "P11.02",
+          "P11.03",
+          "P11.04"
+        ]
+      }
     },
     {
       "operational_number": 8,
@@ -903,7 +2634,30 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 5,
+        "total": 16,
+        "percent": 31.3,
+        "criterion_ids": [
+          "P04.01",
+          "P04.02",
+          "P04.03",
+          "P04.04",
+          "P04.05",
+          "P11.01",
+          "P11.02",
+          "P11.03",
+          "P11.04",
+          "P12.01",
+          "P12.02",
+          "P12.03",
+          "P12.04",
+          "P24.01",
+          "P24.02",
+          "P24.03"
+        ]
+      }
     },
     {
       "operational_number": 9,
@@ -924,7 +2678,24 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 3,
+        "total": 10,
+        "percent": 30,
+        "criterion_ids": [
+          "P13.01",
+          "P13.02",
+          "P13.03",
+          "P14.01",
+          "P14.02",
+          "P14.03",
+          "P15.01",
+          "P15.02",
+          "P15.03",
+          "P15.04"
+        ]
+      }
     },
     {
       "operational_number": 10,
@@ -947,7 +2718,33 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 7,
+        "total": 19,
+        "percent": 36.8,
+        "criterion_ids": [
+          "P16.01",
+          "P16.02",
+          "P16.03",
+          "P16.04",
+          "P17.01",
+          "P17.02",
+          "P17.03",
+          "P17.04",
+          "P18.01",
+          "P18.02",
+          "P18.03",
+          "P18.04",
+          "P19.01",
+          "P19.02",
+          "P19.03",
+          "P19.04",
+          "P20.01",
+          "P20.02",
+          "P20.03"
+        ]
+      }
     },
     {
       "operational_number": 11,
@@ -971,7 +2768,36 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 7,
+        "total": 22,
+        "percent": 31.8,
+        "criterion_ids": [
+          "P19.01",
+          "P19.02",
+          "P19.03",
+          "P19.04",
+          "P21.01",
+          "P21.02",
+          "P21.03",
+          "P22.01",
+          "P22.02",
+          "P22.03",
+          "P22.04",
+          "P22.05",
+          "P23.01",
+          "P23.02",
+          "P23.03",
+          "P23.04",
+          "P24.01",
+          "P24.02",
+          "P24.03",
+          "P25.01",
+          "P25.02",
+          "P25.03"
+        ]
+      }
     },
     {
       "operational_number": 12,
@@ -996,13 +2822,63 @@
         "plan",
         "review"
       ],
-      "closed": false
+      "closed": false,
+      "plan_checklist": {
+        "done": 8,
+        "total": 43,
+        "percent": 18.6,
+        "criterion_ids": [
+          "P27.01",
+          "P27.02",
+          "P27.03",
+          "P27.04",
+          "P28.01",
+          "P28.02",
+          "P28.03",
+          "P28.04",
+          "P29.01",
+          "P29.02",
+          "P29.03",
+          "P29.04",
+          "P29.05",
+          "P29.06",
+          "P29.07",
+          "P29.08",
+          "P29.09",
+          "P29.10",
+          "P30.01",
+          "P30.02",
+          "P30.03",
+          "P30.04",
+          "P30.05",
+          "P30.06",
+          "P30.07",
+          "P30.08",
+          "P35.01",
+          "P35.02",
+          "P35.03",
+          "P36.01",
+          "P36.02",
+          "P36.03",
+          "P36.04",
+          "P36.05",
+          "P36.06",
+          "P36.07",
+          "P36.08",
+          "P36.09",
+          "P36.10",
+          "P36.11",
+          "P37.01",
+          "P37.02",
+          "P37.03"
+        ]
+      }
     }
   ],
   "maintenance": {
     "source_of_truth": "progress/RESEARCH_FIRST_ILERLEME_TABLOSU.json",
     "rendered_markdown": "docs/master-integration/RESEARCH_FIRST_ILERLEME_TABLOSU.md",
-    "rule": "Each meaningful development updates only affected rows with date, old/new status, evidence exact SHA/path, stage criterion/payda/delta if approved, acceptance separate, owner/blocker and next action; render MD from same JSON; preserve unaffected rows and prior versions in Git; no speculative progress, no extra reports merely to raise counts. Operational section mapping is navigation only, not new scoring or normative IDs. Read current heads and table every round.",
+    "rule": "Each meaningful development updates only affected rows with date, old/new status, evidence exact SHA/path, stage criterion/payda/delta if approved, acceptance separate, owner/blocker and next action; render MD from same JSON; preserve unaffected rows and prior versions in Git; no speculative progress, no extra reports merely to raise counts. Operational section mapping is navigation only, not new scoring or normative IDs. Read current heads and table every round. Plan checklist IDs/denominators remain fixed unless explicitly revised with reason and old/new baseline; record before/after counts and percentage points; no acceptance inference.",
     "rollback": "Normal revert of governance-only commit; product sources and previous plan preserved."
   },
   "history": [
@@ -1012,6 +2888,13 @@
       "candidate": "645c081e2cc107440662600b749d34415ad2f713",
       "changed_sections": [],
       "reason": "Initial table formatting and baseline recording only; no product code/test/acceptance change."
+    },
+    {
+      "revision": 2,
+      "date": "2026-11-28",
+      "candidate": "645c081e2cc107440662600b749d34415ad2f713",
+      "changed_sections": [],
+      "reason": "Added explicit milestone counts and numeric checklist percent at H01 request. New reporting denominator, not actual product progress or acceptance; weighted development still unavailable."
     }
   ]
 }
