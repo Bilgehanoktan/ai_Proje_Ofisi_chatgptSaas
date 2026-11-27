@@ -17783,4 +17783,96 @@
   "next": "Obtain technical/MI10 dispositions already requested, then H01 normative decision if required. Use approved existing T1 mapping, real HUMAN auth and protected commit; implement actual route and readback; no second engine. Run affected binder and actual browser after exact approved environment. No unrelated phase.",
   "rollback": "ordinary revert source and governance commit; no DB/API/event/dependency/CI/main/PROD changes; preserve prior PR comments."
 }
+,
+  "h01_mvp03_p0_binder_execution_20261127": {
+  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+  "priority": "P0",
+  "phase": "7 same P0 task",
+  "status": "BINDER_TESTS_PASS_PROTECTED_RECORD_HOLD",
+  "candidate": "ce6bbbaf5eca44a6d83982e5909b2e1b1efae7a9",
+  "tested_source": "c556aa938d6d3ccbb216280e0bdb06397e9d5881",
+  "candidate_branch": "integration/h01-r6-research-unified-20261127",
+  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "manifest": {
+    "entries": 589,
+    "product_files": 590,
+    "blob": "5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb",
+    "product_tree": "f4994e99c07313181fb86256af60e2b7c1a0f26e",
+    "status": "unchanged exact product tree; prior full manifest proof reused"
+  },
+  "tests": {
+    "binder": {
+      "status": "PASS",
+      "passed": 8,
+      "total": 8,
+      "exit": 0,
+      "seconds": 0.007,
+      "environment": "CPython 3.13.5 Linux x86_64 stdlib only; -B -S; no package installation; authorized isolated synthetic test, not approved full C50/R9 runtime",
+      "command": "python -B -S -m unittest discover -s tests -p test_research_command_review_mvp03.py -v",
+      "closure": "15/15 exact file bytes, SHA256 and Git blob match candidate manifest/tree; static imports stdlib or local app; source reconstructed from connector plus identical archived fixture; not full checkout",
+      "preflight": {
+        "path": "handover/evidence/H01_MVP03_P7_BINDER_20261127/preflight.log",
+        "sha256": "3c57cf7966fdecfd38b7231ad4edfcf8cd2e472a8a4f3adf6bf109a3cd0f017a",
+        "blob": "21f5f46be9e542a6ea569fc3971cf31f71ea8da3"
+      },
+      "raw": {
+        "path": "handover/evidence/H01_MVP03_P7_BINDER_20261127/unittest.log",
+        "sha256": "a45d2bfd19098a752d4f94ed34e59ff463c762d529ecf68bcf31245c855d64fe",
+        "blob": "6d72f9c6a3e89f9296ec89dcf1f45b6f0e42cf58"
+      },
+      "github_raw_readback": "PASS exact SHA256"
+    },
+    "ui_browser": "NOT_RUN",
+    "ui_typecheck": "NOT_RUN",
+    "build": "NOT_RUN",
+    "reason": "No approved full frontend or C50/R9 exact runtime; actual browser not run. Local tsc5.8.3 differs from package pin5.9.3; no install. Direct Git checkout unavailable in container (DNS); exact scoped source verified instead."
+  },
+  "tracks": {
+    "core": {
+      "pr": 10,
+      "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+      "comment": 7225465563,
+      "status": "HOLD",
+      "owner": "MI02/03/04 technical and MI10 independent",
+      "missing": "approved typed HUMAN WorkItem physical write/read mapping, protected commit, durable idempotency, independent custody/restore and RLS; no new review response or submitted review",
+      "first_action": "ratify exact existing mapping if found or bring bounded normative WORKITEM_REQUEST extension to H01 only after independent review"
+    },
+    "iam": {
+      "pr": 46,
+      "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "comment": 7225466658,
+      "status": "HOLD",
+      "owner": "MI03/04 IAM/ORG, MI02/05/06 API/UI",
+      "missing": "real HUMAN issuer and project create/read permission, expiry/revocation, COMMIT, same-ID readback",
+      "first_action": "integrate server-resolved identity and approved protected operation; no synthetic grant or enabled button"
+    },
+    "runtime": {
+      "pr": 52,
+      "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+      "comment": 7225467598,
+      "status": "HOLD",
+      "owner": "MI01/10",
+      "missing": "existing 25-row C50/R9 review lock fb50ae2d06594150887e849d61de027c61ae1492 runtime/security/license/native-wheel and source pin approval",
+      "install": "NOT_RUN"
+    }
+  },
+  "coordination": "No new review submissions, replies or requested reviewers on 3 relevant PRs; actual authorized independent reviewer assignment not verified. Existing comments reused, no duplicate request. H01 can identify authorized MI10 reviewer, not replace independent review.",
+  "phase4": "E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD; binder subset PASS does not close E03",
+  "phase5": "real execution HOLD",
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "integration": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "source_gain": "No new product code. Existing binder now verified on exact source; evidence-only commit. No HTTP201, request ID, actual restart/readback/dedup. Existing product safety boundaries unchanged.",
+  "next": "Obtain authenticated MI02/03/04 and MI10 disposition (establish authorized reviewer assignment). Then H01 normative decision if required; implement approved typed mapping, real HUMAN permission and protected transaction; only then real HTTP201/readback/restart/idempotency followed by E01-E10. Do not repeat binder suite unless its source/dependencies change.",
+  "rollback": "normal revert evidence and tracker commits; product tree, DB/API/events and permissions unchanged."
+}
 }
