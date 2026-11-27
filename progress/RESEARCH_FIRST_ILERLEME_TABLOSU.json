@@ -1,0 +1,1017 @@
+{
+  "schema_version": 1,
+  "revision": 1,
+  "updated": "2026-11-28",
+  "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
+  "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
+  "plan_ref": {
+    "commit": "b4b8a9b5d0c78b23926822251e23dc3dabb74c13",
+    "path": "docs/master-integration/RESEARCH_FIRST_INTEGRATION_PLAN_20261128.md",
+    "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
+  },
+  "observed": {
+    "governance": "b4b8a9b5d0c78b23926822251e23dc3dabb74c13",
+    "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "candidate_branch": "integration/h01-r6-research-unified-20261127",
+    "candidate": "645c081e2cc107440662600b749d34415ad2f713",
+    "product_tree": "3bdec49f342cfbd8589eb6d999de8410966adb9f",
+    "manifest": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+    "product_files": 593,
+    "manifest_entries": 592
+  },
+  "measurement": {
+    "development_percent": null,
+    "development_status": "HESAPLANAMADI",
+    "stage_weights": {
+      "design": 15,
+      "source": 35,
+      "functional_test": 20,
+      "integration": 20,
+      "acceptance": 10
+    },
+    "reason": "No approved per-stage task denominators. No estimates. Operational rollup is not weighted progress; overlapping section references do not count twice.",
+    "integration_percent": null,
+    "acceptance": {
+      "UI": {
+        "done": 21,
+        "total": 40
+      },
+      "CORE": {
+        "done": 12,
+        "total": 16
+      },
+      "MVP": {
+        "done": 0,
+        "total": 11
+      },
+      "W8": {
+        "done": 3,
+        "total": 8
+      },
+      "IV": {
+        "done": 0,
+        "total": 7
+      }
+    },
+    "acceptance_delta_pp": 0,
+    "closed_operational": 0,
+    "total_operational": 12
+  },
+  "evidence": {
+    "plan": {
+      "commit": "b4b8a9b5d0c78b23926822251e23dc3dabb74c13",
+      "path": "docs/master-integration/RESEARCH_FIRST_INTEGRATION_PLAN_20261128.md",
+      "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
+    },
+    "review": {
+      "commit": "645c081e2cc107440662600b749d34415ad2f713",
+      "path": "catalog/revisions/H01_UNIFIED_SOURCE_RECONCILIATION_20261128.json",
+      "blob": "17b8a0e6f98a67698d5924154ea5d89bba13554b",
+      "key": "research_first_function_review_20261128"
+    },
+    "report": {
+      "commit": "b6983047430cecde80a02c6384a22fe80301ad93",
+      "path": "progress/REPORTING_STANDARD_20261118.md"
+    }
+  },
+  "detail_rows": [
+    {
+      "plan_section": 1,
+      "area": "Başlangıç ve kaynak otoritesi",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "AKTİF",
+      "ready": "Dört merkezi dal HEAD ve plan referansları doğrulandı.",
+      "missing": "Tam Design Master eklerinin ve kalan arşivin uzlaştırması açık.",
+      "next": "Her tur exact SHA, sahiplik ve etkilenen kaynak kontrolü.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 2,
+      "area": "Ana yön ve mimari",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "PLAN KAYITLI",
+      "ready": "RESEARCH-first yönü, tek WorkItem ve mevcut motorlar kayıtlı.",
+      "missing": "Gerçek uçtan uca ürün zinciri çalışır olarak kabul edilmedi.",
+      "next": "Önce CEO–IAM–T1–readback dilimini kapat.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 3,
+      "area": "Tek ürün ağacı",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "DEVAM",
+      "ready": "593 dosya, 592/592 yol/boyut, 7 teknik kaynak grubu; üç özgün kaynak önceki turda aktarılmış.",
+      "missing": "D5-C-R8/PR46 ortak davranış, kalan farklı sürümler, tam arşiv ve tüm raw hash kontrolü.",
+      "next": "Exact kaynak birleşimini değerlendir; yalnız doğrulanabilir kaynakları aktar.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 4,
+      "area": "CEO talebi — MI-05/06",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "ResearchRequestPanel, gözleme bağlı sabit plan seçimi ve dört alanlı D0 komut sözleşmesi.",
+      "missing": "Yetkili proje, POST ve gerçek kayıt; gönderim devre dışı.",
+      "next": "Yetkili komut sözleşmesine bağla; kapılar açıkken etkinleştirme.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 5,
+      "area": "HUMAN IAM — MI-03/04, PR46",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "D5-G1/G2 ve PR46 D0 SessionClaimCheck mevcut.",
+      "missing": "Gerçek issuer/custody, HUMAN create/read izni ve bağımsız inceleme.",
+      "next": "PR46 gerçek IAM otoritesi ve proje iznini kesinleştir.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 6,
+      "area": "ORG ve Project — MI-02/03/06",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "ORG D0 okuma ve G4/G5 referans inceleme kaynakları mevcut.",
+      "missing": "Gerçek Project otoritesi, WorkOwner, üyelik ve güncel revizyon.",
+      "next": "A1 Project otoritesini ve IAM/ORG bağını kesinleştir.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 7,
+      "area": "RESEARCH WorkType yayını — H01/katalog sahibi/QA/MI-10",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "RESEARCH@mvp03-request-1-rc1 paket 4107 byte; 8/8 tarihsel pin, içerik/provenance digest doğrulandı.",
+      "missing": "QA/IV exact sürüm, H01 yayın kararı ve ayrı scope binding/entitlement.",
+      "next": "Mevcut paket kimliğiyle yayın incelemesini tamamla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 8,
+      "area": "Fiziksel veri modeli — MI-02/03/04",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "A1 tasarım yönü ve Project/WorkType/WorkItem mantıksal eşlemesi.",
+      "missing": "Nihai PK/FK/DDL, RLS, veri sahibi ve bağımsız otorite; migration izni.",
+      "next": "Mevcut eşdeğerleri araştır, fiziksel sözleşmeyi kesinleştir.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 9,
+      "area": "Mevcut T1 Coordinator — MI-02/04",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "WorkItem taslağı, altı rol readback ve mevcut strict PostgreSQL deny guard.",
+      "missing": "Typed HUMAN protected COMMIT; D5-C-R8 ve PR46 birleşimi; D03/D04.",
+      "next": "Mevcut Coordinator ve Authority içinde no-fallback birleşimini hazırla; zorunlu kanıt kapısı.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 10,
+      "area": "Idempotency/fencing/recovery",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "D0 digest/fence ve UNKNOWN inceleme sözleşmeleri mevcut.",
+      "missing": "Kalıcı WorkItem idempotency, absent-head CAS, restore ve gerçek readback.",
+      "next": "Onaylı fiziksel eşleme üzerinde fence ve recovery sözleşmesini bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 11,
+      "area": "Backend komut/geri okuma — MI-02/03/05",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "D0 binder ve mevcut salt okunur demo API.",
+      "missing": "Yetkili ayrı POST/GET, gerçek 201 ve aynı-ID readback; replay kararı.",
+      "next": "HUMAN/Project/T1 kapılarıyla mevcut backend komutunu bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 12,
+      "area": "CEO paneli ilk gerçek geri okuma — MI-05/06",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "ResearchRequestPanel geri okuma alanı ve plan seçimi mevcut; submit/read disabled.",
+      "missing": "Gerçek request ID ve reload/restart sonrası yetkili okuma.",
+      "next": "Protected COMMIT sonrası gerçek API geri okumasını bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 13,
+      "area": "Orchestrator — MI-02/04",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "Mevcut engine.py ve research_command_review.py sabit plan binder.",
+      "missing": "Kalıcı WorkItem, approved plan ve kalıcı durum ilişkisi.",
+      "next": "İlk görev kaydına mevcut Orchestrator'ı bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 14,
+      "area": "DAG",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "PR54 DAG kaynakları mevcut; D0 7 görev/6 dalga.",
+      "missing": "Gerçek Task/WorkItem ilişkisi, yetkili yürütme ve event kaydı.",
+      "next": "Mevcut DAG'ı kalıcı plan revizyonuna bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 15,
+      "area": "Scheduler",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "Scheduler state/version guard korunuyor; PR54 kaynakları mevcut.",
+      "missing": "Gerçek AGENT admission, kapasite/bütçe, dispatch ve retry.",
+      "next": "WorkItem planıyla mevcut Scheduler bağlantısını hazırla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 16,
+      "area": "Agent Runtime — MI-03/04/07",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "Runtime, admission ve D0 okuma kaynakları mevcut; paired read guard aktarılmış.",
+      "missing": "Gerçek agent grant/lease, RunAdmission/T1 ve lifecycle.",
+      "next": "Ayrı AGENT admission ve mevcut Runtime sözleşmelerini bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 17,
+      "area": "Model Gateway — MI-07",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "DEVAM",
+      "ready": "PR53 router, registry ve recovered-memory sample adapter kaynakları korunuyor.",
+      "missing": "Gerçek yetkili sağlayıcı, model/maliyet ve Runtime yürütme.",
+      "next": "Mevcut model bağlantısını WorkItem/AgentRun bağlamında uzlaştır.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 18,
+      "area": "Skill/Tool — MI-09",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "DEVAM",
+      "ready": "PR55 daha sıkı exact SourcePin/string kontrolleri mevcut.",
+      "missing": "Gerçek skill/tool kullanım yetkisi ve sonuç/evidence.",
+      "next": "Mevcut resolver ve Tool Gateway'i yetkili Runtime'a bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 19,
+      "area": "Memory/Knowledge — MI-08",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "DEVAM",
+      "ready": "MEM05E Runtime, signed history, snapshot lineage korumaları mevcut.",
+      "missing": "Yetkili retrieval, T1 kalıcı WorkItem sonucu, gerçek scope.",
+      "next": "Memory/Model ve kalıcı sonuç sözleşmesini aynı görevde birleştir.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 20,
+      "area": "Finance/Budget (MVP minimum)",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "D0 task_budget_snapshot ve paired read guard kaynakları mevcut.",
+      "missing": "Gerçek bütçe rezervasyonu, settlement ve maliyet kaydı.",
+      "next": "Admission ve T1 budget bağını mevcut policy ile tamamla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 21,
+      "area": "QA",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "D0 referans planında QA adımı ve kalite kapısı tanımlı.",
+      "missing": "Gerçek araştırma çıktısı, WorkItem-bound QA kararı ve kanıt.",
+      "next": "Gerçek çıktı üretilince mevcut QA zincirini bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 22,
+      "area": "Security/Independent Verifier — MI-10 bağımsız",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "PR10/46/52 teknik incelemesi; mevcut bağımsız kabul kuralları korunuyor.",
+      "missing": "Son kayıtta üç PR'da 0 review; MI10, custody, D03/D04 ve bağımsız kararlar.",
+      "next": "Yetkili bağımsız incelemeci ve exact PR kararları.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 23,
+      "area": "Event Store / Projection",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "Event Store/Outbox ve D0 projection kaynakları mevcut.",
+      "missing": "Gerçek WorkItem/AgentRun olayları, non-dispatch ayrımı ve ortak read model.",
+      "next": "Korumalı kayıttan gerçek olay tüketimine bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 24,
+      "area": "CEO Command Center",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "Dashboard, mevcut source summary ve RESEARCH paneli; plan/ORG shared read.",
+      "missing": "Gerçek görev, sonuç, maliyet, QA/IV ve yetkili durum.",
+      "next": "İlk aynı-ID readback ve gerçek projection.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 25,
+      "area": "2.5D Office",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "Mevcut Office kaynakları ve ortak ORG/plan okuma kontrolleri; JOIN_HOLD.",
+      "missing": "Gerçek AgentInstance–workstation ve event projection.",
+      "next": "Yetkili gerçek olaylarla ofis görünümünü bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 26,
+      "area": "Diğer Studio (paralel, kritik yol değil)",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "PARALEL",
+      "ready": "Güncel Project/Workflow Studio plan read/reset ve shared projection kaynakları korunuyor.",
+      "missing": "Diğer Studio alanlarının gerçek ortak backend bağlantıları.",
+      "next": "RESEARCH kritik yolunu bekletmeden bağımsız uygun Studio işi.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 27,
+      "area": "Çalışma ortamı — MI-01/MI-10/Codex",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "Frontend lock, PR52 R9 20 paket ve C50/R9 25 paket adayları incelendi.",
+      "missing": "FastAPI 0.163.0→0.163.2 ve cryptography 46.0.4→50.0.2 owner/security/runtime/lisans kararı; onaylı ortam.",
+      "next": "Exact lock kararları; onaysız install yok.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "review",
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 28,
+      "area": "Doğrulama sınırı",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "AKTİF",
+      "ready": "Yeni rutin test yok; önceki kanıt ayrımı ve 592/592 yol/boyut kontrolü.",
+      "missing": "Tam arşiv ve tüm raw SHA-256; değişen davranışın zorunlu doğrulaması.",
+      "next": "Sadece ilgili zorunlu kapıyı izinli kapsamda kapat.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 29,
+      "area": "Mevcut MVP-03 E01–E10",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "E01/E03/E10 NOT_RUN, E02/E04–E09 HOLD; D0 kanıtları ayrı.",
+      "missing": "Gerçek E01–E10 kabulü.",
+      "next": "İlk korumalı RESEARCH akışını exact oracle ile doğrula.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 30,
+      "area": "W8",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "W8 3/8 kayıtlı; önceki dar kapsamlı kanıtlar korunuyor.",
+      "missing": "Kaynak sahibi/bağımlılık/lisans, resmi C07, gerçek C08, bağımsız C05.",
+      "next": "Mevcut W8 zincirinde sıradaki izinli kapıyı kapat.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 31,
+      "area": "Plan içi 12 teslimat noktası",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "PLAN KAYITLI",
+      "ready": "T01–T12 teslimat noktaları ve bağımlılık sırası mevcut.",
+      "missing": "Hiçbir bütün teslimatın kapanışı son kayıtta kanıtlanmadı.",
+      "next": "Aynı planı 12 operasyonel görev ve 40 bölüm düzeyinde izle.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 32,
+      "area": "ChatGPT",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "AKTİF",
+      "ready": "H01 merkezi teknik yazıcı yetkisi mevcut; 7 grup teknik inceleme kayıtlı.",
+      "missing": "Uygun gerçek kaynak değişiklikleri ve aktarım; bağımsız IV ayrı.",
+      "next": "D5-C-R8/PR46 ve diğer uygulanabilir kaynak işlerini ele al.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 33,
+      "area": "Codex",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KISMEN HAZIR",
+      "ready": "Codex yerel geliştirme/kanıt rolü planlı; mevcut tarihsel ortam kanıtları korunuyor.",
+      "missing": "Güncel exact checkout ve onaylı lock/runtime ile gerekli yerel doğrulamalar.",
+      "next": "Yetkili kapsam ve SHA bağlı görev devri.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 34,
+      "area": "H01",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "H01 nihai karar ve dar RESEARCH yayın sahibi ataması mevcut.",
+      "missing": "Exact yayın, bağımsız reviewer/custody ve gerçekten yeni yetki kararları.",
+      "next": "Yalnız eksik yeni H01 kararlarını sun; önceki izni tekrar isteme.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 35,
+      "area": "Başlangıç resmî kabul",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KAYITLI",
+      "ready": "UI21/40, Core12/16, MVP0/11, W8 3/8, IV0/7; son delta 0.",
+      "missing": "GOAL INTEGRATION ve genel gelişim için onaylı payda.",
+      "next": "Her tur önceki/güncel/delta kanıtıyla güncelle.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 36,
+      "area": "Mevcut 11 MVP kriteri",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "HOLD",
+      "ready": "11 normatif MVP kabul kriteri planlı ve kayıtlı.",
+      "missing": "Gerçek kabul 0/11; her kriter ayrı kanıt gerektirir.",
+      "next": "İlk RESEARCH kayıt/readback, ardından yürütme ve kabul.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 37,
+      "area": "Geliştirme metrikleri",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "KAYITLI",
+      "ready": "15/35/20/20/10 standardı ve üç ayrı metrik mevcut.",
+      "missing": "Görev bazlı onaylı aşama kriter/payda yok.",
+      "next": "Kriter setlerini onayla; yoksa HESAPLANAMADI.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 38,
+      "area": "Genişleme",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "SONRA / PARALEL",
+      "ready": "Diğer WorkType ve SaaS genişleme planı kayıtlı.",
+      "missing": "Gerçek kapsam/entegrasyon ve ayrı kabul; ilk MVP önkoşulu değil.",
+      "next": "Bağımsız uygun kaynakları ilerlet; kritik yolu koru.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 39,
+      "area": "Hemen uygulanacak sıra ve engeller",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "AKTİF",
+      "ready": "12 operasyonel görev, P0 ortak engeller ve ilk kaynak incelemesi kayıtlı.",
+      "missing": "01–12 tam kapanışları açık.",
+      "next": "Önce D5-C-R8/PR46, A1 ve yayın/IAM/bağımsız kapılar.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    },
+    {
+      "plan_section": 40,
+      "area": "Çalışma disiplini ve nihai hedef",
+      "development_percent": null,
+      "development_status": "HESAPLANAMADI",
+      "status": "AKTİF",
+      "ready": "Tek izole aday, mevcut yetkiler ve son devir kaydı korundu.",
+      "missing": "Çalışan bütünleşik ürün, tam arşiv ve eksik kabul kanıtları.",
+      "next": "Her anlamlı işte ilgili satır, exact SHA, kanıt ve delta güncelle.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan"
+      ],
+      "previous_status": null,
+      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok."
+    }
+  ],
+  "operational_rows": [
+    {
+      "operational_number": 1,
+      "area": "RESEARCH kaynak uzlaştırması",
+      "owner": "Merkezi entegrasyon",
+      "plan_sections": [
+        3
+      ],
+      "development_percent": null,
+      "status": "DEVAM",
+      "ready": "593 dosya; 592/592 yol/boyut; 7 kaynak grubu.",
+      "missing": "D5-C-R8/PR46 birleşimi, kalan işlev farkları ve arşiv.",
+      "next": "Exact birleşim ve doğrulanabilir kaynak aktarımı.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 2,
+      "area": "PR #10, #46, #52 kararları",
+      "owner": "MI-02/03/04 ve bağımsız MI-10",
+      "plan_sections": [
+        5,
+        22,
+        27
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "Teknik inceleme kayıtlı; PR46 D0 kaynakları mevcut.",
+      "missing": "Bağımsız review, gerçek IAM/otorite ve dependency kararları.",
+      "next": "Yetkili reviewer ve exact PR disposition.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 3,
+      "area": "A1 fiziksel WorkItem/Project",
+      "owner": "MI-02/03/04",
+      "plan_sections": [
+        6,
+        8
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "A1 tasarım yönü ve mantıksal eşleme.",
+      "missing": "Nihai schema, custody, RLS ve migration kararı.",
+      "next": "Fiziksel eşlemeyi mevcut store ile kesinleştir.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 4,
+      "area": "RESEARCH WorkType yayını",
+      "owner": "H01 / QA / IV",
+      "plan_sections": [
+        7
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "8/8 tarihsel pin ve paket digest doğrulandı.",
+      "missing": "QA/IV/H01 exact yayın ve ayrı binding.",
+      "next": "Mevcut paket üzerinden yayın kararı.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 5,
+      "area": "Gerçek HUMAN IAM ve Project",
+      "owner": "MI-03/04",
+      "plan_sections": [
+        5,
+        6
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "D0 session/ORG review kaynakları.",
+      "missing": "Gerçek issuer, güncel create/read permission.",
+      "next": "Yetkili kimlik ve proje otoritesine bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 6,
+      "area": "HUMAN WorkItem / T1",
+      "owner": "MI-02/04",
+      "plan_sections": [
+        9,
+        10
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "Taslak ve strict transport deny guard.",
+      "missing": "Typed protected operation ve ortak ön kontrol.",
+      "next": "D5-C-R8/PR46 no-fallback birleşimi.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 7,
+      "area": "PostgreSQL ve readback",
+      "owner": "MI-02/04",
+      "plan_sections": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "Altı rol ve mantıksal readback sözleşmesi.",
+      "missing": "Gerçek kalıcı COMMIT, aynı-ID, restart, RLS.",
+      "next": "Onaylı mapping ve protected DB bağlantısı.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 8,
+      "area": "CEO Paneli / Backend",
+      "owner": "MI-05/06",
+      "plan_sections": [
+        4,
+        11,
+        12,
+        24
+      ],
+      "development_percent": null,
+      "status": "KISMEN HAZIR",
+      "ready": "Sabit plan seçimi ve panel mevcut.",
+      "missing": "Gerçek command ve readback; submit/read devre dışı.",
+      "next": "Yetkili API ile gerçek kayıt gösterimi.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 9,
+      "area": "Orchestrator / Scheduler",
+      "owner": "Core / Runtime",
+      "plan_sections": [
+        13,
+        14,
+        15
+      ],
+      "development_percent": null,
+      "status": "KISMEN HAZIR",
+      "ready": "Mevcut DAG/Scheduler; D0 7 görev 6 dalga.",
+      "missing": "Kalıcı WorkItem ve gerçek admission bağlantısı.",
+      "next": "Aynı WorkItem'a plan ve scheduler bağla.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 10,
+      "area": "Runtime / Model / Skill / Memory",
+      "owner": "MI-03/07/08/09",
+      "plan_sections": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "development_percent": null,
+      "status": "DEVAM",
+      "ready": "Güncel motor kaynakları ve korumalar mevcut.",
+      "missing": "Gerçek grant/lease/budget, retrieval ve yürütme.",
+      "next": "Yetkili Runtime bağını mevcut motorlara kur.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 11,
+      "area": "Sonuç / QA / IV / Office",
+      "owner": "MI-02/05/06/10",
+      "plan_sections": [
+        19,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "development_percent": null,
+      "status": "KISMEN HAZIR",
+      "ready": "Mevcut D0 plan ve projection kaynakları.",
+      "missing": "Gerçek sonuç, bağımsız denetim ve ofis durumu.",
+      "next": "Kalıcı sonuç ve gerçek event projection.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    },
+    {
+      "operational_number": 12,
+      "area": "Zorunlu doğrulama ve kabul",
+      "owner": "MI-01/10 / H01",
+      "plan_sections": [
+        27,
+        28,
+        29,
+        30,
+        35,
+        36,
+        37
+      ],
+      "development_percent": null,
+      "status": "HOLD",
+      "ready": "Önceki geçerli kanıtlar ve E01–E10 kaydı.",
+      "missing": "Zorunlu gerçek doğrulama ve bağımsız kabul.",
+      "next": "Kapıları yetkili sırayla kapat.",
+      "as_of": "2026-11-28",
+      "evidence_refs": [
+        "plan",
+        "review"
+      ],
+      "closed": false
+    }
+  ],
+  "maintenance": {
+    "source_of_truth": "progress/RESEARCH_FIRST_ILERLEME_TABLOSU.json",
+    "rendered_markdown": "docs/master-integration/RESEARCH_FIRST_ILERLEME_TABLOSU.md",
+    "rule": "Each meaningful development updates only affected rows with date, old/new status, evidence exact SHA/path, stage criterion/payda/delta if approved, acceptance separate, owner/blocker and next action; render MD from same JSON; preserve unaffected rows and prior versions in Git; no speculative progress, no extra reports merely to raise counts. Operational section mapping is navigation only, not new scoring or normative IDs. Read current heads and table every round.",
+    "rollback": "Normal revert of governance-only commit; product sources and previous plan preserved."
+  },
+  "history": [
+    {
+      "revision": 1,
+      "date": "2026-11-28",
+      "candidate": "645c081e2cc107440662600b749d34415ad2f713",
+      "changed_sections": [],
+      "reason": "Initial table formatting and baseline recording only; no product code/test/acceptance change."
+    }
+  ]
+}
