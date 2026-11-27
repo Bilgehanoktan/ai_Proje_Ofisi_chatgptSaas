@@ -1,0 +1,49 @@
+{
+  "task": "H01-MVP03-01-PHASE3-BINDING",
+  "parent": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
+  "decision": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "scope": "Existing binder only; strict fixed D0 pin, cap, reject non-JSON constants, safe plan compiler errors, immutable HOLD/false flags. New test source adapts historical review cases to actual existing binder. No second validator or runtime.",
+  "changes": [
+    {
+      "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+      "bytes": 4463,
+      "sha256": "b290147418809150b746eecbd95f3c4db2cfc2176f651dbb6e1e3af7e49f47b7"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+      "bytes": 4509,
+      "sha256": "f1c7f7bfd0a2502a5b37f70224de61f33edf538db9a1e6ebbe859d2c0639b8da"
+    }
+  ],
+  "previous_blob": "27a8e120fbc53bd84330f64f2f6bf649515eacd9",
+  "previous_manifest": "c1ebba70f9030cb2325218feed27ca9431d076d8",
+  "dependencies": {
+    "engine": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+    "dag": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+    "lifecycle": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+    "review": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "fixture": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7"
+  },
+  "api_db_event": "No route, DB, schema, event, provider, permission or lock change. No legacy write path.",
+  "tests": {
+    "new_methods": 8,
+    "execution": "NOT_RUN",
+    "previous_review": "12/12 historical separate candidate, not carried as current PASS"
+  },
+  "acceptance": {
+    "MVP": "0/11",
+    "criterion3": "HOLD",
+    "e01_e10": "not accepted",
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "blockers": [
+    "real HUMAN IAM and project permission",
+    "approved physical WorkItem persistence and scoped idempotency mapping",
+    "strict protected PostgreSQL COMMIT",
+    "independent security/IV and C50/R9 dependency/runtime/licensing clearance",
+    "actual browser and DB readback"
+  ],
+  "next": "Run only required binder suite after exact source availability; integrate CEO local plan selection and reviewed protected request port without registering live mutation or fabricating receipt.",
+  "rollback": "ordinary revert of isolated source commit; no DB migration or canonical mutation"
+}

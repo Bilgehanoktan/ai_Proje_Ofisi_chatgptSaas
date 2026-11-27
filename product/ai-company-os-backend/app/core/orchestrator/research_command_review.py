@@ -1,5 +1,5 @@
-"""Non-normative CEO RESEARCH command binding for isolated D0 review."""
-from dataclasses import dataclass
+"""H01-MVP03-01: isolated D0 fixed-plan binding, never persistence or admission."""
+from dataclasses import dataclass, field
 import json
 
 from app.core.agent_runtime.lifecycle import token
@@ -9,6 +9,10 @@ from app.core.transaction.review import digest_ok
 
 
 _FIELDS = {"worktype", "project_ref", "plan_ref", "expected_plan_revision"}
+# Existing reviewed D0 fixture, not production plan approval or a public API limit.
+_D0_PLAN_REF = "demo-plan-research"
+_D0_PLAN_REVISION = "sha256:6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9"
+_D0_MAX_BODY_BYTES = 4096
 
 
 class ResearchCommandError(ValueError):
@@ -22,6 +26,10 @@ class ResearchPlanBinding:
     plan_revision: str
     plan_digest: str
     root_task_id: str
+    decision: str = field(default="HOLD", init=False)
+    persistence_allowed: bool = field(default=False, init=False)
+    dispatch_allowed: bool = field(default=False, init=False)
+    committed: bool = field(default=False, init=False)
 
 
 def _unique_object(pairs):
@@ -31,6 +39,10 @@ def _unique_object(pairs):
             raise ResearchCommandError("COMMAND_DUPLICATE_FIELD")
         result[key] = value
     return result
+
+
+def _reject_constant(value):
+    raise ResearchCommandError("COMMAND_NON_JSON_CONSTANT")
 
 
 def bind_research_command(
@@ -44,18 +56,20 @@ def bind_research_command(
 ) -> ResearchPlanBinding:
     """Compare draft input with server-selected pins and compile the existing D0 DAG.
 
-    The caller supplies the limit and pins from trusted configuration and custody.
-    This function only checks key syntax. Durable idempotency, IAM and admission
-    must be established by their existing owners before a transport can use it.
+    The caller supplies observed project and plan pins, not authority. The D0
+    cap and fixed fixture are source-review limits only. Durable idempotency,
+    real HUMAN IAM, protected persistence and admission remain separate HOLD gates.
+    A returned binding is not a receipt, grant or authorization.
     """
-    if type(max_body_bytes) is not int or max_body_bytes < 1:
+    if type(max_body_bytes) is not int or not 1 <= max_body_bytes <= _D0_MAX_BODY_BYTES:
         raise ResearchCommandError("COMMAND_LIMIT_INVALID")
     if type(body) is not bytes or not 1 <= len(body) <= max_body_bytes:
         raise ResearchCommandError("COMMAND_BODY_SIZE_INVALID")
     if not token(idempotency_key):
         raise ResearchCommandError("COMMAND_KEY_INVALID")
     try:
-        request = json.loads(body.decode("utf-8"), object_pairs_hook=_unique_object)
+        request = json.loads(body.decode("utf-8"), object_pairs_hook=_unique_object,
+                             parse_constant=_reject_constant)
     except ResearchCommandError:
         raise
     except (UnicodeError, ValueError, RecursionError) as exc:
@@ -69,11 +83,18 @@ def bind_research_command(
     revision = request["expected_plan_revision"]
     if not isinstance(revision, str) or not revision.startswith("sha256:") or not digest_ok(revision[7:]):
         raise ResearchCommandError("COMMAND_REVISION_INVALID")
-    if revision != approved_revision or request["project_ref"] != project_ref:
+    if (not valid_id(project_ref) or revision != approved_revision
+            or request["project_ref"] != project_ref
+            or request["plan_ref"] != _D0_PLAN_REF or revision != _D0_PLAN_REVISION):
         raise ResearchCommandError("COMMAND_PIN_MISMATCH")
 
-    projection = canonical_plan(retained_plan)
-    if projection["revision"] != revision or projection["plan_id"] != request["plan_ref"]:
+    try:
+        projection = canonical_plan(retained_plan)
+    except (ValueError, TypeError, KeyError, AttributeError, RecursionError) as exc:
+        raise ResearchCommandError("COMMAND_PLAN_INVALID") from exc
+    if (projection["revision"] != revision or projection["plan_id"] != request["plan_ref"]
+            or projection["digest"] != revision[7:] or projection["admission"] != "DENY"
+            or projection["dispatch_allowed"] is not False or projection["release_ready"] is not False):
         raise ResearchCommandError("COMMAND_PLAN_MISMATCH")
 
     roots = projection["waves"][0]

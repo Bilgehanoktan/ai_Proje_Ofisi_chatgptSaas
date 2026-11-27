@@ -339,8 +339,8 @@
       "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
     },
     "ai-company-os-backend/app/core/orchestrator/research_command_review.py": {
-      "bytes": 3241,
-      "sha256": "705b14fa6c6d2dcc7ec6df9bd014d5a59705978070711a6e88264be17a1f8a99"
+      "bytes": 4463,
+      "sha256": "b290147418809150b746eecbd95f3c4db2cfc2176f651dbb6e1e3af7e49f47b7"
     },
     "ai-company-os-backend/app/core/outbox_review.py": {
       "bytes": 421,
@@ -1093,6 +1093,10 @@
     "ai-company-os-backend/tests/test_recovered_sample_consumer.py": {
       "bytes": 6971,
       "sha256": "28fe78023ad0fa8c20a25732766ee90d58c279f02f611b92fb653d29e556f9f2"
+    },
+    "ai-company-os-backend/tests/test_research_command_review_mvp03.py": {
+      "bytes": 4509,
+      "sha256": "f1c7f7bfd0a2502a5b37f70224de61f33edf538db9a1e6ebbe859d2c0639b8da"
     },
     "ai-company-os-backend/tests/test_research_company_snapshot_0224.py": {
       "bytes": 6416,
@@ -2546,5 +2550,24 @@
     "dependency_install": "HOLD",
     "actual_execution": "HOLD",
     "acceptance": "unchanged"
+  },
+  "h01_mvp03_phase3_binding_20261127": {
+    "parent": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
+    "decision": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+    "classification": "ISOLATED_SOURCE_ONLY_NOT_ACCEPTANCE",
+    "paths": [
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "bytes": 4463,
+        "sha256": "b290147418809150b746eecbd95f3c4db2cfc2176f651dbb6e1e3af7e49f47b7"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "bytes": 4509,
+        "sha256": "f1c7f7bfd0a2502a5b37f70224de61f33edf538db9a1e6ebbe859d2c0639b8da"
+      }
+    ],
+    "execution": "NOT_RUN",
+    "acceptance": "HOLD"
   }
 }

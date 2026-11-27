@@ -1,0 +1,2 @@
+# MVP-03 Phase 3 — fixed RESEARCH plan binding
+H01 decision f3cea35ef45c531d30724795fbb4c189f7e9e5a1; source parent 0bc7a04440baba0d0972389a9c9347abfbd5f82b. Existing binder hardened; eight focused test methods added, NOT_RUN. 588 manifest entries; no route, DB, event or UI change. C50/R9, real IAM, strict protected COMMIT and independent IV HOLD. No acceptance increase. See ../catalog/revisions/H01_MVP03_PHASE3_BINDING_20261127.json. Rollback ordinary revert; no main/PROD/CI.
