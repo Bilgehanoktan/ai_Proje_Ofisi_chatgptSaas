@@ -17595,4 +17595,101 @@
   "next": "Ratify WorkItem physical mapping and HUMAN permission, actual protected COMMIT and idempotency, independent dependency/runtime clearance. Then exact candidate tests, authorized request -> separate AGENT admission -> runtime result, same scoped CEO/Office readback. No fabricated grant or receipt.",
   "rollback": "ordinary revert isolated source and tracker commit; no DB/API/event change."
 }
+,
+  "h01_mvp03_workitem_mapping_ratification_20261127": {
+  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+  "priority": "P0",
+  "status": "TECHNICAL_DISPOSITION_REVIEW_REQUESTED_HOLD",
+  "candidate": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+  "candidate_branch": "integration/h01-r6-research-unified-20261127",
+  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "review_blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
+  "technical_disposition": {
+    "status": "PREFERRED_NOT_RATIFIED",
+    "existing_port": "b0dde358be781b48e06b8901acc63ef31b013db0",
+    "existing_intent": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+    "operations_sql": "3443f6581eb3a8d3894aea0b620f2b8d6dba9b2a",
+    "operations_store": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+    "strict_commit": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+    "finding": "Existing run-scoped grant/lease T1 cannot represent HUMAN WorkItem; D0 OperationsStore is team/delegation/handoff review, not authoritative WorkItem. Prefer typed non-run WORKITEM_REQUEST within existing T1 coordinator, or exact already-approved mapping if owners provide it. No normative change, no fake lease, no second ledger.",
+    "master": "Actual v135 SHA256 01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9, lines 99073–99085, 105040–105076, 116785–116816, 29132–29214 directly checked; full latest addenda reconciliation incomplete."
+  },
+  "coordination": {
+    "open_prs": 44,
+    "checked_review_submissions": [
+      6,
+      10,
+      19,
+      46,
+      52,
+      54
+    ],
+    "submitted_reviews_found": 0,
+    "requested_reviewers_found_on_prs": [
+      10,
+      46,
+      52,
+      54
+    ],
+    "requested_reviewers_count": 0,
+    "notes": [
+      {
+        "pr": 10,
+        "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+        "comment": 7225465563,
+        "scope": "MI02/03/04 Data/Runtime mapping + MI10 independent custody/commit/RLS/restore decision"
+      },
+      {
+        "pr": 46,
+        "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+        "comment": 7225466658,
+        "scope": "MI03/04 real HUMAN issuer/project create/read permission and revoke/expiry evidence"
+      },
+      {
+        "pr": 52,
+        "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+        "comment": 7225467598,
+        "scope": "MI01/10 existing C50/R9 lock, target runtime, security/license/native wheel disposition"
+      }
+    ],
+    "comment_readback": "3/3 PASS; requests posted to existing PR threads, no independently returned decision or verified reviewer assignment; no new PR or phase."
+  },
+  "dependencies": {
+    "status": "HOLD",
+    "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+    "rows": 25,
+    "requirements_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+    "signatures_blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+    "pin_differences": [
+      "FastAPI 0.163.0 vs review lock 0.163.2",
+      "cryptography 46.0.4 vs review lock 50.0.2"
+    ],
+    "install": "NOT_RUN"
+  },
+  "manifest": {
+    "entries": 589,
+    "product_files": 590,
+    "blob": "d0be0ecb733e76a4241086415733150cd9260fe0",
+    "product_tree": "0d941b2cfa1800279cb8b637237475780e80e337",
+    "status": "unchanged; existing proof reused"
+  },
+  "source_gain": "0 product code changes; actual existing owner-review channels received exact review requests; no approval or completion claimed.",
+  "phase4": "HOLD E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
+  "phase5": "real execution HOLD",
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "integration": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "Obtain authenticated technical/independent dispositions at existing review threads; if normative typed aggregate extension required, submit only that specific H01 decision after MI10 review. Exact approved physical mapping and real protected authority precede write route; no unrelated phase. H01 scope approval unchanged. No direct reviewer assignment guessed.",
+  "rollback": "ordinary revert governance record; existing PR comments preserved as request history; no data, code or schema change"
+}
 }
