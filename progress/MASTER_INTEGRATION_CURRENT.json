@@ -16865,6 +16865,192 @@
       "catalog": "catalog/revisions/H01_B_MODEL_SKILL_ORIGINAL_INTEGRATION_REGRESSION_20261127.json",
       "local_evidence": "Exact archived regression file SHA256/bytes and Git blob; 10/10 dependencies matched current pins; original 15/15 raw log verified; 575/575 manifest paths/modes/sizes, 574 retained product blobs, no deletion. No new tests or functional gain.",
       "next": "Mandatory IAM/T1 wrapper12 and G7 original7 blocked on reviewed C50/R9. Resolve dependency owner and independent review before G2/real protected commit. Independent product UI/backend source wiring may continue; avoid repetitive tests."
+    },
+    "r6_readonly_local_verification_20261127": {
+      "classification": "REPORTED_LOCAL_BUILD_AND_NATIVE_EDGE_READONLY_PASS_GITHUB_HANDOVER_VERIFIED_NOT_CANONICAL_ACCEPTANCE",
+      "candidate": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "tested_source": "678b4f6f5bf0c4c1266951abd06e9b3a0a0545c2",
+      "canonical_at_review": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
+      "source_handover": {
+        "path": "handover/R6-RECONCILED-D0-c7eba2c.md",
+        "blob": "724f75d8d49f4d55a4c6bff21abcb531aa648c0e"
+      },
+      "candidate_manifest": {
+        "blob": "8630a219a350cea877dfed4ea3880778ba902905",
+        "entries": 586,
+        "tree_product_files": 587,
+        "path_size_mode_matches": 586
+      },
+      "canonical_product_files": 576,
+      "source_identity_tested_vs_delivery": "587/587 product blobs identical",
+      "candidate_delta": {
+        "added": 11,
+        "replaced": 7,
+        "preserve_newer_canonical": 2,
+        "remaining_candidate_paths": 16,
+        "deleted": 0,
+        "paths": [
+          {
+            "path": "product/ai-company-os-backend/app/core/iam_session.py",
+            "candidate_blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+            "canonical_blob": "864fe30c72ebcc6783575c62f98748fb2d9cfff6",
+            "bytes": 15424,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+            "candidate_blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2",
+            "canonical_blob": null,
+            "bytes": 6746,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+            "candidate_blob": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d",
+            "canonical_blob": null,
+            "bytes": 8738,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+            "candidate_blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+            "canonical_blob": "fa47acd32adb309896f762ec50e47bf26641adbb",
+            "bytes": 10066,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+            "candidate_blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+            "canonical_blob": null,
+            "bytes": 6742,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+            "candidate_blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+            "canonical_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1",
+            "bytes": 3836,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+            "candidate_blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+            "canonical_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+            "bytes": 8796,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+            "candidate_blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+            "canonical_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+            "bytes": 8792,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+            "candidate_blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463",
+            "canonical_blob": null,
+            "bytes": 13538,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+            "candidate_blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c",
+            "canonical_blob": null,
+            "bytes": 11216,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+            "candidate_blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f",
+            "canonical_blob": null,
+            "bytes": 7172,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+            "candidate_blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+            "canonical_blob": null,
+            "bytes": 6390,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_recovered_sample_consumer.py",
+            "candidate_blob": "e5ab929cf0c4281bd51ef6f131b04831d80ef205",
+            "canonical_blob": null,
+            "bytes": 6971,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
+            "candidate_blob": "449fc4eb642016162a8fc0fcdcc414b3cc1d8661",
+            "canonical_blob": null,
+            "bytes": 5444,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+            "candidate_blob": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+            "canonical_blob": "c99262af504d8e7b16362e6a023e10d8b02d69f7",
+            "bytes": 4561,
+            "disposition": "PRESERVE_NEWER_CANONICAL_AGENT_STUDIO"
+          },
+          {
+            "path": "product/ai-company-os-frontend/package-lock.json",
+            "candidate_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+            "canonical_blob": null,
+            "bytes": 33618,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+            "candidate_blob": "bc714ec16a144cba403c214bd1497525e5114821",
+            "canonical_blob": null,
+            "bytes": 2510,
+            "disposition": "OWNER_GATE_REVIEW_PENDING"
+          },
+          {
+            "path": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+            "candidate_blob": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+            "canonical_blob": "106df38e4ccb721dc9a215233c47ed87c74acd6c",
+            "bytes": 6849,
+            "disposition": "PRESERVE_NEWER_CANONICAL_AGENT_STUDIO"
+          }
+        ]
+      },
+      "reported_local": {
+        "next": "15.5.29 production build PASS",
+        "static_routes": "9/9",
+        "frontend_manifest": "282 entries verified",
+        "edge": "CEO history/plan read buttons and Office render PASS",
+        "plan_tasks": 7,
+        "paired_loopback_api": "plan/SSE HTTP 200",
+        "page_errors": 0,
+        "css": "compatibility warnings remain",
+        "scope": "D0 historical disposable fixture, read only",
+        "local_zip_and_raw_logs": "not independently accessible in this chat; handover report verified, no rerun"
+      },
+      "gates": {
+        "CEO_RESEARCH": "HOLD: no approved command ingress, use existing scheduled admission + protected T1 contract; prepare source-only contract proposal, never mutate GET or invent grants",
+        "C50_R9": "HOLD: PR52 R9/R6 exact records; dependency/runtime/licensing and independent security decisions absent",
+        "API_pin": "HOLD: canonical and candidate requirements still fastapi 0.163.0; R9 proposed 0.163.2, PR47 and PR52 no review submissions observed",
+        "original_IAM_G7_API": "not newly established by smoke; exact original suite evidence and dependency approval required",
+        "C07_C08_C05": "not promoted",
+        "actual_agent_completion": "NOT_RUN/HOLD",
+        "canonical_acceptance": "unchanged"
+      },
+      "next": "Reconcile candidate against newer canonical; preserve AgentDirectory and existing test; source-bound dependency owner dispositions (including 03API and independent Security) and separate CEO RESEARCH command contract review. No blanket merge, no CI/main/PROD/live grant.",
+      "acceptance": {
+        "UI": "21/40",
+        "Core": "12/16",
+        "MVP": "0/11",
+        "W8": "3/8",
+        "IV": "0/7",
+        "integration": "HESAPLANAMADI",
+        "weighted": "HESAPLANAMADI",
+        "ordinal": "unchanged"
+      },
+      "rollback": "Record-only ordinary revert; product branch unchanged."
     }
   }
 }
