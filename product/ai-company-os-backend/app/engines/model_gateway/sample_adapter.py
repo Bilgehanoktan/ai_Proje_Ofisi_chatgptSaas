@@ -87,3 +87,64 @@ def sample_task_output(envelope, registry, capabilities, clock, raw):
         return sample_model(envelope.primary,envelope.alternate,registry)
     except (ValueError,TypeError,AttributeError,OverflowError,RecursionError):
         return SampleOutput('D0_SAMPLE_TASK_SHAPE_HOLD')
+
+
+def sample_task_output_with_recovered_memory(
+        ctx, current_run, current_lease, clock, context, expected_joint_pin,
+        memory_path, reader, expected_witness, public_key, snapshot, reference,
+        budget_reference, expected_owner_pin, capabilities, *, checkpoint_body,
+        checkpoint_signature, checkpoint_sha):
+    """Explicit D0 consumer of the recovered-memory Runtime path.
+
+    Retains the historical fixed-output function and its wire shape. No real
+    model/tool invocation, receipt, persisted result or execution authority.
+    The economic and capability references must refer to the same reviewed
+    invocation and signed witness. A failure never falls back to the old path.
+    Readback is diagnostic, not an atomic effect fence or independent custody.
+    """
+    try:
+        from .runtime_model_review import inspect_runtime_model_with_recovered_memory
+        from app.core.agent_runtime.memory_gateway_review import MemoryGatewayReview
+        from app.core.agent_runtime.memory_witness import (
+            LatestWitnessPin, MemoryWitness, MemoryWitnessReader, witness_sha,
+        )
+        if (type(capabilities) is not SampleCapabilityContext
+                or type(capabilities.effect) is not EffectScope
+                or type(capabilities.witness) is not WitnessSample
+                or type(capabilities.witness_reference) is not WitnessSample
+                or type(expected_witness) is not LatestWitnessPin
+                or type(reader) is not MemoryWitnessReader):
+            return SampleOutput('D0_RECOVERED_SAMPLE_CONTEXT_HOLD')
+        review = inspect_runtime_model_with_recovered_memory(
+            ctx, current_run, current_lease, clock, context, expected_joint_pin,
+            memory_path, reader, expected_witness, public_key, snapshot, reference,
+            budget_reference, expected_owner_pin, checkpoint_body=checkpoint_body,
+            checkpoint_signature=checkpoint_signature, checkpoint_sha=checkpoint_sha,
+        )
+        if (type(review) is not MemoryGatewayReview or review.structural_match is not True
+                or review.reason != 'D0_RECOVERED_MEMORY_GATEWAY_MATCH_ONLY'
+                or review.decision != 'HOLD'
+                or any(getattr(review, name) is not False for name in (
+                    'retrieval_allowed', 'release_allowed', 'provider_call_allowed',
+                    'dispatch_allowed', 'spend_allowed', 'settlement_allowed',
+                    'transition_allowed', 'retry_allowed', 'independent_verified',
+                    'atomicity_verified'))):
+            return SampleOutput('D0_RECOVERED_SAMPLE_RUNTIME_HOLD')
+        signed = reader.read_latest(expected_witness, public_key)
+        if type(signed) is not MemoryWitness or witness_sha(signed) != expected_witness.record_sha:
+            return SampleOutput('D0_RECOVERED_SAMPLE_WITNESS_HOLD')
+        expected = WitnessSample(signed.scope, expected_witness.key_sha,
+                                 signed.witness_epoch, signed.sequence,
+                                 expected_witness.record_sha, signed.issued_tick)
+        if (capabilities.witness != expected or capabilities.witness_reference != expected
+                or signed.scope != current_run.scope or signed.pending is not None
+                or signed.recovery_epoch != expected_witness.recovery_epoch
+                or (signed.policy_epoch, signed.witness_epoch) != (clock.policy_epoch, clock.witness_epoch)
+                or not signed.issued_tick <= clock.now_tick < signed.expires_tick):
+            return SampleOutput('D0_RECOVERED_SAMPLE_WITNESS_HOLD')
+        if capabilities.effect.budget_id != snapshot.budget.budget_id:
+            return SampleOutput('D0_RECOVERED_SAMPLE_BUDGET_HOLD')
+        return sample_task_output(ctx.envelope, ctx.registry, capabilities, clock, ctx.raw)
+    except Exception:
+        # Including unavailable cryptography or unexpected owner readback errors.
+        return SampleOutput('D0_RECOVERED_SAMPLE_REVIEW_ERROR_HOLD')

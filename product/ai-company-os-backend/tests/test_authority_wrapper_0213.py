@@ -2,6 +2,10 @@
 Requires full pinned repository; NOT executable in 0212 55-file source slice.
 No independent custody or real effect grant. Run in isolated disposable DEV only.
 """
+import secrets
+from app.core.iam_session import (
+    D0_SCOPE, D0SessionResolver, SessionRecord, SessionClaimCheck, credential_digest,
+)
 from contextlib import closing
 from dataclasses import replace
 import sqlite3
@@ -35,6 +39,79 @@ class AuthorityWrappedSqlTests(TestCase):
     def _claims(self):
         with closing(sqlite3.connect(self.authority.path)) as db:
             return db.execute('SELECT count(*) FROM claims').fetchone()[0]
+
+    def _enable_d0_iam(self):
+        """Existing D0 session/authority source, never a live grant or real issuer."""
+        scope = self.i.scope
+        self.iam_now = 100
+        self.iam_secret = secrets.token_urlsafe(32)
+        self.iam_session_id = 'demo-bridge-session'
+        record = SessionRecord(
+            self.iam_session_id, credential_digest(self.iam_secret),
+            scope.principal_id, 'AGENT', D0_SCOPE, scope.agent_instance_id,
+            80, 200,
+        )
+        self.iam_resolver = D0SessionResolver.bootstrap_durable(
+            self.w.path.with_name('run-iam.authority.sqlite'), self.root, (record,),
+            domain='demo-bridge-clock', clock=lambda: self.iam_now,
+        )
+        self.authority = self.iam_resolver._authority
+        observed = self.iam_resolver.resolve(self.iam_secret, expected_scope=D0_SCOPE)
+        self.assertIsNotNone(observed)
+        return SessionClaimCheck(
+            self.iam_resolver, self.iam_secret, observed, D0_SCOPE,
+            scope.principal_id, scope.agent_instance_id,
+        )
+
+    def test_iam_wrapper_missing_check_fails_before_t1(self):
+        self._enable_d0_iam()
+        with self.assertRaisesRegex(ValueError, 'D0_IAM_CHECK_REQUIRED_HOLD'):
+            self.invoke()
+        self.assertEqual(self._claims(), 0)
+        self.assertEqual(self.f.dump(), self.f.initial)
+
+    def test_iam_wrapper_explicit_scoped_check_historical_only(self):
+        check = self._enable_d0_iam()
+        result = self.invoke(session_check=check)
+        self.assertTrue(result.historical_match)
+        self.assertFalse(result.independent_verified or result.dispatch_allowed or result.retry_allowed)
+        self.f.exact_readback()
+        self.assertEqual(self._claims(), 1)
+        with closing(sqlite3.connect(self.authority.path)) as db:
+            self.assertEqual(db.execute('SELECT count(*) FROM iam_claim_pins').fetchone(), (1,))
+
+    def test_iam_wrapper_wrong_principal_and_agent_denied(self):
+        check = self._enable_d0_iam()
+        for changed in (dict(principal='demo-forged'), dict(agent='demo-forged')):
+            with self.subTest(changed=changed):
+                with self.assertRaisesRegex(ValueError, 'D0_AUTHORITY_SESSION_SCOPE_HOLD'):
+                    self.invoke(session_check=replace(check, **changed))
+                self.assertEqual(self._claims(), 0)
+                self.assertEqual(self.f.dump(), self.f.initial)
+
+    def test_iam_wrapper_revoked_session_no_claim(self):
+        check = self._enable_d0_iam()
+        self.assertTrue(self.iam_resolver.revoke_local(self.iam_session_id, expected_revision=1))
+        with self.assertRaisesRegex(ValueError, 'IAM_CLAIM_HOLD'):
+            self.invoke(session_check=check)
+        self.assertEqual(self._claims(), 0)
+        self.assertEqual(self.f.dump(), self.f.initial)
+
+    def test_iam_wrapper_expired_session_no_claim(self):
+        check = self._enable_d0_iam()
+        self.iam_now = 200
+        with self.assertRaisesRegex(ValueError, 'IAM_CLAIM_HOLD'):
+            self.invoke(session_check=check)
+        self.assertEqual(self._claims(), 0)
+        self.assertEqual(self.f.dump(), self.f.initial)
+
+    def test_legacy_authority_rejects_iam_check(self):
+        check = self._enable_d0_iam()
+        self.authority = D0IntentAuthority(self.w.path.with_name('run.authority.sqlite'))
+        with self.assertRaisesRegex(ValueError, 'D0_IAM_MODE_HOLD'):
+            self.invoke(session_check=check)
+        self.assertEqual(self._claims(), 0)
+        self.assertEqual(self.f.dump(), self.f.initial)
 
     def test_original_t1_and_all_three_guards(self):
         result=self.invoke()
