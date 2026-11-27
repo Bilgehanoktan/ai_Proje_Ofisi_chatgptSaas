@@ -681,5 +681,155 @@
     "Unreviewed divergent historical or archived source payloads"
   ],
   "tests": "NOT_RUN",
-  "rollback": "9386ec986cefad3d2a3668ff94f711218e1d0fca"
+  "rollback": "9386ec986cefad3d2a3668ff94f711218e1d0fca",
+  "research_first_function_review_20261128": {
+    "scope": "Plan operational items 01,02,03,04,08,10 source/function review; no product source promotion",
+    "governance": "b4b8a9b5d0c78b23926822251e23dc3dabb74c13",
+    "base_product": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "base_candidate": "4245b569797a2742579e4619a0e546d25281c0ca",
+    "product_tree": "3bdec49f342cfbd8589eb6d999de8410966adb9f",
+    "manifest": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+    "integrity": {
+      "path_size": "592/592 match; no extra except manifest itself; recursive Git tree not truncated",
+      "raw_hash_scope": "10 raw files (8 historical publication source pins + package + current binder), not all 592",
+      "archive": "NOT_VERIFIED full archive unavailable"
+    },
+    "functional_disposition": [
+      {
+        "source": "PR10 inherited backend versions (actual PR10 three review-only files)",
+        "paths": [
+          "app/core/agent_runtime/scheduler_review.py",
+          "app/core/development_review/research_slice.py",
+          "app/core/transaction/intent_authority.py",
+          "app/engines/model_gateway/sample_adapter.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "same-version scheduler state guard; explicit request_linked false and result archive/journal separation + re-observation; exact SessionClaimCheck before claim; additive recovered-memory consumer with all permission flags false. Do not regress by importing inherited PR10 blobs."
+      },
+      {
+        "source": "PR19/31 vs PR46",
+        "paths": [
+          "app/core/transaction/intent_authority.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "PR46 exact D0 scope/tenant/company/env/principal/agent binding and forwarding to existing claim_and_fence retained; real HUMAN issuer/COMMIT HOLD."
+      },
+      {
+        "source": "D5-C-R8 at 459c3eb16302375cd352140a0d6023fb1554d566",
+        "paths": [
+          "app/core/transaction/org_membership_review.py",
+          "app/core/transaction/intent_authority.py",
+          "tests/test_protected_org_t1_d5c_r8.py"
+        ],
+        "decision": "HOLD_UNION_REQUIRED",
+        "reason": "Missing original ProtectedOrgTransition and require_protected_org_commit; original wrapper's protected_org keyword checks before claim/journal/connect and never falls back even if guard returns; old wrapper loses PR46 session_check forwarding. Exact original PostgreSQL strict guard present. Seven compared dependency/test paths exact by manifest (company_coordination, iam_session, identity_binding, identity_fence_review, postgres_session, G4/G5 tests); port differs, original affected test absent. No behavior verification on current closure. Do not transfer either wrapper alone.",
+        "next": "Retain current PR46 wrapper semantics; reconcile protected_org preclaim branch and original G5 guard on same coordinator, no execution/fallback; preserve new WorkItem port. Check dual input semantics under owner review; original affected validation on approved exact closure before integration. Not a HUMAN WorkItem implementation."
+      },
+      {
+        "source": "MEM05E e85cd16e19c8f32da948b9bba98115667c9e1573 + D5-C-R8",
+        "paths": [
+          "app/engines/model_gateway/runtime_model_review.py",
+          "app/core/agent_runtime/joint_context.py",
+          "app/core/agent_runtime/memory_witness.py",
+          "app/engines/memory_engine/snapshot_store.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "current recovered-memory Runtime entry, history pins in both transactions, signed committed generation history, bounded replay and immutable node revision/parent lineage guard; old versions lose these checks. D0 only."
+      },
+      {
+        "source": "PR55 65ddae6a33d94593ed686b53698a6d8ad48919b4",
+        "paths": [
+          "app/engines/skill_engine/resolver.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "exact SourcePin and string value types replace isinstance; current stronger source-pin validation"
+      },
+      {
+        "source": "PR49 3361ae04310b9b7f51114aefca83f8c8c5255410",
+        "paths": [
+          "features/data/SharedSnapshotPanel.tsx",
+          "features/data/projectionRead.ts"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "shared ORG reader, Office explicit controls and JOIN_HOLD, bounded deadline/cancelResponse on fetch and reader; no regression."
+      },
+      {
+        "source": "PR3 54d4601f1ea1093d79a317f282a1696d95fe3cd3",
+        "paths": [
+          "app/api/local-mvp/readback/route.ts",
+          "components/dashboard/LocalReadbackPanel.tsx"
+        ],
+        "decision": "DO_NOT_MOUNT_LEGACY",
+        "reason": "quarantined old fixed loopback port, MIME substring, fixture-only match, no authorized WorkItem readback, parallel route/panel; use current shared plan/projection and future authorized command."
+      }
+    ],
+    "review_channels": [
+      {
+        "pr": 10,
+        "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+        "actual_product_delta": 0,
+        "actual_files": 3,
+        "submitted": 0,
+        "requested_reviewers": [],
+        "hold": "10 owner/custody items; D03/D04 and independent A-AT01..08; actual physical schema/COMMIT/authority not approved"
+      },
+      {
+        "pr": 46,
+        "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+        "submitted": 0,
+        "requested_reviewers": [],
+        "hold": "exact D0 source already present, actual HUMAN issuer and permission unproven"
+      },
+      {
+        "pr": 52,
+        "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+        "actual_product_delta": 0,
+        "submitted": 0,
+        "requested_reviewers": [],
+        "hold": "R9 20-row lock ab9908b033b9b62017a7689716420f61ce2c6364 vs combined 25-row lock fb50ae2d06594150887e849d61de027c61ae1492 at 9818660fc71648841288f7bc59fc179eac3ee29c; current direct pins FastAPI 0.163.0 / cryptography 46.0.4 vs proposal 0.163.2 / 50.0.2; no runtime/license/security disposition or install; prior wheel audit reported only"
+      }
+    ],
+    "publication": {
+      "version": "RESEARCH@mvp03-request-1-rc1",
+      "package_blob": "f443a28be483118d4e54d8494a122126e551198d",
+      "bytes": 4107,
+      "raw_sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e",
+      "content_digest": "10f87e6cdb8a6b1db7be79db92ff1fef40d79a999b6be7080ca2382c5b57fd3f",
+      "provenance_digest": "e0697962fcee9fe9e51cbb47063fc8c3e5422a5c9c86728d56d92ec9828c6969",
+      "content_and_provenance_recomputed": true,
+      "historical_source_commit": "325ee3009b80f1d1651013e3261c9a03dd7fe4bb",
+      "historical_raw_sha256_blob_bytes": "8/8 MATCH",
+      "current_manifest_pins": "7/8 identical; binder intentionally superseded in publication source delivery, not rewrite of historical provenance",
+      "current_binder_blob": "a05379b6909d2c3d1a5668c38942ba0151ac1233",
+      "current_binder_sha256": "e955d26b9c57891a0e65f4a44b79e1672c2696c526c32e165b15bf74eccd346c",
+      "current_binder_bytes": 9355,
+      "technical_package_integrity": "MATCH_ONLY",
+      "status": "REVIEW_CANDIDATE_NOT_PUBLISHED; QA/IV actual release and protected custody H01 decision still HOLD"
+    },
+    "a1": {
+      "status": "PHYSICAL_DESIGN_DIRECTION_APPROVED_FINAL_SCHEMA_HOLD",
+      "source": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+      "reason": "inspect_workitem_authority_readback structural equality only; requires actual Project/WorkType/binding/plan/HUMAN authority and protected transaction; no real store/migration or independent custody ratified"
+    },
+    "ui": {
+      "blob": "660a756e345023151117cdd8f69382052dad2bc6",
+      "status": "PLAN_SELECTION_ONLY_HOLD",
+      "reason": "existing observation-bound selection, disabled submit/readback; no real command API/ID, retain until required gates"
+    },
+    "tests": "NOT_RUN",
+    "product_changes": 0,
+    "acceptance": {
+      "UI": "21/40",
+      "Core": "12/16",
+      "MVP": "0/11",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI"
+    },
+    "next": "Owner disposition of exact D5-C-R8/PR46 protected source union (no fallback) and current A1 physical mapping; independently appointed MI10 exact PR10/46/52 review and publication QA. Continue independent eligible source review; no new test or transfer while affected mandatory evidence missing.",
+    "limitations": "Reviewed targeted divergent source variants, not all historic versions or entire Design Master addenda. No full archive, no uncommitted work visibility, no code transfer; no real grants/COMMIT/CI/main/PROD.",
+    "rollback": "ordinary revert this review-only commit; product tree unchanged"
+  }
 }
