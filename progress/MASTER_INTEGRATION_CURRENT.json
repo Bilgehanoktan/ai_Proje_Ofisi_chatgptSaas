@@ -17428,4 +17428,108 @@
   "next": "Resolve physical WorkItem request mapping, real HUMAN issuer and scoped permission, protected persistence and same-ID readback with existing owners; dependency/security/licensing disposition and approved exact-source test/build. No Phase4 before working authorized submit/commit/readback.",
   "rollback": "ordinary revert isolated source and governance record; no DB changes. H01 decision retained."
 }
+,
+  "h01_mvp03_phase4_entry_20261127": {
+  "task": "H01-MVP03-PHASE4-ACCEPTANCE",
+  "entry_task": "H01-MVP03-PHASE3-PROTECTED-WORKITEM",
+  "status": "HOLD_ENTRY_NOT_SATISFIED",
+  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "candidate_branch": "integration/h01-r6-research-unified-20261127",
+  "candidate": "3a515bc540352393be30b51553736f9388648084",
+  "source_parent": "a9bc809f4e75334cc27f7cdee8b171e863136fe3",
+  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "mapping_review": {
+    "path": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+    "blob": "073531d8eaf23a11616d9adf8086eebc1c82f1e3",
+    "classification": "NON_NORMATIVE_PROPOSAL",
+    "finding": "Current run-scoped LogicalIntent and grant/lease T1Port cannot represent HUMAN WorkItem without invented authority. R03 physical mapping C/HOLD; typed aggregate proposal requires Data/Runtime/IAM/MI10 review and H01 ratification if normative extension required."
+  },
+  "manifest": {
+    "entries": 589,
+    "product_files": 590,
+    "blob": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
+    "product_tree": "010d03d332bad3017f35565b920d6fe79ca7e086",
+    "status": "exact product tree and manifest unchanged/readback PASS; prior path/size/blob proof reused, no fresh full archive hash"
+  },
+  "dependency": {
+    "status": "HOLD",
+    "lock_ref": "9818660fc71648841288f7bc59fc179eac3ee29c",
+    "lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+    "rows": 25,
+    "owner": "MI01/10",
+    "install": "NOT_RUN"
+  },
+  "evidence": {
+    "E01": {
+      "status": "NOT_RUN",
+      "owner": "MI05/06",
+      "condition": "actual browser fixed plan selection"
+    },
+    "E02": {
+      "status": "HOLD",
+      "owner": "MI03/04",
+      "condition": "real HUMAN issuer and scoped create/read permission"
+    },
+    "E03": {
+      "status": "NOT_RUN",
+      "owner": "MI02/05/06",
+      "condition": "actual fixed plan pin verification"
+    },
+    "E04": {
+      "status": "HOLD",
+      "owner": "MI02/03/04",
+      "condition": "protected WorkItem mapping, durable COMMIT, HTTP201/request ID"
+    },
+    "E05": {
+      "status": "HOLD",
+      "owner": "MI02/05/06",
+      "condition": "authorized same-ID readback"
+    },
+    "E06": {
+      "status": "HOLD",
+      "owner": "MI02/03/04",
+      "condition": "restart durability"
+    },
+    "E07": {
+      "status": "HOLD",
+      "owner": "MI02/03/04",
+      "condition": "authoritative scoped idempotency, concurrency"
+    },
+    "E08": {
+      "status": "HOLD",
+      "owner": "MI03/04/10",
+      "condition": "real IAM/RLS negatives"
+    },
+    "E09": {
+      "status": "HOLD",
+      "owner": "MI03/04/10",
+      "condition": "rollback/revoke/unknown/restore independent proof"
+    },
+    "E10": {
+      "status": "NOT_RUN",
+      "owner": "MI02/05/06/10",
+      "condition": "actual no admission/dispatch/provider side effects"
+    }
+  },
+  "binder8": "NOT_RUN",
+  "build": "NOT_RUN",
+  "actual_browser": "NOT_RUN",
+  "actual_http_db": "HOLD",
+  "independent_acceptance": "HOLD",
+  "functional_acceptance": "HOLD",
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "integration": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "source_gain": "0 product code changes; specific owner decision packet grounded in actual v135/0155 archives and current R03/port/COMMIT/RLS files. No fake persistence, migration or route.",
+  "next": "MI02/Data/Runtime ratify existing Project/WorkItem/WorkTypeVersion physical mapping and typed protected HUMAN operation with MI03/04/10. Resolve strict COMMIT/restore and actual issuer scope. Independent lock/runtime review then exact candidate implementation/acceptance.",
+  "rollback": "ordinary revert review and tracker commit; no data or schema changes; H01-MVP03-01 retained."
+}
 }
