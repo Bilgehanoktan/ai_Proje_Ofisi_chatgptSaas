@@ -181,5 +181,47 @@
     },
     "acceptance": "0/11",
     "physical": "HOLD"
+  },
+  "research_publication_candidate_20261128": {
+    "parent": "325ee3009b80f1d1651013e3261c9a03dd7fe4bb",
+    "governance": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "previous_blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "blob": "a05379b6909d2c3d1a5668c38942ba0151ac1233",
+        "bytes": 9355,
+        "sha256": "e955d26b9c57891a0e65f4a44b79e1672c2696c526c32e165b15bf74eccd346c"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "previous_blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "blob": "2ff3164422a0f3984f5b5c1c24f8678e4bcd069c",
+        "bytes": 13846,
+        "sha256": "6aa226ca38b571cf70a5b1520489ba05ed8b71e3a261ea0f12532e88363b975e"
+      },
+      {
+        "path": "ai-company-os-backend/fixtures/research.worktype.publication_candidate.json",
+        "previous_blob": null,
+        "blob": "f443a28be483118d4e54d8494a122126e551198d",
+        "bytes": 4107,
+        "sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
+      }
+    ],
+    "manifest": "3258d265ab14f8e50b1a2558cd109a13427fb2f0",
+    "evidence": "handover/evidence/H01_MVP03_RESEARCH_PUBLICATION_20261128/",
+    "worktype": "RESEARCH",
+    "version": "mvp03-request-1-rc1",
+    "content_digest": "10f87e6cdb8a6b1db7be79db92ff1fef40d79a999b6be7080ca2382c5b57fd3f",
+    "package": "product/ai-company-os-backend/fixtures/research.worktype.publication_candidate.json",
+    "publication": "HOLD_NOT_PUBLISHED",
+    "source_gain": "Exact candidate package linked to existing D0 WorkItem draft seam",
+    "tests": {
+      "run": 18,
+      "new": 4,
+      "regression": 14
+    },
+    "acceptance": "0/11",
+    "physical": "HOLD"
   }
 }

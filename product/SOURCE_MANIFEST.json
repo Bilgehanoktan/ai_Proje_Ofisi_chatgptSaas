@@ -339,8 +339,8 @@
       "sha256": "b945e08de12a3141c6a1185afffb389c457f67196b0710e856b0170dbb77c482"
     },
     "ai-company-os-backend/app/core/orchestrator/research_command_review.py": {
-      "bytes": 5720,
-      "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
+      "bytes": 9355,
+      "sha256": "e955d26b9c57891a0e65f4a44b79e1672c2696c526c32e165b15bf74eccd346c"
     },
     "ai-company-os-backend/app/core/outbox_review.py": {
       "bytes": 421,
@@ -1095,8 +1095,8 @@
       "sha256": "28fe78023ad0fa8c20a25732766ee90d58c279f02f611b92fb653d29e556f9f2"
     },
     "ai-company-os-backend/tests/test_research_command_review_mvp03.py": {
-      "bytes": 10002,
-      "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
+      "bytes": 13846,
+      "sha256": "6aa226ca38b571cf70a5b1520489ba05ed8b71e3a261ea0f12532e88363b975e"
     },
     "ai-company-os-backend/tests/test_research_company_snapshot_0224.py": {
       "bytes": 6416,
@@ -2365,6 +2365,10 @@
     "ai-company-os-backend/tests/test_workitem_readback_mvp03.py": {
       "bytes": 12177,
       "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
+    },
+    "ai-company-os-backend/fixtures/research.worktype.publication_candidate.json": {
+      "bytes": 4107,
+      "sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2722,6 +2726,36 @@
     ],
     "scope": "Non-executable authority pin correlation in existing WorkItem readback review; no physical schema, auth, COMMIT or migration",
     "targeted_tests": "12/12 WorkItem (5 new, 7 affected regression), 11/11 AGENT admission regression; prior 14/14 binder reused",
+    "acceptance": "HOLD"
+  },
+  "h01_mvp03_research_publication_candidate_20261128": {
+    "parent": "325ee3009b80f1d1651013e3261c9a03dd7fe4bb",
+    "governance": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+    "changes": [
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "previous_blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "blob": "a05379b6909d2c3d1a5668c38942ba0151ac1233",
+        "bytes": 9355,
+        "sha256": "e955d26b9c57891a0e65f4a44b79e1672c2696c526c32e165b15bf74eccd346c"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "previous_blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "blob": "2ff3164422a0f3984f5b5c1c24f8678e4bcd069c",
+        "bytes": 13846,
+        "sha256": "6aa226ca38b571cf70a5b1520489ba05ed8b71e3a261ea0f12532e88363b975e"
+      },
+      {
+        "path": "ai-company-os-backend/fixtures/research.worktype.publication_candidate.json",
+        "previous_blob": null,
+        "blob": "f443a28be483118d4e54d8494a122126e551198d",
+        "bytes": 4107,
+        "sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
+      }
+    ],
+    "scope": "Exact D0 publication candidate package and draft binding; no publication or authority",
+    "targeted_tests": "18/18 PASS: 4 new + 14 affected binder regression",
     "acceptance": "HOLD"
   }
 }

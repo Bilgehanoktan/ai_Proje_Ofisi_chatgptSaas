@@ -8,7 +8,7 @@ import unittest
 
 from app.core.orchestrator.engine import canonical_plan
 from app.core.orchestrator.research_command_review import (
-    ResearchCommandError, bind_research_command,
+    ResearchCommandError, bind_research_command, bind_research_publication_draft,
 )
 
 from app.core.agent_runtime.lifecycle import Scope
@@ -184,6 +184,64 @@ class ResearchCommandReviewTests(unittest.TestCase):
         self.assertEqual(required_roles(replace(intent, operation=Operation.STATE_MUTATION)), BASE_ROLES)
         self.assertFalse(valid_intent(replace(intent, lease_ref="")))
         self.assertFalse(valid_intent(replace(intent, grant_ref="")))
+
+
+
+    def publication_draft(self, package=None, binding=None, plan=None, scope=None):
+        if package is None:
+            package = (Path(__file__).resolve().parents[1] /
+                       'fixtures/research.worktype.publication_candidate.json').read_bytes()
+        if scope is None:
+            scope = WorkItemScopeDraft('synthetic-tenant', 'synthetic-company', 'A0_SAMPLE_ONLY',
+                                      self.body['project_ref'], 'demo-human')
+        return bind_research_publication_draft(self.bind() if binding is None else binding,
+                                               package, self.plan if plan is None else plan, scope,
+                                               project_revision='project-v1', workowner_ref='demo-owner')
+
+    def test_publication_exact_candidate_binds_version_without_authority(self):
+        candidate, draft = self.publication_draft()
+        self.assertEqual(candidate.worktype_id, 'RESEARCH')
+        self.assertEqual(candidate.version, 'mvp03-request-1-rc1')
+        self.assertEqual(candidate.content_digest, '10f87e6cdb8a6b1db7be79db92ff1fef40d79a999b6be7080ca2382c5b57fd3f')
+        self.assertNotEqual(candidate.content_digest, draft.plan_digest)
+        self.assertEqual(candidate.source_commit, '325ee3009b80f1d1651013e3261c9a03dd7fe4bb')
+        self.assertEqual(candidate.plan_revision, draft.plan_revision)
+        self.assertEqual(candidate.version, draft.worktype_version)
+        self.assertEqual(candidate.decision, 'HOLD')
+        self.assertFalse(candidate.published or candidate.activation_allowed or candidate.admission_allowed or candidate.persistence_allowed)
+        self.assertFalse(valid_intent(draft))
+        self.assertFalse(inspect_workitem_request(draft).commit_allowed)
+
+    def test_publication_mutations_rejected(self):
+        raw = (Path(__file__).resolve().parents[1] /
+               'fixtures/research.worktype.publication_candidate.json').read_bytes()
+        for value in (raw.replace(b'mvp03-request-1-rc1', b'mvp03-request-2-rc1'),
+                      raw.replace(b'REVIEW_CANDIDATE_NOT_PUBLISHED', b'PUBLISHED'),
+                      raw.replace(b'325ee3009b80f1d1651013e3261c9a03dd7fe4bb', b'0'*40),
+                      raw + b' ', b'', bytearray(raw)):
+            with self.subTest(value_type=type(value)), self.assertRaisesRegex(ResearchCommandError, 'PUBLICATION_PACKAGE_PIN_MISMATCH'):
+                self.publication_draft(package=value)
+
+    def test_publication_plan_and_binding_drift_rejected(self):
+        changed = deepcopy(self.plan)
+        changed['tasks'][0]['label'] = 'Changed'
+        with self.assertRaisesRegex(ResearchCommandError, 'PUBLICATION_PLAN_PIN_MISMATCH'):
+            self.publication_draft(plan=changed)
+        with self.assertRaisesRegex(ResearchCommandError, 'PUBLICATION_PLAN_PIN_MISMATCH'):
+            self.publication_draft(binding=replace(self.bind(), plan_digest='0'*64))
+        with self.assertRaisesRegex(ResearchCommandError, 'PUBLICATION_BINDING_INVALID'):
+            self.publication_draft(binding={})
+
+    def test_publication_cannot_bypass_scope_and_commit(self):
+        for scope in (WorkItemScopeDraft('other', 'synthetic-company', 'A0_SAMPLE_ONLY', self.body['project_ref'], 'demo-human'),
+                      WorkItemScopeDraft('synthetic-tenant', 'synthetic-company', 'A0_SAMPLE_ONLY', 'other-project', 'demo-human')):
+            with self.subTest(scope=scope), self.assertRaises(ResearchCommandError):
+                self.publication_draft(scope=scope)
+        _, draft = self.publication_draft()
+        factory = Mock(side_effect=AssertionError('transaction opened'))
+        with self.assertRaisesRegex(ValueError, 'T1_INTENT_INVALID'):
+            LogicalT1Coordinator(factory).commit(draft)
+        factory.assert_not_called()
 
 
 if __name__ == "__main__":

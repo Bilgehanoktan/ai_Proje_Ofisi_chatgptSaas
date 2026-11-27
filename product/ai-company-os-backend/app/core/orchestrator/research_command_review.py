@@ -1,6 +1,7 @@
 """H01-MVP03-01: isolated D0 fixed-plan binding, never persistence or admission."""
 from dataclasses import dataclass, field
 import json
+import hashlib
 
 from app.core.agent_runtime.lifecycle import token
 from app.core.orchestrator.engine import canonical_plan
@@ -124,3 +125,65 @@ def bind_research_command(
     return ResearchPlanBinding(
         project_ref, projection["plan_id"], revision, projection["digest"], roots[0], idempotency_key
     )
+
+
+@dataclass(frozen=True)
+class ResearchPublicationCandidate:
+    """Exact review candidate, never a publication decision or entitlement."""
+    worktype_id: str
+    version: str
+    content_digest: str
+    provenance_digest: str
+    source_commit: str
+    plan_revision: str
+    package_digest: str
+    decision: str = field(default="HOLD", init=False)
+    published: bool = field(default=False, init=False)
+    activation_allowed: bool = field(default=False, init=False)
+    admission_allowed: bool = field(default=False, init=False)
+    persistence_allowed: bool = field(default=False, init=False)
+
+
+_RESEARCH_PUBLICATION_PACKAGE_SHA256 = "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
+
+
+def bind_research_publication_draft(binding: ResearchPlanBinding, package: bytes,
+                                    retained_plan: dict, scope: WorkItemScopeDraft, *,
+                                    project_revision: str, workowner_ref: str
+                                    ) -> tuple[ResearchPublicationCandidate, WorkItemRequestDraft]:
+    """Bind only the exact reviewed A1 package to the existing D0 request seam.
+
+    Package pins are immutable candidate identity, not live source attestation,
+    H01 publication, current policy, authenticated IAM or protected COMMIT.
+    No file I/O, grant, G8, admission, request ID or transaction is created.
+    """
+    if (type(package) is not bytes or len(package) != 4107
+            or hashlib.sha256(package).hexdigest() != _RESEARCH_PUBLICATION_PACKAGE_SHA256):
+        raise ResearchCommandError("PUBLICATION_PACKAGE_PIN_MISMATCH")
+    if type(binding) is not ResearchPlanBinding:
+        raise ResearchCommandError("PUBLICATION_BINDING_INVALID")
+    value = json.loads(package.decode("utf-8"), object_pairs_hook=_unique_object,
+                       parse_constant=_reject_constant)
+    content, provenance = value["content"], value["provenance"]
+    def digest(obj):
+        return hashlib.sha256(json.dumps(obj, sort_keys=True, separators=(",", ":"),
+                                         ensure_ascii=False, allow_nan=False).encode("utf-8")).hexdigest()
+    if (digest(content) != value["content_digest"] or digest(provenance) != value["provenance_digest"]
+            or value["status"] != "REVIEW_CANDIDATE_NOT_PUBLISHED"
+            or content["worktype_id"] != "RESEARCH"
+            or content["plan_ref"] != _D0_PLAN_REF or content["plan_revision"] != _D0_PLAN_REVISION):
+        raise ResearchCommandError("PUBLICATION_CONTENT_PIN_MISMATCH")
+    try:
+        projection = canonical_plan(retained_plan)
+    except (ValueError, TypeError, KeyError, AttributeError, RecursionError) as exc:
+        raise ResearchCommandError("PUBLICATION_PLAN_INVALID") from exc
+    if (projection["plan_id"], projection["revision"], projection["digest"]) != (
+            binding.plan_ref, binding.plan_revision, binding.plan_digest) or (
+            binding.plan_ref, binding.plan_revision) != (content["plan_ref"], content["plan_revision"]):
+        raise ResearchCommandError("PUBLICATION_PLAN_PIN_MISMATCH")
+    draft = binding.to_workitem_draft(scope, project_revision=project_revision,
+                                      worktype_version=content["version"], workowner_ref=workowner_ref)
+    return ResearchPublicationCandidate(content["worktype_id"], content["version"],
+                                        value["content_digest"], value["provenance_digest"],
+                                        provenance["source_commit"], content["plan_revision"],
+                                        _RESEARCH_PUBLICATION_PACKAGE_SHA256), draft
