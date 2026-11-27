@@ -1,0 +1,97 @@
+{
+  "task": "MVP03-CEO-REQUEST-PERSISTENCE",
+  "classification": "NON_NORMATIVE_ISOLATED_SOURCE_REVIEW_CANDIDATE_NO_ROUTE_NO_WRITE",
+  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "governance_parent": "02ce53a077b45e17f78d79311508f6669566538b",
+  "r6": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+  "contract": "docs/master-integration/CEO_RESEARCH_COMMAND_CONTRACT_REVIEW_20261127.md",
+  "acceptance_source": {
+    "path": "progress/MVP_ACCEPTANCE_UI_P10J15.json",
+    "blob": "719b5d31515f04edf607bb4f61f2a38abee79b24",
+    "criterion": "3",
+    "status": "HOLD",
+    "mvp": "0/11"
+  },
+  "architecture_review": {
+    "source": "H01 uploaded v11.6.135-rc1 full master archive member",
+    "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+    "lines": [
+      "105040-105076 (authorized request, Project/WorkItem vs AgentRun)",
+      "116785-116827 (separate authorities, candidate contracts, dedup)",
+      "40743-40749 (security guards)",
+      "97111-97116 (server identity, idempotency)"
+    ],
+    "limits": "Reviewed relevant passages, not complete latest Design Master/ADR ratification. Project/WorkItem separation is a design reference, not an approved physical write mapping."
+  },
+  "source_pins": [
+    {
+      "name": "research_request_review.py",
+      "blob": "bbd3c6a2425eaa02c08d1ba09cd351e76818169d",
+      "bytes": 3377,
+      "sha256": "4c3e9fbf082b481b3f008d5f3f161f5299365be6f00beddc4a28c120463cd531"
+    },
+    {
+      "name": "test_research_request_review.py",
+      "blob": "298dff430b265be9d553305d1066a6506375f929",
+      "bytes": 3764,
+      "sha256": "20fef14ec6bb6364ed0bf154c5a00e50a2714841a2d9ebb6e312957faf42e924"
+    },
+    {
+      "name": "test.log",
+      "blob": "5608dfe447d4965a951cf340dee88d449ae85aa3",
+      "bytes": 1363,
+      "sha256": "a86b59c1ee5f9d09ba1558961c916a963cfb789462e8735593dbb20739454d1c"
+    }
+  ],
+  "dependency_git_blobs": {
+    "app/core/task_engine/dag.py": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+    "app/core/policy/denial.py": "9768b34e447c08136440c891b1974fae131f3ebd",
+    "app/core/orchestrator/engine.py": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+    "app/core/transaction/identity_binding.py": "e1e977880324664bb359eee3286223a796878f44"
+  },
+  "technical_catalog": {
+    "module": "research_request_review.py",
+    "class": "ResearchRequestReview",
+    "function": "inspect_research_request",
+    "reuse": [
+      "canonical_plan",
+      "identity_binding.token",
+      "identity_binding.digest"
+    ],
+    "proposed_body_limit_bytes": 4096,
+    "scope": "Four exact fields; fixed D0 plan ID and revision; server-observed project and existing compiler; all outcomes HOLD. No HTTP mount, DB, event, runtime, grant, storage or dependency change."
+  },
+  "evidence": {
+    "command": "python -B -m unittest -v test_research_request_review",
+    "scope": "Actual local stdlib test, four imported canonical files matched Git blob SHA1; reconstructed seven-task fixture recomputes exact fixed revision. Not full product test.",
+    "passed": 12,
+    "failed": 0,
+    "raw": "test.log",
+    "no_duplicate_claim": "Repeat test proves no receipt only; no durable dedup tested.",
+    "not_run": [
+      "full build",
+      "browser",
+      "HTTP",
+      "IAM real authentication",
+      "database commit",
+      "independent acceptance"
+    ]
+  },
+  "ownership": "H01 B central technical review; 44 open PR titles inspected, no direct MVP03 title overlap; three pinned trees contain no named candidate. Uncommitted work and semantic overlap not fully observable. No shared product file changed.",
+  "blockers": [
+    "Acceptance owner confirmation of fixed-plan request sufficiency",
+    "Authoritative HUMAN H01 session and project permission",
+    "Approved Project/WorkItem persistence and scoped idempotency physical mapping",
+    "Protected commit/revocation and independent Security/IV",
+    "C50/R9 dependency clearance before runtime"
+  ],
+  "next": "Use exact candidate for API service review, reconcile approved work-item write/read contract with owners before mounting or adding schema; retain T1 fail-closed. No second persistence engine.",
+  "rollback": "Ordinary revert governance candidate commit. No product/DB changes. Full current ZIP unavailable.",
+  "acceptance": {
+    "previous": "0/11",
+    "current": "0/11",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  }
+}
