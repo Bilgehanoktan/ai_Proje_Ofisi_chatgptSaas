@@ -15248,23 +15248,23 @@
       "MVP": "11/11"
     },
     "last_product_transfer": {
-      "canonical": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
-      "previous": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
+      "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "previous": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
       "commits": [
-        "a8730d0824c974b9c6ea5b4144f9bc1715230f5b"
+        "9acf778bc71568cdb20ea4298ce86ac539afe07d"
       ],
       "product_files": 576,
       "manifest_entries": 575,
-      "manifest_blob": "fe5d97105d5241f64573ab89d23644c5e64bfd7a",
+      "manifest_blob": "c4482fbd4d2bf87346ee3974b57fd93c2d2683d1",
       "changed_exact_payload_sha256": "2/2",
-      "product_code_files": 1,
-      "existing_test_files": 1,
+      "product_code_files": 2,
+      "existing_test_files": 0,
       "added": 0,
       "deleted": 0,
       "cumulative_H01_B": {
-        "code": 26,
+        "code": 28,
         "tests": 20,
-        "changed": 46,
+        "changed": 48,
         "added": 12,
         "deleted": 0
       },
@@ -15299,7 +15299,7 @@
         },
         {
           "path": "product/ai-company-os-backend/tests/test_recovered_sample_consumer.py",
-          "blob": "31e0de7b54ad5674a4df2312e7ff054767605d24"
+          "blob": "e5ab929cf0c4281bd51ef6f131b04831d80ef205"
         },
         {
           "path": "product/ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
@@ -15316,6 +15316,11 @@
       ],
       "remaining_R6_replacements": [
         {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+          "canonical_blob": "864fe30c72ebcc6783575c62f98748fb2d9cfff6"
+        },
+        {
           "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
           "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
           "canonical_blob": "fa47acd32adb309896f762ec50e47bf26641adbb"
@@ -15331,60 +15336,34 @@
           "canonical_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713"
         },
         {
-          "path": "product/ai-company-os-backend/requirements.txt",
-          "blob": "b2e70349a0468b016a27515d75c7aa00d1ffb317",
-          "canonical_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c"
-        },
-        {
           "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
           "blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
           "canonical_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b"
-        },
-        {
-          "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
-          "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
-          "canonical_blob": "851d642c88486d0d6e8818265866a898108eaa1c"
-        },
-        {
-          "path": "product/ai-company-os-backend/app/core/iam_session.py",
-          "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
-          "canonical_blob": "864fe30c72ebcc6783575c62f98748fb2d9cfff6",
-          "disposition": "G2 successor HOLD; G1 predecessor transferred, not G2 or actual authority"
         }
       ],
       "intentional_UI_successors": [
         {
-          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
-          "r6": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
-          "canonical": "1419c3253fdf5496738e93f6edbdfb6f654bd860"
+          "path": "product/ai-company-os-frontend/features/evidence/AgentDirectory.tsx",
+          "r6": "7104179f6b853548469bc20ba28a7cd3db07ca2d",
+          "canonical": "c99262af504d8e7b16362e6a023e10d8b02d69f7"
         },
         {
-          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
-          "r6": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
-          "canonical": "3b02873f6f645fe1d9f698ce966727d70e696220"
+          "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+          "r6": "dd68ace6096c4f24f555460783587ac1f1ea3af1",
+          "canonical": "0c7de57a2807cff116763348d1e4192d7fa11e8e"
         },
         {
-          "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
-          "r6": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
-          "canonical": "84790dfad205c0b280c66b759d594e86ddccfcf0"
+          "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+          "r6": "a5019316bac7675a5640f6da113178231f1c3e63",
+          "canonical": "fa720e2e7f022fd8053cdc0e4ae5434ef384f1ef"
         },
         {
-          "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
-          "r6": "990b06ee2b5adc115547615719610ccc02a66061",
-          "canonical": "ba5c811246dac69677f618c0d5568f2ca0701006"
-        },
-        {
-          "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
-          "r6": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
-          "canonical": "c48d8116036357776a9b8f52401fa14ba1554021"
-        },
-        {
-          "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
-          "r6": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
-          "canonical": "7b54683e75bc8591acedc6b0e7d3b9dceb574cb5"
+          "path": "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs",
+          "r6": "0aaec8456aa549d842735e1063a9e2568d5a541f",
+          "canonical": "106df38e4ccb721dc9a215233c47ed87c74acd6c"
         }
       ],
-      "remaining_gate": "IAM/T1 signed wrapper12 and G7 original7 NOT_RUN; real authority and independent root HOLD; runtime memory and dependencies C50/R9 security/license HOLD; original API9 and native browser NOT_RUN; standalone diagnostic tests not transferred pending runner compatibility. No CI.",
+      "remaining_gate": "16 exact R6 source differences: IAM G2/G4/G5/G7 and authority wrapper, recovered Memory model bridge and sample consumer, npm lock and proxy wallclock runner. Full technical/security disposition HOLD; no runtime grant or protected COMMIT. C50/R9 and IV HOLD. Do not revert four newer UI paths. requirements.txt and effect-fence test identical to pinned R6 comparison ref; do not count stale entries as new changes.",
       "acceptance": {
         "UI": "21/40",
         "Core": "12/16",
@@ -15397,11 +15376,13 @@
       },
       "full_build": "NOT_RUN",
       "independent": "HOLD",
-      "task": "H01-B-AGENT-SHARED-PLAN-READBACK-20261127",
-      "source": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
-      "catalog": "catalog/revisions/H01_B_AGENT_SHARED_PLAN_READBACK_20261127.json",
-      "local_evidence": "2/2 exact tested local SHA256/bytes and Git blobs; 16/16 updated existing mock suite (15 retained + 1 necessary method), 7 mock state groups; raw TAP blob d7b586340a1af96a64070bfd4c70bfc0ab026af3, 575/575 manifest paths/modes/sizes, 573 unchanged product blobs, no deletion. Full build/typecheck/browser/backend NOT_RUN. Product source gain: Agent Studio role plan readback shares existing provider, preserves timeout/stale/offline provenance and ORG independence; no live assignment or new acceptance.",
-      "next": "Resolve reviewed C50/R9 and signed wrapper12/G7 original7 prerequisites, then G2–G4–G5–G7; independent existing UI/CEO command contract wiring only inside approved limits, no real grant or new CI."
+      "task": "H01-B-PROJECT-WORKFLOW-PLAN-CONTROLS-20261127",
+      "source": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
+      "catalog": "catalog/revisions/H01_B_PROJECT_WORKFLOW_PLAN_CONTROLS_20261127.json",
+      "local_evidence": "2/2 exact local tested preimages and payloads; TSX syntax 2/2, 10/10 compiled VM mocked controls; 575/575 manifest path/mode/size, 573 product blobs retained, canonical commit readback 4/4; no full build/DOM/browser/real API or full ZIP",
+      "next": "Resolve existing C50/R9 independent review and original IAM12/G7 prerequisites; close fixed-plan command contract against full Design Master and protected admission; preserve new shared plan controls.",
+      "r6_comparison_ref": "2fa12e49046cb1e5b3c805ef75a5ffbe0f4ad00f",
+      "r6_delivery_head": "5d2fddb84502e0052afa75bac409a1f8aad8c1b5"
     },
     "previous_product_transfer": {
       "canonical": "5dd94b135000baeb38b629aa5f62a84a4e507d98",
@@ -17112,6 +17093,162 @@
       "product_source_changes": 0,
       "tests": "NOT_RUN; static source and lock comparison only",
       "next": "Owner ratification of draft and exact dependency/runtime/license dispositions; preserve protected denial and existing R6 evidence."
+    },
+    "project_workflow_plan_controls_previous_transfer": {
+      "canonical": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
+      "previous": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
+      "commits": [
+        "a8730d0824c974b9c6ea5b4144f9bc1715230f5b"
+      ],
+      "product_files": 576,
+      "manifest_entries": 575,
+      "manifest_blob": "fe5d97105d5241f64573ab89d23644c5e64bfd7a",
+      "changed_exact_payload_sha256": "2/2",
+      "product_code_files": 1,
+      "existing_test_files": 1,
+      "added": 0,
+      "deleted": 0,
+      "cumulative_H01_B": {
+        "code": 26,
+        "tests": 20,
+        "changed": 46,
+        "added": 12,
+        "deleted": 0
+      },
+      "remaining_R6_additions": [
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/core_org_session_review.py",
+          "blob": "83f8b81925025fe1dc8fdf5128455862be7bd2c2"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/identity_fence_review.py",
+          "blob": "7dcf5ce03df531f369b1705b8aacfe9c1d61385d"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+          "blob": "675615e04059280ec6aa99e9679b4388cd018c2d"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_core_org_session_sqlite_d5g7.py",
+          "blob": "ed8963a87d69d62ae8a827a2d5c681c6cd1eb463"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_authority_d5g2.py",
+          "blob": "16bfc7013ae77cdcf437227b9fb6ac8a9a69d08c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_identity_d5g4.py",
+          "blob": "8c6f69cf0a489b7bef9a26f7f67b73307c738f6f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_iam_org_d5g5.py",
+          "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_recovered_sample_consumer.py",
+          "blob": "31e0de7b54ad5674a4df2312e7ff054767605d24"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_runtime_recovered_memory_link.py",
+          "blob": "449fc4eb642016162a8fc0fcdcc414b3cc1d8661"
+        },
+        {
+          "path": "product/ai-company-os-frontend/package-lock.json",
+          "blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/d0-proxy-wallclock.test.cjs",
+          "blob": "bc714ec16a144cba403c214bd1497525e5114821"
+        }
+      ],
+      "remaining_R6_replacements": [
+        {
+          "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+          "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+          "canonical_blob": "fa47acd32adb309896f762ec50e47bf26641adbb"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/runtime_model_review.py",
+          "blob": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+          "canonical_blob": "6e25b4d3429f821bb1b55e0bc2bdcf7dc98a5bf1"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py",
+          "blob": "39b7b65eb55cb29530120d477a334543e0ba3dfe",
+          "canonical_blob": "86ddb2771c881dd3da6bc2b5845bf98f3577c713"
+        },
+        {
+          "path": "product/ai-company-os-backend/requirements.txt",
+          "blob": "b2e70349a0468b016a27515d75c7aa00d1ffb317",
+          "canonical_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+          "blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+          "canonical_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b"
+        },
+        {
+          "path": "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py",
+          "blob": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+          "canonical_blob": "851d642c88486d0d6e8818265866a898108eaa1c"
+        },
+        {
+          "path": "product/ai-company-os-backend/app/core/iam_session.py",
+          "blob": "f3c37428acd475e09c228bce47d534d6584cd944",
+          "canonical_blob": "864fe30c72ebcc6783575c62f98748fb2d9cfff6",
+          "disposition": "G2 successor HOLD; G1 predecessor transferred, not G2 or actual authority"
+        }
+      ],
+      "intentional_UI_successors": [
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx",
+          "r6": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+          "canonical": "1419c3253fdf5496738e93f6edbdfb6f654bd860"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx",
+          "r6": "2085382bf5cd514a95d3e246ead6a00b47aa75bf",
+          "canonical": "3b02873f6f645fe1d9f698ce966727d70e696220"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx",
+          "r6": "1dce3b9f6d059d2302bebf3ac209a31db89f4d39",
+          "canonical": "84790dfad205c0b280c66b759d594e86ddccfcf0"
+        },
+        {
+          "path": "product/ai-company-os-frontend/features/organization/OrganizationReadback.tsx",
+          "r6": "990b06ee2b5adc115547615719610ccc02a66061",
+          "canonical": "ba5c811246dac69677f618c0d5568f2ca0701006"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs",
+          "r6": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+          "canonical": "c48d8116036357776a9b8f52401fa14ba1554021"
+        },
+        {
+          "path": "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs",
+          "r6": "38da03a56d60c37cefc15069791f7f83dd6b0ee6",
+          "canonical": "7b54683e75bc8591acedc6b0e7d3b9dceb574cb5"
+        }
+      ],
+      "remaining_gate": "IAM/T1 signed wrapper12 and G7 original7 NOT_RUN; real authority and independent root HOLD; runtime memory and dependencies C50/R9 security/license HOLD; original API9 and native browser NOT_RUN; standalone diagnostic tests not transferred pending runner compatibility. No CI.",
+      "acceptance": {
+        "UI": "21/40",
+        "Core": "12/16",
+        "MVP": "0/11",
+        "W8": "3/8",
+        "IV": "0/7",
+        "integration": "HESAPLANAMADI",
+        "weighted": "HESAPLANAMADI",
+        "ordinal": "unchanged"
+      },
+      "full_build": "NOT_RUN",
+      "independent": "HOLD",
+      "task": "H01-B-AGENT-SHARED-PLAN-READBACK-20261127",
+      "source": "7f875dd55e2373d36c15a3dc2ba1e59b4b0478e6",
+      "catalog": "catalog/revisions/H01_B_AGENT_SHARED_PLAN_READBACK_20261127.json",
+      "local_evidence": "2/2 exact tested local SHA256/bytes and Git blobs; 16/16 updated existing mock suite (15 retained + 1 necessary method), 7 mock state groups; raw TAP blob d7b586340a1af96a64070bfd4c70bfc0ab026af3, 575/575 manifest paths/modes/sizes, 573 unchanged product blobs, no deletion. Full build/typecheck/browser/backend NOT_RUN. Product source gain: Agent Studio role plan readback shares existing provider, preserves timeout/stale/offline provenance and ORG independence; no live assignment or new acceptance.",
+      "next": "Resolve reviewed C50/R9 and signed wrapper12/G7 original7 prerequisites, then G2–G4–G5–G7; independent existing UI/CEO command contract wiring only inside approved limits, no real grant or new CI."
     }
   }
 }
