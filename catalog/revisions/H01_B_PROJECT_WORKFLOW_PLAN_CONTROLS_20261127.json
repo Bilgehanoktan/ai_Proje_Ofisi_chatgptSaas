@@ -1,0 +1,44 @@
+{
+  "task": "H01-B-PROJECT-WORKFLOW-PLAN-CONTROLS-20261127",
+  "parent": "a8730d0824c974b9c6ea5b4144f9bc1715230f5b",
+  "governance": "c6d036690ba24e9e0bc4db094564d9c1dea270ab",
+  "classification": "D0_READ_ONLY_SOURCE_INTEGRATION",
+  "paths": [
+    {
+      "path": "product/ai-company-os-frontend/features/project-management/ProjectStudio.tsx",
+      "old_blob": "dd68ace6096c4f24f555460783587ac1f1ea3af1",
+      "new_blob": "0c7de57a2807cff116763348d1e4192d7fa11e8e",
+      "bytes": 7800,
+      "sha256": "24ddcb033bbde138570405848669fa6f9410928e24dd302bedd4911730137370"
+    },
+    {
+      "path": "product/ai-company-os-frontend/features/workflow/WorkflowDraft.tsx",
+      "old_blob": "a5019316bac7675a5640f6da113178231f1c3e63",
+      "new_blob": "fa720e2e7f022fd8053cdc0e4ae5434ef384f1ef",
+      "bytes": 6741,
+      "sha256": "b86694b9f719a0a720c50f71f3ce7fe4594f15ad26e4e058b52c025947398898"
+    }
+  ],
+  "scope": "Expose existing useSharedSnapshot().planRead.read/reset on ProjectStudio and WorkflowDraft. Explicit click only; read disabled during loading and reset disabled at idle. Both use the existing shared source, parser, freshness and offline labels. No draft mutation, new route, dependency, runtime, DB or event.",
+  "architecture": "Existing D13 UI read-only; v135 archive sha256 01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9 lines 1310-1339 and 50323-50335 reviewed; no normative amendment; full latest Design Master review remains incomplete.",
+  "ownership": "H01 B central writer; rechecked canonical/governance/R6 HEAD; PR 26,29,31,39,40,42,43,45,48,49,50,51,52,53,54,55 changed-path lists contain neither touched TSX file. Uncommitted external work not observable.",
+  "evidence": {
+    "preimages": "2/2 actual local git blob SHA1 and SHA256 matched exact canonical bytes",
+    "syntax": "2/2 TypeScript 5.8.3 transpileModule on Node 22.16.0 PASS",
+    "wiring": "10/10 local VM mock React/JSX checks across idle, loading, historical, hold and stale mock label; actual compiled source exercised, verified read/reset function identity, disabled behavior, callback counters and historical-only parser input. Not full typecheck, DOM, browser, HTTP or execution. No new test file in product.",
+    "manifest": "575 entries; two changed payloads and 573 unchanged entries; prior test evidence preserved",
+    "limits": "Full current archive/ZIP and full byte rehash unavailable; full build/real browser NOT_RUN. Independent Security/IV, real grants/T1, C50/R9 and 16 R6 transfers still HOLD or review. No CI."
+  },
+  "acceptance": {
+    "UI": "21/40",
+    "Core": "12/16",
+    "MVP": "0/11",
+    "W8": "3/8",
+    "IV": "0/7",
+    "integration": "HESAPLANAMADI",
+    "weighted": "HESAPLANAMADI",
+    "delta_pp": 0
+  },
+  "rollback": "Ordinary revert of the scoped commit. Troubleshoot shared planRead phase, existing projectionRegistry and fixed-plan parser. No DB migration or data reset. Shared reset intentionally clears historical read across dependent views.",
+  "next": "C50/R9 independent owner decisions and existing protected admission/CEO command contract reconciliation. Preserve current Agent Studio and both new UI controls."
+}

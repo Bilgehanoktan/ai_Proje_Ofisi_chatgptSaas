@@ -72,3 +72,7 @@ Exact archived test_adapter_skill_integration.py (four existing methods, no new 
 
 ## H01 B — AI employee role shared historical plan readback (27.11.2026)
 AgentDirectory consumes existing shared planRead and exact plan guard, adds read/reset and historical/offline/STALE/TIMEOUT provenance. Existing ORG remains independent, role assignment and runtime execution HOLD. PR35 exact test fix retained; original updated suite 16/16 isolated mock PASS and 7 targeted state groups PASS. Full build/typecheck/browser/live backend NOT_RUN. See ../catalog/revisions/H01_B_AGENT_SHARED_PLAN_READBACK_20261127.json. Manifest 575 entries, 576 product files. Ordinary revert; IAM12/G7/C50/R9/IV unchanged.
+
+
+## H01 B — Project/Workflow direct shared-plan controls (27.11.2026)
+Existing ProjectStudio and WorkflowDraft now expose the existing shared plan read/reset callbacks directly, retaining historical/offline labels, freshness, HOLD and local draft separation. Exact two preimages and new payloads verified locally; TSX syntax 2/2 and compiled mock wiring 10/10 PASS (not full typecheck/DOM/browser/HTTP). 575 manifest entries, no new product files or dependency changes. See ../catalog/revisions/H01_B_PROJECT_WORKFLOW_PLAN_CONTROLS_20261127.json. No command ingress, actual grant/T1/worker dispatch or independent acceptance. C50/R9, IAM12/G7 and 16 R6 path review remain open; full current ZIP unavailable. Normal revert for rollback.
