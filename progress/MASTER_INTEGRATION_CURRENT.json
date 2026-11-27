@@ -17282,4 +17282,54 @@
   "acceptance": "0/11 unchanged",
   "next": "Phase 3: reconcile existing binder on isolated candidate; no mounted mutation until IAM, physical mapping, protected commit and independent prerequisites."
 }
+,
+  "h01_mvp03_phase3_20261127": {
+  "task": "H01-MVP03-01-PHASE3-BINDING",
+  "status": "ISOLATED_SOURCE_UPDATED_RUNTIME_ACCEPTANCE_HOLD",
+  "decision_commit": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "criterion": "3",
+  "candidate_branch": "integration/h01-r6-research-unified-20261127",
+  "candidate": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
+  "previous_candidate": "0bc7a04440baba0d0972389a9c9347abfbd5f82b",
+  "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "manifest": {
+    "entries": 588,
+    "product_files": 589,
+    "blob": "3d213258bdec7839af65d143366ec6fe338a47a6",
+    "unchanged_payload": 586,
+    "changed_payload": 2,
+    "readback": "PASS path/mode/size and pin reconciliation; changed content hashes computed before tree creation"
+  },
+  "catalog": "catalog/revisions/H01_MVP03_PHASE3_BINDING_20261127.json",
+  "handover": "handover/H01_MVP03_PHASE3_BINDING_20261127.md",
+  "architecture_review": {
+    "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+    "lines": [
+      "105040-105076",
+      "116785-116827",
+      "40743-40749",
+      "97111-97116"
+    ],
+    "scope": "Relevant actual uploaded v135 passages rechecked; full latest Design Master and all addenda reconciliation incomplete."
+  },
+  "source_gain": "Existing RESEARCH binder hardened; 8 focused test methods added, NOT_RUN; no new API or DB/event schema; no actual persistence, admission, or UI mutation.",
+  "evidence": {
+    "E01_E10": "HOLD; no acceptance proof",
+    "tests": "NOT_RUN",
+    "dependency": "HOLD",
+    "IV": "HOLD"
+  },
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "Codex exact candidate scoped binder test when reviewed local environment available. MI05/06 fixed plan selection; MI02/03/04 approved WorkItem physical mapping, HUMAN project permission and protected write/readback; MI10 independent review. No live endpoint until gates close.",
+  "rollback": "ordinary revert of isolated source commit and this record; decision history remains."
+}
 }
