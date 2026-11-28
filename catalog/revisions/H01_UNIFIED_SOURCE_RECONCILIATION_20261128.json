@@ -1282,5 +1282,105 @@
     "decision": "Keep two-file patch quarantined because mandatory closure remains incomplete; no new independent engine or routine regression. Additional narrow dual reference check is required for changed behavior.",
     "acceptance_delta_pp": 0,
     "rollback": "normal revert evidence-only commit; product tree unchanged"
+  },
+  "research_first_r8_org_transfer_20261128": {
+    "status": "ISOLATED_ADDITIVE_ORG_MODULE_TRANSFER; R8_10_LOCAL_CANDIDATE_PASS; G5_12_TRANSFER_SCOPE_PASS; DIRECT_3_PASS",
+    "base": "b2f2c91415b918b68f0226de922103d27d5cc36b",
+    "governance": "d612fcbd4f3178f47ca135d31ef680eb5cf03e2b",
+    "architecture": {
+      "v135_member": "Ai_Proje_Ofisi_Chatgpt(Saas)/AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1.md",
+      "bytes": 12011382,
+      "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "105060-105095",
+        "116785-116827"
+      ],
+      "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7"
+    },
+    "source": {
+      "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "preimage": "675615e04059280ec6aa99e9679b4388cd018c2d",
+      "postimage": "14787a8c7e73e68f25d3ccc91b414e2c1b0d12ee",
+      "sha256": "99def2fc353d2b704bc6dca49548133695317b3c2c583d3d01383dba2cac28bd",
+      "bytes": 9219,
+      "symbols": [
+        "ProtectedOrgTransition",
+        "require_protected_org_commit"
+      ],
+      "source_patch": "7d52c24d2b8134553fa997de4469d141aa699925",
+      "remaining_authority_patch": "2c10ed99b13db6d81f5fa2debb518c5bfa5e0fef",
+      "legacy_authority_unchanged": "d492c6d3ea99214e28c0fa4e772139169bd39a17"
+    },
+    "closure": {
+      "files": 33,
+      "exact": 33,
+      "pins_path": "tests/evidence/H01_RESEARCH_FIRST_R8_EXACT_PINS_20261128.json",
+      "pins_blob": "5ded8170335f983513ef2d2054fe7db91730cfc5",
+      "pins_sha256": "63b450f8aef737d26eb8d24f781cd2eb155c88d84010a9ea192da127f0212f43",
+      "preserved_newer_durable_ops": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "environment": "Python 3.13.5 -I -S -B, SQLite 3.46.1, stdlib only, no network/PG; exact source bytes reconstructed via connector, no stubs. Three SQL schemas exact."
+    },
+    "tests": {
+      "r8": {
+        "source": "459c3eb16302375cd352140a0d6023fb1554d566",
+        "blob": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc",
+        "pass": 10,
+        "fail": 0,
+        "scope": "both patched modules local candidate only; original test not yet added to product because legacy caller lacks protected_org parameter",
+        "raw": "tests/evidence/H01_RESEARCH_FIRST_R8_ORIGINAL_20261128.log",
+        "blob_log": "870b7e05fcc9eb44f0dbef921610c51ba344a973",
+        "sha256": "c71d6f51f2f8fa764064aad43fb6a227134ee3a5ebcd68cc3591a597d1bf203e"
+      },
+      "g5": {
+        "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "pass": 12,
+        "fail": 0,
+        "scope": "exact ORG postimage with original intent_authority preimage restored, existing affected regression",
+        "raw": "tests/evidence/H01_RESEARCH_FIRST_R8_ORG_ONLY_G5_20261128.log",
+        "blob_log": "9d92cf514f970091eba1f8ae938aeeabf65b879b",
+        "sha256": "594fdd29d0a062e03210cc7cfa5562f1aa0f876ed9ee00aefcb8f862d95cdaa8"
+      },
+      "direct": {
+        "pass": 3,
+        "fail": 0,
+        "scope": "direct new ORG guard with original authority: exact, invalid digest, malformed reference; snapshots unchanged and claim not called. Separate checks, not part of original 30.",
+        "raw": "tests/evidence/H01_RESEARCH_FIRST_R8_ORG_ONLY_DIRECT_20261128.log",
+        "blob_log": "b79ae7ee652bd21c45fbd266095337afb5492592",
+        "sha256": "5f464615372a4180b6f4b009b2617b2671a0b3b8d6e258fa1958469eccecb9b6"
+      },
+      "original_progress": {
+        "previous": 18,
+        "current": 28,
+        "total": 30,
+        "remaining": 2
+      },
+      "not_run": [
+        "G6A fullchain 2",
+        "PR46 signed-wrapper mandatory flows",
+        "actual protected PG",
+        "IV",
+        "full build"
+      ]
+    },
+    "dependency": {
+      "installed_metadata_only": {
+        "cryptography": "46.0.4",
+        "cffi": "2.0.0",
+        "pycparser": "3.0"
+      },
+      "decision": "cryptography 46.0.4 legacy pin not approved current C50 graph; no import, package install or signed tests. MI01/03/10 owner/license/security HOLD."
+    },
+    "manifest": {
+      "previous": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
+      "new": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "entries": 593,
+      "product_files": 594,
+      "full_raw": "NOT_VERIFIED"
+    },
+    "decision": "Independent additive ORG module transfer justified by actual G5 regression with unchanged authority and direct new boundary checks; no legacy wrapper change, no new caller or real grant. Remaining Authority hunk and original R8 test transfer gated by signed closure; not a full R8/PR46 milestone.",
+    "acceptance_delta_pp": 0,
+    "rollback": "ordinary revert; prior two-file patch retained in parent."
   }
 }
