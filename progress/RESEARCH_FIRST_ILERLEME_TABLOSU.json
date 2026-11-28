@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 15,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,7 +10,7 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "a7c1201a8af24c75bbb17f039c5ad908e88a2b84",
+    "governance": "deb678232e78103f9445f61fffa06bbbb540fb9b",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
     "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
@@ -868,6 +868,63 @@
       "product_transfer": 0,
       "acceptance_delta_pp": 0,
       "rollback": "ordinary revert candidate patch/evidence and governance record."
+    },
+    "finance_local_build_browser_precheck_handover_20261128": {
+      "classification": "EXACT_HEAD_USER_REPORTED_LOCAL_EVIDENCE_GITHUB_COMMENT_READBACK_VERIFIED",
+      "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+      "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "comment_id": 7240149017,
+      "comment_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/56#issuecomment-7240149017",
+      "comment_created_at": "2026-11-28T13:44:15Z",
+      "architecture": {
+        "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "read_ranges": [
+          "73548-73554",
+          "99643-99649"
+        ],
+        "doc_rev_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "read_ranges_0155": [
+          "101262-101268"
+        ],
+        "paired_addendum": "ba33e7f4da436d2c865d25c81f68a899a9e919f6",
+        "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "limit": "Relevant sections reread; full latest master/archive not verified."
+      },
+      "patch_blob": "13ec028b352ee70f5b2dcef0d6df159bbf4ca9e0",
+      "frontend_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "environment_reported": {
+        "platform": "Windows",
+        "node": "24.14.0",
+        "next": "15.5.29",
+        "offline_packages": 30
+      },
+      "checks": {
+        "apply_check": "PASS_REPORTED",
+        "standalone_tsc_initial": "FAIL_REPORTED_GENERATED_CSS_DECLARATIONS_MISSING",
+        "next_build": "PASS_REPORTED_EXIT_0",
+        "browser_precheck": "PASS_REPORTED_HEADLESS",
+        "overview_only": "PASS_REPORTED",
+        "existing_get": "PASS_REPORTED",
+        "synthetic_503_no_data_hold": "PASS_REPORTED",
+        "actual_backend_200": "NOT_RUN_OR_UNVERIFIED",
+        "full_browser_acceptance": "NOT_VERIFIED"
+      },
+      "limits": "Comment verified; raw logs, local postimage and installation integrity not independently read back this turn. No new local execution or product change. Positive backend return remains open. No C50 approval, W8 C07/C08/C05 or acceptance inferred.",
+      "memory_checkpoint": {
+        "status": "BLOCKED_REPORTED_IN_CHAT",
+        "reason": "Authorized live card mapping not verified",
+        "scope": "Checkpoint report only; no inferred product Memory/Knowledge failure or acceptance change."
+      },
+      "next": {
+        "owner": "Codex / MI05/03API",
+        "existing_fixture_creator": "product/ai-company-os-backend/app/core/development_review/paired_demo.py",
+        "creator_blob": "7399a527549d6be3d1aa9692fcc5998c0dbf9961",
+        "backend_router_blob": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b",
+        "method": "In existing approved exact backend environment, create a fresh disposable pair via existing paired_demo; set AICOS_D0_WORKBENCH_DB and AICOS_D0_ADMISSION_DB, start existing app.main:app on loopback matching AICOS_D0_BACKEND_PORT, check actual GET 200 and Finance render of sample fields with no-spend labels; record exact patch postimage, lock, logs, and readback. No unapproved package install or mock 200 substitution. Then scoped candidate source transfer if mandatory review closed."
+      },
+      "product_transfer": 0,
+      "acceptance_delta_pp": 0,
+      "rollback": "Normal revert governance record; no product change."
     }
   },
   "detail_rows": [
@@ -2048,17 +2105,18 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "D0 task_budget_snapshot ve paired read guard kaynakları mevcut. Finance overview için mevcut TaskBudgetPanel bağlantısı exact yama 1/1 hazır; ürün aktarımı 0/1.",
-      "missing": "Gerçek bütçe rezervasyonu, settlement ve maliyet kaydı. React/browser etkilenmiş akış NOT_RUN.",
-      "next": "Onaylı frontend ortamında finans paneli okuma/HOLD ve yetki sınırı doğrula; ardından exact yama aktarımı.",
+      "ready": "Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
+      "missing": "Gerçek bütçe rezervasyonu, settlement ve maliyet kaydı HOLD. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
+      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
-        "finance_task_budget_mount_20261128"
+        "finance_task_budget_mount_20261128",
+        "finance_local_build_browser_precheck_handover_20261128"
       ],
       "previous_status": "KISMEN HAZIR",
-      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
+      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2364,17 +2422,18 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "PARALEL",
-      "ready": "Güncel Project/Workflow Studio plan read/reset ve shared projection kaynakları korunuyor. Finance Studio için mevcut görev-bütçe paneli yeniden kullanım yaması hazır (karantina).",
-      "missing": "Diğer Studio alanlarının gerçek ortak backend bağlantıları. Finance render/build açık.",
-      "next": "Onaylı mevcut frontend ortamında etkilenen Finance akışı, ardından kaynak aktarımı.",
+      "ready": "Project/Workflow kaynakları korunuyor. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
+      "missing": "Diğer Studio ortak backend bağlantıları açık. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
+      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
-        "finance_task_budget_mount_20261128"
+        "finance_task_budget_mount_20261128",
+        "finance_local_build_browser_precheck_handover_20261128"
       ],
       "previous_status": "PARALEL",
-      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
+      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -3179,9 +3238,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance bağımsız kaynak yaması 1/1; ürün ağacı değişmedi.",
-      "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft.",
-      "next": "Signed Authority/Scheduler exact dependency ve Finance etkilenen render ayrı ilerlesin.",
+      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance bağımsız kaynak yaması 1/1; ürün ağacı değişmedi. Finance build ve browser precheck PASS_REPORTED.",
+      "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft. Finance 200/transfer açık.",
+      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım. Signed Authority/Scheduler ayrı HOLD.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3196,10 +3255,11 @@
         "c50_r9_publisher_provenance_requalification_20261128",
         "r9_api20_static_import_review_20261128",
         "pr56_unchanged_raw_source_batch_01_20261128",
-        "finance_task_budget_mount_20261128"
+        "finance_task_budget_mount_20261128",
+        "finance_local_build_browser_precheck_handover_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
+      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -3648,14 +3708,15 @@
       ],
       "development_percent": null,
       "status": "KISMEN HAZIR",
-      "ready": "Sabit plan seçimi ve panel mevcut. Finance Studio kaynak bağlantı yaması 1/1 hazır; ürün aktarımı 0/1.",
-      "missing": "Gerçek command ve readback; submit/read devre dışı. Finance etkilenmiş render NOT_RUN.",
-      "next": "Onaylı ortamda Finance render; mevcut yetkili CEO backend akışı ayrı.",
+      "ready": "Sabit plan seçimi ve panel mevcut. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
+      "missing": "Gerçek command ve readback; submit/read devre dışı. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
+      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım. Yetkili CEO komut akışı ayrı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "review",
-        "finance_task_budget_mount_20261128"
+        "finance_task_budget_mount_20261128",
+        "finance_local_build_browser_precheck_handover_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3688,7 +3749,7 @@
         "percent": 31.3
       },
       "delta_pp": 0,
-      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone."
+      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure."
     },
     {
       "operational_number": 9,
@@ -3854,9 +3915,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance exact kaynak yaması ve statik kanıtı mevcut.",
-      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive. Finance gerçek render/build NOT_RUN.",
-      "next": "Exact signed bağımlılık ve izinli frontend render; ilgili aktarım kapılarını kapat.",
+      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance exact kaynak yaması ve statik kanıtı mevcut. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
+      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
+      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım. Signed bağımlılık ayrı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3872,7 +3933,8 @@
         "c50_r9_publisher_provenance_requalification_20261128",
         "r9_api20_static_import_review_20261128",
         "pr56_unchanged_raw_source_batch_01_20261128",
-        "finance_task_budget_mount_20261128"
+        "finance_task_budget_mount_20261128",
+        "finance_local_build_browser_precheck_handover_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3932,7 +3994,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone."
+      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure."
     }
   ],
   "maintenance": {
@@ -4193,6 +4255,23 @@
       "reason": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
       "evidence_ref": "finance_task_budget_mount_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 15,
+      "date": "2026-11-28",
+      "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+      "changed_sections": [
+        20,
+        26,
+        39
+      ],
+      "changed_operational": [
+        8,
+        12
+      ],
+      "reason": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
+      "evidence_ref": "finance_local_build_browser_precheck_handover_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -4344,14 +4423,41 @@
         "previous": 0,
         "current": 0,
         "total": 1,
-        "status": "HOLD_AFFECTED_RUNTIME"
+        "status": "HOLD_POSITIVE_FLOW_AND_EXACT_EVIDENCE"
       },
       "affected_runtime": {
         "current": 0,
         "total": 1,
-        "status": "NOT_RUN"
+        "status": "PARTIAL_NEGATIVE_PATH_PASS_POSITIVE_OPEN"
       },
-      "evidence_ref": "finance_task_budget_mount_20261128"
+      "evidence_ref": "finance_task_budget_mount_20261128",
+      "local_build": {
+        "previous": 0,
+        "current": 1,
+        "total": 1,
+        "status": "PASS_REPORTED_COMMENT_VERIFIED",
+        "evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+      },
+      "browser_precheck": {
+        "previous": 0,
+        "current": 1,
+        "total": 1,
+        "status": "PASS_REPORTED_COMMENT_VERIFIED",
+        "evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+      },
+      "positive_backend_return": {
+        "previous": 0,
+        "current": 0,
+        "total": 1,
+        "status": "OPEN_UNVERIFIED"
+      },
+      "latest_evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+    },
+    "memory_checkpoint": {
+      "status": "BLOCKED_REPORTED_IN_CHAT",
+      "reason": "Authorized live card mapping not verified",
+      "classification": "Separate checkpoint; product Memory score unchanged",
+      "evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
     }
   }
 }
