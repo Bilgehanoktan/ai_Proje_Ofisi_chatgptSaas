@@ -871,5 +871,162 @@
     "pr_review": "PR10/46/52 0 reviews; 44 open PRs checked, no competing published path writer newly identified by title; uncommitted work invisible.",
     "next": "Review patch against exact closure and original G6A/R8/PR46/strict transport suites under approved scope; apply only after mandatory affected-flow validation. Continue independent exact source reconciliation. Actual HUMAN protected COMMIT remains HOLD.",
     "rollback": "Normal revert review-only commit, product tree unchanged."
+  },
+  "research_first_architecture_closure_20261128": {
+    "status": "TECHNICAL_SOURCE_CLOSURE_REVIEW_HOLD",
+    "base": "7feb8375061a8e20b741205e415a88eb772f0a29",
+    "governance": "60a8f462f8bc0dcaeb123f3d43b484ce5d36f044",
+    "architecture": [
+      {
+        "source": "uploaded AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1.md",
+        "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "bytes": 12011382,
+        "lines": 119818,
+        "reviewed_ranges": [
+          "13655-13664",
+          "29132-29214",
+          "64044-64066",
+          "105060-105095",
+          "106330-106343",
+          "106397-106422",
+          "116785-116802",
+          "116806-116827"
+        ]
+      },
+      {
+        "source": "uploaded v11.6.142-rc1 ADAY",
+        "sha256": "073a8e4b846fa4d546d10dd0a92a1926f886ff6621eff8cbfd36f6812e1c8311",
+        "bytes": 12101285,
+        "lines": 120686,
+        "reviewed": "candidate catalog and relevant initial additions; not normative successor approval"
+      },
+      {
+        "source": "uploaded DOC-REV-0155 recovery",
+        "sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "bytes": 12193137,
+        "lines": 121437,
+        "reviewed": "initial R01/R02/R03/R09/QA/IV recovery sections; relevant source reconciliation"
+      },
+      {
+        "source": "current GitHub Design Master index/addenda",
+        "blob": "749f4480022569dd6149023705fe54606d3c50a4"
+      },
+      {
+        "source": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+        "blob": "dccf1b8c297efc22efb9f9e97666346348a580e4"
+      },
+      {
+        "source": "docs/0190/R03_T1_DECISION_PACKET.md",
+        "blob": "adf651da6493f742dd473109b2a98776ca25198f"
+      },
+      {
+        "source": "docs/0158/R03_T1_PHYSICAL_MAPPING_0157.md",
+        "blob": "ea5698984409e85ecd31242c306143f92a740452"
+      },
+      {
+        "source": "docs/0217/PG_RLS_ACCEPTANCE.md",
+        "blob": "1e7d7f9e773cffffb0cecfb0c9388ebe1da90f5a"
+      },
+      {
+        "source": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+        "blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+      }
+    ],
+    "physical": [
+      {
+        "id": "A1-PROJECT",
+        "existing": "schema.sql@32b7609b + operations.sql@3443f658 + durable_ops.py@619fe224",
+        "finding": "ORG revision and project team/proposal D0 store; not authoritative Project head/revision/create/read permission. No reuse of org rev as project rev.",
+        "next": "Data/IAM owner exact Project authority and PK/FK/WorkOwner source."
+      },
+      {
+        "id": "A1-CATALOG",
+        "existing": "RESEARCH package f443a28b; binder a05379b6; readback f1e3049b",
+        "finding": "immutable candidate and structural pins only; publication, entitlement, plan approval and G8 separate; no physical protected custody record demonstrated.",
+        "next": "QA/IV exact candidate review and actual owner publication/entitlement/plan authority."
+      },
+      {
+        "id": "A1-FENCE",
+        "existing": "database/0192/candidate_event_outbox_fence.sql@6e4780bf; postgres_write.py@5b341e1d",
+        "finding": "unique(S,idempotency_key) not equivalent to proposed tenant-wide namespace/key fingerprint; run primitives require run_id and valid LogicalIntent; not HUMAN WorkItem writer.",
+        "next": "Ratify A1 exact typed keys and server digest, preserve legacy run constraints; no DDL before approval."
+      },
+      {
+        "id": "A1-ROLES",
+        "existing": "database/0193/candidate_run_head.sql@180924e9; 0194/candidate_transition_roles.sql@7b5d374b; company_coordination.py@fb068ef9",
+        "finding": "run_heads and company_run_membership/run events are run-specific; no WorkItem six-role persisted mapping or non-dispatchable event consumption proven.",
+        "next": "Typed WORKITEM branch in existing T1, exact creation anchor C and separate event consumer review."
+      },
+      {
+        "id": "A1-READBACK",
+        "existing": "postgres_snapshot.py@9ba61263; readback_review.py@f1e3049b",
+        "finding": "repeatable-read read-only D0 historical plan reader; synthetic expected/observed equality is not fresh authorized HUMAN readback. No authority grant from same_id or historical pin.",
+        "next": "Fresh authorized same-ID readback of all six roles and immutable creation anchor; do not substitute old plan GET."
+      },
+      {
+        "id": "A1-PROTECTION",
+        "existing": "postgres_session.py@6c099571; iam_session.py@f3c37428; 0183 D0 SQL@8e6b4a4e; 0217 RLS",
+        "finding": "protected transport always denies before connect; SQLite IAM issuer not real; 0183 FORCE RLS has no policies and rollback; 0192-0196L candidates no RLS, no verified actual COMMIT; D03/D04 independent custody open.",
+        "next": "Independent MI10 exact authority/restore/expiry and actual protected RLS/COMMIT review; no fallback."
+      }
+    ],
+    "source_closure": {
+      "r8": {
+        "commit": "459c3eb16302375cd352140a0d6023fb1554d566",
+        "pins_blob": "520c05a4b18e8c1d9e88ef32d3bbcd1475dfeb02",
+        "match": 16,
+        "diverged": 5,
+        "absent": 16,
+        "total": 37,
+        "diverged_product": [
+          "ledger.py",
+          "review.py",
+          "intent_authority.py",
+          "org_membership_review.py",
+          "port.py"
+        ],
+        "absent_historical_candidate_paths": 14,
+        "absent_original_product_tests": [
+          "test_protected_org_t1_d5c_r8.py",
+          "test_postgres_strict_expiry_d5c_r6.py"
+        ],
+        "org_candidate_relocation": {
+          "exact": 8,
+          "total": 9,
+          "keep_current": "durable_ops.py 619fe224c05d7f7f7efe998583e4730cb2cb4d3e; adds D0 assignment review initialization and record/read methods, no removal found in compared line set; original 43ed448c02904ab44b3cf8665f4aeafb0a38f10a; preserve newer path, do not overwrite."
+        },
+        "ledger": "Current 95438f2d300f09242876893943ee250884ebdde6 adds exact event id and payload type guards relative to historical e3f94cab61a27c7d4c89d02516887146b2026eb3; keep current."
+      },
+      "g6a": {
+        "commit": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+        "pins_blob": "cecb7abfa0654daa2190fcb878c4e33db0163646",
+        "match": 6,
+        "diverged": 3,
+        "absent": 1,
+        "total": 10
+      },
+      "r8_historical_transport_evidence": {
+        "commit": "c818549bc143467798e9f508e1dc42e24be60bca",
+        "blob": "72db8ff5ffba7a1f519188645fa78ea763950bb8",
+        "scope": "17/17 R6/R7 transport selected regression only; R8 protected ORG 10 NOT_RUN, G5 12/G4 14 NOT_RUN in this closure. Cannot authorize union."
+      },
+      "patch": "quarantine/H01_RESEARCH_FIRST_PROTECTED_PRECLAIM_20261128.patch",
+      "disposition": "HOLD; original test references exist but exact integrated closure differs. No old source overwrite or new test."
+    },
+    "publication": {
+      "package": "f443a28be483118d4e54d8494a122126e551198d",
+      "scope": "MVP-03_FIXED_RESEARCH_REQUEST_ONLY",
+      "decision": "Technical content review only: exact four input fields, separate idempotency header, HTTP201 after protected COMMIT/readback; 200 proposal, 202 separate admission; E01–E10 references, execution/release/effects explicitly excluded. Not full RESEARCH execution contract, actual QA/IV not completed; no publication or activation."
+    },
+    "manifest": {
+      "entries": 592,
+      "path_size": "592/592",
+      "product_files": 593,
+      "manifest_blob": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+      "raw_full": "NOT_VERIFIED",
+      "full_archive": "NOT_AVAILABLE current exact archive"
+    },
+    "limitations": "Relevant sections of full uploaded masters read, not all 119k+ lines or every later addendum. 44 open PR and 0 reviews at prior exact check; no new tests, code, merge, CI, real IAM/COMMIT or acceptance. No verified independent source transfer found in scope; no artificial progress.",
+    "next": "Separate owner A1 ratification and source closure verification of existing quarantined patch; actual QA/IV/custody remain independent. Continue source-only independent work when exact eligible source is found. User prior no new/routine test remains."
   }
 }
