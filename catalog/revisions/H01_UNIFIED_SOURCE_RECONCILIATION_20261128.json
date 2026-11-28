@@ -1483,5 +1483,74 @@
     "plan_criterion_delta": 0,
     "next": "Use approved exact current signed closure to run existing G6A 2, PR46 signed wrapper and Scheduler 6 SQL consumer methods; then transfer existing candidate patches and original regressions. No unapproved install/downgrade, no real PG/IV.",
     "rollback": "ordinary revert evidence and quarantine patch commit; product unchanged"
+  },
+  "research_first_finance_task_budget_mount_20261128": {
+    "status": "EXACT_SOURCE_PATCH_PREPARED_AFFECTED_BROWSER_HOLD",
+    "base": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+    "governance": "a7c1201a8af24c75bbb17f039c5ad908e88a2b84",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "v135_lines": [
+        73551,
+        99646
+      ],
+      "doc_rev_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+      "doc_rev_0155_line": 101265,
+      "current_paired_addendum": "ba33e7f4da436d2c865d25c81f68a899a9e919f6",
+      "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+      "normative_change": false
+    },
+    "owner": {
+      "central_writer": "H01 assigned",
+      "open_pr_count": 45,
+      "checked_pr_files": [
+        42,
+        43,
+        45,
+        48,
+        49,
+        54,
+        56
+      ],
+      "overlap": [],
+      "uncommitted_work": "not visible"
+    },
+    "finding": "Existing Finance Studio shows offline metrics and Dashboard mounts independent admission and lifecycle readers. Existing paired TaskBudgetPanel is available on the Office path but not in Finance overview. Reuse rather than duplicate; historical sample remains separate from verified finance metrics.",
+    "decision": "Add one existing panel to the overview tab only, no new props, API, DB, schema, event, dependencies, authority or actual KPI. No join to other projections. User did not specify this exact UI decision; chosen independent task because signed Authority/Scheduler affected flow remains HOLD.",
+    "source": {
+      "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+      "preimage": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+      "postimage": "f80bd6cbbd1a8adb55da482b793be493fe28c0a3",
+      "sha256": "58c1f6d340918d8a4b1d241060aae3dbec7bd2617649115c4d1b5a7980c035a4",
+      "bytes": 3028,
+      "unchanged_panel": "5547bc2168cc483f5328915afdd4e0be30d9f6bd",
+      "unchanged_registry": "b8d4419253c201741a6f2f5aac31906a9a528110",
+      "unchanged_hook": "4294f67533cd1ff0d92a117935393bbee84d2abe",
+      "unchanged_proxy": "b8c6a4e6021b05d126c027d17fc358cc2a7d2816",
+      "patch": {
+        "path": "quarantine/H01_RESEARCH_FIRST_FINANCE_TASK_BUDGET_20261128.patch",
+        "blob": "13ec028b352ee70f5b2dcef0d6df159bbf4ca9e0",
+        "sha256": "996c22a05d9796ade4549c6efa557acb2ba8afddd3f8e81db266fb1592038869"
+      }
+    },
+    "verification": {
+      "exact_preimages": "2/2 Git blob",
+      "patch_apply_reverse": "PASS actual local git apply, cmp post and pre",
+      "syntax": "3 parse/transpile checks, TypeScript 5.8.3 global, Node 22.16.0; not pinned full build",
+      "structure": "single import, overview guard, no new props, additive delta, original read-only boundary PASS",
+      "log": "tests/evidence/H01_RESEARCH_FIRST_FINANCE_TASK_BUDGET_20261128_SOURCE.log",
+      "log_blob": "89126b292c10abea744aa5f3be6faef48ffe7bb8",
+      "log_sha256": "a705f07d5e5b8bccc6235f85bc27c469d18337a5459fc1ee8c26a05e2f801305",
+      "affected_runtime_render": "NOT_RUN React 19.1.10 and pinned Next environment unavailable",
+      "full_archive": "NOT_VERIFIED"
+    },
+    "product_source_transfer": 0,
+    "product_source_count": 594,
+    "manifest_entries": 593,
+    "acceptance_delta_pp": 0,
+    "plan_criterion_delta": 0,
+    "rollback": "ordinary revert isolated patch/evidence commit; no product source altered",
+    "next": "Run affected Finance overview manual read, HOLD and no-spend render using approved exact frontend environment; then apply exact existing patch and update manifest. In parallel signed chain still requires exact approved dependency disposition."
   }
 }
