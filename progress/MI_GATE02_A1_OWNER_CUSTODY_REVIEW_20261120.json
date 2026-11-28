@@ -1,0 +1,57 @@
+{
+  "revision": "MI-GATE02-A1-OWNER-CUSTODY-REVIEW-20261120",
+  "scope": "GATE02_A1_OWNER_CUSTODY_REVIEW_ONLY",
+  "branch": "review/gate02-a1-owner-custody-20261120",
+  "decision": "A_ALREADY_SELECTED",
+  "owner_review_completed": 0,
+  "owner_review_total": 10,
+  "owner_approval": "HOLD",
+  "independent_tests": [
+    0,
+    8
+  ],
+  "existing_ci_original": [
+    10,
+    10
+  ],
+  "original_ci_not_rerun": true,
+  "static_review_source_pins": 7,
+  "new_functional_tests": 0,
+  "source_changes": 0,
+  "permissions_changes": 0,
+  "prod_activation": false,
+  "overall_weighted_development_percent": null,
+  "iam_org_weighted_previous": 42.5,
+  "iam_org_weighted_current": 42.5,
+  "delta_percentage_points": 0,
+  "core_acceptance_previous": [
+    12,
+    16
+  ],
+  "core_acceptance_current": [
+    12,
+    16
+  ],
+  "mvp_acceptance": [
+    0,
+    11
+  ],
+  "iv_acceptance": [
+    0,
+    7
+  ],
+  "blockers": [
+    "Old product+local authority+pin restore reaccept reproduced",
+    "G9/G2 intent_authority source collision",
+    "ORG durable_ops source collision",
+    "Live role issuer not implemented/proven",
+    "No independent custody/quorum/provider/root KMS selected",
+    "No effect sink atomically enforcing fresh fence",
+    "No protected PG commit or independent IV"
+  ],
+  "next": "A1-01..10 owner review; no new product engine, integration merge or security activation",
+  "catalog": "docs/master-integration/GATE02-A1-OWNER-CUSTODY-20261120/A1_OWNER_BOUNDARY_MATRIX.json",
+  "handover": "docs/master-integration/GATE02-A1-OWNER-CUSTODY-20261120/ARCHITECTURE_CATALOG_HANDOVER.md",
+  "status": "PROPOSED_FOR_GOVERNANCE_OWNER_REVIEW_NOT_CANONICAL",
+  "base_governance_sha": "86d196a9b4716da66395766e5914fbf45aa6b06b"
+}
