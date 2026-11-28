@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 11,
+  "revision": 12,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,7 +10,7 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "a09f21402819b93ac0c31d1b40252263f28c1f48",
+    "governance": "4a70b5d1ceb746d2baa2696b21073998b4a2a257",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
     "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
@@ -291,6 +291,423 @@
       "new_tests": 0,
       "plan_delta_pp": 0,
       "rollback": "Normal revert of governance-only commit; no product code or manifest changed."
+    },
+    "r9_api20_static_import_review_20261128": {
+      "date": "2026-11-28",
+      "classification": "DEPENDENT_TECHNICAL_STATIC_REVIEW_NOT_INDEPENDENT_APPROVAL",
+      "user_statement": "tamamlayalımbağımsız güvenlik onayıyok bağımlı şekilde var",
+      "interpretation": "Continue dependent technical review. No exact signed approval artifact provided; do not infer independent approval or broaden installation authority.",
+      "governance_parent": "4a70b5d1ceb746d2baa2696b21073998b4a2a257",
+      "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "pr47": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "pr52": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+      "architecture": {
+        "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "v135_lines": [
+          18893,
+          18900,
+          30859,
+          51323,
+          102041
+        ],
+        "doc_rev_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "doc_rev_0155_lines": [
+          1273,
+          1371,
+          20512
+        ],
+        "finding": "Dependency/licence/SBOM and independent custody gates remain; later complete addenda not requalified."
+      },
+      "method": "Read explicit import lines in original test and application modules recursively, including conditional and relative imports; checked package initializer content or identical blob; compared nontruncated exact Git trees and reread eleven changed modules plus new paired_read_guard. Static inspection, not Python execution, AST-complete dynamic-import analysis, or wheel dependency verification.",
+      "scope": "PR47 primary nine-case API read-boundary test; not full app.main, entire backend, signed T1, W8 or other tests.",
+      "counts": {
+        "original_modules": 56,
+        "original_initializers": 16,
+        "original_paths": 72,
+        "same_blob": 61,
+        "changed_blob": 11,
+        "new_candidate_path": 1,
+        "candidate_paths": 73
+      },
+      "inventory": [
+        {
+          "path": "tests/test_api_core_plan_read_boundary_03.py",
+          "pr47_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+          "candidate_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4"
+        },
+        {
+          "path": "app/api/demo.py",
+          "pr47_blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+          "candidate_blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a"
+        },
+        {
+          "path": "app/api/mvp_diagnostics.py",
+          "pr47_blob": "98709a90e5d5401c4cb780a30c6e1924f2f89b65",
+          "candidate_blob": "98709a90e5d5401c4cb780a30c6e1924f2f89b65"
+        },
+        {
+          "path": "app/api/outbox_projection.py",
+          "pr47_blob": "3dc3a9407ee626284c9388124843cb34ab132a6d",
+          "candidate_blob": "3dc3a9407ee626284c9388124843cb34ab132a6d"
+        },
+        {
+          "path": "app/api/admission_projection.py",
+          "pr47_blob": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b",
+          "candidate_blob": "c8b1a36371ddacd2dbbc564970a5e04c413ba59b"
+        },
+        {
+          "path": "app/api/office_workbench_projection.py",
+          "pr47_blob": "735f1aa950285b55278cc369ae08620c972f3f66",
+          "candidate_blob": "735f1aa950285b55278cc369ae08620c972f3f66"
+        },
+        {
+          "path": "app/api/task_budget_projection.py",
+          "pr47_blob": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b",
+          "candidate_blob": "1787cf75ef8c1a0c5f120402d92e4db6fea83d6b"
+        },
+        {
+          "path": "app/api/lifecycle_projection.py",
+          "pr47_blob": "8f79bccf34660f63e57e14c67d4e0fe9132bde62",
+          "candidate_blob": "8f79bccf34660f63e57e14c67d4e0fe9132bde62"
+        },
+        {
+          "path": "app/api/lifecycle_prefix_projection.py",
+          "pr47_blob": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822",
+          "candidate_blob": "3c3b81bb50c7def3de83446c7f9ec0cb2efa3822"
+        },
+        {
+          "path": "app/core/agent_runtime/scheduler_review.py",
+          "pr47_blob": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+          "candidate_blob": "eb3e283e3406996254283595e14711e90b2bca8c"
+        },
+        {
+          "path": "app/core/event_store/company_coordination.py",
+          "pr47_blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5",
+          "candidate_blob": "fb068ef9bececca21e6b0562b12ac41aa3d4fcc5"
+        },
+        {
+          "path": "app/core/event_store/plan_history_review.py",
+          "pr47_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec",
+          "candidate_blob": "b73cadf83c7e6dc55c5fc1aee3398e476dd598ec"
+        },
+        {
+          "path": "app/core/transaction/postgres_session.py",
+          "pr47_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+          "candidate_blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9"
+        },
+        {
+          "path": "app/core/development_review/atomic_sample.py",
+          "pr47_blob": "77998cd03cb8682dd54f854356ecba620f7d906b",
+          "candidate_blob": "77998cd03cb8682dd54f854356ecba620f7d906b"
+        },
+        {
+          "path": "app/core/development_review/lifecycle_read_snapshot.py",
+          "pr47_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14",
+          "candidate_blob": "c770c02b5b77eba66b6c3c1b361853075d1d4b14"
+        },
+        {
+          "path": "app/core/development_review/lifecycle_prefix_wire.py",
+          "pr47_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99",
+          "candidate_blob": "d9f2137d1afe3596d49f10fb4ada99b946416a99"
+        },
+        {
+          "path": "app/core/development_review/admission_sample.py",
+          "pr47_blob": "a697188c51173e23d645fac95abf99c282f939b3",
+          "candidate_blob": "a530d415f5fb1f7e7eff79c1aa1bda3c36057859"
+        },
+        {
+          "path": "app/core/development_review/outbox_claim_sample.py",
+          "pr47_blob": "bbfb25daad824f1ff427c48e4727360c9721c13d",
+          "candidate_blob": "bbfb25daad824f1ff427c48e4727360c9721c13d"
+        },
+        {
+          "path": "app/core/development_review/task_budget_snapshot.py",
+          "pr47_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+          "candidate_blob": "086584de235756f24aebea16657fa51793fc06e2"
+        },
+        {
+          "path": "app/core/development_review/shared_snapshot.py",
+          "pr47_blob": "54b3ff7bf96ecd032fa72851183fe671e69a6418",
+          "candidate_blob": "54b3ff7bf96ecd032fa72851183fe671e69a6418"
+        },
+        {
+          "path": "app/demo_policy.py",
+          "pr47_blob": "03db51b35e436b5cb4f194b2c3caec51b212ebef",
+          "candidate_blob": "03db51b35e436b5cb4f194b2c3caec51b212ebef"
+        },
+        {
+          "path": "app/core/orchestrator/engine.py",
+          "pr47_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+          "candidate_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e"
+        },
+        {
+          "path": "app/core/task_engine/dag.py",
+          "pr47_blob": "04487bda631e9133f3904451a39fc8722e985997",
+          "candidate_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1"
+        },
+        {
+          "path": "app/core/event_store/ledger.py",
+          "pr47_blob": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+          "candidate_blob": "95438f2d300f09242876893943ee250884ebdde6"
+        },
+        {
+          "path": "app/engines/office_engine/layout.py",
+          "pr47_blob": "cf47623d303d21aed11eb5ee69b66a757c6a5d18",
+          "candidate_blob": "4e637a46bcc1efbf0b6e5637e32b70398f70f1c2"
+        },
+        {
+          "path": "app/core/agent_runtime/lifecycle.py",
+          "pr47_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+          "candidate_blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49"
+        },
+        {
+          "path": "app/core/agent_runtime/plan_binding.py",
+          "pr47_blob": "c445726efb9fbd34410f5189d5aad39dc4a85201",
+          "candidate_blob": "c445726efb9fbd34410f5189d5aad39dc4a85201"
+        },
+        {
+          "path": "app/core/event_store/sqlite_preview.py",
+          "pr47_blob": "2343afd8183d2ebc3381c1a2392c5bbf88913123",
+          "candidate_blob": "2343afd8183d2ebc3381c1a2392c5bbf88913123"
+        },
+        {
+          "path": "app/core/policy/iv_review.py",
+          "pr47_blob": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb",
+          "candidate_blob": "8dc0bec51401650ca59a7dc8a1b490643f64b4fb"
+        },
+        {
+          "path": "app/engines/model_gateway/registry.py",
+          "pr47_blob": "c923113239c7d783fd32419b2ef51bbcf4c299bf",
+          "candidate_blob": "d805516dd2da0f88e6207f31f2c377f2fefaf493"
+        },
+        {
+          "path": "app/engines/model_gateway/fallback.py",
+          "pr47_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a",
+          "candidate_blob": "5f8ce7c7e2afd94399fc42cc7eed7b133f6d339a"
+        },
+        {
+          "path": "app/engines/model_gateway/gateway.py",
+          "pr47_blob": "d9ef74951acb8daa57e9b8339fb8f8152369d932",
+          "candidate_blob": "d9ef74951acb8daa57e9b8339fb8f8152369d932"
+        },
+        {
+          "path": "app/engines/skill_engine/manifest_review.py",
+          "pr47_blob": "26c4eea34bb938ae4e9a311d9331d3ccab77487d",
+          "candidate_blob": "26c4eea34bb938ae4e9a311d9331d3ccab77487d"
+        },
+        {
+          "path": "app/engines/skill_engine/resolver.py",
+          "pr47_blob": "fede5e35bf2221920a83b4d8183c9374b72d9668",
+          "candidate_blob": "0c6829a006f28f283e39d7aca62a8de1c3683949"
+        },
+        {
+          "path": "app/engines/budget_engine/reservation_review.py",
+          "pr47_blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961",
+          "candidate_blob": "b1d7ee6a08604b7726e1b0ec98d00723e7d75961"
+        },
+        {
+          "path": "app/observability/finance_projection.py",
+          "pr47_blob": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc",
+          "candidate_blob": "39a0b6fc99b272549fb9d5ec2e1aaa8018bf08fc"
+        },
+        {
+          "path": "app/core/policy/denial.py",
+          "pr47_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+          "candidate_blob": "9768b34e447c08136440c891b1974fae131f3ebd"
+        },
+        {
+          "path": "app/core/runtime_preview.py",
+          "pr47_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9",
+          "candidate_blob": "341cf800c070da5e6afcc0a5c8a75e57c2396eb9"
+        },
+        {
+          "path": "app/core/t1_review.py",
+          "pr47_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c",
+          "candidate_blob": "7a526ed4a0fb3ac6931b7c3ab50d3498a4ea068c"
+        },
+        {
+          "path": "app/core/transaction/review.py",
+          "pr47_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+          "candidate_blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad"
+        },
+        {
+          "path": "app/core/transaction/port.py",
+          "pr47_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+          "candidate_blob": "fe7e471405f49fd3e118b44df72e472e7ef02315"
+        },
+        {
+          "path": "app/core/transaction/readback_review.py",
+          "pr47_blob": "bba032b058a8c9406e58fa90091b1894cd795190",
+          "candidate_blob": "f1e3049b40ee3c22117fb5ab7b8958d661157152"
+        },
+        {
+          "path": "app/core/transaction/admission_bundle.py",
+          "pr47_blob": "276b4330afdce7cde98f92f8051c019eb7345fe1",
+          "candidate_blob": "276b4330afdce7cde98f92f8051c019eb7345fe1"
+        },
+        {
+          "path": "app/core/policy/witness_review.py",
+          "pr47_blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6",
+          "candidate_blob": "da6414affbf9207b10b65fbb5aa327a021dc05a6"
+        },
+        {
+          "path": "app/core/development_review/lifecycle_projection.py",
+          "pr47_blob": "2b9a01807621eac35239baab55b10df6b1edb91b",
+          "candidate_blob": "2b9a01807621eac35239baab55b10df6b1edb91b"
+        },
+        {
+          "path": "app/core/development_review/lifecycle_prefix_projection.py",
+          "pr47_blob": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4",
+          "candidate_blob": "deea0224c2b6a46c05f27dd1d0e8c8e0b94acce4"
+        },
+        {
+          "path": "app/core/development_review/office_workbench.py",
+          "pr47_blob": "9a0f053482c0783f453b9afc3972aab97c3881ea",
+          "candidate_blob": "9a0f053482c0783f453b9afc3972aab97c3881ea"
+        },
+        {
+          "path": "app/core/transaction/postgres_admission_mapping.py",
+          "pr47_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+          "candidate_blob": "ba134d2e7d4ddecb41334071fc02236a35435dac"
+        },
+        {
+          "path": "app/core/transaction/postgres_lifecycle_mapping.py",
+          "pr47_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+          "candidate_blob": "923fb705094cab97fb5af99ada7c1bdcef76da59"
+        },
+        {
+          "path": "app/core/transaction/postgres_transition_mapping.py",
+          "pr47_blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+          "candidate_blob": "e722a9188a76034f5133c3f61be1da16930a8924"
+        },
+        {
+          "path": "app/core/agent_runtime/postgres_run.py",
+          "pr47_blob": "ea66a72bdb84c267ded348342a941ce8e5927005",
+          "candidate_blob": "ea66a72bdb84c267ded348342a941ce8e5927005"
+        },
+        {
+          "path": "app/core/agent_runtime/transition_command.py",
+          "pr47_blob": "5680fa428be81645a43d7442ec161c0c10384986",
+          "candidate_blob": "5680fa428be81645a43d7442ec161c0c10384986"
+        },
+        {
+          "path": "app/core/event_store/postgres_write.py",
+          "pr47_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60",
+          "candidate_blob": "5b341e1d54609bc417876ba807b8d0ca8b3a7b60"
+        },
+        {
+          "path": "app/core/event_store/history_readback.py",
+          "pr47_blob": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db",
+          "candidate_blob": "7f03faeab95a20ec8e5a4d79eb30f6b7cd4347db"
+        },
+        {
+          "path": "app/core/orchestrator/readiness.py",
+          "pr47_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1",
+          "candidate_blob": "f7f70d1ae771d398f09d5abd92911f76c2add9a1"
+        },
+        {
+          "path": "app/core/skill_review.py",
+          "pr47_blob": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3",
+          "candidate_blob": "4e6a6846d746b7b33bca2d9f0f529cfc01a14cd3"
+        },
+        {
+          "path": "app/__init__.py",
+          "pr47_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "candidate_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "app/api/__init__.py",
+          "pr47_blob": "2d899e27663a6e414765904ffd9c4624a825adde",
+          "candidate_blob": "2d899e27663a6e414765904ffd9c4624a825adde"
+        },
+        {
+          "path": "app/core/__init__.py",
+          "pr47_blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+          "candidate_blob": "9d457472970b7f581687ba142d1bf99ba91c7388"
+        },
+        {
+          "path": "app/core/agent_runtime/__init__.py",
+          "pr47_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "candidate_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "app/core/event_store/__init__.py",
+          "pr47_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78",
+          "candidate_blob": "c4c3c4dd20cc9a7e1e76fc80c231f223467fdd78"
+        },
+        {
+          "path": "app/core/transaction/__init__.py",
+          "pr47_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "candidate_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "app/core/development_review/__init__.py",
+          "pr47_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b",
+          "candidate_blob": "77adaf6fcc7ccb5b1396cd4167f74416a956c05b"
+        },
+        {
+          "path": "app/core/orchestrator/__init__.py",
+          "pr47_blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+          "candidate_blob": "9c1e71bb5024a99ec60f934c5944584f63217692"
+        },
+        {
+          "path": "app/core/task_engine/__init__.py",
+          "pr47_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "candidate_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "app/engines/__init__.py",
+          "pr47_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "candidate_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "app/engines/office_engine/__init__.py",
+          "pr47_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "candidate_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "app/core/policy/__init__.py",
+          "pr47_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+          "candidate_blob": "5b19819cd7070302e874ecee80170a3921ce8fb0"
+        },
+        {
+          "path": "app/engines/model_gateway/__init__.py",
+          "pr47_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "candidate_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "app/engines/skill_engine/__init__.py",
+          "pr47_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73",
+          "candidate_blob": "30a8f8f99c47f5c7acae166c57006ef927f3ea73"
+        },
+        {
+          "path": "app/engines/budget_engine/__init__.py",
+          "pr47_blob": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2",
+          "candidate_blob": "7c4a1ee842b17dd0a26947a2c43f4c3b46b4ffb2"
+        },
+        {
+          "path": "app/observability/__init__.py",
+          "pr47_blob": "98dc7640ebb9f6a44710b9788d7f5c0cc46f2fc3",
+          "candidate_blob": "98dc7640ebb9f6a44710b9788d7f5c0cc46f2fc3"
+        },
+        {
+          "path": "app/core/development_review/paired_read_guard.py",
+          "pr47_blob": null,
+          "candidate_blob": "63659a7648bafe633cb3f80300f776bf3c842cf9"
+        }
+      ],
+      "external_import_finding": "No explicit cryptography, uvicorn or psycopg import observed in reviewed application/test paths; external fastapi/TestClient and their transitive wheel imports are not independently proven. No runtime import or execution claim.",
+      "r9_lock_blob": "ab9908b033b9b62017a7689716420f61ce2c6364",
+      "decision": "STATIC_ROUTE_SCOPE_REVIEW_COMPLETE_WITH_LIMITS; R9 separate technical candidate; installation and actual test remain HOLD pending exact wheel/native/runtime/licence and required independent disposition. Existing FastAPI patch not applied, cryptography pin not changed. No new authorization inferred.",
+      "tests": {
+        "pr47_primary": "0/9 NOT_RUN",
+        "g6a": "0/2 NOT_RUN",
+        "pr46": "0/12 NOT_RUN",
+        "scheduler_sql": "0/6 NOT_RUN"
+      },
+      "next": "MI01/03API review exact R9 Windows wheel archive and runtime/security/licence evidence; MI10 independent disposition remains separate. No routine test rerun, no C50 install or source transfer until gates.",
+      "rollback": "Normal revert of governance-only commit. No source or manifest change."
     }
   },
   "detail_rows": [
@@ -1826,19 +2243,20 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "HOLD",
-      "ready": "PR52 paket içermeyen Windows önkontrolü PASS (devir); mevcut FastAPI yaması exact preimage, R9 20/20 lock satırı ve iki PyPI wheel hash'i eşleşti.",
-      "missing": "Direct pin aktarımı 0/2; FastAPI attestation yok, Cryptography OpenSSL 4.0.3; native/lisans/runtime ve bağımsız karar, kurulum açık.",
-      "next": "MI-01/MI-10 exact runtime ve bağımlılık kararı; R9 import closure ayrı tamamla; onaylı kapsamda Codex kurulum.",
+      "ready": "R9 API20 static import scope: PR47 72 paths; candidate 73; 61 exact, 11 changed, 1 new; explicit crypto/uvicorn/psycopg import not observed.",
+      "missing": "Exact wheel runtime/native/licence and independent disposition; dynamic/third-party closure; direct pins 0/2; install 0/1.",
+      "next": "R9 exact wheel/runtime review separately; C50 native risk separate; install only in approved scope.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
         "scheduler_state_distance_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "c50_r9_publisher_provenance_requalification_20261128"
+        "c50_r9_publisher_provenance_requalification_20261128",
+        "r9_api20_static_import_review_20261128"
       ],
       "previous_status": "HOLD",
-      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
+      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone.",
       "plan_checklist": {
         "done": 1,
         "total": 4,
@@ -2231,17 +2649,18 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "Codex devir: paket içermeyen Windows/Python 3.13.17 PASS; PyPI exact pin metadata 2/2 eşleşti.",
-      "missing": "Onaylı exact runtime/checkout, wheel bytes ve bağımsız güvenlik/lisans; Python 3.13.18 yalnız requalification adayı.",
-      "next": "Onaylı runtime/lock ile izole kurulum; G6A 2, PR46 12, Scheduler SQL 6.",
+      "ready": "Previous Windows venv PASS; R9 scoped static import inventory recorded (73 candidate paths).",
+      "missing": "Exact approved runtime/checkout and wheel/third-party closure; original tests NOT_RUN.",
+      "next": "Codex on approved exact R9 scope, then original 9 API tests; signed C50 chain remains separate.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "c50_r9_publisher_provenance_requalification_20261128"
+        "c50_r9_publisher_provenance_requalification_20261128",
+        "r9_api20_static_import_review_20261128"
       ],
       "previous_status": "KISMEN HAZIR",
-      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
+      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2583,9 +3002,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "PR56 değişen kaynak 31/31 ve Windows önkontrolü önceki devir PASS; mevcut FastAPI yaması ve 20/20 ortak lock satırı yeniden bağlandı.",
-      "missing": "C50 direct pin 0/2, kurulum 0/1; Crypto native risk ve FastAPI attestation açık; G6A 2, PR46 12, Scheduler SQL 6; PR56 taslak.",
-      "next": "Exact bağımsız dependency/runtime/lisans disposition; R9 closure ayrı; sonra onaylı testler ve kontrollü aktarım.",
+      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded.",
+      "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft.",
+      "next": "Exact R9 wheel/runtime/licence review, C50 native disposition separately; original tests then controlled transfer.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2597,10 +3016,11 @@
         "r8_org_transfer_20261128",
         "scheduler_state_distance_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "c50_r9_publisher_provenance_requalification_20261128"
+        "c50_r9_publisher_provenance_requalification_20261128",
+        "r9_api20_static_import_review_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
+      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -2755,15 +3175,16 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Teknik yazıcı yetkisi ve önceki Windows önkontrolü PASS; iki wheel yayıncı hash'i eşleşti, FastAPI mevcut yama exact.",
-      "missing": "C50 pin aktarımı 0/2; FastAPI attestation eksik, Crypto OpenSSL 4.0.3; security/lisans/runtime bağımsız karar ve gerçek IAM HOLD.",
-      "next": "MI-01/03API/MI-10 exact bağımlılık kararları; R9 closure ayrı.",
+      "ready": "Dependent technical review advanced: R9 scoped 73-path inventory, no explicit crypto/uvicorn/psycopg import observed.",
+      "missing": "Third-party/runtime closure, exact licence/security and independent disposition; C50 pin 0/2; real IAM HOLD.",
+      "next": "MI01/03API exact R9 wheel and runtime review; MI10 decision separate.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "review",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "c50_r9_publisher_provenance_requalification_20261128"
+        "c50_r9_publisher_provenance_requalification_20261128",
+        "r9_api20_static_import_review_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2794,7 +3215,7 @@
         "percent": 21.4
       },
       "delta_pp": 0,
-      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok."
+      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone."
     },
     {
       "operational_number": 3,
@@ -3244,9 +3665,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Önceki PR56 31/31, venv PASS, Authority 28/30 ve Scheduler 19/19 korunuyor; lock ortak satır 20/20.",
-      "missing": "C50 0/1 kurulum; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; tam arşiv/IV; R9 import closure açık.",
-      "next": "Onaylı exact bağımlılık zinciri ve özgün testler; sonra kontrollü PR56 aktarımı.",
+      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded.",
+      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive.",
+      "next": "Independent R9 package/runtime scope review, approved tests and controlled transfer.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3259,7 +3680,8 @@
         "r8_org_transfer_20261128",
         "scheduler_state_distance_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "c50_r9_publisher_provenance_requalification_20261128"
+        "c50_r9_publisher_provenance_requalification_20261128",
+        "r9_api20_static_import_review_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3319,7 +3741,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok."
+      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone."
     }
   ],
   "maintenance": {
@@ -3528,6 +3950,23 @@
       "reason": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
       "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 12,
+      "date": "2026-11-28",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "changed_sections": [
+        27,
+        33,
+        39
+      ],
+      "changed_operational": [
+        2,
+        12
+      ],
+      "reason": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone.",
+      "evidence_ref": "r9_api20_static_import_review_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -3602,7 +4041,7 @@
       },
       "classification": "separate independent work; do not add to original 30 or plan milestone"
     },
-    "current_blocker": "Direct pin source transfer 0/2; FastAPI patch and 2/2 publisher checksums matched; FastAPI attestation absent, crypto OpenSSL 4.0.3; exact native/license/runtime and independent disposition; R9 import closure incomplete. G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+    "current_blocker": "R9 scoped static source imports reviewed; exact wheel/runtime/native/licence/independent disposition and C50 direct pin 0/2 remain open. G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
     "runtime_preflight": {
       "previous": "OPEN",
       "current": "PASS_REPORTED",
@@ -3640,6 +4079,18 @@
       "total": 2,
       "classification": "Requalification only; not source pin alignment, wheel byte verification, installation or progress milestone",
       "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
+    },
+    "r9_api20_static_import_review": {
+      "original_paths": 72,
+      "candidate_paths": 73,
+      "identical": 61,
+      "changed": 11,
+      "added": 1,
+      "classification": "STATIC_SCOPED_ONLY",
+      "test_pass": 0,
+      "test_total": 9,
+      "status": "INSTALL_AND_RUNTIME_HOLD",
+      "evidence_ref": "r9_api20_static_import_review_20261128"
     }
   }
 }

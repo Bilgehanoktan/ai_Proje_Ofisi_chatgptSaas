@@ -18017,10 +18017,10 @@
     "checklist_revision": 2,
     "checklist_status": "PROVISIONAL_REPORTING_METRIC",
     "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging.",
-    "latest_table_revision": 11,
+    "latest_table_revision": 12,
     "latest_candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
     "latest_delta_pp": 0,
-    "latest_delivery": "C50/R9 static pin and registry metadata requalification only; 2/2 public wheel checksums matched, no source transfer, install, runtime tests, plan or acceptance closure. R9 closure incomplete.",
+    "latest_delivery": "Scoped R9 API20 static import review of 73 candidate paths, 61 exact, 11 changed, one new; installation/third-party closure/independent disposition HOLD; no code/test/acceptance delta.",
     "architecture_read_required": "H01 2026-11-28: every development/table update reads actual full Design Master relevant sections and applicable current addenda, exact source hash/lines, not index only; missing scope HOLD.",
     "active_subtask_progress": {
       "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
@@ -18094,7 +18094,7 @@
         },
         "classification": "separate independent work; do not add to original 30 or plan milestone"
       },
-      "current_blocker": "Direct pin source transfer 0/2; FastAPI patch and 2/2 publisher checksums matched; FastAPI attestation absent, crypto OpenSSL 4.0.3; exact native/license/runtime and independent disposition; R9 import closure incomplete. G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+      "current_blocker": "R9 scoped static source imports reviewed; exact wheel/runtime/native/licence/independent disposition and C50 direct pin 0/2 remain open. G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
       "runtime_preflight": {
         "previous": "OPEN",
         "current": "PASS_REPORTED",
@@ -18132,8 +18132,20 @@
         "total": 2,
         "classification": "Requalification only; not source pin alignment, wheel byte verification, installation or progress milestone",
         "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
+      },
+      "r9_api20_static_import_review": {
+        "original_paths": 72,
+        "candidate_paths": 73,
+        "identical": 61,
+        "changed": 11,
+        "added": 1,
+        "classification": "STATIC_SCOPED_ONLY",
+        "test_pass": 0,
+        "test_total": 9,
+        "status": "INSTALL_AND_RUNTIME_HOLD",
+        "evidence_ref": "r9_api20_static_import_review_20261128"
       }
     },
-    "latest_dependency_evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
+    "latest_dependency_evidence_ref": "r9_api20_static_import_review_20261128"
   }
 }
