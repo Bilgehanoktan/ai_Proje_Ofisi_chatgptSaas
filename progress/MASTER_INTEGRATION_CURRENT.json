@@ -18017,10 +18017,10 @@
     "checklist_revision": 2,
     "checklist_status": "PROVISIONAL_REPORTING_METRIC",
     "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging.",
-    "latest_table_revision": 9,
+    "latest_table_revision": 10,
     "latest_candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
     "latest_delta_pp": 0,
-    "latest_delivery": "Independent Scheduler state distance fix locally reproduced: 8 failing subtests -> 19/19 PASS; no product transfer, SQL 6 NOT_RUN, common signed dependency HOLD. Authority 2/3 files and 28/30 unchanged.",
+    "latest_delivery": "PR56 exact changed raw hash handover 31/31 and PR52 package-free Windows preflight reported PASS; GitHub comment readback, not fresh local execution; no product or acceptance delta.",
     "architecture_read_required": "H01 2026-11-28: every development/table update reads actual full Design Master relevant sections and applicable current addenda, exact source hash/lines, not index only; missing scope HOLD.",
     "active_subtask_progress": {
       "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
@@ -18059,7 +18059,13 @@
         "code_modified": 0,
         "original_test_added": 0,
         "manifest_entries": 593,
-        "full_raw": "NOT_VERIFIED"
+        "full_raw": "NOT_VERIFIED",
+        "changed_raw_sha256": {
+          "previous": 11,
+          "current": 31,
+          "total": 31,
+          "classification": "PR56 exact-head handover report, GitHub comment readback verified; full archive and unchanged raw payloads not rehashed"
+        }
       },
       "scheduler_state_distance": {
         "evidence_ref": "scheduler_state_distance_20261128",
@@ -18088,7 +18094,36 @@
         },
         "classification": "separate independent work; do not add to original 30 or plan milestone"
       },
-      "current_blocker": "C50 exact approved signed dependency closure required for remaining Authority and Scheduler SQL consumer; historical Windows approval not broadened"
+      "current_blocker": "Exact C50 dependency pins, runtime/native provenance, license/security and independent disposition; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+      "runtime_preflight": {
+        "previous": "OPEN",
+        "current": "PASS_REPORTED",
+        "python": "3.13.17",
+        "sqlite": "3.50.4",
+        "platform": "Windows AMD64",
+        "package_free": true,
+        "approved_c50": false,
+        "evidence_ref": "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+      },
+      "c50_pin_alignment": {
+        "current": 0,
+        "total": 2
+      },
+      "c50_install": {
+        "current": 0,
+        "total": 1,
+        "status": "HOLD"
+      },
+      "pr46_original": {
+        "current": 0,
+        "total": 12,
+        "status": "NOT_RUN"
+      },
+      "pr56_transfer": {
+        "current": 0,
+        "total": 1,
+        "status": "DRAFT_HOLD"
+      }
     }
   }
 }

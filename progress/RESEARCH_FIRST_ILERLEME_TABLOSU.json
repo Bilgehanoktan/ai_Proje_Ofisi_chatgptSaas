@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 9,
+  "revision": 10,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,7 +10,7 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "ca25b1588ac9663aaed50c5b569c37878eec1594",
+    "governance": "a5a55bfea373e9eeeb19b9bd7bbed4ca506b4a4b",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
     "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
@@ -149,6 +149,49 @@
       "before_log_blob": "7d8f3fd212c067514aca80eb3da16a21da9eb30c",
       "after_log_blob": "237aafce79020389fb4326680564e3824fccb4c3",
       "classification": "LOCAL QUARANTINED SCHEDULER FIX 19/19; SQL CONSUMER 6 NOT_RUN; no product or acceptance"
+    },
+    "pr56_raw_and_pr52_windows_preflight_handover_20261128": {
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "source_comment": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/56#issuecomment-7239625053",
+      "runtime_comment": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/52#issuecomment-7239624447",
+      "classification": "Exact-head handover reports independently re-read on GitHub; reported changed-file raw hashes and local package-free Windows preflight; no new local execution or raw full archive verification in this turn.",
+      "source": {
+        "manifest_paths_sizes": "593/593",
+        "unchanged": 562,
+        "added": 18,
+        "replaced": 13,
+        "deleted": 0,
+        "changed_raw_sha256": "31/31",
+        "previous_reported": 11,
+        "delta": 20
+      },
+      "runtime": {
+        "os": "Windows AMD64",
+        "python": "3.13.17",
+        "sqlite": "3.50.4",
+        "venv": "--without-pip",
+        "status": "PASS_REPORTED_PACKAGE_FREE_PREFLIGHT",
+        "install": "NOT_RUN",
+        "approval": "HOLD"
+      },
+      "architecture": {
+        "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "bytes": 12011382,
+        "lines": 119818,
+        "read_ranges": [
+          "13655-13664",
+          "105060-105095",
+          "116785-116827"
+        ],
+        "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7"
+      },
+      "review_status": {
+        "pr52": "DRAFT_NO_SUBMITTED_REVIEWS",
+        "pr56": "DRAFT_NOT_MERGED_NO_SUBMITTED_REVIEWS"
+      },
+      "acceptance_delta": 0
     }
   },
   "detail_rows": [
@@ -269,9 +312,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "DEVAM",
-      "ready": "594 ürün dosyası; 593 manifest. ORG guard ürüne alındı: 2/3 dosya. R8 10/10 yerel aday; G5 12/12 + direct 3/3 aktarım kapsamı PASS.",
-      "missing": "Son Authority hunkı, G6A fullchain 2 ve PR46 signed wrapper; tam raw/arşiv yok.",
-      "next": "Onaylı C50/PR46 bağımlılığı; son Authority dosyası ve özgün test aktarımı.",
+      "ready": "594 ürün dosyası; 593/593 manifest yol/boyut. PR56 devir kanıtı: değişen ham hash 31/31 (11→31), 562 korunan, 18 eklenen, 13 değişen, 0 silinen. Authority 2/3.",
+      "missing": "Tam arşiv/tüm ham hash; son Authority hunkı, G6A 2, PR46; PR56 taslak.",
+      "next": "C50 pin/inceleme ve zorunlu akış; kontrollü aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
@@ -281,10 +324,11 @@
         "signature_reconciliation_20261128",
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
-        "r8_org_transfer_20261128"
+        "r8_org_transfer_20261128",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "previous_status": "DEVAM",
-      "delta": "R8 ORG modülü ürüne aktarıldı; 10 yeni özgün metot, 12 G5 regresyonu ve 3 ek kontrol PASS; tam plan kriteri kapanışı yok.",
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
       "plan_checklist": {
         "done": 3,
         "total": 6,
@@ -1683,17 +1727,18 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "HOLD",
-      "ready": "Exact yerel stdlib closure mevcut; imzalı ortamda cryptography 46.0.4 metadata görüldü. Tarihsel C50 onayı ayrı.",
-      "missing": "G6A fullchain, PR46 ve Scheduler SQL fixture için current exact approved signed graph yok.",
-      "next": "MI01/03/10 ile tek onaylı exact dependency/runtime hazırlığı; Codex izinli mevcut ortam.",
+      "ready": "PR52 devir kanıtı: Windows AMD64 Python 3.13.17 SQLite 3.50.4 paket içermeyen venv önkontrolü PASS. Lock 25 paket, direct-pin farkları belirli.",
+      "missing": "2 pin uyumu, exact runtime/native provenance, lisans/security bağımsız karar, kurulum ve signed testler.",
+      "next": "Mevcut FastAPI yamasını ve cryptography pin kararını exact lock ile uzlaştır; onaylı kapsamda Codex kurulum.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
-        "scheduler_state_distance_20261128"
+        "scheduler_state_distance_20261128",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "previous_status": "HOLD",
-      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
       "plan_checklist": {
         "done": 1,
         "total": 4,
@@ -1745,9 +1790,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Özgün Authority 28/30; ayrı Scheduler kusuru 8 alt senaryo baseline FAIL → 19/19 aday PASS, 13/13 manifest raw/bytes/blob.",
-      "missing": "G6A 2, PR46 ve Scheduler SQL 6 NOT_RUN; tam arşiv ve bağımsız kabul.",
-      "next": "Tek onaylı signed closure ile zorunlu etkilenen özgün akışlar.",
+      "ready": "PR56 devir 31/31 değişen ham hash, 593/593 yol/boyut; Authority 28/30; ayrı Scheduler 19/19 yerel aday PASS.",
+      "missing": "Tam arşiv ve tüm ürün raw hash; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+      "next": "Onaylı imzalı ortam ve özgün etkilenen testler.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -1757,10 +1802,11 @@
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
-        "scheduler_state_distance_20261128"
+        "scheduler_state_distance_20261128",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -2085,15 +2131,16 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "Codex yerel geliştirme/kanıt rolü planlı; mevcut tarihsel ortam kanıtları korunuyor.",
-      "missing": "Güncel exact checkout ve onaylı lock/runtime ile gerekli yerel doğrulamalar.",
-      "next": "Yetkili kapsam ve SHA bağlı görev devri.",
+      "ready": "Codex devir: paket içermeyen Windows/Python 3.13.17 ortamı PASS; PR52 exact kayıt.",
+      "missing": "Onaylı tam bağımlılık ortamı, exact birleşik checkout ve zorunlu ham test kanıtları.",
+      "next": "C50 pin/security/lisans disposition sonrası izole kurulum ve özgün testler.",
       "as_of": "2026-11-28",
       "evidence_refs": [
-        "plan"
+        "plan",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
-      "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "previous_status": "KISMEN HAZIR",
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2123,7 +2170,13 @@
             "scope": "plan milestone only; not independent acceptance"
           }
         ]
-      }
+      },
+      "previous_plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3
+      },
+      "delta_pp": 0
     },
     {
       "plan_section": 34,
@@ -2429,9 +2482,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Authority 2/3 kaynak, 28/30 metot. Bağımsız Scheduler kaynak düzeltmesi karantinada, 19/19 PASS.",
-      "missing": "Son Authority ve Scheduler yaması; signed G6A/PR46/SQL tüketici; A1/IV açık.",
-      "next": "Onaylı imzalı checkout engelini tek işte kapat; sonra iki paketin kontrollü aktarımı.",
+      "ready": "PR56 değişen kaynak hash 31/31; PR52 paket içermeyen Windows önkontrolü PASS. Authority 2/3, 28/30, Scheduler 19/19 yerel.",
+      "missing": "C50 0/2 pin, 0/1 kurulum; G6A 2, PR46 12, Scheduler SQL 6; PR56 taslak.",
+      "next": "Tek C50 onaylı bağımlılık zinciri; ardından mevcut kaynak aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2441,10 +2494,11 @@
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
-        "scheduler_state_distance_20261128"
+        "scheduler_state_distance_20261128",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -2550,9 +2604,9 @@
       ],
       "development_percent": null,
       "status": "DEVAM",
-      "ready": "2/3 hunk ürün adayında; özgün test 18/30 → 28/30. ORG 10/10 yerel aday, G5 12/12 + direct 3/3 ayrı aktarım kanıtı.",
-      "missing": "Son Authority hunkı, G6A fullchain 2, PR46; tam arşiv yok.",
-      "next": "Onaylı imzalı zincir, son kaynak aktarımı.",
+      "ready": "PR56 devir 31/31 değişen raw hash (11→31), 593/593 manifest yol/boyut; Authority 2/3.",
+      "missing": "Tam arşiv/tüm raw hash; son hunk ve signed testler; PR56 taslak.",
+      "next": "C50 ve zorunlu akış; kontrollü aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2562,7 +2616,8 @@
         "signature_reconciliation_20261128",
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
-        "r8_org_transfer_20261128"
+        "r8_org_transfer_20261128",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2585,7 +2640,7 @@
         "percent": 50
       },
       "delta_pp": 0,
-      "delta": "R8 ORG modülü ürüne aktarıldı; 10 yeni özgün metot, 12 G5 regresyonu ve 3 ek kontrol PASS; tam plan kriteri kapanışı yok."
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok."
     },
     {
       "operational_number": 2,
@@ -2598,13 +2653,14 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Teknik inceleme kayıtlı; PR46 D0 kaynakları mevcut.",
-      "missing": "Bağımsız review, gerçek IAM/otorite ve dependency kararları.",
-      "next": "Yetkili reviewer ve exact PR disposition.",
+      "ready": "Teknik kaynak yetkisi mevcut; PR52 paket içermeyen Windows 3.13.17 önkontrolü devir PASS.",
+      "missing": "C50 pin 0/2, security/lisans/runtime ve bağımsız karar; gerçek IAM HOLD.",
+      "next": "Mevcut teknik yetkiyle exact bağımlılık/pin incelemesi; bağımsız kapı ayrı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
-        "review"
+        "review",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2627,7 +2683,15 @@
           "P27.03",
           "P27.04"
         ]
-      }
+      },
+      "previous_status": "HOLD",
+      "previous_plan_checklist": {
+        "done": 3,
+        "total": 14,
+        "percent": 21.4
+      },
+      "delta_pp": 0,
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok."
     },
     {
       "operational_number": 3,
@@ -3077,9 +3141,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Authority 28/30; ayrı Scheduler 19/19 aday PASS, 8 baseline alt senaryo giderildi; kaynak hashleri 13/13.",
-      "missing": "G6A 2, PR46 ve Scheduler 6 SQL consumer NOT_RUN; tam arşiv/IV açık.",
-      "next": "MI01/03/10 onaylı exact signed closure; Codex yerel zorunlu akışlar.",
+      "ready": "PR56 devir 31/31 değişen raw hash; PR52 paket içermeyen venv PASS; Authority 28/30, Scheduler 19/19 yerel.",
+      "missing": "C50 kurulumu 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; tam arşiv/IV.",
+      "next": "Onaylı bağımlılık zinciri ve özgün testler; sonra kontrollü PR56 aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3090,7 +3154,8 @@
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
-        "scheduler_state_distance_20261128"
+        "scheduler_state_distance_20261128",
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3150,7 +3215,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer."
+      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok."
     }
   ],
   "maintenance": {
@@ -3322,6 +3387,26 @@
       "reason": "Independent Scheduler state-distance defect reproduced and fixed locally; exact 13/13, 19/19 PASS; signed SQL consumer remains HOLD. Authority 2/3 and 28/30 unchanged. No product transfer or criterion delta.",
       "evidence_ref": "scheduler_state_distance_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 10,
+      "date": "2026-11-28",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "changed_sections": [
+        3,
+        27,
+        28,
+        33,
+        39
+      ],
+      "changed_operational": [
+        1,
+        2,
+        12
+      ],
+      "reason": "Read back exact PR56 31/31 changed-file raw hash report and PR52 package-free Windows preflight report; no new test or product transfer; full archive and approved C50 remain HOLD.",
+      "evidence_ref": "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -3361,7 +3446,13 @@
       "code_modified": 0,
       "original_test_added": 0,
       "manifest_entries": 593,
-      "full_raw": "NOT_VERIFIED"
+      "full_raw": "NOT_VERIFIED",
+      "changed_raw_sha256": {
+        "previous": 11,
+        "current": 31,
+        "total": 31,
+        "classification": "PR56 exact-head handover report, GitHub comment readback verified; full archive and unchanged raw payloads not rehashed"
+      }
     },
     "scheduler_state_distance": {
       "evidence_ref": "scheduler_state_distance_20261128",
@@ -3390,6 +3481,35 @@
       },
       "classification": "separate independent work; do not add to original 30 or plan milestone"
     },
-    "current_blocker": "C50 exact approved signed dependency closure required for remaining Authority and Scheduler SQL consumer; historical Windows approval not broadened"
+    "current_blocker": "Exact C50 dependency pins, runtime/native provenance, license/security and independent disposition; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+    "runtime_preflight": {
+      "previous": "OPEN",
+      "current": "PASS_REPORTED",
+      "python": "3.13.17",
+      "sqlite": "3.50.4",
+      "platform": "Windows AMD64",
+      "package_free": true,
+      "approved_c50": false,
+      "evidence_ref": "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+    },
+    "c50_pin_alignment": {
+      "current": 0,
+      "total": 2
+    },
+    "c50_install": {
+      "current": 0,
+      "total": 1,
+      "status": "HOLD"
+    },
+    "pr46_original": {
+      "current": 0,
+      "total": 12,
+      "status": "NOT_RUN"
+    },
+    "pr56_transfer": {
+      "current": 0,
+      "total": 1,
+      "status": "DRAFT_HOLD"
+    }
   }
 }
