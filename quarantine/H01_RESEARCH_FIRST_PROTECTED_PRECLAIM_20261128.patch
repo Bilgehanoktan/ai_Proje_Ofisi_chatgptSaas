@@ -1,0 +1,723 @@
+diff --git a/product/ai-company-os-backend/app/core/transaction/intent_authority.py b/product/ai-company-os-backend/app/core/transaction/intent_authority.py
+--- a/product/ai-company-os-backend/app/core/transaction/intent_authority.py
++++ b/product/ai-company-os-backend/app/core/transaction/intent_authority.py
+@@ -5,182 +5,203 @@
+ """
+ from contextlib import closing, contextmanager
+ from dataclasses import dataclass
+-import os
+-from pathlib import Path
+-import sqlite3
+-
+-
+-def _digest(value):
+-    return type(value) is str and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
+-
+-
+-@dataclass(frozen=True)
+-class RootPin:
+-    record_sha: str
+-    key_sha: str
+-    recovery_epoch: int
+-
+-    def validate(self):
+-        if not (_digest(self.record_sha) and _digest(self.key_sha) and
+-                type(self.recovery_epoch) is int and 0 < self.recovery_epoch < 2**63):
+-            raise ValueError('D0_AUTHORITY_PIN_HOLD')
+-
+-
+-def _path(path):
+-    p = Path(os.path.abspath(path))
+-    if not p.name.endswith('.authority.sqlite') or p.resolve() != p or any(x.is_symlink() for x in (p, *p.parents)):
+-        raise ValueError('D0_AUTHORITY_PATH_HOLD')
+-    return p
+-
+-
+-class D0IntentAuthority:
+-    """Fixture: never restore alongside product DBs. All publishers must use CAS."""
+-    def __init__(self, path):
+-        self.path = _path(path)
+-
+-    def _db(self):
+-        db = sqlite3.connect(self.path.as_uri() + '?mode=rw', uri=True, isolation_level=None, timeout=2)
+-        db.execute('PRAGMA trusted_schema=OFF')
+-        return db
+-
+-    @classmethod
+-    def create(cls, path, root, *, iam_bootstrap=False):
+-        if type(root) is not RootPin or type(iam_bootstrap) is not bool:
+-            raise ValueError('D0_AUTHORITY_PIN_HOLD')
+-        root.validate()
+-        a = cls(path)
+-        fd = os.open(a.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+-        os.close(fd)
+-        with closing(a._db()) as db:
+-            db.executescript("""BEGIN IMMEDIATE;
+-            CREATE TABLE roots(seq INTEGER PRIMARY KEY, record_sha TEXT UNIQUE NOT NULL,
+-                key_sha TEXT NOT NULL, epoch INTEGER NOT NULL);
+-            CREATE TABLE claims(scope_sha TEXT PRIMARY KEY, binding TEXT UNIQUE NOT NULL,
+-                tx TEXT UNIQUE NOT NULL, request_digest TEXT NOT NULL, root_seq INTEGER NOT NULL,
+-                root_sha TEXT NOT NULL);
+-            CREATE TRIGGER roots_no_update BEFORE UPDATE ON roots BEGIN SELECT RAISE(ABORT,'append only'); END;
+-            CREATE TRIGGER roots_no_delete BEFORE DELETE ON roots BEGIN SELECT RAISE(ABORT,'append only'); END;
+-            CREATE TRIGGER roots_no_replace BEFORE INSERT ON roots WHEN EXISTS(SELECT 1 FROM roots WHERE seq=NEW.seq OR record_sha=NEW.record_sha) BEGIN SELECT RAISE(ABORT,'append only'); END;
+-            CREATE TRIGGER claims_no_update BEFORE UPDATE ON claims BEGIN SELECT RAISE(ABORT,'append only'); END;
+-            CREATE TRIGGER claims_no_delete BEFORE DELETE ON claims BEGIN SELECT RAISE(ABORT,'append only'); END;
+-            CREATE TRIGGER claims_no_replace BEFORE INSERT ON claims WHEN EXISTS(SELECT 1 FROM claims WHERE scope_sha=NEW.scope_sha OR binding=NEW.binding OR tx=NEW.tx) BEGIN SELECT RAISE(ABORT,'append only'); END;""")
+-            db.execute('INSERT INTO roots VALUES (1,?,?,?)', (root.record_sha, root.key_sha, root.recovery_epoch))
+-            if iam_bootstrap:
+-                db.execute('CREATE TABLE iam_bootstrap(id INTEGER PRIMARY KEY CHECK(id=1))')
+-                db.execute('INSERT INTO iam_bootstrap VALUES (1)')
+-            db.execute('COMMIT')
+-        return a
+-
+-    @staticmethod
+-    def _head(db):
+-        row = db.execute('SELECT seq,record_sha,key_sha,epoch FROM roots ORDER BY seq DESC LIMIT 1').fetchone()
+-        if row is None:
+-            raise ValueError('D0_AUTHORITY_MISSING_HOLD')
+-        seq, *data = row
+-        root = RootPin(*data)
+-        root.validate()
+-        return seq, root
+-
+-    @staticmethod
+-    def _iam_mode(db):
+-        # Partial schema also fails closed. Original authority stores are unaffected.
+-        return db.execute("SELECT 1 FROM sqlite_master WHERE name GLOB 'iam_*' LIMIT 1").fetchone() is not None
+-
+-    def _check_iam(self, db, session_check):
+-        if not self._iam_mode(db):
+-            if session_check is not None:
+-                raise ValueError('D0_IAM_MODE_HOLD')
+-            return None
+-        from app.core.iam_session import SessionClaimCheck
+-        if type(session_check) is not SessionClaimCheck:
+-            raise ValueError('D0_IAM_CHECK_REQUIRED_HOLD')
+-        return session_check.inspect(self,db)
+-
+-    def publish(self, expected, new):
+-        if type(expected) is not RootPin or type(new) is not RootPin:
+-            raise ValueError('D0_AUTHORITY_PIN_HOLD')
+-        expected.validate()
+-        new.validate()
+-        with closing(self._db()) as db:
+-            db.execute('BEGIN IMMEDIATE')
+-            seq, current = self._head(db)
+-            if self._iam_mode(db):
+-                raise ValueError('D0_JOINT_PUBLICATION_HOLD')
+-            if current != expected or new.key_sha != current.key_sha or new.recovery_epoch < current.recovery_epoch or new.record_sha == current.record_sha:
+-                raise ValueError('D0_AUTHORITY_CAS_HOLD')
+-            db.execute('INSERT INTO roots VALUES (?,?,?,?)', (seq+1, new.record_sha, new.key_sha, new.recovery_epoch))
+-            db.execute('COMMIT')
+-
+-    @contextmanager
+-    def claim_and_fence(self, expected, scope_sha, binding, tx, request_digest, *, session_check=None):
+-        """Consume scope before T1; then lock the root through the caller's commit.
+-
+-        Any failure after claim leaves a permanent quarantine. No reset or retry.
+-        A publisher winning the gap between claim commit and fence causes HOLD.
+-        """
+-        if type(expected) is not RootPin or not all(_digest(x) for x in (scope_sha,binding,request_digest)) or type(tx) is not str or not 0 < len(tx) <= 512:
+-            raise ValueError('D0_AUTHORITY_INPUT_HOLD')
+-        expected.validate()
+-        with closing(self._db()) as db:
+-            db.execute('BEGIN IMMEDIATE')
+-            seq, current = self._head(db)
+-            if current != expected:
+-                raise ValueError('D0_AUTHORITY_ROOT_HOLD')
+-            session_sha = self._check_iam(db,session_check)
+-            if db.execute('SELECT 1 FROM claims WHERE scope_sha=? OR binding=? OR tx=?', (scope_sha,binding,tx)).fetchone():
+-                raise ValueError('D0_AUTHORITY_ALREADY_CLAIMED_HOLD')
+-            db.execute('INSERT INTO claims VALUES (?,?,?,?,?,?)', (scope_sha,binding,tx,request_digest,seq,current.record_sha))
+-            if session_sha is not None:
+-                db.execute('INSERT INTO iam_claim_pins VALUES (?,?)',(scope_sha,session_sha))
+-            db.execute('COMMIT')
+-            db.execute('BEGIN IMMEDIATE')
+-            if self._head(db) != (seq, expected):
+-                raise ValueError('D0_AUTHORITY_ROOT_CHANGED_HOLD')
+-            if self._check_iam(db,session_check) != session_sha:
+-                raise ValueError('D0_IAM_CLAIM_DRIFT_HOLD')
+-            try:
+-                yield
+-            finally:
+-                if db.in_transaction:
+-                    db.execute('ROLLBACK')
+-
+-
+-def execute_authority_fenced_transition(*, authority, intent, context, registry, witness,
+-        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
+-        company=None, expected_company_binding=None, result=None, result_reader=None,
+-        session_check=None):
+-    """Opt-in wrapper around 0210; no caller-supplied latest callback or live grant."""
+-    from app.core.transaction.fenced_transition import (execute_fenced_transition, intent_pin,
+-        resolve_fence_binding, resolve_result_binding, check_result_store_separation)
+-    from app.core.transaction.witnessed_mapping import binding_digest
+-    from app.core.agent_runtime.memory_witness import LatestWitnessPin
+-    if type(authority) is not D0IntentAuthority or type(witness) is not LatestWitnessPin:
+-        raise ValueError('D0_AUTHORITY_ADAPTER_HOLD')
+-    if binding_digest(intent, context, registry, witness) != expected_binding:
+-        raise ValueError('D0_AUTHORITY_BINDING_HOLD')
+-    if any(os.path.samefile(authority.path, p) for p in (memory_path, reader.path, journal.path)):
+-        raise ValueError('D0_AUTHORITY_SEPARATION_HOLD')
+-    company_pin = resolve_fence_binding(intent, expected_binding, company, expected_company_binding)
+-    check_result_store_separation(result_reader,(authority.path,memory_path,reader.path,journal.path))
+-    fence_binding = resolve_result_binding(intent,context,registry,witness,expected_binding,company,
+-                                          company_pin,result,result_reader,clock() if result is not None else None,raw)
+-    pin = intent_pin(intent, fence_binding)
+-    # D0 only: bind the server-owned session identity to the exact T1 intent.
+-    # This is not an ORG grant, independent issuer, or production authorization.
+-    if session_check is not None:
+-        from app.core.iam_session import SessionClaimCheck, D0_SCOPE
+-        from app.core.agent_runtime.lifecycle import Scope
+-        scope = getattr(intent, 'scope', None)
+-        if (type(session_check) is not SessionClaimCheck or type(scope) is not Scope
+-                or session_check.scope != D0_SCOPE
+-                or (scope.tenant_id, scope.company_id, scope.environment_id) != D0_SCOPE
+-                or scope.principal_id != session_check.principal
+-                or scope.agent_instance_id != session_check.agent):
+-            raise ValueError('D0_AUTHORITY_SESSION_SCOPE_HOLD')
+-    root = RootPin(witness.record_sha, witness.key_sha, witness.recovery_epoch)
+-    with authority.claim_and_fence(root, pin.scope_sha, pin.binding, pin.transaction_ref,
+-                                   pin.request_digest, session_check=session_check):
+-        return execute_fenced_transition(intent, context, registry, witness, expected_binding,
+-            memory_path, reader, public_key, raw, journal, connect, clock, lambda: witness,
+-            company=company, expected_company_binding=expected_company_binding,
+-            result=result, result_reader=result_reader)
++from typing import NoReturn
++import os
++from pathlib import Path
++import sqlite3
++
++
++def _digest(value):
++    return type(value) is str and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
++
++
++@dataclass(frozen=True)
++class RootPin:
++    record_sha: str
++    key_sha: str
++    recovery_epoch: int
++
++    def validate(self):
++        if not (_digest(self.record_sha) and _digest(self.key_sha) and
++                type(self.recovery_epoch) is int and 0 < self.recovery_epoch < 2**63):
++            raise ValueError('D0_AUTHORITY_PIN_HOLD')
++
++
++def _path(path):
++    p = Path(os.path.abspath(path))
++    if not p.name.endswith('.authority.sqlite') or p.resolve() != p or any(x.is_symlink() for x in (p, *p.parents)):
++        raise ValueError('D0_AUTHORITY_PATH_HOLD')
++    return p
++
++
++class D0IntentAuthority:
++    """Fixture: never restore alongside product DBs. All publishers must use CAS."""
++    def __init__(self, path):
++        self.path = _path(path)
++
++    def _db(self):
++        db = sqlite3.connect(self.path.as_uri() + '?mode=rw', uri=True, isolation_level=None, timeout=2)
++        db.execute('PRAGMA trusted_schema=OFF')
++        return db
++
++    @classmethod
++    def create(cls, path, root, *, iam_bootstrap=False):
++        if type(root) is not RootPin or type(iam_bootstrap) is not bool:
++            raise ValueError('D0_AUTHORITY_PIN_HOLD')
++        root.validate()
++        a = cls(path)
++        fd = os.open(a.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
++        os.close(fd)
++        with closing(a._db()) as db:
++            db.executescript("""BEGIN IMMEDIATE;
++            CREATE TABLE roots(seq INTEGER PRIMARY KEY, record_sha TEXT UNIQUE NOT NULL,
++                key_sha TEXT NOT NULL, epoch INTEGER NOT NULL);
++            CREATE TABLE claims(scope_sha TEXT PRIMARY KEY, binding TEXT UNIQUE NOT NULL,
++                tx TEXT UNIQUE NOT NULL, request_digest TEXT NOT NULL, root_seq INTEGER NOT NULL,
++                root_sha TEXT NOT NULL);
++            CREATE TRIGGER roots_no_update BEFORE UPDATE ON roots BEGIN SELECT RAISE(ABORT,'append only'); END;
++            CREATE TRIGGER roots_no_delete BEFORE DELETE ON roots BEGIN SELECT RAISE(ABORT,'append only'); END;
++            CREATE TRIGGER roots_no_replace BEFORE INSERT ON roots WHEN EXISTS(SELECT 1 FROM roots WHERE seq=NEW.seq OR record_sha=NEW.record_sha) BEGIN SELECT RAISE(ABORT,'append only'); END;
++            CREATE TRIGGER claims_no_update BEFORE UPDATE ON claims BEGIN SELECT RAISE(ABORT,'append only'); END;
++            CREATE TRIGGER claims_no_delete BEFORE DELETE ON claims BEGIN SELECT RAISE(ABORT,'append only'); END;
++            CREATE TRIGGER claims_no_replace BEFORE INSERT ON claims WHEN EXISTS(SELECT 1 FROM claims WHERE scope_sha=NEW.scope_sha OR binding=NEW.binding OR tx=NEW.tx) BEGIN SELECT RAISE(ABORT,'append only'); END;""")
++            db.execute('INSERT INTO roots VALUES (1,?,?,?)', (root.record_sha, root.key_sha, root.recovery_epoch))
++            if iam_bootstrap:
++                db.execute('CREATE TABLE iam_bootstrap(id INTEGER PRIMARY KEY CHECK(id=1))')
++                db.execute('INSERT INTO iam_bootstrap VALUES (1)')
++            db.execute('COMMIT')
++        return a
++
++    @staticmethod
++    def _head(db):
++        row = db.execute('SELECT seq,record_sha,key_sha,epoch FROM roots ORDER BY seq DESC LIMIT 1').fetchone()
++        if row is None:
++            raise ValueError('D0_AUTHORITY_MISSING_HOLD')
++        seq, *data = row
++        root = RootPin(*data)
++        root.validate()
++        return seq, root
++
++    @staticmethod
++    def _iam_mode(db):
++        # Partial schema also fails closed. Original authority stores are unaffected.
++        return db.execute("SELECT 1 FROM sqlite_master WHERE name GLOB 'iam_*' LIMIT 1").fetchone() is not None
++
++    def _check_iam(self, db, session_check):
++        if not self._iam_mode(db):
++            if session_check is not None:
++                raise ValueError('D0_IAM_MODE_HOLD')
++            return None
++        from app.core.iam_session import SessionClaimCheck
++        if type(session_check) is not SessionClaimCheck:
++            raise ValueError('D0_IAM_CHECK_REQUIRED_HOLD')
++        return session_check.inspect(self,db)
++
++    def publish(self, expected, new):
++        if type(expected) is not RootPin or type(new) is not RootPin:
++            raise ValueError('D0_AUTHORITY_PIN_HOLD')
++        expected.validate()
++        new.validate()
++        with closing(self._db()) as db:
++            db.execute('BEGIN IMMEDIATE')
++            seq, current = self._head(db)
++            if self._iam_mode(db):
++                raise ValueError('D0_JOINT_PUBLICATION_HOLD')
++            if current != expected or new.key_sha != current.key_sha or new.recovery_epoch < current.recovery_epoch or new.record_sha == current.record_sha:
++                raise ValueError('D0_AUTHORITY_CAS_HOLD')
++            db.execute('INSERT INTO roots VALUES (?,?,?,?)', (seq+1, new.record_sha, new.key_sha, new.recovery_epoch))
++            db.execute('COMMIT')
++
++    @contextmanager
++    def claim_and_fence(self, expected, scope_sha, binding, tx, request_digest, *, session_check=None):
++        """Consume scope before T1; then lock the root through the caller's commit.
++
++        Any failure after claim leaves a permanent quarantine. No reset or retry.
++        A publisher winning the gap between claim commit and fence causes HOLD.
++        """
++        if type(expected) is not RootPin or not all(_digest(x) for x in (scope_sha,binding,request_digest)) or type(tx) is not str or not 0 < len(tx) <= 512:
++            raise ValueError('D0_AUTHORITY_INPUT_HOLD')
++        expected.validate()
++        with closing(self._db()) as db:
++            db.execute('BEGIN IMMEDIATE')
++            seq, current = self._head(db)
++            if current != expected:
++                raise ValueError('D0_AUTHORITY_ROOT_HOLD')
++            session_sha = self._check_iam(db,session_check)
++            if db.execute('SELECT 1 FROM claims WHERE scope_sha=? OR binding=? OR tx=?', (scope_sha,binding,tx)).fetchone():
++                raise ValueError('D0_AUTHORITY_ALREADY_CLAIMED_HOLD')
++            db.execute('INSERT INTO claims VALUES (?,?,?,?,?,?)', (scope_sha,binding,tx,request_digest,seq,current.record_sha))
++            if session_sha is not None:
++                db.execute('INSERT INTO iam_claim_pins VALUES (?,?)',(scope_sha,session_sha))
++            db.execute('COMMIT')
++            db.execute('BEGIN IMMEDIATE')
++            if self._head(db) != (seq, expected):
++                raise ValueError('D0_AUTHORITY_ROOT_CHANGED_HOLD')
++            if self._check_iam(db,session_check) != session_sha:
++                raise ValueError('D0_IAM_CLAIM_DRIFT_HOLD')
++            try:
++                yield
++            finally:
++                if db.in_transaction:
++                    db.execute('ROLLBACK')
++
++
++def execute_authority_fenced_transition(*, authority, intent, context, registry, witness,
++        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
++        company=None, expected_company_binding=None, result=None, result_reader=None,
++        session_check=None, protected_org=None):
++    """D0 legacy fixture or explicit protected G5 entry; no live grant."""
++    # Two reference types are not interchangeable; never fall back to legacy.
++    if protected_org is not None and session_check is not None:
++        raise PermissionError('D5C_R8_DUAL_REFERENCE_HOLD')
++    if protected_org is not None:
++        from app.core.transaction.org_membership_review import require_protected_org_commit
++        require_protected_org_commit(authority, intent, protected_org)
++        raise PermissionError('D5C_R8_PROTECTED_EXECUTION_UNIMPLEMENTED_HOLD')
++    from app.core.transaction.fenced_transition import (execute_fenced_transition, intent_pin,
++        resolve_fence_binding, resolve_result_binding, check_result_store_separation)
++    from app.core.transaction.witnessed_mapping import binding_digest
++    from app.core.agent_runtime.memory_witness import LatestWitnessPin
++    if type(authority) is not D0IntentAuthority or type(witness) is not LatestWitnessPin:
++        raise ValueError('D0_AUTHORITY_ADAPTER_HOLD')
++    if binding_digest(intent, context, registry, witness) != expected_binding:
++        raise ValueError('D0_AUTHORITY_BINDING_HOLD')
++    if any(os.path.samefile(authority.path, p) for p in (memory_path, reader.path, journal.path)):
++        raise ValueError('D0_AUTHORITY_SEPARATION_HOLD')
++    company_pin = resolve_fence_binding(intent, expected_binding, company, expected_company_binding)
++    check_result_store_separation(result_reader,(authority.path,memory_path,reader.path,journal.path))
++    fence_binding = resolve_result_binding(intent,context,registry,witness,expected_binding,company,
++                                          company_pin,result,result_reader,clock() if result is not None else None,raw)
++    pin = intent_pin(intent, fence_binding)
++    # D0 only: bind the server-owned session identity to the exact T1 intent.
++    # This is not an ORG grant, independent issuer, or production authorization.
++    if session_check is not None:
++        from app.core.iam_session import SessionClaimCheck, D0_SCOPE
++        from app.core.agent_runtime.lifecycle import Scope
++        scope = getattr(intent, 'scope', None)
++        if (type(session_check) is not SessionClaimCheck or type(scope) is not Scope
++                or session_check.scope != D0_SCOPE
++                or (scope.tenant_id, scope.company_id, scope.environment_id) != D0_SCOPE
++                or scope.principal_id != session_check.principal
++                or scope.agent_instance_id != session_check.agent):
++            raise ValueError('D0_AUTHORITY_SESSION_SCOPE_HOLD')
++    root = RootPin(witness.record_sha, witness.key_sha, witness.recovery_epoch)
++    with authority.claim_and_fence(root, pin.scope_sha, pin.binding, pin.transaction_ref,
++                                   pin.request_digest, session_check=session_check):
++        return execute_fenced_transition(intent, context, registry, witness, expected_binding,
++            memory_path, reader, public_key, raw, journal, connect, clock, lambda: witness,
++            company=company, expected_company_binding=expected_company_binding,
++            result=result, result_reader=result_reader)
++
++def execute_protected_authority_fenced_transition(*, authority, intent, context, registry, witness,
++        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
++        company=None, expected_company_binding=None, result=None, result_reader=None) -> NoReturn:
++    """Protected D0 entry; deny before claim, journal stage, or connection access.
++
++    The R7 transport gate is shared, not a caller-selected mode or a grant.
++    No protected composition is implemented yet. Never fall back to the legacy
++    diagnostic wrapper, even if the capability gate unexpectedly returns.
++    """
++    from app.core.transaction.postgres_session import require_strict_postgres_commit
++    require_strict_postgres_commit()
++    raise PermissionError('T1_PROTECTED_AUTHORITY_COMPOSITION_UNIMPLEMENTED_HOLD')
+diff --git a/product/ai-company-os-backend/app/core/transaction/org_membership_review.py b/product/ai-company-os-backend/app/core/transaction/org_membership_review.py
+--- a/product/ai-company-os-backend/app/core/transaction/org_membership_review.py
++++ b/product/ai-company-os-backend/app/core/transaction/org_membership_review.py
+@@ -3,132 +3,188 @@
+ The exact R3 owner modules must be supplied by the isolated checkout runner.
+ """
+ from contextlib import closing
+-from dataclasses import asdict, dataclass
+-from hashlib import sha256
+-import json
+-
+-from app.core.transaction.identity_binding import Review, digest, revision, token, valid_request, valid_binding
+-from app.core.event_store.company_coordination import _member
+-from app.core.transaction.identity_fence_review import (
+-    IdentityReadback, SessionReference, inspect_session_reference,
+-)
+-
+-JOIN_FIELDS = ('tenant', 'company', 'environment', 'org_head', 'org_sequence',
+-               'staffing_digest', 'team_digest', 'project', 'plan_revision',
+-               'task', 'run', 'agent', 'principal', 'policy_epoch',
+-               'witness_epoch', 'role_revision', 'full_intent_digest')
+-
+-
+-@dataclass(frozen=True)
+-class OrgReadback:
+-    join: tuple
+-    seat: str
+-    unit: str
+-    department: str
+-    role: str
+-    history_count: int
+-    history_head: str
+-    proposal_digest: str
+-
+-
+-def org_reference_digest(reference):
+-    if type(reference) is not OrgReadback:
+-        raise ValueError('D5G5_ORG_REFERENCE_HOLD')
+-    return sha256(json.dumps(['aicos-d5g5-org-review-v1', asdict(reference)],
+-        sort_keys=True, separators=(',', ':'), ensure_ascii=True,
+-        allow_nan=False).encode('ascii')).hexdigest()
+-
+-
+-def read_current_org_reference(store, sample, session, *, org_head, seat, role, history_pin):
+-    """Read current staffing/team/proposal in one existing R3 read transaction.
+-    No archived head fallback; D4 role revision is not ORG sequence.
+-    Core/role inputs remain owner observations, not independently verified facts.
+-    """
+-    from durable_ops import OperationsStore, check_pin
+-    from integration_guard import ReviewPin, inspect_runtime
+-    from operations import digest as org_digest, department
+-
+-    if (type(store) is not OperationsStore or type(sample) is not IdentityReadback
+-            or type(session) is not SessionReference or not valid_request(session.request)
+-            or not digest(org_head) or not token(seat) or not token(role)):
+-        raise ValueError('D5G5_ORG_INPUT_HOLD')
+-    req = session.request
+-    binding = sample.binding
+-    if (store._key != req.scope or sample.scope != req.scope
+-            or sample.principal != req.principal or not valid_binding(binding)
+-            or binding.request != req or not _member(sample.member)
+-            or sample.member.row()[:6] != (req.project, req.plan_revision, req.task,
+-                req.run, req.agent, req.principal)
+-            or session.observation.principal_id != req.principal
+-            or session.observation.agent_instance_id != req.agent
+-            or not revision(binding.role_revision)):
+-        raise ValueError('D5G5_ORG_SCOPE_HOLD')
+-    check_pin(history_pin)
+-    with closing(store._connect()) as db:
+-        db.execute('BEGIN')
+-        try:
+-            if store._head(db) != org_head:
+-                raise ValueError('D5G5_ORG_HEAD_HOLD')
+-            staffing, sequence, _, _ = store._read(db, org_head)
+-            team = store._team(db, org_head, req.project, staffing)
+-            actual, entries = store._history(db, org_head, team, staffing)
+-            if actual != history_pin or seat not in team.members or not revision(sequence):
+-                raise ValueError('D5G5_ORG_TEAM_HISTORY_HOLD')
+-            positions = [p for p in staffing.org.seats if p.id == seat]
+-            if len(positions) != 1 or positions[0].role != role:
+-                raise ValueError('D5G5_ORG_POSITION_HOLD')
+-            dept = department(staffing, seat)
+-            if not token(dept):
+-                raise ValueError('D5G5_ORG_DEPARTMENT_HOLD')
+-            sd = staffing.revision()
+-            pin = ReviewPin(*req.scope, sd, req.project, req.plan_revision,
+-                            req.task, req.run, req.agent, req.principal, role)
+-            reviewed = inspect_runtime(staffing, seat, pin, pin)
+-            if (reviewed.get('structural_match') is not True
+-                    or reviewed.get('decision') != 'HOLD'
+-                    or reviewed.get('authority') is not False
+-                    or reviewed.get('dispatch_allowed') is not False
+-                    or reviewed.get('binding_created') is not False):
+-                raise ValueError('D5G5_ORG_STAFFING_HOLD')
+-            proposals = [e for e in entries if
+-                (e['plan_revision'], e['task'], e['recipient'], e['decision']) ==
+-                (req.plan_revision, req.task, seat, 'HOLD')]
+-            if len(proposals) != 1 or not digest(proposals[0]['digest']):
+-                raise ValueError('D5G5_ORG_PROPOSAL_HOLD')
+-            join = (*req.scope, org_head, sequence, sd, org_digest(asdict(team)),
+-                    req.project, req.plan_revision, req.task, req.run, req.agent,
+-                    req.principal, req.policy_epoch, req.witness_epoch,
+-                    binding.role_revision, req.intent_sha)
+-            return OrgReadback(join, seat, positions[0].unit, dept, role,
+-                               actual.count, actual.head, proposals[0]['digest'])
+-        finally:
+-            db.rollback()
+-
+-
+-def inspect_org_session_reference(resolver, credential, intent, initial, session,
+-                                  session_sha, read_latest, *, store, org_reference,
+-                                  org_sha, org_head, seat, role, history_pin,
+-                                  root, owner_pin, domain):
+-    """Reuse G4's authority lock and re-read actual ORG during owner callback.
+-    Separate stores: no atomic freshness, no claim, no write, no commit permission.
+-    """
+-    try:
+-        if (not digest(org_sha) or org_reference_digest(org_reference) != org_sha
+-                or not callable(read_latest)):
+-            return Review('D5G5_ORG_REFERENCE_HOLD')
+-        def current(sample):
+-            value = read_current_org_reference(store, sample, session, org_head=org_head,
+-                        seat=seat, role=role, history_pin=history_pin)
+-            if org_reference_digest(value) != org_sha:
+-                raise ValueError('D5G5_ORG_DRIFT_HOLD')
+-            return sample
+-        current(initial)
+-        result = inspect_session_reference(resolver, credential, intent, initial,
+-                    session, session_sha, lambda: current(read_latest()),
+-                    root=root, owner_pin=owner_pin, domain=domain)
+-        if not result.structural_match:
+-            return result
+-        current(initial)
+-        return Review('D5G5_ORG_PROPOSAL_SESSION_MATCH_ONLY', True, result.binding_sha)
+-    except Exception:
+-        return Review('D5G5_ORG_READBACK_HOLD')
++from dataclasses import asdict, dataclass, field
++from hashlib import sha256
++import json
++
++from app.core.transaction.identity_binding import Review, digest, revision, token, valid_request, valid_binding
++from app.core.event_store.company_coordination import _member
++from app.core.transaction.identity_fence_review import (
++    IdentityReadback, SessionReference, inspect_session_reference,
++)
++
++JOIN_FIELDS = ('tenant', 'company', 'environment', 'org_head', 'org_sequence',
++               'staffing_digest', 'team_digest', 'project', 'plan_revision',
++               'task', 'run', 'agent', 'principal', 'policy_epoch',
++               'witness_epoch', 'role_revision', 'full_intent_digest')
++
++
++@dataclass(frozen=True)
++class OrgReadback:
++    join: tuple
++    seat: str
++    unit: str
++    department: str
++    role: str
++    history_count: int
++    history_head: str
++    proposal_digest: str
++
++
++def org_reference_digest(reference):
++    if type(reference) is not OrgReadback:
++        raise ValueError('D5G5_ORG_REFERENCE_HOLD')
++    return sha256(json.dumps(['aicos-d5g5-org-review-v1', asdict(reference)],
++        sort_keys=True, separators=(',', ':'), ensure_ascii=True,
++        allow_nan=False).encode('ascii')).hexdigest()
++
++
++def read_current_org_reference(store, sample, session, *, org_head, seat, role, history_pin):
++    """Read current staffing/team/proposal in one existing R3 read transaction.
++    No archived head fallback; D4 role revision is not ORG sequence.
++    Core/role inputs remain owner observations, not independently verified facts.
++    """
++    from durable_ops import OperationsStore, check_pin
++    from integration_guard import ReviewPin, inspect_runtime
++    from operations import digest as org_digest, department
++
++    if (type(store) is not OperationsStore or type(sample) is not IdentityReadback
++            or type(session) is not SessionReference or not valid_request(session.request)
++            or not digest(org_head) or not token(seat) or not token(role)):
++        raise ValueError('D5G5_ORG_INPUT_HOLD')
++    req = session.request
++    binding = sample.binding
++    if (store._key != req.scope or sample.scope != req.scope
++            or sample.principal != req.principal or not valid_binding(binding)
++            or binding.request != req or not _member(sample.member)
++            or sample.member.row()[:6] != (req.project, req.plan_revision, req.task,
++                req.run, req.agent, req.principal)
++            or session.observation.principal_id != req.principal
++            or session.observation.agent_instance_id != req.agent
++            or not revision(binding.role_revision)):
++        raise ValueError('D5G5_ORG_SCOPE_HOLD')
++    check_pin(history_pin)
++    with closing(store._connect()) as db:
++        db.execute('BEGIN')
++        try:
++            if store._head(db) != org_head:
++                raise ValueError('D5G5_ORG_HEAD_HOLD')
++            staffing, sequence, _, _ = store._read(db, org_head)
++            team = store._team(db, org_head, req.project, staffing)
++            actual, entries = store._history(db, org_head, team, staffing)
++            if actual != history_pin or seat not in team.members or not revision(sequence):
++                raise ValueError('D5G5_ORG_TEAM_HISTORY_HOLD')
++            positions = [p for p in staffing.org.seats if p.id == seat]
++            if len(positions) != 1 or positions[0].role != role:
++                raise ValueError('D5G5_ORG_POSITION_HOLD')
++            dept = department(staffing, seat)
++            if not token(dept):
++                raise ValueError('D5G5_ORG_DEPARTMENT_HOLD')
++            sd = staffing.revision()
++            pin = ReviewPin(*req.scope, sd, req.project, req.plan_revision,
++                            req.task, req.run, req.agent, req.principal, role)
++            reviewed = inspect_runtime(staffing, seat, pin, pin)
++            if (reviewed.get('structural_match') is not True
++                    or reviewed.get('decision') != 'HOLD'
++                    or reviewed.get('authority') is not False
++                    or reviewed.get('dispatch_allowed') is not False
++                    or reviewed.get('binding_created') is not False):
++                raise ValueError('D5G5_ORG_STAFFING_HOLD')
++            proposals = [e for e in entries if
++                (e['plan_revision'], e['task'], e['recipient'], e['decision']) ==
++                (req.plan_revision, req.task, seat, 'HOLD')]
++            if len(proposals) != 1 or not digest(proposals[0]['digest']):
++                raise ValueError('D5G5_ORG_PROPOSAL_HOLD')
++            join = (*req.scope, org_head, sequence, sd, org_digest(asdict(team)),
++                    req.project, req.plan_revision, req.task, req.run, req.agent,
++                    req.principal, req.policy_epoch, req.witness_epoch,
++                    binding.role_revision, req.intent_sha)
++            return OrgReadback(join, seat, positions[0].unit, dept, role,
++                               actual.count, actual.head, proposals[0]['digest'])
++        finally:
++            db.rollback()
++
++
++def inspect_org_session_reference(resolver, credential, intent, initial, session,
++                                  session_sha, read_latest, *, store, org_reference,
++                                  org_sha, org_head, seat, role, history_pin,
++                                  root, owner_pin, domain):
++    """Reuse G4's authority lock and re-read actual ORG during owner callback.
++    Separate stores: no atomic freshness, no claim, no write, no commit permission.
++    """
++    try:
++        if (not digest(org_sha) or org_reference_digest(org_reference) != org_sha
++                or not callable(read_latest)):
++            return Review('D5G5_ORG_REFERENCE_HOLD')
++        def current(sample):
++            value = read_current_org_reference(store, sample, session, org_head=org_head,
++                        seat=seat, role=role, history_pin=history_pin)
++            if org_reference_digest(value) != org_sha:
++                raise ValueError('D5G5_ORG_DRIFT_HOLD')
++            return sample
++        current(initial)
++        result = inspect_session_reference(resolver, credential, intent, initial,
++                    session, session_sha, lambda: current(read_latest()),
++                    root=root, owner_pin=owner_pin, domain=domain)
++        if not result.structural_match:
++            return result
++        current(initial)
++        return Review('D5G5_ORG_PROPOSAL_SESSION_MATCH_ONLY', True, result.binding_sha)
++    except Exception:
++        return Review('D5G5_ORG_READBACK_HOLD')
++
++
++@dataclass(frozen=True)
++class ProtectedOrgTransition:
++    """Internal G5 reference bundle; not a capability or assignment."""
++    resolver: object
++    credential: str = field(repr=False, compare=False)
++    initial: IdentityReadback
++    session: SessionReference
++    session_sha: str
++    read_latest: object = field(repr=False, compare=False)
++    store: object
++    org_reference: OrgReadback
++    org_sha: str
++    org_head: str
++    seat: str
++    role: str
++    history_pin: object
++    root: object
++    owner_pin: str
++    domain: str
++
++
++def require_protected_org_commit(authority, intent, reference):
++    """G5 review then common R7 pre-claim HOLD; never grant or consume.
++
++    Server-owned reader only. Review locks are not a durable deadline or
++    a shared publication protocol. Even if the preflight later returns,
++    no execution is implemented here and legacy must not be selected.
++    """
++    from app.core.iam_session import D0SessionResolver
++    from app.core.transaction.intent_authority import D0IntentAuthority
++    from app.core.transaction.postgres_session import require_strict_postgres_commit
++
++    if (type(reference) is not ProtectedOrgTransition
++            or type(authority) is not D0IntentAuthority
++            or type(reference.resolver) is not D0SessionResolver
++            or reference.resolver._authority is not authority):
++        raise PermissionError('D5C_R8_PROTECTED_REFERENCE_HOLD')
++    result = inspect_org_session_reference(
++        reference.resolver, reference.credential, intent, reference.initial,
++        reference.session, reference.session_sha, reference.read_latest,
++        store=reference.store, org_reference=reference.org_reference,
++        org_sha=reference.org_sha, org_head=reference.org_head,
++        seat=reference.seat, role=reference.role, history_pin=reference.history_pin,
++        root=reference.root, owner_pin=reference.owner_pin, domain=reference.domain)
++    if (type(result) is not Review
++            or result.structural_match is not True
++            or result.reason != 'D5G5_ORG_PROPOSAL_SESSION_MATCH_ONLY'
++            or result.decision != 'HOLD' or not digest(result.binding_sha)
++            or result.commit_allowed is not False
++            or result.dispatch_allowed is not False
++            or result.retry_allowed is not False):
++        raise PermissionError('D5C_R8_ORG_SESSION_REVIEW_HOLD')
++    require_strict_postgres_commit()
++    raise PermissionError('D5C_R8_PROTECTED_EXECUTION_UNIMPLEMENTED_HOLD')
+diff --git a/product/ai-company-os-backend/app/core/transaction/port.py b/product/ai-company-os-backend/app/core/transaction/port.py
+--- a/product/ai-company-os-backend/app/core/transaction/port.py
++++ b/product/ai-company-os-backend/app/core/transaction/port.py
+@@ -47,6 +47,12 @@
+     def __init__(self, transaction: Callable[[], AbstractContextManager[TransactionSession]]):
+         self._transaction = transaction
+ 
++    @classmethod
++    def for_protected_postgres(cls, connect, mapping):
++        """Explicit strict-expiry route; never fall back to the D0 transport."""
++        from app.core.transaction.postgres_session import protected_postgres_transaction
++        return cls(lambda: protected_postgres_transaction(connect, mapping))
++
+     def review_workitem_request(self, draft: WorkItemRequestDraft) -> T1Review:
+         """Direction A review only; deliberately never calls the transaction factory."""
+         return inspect_workitem_request(draft)

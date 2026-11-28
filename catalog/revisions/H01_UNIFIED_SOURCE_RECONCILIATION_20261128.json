@@ -831,5 +831,45 @@
     "next": "Owner disposition of exact D5-C-R8/PR46 protected source union (no fallback) and current A1 physical mapping; independently appointed MI10 exact PR10/46/52 review and publication QA. Continue independent eligible source review; no new test or transfer while affected mandatory evidence missing.",
     "limitations": "Reviewed targeted divergent source variants, not all historic versions or entire Design Master addenda. No full archive, no uncommitted work visibility, no code transfer; no real grants/COMMIT/CI/main/PROD.",
     "rollback": "ordinary revert this review-only commit; product tree unchanged"
+  },
+  "research_first_protected_preclaim_patch_20261128": {
+    "status": "PATCH_PREPARED_NOT_APPLIED_HOLD",
+    "base": "645c081e2cc107440662600b749d34415ad2f713",
+    "governance": "239bfd4032a2f717263288ff7f73e0a049898801",
+    "source_origins": {
+      "r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+      "g6a": "253128a2236ee706486e70acc97e472ededac26b",
+      "pr46": "098486f272047a4fef8ba07b90738f2baeb5351e"
+    },
+    "patch": "quarantine/H01_RESEARCH_FIRST_PROTECTED_PRECLAIM_20261128.patch",
+    "preimages": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+        "r8_blob": "6810c8eea0d7323736f1e5ce68d9de85dcc2ca61"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "r8_blob": "14787a8c7e73e68f25d3ccc91b414e2c1b0d12ee"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "r8_blob": "12f40659e916d5722d60c41c27f3116d746545f0"
+      }
+    ],
+    "g6a_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+    "changes": [
+      "Keep PR46 session_check exact scope/principal/agent guard and claim forwarding; add original R8 protected_org preclaim branch, reject simultaneous references before either branch. Restore G6A explicit NoReturn protected authority entry, never fallback.",
+      "Restore exact original R8 org_membership_review.py; prior G5 implementation byte-equivalent except import and additive guard.",
+      "Restore original R6/R8 LogicalT1Coordinator.for_protected_postgres classmethod, preserve current review_workitem_request and run operations. Existing protected_postgres_transaction unchanged and unconditionally denies before connect."
+    ],
+    "decision_without_explicit_guidance": "Proposed dual-reference denial instead of silently ignoring one reference. Requires affected-flow validation and technical review; no behavior active.",
+    "historical_evidence": "G6A 6/6 historical narrow authority SQLite; 2 fullchain NOT_RUN at G6A, later R9 separate evidence; no current union evidence. Original R8 tests not transferred or run.",
+    "validation": "NOT_RUN. No tests added, no product source/manifest change. Patch not imported or applied. Current product retains previous behavior. Full master exact full text fetch returned empty; mapping and relevant current sources used, full master/archive HOLD.",
+    "pr_review": "PR10/46/52 0 reviews; 44 open PRs checked, no competing published path writer newly identified by title; uncommitted work invisible.",
+    "next": "Review patch against exact closure and original G6A/R8/PR46/strict transport suites under approved scope; apply only after mandatory affected-flow validation. Continue independent exact source reconciliation. Actual HUMAN protected COMMIT remains HOLD.",
+    "rollback": "Normal revert review-only commit, product tree unchanged."
   }
 }
