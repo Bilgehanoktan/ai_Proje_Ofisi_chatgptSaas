@@ -18017,10 +18017,10 @@
     "checklist_revision": 2,
     "checklist_status": "PROVISIONAL_REPORTING_METRIC",
     "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging.",
-    "latest_table_revision": 15,
-    "latest_candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+    "latest_table_revision": 16,
+    "latest_candidate": "ab585a483b923909cd8151a7208db5f9995dd52f",
     "latest_delta_pp": 0,
-    "latest_delivery": "PR56 exact-head Finance local build and negative-path browser precheck handover verified as published; backend positive flow and transfer remain open.",
+    "latest_delivery": "Finance exact normalized patch transferred to isolated PR56 product tree; positive D0 runtime handover verified, 593/593 paths/sizes, 42/593 mixed raw coverage. Canonical/acceptance and signed dependency gates unchanged.",
     "architecture_read_required": "H01 2026-11-28: every development/table update reads actual full Design Master relevant sections and applicable current addenda, exact source hash/lines, not index only; missing scope HOLD.",
     "active_subtask_progress": {
       "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
@@ -18056,15 +18056,16 @@
       "product_source": {
         "previous_files": 594,
         "current_files": 594,
-        "code_modified": 0,
+        "code_modified": 1,
         "original_test_added": 0,
         "manifest_entries": 593,
-        "full_raw": "PARTIAL_41_OF_593_MIXED_REPORTED_AND_ACTUAL; FULL_ARCHIVE_NOT_VERIFIED",
+        "full_raw": "PARTIAL_42_OF_593_MIXED_REPORTED_AND_ACTUAL; FULL_ARCHIVE_NOT_VERIFIED",
         "changed_raw_sha256": {
-          "previous": 11,
-          "current": 31,
-          "total": 31,
-          "classification": "PR56 exact-head handover report, GitHub comment readback verified; full archive and unchanged raw payloads not rehashed"
+          "previous": 31,
+          "current": 32,
+          "total": 32,
+          "classification": "31 prior reported and preserved exact changed payloads + 1 directly verified new Finance postimage; not full archive",
+          "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
         }
       },
       "scheduler_state_distance": {
@@ -18146,19 +18147,20 @@
         "evidence_ref": "r9_api20_static_import_review_20261128"
       },
       "full_source_raw_coverage": {
-        "previous": 31,
-        "current": 41,
+        "previous": 41,
+        "current": 42,
         "total": 593,
-        "previous_percent": 5.2,
-        "current_percent": 6.9,
-        "delta_pp": 1.7,
-        "remaining": 552,
+        "previous_percent": 6.9,
+        "current_percent": 7.1,
+        "delta_pp": 0.2,
+        "remaining": 551,
         "previous_reported_changed": 31,
         "new_actual_unchanged": 10,
-        "unchanged_total": 562,
-        "unchanged_remaining": 552,
-        "classification": "Non-overlapping current-candidate coverage: 31 changed paths from exact PR56 handover report, 10 unchanged paths directly rehashed this turn. Not complete archive, weighted development, or acceptance.",
-        "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
+        "unchanged_total": 561,
+        "unchanged_remaining": 551,
+        "classification": "31 prior changed-path reported evidence retained by unchanged blob; 10 prior directly verified unchanged paths retained; 1 newly verified Finance changed payload. Non-overlapping. Full archive not verified.",
+        "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128",
+        "new_actual_changed": 1
       },
       "finance_task_budget_mount": {
         "source_patch": {
@@ -18169,14 +18171,17 @@
         },
         "product_transfer": {
           "previous": 0,
-          "current": 0,
+          "current": 1,
           "total": 1,
-          "status": "HOLD_POSITIVE_FLOW_AND_EXACT_EVIDENCE"
+          "status": "ACTUAL_ISOLATED_CANDIDATE_SOURCE_TRANSFER",
+          "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
         },
         "affected_runtime": {
-          "current": 0,
+          "previous": 0,
+          "current": 1,
           "total": 1,
-          "status": "PARTIAL_NEGATIVE_PATH_PASS_POSITIVE_OPEN"
+          "status": "SCOPED_D0_POSITIVE_AND_NEGATIVE_PASS_REPORTED",
+          "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
         },
         "evidence_ref": "finance_task_budget_mount_20261128",
         "local_build": {
@@ -18195,21 +18200,28 @@
         },
         "positive_backend_return": {
           "previous": 0,
+          "current": 1,
+          "total": 1,
+          "status": "PASS_REPORTED_COMMENT_VERIFIED",
+          "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
+        },
+        "latest_evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128",
+        "canonical_transfer": {
+          "previous": 0,
           "current": 0,
           "total": 1,
-          "status": "OPEN_UNVERIFIED"
-        },
-        "latest_evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+          "status": "HOLD_PR56"
+        }
       },
       "memory_checkpoint": {
         "status": "BLOCKED_REPORTED_IN_CHAT",
         "reason": "Authorized live card mapping not verified",
         "classification": "Separate checkpoint; product Memory score unchanged",
-        "evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+        "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
       }
     },
     "latest_dependency_evidence_ref": "r9_api20_static_import_review_20261128",
-    "latest_source_integrity_evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128",
-    "latest_finance_evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+    "latest_source_integrity_evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128",
+    "latest_finance_evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
   }
 }

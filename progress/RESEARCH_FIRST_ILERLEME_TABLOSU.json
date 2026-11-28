@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 15,
+  "revision": 16,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,12 +10,12 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "deb678232e78103f9445f61fffa06bbbb540fb9b",
+    "governance": "533c922974377c3f4f8ca98481354529fa1dd7ec",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
-    "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
-    "product_tree": "f42173660b28e3563504c7fdd2dd3963004fba70",
-    "manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
+    "candidate": "ab585a483b923909cd8151a7208db5f9995dd52f",
+    "product_tree": "7142d6e8de8eaf48bff057c1ebc7212aa11d49e5",
+    "manifest": "8bb5addc54523a1fd85ae8fdc013d775478635a0",
     "product_files": 594,
     "manifest_entries": 593
   },
@@ -925,6 +925,69 @@
       "product_transfer": 0,
       "acceptance_delta_pp": 0,
       "rollback": "Normal revert governance record; no product change."
+    },
+    "finance_positive_d0_and_candidate_transfer_20261128": {
+      "classification": "ACTUAL_ISOLATED_PRODUCT_SOURCE_TRANSFER_AND_REPORTED_LOCAL_POSITIVE_D0_FLOW",
+      "candidate": "ab585a483b923909cd8151a7208db5f9995dd52f",
+      "previous_candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+      "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "comment_id": 7240698467,
+      "comment_url": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/56#issuecomment-7240698467",
+      "comment_created_at": "2026-11-28T14:28:35Z",
+      "source": {
+        "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+        "preimage": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+        "postimage": "f80bd6cbbd1a8adb55da482b793be493fe28c0a3",
+        "bytes": 3028,
+        "sha256": "58c1f6d340918d8a4b1d241060aae3dbec7bd2617649115c4d1b5a7980c035a4",
+        "windows_crlf_bytes": 3050,
+        "windows_crlf_sha256": "b838981cfd73dc4ec1b4eb35e8dffcbf25f7a6307a31fe1b60ad47d9035e7b48",
+        "patch_blob": "13ec028b352ee70f5b2dcef0d6df159bbf4ca9e0",
+        "verification": "Exact patch contexts, both raw SHA256 variants recomputed, Git LF blob matches catalog, source and manifest readback verified"
+      },
+      "architecture": {
+        "v135": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "lines": [
+          "73548-73554",
+          "99643-99649"
+        ],
+        "doc0155": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "lines0155": "101262-101268",
+        "paired_addendum": "ba33e7f4da436d2c865d25c81f68a899a9e919f6",
+        "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "limit": "Relevant sections reread; later full master/archive remains unverified"
+      },
+      "runtime": {
+        "classification": "LOCAL_REPORTED_COMMENT_VERIFIED_NOT_INDEPENDENT_RERUN",
+        "backend": "HTTP 200 actual app.main:app and fresh paired_demo",
+        "frontend": "HTTP 200 equality, browser Research event 3 RESERVED 100/900, four permission flags false",
+        "backend_log_sha256": "77c41dd133189a533aa7a7203202da470f4a528a4c0411474ed23dbc251d4984",
+        "initial_503": "Port configuration and port collision reported in chat; later valid loopback run passed",
+        "frontend_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+        "frontend_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+        "frontend_lock_status": "DIRECT_MATCH",
+        "backend_lock_blob_reported": "741e02725ddecc85ed7af5c380829d74652482d9",
+        "backend_lock_sha256_reported": "39feb819f53e2a08ff463391ce20e3bcf175b45d0c4bfa82a820bbe8fa288112",
+        "backend_lock_status": "404_NOT_INDEPENDENTLY_RETRIEVED",
+        "no_new_install_or_build": true
+      },
+      "product_tree": "7142d6e8de8eaf48bff057c1ebc7212aa11d49e5",
+      "manifest": "8bb5addc54523a1fd85ae8fdc013d775478635a0",
+      "product_files": 594,
+      "manifest_entries": 593,
+      "path_size": "593/593",
+      "unchanged_product_files": 592,
+      "changed_product_files": [
+        "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+        "product/SOURCE_MANIFEST.json"
+      ],
+      "catalog": "catalog/revisions/H01_UNIFIED_SOURCE_RECONCILIATION_20261128.json",
+      "catalog_key": "research_first_finance_task_budget_transfer_20261128",
+      "disposition": "One scoped existing UI mount integrated in existing candidate. Existing dependency, API, DB, policy and event sources untouched. W8/C50 lock approval, full archive and raw access log verification remain open. No product-dev/main merge, CI request, real grant, spend or independent acceptance.",
+      "memory_checkpoint": "BLOCKED_REPORTED_IN_CHAT; no product Memory score change",
+      "rollback": "Ordinary revert of candidate commit restores prior source and manifest, preserve patch and evidence.",
+      "plan_criterion_delta": 0,
+      "acceptance_delta_pp": 0
     }
   },
   "detail_rows": [
@@ -934,7 +997,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Tam v135 ZIP yeniden açıldı; 12.011.382 byte, SHA-256 exact; 13655–13664,105060–105095,116785–116827 okundu. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
+      "ready": "Tam v135 ZIP yeniden açıldı; 12.011.382 byte, SHA-256 exact; 13655–13664,105060–105095,116785–116827 okundu. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Yeni Finance exact kaynak ve manifest aktarımı: 42/593 ham kapsam (%7,1), 593/593 yol/boyut.",
       "missing": "Tam sonraki ek uzlaştırması ve güncel tam ürün arşivi açık.",
       "next": "Onaylı imzalı zincir ve tam arşiv.",
       "as_of": "2026-11-28",
@@ -944,10 +1007,11 @@
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
-        "pr56_unchanged_raw_source_batch_01_20261128"
+        "pr56_unchanged_raw_source_batch_01_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -1046,7 +1110,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "DEVAM",
-      "ready": "594 ürün dosyası; 593/593 manifest yol/boyut. PR56 devir kanıtı: değişen ham hash 31/31 (11→31), 562 korunan, 18 eklenen, 13 değişen, 0 silinen. Authority 2/3. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
+      "ready": "594 ürün dosyası; 593/593 manifest yol/boyut. PR56 devir kanıtı: değişen ham hash 31/31 (11→31), 562 korunan, 18 eklenen, 13 değişen, 0 silinen. Authority 2/3. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Yeni Finance exact kaynak ve manifest aktarımı: 42/593 ham kapsam (%7,1), 593/593 yol/boyut.",
       "missing": "Tam arşiv/tüm ham hash; son Authority hunkı, G6A 2, PR46; PR56 taslak.",
       "next": "C50 pin/inceleme ve zorunlu akış; kontrollü aktarım.",
       "as_of": "2026-11-28",
@@ -1060,10 +1124,11 @@
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "pr56_unchanged_raw_source_batch_01_20261128"
+        "pr56_unchanged_raw_source_batch_01_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "previous_status": "DEVAM",
-      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
       "plan_checklist": {
         "done": 3,
         "total": 6,
@@ -2105,18 +2170,19 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
-      "missing": "Gerçek bütçe rezervasyonu, settlement ve maliyet kaydı HOLD. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
-      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım.",
+      "ready": "Finance overview mevcut TaskBudgetPanel kaynak aktarımı 1/1 izole adayda; yerel build, browser 503 HOLD ve gerçek loopback D0 200 veri akışı PASS_REPORTED (PR56). Exact LF/CRLF postimage doğrulandı.",
+      "missing": "Kanonik PR56 aktarımı, gerçek yetkili bütçe/settlement ve bağımsız kabul açık. W8 backend lock ham blob ve erişim logu bağımsız okunmadı.",
+      "next": "Finance kaynak tekrar geliştirme yok; PR56 kontrollü kapıları ve signed Authority/Scheduler bağımlılık zinciri. Gerçek finance ayrı HOLD.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
         "finance_task_budget_mount_20261128",
-        "finance_local_build_browser_precheck_handover_20261128"
+        "finance_local_build_browser_precheck_handover_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "previous_status": "KISMEN HAZIR",
-      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2422,18 +2488,19 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "PARALEL",
-      "ready": "Project/Workflow kaynakları korunuyor. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
-      "missing": "Diğer Studio ortak backend bağlantıları açık. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
-      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım.",
+      "ready": "Project/Workflow kaynakları korunuyor. Finance overview mevcut TaskBudgetPanel kaynak aktarımı 1/1 izole adayda; yerel build, browser 503 HOLD ve gerçek loopback D0 200 veri akışı PASS_REPORTED (PR56). Exact LF/CRLF postimage doğrulandı.",
+      "missing": "Diğer Studio yetkili ortak bağlantıları açık. Kanonik PR56 aktarımı, gerçek yetkili bütçe/settlement ve bağımsız kabul açık. W8 backend lock ham blob ve erişim logu bağımsız okunmadı.",
+      "next": "Finance kaynak tekrar geliştirme yok; PR56 kontrollü kapıları ve signed Authority/Scheduler bağımlılık zinciri. Gerçek finance ayrı HOLD.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
         "finance_task_budget_mount_20261128",
-        "finance_local_build_browser_precheck_handover_20261128"
+        "finance_local_build_browser_precheck_handover_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "previous_status": "PARALEL",
-      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2543,7 +2610,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "PR56 devir 31/31 değişen ham hash, 593/593 yol/boyut; Authority 28/30; ayrı Scheduler 19/19 yerel aday PASS. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
+      "ready": "PR56 devir 31/31 değişen ham hash, 593/593 yol/boyut; Authority 28/30; ayrı Scheduler 19/19 yerel aday PASS. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Yeni Finance exact kaynak ve manifest aktarımı: 42/593 ham kapsam (%7,1), 593/593 yol/boyut.",
       "missing": "Tam arşiv ve tüm ürün raw hash; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
       "next": "Onaylı imzalı ortam ve özgün etkilenen testler.",
       "as_of": "2026-11-28",
@@ -2557,10 +2624,11 @@
         "r8_org_transfer_20261128",
         "scheduler_state_distance_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "pr56_unchanged_raw_source_batch_01_20261128"
+        "pr56_unchanged_raw_source_batch_01_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -3238,9 +3306,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance bağımsız kaynak yaması 1/1; ürün ağacı değişmedi. Finance build ve browser precheck PASS_REPORTED.",
-      "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft. Finance 200/transfer açık.",
-      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım. Signed Authority/Scheduler ayrı HOLD.",
+      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance bağımsız kaynak yaması 1/1; ürün ağacı değişmedi. Finance build ve browser precheck PASS_REPORTED. Finance izole aday aktarımı 1/1; ham kapsam 42/593 (%7,1).",
+      "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft. Finance kanonik transfer ayrı HOLD.",
+      "next": "Finance kaynak tekrar geliştirme yok; PR56 kontrollü kapıları ve signed Authority/Scheduler bağımlılık zinciri. Gerçek finance ayrı HOLD.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3256,10 +3324,11 @@
         "r9_api20_static_import_review_20261128",
         "pr56_unchanged_raw_source_batch_01_20261128",
         "finance_task_budget_mount_20261128",
-        "finance_local_build_browser_precheck_handover_20261128"
+        "finance_local_build_browser_precheck_handover_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -3365,7 +3434,7 @@
       ],
       "development_percent": null,
       "status": "DEVAM",
-      "ready": "PR56 devir 31/31 değişen raw hash (11→31), 593/593 manifest yol/boyut; Authority 2/3. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
+      "ready": "PR56 devir 31/31 değişen raw hash (11→31), 593/593 manifest yol/boyut; Authority 2/3. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance 1 kaynak değişikliği ve manifest aktarımı; 42/593 ham kapsam.",
       "missing": "Tam arşiv/tüm raw hash; son hunk ve signed testler; PR56 taslak.",
       "next": "C50 ve zorunlu akış; kontrollü aktarım.",
       "as_of": "2026-11-28",
@@ -3379,7 +3448,8 @@
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
-        "pr56_unchanged_raw_source_batch_01_20261128"
+        "pr56_unchanged_raw_source_batch_01_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3402,7 +3472,7 @@
         "percent": 50
       },
       "delta_pp": 0,
-      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed."
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure."
     },
     {
       "operational_number": 2,
@@ -3708,15 +3778,16 @@
       ],
       "development_percent": null,
       "status": "KISMEN HAZIR",
-      "ready": "Sabit plan seçimi ve panel mevcut. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
-      "missing": "Gerçek command ve readback; submit/read devre dışı. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
-      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım. Yetkili CEO komut akışı ayrı.",
+      "ready": "Finance overview mevcut TaskBudgetPanel kaynak aktarımı 1/1 izole adayda; yerel build, browser 503 HOLD ve gerçek loopback D0 200 veri akışı PASS_REPORTED (PR56). Exact LF/CRLF postimage doğrulandı. Mevcut CEO yetkili komut akışı ayrı.",
+      "missing": "Kanonik PR56 aktarımı, gerçek yetkili bütçe/settlement ve bağımsız kabul açık. W8 backend lock ham blob ve erişim logu bağımsız okunmadı. Gerçek CEO komutu HOLD.",
+      "next": "Finance kaynak tekrar geliştirme yok; PR56 kontrollü kapıları ve signed Authority/Scheduler bağımlılık zinciri. Gerçek finance ayrı HOLD.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "review",
         "finance_task_budget_mount_20261128",
-        "finance_local_build_browser_precheck_handover_20261128"
+        "finance_local_build_browser_precheck_handover_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3749,7 +3820,7 @@
         "percent": 31.3
       },
       "delta_pp": 0,
-      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure."
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure."
     },
     {
       "operational_number": 9,
@@ -3915,9 +3986,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance exact kaynak yaması ve statik kanıtı mevcut. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı.",
-      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık.",
-      "next": "Mevcut izinli backend ortamında paired_demo ile yeni disposable pair; loopback GET 200 ve Finance veri gösterimi/no-spend, ardından exact aktarım. Signed bağımlılık ayrı.",
+      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance exact kaynak yaması ve statik kanıtı mevcut. Finance exact yama 1/1; Windows Next build ve kapsamlı olmayan headless browser önkontrolü PASS (PR56 devir kanıtı); GET ve sentetik 503 HOLD/no data doğrulandı. Finance pozitif D0 ve aday aktarımı tamamlandı; ham kapsam 42/593.",
+      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive. Gerçek backend 200 örnek veri dönüşü, exact yerel postimage/ham log doğrulaması ve kontrollü aday aktarımı açık. W8 backend lock okunamadı; kanonik aktarım açık.",
+      "next": "Finance kaynak tekrar geliştirme yok; PR56 kontrollü kapıları ve signed Authority/Scheduler bağımlılık zinciri. Gerçek finance ayrı HOLD.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3934,7 +4005,8 @@
         "r9_api20_static_import_review_20261128",
         "pr56_unchanged_raw_source_batch_01_20261128",
         "finance_task_budget_mount_20261128",
-        "finance_local_build_browser_precheck_handover_20261128"
+        "finance_local_build_browser_precheck_handover_20261128",
+        "finance_positive_d0_and_candidate_transfer_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3994,7 +4066,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure."
+      "delta": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure."
     }
   ],
   "maintenance": {
@@ -4272,6 +4344,27 @@
       "reason": "Finance local Next build and negative-path browser precheck reported PASS on exact candidate; GitHub comment readback verified. Full affected runtime/positive backend 200 and source transfer remain HOLD; no full milestone closure.",
       "evidence_ref": "finance_local_build_browser_precheck_handover_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 16,
+      "date": "2026-11-28",
+      "candidate": "ab585a483b923909cd8151a7208db5f9995dd52f",
+      "changed_sections": [
+        1,
+        3,
+        20,
+        26,
+        28,
+        39
+      ],
+      "changed_operational": [
+        1,
+        8,
+        12
+      ],
+      "reason": "Finance positive D0 backend/browser flow PASS_REPORTED on exact normalized postimage; isolated product source transfer 0/1 -> 1/1 ACTUAL. Canonical transfer and real finance authority remain HOLD; no frozen whole milestone closure.",
+      "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -4308,15 +4401,16 @@
     "product_source": {
       "previous_files": 594,
       "current_files": 594,
-      "code_modified": 0,
+      "code_modified": 1,
       "original_test_added": 0,
       "manifest_entries": 593,
-      "full_raw": "PARTIAL_41_OF_593_MIXED_REPORTED_AND_ACTUAL; FULL_ARCHIVE_NOT_VERIFIED",
+      "full_raw": "PARTIAL_42_OF_593_MIXED_REPORTED_AND_ACTUAL; FULL_ARCHIVE_NOT_VERIFIED",
       "changed_raw_sha256": {
-        "previous": 11,
-        "current": 31,
-        "total": 31,
-        "classification": "PR56 exact-head handover report, GitHub comment readback verified; full archive and unchanged raw payloads not rehashed"
+        "previous": 31,
+        "current": 32,
+        "total": 32,
+        "classification": "31 prior reported and preserved exact changed payloads + 1 directly verified new Finance postimage; not full archive",
+        "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
       }
     },
     "scheduler_state_distance": {
@@ -4398,19 +4492,20 @@
       "evidence_ref": "r9_api20_static_import_review_20261128"
     },
     "full_source_raw_coverage": {
-      "previous": 31,
-      "current": 41,
+      "previous": 41,
+      "current": 42,
       "total": 593,
-      "previous_percent": 5.2,
-      "current_percent": 6.9,
-      "delta_pp": 1.7,
-      "remaining": 552,
+      "previous_percent": 6.9,
+      "current_percent": 7.1,
+      "delta_pp": 0.2,
+      "remaining": 551,
       "previous_reported_changed": 31,
       "new_actual_unchanged": 10,
-      "unchanged_total": 562,
-      "unchanged_remaining": 552,
-      "classification": "Non-overlapping current-candidate coverage: 31 changed paths from exact PR56 handover report, 10 unchanged paths directly rehashed this turn. Not complete archive, weighted development, or acceptance.",
-      "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
+      "unchanged_total": 561,
+      "unchanged_remaining": 551,
+      "classification": "31 prior changed-path reported evidence retained by unchanged blob; 10 prior directly verified unchanged paths retained; 1 newly verified Finance changed payload. Non-overlapping. Full archive not verified.",
+      "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128",
+      "new_actual_changed": 1
     },
     "finance_task_budget_mount": {
       "source_patch": {
@@ -4421,14 +4516,17 @@
       },
       "product_transfer": {
         "previous": 0,
-        "current": 0,
+        "current": 1,
         "total": 1,
-        "status": "HOLD_POSITIVE_FLOW_AND_EXACT_EVIDENCE"
+        "status": "ACTUAL_ISOLATED_CANDIDATE_SOURCE_TRANSFER",
+        "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
       },
       "affected_runtime": {
-        "current": 0,
+        "previous": 0,
+        "current": 1,
         "total": 1,
-        "status": "PARTIAL_NEGATIVE_PATH_PASS_POSITIVE_OPEN"
+        "status": "SCOPED_D0_POSITIVE_AND_NEGATIVE_PASS_REPORTED",
+        "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
       },
       "evidence_ref": "finance_task_budget_mount_20261128",
       "local_build": {
@@ -4447,17 +4545,24 @@
       },
       "positive_backend_return": {
         "previous": 0,
+        "current": 1,
+        "total": 1,
+        "status": "PASS_REPORTED_COMMENT_VERIFIED",
+        "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
+      },
+      "latest_evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128",
+      "canonical_transfer": {
+        "previous": 0,
         "current": 0,
         "total": 1,
-        "status": "OPEN_UNVERIFIED"
-      },
-      "latest_evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+        "status": "HOLD_PR56"
+      }
     },
     "memory_checkpoint": {
       "status": "BLOCKED_REPORTED_IN_CHAT",
       "reason": "Authorized live card mapping not verified",
       "classification": "Separate checkpoint; product Memory score unchanged",
-      "evidence_ref": "finance_local_build_browser_precheck_handover_20261128"
+      "evidence_ref": "finance_positive_d0_and_candidate_transfer_20261128"
     }
   }
 }
