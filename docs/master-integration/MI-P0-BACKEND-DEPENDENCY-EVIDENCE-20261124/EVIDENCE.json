@@ -1,0 +1,147 @@
+{
+  "task": "MI-P0-NEXT-OWNER-INTEGRATION-20261123",
+  "record": "MI-P0-BACKEND-DEPENDENCY-EVIDENCE-20261124",
+  "status": "REVIEW_ONLY_HOLD",
+  "observed_date": "2026-11-24",
+  "canonical_product": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance_base": "ffcbfe79b1b3eb131dbb952741722995284126e2",
+  "reporting_head": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "pr_heads": {
+    "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+    "51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d"
+  },
+  "checkout": {
+    "source": "User-provided Windows PowerShell logs; independently checked remote HEADs",
+    "previous": "BLOCKED",
+    "current": "3/3 PASS",
+    "clean": 3,
+    "critical_git_blobs": 6,
+    "python": "3.13.17",
+    "platform": "Windows AMD64",
+    "source_test_groups": [
+      {
+        "pr": 46,
+        "path": "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+        "blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+        "pass": 0,
+        "total": 12,
+        "status": "NOT_RUN"
+      },
+      {
+        "pr": 19,
+        "path": "candidates/D5-G7/test_checkout.py",
+        "blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+        "pass": 0,
+        "total": 7,
+        "status": "NOT_RUN"
+      },
+      {
+        "pr": 47,
+        "path": "product/ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+        "blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+        "pass": 0,
+        "total": 9,
+        "status": "NOT_RUN"
+      }
+    ]
+  },
+  "archives": [
+    {
+      "filename": "AIOS_DEPENDENCY_REVIEW_25.zip",
+      "sha256": "378761fcf7b36cd4c111ab7553f975de7f1960602ca76bc2c165da0e0ad9d153",
+      "members": {
+        "PREPARE_REPORT.json": "5019435c4202c0d781e64207415e8f8edae3cbce69a59ba2143eb5657158d467",
+        "wheel_inventory.json": "b1aae2bf9a0615a77870826c653cfe741a60db4292736d3896753d20d8e56b86",
+        "python.lock.CANDIDATE_NOT_APPROVED.txt": "b7893fb1c4e70810bc81744c74e4f62c24b0b2c2e99cac5dc92acb5de3bfcbb1"
+      }
+    },
+    {
+      "filename": "AIOS_C50_REVIEW_20261124_064534_310315.zip",
+      "sha256": "13ac8400add38b3834c7ca33d10579b23780e2f2c6f276c6b262b15241c3d9aa",
+      "bytes": 8392372,
+      "members": {
+        "REVIEW_REPORT.json": "51be41437495cac96d39faed194af24353b1696385ced44933a6641d3eed5172",
+        "wheel_inventory.json": "fd286a82fec52ac008ba3e9c0b5b16b147e5a146a01095bd795060346b410a56",
+        "python.lock.C50.CANDIDATE.txt": "942ec4a790e746e18dfaa5a9d666bef17d27dc0efa4f764259afc0ee4e266eec"
+      }
+    }
+  ],
+  "archive_storage": "Original user-uploaded archives retained outside Git; hashes recorded; wheel binaries not redistributed.",
+  "tool_hashes": {
+    "AIOS_PR19_46_47_DEPENDENCY_STAGE_R3_20261124.ps1": "f13494471fe39095d4ff83fa4045a110df3845d042f90a63c63c7b63c3aab8c4",
+    "AIOS_C50_DEPENDENCY_REVIEW_R4.py": "997c53c227fa03faf34379cf3d4f2b737cf3d1b423588e32f11604c9437489c7"
+  },
+  "read_only_audit": {
+    "zip_crc": "PASS",
+    "wheel_sha256": "25/25 PASS",
+    "record_hashed_rows": "809/809 PASS",
+    "lock_inventory": "25/25 PASS",
+    "requires_python": "25/25 PASS",
+    "active_requires_dist_windows_cp313": "34/34 PASS",
+    "unchanged_wheel_hashes": 24,
+    "replaced": 1,
+    "pypi_hash_matches": "25/25 per uploaded R4 report; not fresh publisher query in this transfer",
+    "license_metadata_present": "25/25; legal approval HOLD",
+    "signed_attestation": "NOT_RUN",
+    "install": "NOT_RUN"
+  },
+  "security": {
+    "original_crypto_pin": "46.0.4",
+    "original_wheel_hash": "6225d3ebe26a55dbc8ead5ad1265c0403552a63336499564675b29eb3184c09b",
+    "proposed_crypto": "50.0.2",
+    "original_requirements_unchanged": true,
+    "embedded_string": "OpenSSL 4.0.3 29 Sep 2026",
+    "embedded_string_path": "cryptography/hazmat/bindings/_rust.pyd",
+    "runtime_openssl_version": "NOT_RUN",
+    "advisory": "CVE-2026-95692",
+    "severity": "Low (vendor)",
+    "affected": "4.0.0 <= version < 4.0.4",
+    "advisory_url": "https://www.openssl-library.org/news/vulnerabilities-4.0/index.html",
+    "exploitability_in_product": "UNDETERMINED",
+    "status": "HOLD",
+    "owners": [
+      "MI-01 W8",
+      "MI-03/04 dependency and source owners",
+      "independent Security/IV"
+    ]
+  },
+  "previous_mime": {
+    "pr50": "34/34 reported prior evidence",
+    "pr51": "65/65 reported prior evidence",
+    "new_execution": false,
+    "owner_review": "HOLD"
+  },
+  "integration": {
+    "manifest": "HOLD; central single writer",
+    "product_code_changes": 0,
+    "manifest_changes": 0,
+    "architecture_changes": 0,
+    "ci_changes": 0,
+    "main_merge": false
+  },
+  "metrics": {
+    "backend_tests": {
+      "previous": "0/28",
+      "current": "0/28",
+      "delta": 0
+    },
+    "w8_acceptance": {
+      "previous": "3/8",
+      "current": "3/8",
+      "delta_pp": 0
+    },
+    "weighted_development": "HESAPLANAMADI",
+    "ordinal_24": "unchanged; not recalculated"
+  },
+  "next": [
+    "MI-03/04 and 03API owners: verify complete transitive imports and reviewed dependency subsets for G7/API (7+9); no cryptography install unless authorized and reviewed",
+    "MI-01 and independent Security/IV: assess bundled OpenSSL advisory reachability, provenance, license and new supported candidate; no automatic upgrade",
+    "Run original IAM/G7/API only in approved exact isolated environments, preserve results separately",
+    "Reconcile NW02 authority source and PR47 manifest with central writer; owner review; W8 mandatory preflight then formal C07, actual Chromium C08, independent C05, acceptance"
+  ],
+  "rollback": "Close draft review or normal revert only these documentation/evidence files; preserve existing branches, locks, stages and archives. No rewrite."
+}

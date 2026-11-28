@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-24",
+  "record": "R5_API_DEPENDENCY_SPLIT",
+  "parent_evidence": "020be62b52b326614c48c990c2e5d05ae2388fec",
+  "product_head": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "pr19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+  "pr47": "a647095f57c319210596a3552dfacf40a37baf2d",
+  "g7": {
+    "status": "CRYPTO_DEPENDENCY_HOLD",
+    "chain": [
+      {
+        "path": "candidates/D5-G7/test_checkout.py",
+        "blob": "6bd86d7972c8bca511b5702117be3542431e7493"
+      },
+      {
+        "path": "candidates/ORG-06/test_org_core_checkout.py",
+        "blob": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_canonical_research_0224.py",
+        "blob": "e121ee6275def01070397a942a8434ff37b611a6"
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_company_terminal_0212.py",
+        "blob": "c35a2e497ce013409c1943f293799d83c7164e83",
+        "import": "from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey"
+      }
+    ],
+    "tests": "0/7 NOT_RUN"
+  },
+  "api": {
+    "status": "CANDIDATE_ONLY_SOURCE_CLOSURE_AND_OWNER_REVIEW_HOLD",
+    "test_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+    "direct_imports_reviewed": true,
+    "transitive_source_closure": "INCOMPLETE; connector per-call limit; Windows AST preflight pending",
+    "package_metadata_analysis": "Actual R4 ZIP wheel METADATA parsed without executing or installing wheels; packaging requirement markers evaluated for Windows AMD64 CPython 3.13.17, extras empty",
+    "minimum_roots": [
+      "fastapi",
+      "httpx"
+    ],
+    "minimum_packages": 15,
+    "minimum_active_edges": 23,
+    "conservative_roots": [
+      "fastapi",
+      "httpx",
+      "jsonschema"
+    ],
+    "candidate_packages": 20,
+    "active_edges": 30,
+    "excluded": [
+      "cffi",
+      "click",
+      "cryptography",
+      "pycparser",
+      "uvicorn"
+    ],
+    "lock_sha256": "6080bf2883bb64770a48bbc0507e867b3005ea772f84f06bd5e2c3acd0411a3e",
+    "native_pydantic_core_and_rpds_still_need_review": true,
+    "tests": "0/9 NOT_RUN"
+  },
+  "r5_helper": {
+    "filename": "AIOS_PR47_IMPORT_PREFLIGHT_R5.py",
+    "sha256": "8df544c4197934acd29106a6c2e592528364d9b6b69e95ce1464a072eb9711ca",
+    "scope": "local static AST + raw Git blob check; no repo import, install or test; report outside checkout",
+    "synthetic": "2 checks PASS (closure/relative/crypto/dynamic; raw byte mismatch rejection)",
+    "windows": "NOT_RUN",
+    "artifact_storage": "conversation attachment; script bytes not copied to repository"
+  },
+  "iam": "0/12 NOT_RUN; security HOLD",
+  "w8_acceptance": "3/8 unchanged",
+  "weighted_development": "HESAPLANAMADI",
+  "next": "03API owner review exact R5 AST report and subset supply-chain/security/license status; only if approved, install isolated offline subset and run original 9 tests. MI-03/04 and independent Security review original G7/IAM crypto dependency. No substitutions.",
+  "rollback": "Normal revert only these new review records; prior full lock, source pins and archives preserved.",
+  "product_manifest_ci_changes": 0
+}

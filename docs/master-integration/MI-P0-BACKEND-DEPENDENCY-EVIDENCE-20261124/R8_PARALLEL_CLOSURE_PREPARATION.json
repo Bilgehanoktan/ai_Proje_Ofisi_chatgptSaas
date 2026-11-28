@@ -1,0 +1,128 @@
+{
+  "record": "R8_PARALLEL_CLOSURE_PREPARATION",
+  "date": "2026-11-24",
+  "status": "REVIEW_ONLY_HOLD",
+  "parent": "be1d37f2fd3c3f68c55cff0bff4f2521ecac02a5",
+  "canonical_product": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "ffcbfe79b1b3eb131dbb952741722995284126e2",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "r7_operator_evidence": {
+    "script_sha256": "08ddc46fbee2504591f3d5ea7ff99138f4f874a7d92d28684e8b6ca41c527da1",
+    "archive": "AIOS_PR47_F1632_REVIEW_R7_20261124_193400_438109.zip",
+    "reported_archive_sha256": "aa792bdbe20c07cef3571e740d9d3fa9333c1df7039ae1dd51c22e66780d13cd",
+    "archive_bytes": "NOT_RECEIVED",
+    "old_wheel_record": "20/20 reported PASS",
+    "new_fastapi_hash_and_record": "reported PASS",
+    "registry_hash": "20/20 reported PASS",
+    "registry_issues": 0,
+    "metadata_graph": "UNCHANGED_REQUIREMENTS_METADATA",
+    "scope": "operator console only; no independent archive verification or acceptance; install/test NOT_RUN"
+  },
+  "g7_static_resolution": {
+    "report_sha256": "9161397280fbe80e13d440a1f961b3610444e089b97adcfe3a3fba30e1273459",
+    "source_pins": 95,
+    "ambiguous_import_sites": 47,
+    "identical_blob_sites": 42,
+    "different_blob_sites": 5,
+    "distinct_module_names": 8,
+    "only_content_difference": "durable_ops",
+    "original_runner_blob": "6bd86d7972c8bca511b5702117be3542431e7493",
+    "nested_fixture_blob": "04ecd44417e97fa44d3b9e59f56db6db30e5cb87",
+    "static_precedence": "Original G7 and nested ORG-06 fixtures prepend candidates/ORG-05R3 ahead of backend; assuming clean interpreter and no preloaded shadow modules, durable_ops resolves to original candidate path, not current product. Runtime provenance NOT_RUN.",
+    "candidate_durable_ops": "43ed448c02904ab44b3cf8665f4aeafb0a38f10a",
+    "product_durable_ops": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+    "product_extra_symbols": [
+      "initialize_assignment_ops",
+      "OperationsStore.record_assignment_review",
+      "OperationsStore.assignment_review"
+    ],
+    "scope": "Original seven tests cannot establish current-product assignment integration. Do not alter sys.path or original pin to force equivalence. Review existing PR32 current-store runner and owner evidence separately.",
+    "crypto": "Ed25519 source evidence retained; independent risk disposition HOLD"
+  },
+  "combined_projection": {
+    "base_pr": 31,
+    "base_head": "98998942ad5cec0cbc9629ab7839501dd22f05d3",
+    "base_manifest_blob": "35ef4764f9fa724bed182b96d76a2746b0c38602",
+    "base_product_files": 566,
+    "base_manifest_entries": 565,
+    "proposed_file_count": 567,
+    "proposed_manifest_entries": 566,
+    "replace_count": 5,
+    "add_count": 1,
+    "entries": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "pr": 46,
+        "expected_previous_blob": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "proposed_blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+        "bytes": 10066,
+        "sha256": "c1d0cef446a374885054d6cda8852c273297c05f92eed3debcde42e4c5127125",
+        "note": "NW02 competing source; D0 target only; owner selection HOLD"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_authority_wrapper_0213.py",
+        "pr": 46,
+        "expected_previous_blob": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "proposed_blob": "f2176332ebdef0c0b0597977582bab5c5b34c59d",
+        "bytes": 8792,
+        "sha256": "d8363de0bab41ed8ee6625d996f8ba63d21ff24d33e831c87ad7a3dc8a993c1f",
+        "note": "12 original cases NOT_RUN"
+      },
+      {
+        "path": "ai-company-os-backend/app/api/demo.py",
+        "pr": 47,
+        "expected_previous_blob": "4d80172bc467953039ff57296055f68d740a3ff2",
+        "proposed_blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+        "bytes": 5118,
+        "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75",
+        "note": "API owner and tests HOLD"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+        "pr": 47,
+        "expected_previous_blob": null,
+        "proposed_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+        "bytes": 5654,
+        "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca",
+        "note": "9 original cases NOT_RUN"
+      },
+      {
+        "path": "ai-company-os-frontend/app/api/demo/office-workbench/route.ts",
+        "pr": 50,
+        "expected_previous_blob": "ae42ecccdda987c00537696f2698f49c374ec927",
+        "proposed_blob": "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079",
+        "bytes": 2138,
+        "sha256": "32c9327ba59167ef55421b65c75322030aa522caa2c83cec0326d8849742b882",
+        "note": "34/34 previously reported, owner HOLD; exact PR50 preimage matches PR31"
+      },
+      {
+        "path": "ai-company-os-frontend/features/mvp/readBoundedD0Json.ts",
+        "pr": 51,
+        "expected_previous_blob": "a1ff4a1690a0b113aa882de633e063c02f9535a4",
+        "proposed_blob": "f3fe889b41ad3d8445025458225aa34d3d63a5e9",
+        "bytes": 1851,
+        "sha256": "922b3084803032a5fb8a4e2f5d2c52397db74c071f71c1e1d06d53b3f33c9d08",
+        "note": "65/65 previously reported, owner HOLD; exact PR51 preimage matches PR31"
+      }
+    ],
+    "source": "Remote exact Git tree indices and prior SHA256/manifest evidence; six-file prospective overlay only, not applied; conditional on all source-owner dispositions, complete postimage manifest audit and appropriate regression. Dependency pin changes would require separate scope.",
+    "status": "HOLD_CENTRAL_SINGLE_WRITER"
+  },
+  "reviews": "PR19/31/46/47/50/51/52 zero submitted reviews; no approval inferred",
+  "tests": {
+    "api": "0/9 NOT_RUN",
+    "g7": "0/7 NOT_RUN",
+    "iam": "0/12 NOT_RUN",
+    "w8_previous": "3/8",
+    "w8_current": "3/8",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "next": [
+    "Verify uploaded R7 archive and new wheel bytes; preserve 19 old wheels; review owner/runtime/security gate",
+    "Use existing original test modules in reviewed disposable offline environment after exact disposition; retain raw exit/stdout/stderr",
+    "MI03/04 + independent security review G7 current-vs-original selection and crypto scope; no artificial substitution",
+    "Central owner review six-file projection; verify manifest and separate acceptance gates; no automatic merge"
+  ],
+  "rollback": "Normal revert this single review record; no product, manifest, CI, branch deletion or source modification."
+}

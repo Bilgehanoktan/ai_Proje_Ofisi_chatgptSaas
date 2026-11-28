@@ -1,0 +1,66 @@
+{
+  "record": "R9_API20_PATCH_WHEEL_READBACK",
+  "date": "2026-11-24",
+  "parent": "47ed64d13285faac69eec9c0e3c4ba3c7afe5040",
+  "canonical_product": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "ffcbfe79b1b3eb131dbb952741722995284126e2",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "source_pr47": "a647095f57c319210596a3552dfacf40a37baf2d",
+  "r7_archive": {
+    "filename": "AIOS_PR47_F1632_REVIEW_R7_20261124_193400_438109.zip",
+    "bytes": 154980,
+    "sha256": "aa792bdbe20c07cef3571e740d9d3fa9333c1df7039ae1dd51c22e66780d13cd",
+    "report_sha256": "0de9e43acd32e10ebea92122da485d6ba2c11a09aae6e96ed4e1ddbea58709bd",
+    "crc": "PASS",
+    "old_archive_sha256": "13ac8400add38b3834c7ca33d10579b23780e2f2c6f276c6b262b15241c3d9aa"
+  },
+  "actual_wheel_audit": {
+    "wheel_bytes_hash": "20/20 PASS",
+    "record_hash_size_and_membership": "584/584 PASS",
+    "requires_python": "20/20 PASS",
+    "active_dependency_edges": "30/30 PASS (Windows CPython 3.13.17, extras empty)",
+    "registry_report_hash_and_size": "20/20 reported matches, 0 reported vulnerabilities; not independent fresh advisory scan",
+    "license_files": "20/20 hash verified; distribution/native notice signoff HOLD",
+    "new_wheel_sha256": "825a8fdd18d7bfcb1b86735e9805c59b7400d55c4060d3df5331b62ae452f004",
+    "metadata_requirements": "unchanged",
+    "new_code_files_changed": [
+      "fastapi/__init__.py",
+      "fastapi/_compat/v2.py",
+      "fastapi/dependencies/utils.py"
+    ],
+    "code_diff_scope": "Read-only comparison: version bump, nested computed-field schema handling, multivalue extra grouping and form extraction; no runtime verification. MIT license hash unchanged."
+  },
+  "candidate": {
+    "r6_lock_blob": "525efd4b002f3dfea9c476d22c791837bed9dd2f",
+    "r9_lock_sha256": "cbd5d737825492273948f26f2001b10c1114325ede80fdeb98eda7ad5c98d579",
+    "same_20_package_pin_lines": true,
+    "archive": "AIOS_PR47_API20_F1632_OFFLINE_CANDIDATE_R9.zip",
+    "bytes": 4034162,
+    "sha256": "67ae164d4f5746542e4c623df8ebf093d5b29a81c7fac365250b6952cd6c15f8",
+    "storage": "User conversation artifact only, assembled from user's prior supplied wheels; not copied into repository; original archives preserved.",
+    "status": "READY_FOR_REVIEW_NOT_APPROVED_DO_NOT_INSTALL"
+  },
+  "runtime": {
+    "reported_python": "3.13.17",
+    "reported_ssl": "OpenSSL 3.5.9 29 Sep 2026",
+    "status": "HOLD pending exact runtime disposition/requalification; CPython 3.13.18 source-only release already recorded. Distinct from cryptography bundled OpenSSL 4.0.3."
+  },
+  "owner": "PR47/52 and related review submissions still absent; no inferred approval",
+  "g7_current_store": {
+    "pr32": "d48b6fea8021db0d470d6e1eadfd4a539fc9e748",
+    "existing_helper": "48bc0a7c6582defac61a5e346fd923af200d1d88",
+    "prior_owner_comment": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/32#issuecomment-7082246795",
+    "scope": "existing helper stale exact checkout pin identified previously; original candidate paths present in PR19, not PR31; no new runner, no modification without owner",
+    "status": "HOLD"
+  },
+  "next": "03API and dependency/runtime/independent security owners record exact scoped approval or reject and provide remediation. Then use existing isolated offline candidate and unchanged original suites with raw exit/stdout/stderr; run original two additional regression files as owner requires. Keep FastAPI pin change separate from source PR47; central overlay from R8 remains conditional.",
+  "tests": {
+    "install": "NOT_RUN",
+    "API": "0/9 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "IAM": "0/12 NOT_RUN",
+    "W8": "3/8 -> 3/8, delta 0 pp",
+    "weighted": "HESAPLANAMADI"
+  },
+  "rollback": "Revert only R9 review records normally; all source, manifests, original locks, archive evidence preserved. No source/CI/merge/acceptance changes."
+}

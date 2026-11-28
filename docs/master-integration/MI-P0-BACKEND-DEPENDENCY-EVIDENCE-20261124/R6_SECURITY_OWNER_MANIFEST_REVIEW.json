@@ -1,0 +1,137 @@
+{
+  "record": "R6_SECURITY_OWNER_MANIFEST_REVIEW",
+  "date": "2026-11-24",
+  "scope": "STATIC_REVIEW_ONLY; no install, tests, product edits, promotion or independent acceptance",
+  "base_product": "254e0188998d0d245bd8ee4eb901aead02951a66",
+  "governance": "ffcbfe79b1b3eb131dbb952741722995284126e2",
+  "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+  "review_parent": "e18d95d30ebfdd7d0a55c81162878a2df98e1118",
+  "pr_heads": {
+    "19": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+    "38": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+    "41": "ebd307fecc081a523fec1cefcb5070cc3e38a977",
+    "46": "098486f272047a4fef8ba07b90738f2baeb5351e",
+    "47": "a647095f57c319210596a3552dfacf40a37baf2d",
+    "50": "596282284a9b29216a89a7cc20651b3b31c501bd",
+    "51": "c12567aed7d8f20aab9c4162471cfc97808c5d0d"
+  },
+  "api20": {
+    "old_lock_blob": "be97178a822344b83319bcdb74b40cde5bcb51a7",
+    "archive_sha256": "13ac8400add38b3834c7ca33d10579b23780e2f2c6f276c6b262b15241c3d9aa",
+    "actual_wheel_hashes": "20/20 PASS",
+    "license_declaration_and_file": "20/20 metadata/inventory; redistribution and native third-party notice review HOLD",
+    "native": [
+      "pydantic_core-2.50.5-cp313-cp313-win_amd64.whl",
+      "rpds_py-2026.9.1-cp313-cp313-win_amd64.whl"
+    ],
+    "pypi_snapshot": "R4 20/20 matches, 0 reported vulnerabilities; not current exhaustive scan",
+    "fresh_registry": "BLOCKED container DNS; public targeted advisory review only",
+    "fastapi": {
+      "old": "0.163.0",
+      "proposed": "0.163.2",
+      "advisory": "GHSA-f56c-v883-vx8r",
+      "advisory_url": "https://github.com/fastapi/fastapi/security/advisories/GHSA-f56c-v883-vx8r",
+      "published": "2026-11-17",
+      "patched": ">=0.163.2",
+      "old_version_in_affected_range": true,
+      "product_reachability": "UNDETERMINED; original plan-projection is GET, no user request fields; do not generalize to all routes",
+      "publisher_wheel": "fastapi-0.163.2-py3-none-any.whl",
+      "publisher_sha256": "825a8fdd18d7bfcb1b86735e9805c59b7400d55c4060d3df5331b62ae452f004",
+      "publisher_url": "https://pypi.org/project/fastapi/0.163.2/",
+      "download": "NOT_RUN",
+      "metadata_graph": "NOT_RUN",
+      "provenance": "Trusted Publishing indicated by PyPI; no signed file provenance on page",
+      "status": "HOLD_OWNER_REVIEW"
+    },
+    "candidate": "python.lock.PR47.API20.F1632.CANDIDATE.txt; only proposed replacement, 19 old hashes unchanged; source requirements still old; graph not resolved"
+  },
+  "python": {
+    "observed": "3.13.17",
+    "security_release": "3.13.18",
+    "published": "2026-10-25",
+    "url": "https://www.python.org/downloads/release/python-31318/",
+    "issues": [
+      "CVE-2026-115557",
+      "CVE-2026-77214",
+      "CVE-2026-102633",
+      "CVE-2026-114583"
+    ],
+    "official_windows_installer": false,
+    "disposition": "Runtime owner must choose reviewed patched 3.13 build or new supported runtime and platform wheel requalification; do not silently substitute. Restricted local synthetic diagnostic risk disposition distinct from product acceptance."
+  },
+  "crypto": {
+    "latest_stable_observed": "50.0.2",
+    "wheel_openssl": "4.0.3",
+    "vendor_changelog": "https://cryptography.io/en/50.0.2/changelog/",
+    "advisory": "CVE-2026-95692",
+    "advisory_url": "https://www.openssl-library.org/news/vulnerabilities-4.0/index.html",
+    "severity": "Low",
+    "affected": "4.0.0 <= version < 4.0.4",
+    "patched": "4.0.4",
+    "status": "HOLD; no patched stable publisher wheel identified in current search; no 51-dev substitution or unreviewed native build",
+    "resolution_options": [
+      "Publisher patched wheel when available",
+      "Owner-reviewed reproducible build against fully patched supported OpenSSL with provenance, toolchain, license and original regression review",
+      "Independent explicit reachability/risk disposition for bounded local Ed25519 D0 only; not production approval"
+    ]
+  },
+  "manifest": {
+    "base_blob": "27b4eb5816265d4e6e6d2458acb6220db7dd0c76",
+    "base_entries": 552,
+    "scope": "PR47-only delta; not union, not applied",
+    "candidate_entries_if_only_PR47_applied": 553,
+    "replace": [
+      {
+        "path": "ai-company-os-backend/app/api/demo.py",
+        "old": {
+          "bytes": 3518,
+          "sha256": "7cab82ab1cdb51b225489dee2ec1d8c2d19ab97a584aa7492e20216020382c7f"
+        },
+        "candidate": {
+          "bytes": 5118,
+          "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75",
+          "blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a"
+        }
+      }
+    ],
+    "add": [
+      {
+        "path": "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+        "candidate": {
+          "bytes": 5654,
+          "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca",
+          "blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4"
+        }
+      }
+    ],
+    "fixtures_unchanged": [
+      {
+        "path": "ai-company-os-backend/fixtures/core.preview.json",
+        "bytes": 8418,
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      },
+      {
+        "path": "ai-company-os-backend/fixtures/core.plan.projection.json",
+        "bytes": 2462,
+        "sha256": "e564bed4f4edfb5dd94488b08cbba3205b6f018491fadd8d200d884a85e1f4bb"
+      }
+    ],
+    "status": "HOLD central single writer; owner PR41; no applied delta"
+  },
+  "tests": {
+    "api": "0/9 NOT_RUN",
+    "G7": "0/7 NOT_RUN",
+    "IAM": "0/12 NOT_RUN",
+    "install": "NOT_RUN",
+    "w8_previous": "3/8",
+    "w8_current": "3/8",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI"
+  },
+  "owner_actions": [
+    "03API and dependency owner: choose exact FastAPI patch pin; verify fresh wheel, graph, package advisories, native notices and CPython risk/requalification; record SHA-bound scoped disposition",
+    "MI-03/04, MI-01, independent Security/IV: review crypto and runtime; no accepted release or authority bypass",
+    "Central single writer: reconcile PR47 two records, NW02 authority selection and remaining owner-approved changes only after tests and disposition"
+  ],
+  "rollback": "Normal revert only the two R6 review additions; existing locks, source, stages and evidence preserved. No source or manifest mutation."
+}
