@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 6,
+  "revision": 7,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,10 +10,10 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "aafc180dee8b45d232bf4ebb89e627f353440bd5",
+    "governance": "019d8e88d2eb5ef07b3fb4d6b014ace066f32ba8",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
-    "candidate": "9622df67af3e22db2d79e9060ae696d6edf5c3ba",
+    "candidate": "b2f2c91415b918b68f0226de922103d27d5cc36b",
     "product_tree": "6fa97f3255572960b63042caaad44eb1cbc6be21",
     "manifest": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
     "product_files": 594,
@@ -115,6 +115,17 @@
       "raw_log": "tests/evidence/H01_RESEARCH_FIRST_R6_STRICT_ROUTE_20261128.log",
       "raw_log_blob": "c4eb079a5a4e8210c91aa35747dd6747ea0bdbfb",
       "classification": "ISOLATED_PRODUCT_SOURCE_TRANSFER; exact local stdlib/SQLite 12/12 original PASS; real PG/authority HOLD; not acceptance"
+    },
+    "g6a_preclaim_actual_validation_20261128": {
+      "commit": "b2f2c91415b918b68f0226de922103d27d5cc36b",
+      "path": "catalog/revisions/H01_UNIFIED_SOURCE_RECONCILIATION_20261128.json",
+      "blob": "d4ba8271dd991f00a18e44a81dd8335a7900eeec",
+      "record_key": "research_first_g6a_preclaim_actual_validation_20261128",
+      "raw_log": "tests/evidence/H01_RESEARCH_FIRST_G6A_PRECLAIM_20261128.log",
+      "raw_log_blob": "7efd852f06899c228f1792e65551024f797528c7",
+      "dual_reference_log": "tests/evidence/H01_RESEARCH_FIRST_G6A_DUAL_REFERENCE_20261128.log",
+      "dual_reference_log_blob": "1c01622fba24165bcb00ce179f94bb4ab07cdef5",
+      "classification": "LOCAL EXACT QUARANTINE CANDIDATE 6/6 ORIGINAL D0 PASS + 1 targeted dual-reference check; no product transfer or acceptance"
     }
   },
   "detail_rows": [
@@ -124,17 +135,18 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Tam v135 ZIP içinden yeniden açıldı; 12.011.382 byte, SHA-256 exact. İlgili T1/WorkItem/yetki bölümleri okundu; v142/0155 aday hashleri doğrulandı.",
+      "ready": "Tam v135 ZIP içinden açıldı; 12.011.382 byte, SHA-256 exact; T1/WorkItem/yetki bölümleri 13655–13664,29132–29214,105060–105095,116785–116827 okundu.",
       "missing": "Tam sonraki ek uzlaştırması ve güncel tam ürün arşivi açık.",
-      "next": "Exact kaynak ve etkilenen mimari bölümlerle bağımsız R8/G6A closure.",
+      "next": "Exact R8/PR46 checkout ve onaylı bağımlılıkları sağla.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "architecture_closure_review_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0.",
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -233,9 +245,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "DEVAM",
-      "ready": "594 ürün dosyası; 593/593 manifest yol/boyut; özgün port metodu ve test gerçek izole ürün ağacında. Yama 1/3 entegre; R6 12/12 PASS.",
-      "missing": "İki kalan yama dosyası, özgün 18 metot ve PR46/çift referans davranışı; tam raw hash/arşiv yok.",
-      "next": "G6A ve R8 exact closure ile kalan iki hunkı doğrula ve entegre et.",
+      "ready": "594 ürün dosyası, 593 manifest; 1/3 hunk üründe. R6 12/12 önceki, G6A 6/6 exact yerel aday PASS; ek çift referans kontrolü PASS.",
+      "missing": "2 hunk aktarımı, R8 10 ve G6A fullchain 2 özgün metot, PR46; tam arşiv yok.",
+      "next": "Exact R8 fixture closure ve imzalı G6A/PR46 doğrulaması; sonra kalan 2 dosyayı entegre et.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
@@ -243,10 +255,11 @@
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "previous_status": "DEVAM",
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0.",
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 3,
         "total": 6,
@@ -648,9 +661,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "HOLD",
-      "ready": "Mevcut T1 Coordinator'a for_protected_postgres bağlandı; 12/12 özgün D0 test PASS; WorkItem review ve strict deny korundu.",
-      "missing": "Kalan R8/G6A 18 metot ve PR46/çift referans; gerçek HUMAN COMMIT yok.",
-      "next": "İki kalan hunkı mevcut authority/ORG kaynaklarına doğrulayarak bağla; fallback yok.",
+      "ready": "Mevcut strict factory üründe; G6A yerel 6/6 PASS ve çift referans 1/1 PASS; claim/journal/connect/clock değişmedi.",
+      "missing": "R8 10 + G6A fullchain 2 ve PR46 signed wrapper NOT_RUN; gerçek HUMAN COMMIT yok.",
+      "next": "Kalan ORG fixture zinciri ve onaylı signed fullchain; fallback yok.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
@@ -658,10 +671,11 @@
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "previous_status": "HOLD",
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0.",
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 5,
@@ -1691,19 +1705,20 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "10/10 yerel exact blob; stdlib/SQLite R6 özgün 12/12 PASS; ürün aktarımı ve 593/593 manifest yol/boyut doğrulandı.",
-      "missing": "18 özgün metot ve ek PR46/çift referans; full raw/archive, bağımsız kabul açık.",
-      "next": "G6A ve R8 için exact fixture/dependency closure, yalnız zorunlu akış doğrulaması.",
+      "ready": "Özgün 18/30 PASS (R6 12 önceki, G6A 6 yeni); ek çift referans 1/1 PASS. Exact local/patch blob eşleşti.",
+      "missing": "R8 10, G6A fullchain 2, PR46; tam raw/archive, bağımsız kabul açık.",
+      "next": "Exact R8 checkout ve onaylı cryptography/PR46 zinciri.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0.",
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -2372,19 +2387,20 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "01/06 kapsamındaki port hunkı ürüne aktarıldı; 12/30 özgün metot tamamlandı.",
-      "missing": "İki hunk; 18 özgün metot ve ek PR46 akışı; A1 ratification, QA/IV, gerçek COMMIT açık.",
-      "next": "01/06 kalan authority/ORG closure; A1/MI10 paralel.",
+      "ready": "1/3 hunk üründe; 18/30 özgün metot tamamlandı, çift referans ek kontrolü PASS.",
+      "missing": "2 hunk, 12 özgün metot, PR46; A1, QA/IV, gerçek COMMIT açık.",
+      "next": "01/06 kalan source closure; A1/MI10 paralel.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0.",
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -2490,9 +2506,9 @@
       ],
       "development_percent": null,
       "status": "DEVAM",
-      "ready": "594 dosya, 593/593 manifest yol/boyut. 1/3 hunk gerçek ürün adayında; R6 12/12 PASS.",
-      "missing": "Kalan 2 hunk, 18 özgün metot ve etkilenen PR46/çift referans; tam arşiv yok.",
-      "next": "Kalan authority/ORG kaynaklarını exact doğrula ve kontrollü entegre et.",
+      "ready": "1/3 hunk ürün adayında; özgün test 12/30 → 18/30. G6A 6/6 yerel aday, ek çift referans PASS.",
+      "missing": "2 hunk; R8 10 ve G6A fullchain 2, PR46; tam arşiv yok.",
+      "next": "Kalan R8/G6A/PR46 exact doğrulama ve kontrollü aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2500,7 +2516,8 @@
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2523,7 +2540,7 @@
         "percent": 50
       },
       "delta_pp": 0,
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0."
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok."
     },
     {
       "operational_number": 2,
@@ -2707,9 +2724,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "for_protected_postgres gerçek ürün adayına aktarıldı; strict deny ve eski akış korunuyor; 12/12 özgün D0 PASS.",
-      "missing": "İki IAM/ORG hunk, 18 özgün metot ve etkilenen PR46/çift referans; gerçek HUMAN COMMIT HOLD.",
-      "next": "G6A/R8 kalan kaynakları doğrula, ardından T1 bağlantısı.",
+      "ready": "Strict factory üründe; G6A preclaim 6/6 ve çift referans 1/1 yerel aday PASS.",
+      "missing": "İki hunk ve kalan 12 özgün metot, PR46 signed wrapper; gerçek HUMAN COMMIT HOLD.",
+      "next": "R8/ORG fixture ve onaylı signed fullchain; sonra aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2717,7 +2734,8 @@
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2743,7 +2761,7 @@
         "percent": 33.3
       },
       "delta_pp": 0,
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0."
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok."
     },
     {
       "operational_number": 7,
@@ -3003,9 +3021,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "12/30 özgün metot PASS (exact dar stdlib/SQLite); 10/10 preimage, 593/593 manifest yol/boyut.",
-      "missing": "NOT_RUN: kalan 18 özgün metot, ek PR46/çift referans, tam arşiv ve bağımsız kabul.",
-      "next": "Kalan exact closure; yetkili zorunlu akışlar, MI10/H01 ayrı.",
+      "ready": "18/30 özgün metot PASS (12 önceki + 6 yeni), ek çift referans 1/1 PASS; exact Git blob.",
+      "missing": "NOT_RUN: R8 10, G6A fullchain 2, PR46, tam arşiv ve bağımsız kabul.",
+      "next": "Exact R8 ve onaylı signed closure; MI10/H01 ayrı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3013,7 +3031,8 @@
         "protected_preclaim_patch",
         "architecture_closure_review_20261128",
         "signature_reconciliation_20261128",
-        "r6_strict_route_transfer_20261128"
+        "r6_strict_route_transfer_20261128",
+        "g6a_preclaim_actual_validation_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3073,7 +3092,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "Bir ürün fonksiyonu ve özgün test aktarıldı; 12/12 PASS. Tam plan kriteri kapanışı yok; kabul delta 0."
+      "delta": "6 özgün G6A ve 1 zorunlu ek kontrol yerel adayda PASS; ürün ve tam plan kriteri kapanışı yok."
     }
   ],
   "maintenance": {
@@ -3186,31 +3205,57 @@
       "reason": "Actual isolated product transfer: strict route factory and original 12/12 passing D0 regression; 1/3 patch files, 12/30 original methods. No full plan milestone closure or acceptance.",
       "evidence_ref": "r6_strict_route_transfer_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 7,
+      "date": "2026-11-28",
+      "candidate": "b2f2c91415b918b68f0226de922103d27d5cc36b",
+      "changed_sections": [
+        1,
+        3,
+        9,
+        28,
+        39
+      ],
+      "changed_operational": [
+        1,
+        6,
+        12
+      ],
+      "reason": "Exact local G6A 6 original methods and one required dual-reference validation PASS; 12/30 to 18/30. Remaining mandatory closure prevents product transfer.",
+      "evidence_ref": "g6a_preclaim_actual_validation_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
-    "scope": "Existing three-file quarantine patch and four original suites only; not plan milestone closure or weighted development. No double-counting; PR46 and dual-reference checks are additional.",
-    "evidence_ref": "r6_strict_route_transfer_20261128",
+    "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Separate additional mandatory PR46 and dual-reference validation.",
+    "evidence_ref": "g6a_preclaim_actual_validation_20261128",
     "patch_files": {
-      "previous": 0,
+      "previous": 1,
       "current": 1,
       "total": 3,
       "target": 3,
       "remaining": 2
     },
     "original_methods": {
-      "previous": 0,
-      "current": 12,
+      "previous": 12,
+      "current": 18,
       "total": 30,
       "target": 30,
-      "remaining": 18,
-      "classification": "D0 local synthetic; additional affected PR46/dual-reference checks not included"
+      "remaining": 12,
+      "classification": "R6 12/12 previous exact product transfer, G6A 6/6 exact local quarantined candidate; separate source scopes, not entire combined run."
+    },
+    "dual_reference": {
+      "previous": 0,
+      "current": 1,
+      "total": 1,
+      "classification": "targeted local candidate check; not included in 30"
     },
     "product_source": {
-      "previous_files": 593,
+      "previous_files": 594,
       "current_files": 594,
-      "code_modified": 1,
-      "original_test_added": 1,
+      "code_modified": 0,
+      "original_test_added": 0,
       "manifest_entries": 593,
       "full_raw": "NOT_VERIFIED"
     }
