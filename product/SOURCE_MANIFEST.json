@@ -459,8 +459,8 @@
       "sha256": "f04236338ef2de783a343527450e469c490d570d4001c4c26ed45850e28f50c4"
     },
     "ai-company-os-backend/app/core/transaction/port.py": {
-      "bytes": 4604,
-      "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
+      "bytes": 4924,
+      "sha256": "7710c6e917ef6a01dc3c078d621f41db47bdfb2141bc2f9c7eca26ee795a2b97"
     },
     "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py": {
       "bytes": 17868,
@@ -733,6 +733,10 @@
     "ai-company-os-backend/fixtures/office.snapshot.json": {
       "bytes": 2700,
       "sha256": "313b8072ec1e4bdc1feb945540c31e0a762be4151f616bd6a25e4772a790baa5"
+    },
+    "ai-company-os-backend/fixtures/research.worktype.publication_candidate.json": {
+      "bytes": 4107,
+      "sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
     },
     "ai-company-os-backend/integration_guard.py": {
       "bytes": 4996,
@@ -1082,6 +1086,10 @@
       "bytes": 4899,
       "sha256": "842a1feebcd9d68dddbcb3764c11be23b672dc4aabdd2b43ffc37a95003cfa5a"
     },
+    "ai-company-os-backend/tests/test_postgres_strict_expiry_d5c_r6.py": {
+      "bytes": 6387,
+      "sha256": "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33"
+    },
     "ai-company-os-backend/tests/test_prefix_wire_p03.py": {
       "bytes": 1765,
       "sha256": "a2af0b6fec199fb81728206d89ba2ead1cf48c95c81b75439d7ddd0464d033a7"
@@ -1233,6 +1241,10 @@
     "ai-company-os-backend/tests/test_witnessed_t1_0209.py": {
       "bytes": 8253,
       "sha256": "cf157958b9686f897cca79b8b238842a7cd56d040b5eb2ea4f0affc4f4368f64"
+    },
+    "ai-company-os-backend/tests/test_workitem_readback_mvp03.py": {
+      "bytes": 12177,
+      "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
     },
     "ai-company-os-frontend/.gitignore": {
       "bytes": 59,
@@ -2365,14 +2377,6 @@
     "ai-company-os-frontend/tsconfig.json": {
       "bytes": 608,
       "sha256": "299053a646112831337334bf467678a4ce01ee365e06d68b6654af111d975e1e"
-    },
-    "ai-company-os-backend/tests/test_workitem_readback_mvp03.py": {
-      "bytes": 12177,
-      "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
-    },
-    "ai-company-os-backend/fixtures/research.worktype.publication_candidate.json": {
-      "bytes": 4107,
-      "sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
     }
   },
   "parent_source_manifest_blob": "ca790b2764136692eb4ac1c7e09264fb22d41ea4",
@@ -2792,5 +2796,14 @@
     "scope": "Exact W1-0198-P09 D0 SQLite read sources, no API, DB schema, dependency, or authority change",
     "tests": "NOT_RUN; source branch reports 39/39 diagnostic checks, not retested",
     "acceptance": "HOLD"
+  },
+  "h01_research_first_r6_strict_route_20261128": {
+    "parent": "dbefe44946488528083564560fe6810f8ff05c11",
+    "previous_manifest": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+    "source_patch": "8b83b4d0cc649590482accfee222b0b7bbcc7d61",
+    "original_test": "cde0ed2b841c6b48500a464979096aad55a635b1",
+    "code": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+    "raw_log": "c4eb079a5a4e8210c91aa35747dd6747ea0bdbfb",
+    "status": "ISOLATED_PRODUCT_SOURCE_TRANSFER_12_ORIGINAL_D0_PASS_REAL_PG_HOLD"
   }
 }

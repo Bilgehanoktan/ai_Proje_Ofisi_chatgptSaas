@@ -706,19 +706,3 @@ diff --git a/product/ai-company-os-backend/app/core/transaction/org_membership_r
 +        raise PermissionError('D5C_R8_ORG_SESSION_REVIEW_HOLD')
 +    require_strict_postgres_commit()
 +    raise PermissionError('D5C_R8_PROTECTED_EXECUTION_UNIMPLEMENTED_HOLD')
-diff --git a/product/ai-company-os-backend/app/core/transaction/port.py b/product/ai-company-os-backend/app/core/transaction/port.py
---- a/product/ai-company-os-backend/app/core/transaction/port.py
-+++ b/product/ai-company-os-backend/app/core/transaction/port.py
-@@ -47,6 +47,12 @@
-     def __init__(self, transaction: Callable[[], AbstractContextManager[TransactionSession]]):
-         self._transaction = transaction
- 
-+    @classmethod
-+    def for_protected_postgres(cls, connect, mapping):
-+        """Explicit strict-expiry route; never fall back to the D0 transport."""
-+        from app.core.transaction.postgres_session import protected_postgres_transaction
-+        return cls(lambda: protected_postgres_transaction(connect, mapping))
-+
-     def review_workitem_request(self, draft: WorkItemRequestDraft) -> T1Review:
-         """Direction A review only; deliberately never calls the transaction factory."""
-         return inspect_workitem_request(draft)

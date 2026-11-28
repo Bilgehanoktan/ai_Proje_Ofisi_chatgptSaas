@@ -1116,5 +1116,77 @@
     "limitations": "No exact current full archive or approved full dependency closure; no runtime or IV acceptance. 44 open PRs; no candidate PR; uncommitted work invisible.",
     "rollback": "ordinary revert of candidate-only commit; product tree untouched",
     "next": "Exact existing 30 methods plus affected PR46/dual-reference behavior closure under approved dependencies; keep actual protected COMMIT HOLD. Separate A1/MI10/publication."
+  },
+  "research_first_r6_strict_route_transfer_20261128": {
+    "status": "ISOLATED_PRODUCT_SOURCE_TRANSFER_12_ORIGINAL_D0_PASS",
+    "base": "dbefe44946488528083564560fe6810f8ff05c11",
+    "governance": "aafc180dee8b45d232bf4ebb89e627f353440bd5",
+    "source_patch": "8b83b4d0cc649590482accfee222b0b7bbcc7d61",
+    "remaining_patch": "7d52c24d2b8134553fa997de4469d141aa699925",
+    "technical_decision": "Split independent existing port hunk from IAM/ORG protected preclaim patch; restore exact original strict factory only, no change to legacy or actual strict denial. No new tests. Remaining two hunks quarantined.",
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": 119818,
+      "ranges": [
+        "13655-13664",
+        "29132-29214",
+        "105060-105095",
+        "106330-106343",
+        "106397-106422",
+        "116785-116827"
+      ],
+      "v142_candidate_sha256": "073a8e4b846fa4d546d10dd0a92a1926f886ff6621eff8cbfd36f6812e1c8311",
+      "recovery0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+      "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7"
+    },
+    "files": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "preimage": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "blob": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+        "sha256": "7710c6e917ef6a01dc3c078d621f41db47bdfb2141bc2f9c7eca26ee795a2b97",
+        "bytes": 4924
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_postgres_strict_expiry_d5c_r6.py",
+        "source": "459c3eb16302375cd352140a0d6023fb1554d566",
+        "blob": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "sha256": "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33",
+        "bytes": 6387
+      }
+    ],
+    "test": {
+      "scope": "Python 3.13.5 -I -S stdlib only, disposable SQLite 3.46.1 and Mock, no third-party imports, no PG connection. 10/10 exact Git blobs before patch (five modules, four package markers, one original test).",
+      "pass": 12,
+      "fail": 0,
+      "not_run": "remaining R8/G6A 18 and affected PR46/dual-reference; full build, real PostgreSQL and IV",
+      "raw_log": "tests/evidence/H01_RESEARCH_FIRST_R6_STRICT_ROUTE_20261128.log",
+      "blob": "c4eb079a5a4e8210c91aa35747dd6747ea0bdbfb",
+      "sha256": "2c40982e172152f2a2b2dbbd0cba8406652b9779d655877ad5f0e7a9bdbc6836",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -I -S -c 'import sys,runpy; sys.path.insert(0,\"/tmp/aios_r6_exact\"); runpy.run_path(\"/tmp/aios_r6_exact/tests/test_postgres_strict_expiry_d5c_r6.py\",run_name=\"__main__\")'",
+      "pins": {
+        "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "app/core/transaction/review.py": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "app/core/agent_runtime/transition_command.py": "5680fa428be81645a43d7442ec161c0c10384986",
+        "app/core/transaction/port.py": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+        "app/core/transaction/postgres_session.py": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "tests/test_postgres_strict_expiry_d5c_r6.py": "cde0ed2b841c6b48500a464979096aad55a635b1"
+      }
+    },
+    "manifest": {
+      "previous": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+      "new": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
+      "entries": 593,
+      "product_files": 594,
+      "full_raw": "NOT_VERIFIED"
+    },
+    "acceptance_delta_pp": 0,
+    "limitations": "Full archive unavailable; local git direct DNS resolution failed; exact narrow source restored by connector with Git blob comparison. 44 open PRs, no uncommitted work visibility. No real commit/grant, CI, main, PROD, independent acceptance. Other source flows not activated.",
+    "rollback": "ordinary revert isolated commit; original three-file patch available at parent."
   }
 }
