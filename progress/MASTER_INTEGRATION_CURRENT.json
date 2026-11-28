@@ -18017,10 +18017,10 @@
     "checklist_revision": 2,
     "checklist_status": "PROVISIONAL_REPORTING_METRIC",
     "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging.",
-    "latest_table_revision": 10,
+    "latest_table_revision": 11,
     "latest_candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
     "latest_delta_pp": 0,
-    "latest_delivery": "PR56 exact changed raw hash handover 31/31 and PR52 package-free Windows preflight reported PASS; GitHub comment readback, not fresh local execution; no product or acceptance delta.",
+    "latest_delivery": "C50/R9 static pin and registry metadata requalification only; 2/2 public wheel checksums matched, no source transfer, install, runtime tests, plan or acceptance closure. R9 closure incomplete.",
     "architecture_read_required": "H01 2026-11-28: every development/table update reads actual full Design Master relevant sections and applicable current addenda, exact source hash/lines, not index only; missing scope HOLD.",
     "active_subtask_progress": {
       "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
@@ -18094,7 +18094,7 @@
         },
         "classification": "separate independent work; do not add to original 30 or plan milestone"
       },
-      "current_blocker": "Exact C50 dependency pins, runtime/native provenance, license/security and independent disposition; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+      "current_blocker": "Direct pin source transfer 0/2; FastAPI patch and 2/2 publisher checksums matched; FastAPI attestation absent, crypto OpenSSL 4.0.3; exact native/license/runtime and independent disposition; R9 import closure incomplete. G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
       "runtime_preflight": {
         "previous": "OPEN",
         "current": "PASS_REPORTED",
@@ -18107,7 +18107,10 @@
       },
       "c50_pin_alignment": {
         "current": 0,
-        "total": 2
+        "total": 2,
+        "previous": 0,
+        "status": "HOLD",
+        "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
       },
       "c50_install": {
         "current": 0,
@@ -18123,7 +18126,14 @@
         "current": 0,
         "total": 1,
         "status": "DRAFT_HOLD"
+      },
+      "publisher_checksum_readback": {
+        "matched": 2,
+        "total": 2,
+        "classification": "Requalification only; not source pin alignment, wheel byte verification, installation or progress milestone",
+        "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
       }
-    }
+    },
+    "latest_dependency_evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
   }
 }

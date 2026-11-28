@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 10,
+  "revision": 11,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,7 +10,7 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "a5a55bfea373e9eeeb19b9bd7bbed4ca506b4a4b",
+    "governance": "a09f21402819b93ac0c31d1b40252263f28c1f48",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
     "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
@@ -192,6 +192,105 @@
         "pr56": "DRAFT_NOT_MERGED_NO_SUBMITTED_REVIEWS"
       },
       "acceptance_delta": 0
+    },
+    "c50_r9_publisher_provenance_requalification_20261128": {
+      "date": "2026-11-28",
+      "classification": "STATIC_TECHNICAL_REVIEW_ONLY_NO_NEW_INSTALL_OR_ACCEPTANCE",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "governance_parent": "a09f21402819b93ac0c31d1b40252263f28c1f48",
+      "pr52": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+      "pr47": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "pr56": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "source": {
+        "requirements_blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+        "signature_requirements_blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+        "current_fastapi": "0.163.0",
+        "current_cryptography": "46.0.4",
+        "archived_patch_commit": "79771c6dce3fda0b9b6275cacbac1a3d24a4c9a8",
+        "patch_blob": "2fcc42b817145164a197d6b83094e2f1d58dfe38",
+        "union_lock_blob": "fb50ae2d06594150887e849d61de027c61ae1492",
+        "r9_lock_blob": "ab9908b033b9b62017a7689716420f61ce2c6364",
+        "original_c50_blob": "46cec5f605701a5b8c97c91f3d412f9907b71021",
+        "r9_common_exact": "20/20",
+        "original_c50_rows_retained": "24/25",
+        "source_pin_closure": "0/2",
+        "source_transfer": "NOT_DONE"
+      },
+      "publisher_metadata": {
+        "classification": "Public registry checksum/metadata readback only; no wheel downloaded, binary rehash, local attestation verification or installation. Historical hashes not counted again as completed plan steps.",
+        "fastapi": {
+          "version": "0.163.2",
+          "wheel": "fastapi-0.163.2-py3-none-any.whl",
+          "sha256": "825a8fdd18d7bfcb1b86735e9805c59b7400d55c4060d3df5331b62ae452f004",
+          "registry": "https://pypi.org/project/fastapi/0.163.2/",
+          "trusted_publishing": true,
+          "attestation": "PyPI reports no provenance metadata",
+          "advisory": "https://github.com/fastapi/fastapi/security/advisories/GHSA-f56c-v883-vx8r",
+          "status": "PATCH_CANDIDATE_MATCH; installation and actual bytes/license review HOLD"
+        },
+        "cryptography": {
+          "version": "50.0.2",
+          "wheel": "cryptography-50.0.2-cp311-abi3-win_amd64.whl",
+          "sha256": "7afa5a6602a9f29af1f3a2965f831bae7c9d5d597b7cbb716d41ab3b7d89879c",
+          "registry": "https://pypi.org/project/cryptography/50.0.2/",
+          "trusted_publishing": true,
+          "attestation": "PyPI reports verified publisher attestation 2026-09-30; not locally verified",
+          "publisher_commit": "fe12d283180ea89ceed622021242fddb31d27f84",
+          "publisher_run": "36731020563",
+          "native": "OpenSSL 4.0.3 per producer release notes",
+          "vendor": "https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst",
+          "advisory": "https://www.openssl-library.org/news/vulnerabilities/",
+          "status": "HOLD; no patched stable publisher wheel verified in this review, no unreviewed substitution"
+        }
+      },
+      "runtime": {
+        "reported": "Windows AMD64 Python 3.13.17 package-free venv PASS; previous evidence only",
+        "review_target": "Python 3.13.18 security release is a candidate for requalification, no download or substitution",
+        "vendor": "https://www.python.org/downloads/release/python-31318/",
+        "risk": "gh-157579 TemporaryDirectory; exact PR47 test imports TemporaryDirectory",
+        "status": "HOLD"
+      },
+      "api20": {
+        "scope": "PR47 original 9-test suite and candidate read boundary",
+        "test_blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+        "demo_blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+        "finding": "demo imports seven router/diagnostic modules and lifecycle readers include postgres mappings. R9 excludes cryptography and uvicorn, but complete transitive import closure was not established; recursive tool call exceeded limit. No assertion crypto-free; independent scoped path remains a candidate.",
+        "status": "NOT_RUN/HOLD"
+      },
+      "architecture": {
+        "master_bytes": 12011382,
+        "master_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "master_relevant_lines": [
+          18900,
+          30859,
+          51323,
+          102041
+        ],
+        "doc_rev_0155_bytes": 12193137,
+        "doc_rev_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "addendum_relevant_lines": [
+          1273,
+          1371,
+          32478,
+          52942,
+          103660
+        ],
+        "current_candidate_catalog_blob": "31e1a78856cb957240db0b29ddc338803f25507f",
+        "limit": "Relevant full local master sections and current reconciliation catalogue consulted; complete later addenda and full archive not requalified."
+      },
+      "reviews": {
+        "pr52": 0,
+        "pr47": 0,
+        "pr56": 0,
+        "classification": "No submitted GitHub review returned; no independent approval inferred"
+      },
+      "owners": "MI-01 / 03API / MI-03/04 dependency owners; MI-10 independent Security/IV and license/runtime disposition; Codex exact approved local install and tests",
+      "next": "Complete exact R9 import closure separately; resolve approved C50 native/security/license/runtime and FastAPI source transfer before installation. No new CI, PROD, main or acceptance.",
+      "new_product_files": 0,
+      "new_tests": 0,
+      "plan_delta_pp": 0,
+      "rollback": "Normal revert of governance-only commit; no product code or manifest changed."
     }
   },
   "detail_rows": [
@@ -1727,18 +1826,19 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "HOLD",
-      "ready": "PR52 devir kanıtı: Windows AMD64 Python 3.13.17 SQLite 3.50.4 paket içermeyen venv önkontrolü PASS. Lock 25 paket, direct-pin farkları belirli.",
-      "missing": "2 pin uyumu, exact runtime/native provenance, lisans/security bağımsız karar, kurulum ve signed testler.",
-      "next": "Mevcut FastAPI yamasını ve cryptography pin kararını exact lock ile uzlaştır; onaylı kapsamda Codex kurulum.",
+      "ready": "PR52 paket içermeyen Windows önkontrolü PASS (devir); mevcut FastAPI yaması exact preimage, R9 20/20 lock satırı ve iki PyPI wheel hash'i eşleşti.",
+      "missing": "Direct pin aktarımı 0/2; FastAPI attestation yok, Cryptography OpenSSL 4.0.3; native/lisans/runtime ve bağımsız karar, kurulum açık.",
+      "next": "MI-01/MI-10 exact runtime ve bağımlılık kararı; R9 import closure ayrı tamamla; onaylı kapsamda Codex kurulum.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
         "plan",
         "scheduler_state_distance_20261128",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "c50_r9_publisher_provenance_requalification_20261128"
       ],
       "previous_status": "HOLD",
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
+      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 1,
         "total": 4,
@@ -2131,16 +2231,17 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "Codex devir: paket içermeyen Windows/Python 3.13.17 ortamı PASS; PR52 exact kayıt.",
-      "missing": "Onaylı tam bağımlılık ortamı, exact birleşik checkout ve zorunlu ham test kanıtları.",
-      "next": "C50 pin/security/lisans disposition sonrası izole kurulum ve özgün testler.",
+      "ready": "Codex devir: paket içermeyen Windows/Python 3.13.17 PASS; PyPI exact pin metadata 2/2 eşleşti.",
+      "missing": "Onaylı exact runtime/checkout, wheel bytes ve bağımsız güvenlik/lisans; Python 3.13.18 yalnız requalification adayı.",
+      "next": "Onaylı runtime/lock ile izole kurulum; G6A 2, PR46 12, Scheduler SQL 6.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "c50_r9_publisher_provenance_requalification_20261128"
       ],
       "previous_status": "KISMEN HAZIR",
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
+      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2482,9 +2583,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "PR56 değişen kaynak hash 31/31; PR52 paket içermeyen Windows önkontrolü PASS. Authority 2/3, 28/30, Scheduler 19/19 yerel.",
-      "missing": "C50 0/2 pin, 0/1 kurulum; G6A 2, PR46 12, Scheduler SQL 6; PR56 taslak.",
-      "next": "Tek C50 onaylı bağımlılık zinciri; ardından mevcut kaynak aktarımı.",
+      "ready": "PR56 değişen kaynak 31/31 ve Windows önkontrolü önceki devir PASS; mevcut FastAPI yaması ve 20/20 ortak lock satırı yeniden bağlandı.",
+      "missing": "C50 direct pin 0/2, kurulum 0/1; Crypto native risk ve FastAPI attestation açık; G6A 2, PR46 12, Scheduler SQL 6; PR56 taslak.",
+      "next": "Exact bağımsız dependency/runtime/lisans disposition; R9 closure ayrı; sonra onaylı testler ve kontrollü aktarım.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2495,10 +2596,11 @@
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
         "scheduler_state_distance_20261128",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "c50_r9_publisher_provenance_requalification_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
+      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -2653,14 +2755,15 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Teknik kaynak yetkisi mevcut; PR52 paket içermeyen Windows 3.13.17 önkontrolü devir PASS.",
-      "missing": "C50 pin 0/2, security/lisans/runtime ve bağımsız karar; gerçek IAM HOLD.",
-      "next": "Mevcut teknik yetkiyle exact bağımlılık/pin incelemesi; bağımsız kapı ayrı.",
+      "ready": "Teknik yazıcı yetkisi ve önceki Windows önkontrolü PASS; iki wheel yayıncı hash'i eşleşti, FastAPI mevcut yama exact.",
+      "missing": "C50 pin aktarımı 0/2; FastAPI attestation eksik, Crypto OpenSSL 4.0.3; security/lisans/runtime bağımsız karar ve gerçek IAM HOLD.",
+      "next": "MI-01/03API/MI-10 exact bağımlılık kararları; R9 closure ayrı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
         "review",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "c50_r9_publisher_provenance_requalification_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2691,7 +2794,7 @@
         "percent": 21.4
       },
       "delta_pp": 0,
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok."
+      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok."
     },
     {
       "operational_number": 3,
@@ -3141,9 +3244,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "PR56 devir 31/31 değişen raw hash; PR52 paket içermeyen venv PASS; Authority 28/30, Scheduler 19/19 yerel.",
-      "missing": "C50 kurulumu 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; tam arşiv/IV.",
-      "next": "Onaylı bağımlılık zinciri ve özgün testler; sonra kontrollü PR56 aktarımı.",
+      "ready": "Önceki PR56 31/31, venv PASS, Authority 28/30 ve Scheduler 19/19 korunuyor; lock ortak satır 20/20.",
+      "missing": "C50 0/1 kurulum; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; tam arşiv/IV; R9 import closure açık.",
+      "next": "Onaylı exact bağımlılık zinciri ve özgün testler; sonra kontrollü PR56 aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3155,7 +3258,8 @@
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
         "scheduler_state_distance_20261128",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "c50_r9_publisher_provenance_requalification_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3215,7 +3319,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok."
+      "delta": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok."
     }
   ],
   "maintenance": {
@@ -3407,6 +3511,23 @@
       "reason": "Read back exact PR56 31/31 changed-file raw hash report and PR52 package-free Windows preflight report; no new test or product transfer; full archive and approved C50 remain HOLD.",
       "evidence_ref": "pr56_raw_and_pr52_windows_preflight_handover_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 11,
+      "date": "2026-11-28",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "changed_sections": [
+        27,
+        33,
+        39
+      ],
+      "changed_operational": [
+        2,
+        12
+      ],
+      "reason": "Mevcut iki wheel için yayıncı hash/metadata yeniden bağlandı; FastAPI attestation yok, Crypto publisher attestation mevcut ancak OpenSSL 4.0.3 riski açık. Direct pin aktarımı, kurulum, yeni test ve tam plan kriteri kapanışı yok.",
+      "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -3481,7 +3602,7 @@
       },
       "classification": "separate independent work; do not add to original 30 or plan milestone"
     },
-    "current_blocker": "Exact C50 dependency pins, runtime/native provenance, license/security and independent disposition; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
+    "current_blocker": "Direct pin source transfer 0/2; FastAPI patch and 2/2 publisher checksums matched; FastAPI attestation absent, crypto OpenSSL 4.0.3; exact native/license/runtime and independent disposition; R9 import closure incomplete. G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
     "runtime_preflight": {
       "previous": "OPEN",
       "current": "PASS_REPORTED",
@@ -3494,7 +3615,10 @@
     },
     "c50_pin_alignment": {
       "current": 0,
-      "total": 2
+      "total": 2,
+      "previous": 0,
+      "status": "HOLD",
+      "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
     },
     "c50_install": {
       "current": 0,
@@ -3510,6 +3634,12 @@
       "current": 0,
       "total": 1,
       "status": "DRAFT_HOLD"
+    },
+    "publisher_checksum_readback": {
+      "matched": 2,
+      "total": 2,
+      "classification": "Requalification only; not source pin alignment, wheel byte verification, installation or progress milestone",
+      "evidence_ref": "c50_r9_publisher_provenance_requalification_20261128"
     }
   }
 }
