@@ -1,7 +1,7 @@
 diff --git a/product/ai-company-os-backend/app/core/transaction/intent_authority.py b/product/ai-company-os-backend/app/core/transaction/intent_authority.py
 --- a/product/ai-company-os-backend/app/core/transaction/intent_authority.py
 +++ b/product/ai-company-os-backend/app/core/transaction/intent_authority.py
-@@ -5,182 +5,203 @@
+@@ -5,182 +5,204 @@
  """
  from contextlib import closing, contextmanager
  from dataclasses import dataclass
@@ -374,7 +374,8 @@ diff --git a/product/ai-company-os-backend/app/core/transaction/intent_authority
 +
 +def execute_protected_authority_fenced_transition(*, authority, intent, context, registry, witness,
 +        expected_binding, memory_path, reader, public_key, raw, journal, connect, clock,
-+        company=None, expected_company_binding=None, result=None, result_reader=None) -> NoReturn:
++        company=None, expected_company_binding=None, result=None, result_reader=None,
++        session_check=None, protected_org=None) -> NoReturn:
 +    """Protected D0 entry; deny before claim, journal stage, or connection access.
 +
 +    The R7 transport gate is shared, not a caller-selected mode or a grant.

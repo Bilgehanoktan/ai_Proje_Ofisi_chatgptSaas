@@ -1028,5 +1028,93 @@
     },
     "limitations": "Relevant sections of full uploaded masters read, not all 119k+ lines or every later addendum. 44 open PR and 0 reviews at prior exact check; no new tests, code, merge, CI, real IAM/COMMIT or acceptance. No verified independent source transfer found in scope; no artificial progress.",
     "next": "Separate owner A1 ratification and source closure verification of existing quarantined patch; actual QA/IV/custody remain independent. Continue source-only independent work when exact eligible source is found. User prior no new/routine test remains."
+  },
+  "research_first_signature_reconciliation_20261128": {
+    "status": "QUARANTINE_PATCH_CORRECTED_NOT_APPLIED_HOLD",
+    "base": "8d6e4af51a48206ee7e728037298fd5d007cfb23",
+    "governance": "b30158b74ae6aaa1681950d617dd9f8974b5e763",
+    "patch": {
+      "path": "quarantine/H01_RESEARCH_FIRST_PROTECTED_PRECLAIM_20261128.patch",
+      "previous_blob": "339d05040dd7694689488c4417c0109c5e8aaefe",
+      "blob": "8b83b4d0cc649590482accfee222b0b7bbcc7d61"
+    },
+    "finding": "Original G6A test_legacy_signature_preserved asserts equality of inspect.signature(...).parameters. Existing patch legacy entry includes session_check and protected_org; protected entry lacked both. Static mismatch, not a test execution.",
+    "original_test": {
+      "commit": "253128a2236ee706486e70acc97e472ededac26b",
+      "path": "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py",
+      "blob": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+      "method": "test_legacy_signature_preserved"
+    },
+    "decision_without_explicit_guidance": "Add both optional keyword-only parameters to the quarantined G6A entry, with no consumption or fallback; existing strict gate plus unconditional denial retained. No product source altered.",
+    "static_checks": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+        "hunk": "EXACT",
+        "signature": "STATIC_EQUAL"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "hunk": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "hunk": "EXACT"
+      }
+    ],
+    "original_suites": [
+      {
+        "name": "R8 protected ORG",
+        "blob": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc",
+        "methods": 10
+      },
+      {
+        "name": "R6 strict expiry",
+        "blob": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "methods": 12
+      },
+      {
+        "name": "G6A preclaim",
+        "blob": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+        "methods": 6
+      },
+      {
+        "name": "G6A fullchain",
+        "blob": "822d27c55b6626a07cd9a56b4dbd53d9eb52292d",
+        "methods": 2
+      }
+    ],
+    "fixture_pins": {
+      "g5": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+      "fullchain0214": "4918027e828e8e72273ee4d6a508cac3aa6e9b59"
+    },
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "29132-29214",
+        "64044-64066",
+        "105060-105095",
+        "106330-106343",
+        "106397-106422",
+        "116785-116827"
+      ],
+      "addenda": [
+        "adf651da6493f742dd473109b2a98776ca25198f",
+        "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+      ]
+    },
+    "tests": "NOT_RUN; affected-flow closure including dual-reference denial and PR46 still mandatory. No new tests.",
+    "product_changes": 0,
+    "manifest": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12 unchanged",
+    "acceptance_delta_pp": 0,
+    "limitations": "No exact current full archive or approved full dependency closure; no runtime or IV acceptance. 44 open PRs; no candidate PR; uncommitted work invisible.",
+    "rollback": "ordinary revert of candidate-only commit; product tree untouched",
+    "next": "Exact existing 30 methods plus affected PR46/dual-reference behavior closure under approved dependencies; keep actual protected COMMIT HOLD. Separate A1/MI10/publication."
   }
 }
