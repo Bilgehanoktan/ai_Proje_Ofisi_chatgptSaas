@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 8,
+  "revision": 9,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,10 +10,10 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "d612fcbd4f3178f47ca135d31ef680eb5cf03e2b",
+    "governance": "ca25b1588ac9663aaed50c5b569c37878eec1594",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
-    "candidate": "5772c15cfceb8eb01264350c13f5a013df353307",
+    "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
     "product_tree": "f42173660b28e3563504c7fdd2dd3963004fba70",
     "manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
     "product_files": 594,
@@ -138,6 +138,17 @@
       "direct_log_blob": "b79ae7ee652bd21c45fbd266095337afb5492592",
       "pins_blob": "5ded8170335f983513ef2d2054fe7db91730cfc5",
       "classification": "ISOLATED ADDITIVE ORG SOURCE TRANSFER; R8 10/10 local both-patch candidate; G5 12/12 + direct 3/3 transfer-scope PASS; no legacy Authority transfer or acceptance"
+    },
+    "scheduler_state_distance_20261128": {
+      "commit": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "path": "catalog/revisions/H01_UNIFIED_SOURCE_RECONCILIATION_20261128.json",
+      "blob": "31e1a78856cb957240db0b29ddc338803f25507f",
+      "record_key": "research_first_scheduler_state_distance_20261128",
+      "patch": "quarantine/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128.patch",
+      "patch_blob": "6c2b9f07e75744343a6cd771300fb5d9af960baa",
+      "before_log_blob": "7d8f3fd212c067514aca80eb3da16a21da9eb30c",
+      "after_log_blob": "237aafce79020389fb4326680564e3824fccb4c3",
+      "classification": "LOCAL QUARANTINED SCHEDULER FIX 19/19; SQL CONSUMER 6 NOT_RUN; no product or acceptance"
     }
   },
   "detail_rows": [
@@ -1027,16 +1038,17 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "Scheduler state/version guard korunuyor; PR54 kaynakları mevcut.",
-      "missing": "Gerçek AGENT admission, kapasite/bütçe, dispatch ve retry.",
-      "next": "WorkItem planıyla mevcut Scheduler bağlantısını hazırla.",
+      "ready": "Mevcut Scheduler ve DAG kaynakları; exact yerel adayda ulaşılmaz geri durum ve yetersiz version artışı kusuru düzeltildi; 19/19 PASS.",
+      "missing": "SQL tüketici 6 metot imzalı fixture nedeniyle NOT_RUN; kaynak transferi, gerçek ready task/capacity/dispatch açık.",
+      "next": "Onaylı signed checkout ile test_scheduled_admission_0220.py 6 metodu; sonra yama aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
-        "plan"
+        "plan",
+        "scheduler_state_distance_20261128"
       ],
-      "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "previous_status": "KISMEN HAZIR",
+      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
       "plan_checklist": {
         "done": 1,
         "total": 4,
@@ -1074,7 +1086,13 @@
             "scope": "plan milestone only; not independent acceptance"
           }
         ]
-      }
+      },
+      "previous_plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25
+      },
+      "delta_pp": 0
     },
     {
       "plan_section": 16,
@@ -1665,16 +1683,17 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "HOLD",
-      "ready": "Frontend lock, PR52 R9 20 paket ve C50/R9 25 paket adayları incelendi.",
-      "missing": "FastAPI 0.163.0→0.163.2 ve cryptography 46.0.4→50.0.2 owner/security/runtime/lisans kararı; onaylı ortam.",
-      "next": "Exact lock kararları; onaysız install yok.",
+      "ready": "Exact yerel stdlib closure mevcut; imzalı ortamda cryptography 46.0.4 metadata görüldü. Tarihsel C50 onayı ayrı.",
+      "missing": "G6A fullchain, PR46 ve Scheduler SQL fixture için current exact approved signed graph yok.",
+      "next": "MI01/03/10 ile tek onaylı exact dependency/runtime hazırlığı; Codex izinli mevcut ortam.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
-        "plan"
+        "plan",
+        "scheduler_state_distance_20261128"
       ],
-      "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "previous_status": "HOLD",
+      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
       "plan_checklist": {
         "done": 1,
         "total": 4,
@@ -1712,7 +1731,13 @@
             "scope": "plan milestone only; not independent acceptance"
           }
         ]
-      }
+      },
+      "previous_plan_checklist": {
+        "done": 1,
+        "total": 4,
+        "percent": 25
+      },
+      "delta_pp": 0
     },
     {
       "plan_section": 28,
@@ -1720,9 +1745,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "33/33 exact yerel kaynak; özgün 28/30 PASS (R6 12, G6A 6, R8 10). Ayrı G5 12/12 ve direct 3/3; ORG modülü aktarıldı.",
-      "missing": "G6A fullchain 2, PR46, tam raw/archive, bağımsız kabul açık.",
-      "next": "Onaylı C50 bağımlılık ve imzalı PR46 doğrulaması.",
+      "ready": "Özgün Authority 28/30; ayrı Scheduler kusuru 8 alt senaryo baseline FAIL → 19/19 aday PASS, 13/13 manifest raw/bytes/blob.",
+      "missing": "G6A 2, PR46 ve Scheduler SQL 6 NOT_RUN; tam arşiv ve bağımsız kabul.",
+      "next": "Tek onaylı signed closure ile zorunlu etkilenen özgün akışlar.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -1731,10 +1756,11 @@
         "signature_reconciliation_20261128",
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
-        "r8_org_transfer_20261128"
+        "r8_org_transfer_20261128",
+        "scheduler_state_distance_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "R8 ORG modülü ürüne aktarıldı; 10 yeni özgün metot, 12 G5 regresyonu ve 3 ek kontrol PASS; tam plan kriteri kapanışı yok.",
+      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -2403,9 +2429,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "2/3 kaynak üründe; 28/30 özgün metot PASS. R8 ORG kaynak aktarımı tamamlandı; Authority eski blob korunuyor.",
-      "missing": "Son Authority hunkı, 2 özgün test ve PR46; A1, QA/IV, gerçek COMMIT açık.",
-      "next": "C50/PR46 exact signed closure, ardından son hunk.",
+      "ready": "Authority 2/3 kaynak, 28/30 metot. Bağımsız Scheduler kaynak düzeltmesi karantinada, 19/19 PASS.",
+      "missing": "Son Authority ve Scheduler yaması; signed G6A/PR46/SQL tüketici; A1/IV açık.",
+      "next": "Onaylı imzalı checkout engelini tek işte kapat; sonra iki paketin kontrollü aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -2414,10 +2440,11 @@
         "signature_reconciliation_20261128",
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
-        "r8_org_transfer_20261128"
+        "r8_org_transfer_20261128",
+        "scheduler_state_distance_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "R8 ORG modülü ürüne aktarıldı; 10 yeni özgün metot, 12 G5 regresyonu ve 3 ek kontrol PASS; tam plan kriteri kapanışı yok.",
+      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -2897,13 +2924,14 @@
       ],
       "development_percent": null,
       "status": "KISMEN HAZIR",
-      "ready": "Mevcut DAG/Scheduler; D0 7 görev 6 dalga.",
-      "missing": "Kalıcı WorkItem ve gerçek admission bağlantısı.",
-      "next": "Aynı WorkItem'a plan ve scheduler bağla.",
+      "ready": "Mevcut Scheduler/DAG kaynakları; yeni state distance düzeltmesi exact yerel adayda 19/19 PASS (17 özgün + 2 zorunlu).",
+      "missing": "SQL consumer 6 NOT_RUN; yama henüz üründe değil, durable WorkItem/AGENT admission açık.",
+      "next": "Onaylı signed SQL tüketici testini koş, ardından mevcut Scheduler yamasını entegre et.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
-        "review"
+        "review",
+        "scheduler_state_distance_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -2922,7 +2950,15 @@
           "P15.03",
           "P15.04"
         ]
-      }
+      },
+      "previous_status": "KISMEN HAZIR",
+      "previous_plan_checklist": {
+        "done": 3,
+        "total": 10,
+        "percent": 30
+      },
+      "delta_pp": 0,
+      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer."
     },
     {
       "operational_number": 10,
@@ -3041,9 +3077,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "28/30 özgün metot PASS; 33/33 exact; G5 12/12 ve direct 3/3 ayrıca PASS.",
-      "missing": "NOT_RUN: G6A fullchain 2, PR46, tam arşiv ve bağımsız kabul.",
-      "next": "Onaylı C50/PR46 signed closure; MI10/H01 ayrı.",
+      "ready": "Authority 28/30; ayrı Scheduler 19/19 aday PASS, 8 baseline alt senaryo giderildi; kaynak hashleri 13/13.",
+      "missing": "G6A 2, PR46 ve Scheduler 6 SQL consumer NOT_RUN; tam arşiv/IV açık.",
+      "next": "MI01/03/10 onaylı exact signed closure; Codex yerel zorunlu akışlar.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3053,7 +3089,8 @@
         "signature_reconciliation_20261128",
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
-        "r8_org_transfer_20261128"
+        "r8_org_transfer_20261128",
+        "scheduler_state_distance_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3113,7 +3150,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "R8 ORG modülü ürüne aktarıldı; 10 yeni özgün metot, 12 G5 regresyonu ve 3 ek kontrol PASS; tam plan kriteri kapanışı yok."
+      "delta": "Scheduler source candidate fixed; 8 failing subtests → 19/19 local PASS, SQL consumer HOLD, no full milestone/product transfer."
     }
   ],
   "maintenance": {
@@ -3267,20 +3304,38 @@
       "reason": "Actual independent ORG module transfer, 33/33 exact closure and R8 10 original local PASS; G5 12 and direct 3 transfer-scope PASS; 2/3 files, 28/30 methods. Signed Authority remains HOLD.",
       "evidence_ref": "r8_org_transfer_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 9,
+      "date": "2026-11-28",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "changed_sections": [
+        15,
+        27,
+        28,
+        39
+      ],
+      "changed_operational": [
+        9,
+        12
+      ],
+      "reason": "Independent Scheduler state-distance defect reproduced and fixed locally; exact 13/13, 19/19 PASS; signed SQL consumer remains HOLD. Authority 2/3 and 28/30 unchanged. No product transfer or criterion delta.",
+      "evidence_ref": "scheduler_state_distance_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
     "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
     "evidence_ref": "r8_org_transfer_20261128",
     "patch_files": {
-      "previous": 1,
+      "previous": 2,
       "current": 2,
       "total": 3,
       "target": 3,
       "remaining": 1
     },
     "original_methods": {
-      "previous": 18,
+      "previous": 28,
       "current": 28,
       "total": 30,
       "target": 30,
@@ -3303,10 +3358,38 @@
     "product_source": {
       "previous_files": 594,
       "current_files": 594,
-      "code_modified": 1,
+      "code_modified": 0,
       "original_test_added": 0,
       "manifest_entries": 593,
       "full_raw": "NOT_VERIFIED"
-    }
+    },
+    "scheduler_state_distance": {
+      "evidence_ref": "scheduler_state_distance_20261128",
+      "source_defect": "QUEUED backward state and too-short version transition path",
+      "source_candidate": "FIXED_LOCAL",
+      "original_methods": 17,
+      "new_mandatory_methods": 2,
+      "baseline": {
+        "pass_methods": 17,
+        "failed_methods": 2,
+        "failed_subtests": 8
+      },
+      "after": {
+        "pass_methods": 19,
+        "total": 19
+      },
+      "sql_consumer": {
+        "pass": 0,
+        "total": 6,
+        "status": "NOT_RUN_SIGNED_FIXTURE_DEPENDENCY_HOLD"
+      },
+      "product_transfer": {
+        "current": 0,
+        "total": 2,
+        "status": "HOLD"
+      },
+      "classification": "separate independent work; do not add to original 30 or plan milestone"
+    },
+    "current_blocker": "C50 exact approved signed dependency closure required for remaining Authority and Scheduler SQL consumer; historical Windows approval not broadened"
   }
 }

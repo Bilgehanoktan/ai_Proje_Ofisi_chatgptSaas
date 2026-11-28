@@ -18017,23 +18017,23 @@
     "checklist_revision": 2,
     "checklist_status": "PROVISIONAL_REPORTING_METRIC",
     "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging.",
-    "latest_table_revision": 8,
-    "latest_candidate": "5772c15cfceb8eb01264350c13f5a013df353307",
+    "latest_table_revision": 9,
+    "latest_candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
     "latest_delta_pp": 0,
-    "latest_delivery": "Actual R8 ORG additive guard transfer; 33/33 exact, 10/10 R8 local candidate, 12/12 G5 + 3/3 direct transfer scope, 2/3 patch files and 28/30 original methods. No full plan criterion or acceptance delta.",
+    "latest_delivery": "Independent Scheduler state distance fix locally reproduced: 8 failing subtests -> 19/19 PASS; no product transfer, SQL 6 NOT_RUN, common signed dependency HOLD. Authority 2/3 files and 28/30 unchanged.",
     "architecture_read_required": "H01 2026-11-28: every development/table update reads actual full Design Master relevant sections and applicable current addenda, exact source hash/lines, not index only; missing scope HOLD.",
     "active_subtask_progress": {
       "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
       "evidence_ref": "r8_org_transfer_20261128",
       "patch_files": {
-        "previous": 1,
+        "previous": 2,
         "current": 2,
         "total": 3,
         "target": 3,
         "remaining": 1
       },
       "original_methods": {
-        "previous": 18,
+        "previous": 28,
         "current": 28,
         "total": 30,
         "target": 30,
@@ -18056,11 +18056,39 @@
       "product_source": {
         "previous_files": 594,
         "current_files": 594,
-        "code_modified": 1,
+        "code_modified": 0,
         "original_test_added": 0,
         "manifest_entries": 593,
         "full_raw": "NOT_VERIFIED"
-      }
+      },
+      "scheduler_state_distance": {
+        "evidence_ref": "scheduler_state_distance_20261128",
+        "source_defect": "QUEUED backward state and too-short version transition path",
+        "source_candidate": "FIXED_LOCAL",
+        "original_methods": 17,
+        "new_mandatory_methods": 2,
+        "baseline": {
+          "pass_methods": 17,
+          "failed_methods": 2,
+          "failed_subtests": 8
+        },
+        "after": {
+          "pass_methods": 19,
+          "total": 19
+        },
+        "sql_consumer": {
+          "pass": 0,
+          "total": 6,
+          "status": "NOT_RUN_SIGNED_FIXTURE_DEPENDENCY_HOLD"
+        },
+        "product_transfer": {
+          "current": 0,
+          "total": 2,
+          "status": "HOLD"
+        },
+        "classification": "separate independent work; do not add to original 30 or plan milestone"
+      },
+      "current_blocker": "C50 exact approved signed dependency closure required for remaining Authority and Scheduler SQL consumer; historical Windows approval not broadened"
     }
   }
 }
