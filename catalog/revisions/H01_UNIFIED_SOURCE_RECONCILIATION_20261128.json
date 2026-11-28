@@ -1382,5 +1382,106 @@
     "decision": "Independent additive ORG module transfer justified by actual G5 regression with unchanged authority and direct new boundary checks; no legacy wrapper change, no new caller or real grant. Remaining Authority hunk and original R8 test transfer gated by signed closure; not a full R8/PR46 milestone.",
     "acceptance_delta_pp": 0,
     "rollback": "ordinary revert; prior two-file patch retained in parent."
+  },
+  "research_first_scheduler_state_distance_20261128": {
+    "status": "LOCAL_CANDIDATE_19_OF_19_PASS_SQL_CONSUMER_HOLD",
+    "base": "5772c15cfceb8eb01264350c13f5a013df353307",
+    "governance": "ca25b1588ac9663aaed50c5b569c37878eec1594",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "ownership": {
+      "pr54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+      "open_pr_count": 44,
+      "source_writer": "H01 central writer; PR54 historical paths preserved; no open working tree visibility"
+    },
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "105060-105095",
+        "116785-116827",
+        "58430-58445",
+        "92105-92137"
+      ],
+      "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+      "pr54_exact_reviews": [
+        "485f76ddd4546bc90734bf8381489e9556698550",
+        "8ed7dc599f4c1773d1d34c6d0d2dfba3aaf5bebc"
+      ],
+      "normative_change": false
+    },
+    "finding": "Existing pinned scheduler accepts impossible QUEUED->CREATED and RUNNING with insufficient state version delta. Baseline actual 8 failed subtests in 2 new mandatory regression methods; original 17 passed.",
+    "change": "Use existing lifecycle.EDGES shortest-path lower bound; reuse D0_SCHEDULE_STATE_VERSION_HOLD. No new state machine, no authority, no proof of persisted history, no change to legacy inspect_schedule, no API/DB/event/dependency change.",
+    "files": [
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "preimage": "eb3e283e3406996254283595e14711e90b2bca8c",
+        "local_postimage": "6836c63b0c3e3bf93748a333a4578b4be7610009",
+        "sha256": "b32c882642ce271488ce899c764820a94e4307d7f41872b00ab7f01218b510c3",
+        "bytes": 4430
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "preimage": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+        "local_postimage": "dfd850420c5a30ca0347eda3c0d62199701151f3",
+        "sha256": "3e8038ccc35630d8d49f5e0c569f89d6ca0e3a48ff6b3c8e7ff721c53cbf0a14",
+        "bytes": 7374
+      }
+    ],
+    "patch": {
+      "path": "quarantine/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128.patch",
+      "blob": "6c2b9f07e75744343a6cd771300fb5d9af960baa",
+      "sha256": "8d9223f60a6a562f07d852cc88cd7607518f13088d627dc475ccfbfc52c28065"
+    },
+    "test": {
+      "environment": "Python 3.13.5 -I -S -B, stdlib only; no install or external access",
+      "source_closure": "13/13 preimage Git blob, manifest raw SHA256 and bytes matched",
+      "before": {
+        "methods": 19,
+        "original_pass": 17,
+        "new_failed_methods": 2,
+        "failed_subtests": 8,
+        "exit": 1,
+        "path": "tests/evidence/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128_BEFORE.log",
+        "blob": "7d8f3fd212c067514aca80eb3da16a21da9eb30c",
+        "sha256": "f269ab67f54689c5b56f10293708c8750726fe0fdb8db6c5d113fa21b90f1ec5"
+      },
+      "after": {
+        "methods": 19,
+        "pass": 19,
+        "fail": 0,
+        "exit": 0,
+        "path": "tests/evidence/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128_AFTER.log",
+        "blob": "237aafce79020389fb4326680564e3824fccb4c3",
+        "sha256": "826d8ab6af3bd7aae0dedcb72abd711e8619e5302fc8e8f445ad3f0135dc97f3"
+      },
+      "consumer": {
+        "path": "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+        "blob": "3e01853c9fb3d184c3bd74fe2c5bbbb5904a36af",
+        "methods": 6,
+        "status": "NOT_RUN",
+        "dependency": "test_company_terminal_0212.py imports cryptography; existing signed dependency graph not approved for this scope"
+      }
+    },
+    "signed_authority": {
+      "patch_files": "2/3",
+      "original_methods": "28/30",
+      "status": "HOLD",
+      "remaining": "G6A fullchain 2 + PR46 affected signed wrapper, exact reviewed dependency and full checkout",
+      "metadata_only": "local cryptography 46.0.4, cffi 2.0.0, pycparser 3.0. Historical C50 approval for pinned Windows PR37 scope not broadened."
+    },
+    "manifest": {
+      "blob": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "entries": 593,
+      "product_files": 594,
+      "product_tree": "f42173660b28e3563504c7fdd2dd3963004fba70",
+      "full_raw": "NOT_VERIFIED"
+    },
+    "acceptance_delta_pp": 0,
+    "plan_criterion_delta": 0,
+    "next": "Use approved exact current signed closure to run existing G6A 2, PR46 signed wrapper and Scheduler 6 SQL consumer methods; then transfer existing candidate patches and original regressions. No unapproved install/downgrade, no real PG/IV.",
+    "rollback": "ordinary revert evidence and quarantine patch commit; product unchanged"
   }
 }

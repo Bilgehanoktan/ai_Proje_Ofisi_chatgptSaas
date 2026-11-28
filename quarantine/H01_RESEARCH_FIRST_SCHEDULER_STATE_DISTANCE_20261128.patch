@@ -1,0 +1,75 @@
+--- a/product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py
++++ b/product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py
+@@ -2,7 +2,7 @@
+ This is an observation of dependency readiness, not admission or lease issuance.
+ """
+ from dataclasses import dataclass, field
+-from app.core.agent_runtime.lifecycle import RunObservation, RunState, valid_scope, uint
++from app.core.agent_runtime.lifecycle import EDGES, RunObservation, RunState, valid_scope, uint
+ from app.core.orchestrator.engine import canonical_plan
+ from app.core.orchestrator.readiness import ready_tasks
+ 
+@@ -44,6 +44,20 @@
+     return SchedulerReview('D0_READY_ONLY_ADMISSION_AND_LEASE_REQUIRED', ready_tasks(plan, states))
+ 
+ 
++def _minimum_transition_count(start, target):
++    """Lower bound from the existing D0 lifecycle graph, not history proof."""
++    frontier = {start}
++    seen = set()
++    distance = 0
++    while frontier:
++        if target in frontier:
++            return distance
++        seen.update(frontier)
++        frontier = {n for state in frontier for n in EDGES.get(state, ())} - seen
++        distance += 1
++    return None
++
++
+ def inspect_pinned_schedule(plan, observations, initial_observations):
+     """D0 readiness with exact initial identity/attempt roster; no success proof yet.
+ 
+@@ -64,8 +78,10 @@
+         # Even a causally consistent bare SUCCEEDED head is not a release receipt.
+         if current.state is RunState.SUCCEEDED:
+             raise ValueError('D0_SCHEDULE_SUCCESS_PROOF_HOLD')
+-        # A state transition cannot reuse the pinned initial run version.
+-        if current.version == pin.version and current.state is not pin.state:
++        # Each lifecycle edge needs a version increment. Other events may also
++        # increment the version; this bound does not prove persisted history.
++        minimum = _minimum_transition_count(pin.state, current.state)
++        if minimum is None or current.version - pin.version < minimum:
+             raise ValueError('D0_SCHEDULE_STATE_VERSION_HOLD')
+     if not set(review.ready).issubset(baseline.ready):
+         raise ValueError('D0_SCHEDULE_PREDECESSOR_PROOF_HOLD')
+--- a/product/ai-company-os-backend/tests/test_pinned_schedule_0220.py
++++ b/product/ai-company-os-backend/tests/test_pinned_schedule_0220.py
+@@ -104,3 +104,27 @@
+         self.assertEqual(review.ready,('a',))
+         self.assertEqual(review.decision,'HOLD')
+         self.assertFalse(review.claim_allowed or review.dispatch_allowed)
++
++    def test_backward_state_never_reachable_from_queued_pin(self):
++        rows=initial()
++        for version in (1, 7, 2**63-1):
++            with self.subTest(version=version):
++                changed=(replace(rows[0],state=RunState.CREATED,version=version),*rows[1:])
++                with self.assertRaisesRegex(ValueError,'D0_SCHEDULE_STATE_VERSION_HOLD'):
++                    inspect_pinned_schedule(PLAN,changed,rows)
++
++    def test_minimum_transition_count_from_nonzero_pin(self):
++        rows=tuple(replace(r,version=7) for r in initial())
++        for state,minimum in ((RunState.RUNNING,2),(RunState.PLANNING,2),
++                              (RunState.VERIFYING,3),(RunState.WAITING_APPROVAL,3),
++                              (RunState.FAILED,3)):
++            with self.subTest(state=state):
++                short=(replace(rows[0],state=state,version=7+minimum-1),*rows[1:])
++                with self.assertRaisesRegex(ValueError,'D0_SCHEDULE_STATE_VERSION_HOLD'):
++                    inspect_pinned_schedule(PLAN,short,rows)
++                for delta in (minimum,minimum+3):
++                    current=(replace(rows[0],state=state,version=7+delta),*rows[1:])
++                    review=inspect_pinned_schedule(PLAN,current,rows)
++                    self.assertEqual(review.ready,())
++                    self.assertEqual(review.decision,'HOLD')
++                    self.assertFalse(review.claim_allowed or review.dispatch_allowed)
