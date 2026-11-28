@@ -1188,5 +1188,99 @@
     "acceptance_delta_pp": 0,
     "limitations": "Full archive unavailable; local git direct DNS resolution failed; exact narrow source restored by connector with Git blob comparison. 44 open PRs, no uncommitted work visibility. No real commit/grant, CI, main, PROD, independent acceptance. Other source flows not activated.",
     "rollback": "ordinary revert isolated commit; original three-file patch available at parent."
+  },
+  "research_first_g6a_preclaim_actual_validation_20261128": {
+    "status": "LOCAL_CANDIDATE_6_ORIGINAL_PASS_1_TARGETED_PASS_PRODUCT_TRANSFER_HOLD",
+    "base": "9622df67af3e22db2d79e9060ae696d6edf5c3ba",
+    "governance": "019d8e88d2eb5ef07b3fb4d6b014ace066f32ba8",
+    "patch_blob": "7d52c24d2b8134553fa997de4469d141aa699925",
+    "source_preimage": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+    "local_postimage": {
+      "blob": "d0fba50b914d883c8df249d0e2e04dc372a70049",
+      "sha256": "d8c34a2447af051dfbdde0bcd51186a6f1515a8168e08441fb78199742216fc0",
+      "bytes": 11442,
+      "lines": 208,
+      "remote_patch_application": "exact context reconstructed from immutable patch; Git blob matches local"
+    },
+    "original_test": {
+      "path": "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py",
+      "source_commit": "253128a2236ee706486e70acc97e472ededac26b",
+      "blob": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+      "pass": 6,
+      "fail": 0,
+      "log": "tests/evidence/H01_RESEARCH_FIRST_G6A_PRECLAIM_20261128.log",
+      "log_blob": "7efd852f06899c228f1792e65551024f797528c7",
+      "log_sha256": "2ba87e674ebaf9d4782efb882c293e919ddcbc5862a060d32aa245a0bbaae2ff"
+    },
+    "targeted_check": {
+      "scope": "required new dual-reference rejection only; reused original SQLite fixture and Mock; not one of 30 methods",
+      "pass": 1,
+      "log": "tests/evidence/H01_RESEARCH_FIRST_G6A_DUAL_REFERENCE_20261128.log",
+      "log_blob": "1c01622fba24165bcb00ce179f94bb4ab07cdef5",
+      "log_sha256": "55ad842b56125001b297f809681fcf4659fc27c0670030408d6ac906c8b0a964",
+      "procedure": "ProtectedAuthorityTests.setUp(); snapshot; patch claim_and_fence and strict gate to raise if entered; invoke legacy wrapper with both refs; require PermissionError D5C_R8_DUAL_REFERENCE_HOLD; assert snapshot, claim/gate/connect/clock/journal unchanged; doCleanups."
+    },
+    "environment": {
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "flags": "-I -S -B",
+      "third_party": "none",
+      "source_pins": {
+        "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/agent_runtime/transition_command.py": "5680fa428be81645a43d7442ec161c0c10384986",
+        "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/transaction/review.py": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "app/core/transaction/port.py": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+        "app/core/transaction/intent_authority.py": "d0fba50b914d883c8df249d0e2e04dc372a70049",
+        "app/core/transaction/postgres_session.py": "6c0995712bd368f72c239cb19cd3e85aa781c1b9"
+      }
+    },
+    "previous_R6_log_reused": {
+      "blob": "c4eb079a5a4e8210c91aa35747dd6747ea0bdbfb",
+      "local_sha256": "2c40982e172152f2a2b2dbbd0cba8406652b9779d655877ad5f0e7a9bdbc6836",
+      "pass": 12,
+      "new_run": false
+    },
+    "original_methods": {
+      "previous": 12,
+      "current": 18,
+      "total": 30,
+      "remaining": 12
+    },
+    "architecture": {
+      "v135_zip_member": "AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1 (1).md",
+      "bytes": 12011382,
+      "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "29132-29214",
+        "105060-105095",
+        "116785-116827"
+      ],
+      "addenda": [
+        "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "adf651da6493f742dd473109b2a98776ca25198f",
+        "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+      ]
+    },
+    "hold": {
+      "r8": "10 NOT_RUN; exact closure requires IAM, ORG, company, durable_ops, assignment, SQL and fixture modules; direct git checkout DNS failure",
+      "g6a_fullchain": "2 NOT_RUN; imports cryptography, exact approved C50/R9 dependency/license review still HOLD",
+      "pr46": "affected original signed wrapper not run; no claim of behavioral closure",
+      "authority": "actual protected COMMIT and IV HOLD"
+    },
+    "product": {
+      "files": 594,
+      "manifest_entries": 593,
+      "manifest": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
+      "changes": 0
+    },
+    "decision": "Keep two-file patch quarantined because mandatory closure remains incomplete; no new independent engine or routine regression. Additional narrow dual reference check is required for changed behavior.",
+    "acceptance_delta_pp": 0,
+    "rollback": "normal revert evidence-only commit; product tree unchanged"
   }
 }
