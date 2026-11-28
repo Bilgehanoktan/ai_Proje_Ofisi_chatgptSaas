@@ -1,0 +1,123 @@
+{
+  "content": {
+    "schema": "aicos.worktype.publication-candidate.v1",
+    "worktype_id": "RESEARCH",
+    "version": "mvp03-request-1-rc1",
+    "namespace": "platform_shared",
+    "scope": "MVP-03_FIXED_RESEARCH_REQUEST_ONLY",
+    "plan_ref": "demo-plan-research",
+    "plan_revision": "sha256:6ad8b07933c43b06dffe7de9cb0e582d924449b3823c17f5425ce39086edbeb9",
+    "input": {
+      "body_fields": [
+        "worktype",
+        "project_ref",
+        "plan_ref",
+        "expected_plan_revision"
+      ],
+      "idempotency_header": "Idempotency-Key",
+      "server_owned": [
+        "tenant_id",
+        "company_id",
+        "environment_id",
+        "principal_id",
+        "project_revision",
+        "worktype_version",
+        "workowner_ref",
+        "approval"
+      ]
+    },
+    "output": {
+      "create": "HTTP201_ONLY_AFTER_VERIFIED_PROTECTED_COMMIT_AND_AUTHORIZED_READBACK",
+      "replay": "PROPOSED_HTTP200_ORIGINAL_RECEIPT",
+      "admission": "HTTP202_SEPARATE_OPERATION"
+    },
+    "oracle": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "excluded": [
+      "AGENT_ADMISSION",
+      "DISPATCH",
+      "PROVIDER_CALL",
+      "RESEARCH_EXECUTION",
+      "RESULT_RELEASE",
+      "EXTERNAL_EFFECT"
+    ],
+    "required_separate_decisions": [
+      "WORKTYPE_PUBLICATION",
+      "TENANT_ENTITLEMENT_AND_G8_AS_REQUIRED",
+      "HUMAN_IAM",
+      "PROTECTED_COMMIT",
+      "AGENT_GRANT_AND_RUN_ADMISSION"
+    ]
+  },
+  "content_digest": "10f87e6cdb8a6b1db7be79db92ff1fef40d79a999b6be7080ca2382c5b57fd3f",
+  "provenance": {
+    "source_commit": "325ee3009b80f1d1651013e3261c9a03dd7fe4bb",
+    "source_manifest_blob": "47545484c5399b9ff3b3d60c5ec1a50419d78376",
+    "functional_decision": "H01-MVP03-01",
+    "physical_direction": "H01-MVP03-PHYSICAL-A1",
+    "publication_owner_decision_commit": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+    "source_pins": [
+      {
+        "path": "fixtures/core.preview.json",
+        "git_blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b",
+        "bytes": 8418
+      },
+      {
+        "path": "app/core/orchestrator/engine.py",
+        "git_blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3",
+        "bytes": 3082
+      },
+      {
+        "path": "app/core/task_engine/dag.py",
+        "git_blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051",
+        "bytes": 3542
+      },
+      {
+        "path": "app/core/policy/denial.py",
+        "git_blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4",
+        "bytes": 1335
+      },
+      {
+        "path": "app/core/orchestrator/research_command_review.py",
+        "git_blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02",
+        "bytes": 5720
+      },
+      {
+        "path": "app/core/transaction/review.py",
+        "git_blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0",
+        "bytes": 7329
+      },
+      {
+        "path": "app/core/transaction/port.py",
+        "git_blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f",
+        "bytes": 4604
+      },
+      {
+        "path": "app/core/transaction/readback_review.py",
+        "git_blob": "f1e3049b40ee3c22117fb5ab7b8958d661157152",
+        "sha256": "f1659491190777fe1763ca8119bdd7aa9168b7f83d526131952bb02df75cda4b",
+        "bytes": 11814
+      }
+    ]
+  },
+  "provenance_digest": "e0697962fcee9fe9e51cbb47063fc8c3e5422a5c9c86728d56d92ec9828c6969",
+  "status": "REVIEW_CANDIDATE_NOT_PUBLISHED",
+  "plan_approval": "D0_FIXED_PLAN_REVIEWED_REAL_APPROVAL_HOLD"
+}

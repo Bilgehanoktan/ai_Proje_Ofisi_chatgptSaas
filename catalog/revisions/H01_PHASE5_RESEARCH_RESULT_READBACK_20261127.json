@@ -1,0 +1,54 @@
+{
+  "task": "H01-PHASE5-RESEARCH-END-TO-END",
+  "parent": "3a515bc540352393be30b51553736f9388648084",
+  "governance": "04ba25fe8934266202a2db3383f51551cac26320",
+  "decision": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "classification": "ISOLATED_D0_HISTORICAL_READBACK_ONLY",
+  "changes": [
+    {
+      "path": "ai-company-os-backend/app/core/development_review/research_slice.py",
+      "bytes": 12525,
+      "sha256": "48348d9745985a1555fdbe855a038a9eabddf8bbc77545925392f5aec451e37d"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_canonical_research_0224.py",
+      "bytes": 12222,
+      "sha256": "f59ffcfdb062013e4fd58fa0f3fdd316be34815ae0ef5672a2cb83cf58bcf8b6"
+    }
+  ],
+  "previous_blobs": [
+    "720044a4e4954820b8d298f73b6b75f2189b4f94",
+    "ff879639270a6015ff62ccc2744c585a21f43c4b"
+  ],
+  "previous_manifest": "b35139a590bafb2fa8d1cf074a8da200e31862b7",
+  "source_gain": "Existing inspect_research_slice reuses writer-side archive/journal separation and re-observes exact result binding and historical receipt before returning evidence_sha. Explicit request_id=None/request_linked=False. No wire schema, new writer, runtime, scheduler permission, receipt or new digest. Re-observation detects some drift, not cross-store atomicity or custody.",
+  "dependencies": {
+    "fenced_transition": "b43a8d1129138b917c499ad1091ac61940af1846",
+    "retained_history": "f65a6a9c79c053a9fa7cc53cfde897b1453b982d",
+    "scheduler": "eb3e283e3406996254283595e14711e90b2bca8c",
+    "runtime_model": "bd8df4e1ed65f83ca2b34ea01fca825cc14932af",
+    "memory_gateway": "9674f346ae0a009afa86d2bf884762806c2d89f1",
+    "skill_resolver": "0c6829a006f28f283e39d7aca62a8de1c3683949",
+    "ceo_office_join": "03ac36fcf87208cfc2bc90e9abb1297eda244117"
+  },
+  "ownership": "44 open PR titles inspected; related scheduler/IAM/UI/Skill work not modified. No independent owner signature; uncommitted work not visible.",
+  "historical": "0225 actual isolated SQLite root VERIFYING v3 and 3 events; 0224 result readback source retained, not current acceptance; successor tasks remain QUEUED and IV/H01 no run.",
+  "entry": "HOLD: H01-MVP03 WorkItem mapping ratification, real HUMAN permission/COMMIT/idempotency/readback, separate AGENT grant, independently custodied witness and protected commit, C50/R9. No normative operation implemented; mapping review 073531d8eaf23a11616d9adf8086eebc1c82f1e3 remains open. Independent MI10 review pending.",
+  "tests": {
+    "two_added_to_existing_suite": "NOT_RUN",
+    "eight_prior_methods": "historical/NOT_RUN current",
+    "scope": "archive/journal co-location and archive drift; no new runtime tests, no repeat historical tests"
+  },
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "MI02/03/04 + MI10 resolve typed WorkItem physical mapping and protected authority first; independently reviewed exact lock/runtime then run affected canonical result test suite and original binder suite; authorized request -> run linkage and result projection only with real evidence.",
+  "rollback": "ordinary revert isolated source commit; no DB, event, route, dependency, CI or production change"
+}

@@ -1,0 +1,62 @@
+{
+  "task": "H01-MVP03-PHASE3-REQUEST-UI-PERSISTENCE",
+  "parent": "1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1",
+  "governance": "b8fc9e54f483f962fe2c60adc5563b9c0640238d",
+  "decision": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "classification": "ISOLATED_D0_UI_SOURCE_ONLY",
+  "changes": [
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx",
+      "bytes": 12532,
+      "sha256": "39ea7506c317fd1859fc7a9dd9409e5406a534b55e47c79323263eaf3aff9969"
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx",
+      "bytes": 3665,
+      "sha256": "d31684c19649ef957868961a9c8b80f71be53fbd0836ec148826e9d119d80626"
+    }
+  ],
+  "previous_manifest": "3d213258bdec7839af65d143366ec6fe338a47a6",
+  "previous_dashboard": "3cf52a0fa79cdae441c5124d537f20b051d01f28",
+  "source_reuse": {
+    "plan_parser": "e337a8da904e31b027f02d5876ab451d8da1d699",
+    "shared_provider": "3b02873f6f645fe1d9f698ce966727d70e696220",
+    "binder": "b4e10628abc63c3559098790ce55d109801b71b8"
+  },
+  "functionality": "CEO summary renders ResearchRequestPanel; exact historical fixed plan selection; controlled local checkbox only while valid read mounted; existing shared GET reader/reset; no offline fallback, ORG join, fake project/request ID, POST or GET request lookup. Disabled submit/readback with explicit HOLD.",
+  "persistence_review": {
+    "iam": "f3c37428acd475e09c228bce47d534d6584cd944: D0 synthetic HUMAN/AGENT resolver, grant false, AGENT claim check; no real issuer/project permission",
+    "sql": "0183 D0 head/lease/event/audit/outbox; 0192 run events/outbox/fences; 0204C project-run membership is not WorkItem request",
+    "admission": "ba134d2e7d4ddecb41334071fc02236a35435dac: legacy D0 run admission, not request persistence",
+    "protected": "6c0995712bd368f72c239cb19cd3e85aa781c1b9: deliberately denies preconnection",
+    "disposition": "No approved physical request mapping verified. Do not reuse run identity, create parallel ledger, activate mutation or return 201/202."
+  },
+  "ownership": "H01 B central source writer; 44 open PR titles checked; existing MI05/03API reviews related; no changes to shared reader, parser, existing tests, backend or Studio files; uncommitted work not visible.",
+  "dependency": "C50/R9 existing 25-row reviewed union remains HOLD pending independent security/licensing/runtime; no installs/build.",
+  "evidence": {
+    "E01": "SOURCE_READY_BROWSER_NOT_RUN",
+    "E02": "HOLD",
+    "E03": "SOURCE_READY_RUNTIME_NOT_RUN",
+    "E04": "HOLD",
+    "E05": "HOLD",
+    "E06": "HOLD",
+    "E07": "HOLD",
+    "E08": "HOLD",
+    "E09": "HOLD",
+    "E10": "SOURCE_NO_MUTATION_RUNTIME_NOT_RUN",
+    "binder8": "NOT_RUN",
+    "ui_build": "NOT_RUN"
+  },
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "next": "MI02/03/04 reconcile actual Project/WorkItem physical mapping, HUMAN project permission and protected durable request idempotency/readback; MI10 dependency/security/license runtime disposition; Codex exact candidate build, 8 binder checks, actual UI browser when approved. Phase4 HOLD.",
+  "rollback": "ordinary revert isolated source commit; no DB changes."
+}

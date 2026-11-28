@@ -1,0 +1,227 @@
+{
+  "task": "H01-MVP03-T1-WORKITEM-MAPPING-RATIFICATION",
+  "phase": "6 work focus; same P0 task",
+  "parent": "3d50b3343e2d1431fdbc305edd7a272c1f14a144",
+  "governance": "50738ca50f32259d4613144c8c390967301c1c4c",
+  "decision": "f3cea35ef45c531d30724795fbb4c189f7e9e5a1",
+  "changes": [
+    {
+      "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+      "bytes": 4684,
+      "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd"
+    },
+    {
+      "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+      "bytes": 4841,
+      "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f"
+    },
+    {
+      "path": "ai-company-os-frontend/features/ceo-dashboard/ResearchRequestPanel.tsx",
+      "bytes": 4147,
+      "sha256": "6d1a6796c3c50f3dab80e9d292ca59dfdb4adc550bee1ecc17ef4b7d394c08c7"
+    }
+  ],
+  "previous_blobs": [
+    "b4e10628abc63c3559098790ce55d109801b71b8",
+    "a9683b7be2acd1354583dadd52b6731983873210",
+    "def3649259e53bbf526386f52c82a429ea44b965"
+  ],
+  "previous_manifest": "d0be0ecb733e76a4241086415733150cd9260fe0",
+  "source_gain": [
+    "Validated opaque Idempotency-Key carried by existing internal D0 ResearchPlanBinding, hidden from repr, participates in equality; no digest protocol, persistent fence or request receipt.",
+    "CEO plan selection bound to actual shared historical ReadState object, not revision alone; reread/reset or invalid/expired observation cannot display an old selection. No new read/write endpoint; buttons remain disabled.",
+    "Existing test method extended for key preservation/distinction/redacted repr and HOLD. No new suite."
+  ],
+  "dependencies": {
+    "plan_parser": "e337a8da904e31b027f02d5876ab451d8da1d699",
+    "projection_reader": "58e1085b1804c8b83f17f0e8c836feee84706164",
+    "shared_provider": "3b02873f6f645fe1d9f698ce966727d70e696220",
+    "reader_hook": "4294f67533cd1ff0d92a117935393bbee84d2abe"
+  },
+  "ownership": "44 open PR titles checked, no WorkItem path overlap identified; existing UI and API shared files left unchanged. No independent approval or access to uncommitted work.",
+  "core": {
+    "status": "HOLD",
+    "review": "PR10 comment 7225465563",
+    "finding": "Existing T1 operation/mapping not ratified; proposed typed aggregate workitem operation not implemented. No new schema, grant or transport."
+  },
+  "iam": {
+    "status": "HOLD",
+    "review": "PR46 comment 7225466658",
+    "finding": "No real HUMAN project create/read permission yet. No write route or authorized readback."
+  },
+  "runtime": {
+    "status": "HOLD",
+    "review": "PR52 comment 7225467598",
+    "lock": "fb50ae2d06594150887e849d61de027c61ae1492",
+    "finding": "No new approval. Existing 25-row lock and pin comparison retained. No install."
+  },
+  "tests": "NOT_RUN (affected binder suite 8 methods; UI browser/typecheck not run). Local preinstalled Python 3.13.5 and tsc 5.8.3 not evidence of approved full runtime; no full exact checkout.",
+  "phase4": "E01/E03/E10 NOT_RUN; E02/E04-E09 HOLD",
+  "phase5": "real execution HOLD",
+  "acceptance": {
+    "MVP": "0/11",
+    "UI": "21/40",
+    "Core": "12/16",
+    "W8": "3/8",
+    "IV": "0/7",
+    "delta_pp": 0,
+    "weighted": "HESAPLANAMADI",
+    "ordinal": "unchanged"
+  },
+  "rollback": "ordinary revert source commit; no DB/event/API/dependency or data migration.",
+  "direction_a_source_increment_20261127": {
+    "parent": "c6fef15068e7f9fcd752b0513d39ca9dc39c82d4",
+    "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/review.py",
+        "previous_blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "bytes": 7329,
+        "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/transaction/port.py",
+        "previous_blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "bytes": 4604,
+        "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
+      },
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "previous_blob": "591f3685ab69d5e202124bbdd4716ebc161c5ba0",
+        "blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "bytes": 5720,
+        "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "previous_blob": "9aba76bb610c210a4195d0568929a880bb9704e4",
+        "blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "bytes": 10002,
+        "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
+      }
+    ],
+    "manifest": "5e72517cb441c77dd6ee5242483f3b66287d6b82",
+    "evidence": "handover/evidence/H01_MVP03_DIRECTION_A_20261127/",
+    "tests": {
+      "run": 14,
+      "pass": 14,
+      "fail": 0,
+      "original_regression": 8,
+      "new": 6,
+      "seconds": 0.011,
+      "exit": 0
+    },
+    "source_gain": "Typed D0 draft and existing coordinator review connected; does not write or issue receipt",
+    "acceptance": "0/11",
+    "physical": "HOLD"
+  },
+  "physical_readback_review_20261127": {
+    "parent": "7e1d3db19bba810485b2fb093009e8ae6317d9e7",
+    "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/readback_review.py",
+        "previous_blob": "bba032b058a8c9406e58fa90091b1894cd795190",
+        "blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "bytes": 8217,
+        "sha256": "696d5404faf87ed2766975b48ae250351b46e9522ff87e4c4bcf7835296d6bb0"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+        "previous_blob": null,
+        "blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "bytes": 7173,
+        "sha256": "8e51ce36dc9cd75940473cf58ab500a933d03fabbc9bc9ff337005bd89c2c17a"
+      }
+    ],
+    "manifest": "84b001d9031ac460d19f5113780198338df79e14",
+    "evidence": "handover/evidence/H01_MVP03_PHYSICAL_READBACK_20261127/",
+    "source_gain": "Pure WorkItem six-role readback inspection; no physical authority or receipt",
+    "authority_status": "PROJECT_AND_WORKTYPEVERSION_PHYSICAL_TARGETS_UNRESOLVED",
+    "proposal": "project_heads, project_revisions, worktype_versions, worktype_scope_bindings, workitem_heads; no DDL",
+    "tests": {
+      "new": 7,
+      "agent_regression": 11,
+      "prior_binder_reused": 14
+    },
+    "acceptance": "0/11",
+    "physical": "HOLD"
+  },
+  "physical_a1_authority_review_20261127": {
+    "parent": "07c62ca1cdcc6d433bd40784ded2806fa8483cf9",
+    "governance": "9aac7d0d9847d7596975dea74e49fa6e2b1af20a",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/transaction/readback_review.py",
+        "previous_blob": "f716aec292499a49000960fd748a23c8b88272bc",
+        "blob": "f1e3049b40ee3c22117fb5ab7b8958d661157152",
+        "bytes": 11814,
+        "sha256": "f1659491190777fe1763ca8119bdd7aa9168b7f83d526131952bb02df75cda4b"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_workitem_readback_mvp03.py",
+        "previous_blob": "c7395cb9d9a23040bd4d49f490c5dda08db00562",
+        "blob": "1f42e86554824ffc8a0c6ef4b090b166fa965984",
+        "bytes": 12177,
+        "sha256": "5899a608636cebd3e5bbaa429249efe48949d0fa20bc77b122f525f8505b7d66"
+      }
+    ],
+    "manifest": "47545484c5399b9ff3b3d60c5ec1a50419d78376",
+    "evidence": "handover/evidence/H01_MVP03_PHYSICAL_A1_AUTHORITY_20261127/",
+    "source_gain": "Existing six-role readback joined to proposed Project revision, immutable WorkTypeVersion and scoped binding observations; structural only",
+    "contract": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+    "authority": "ROLE_PROPOSAL_CUSTODY_AND_PUBLICATION_ADR_HOLD",
+    "tests": {
+      "workitem": 12,
+      "new": 5,
+      "agent_regression": 11,
+      "prior_binder_reused": 14
+    },
+    "acceptance": "0/11",
+    "physical": "HOLD"
+  },
+  "research_publication_candidate_20261128": {
+    "parent": "325ee3009b80f1d1651013e3261c9a03dd7fe4bb",
+    "governance": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+    "delta": [
+      {
+        "path": "ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+        "previous_blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "blob": "a05379b6909d2c3d1a5668c38942ba0151ac1233",
+        "bytes": 9355,
+        "sha256": "e955d26b9c57891a0e65f4a44b79e1672c2696c526c32e165b15bf74eccd346c"
+      },
+      {
+        "path": "ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+        "previous_blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "blob": "2ff3164422a0f3984f5b5c1c24f8678e4bcd069c",
+        "bytes": 13846,
+        "sha256": "6aa226ca38b571cf70a5b1520489ba05ed8b71e3a261ea0f12532e88363b975e"
+      },
+      {
+        "path": "ai-company-os-backend/fixtures/research.worktype.publication_candidate.json",
+        "previous_blob": null,
+        "blob": "f443a28be483118d4e54d8494a122126e551198d",
+        "bytes": 4107,
+        "sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e"
+      }
+    ],
+    "manifest": "3258d265ab14f8e50b1a2558cd109a13427fb2f0",
+    "evidence": "handover/evidence/H01_MVP03_RESEARCH_PUBLICATION_20261128/",
+    "worktype": "RESEARCH",
+    "version": "mvp03-request-1-rc1",
+    "content_digest": "10f87e6cdb8a6b1db7be79db92ff1fef40d79a999b6be7080ca2382c5b57fd3f",
+    "package": "product/ai-company-os-backend/fixtures/research.worktype.publication_candidate.json",
+    "publication": "HOLD_NOT_PUBLISHED",
+    "source_gain": "Exact candidate package linked to existing D0 WorkItem draft seam",
+    "tests": {
+      "run": 18,
+      "new": 4,
+      "regression": 14
+    },
+    "acceptance": "0/11",
+    "physical": "HOLD"
+  }
+}

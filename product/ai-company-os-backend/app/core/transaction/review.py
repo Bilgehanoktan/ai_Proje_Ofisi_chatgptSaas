@@ -1,7 +1,7 @@
 """R03 D0 logical write-set inspection. No DB, SQL, real commit, or provider call.
 Physical four/five/seven mapping remains HOLD. These names are logical roles only.
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 import re
 from app.core.agent_runtime.lifecycle import Scope, LeaseObservation, ClockSample, valid_scope, token, uint, inspect_lease
@@ -64,6 +64,54 @@ class T1Review:
     dispatch_allowed: bool = False
     physical_mapping: str = 'PHYSICAL_MAPPING_HOLD'
     committed_version: int | None = None
+
+
+@dataclass(frozen=True)
+class WorkItemScopeDraft:
+    """Synthetic review references only, not authenticated HUMAN scope."""
+    tenant_id: str
+    company_id: str
+    environment_id: str
+    project_ref: str
+    principal_id: str
+
+
+@dataclass(frozen=True)
+class WorkItemRequestDraft:
+    """Direction A review envelope; never a LogicalIntent or durable receipt."""
+    scope: WorkItemScopeDraft
+    project_revision: str
+    worktype_version: str
+    workowner_ref: str
+    plan_ref: str
+    plan_revision: str
+    plan_digest: str
+    idempotency_key: str = field(repr=False)
+    operation: str = field(default='WORKITEM_REQUEST', init=False)
+    worktype: str = field(default='RESEARCH', init=False)
+    expected_version: int = field(default=0, init=False)
+
+
+def inspect_workitem_request(draft: object) -> T1Review:
+    """Review candidate references and role needs; no authority or transaction."""
+    if type(draft) is not WorkItemRequestDraft or type(draft.scope) is not WorkItemScopeDraft:
+        return T1Review('WORKITEM_DRAFT_INVALID', decision='DENY')
+    s = draft.scope
+    if (s.tenant_id != 'synthetic-tenant' or s.company_id != 'synthetic-company'
+            or s.environment_id != 'A0_SAMPLE_ONLY' or not token(s.project_ref)
+            or not token(s.principal_id) or not s.principal_id.startswith('demo-')):
+        return T1Review('WORKITEM_D0_SCOPE_HOLD', decision='DENY')
+    if (draft.operation != 'WORKITEM_REQUEST' or draft.worktype != 'RESEARCH'
+            or type(draft.expected_version) is not int or draft.expected_version != 0
+            or not all(token(v) for v in (draft.project_revision, draft.worktype_version,
+                                          draft.workowner_ref, draft.plan_ref, draft.idempotency_key))
+            or not digest_ok(draft.plan_digest)
+            or draft.plan_revision != 'sha256:' + draft.plan_digest):
+        return T1Review('WORKITEM_DRAFT_REFERENCES_INVALID', decision='DENY')
+    # No physical observations supplied: all candidate base roles remain missing.
+    # Do not allocate a request_id, fake a lease, or enter the generic commit path.
+    return T1Review('WORKITEM_MAPPING_AUTHORITY_HOLD', structural_match=True,
+                    missing_roles=tuple(sorted(BASE_ROLES)))
 
 
 def valid_intent(i: object) -> bool:

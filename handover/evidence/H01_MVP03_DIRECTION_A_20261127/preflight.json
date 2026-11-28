@@ -1,0 +1,234 @@
+{
+  "parent": "c6fef15068e7f9fcd752b0513d39ca9dc39c82d4",
+  "governance": "12d8a9f7624427fbe4b56851133532bd6c9e839e",
+  "manifest_before": "5c3cb41b5f4ac4b0b4944c99403e646292bcc8cb",
+  "manifest_after": "5e72517cb441c77dd6ee5242483f3b66287d6b82",
+  "scope": "Exact 16-file closure reconstructed from GitHub text and uploaded fixture; base blobs/bytes/SHA256 checked against GitHub tree and manifest; changed sources match locally tested Git blobs",
+  "python": "3.13.5 Linux",
+  "command": "python -B -S -m unittest discover -s tests -p test_research_command_review_mvp03.py -v",
+  "tests": {
+    "run": 14,
+    "pass": 14,
+    "fail": 0,
+    "original_regression": 8,
+    "new": 6,
+    "seconds": 0.011,
+    "exit": 0
+  },
+  "raw_log": {
+    "blob": "64976513245c1624043d32df6c835dc41107defc",
+    "sha256": "90a1ccff06158befabd6de2f0ba06f9f782df9e635b48503f2e6ec0f9bb4566c",
+    "bytes": 2245
+  },
+  "closure": [
+    {
+      "path": "product/ai-company-os-backend/app/__init__.py",
+      "base": {
+        "bytes": 0,
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tested": {
+        "bytes": 0,
+        "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/__init__.py",
+      "base": {
+        "bytes": 59,
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      },
+      "tested": {
+        "bytes": 59,
+        "blob": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "sha256": "967386f3247a32fddf49b7a671cb0355f6dfd384a856d587486f89364c43d920"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/__init__.py",
+      "base": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+      "base": {
+        "bytes": 7251,
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      },
+      "tested": {
+        "bytes": 7251,
+        "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/__init__.py",
+      "base": {
+        "bytes": 259,
+        "blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      },
+      "tested": {
+        "bytes": 259,
+        "blob": "9c1e71bb5024a99ec60f934c5944584f63217692",
+        "sha256": "cd74278df227a78b80471aedc67632239e6ac815406ee01a1e7ab48390c10cb6"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/engine.py",
+      "base": {
+        "bytes": 3082,
+        "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      },
+      "tested": {
+        "bytes": 3082,
+        "blob": "f327ab8a69336cd1ba4d61f56035f540c66d700e",
+        "sha256": "354e3b173c50f3c9de55209f33bd6045e53feb48c09808d97e705c0671c91ca3"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/orchestrator/research_command_review.py",
+      "base": {
+        "bytes": 4684,
+        "blob": "591f3685ab69d5e202124bbdd4716ebc161c5ba0",
+        "sha256": "9e891b845ec6684b8fee5f85135b5b8000695ccf1459f1f708741122fd53a8cd"
+      },
+      "tested": {
+        "bytes": 5720,
+        "blob": "93f6fa1d3d14a8781f6d2fcd227790879e48ec63",
+        "sha256": "1b5a9b7fc8f154af739c9aad38db43d436183b3f9a5d6d62c384a62217ce8f02"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/__init__.py",
+      "base": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/policy/denial.py",
+      "base": {
+        "bytes": 1335,
+        "blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      },
+      "tested": {
+        "bytes": 1335,
+        "blob": "9768b34e447c08136440c891b1974fae131f3ebd",
+        "sha256": "5f5d63e4a4a37e909b2f09c3e9216387d9cddd2ec2c19eb6ca7a815d1e1bc0d4"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/__init__.py",
+      "base": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/task_engine/dag.py",
+      "base": {
+        "bytes": 3542,
+        "blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      },
+      "tested": {
+        "bytes": 3542,
+        "blob": "6e389fe77252eecb29e4f152760f1dd7ffe07bc1",
+        "sha256": "23e86ebf365d48889a1cf64b4a2a410728164542abfe8fb7dc6ed7765783d051"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/__init__.py",
+      "base": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      },
+      "tested": {
+        "bytes": 49,
+        "blob": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "sha256": "c7026b133d77cf305584108cf30743db8884c2f2f4bc96c1e6a8d1c1ecd8cefe"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+      "base": {
+        "bytes": 4286,
+        "blob": "b0dde358be781b48e06b8901acc63ef31b013db0",
+        "sha256": "14e0b19dd800cb9cdd4f7df42cea1b35d239064c74abe28e678b95b50ff8b56b"
+      },
+      "tested": {
+        "bytes": 4604,
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "sha256": "68e198d1c448b62ce5d2fb421538acc517c855ea7bc62657196942a5b36adf0f"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/app/core/transaction/review.py",
+      "base": {
+        "bytes": 5065,
+        "blob": "79b2b442f51bb5ea7706a33a5f9f1e7aed258cd4",
+        "sha256": "ea557857210bf8c59e772ce94b91d9be53e1a4efcaa0a4b82ed597cb5453a908"
+      },
+      "tested": {
+        "bytes": 7329,
+        "blob": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "sha256": "c164b3e0455d24b7d3f0844f1591346bb0007a41259879e80695c60cdf49c4b0"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/fixtures/core.preview.json",
+      "base": {
+        "bytes": 8418,
+        "blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      },
+      "tested": {
+        "bytes": 8418,
+        "blob": "1e36d523d5fb326b1bc9a4acc5197ef6b29a5dc7",
+        "sha256": "3f06282142ca685f21cce6a83ebb6341fe3b8c470027b912662c6d879f15256b"
+      }
+    },
+    {
+      "path": "product/ai-company-os-backend/tests/test_research_command_review_mvp03.py",
+      "base": {
+        "bytes": 4841,
+        "blob": "9aba76bb610c210a4195d0568929a880bb9704e4",
+        "sha256": "a9799ea5973f3f899a587641328602998470b2166656b51385942a7944ab454f"
+      },
+      "tested": {
+        "bytes": 10002,
+        "blob": "e26679e2aa8a66e89e12ea6ac2e8cd488baff264",
+        "sha256": "14cb56bd98eeff30d694c3ca37ead7111a681f550d8c66413043cec1dd4dcf41"
+      }
+    }
+  ],
+  "excluded": "No full checkout/build, real IAM, DB, runtime, migration, install, CI, independent acceptance, provider or route."
+}

@@ -1,0 +1,1617 @@
+{
+  "parent": "9386ec986cefad3d2a3668ff94f711218e1d0fca",
+  "shared_product": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+  "governance": "f89b8f9a4c6d7f19f15be60827843eeaa4456c5f",
+  "source": "353c5c8d00dae3649b029c16e9b8aae96eb61e01",
+  "product_files_before": 592,
+  "product_files_after": 593,
+  "manifest_entries_after": 592,
+  "refs_compared": 350,
+  "source_changes": [
+    {
+      "path": "ai-company-os-backend/app/core/development_review/admission_sample.py",
+      "previous_blob": "a697188c51173e23d645fac95abf99c282f939b3",
+      "blob": "a530d415f5fb1f7e7eff79c1aa1bda3c36057859",
+      "bytes": 8672,
+      "sha256": "bcb8e58049e96277153b98a37b054d3c59e0d2e473af52d4763c369eb56ddfe3"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/development_review/paired_read_guard.py",
+      "previous_blob": null,
+      "blob": "63659a7648bafe633cb3f80300f776bf3c842cf9",
+      "bytes": 2897,
+      "sha256": "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347"
+    },
+    {
+      "path": "ai-company-os-backend/app/core/development_review/task_budget_snapshot.py",
+      "previous_blob": "18b40307d069622be114b77de272aaa4adaa0f85",
+      "blob": "086584de235756f24aebea16657fa51793fc06e2",
+      "bytes": 4515,
+      "sha256": "06dcc74490cd9fa31d66ada69a017370174b23dd3c30d7e395fd3c3b6653a798"
+    }
+  ],
+  "prior_evidence": {
+    "commit": "353c5c8d00dae3649b029c16e9b8aae96eb61e01",
+    "lock_path": "tests/evidence/W1_0198_P09/final_lock.json",
+    "lock_blob": "91b5018e3edebd8c08f41c4bc03cd5ea799701a8",
+    "status": "REPORTED_NOT_RETESTED"
+  },
+  "changed_pr_paths": {
+    "PR#10": {
+      "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#19": {
+      "head": "0a8907f177bb3e9b458aefb3ea3441b15537f542",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "b28788f46a39c282d79d29c4abd817ed5fc9de99"
+      }
+    },
+    "PR#31": {
+      "head": "316d2dd86d245fd8f04bdb6921c57eafe63c590a",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "b28788f46a39c282d79d29c4abd817ed5fc9de99",
+        "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "ae42ecccdda987c00537696f2698f49c374ec927",
+        "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": "a1ff4a1690a0b113aa882de633e063c02f9535a4"
+      }
+    },
+    "PR#34": {
+      "head": "93d527cf436fe56d44a27f883980baa6edf236c5",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9"
+      }
+    },
+    "PR#35": {
+      "head": "39310fd452cf6cebcfd92ae02fe67c935c4c3978",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#36": {
+      "head": "683a26171ac54544260456ce84e19c38614aa5e2",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#37": {
+      "head": "63fa94f5c73924940311b120e485c3ae34b87df6",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#38": {
+      "head": "0ce023ea53e6aed4938528941ebe4fa37c7da6d4",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/requirements-history-signatures.txt": "921818de26b481ed94603d8e596a384abf04bfa9",
+        "product/ai-company-os-frontend/tests/ui-p10j18-agent-profile.test.cjs": "0aaec8456aa549d842735e1063a9e2568d5a541f"
+      }
+    },
+    "PR#39": {
+      "head": "8e614ec744b59bb1c3cb6c1166f59c3a6eb4941e",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#40": {
+      "head": "1a75ea2cd287f8fbeab01f4ce5fd89c4197ba2c9",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#41": {
+      "head": "ebd307fecc081a523fec1cefcb5070cc3e38a977",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#42": {
+      "head": "659fa93ca60364395095a0efe74ab3ed37051303",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#43": {
+      "head": "5b6b5456a7a40e13bddc524f6476ab2d2339977e",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#44": {
+      "head": "098afa1c0122d9d2b278898fece94b0adc1fab07",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#45": {
+      "head": "17911f73003e6ac303579d40d4a9aac8a3e2fe98",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "4a35c712a92a609e8ed07e5ea28d24a15eb67576",
+        "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": "c8a333c82c3706f3b8e4ee191034bdf30bec1187"
+      }
+    },
+    "PR#46": {
+      "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#47": {
+      "head": "a647095f57c319210596a3552dfacf40a37baf2d",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#48": {
+      "head": "59400debd73bf3b5e2df1e0d2fe008fd4e633917",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "4a35c712a92a609e8ed07e5ea28d24a15eb67576",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "b9046f4f4f92ea121ecb530c7fa781af96d8d79d",
+        "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": "c8a333c82c3706f3b8e4ee191034bdf30bec1187"
+      }
+    },
+    "PR#49": {
+      "head": "3361ae04310b9b7f51114aefca83f8c8c5255410",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "4cbdcedff13166a6f4228fafd260b2ebf5add90a",
+        "product/ai-company-os-frontend/tests/ui02-ceo-source-summary.test.cjs": "cb9f510a762b460a63e3ce64edf974a6ba5f6762",
+        "product/ai-company-os-frontend/tests/ui03-readstatus-presentation-r3.test.cjs": "38da03a56d60c37cefc15069791f7f83dd6b0ee6"
+      }
+    },
+    "PR#50": {
+      "head": "596282284a9b29216a89a7cc20651b3b31c501bd",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/app/api/demo/office-workbench/route.ts": "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079"
+      }
+    },
+    "PR#51": {
+      "head": "c12567aed7d8f20aab9c4162471cfc97808c5d0d",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-frontend/features/mvp/readBoundedD0Json.ts": "f3fe889b41ad3d8445025458225aa34d3d63a5e9"
+      }
+    },
+    "PR#52": {
+      "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+      "merge_base": "b395d1944877128ab1bb7fa6477fc3188841fe57",
+      "product_delta": {
+        "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py": "f354ee1fdceca013ad6cf32fdea7c41001794083",
+        "product/ai-company-os-backend/app/core/development_review/research_slice.py": "720044a4e4954820b8d298f73b6b75f2189b4f94",
+        "product/ai-company-os-backend/app/core/transaction/intent_authority.py": "fa47acd32adb309896f762ec50e47bf26641adbb",
+        "product/ai-company-os-backend/app/engines/model_gateway/sample_adapter.py": "86ddb2771c881dd3da6bc2b5845bf98f3577c713",
+        "product/ai-company-os-backend/tests/test_authority_wrapper_0213.py": "f921dbe2abc114cb2b7ff2eb384468a5779eee5b",
+        "product/ai-company-os-backend/tests/test_canonical_research_0224.py": "e121ee6275def01070397a942a8434ff37b611a6",
+        "product/ai-company-os-backend/tests/test_effect_fence_reference_0216.py": "81b473eae07b66b3cfe38c52018fd6431e36c94f",
+        "product/ai-company-os-backend/tests/test_lifecycle_proxy_0225.py": "3e16b9952af6886b6579729108a0278042ac4052",
+        "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py": "65716d57080ea94602a8d49da1682d0d14bb74dc",
+        "product/ai-company-os-backend/tests/test_research_company_snapshot_0224.py": "d51dca6c425a40d196390361e071d02026d1f548",
+        "product/ai-company-os-backend/tests/test_research_roster_0224.py": "24596fdc3ac6e340d7798529b5308a6e4c6eff67",
+        "product/ai-company-os-frontend/app/api/demo/plan/route.ts": "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0",
+        "product/ai-company-os-frontend/app/api/demo/shared-snapshot/route.ts": "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6",
+        "product/ai-company-os-frontend/components/dashboard/OfficePanel.tsx": "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256",
+        "product/ai-company-os-frontend/features/ceo-dashboard/Dashboard.tsx": "593af6fd77724bd3b771fc408e4dbda4464abaa8",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotPanel.tsx": "9f8eff3dfeecc009f93ce2089eefff4f54aa8776",
+        "product/ai-company-os-frontend/features/data/SharedSnapshotProvider.tsx": "25f5b4f69eccefaacebfb80d65e046d23e2a1ace",
+        "product/ai-company-os-frontend/features/data/projectionRead.ts": "5456a3812117d4f4d9503e4875625e58bea0382b",
+        "product/ai-company-os-frontend/features/data/projectionRegistry.ts": "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6",
+        "product/ai-company-os-frontend/features/data/sharedSnapshot.ts": "9abf25315e79ba54b071702ca5b74b9656f3bbbc",
+        "product/ai-company-os-frontend/features/mvp/LifecyclePrefixReadback.tsx": "abac1ae5382ab7a3d2148e815b65be0e2da1bccd",
+        "product/ai-company-os-frontend/features/mvp/LifecycleReadback.tsx": "46827e7a4925cf56efdcda498250ce5e0f05e10e",
+        "product/ai-company-os-frontend/features/mvp/StudioContextPanel.tsx": "dbfed501c97f0570b0f6a93e9cf0838c41449038",
+        "product/ai-company-os-frontend/tests/projection-registry.test.cjs": "d7cdc2f1918d7328e4b180558488987ca00ad444"
+      }
+    },
+    "PR#53": {
+      "head": "00dc79796748a6aa84c0c787092fcb087b44e7c8",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#54": {
+      "head": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {}
+    },
+    "PR#55": {
+      "head": "65ddae6a33d94593ed686b53698a6d8ad48919b4",
+      "merge_base": "254e0188998d0d245bd8ee4eb901aead02951a66",
+      "product_delta": {
+        "product/ai-company-os-backend/app/engines/skill_engine/resolver.py": "1a448e4658ffd8dcf3884fef150dab8d77b766ca"
+      }
+    }
+  },
+  "missing_path_inventory": {
+    "product/ai-company-os-backend/app/core/development_review/paired_read_guard.py": {
+      "disposition": "TRANSFERRED_D0",
+      "source_blobs": {
+        "origin/integration/w1-0198-p09": "63659a7648bafe633cb3f80300f776bf3c842cf9"
+      }
+    },
+    "product/ai-company-os-backend/app/core/event_store.py": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/recovery/0158-r5": "e3f94cab61a27c7d4c89d02516887146b2026eb3",
+        "origin/recovery/0159-structure": "e3f94cab61a27c7d4c89d02516887146b2026eb3"
+      }
+    },
+    "product/ai-company-os-backend/app/core/orchestrator.py": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/recovery/0158-r5": "62aee5a6f2c063445b574a400d7bb53472319969",
+        "origin/recovery/0159-structure": "62aee5a6f2c063445b574a400d7bb53472319969"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r9-claim-fullchain-evidence": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+        "origin/workstream/0230-d5g6a-protected-preclaim-integration": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_authority_preclaim_fullchain_d5g6a.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r9-claim-fullchain-evidence": "822d27c55b6626a07cd9a56b4dbd53d9eb52292d",
+        "origin/workstream/0230-d5g6a-protected-preclaim-integration": "822d27c55b6626a07cd9a56b4dbd53d9eb52292d"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_core_operations_assignment_mi03.py": {
+      "disposition": "HISTORICAL_REGRESSION_REVIEW",
+      "source_blobs": {
+        "origin/review/mi03-gate02-core-positive-20261119": "23c2f019a27bc9e16d8de3f2af72c239eefac035"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_postgres_strict_expiry_d5c_r6.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r6-strict-commit-hold": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "origin/planning/0230-d5c-r7-strict-preclaim-hold": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "origin/planning/0230-d5c-r8-g5-t1-protected-integration": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "origin/planning/0230-d5c-r8-transport-evidence": "cde0ed2b841c6b48500a464979096aad55a635b1"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_protected_org_t1_d5c_r8.py": {
+      "disposition": "HOLD_PHYSICAL_AUTHORITY",
+      "source_blobs": {
+        "origin/planning/0230-d5c-r8-g5-t1-protected-integration": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc",
+        "origin/planning/0230-d5c-r8-transport-evidence": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc"
+      }
+    },
+    "product/ai-company-os-backend/tests/test_runtime_memory_t1_w5_mem05a.py": {
+      "disposition": "HISTORICAL_REGRESSION_REVIEW",
+      "source_blobs": {
+        "origin/integration/w5-mem-05a-runtime-memory-contract": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05c-r2-memory-gateway": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05d-recovery-reconciliation": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05e-r1-authority-source-alignment": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/integration/w5-mem-05e-recovery-gateway-binding": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/planning/w5-mem-05c-gateway-memory-contract": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/planning/w5-mem-05c-r1-exact-regression-evidence": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1",
+        "origin/planning/w5-mem-05c-r1-portable-regression": "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1"
+      }
+    },
+    "product/ai-company-os-frontend/app/api/local-mvp/readback/route.ts": {
+      "disposition": "HOLD_LEGACY_ROUTE_AND_PANEL",
+      "source_blobs": {
+        "origin/recovery/0172-r12-readback-integration": "d0bff84e4adb1cac9bc21b5b0efcb5ecb8cdd5bd"
+      }
+    },
+    "product/ai-company-os-frontend/components/dashboard/LocalReadbackPanel.tsx": {
+      "disposition": "HOLD_LEGACY_ROUTE_AND_PANEL",
+      "source_blobs": {
+        "origin/recovery/0172-r12-readback-integration": "768873f1bc4b884679b845ec43711c853283565f"
+      }
+    },
+    "product/ai-company-os-frontend/features/evidence/HistoricalEvidence.tsx": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/integration/ui-0210-p10d": "491dcc77bde9fd1b31a7bbf8aae33fe02c344bd5",
+        "origin/integration/ui-0211-p10e": "3a009e3250ecf4c563844957936df74cfc07cf4d",
+        "origin/integration/ui-0211-p10f": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ui-0212-p10g": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ui-0212-p10h": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ui-0212-p10i": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-02-5": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-02-5b-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-02-office-motion": "3a009e3250ecf4c563844957936df74cfc07cf4d",
+        "origin/integration/ux-premium-03-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-04-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-05-native": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-06-consolidation": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-07-a0-traffic-fix": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/integration/ux-premium-07-a0b-build": "19e18f9d1a5baaa59528adc06d81b1ab62706f74",
+        "origin/planning/ux-premium-07-office-realignment": "19e18f9d1a5baaa59528adc06d81b1ab62706f74"
+      }
+    },
+    "product/ai-company-os-frontend/features/project-management/DependencyNeighborhood.tsx": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/integration/ui-0212-p10i": "f2703319f9a11d6545105c9e7652188f322fee86"
+      }
+    },
+    "product/ai-company-os-frontend/features/workflow/DraftInspector.tsx": {
+      "disposition": "SUPERSEDED_OR_RELOCATED",
+      "source_blobs": {
+        "origin/integration/mi-03-r2-readonly-identity": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/mi-04-transport-source-transfer": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/mi-07-08-model-memory-transfer": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/mi10-limited-ci-20261119": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j20-workflow-inspector-a4r2": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j21-skill-memory-studio": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j22-finance-security-studio": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j23-premium-management-eds": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j24-product-acceptance": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/p10j24b-source-recovery": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/unified-u1-core-ui-office": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/unified-u2-shared-runtime": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/unified-u3a-product-acceptance": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-ext-06-skill-studio": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05a-runtime-memory-contract": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05c-r2-memory-gateway": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05d-recovery-reconciliation": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05e-r1-authority-source-alignment": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/integration/w5-mem-05e-recovery-gateway-binding": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-01-skill-evaluation": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-02-superpowers-guidance": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-03-ui-recommendations": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-04-local-video": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-05-skill-manifest-review": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-07r5-acceptance-transfer": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-ext-07r6-source-preflight": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-01-lineage-continuity": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-02-revision-continuity": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-03-history-commitment": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-03r1-regression-evidence": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-04-signed-checkpoint": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-05c-gateway-memory-contract": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-05c-r1-exact-regression-evidence": "b57e27761e60351e62224b569ad107cd54fd8daf",
+        "origin/planning/w5-mem-05c-r1-portable-regression": "b57e27761e60351e62224b569ad107cd54fd8daf"
+      }
+    }
+  },
+  "blob_bytes_sha256": {
+    "0aaec8456aa549d842735e1063a9e2568d5a541f": [
+      6849,
+      "b9018dd072f3cc72e9ffb8d42de347d5a743757aee05f8698c3178f8c3dd6932"
+    ],
+    "19e18f9d1a5baaa59528adc06d81b1ab62706f74": [
+      3658,
+      "e394862c1971f14824345b2cc2eada9f83c3a5bfed97d52028cf380a21cce121"
+    ],
+    "1a448e4658ffd8dcf3884fef150dab8d77b766ca": [
+      2152,
+      "787449cec4ec414c2d656450bf81d697d082b87ff24b171d8e9a59fd9723b35a"
+    ],
+    "1e2bbdd6d992a291bc510c3fbca85c98dc4733a6": [
+      918,
+      "e71ea3b15e8e576704f98a22879e9b169fc0c2689834468ff5562eea7b706be8"
+    ],
+    "23c2f019a27bc9e16d8de3f2af72c239eefac035": [
+      10313,
+      "1ef392356f7f605cff573069d77da31d9188f874636d1179eb7a3751a32e636d"
+    ],
+    "24596fdc3ac6e340d7798529b5308a6e4c6eff67": [
+      3913,
+      "71192aa17660d6b458cf2cd8ce24cdbdc9f54a63cab029f65a3ea9ff28950c69"
+    ],
+    "25f5b4f69eccefaacebfb80d65e046d23e2a1ace": [
+      2205,
+      "965bdfe15a45cb7b38cecc0f5a521fbb596722475ea5b9794ff17b24a40ca9ec"
+    ],
+    "38da03a56d60c37cefc15069791f7f83dd6b0ee6": [
+      6668,
+      "260cfcb6134aed0f8a2872b3c73e876e0ac3017b9cae2aa2934e4c5531a795a1"
+    ],
+    "3a009e3250ecf4c563844957936df74cfc07cf4d": [
+      2816,
+      "a1dd8b3b42660755aa3f15f95aa8518288a11b1eeb7c4033453f03a6832158c1"
+    ],
+    "3e16b9952af6886b6579729108a0278042ac4052": [
+      5229,
+      "808ede44c79324dea98af33315fde68d3255666c614d4a63968f21d33445234b"
+    ],
+    "46827e7a4925cf56efdcda498250ce5e0f05e10e": [
+      2309,
+      "c1858c0751e594aba4fbc07728e99d39fab867c0f45bf52e099690fc97350cca"
+    ],
+    "491dcc77bde9fd1b31a7bbf8aae33fe02c344bd5": [
+      1963,
+      "da978ddabef6b660fc1dac9612ad790440595f265b27ed55aa08e0b763c9f501"
+    ],
+    "4a35c712a92a609e8ed07e5ea28d24a15eb67576": [
+      5475,
+      "7f8746fbb8f5fc26d8de369af229042fe53ebc485eae3d0c5d1717ef35d19b67"
+    ],
+    "4cbdcedff13166a6f4228fafd260b2ebf5add90a": [
+      4083,
+      "2b2f24e78237cee7ddd74bb4e91386be466d58c43b221a6347f5f91efd98af48"
+    ],
+    "5456a3812117d4f4d9503e4875625e58bea0382b": [
+      2984,
+      "ba40068ea9807347a547ddd82721bc0acf750f2a058c353561ac8ab3e32c650d"
+    ],
+    "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc": [
+      4991,
+      "817bab0d95a5bba681c7510f1db0aa2696ea4e6588877721a46f55317fd84d5e"
+    ],
+    "593af6fd77724bd3b771fc408e4dbda4464abaa8": [
+      9047,
+      "ceb0f43f6ec9e024e200e63cb7c653f8a106286f658a457903efee39bd26994c"
+    ],
+    "62aee5a6f2c063445b574a400d7bb53472319969": [
+      3049,
+      "7aafa1380d12bdcdf8a9d00de4d7427abebab8a433c57b5dc74af10802b17aa2"
+    ],
+    "63659a7648bafe633cb3f80300f776bf3c842cf9": [
+      2897,
+      "39fb1286b05a762be5ae2099a0e66605a71783fd06cc4ab0a9b3dbd3a5d4d347"
+    ],
+    "65716d57080ea94602a8d49da1682d0d14bb74dc": [
+      4042,
+      "096b7cfb25a0c39149ea624ffac92f8b7e124ec56674abc8c42896633ecf5edc"
+    ],
+    "720044a4e4954820b8d298f73b6b75f2189b4f94": [
+      11516,
+      "6b0793a9a81ef03cb45ff04fb964b2e394b5ebcbad89c19572e5f03dc23cb461"
+    ],
+    "768873f1bc4b884679b845ec43711c853283565f": [
+      2585,
+      "dfd137538fa62ca1639c9d4ebb43599f016f567e0b7b46227281834a8049d93c"
+    ],
+    "81b473eae07b66b3cfe38c52018fd6431e36c94f": [
+      5007,
+      "ac7be8d63482bee3c63fa7ddaba97ca68d165696d4c9c8d98bf85515a61fb08f"
+    ],
+    "822d27c55b6626a07cd9a56b4dbd53d9eb52292d": [
+      2756,
+      "c574779d63c52df48d5d85122fcd56a78e6bc1f717c9e001e273ec45460e9124"
+    ],
+    "86ddb2771c881dd3da6bc2b5845bf98f3577c713": [
+      4783,
+      "bf7a2398ffbcc86481c119c5b956d0a444992867d30e955853633efe9d9fb247"
+    ],
+    "921818de26b481ed94603d8e596a384abf04bfa9": [
+      120,
+      "14f7abb23f8fa599eec9103ef59f26ead5650b0075c7d93b1da5c2494473bcd2"
+    ],
+    "95dfbdee03a3739a42a7e8d3f83e5a5b45bca256": [
+      3011,
+      "c3fe73638078ea1d4819b9acd50ad0a233cd81e11290e61da9644153651b3f56"
+    ],
+    "9abf25315e79ba54b071702ca5b74b9656f3bbbc": [
+      3270,
+      "5afc3e63d145cea3970ab0b89f3508791d09b91ea7ab839a58bf18dcf0388f8e"
+    ],
+    "9f8eff3dfeecc009f93ce2089eefff4f54aa8776": [
+      1716,
+      "d81d6a1572961c81d8e3193cb977160652f403b2d3493714644f5b8f3e0c8557"
+    ],
+    "a1ff4a1690a0b113aa882de633e063c02f9535a4": [
+      1827,
+      "22ad73c2b74d400e251e779fe1d66e25be54031ca7890af9524a6b66deeaeb5a"
+    ],
+    "a31b0c6c3af17b4ea8b7ff0c1e647cc7881aa079": [
+      2138,
+      "32c9327ba59167ef55421b65c75322030aa522caa2c83cec0326d8849742b882"
+    ],
+    "abac1ae5382ab7a3d2148e815b65be0e2da1bccd": [
+      2467,
+      "e429fb9f000fc340ab8ecab6722b8137fb3114f290a1ec49a4968da8b4ee5441"
+    ],
+    "ae42ecccdda987c00537696f2698f49c374ec927": [
+      2114,
+      "bf03304a9e8705d68c9c8987f7c03a928eb27b728d9daca44d33b86b2b9677aa"
+    ],
+    "b18b8f31e8739f6cc0df5cb0189c91b31740b8f0": [
+      1323,
+      "09ec024c8ec56491c041a7d6341260c73e12192de23775ee99594b8ca960b6f7"
+    ],
+    "b28788f46a39c282d79d29c4abd817ed5fc9de99": [
+      9184,
+      "2230e1e11f6483e092085c329f233c2ea01d800e3adbf466367f25a49bbb1eb1"
+    ],
+    "b57e27761e60351e62224b569ad107cd54fd8daf": [
+      3217,
+      "349a4acb8b7144b1e168f54254d3b0fa1e27c0341e53157bc6906950c456c937"
+    ],
+    "b9046f4f4f92ea121ecb530c7fa781af96d8d79d": [
+      3841,
+      "81a42cc8f938995bd8de50d9f6dbf5269bd0266b191f6358166957a320f2c763"
+    ],
+    "c8a333c82c3706f3b8e4ee191034bdf30bec1187": [
+      7235,
+      "e8981dce5fbef9006194688c40f6f8959afb573b7b4cafc1e6860d9b2c6dd503"
+    ],
+    "cb9f510a762b460a63e3ce64edf974a6ba5f6762": [
+      9718,
+      "e17c76b5ed926e6a8c231bbbd33f9bb7b9ca29de8a10a1793b0a2e7d2551bf24"
+    ],
+    "cde0ed2b841c6b48500a464979096aad55a635b1": [
+      6387,
+      "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33"
+    ],
+    "cfb2cea433f2eb95eba4fb7bbf4b1af8c9e883c1": [
+      5555,
+      "944e04a3d05e0f3d02eeef9d177e5f9237ab6b7eea848aa9e42b1698fb819294"
+    ],
+    "d0bff84e4adb1cac9bc21b5b0efcb5ecb8cdd5bd": [
+      2768,
+      "5bfe86d46a3043172629ba4ceba66f458d07a0451921c3d0601c5a2140c328dc"
+    ],
+    "d51dca6c425a40d196390361e071d02026d1f548": [
+      6400,
+      "1ecfd81ed079d4ccd90bde3c75f256845ad2ac3896b6ea0f78f05a36353e2a23"
+    ],
+    "d7cdc2f1918d7328e4b180558488987ca00ad444": [
+      1699,
+      "8af4094142bf6166542d0681ea193f53384a84378fbf558d5e1846fad289edbf"
+    ],
+    "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156": [
+      5024,
+      "6d4f40c02a05a77a12f5bab842d6a28c8b0411b0272da0858cf2e8158ea1707d"
+    ],
+    "dbfed501c97f0570b0f6a93e9cf0838c41449038": [
+      3159,
+      "7dbd3019867bc8e8868be0f5eec4e5d9aab6dcb126e88c85d98aca1c0152e62f"
+    ],
+    "e121ee6275def01070397a942a8434ff37b611a6": [
+      11125,
+      "1292634b1a4ea7581634435163d5f7a7064c9fb29ae3be888a019d96ef5b8164"
+    ],
+    "e3f94cab61a27c7d4c89d02516887146b2026eb3": [
+      3093,
+      "abf06a9ea1f9bb90bd56dd88a1b7c4c00f729916e0f812620ac3f6c39409aadd"
+    ],
+    "f2703319f9a11d6545105c9e7652188f322fee86": [
+      1663,
+      "74b22d09ae1ca1742bc0d8f02db8ee70102c2f64ce86146ee8eddd6a0c48892d"
+    ],
+    "f354ee1fdceca013ad6cf32fdea7c41001794083": [
+      3649,
+      "c39e9f7cb3bf357d89d27a4d9a783f0e181426f61193ecb9df876fff195bbf1d"
+    ],
+    "f3fe889b41ad3d8445025458225aa34d3d63a5e9": [
+      1851,
+      "922b3084803032a5fb8a4e2f5d2c52397db74c071f71c1e1d06d53b3f33c9d08"
+    ],
+    "f55cd91fd00ae5ff6868dfcd1607b5b94a166a4c": [
+      5876,
+      "6874d0ed47c7d7674f08cb4f099357bb7828301cc35609632eede1dd140cb605"
+    ],
+    "f921dbe2abc114cb2b7ff2eb384468a5779eee5b": [
+      5086,
+      "8650a927f7eabc7eb8d8a52feef4ae262c150cf81fbbb6fc69a45679f4b353df"
+    ],
+    "fa47acd32adb309896f762ec50e47bf26641adbb": [
+      7835,
+      "1f9e3c675062601be45e933be9ce21e9cb11fa88f8abf545df54336afab7a392"
+    ],
+    "ff46b18ad1a20b295066f3e7a3aad1c79dfc07b6": [
+      1528,
+      "c7fec9d9b6adde98f259c9fd662d56f68f4a5799ad25e215f0d570b7635756ce"
+    ]
+  },
+  "hold": [
+    "C50/R9 and official W8",
+    "Protected physical WorkItem/PostgreSQL and T1 COMMIT",
+    "Real HUMAN IAM issuer and grants",
+    "RESEARCH WorkType release",
+    "Independent MI-10",
+    "Unreviewed divergent historical or archived source payloads"
+  ],
+  "tests": "NOT_RUN",
+  "rollback": "9386ec986cefad3d2a3668ff94f711218e1d0fca",
+  "research_first_function_review_20261128": {
+    "scope": "Plan operational items 01,02,03,04,08,10 source/function review; no product source promotion",
+    "governance": "b4b8a9b5d0c78b23926822251e23dc3dabb74c13",
+    "base_product": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "base_candidate": "4245b569797a2742579e4619a0e546d25281c0ca",
+    "product_tree": "3bdec49f342cfbd8589eb6d999de8410966adb9f",
+    "manifest": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+    "integrity": {
+      "path_size": "592/592 match; no extra except manifest itself; recursive Git tree not truncated",
+      "raw_hash_scope": "10 raw files (8 historical publication source pins + package + current binder), not all 592",
+      "archive": "NOT_VERIFIED full archive unavailable"
+    },
+    "functional_disposition": [
+      {
+        "source": "PR10 inherited backend versions (actual PR10 three review-only files)",
+        "paths": [
+          "app/core/agent_runtime/scheduler_review.py",
+          "app/core/development_review/research_slice.py",
+          "app/core/transaction/intent_authority.py",
+          "app/engines/model_gateway/sample_adapter.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "same-version scheduler state guard; explicit request_linked false and result archive/journal separation + re-observation; exact SessionClaimCheck before claim; additive recovered-memory consumer with all permission flags false. Do not regress by importing inherited PR10 blobs."
+      },
+      {
+        "source": "PR19/31 vs PR46",
+        "paths": [
+          "app/core/transaction/intent_authority.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "PR46 exact D0 scope/tenant/company/env/principal/agent binding and forwarding to existing claim_and_fence retained; real HUMAN issuer/COMMIT HOLD."
+      },
+      {
+        "source": "D5-C-R8 at 459c3eb16302375cd352140a0d6023fb1554d566",
+        "paths": [
+          "app/core/transaction/org_membership_review.py",
+          "app/core/transaction/intent_authority.py",
+          "tests/test_protected_org_t1_d5c_r8.py"
+        ],
+        "decision": "HOLD_UNION_REQUIRED",
+        "reason": "Missing original ProtectedOrgTransition and require_protected_org_commit; original wrapper's protected_org keyword checks before claim/journal/connect and never falls back even if guard returns; old wrapper loses PR46 session_check forwarding. Exact original PostgreSQL strict guard present. Seven compared dependency/test paths exact by manifest (company_coordination, iam_session, identity_binding, identity_fence_review, postgres_session, G4/G5 tests); port differs, original affected test absent. No behavior verification on current closure. Do not transfer either wrapper alone.",
+        "next": "Retain current PR46 wrapper semantics; reconcile protected_org preclaim branch and original G5 guard on same coordinator, no execution/fallback; preserve new WorkItem port. Check dual input semantics under owner review; original affected validation on approved exact closure before integration. Not a HUMAN WorkItem implementation."
+      },
+      {
+        "source": "MEM05E e85cd16e19c8f32da948b9bba98115667c9e1573 + D5-C-R8",
+        "paths": [
+          "app/engines/model_gateway/runtime_model_review.py",
+          "app/core/agent_runtime/joint_context.py",
+          "app/core/agent_runtime/memory_witness.py",
+          "app/engines/memory_engine/snapshot_store.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "current recovered-memory Runtime entry, history pins in both transactions, signed committed generation history, bounded replay and immutable node revision/parent lineage guard; old versions lose these checks. D0 only."
+      },
+      {
+        "source": "PR55 65ddae6a33d94593ed686b53698a6d8ad48919b4",
+        "paths": [
+          "app/engines/skill_engine/resolver.py"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "exact SourcePin and string value types replace isinstance; current stronger source-pin validation"
+      },
+      {
+        "source": "PR49 3361ae04310b9b7f51114aefca83f8c8c5255410",
+        "paths": [
+          "features/data/SharedSnapshotPanel.tsx",
+          "features/data/projectionRead.ts"
+        ],
+        "decision": "KEEP_CURRENT",
+        "reason": "shared ORG reader, Office explicit controls and JOIN_HOLD, bounded deadline/cancelResponse on fetch and reader; no regression."
+      },
+      {
+        "source": "PR3 54d4601f1ea1093d79a317f282a1696d95fe3cd3",
+        "paths": [
+          "app/api/local-mvp/readback/route.ts",
+          "components/dashboard/LocalReadbackPanel.tsx"
+        ],
+        "decision": "DO_NOT_MOUNT_LEGACY",
+        "reason": "quarantined old fixed loopback port, MIME substring, fixture-only match, no authorized WorkItem readback, parallel route/panel; use current shared plan/projection and future authorized command."
+      }
+    ],
+    "review_channels": [
+      {
+        "pr": 10,
+        "head": "74b00439f2f7ef045e9c7cb5ebec9986e52dbde2",
+        "actual_product_delta": 0,
+        "actual_files": 3,
+        "submitted": 0,
+        "requested_reviewers": [],
+        "hold": "10 owner/custody items; D03/D04 and independent A-AT01..08; actual physical schema/COMMIT/authority not approved"
+      },
+      {
+        "pr": 46,
+        "head": "098486f272047a4fef8ba07b90738f2baeb5351e",
+        "submitted": 0,
+        "requested_reviewers": [],
+        "hold": "exact D0 source already present, actual HUMAN issuer and permission unproven"
+      },
+      {
+        "pr": 52,
+        "head": "28754b7b1a2c4387c03ef7df8bb6018d67f6dd08",
+        "actual_product_delta": 0,
+        "submitted": 0,
+        "requested_reviewers": [],
+        "hold": "R9 20-row lock ab9908b033b9b62017a7689716420f61ce2c6364 vs combined 25-row lock fb50ae2d06594150887e849d61de027c61ae1492 at 9818660fc71648841288f7bc59fc179eac3ee29c; current direct pins FastAPI 0.163.0 / cryptography 46.0.4 vs proposal 0.163.2 / 50.0.2; no runtime/license/security disposition or install; prior wheel audit reported only"
+      }
+    ],
+    "publication": {
+      "version": "RESEARCH@mvp03-request-1-rc1",
+      "package_blob": "f443a28be483118d4e54d8494a122126e551198d",
+      "bytes": 4107,
+      "raw_sha256": "4c5f0b8ab9efa7e0525f1b5e3d2da1072fab8e6f219df2fe4f565605dfd2ce4e",
+      "content_digest": "10f87e6cdb8a6b1db7be79db92ff1fef40d79a999b6be7080ca2382c5b57fd3f",
+      "provenance_digest": "e0697962fcee9fe9e51cbb47063fc8c3e5422a5c9c86728d56d92ec9828c6969",
+      "content_and_provenance_recomputed": true,
+      "historical_source_commit": "325ee3009b80f1d1651013e3261c9a03dd7fe4bb",
+      "historical_raw_sha256_blob_bytes": "8/8 MATCH",
+      "current_manifest_pins": "7/8 identical; binder intentionally superseded in publication source delivery, not rewrite of historical provenance",
+      "current_binder_blob": "a05379b6909d2c3d1a5668c38942ba0151ac1233",
+      "current_binder_sha256": "e955d26b9c57891a0e65f4a44b79e1672c2696c526c32e165b15bf74eccd346c",
+      "current_binder_bytes": 9355,
+      "technical_package_integrity": "MATCH_ONLY",
+      "status": "REVIEW_CANDIDATE_NOT_PUBLISHED; QA/IV actual release and protected custody H01 decision still HOLD"
+    },
+    "a1": {
+      "status": "PHYSICAL_DESIGN_DIRECTION_APPROVED_FINAL_SCHEMA_HOLD",
+      "source": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+      "reason": "inspect_workitem_authority_readback structural equality only; requires actual Project/WorkType/binding/plan/HUMAN authority and protected transaction; no real store/migration or independent custody ratified"
+    },
+    "ui": {
+      "blob": "660a756e345023151117cdd8f69382052dad2bc6",
+      "status": "PLAN_SELECTION_ONLY_HOLD",
+      "reason": "existing observation-bound selection, disabled submit/readback; no real command API/ID, retain until required gates"
+    },
+    "tests": "NOT_RUN",
+    "product_changes": 0,
+    "acceptance": {
+      "UI": "21/40",
+      "Core": "12/16",
+      "MVP": "0/11",
+      "W8": "3/8",
+      "IV": "0/7",
+      "delta_pp": 0,
+      "weighted": "HESAPLANAMADI",
+      "integration": "HESAPLANAMADI"
+    },
+    "next": "Owner disposition of exact D5-C-R8/PR46 protected source union (no fallback) and current A1 physical mapping; independently appointed MI10 exact PR10/46/52 review and publication QA. Continue independent eligible source review; no new test or transfer while affected mandatory evidence missing.",
+    "limitations": "Reviewed targeted divergent source variants, not all historic versions or entire Design Master addenda. No full archive, no uncommitted work visibility, no code transfer; no real grants/COMMIT/CI/main/PROD.",
+    "rollback": "ordinary revert this review-only commit; product tree unchanged"
+  },
+  "research_first_protected_preclaim_patch_20261128": {
+    "status": "PATCH_PREPARED_NOT_APPLIED_HOLD",
+    "base": "645c081e2cc107440662600b749d34415ad2f713",
+    "governance": "239bfd4032a2f717263288ff7f73e0a049898801",
+    "source_origins": {
+      "r8": "459c3eb16302375cd352140a0d6023fb1554d566",
+      "g6a": "253128a2236ee706486e70acc97e472ededac26b",
+      "pr46": "098486f272047a4fef8ba07b90738f2baeb5351e"
+    },
+    "patch": "quarantine/H01_RESEARCH_FIRST_PROTECTED_PRECLAIM_20261128.patch",
+    "preimages": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+        "r8_blob": "6810c8eea0d7323736f1e5ce68d9de85dcc2ca61"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "r8_blob": "14787a8c7e73e68f25d3ccc91b414e2c1b0d12ee"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "r8_blob": "12f40659e916d5722d60c41c27f3116d746545f0"
+      }
+    ],
+    "g6a_blob": "88fd68c563db7e620c5b06c1a9c6b68d304ae071",
+    "changes": [
+      "Keep PR46 session_check exact scope/principal/agent guard and claim forwarding; add original R8 protected_org preclaim branch, reject simultaneous references before either branch. Restore G6A explicit NoReturn protected authority entry, never fallback.",
+      "Restore exact original R8 org_membership_review.py; prior G5 implementation byte-equivalent except import and additive guard.",
+      "Restore original R6/R8 LogicalT1Coordinator.for_protected_postgres classmethod, preserve current review_workitem_request and run operations. Existing protected_postgres_transaction unchanged and unconditionally denies before connect."
+    ],
+    "decision_without_explicit_guidance": "Proposed dual-reference denial instead of silently ignoring one reference. Requires affected-flow validation and technical review; no behavior active.",
+    "historical_evidence": "G6A 6/6 historical narrow authority SQLite; 2 fullchain NOT_RUN at G6A, later R9 separate evidence; no current union evidence. Original R8 tests not transferred or run.",
+    "validation": "NOT_RUN. No tests added, no product source/manifest change. Patch not imported or applied. Current product retains previous behavior. Full master exact full text fetch returned empty; mapping and relevant current sources used, full master/archive HOLD.",
+    "pr_review": "PR10/46/52 0 reviews; 44 open PRs checked, no competing published path writer newly identified by title; uncommitted work invisible.",
+    "next": "Review patch against exact closure and original G6A/R8/PR46/strict transport suites under approved scope; apply only after mandatory affected-flow validation. Continue independent exact source reconciliation. Actual HUMAN protected COMMIT remains HOLD.",
+    "rollback": "Normal revert review-only commit, product tree unchanged."
+  },
+  "research_first_architecture_closure_20261128": {
+    "status": "TECHNICAL_SOURCE_CLOSURE_REVIEW_HOLD",
+    "base": "7feb8375061a8e20b741205e415a88eb772f0a29",
+    "governance": "60a8f462f8bc0dcaeb123f3d43b484ce5d36f044",
+    "architecture": [
+      {
+        "source": "uploaded AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1.md",
+        "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "bytes": 12011382,
+        "lines": 119818,
+        "reviewed_ranges": [
+          "13655-13664",
+          "29132-29214",
+          "64044-64066",
+          "105060-105095",
+          "106330-106343",
+          "106397-106422",
+          "116785-116802",
+          "116806-116827"
+        ]
+      },
+      {
+        "source": "uploaded v11.6.142-rc1 ADAY",
+        "sha256": "073a8e4b846fa4d546d10dd0a92a1926f886ff6621eff8cbfd36f6812e1c8311",
+        "bytes": 12101285,
+        "lines": 120686,
+        "reviewed": "candidate catalog and relevant initial additions; not normative successor approval"
+      },
+      {
+        "source": "uploaded DOC-REV-0155 recovery",
+        "sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "bytes": 12193137,
+        "lines": 121437,
+        "reviewed": "initial R01/R02/R03/R09/QA/IV recovery sections; relevant source reconciliation"
+      },
+      {
+        "source": "current GitHub Design Master index/addenda",
+        "blob": "749f4480022569dd6149023705fe54606d3c50a4"
+      },
+      {
+        "source": "docs/architecture/H01_MVP03_PROTECTED_WORKITEM_MAPPING_REVIEW_20261127.md",
+        "blob": "dccf1b8c297efc22efb9f9e97666346348a580e4"
+      },
+      {
+        "source": "docs/0190/R03_T1_DECISION_PACKET.md",
+        "blob": "adf651da6493f742dd473109b2a98776ca25198f"
+      },
+      {
+        "source": "docs/0158/R03_T1_PHYSICAL_MAPPING_0157.md",
+        "blob": "ea5698984409e85ecd31242c306143f92a740452"
+      },
+      {
+        "source": "docs/0217/PG_RLS_ACCEPTANCE.md",
+        "blob": "1e7d7f9e773cffffb0cecfb0c9388ebe1da90f5a"
+      },
+      {
+        "source": "docs/UI-P10I/D03_D04_INDEPENDENT_AUTHORITY_DESIGN.md",
+        "blob": "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+      }
+    ],
+    "physical": [
+      {
+        "id": "A1-PROJECT",
+        "existing": "schema.sql@32b7609b + operations.sql@3443f658 + durable_ops.py@619fe224",
+        "finding": "ORG revision and project team/proposal D0 store; not authoritative Project head/revision/create/read permission. No reuse of org rev as project rev.",
+        "next": "Data/IAM owner exact Project authority and PK/FK/WorkOwner source."
+      },
+      {
+        "id": "A1-CATALOG",
+        "existing": "RESEARCH package f443a28b; binder a05379b6; readback f1e3049b",
+        "finding": "immutable candidate and structural pins only; publication, entitlement, plan approval and G8 separate; no physical protected custody record demonstrated.",
+        "next": "QA/IV exact candidate review and actual owner publication/entitlement/plan authority."
+      },
+      {
+        "id": "A1-FENCE",
+        "existing": "database/0192/candidate_event_outbox_fence.sql@6e4780bf; postgres_write.py@5b341e1d",
+        "finding": "unique(S,idempotency_key) not equivalent to proposed tenant-wide namespace/key fingerprint; run primitives require run_id and valid LogicalIntent; not HUMAN WorkItem writer.",
+        "next": "Ratify A1 exact typed keys and server digest, preserve legacy run constraints; no DDL before approval."
+      },
+      {
+        "id": "A1-ROLES",
+        "existing": "database/0193/candidate_run_head.sql@180924e9; 0194/candidate_transition_roles.sql@7b5d374b; company_coordination.py@fb068ef9",
+        "finding": "run_heads and company_run_membership/run events are run-specific; no WorkItem six-role persisted mapping or non-dispatchable event consumption proven.",
+        "next": "Typed WORKITEM branch in existing T1, exact creation anchor C and separate event consumer review."
+      },
+      {
+        "id": "A1-READBACK",
+        "existing": "postgres_snapshot.py@9ba61263; readback_review.py@f1e3049b",
+        "finding": "repeatable-read read-only D0 historical plan reader; synthetic expected/observed equality is not fresh authorized HUMAN readback. No authority grant from same_id or historical pin.",
+        "next": "Fresh authorized same-ID readback of all six roles and immutable creation anchor; do not substitute old plan GET."
+      },
+      {
+        "id": "A1-PROTECTION",
+        "existing": "postgres_session.py@6c099571; iam_session.py@f3c37428; 0183 D0 SQL@8e6b4a4e; 0217 RLS",
+        "finding": "protected transport always denies before connect; SQLite IAM issuer not real; 0183 FORCE RLS has no policies and rollback; 0192-0196L candidates no RLS, no verified actual COMMIT; D03/D04 independent custody open.",
+        "next": "Independent MI10 exact authority/restore/expiry and actual protected RLS/COMMIT review; no fallback."
+      }
+    ],
+    "source_closure": {
+      "r8": {
+        "commit": "459c3eb16302375cd352140a0d6023fb1554d566",
+        "pins_blob": "520c05a4b18e8c1d9e88ef32d3bbcd1475dfeb02",
+        "match": 16,
+        "diverged": 5,
+        "absent": 16,
+        "total": 37,
+        "diverged_product": [
+          "ledger.py",
+          "review.py",
+          "intent_authority.py",
+          "org_membership_review.py",
+          "port.py"
+        ],
+        "absent_historical_candidate_paths": 14,
+        "absent_original_product_tests": [
+          "test_protected_org_t1_d5c_r8.py",
+          "test_postgres_strict_expiry_d5c_r6.py"
+        ],
+        "org_candidate_relocation": {
+          "exact": 8,
+          "total": 9,
+          "keep_current": "durable_ops.py 619fe224c05d7f7f7efe998583e4730cb2cb4d3e; adds D0 assignment review initialization and record/read methods, no removal found in compared line set; original 43ed448c02904ab44b3cf8665f4aeafb0a38f10a; preserve newer path, do not overwrite."
+        },
+        "ledger": "Current 95438f2d300f09242876893943ee250884ebdde6 adds exact event id and payload type guards relative to historical e3f94cab61a27c7d4c89d02516887146b2026eb3; keep current."
+      },
+      "g6a": {
+        "commit": "6bab62305d2ea15f8608f7835270ae027ce01e83",
+        "pins_blob": "cecb7abfa0654daa2190fcb878c4e33db0163646",
+        "match": 6,
+        "diverged": 3,
+        "absent": 1,
+        "total": 10
+      },
+      "r8_historical_transport_evidence": {
+        "commit": "c818549bc143467798e9f508e1dc42e24be60bca",
+        "blob": "72db8ff5ffba7a1f519188645fa78ea763950bb8",
+        "scope": "17/17 R6/R7 transport selected regression only; R8 protected ORG 10 NOT_RUN, G5 12/G4 14 NOT_RUN in this closure. Cannot authorize union."
+      },
+      "patch": "quarantine/H01_RESEARCH_FIRST_PROTECTED_PRECLAIM_20261128.patch",
+      "disposition": "HOLD; original test references exist but exact integrated closure differs. No old source overwrite or new test."
+    },
+    "publication": {
+      "package": "f443a28be483118d4e54d8494a122126e551198d",
+      "scope": "MVP-03_FIXED_RESEARCH_REQUEST_ONLY",
+      "decision": "Technical content review only: exact four input fields, separate idempotency header, HTTP201 after protected COMMIT/readback; 200 proposal, 202 separate admission; E01–E10 references, execution/release/effects explicitly excluded. Not full RESEARCH execution contract, actual QA/IV not completed; no publication or activation."
+    },
+    "manifest": {
+      "entries": 592,
+      "path_size": "592/592",
+      "product_files": 593,
+      "manifest_blob": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+      "raw_full": "NOT_VERIFIED",
+      "full_archive": "NOT_AVAILABLE current exact archive"
+    },
+    "limitations": "Relevant sections of full uploaded masters read, not all 119k+ lines or every later addendum. 44 open PR and 0 reviews at prior exact check; no new tests, code, merge, CI, real IAM/COMMIT or acceptance. No verified independent source transfer found in scope; no artificial progress.",
+    "next": "Separate owner A1 ratification and source closure verification of existing quarantined patch; actual QA/IV/custody remain independent. Continue source-only independent work when exact eligible source is found. User prior no new/routine test remains."
+  },
+  "research_first_signature_reconciliation_20261128": {
+    "status": "QUARANTINE_PATCH_CORRECTED_NOT_APPLIED_HOLD",
+    "base": "8d6e4af51a48206ee7e728037298fd5d007cfb23",
+    "governance": "b30158b74ae6aaa1681950d617dd9f8974b5e763",
+    "patch": {
+      "path": "quarantine/H01_RESEARCH_FIRST_PROTECTED_PRECLAIM_20261128.patch",
+      "previous_blob": "339d05040dd7694689488c4417c0109c5e8aaefe",
+      "blob": "8b83b4d0cc649590482accfee222b0b7bbcc7d61"
+    },
+    "finding": "Original G6A test_legacy_signature_preserved asserts equality of inspect.signature(...).parameters. Existing patch legacy entry includes session_check and protected_org; protected entry lacked both. Static mismatch, not a test execution.",
+    "original_test": {
+      "commit": "253128a2236ee706486e70acc97e472ededac26b",
+      "path": "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py",
+      "blob": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+      "method": "test_legacy_signature_preserved"
+    },
+    "decision_without_explicit_guidance": "Add both optional keyword-only parameters to the quarantined G6A entry, with no consumption or fallback; existing strict gate plus unconditional denial retained. No product source altered.",
+    "static_checks": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/intent_authority.py",
+        "blob": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+        "hunk": "EXACT",
+        "signature": "STATIC_EQUAL"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+        "blob": "675615e04059280ec6aa99e9679b4388cd018c2d",
+        "hunk": "EXACT"
+      },
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "blob": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "hunk": "EXACT"
+      }
+    ],
+    "original_suites": [
+      {
+        "name": "R8 protected ORG",
+        "blob": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc",
+        "methods": 10
+      },
+      {
+        "name": "R6 strict expiry",
+        "blob": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "methods": 12
+      },
+      {
+        "name": "G6A preclaim",
+        "blob": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+        "methods": 6
+      },
+      {
+        "name": "G6A fullchain",
+        "blob": "822d27c55b6626a07cd9a56b4dbd53d9eb52292d",
+        "methods": 2
+      }
+    ],
+    "fixture_pins": {
+      "g5": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+      "fullchain0214": "4918027e828e8e72273ee4d6a508cac3aa6e9b59"
+    },
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "29132-29214",
+        "64044-64066",
+        "105060-105095",
+        "106330-106343",
+        "106397-106422",
+        "116785-116827"
+      ],
+      "addenda": [
+        "adf651da6493f742dd473109b2a98776ca25198f",
+        "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+      ]
+    },
+    "tests": "NOT_RUN; affected-flow closure including dual-reference denial and PR46 still mandatory. No new tests.",
+    "product_changes": 0,
+    "manifest": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12 unchanged",
+    "acceptance_delta_pp": 0,
+    "limitations": "No exact current full archive or approved full dependency closure; no runtime or IV acceptance. 44 open PRs; no candidate PR; uncommitted work invisible.",
+    "rollback": "ordinary revert of candidate-only commit; product tree untouched",
+    "next": "Exact existing 30 methods plus affected PR46/dual-reference behavior closure under approved dependencies; keep actual protected COMMIT HOLD. Separate A1/MI10/publication."
+  },
+  "research_first_r6_strict_route_transfer_20261128": {
+    "status": "ISOLATED_PRODUCT_SOURCE_TRANSFER_12_ORIGINAL_D0_PASS",
+    "base": "dbefe44946488528083564560fe6810f8ff05c11",
+    "governance": "aafc180dee8b45d232bf4ebb89e627f353440bd5",
+    "source_patch": "8b83b4d0cc649590482accfee222b0b7bbcc7d61",
+    "remaining_patch": "7d52c24d2b8134553fa997de4469d141aa699925",
+    "technical_decision": "Split independent existing port hunk from IAM/ORG protected preclaim patch; restore exact original strict factory only, no change to legacy or actual strict denial. No new tests. Remaining two hunks quarantined.",
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": 119818,
+      "ranges": [
+        "13655-13664",
+        "29132-29214",
+        "105060-105095",
+        "106330-106343",
+        "106397-106422",
+        "116785-116827"
+      ],
+      "v142_candidate_sha256": "073a8e4b846fa4d546d10dd0a92a1926f886ff6621eff8cbfd36f6812e1c8311",
+      "recovery0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+      "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7"
+    },
+    "files": [
+      {
+        "path": "product/ai-company-os-backend/app/core/transaction/port.py",
+        "preimage": "7f2e93273d3e9543fb7c1676703632c39876db47",
+        "blob": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+        "sha256": "7710c6e917ef6a01dc3c078d621f41db47bdfb2141bc2f9c7eca26ee795a2b97",
+        "bytes": 4924
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_postgres_strict_expiry_d5c_r6.py",
+        "source": "459c3eb16302375cd352140a0d6023fb1554d566",
+        "blob": "cde0ed2b841c6b48500a464979096aad55a635b1",
+        "sha256": "5121861d8b307e856c38a647732ede8b5da2d33534d300c58f1d920bba396b33",
+        "bytes": 6387
+      }
+    ],
+    "test": {
+      "scope": "Python 3.13.5 -I -S stdlib only, disposable SQLite 3.46.1 and Mock, no third-party imports, no PG connection. 10/10 exact Git blobs before patch (five modules, four package markers, one original test).",
+      "pass": 12,
+      "fail": 0,
+      "not_run": "remaining R8/G6A 18 and affected PR46/dual-reference; full build, real PostgreSQL and IV",
+      "raw_log": "tests/evidence/H01_RESEARCH_FIRST_R6_STRICT_ROUTE_20261128.log",
+      "blob": "c4eb079a5a4e8210c91aa35747dd6747ea0bdbfb",
+      "sha256": "2c40982e172152f2a2b2dbbd0cba8406652b9779d655877ad5f0e7a9bdbc6836",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -I -S -c 'import sys,runpy; sys.path.insert(0,\"/tmp/aios_r6_exact\"); runpy.run_path(\"/tmp/aios_r6_exact/tests/test_postgres_strict_expiry_d5c_r6.py\",run_name=\"__main__\")'",
+      "pins": {
+        "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "app/core/transaction/review.py": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "app/core/agent_runtime/transition_command.py": "5680fa428be81645a43d7442ec161c0c10384986",
+        "app/core/transaction/port.py": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+        "app/core/transaction/postgres_session.py": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+        "tests/test_postgres_strict_expiry_d5c_r6.py": "cde0ed2b841c6b48500a464979096aad55a635b1"
+      }
+    },
+    "manifest": {
+      "previous": "4e0bd2dfc2265e191b1a5f008f3e541174b81c12",
+      "new": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
+      "entries": 593,
+      "product_files": 594,
+      "full_raw": "NOT_VERIFIED"
+    },
+    "acceptance_delta_pp": 0,
+    "limitations": "Full archive unavailable; local git direct DNS resolution failed; exact narrow source restored by connector with Git blob comparison. 44 open PRs, no uncommitted work visibility. No real commit/grant, CI, main, PROD, independent acceptance. Other source flows not activated.",
+    "rollback": "ordinary revert isolated commit; original three-file patch available at parent."
+  },
+  "research_first_g6a_preclaim_actual_validation_20261128": {
+    "status": "LOCAL_CANDIDATE_6_ORIGINAL_PASS_1_TARGETED_PASS_PRODUCT_TRANSFER_HOLD",
+    "base": "9622df67af3e22db2d79e9060ae696d6edf5c3ba",
+    "governance": "019d8e88d2eb5ef07b3fb4d6b014ace066f32ba8",
+    "patch_blob": "7d52c24d2b8134553fa997de4469d141aa699925",
+    "source_preimage": "d492c6d3ea99214e28c0fa4e772139169bd39a17",
+    "local_postimage": {
+      "blob": "d0fba50b914d883c8df249d0e2e04dc372a70049",
+      "sha256": "d8c34a2447af051dfbdde0bcd51186a6f1515a8168e08441fb78199742216fc0",
+      "bytes": 11442,
+      "lines": 208,
+      "remote_patch_application": "exact context reconstructed from immutable patch; Git blob matches local"
+    },
+    "original_test": {
+      "path": "product/ai-company-os-backend/tests/test_authority_preclaim_d5g6a.py",
+      "source_commit": "253128a2236ee706486e70acc97e472ededac26b",
+      "blob": "db66bcbd89df1bb7956d7b5bdbea67ead2a2f156",
+      "pass": 6,
+      "fail": 0,
+      "log": "tests/evidence/H01_RESEARCH_FIRST_G6A_PRECLAIM_20261128.log",
+      "log_blob": "7efd852f06899c228f1792e65551024f797528c7",
+      "log_sha256": "2ba87e674ebaf9d4782efb882c293e919ddcbc5862a060d32aa245a0bbaae2ff"
+    },
+    "targeted_check": {
+      "scope": "required new dual-reference rejection only; reused original SQLite fixture and Mock; not one of 30 methods",
+      "pass": 1,
+      "log": "tests/evidence/H01_RESEARCH_FIRST_G6A_DUAL_REFERENCE_20261128.log",
+      "log_blob": "1c01622fba24165bcb00ce179f94bb4ab07cdef5",
+      "log_sha256": "55ad842b56125001b297f809681fcf4659fc27c0670030408d6ac906c8b0a964",
+      "procedure": "ProtectedAuthorityTests.setUp(); snapshot; patch claim_and_fence and strict gate to raise if entered; invoke legacy wrapper with both refs; require PermissionError D5C_R8_DUAL_REFERENCE_HOLD; assert snapshot, claim/gate/connect/clock/journal unchanged; doCleanups."
+    },
+    "environment": {
+      "python": "3.13.5",
+      "sqlite": "3.46.1",
+      "flags": "-I -S -B",
+      "third_party": "none",
+      "source_pins": {
+        "app/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "app/core/__init__.py": "9d457472970b7f581687ba142d1bf99ba91c7388",
+        "app/core/agent_runtime/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/agent_runtime/transition_command.py": "5680fa428be81645a43d7442ec161c0c10384986",
+        "app/core/agent_runtime/lifecycle.py": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+        "app/core/transaction/__init__.py": "5b19819cd7070302e874ecee80170a3921ce8fb0",
+        "app/core/transaction/review.py": "aba67f84484d1723e913f4ec2b2b5d0afd0afdad",
+        "app/core/transaction/port.py": "fe7e471405f49fd3e118b44df72e472e7ef02315",
+        "app/core/transaction/intent_authority.py": "d0fba50b914d883c8df249d0e2e04dc372a70049",
+        "app/core/transaction/postgres_session.py": "6c0995712bd368f72c239cb19cd3e85aa781c1b9"
+      }
+    },
+    "previous_R6_log_reused": {
+      "blob": "c4eb079a5a4e8210c91aa35747dd6747ea0bdbfb",
+      "local_sha256": "2c40982e172152f2a2b2dbbd0cba8406652b9779d655877ad5f0e7a9bdbc6836",
+      "pass": 12,
+      "new_run": false
+    },
+    "original_methods": {
+      "previous": 12,
+      "current": 18,
+      "total": 30,
+      "remaining": 12
+    },
+    "architecture": {
+      "v135_zip_member": "AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1 (1).md",
+      "bytes": 12011382,
+      "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "29132-29214",
+        "105060-105095",
+        "116785-116827"
+      ],
+      "addenda": [
+        "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "adf651da6493f742dd473109b2a98776ca25198f",
+        "85f61a0cbb4d3a3336a9bc9d3de8b00b995f0f24"
+      ]
+    },
+    "hold": {
+      "r8": "10 NOT_RUN; exact closure requires IAM, ORG, company, durable_ops, assignment, SQL and fixture modules; direct git checkout DNS failure",
+      "g6a_fullchain": "2 NOT_RUN; imports cryptography, exact approved C50/R9 dependency/license review still HOLD",
+      "pr46": "affected original signed wrapper not run; no claim of behavioral closure",
+      "authority": "actual protected COMMIT and IV HOLD"
+    },
+    "product": {
+      "files": 594,
+      "manifest_entries": 593,
+      "manifest": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
+      "changes": 0
+    },
+    "decision": "Keep two-file patch quarantined because mandatory closure remains incomplete; no new independent engine or routine regression. Additional narrow dual reference check is required for changed behavior.",
+    "acceptance_delta_pp": 0,
+    "rollback": "normal revert evidence-only commit; product tree unchanged"
+  },
+  "research_first_r8_org_transfer_20261128": {
+    "status": "ISOLATED_ADDITIVE_ORG_MODULE_TRANSFER; R8_10_LOCAL_CANDIDATE_PASS; G5_12_TRANSFER_SCOPE_PASS; DIRECT_3_PASS",
+    "base": "b2f2c91415b918b68f0226de922103d27d5cc36b",
+    "governance": "d612fcbd4f3178f47ca135d31ef680eb5cf03e2b",
+    "architecture": {
+      "v135_member": "Ai_Proje_Ofisi_Chatgpt(Saas)/AI_Company_OS_DESIGN_MASTER_V11_6_135_RC1.md",
+      "bytes": 12011382,
+      "sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "105060-105095",
+        "116785-116827"
+      ],
+      "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7"
+    },
+    "source": {
+      "path": "product/ai-company-os-backend/app/core/transaction/org_membership_review.py",
+      "preimage": "675615e04059280ec6aa99e9679b4388cd018c2d",
+      "postimage": "14787a8c7e73e68f25d3ccc91b414e2c1b0d12ee",
+      "sha256": "99def2fc353d2b704bc6dca49548133695317b3c2c583d3d01383dba2cac28bd",
+      "bytes": 9219,
+      "symbols": [
+        "ProtectedOrgTransition",
+        "require_protected_org_commit"
+      ],
+      "source_patch": "7d52c24d2b8134553fa997de4469d141aa699925",
+      "remaining_authority_patch": "2c10ed99b13db6d81f5fa2debb518c5bfa5e0fef",
+      "legacy_authority_unchanged": "d492c6d3ea99214e28c0fa4e772139169bd39a17"
+    },
+    "closure": {
+      "files": 33,
+      "exact": 33,
+      "pins_path": "tests/evidence/H01_RESEARCH_FIRST_R8_EXACT_PINS_20261128.json",
+      "pins_blob": "5ded8170335f983513ef2d2054fe7db91730cfc5",
+      "pins_sha256": "63b450f8aef737d26eb8d24f781cd2eb155c88d84010a9ea192da127f0212f43",
+      "preserved_newer_durable_ops": "619fe224c05d7f7f7efe998583e4730cb2cb4d3e",
+      "environment": "Python 3.13.5 -I -S -B, SQLite 3.46.1, stdlib only, no network/PG; exact source bytes reconstructed via connector, no stubs. Three SQL schemas exact."
+    },
+    "tests": {
+      "r8": {
+        "source": "459c3eb16302375cd352140a0d6023fb1554d566",
+        "blob": "54714f8ac8f52abe7764e6fdd4fc92e9a67b83bc",
+        "pass": 10,
+        "fail": 0,
+        "scope": "both patched modules local candidate only; original test not yet added to product because legacy caller lacks protected_org parameter",
+        "raw": "tests/evidence/H01_RESEARCH_FIRST_R8_ORIGINAL_20261128.log",
+        "blob_log": "870b7e05fcc9eb44f0dbef921610c51ba344a973",
+        "sha256": "c71d6f51f2f8fa764064aad43fb6a227134ee3a5ebcd68cc3591a597d1bf203e"
+      },
+      "g5": {
+        "blob": "23dda21091b82f0da61753b266e765d5c0d3c96f",
+        "pass": 12,
+        "fail": 0,
+        "scope": "exact ORG postimage with original intent_authority preimage restored, existing affected regression",
+        "raw": "tests/evidence/H01_RESEARCH_FIRST_R8_ORG_ONLY_G5_20261128.log",
+        "blob_log": "9d92cf514f970091eba1f8ae938aeeabf65b879b",
+        "sha256": "594fdd29d0a062e03210cc7cfa5562f1aa0f876ed9ee00aefcb8f862d95cdaa8"
+      },
+      "direct": {
+        "pass": 3,
+        "fail": 0,
+        "scope": "direct new ORG guard with original authority: exact, invalid digest, malformed reference; snapshots unchanged and claim not called. Separate checks, not part of original 30.",
+        "raw": "tests/evidence/H01_RESEARCH_FIRST_R8_ORG_ONLY_DIRECT_20261128.log",
+        "blob_log": "b79ae7ee652bd21c45fbd266095337afb5492592",
+        "sha256": "5f464615372a4180b6f4b009b2617b2671a0b3b8d6e258fa1958469eccecb9b6"
+      },
+      "original_progress": {
+        "previous": 18,
+        "current": 28,
+        "total": 30,
+        "remaining": 2
+      },
+      "not_run": [
+        "G6A fullchain 2",
+        "PR46 signed-wrapper mandatory flows",
+        "actual protected PG",
+        "IV",
+        "full build"
+      ]
+    },
+    "dependency": {
+      "installed_metadata_only": {
+        "cryptography": "46.0.4",
+        "cffi": "2.0.0",
+        "pycparser": "3.0"
+      },
+      "decision": "cryptography 46.0.4 legacy pin not approved current C50 graph; no import, package install or signed tests. MI01/03/10 owner/license/security HOLD."
+    },
+    "manifest": {
+      "previous": "676d4449ae6bd193d88e5d4eea5d4c2c76bd9fcb",
+      "new": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "entries": 593,
+      "product_files": 594,
+      "full_raw": "NOT_VERIFIED"
+    },
+    "decision": "Independent additive ORG module transfer justified by actual G5 regression with unchanged authority and direct new boundary checks; no legacy wrapper change, no new caller or real grant. Remaining Authority hunk and original R8 test transfer gated by signed closure; not a full R8/PR46 milestone.",
+    "acceptance_delta_pp": 0,
+    "rollback": "ordinary revert; prior two-file patch retained in parent."
+  },
+  "research_first_scheduler_state_distance_20261128": {
+    "status": "LOCAL_CANDIDATE_19_OF_19_PASS_SQL_CONSUMER_HOLD",
+    "base": "5772c15cfceb8eb01264350c13f5a013df353307",
+    "governance": "ca25b1588ac9663aaed50c5b569c37878eec1594",
+    "reporting": "b6983047430cecde80a02c6384a22fe80301ad93",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "ownership": {
+      "pr54": "41dc540b43546854b9e0b6e2d855bffe5fdd965a",
+      "open_pr_count": 44,
+      "source_writer": "H01 central writer; PR54 historical paths preserved; no open working tree visibility"
+    },
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "bytes": 12011382,
+      "lines": 119818,
+      "read_ranges": [
+        "13655-13664",
+        "105060-105095",
+        "116785-116827",
+        "58430-58445",
+        "92105-92137"
+      ],
+      "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+      "pr54_exact_reviews": [
+        "485f76ddd4546bc90734bf8381489e9556698550",
+        "8ed7dc599f4c1773d1d34c6d0d2dfba3aaf5bebc"
+      ],
+      "normative_change": false
+    },
+    "finding": "Existing pinned scheduler accepts impossible QUEUED->CREATED and RUNNING with insufficient state version delta. Baseline actual 8 failed subtests in 2 new mandatory regression methods; original 17 passed.",
+    "change": "Use existing lifecycle.EDGES shortest-path lower bound; reuse D0_SCHEDULE_STATE_VERSION_HOLD. No new state machine, no authority, no proof of persisted history, no change to legacy inspect_schedule, no API/DB/event/dependency change.",
+    "files": [
+      {
+        "path": "product/ai-company-os-backend/app/core/agent_runtime/scheduler_review.py",
+        "preimage": "eb3e283e3406996254283595e14711e90b2bca8c",
+        "local_postimage": "6836c63b0c3e3bf93748a333a4578b4be7610009",
+        "sha256": "b32c882642ce271488ce899c764820a94e4307d7f41872b00ab7f01218b510c3",
+        "bytes": 4430
+      },
+      {
+        "path": "product/ai-company-os-backend/tests/test_pinned_schedule_0220.py",
+        "preimage": "f17fc813bec76e91c91cf1a35e177972a8c29e34",
+        "local_postimage": "dfd850420c5a30ca0347eda3c0d62199701151f3",
+        "sha256": "3e8038ccc35630d8d49f5e0c569f89d6ca0e3a48ff6b3c8e7ff721c53cbf0a14",
+        "bytes": 7374
+      }
+    ],
+    "patch": {
+      "path": "quarantine/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128.patch",
+      "blob": "6c2b9f07e75744343a6cd771300fb5d9af960baa",
+      "sha256": "8d9223f60a6a562f07d852cc88cd7607518f13088d627dc475ccfbfc52c28065"
+    },
+    "test": {
+      "environment": "Python 3.13.5 -I -S -B, stdlib only; no install or external access",
+      "source_closure": "13/13 preimage Git blob, manifest raw SHA256 and bytes matched",
+      "before": {
+        "methods": 19,
+        "original_pass": 17,
+        "new_failed_methods": 2,
+        "failed_subtests": 8,
+        "exit": 1,
+        "path": "tests/evidence/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128_BEFORE.log",
+        "blob": "7d8f3fd212c067514aca80eb3da16a21da9eb30c",
+        "sha256": "f269ab67f54689c5b56f10293708c8750726fe0fdb8db6c5d113fa21b90f1ec5"
+      },
+      "after": {
+        "methods": 19,
+        "pass": 19,
+        "fail": 0,
+        "exit": 0,
+        "path": "tests/evidence/H01_RESEARCH_FIRST_SCHEDULER_STATE_DISTANCE_20261128_AFTER.log",
+        "blob": "237aafce79020389fb4326680564e3824fccb4c3",
+        "sha256": "826d8ab6af3bd7aae0dedcb72abd711e8619e5302fc8e8f445ad3f0135dc97f3"
+      },
+      "consumer": {
+        "path": "product/ai-company-os-backend/tests/test_scheduled_admission_0220.py",
+        "blob": "3e01853c9fb3d184c3bd74fe2c5bbbb5904a36af",
+        "methods": 6,
+        "status": "NOT_RUN",
+        "dependency": "test_company_terminal_0212.py imports cryptography; existing signed dependency graph not approved for this scope"
+      }
+    },
+    "signed_authority": {
+      "patch_files": "2/3",
+      "original_methods": "28/30",
+      "status": "HOLD",
+      "remaining": "G6A fullchain 2 + PR46 affected signed wrapper, exact reviewed dependency and full checkout",
+      "metadata_only": "local cryptography 46.0.4, cffi 2.0.0, pycparser 3.0. Historical C50 approval for pinned Windows PR37 scope not broadened."
+    },
+    "manifest": {
+      "blob": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "entries": 593,
+      "product_files": 594,
+      "product_tree": "f42173660b28e3563504c7fdd2dd3963004fba70",
+      "full_raw": "NOT_VERIFIED"
+    },
+    "acceptance_delta_pp": 0,
+    "plan_criterion_delta": 0,
+    "next": "Use approved exact current signed closure to run existing G6A 2, PR46 signed wrapper and Scheduler 6 SQL consumer methods; then transfer existing candidate patches and original regressions. No unapproved install/downgrade, no real PG/IV.",
+    "rollback": "ordinary revert evidence and quarantine patch commit; product unchanged"
+  },
+  "research_first_finance_task_budget_mount_20261128": {
+    "status": "EXACT_SOURCE_PATCH_PREPARED_AFFECTED_BROWSER_HOLD",
+    "base": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+    "governance": "a7c1201a8af24c75bbb17f039c5ad908e88a2b84",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "architecture": {
+      "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "v135_lines": [
+        73551,
+        99646
+      ],
+      "doc_rev_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+      "doc_rev_0155_line": 101265,
+      "current_paired_addendum": "ba33e7f4da436d2c865d25c81f68a899a9e919f6",
+      "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+      "normative_change": false
+    },
+    "owner": {
+      "central_writer": "H01 assigned",
+      "open_pr_count": 45,
+      "checked_pr_files": [
+        42,
+        43,
+        45,
+        48,
+        49,
+        54,
+        56
+      ],
+      "overlap": [],
+      "uncommitted_work": "not visible"
+    },
+    "finding": "Existing Finance Studio shows offline metrics and Dashboard mounts independent admission and lifecycle readers. Existing paired TaskBudgetPanel is available on the Office path but not in Finance overview. Reuse rather than duplicate; historical sample remains separate from verified finance metrics.",
+    "decision": "Add one existing panel to the overview tab only, no new props, API, DB, schema, event, dependencies, authority or actual KPI. No join to other projections. User did not specify this exact UI decision; chosen independent task because signed Authority/Scheduler affected flow remains HOLD.",
+    "source": {
+      "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+      "preimage": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+      "postimage": "f80bd6cbbd1a8adb55da482b793be493fe28c0a3",
+      "sha256": "58c1f6d340918d8a4b1d241060aae3dbec7bd2617649115c4d1b5a7980c035a4",
+      "bytes": 3028,
+      "unchanged_panel": "5547bc2168cc483f5328915afdd4e0be30d9f6bd",
+      "unchanged_registry": "b8d4419253c201741a6f2f5aac31906a9a528110",
+      "unchanged_hook": "4294f67533cd1ff0d92a117935393bbee84d2abe",
+      "unchanged_proxy": "b8c6a4e6021b05d126c027d17fc358cc2a7d2816",
+      "patch": {
+        "path": "quarantine/H01_RESEARCH_FIRST_FINANCE_TASK_BUDGET_20261128.patch",
+        "blob": "13ec028b352ee70f5b2dcef0d6df159bbf4ca9e0",
+        "sha256": "996c22a05d9796ade4549c6efa557acb2ba8afddd3f8e81db266fb1592038869"
+      }
+    },
+    "verification": {
+      "exact_preimages": "2/2 Git blob",
+      "patch_apply_reverse": "PASS actual local git apply, cmp post and pre",
+      "syntax": "3 parse/transpile checks, TypeScript 5.8.3 global, Node 22.16.0; not pinned full build",
+      "structure": "single import, overview guard, no new props, additive delta, original read-only boundary PASS",
+      "log": "tests/evidence/H01_RESEARCH_FIRST_FINANCE_TASK_BUDGET_20261128_SOURCE.log",
+      "log_blob": "89126b292c10abea744aa5f3be6faef48ffe7bb8",
+      "log_sha256": "a705f07d5e5b8bccc6235f85bc27c469d18337a5459fc1ee8c26a05e2f801305",
+      "affected_runtime_render": "NOT_RUN React 19.1.10 and pinned Next environment unavailable",
+      "full_archive": "NOT_VERIFIED"
+    },
+    "product_source_transfer": 0,
+    "product_source_count": 594,
+    "manifest_entries": 593,
+    "acceptance_delta_pp": 0,
+    "plan_criterion_delta": 0,
+    "rollback": "ordinary revert isolated patch/evidence commit; no product source altered",
+    "next": "Run affected Finance overview manual read, HOLD and no-spend render using approved exact frontend environment; then apply exact existing patch and update manifest. In parallel signed chain still requires exact approved dependency disposition."
+  },
+  "research_first_finance_task_budget_transfer_20261128": {
+    "status": "SCOPED_D0_SOURCE_TRANSFER_PREPARED",
+    "parent": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+    "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+    "governance": "533c922974377c3f4f8ca98481354529fa1dd7ec",
+    "source_patch": "13ec028b352ee70f5b2dcef0d6df159bbf4ca9e0",
+    "source": {
+      "path": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+      "previous_blob": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+      "blob": "f80bd6cbbd1a8adb55da482b793be493fe28c0a3",
+      "bytes": 3028,
+      "sha256": "58c1f6d340918d8a4b1d241060aae3dbec7bd2617649115c4d1b5a7980c035a4",
+      "reported_windows_crlf_bytes": 3050,
+      "reported_windows_crlf_sha256": "b838981cfd73dc4ec1b4eb35e8dffcbf25f7a6307a31fe1b60ad47d9035e7b48",
+      "normalization": "Recomputed LF and CRLF SHA256 on exact two-hunk patch; both match respective published pins; Git LF retained."
+    },
+    "prior_manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
+    "scope": "Only existing TaskBudgetPanel mount in Finance overview; existing parser, GET, backend, schemas, DB, events, locks, policy and all other product paths unchanged. No new real authority.",
+    "ownership": {
+      "open_pr_count": 45,
+      "prior_relevant_pr_heads_unchanged": true,
+      "pr56_target_previously_absent": true,
+      "canonical_preimage_same": true,
+      "uncommitted_work_not_visible": true
+    },
+    "architecture": {
+      "v135": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+      "lines": [
+        "73548-73554",
+        "99643-99649"
+      ],
+      "doc0155": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+      "lines0155": "101262-101268",
+      "paired_addendum": "ba33e7f4da436d2c865d25c81f68a899a9e919f6",
+      "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+      "normative_change": false,
+      "limit": "Full later master/archive not verified"
+    },
+    "local_handover": {
+      "classification": "REPORTED_ACTUAL_LOCAL_D0_RUNTIME; PUBLISHED_COMMENT_READBACK_VERIFIED",
+      "negative": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/56#issuecomment-7240149017",
+      "positive": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/56#issuecomment-7240698467",
+      "backend": "app.main:app HTTP 200",
+      "frontend": "GET HTTP 200 equal backend and paired_demo JSON; browser RESERVED 100/900 Research event 3; all four flags false",
+      "backend_log_sha256": "77c41dd133189a533aa7a7203202da470f4a528a4c0411474ed23dbc251d4984",
+      "frontend_lock_blob": "4cd33f437df85d7e74c7946a0999f76adf2e31fe",
+      "frontend_lock_sha256": "036fd649daf67874646018c12de91b6e27bb38acc3a0aef2989f7b67aad06c88",
+      "frontend_lock_hash": "DIRECT_MATCH",
+      "backend_lock_blob_reported": "741e02725ddecc85ed7af5c380829d74652482d9",
+      "backend_lock_sha256_reported": "39feb819f53e2a08ff463391ce20e3bcf175b45d0c4bfa82a820bbe8fa288112",
+      "backend_lock_status": "404_DIRECT_BLOB_NOT_READABLE; absent exact candidate and four reviewed archive trees",
+      "environment": "Windows AMD64 Python 3.13.14 FastAPI 0.163.0 Starlette 1.10.0 Uvicorn 0.34.2 existing W8; previous Next build reused; no new install",
+      "limits": "Raw access log, local installed package bytes, backend lock not independently read. Port config/conflict 503 earlier per chat. No repeat test. No C50/W8 approval or dependency security requalification."
+    },
+    "disposition": "Central technical writer: scoped isolated UI source transfer only; no new dependency and existing read path unchanged; reuse reported affected D0 flow evidence bound by exact normalized postimage. Backend lock/whole archive/H01 real grant and independent acceptance remain separate HOLD. No direct product-dev or main update, no CI requested.",
+    "product_files": 594,
+    "manifest_entries": 593,
+    "acceptance_delta_pp": 0,
+    "plan_criterion_delta": 0,
+    "rollback": "Normal revert of this commit; restore prior manifest and source; preserve original quarantine patch/evidence."
+  }
+}

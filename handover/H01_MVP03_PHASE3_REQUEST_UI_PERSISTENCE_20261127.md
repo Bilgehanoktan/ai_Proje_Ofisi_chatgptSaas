@@ -1,0 +1,3 @@
+# MVP-03 Phase 3 — CEO request selection and persistence disposition
+
+H01 approved scope f3cea35ef45c531d30724795fbb4c189f7e9e5a1. Parent 1eaf864d3ab7e09041f6bdd6641e1e493b4b8fc1. Dashboard integrates existing shared exact fixed-plan read source with a local selectable reference; no authority or persistence. Submission and readback disabled; explicit HOLD. No new API, DB, event, dependency or runtime mutation. 589 manifest entries (590 product files); source validation pending tree/readback. Eight previous binder tests and UI build/browser NOT_RUN. Phase 4 HOLD; MVP 0/11. See ../catalog/revisions/H01_MVP03_PHASE3_REQUEST_UI_PERSISTENCE_20261127.json. Rollback normal revert.

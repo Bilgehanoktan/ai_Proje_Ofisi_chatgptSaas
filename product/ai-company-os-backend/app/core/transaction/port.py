@@ -2,7 +2,8 @@
 from dataclasses import dataclass
 from typing import Protocol, NoReturn, Callable
 from contextlib import AbstractContextManager
-from app.core.transaction.review import LogicalIntent, valid_intent, required_roles
+from app.core.transaction.review import (LogicalIntent, valid_intent, required_roles,
+                                         WorkItemRequestDraft, T1Review, inspect_workitem_request)
 
 @dataclass(frozen=True)
 class CommitIntent:
@@ -45,6 +46,16 @@ class LogicalT1Coordinator:
     """One transaction; no default mapping, runtime grant or independent acceptance."""
     def __init__(self, transaction: Callable[[], AbstractContextManager[TransactionSession]]):
         self._transaction = transaction
+
+    @classmethod
+    def for_protected_postgres(cls, connect, mapping):
+        """Explicit strict-expiry route; never fall back to the D0 transport."""
+        from app.core.transaction.postgres_session import protected_postgres_transaction
+        return cls(lambda: protected_postgres_transaction(connect, mapping))
+
+    def review_workitem_request(self, draft: WorkItemRequestDraft) -> T1Review:
+        """Direction A review only; deliberately never calls the transaction factory."""
+        return inspect_workitem_request(draft)
 
     def commit(self, intent: LogicalIntent) -> CommitReceipt:
         return self._commit(intent)
