@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 14,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,10 +10,10 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "bbba709fd3a79c12450596ffd5c3bccadcd07796",
+    "governance": "a7c1201a8af24c75bbb17f039c5ad908e88a2b84",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
-    "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+    "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
     "product_tree": "f42173660b28e3563504c7fdd2dd3963004fba70",
     "manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
     "product_files": 594,
@@ -832,6 +832,42 @@
       "archive": "NOT_VERIFIED",
       "plan_delta_pp": 0,
       "rollback": "Normal revert governance-only commit. No product source or manifest altered."
+    },
+    "finance_task_budget_mount_20261128": {
+      "date": "2026-11-28",
+      "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+      "canonical": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "classification": "ACTUAL_CODE_PATCH_QUARANTINE_NOT_PRODUCT_TRANSFER",
+      "catalog": "catalog/revisions/H01_UNIFIED_SOURCE_RECONCILIATION_20261128.json",
+      "catalog_key": "research_first_finance_task_budget_mount_20261128",
+      "source": "product/ai-company-os-frontend/features/finance/FinanceStudio.tsx",
+      "preimage": "2cb581420c2c06be4bf7161b41b682974466fa7f",
+      "postimage": "f80bd6cbbd1a8adb55da482b793be493fe28c0a3",
+      "post_sha256": "58c1f6d340918d8a4b1d241060aae3dbec7bd2617649115c4d1b5a7980c035a4",
+      "patch": "quarantine/H01_RESEARCH_FIRST_FINANCE_TASK_BUDGET_20261128.patch",
+      "patch_blob": "13ec028b352ee70f5b2dcef0d6df159bbf4ca9e0",
+      "source_log": "tests/evidence/H01_RESEARCH_FIRST_FINANCE_TASK_BUDGET_20261128_SOURCE.log",
+      "source_log_blob": "89126b292c10abea744aa5f3be6faef48ffe7bb8",
+      "result": "Exact source and reverse patch, TS syntax and structural checks PASS. No React render, browser or pinned full build.",
+      "architecture": {
+        "v135": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "lines": [
+          73551,
+          99646
+        ],
+        "recovery0155": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "line": 101265,
+        "paired_addendum": "ba33e7f4da436d2c865d25c81f68a899a9e919f6",
+        "mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7"
+      },
+      "decision": "Choose independent Finance read-only integration seam; source patch prepared in existing quarantine, existing reader unchanged, no new live authority. Affected render required before transfer.",
+      "product_tree": "f42173660b28e3563504c7fdd2dd3963004fba70",
+      "manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "product_files": 594,
+      "manifest_entries": 593,
+      "product_transfer": 0,
+      "acceptance_delta_pp": 0,
+      "rollback": "ordinary revert candidate patch/evidence and governance record."
     }
   },
   "detail_rows": [
@@ -2012,16 +2048,17 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "KISMEN HAZIR",
-      "ready": "D0 task_budget_snapshot ve paired read guard kaynakları mevcut.",
-      "missing": "Gerçek bütçe rezervasyonu, settlement ve maliyet kaydı.",
-      "next": "Admission ve T1 budget bağını mevcut policy ile tamamla.",
+      "ready": "D0 task_budget_snapshot ve paired read guard kaynakları mevcut. Finance overview için mevcut TaskBudgetPanel bağlantısı exact yama 1/1 hazır; ürün aktarımı 0/1.",
+      "missing": "Gerçek bütçe rezervasyonu, settlement ve maliyet kaydı. React/browser etkilenmiş akış NOT_RUN.",
+      "next": "Onaylı frontend ortamında finans paneli okuma/HOLD ve yetki sınırı doğrula; ardından exact yama aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
-        "plan"
+        "plan",
+        "finance_task_budget_mount_20261128"
       ],
-      "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "previous_status": "KISMEN HAZIR",
+      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2052,7 +2089,13 @@
             "scope": "plan milestone only; not independent acceptance"
           }
         ]
-      }
+      },
+      "previous_plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3
+      },
+      "delta_pp": 0
     },
     {
       "plan_section": 21,
@@ -2321,16 +2364,17 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "PARALEL",
-      "ready": "Güncel Project/Workflow Studio plan read/reset ve shared projection kaynakları korunuyor.",
-      "missing": "Diğer Studio alanlarının gerçek ortak backend bağlantıları.",
-      "next": "RESEARCH kritik yolunu bekletmeden bağımsız uygun Studio işi.",
+      "ready": "Güncel Project/Workflow Studio plan read/reset ve shared projection kaynakları korunuyor. Finance Studio için mevcut görev-bütçe paneli yeniden kullanım yaması hazır (karantina).",
+      "missing": "Diğer Studio alanlarının gerçek ortak backend bağlantıları. Finance render/build açık.",
+      "next": "Onaylı mevcut frontend ortamında etkilenen Finance akışı, ardından kaynak aktarımı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "review",
-        "plan"
+        "plan",
+        "finance_task_budget_mount_20261128"
       ],
-      "previous_status": null,
-      "delta": "İlk tablo kaydı; ürün kabul değişikliği yok.",
+      "previous_status": "PARALEL",
+      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
       "plan_checklist": {
         "done": 1,
         "total": 3,
@@ -2361,7 +2405,13 @@
             "scope": "plan milestone only; not independent acceptance"
           }
         ]
-      }
+      },
+      "previous_plan_checklist": {
+        "done": 1,
+        "total": 3,
+        "percent": 33.3
+      },
+      "delta_pp": 0
     },
     {
       "plan_section": 27,
@@ -3129,9 +3179,9 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
+      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance bağımsız kaynak yaması 1/1; ürün ağacı değişmedi.",
       "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft.",
-      "next": "Exact R9 wheel/runtime/licence review, C50 native disposition separately; original tests then controlled transfer.",
+      "next": "Signed Authority/Scheduler exact dependency ve Finance etkilenen render ayrı ilerlesin.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3145,10 +3195,11 @@
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
         "c50_r9_publisher_provenance_requalification_20261128",
         "r9_api20_static_import_review_20261128",
-        "pr56_unchanged_raw_source_batch_01_20261128"
+        "pr56_unchanged_raw_source_batch_01_20261128",
+        "finance_task_budget_mount_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
+      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -3597,13 +3648,14 @@
       ],
       "development_percent": null,
       "status": "KISMEN HAZIR",
-      "ready": "Sabit plan seçimi ve panel mevcut.",
-      "missing": "Gerçek command ve readback; submit/read devre dışı.",
-      "next": "Yetkili API ile gerçek kayıt gösterimi.",
+      "ready": "Sabit plan seçimi ve panel mevcut. Finance Studio kaynak bağlantı yaması 1/1 hazır; ürün aktarımı 0/1.",
+      "missing": "Gerçek command ve readback; submit/read devre dışı. Finance etkilenmiş render NOT_RUN.",
+      "next": "Onaylı ortamda Finance render; mevcut yetkili CEO backend akışı ayrı.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
-        "review"
+        "review",
+        "finance_task_budget_mount_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3628,7 +3680,15 @@
           "P24.02",
           "P24.03"
         ]
-      }
+      },
+      "previous_status": "KISMEN HAZIR",
+      "previous_plan_checklist": {
+        "done": 5,
+        "total": 16,
+        "percent": 31.3
+      },
+      "delta_pp": 0,
+      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone."
     },
     {
       "operational_number": 9,
@@ -3794,9 +3854,9 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
-      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive.",
-      "next": "Independent R9 package/runtime scope review, approved tests and controlled transfer.",
+      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS. Finance exact kaynak yaması ve statik kanıtı mevcut.",
+      "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive. Finance gerçek render/build NOT_RUN.",
+      "next": "Exact signed bağımlılık ve izinli frontend render; ilgili aktarım kapılarını kapat.",
       "as_of": "2026-11-28",
       "evidence_refs": [
         "plan",
@@ -3811,7 +3871,8 @@
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
         "c50_r9_publisher_provenance_requalification_20261128",
         "r9_api20_static_import_review_20261128",
-        "pr56_unchanged_raw_source_batch_01_20261128"
+        "pr56_unchanged_raw_source_batch_01_20261128",
+        "finance_task_budget_mount_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3871,7 +3932,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed."
+      "delta": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone."
     }
   ],
   "maintenance": {
@@ -4115,6 +4176,23 @@
       "reason": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
       "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 14,
+      "date": "2026-11-28",
+      "candidate": "df14b65318ad6c275fedc6646bb86ecd590f5b65",
+      "changed_sections": [
+        20,
+        26,
+        39
+      ],
+      "changed_operational": [
+        8,
+        12
+      ],
+      "reason": "Finance overview existing task-budget reader mount: exact source patch 1/1 prepared, product transfer 0/1, affected runtime/browser 0/1 NOT_RUN; no complete plan milestone.",
+      "evidence_ref": "finance_task_budget_mount_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -4254,6 +4332,26 @@
       "unchanged_remaining": 552,
       "classification": "Non-overlapping current-candidate coverage: 31 changed paths from exact PR56 handover report, 10 unchanged paths directly rehashed this turn. Not complete archive, weighted development, or acceptance.",
       "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
+    },
+    "finance_task_budget_mount": {
+      "source_patch": {
+        "previous": 0,
+        "current": 1,
+        "total": 1,
+        "status": "PREPARED_QUARANTINE"
+      },
+      "product_transfer": {
+        "previous": 0,
+        "current": 0,
+        "total": 1,
+        "status": "HOLD_AFFECTED_RUNTIME"
+      },
+      "affected_runtime": {
+        "current": 0,
+        "total": 1,
+        "status": "NOT_RUN"
+      },
+      "evidence_ref": "finance_task_budget_mount_20261128"
     }
   }
 }
