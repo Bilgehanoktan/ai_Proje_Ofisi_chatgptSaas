@@ -18017,10 +18017,10 @@
     "checklist_revision": 2,
     "checklist_status": "PROVISIONAL_REPORTING_METRIC",
     "checklist_rule": "Numeric completed/total plan milestone percentages; distinct from official weighted development and acceptance; no rollup averaging.",
-    "latest_table_revision": 12,
+    "latest_table_revision": 13,
     "latest_candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
     "latest_delta_pp": 0,
-    "latest_delivery": "Scoped R9 API20 static import review of 73 candidate paths, 61 exact, 11 changed, one new; installation/third-party closure/independent disposition HOLD; no code/test/acceptance delta.",
+    "latest_delivery": "Actual raw SHA256 verification of 10 unchanged critical source paths; full-candidate evidence coverage 31/593 reported to 41/593 mixed reported/direct. Full archive, source transfer and acceptance unchanged.",
     "architecture_read_required": "H01 2026-11-28: every development/table update reads actual full Design Master relevant sections and applicable current addenda, exact source hash/lines, not index only; missing scope HOLD.",
     "active_subtask_progress": {
       "scope": "Existing three-file quarantine patch and four original suites only; no plan milestone closure or weighted development. Additional required PR46 signed flow separate.",
@@ -18059,7 +18059,7 @@
         "code_modified": 0,
         "original_test_added": 0,
         "manifest_entries": 593,
-        "full_raw": "NOT_VERIFIED",
+        "full_raw": "PARTIAL_41_OF_593_MIXED_REPORTED_AND_ACTUAL; FULL_ARCHIVE_NOT_VERIFIED",
         "changed_raw_sha256": {
           "previous": 11,
           "current": 31,
@@ -18144,8 +18144,24 @@
         "test_total": 9,
         "status": "INSTALL_AND_RUNTIME_HOLD",
         "evidence_ref": "r9_api20_static_import_review_20261128"
+      },
+      "full_source_raw_coverage": {
+        "previous": 31,
+        "current": 41,
+        "total": 593,
+        "previous_percent": 5.2,
+        "current_percent": 6.9,
+        "delta_pp": 1.7,
+        "remaining": 552,
+        "previous_reported_changed": 31,
+        "new_actual_unchanged": 10,
+        "unchanged_total": 562,
+        "unchanged_remaining": 552,
+        "classification": "Non-overlapping current-candidate coverage: 31 changed paths from exact PR56 handover report, 10 unchanged paths directly rehashed this turn. Not complete archive, weighted development, or acceptance.",
+        "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
       }
     },
-    "latest_dependency_evidence_ref": "r9_api20_static_import_review_20261128"
+    "latest_dependency_evidence_ref": "r9_api20_static_import_review_20261128",
+    "latest_source_integrity_evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
   }
 }

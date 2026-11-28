@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 12,
+  "revision": 13,
   "updated": "2026-11-28",
   "purpose": "Existing plan progress presentation; no new normative architecture, acceptance, criteria, authority or task IDs.",
   "source_format": "H01 uploaded sample: Alan / Tahmini gelişim / Durum / Hazır olan / Eksik olan / Sıradaki iş. Format only; no other project evidence or estimated percentages imported.",
@@ -10,7 +10,7 @@
     "blob": "2fc0596270b585feaf91cc731102ae84d43c6d89"
   },
   "observed": {
-    "governance": "4a70b5d1ceb746d2baa2696b21073998b4a2a257",
+    "governance": "bbba709fd3a79c12450596ffd5c3bccadcd07796",
     "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
     "candidate_branch": "integration/h01-r6-research-unified-20261127",
     "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
@@ -708,6 +708,130 @@
       },
       "next": "MI01/03API review exact R9 Windows wheel archive and runtime/security/licence evidence; MI10 independent disposition remains separate. No routine test rerun, no C50 install or source transfer until gates.",
       "rollback": "Normal revert of governance-only commit. No source or manifest change."
+    },
+    "pr56_unchanged_raw_source_batch_01_20261128": {
+      "date": "2026-11-28",
+      "classification": "ACTUAL_PARTIAL_RAW_SHA256_VERIFICATION",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "product_dev": "9acf778bc71568cdb20ea4298ce86ac539afe07d",
+      "governance_parent": "bbba709fd3a79c12450596ffd5c3bccadcd07796",
+      "manifest": "2f460ffdc0de94414f158b56884c02cb614845f1",
+      "architecture": {
+        "v135_sha256": "01e2258cb71a97f60a7a48aaef8a3282c905c32443cf3bd5d61a78ee5b93d0f9",
+        "v135_lines": [
+          8436,
+          13134,
+          18893,
+          18900,
+          30859,
+          51323,
+          102041
+        ],
+        "doc_rev_0155_sha256": "b812f48d155d03bf717a6cc5a6d9f3770db72da01404622890a4fa7ef0fc8fd2",
+        "doc_rev_0155_lines": [
+          424,
+          10055,
+          14753
+        ],
+        "current_mapping_addendum": "f910a6b08cda7f403235e714b19bdcc4198b48f7",
+        "limit": "Relevant sections and current mapping addendum reviewed; complete later architecture/addendum and full archive still open."
+      },
+      "method": "Exact candidate and base nontruncated Git trees; 593/593 paths and bytes, 562 same-blob paths, 31 changed/new. Select 10 same-blob critical sources, retrieve base64 file payloads, decode and recompute SHA-256; SHA-256 known-answer checks empty and abc PASS; compare manifest byte length and digest and expected Git blob ID. Initial batch exceeded tool call cap; next blob endpoint returned text rather than expected JSON, so no successes counted from either attempt; corrected fetch_file(base64) verified 10/10.",
+      "prior_changed_report": "https://github.com/Bilgehanoktan/ai_Proje_Ofisi_chatgptSaas/pull/56#issuecomment-7239625053",
+      "coverage": {
+        "previous": 31,
+        "current": 41,
+        "total": 593,
+        "previous_percent": 5.2,
+        "current_percent": 6.9,
+        "delta_pp": 1.7,
+        "remaining": 552,
+        "previous_reported_changed": 31,
+        "new_actual_unchanged": 10,
+        "unchanged_total": 562,
+        "unchanged_remaining": 552,
+        "classification": "Non-overlapping current-candidate coverage: 31 changed paths from exact PR56 handover report, 10 unchanged paths directly rehashed this turn. Not complete archive, weighted development, or acceptance.",
+        "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
+      },
+      "results": [
+        {
+          "path": "ai-company-os-backend/requirements.txt",
+          "blob": "297b0a1ff6a125166f9f7eca94390062644bee7c",
+          "bytes": 128,
+          "sha256": "e1e7b627b7f83b54687170391406cbf996a85dfb02fed06591b301c01a78799a",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/requirements-history-signatures.txt",
+          "blob": "b704e3dfd92b43d966dd4c023dab1ab576f57141",
+          "bytes": 120,
+          "sha256": "a2b52ebff7bc0ae138ca5cc06dc483826e5ec245fb506c76d01411a9beccd020",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/api/demo.py",
+          "blob": "32a1bac1336dfd9ed625d74a59c01cb92baf303a",
+          "bytes": 5118,
+          "sha256": "7090aafe6f3111548aba11af9532cb819a510df3f2d1418e003407d8eb808c75",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/main.py",
+          "blob": "d49c3dadb277753d5bc5589a1660506d6103ec99",
+          "bytes": 565,
+          "sha256": "e019263f6cb30fe5d3b4332b4a374e7c31daf0410dd6013007d342384acd3c92",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/tests/test_api_core_plan_read_boundary_03.py",
+          "blob": "2435dc1b05ba2d61221542f6cd78df36e68ef5b4",
+          "bytes": 5654,
+          "sha256": "428fef7580c261bdde6056587a5912d92e03c73823985a018d0e8f40515290ca",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/core/transaction/postgres_session.py",
+          "blob": "6c0995712bd368f72c239cb19cd3e85aa781c1b9",
+          "bytes": 3677,
+          "sha256": "947ace60209c98e2c8e495cc992ec05ed99ad01e47b9577f0ee43f851d91d6c3",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/core/transaction/postgres_admission_mapping.py",
+          "blob": "ba134d2e7d4ddecb41334071fc02236a35435dac",
+          "bytes": 17868,
+          "sha256": "829e6ec7b1048770a6ee3e80afaafae2f75408a9c4e10796c4fdeb2ab409b60e",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/core/transaction/postgres_lifecycle_mapping.py",
+          "blob": "923fb705094cab97fb5af99ada7c1bdcef76da59",
+          "bytes": 18997,
+          "sha256": "3d9f09fd1e7e12a2c59432749a6089665d4001bf32a10e88fc4adabe06bd23c1",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/core/transaction/postgres_transition_mapping.py",
+          "blob": "e722a9188a76034f5133c3f61be1da16930a8924",
+          "bytes": 8493,
+          "sha256": "0969f92e818d514d7dd83d22cd7283ebe52bc33651585e6223fd1bbeac35cea0",
+          "status": "PASS"
+        },
+        {
+          "path": "ai-company-os-backend/app/core/agent_runtime/lifecycle.py",
+          "blob": "4c4ecbba9b2b1ec56dd8f73378b56b50f6578b49",
+          "bytes": 7251,
+          "sha256": "28a9576d9d2be18ec70293dc4b1d1a67f678ebc8026bd9af52b8656b679ef90d",
+          "status": "PASS"
+        }
+      ],
+      "root_cause": "The 12 operational rows are binary milestone ratios. Rev 8-12 partial source, test and static review evidence did not meet another complete frozen criterion; P03.06/P01.04/P28.03 require all raw payloads and full archive, P27.02 requires exact approved dependency/runtime/security/license. No partial credit in main plan checklist; previous display hid partial source validation coverage.",
+      "reporting_decision": "Add visible existing-scope raw source coverage as separate operational submetric; keep 40 detail and 12 operational rows, frozen IDs/denominators and acceptance untouched. No backdated credit or new normative criterion. User asked to advance table; new 10 actual checks counted exactly once within full source raw coverage, not product development.",
+      "product_changes": 0,
+      "new_product_tests": 0,
+      "archive": "NOT_VERIFIED",
+      "plan_delta_pp": 0,
+      "rollback": "Normal revert governance-only commit. No product source or manifest altered."
     }
   },
   "detail_rows": [
@@ -717,7 +841,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Tam v135 ZIP yeniden açıldı; 12.011.382 byte, SHA-256 exact; 13655–13664,105060–105095,116785–116827 okundu.",
+      "ready": "Tam v135 ZIP yeniden açıldı; 12.011.382 byte, SHA-256 exact; 13655–13664,105060–105095,116785–116827 okundu. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
       "missing": "Tam sonraki ek uzlaştırması ve güncel tam ürün arşivi açık.",
       "next": "Onaylı imzalı zincir ve tam arşiv.",
       "as_of": "2026-11-28",
@@ -726,10 +850,11 @@
         "architecture_closure_review_20261128",
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
-        "r8_org_transfer_20261128"
+        "r8_org_transfer_20261128",
+        "pr56_unchanged_raw_source_batch_01_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "R8 ORG modülü ürüne aktarıldı; 10 yeni özgün metot, 12 G5 regresyonu ve 3 ek kontrol PASS; tam plan kriteri kapanışı yok.",
+      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -828,7 +953,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "DEVAM",
-      "ready": "594 ürün dosyası; 593/593 manifest yol/boyut. PR56 devir kanıtı: değişen ham hash 31/31 (11→31), 562 korunan, 18 eklenen, 13 değişen, 0 silinen. Authority 2/3.",
+      "ready": "594 ürün dosyası; 593/593 manifest yol/boyut. PR56 devir kanıtı: değişen ham hash 31/31 (11→31), 562 korunan, 18 eklenen, 13 değişen, 0 silinen. Authority 2/3. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
       "missing": "Tam arşiv/tüm ham hash; son Authority hunkı, G6A 2, PR46; PR56 taslak.",
       "next": "C50 pin/inceleme ve zorunlu akış; kontrollü aktarım.",
       "as_of": "2026-11-28",
@@ -841,10 +966,11 @@
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "pr56_unchanged_raw_source_batch_01_20261128"
       ],
       "previous_status": "DEVAM",
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
+      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
       "plan_checklist": {
         "done": 3,
         "total": 6,
@@ -2308,7 +2434,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "PR56 devir 31/31 değişen ham hash, 593/593 yol/boyut; Authority 28/30; ayrı Scheduler 19/19 yerel aday PASS.",
+      "ready": "PR56 devir 31/31 değişen ham hash, 593/593 yol/boyut; Authority 28/30; ayrı Scheduler 19/19 yerel aday PASS. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
       "missing": "Tam arşiv ve tüm ürün raw hash; G6A 2, PR46 12, Scheduler SQL 6 NOT_RUN.",
       "next": "Onaylı imzalı ortam ve özgün etkilenen testler.",
       "as_of": "2026-11-28",
@@ -2321,10 +2447,11 @@
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
         "scheduler_state_distance_20261128",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "pr56_unchanged_raw_source_batch_01_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok.",
+      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
       "plan_checklist": {
         "done": 2,
         "total": 4,
@@ -3002,7 +3129,7 @@
       "development_percent": null,
       "development_status": "HESAPLANAMADI",
       "status": "AKTİF",
-      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded.",
+      "ready": "Prior 31/31 raw hash and Windows preflight preserved. R9 scoped 73-path static import review now recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
       "missing": "C50 pin 0/2 and install 0/1; runtime/licence/independent disposition; G6A 2, PR46 12, Scheduler SQL 6; PR56 draft.",
       "next": "Exact R9 wheel/runtime/licence review, C50 native disposition separately; original tests then controlled transfer.",
       "as_of": "2026-11-28",
@@ -3017,10 +3144,11 @@
         "scheduler_state_distance_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
         "c50_r9_publisher_provenance_requalification_20261128",
-        "r9_api20_static_import_review_20261128"
+        "r9_api20_static_import_review_20261128",
+        "pr56_unchanged_raw_source_batch_01_20261128"
       ],
       "previous_status": "AKTİF",
-      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone.",
+      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
       "plan_checklist": {
         "done": 2,
         "total": 3,
@@ -3126,7 +3254,7 @@
       ],
       "development_percent": null,
       "status": "DEVAM",
-      "ready": "PR56 devir 31/31 değişen raw hash (11→31), 593/593 manifest yol/boyut; Authority 2/3.",
+      "ready": "PR56 devir 31/31 değişen raw hash (11→31), 593/593 manifest yol/boyut; Authority 2/3. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
       "missing": "Tam arşiv/tüm raw hash; son hunk ve signed testler; PR56 taslak.",
       "next": "C50 ve zorunlu akış; kontrollü aktarım.",
       "as_of": "2026-11-28",
@@ -3139,7 +3267,8 @@
         "r6_strict_route_transfer_20261128",
         "g6a_preclaim_actual_validation_20261128",
         "r8_org_transfer_20261128",
-        "pr56_raw_and_pr52_windows_preflight_handover_20261128"
+        "pr56_raw_and_pr52_windows_preflight_handover_20261128",
+        "pr56_unchanged_raw_source_batch_01_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3162,7 +3291,7 @@
         "percent": 50
       },
       "delta_pp": 0,
-      "delta": "GitHub devir kayıtları doğrulandı: değişen ham kaynak 11/31 → 31/31; paket içermeyen Windows önkontrolü PASS. Tam plan kriteri veya kabul kapanışı yok."
+      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed."
     },
     {
       "operational_number": 2,
@@ -3665,7 +3794,7 @@
       ],
       "development_percent": null,
       "status": "HOLD",
-      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded.",
+      "ready": "Previous Authority 28/30, Scheduler 19/19 and Windows preflight preserved; R9 scoped static import review recorded. Tam ham kaynak kapsamı 41/593 (%6,9): önceki 31 devir + 10 yeni doğrudan SHA-256 PASS.",
       "missing": "C50 install 0/1; G6A 0/2, PR46 0/12, Scheduler SQL 0/6; R9 primary 0/9; exact approval/IV/full archive.",
       "next": "Independent R9 package/runtime scope review, approved tests and controlled transfer.",
       "as_of": "2026-11-28",
@@ -3681,7 +3810,8 @@
         "scheduler_state_distance_20261128",
         "pr56_raw_and_pr52_windows_preflight_handover_20261128",
         "c50_r9_publisher_provenance_requalification_20261128",
-        "r9_api20_static_import_review_20261128"
+        "r9_api20_static_import_review_20261128",
+        "pr56_unchanged_raw_source_batch_01_20261128"
       ],
       "closed": false,
       "plan_checklist": {
@@ -3741,7 +3871,7 @@
         "percent": 18.6
       },
       "delta_pp": 0,
-      "delta": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone."
+      "delta": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed."
     }
   ],
   "maintenance": {
@@ -3967,6 +4097,24 @@
       "reason": "R9 API20 static explicit-import inventory: PR47 72 paths, 61 exact + 11 changed candidate blobs + 1 new helper = 73 candidate paths reviewed. No explicit crypto/uvicorn/psycopg import identified in scoped paths; third-party dynamic/runtime closure and security/licence remain HOLD. No new test, install, source transfer or plan milestone.",
       "evidence_ref": "r9_api20_static_import_review_20261128",
       "delta_pp": 0
+    },
+    {
+      "revision": 13,
+      "date": "2026-11-28",
+      "candidate": "ebe2c6b705e105f0a2fe9874c0a9f6bc94429c43",
+      "changed_sections": [
+        1,
+        3,
+        28,
+        39
+      ],
+      "changed_operational": [
+        1,
+        12
+      ],
+      "reason": "PR56 full raw verification coverage 31/593 (reported changed files) → 41/593 (10 additional actual unchanged-source SHA256 checks); 552 remain, archive open. No whole criterion or acceptance closed.",
+      "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128",
+      "delta_pp": 0
     }
   ],
   "active_subtask_progress": {
@@ -4006,7 +4154,7 @@
       "code_modified": 0,
       "original_test_added": 0,
       "manifest_entries": 593,
-      "full_raw": "NOT_VERIFIED",
+      "full_raw": "PARTIAL_41_OF_593_MIXED_REPORTED_AND_ACTUAL; FULL_ARCHIVE_NOT_VERIFIED",
       "changed_raw_sha256": {
         "previous": 11,
         "current": 31,
@@ -4091,6 +4239,21 @@
       "test_total": 9,
       "status": "INSTALL_AND_RUNTIME_HOLD",
       "evidence_ref": "r9_api20_static_import_review_20261128"
+    },
+    "full_source_raw_coverage": {
+      "previous": 31,
+      "current": 41,
+      "total": 593,
+      "previous_percent": 5.2,
+      "current_percent": 6.9,
+      "delta_pp": 1.7,
+      "remaining": 552,
+      "previous_reported_changed": 31,
+      "new_actual_unchanged": 10,
+      "unchanged_total": 562,
+      "unchanged_remaining": 552,
+      "classification": "Non-overlapping current-candidate coverage: 31 changed paths from exact PR56 handover report, 10 unchanged paths directly rehashed this turn. Not complete archive, weighted development, or acceptance.",
+      "evidence_ref": "pr56_unchanged_raw_source_batch_01_20261128"
     }
   }
 }
